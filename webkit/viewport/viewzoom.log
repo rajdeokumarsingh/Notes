@@ -1,0 +1,180 @@
+jiangrui@jiangrui-desktop:~/notes$ 
+jiangrui@jiangrui-desktop:~/notes$ 
+jiangrui@jiangrui-desktop:~/notes$ adb logcat -c
+jiangrui@jiangrui-desktop:~/notes$ adb logcat
+
+
+
+
+
+
+--------- beginning of /dev/log/system
+--------- beginning of /dev/log/main
+V/webcore ( 2306): UPDATE_FRAME_CACHE_IF_LOADING arg1=0 arg2=0 obj=null
+V/webcore ( 2306): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 27)
+V/webcore ( 2306): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 21)
+V/webcore ( 2306): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 19)
+V/webcore ( 2306): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 10)
+V/webcore ( 2306): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 0)
+V/webcore ( 2306): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43d370b8
+V/webcore ( 2306): viewSizeChanged w=462; h=575; textwrapWidth=462; scale=0.52
+V/webcore ( 2306): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webcore ( 2306): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 0)
+V/webcore ( 2306): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43decb00
+V/webcore ( 2306): viewSizeChanged w=462; h=567; textwrapWidth=462; scale=0.52
+V/webcore ( 2306): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webcore ( 2306): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 0)
+V/webcore ( 2306): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43d97c50
+V/webcore ( 2306): viewSizeChanged w=462; h=562; textwrapWidth=462; scale=0.52
+V/webcore ( 2306): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webcore ( 2306): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 0)
+V/webcore ( 2306): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43dfb578
+V/webcore ( 2306): viewSizeChanged w=462; h=558; textwrapWidth=462; scale=0.52
+V/webcore ( 2306): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webcore ( 2306): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 0)
+V/webcore ( 2306): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43e15238
+V/webcore ( 2306): viewSizeChanged w=462; h=554; textwrapWidth=462; scale=0.52
+V/webcore ( 2306): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webcore ( 2306): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 0)
+V/webcore ( 2306): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43dd7f98
+V/webcore ( 2306): viewSizeChanged w=462; h=550; textwrapWidth=462; scale=0.52
+V/webcore ( 2306): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webcore ( 2306): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 0)
+V/webcore ( 2306): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43dc1018
+V/webcore ( 2306): viewSizeChanged w=462; h=546; textwrapWidth=462; scale=0.52
+V/webcore ( 2306): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webcore ( 2306): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 0)
+V/webcore ( 2306): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43de60b8
+V/webcore ( 2306): viewSizeChanged w=462; h=544; textwrapWidth=462; scale=0.52
+V/webcore ( 2306): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webcore ( 2306): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 0)
+V/webcore ( 2306): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43da9c08
+V/webcore ( 2306): viewSizeChanged w=462; h=542; textwrapWidth=462; scale=0.52
+V/webcore ( 2306): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webcore ( 2306): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2306): webkitDraw start
+V/webcore ( 2306): webkitDraw NEW_PICTURE_MSG_ID
+V/webcore ( 2306): UPDATE_FRAME_CACHE_IF_LOADING arg1=0 arg2=0 obj=null
+V/webcore ( 2306): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 0)
+V/webcore ( 2306): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43e06348
+V/webcore ( 2306): viewSizeChanged w=462; h=498; textwrapWidth=462; scale=0.52
+V/webcore ( 2306): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+V/webcore ( 2306): UPDATE_FRAME_CACHE_IF_LOADING arg1=0 arg2=0 obj=null
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+V/webcore ( 2306): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(46, 0)
+V/webcore ( 2306): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43dda6b0
+V/webcore ( 2306): viewSizeChanged w=369; h=432; textwrapWidth=369; scale=0.65
+V/webcore ( 2306): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 0)
+V/webcore ( 2306): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43d60d48
+V/webcore ( 2306): viewSizeChanged w=369; h=398; textwrapWidth=369; scale=0.65
+V/webcore ( 2306): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webcore ( 2306): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webcore ( 2306): SPLIT_PICTURE_SET arg1=0 arg2=0 obj=null
+V/webcore ( 2306): SPLIT_PICTURE_SET arg1=0 arg2=0 obj=null
+V/webcore ( 2306): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 0)
+V/webcore ( 2306): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43dc18e8
+V/webcore ( 2306): viewSizeChanged w=369; h=431; textwrapWidth=369; scale=0.65
+V/webcore ( 2306): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 0)
+V/webcore ( 2306): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43dc1998
+V/webcore ( 2306): viewSizeChanged w=369; h=398; textwrapWidth=369; scale=0.65
+V/webcore ( 2306): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webcore ( 2306): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webcore ( 2306): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2306): webkitDraw start
+V/webcore ( 2306): webkitDraw NEW_PICTURE_MSG_ID
+
+
+
+
+V/cache   ( 2306): endTransaction
+V/cache   ( 2306): trimCacheIfNeeded
+V/cache   ( 2306): startTransaction
+
+
+V/webcore ( 2306): UPDATE_FRAME_CACHE_IF_LOADING arg1=0 arg2=0 obj=null
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D/StorageMonitor( 1846): mms freeMem:14475264, smslowflag:false,mmslowflag:false,smsThrehold:10240,mmsThreshold:317440
+V/webcore ( 2306): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(24, 0)
+V/webcore ( 2306): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43d65a48
+V/webcore ( 2306): viewSizeChanged w=320; h=363; textwrapWidth=320; scale=0.75
+V/webcore ( 2306): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webcore ( 2306): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 0)
+V/webcore ( 2306): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43de48f0
+V/webcore ( 2306): viewSizeChanged w=320; h=373; textwrapWidth=320; scale=0.75
+V/webcore ( 2306): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+D/skia    ( 2306): purging 195K from font cache [26 entries]
+V/webcore ( 2306): SPLIT_PICTURE_SET arg1=0 arg2=0 obj=null
+V/webcore ( 2306): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2306): webkitDraw start
+V/webcore ( 2306): webkitDraw NEW_PICTURE_MSG_ID
+
+
+
+
+
+
+V/webcore ( 2306): UPDATE_FRAME_CACHE_IF_LOADING arg1=0 arg2=0 obj=null
+V/webcore ( 2306): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 0)
+V/webcore ( 2306): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43deee70
+V/webcore ( 2306): viewSizeChanged w=320; h=345; textwrapWidth=320; scale=0.75
+V/webcore ( 2306): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webcore ( 2306): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2306): webkitDraw start
+V/webcore ( 2306): webkitDraw NEW_PICTURE_MSG_ID
+^C
+jiangrui@jiangrui-desktop:~/notes$ 
+

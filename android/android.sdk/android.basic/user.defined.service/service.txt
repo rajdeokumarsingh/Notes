@@ -1,0 +1,110 @@
+Android 控制用户定义 service
+
+1.  修改/etc/init.rc
+添加用户定义service 定义
+service xxx /usr/sbin/xxx
+     user root
+     disabled
+     oneshot
+
+2.  Android init 启动后会调用
+init.c 来实现init.rc文件的解析。并启动android property service.
+
+3.  用户可以在代码中通过调用property_service.c 中函数
+property_set("ctl.start",xxx)
+property_set("ctl.stop",xxx) 
+来使得android property service 去开启或结束 xxx service.
+
+当然用户也可以在控制台直接使用命令
+#setprop ctl.start xxx
+#setprop ctl.stop xxx
+来做同样的事情
+
+
+4. In APK,
+AndroidManifest.xml
+    android:sharedUserId="android.uid.system"
+
+In Java code:
+    import android.os.SystemProperties;
+    SystemProperties.set("ctl.start", "eCompassd");    // start the /system/bin/eCompassd
+    SystemProperties.set("ctl.stop", "eCompassd");    // stop the /system/bin/eCompassd
+
+
+5. Property 权限
+Android Property 也是有权限的。
+2.1 以前缀 ctl. 开头的控制属性， 设置前，Android 代码会调用函数check_control_perms()检查调用者的 user id 和 group id 
+
+struct {
+    const char *service;
+    unsigned int uid;
+    unsigned int gid;
+} control_perms[] = {
+    { "dumpstate",AID_SHELL, AID_LOG },
+    {NULL, 0, 0 }
+};
+
+static int check_control_perms(const char *name, int uid, int gid) 
+ if (uid == AID_SYSTEM || uid == AID_ROOT)
+     return 1;
+
+ /* Search the ACL */
+ for (i = 0; control_perms[i].service; i++) {
+     if (strcmp(control_perms[i].service, name) == 0) {
+         if ((uid && control_perms[i].uid == uid) ||
+                 (gid && control_perms[i].gid == gid)) {
+             return 1;
+ return 0;
+
+2.2 其它属性， 设置前，Android 代码会调用函数check_perms()检查调用者的 user id 和 group id 
+check_perms(msg.name, cr.uid, cr.gid)
+
+struct {
+    const char *prefix;
+    unsigned int uid;
+    unsigned int gid;
+} property_perms[] = {
+    { "net.rmnet0.",      AID_RADIO,    0 },
+    { "net.gprs.",        AID_RADIO,    0 },
+    { "net.ppp",          AID_RADIO,    0 },
+    { "ril.",             AID_RADIO,    0 },
+    { "gsm.",             AID_RADIO,    0 },
+    { "persist.radio",    AID_RADIO,    0 },
+    { "net.dns",          AID_RADIO,    0 },
+    { "net.",             AID_SYSTEM,   0 },
+    { "dev.",             AID_SYSTEM,   0 },
+    { "runtime.",         AID_SYSTEM,   0 },
+    { "hw.",              AID_SYSTEM,   0 },
+    { "sys.",             AID_SYSTEM,   0 },
+    { "service.",         AID_SYSTEM,   0 },
+    { "wlan.",            AID_SYSTEM,   0 },
+    { "dhcp.",            AID_SYSTEM,   0 },
+    { "dhcp.",            AID_DHCP,     0 },
+    { "vpn.",             AID_SYSTEM,   0 },
+    { "vpn.",             AID_VPN,      0 },
+    { "debug.",           AID_SHELL,    0 },
+    { "log.",             AID_SHELL,    0 },
+    { "service.adb.root", AID_SHELL,    0 },
+    { "persist.sys.",     AID_SYSTEM,   0 },
+    { "persist.service.", AID_SYSTEM,   0 },
+    { NULL, 0, 0 }
+};
+
+static int check_perms(const char *name, unsigned int uid, int gid)
+    if (uid == 0)
+        return 1;
+
+    if(!strncmp(name, "ro.", 3))
+        name +=3;
+
+    for (i = 0; property_perms[i].prefix; i++) {
+        int tmp;
+        if (strncmp(property_perms[i].prefix, name,
+                    strlen(property_perms[i].prefix)) == 0) {
+            if ((uid && property_perms[i].uid == uid) ||
+                    (gid && property_perms[i].gid == gid)) {
+                return 1;
+    return 0;
+
+从代码中可以看到， 任何不以property_perms[]中定义的前缀开头的property
+是无法被除root以外的用户访问的，包括system用户。

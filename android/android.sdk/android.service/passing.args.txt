@@ -1,0 +1,56 @@
+######################################################################
+# Java layer
+######################################################################
+public native final boolean sendTestCommand(String command);
+
+public interface IServiceManager extends IInterface
+    public IBinder checkService(String name) throws RemoteException;
+
+public final class ServiceManager
+    return getIServiceManager().checkService(name);
+
+
+
+######################################################################
+# C Interface layer
+######################################################################
+class ICmmbService : public IInterface
+public:
+   DECLARE_META_INTERFACE(CmmbService);
+   virtual bool sendTestCommand(const String8& command) = 0;
+
+class IServiceManager : public IInterface
+    DECLARE_META_INTERFACE(ServiceManager);
+    virtual sp<IBinder> checkService( const String16& name) const = 0;
+
+######################################################################
+# C remote layer
+######################################################################
+class BpCmmbService : public BpInterface<ICmmbService>
+    virtual bool sendTestCommand(const String8& command)
+        Parcel data, reply;
+        data.writeInterfaceToken(ICmmbService::getInterfaceDescriptor());
+        data.writeString8(command);
+        remote()->transact(SEND_TESTCOMMAND, data, &reply);
+        return reply.readInt32();
+
+######################################################################
+# C native layer
+######################################################################
+class BnCmmbService : public BnInterface<ICmmbService>
+public:
+    virtual status_t onTransact( uint32_t code, const Parcel& data, Parcel* reply, uint32_t flags = 0);
+    ...
+       CHECK_INTERFACE(ICmmbService, data, reply);               
+       int ret = sendTestCommand(data.readString8());            
+       reply->writeInt32(ret);
+       return NO_ERROR;
+
+# Implement native method, do the job
+class CmmbService : public BnCmmbService                              
+    virtual bool sendTestCommand(const String8& command);             
+        if(strcmp(command, "start") == 0)
+        ...
+        return true;
+
+

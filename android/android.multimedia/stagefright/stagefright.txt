@@ -1,0 +1,74 @@
+
+
+jiangrui@jiangrui-desktop:~/Perforce/pekall/xmm2231.11.4/android/frameworks/base/media/libstagefright$ tree 
+
+二进制文件是一个so
+libstagefright
+
+    code.read/flow.stagefright.player.cpp
+    code.read/flow.stagefright.recorder.cpp
+
+|-- MediaDefs.cpp
+    定义了媒体文件的MIME
+.
+|-- MediaExtractor.cpp
+    code.read/MediaExtractor.cpp
+    |-- AMRExtractor.cpp
+        code.read/AMRExtractor.cpp
+
+    |-- MP3Extractor.cpp
+    |-- MPEG4Extractor.cpp
+    |-- OggExtractor.cpp
+
+|-- AMRWriter.cpp
+    |-- code.read/AMRWriter.cpp
+
+|-- MPEG4Writer.cpp
+
+|-- MediaSource.cpp
+|-- CachingDataSource.cpp
+|-- CameraSource.cpp
+|-- DataSource.cpp
+|-- AudioSource.cpp
+|-- FileSource.cpp
+|-- HTTPDataSource.cpp
+|-- JPEGSource.cpp
+|-- ShoutcastSource.cpp
+|-- TimeSource.cpp
+|-- HTTPStream.cpp
+
+|-- MetaData.cpp
+
+|-- AudioPlayer.cpp
+|-- AwesomePlayer.cpp
+    code.reading/AwesomePlayer.cpp
+
+|-- ESDS.cpp
+|-- MediaBuffer.cpp
+|-- MediaBufferGroup.cpp
+
+|-- OMXClient.cpp
+|-- OMXCodec.cpp
+|-- Prefetcher.cpp
+|-- SampleIterator.cpp
+|-- SampleTable.cpp
+
+|-- StagefrightMediaScanner.cpp
+|-- StagefrightMetadataRetriever.cpp
+|-- string.cpp
+|-- TimedEventQueue.cpp
+|-- Utils.cpp
+`-- WAVExtractor.cpp
+
+|-- omx
+|   |-- Android.mk
+|   |-- OMXComponentBase.cpp
+|   |-- OMXComponentBase.h
+|   |-- OMX.cpp
+|   |-- OMXMaster.cpp
+|   |-- OMXMaster.h
+|   |-- OMXNodeInstance.cpp
+|   |-- OMXPVCodecsPlugin.cpp
+|   |-- OMXPVCodecsPlugin.h
+|   |-- OMXRenderer.h
+

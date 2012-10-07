@@ -1,0 +1,759 @@
+缩略语
+    STA
+        移动终端
+
+    service set identifier (SSID)
+        网络的名称
+
+    Basic service set identifier (BSSID)
+        AP的MAC地址
+
+##########################################################################################
+protocol:
+    case AccessPoint.SECURITY_WAPI_PERSONAL:
+        config.allowedGroupCiphers.set(GroupCipher.SMS4);       
+        config.allowedPairwiseCiphers.set(PairwiseCipher.SMS4);
+        config.allowedKeyManagement.set(KeyMgmt.WAPI_PSK);
+        config.allowedProtocols.set(Protocol.WAPI);             
+        if (mPassword.length() != 0) {
+            String password = mPassword.getText().toString();
+            if (mHexType.isChecked() && isHex(password)) {
+                password = convertToASCIIString(password);
+                    // just store the ascii code(integer type) instead of character
+                config.preSharedKey = convertToQuotedString(password);
+            } else {
+                config.preSharedKey = '"' + password + '"';
+
+    case AccessPoint.SECURITY_WAPI_CERT:
+        config.allowedGroupCiphers.set(GroupCipher.SMS4);          
+        config.allowedPairwiseCiphers.set(PairwiseCipher.SMS4);
+        config.allowedKeyManagement.set(KeyMgmt.WAPI_CERT);
+        config.allowedProtocols.set(Protocol.WAPI);
+
+        config.ca_cert.setValue(mWAPICaCert.getText().toString());
+        config.client_cert.setValue(mWAPIClientCert.getText().toString());
+
+        config.wapiCaCert = config.ca_cert.value();
+        config.wapiClientCert = config.client_cert.value();
+
+##########################################################################################
+# Hierarchy
+##########################################################################################
+packages/apps/Settings/src/com/android/settings/wifi/
+                |
+                V
+frameworks/base/services/java/com/android/server/WifiService.java
+                |
+                V
+frameworks/base/wifi/java/android/net/wifi/   
+                | JNI
+                V
+frameworks/base/core/jni/android_net_wifi_Wifi.cpp      [libandroid_runtime.so]
+                | HAL; refer to #JNI_interfaces 
+                V
+hardware/libhardware_legacy/wifi/wifi.c                 [libhardware_legacy.so] ---> libnetutils
+                | socket; refer to #wifi_c
+                V
+external/wpa_supplicant                                 [wpa_supplicant, libwpa_client.so]
+
+################################################################################
+base/wifi/java/android/net/wifi/
+    WifiManager.java
+        wrapper of WifiService.java
+        WifiLock
+            Allows an application to keep the Wi-Fi radio awake
+            BatteryStatsService does the job
+        MulticastLock
+            Allows an application to receive Wifi Multicast packets
+
+################################################################################
+
+    WifiNative.java 
+        simple JNI wrapper
+
+################################################################################
+frameworks/base/services/java/com/android/server/
+    WifiService.java
+        wrapper of WifiStateTracker.java
+        broadcast intent to system
+        send wifi status to BatteryStatsService
+        power management, control the wakelock
+        tether state
+        wifi persisted setting
+        permission checking
+        screen on/off event
+        handle wifi lock
+
+        construction:
+            private ConnectivityService(Context context)
+                WifiStateTracker wst = new WifiStateTracker(context, mHandler);
+                WifiService wifiService = new WifiService(context, wst);
+                ServiceManager.addService(Context.WIFI_SERVICE, wifiService);
+                wifiService.startWifi();
+                mNetTrackers[ConnectivityManager.TYPE_WIFI] = wst;
+                wst.startMonitoring();
+
+        initialization:
+        WifiService(Context context, WifiStateTracker tracker)
+            // do time-comsuming, enable/start... work in a background thread
+            HandlerThread wifiThread = new HandlerThread("WifiService");
+            wifiThread.start();   
+            mWifiHandler = new WifiHandler(wifiThread.getLooper()); 
+
+################################################################################
+    WifiMonitor
+        Listens for events from the wpa_supplicant server, and passes them on
+        to the {@link WifiStateTracker} for handling. Runs in its own thread.   
+
+        wrapper of mWifiStateTracker
+            mWifiStateTracker.notifySupplicantConnection()
+            mWifiStateTracker.notifyPasswordKeyMayBeIncorrect()
+            mWifiStateTracker.notifySupplicantLost()
+
+        /** Events we receive from the supplicant daemon */
+        private static final int CONNECTED    = 1;
+        private static final int DISCONNECTED = 2;
+        private static final int STATE_CHANGE = 3;
+        private static final int SCAN_RESULTS = 4;
+        private static final int LINK_SPEED   = 5;
+        private static final int TERMINATING  = 6;
+        private static final int DRIVER_STATE = 7;
+        private static final int UNKNOWN      = 8;
+
+        /** All events coming from the supplicant start with this prefix */
+        private static final String eventPrefix = "CTRL-EVENT-";
+
+        /** All WPA events coming from the supplicant start with this prefix */
+        private static final String wpaEventPrefix = "WPA:";
+
+        class MonitorThread extends Thread 
+            public void run()
+                for (;;) {
+                    String eventStr = WifiNative.waitForEvent();
+                    // parser event from string
+                    if (event == STATE_CHANGE) {
+                        handleSupplicantStateChange(eventData);
+                    } else if (event == DRIVER_STATE) {
+                        handleDriverEvent(eventData);
+                    } else if (event == TERMINATING) {
+                        // notify and exit
+                        mWifiStateTracker.notifySupplicantLost();
+                    } else {
+                        handleEvent(event, eventData);
+                    }
+
+################################################################################
+WifiStateTracker
+    extends NetworkStateTracker
+        Each subclass of this class keeps track of the state of connectivity
+        of a network interface. All state information for a network should
+        be kept in a Tracker class. This superclass manages the
+        network-type-independent aspects of network state.
+
+    // Event codes            
+    private static final int EVENT_SUPPLICANT_CONNECTION             = 1;
+    private static final int EVENT_SUPPLICANT_DISCONNECT             = 2;
+    private static final int EVENT_SUPPLICANT_STATE_CHANGED          = 3;
+    private static final int EVENT_NETWORK_STATE_CHANGED             = 4;
+    private static final int EVENT_SCAN_RESULTS_AVAILABLE            = 5;
+    private static final int EVENT_INTERFACE_CONFIGURATION_SUCCEEDED = 6;
+    private static final int EVENT_INTERFACE_CONFIGURATION_FAILED    = 7;
+    private static final int EVENT_POLL_INTERVAL                     = 8;
+    private static final int EVENT_DHCP_START                        = 9;
+    private static final int EVENT_DEFERRED_DISCONNECT               = 10;
+    private static final int EVENT_DEFERRED_RECONNECT                = 11;  
+
+    private static final int EVENT_DRIVER_STATE_CHANGED              = 12;
+        private static final int DRIVER_STARTED                          = 0;
+        private static final int DRIVER_STOPPED                          = 1;
+        private static final int DRIVER_HUNG                             = 2;
+
+    private static final int EVENT_PASSWORD_KEY_MAY_BE_INCORRECT     = 13;
+    private static final int EVENT_MAYBE_START_SCAN_POST_DISCONNECT  = 14; 
+
+    Send notification to NotificationManager
+    Handle DHCP event
+
+    constructor
+        mWifiInfo = new WifiInfo();
+        mWifiMonitor = new WifiMonitor(this);
+        mScanResults = new ArrayList<ScanResult>();
+        mDhcpInfo = new DhcpInfo();
+
+    setScanOnlyMode
+        Set the run state to either "normal" or "scan-only"
+            normal mode
+                SUPPL_SCAN_HANDLING_NORMAL
+            scan-only mode
+                SUPPL_SCAN_HANDLING_LIST_ONLY
+
+        Specifies whether the supplicant or driver take care of 
+            initiating scan 
+            and doing AP selection
+
+    setScanMode
+        set the scan mode - active or passive
+
+    enableRssiPolling
+        check rssi periodically
+        /**
+         * Interval in milliseconds between polling for connection
+         * status items that are not sent via asynchronous events.
+         * An example is RSSI (signal strength).
+         */
+        private static final int POLL_STATUS_INTERVAL_MSECS = 3000;
+
+################################################################################
+
+    /**    
+     * {@link WifiWatchdogService} monitors the initial connection to a Wi-Fi
+     * network with multiple access points. After the framework successfully
+     * connects to an access point, the watchdog verifies whether the DNS server is
+     * reachable. If not, the watchdog blacklists the current access point, leading
+     * to a connection on another access point within the same network.
+     */
+
+WifiConfiguration
+    A class representing a configured Wi-Fi network, including the security configuration. 
+
+    WPA key management
+        With 802.1x, the rekeying of unicast encryption keys is optional. 
+        Additionally, 802.11 and 802.1x provide no mechanism to change the 
+            global encryption key used for multicast and broadcast traffic. 
+
+        With WPA, rekeying of both unicast and global encryption keys is required. 
+            For the unicast encryption key, the Temporal Key Integrity Protocol (TKIP) changes the key for every frame, 
+            and the change is synchronized between the wireless client and the wireless access point (AP). 
+            For the global encryption key, WPA includes a facility for the wireless AP 
+                to advertise the changed key to the connected wireless clients.
+
+    public static class KeyMgmt
+        /** WPA is not used; plaintext or static WEP could be used. */
+        public static final int NONE = 0;
+
+        /** WPA pre-shared key (requires {@code preSharedKey} to be specified). */
+        public static final int WPA_PSK = 1;
+
+        /** WPA using EAP authentication. Generally used with an external authentication server. */
+        public static final int WPA_EAP = 2;
+
+        /** IEEE 802.1X using EAP authentication and (optionally) dynamically
+        * generated WEP keys. */
+        public static final int IEEE8021X = 3;
+
+        public static final String varName = "key_mgmt";
+
+        public static final String[] strings = { "NONE", "WPA_PSK", "WPA_EAP", "IEEE8021X" };
+
+    // Recognized security protocols.
+    public static class Protocol {
+        /** WPA/IEEE 802.11i/D3.0 */
+        public static final int WPA = 0;
+
+        /** WPA2/IEEE 802.11i */
+        public static final int RSN = 1;
+
+        public static final String varName = "proto";
+
+        public static final String[] strings = { "WPA", "RSN" };
+
+
+    // Recognized IEEE 802.11 authentication algorithms.
+    public static class AuthAlgorithm {
+        /** Open System authentication (required for WPA/WPA2) */
+        public static final int OPEN = 0;
+
+        /** Shared Key authentication (requires static WEP keys) */
+        public static final int SHARED = 1;
+
+        /** LEAP/Network EAP (only used with LEAP) */
+        public static final int LEAP = 2;
+
+        public static final String varName = "auth_alg";
+        public static final String[] strings = { "OPEN", "SHARED", "LEAP" };
+    }
+
+    // Recognized pairwise ciphers for WPA.
+    public static class PairwiseCipher
+        private PairwiseCipher() { }
+
+        /** Use only Group keys (deprecated) */
+        public static final int NONE = 0;
+        /** Temporal Key Integrity Protocol [IEEE 802.11i/D7.0] */
+        public static final int TKIP = 1;
+        /** AES in Counter mode with CBC-MAC [RFC 3610, IEEE 802.11i/D7.0] */
+        public static final int CCMP = 2;
+
+        public static final String varName = "pairwise";
+
+        public static final String[] strings = { "NONE", "TKIP", "CCMP" };
+
+
+    /**
+     * Recognized group ciphers.
+     * <pre>
+     * CCMP = AES in Counter mode with CBC-MAC [RFC 3610, IEEE 802.11i/D7.0]
+     * TKIP = Temporal Key Integrity Protocol [IEEE 802.11i/D7.0]
+     * WEP104 = WEP (Wired Equivalent Privacy) with 104-bit key
+     * WEP40 = WEP (Wired Equivalent Privacy) with 40-bit key (original 802.11)
+     * </pre>
+     */
+    public static class GroupCipher {
+        /** WEP40 = WEP (Wired Equivalent Privacy) with 40-bit key (original 802.11) */
+        public static final int WEP40 = 0;
+        /** WEP104 = WEP (Wired Equivalent Privacy) with 104-bit key */
+        public static final int WEP104 = 1;
+        /** Temporal Key Integrity Protocol [IEEE 802.11i/D7.0] */
+        public static final int TKIP = 2;
+        /** AES in Counter mode with CBC-MAC [RFC 3610, IEEE 802.11i/D7.0] */
+        public static final int CCMP = 3;
+
+        public static final String varName = "group";
+
+        public static final String[] strings = { "WEP40", "WEP104", "TKIP", "CCMP" };
+
+    /**
+     * The ID number that the supplicant uses to identify this
+     * network configuration entry. This must be passed as an argument
+     * to most calls into the supplicant.
+     */
+    public int networkId;
+
+    /**
+     * The network's SSID. Can either be an ASCII string,
+     * which must be enclosed in double quotation marks
+     * (e.g., {@code &quot;MyNetwork&quot;}, or a string of
+     * hex digits,which are not enclosed in quotes
+     * (e.g., {@code 01a243f405}).
+     */
+    public String SSID;
+
+    /**
+     * When set, this network configuration entry should only be used when
+     * associating with the AP having the specified BSSID. The value is
+     * a string in the format of an Ethernet MAC address, e.g.,
+     * <code>XX:XX:XX:XX:XX:XX</code> where each <code>X</code> is a hex digit.
+     */
+    public String BSSID;
+
+    /**
+     * Pre-shared key for use with WPA-PSK.
+     * When the value of this key is read, the actual key is
+     * not returned, just a "*" if the key has a value, or the null
+     * string otherwise.
+     */
+    public String preSharedKey;
+
+    /**
+     * Up to four WEP keys. Either an ASCII string enclosed in double
+     * quotation marks (e.g., {@code &quot;abcdef&quot;} or a string
+     * of hex digits (e.g., {@code 0102030405}).
+     * <p/>
+     * When the value of one of these keys is read, the actual key is
+     * not returned, just a "*" if the key has a value, or the null
+     * string otherwise.
+     */
+    public String[] wepKeys;
+
+    /**
+     * Priority determines the preference given to a network by {@code wpa_supplicant}
+     * when choosing an access point with which to associate.
+     */
+    public int priority;
+
+    /**
+     * This is a network that does not broadcast its SSID, so an
+     * SSID-specific probe request must be used for scans.
+     */
+    public boolean hiddenSSID;
+
+    /**
+     * The set of key management protocols supported by this configuration.
+     * Defaults to WPA-PSK WPA-EAP.
+     */
+    public BitSet allowedKeyManagement;
+
+    /**
+     * The set of security protocols supported by this configuration.
+     * Defaults to WPA RSN.
+     */
+    public BitSet allowedProtocols;
+
+    /**
+     * The set of authentication protocols supported by this configuration.
+     * Defaults to automatic selection.
+     */
+    public BitSet allowedAuthAlgorithms;
+
+    /**
+     * The set of pairwise ciphers for WPA supported by this configuration.
+     * Defaults to CCMP TKIP.
+     */
+    public BitSet allowedPairwiseCiphers;
+
+
+##########################################################################################
+# WIFI function porting-WIFI功能移植
+##########################################################################################
+转自http://blog.chinaunix.net/u3/118873/showart_2339509.html
+一、WIFI的基本架构
+
+    1、wifi用户空间的程序和库:
+         external/wpa_supplicant/
+       生成库libwpaclient.so和守护进程wpa_supplicant。
+    2、hardware/libhardware_legary/wifi/是wifi管理库。
+    3、JNI部分：
+         frameworks/base/core/jni/android_net_wifi_Wifi.cpp
+    4、JAVA部分：
+         frameworks/base/services/java/com/android/server/
+         frameworks/base/wifi/java/android/net/wifi/
+    5、WIFI Settings应用程序位于：
+       packages/apps/Settings/src/com/android/settings/wifi/
+ 
+二、WIFI在Android中如何工作
+
+   Android使用一个修改版wpa_supplicant作为daemon来控制WIFI，代码位于
+   external/wpa_supplicant。wpa_supplicant是通过socket与
+   hardware/libhardware_legacy/wifi/wifi.c通信。UI通过android.net.wifi package
+   （frameworks/base/wifi/java/android/net/wifi/）发送命令给wifi.c。
+   相应的JNI实现位于frameworks/base/core/jni/android_net_wifi_Wifi.cpp。
+   更高一级的网络管理位于frameworks/base/core/java/android/net。
+  
+三、配置Android支持WIFI
+
+   在BoardConfig.mk中添加：
+      BOARD_HAVE_WIFI := true
+      BOARD_WPA_SUPPLICANT_DRIVER := WEXT
+  
+    # Huawei T8301  
+    ~/Perforce/pekall/t8301.3.18/device/./HuaWei/T8301/AndroidBoard.mk
+        WIFI_KO_MODULES_PATH := stkernel/t8301-p1/output/targetfs/lib/modules/wifi
+            |-- fw
+            |   |-- version
+            |   |-- x_mac.axf
+            |   `-- x_test.axf
+            |-- mib.bin
+            |-- nano_if.ko
+            `-- nano_trans.ko
+
+        # copy wifi module file to system partition
+        define copy-wifi-modules-to-system-from-local
+        $(foreach f, $(1), \
+        $(eval bf := $(patsubst $(WIFI_KO_MODULES_PATH)/%,%,$(f))) \
+        $(eval PRODUCT_COPY_FILES += $(f):system/lib/modules/wifi/$(bf)))
+        endef
+        # copy local wifi modules files into system/lib/modules/wifi
+        $(call copy-wifi-modules-to-system-from-local, $(shell find $(WIFI_KO_MODULES_PATH) -type f))
+
+   这将在external/wpa_supplicant/Android.mk设置WPA_BUILD_SUPPLICANT为true，
+   默认使用驱动driver_wext.c。
+   如果使用定制的wpa_supplicant驱动(例如 madwifi)，可以设置:
+       BOARD_WPA_SUPPLICANT_DRIVER := MADWIFI
+        # Huawei T8301  
+       ./HuaWei/T8301/BoardConfig.mk
+            BOARD_WPA_SUPPLICANT_DRIVER:= CUSTOM
+       WPA_BUILD_SUPPLICANT := true
+
+四、使能wpa_supplicant调试信息
+
+   默认wpa_supplicant设置为MSG_INFO，为了输出更多信息，可修改：
+   1、在common.c中设置wpa_debug_level = MSG_DEBUG;
+   2、在common.c中把#define wpa_printf宏中的
+      if ((level) >= MSG_INFO)
+      改为
+      if ((level) >= MSG_DEBUG)
+ 
+五、配置wpa_supplicant.conf
+  
+   wpa_supplicant是通过wpa_supplicant.conf中的ctrl_interface=来指定控制socket的，应该在
+   AndroidBoard.mk中配置好复制到$(TARGET_OUT_ETC)/wifi（也就是
+   /system/etc/wifi/wpa_supplicant.conf）
+   # Huawei T8301
+   ctrl_interface=DIR=/data/misc/wifi/wpa_supplicant GROUP=system
+
+   这个位置会在init.rc中再次检测的。
+   一般的wpa_supplicant.conf配置为：
+      ctrl_interface=DIR=/data/system/wpa_supplicant GROUP=wifi
+      update_config=1
+      fast_reauth=1  
+   有时，驱动需要增加：
+      ap_scan=1
+   如果遇到AP连接问题，需要修改ap_scan=0来让驱动连接，代替wpa_supplicant。
+
+   # Huawei T8301, init.rc
+        # nano wlan
+        mkdir /data/misc/wifi 0771 system system
+        mkdir /data/misc/wifi/sockets 0771 system system
+        mkdir /data/misc/wifi/wpa_supplicant  0771 system system
+
+        # Define TCP buffer sizes for various networks
+        #   ReadMin, ReadInitial, ReadMax, WriteMin, WriteInitial, WriteMax,
+        setprop net.tcp.buffersize.default 4096,87380,110208,4096,16384,110208
+        setprop net.tcp.buffersize.wifi    4095,87380,110208,4096,16384,110208
+        setprop net.tcp.buffersize.umts    4094,87380,110208,4096,16384,110208
+        setprop net.tcp.buffersize.edge    4093,26280,35040,4096,16384,35040
+        setprop net.tcp.buffersize.gprs    4092,8760,11680,4096,8760,11680
+
+   如果要连接到non-WPA or open wireless networks，要增加：
+      network={
+              key_mgmt=NONE
+      }
+ 
+六、配置路径和权限
+ 
+   Google修改的wpa_supplicant要运行在wifi用户和组下的。代码可见wpa_supplicant/os_unix.c
+   中的os_program_init()函数。
+  
+   如果配置不对，会出现下面错误：
+      E/WifiHW  (  ): Unable to open connection to supplicant on
+      "/data/system/wpa_supplicant/wlan0": No such file or directory will appear.
+ 
+   确认init.rc中有如下配置：
+       mkdir /system/etc/wifi 0770 wifi wifi
+       chmod 0770 /system/etc/wifi
+       chmod 0660 /system/etc/wifi/wpa_supplicant.conf
+       chown wifi wifi /system/etc/wifi/wpa_supplicant.conf
+       # wpa_supplicant socket
+       mkdir /data/system/wpa_supplicant 0771 wifi wifi
+       chmod 0771 /data/system/wpa_supplicant
+       #wpa_supplicant control socket for android wifi.c
+       mkdir /data/misc/wifi 0770 wifi wifi
+       mkdir /data/misc/wifi/sockets 0770 wifi wifi
+       chmod 0770 /data/misc/wifi
+       chmod 0660 /data/misc/wifi/wpa_supplicant.conf
+ 
+   如果系统的/system目录为只读，那应该使用路径/data/misc/wifi/wpa_supplicant.conf。
+  
+七、运行wpa_supplicant和dhcpcd
+  
+   在init.rc中确保有如下语句：
+      service wpa_supplicant /system/bin/logwrapper /system/bin/wpa_supplicant -dd
+                   -Dwext -iwlan0 -c /data/misc/wifi/wpa_supplicant.conf
+         user root
+         group wifi inet
+      socket wpa_wlan0 dgram 660 wifi wifi
+         oneshot
+      service dhcpcd /system/bin/logwrapper /system/bin/dhcpcd -d -B wlan0
+         disabled
+         oneshot
+ 
+   根据所用的WIFI驱动名字，修改wlan0为自己驱动的名字。
+
+   # Huawei T8301, init.rc
+   开wifi时候，启动wpa_supplicant, dhcpd
+   关wifi时候，关wpa_supplicant, dhcpd
+
+七、编译WIFI驱动为module或kernel built in
+ 
+   1、编译为module
+      # HTC
+      在BoardConfig.mk中添加：
+         WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/ar6000.ko"
+         WIFI_DRIVER_MODULE_ARG := ""  #for example nohwcrypt
+         WIFI_DRIVER_MODULE_NAME := "ar6000"  #for example wlan0 
+         WIFI_FIRMWARE_LOADER := ""         
+  
+   2、编译为kernel built in  
+     1）在hardware/libhardware_legacy/wifi/wifi.c要修改interface名字，
+     2）在init.rc中添加：
+        setprop wifi.interface "wlan0"
+     3）在hardware/libhardware_legacy/wifi/wifi.c中当insmod/rmmod时，
+        直接return 0。
+ 
+八、WIFI需要的firmware
+ 
+   Android不使用标准的hotplug binary，WIFI需要的firmware要复制到/etc/firmware。
+   或者复制到WIFI驱动指定的位置，然后WIFI驱动会自动加载。
+ 
+九、修改WIFI驱动适合Android
+ 
+   Google修改的wpa_supplicant要求SIOCSIWPRIV ioctl发送命令到驱动，及接收信息，例如signal
+   strength, mac address of the AP, link speed等。所以要正确实现WIFI驱动，需要从
+   SIOCSIWPRIV ioctl返回RSSI (signal strength)和MACADDR信息。
+ 
+   如果没实现这个ioctl，会出现如下错误：
+     E/wpa_supplicant(  ): wpa_driver_priv_driver_cmd failed
+                               wpa_driver_priv_driver_cmd RSSI len = 4096 
+     E/wpa_supplicant(  ): wpa_driver_priv_driver_cmd failed 
+     D/wpa_supplicant(  ): wpa_driver_priv_driver_cmd LINKSPEED len = 4096
+     E/wpa_supplicant(  ): wpa_driver_priv_driver_cmd failed 
+     I/wpa_supplicant(  ): CTRL-EVENT-DRIVER-STATE HANGED
+   
+十、设置dhcpcd.conf
+  
+   一般/system/etc/dhcpcd/dhcpcd.conf的配置为：
+      interface wlan0
+      option subnet_mask, routers, domain_name_servers  
+
+   # Huawei 
+      /home/jiangrui/Perforce/pekall/android/new/android/st-android/main2.2/external/dhcpcd/dhcpcd.conf
+      /home/jiangrui/Perforce/pekall/android/new/android/st-android/main2.2/external/dhcpcd/dhcpcd.conf.5
+      /home/jiangrui/Perforce/pekall/android/new/android/st-android/main2.2/external/dhcpcd/dhcpcd.conf.5.in
+      /home/jiangrui/Perforce/pekall/android/new/android/st-android/main2.2/system/wlan/nano/config/android_dhcpcd.conf
+          interface eth0
+          # dhcpcd-run-hooks uses these options.
+          option subnet_mask, routers, domain_name_servers
+      /home/jiangrui/Perforce/pekall/android/new/android/st-android/main2.2/system/wlan/nano_nrx600_softap/config/android_dhcpcd.conf
+      /home/jiangrui/Perforce/pekall/android/new/android/st-android/main2.2/system/wlan/ti/sta_dk_4_0_4_32/config/android_dhcpcd.conf
+      /home/jiangrui/Perforce/pekall/android/new/android/st-android/main2.2/system/wlan/ti/wilink_6_1/config/android_dhcpcd.conf
+
+
+#JNI_interfaces
+JNI interfaces:
+    android_net_wifi_loadDriver 
+    android_net_wifi_unloadDriver 
+    android_net_wifi_startSupplicant 
+    android_net_wifi_stopSupplicant 
+    android_net_wifi_connectToSupplicant 
+    android_net_wifi_closeSupplicantConnection 
+
+    android_net_wifi_waitForEvent 
+
+    android_net_wifi_listNetworksCommand 
+    android_net_wifi_addNetworkCommand 
+    android_net_wifi_setNetworkVariableCommand 
+    android_net_wifi_getNetworkVariableCommand 
+    android_net_wifi_removeNetworkCommand 
+    android_net_wifi_disconnectNetworkCommand 
+    android_net_wifi_enableNetworkCommand 
+    android_net_wifi_disableNetworkCommand 
+    android_net_wifi_statusCommand 
+    android_net_wifi_pingCommand 
+    android_net_wifi_scanResultsCommand 
+    android_net_wifi_disconnectCommand 
+    android_net_wifi_autoConnectCommand 
+    android_net_wifi_reconnectCommand 
+    android_net_wifi_reassociateCommand 
+    doSetScanMode 
+    android_net_wifi_scanCommand 
+    android_net_wifi_setScanModeCommand 
+    android_net_wifi_startDriverCommand 
+    android_net_wifi_stopDriverCommand 
+    android_net_wifi_startPacketFiltering 
+    android_net_wifi_stopPacketFiltering 
+    android_net_wifi_getRssiHelper 
+    android_net_wifi_getRssiCommand 
+    android_net_wifi_getRssiApproxCommand 
+    android_net_wifi_getLinkSpeedCommand 
+    android_net_wifi_getMacAddressCommand 
+    android_net_wifi_setPowerModeCommand 
+    android_net_wifi_setNumAllowedChannelsCommand 
+    android_net_wifi_getNumAllowedChannelsCommand 
+    android_net_wifi_setBluetoothCoexistenceModeCommand 
+    android_net_wifi_setBluetoothCoexistenceScanModeCommand 
+    android_net_wifi_saveConfigCommand 
+    android_net_wifi_reloadConfigCommand 
+    android_net_wifi_setScanResultHandlingCommand 
+    android_net_wifi_addToBlacklistCommand 
+    android_net_wifi_clearBlacklistCommand 
+    android_net_wifi_doDhcpRequest 
+    android_net_wifi_getDhcpError 
+
+#wifi_c
+wifi.c
+    HAL
+    Define driver path, network interface, firmware loader, ...
+        #define WIFI_DRIVER_MODULE_IF_PATH         "/system/lib/modules/wifi/nano_if.ko"
+        #define WIFI_DRIVER_MODULE_TRANS_PATH        "/system/lib/modules/wifi/nano_trans.ko"
+        #define WIFI_DRIVER_MODULE_IF_NAME         "nano_if" 
+        #define WIFI_FIRMWARE_LOADER                 "wlan_loader" 
+        ...
+    
+    Load/unload driver:
+        static int insmod(const char *filename, const char *args)
+            module = load_file(filename, &size);
+            ret = init_module(module, size, args);
+
+        static int rmmod(const char *modname)
+            ret = delete_module(modname, O_NONBLOCK | O_EXCL);
+
+        int wifi_load_driver()
+            // start service nanowifi_wake
+            property_set("ctl.start", "nanowifi_wake");
+
+        int wifi_unload_driver()
+            // start service nanowifi_wake
+            property_set("ctl.start", "nanowifi_sleep");
+
+    DHCP request:
+        int do_dhcp_request(int *ipaddr, int *gateway, int *mask, ...)
+            if (ifc_init() < 0)
+            if (do_dhcp(iface) < 0)
+            ifc_close();
+            get_dhcp_info(ipaddr, gateway, mask, dns1, dns2, server, lease);
+
+        const char *get_dhcp_error_string() 
+            dhcp_lasterror();
+
+    wpa_supplicant:
+        int ensure_config_file_exists()
+            copy /system/etc/wifi/wpa_supplicant.conf to /data/misc/wifi/wpa_supplicant.conf
+
+        int wifi_start_supplicant()
+            // start service wpa_supplicant
+            property_set("ctl.start", "wpa_supplicant");
+
+        int wifi_stop_supplicant()
+            // stop service wpa_supplicant
+            property_set("ctl.stop", "wpa_supplicant");
+
+        int wifi_connect_to_supplicant()
+            property_get("wifi.interface", iface, "eth0");
+            snprintf(ifname, sizeof(ifname), "%s/%s", "/data/system/wpa_supplicant", "eth0");
+            ctrl_conn = wpa_ctrl_open(ifname);
+            wpa_ctrl_attach(monitor_conn);
+
+        int wifi_send_command(struct wpa_ctrl *ctrl, const char *cmd, char *reply, size_t *reply_len)
+            ret = wpa_ctrl_request(ctrl, cmd, strlen(cmd), reply, reply_len, NULL);
+
+        int wifi_wait_for_event(char *buf, size_t buflen)
+            result = wpa_ctrl_recv(monitor_conn, buf, &nread);
+
+        void wifi_close_supplicant_connection()
+            wpa_ctrl_close(ctrl_conn);
+            wpa_ctrl_close(monitor_conn);
+
+        int wifi_command(const char *command, char *reply, size_t *reply_len)
+            return wifi_send_command(ctrl_conn, command, reply, reply_len);
+
+init.rc
+    # nano wlan
+    mkdir /data/misc/wifi 0771 system system
+    mkdir /data/misc/wifi/sockets 0771 system system
+    mkdir /data/misc/wifi/wpa_supplicant  0771 system system
+    mkdir /data/misc/dhcp 0771 dhcp dhcp
+    chown dhcp dhcp /data/misc/dhcp
+
+    # Define TCP buffer sizes for various networks
+    # ReadMin, ReadInitial, ReadMax, WriteMin, WriteInitial, WriteMax,
+    setprop net.tcp.buffersize.wifi    4095,87380,110208,4096,16384,110208
+
+    /data/misc/wifi
+        wpa_supplicant.conf
+            update_config=1
+            ctrl_interface=eth0
+            eapol_version=1
+            ap_scan=1
+            fast_reauth=1
+
+        sockets
+            wpa_ctrl_1697-1
+            wpa_ctrl_1697-0
+
+        wpa_supplicant
+
+
+WAPI 无线AP
+    http://www.isccc.gov.cn/zsgg/08/406483.shtml
+    7、北京联信永益科技股份有限公司
+    WAPI无线接入点 WAPI AP
+    LXP 2008 +48vdc 0.6A
+    2007162001000007
+    2007-9-18
+    有效
+
+    南京智达康: ZN-7100-2DH
+
+    西安西电捷通：WAPI无线接入点IWN A2410 
+
+

@@ -1,0 +1,80 @@
+
+http://docs.huihoo.com/gnu_linux/own_os/driver-keyboard_2.htm
+
+    CPU并不直接和Keyboard进行通信，而是通过一个8042芯片或者其它与之兼容的芯片
+    增加8042这么一个中间层，就可以屏蔽掉不同键盘之间实现的差别，并可以增加新的特性。
+
+    CPU直接和8042芯片进行通信，以实现对整个键盘的控制；
+        键盘从外界输入得到的数据也可以通过8042芯片通知给CPU，然后CPU可以通过8042芯片读取这些数据。
+        另外，CPU也直接向8042芯片发送命令，以使用8042芯片自身所提供的功能。
+
+     键盘自身也有自己的芯片（Intel 8048及其兼容芯片），此芯片的功能主要是检索来
+        自于Key Matrix的外界输入（击键（Press key）或释放键（Release Key））所产生的Scan code，
+        并将这些Scan code存放于键盘自身的内部缓冲；还负责和外部系统（i8042）之间的通信，
+        以及自身的控制（Self Test, Reset, etc）等等。
+
+
+    ------------------------ 
+            8259A
+    ------------------------ 
+        |               |
+        |               |
+        |               |
+      -----           -----
+       cpu <--------> 8042 <------->|
+      -----           -----       -----           ------------
+                                  8048 <----------> key matix
+                                  -----           ------------
+
+击键过程
+    Press key
+    Release key
+    Press key delay
+        Press key和Release key之间的时间段
+ 
+    我们将这2个动作和1个时间段称为一个“击键过程”
+
+Scan code
+    Press Key时
+        产生Scan code，称作Make Code
+    Release Key时
+        产生Scan code，称作Break Code
+
+    Repeat code
+        在这两个动作之间的时间段里，会按照一定的频率产生Repeat code。
+            
+        Repeat code的“产生延迟”设置
+            这个“产生延迟”指的是两次产生“Repeat code”之间的时间间隔，
+                比如,如果"产生延迟"被设置为0.25秒，则当一个键被保持Press状态时，
+                键盘系统会每0.25秒产生一个针对此键的Repeat code。
+
+    同时按下多个键
+        可能对这些按键按下之后会保持一段时间才放开。这时候，键盘总是对你最后发生Press key动作的键产生Repeat code。
+            而对你之前按下而没有松开的键，在它的当前“击键过程”内不会再产生Repeat code，即使在它之后被按下的键都已经完全松开。
+
+            A pressed
+            A repeat
+            ...
+            B pressed
+            B repeat
+            B repeat
+            (not any A repeat)
+            ...
+            B released
+            (not any A repeat)
+            A released
+
+    只要一个键发生了Press key的动作，
+        就一定会产生一个Make code；
+    只要一个键(除了"Pause/Break"键)发生了Rlease key的动作，
+        就一定会产生一个Break code；
+    而对于Repeat Code，则有两个条件，
+        一是，到当前的时刻为止，最后被按下的键；
+        二是，这个最后被按下的键，在被松开之前被按的时间超过键盘所设置的Repeat code“产生延迟”。
+     
+
+
+
+
+
+

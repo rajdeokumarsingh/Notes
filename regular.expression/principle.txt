@@ -1,0 +1,95 @@
+正则表达式引擎
+    原则
+        1. 最先匹配原则
+            The earliest (leftmost) match wins
+            正则表达式引擎从第一个字符开始匹配，只要匹配到第一个字串，就返回
+
+        2. 贪婪模式
+            Standard quantifiers are greedy
+            标准的数量匹配符（如*, +）等，会尽可能多的进行匹配
+
+            非贪婪模式
+                backtracking
+
+
+    两种类型:
+        1. Deterministic Finite Automaton (DFA)
+            决定性有限自动机
+
+            DFAs are faster
+                but lack many of the features of an NFA, such as 
+                    capturing, lookaround, and nongreedy quantifiers.
+
+            工作原理：
+                找到第一个最长的匹配, 不会回溯
+
+        2. Nondeterministic Finite Automaton (NFA)
+            非决定性有限自动机
+
+            two types: 
+                traditional 
+                POSIX
+
+
+字符表示
+    Octal escape: \num
+        \015\012 matches an ASCII CR/LF sequence
+
+    Hex and Unicode escapes: \xnum, \x{num}, \unum, \Unum
+        \x0D\x0A matches an ASCII CR/LF sequence.
+
+    Control characters: \cchar
+        \cH matches Control-H
+
+    [...] and [^...]
+
+    Almost any character: dot (.)
+        matches any character except a newline
+
+    Class shorthands: \w, \d, \s, \W, \D, \S
+        \w word
+            alphanumeric characters plus the underscore
+        \d digit
+        \s white space
+
+        \W NOT word
+        \D NOT digit
+        \S NOT white space
+
+
+    Unicode properties, scripts, and blocks: \p{prop}, \P{prop}
+        匹配unicode中的区块
+            \p{Ll} matches lowercase letters in any Unicode-supported language, such as a or α.
+
+    Anchors and zero-width assertions
+
+        Start of line/string: ^, \A
+
+        End of line/string: $, \Z, \z
+
+        Word boundary: \b, \B, \<, \>
+
+        Lookahead: (?=...), (?!...)
+            foo(?=bar) matches foo in foobar, but not food
+
+        Lookbehind: (?<=...), (?<!...)
+
+
+    Mode modifiers: (?i), (?-i), (?mod:...)
+        use (?i:perl) matches use perl, use Perl, use PeRl, etc
+
+    Comments: (?#...) and #
+        .{0,80}(?#Field limit is 80 chars) 
+            allows you to make notes about why you wrote .{0,80}
+
+    Capturing and grouping parentheses: (...) and \1, \2, etc.
+        将括号中匹配的串保存到\1, \2, ...中
+
+    Grouping-only parentheses: (?:...)
+        grouping但是不保存到\1, \2,...中
+
+
+
+
+
+

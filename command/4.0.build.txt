@@ -1,0 +1,27 @@
+sudo apt-get install libusb-dev
+
+chmod 777 -R *
+. build/envsetup.sh
+lunch
+
+make -j2 # should not be greate than 2
+
+flash W8800 pad:
+    1. shutdown pad
+        1.1 press reset key with a pen 
+        1.2 press power key for 8 seconds
+
+    2. cd image/W8800...
+        # pad with tag 1
+        sudo ./flasher -t ontim_wp8800_h13 -L -e -e /flash0/TOC/ARB_TBL1 -e /flash0/TOC/ARB_TBL2 -c
+
+        # pad with tag 2
+        sudo ./flasher -t ontim_wp8800_hz3 -L -e -e/flash0/TOC/ARB_TBL1 -e/flash0/TOC/ARB_TBL2 -c
+
+    3. insert usb cable to pad
+
+
+PAD格式化:
+    开机时会弹出菜单去格式化内部 SD 卡，如果没有弹出，请进入 CIT ， 
+
+    *#*#2482#*#* ，第一步会自动格式化内部 SD 卡。

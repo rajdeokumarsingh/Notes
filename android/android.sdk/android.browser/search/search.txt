@@ -1,0 +1,46 @@
+
+######################################################################
+# Process of launching search dialog
+######################################################################
+src/com/android/browser/TitleBar.java
+    public boolean onTouchEvent(MotionEvent event) 
+        mBrowserActivity.editUrl();
+                |
+                V
+src/com/android/browser/BrowserActivity.java
+    void editUrl()
+        String url = (getTopWindow() == null) ? null : getTopWindow().getUrl();
+        startSearch(mSettings.getHomePage().equals(url) ? null : url, true, null, false);
+
+    public void startSearch(String initialQuery, boolean selectInitialQuery,
+                Bundle appSearchData, boolean globalSearch)
+        if (appSearchData == null)
+            appSearchData = createGoogleSearchSourceBundle(GOOGLE_SEARCH_SOURCE_TYPE);
+
+        super.startSearch(initialQuery, selectInitialQuery, appSearchData, globalSearch);
+                |
+                V
+base/core/java/android/app/Activity.java
+public void startSearch(String initialQuery, boolean selectInitialQuery, 
+        Bundle appSearchData, boolean globalSearch) {
+    ensureSearchManager();
+        if (mSearchManager != null) return;
+        mSearchManager = new SearchManager(this, null);
+
+    mSearchManager.startSearch(initialQuery, selectInitialQuery, 
+            getComponentName(), appSearchData, globalSearch); 
+
+            mSearchDialog.show(initialQuery, selectInitialQuery, 
+                    launchActivity, appSearchData);
+
+######################################################################
+# Search dialog
+######################################################################
+base/core/java/android/app/SearchDialog.java
+private void createContentView() 
+    mSearchAutoComplete = (SearchAutoComplete) findViewById(
+            com.android.internal.R.id.search_src_text);
+
+
+
+

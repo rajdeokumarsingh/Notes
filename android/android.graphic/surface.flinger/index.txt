@@ -1,0 +1,16 @@
+
+
+important.concepts.txt
+framebuffer.concepts.txt
+surface.flinger.concepts.txt
+
+code.layout.txt
+application.display.java
+
+
+它什么是?
+它包括了那些成员？
+成员间拓朴结构是什么？
+它实现了哪些功能？
+它在系统中的位置？
+进程线程结构？

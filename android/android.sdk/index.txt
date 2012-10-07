@@ -1,0 +1,66 @@
+./checklist.java
+
+./app.fundamentals.txt [done]
+
+./activities.txt [done]
+    ./tasks.stack.txt [done]
+
+./services.txt [done]
+./bound.services.txt
+
+./aidl.txt
+
+./mediaplayer.txt
+
+./process.txt
+    Process and thread
+
+./intent.txt
+    Intents and Intent Filters
+
+./adapter.java
+
+./content.provider.java
+
+dig more:
+    bluetooth
+        ./bluetooth.txt
+
+    file:///home/jiangrui/android/backup/android-sdk/docs/guide/topics/providers/content-providers.html
+    file:///home/jiangrui/android/backup/android-sdk/docs/reference/android/content/BroadcastReceiver.html
+
+    Tasks and Back Stack
+        file:///home/jiangrui/android/backup/android-sdk/docs/guide/topics/fundamentals/tasks-and-back-stack.html
+
+    Application Resources  
+        file:///home/jiangrui/android/backup/android-sdk/docs/guide/topics/resources/index.html
+
+    User Interface
+        file:///home/jiangrui/android/backup/android-sdk/docs/guide/topics/ui/index.html
+
+    Creating Status Bar Notifications
+        file:///home/jiangrui/android/backup/android-sdk/docs/guide/topics/ui/notifiers/notifications.html
+
+    Font
+        ./font.txt
+
+Reference:
+    Intent
+        file:///home/jiangrui/android/backup/android-sdk/docs/reference/android/content/Intent.html
+
+    Manifest 
+        file:///home/jiangrui/android/backup/android-sdk/docs/guide/topics/manifest/
+            activity-element.html
+            intent-filter-element.html
+
+    Market Filters
+        file:///home/jiangrui/android/backup/android-sdk/docs/guide/appendix/market-filters.html
+
+    Supporting Multiple Screens
+        file:///home/jiangrui/android/backup/android-sdk/docs/guide/practices/screens_support.html
+
+    Handling Runtime Changes
+        file:///home/jiangrui/android/backup/android-sdk/docs/guide/topics/resources/runtime-changes.html
+
+
+

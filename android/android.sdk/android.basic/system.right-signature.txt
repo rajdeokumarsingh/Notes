@@ -1,0 +1,74 @@
+Eclipse+ADT 进行android应用签名详解
+http://jojol-zhou.iteye.com/blog/719428
+
+    1. Eclipse工程中右键工程 android tools->Export Signed Application Package
+    2. 选择项目，
+    3. 选择或创建keystore
+    ...
+
+    // FIXME: 这种签名方式还是不能获取到系统的某些权限, 需要使用#anchor_1中方法
+    如download manager中
+    <permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"
+        android:protectionLevel="signatureOrSystem" />
+
+http://developer.android.com/guide/topics/manifest/permission-element.html
+    <permission android:description="string resource"
+        android:icon="drawable resource"
+        android:label="string resource"
+        android:name="string"
+        android:permissionGroup="string"
+        android:protectionLevel=["normal" | "dangerous" | "signature" | "signatureOrSystem"] />
+
+            "signature"     
+                A permission that the system grants 
+                    only if the requesting application is signed with the same certificate 
+                    as the application that declared the permission. 
+
+                If the certificates match, the system automatically grants the permission without 
+                    notifying the user or asking for the user's explicit approval. 
+
+            "signatureOrSystem"
+                A permission that the system grants 
+                    only to applications that are in the Android system image or 
+                    that are signed with the same certificates as those in the system image. 
+                Please avoid using this option, as the signature protection level should be 
+                    sufficient for most needs and works regardless of exactly where applications are installed. 
+                The "signatureOrSystem" permission is used for certain special situations 
+                    where multiple vendors have applications built into a system image 
+                    and need to share specific features explicitly because they are being built together. 
+
+An application can also protect its own components with permissions
+    activities, services, broadcast receivers, and content providers
+    基本思路是:
+        定义一个权限
+            <permission android:name="com.example.project.DEBIT_ACCT" . . . />
+
+        使用这个权限去保护各种资源
+            <activity android:name="com.example.project.FreneticActivity"
+                android:permission="com.example.project.DEBIT_ACCT"
+
+        需要访问资源的应用程序，需要声明使用这个权限。用户在安装的时候需要确认。
+            <uses-permission android:name="com.example.project.DEBIT_ACCT"/>
+
+    for example:
+    <permission android:name="com.example.project.DEBIT_ACCT" . . . />
+    <uses-permission android:name="com.example.project.DEBIT_ACCT" />
+    . . .
+    <application . . .>
+        <activity android:name="com.example.project.FreneticActivity"
+            android:permission="com.example.project.DEBIT_ACCT"
+
+所有的系统属性定义在:
+    ./frameworks/base/core/res/AndroidManifest.xml
+
+#anchor_1
+Android中应用程序如何获得系统签名权限
+http://hi.baidu.com/joec3/blog/item/c1fba2a4119ed7e49152eee7.html
+
+第一个方法简单点，不过需要在Android系统源码的环境下用make来编译：
+    1. 在应用程序的AndroidManifest.xml中的manifest节点中加入android:sharedUserId="android.uid.system"这个属性。
+        不一定需要
+    2. 修改Android.mk文件，加入LOCAL_CERTIFICATE := platform这一行
+    3. 使用mm命令来编译，生成的apk就有修改系统时间的权限了。
+
+

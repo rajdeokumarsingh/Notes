@@ -1,0 +1,20 @@
+
+
+surface系统功能总结：
+    对显示缓冲区的操作和管理
+
+SurfaceFlinger本质上干什么的
+    应用程序通过SurfaceFlinger将自己的“Surface”投掷到屏幕缓冲区。
+
+基本概念：
+    屏幕
+    窗口
+
+    多个窗口如何在屏幕上显示
+
+    FrameBuffer
+        ./framebuffer.concepts.txt
+
+    ./surface.flinger.concepts.txt
+
+

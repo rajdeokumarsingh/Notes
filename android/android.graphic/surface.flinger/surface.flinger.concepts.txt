@@ -1,0 +1,78 @@
+
+What is:
+    Window
+        ./concept.window.txt
+
+        Display
+            ./concept.display.txt
+
+        View
+            ./concept.view.java
+        ViewRoot
+
+    Layer
+    Surface
+
+
+SufaceFlinger主要功能是：
+    1） 将Layers （Surfaces） 内容的刷新到屏幕上
+    2） 维持Layer的Zorder序列，并对Layer最终输出做出裁剪计算。
+    3） 响应Client要求，创建Layer与客户端的Surface建立连接
+    4） 接收Client要求，修改Layer属性（输出大小，Alpha等设定）
+
+    如何投递，投掷物，投递路线，投递目的地
+
+SurfaceFlinger管理对象为：
+    mClientsMap：管理客户端与服务端的连接。
+    ISurface，IsurfaceComposer：AIDL调用接口实例
+    mLayerMap：服务端的Surface的管理对象。
+    mCurrentState.layersSortedByZ ：以Surface的Z-order序列排列的Layer数组。
+    graphicPlane 缓冲区输出管理
+    OpenGL ES：图形计算，图像合成等图形库。
+    gralloc.xxx.so这是个跟平台相关的图形缓冲区管理器。
+        pmem Device：提供共享内存，在这里只是在gralloc.xxx.so可见，在上层被gralloc.xxx.so抽象了。
+
+
+Client对象：一般的在客户端都是通过SurfaceComposerClient来跟SurfaceFlinger打交道。
+
+
+3.1 DisplayHardware &FrameBuffer
+    首先SurfaceFlinger需要操作到屏幕，需要建立一个屏幕硬件缓冲区管理框架。
+    Android在设计支持时，考虑多个屏幕的情况，引入了graphicPlane的概念。
+    在SurfaceFlinger上有一个graphicPlane数组，每一个graphicPlane对象都对应一个DisplayHardware.
+    在当前的Android（2.1）版本的设计中，系统支持一个graphicPlane，所以也就支持一个DisplayHardware。
+
+    4.1 SurfaceFlinger::readyToRun()
+        （1）建立GraphicPanle
+        （2）建立FrameBufferHardware(确定输出目标)
+        初始化：OpenGL ES
+        建立兼容的mainSurface.利用eglCreateWindowSurface。
+        建立OpenGL ES进程上下文。
+        建立主Surface（OpenGL ES）。 DisplayHardware的Init()@DisplayHardware.cpp函数对OpenGL做了初始化，并创建立主Surface。
+
+        为什么叫主Surface，因为所有的Layer在绘制时，都需要先绘制在这个主Surface上，最后系统才将主Surface的内容”投掷”到真正的屏幕上。
+
+        （3） 主Surface的绑定
+            1）在DisplayHandware初始完毕后，hw.makeCurrent()将主Surface，OpenGL ES进程上下文绑定到SurfaceFlinger的上下文中，
+            2）之后所有的SurfaceFlinger进程中使用EGL的所有的操作目的地都是mSurface@DisplayHardware。
+
+    4.2 ThreadLoop
+        (1)handleTransaction(…):主要计算每个Layer有无属性修改，如果有修改着内用需要重画。
+        (2)handlePageFlip()
+            computeVisibleRegions：根据Z-Order序列计算每个Layer的可见区域和被覆盖区域。裁剪输出范围计算-
+            在生成裁剪区域的时候，根据Z_order依次，每个Layer在计算自己在屏幕的可显示区域时，需要经历如下步骤：
+            1）以自己的W,H给出自己初始的可见区域
+            2）减去自己上面窗口所覆盖的区域
+
+        在绘制时，Layer将根据自己的可将区域做相应的区域数据Copy。
+
+        （3）handleRepaint()
+
+            composeSurfaces（需要刷新区域）：
+
+            根据每个Layer的可见区域与需要刷新区域的交集区域从Z-Order序列从底部开始绘制到主Surface上。
+
+        （4）postFramebuffer()
+            （DisplayHardware）hw.flip(mInvalidRegion);
+            eglSwapBuffers(display,mSurface) :将mSruface投递到屏幕。
+

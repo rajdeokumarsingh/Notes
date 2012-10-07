@@ -1,0 +1,102 @@
+
+2.2上的运行方法
+start --plan Performance --package android.performance3
+
+start --plan Android -p android.app.cts.DownloadManagerTest
+
+start --plan Android -t android.app.cts.DownloadManagerTest#testCase1
+
+
+Hi Zhidong：
+我就是从网上下载的Android 4.0.3 R2 Compatibility Test Suite (CTS)，链接如下：
+http://source.android.com/compatibility/downloads.html
+附件是我写的CTS测试说明文档，可以参考一下！
+
+
+CTS测试步骤
+
+1、在终端进入../ android-cts/tools目录；
+2、运行./cts-tradefed；
+3、此时进入CTS测试模式：
+cts_tf >
+
+4、可以在cts_tf> 中输入help查看命令列表及使用说明，这里介绍一下主要使用到的几个命令：
+Run:
+    run cts --plan test_plan_name: 
+        test_plan_name可以在../android-cts/repository/plans下面查到，CTS与CTS_TF都是全用例测试；
+        也可以自己增加test_plan_name，将需要测试的package加入到xml文件中即可；
+
+    run cts --package/-p : 
+        单独测试某一个package，不使用plan；
+    run cts --class/-c [--method/-m] : 
+        单独测试某一个class；
+
+    run cts --continue-session session_ID: 
+        重新测试之前测试过的未完成的case，这个在全用例测试时很有用，因为不是每次全用例测试都能顺利的全部跑完，
+        使用这个命令可以把未跑完的重跑一遍。也可以将全用例测试结果中fail的case修改为notExecuted，然后重跑；
+
+    run cts [options] --serial/s device_ID: 
+        在指定的device上跑CTS；
+
+List:
+    l/list d/devices: 
+        list connected devices and their state
+
+    l/list packages: 
+        list CTS test packages
+    l/list p/plans: 
+        list CTS test plans
+
+    l/list i/invocations:
+        list invocations aka CTS test runs currently in progress
+
+    l/list c/commands:
+        list commands: aka CTS test run commands currently in the queue waiting to be allocated devices
+
+    l/list r/results:
+        列出CTS测试结果，多用在已跑了多个CTS结果，需要在其中一个上完成还未跑完的case，获取到session_ID后，可使用与 run cts --continue-session session_ID
+    命令；
+
+跑某一条case的例子：
+    run cts --class android.graphics.cts.BitmapRegionDecoderTest -m testDecodeRegionInputStream
+
+    run cts --class android.webkit.cts.WebSettingsTest -m testUserAgentString_default
+
+
+    跑的是android.graphics.cts.BitmapRegionDecoderTest类中的testDecodeRegionInputStream case；
+
+5、CTS测试的结果会在../android-cts/repository/results中，根据开始跑CTS的时间会生成一个文件夹。
+6、每跑完一次之后都要退出cts_tf>，重新./cts-tradefed；
+
+
+开始跑CTS全用例之前要注意以下事项
+① 进入Settings/Language & keyboard/Select language，选择English(United States)
+② 进入Settings/Language & keyboard，只选择Android keyboard输入法（去掉其他所有输入法）
+③ 如果手机开机后，发现没有TTS，则需要Download TTS files(或者直接安装“SpeechSynthesisDataInstaller.apk”)：Settings/Language&input/Text-to-speech output/Settings/Language选择English(United States) .
+④ 确保SDCard正常mount
+⑤ 进入Settings/Display/Sleep，选择最大值
+⑥ 进入Settings/Developer options/，选中"Stay Awake"、"Allow mock locations" 以及 "User Debugging"
+⑦ 将用来测试的SIM卡写上本机号码（需要用可写Sim号码的手机先写一下。7210平台手机均可写‘本机号码’）
+
+⑧ Install CtsDelegatingAccessibilityService.apk（这个apk在./ android-cts/repository/testcases中）
+adb install -r android-cts/repository/testcases/ CtsDelegatingAccessibilityService.apk
+进入 Settings/Accessibility，将 Delegating Accessibility Service打开；
+
+
+⑨ 设置手机的APN为cmnet；
+安装CtsDeviceAdmin.apk（这个apk在./ android-cts/repository/testcases中）
+adb install -r android-cts/repository/testcases/ CtsDeviceAdmin.apk
+进入Settings/Security/Device administrators中，选中android.deviceadmin.
+
+
+10 跑mediastress case时，需要将android-cts-media-1.0中的视频文件拷贝的T卡当中，方法如下：
+从Perforce服务器192.168.0.88上，下载//depot/resource/cts/android-cts-media-1.0.zip文件并解压缩，可以查看其中的README.txt说明。
+a). 连接adb；
+b). 进入到android-cts-media-1.0文件夹下，在命令行下修改copy_media.sh 文件的属性：chmod 544 copy_media.sh
+c). 运行copy_media.sh
+脚本；
+默认情况下直接运行：./copy_media.sh
+如果手机支持的最大播放视频文件尺寸为720x480时, 运行命令为： ./copy_media.sh 720x480
+如果不确定手机支持的最大播放视频文件尺寸，可以运行./copy_media.sh 1920x1080，这样会把android-cts-media-1.0文件夹下所有的视频文件都拷贝到SD卡下面；
+
+

@@ -1,0 +1,21 @@
+如何在Opencore的log打印方式
+
+如何打开opencore里的log
+
+1.将文件 external/opencore/oscl/oscl/osclbase/src/pvlogger.h 里
+    PVLOGGER_INST_LEVEL 全部定义为5
+    PVLOGGER_ENABLE 全部定义为1
+
+2.在/sdcard/建立一个文件 pvlogger.txt，将8写入，echo 8 >/sdcard/pvlogger.txt
+
+
+但是这里有个问题，就是按照上述步骤更改以后编译出来的库，其他地方的log全部能打印，但是component里面的却没法打印。
+根据opencore的邮件组，component里面的PVLOGGER_LOGMSG方式无法将消息正常打印出来，是由一个bug引起的。
+我们有一个walk around。
+
+采用LOGE来打印debug信息。
+具体做法是包含log.h，logd.h，android_log.h，uio.h文件到你的文件夹中，在你的文件中加入
+#define LOG_TAG "xxxx"
+#include "log.h"
+然后用LOGE打印，即可。
+

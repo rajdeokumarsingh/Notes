@@ -1,0 +1,44 @@
+
+1 byte = 8 bits
+
+0x04D2
+Most Significant Bit
+    高字节前
+    低位  00 00 04 D2 高位
+    sparc, java 
+LSB（Last Significant Bit）
+    低字节前
+    低位 D2 04 00 00 高位
+    Intel
+    小倒大正
+
+
+查一个库文件的依赖:
+objdump -x libmyapp.so | grep NEEDED
+
+
+wireshark拷贝完整的html文件:
+    1. 点击一个http传输
+    2. Follow TCP Stream
+    3. 选择raw
+    4. 保存为a.tmp
+
+    5. 去掉a.tmp中的http头部信息, 仅仅保留http实体部分。注意头部信息中的一下两个字段：
+        Content-Encoding: gzip
+        Content-Length: 9339
+
+        可以用工具vim, ghex
+        注意删除gzip部分前后的0x0D回车，换行(0x0A)
+
+    6. 修改完成后的a.tmp长度应为Content-Length, 重命名为a.gz
+
+    7. 解压a.gz即可得到完整的html文件
+
+
+编辑二进制文件:
+    1. vim -b your_file (-b 是二进制模式，一定要，否则文件大小会变)
+    2. 然后“:%!xxd”就可以转换为16进制，注意要编辑左边的hex，改写右边的文本没用！和Ultraedit严重不同
+    3. 编辑好了再“:%!xxd -r”转换回文本模式":wq"存盘退出。
+
+
+

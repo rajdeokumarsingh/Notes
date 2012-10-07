@@ -1,0 +1,67 @@
+﻿Android Media Scanner
+
+
+MediaScannerService create MediaScanner--»
+MediaScanner.scanDirectories()  //for each of the specified directories
+    |
+    V (JNI to C++)
+processDirectory() which wrap MyMediaScannerClient-»
+native MediaScanner.processDirectory()  (currently part of opencore)--»
+doProcessDirectory()--»    //recurses over the folder
+native MyMediaScannerClient.scanFile()    //for every file whose extension matches
+    |
+    V (JNI back to Java)
+MediaScannerClient.scanFile--»doScanFile().........MyMediaScannerClient.endFile()--»insert info to database---»done!
+    |                                                                     ^ (return)
+    V (JNI to C++)                                                        |
+MediaScanner.processFile()    //calls one of several methods depending on the type of the
+                                                //file: parseMP3, parseMP4, parseMidi, parseOgg or parseWMA.
+                                                //each of these methods gets metadata key/value pairs from the file,
+                                                //and repeatedly calls
+--»native MyMediaScannerClient.handleStringTag
+    |
+    V(JNI back to Java)
+handleStringTag()    //gathers the key/value pairs that it's interested in.
+
+各个文件的进程结构
+
+音乐播放器在播放歌曲时会显示一个专辑的图片， 这个图片其实就是和音乐文件放在同一个目录的图片文件。
+
+相关实现：
+sdcard中有两个文件夹，每个中有一个音乐文件和一张图片
+
+数据库：
+sqlite3 /data/data/com.android.providers.media/databases/external-e24c2325.db
+sqlite» .tables
+album_art            audio                search             
+album_info           audio_genres         searchhelpertitle  
+albums               audio_genres_map     thumbnails         
+android_metadata     audio_meta           video              
+artist_info          audio_playlists      videothumbnails    
+artists              audio_playlists_map
+artists_albums_map   images            
+
+sqlite» select * from albums;
+album_id    album_key                                    album          
+----------  -------------------------------------------  ---------------
+1          Â × ß ß ß -2144216624  怀念张雨生
+2           -2144216624«unknown»                        «unknown»      
+3            american englis
+4          ß
+             ß ¶ ³ ­ 691196735    天使的翅膀
+
+
+sqlite» select * from album_art;
+album_id    _data                            
+----------  ---------------------------------
+3           /sdcard/albumthumbs/1282725008189
+4           /sdcard/albumthumbs/1282726202867
+
+sqlite» select * from album_info;
+_id         album             album_key                                                      minyear     maxyear     artist            artist_id   artist_key                                          numsongs    album_art                        
+----------  ----------------  -------------------------------------------------------------  ----------  ----------  ----------------  ----------  --------------------------------------------------  ----------  ---------------------------------
+3           american english -2144216624                          american english  3            1           /sdcard/albumthumbs/1282725008189
+4           天使的翅膀  ß
+                          ß ¶ ³ ­ 691196735                                              安琥            4          ¬ Â                                         1           /sdcard/albumthumbs/1282726202867
+
+

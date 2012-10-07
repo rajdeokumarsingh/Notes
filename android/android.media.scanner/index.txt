@@ -1,0 +1,58 @@
+code layout:
+    provider
+        packages/providers/MediaProvidersrc/com/android/providers/media/
+            |-- MediaScannerReceiver.java
+                broadcast receiver 
+                    系统扫描的入口
+
+                    Intent.ACTION_BOOT_COMPLETED
+                        开机完成后，启动MediaScannerService扫描整个内部文件系统
+
+                    Intent.ACTION_MEDIA_MOUNTED
+                        SD card挂载上后，启动MediaScannerService扫描整个外部文件系统
+
+                    Intent.ACTION_MEDIA_SCANNER_SCAN_FILE
+                        接受应用，如download, file manager等等发送的扫描请求
+                        启动MediaScannerService, 扫描外部文件系统中某个目录或文件
+
+            |-- code/MediaScannerService.java
+                提供scan的服务， 接口包括扫描文件，目录, 整个内部/外部文件系统
+                扫描前后会广播开始/结束intent
+
+            |-- code/MediaProvider.java
+                所有媒体的content provider
+                关于媒体的所有meta信息可参考MediaStore
+
+            |-- MediaThumbRequest.java
+                创建/更新图片和视频的thumbnail 
+                并创建/更新DB中thumbnail相关内容
+
+    framework
+        base/core/java/android/provider/
+            code/MediaStore.java
+            各种媒体有哪些meta信息
+
+        frameworks/base/media/java/android/media/
+            code/MediaScanner.java
+
+        frameworks/base/media/libstagefright/
+            code/StagefrightMediaScanner.cpp
+
+android.media.scanner.txt
+
+clues:
+    base/core/java/android/webkit/MimeTypeMap.java
+        public static MimeTypeMap getSingleton() {
+            if (sMimeTypeMap == null) {
+            ...
+            //added aac type
+            sMimeTypeMap.loadEntry("audio/aac", "aac");
+
+    //depot/android/imc-android/xmm2231/main2.2/android/frameworks/base/media/libstagefright/MediaDefs.cpp#2
+        const char *MEDIA_MIMETYPE_AUDIO_AAC_ADTS = "audio/aac-adts";
+
+    framework
+    libmedia
+    libstagefright
+
+

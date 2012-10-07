@@ -1,0 +1,147 @@
+
+top -m 10 -d 1 -t
+
+tcpdump -i any -s 0 -vvv -w /data/local/
+
+调整进程的优先级:
+Usage: renice {{-n INCREMENT} | PRIORITY} [[-p | -g | -u] ID...]
+Change scheduling priority for a running process
+Options:
+-nullAdjust current nice value (smaller is faster)
+-processProcess id(s) (default)
+-gidProcess group id(s)
+-UsageProcess user name(s) and/or id(s)
+
+
+################################################################################
+sudo ‘command not found’
+
+原来Debian在编译sudo包的时候默认开启了- -with-secure-path选项，在我机器上这个完整的选项是： - -with-secure-path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin: /sbin:/bin:/usr/X11R6/bin"。当sudo时$PATH变量就会被secure-path所代替，所以即便你更改/etc /environment中的PATH也没有用。此问题由来已久，没想到在lenny中仍然存在。
+后来有一个sudo options SECURE_PATH可以override此内置设置，在/etc/sudoers文件内增加这么一行：
+Defaults secure_path="/bin:/usr/bin:/usr/local/bin:..."
+################################################################################
+
+# check audio driver information
+cat /dev/sndstat 
+
+# calendar
+cal
+
+
+# 查看开机到当前的时间
+uptime
+java System.Clock.elipse..time
+
+#全局查找文件
+locate *.wav
+
+# delete all xml files except "strings.xml"
+find . -name '*.xml' -o ! -name 'strings.xml' |xargs rm -rf
+
+free -m  #查看内存占用
+free -m -t #看内存占用并统计
+free -n -t -s 2  #看内存占用并统计，每两秒刷新一次
+
+vmstat -s  #看内存的使用状况
+
+3.
+top  #看进程的CPU排名
+top -d 1  #看排名的时候1秒刷新一次
+top  进入后按1，可以看见每个cpu的执行情况
+top  进入后按f,按j，按空格，可以看见进程在哪个CPU上执行
+按W(大写)，可以将TOP的设置保存下来
+
+4.
+ps -ef  #看完整的进程信息
+ps -eLf  #如果每个进程不显示其中的线程，则L参数可以显示每个线程
+ps -eo ppid,pid,user,args,%mem,vsz,rss --sort rss   #显示进程名，内存占用，虚拟内存，物理内存，并按照物理内存使用量排序
+ps -eo ppid,pid,user,args,%mem,vsz,rss --sort vsz   #显示进程名，内存占用，虚拟内存，物理内存，并按照虚拟内存使用量排序
+(虚拟内存和物理内存使用很大都可能产生大量碎片)
+
+ps -eo pid,user,wchan=WIDE-WCHAN-COLUMN -o s,cmd|awk ' $4 ~ /D/ {print $0}' 查看哪个进程在iowait中
+5.
+iostat -p 2  #分别显示每个分区的IO，每2秒刷新一次
+
+1、ps查看内存信息
+
+RSS -- 进程本身的内存占用
+VSZ -- 算上共享库的总占用
+ps -eo pid,user,comm,args,%cpu,%mem,rss,vsz,sz
+查看内存、CPU
+ps -fewL|grep face_svr
+ps -fp $(pgrep -d, face_svr)
+
+top c
+VIRT 使用的虚拟内存总量, VIRT=SWAP+RES
+RES  使用的、未被换出的物理内存大小, RES=CODE+DATA
+SWAP 使用的虚拟内存中被换出的大小
+SHR  共享内存大小
+CODE 可执行代码占用的物理内存大小
+DATA 可执行代码以外的部分(数据段+栈)占用的物理内存大小
+%MEM 使用的物理内存百分比, =RES/总共内存大小
+
+2、查看指定进程名的信息
+
+ps -fp $(pgrep -d, -fx ./httpd)
+
+3、精确计算进程数
+
+proc_num=$(pgrep -x $proc | wc -l)
+
+4、数据库操作
+
+mysqldump group_filter -uroot -proot@105 --default-character-set=latin1  --extended-insert=false
+mysql -uroot -e "select fpath, lloccode into outfile '/data/dump_data/$db_idx.$t.txt' from picdata_$db_idx.album_photolist_$t where lloccode like '^%';"
+
+unix时间转换
+select now();
+select from_unixtime(1238373217);
+select unix_timestamp('2009-03-30 08:33:37')
+
+5、exclude 压缩
+
+-----注意子目录不要加最后的/
+tar  --exclude=qhttpd/log   -cfvz qhttpd.tgz  qhttpd (错误)
+tar  --exclude=log   -cfvz qhttpd.tgz  qhttpd   (正确，不能跟路径，仅能跟文件名，如果子目录有同名，则一起不包括)
+
+6、自启动修改共享内存最大值
+
+sysctl -w kernel.shmmax = 4294967295
+
+7、增加www用户
+
+#useradd  -s /bin/false -d /dev/null www
+useradd  -s /bin/false www
+groupadd www
+
+8、本机IP
+
+LOCALHOST=`ifconfig|grep eth1 -A1|sed -n '2p'|awk -F":" '{print $2}' |awk -F" " '{print $1}'`
+cat ifcfg-eth0|grep IP|awk -F\' '{printf $2 "\n"}'
+
+9、lsof常用的用法：
+
+lsof abc.txt 显示开启文件abc.txt的进程
+lsof -i :22 知道22端口现在运行什么程序
+lsof -c abc 显示abc进程现在打开的文件
+lsof -g gid 显示归属gid的进程情况
+lsof +d /usr/local/ 显示目录下被进程开启的文件
+lsof +D /usr/local/ 同上，但是会搜索目录下的目录，时间较长
+lsof -d 4 显示使用fd为4的进程
+lsof -i 用以显示符合条件的进程情况
+
+10、查看常用命令的位置
+
+which mysql 或者 whereis mysql
+
+11、vmstat
+
+procs
+r--在运行队列中等候运行。展示了正在执行和等待CPU资源的任务个数。当这个值超过了CPU数目，就会出现CPU瓶颈了
+b--被资源阻塞(I/0，页面调度，等等.)
+w--可运行但是被换出的
+
+cpu 表示cpu的使用状态
+cs--》用户进程使用的时间
+sy--》系统进程使用的时间
+id--》cpu空闲的时间

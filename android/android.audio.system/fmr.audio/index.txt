@@ -1,0 +1,28 @@
+./add_fm_dev.cpp
+
+flow:
+./fmr.on.flow.cpp
+./set.volume.flow.cpp
+./set.routing.flow.cpp
+
+code layout:
+./code.layout.cpp
+./code.layout.HAL.cpp
+
+./code.to.read.txt
+
+
+another clue:
+    AudioSystem::FM:
+    STRATEGY_PHONE:
+    SET_FM_VOLUME:
+
+AudioFlinger::AudioFlinger()
+    从工作的角度看，AudioFlinger 在初始化之后，首先获得放音设备，然后为混音器
+    （Mixer）建立线程，接着建立放音设备线程，在线程中获得放音设备。
+    在AudioFlinger的 AudioResampler.h中定义了一个音频重取样器工具类，如下所示：
+
+    android.media.AudioSystem：负责Audio系统的总体控制；
+    android.media.AudioTrack：负责Audio系统的输出环节；
+    android.media.AudioRecorder：负责Audio系统的输入环节。
+

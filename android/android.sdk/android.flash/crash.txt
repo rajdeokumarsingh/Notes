@@ -1,0 +1,61 @@
+I/DEBUG   ( 1369): *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+I/DEBUG   ( 1369): Build fingerprint: 'HUAWEI/T8100/T8100/TD6719:2.2.2/20110704-1264/20110704.094851:user/release-keys'
+I/DEBUG   ( 1369): pid: 3267, tid: 3275  >>> com.android.browser <<<
+I/DEBUG   ( 1369): signal 4 (SIGILL), fault addr 820ebb46
+I/DEBUG   ( 1369):  r0 82696d28  r1 0000000b  r2 820ebb47  r3 005c99c0
+I/DEBUG   ( 1369):  r4 82696d2c  r5 0000000b  r6 00000004  r7 00000000
+I/DEBUG   ( 1369):  r8 4502eda0  r9 42963ecc  10 42963eb4  fp 000a39f8
+I/DEBUG   ( 1369):  ip 820000dc  sp 4502e450  lr b0001169  pc 820ebb46  cpsr 80010030
+I/DEBUG   ( 1369):          #00  pc 000ebb46  /data/data/com.adobe.flashplayer/lib/libflashplayer.so
+I/DEBUG   ( 1369):          #01  lr b0001169  /system/bin/linker
+I/DEBUG   ( 1369): 
+I/DEBUG   ( 1369): code around pc:
+I/DEBUG   ( 1369): 820ebb24 e9d43301 e9cc6700 f8d06700 4494c01c 
+I/DEBUG   ( 1369): 820ebb34 428b3a08 7b00ed8c bcd0d3eb bf004770 
+I/DEBUG   ( 1369): 820ebb44 bf004b5f b410a100 185b4c5e a91eb09f 
+I/DEBUG   ( 1369): 820ebb54 59184a5d 0c00f04f 189a4c5c c004f8cd 
+I/DEBUG   ( 1369): 820ebb64 0d78f841 e882c903 a91e0003 f1025918 
+I/DEBUG   ( 1369): 
+I/DEBUG   ( 1369): code around lr:
+I/DEBUG   ( 1369): b0001148 2a002601 1e48d003 18e40083 00b64276 
+I/DEBUG   ( 1369): b0001158 e0061c0d 19a46823 32031e5a 4798d800 
+I/DEBUG   ( 1369): b0001168 2d003d01 bd70dcf6 1c03b510 1c0433e8 
+I/DEBUG   ( 1369): b0001178 28006818 3304d004 22016819 ffdef7ff 
+I/DEBUG   ( 1369): b0001188 682334f4 d0002b00 bd104798 47702000 
+I/DEBUG   ( 1369): 
+I/DEBUG   ( 1369): stack:
+I/DEBUG   ( 1369):     4502e410  82002158  /data/data/com.adobe.flashplayer/lib/libflashplayer.so
+I/DEBUG   ( 1369):     4502e414  b0001599  /system/bin/linker
+I/DEBUG   ( 1369):     4502e418  ffffffff  
+I/DEBUG   ( 1369):     4502e41c  00000000  
+I/DEBUG   ( 1369):     4502e420  82696000  /data/data/com.adobe.flashplayer/lib/libflashplayer.so
+I/DEBUG   ( 1369):     4502e424  b0015854  
+I/DEBUG   ( 1369):     4502e428  82696000  /data/data/com.adobe.flashplayer/lib/libflashplayer.so
+I/DEBUG   ( 1369):     4502e42c  b0002187  /system/bin/linker
+I/DEBUG   ( 1369):     4502e430  b00110c8  
+I/DEBUG   ( 1369):     4502e434  0000016b  
+I/DEBUG   ( 1369):     4502e438  0000a9ba  [heap]
+I/DEBUG   ( 1369):     4502e43c  82003678  /data/data/com.adobe.flashplayer/lib/libflashplayer.so
+I/DEBUG   ( 1369):     4502e440  82002243  /data/data/com.adobe.flashplayer/lib/libflashplayer.so
+I/DEBUG   ( 1369):     4502e444  b0011154  
+I/DEBUG   ( 1369):     4502e448  df002777  
+I/DEBUG   ( 1369):     4502e44c  e3a070ad  
+I/DEBUG   ( 1369): #00 4502e450  b00111ac  
+I/DEBUG   ( 1369):     4502e454  b00111b8  
+I/DEBUG   ( 1369):     4502e458  00002736  
+I/DEBUG   ( 1369):     4502e45c  b0001229  /system/bin/linker
+I/DEBUG   ( 1369):     4502e460  b00157e0  
+I/DEBUG   ( 1369):     4502e464  afd00000  /system/lib/libc.so
+I/DEBUG   ( 1369):     4502e468  0000002e  
+I/DEBUG   ( 1369):     4502e46c  b00110c8  
+I/DEBUG   ( 1369):     4502e470  b00110c8  
+I/DEBUG   ( 1369):     4502e474  00002736  
+I/DEBUG   ( 1369):     4502e478  00002736  
+I/DEBUG   ( 1369):     4502e47c  b0002815  /system/bin/linker
+I/DEBUG   ( 1369):     4502e480  b00110c8  
+I/DEBUG   ( 1369):     4502e484  0000002e  
+I/DEBUG   ( 1369):     4502e488  82000000  /data/data/com.adobe.flashplayer/lib/libflashplayer.so
+I/DEBUG   ( 1369):     4502e48c  b00110d0  
+I/DEBUG   ( 1369):     4502e490  00000000  
+I/DEBUG   ( 1369):     4502e494  a83b28c5  /system/lib/libwebcore.so
+

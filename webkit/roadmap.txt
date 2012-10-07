@@ -1,0 +1,20 @@
+benchmark
+    搞清楚重点
+    搞清楚基本概念
+    搞清楚基本的组成部件
+
+    benchmark/index.txt
+
+loader
+
+html parsing
+    dom tree生成
+
+render tree 生成
+
+js binding
+
+Glue:
+    webview
+    WebViewCore
+

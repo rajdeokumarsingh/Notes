@@ -1,0 +1,49 @@
+http://www.kunli.info/2011/11/17/view-android-native-code-profiling/
+
+如何对Android的本地代码进行profiling
+
+现在用Android native code写程序库的人越来越多。对于那些需要写的库实时性要求特别强的应用，通过profiling来进行优化是一个非常有用的特性，因为它能帮你理解程序编译后的本质，比如多少instruction，哪些method调用多少次，多长时间，等等。
+
+Android开发环境提供了Traceview这样一个工具，可以点到这个链接里面去看官方对他的介绍。总的来说，就是它提供给程序开发者目标程序的执行日志，以此帮助你调试程序和优化性能。有两种方法能够声称traceview所需的log，一种是利用DDMS的profiling特性，通过控制什么时候开始和结束logging来获得log。这个方法在你没有程序源代码的时候有用，因为只需要Run程序就能获得log信息，但是没有精准的起始中止控制。另一种是通过将Android自带的Debug类加到code中，然后调用里面的method来开始和中止trace信息的纪录。这个方法能让开发者非常精准地控制什么时候开始纪录，什么时候结束纪录，因为开始和技术都是在code中执行的。
+
+对于Java程序来说，官方网页介绍了一个标准流程，就是在程序中引入Debug类，然后在你想要开始纪录profiling信息的时候调用startMethodTracing()，然后在准备结束的时候调用stopMethodTracing()方法。纪录的log文件默认放在sdcard中。
+
+然而对于本地native代码，该方法就无效了。原因是这个方式只能trace你的java层的方法和其对Android API的调用，却无法trace Android API背后的那些方法，也无法trace你自己写的native code。如果你希望trace这些更底层的代码，就需要用Debug类提供的Debug.startNativeTracing()和 Debug.stopNativeTracing()。而且，这个配对只能工作的虚拟机emulator中，因为只有trace qemu emulator，才能去trace每一个进程的每一条cpu指令，甚至包括内核的代码，我们也才能获得更多的信息比如context switch，cache misses。
+
+下面就来看看，利用该方法对来profile native code是怎样一个流程：
+
+1. 新建一个Android Virtual Device，给一个名字，比如Profile。可以在AVD manager中创建。
+
+2. 在命令行中通过命令”emulator -avd -trace
+” 来运行该AVD。比如emulator -avd Profile -trace myTrace。
+
+3. 将startNativeTracing()和stopNativeTracing()添加到你想profile的代码中。
+
+4. 在Eclipse中build代码，确保没有错误。安装到正在运行的AVD中。
+
+5. 去AVD中运行代码，确保你希望trace的代码段正常运行了。如果你观察运行AVD的那个terminal的窗口，应该会有比如“–start tracing–” 和 “–stop tracing–”这样的消息出现，这就说明代码正常运行了。
+
+6. App运行完毕后，退出emulator。
+
+7. 去你的用户目录找trace文件。这个目录是存储你AVD settings的目录，默认一般都在/Home/User/.android/avd/下。这个User是你自己的用户名，如果你是用的Mac或者Linux，这个路径也就是~/.android/avd。
+
+8. 找到和你AVD名字对应的文件夹，里面有另一个子文件夹，命名就是你的trace名字，比如这里就是myTrace。里面的文件包括：
+
+    qtrace.bb
+    qtrace.exc
+    qtrace.insn
+    qtrace.method
+    qtrace.pid
+    qtrace.static
+
+9.你需要用tracedmdump这个工具来将这些文件转化为符合Traceview格式的文件。问题在于，坑爹的Android SDK/NDK环境不原生提供这个工具。所以……..请看下一步
+
+10. 好吧，这个工具来自于Android的源代码环境。那我们需要做的，就是下载整个Android源代码，编译。这个过程通常会持续……一个小时以上。请参考官方手册来进行编译。如果你使用的是Linux，恭喜你，什么别的资料都不用找，就一步一步按照手册来就行了。如果你是Mac用户……哥们，还是按照官方手册来吧，但过程就听天由命了。
+
+11. Okay，假设到这里，你已经完成了整个Android源代码的编译。接下来，在源代码的根目录下运行“source build/envsetup.sh”，然后将根目录下的/out/host/xxxx/bin加到PARH路径中。xxx表示你的编译平台。这下你就可以run tracedmdump了。开一个终端，执行“tracedmdump ~/.android/avd/Profile/myTrace/”，tracedmdump去分析刚才那些五花八门的二进制文件，挖掘里面的symbolic信息，然后将其和trace数据对应。等一小会，就可以得到instruction的信息，并会生成一个更详细的包括所有profiling信息的html文档，这个文档和Traceview兼容的，可以直接打开，也可以用Traceview工具分析。
+
+这样，整个profiling过程就结束了。需要注意一点的是，这个方法和method tracing比有一个局限，就是因为工作在真实设备上，所以emulator不能模拟所有的真实设备效果，比如memory contention和bus contention，同时也无法模拟真实的cache效果，因为emulator中的cache设计是大大简化了的。
+
+
+
+

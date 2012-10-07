@@ -1,0 +1,8 @@
+
+man 7 capabilities
+
+
+CAP_SYS_PTRACE
+    Trace arbitrary processes using ptrace(2)
+
+    有了这个权限，可以读取其他进程的/proc/pid/fd(或更多)下的信息

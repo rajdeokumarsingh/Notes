@@ -1,0 +1,4 @@
+1. question: can't import android.os.SystemProperties in Camera app
+
+2.  I found why! In Camera/Android.mk, LOCAL_SDK_VERSION := current, 
+this prevent us using the HIDE interface. Comment this line will make compile pass. 

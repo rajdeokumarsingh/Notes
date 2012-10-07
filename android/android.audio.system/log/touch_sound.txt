@@ -1,0 +1,44 @@
+
+E/AudioSystem( 1556): getOutput() read 1 from cache for stream 1
+E/AudioSystem( 1556): getOutputFrameCount() streamType 1, output 1, frameCount 4096
+E/AudioSystem( 1556): getOutput() read 1 from cache for stream 1
+E/AudioSystem( 1556): getOutputSamplingRate() reading from output desc
+E/AudioSystem( 1556): getOutputSamplingRate() streamType 1, output 1, sampling rate 44100
+E/AudioSystem( 1556): getOutput() read 1 from cache for stream 1
+E/AudioSystem( 1556): getOutputSamplingRate() reading from output desc
+E/AudioSystem( 1556): getOutputSamplingRate() streamType 1, output 1, sampling rate 44100
+E/AudioSystem( 1556): getOutput() read 1 from cache for stream 1
+E/AudioSystem( 1556): getOutputFrameCount() streamType 1, output 1, frameCount 4096
+E/AudioSystem( 1556): getOutput() read 1 from cache for stream 1
+E/AudioSystem( 1556): getOutputLatency() streamType 1, output 1, latency 186
+E/AudioSystem( 1556): getOutput() read 1 from cache for stream 1
+E/AudioFlinger( 1516): Track constructor name 4097, calling thread 1556
+E/AudioTrack( 1556): start 0x2cc070
+E/AudioTrack( 1556): Underrun user: 0, server: 0, flowControlFlag 1
+E/AudioFlinger( 1516): start(4097), calling thread 1556
+E/AudioFlinger( 1516): ? => ACTIVE (4097) on thread 0x437b0
+V/AudioPolicyManagerALSA( 1516): startOutput() output 1, stream 1
+V/AudioPolicyManagerALSA( 1516): getDeviceForStrategy() strategy 0, device 2
+V/AudioPolicyManagerALSA( 1516): setOutputDevice() output 1 device 2 delayMs 0
+V/AudioPolicyManagerALSA( 1516): setOutputDevice() setting same device 2 for output 1
+V/AudioPolicyManagerALSA( 1516): changeRefCount() stream 1, count 1
+E/AudioFlinger( 1516): mWaitWorkCV.broadcast
+E/AudioTrack( 1556): stop 0x41d6c8
+V/AudioPolicyManagerALSA( 1516): releaseOutput() 1
+E/AudioFlinger( 1516): remove track (4096) and delete from mixer
+E/AudioFlinger( 1516): PlaybackThread::Track destructor
+E/AudioFlinger( 1516): MixerThread 0x30130 TID 1554 waking up
+W/AudioHardwareALSA( 1516): Write request but device is in state SND_PCM_STATE_SETUP
+D/AudioHardwareALSA( 1516): call snd_pcm_prepare
+W/AudioHardwareALSA( 1516): Wait for correct device state
+E/AudioTrack( 1556): Underrun user: 4000, server: 4000, flowControlFlag 0
+E/AudioTrack( 1556): stop 0x2cc070
+E/AudioFlinger( 1516): stop(4097), calling thread 1556
+E/AudioFlinger( 1516): (> STOPPED) => STOPPED (4097) on thread 0x30130
+V/AudioPolicyManagerALSA( 1516): stopOutput() output 1, stream 1
+V/AudioPolicyManagerALSA( 1516): changeRefCount() stream 1, count 0
+V/AudioPolicyManagerALSA( 1516): setOutputDevice() output 1 device 0 delayMs 372
+E/AudioFlinger( 1516): TrackBase::reset
+E/AudioFlinger( 1516): Audio hardware entering standby, mixer 0x30130, mSuspended 0
+E/AudioFlinger( 1516): MixerThread 0x30130 TID 1554 going to sleep
+

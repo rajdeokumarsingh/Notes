@@ -1,0 +1,4 @@
+./AndroidManifest.xml
+./res/layout/main.xml
+./res/values/strings.xml
+./src/com/pekall/canvas/DrawFullScreenActivity.java

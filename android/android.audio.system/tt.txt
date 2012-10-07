@@ -1,0 +1,30 @@
+./code.reading/AudioTrack.cpp:227:    audio_io_handle_t output = AudioSystem::getOutput((AudioSystem::stream_type)streamType,
+./code.reading/AudioTrack.cpp:396:    if (AudioSystem::getOutputSamplingRate(&afSamplingRate, mStreamType) != NO_ERROR) {
+./code.reading/AudioTrack.cpp:514:audio_io_handle_t    getOutput();
+./code.reading/AudioFlinger_DuplicatingThread.cpp:4::   MixerThread(audioFlinger, mainThread->getOutput(), id, mainThread->device()), mWaitTimeMs(UINT_MAX)
+./code.reading/AudioSystem.cpp:15:            getOutputSamplingRate getOutputFrameCount getOutputLatency 
+./code.reading/AudioSystem.cpp:25:            getOutput startOutput stopOutput releaseOutput
+./code.reading/AudioSystem.cpp:118:status_t AudioSystem::getOutputSamplingRate(int* samplingRate, int streamType)
+./code.reading/AudioSystem.cpp:119:    audio_io_handle_t output = getOutput((stream_type)streamType);
+./code.reading/AudioSystem.cpp:128:status_t AudioSystem::getOutputFrameCount(int* frameCount, int streamType)
+./code.reading/AudioSystem.cpp:132:status_t AudioSystem::getOutputLatency(uint32_t* latency, int streamType)
+./code.reading/AudioSystem.cpp:204:audio_io_handle_t AudioSystem::getOutput(stream_type stream, uint32_t samplingRate, 
+./code.reading/AudioPolicyInterface.h:14://   - process getOutput() queries received when AudioTrack objects are created: Those queries
+./code.reading/AudioPolicyInterface.h:58:    virtual audio_io_handle_t getOutput(AudioSystem::stream_type stream,
+./code.reading/AudioPolicyService.cpp:24:        getOutput startOutput stopOutput releaseOutput
+./code.reading/AudioPolicyService.cpp:30:    getOutputForEffect registerEffect unregisterEffect
+./code.reading/AudioPolicyService.cpp:123:audio_io_handle_t AudioPolicyService::getOutput(AudioSystem::stream_type stream, uint32_t samplingRate, uint32_t format, uint32_t channels, AudioSystem::output_flags flags)
+./code.reading/AudioPolicyService.cpp:135:audio_io_handle_t AudioPolicyService::getOutputForEffect(effect_descriptor_t *desc)
+./code.reading/flow.incoming.call.cpp:43:getOutput
+./code.reading/flow.incoming.call.cpp:44:    01-01 09:58:57.208 I/AudioPolicyService(  568): getOutput() tid 631
+./code.reading/flow.incoming.call.cpp:46:    01-01 09:58:57.208 I/AudioPolicyManagerBase(  568): getOutput() stream 2, samplingRate 8000, format 1, channels 4, flags 0
+./code.reading/AudioFlinger.h:277:    AudioStreamOut* getOutput() { return mOutput; }
+./code.reading/flow.open.output.cpp:202:    audio_io_handle_t output = AudioSystem::getOutput((AudioSystem::stream_type)streamType,
+./code.reading/flow.open.output.cpp:208:audio_io_handle_t AudioPolicyManagerBase::getOutput(AudioSystem::stream_type stream,
+./code.reading/AudioPolicyManagerBase.cpp:273:audio_io_handle_t AudioPolicyManagerBase::getOutput(AudioSystem::stream_type stream, 
+./important.concept.txt:56:    // request to open a direct output with getOutput() (by opposition to 
+./fmr.audio/set.routing.flow.cpp:82:audio_io_handle_t AudioPolicyManagerBase::getOutput(
+./fmr.audio/code.layout.HAL.cpp:334://   - process getOutput() queries received when AudioTrack objects are created: Those queries
+./fmr.audio/code.layout.HAL.cpp:372:    virtual audio_io_handle_t getOutput(AudioSystem::stream_type stream,
+
+

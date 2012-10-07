@@ -1,0 +1,231 @@
+名词短语
+    组成
+        名词的修饰语+名词
+    功能
+        主语，宾语，表语
+
+    名词的修饰语
+        限定词
+            限定名词所指范围
+                泛指/特指, 定量/不定量, 数词
+                these, three, that, my, a, the,...
+            冠词是重要的限定词
+                a, an, the
+        形容词
+
+    位置规则
+        限定词＋形容词＋名词
+
+名词分为
+    专有名词
+        特定的人，地，机构，场所
+        首字母必须大写
+　　    China，Newton，London, the United States, Bill Gates, etc.
+
+    普通名词
+    　　个体名词
+            看的见的，可以数出个数的
+            cup，desk，student, tree, house, piano, etc.
+            一般可数，有单复数形式
+
+    　　集体名词
+            由一个或多个看的见的个体组成的
+
+            class，team，family, committee, police, group, etc.
+            一般可数，有单复数形式
+
+    　　物质名词
+            构成个体的成分
+            通常不可数，没有单复数之分
+            材料，
+                用什么做的
+                女人是水做的，男人是泥做的
+                钢，铁，铝，塑料
+                棉花，化纤，尼龙
+            液体
+                beer, bloody, coffee, cream, gasoline, honey, juice, milk, oil, tea, water, wine
+            固体
+                bread, butter, cheese, ice, ice-cream, meat, beef, chicken, fish
+                    I need to get some bread to live on
+            气体
+                air, fog, oxygen, smoke 
+
+    　　抽象名词
+            动作，性质，状态，情感
+            advice,
+            anger, fun, happiness, love
+            confidence, health honesty 
+            beauty information luck peace
+
+            love，work，life, emotion, time, birth, sport
+            
+            通常不可数，没有单复数之分
+
+        可数
+            个体名词，集体名词
+            a book, two books
+
+        不可数
+            物质名词，抽象名词
+            没有复数形式，不能用a，two来形容
+            使用量词来形容
+                piece : advice bread baggage chalk equipment funiture information
+                    jewelry luggage music news cake
+                    a piece of news, two pieces of luggage
+
+                bottle, cup, drop, glass : beer blood water coffee milk tea wine
+                    several drops of blood, a cup of coffee, a glass of milk
+
+                其他: a loaf of bread, a tube of toothpaste, a pack of cigarette,
+                    a slice of meat, a film/layer of dust, clouds of dust
+                    
+    总称名词不可数      个体名词可数
+        furniture       chair, table, bed     
+        fruit           apple, orange, banana
+        jewelry         ring, earring, necklace, bracelet
+        luggage         bag, suitcase
+
+        machinery/machine
+        equipment/tool
+        poetry/poet
+
+
+        简单名词
+            story, student
+        复合名词
+            girlfriend, roommate, mother-in-law
+    
+    可以用于不可数名词的限定词
+        some, plenty of
+            some paper, some water, some fresh air, some fresh blood
+        
+    根据词义判断是否可数
+        paper
+            I need some paper to write a letter. 纸是不可数的
+            I have a term paper to write on weekends. 论文是可数的
+            I bought a paper. 报纸是可数的
+
+        room
+            There is plenty of room for everybody to sit down. 空间是不可数的
+
+
+抽象的，物质的是不可数的
+    个体名词也可以抽象化
+    He finished school at fifteen
+
+具体的东西是可数的
+    物质名词，抽象名词也可以具体化
+        1）物质名词  
+            a．当物质名词转化为个体名词时，可数。  
+                Cake is a kind of food．蛋糕是一种食物。（不可数）  
+                These cakes are sweet．这些蛋糕很好吃。（可数）  
+            b．当物质名词表示该物质的种类时，可数。例如：  
+                This factory produces steel．（不可数）  
+                We need various steels．（可数）  
+            c．当物质名词表示份数时，可数。
+                Our country is famous for tea．我国因茶叶而闻名。  
+                Two teas，please．请来两杯茶。  
+                Two beers，please．请来两杯茶。  
+                Two coffees, please
+        2）抽象名词表示具体的事物时也可数。例如：  
+            four freedoms四大自由  
+            the four modernizations四个现代化  
+
+        物质名词和抽象名词可以借助单位词表示一定的数量
+            a glass of water一杯水
+            a piece of advice一则建议
+
+
+集体名词，做整体讲为单数。如考虑到个体，则为复数。
+    集体名词，以单数形式出现，但实为复数
+        例如： people，police，cattle
+            不能说a people，a police，a cattle，
+            但可以说a person，a policeman，a head of cattle
+
+        The British，the French，the Chinese，the Japanese，the Swiss等表示国民总称时，作复数用，如：
+            The Chinese are industrious and brave．中国人民是勤劳勇敢的。  
+            Her family are all music lovers.
+
+个体名词作为抽象名词，是不可数的
+    He finished school at fifteen
+
+多数情况，抽象名词用单数，某些时候可添加定冠词和不定冠词
+    There is a beauty in simplicity.
+    
+物质名词一般是不可数的，不过表示一份，几份时可以是可数的
+    Two beers, please
+
+相互复数
+    He came up to shake hands with me.
+    Never make friends with such a person
+
+由一个词加man或woman构成的合成词，其复数形式也是-men和-women
+    two englishmen
+    German不是合成词，故复数形式为Germans
+    Bowman是姓，其复数是the Bowmans
+
+5．定语名词的复数  
+    1）用复数作定语。例如：  
+        sports meeting 运动会  
+        students reading-room 学生阅览室  
+        talks table 谈判桌  
+        the foreign languages department 外语系  
+
+    2）man，woman，gentleman 等作定语时，单复数一起变  
+         men workers, women teachers, gentlemen officials  
+        man teacher/men teachers, man doctor/men doctors
+
+    名词＋介词短语, 将主语名词变复数
+        passer-by/passers-by runner-up/runners-up looker-on/lookers-on
+        mother-in-law/mothers-in-law editor-in-chief/editors-in-chief
+        bride-to-be/brides-to-be
+
+    3）有些以s结尾的名词，作定语时，s保留。例如：  
+        goods train 货车 
+        arms production 武器生产  
+        customs papers 海关文件 
+        clothes brush 衣刷
+
+the United States，the United Nations应视为单数。例如：  
+The United Nations was organized in 1945．联合国是 1945年组建起来的。 
+
+可数名词复数的变化规则：
+    一般结尾加-s
+    以-s, -x, -ch, -sh结尾加-es
+        以-ch结尾的如果发音为k，则加s
+            stomach/stomachs
+    辅音字母+y结尾, 变-ies
+        country/counties, family/families, baby/babies, lady/ladies
+    元音字母+y结尾, 变-ys
+        play/plays, boy/boys, guy/guys, donkey/donkey, key/keys
+    
+    以o结尾
+        potato/potatoes, tomato/tomatoes, hero/heroes
+        piano/pianos, photo/photos, radio/radios, studio/studios, bamboo/bamboos
+    以f, fe结尾
+       变ves
+        half/halves, knife/knives, leaf/leaves, life/lives, self/selves shelf/shelves
+            thief/thieves wife/wives, wolf/wolves
+        直接接啊s
+            belief/beliefs chief/chiefs cliff/cliffs proof/proofs roof/roofs 
+单复数同形
+    Her husband is a Swiss. Her parents are both Swiss.
+    类似还有
+        某国人 Chinese， Japanese
+        动物 bison, cod, salmon, fish, deer，sheep，aircraft, giraffe
+
+        yuan
+        但除人民币的元、角、分外，美元、英镑、法郎等都有复数形式
+            如：two dollars， ten pence（penny的复数形式）
+
+
+名词        noun
+动词        verb
+形容词      adjective
+副词        adverb
+介词        preposition
+定冠词      definite article
+不定冠词    indefinite article
+
+
+

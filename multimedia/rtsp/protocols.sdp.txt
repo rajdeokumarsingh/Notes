@@ -1,0 +1,135 @@
+
+SDP
+    会话描述格式
+    基于文本的协议
+    不属于传输协议
+
+    使用不同的适当的传输协议
+        会话通知协议（SAP）
+        会话初始协议（SIP）
+        实时流协议（RTSP）
+        MIME扩展协议的电子邮件
+        超文本传输协议（HTTP）
+
+
+    SDP不支持会话内容或媒体编码的协商
+    媒体协商这一块要用RTSP来实现
+
+    在流媒体中只用来描述媒体信息
+
+SDP协议格式
+    多行文本组成
+
+    <type>=<value>[CRLF]
+
+
+三、SDP协议例子：
+
+下面是一个helix 流媒体服务器的RTSP协议中的SDP协议：
+v=0 //SDP version
+
+// o field定义的源的一些信息。其格式为：o=<username> <sess-id> <sess-version> <nettype> <addrtype> <unicast-address>
+o=- 1271659412 1271659412 IN IP4 10.56.136.37 
+
+s=<No title>
+
+i=<No author> <No copyright>  //session的信息
+
+c=IN IP4 0.0.0.0 //connect 的信息，分别描述了：网络协议，地址的类型，连接地址。
+c=IN IP4 0.0.0.0
+
+t=0 0 //时间信息，分别表示开始的时间和结束的时间，一般在流媒体的直播的时移中见的比较多。
+
+a=SdpplinVersion:1610641560 //描述性的信息
+
+a=StreamCount:integer;2 //用来描述媒体流的信息，表示有两个媒体流。integer表示信息的格式为整数。
+
+a=control:*
+
+a=DefaultLicenseValue:integer;0 //License信息
+
+a=FileType:string;"MPEG4" ////用来描述媒体流的信息说明当前协商的文件是mpeg4格式的文件
+
+a=LicenseKey:string;"license.Summary.Datatypes.RealMPEG4.Enabled"
+
+a=range:npt=0-72.080000  //用来表示媒体流的长度
+
+m=audio 0 RTP/AVP 96 //做为媒体描述信息的重要组成部分描述了媒体信息的详细内容：表示session的audio是通过RTP来格式传送的，其payload值为96传送的端口还没有定。
+
+b=as:24 //audio 的bitrate
+
+b=RR:1800
+
+b=RS:600
+
+a=control:streamid=1  //通过媒体流1来发送音频
+
+a=range:npt=0-72.080000 //说明媒体流的长度。
+
+a=length:npt=72.080000
+
+a=rtpmap:96 MPEG4-GENERIC/32000/2 //rtpmap的信息，表示音频为AAC的其sample为32000
+
+a=fmtp:96 profile-level-id=15;mode=AAC-hbr;sizelength=13;indexlength=3;indexdeltalength=3;config=1210 //config为AAC的详细格式信息
+
+a=mimetype:string;"audio/MPEG4-GENERIC"
+
+a=Helix-Adaptation-Support:1
+
+a=AvgBitRate:integer;48000
+
+a=HasOutOfOrderTS:integer;1
+
+a=MaxBitRate:integer;48000
+
+a=Preroll:integer;1000
+
+a=OpaqueData:buffer;"A4CAgCIAAAAEgICAFEAVABgAAAC7gAAAu4AFgICAAhKIBoCAgAEC"
+
+a=StreamName:string;"Audio Track"
+
+下面是video的信息基本和audio的信息相对称，这里就不再说了。
+
+m=video 0 RTP/AVP 97
+
+b=as:150
+
+b=RR:11250
+
+b=RS:3750
+
+a=control:streamid=2
+
+a=range:npt=0-72.080000
+
+a=length:npt=72.080000
+
+a=rtpmap:97 MP4V-ES/2500
+
+a=fmtp:97 profile-level-id=1;
+
+a=mimetype:string;"video/MP4V-ES"
+
+a=Helix-Adaptation-Support:1
+
+a=AvgBitRate:integer;300000
+
+a=HasOutOfOrderTS:integer;1
+
+a=Height:integer;240 //影片的长度
+
+a=MaxBitRate:integer;300000
+
+a=MaxPacketSize:integer;1400
+
+a=Preroll:integer;1000
+
+a=Width:integer;320  //影片的宽度
+
+a=OpaqueData:buffer;"AzcAAB8ELyARAbd0AAST4AAEk+AFIAAAAbDzAAABtQ7gQMDPAAABAAAAASAAhED6KFAg8KIfBgEC"
+
+a=StreamName:string;"Video Track"
+
+
+
+

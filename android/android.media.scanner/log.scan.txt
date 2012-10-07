@@ -1,0 +1,86 @@
+--------- beginning of /dev/log/main
+01-01 12:44:54.393 D/AndroidRuntime(  899): 
+01-01 12:44:54.393 D/AndroidRuntime(  899): >>>>>>>>>>>>>> AndroidRuntime START <<<<<<<<<<<<<<
+01-01 12:44:54.403 D/AndroidRuntime(  899): CheckJNI is ON
+01-01 12:44:55.033 D/AndroidRuntime(  899): --- registering native functions ---
+01-01 12:44:56.673 D/AndroidRuntime(  899): Shutting down VM
+01-01 12:44:56.683 D/jdwp    (  899): adbd disconnected
+01-01 12:44:56.723 I/AndroidRuntime(  899): NOTE: attach of thread 'Binder Thread #3' failed
+01-01 12:44:56.773 W/Process (  615): Unable to open /proc/899/status
+
+
+
+01-01 12:44:56.816 D/MediaScannerService(  832): start scanning volume external
+01-01 12:44:56.843 I/MediaScanner(  832): initialize, volume: external
+01-01 12:44:56.843 I/MediaScanner(  832): prescan, filePath: null
+01-01 12:44:56.903 I/MediaScanner_native(  832): processDirectory, path: /mnt/sdcard, extensions: DCF,3GP,MIDI,WBMP,AMR,M4V,OGG,MID,OGA,JPG,AWB,AAC,PNG,JPEG,MPEG,MP4,MP3,3GPP2,3GPP,RTX,BMP,3G2,OTA,RTTTL,WAV,GIF,IMY,SMF,M3U,WPL,PLS,XMF,M4A
+01-01 12:44:56.903 I/MediaScanner_native(  832): doProcessDirectory, path: /mnt/sdcard/, extensions: DCF,3GP,MIDI,WBMP,AMR,M4V,OGG,MID,OGA,JPG,AWB,AAC,PNG,JPEG,MPEG,MP4,MP3,3GPP2,3GPP,RTX,BMP,3G2,OTA,RTTTL,WAV,GIF,IMY,SMF,M3U,WPL,PLS,XMF,M4A
+01-01 12:44:56.903 I/MediaScanner_native(  832): doProcessDirectory, path: /mnt/sdcard/LOST.DIR/, extensions: DCF,3GP,MIDI,WBMP,AMR,M4V,OGG,MID,OGA,JPG,AWB,AAC,PNG,JPEG,MPEG,MP4,MP3,3GPP2,3GPP,RTX,BMP,3G2,OTA,RTTTL,WAV,GIF,IMY,SMF,M3U,WPL,PLS,XMF,M4A
+01-01 12:44:56.903 I/MediaScanner_native(  832): doProcessDirectory, path: /mnt/sdcard/FmRecords/, extensions: DCF,3GP,MIDI,WBMP,AMR,M4V,OGG,MID,OGA,JPG,AWB,AAC,PNG,JPEG,MPEG,MP4,MP3,3GPP2,3GPP,RTX,BMP,3G2,OTA,RTTTL,WAV,GIF,IMY,SMF,M3U,WPL,PLS,XMF,M4A
+01-01 12:44:56.923 I/MediaScanner_native(  832): fileMatchesExtension, path: /mnt/sdcard/海阔天空_114916.47442004373213.mp3, extensions: DCF,3GP,MIDI,WBMP,AMR,M4V,OGG,MID,OGA,JPG,AWB,AAC,PNG,JPEG,MPEG,MP4,MP3,3GPP2,3GPP,RTX,BMP,3G2,OTA,RTTTL,WAV,GIF,IMY,SMF,M3U,WPL,PLS,XMF,M4A
+01-01 12:44:56.923 I/MediaScanner_native(  832): doProcessDirectory, client.scanFile, path: /mnt/sdcard/海阔天空_114916.47442004373213.mp3
+01-01 12:44:56.923 I/MediaScanner(  832): scanFile: /mnt/sdcard/海阔天空_114916.47442004373213.mp3
+01-01 12:44:56.923 I/MediaScanner(  832): doScanFile, path: /mnt/sdcard/海阔天空_114916.47442004373213.mp3, mimeType: null
+01-01 12:44:56.923 I/MediaScanner(  832): beginFile, path: /mnt/sdcard/海阔天空_114916.47442004373213.mp3, mimeTye: null
+01-01 12:44:56.923 I/MediaScanner(  832): scanFile: /mnt/sdcard/海阔天空_114916.47442004373213.mp3 took 1
+
+
+01-01 12:44:56.923 I/MediaScanner_native(  832): fileMatchesExtension, path: /mnt/sdcard/再等待.aac, extensions: DCF,3GP,MIDI,WBMP,AMR,M4V,OGG,MID,OGA,JPG,AWB,AAC,PNG,JPEG,MPEG,MP4,MP3,3GPP2,3GPP,RTX,BMP,3G2,OTA,RTTTL,WAV,GIF,IMY,SMF,M3U,WPL,PLS,XMF,M4A
+01-01 12:44:56.923 I/MediaScanner_native(  832): doProcessDirectory, client.scanFile, path: /mnt/sdcard/再等待.aac
+01-01 12:44:56.923 I/MediaScanner(  832): scanFile: /mnt/sdcard/再等待.aac
+01-01 12:44:56.923 I/MediaScanner(  832): doScanFile, path: /mnt/sdcard/再等待.aac, mimeType: null
+01-01 12:44:56.933 I/MediaScanner(  832): beginFile, path: /mnt/sdcard/再等待.aac, mimeTye: null
+01-01 12:44:56.933 I/StagefrightMediaScanner(  832): processFile 1, path: /mnt/sdcard/再等待.aac
+01-01 12:44:56.933 I/StagefrightMediaScanner(  832): processFile 2, path: /mnt/sdcard/再等待.aac
+01-01 12:44:56.933 V/StagefrightMetadataRetriever(  559): StagefrightMetadataRetriever()
+01-01 12:44:56.933 V/StagefrightMetadataRetriever(  559): setDataSource(/mnt/sdcard/再等待.aac)
+01-01 12:44:57.303 V/MediaExtractor(  559): Autodetected media content as 'audio/aac-adts' with confidence 0.20
+01-01 12:44:57.303 D/AACExtractor(  559): +++++ AACExtractor
+01-01 12:44:57.323 D/AACExtractor(  559): ----- AACExtractor
+01-01 12:44:57.323 I/StagefrightMediaScanner(  832): processFile setDataSource, setMode, ok
+01-01 12:44:57.333 I/MediaScanner(  832): setMimeType, mimeType: audio/aac-adts, mFileType: 0
+01-01 12:44:57.353 I/MediaScanner(  832): handleStringTag, name:duration, value: 12629
+01-01 12:44:57.353 I/MediaScanner(  832): parseSubstring: 12629
+01-01 12:44:57.353 I/MediaScanner(  832): endFile, file type: 0
+01-01 12:44:57.353 I/MediaScanner(  832): scanFile: /mnt/sdcard/再等待.aac took 424
+
+01-01 12:44:57.353 I/MediaScanner_native(  832): fileMatchesExtension, path: /mnt/sdcard/dfp.mp3, extensions: DCF,3GP,MIDI,WBMP,AMR,M4V,OGG,MID,OGA,JPG,AWB,AAC,PNG,JPEG,MPEG,MP4,MP3,3GPP2,3GPP,RTX,BMP,3G2,OTA,RTTTL,WAV,GIF,IMY,SMF,M3U,WPL,PLS,XMF,M4A
+01-01 12:44:57.363 I/MediaScanner_native(  832): doProcessDirectory, client.scanFile, path: /mnt/sdcard/dfp.mp3
+01-01 12:44:57.363 I/MediaScanner(  832): scanFile: /mnt/sdcard/dfp.mp3
+01-01 12:44:57.363 I/MediaScanner(  832): doScanFile, path: /mnt/sdcard/dfp.mp3, mimeType: null
+01-01 12:44:57.363 I/MediaScanner(  832): beginFile, path: /mnt/sdcard/dfp.mp3, mimeTye: null
+01-01 12:44:57.363 I/StagefrightMediaScanner(  832): processFile 1, path: /mnt/sdcard/dfp.mp3
+01-01 12:44:57.363 I/StagefrightMediaScanner(  832): processFile 2, path: /mnt/sdcard/dfp.mp3
+01-01 12:44:57.373 V/StagefrightMetadataRetriever(  559): StagefrightMetadataRetriever()
+01-01 12:44:57.373 V/StagefrightMetadataRetriever(  559): setDataSource(/mnt/sdcard/dfp.mp3)
+01-01 12:44:57.384 V/MediaExtractor(  559): Autodetected media content as 'audio/mpeg' with confidence 0.30
+01-01 12:44:57.384 V/StagefrightMetadataRetriever(  559): ~StagefrightMetadataRetriever()
+01-01 12:44:57.384 I/StagefrightMediaScanner(  832): processFile setDataSource, setMode, ok
+01-01 12:44:57.443 I/MediaScanner(  832): setMimeType, mimeType: audio/mpeg, mFileType: 1
+01-01 12:44:57.463 I/MediaScanner(  832): handleStringTag, name:duration, value: 313208
+01-01 12:44:57.463 I/MediaScanner(  832): parseSubstring: 313208
+01-01 12:44:57.463 I/MediaScanner(  832): handleStringTag, name:album, value: 星座圣典
+01-01 12:44:57.463 I/MediaScanner(  832): handleStringTag, name:artist, value: 周杰伦
+01-01 12:44:57.463 I/MediaScanner(  832): handleStringTag, name:title, value: 东风破
+01-01 12:44:57.463 I/MediaScanner(  832): endFile, file type: 1
+01-01 12:44:57.473 I/MediaScanner(  832): toValues, mPath: /mnt/sdcard/dfp.mp3, mMimeType: audio/mpeg
+01-01 12:44:57.473 I/MediaScanner(  832): endFile, insert an item to DB
+01-01 12:44:57.703 I/MediaScanner(  832): scanFile: /mnt/sdcard/dfp.mp3 took 334
+01-01 12:44:57.703 I/MediaScanner(  832): postscan
+01-01 12:44:57.843 V/StagefrightMetadataRetriever(  559): ~StagefrightMetadataRetriever()
+01-01 12:44:57.843 D/dalvikvm(  832): GC_FOR_MALLOC freed 5337 objects / 359748 bytes in 143ms
+01-01 12:44:57.954 V/MediaScanner(  832): pruneDeadThumbnailFiles... android.database.sqlite.SQLiteCursor@43d7ad80
+01-01 12:44:57.963 V/MediaScanner(  832): /pruneDeadThumbnailFiles... android.database.sqlite.SQLiteCursor@43d7ad80
+01-01 12:44:57.963 D/MediaScanner(  832):  prescan time: 59ms
+01-01 12:44:57.963 D/MediaScanner(  832):     scan time: 799ms
+01-01 12:44:57.963 D/MediaScanner(  832): postscan time: 264ms
+01-01 12:44:57.963 D/MediaScanner(  832):    total time: 1122ms
+01-01 12:44:57.983 D/MediaScannerService(  832): done scanning volume external
+01-01 12:45:00.003 D/KeyguardUpdateMonitor(  615): received broadcast android.intent.action.TIME_TICK
+01-01 12:45:00.013 D/KeyguardUpdateMonitor(  615): handleTimeUpdate
+01-01 12:45:00.063 V/LockPatternKeyguardView(  615): *** dispatchDraw() time: 306580
+01-01 12:45:00.093 E/libagl  (  615): copybit failed (Bad address)
+01-01 12:45:00.123 E/libagl  (  615): copybit failed (Bad address)
+01-01 12:45:00.143 V/LockPatternKeyguardView(  615): *** dispatchDraw() time: 306650
+01-01 12:45:00.163 E/libagl  (  615): copybit failed (Bad address)
+

@@ -1,0 +1,7 @@
+
+客户端引用服务器端aidl的时候，需要见服务器端aidl生成的java文件，拷贝到客户端的源代码目录中
+aidl生成的文件如果是源代码编译，是放在out目录中的。
+
+    客户端目录结构如下：
+        src/server包括aidl文件多级子目录/aidl.java
+        如:src/com.pekall.fmradio/*.aidl

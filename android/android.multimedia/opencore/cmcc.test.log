@@ -1,0 +1,763 @@
+jiangrui@jiangrui-desktop:~/notes/multimedia/opencore$ log
+--------- beginning of /dev/log/main
+01-01 08:38:21.141 I/WebCore::FrameLoader( 1116): shouldReload, 2787
+01-01 08:38:21.150 I/WebCore::FrameLoader( 1116): frameContainsWMLContent, 1616
+01-01 08:38:21.150 I/WebCore::FrameLoader( 1116): shouldReload, 2787
+01-01 08:38:21.150 I/WebCore::FrameLoader( 1116): frameContainsWMLContent, 1616
+01-01 08:38:21.150 I/WebCoreFrameBridge( 1116): canHandleRequest, 788
+01-01 08:38:21.341 D/dalvikvm( 1116): GC_EXTERNAL_ALLOC freed 7232 objects / 415152 bytes in 139ms
+01-01 08:38:21.371 V/BrowserActivity( 1116): shouldOverrideUrlLoading: rtsp://221.181.100.20/lMTiu0R1bOINL3MaWPe5afoGseWQguPRZ3kSRx0bSvXC3pT35xGLqjXoivFQYWcOD7qrukbvqQ2UfpCk4fjmSUe9fvqyme2bd5lRp2+W3YyFkDhUlImMjrRwiHdT+E44rOmNc3aLGCOSOPioGsqUgxWwfeRaqFcjHssnnNkSOEI=/699008_8_3h.3gp?ec=1 android.webkit.WebView@43e5c068
+01-01 08:38:21.381 V/BrowserActivity( 1116): Send rtsp intent
+--------- beginning of /dev/log/system
+01-01 08:38:21.391 I/ActivityManager(  632): Starting activity: Intent { act=android.intent.action.VIEW cat=[android.intent.category.BROWSABLE] dat=rtsp://221.181.100.20/lMTiu0R1bOINL3MaWPe5afoGseWQguPRZ3kSRx0bSvXC3pT35xGLqjXoivFQYWcOD7qrukbvqQ2UfpCk4fjmSUe9fvqyme2bd5lRp2+W3YyFkDhUlImMjrRwiHdT+E44rOmNc3aLGCOSOPioGsqUgxWwfeRaqFcjHssnnNkSOEI=/699008_8_3h.3gp?ec=1 cmp=com.android.gallery/com.android.camera.MovieView }
+01-01 08:38:21.451 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:21.481 V/BrowserActivity( 1116): BrowserActivity.onSaveInstanceState: this=com.android.browser.BrowserActivity@43e81820
+01-01 08:38:21.481 I/TabControl( 1116): saveState
+01-01 08:38:21.481 I/WebCoreFrameBridge( 1116): canHandleRequest, 813
+01-01 08:38:21.521 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:21.540 I/TabControl( 1116): getTab
+01-01 08:38:21.540 I/Tab     ( 1116): saveState
+01-01 08:38:21.540 I/TabControl( 1116): getCurrentTab
+01-01 08:38:21.540 I/TabControl( 1116): getTab
+01-01 08:38:21.540 I/Tab     ( 1116): populatePickerData
+01-01 08:38:21.540 I/TabControl( 1116): getTab
+01-01 08:38:21.540 I/Tab     ( 1116): saveState
+01-01 08:38:21.551 I/TabControl( 1116): getCurrentTab
+01-01 08:38:21.551 I/TabControl( 1116): getTab
+01-01 08:38:21.551 I/Tab     ( 1116): populatePickerData
+01-01 08:38:21.561 I/TabControl( 1116): getTab
+01-01 08:38:21.561 I/Tab     ( 1116): saveState
+01-01 08:38:21.561 I/TabControl( 1116): getCurrentTab
+01-01 08:38:21.561 I/TabControl( 1116): getTab
+01-01 08:38:21.561 I/Tab     ( 1116): saveState, saving thumbnail...
+01-01 08:38:21.561 I/TabControl( 1116): getThumbnailDir
+01-01 08:38:21.591 I/Tab     ( 1116): populatePickerData
+01-01 08:38:21.601 V/BrowserActivity( 1116): onPause
+01-01 08:38:21.601 V/BrowserActivity( 1116): onPause mLoadsPageInOverviewMode:  true
+01-01 08:38:21.601 I/TabControl( 1116): pauseCurrentTab
+01-01 08:38:21.601 I/TabControl( 1116): getCurrentTab
+01-01 08:38:21.601 I/TabControl( 1116): getTab
+01-01 08:38:21.601 I/Tab     ( 1116): pause
+01-01 08:38:21.601 V/BrowserActivity( 1116): pauseWebViewTimers
+01-01 08:38:21.601 I/TabControl( 1116): getCurrentTab
+01-01 08:38:21.601 I/TabControl( 1116): getTab
+01-01 08:38:21.601 I/TabControl( 1116): getCurrentWebView
+01-01 08:38:21.601 I/TabControl( 1116): getTab
+01-01 08:38:21.620 V/http    ( 1116): 984426 main RequestQueue.disablePlatformNotifications() network
+01-01 08:38:21.671 V/cache   ( 1116): disableTransaction
+01-01 08:38:21.681 I/ActivityManager(  632): Start proc com.android.gallery for activity com.android.gallery/com.android.camera.MovieView: pid=1233 uid=10014 gids={2001, 3003, 1015, 1006}
+01-01 08:38:21.732 I/ActivityManager(  632): Process com.android.settings (pid 1188) has died.
+01-01 08:38:21.911 I/WindowManager(  632): Setting rotation to 1, animFlags=1
+01-01 08:38:21.943 I/ActivityManager(  632): Config changed: { scale=1.0 imsi=460/0 loc=zh_CN touch=3 keys=2/1/2 nav=2/1 orien=2 layout=34 uiMode=17 seq=8}
+01-01 08:38:22.061 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:22.071 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:22.081 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:22.111 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:22.151 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:22.171 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:22.251 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:22.491 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:22.501 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:22.551 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:22.681 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:22.761 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:22.791 D/MovieViewControl( 1233): streamingAPN = cmwap
+01-01 08:38:22.791 D/MovieViewControl( 1233): mUseWapForStreaming = true
+01-01 08:38:22.931 D/ConnectivityHelper( 1233): [beginConnectivity] name = enableWAP
+01-01 08:38:22.941 D/ConnectivityHelper( 1233): [startListening] mListening = false
+01-01 08:38:22.941 D/ConnectivityHelper( 1233): [startListening] networkType = TYPE_MOBILE_WAP, timeout = 180000
+01-01 08:38:22.981 D/ConnectivityHelper( 1233): >>>>> startUsingNetworkFeature name = enableWAP
+01-01 08:38:22.981 D/ConnectivityServiceExt(  632): startUsingNetworkFeature for net 0: enableWAP
+01-01 08:38:22.981 D/ConnectivityServiceExt(  632): getMobileDataEnabled returning true
+01-01 08:38:22.981 D/ConnectivityServiceExt(  632): adding dns 221.130.33.60 for mobile
+01-01 08:38:22.981 D/ConnectivityServiceExt(  632): adding dns 221.130.33.52 for mobile
+01-01 08:38:23.011 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:23.011 D/ConnectivityHelper( 1233): <<<<< startUsingNetworkFeature result = 0
+01-01 08:38:23.011 D/ConnectivityHelper( 1233): Phone.APN_ALREADY_ACTIVE
+01-01 08:38:23.011 D/ConnectivityServiceExt(  632): special network already active
+01-01 08:38:23.030 D/ConnectivityHelper( 1233): [handleMessage] Special network connected -> TYPE_MOBILE_WAP, ifName = veth0
+01-01 08:38:23.030 D/MovieViewControl( 1233): [onConnectComplete] connected = true, interfaceName = veth0
+01-01 08:38:23.030 D/MovieViewControl( 1233): [onConnectComplete] setup PDP OK
+01-01 08:38:23.041 D/ConnectivityServiceExt(  632): setStreamingPdpName = veth0
+01-01 08:38:23.051 D/ConnectivityHelper( 1233): [stopListening] mListening = true
+01-01 08:38:23.141 D/ConnectivityHelper( 1233): [onReceive] action -> android.net.conn.CONNECTIVITY_CHANGE
+01-01 08:38:23.141 D/ConnectivityHelper( 1233): [onReceive] ConnectivityManager.CONNECTIVITY_ACTION -> android.net.conn.CONNECTIVITY_CHANGE
+01-01 08:38:23.141 D/ConnectivityHelper( 1233): [onReceive] mListening -> false
+01-01 08:38:23.161 D/ConnectivityHelper( 1233): [onReceive] onReceived() called with state = UNKNOWN and intent = Intent { act=android.net.conn.CONNECTIVITY_CHANGE flg=0x10000000 (has extras) }
+01-01 08:38:23.161 D/MovieViewControl( 1233): [setupVideoView] mUri = rtsp://221.181.100.20/lMTiu0R1bOINL3MaWPe5afoGseWQguPRZ3kSRx0bSvXC3pT35xGLqjXoivFQYWcOD7qrukbvqQ2UfpCk4fjmSUe9fvqyme2bd5lRp2+W3YyFkDhUlImMjrRwiHdT+E44rOmNc3aLGCOSOPioGsqUgxWwfeRaqFcjHssnnNkSOEI=/699008_8_3h.3gp?ec=1
+01-01 08:38:23.181 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:23.261 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:23.601 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:23.601 I/ActivityManager(  632): Displayed activity com.android.gallery/com.android.camera.MovieView: 1955 ms (total 1955 ms)
+01-01 08:38:23.651 I/MovieViewControl( 1233): onResume
+01-01 08:38:23.711 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:23.721 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:23.721 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:23.761 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:23.841 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:23.900 V/MediaPlayer-JNI( 1233): native_setup
+01-01 08:38:23.921 V/IMediaDeathNotifier( 1233): addObitRecipient
+01-01 08:38:23.921 V/MediaPlayer( 1233): constructor
+01-01 08:38:23.921 V/MediaPlayer( 1233): setListener
+01-01 08:38:23.921 D/MediaPlayer( 1233): Couldn't open file on client side, trying server side
+01-01 08:38:23.921 V/MediaPlayer-JNI( 1233): setDataSource: path rtsp://221.181.100.20/lMTiu0R1bOINL3MaWPe5afoGseWQguPRZ3kSRx0bSvXC3pT35xGLqjXoivFQYWcOD7qrukbvqQ2UfpCk4fjmSUe9fvqyme2bd5lRp2+W3YyFkDhUlImMjrRwiHdT+E44rOmNc3aLGCOSOPioGsqUgxWwfeRaqFcjHssnnNkSOEI=/699008_8_3h.3gp?ec=1
+01-01 08:38:23.931 V/MediaPlayer( 1233): setDataSource(rtsp://221.181.100.20/lMTiu0R1bOINL3MaWPe5afoGseWQguPRZ3kSRx0bSvXC3pT35xGLqjXoivFQYWcOD7qrukbvqQ2UfpCk4fjmSUe9fvqyme2bd5lRp2+W3YyFkDhUlImMjrRwiHdT+E44rOmNc3aLGCOSOPioGsqUgxWwfeRaqFcjHssnnNkSOEI=/699008_8_3h.3gp?ec=1)
+01-01 08:38:23.931 V/IMediaDeathNotifier( 1233): getMediaPlayerService
+01-01 08:38:23.951 V/MediaPlayerService(  568): Client(5) constructor
+01-01 08:38:23.951 V/MediaPlayerService(  568): Create new client(5) from pid 1233, url=rtsp://221.181.100.20/lMTiu0R1bOINL3MaWPe5afoGseWQguPRZ3kSRx0bSvXC3pT35xGLqjXoivFQYWcOD7qrukbvqQ2UfpCk4fjmSUe9fvqyme2bd5lRp2+W3YyFkDhUlImMjrRwiHdT+E44rOmNc3aLGCOSOPioGsqUgxWwfeRaqFcjHssnnNkSOEI=/699008_8_3h.3gp?ec=1, connId=5
+01-01 08:38:23.951 V/MediaPlayerService(  568): setDataSource(rtsp://221.181.100.20/lMTiu0R1bOINL3MaWPe5afoGseWQguPRZ3kSRx0bSvXC3pT35xGLqjXoivFQYWcOD7qrukbvqQ2UfpCk4fjmSUe9fvqyme2bd5lRp2+W3YyFkDhUlImMjrRwiHdT+E44rOmNc3aLGCOSOPioGsqUgxWwfeRaqFcjHssnnNkSOEI=/699008_8_3h.3gp?ec=1)
+01-01 08:38:23.951 V/MediaPlayerService(  568): player type = 1
+01-01 08:38:23.951 V/MediaPlayerService(  568):  create PVPlayer
+01-01 08:38:24.201 E/PV      (  568): PVLOG:TID(0x2eda8):Time=108:PVSCHED:Scheduler 'AndroidPVWrapper', Thread 0x2eda8: Installed
+01-01 08:38:24.231 E/PV      (  568): PVLOG:TID(0x2eda8):Time=138:PVMFMediaClock::SetStartTime32 - Clock Start time set to 0
+01-01 08:38:24.231 E/PV      (  568): PVLOG:TID(0x2eda8):Time=139:OsclConfigFileList::Populate '/system/etc' IN
+01-01 08:38:24.231 E/PV      (  568): PVLOG:TID(0x2eda8):Time=142:PVPlayerNodeRegistry::AddLoadableModules() IN
+01-01 08:38:24.231 E/PV      (  568): PVLOG:TID(0x2eda8):Time=142:OsclLibraryList::Populate '/system/etc/pvplayer.cfg' IN
+01-01 08:38:24.240 E/PV      (  568): PVLOG:TID(0x2eda8):Time=150:OsclLibraryList::Populate - Found a (, reading uuid
+01-01 08:38:24.240 E/PV      (  568): PVLOG:TID(0x2eda8):Time=151:OsclLibraryList::Populate - found a match, adding to list: libopencore_rtspreg.so
+01-01 08:38:24.240 E/PV      (  568): PVLOG:TID(0x2eda8):Time=151:OsclLibraryList::Populate - Found a (, reading uuid
+01-01 08:38:24.240 E/PV      (  568): PVLOG:TID(0x2eda8):Time=152:OsclLibraryList::Populate - found a match, adding to list: libopencore_downloadreg.so
+01-01 08:38:24.240 E/PV      (  568): PVLOG:TID(0x2eda8):Time=153:OsclLibraryList::Populate - Found a (, reading uuid
+01-01 08:38:24.240 E/PV      (  568): PVLOG:TID(0x2eda8):Time=153:OsclLibraryList::Populate - found a match, adding to list: libopencore_mp4localreg.so
+01-01 08:38:24.251 E/PV      (  568): PVLOG:TID(0x2eda8):Time=158:OsclLibraryList::Populate - Found a (, reading uuid
+01-01 08:38:24.251 E/PV      (  568): PVLOG:TID(0x2eda8):Time=159:OsclLibraryList::Populate - uuid not a match, skipping line
+01-01 08:38:24.251 E/PV      (  568): PVLOG:TID(0x2eda8):Time=159:OsclLibraryList::Populate - Found a (, reading uuid
+01-01 08:38:24.251 E/PV      (  568): PVLOG:TID(0x2eda8):Time=160:OsclLibraryList::Populate - uuid not a match, skipping line
+01-01 08:38:24.251 E/PV      (  568): PVLOG:TID(0x2eda8):Time=161:OsclSharedLibrary::LoadLib libopencore_rtspreg.so IN
+01-01 08:38:24.251 E/PV      (  568): PVLOG:TID(0x2eda8):Time=162:OsclSharedLibrary::loadlibrary libopencore_rtspreg.so IN
+01-01 08:38:24.361 E/PV      (  568): PVLOG:TID(0x2eda8):Time=267:OsclSharedLibrary::LoadLib libopencore_downloadreg.so IN
+01-01 08:38:24.361 E/PV      (  568): PVLOG:TID(0x2eda8):Time=267:OsclSharedLibrary::loadlibrary libopencore_downloadreg.so IN
+01-01 08:38:24.370 E/PV      (  568): PVLOG:TID(0x2eda8):Time=281:OsclSharedLibrary::LoadLib libopencore_mp4localreg.so IN
+01-01 08:38:24.370 E/PV      (  568): PVLOG:TID(0x2eda8):Time=282:OsclSharedLibrary::loadlibrary libopencore_mp4localreg.so IN
+01-01 08:38:24.401 E/PV      (  568): PVLOG:TID(0x2eda8):Time=303:PVPlayerNodeRegistry::AddLoadableModules() OUT
+01-01 08:38:24.401 E/PV      (  568): PVLOG:TID(0x2eda8):Time=304:PVPlayerRecognizerRegistry::AddLoadableModules() IN
+01-01 08:38:24.401 E/PV      (  568): PVLOG:TID(0x2eda8):Time=305:OsclLibraryList::Populate '/system/etc/pvplayer.cfg' IN
+01-01 08:38:24.401 E/PV      (  568): PVLOG:TID(0x2eda8):Time=306:OsclLibraryList::Populate - Found a (, reading uuid
+01-01 08:38:24.401 E/PV      (  568): PVLOG:TID(0x2eda8):Time=307:OsclLibraryList::Populate - uuid not a match, skipping line
+01-01 08:38:24.401 E/PV      (  568): PVLOG:TID(0x2eda8):Time=308:OsclLibraryList::Populate - Found a (, reading uuid
+01-01 08:38:24.401 E/PV      (  568): PVLOG:TID(0x2eda8):Time=308:OsclLibraryList::Populate - uuid not a match, skipping line
+01-01 08:38:24.410 E/PV      (  568): PVLOG:TID(0x2eda8):Time=318:OsclLibraryList::Populate - Found a (, reading uuid
+01-01 08:38:24.410 E/PV      (  568): PVLOG:TID(0x2eda8):Time=318:OsclLibraryList::Populate - uuid not a match, skipping line
+01-01 08:38:24.410 E/PV      (  568): PVLOG:TID(0x2eda8):Time=319:OsclLibraryList::Populate - Found a (, reading uuid
+01-01 08:38:24.410 E/PV      (  568): PVLOG:TID(0x2eda8):Time=320:OsclLibraryList::Populate - found a match, adding to list: libopencore_mp4localreg.so
+01-01 08:38:24.410 E/PV      (  568): PVLOG:TID(0x2eda8):Time=321:OsclLibraryList::Populate - Found a (, reading uuid
+01-01 08:38:24.410 E/PV      (  568): PVLOG:TID(0x2eda8):Time=321:OsclLibraryList::Populate - uuid not a match, skipping line
+01-01 08:38:24.410 E/PV      (  568): PVLOG:TID(0x2eda8):Time=322:OsclSharedLibrary::LoadLib libopencore_mp4localreg.so IN
+01-01 08:38:24.410 E/PV      (  568): PVLOG:TID(0x2eda8):Time=322:OsclSharedLibrary::loadlibrary libopencore_mp4localreg.so IN
+01-01 08:38:24.410 E/PV      (  568): PVLOG:TID(0x2eda8):Time=322:PVPlayerRecognizerRegistry::AddLoadableModules() OUT
+01-01 08:38:24.421 E/PV      (  568): PVLOG:TID(0x2eda8):Time=330:PVSCHED:Scheduler 'AndroidPVWrapper', Thread 0x2eda8: Starting PV Scheduling Loop
+01-01 08:38:24.421 E/PV      (  568): PVLOG:TID(0x2eda8):Time=331:PVPlayerEngine::GetPVPlayerStateSync()
+01-01 08:38:24.421 E/PV      (  568): PVLOG:TID(0x2eda8):Time=332:PVPlayerEngine::DoGetPVPlayerState() In
+01-01 08:38:24.421 E/PV      (  568): PVLOG:TID(0x2eda8):Time=332:PVPlayerEngine::DoGetPVPlayerState() Out
+01-01 08:38:24.431 E/PV      (  568): PVLOG:TID(0x2eda8):Time=337:PVPlayerEngine::QueryInterface()
+01-01 08:38:24.431 E/PV      (  568): PVLOG:TID(0x2eda8):Time=338:PVPlayerEngine::AddCommandToQueue() In CmdType 8, CmdId 0
+01-01 08:38:24.431 E/PV      (  568): PVLOG:TID(0x2eda8):Time=339:PVPlayerEngine::AddCommandToQueue() Type=8 ID=0 APIcmd=1 Tick=584098
+01-01 08:38:24.431 E/PV      (  568): PVLOG:TID(0x2eda8):Time=340:PVPlayerEngine::Run() In
+01-01 08:38:24.431 E/PV      (  568): PVLOG:TID(0x2eda8):Time=341:PVPlayerEngine::Run() Processing command with type=8
+01-01 08:38:24.431 E/PV      (  568): PVLOG:TID(0x2eda8):Time=342:PVPlayerEngine::DoQueryInterface() In
+01-01 08:38:24.431 E/PV      (  568): PVLOG:TID(0x2eda8):Time=342:PVPlayerEngine::EngineCommandCompleted() In CmdId 0, Status 1
+01-01 08:38:24.431 E/PV      (  568): PVLOG:TID(0x2eda8):Time=343:PVPlayerEngine::EngineCommandCompleted() Type=8 ID=0 APIcmd=1 Tick=584102
+01-01 08:38:24.441 E/PV      (  568): PVLOG:TID(0x2eda8):Time=349:PVPlayerEngine::EngineCommandCompleted() Notifying engine command as completed. CmdId 0 Status 1
+01-01 08:38:24.441 V/MediaPlayerService(  568):  setDataSource
+01-01 08:38:24.441 V/MediaPlayer-JNI( 1233): prepare: surface=0x20d690 (id=1)
+01-01 08:38:24.441 V/MediaPlayer( 1233): setVideoSurface
+01-01 08:38:24.451 V/MediaPlayerService(  568): [5] setVideoSurface(0x5d2a0)
+01-01 08:38:24.451 V/MediaPlayer-JNI( 1233): setAudioStreamType: 3
+01-01 08:38:24.451 V/MediaPlayer( 1233): MediaPlayer::setAudioStreamType
+01-01 08:38:24.451 V/MediaPlayer-JNI( 1233): prepareAsync: surface=0x20d690 (id=1)
+01-01 08:38:24.451 V/MediaPlayer( 1233): setVideoSurface
+01-01 08:38:24.451 V/MediaPlayerService(  568): [5] setVideoSurface(0x5d1b0)
+01-01 08:38:24.451 V/MediaPlayer( 1233): prepareAsync
+01-01 08:38:24.461 V/MediaPlayerService(  568): [5] setAudioStreamType(3)
+01-01 08:38:24.461 V/MediaPlayerService(  568): [5] prepareAsync
+01-01 08:38:24.461 E/PV      (  568): PVLOG:TID(0x2eda8):Time=372:PVPlayerEngine::DoQueryInterface() Out
+01-01 08:38:24.471 E/PV      (  568): PVLOG:TID(0x2eda8):Time=376:PVPlayerEngine::Run() Out
+01-01 08:38:24.471 E/PV      (  568): PVLOG:TID(0x2eda8):Time=377:PVPlayerEngine::GetPVPlayerStateSync()
+01-01 08:38:24.471 E/PV      (  568): PVLOG:TID(0x2eda8):Time=377:PVPlayerEngine::DoGetPVPlayerState() In
+01-01 08:38:24.471 E/PV      (  568): PVLOG:TID(0x2eda8):Time=377:PVPlayerEngine::DoGetPVPlayerState() Out
+01-01 08:38:24.471 E/PV      (  568): PVLOG:TID(0x2eda8):Time=378:PVPlayerEngine::AddDataSource()
+01-01 08:38:24.471 E/PV      (  568): PVLOG:TID(0x2eda8):Time=378:PVPlayerEngine::AddCommandToQueue() In CmdType 12, CmdId 1
+01-01 08:38:24.471 E/PV      (  568): PVLOG:TID(0x2eda8):Time=378:PVPlayerEngine::AddCommandToQueue() Type=12 ID=1 APIcmd=1 Tick=584137
+01-01 08:38:24.471 E/PV      (  568): PVLOG:TID(0x2eda8):Time=378:PVPlayerEngine::Run() In
+01-01 08:38:24.481 E/PV      (  568): PVLOG:TID(0x2eda8):Time=388:PVPlayerEngine::Run() Processing command with type=12
+01-01 08:38:24.490 E/PV      (  568): PVLOG:TID(0x2eda8):Time=388:PVPlayerEngine::DoAddDataSource() Tick=584147
+01-01 08:38:24.490 E/PV      (  568): PVLOG:TID(0x2eda8):Time=395:PVPlayerEngine::DoAddDataSource() In
+01-01 08:38:24.490 E/PV      (  568): PVLOG:TID(0x2eda8):Time=395:PVPlayerEngine::DoSetupSourceNode() Tick=584154
+01-01 08:38:24.490 E/PV      (  568): PVLOG:TID(0x2eda8):Time=396:PVPlayerEngine::DoSetupSourceNode() In
+01-01 08:38:24.490 E/PV      (  568): PVLOG:TID(0x2eda8):Time=396:PVPlayerNodeRegistry::QueryRegistry() IN
+01-01 08:38:24.490 E/PV      (  568): PVLOG:TID(0x2eda8):Time=396:PVPlayerNodeRegistry::QueryRegistry() OUT
+01-01 08:38:24.490 E/PV      (  568): PVLOG:TID(0x2eda8):Time=396:PVPlayerNodeRegistry::CreateNode() IN
+01-01 08:38:24.490 E/PV      (  568): PVLOG:TID(0x2eda8):Time=396:OsclSharedLibrary::LoadLib libopencore_rtsp.so IN
+01-01 08:38:24.490 E/PV      (  568): PVLOG:TID(0x2eda8):Time=396:OsclSharedLibrary::loadlibrary libopencore_rtsp.so IN
+01-01 08:38:24.712 E/PV      (  568): PVLOG:TID(0x2eda8):Time=621:PVPlayerNodeRegistry::CreateNode() OUT
+01-01 08:38:24.712 E/PV      (  568): PVLOG:TID(0x2eda8):Time=622:PVMFStreamingManagerNode::ThreadLogon - Out status[1]
+01-01 08:38:24.712 E/PV      (  568): PVLOG:TID(0x2eda8):Time=622:PVMFStreamingManagerNode::QueryInterface - In
+01-01 08:38:24.712 E/PV      (  568): PVLOG:TID(0x2eda8):Time=622:PVMFStreamingManagerNode::queryInterface - In
+01-01 08:38:24.712 E/PV      (  568): PVLOG:TID(0x2eda8):Time=622:PVMFStreamingManagerNode::queryInterface - Out
+01-01 08:38:24.712 E/PV      (  568): PVLOG:TID(0x2eda8):Time=622:PVMFStreamingManagerNode::QueryInterface - Out
+01-01 08:38:24.712 E/PV      (  568): PVLOG:TID(0x2eda8):Time=622:PVPlayerEngine::DoSetupSourceNode() Out
+01-01 08:38:24.712 E/PV      (  568): PVLOG:TID(0x2eda8):Time=622:PVPlayerEngine::DoAddDataSource() Out
+01-01 08:38:24.712 E/PV      (  568): PVLOG:TID(0x2eda8):Time=622:PVPlayerEngine::Run() Out
+01-01 08:38:24.712 E/PV      (  568): PVLOG:TID(0x2eda8):Time=623:PVMFStreamingManagerNode::Run - In
+01-01 08:38:24.712 E/PV      (  568): PVLOG:TID(0x2eda8):Time=623:PVMFStreamingManagerNode::ProcessCommand - In
+01-01 08:38:24.712 E/PV      (  568): PVLOG:TID(0x2eda8):Time=623:PVMFStreamingManagerNode::DoQueryInterface - In
+01-01 08:38:24.712 E/PV      (  568): PVLOG:TID(0x2eda8):Time=623:PVMFStreamingManagerNode::queryInterface - In
+01-01 08:38:24.721 E/PV      (  568): PVLOG:TID(0x2eda8):Time=623:PVMFStreamingManagerNode::queryInterface - Out
+01-01 08:38:24.721 E/PV      (  568): PVLOG:TID(0x2eda8):Time=629:StreamingManagerNode:CommandComplete Id 9000 Cmd 1 Status 1 Context 541728 Data 0
+01-01 08:38:24.721 E/PV      (  568): PVLOG:TID(0x2eda8):Time=629:PVPlayerEngine::NodeCommandCompleted() In
+01-01 08:38:24.721 E/PV      (  568): PVLOG:TID(0x2eda8):Time=629:PVPlayerEngine::HandleSourceNodeQueryInitIF() Tick=584388
+01-01 08:38:24.721 E/PV      (  568): PVLOG:TID(0x2eda8):Time=630:PVPlayerEngine::HandleSourceNodeQueryInitIF() In
+01-01 08:38:24.721 E/PV      (  568): PVLOG:TID(0x2eda8):Time=630:PVPlayerEngine::DoSourceNodeQueryTrackSelIF() Tick=584389
+01-01 08:38:24.721 E/PV      (  568): PVLOG:TID(0x2eda8):Time=630:PVPlayerEngine::DoSourceNodeQueryTrackSelIF() In
+01-01 08:38:24.721 E/PV      (  568): PVLOG:TID(0x2eda8):Time=630:PVMFStreamingManagerNode::SetSourceInitializationData() In
+01-01 08:38:24.761 E/PV      (  568): PVLOG:TID(0x2eda8):Time=672:PVMFJitterBufferNode:SetState 1
+01-01 08:38:24.780 E/PV      (  568): PVLOG:TID(0x2eda8):Time=683:PVMFJitterBufferNode::ThreadLogon Out retval - 1
+01-01 08:38:24.780 E/PV      (  568): PVLOG:TID(0x2eda8):Time=685:PVMFMediaLayerNode:SetState 1
+01-01 08:38:24.780 E/PV      (  568): PVLOG:TID(0x2eda8):Time=686:PVMFSMFSPBaseNode::ThreadLogon() - State - EPVMFNodeIdle
+01-01 08:38:24.780 E/PV      (  568): PVLOG:TID(0x2eda8):Time=687:PVMFSMFSPBaseNode::ThreadLogon - Out 1 status
+01-01 08:38:24.780 E/PV      (  568): PVLOG:TID(0x2eda8):Time=687:PVMFSMRTSPUnicastNode::queryInterface - In
+01-01 08:38:24.780 E/PV      (  568): PVLOG:TID(0x2eda8):Time=689:PVMFSMFSPBaseNode::queryInterface - Out
+01-01 08:38:24.780 E/PV      (  568): PVLOG:TID(0x2eda8):Time=690:PVRTSPEngineNode::SetSessionURL() called
+01-01 08:38:24.780 E/PV      (  568): PVLOG:TID(0x2eda8):Time=691:PVMFStreamingManagerNode::SetClientPlayBackClock - In
+01-01 08:38:24.780 E/PV      (  568): PVLOG:TID(0x2eda8):Time=692:PVMFJitterBufferNode::SetClientPlayBackClock 364fc
+01-01 08:38:24.780 E/PV      (  568): PVLOG:TID(0x2eda8):Time=692:PVMFStreamingManagerNode::SetClientPlayBackClock - Out status [1]
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=697:PVMFStreamingManagerNode::QueryInterface - In
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=697:PVMFStreamingManagerNode::queryInterface - In
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=697:PVMFStreamingManagerNode::queryInterface() Unsupported interface UUID.
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=697:PVMFSMFSPBaseNode::QueryInterface - In
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=697:PVMFSMFSPBaseNode::QueryInterface - Out
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=697:Added command [1] to Q, PVMFCommandId returned [10000]
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=698:PVPlayerEngine::DoSourceNodeQueryTrackSelIF() Out
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=698:PVPlayerEngine::HandleSourceNodeQueryInitIF() Out
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=698:PVPlayerEngine::NodeCommandCompleted() Out
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=698:PVMFStreamingManagerNode::DoQueryInterface - Out
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=698:PVMFSMRTSPUnicastNode::DoQueryInterface - In
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=698:PVMFSMRTSPUnicastNode::QueryInterface() - CmdComplete - PVMFSuccess
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=698:StreamingManagerNode:CommandComplete Id 10000 Cmd 1 Status 1 Context 541704 Data 0
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=699:PVPlayerEngine::NodeCommandCompleted() In
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=699:PVPlayerEngine::HandleSourceNodeQueryTrackSelIF() Tick=584458
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=699:PVPlayerEngine::HandleSourceNodeQueryTrackSelIF() In
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=699:PVPlayerEngine::DoSourceNodeQueryInterfaceOptional() Tick=584458
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=699:PVPlayerEngine::DoSourceNodeQueryInterfaceOptional() In
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=699:PVMFStreamingManagerNode::QueryInterface - In
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=699:PVMFStreamingManagerNode::queryInterface - In
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=700:PVMFStreamingManagerNode::queryInterface() Unsupported interface UUID.
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=700:PVMFSMFSPBaseNode::QueryInterface - In
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=700:PVMFSMFSPBaseNode::QueryInterface - Out
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=700:Added command [1] to Q, PVMFCommandId returned [10001]
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=700:PVMFStreamingManagerNode::QueryInterface - In
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=700:PVMFStreamingManagerNode::queryInterface - In
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=700:PVMFStreamingManagerNode::queryInterface() Unsupported interface UUID.
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=700:PVMFSMFSPBaseNode::QueryInterface - In
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=700:PVMFSMFSPBaseNode::QueryInterface - Out
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=700:Added command [1] to Q, PVMFCommandId returned [10002]
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=701:PVMFStreamingManagerNode::QueryInterface - In
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=701:PVMFStreamingManagerNode::queryInterface - In
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=701:PVMFStreamingManagerNode::queryInterface() Unsupported interface UUID.
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=701:PVMFSMFSPBaseNode::QueryInterface - In
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=701:PVMFSMFSPBaseNode::QueryInterface - Out
+01-01 08:38:24.791 E/PV      (  568): PVLOG:TID(0x2eda8):Time=701:Added command [1] to Q, PVMFCommandId returned [10003]
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=728:PVMFStreamingManagerNode::QueryInterface - In
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=728:PVMFStreamingManagerNode::queryInterface - In
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=728:PVMFStreamingManagerNode::queryInterface() Unsupported interface UUID.
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=728:PVMFSMFSPBaseNode::QueryInterface - In
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=728:PVMFSMFSPBaseNode::QueryInterface - Out
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=728:Added command [1] to Q, PVMFCommandId returned [10004]
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=729:PVMFStreamingManagerNode::QueryInterface - In
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=729:PVMFStreamingManagerNode::queryInterface - In
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=729:PVMFStreamingManagerNode::queryInterface() Unsupported interface UUID.
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=729:PVMFSMFSPBaseNode::QueryInterface - In
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=729:PVMFSMFSPBaseNode::QueryInterface - Out
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=729:Added command [1] to Q, PVMFCommandId returned [10005]
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=729:PVMFStreamingManagerNode::QueryInterface - In
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=729:PVMFStreamingManagerNode::queryInterface - In
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=729:PVMFStreamingManagerNode::queryInterface() Unsupported interface UUID.
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=729:PVMFSMFSPBaseNode::QueryInterface - In
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=730:PVMFSMFSPBaseNode::QueryInterface - Out
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=730:Added command [1] to Q, PVMFCommandId returned [10006]
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=730:PVMFStreamingManagerNode::QueryInterface - In
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=730:PVMFStreamingManagerNode::queryInterface - In
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=730:PVMFStreamingManagerNode::queryInterface() Unsupported interface UUID.
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=730:PVMFSMFSPBaseNode::QueryInterface - In
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=730:PVMFSMFSPBaseNode::QueryInterface - Out
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=730:Added command [1] to Q, PVMFCommandId returned [10007]
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=730:PVPlayerEngine::DoSourceNodeQueryInterfaceOptional() Out
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=730:PVPlayerEngine::HandleSourceNodeQueryTrackSelIF() Out
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=730:PVPlayerEngine::NodeCommandCompleted() Out
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=731:PVMFSMRTSPUnicastNode::DoQueryInterface - Out
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=731:PVMFSMRTSPUnicastNode::DoQueryInterface - In
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=731:PVMFSMRTSPUnicastNode::QueryInterface() - CmdFailed - PVMFErrNotSupported
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=731:StreamingManagerNode:CommandComplete Id 10001 Cmd 1 Status -4 Context 541728 Data 0
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=731:PVPlayerEngine::NodeCommandCompleted() In
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=731:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() Tick=584490
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=731:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() In
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=732:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() Track level info IF not available
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=732:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() 6 QueryInterface() commands are still pending
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=732:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() Out
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=732:PVPlayerEngine::NodeCommandCompleted() Out
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=732:PVMFSMRTSPUnicastNode::DoQueryInterface - Out
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=732:PVMFSMRTSPUnicastNode::DoQueryInterface - In
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=732:PVMFSMRTSPUnicastNode::QueryInterface() - CmdComplete - PVMFSuccess
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=732:StreamingManagerNode:CommandComplete Id 10002 Cmd 1 Status 1 Context 541680 Data 0
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=732:PVPlayerEngine::NodeCommandCompleted() In
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=733:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() Tick=584492
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=733:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() In
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=733:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() 5 QueryInterface() commands are still pending
+01-01 08:38:24.821 E/PV      (  568): PVLOG:TID(0x2eda8):Time=733:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() Out
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=756:PVPlayerEngine::NodeCommandCompleted() Out
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=756:PVMFSMRTSPUnicastNode::DoQueryInterface - Out
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=757:PVMFSMRTSPUnicastNode::DoQueryInterface - In
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=757:PVMFSMRTSPUnicastNode::QueryInterface() - CmdFailed - PVMFErrNotSupported
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=757:StreamingManagerNode:CommandComplete Id 10003 Cmd 1 Status -4 Context 541656 Data 0
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=757:PVPlayerEngine::NodeCommandCompleted() In
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=757:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() Tick=584516
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=757:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() In
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=757:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() Direction control IF not available
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=757:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() 4 QueryInterface() commands are still pending
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=757:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() Out
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=758:PVPlayerEngine::NodeCommandCompleted() Out
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=758:PVMFSMRTSPUnicastNode::DoQueryInterface - Out
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=758:PVMFSMRTSPUnicastNode::DoQueryInterface - In
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=758:PVMFSMRTSPUnicastNode::QueryInterface() - CmdComplete - PVMFSuccess
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=758:StreamingManagerNode:CommandComplete Id 10004 Cmd 1 Status 1 Context 541632 Data 0
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=758:PVPlayerEngine::NodeCommandCompleted() In
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=758:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() Tick=584517
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=758:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() In
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=758:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() 3 QueryInterface() commands are still pending
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=758:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() Out
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=759:PVPlayerEngine::NodeCommandCompleted() Out
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=759:PVMFSMRTSPUnicastNode::DoQueryInterface - Out
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=759:PVMFSMRTSPUnicastNode::DoQueryInterface - In
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=759:PVMFSMRTSPUnicastNode::QueryInterface() - CmdComplete - PVMFSuccess
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=759:StreamingManagerNode:CommandComplete Id 10005 Cmd 1 Status 1 Context 541608 Data 0
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=759:PVPlayerEngine::NodeCommandCompleted() In
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=759:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() Tick=584518
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=759:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() In
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=759:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() 2 QueryInterface() commands are still pending
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=759:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() Out
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=759:PVPlayerEngine::NodeCommandCompleted() Out
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=760:PVMFSMRTSPUnicastNode::DoQueryInterface - Out
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=760:PVMFSMRTSPUnicastNode::DoQueryInterface - In
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=760:PVMFSMRTSPUnicastNode::QueryInterface() - CmdComplete - PVMFSuccess
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=760:StreamingManagerNode:CommandComplete Id 10006 Cmd 1 Status 1 Context 541584 Data 0
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=760:PVPlayerEngine::NodeCommandCompleted() In
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=760:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() Tick=584519
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=760:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() In
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=760:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() 1 QueryInterface() commands are still pending
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=760:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() Out
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=760:PVPlayerEngine::NodeCommandCompleted() Out
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=760:PVMFSMRTSPUnicastNode::DoQueryInterface - Out
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=761:PVMFSMRTSPUnicastNode::DoQueryInterface - In
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=761:PVMFSMRTSPUnicastNode::QueryInterface() - CmdFailed - PVMFErrNotSupported
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=761:StreamingManagerNode:CommandComplete Id 10007 Cmd 1 Status -4 Context 541560 Data 0
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=761:PVPlayerEngine::NodeCommandCompleted() In
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=761:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() Tick=584520
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=761:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() In
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=761:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() Src Node Registry Init IF not available
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=761:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() All QueryInterface() commands complete so AddDataSource is complete
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=761:PVPlayerEngine::EngineCommandCompleted() In CmdId 1, Status 1
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=761:PVPlayerEngine::EngineCommandCompleted() Type=12 ID=1 APIcmd=1 Tick=584520
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=762:PVPlayerEngine::EngineCommandCompleted() Notifying engine command as completed. CmdId 1 Status 1
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=762:PVPlayerEngine::HandleSourceNodeQueryInterfaceOptional() Out
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=762:PVPlayerEngine::NodeCommandCompleted() Out
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=762:PVMFSMRTSPUnicastNode::DoQueryInterface - Out
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=762:PVPlayerEngine::GetPVPlayerStateSync()
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=762:PVPlayerEngine::DoGetPVPlayerState() In
+01-01 08:38:24.851 E/PV      (  568): PVLOG:TID(0x2eda8):Time=762:PVPlayerEngine::DoGetPVPlayerState() Out
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=776:PVPlayerEngine::setParametersSync()
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=777:PVPlayerEngine::DoCapConfigSetParameters() In
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=777:PVMFSMRTSPUnicastNode::setParametersSync() In
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=777:PVMFSMRTSPUnicastNode::setParametersSync() key str user-agent;valtype=wchar*
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=777:PVMFSMRTSPUnicastNode::VerifyAndSetConfigParameter() In index[4]
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=778:PVMFSMRTSPUnicastNode::VerifyAndSetPlayerParameter() Out
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=778:PVMFSMRTSPUnicastNode::setParametersSync() Out
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=778:PVPlayerEngine::DoCapConfigSetParameters() Out
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=778:PVPlayerEngine::Init()
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=778:PVPlayerEngine::AddCommandToQueue() In CmdType 13, CmdId 2
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=778:PVPlayerEngine::AddCommandToQueue() Type=13 ID=2 APIcmd=1 Tick=584537
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=778:PVPlayerEngine::Run() In
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=779:PVPlayerEngine::Run() Processing command with type=13
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=779:PVPlayerEngine::DoInit() Tick=584538
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=779:PVPlayerEngine::DoInit() In
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=779:PVPlayerEngine::DoSourceNodeInit() Tick=584538
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=779:PVPlayerEngine::DoSourceNodeInit() In
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=779:PVMFStreamingManagerNode::Init - In
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=779:PVMFSMFSPBaseNode::Init - In
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=779:PVMFSMFSPBaseNode::Init - Out
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=779:Added command [4] to Q, PVMFCommandId returned [10008]
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=780:PVMFStreamingManagerNode::Init - Out cmdId[10008]
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=780:PVPlayerEngine::DoSourceNodeInit() Out
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=780:PVPlayerEngine::DoInit() Out
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=780:PVPlayerEngine::SetEngineState() In Current state 1, New state 2
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=780:PVPlayerEngine::Run() Out
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=780:PVMFSMRTSPUnicastNode::DoInit - In
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=780:PVMFSMRTSPUnicastNode::DoPreInit - In
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=780:PVMFSMRTSPUnicastNode::DoPreInit - Out
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=780:PVMFSocketNode:Init
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=781:PVMFSocketNode::QueueCommandL()
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=781:PVRTSPEngineNode::Init() called
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=781:PVRTSPEngineNode::AddCmdToQueue() Cmd Id 6000
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=781:JitterBufferNode:Init
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=781:PVMFMediaLayerNode:Init
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=782:PVMFSMRTSPUnicastNode::DoInit - Out
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=782:PVMFSocketNode::Run() In
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=782:PVMFSocketNodeCommand::ProcessCommand() in
+01-01 08:38:24.871 E/PV      (  568): PVLOG:TID(0x2eda8):Time=782:PVMFSocketNode::DoInit() In
+01-01 08:38:24.911 E/PV      (  568): PVLOG:TID(0x2eda8):Time=815:PVMFSocketNode:CommandComplete Id 6000 Cmd 4 Status 1 Context 543892 Data 0
+01-01 08:38:24.911 E/PV      (  568): PVLOG:TID(0x2eda8):Time=816:PVMFSMRTSPUnicastNode::NodeCommandCompleted
+01-01 08:38:24.911 E/PV      (  568): PVLOG:TID(0x2eda8):Time=816:PVMFSMRTSPUnicastNode:HandleChildNodeCommandCompletion: 1002
+01-01 08:38:24.911 E/PV      (  568): PVLOG:TID(0x2eda8):Time=817:PVMFSMRTSPUnicastNode::HandleSocketNodeCommandCompleted In - cmd [1002] iSocketNodeContainer->iNodeCmdState [1] iInterfaceState[1]
+01-01 08:38:24.911 E/PV      (  568): PVLOG:TID(0x2eda8):Time=818:PVMFSMRTSPUnicastNode::CompleteInit - In
+01-01 08:38:24.911 E/PV      (  568): PVLOG:TID(0x2eda8):Time=818:PVMFPVMFSMRTSPUnicastNode::CompleteInit - Out
+01-01 08:38:24.911 E/PV      (  568): PVLOG:TID(0x2eda8):Time=818:PVMFSMRTSPUnicastNode::NodeCommandCompleted - performErrHandling[0]
+01-01 08:38:24.911 E/PV      (  568): PVLOG:TID(0x2eda8):Time=818:PVRTSPEngineNode::Run() In
+01-01 08:38:24.911 E/PV      (  568): PVLOG:TID(0x2eda8):Time=818:PVRTSPEngineNode::ProcessCommand() in
+01-01 08:38:24.911 E/PV      (  568): PVLOG:TID(0x2eda8):Time=819:PVRTSPEngineNode::DispatchCommand() in
+01-01 08:38:24.911 E/PV      (  568): PVLOG:TID(0x2eda8):Time=819:PVRTSPEngineNode::DoInitNode() In
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=847:PVRTSPEngineNode::ChangeInternalState() Old 0 New 2
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=847:PVRTSPEngineNode::SendRtspDescribe() Out
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=847:PVMFJitterBufferNode::DoInit
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=848:PVMFMediaClock::SetStartTime32 - Clock Start time set to 0
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=848:PVMFMediaClock::SetStartTime32 - Clock Start time set to 0
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=848:PVMFMediaClock::SetStartTime32 - Clock Start time set to 0
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=849:PVMFJitterBufferNode:SetState 2
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=849:PVPlayerEngine::HandleNodeInformationalEvent() In
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=849:PVPlayerEngine::HandleSourceNodeInfoEvent() In
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=849:PVPlayerEngine::HandleSourceNodeInfoEvent() Do nothing for this event 24
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=849:PVPlayerEngine::HandleSourceNodeInfoEvent() Out
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=850:PVPlayerEngine::HandleNodeInformationalEvent() Out
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=850:JitterBufferNode:CommandComplete Id 10000 Cmd 4 Status 1 Context 543940 Data 0
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=850:PVMFSMRTSPUnicastNode::NodeCommandCompleted
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=850:PVMFSMRTSPUnicastNode:HandleChildNodeCommandCompletion: 3002
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=850:PVMFSMRTSPUnicastNode::HandleJitterBufferCommandCompleted In - cmd [3002] iJitterBufferNodeContainer->iNodeCmdState [1] iInterfaceState[1]
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=851:PVMFSMRTSPUnicastNode::CompleteInit - In
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=851:PVMFPVMFSMRTSPUnicastNode::CompleteInit - Out
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=851:PVMFSMRTSPUnicastNode::NodeCommandCompleted - performErrHandling[0]
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=851:PVMFMediaLayerNode:SetState 2
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=851:PVPlayerEngine::HandleNodeInformationalEvent() In
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=851:PVPlayerEngine::HandleSourceNodeInfoEvent() In
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=851:PVPlayerEngine::HandleSourceNodeInfoEvent() Do nothing for this event 24
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=851:PVPlayerEngine::HandleSourceNodeInfoEvent() Out
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=852:PVPlayerEngine::HandleNodeInformationalEvent() Out
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=852:PVMFMediaLayerNode:CommandComplete Id 6200 Cmd 4 Status 1 Context 543964 Data 0
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=852:PVMFSMRTSPUnicastNode::NodeCommandCompleted
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=852:PVMFSMRTSPUnicastNode:HandleChildNodeCommandCompletion: 4002
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=852:PVMFSMRTSPUnicastNode::HandleMediaLayerCommandCompleted In - cmd [4002] iMediaLayerNodeContainer->iNodeCmdState [1] iInterfaceState[1]
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=852:PVMFSMRTSPUnicastNode::CompleteInit - In
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=852:PVMFPVMFSMRTSPUnicastNode::CompleteInit - Out
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=852:PVMFSMRTSPUnicastNode::NodeCommandCompleted - performErrHandling[0]
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=852:PVRTSPEngineNode::Run() In
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=852:PVRTSPEngineNode::DispatchCommand() in
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=853:PVRTSPEngineNode::DoInitNode() In
+01-01 08:38:24.941 E/PV      (  568): PVLOG:TID(0x2eda8):Time=853:PVRTSPEngineNode::clearEventQueue() Out myRet=1 
+01-01 08:38:24.951 E/PV      (  568): PVLOG:TID(0x2eda8):Time=860:OsclSocket(0x126f08): New Request EPVSocketConnect
+01-01 08:38:24.951 V/osclconfig_io(  568): persist.sys.streaming_apn = cmwap
+01-01 08:38:24.951 V/osclconfig_io(  568): gstrtsp: use wap apn
+01-01 08:38:24.951 V/osclconfig_io(  568): persist.sys.streaming_pdpname = veth0
+01-01 08:38:24.951 V/osclconfig_io(  568): gstrtsp: apn(cmwap) pdpname(veth0) setsockopt ok
+01-01 08:38:24.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=864:PVRTSPEngineNode::ChangeInternalState() Old 2 New 3
+01-01 08:38:24.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=864:PVRTSPEngineNode::SendRtspDescribe() Out
+01-01 08:38:24.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=864:PVRTSPEngineNode::rtspParserLoop() RTSPParser state 1
+01-01 08:38:24.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=864:PVRTSPEngineNode::rtspParserLoop() RTSPParser state 0
+01-01 08:38:24.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=864:PVRTSPEngineNode::Run() Out
+01-01 08:38:25.081 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:25.081 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:25.091 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:25.160 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:25.191 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:25.421 D/ConnectivityServiceExt(  632): getMobileDataNetworkMode returning 1
+01-01 08:38:25.421 D/StatusBarPolicy(  632): slotForData:0
+01-01 08:38:26.441 D/ConnectivityServiceExt(  632): getMobileDataNetworkMode returning 1
+01-01 08:38:26.441 D/StatusBarPolicy(  632): slotForData:0
+01-01 08:38:27.431 D/dalvikvm(  632): GC_EXPLICIT freed 4595 objects / 213572 bytes in 264ms
+01-01 08:38:28.462 D/ConnectivityServiceExt(  632): getMobileDataNetworkMode returning 1
+01-01 08:38:28.462 D/StatusBarPolicy(  632): slotForData:0
+01-01 08:38:29.481 D/ConnectivityServiceExt(  632): getMobileDataNetworkMode returning 1
+01-01 08:38:29.481 D/StatusBarPolicy(  632): slotForData:0
+01-01 08:38:31.181 D/dalvikvm( 1116): GC_EXPLICIT freed 1141 objects / 68052 bytes in 152ms
+01-01 08:38:34.510 D/ConnectivityServiceExt(  632): getMobileDataNetworkMode returning 1
+01-01 08:38:34.510 D/StatusBarPolicy(  632): slotForData:0
+01-01 08:38:35.541 D/ConnectivityServiceExt(  632): getMobileDataNetworkMode returning 1
+01-01 08:38:35.541 D/StatusBarPolicy(  632): slotForData:0
+01-01 08:38:42.581 D/StorageMonitor(  699): mms freeMem:6844416, smslowflag:false,mmslowflag:false,smsThrehold:10240,mmsThreshold:317440
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21864:OsclSocket(0x126f08): EPVSocketConnect EPVSocketFailure 110
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21864:PVRTSPEngineNode::HandleSocketEvent() In aId=1, aFxn=4, aEvent=3, aError=110
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21865:PVRTSPEngineNode::Run() In
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21865:PVRTSPEngineNode::DispatchCommand() in
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21865:PVRTSPEngineNode::DoInitNode() In
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21865:PVRTSPEngineNode::SendRtspDescribe() Out
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21865:PVRTSPEngineNode::ChangeExternalState() Old 1 New 6
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21865:PVRTSPEngineNode:NodeInfoEvent Type 24 Data 0
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21865:PVPlayerEngine::HandleNodeInformationalEvent() In
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21865:PVPlayerEngine::HandleSourceNodeInfoEvent() In
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21865:PVPlayerEngine::HandleSourceNodeInfoEvent() Do nothing for this event 24
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21865:PVPlayerEngine::HandleSourceNodeInfoEvent() Out
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21866:PVPlayerEngine::HandleNodeInformationalEvent() Out
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21866:PVRTSPEngineNode:CommandComplete Id 6000 Cmd 4 Status -1 Context 543916 Data 0
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21866:PVMFSMRTSPUnicastNode::NodeCommandCompleted
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21866:PVMFSMRTSPUnicastNode:HandleChildNodeCommandCompletion: 2002
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21866:PVMFSMRTSPUnicastNode::HandleRTSPSessionControllerCommandCompleted In - cmd [2002] iSessionControllerNodeContainer->iNodeCmdState [1] iInterfaceState[1]
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21866:PVMFSMRTSPUnicastNode::HandleRTSPSessionControllerCommandCompleted - Command failed - context=0x84cac, status=0xffffffff
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21866:PVMFSMRTSPUnicastNode::NodeCommandCompleted - performErrHandling[1]
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21866:PVPlayerEngine::HandleNodeInformationalEvent() In
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21866:PVPlayerEngine::HandleSourceNodeInfoEvent() In
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21867:PVPlayerEngine::HandleSourceNodeInfoEvent() Do nothing for this event 24
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21867:PVPlayerEngine::HandleSourceNodeInfoEvent() Out
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21867:PVPlayerEngine::HandleNodeInformationalEvent() Out
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21867:PVMFSMFSPChildNodeErrorHandler::InitiateErrorHandling In CmdId [6000]
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21867:PVMFSMFSPChildNodeErrorHandler::SaveErrorInfo - ErrSource is Command Completion
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21867:PVMFSMFSPChildNodeErrorHandler::PerformErrorHandling In
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21867:Added command [26] to Q, PVMFCommandId returned [0]
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21867:PVMFSMFSPChildNodeErrorHandler::PerformErrorHandling Out iErrCmd - [85520] iState [3]
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21867:PVRTSPEngineNode::Run() Out
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21867:PVMFSMFSPBaseNode::DoResetDueToErr - In
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21868:PVMFSocketNode:Reset
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21868:PVMFSocketNode::QueueCommandL()
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21868:PVRTSPEngineNode::Reset() called
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21868:PVRTSPEngineNode::AddCmdToQueue() Cmd Id 6001
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21868:JitterBufferNode:Reset
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21868:PVMFMediaLayerNode:Reset
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21868:PVMFSMFSPBaseNode::DoResetDueToErr - Out
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21868:PVMFSocketNode::Run() In
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21868:PVMFSocketNodeCommand::ProcessCommand() in
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21869:PVMFSocketNode::DoReset()
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21869:PVMFSocketNode:CommandComplete Id 6001 Cmd 10 Status 1 Context 543892 Data 0
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21869:PVMFSMRTSPUnicastNode:HandleNodeInformationalEvent Supress info event 24
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21869:PVMFSMRTSPUnicastNode::NodeCommandCompleted
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21869:PVMFSMRTSPUnicastNode:HandleChildNodeCommandCompletion: 1008
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21869:PVMFSMRTSPUnicastNode::HandleSocketNodeCommandCompleted In - cmd [1008] iSocketNodeContainer->iNodeCmdState [1] iInterfaceState[6]
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21869:PVMFSMRTSPUnicastNode::NodeCommandCompleted - performErrHandling[1]
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21870:PVMFSMFSPChildNodeErrorHandler::CompleteErrorHandling In CmdId [6001] ErrHandlerState [3]
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21870:PVMFSMFSPChildNodeErrorHandler::CompleteChildNodesResetDueToErrorIn
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21870:PVRTSPEngineNode::Run() In
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21870:PVRTSPEngineNode::ProcessCommand() in
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21870:PVRTSPEngineNode::DispatchCommand() in
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21870:PVRTSPEngineNode::DoResetNode() In
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21870:PVRTSPEngineNode::SendRtspTeardown() In
+01-01 08:38:45.961 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21870:OsclSocket(0x126f08): New Request EPVSocketShutdown
+01-01 08:38:45.981 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21887:PVRTSPEngineNode::resetSocket() Shutdown
+01-01 08:38:45.981 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21888:PVRTSPEngineNode::ChangeInternalState() Old 3 New 17
+01-01 08:38:45.981 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21888:PVRTSPEngineNode::SendRtspTeardown() Out
+01-01 08:38:45.981 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21888:JitterBufferNode:DoReset 2
+01-01 08:38:45.981 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21888:@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+01-01 08:38:45.981 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21888:PVMFJitterBufferNode - iNumRunL = 3
+01-01 08:38:45.981 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21888:PVMFJitterBufferNode::ResetNodeParams In aReleaseMemory[1]
+01-01 08:38:45.981 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21888:Est clock Vect Size 0
+01-01 08:38:45.981 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21888:Client clock Vect Size 0
+01-01 08:38:45.981 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21888:Non dec clock Vect Size 0
+01-01 08:38:45.981 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21889:PVMFJitterBufferNode::ResetNodeParams Out -
+01-01 08:38:45.981 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21889:PVMFJitterBufferNode:SetState 1
+01-01 08:38:45.981 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21889:PVMFSMRTSPUnicastNode:HandleNodeInformationalEvent Supress info event 24
+01-01 08:38:45.981 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21889:JitterBufferNode:CommandComplete Id 10001 Cmd 10 Status 1 Context 543940 Data 0
+01-01 08:38:45.981 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21889:PVMFSMRTSPUnicastNode::NodeCommandCompleted
+01-01 08:38:45.981 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21889:PVMFSMRTSPUnicastNode:HandleChildNodeCommandCompletion: 3008
+01-01 08:38:45.981 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21889:PVMFSMRTSPUnicastNode::HandleJitterBufferCommandCompleted In - cmd [3008] iJitterBufferNodeContainer->iNodeCmdState [1] iInterfaceState[6]
+01-01 08:38:45.981 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21890:PVMFSMRTSPUnicastNode::NodeCommandCompleted - performErrHandling[1]
+01-01 08:38:45.981 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21890:PVMFSMFSPChildNodeErrorHandler::CompleteErrorHandling In CmdId [10001] ErrHandlerState [3]
+01-01 08:38:45.981 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21890:PVMFSMFSPChildNodeErrorHandler::CompleteChildNodesResetDueToErrorIn
+01-01 08:38:45.981 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21890:@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+01-01 08:38:45.981 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21890:PVMFMediaLayerNode - iNumRunL = 3
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21895:PVMFMediaLayerNode:SetState 1
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21896:PVMFSMRTSPUnicastNode:HandleNodeInformationalEvent Supress info event 24
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21896:PVMFMediaLayerNode:CommandComplete Id 6201 Cmd 10 Status 1 Context 543964 Data 0
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21896:PVMFSMRTSPUnicastNode::NodeCommandCompleted
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21896:PVMFSMRTSPUnicastNode:HandleChildNodeCommandCompletion: 4008
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21896:PVMFSMRTSPUnicastNode::HandleMediaLayerCommandCompleted In - cmd [4008] iMediaLayerNodeContainer->iNodeCmdState [1] iInterfaceState[6]
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21896:PVMFSMRTSPUnicastNode::NodeCommandCompleted - performErrHandling[1]
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21896:PVMFSMFSPChildNodeErrorHandler::CompleteErrorHandling In CmdId [6201] ErrHandlerState [3]
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21896:PVMFSMFSPChildNodeErrorHandler::CompleteChildNodesResetDueToErrorIn
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21897:OsclSocket(0x126f08): EPVSocketShutdown EPVSocketFailure 107
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21897:PVRTSPEngineNode::HandleSocketEvent() In aId=1, aFxn=6, aEvent=3, aError=107
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21897:PVRTSPEngineNode::Run() In
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21897:PVRTSPEngineNode::resetSocket() Delete TCP
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21897:PVRTSPEngineNode::ChangeInternalState() Old 17 New 0
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21897:PVRTSPEngineNode::resetSocket() Done!
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21898:PVRTSPEngineNode::DispatchCommand() in
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21898:PVRTSPEngineNode::DoResetNode() In
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21898:PVRTSPEngineNode::SendRtspTeardown() In
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21898:PVRTSPEngineNode::resetSocket() Nothing to do!
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21898:PVRTSPEngineNode::ChangeInternalState() Old 0 New 2
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21898:PVRTSPEngineNode::SendRtspTeardown() Out
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21898:PVRTSPEngineNode::resetSocket() Nothing to do!
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21898:PVRTSPEngineNode:CommandComplete Id 6001 Cmd 10 Status 1 Context 543916 Data 0
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21898:PVRTSPEngineNode::ChangeExternalState() Old 6 New 1
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21898:PVRTSPEngineNode::ThreadLogoff() called
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21899:PVMFSMRTSPUnicastNode:HandleNodeInformationalEvent Supress info event 24
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21899:PVMFSMRTSPUnicastNode::NodeCommandCompleted
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21899:PVMFSMRTSPUnicastNode:HandleChildNodeCommandCompletion: 2008
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21899:PVMFSMRTSPUnicastNode::HandleRTSPSessionControllerCommandCompleted In - cmd [2008] iSessionControllerNodeContainer->iNodeCmdState [1] iInterfaceState[6]
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21899:PVMFSMRTSPUnicastNode::NodeCommandCompleted - performErrHandling[1]
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21899:PVMFSMFSPChildNodeErrorHandler::CompleteErrorHandling In CmdId [6001] ErrHandlerState [3]
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21899:PVMFSMFSPChildNodeErrorHandler::CompleteChildNodesResetDueToErrorIn
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21899:PVMFSMFSPChildNodeErrorHandler::CompleteChildNodesResetDueToErrorIn - Restting Child Nodes complete 0
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21899:PVMFSMFSPChildNodeErrorHandler::ErrHandlingCommandComplete In iCmd[26]
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21899:PVMFSMFSPChildNodeErrorHandler::ErrHandlingCommandComplete - Reset Due To Err completed
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21899:PVPlayerEngine::HandleNodeInformationalEvent() In
+01-01 08:38:45.991 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21900:PVPlayerEngine::HandleSourceNodeInfoEvent() In
+01-01 08:38:46.011 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21900:PVPlayerEngine::HandleSourceNodeInfoEvent() Do nothing for this event 24
+01-01 08:38:46.011 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21918:PVPlayerEngine::HandleSourceNodeInfoEvent() Out
+01-01 08:38:46.011 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21918:PVPlayerEngine::HandleNodeInformationalEvent() Out
+01-01 08:38:46.011 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21919:PVMFSMFSPChildNodeErrorHandler::GetErroneousCmdResponse [85520]
+01-01 08:38:46.011 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21919:StreamingManagerNode:CommandComplete Id 10008 Cmd 4 Status -1 Context 541560 Data 0
+01-01 08:38:46.011 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21919:PVPlayerEngine::NodeCommandCompleted() In
+01-01 08:38:46.011 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21919:PVPlayerEngine::HandleSourceNodeInit() Tick=605678
+01-01 08:38:46.011 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21919:PVPlayerEngine::HandleSourceNodeInit() In
+01-01 08:38:46.011 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21919:PVPlayerEngine::SetEngineState() In Current state 2, New state 1
+01-01 08:38:46.011 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21919:PVPlayerEngine::HandleSourceNodeInit() failed, Add EH Command
+01-01 08:38:46.011 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21919:PVPlayerEngine::AddCommandToQueue() In CmdType 49, CmdId 3
+01-01 08:38:46.011 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21920:PVPlayerEngine::SetEngineState() In Current state 1, New state 19
+01-01 08:38:46.011 V/MediaPlayerService(  568): [5] notify (0x47050, 200, 1, 26)
+01-01 08:38:46.011 V/MediaPlayer( 1233): message received msg=200, ext1=1, ext2=26
+01-01 08:38:46.011 W/MediaPlayer( 1233): info/warning (1, 26)
+01-01 08:38:46.011 V/MediaPlayer( 1233): callback application
+01-01 08:38:46.011 V/MediaPlayer( 1233): back from callback
+01-01 08:38:46.011 I/MediaPlayer( 1233): Info (1,26)
+01-01 08:38:46.011 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21923:PVPlayerEngine::AddCommandToQueue() Type=49 ID=3 APIcmd=0 Tick=605682
+01-01 08:38:46.011 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21923:PVPlayerEngine::HandleSourceNodeInit() Out
+01-01 08:38:46.011 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21923:PVPlayerEngine::NodeCommandCompleted() Out
+01-01 08:38:46.011 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21923:PVMFSMFSPChildNodeErrorHandler::Reset
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21924:PVPlayerEngine::Run() In
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21924:PVPlayerEngine::Run() Processing Error Handling request
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21924:PVPlayerEngine::DoErrorHandling() In
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21924:PVPlayerEngine::DoErrorHandling() Issue reset on Source Node
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21925:PVPlayerEngine::SetEngineState() In Current state 19, New state 18
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21925:PVMFStreamingManagerNode::Reset - In
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21925:PVMFSMFSPBaseNode::Reset - In
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21925:PVMFSMFSPBaseNode::Reset - Out
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21925:Added command [10] to Q, PVMFCommandId returned [10009]
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21925:PVMFStreamingManagerNode::Reset - Out cmdId[10009]
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21925:PVMFSMFSPBaseNode::DoReset - In
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21925:PVMFSocketNode:Reset
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21925:PVMFSocketNode::QueueCommandL()
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21926:JitterBufferNode:Reset
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21926:PVMFMediaLayerNode:Reset
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21926:PVMFSMFSPBaseNode::DoReset - Out
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21926:PVMFSocketNode::Run() In
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21926:PVMFSocketNodeCommand::ProcessCommand() in
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21926:PVMFSocketNode::DoReset()
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21926:PVMFSocketNode:CommandComplete Id 6002 Cmd 10 Status 1 Context 543892 Data 0
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21926:PVMFSMRTSPUnicastNode:HandleNodeInformationalEvent Supress info event 24
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21926:PVMFSMRTSPUnicastNode::NodeCommandCompleted
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21927:PVMFSMRTSPUnicastNode:HandleChildNodeCommandCompletion: 1008
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21927:PVMFSMRTSPUnicastNode::HandleSocketNodeCommandCompleted In - cmd [1008] iSocketNodeContainer->iNodeCmdState [1] iInterfaceState[1]
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21927:PVMFSMFSPBaseNode::CompleteReset - In
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21927:PVMFSMFSPBaseNode::CompleteReset - Out
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21927:PVMFSMRTSPUnicastNode::NodeCommandCompleted - performErrHandling[0]
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21927:JitterBufferNode:DoReset 1
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21927:PVMFJitterBufferNode::ResetNodeParams In aReleaseMemory[1]
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21927:PVMFJitterBufferNode::ResetNodeParams Out -
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21927:PVMFJitterBufferNode:SetState 1
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21927:PVMFSMRTSPUnicastNode:HandleNodeInformationalEvent Supress info event 24
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21927:JitterBufferNode:CommandComplete Id 10002 Cmd 10 Status 1 Context 543916 Data 0
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21928:PVMFSMRTSPUnicastNode::NodeCommandCompleted
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21928:PVMFSMRTSPUnicastNode:HandleChildNodeCommandCompletion: 3008
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21928:PVMFSMRTSPUnicastNode::HandleJitterBufferCommandCompleted In - cmd [3008] iJitterBufferNodeContainer->iNodeCmdState [1] iInterfaceState[1]
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21928:PVMFSMFSPBaseNode::CompleteReset - In
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21928:PVMFSMFSPBaseNode::CompleteReset - Out
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21928:PVMFSMRTSPUnicastNode::NodeCommandCompleted - performErrHandling[0]
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21928:PVMFMediaLayerNode:SetState 1
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21928:PVMFSMRTSPUnicastNode:HandleNodeInformationalEvent Supress info event 24
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21928:PVMFMediaLayerNode:CommandComplete Id 6202 Cmd 10 Status 1 Context 543940 Data 0
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21929:PVMFSMRTSPUnicastNode::NodeCommandCompleted
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21929:PVMFSMRTSPUnicastNode:HandleChildNodeCommandCompletion: 4008
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21929:PVMFSMRTSPUnicastNode::HandleMediaLayerCommandCompleted In - cmd [4008] iMediaLayerNodeContainer->iNodeCmdState [1] iInterfaceState[1]
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21929:PVMFSMFSPBaseNode::CompleteReset - In
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21929:PVPlayerEngine::HandleNodeInformationalEvent() In
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21929:PVPlayerEngine::HandleSourceNodeInfoEvent() In
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21929:PVPlayerEngine::HandleSourceNodeInfoEvent() Return engine in resetting state no need to process the info event 24
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21929:PVPlayerEngine::HandleNodeInformationalEvent() Out
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21929:StreamingManagerNode:CommandComplete Id 10009 Cmd 10 Status 1 Context 541560 Data 0
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21930:PVPlayerEngine::NodeCommandCompleted() In
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21930:PVPlayerEngine::HandleSourceNodeReset() In
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21930:PVMFStreamingManagerNode::ThreadLogoff - In
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21930:PVMFSMFSPBaseNode::ThreadLogoff - In
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21930:PVMFSocketNode:ThreadLogoff
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21930:PVMFSMRTSPUnicastNode:HandleNodeInformationalEvent Supress info event 24
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21930:PVMFJitterBufferNode::ThreadLogoff In
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21930:PVMFJitterBufferNode::ResetNodeParams In aReleaseMemory[1]
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21930:PVMFJitterBufferNode::ResetNodeParams Out -
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21930:PVMFSMRTSPUnicastNode:HandleNodeInformationalEvent Supress info event 24
+01-01 08:38:46.021 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21931:PVMFMediaLayerNode:ThreadLogoff
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21931:PVMFSMRTSPUnicastNode:HandleNodeInformationalEvent Supress info event 24
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21958:PVPlayerEngine::HandleNodeInformationalEvent() In
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21958:PVPlayerEngine::HandleSourceNodeInfoEvent() In
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21958:PVPlayerEngine::HandleSourceNodeInfoEvent() Return engine in resetting state no need to process the info event 24
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21958:PVPlayerEngine::HandleNodeInformationalEvent() Out
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21958:PVMFSMFSPBaseNode::ThreadLogoff() - State - EPVMFNodeIdle
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21958:PVPlayerEngine::HandleNodeInformationalEvent() In
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21958:PVPlayerEngine::HandleSourceNodeInfoEvent() In
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21958:PVPlayerEngine::HandleSourceNodeInfoEvent() Return engine in resetting state no need to process the info event 24
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21959:PVPlayerEngine::HandleNodeInformationalEvent() Out
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21959:PVPlayerEngine::SetEngineState() In Current state 18, New state 1
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21959:PVPlayerEngine::HandleSourceNodeReset() Out
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21959:PVPlayerEngine::NodeCommandCompleted() Out
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21959:PVPlayerEngine::Run() In
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21959:PVPlayerEngine::Run() Processing Error Handling request
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21959:PVPlayerEngine::DoErrorHandling() In
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21959:PVPlayerEngine::DoErrorHandling() Source node is deleted or in created state, so start removing sinks
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21959:PVPlayerEngine::DoRemoveAllSinks() all datapaths removed
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21960:PVPlayerEngine::RemoveDataSourceSync() In
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21960:PVPlayerEngine::DoSourceNodeCleanup() In
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21960:PVPlayerEngine::DoSourceNodeCleanup() - iSourceNodeInitIF Released
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21960:PVPlayerEngine::DoSourceNodeCleanup() - iSourceNodeTrackSelIF Released
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21960:PVPlayerEngine::DoSourceNodeCleanup() - iSourceNodePBCtrlIF Released
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21960:PVPlayerEngine::DoSourceNodeCleanup() - iSourceNodeMetadataExtIF Released
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21960:PVPlayerEngine::DoSourceNodeCleanup() - iSourceNodeCapConfigIF Released
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21960:PVPlayerEngine::DoSourceNodeCleanup() - DisConnect Done
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21960:PVPlayerEngine::DoSourceNodeCleanup() - ThreadLogoff Done
+01-01 08:38:46.051 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21961:PVPlayerNodeRegistry::ReleaseNode() IN
+01-01 08:38:46.061 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21970:PVPlayerNodeRegistry::ReleaseNode() OUT
+01-01 08:38:46.061 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21970:PVPlayerEngine::DoSourceNodeCleanup() - iSourceNode Delete Done
+01-01 08:38:46.061 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21970:PVPlayerEngine::DoSourceNodeCleanup() Out
+01-01 08:38:46.061 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21971:PVPlayerEngine::RemoveDataSourceSync() Out
+01-01 08:38:46.061 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21971:PVPlayerEngine::SetEngineState() In Current state 1, New state 1
+01-01 08:38:46.061 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21971:PVPlayerEngine::DoErrorHandling() Complete the engine command being processed
+01-01 08:38:46.061 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21971:PVPlayerEngine::EngineCommandCompleted() In CmdId 2, Status -1
+01-01 08:38:46.061 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21971:PVPlayerEngine::EngineCommandCompleted() Type=13 ID=2 APIcmd=1 Tick=605730
+01-01 08:38:46.061 E/PV      (  568): PVLOG:TID(0x2eda8):Time=21971:PVPlayerEngine::EngineCommandCompleted() Notifying engine command as completed. CmdId 2 Status -1
+01-01 08:38:46.061 E/osclconfig_io(  568): Command PLAYER_INIT completed with an error or info PVMFFailure
+01-01 08:38:46.061 V/MediaPlayerService(  568): [5] notify (0x47050, 100, 1, -1)
+01-01 08:38:46.061 V/MediaPlayer( 1233): message received msg=100, ext1=1, ext2=-1
+01-01 08:38:46.061 E/MediaPlayer( 1233): error (1, -1)
+01-01 08:38:46.061 V/MediaPlayer( 1233): callback application
+01-01 08:38:46.061 V/MediaPlayer( 1233): back from callback
+01-01 08:38:46.061 E/MediaPlayer( 1233): Error (1,-1)
+01-01 08:38:46.061 D/VideoView( 1233): Error: 1,-1
+01-01 08:38:46.091 W/osclconfig_io(  568): PVMFInfoErrorHandlingComplete
+01-01 08:38:46.091 E/PV      (  568): PVLOG:TID(0x2eda8):Time=22000:PVPlayerEngine::DoErrorHandling() Out
+01-01 08:38:46.091 E/PV      (  568): PVLOG:TID(0x2eda8):Time=22000:PVPlayerEngine::Run() In
+01-01 08:38:46.091 E/PV      (  568): PVLOG:TID(0x2eda8):Time=22000:PVPlayerEngine::Run() Out
+01-01 08:38:46.581 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:46.731 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:46.740 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:46.751 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:46.771 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:46.811 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:46.831 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:46.841 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:46.861 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:46.881 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:46.901 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:46.921 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:46.941 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:46.950 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:46.971 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:46.991 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:47.011 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:47.021 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:47.040 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:47.061 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:47.070 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:47.091 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:47.111 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:47.120 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:47.141 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:47.161 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:47.180 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:38:47.191 D/KeyguardViewMediator(  632): setHidden false
+01-01 08:39:00.021 D/KeyguardUpdateMonitor(  632): received broadcast android.intent.action.TIME_TICK
+01-01 08:39:00.031 D/KeyguardUpdateMonitor(  632): handleTimeUpdate
+
+^C
+jiangrui@jiangrui-desktop:~/notes/multimedia/opencore$ 
+

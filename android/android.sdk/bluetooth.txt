@@ -1,0 +1,162 @@
+
+http://developer.android.com/reference/android/bluetooth/BluetoothA2dp.html
+
+BluetoothA2dp
+    This class provides the public APIs to control the Bluetooth A2DP profile.
+
+    BluetoothA2dp is a proxy object for controlling the Bluetooth A2DP Service via IPC
+
+
+
+major tasks
+    setting up Bluetooth
+    finding devices that are either paired or available in the local area, 
+    connecting devices
+    transferring data between devices
+
+classes
+    BluetoothAdapter
+        entry-point for all Bluetooth interaction
+
+        discover other Bluetooth devices
+        query a list of bonded (paired) devices
+        instantiate a BluetoothDevice using a known MAC address
+        create a BluetoothServerSocket to listen for 
+            communications from other devices
+
+    BluetoothDevice
+        Represents a remote Bluetooth device
+        Use this to request a connection with a remote device through a BluetoothSocket 
+            or query information about the device such as its name, address, class, and bonding state.
+
+    BluetoothSocket
+        Represents the interface for a Bluetooth socket (similar to a TCP Socket).
+        This is the connection point that allows an application to exchange data with another Bluetooth device 
+            via InputStream and OutputStream.
+
+    BluetoothServerSocket
+        Represents an open server socket that listens for incoming requests
+            (similar to a TCP ServerSocket)
+        In order to connect two Android devices, one device must open a server socket with this class
+        When a remote Bluetooth device makes a connection request to the this device, 
+            the BluetoothServerSocket will return a connected BluetoothSocket when the connection is accepted.
+
+    BluetoothClass
+        Describes the general characteristics and capabilities of a Bluetooth device.
+        define the device's major and minor device classes and its services
+
+
+Bluetooth Permissions
+    BLUETOOTH 
+        perform any Bluetooth communication, 
+            such as requesting a connection, accepting a connection, and transferring data
+
+    BLUETOOTH_ADMIN
+        initiate device discovery or manipulate Bluetooth settings
+
+    If you use BLUETOOTH_ADMIN permission, then must also have the BLUETOOTH permission.
+
+Setting Up Bluetooth
+    1. Get the BluetoothAdapter
+        BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        if (mBluetoothAdapter == null) {
+            // Device does not support Bluetooth
+        }
+
+    2. Enable Bluetooth 
+        if (!mBluetoothAdapter.isEnabled()) {
+            Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+            startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+        }
+
+        receive the RESULT_OK/RESULT_CANCELED result code in the onActivityResult() callback
+
+        listen for the ACTION_STATE_CHANGED broadcast Intent
+            extra fields EXTRA_STATE and EXTRA_PREVIOUS_STATE
+                STATE_TURNING_ON, STATE_ON, STATE_TURNING_OFF, and STATE_OFF
+
+
+Finding Devices
+    either through device discovery 
+    or by querying the list of paired (bonded) devices
+
+    搜索附近的打开的设备, 并向这些设备查询一些信息
+        this is sometimes referred to as "discovering," "inquiring" or "scanning"
+
+        respond to a discovery request 
+            only if it is currently enabled to be discoverable
+                share information such as the device name, class, and its unique MAC address
+
+        pairing request 
+            Once a connection is made with a remote device for the first time
+                a pairing request is automatically presented to the user
+
+            When a device is paired, 
+                the basic information about that device (such as the device name, class, and MAC address) is saved 
+                can be read using the Bluetooth APIs.
+
+                Using the known MAC address for a remote device, a connection can be initiated with it at any time 
+                    without performing discovery (assuming the device is within range).
+     
+    difference between being paired and being connected
+        To be paired means 
+            two devices are aware of each other's existence, 
+            have a shared link-key that can be used for authentication, 
+            and are capable of establishing an encrypted connection with each other. 
+
+            automatically performed when you initiate an encrypted connection with the Bluetooth APIs.
+
+        To be connected means 
+            the devices currently share an RFCOMM channel 
+            and are able to transmit data with each other. 
+            
+        require devices to be paired before an RFCOMM connection can be established. 
+        Pairing is automatically performed when you initiate an encrypted connection with the Bluetooth APIs.
+
+Querying paired devices
+    Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
+    // If there are paired devices
+    if (pairedDevices.size() > 0) {
+        // Loop through paired devices
+        for (BluetoothDevice device : pairedDevices) {
+            // Add the name and address to an array adapter to show in a ListView
+            mArrayAdapter.add(device.getName() + "\n" + device.getAddress());
+        }
+    }
+
+Discovering devices
+    startDiscovery()/cancelDiscovery() 
+
+    // Create a BroadcastReceiver for ACTION_FOUND
+    private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            // When discovery finds a device
+            if (BluetoothDevice.ACTION_FOUND.equals(action)) {
+                // Get the BluetoothDevice object from the Intent
+                BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+                // Add the name and address to an array adapter to show in a ListView
+                mArrayAdapter.add(device.getName() + "\n" + device.getAddress());
+            }
+        }
+    };
+
+    // Register the BroadcastReceiver
+    IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
+    registerReceiver(mReceiver, filter); // Don't forget to unregister during onDestroy
+
+Enabling discoverability
+    call startActivityForResult(Intent, int) with the ACTION_REQUEST_DISCOVERABLE action Intent.
+    By default, the device will become discoverable for 120 seconds
+
+        Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
+        discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
+        startActivity(discoverableIntent);
+
+    A dialog will be displayed, requesting user permission
+
+Connecting Devices
+    Connecting as a server
+        1. Get a BluetoothServerSocket by calling the listenUsingRfcommWithServiceRecord(String, UUID). 
+        2. Start listening for connection requests by calling accept(). 
+        3. Unless you want to accept additional connections, call close(). 

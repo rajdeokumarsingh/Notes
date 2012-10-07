@@ -1,0 +1,234 @@
+SkShader 着色器
+{
+    Shaders are simple programs that describe the traits of either a vertex or a pixel.
+    为像素和顶点着色(这么简单)
+        可以画一种颜色，或多种颜色，如渐变，透明
+
+        pixel shaders 
+        {
+            为像素着色
+            describe the traits (color, z-depth and alpha value) of a pixel
+            compute color and other attributes of each pixel
+
+            Pixel shaders range:
+                1. always outputting the same color, 
+                2. applying a lighting value, 
+                3. doing bump mapping, shadows, specular highlights, translucency and other phenomena. 
+                4. alter the depth of the pixel (for Z-buffering), 
+                5. output more than one color if multiple render targets are active. 
+                
+            A pixel shader alone cannot produce very complex effects, 
+            because it operates only on a single pixel, without knowledge of a scene's geometry.
+        }
+
+        vertex shaders 
+        {
+            为顶点着色
+            describe the traits (position, texture coordinates, colors, etc.) of a vertex
+
+            Vertex shaders are run once for each vertex given to the graphics processor. 
+            The purpose is to transform each vertex's 3D position in virtual space to 
+                the 2D coordinate at which it appears on the screen 
+                (as well as a depth value for the Z-buffer). 
+
+            Vertex shaders can manipulate properties such as 
+                position, color, and texture coordinate, but cannot create new vertices. 
+
+            The output of the vertex shader goes to the next stage in the pipeline, 
+                which is either a geometry shader if present or the rasterizer otherwise.
+
+                Rasterisation (or rasterization) 
+                {
+                    将向量图形转化成位图图形
+
+                    the task of taking an image described in a vector graphics format (shapes) and 
+                    converting it into a raster image (pixels or dots) for output on a video display or printer, 
+                    or for storage in a bitmap file format.
+                }
+        }
+
+        Geometry shaders
+        {
+            为primitives着色
+            introduced in Direct3D 10 and OpenGL 3.2
+
+            generate new graphics primitives, such as points, lines, and triangles
+            from those primitives that were sent to the beginning of the graphics pipeline
+                For example, when operating on triangles, 
+                    the three vertices are the geometry shader's input
+
+            Geometry shader programs are executed after vertex shaders
+            They take as input a whole primitive
+
+            Typical uses of a geometry shader include 
+                point sprite generation
+                gometry tessellation
+                shadow volume extrusion
+                single pass rendering to a cube map.
+
+
+            todo:
+                http://en.wikipedia.org/wiki/Shader
+                http://en.wikipedia.org/wiki/Graphics_pipeline
+
+        }
+}
+
+
+open gl pipeline
+{
+    Transformation
+        This stage consumes data about polygons with 
+            vertices, edges and faces that constitute the whole scene. 
+
+        A matrix controls 
+            the linear transformations (scaling, rotation, translation, etc.) 
+            and viewing transformations (world and view space) that are to be applied on this data.
+
+    Per-vertex lighting
+        设置每个顶点的亮度, 顶点之间的像素的亮度有pixel shader完成
+
+        For more details on this topic, see Vertex shader.
+
+        Geometry in the complete 3D scene is lit according to 
+            the defined locations of light sources, 
+            reflectance, 
+            other surface properties. 
+
+        Current hardware implementations of the graphics pipeline compute lighting 
+            only at the vertices of the polygons being rendered. 
+            The lighting values between vertices are then interpolated during rasterization. 
+
+        Per-fragment or per-pixel lighting can be done on modern graphics hardware 
+            as a post-rasterization process by means of a shader program.
+
+    Viewing transformation or normalizing transformation
+        Objects are transformed from 3-D world space coordinates into 
+            a 3-D coordinate system based on the position and orientation of a virtual camera. 
+            
+        This results in the original 3D scene as seen from the camera’s point of view, 
+            defined in what is called eye space or camera space. 
+
+        The normalizing transformation is the mathematical inverse of the viewing transformation, 
+            and maps from an arbitrary user-specified coordinate system (u, v, w) to a canonical coordinate system (x, y, z).
+
+    Primitives generation
+        For more details on this topic, see Geometry shader.
+        After the transformation, new primitives are generated from those primitives 
+            that were sent to the beginning of the graphics pipeline.
+
+    Projection transformation
+        In the case of a Perspective projection, objects which are distant from the camera are made smaller (sheared). 
+        In an orthographic projection, objects retain their original size regardless of distance from the camera.
+
+        In this stage of the graphics pipeline, 
+            geometry is transformed from the eye space of the rendering camera 
+                into a special 3D coordinate space called "Homogeneous Clip Space", which is very convenient for clipping. 
+
+        Clip Space tends to range from [-1, 1] in X,Y,Z, although this can vary by graphics API(Direct3D or OpenGL). 
+
+        The Projection Transform is responsible for mapping the planes of the camera's viewing volume (or Frustum) 
+            to the planes of the box which makes up Clip Space.
+
+    Clipping
+        For more details on this topic, see Clipping (computer graphics).
+        Geometric primitives that now fall outside of the viewing frustum will 
+            not be visible and are discarded at this stage. 
+
+        Clipping is not necessary to achieve a correct image output, 
+            but it accelerates the rendering process by eliminating the unneeded rasterization 
+            and post-processing on primitives that will not appear anyway.
+
+    Viewport transformation
+        The post-clip vertices are transformed once again to be in window space. 
+        In practice, this transform is very simple: 
+            applying 
+                a scale (multiplying by the width of the window) and 
+                a bias (adding to the offset from the screen origin). 
+
+        At this point, the vertices have coordinates which directly relate to pixels in a raster.
+
+    Scan conversion(rasterization)
+        For more details on this topic, see Render Output unit.
+
+        Rasterization is the process by which the 2D image space representation of the scene is 
+            converted into raster format and the correct resulting pixel values are determined. 
+            
+        From now on, operations will be carried out on each single pixel. 
+        
+        This stage is rather complex, involving multiple steps often referred as a group under the name of pixel pipeline.
+
+    Texturing, fragment shading
+        For more details on this topic, see Texture mapping unit.
+        At this stage of the pipeline individual fragments (or pre-pixels) are assigned a color 
+            based on values interpolated from the vertices during rasterization or from a texture in memory.
+
+    Display
+        The final colored pixels can then be displayed on a computer monitor or other display.
+}
+
+open gl pipeline
+{
+    Get vertices, in a specific ordered sequence.
+    Vertex processing via Vertex Shader. 
+        Each vertex in the stream is processed in turn into an output vertex.
+
+    Optional primitive tessellation stages.
+
+    Primitive assembly and optional Geometry Shader primitive processing. 
+        The output is a sequence of primitives.
+
+    Primitive clipping, and culling.
+
+    Scan conversion and primitive parameter interpolation.
+
+    The data for each fragment is processed with a Fragment Shader. 
+        Each fragment generates a number of outputs.
+
+    Per-sample blending, depth, and stencil operations.
+}
+
+Direct3D pipeline
+{
+    Input-Assembler Stage - 
+        The input-assembler stage is responsible for supplying data (triangles, lines and points) to the pipeline.
+
+    Vertex-Shader Stage - 
+        processes vertices, 
+        typically performing operations such as 
+            transformations
+            skinning
+            lighting. 
+
+        A vertex shader always takes a single input vertex and produces a single output vertex.
+
+    Geometry-Shader Stage - 
+        The geometry-shader stage processes entire primitives. 
+        Its input is a full primitive 
+            (which is three vertices for a triangle, 
+            two vertices for a line, 
+            or a single vertex for a point). 
+        In addition, each primitive can also include the vertex data for any edge-adjacent primitives. 
+        This could include at most an additional three vertices for a triangle or 
+            an additional two vertices for a line. 
+        The Geometry Shader also supports limited geometry amplification and de-amplification. 
+
+        Given an input primitive, the Geometry Shader can discard the primitive, or emit one or more new primitives.
+
+    Stream-Output Stage - 
+        The stream-output stage is designed for streaming primitive data from the pipeline to memory on its way to the rasterizer. 
+        Data can be streamed out and/or passed into the rasterizer. 
+        Data streamed out to memory can be recirculated back into the pipeline as input data or read-back from the CPU.
+
+    Rasterizer Stage - 
+        The rasterizer is responsible for clipping primitives
+            preparing primitives for the pixel shader and determining how to invoke pixel shaders.
+
+    Pixel-Shader Stage - 
+        The pixel-shader stage receives interpolated data for a primitive and generates per-pixel data such as color.
+
+    Output-Merger Stage - 
+        The output-merger stage is responsible for combining various types of output data 
+            (pixel shader values, depth and stencil information) 
+            with the contents of the render target and depth/stencil buffers to generate the final pipeline result.
+}

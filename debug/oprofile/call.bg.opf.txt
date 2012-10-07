@@ -1,0 +1,25 @@
+root@jiangrui-System-Product-Name:~/Perforce/192.168.10.220_1666/pekall.st.imc/xmm2231.1.11.oprofile/android# ./oprofile.sh -v  -d  20oprofile.sh: checking device presence...
+oprofile.sh: checking connectivity...
+oprofile.sh: target at  OK
+Cannot create directory /dev/oprofile: File exists
+OProfile setup failed
+oprofile.sh: launched adb process 319
+Using 2.6+ OProfile kernel interface.
+Reading module info.
+Using log file /data/oprofile/samples/oprofiled.log
+oprofile.sh: terminating adb process 319
+Driver directory: /dev/oprofile
+Session directory: /data/oprofile
+Counter 0 disabled
+Counter 1 disabled
+Counter 2 disabled
+oprofiled pid: 1275
+profiler is running
+         41 samples received
+          0 samples lost overflow
+oprofile.sh: pulling samples for post-processing
+/home/jiangrui/Perforce/192.168.10.220_1666/pekall.st.imc/xmm2231.1.11.oprofile/android/prebuilt/linux-x86/oprofile/../../linux-x86_64/oprofile/bin/opreport: error while loading shared libraries: libbfd-2.18.0.20080103.so: cannot open shared object file: No such file or directory
+root@jiangrui-System-Product-Name:~/Perforce/192.168.10.220_1666/pekall.st.imc/xmm2231.1.11.oprofile/android# opreport -l --session-dir=/tmp/oprofile.pull/   -p  /home/jiangrui/Perforce/192.168.10.220_1666/pekall.st.imc/xmm2231.1.11.oprofile/android/out/target/product/android/symbols/
+opreport error: No sample file found: try running opcontrol --dump
+or specify a session containing sample files
+

@@ -1,0 +1,132 @@
+
+什么是context
+    用于获取应用程序全局信息的接口
+        如获取程序的资源，类，启动activity, 广播和接收intent等等
+
+share data with other applications 
+    two applications share the same Linux user ID
+        be able to access each other's files
+        can arrange to run in the same Linux process 
+        can share the same VM
+
+    can request permission to access device data 
+
+Application Components
+    four types of application components
+        Activities
+            represents a single screen with a user interface
+
+        Services
+            runs in the background to perform long-running operations 
+                or to perform work for remote processes
+            does not provide a user interface
+            examples:
+                play music in the background 
+                fetch data over the network without blocking user interaction
+
+        Content providers
+            manages a shared set of application data
+            other applications can query or even modify the data
+
+        Broadcast receivers
+            responds to system-wide broadcast announcements
+            each broadcast is delivered as an Intent object
+
+    principle
+        any application can start another application's component 
+
+        when the system starts a component
+            it starts the process for that application(if it's not already running)
+            initiate the classes needed for that component
+
+        Android applications don't have a single entry point (there's no main() function, for example)
+
+    activating components
+        an intent activates
+            activities
+               passing an Intent to startActivity() 
+                or startActivityForResult() 
+            services
+                passing an Intent to startService(). 
+                    Or passing an Intent to bindService()
+            broadcast reciever
+                passing an Intent to methods like 
+                    sendBroadcast(), 
+                    sendOrderedBroadcast(), 
+                    sendStickyBroadcast().
+
+            an inten 
+                the action to perform 
+                specify the URI of the data to act on
+                may returns the result in another Intent
+
+        content provider
+           activated when targeted by a request from a ContentResolver 
+           perform a query to a content provider by calling query() on a ContentResolver
+
+The Manifest File
+    An application must declare all its components in the manifest file
+
+    In addition to declaring the application's components
+        Identify any user permissions the application requires
+        Declare the minimum API Level required by the application
+        Declare hardware and software features used or required by the application
+        API libraries the application needs to be linked against
+
+    Declaring components
+        activities:
+            <application android:icon="@drawable/app_icon.png" ... >
+                <activity android:name="com.example.project.ExampleActivity"
+                    android:label="@string/example_label" ... >
+                </activity>
+                ...
+            </application>
+
+        reference:
+            file:///home/jiangrui/android/backup/android-sdk/docs/guide/topics/manifest/activity-element.html
+    
+        Activities, services, and content providers
+            must declare in the manifest, other not visible to the system
+
+    Declaring component capabilities
+        Declare intent filters to catch intents
+
+    Declaring application requirements
+        Screen size and density
+            screen size 
+                the physical dimensions of the screen
+                small, normal, large, and extra large
+            screen density
+                the physical density of the pixels on the screen, or dpi—dots per inch
+                low density, medium density, high density, and extra high density
+
+            By default, your application is compatible with all screen sizes and densities
+
+        <uses-configuration> 
+            used for input configurations
+
+        <uses-feature>
+            used for requiring hareware and software features, like a camera, a light sensor, a certain version of OpenGL 
+
+        <uses-sdk>
+            used for the minimum API level
+
+Application Resources
+    sdk build tools define a unique resource id for for each resource
+        R.drawable.logo for res/drawable/logo.png 
+
+    seperate resources from source code
+
+Reference:
+    Market Filters
+        file:///home/jiangrui/android/backup/android-sdk/docs/guide/appendix/market-filters.html
+
+    Supporting Multiple Screens
+        file:///home/jiangrui/android/backup/android-sdk/docs/guide/practices/screens_support.html
+
+   Application Resources  
+        file:///home/jiangrui/android/backup/android-sdk/docs/guide/topics/resources/index.html
+
+vocabulary
+    portrait orientation (tall), vertical
+    landscape orientation (wide), horizontal

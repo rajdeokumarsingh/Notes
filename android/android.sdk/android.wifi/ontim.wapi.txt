@@ -1,0 +1,128 @@
+
+1. Application part:
+packages/apps/Settings/src/com/android/settings/wifi/
+    changed files:
+        WifiSettings.java
+            Added DB for the WAPI certificate
+                User can add CA/client certificate to the DB, which just stores the file paths
+                /data/data/com.android.providers.settings/databases/wifiCert.db
+                    columns: 
+                        id 
+                        channel_name: file path 
+
+            Added UI for certificate selection
+                Settings->Wireless and networks->WLAN Settings->Add Wi-Fi Network
+                    Select WAPI Certificate for Security
+                        1. Add Certificate (CA and client)
+                        2. Select CA Certificate
+                        3. Select client Certificate
+                        // FIXME: Where is private key of the client
+
+                        Above information will be stored in WifiConfiguration and send to wap_supplicant
+                    
+                // FIXME: seems we need to add an activity for following intent:
+                Intent intent = new Intent();  
+                intent.setClassName("com.ontim.filepicker","com.ontim.filepicker.FilePicker");
+                startActivityForResult(intent, REQUEST_CODE_PICK_ADD_CERT_FILE);
+
+                // Just select certificate from SD card and return the path?
+                protected void onActivityResult(int requestCode, int resultCode, Intent data)
+                    case REQUEST_CODE_PICK_ADD_CERT_FILE: 
+                      String filePath = data.getStringExtra(EXTRA_FILE_PATH);
+                      ContentValues channelValues = new ContentValues();
+                      channelValues.put("channel_name", filePath);
+                      long nID = mDatabase.insert(CHANNEL_TABLE, null, channelValues);
+
+        AccessPoint.java
+            Added two security type
+                static final int SECURITY_WAPI_PERSONAL = 4;
+                static final int SECURITY_WAPI_CERT = 5;
+
+        WifiDialog.java
+            Implemented UI for WAPI
+            Created configurations for 
+                case AccessPoint.SECURITY_WAPI_PERSONAL:
+                    using password
+                case AccessPoint.SECURITY_WAPI_CERT:
+                    using certificate
+                        CA certificate  
+                        Client certificate
+                        FIXME: Where is the client private key ?
+
+2. Framework part:
+frameworks/base/services/java/com/android/server/
+    changed files:
+        WifiService.java
+            Added WAPI info to wpa_supplicant:
+                public int addOrUpdateNetwork(WifiConfiguration config) {
+                    if (config.wapiCaCert != null)
+                        mWifiStateTracker.setNetworkVariable(netId, 
+                            WifiConfiguration.wapiCaCertVarName, config.wapiCaCert)) 
+
+                    if (config.wapiClientCert != null)
+                        mWifiStateTracker.setNetworkVariable(netId, 
+                            WifiConfiguration.wapiClientCertVarName, config.wapiClientCert))
+
+frameworks/base/wifi/java/android/net/wifi/
+    changed files:
+
+        WifiConfiguration.java
+            Added WAPI information:
+                The file path of the CA certificate 
+                The file path of the client certificate 
+
+3. HAL part:
+    hardware/libhardware_legacy/wifi/
+        changed files:
+            wifi.c
+                Added nano logic
+
+4. Protocol part: (Not investigate yet)
+external/wpa_supplicant/
+    changed files:
+        .config
+        Android.mk
+        common.h
+        config.c
+        config_ssid.h
+        ctrl_iface.c
+        defs.h
+        driver.h
+        driver_wext.c
+        eapol_sm.c
+        eapol_sm.h
+        events.c
+        l2_packet.h
+        l2_packet_linux.c
+        Makefile
+        os_unix.c
+        sha256.c
+        sha256.h
+        wireless_copy.h
+        wpa_supplicant.c
+        wpa_supplicant.conf
+        wpa_supplicant_i.h
+
+    new files:
+        wapi-psk.conf
+        wapi-wpa-tkip.conf
+        wpa-tkip-wapi.conf
+        cert.c
+        cert.h
+        ecc.c
+        ecc.h
+        hmac.c
+        hmac.h
+        sms4.c
+        sms4.h
+        wapi.c
+        wapi.h
+        wapi_common.h
+        wapi_i.h
+
+5. driver part: (Not investigate yet)
+
+Questions:
+1. Where is private key of the client?
+2. How to get CA and client certificates?
+

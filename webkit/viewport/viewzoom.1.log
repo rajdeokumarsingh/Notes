@@ -1,0 +1,229 @@
+jiangrui@jiangrui-desktop:~/notes/webkit/viewport$ adb logcat
+--------- beginning of /dev/log/main
+--------- beginning of /dev/log/system
+V/webview ( 2118): doFling start last=468.0 current=-5351.5786 vx=0 vy=599 maxX=0 maxY=201 mScrollX=0 mScrollY=118
+
+
+
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 1.923077
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43dc4890
+V/webcore ( 2118): viewSizeChanged w=462; h=554; textwrapWidth=462; scale=0.52
+V/webcore ( 2118): viewSizeChanged w=462; h=554; textwrapWidth=462; scale=0.52
+
+
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 1.923077
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 1.923077
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43d92bc0
+V/webcore ( 2118): viewSizeChanged w=462; h=504; textwrapWidth=462; scale=0.52
+V/webcore ( 2118): viewSizeChanged w=462; h=504; textwrapWidth=462; scale=0.52
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43d75ae0
+V/webcore ( 2118): viewSizeChanged w=462; h=498; textwrapWidth=462; scale=0.52
+V/webcore ( 2118): viewSizeChanged w=462; h=498; textwrapWidth=462; scale=0.52
+
+V/webcore ( 2118): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2118): webkitDraw start
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 1.923077
+
+
+
+
+
+
+
+
+
+
+
+
+
+V/webview ( 2118): doFling start last=599.0 current=-638.7202 vx=0 vy=729 maxX=0 maxY=201 mScrollX=0 mScrollY=0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 1.5384616
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43ddcb68
+V/webcore ( 2118): viewSizeChanged w=369; h=432; textwrapWidth=369; scale=0.65
+V/webcore ( 2118): viewSizeChanged w=461; h=432; textwrapWidth=461; scale=0.65
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 1.5384616
+V/webcore ( 2118): SPLIT_PICTURE_SET arg1=0 arg2=0 obj=null
+D/skia    ( 2118): purging 198K from font cache [24 entries]
+V/webcore ( 2118): SPLIT_PICTURE_SET arg1=0 arg2=0 obj=null
+V/webview ( 2118): SHOW_RECT_MSG_ID
+V/webview ( 2118): showRectMsg=(left=0,width=300,maxWidth=300,viewWidth=240,x=53,xPercentInDoc=0.5,xPercentInView=0.4004329)
+V/webview ( 2118): showRectMsg=(top=149,height=18,maxHeight=575,viewHeight=281,y=56,yPercentInDoc=0.10714286,yPercentInView=0.33534136)
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 1.5384616
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43d40360
+V/webcore ( 2118): viewSizeChanged w=369; h=454; textwrapWidth=369; scale=0.65
+V/webcore ( 2118): viewSizeChanged w=461; h=454; textwrapWidth=461; scale=0.65
+V/webcore ( 2118): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2118): webkitDraw start
+V/webcore ( 2118): SPLIT_PICTURE_SET arg1=0 arg2=0 obj=null
+V/webcore ( 2118): SPLIT_PICTURE_SET arg1=0 arg2=0 obj=null
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 1.5384616
+V/webcore ( 2118): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2118): webkitDraw start
+V/webcore ( 2118): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2118): webkitDraw start
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 1.5384616
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 1.5384616
+^C
+jiangrui@jiangrui-desktop:~/notes/webkit/viewport$ 
+jiangrui@jiangrui-desktop:~/notes/webkit/viewport$ 
+jiangrui@jiangrui-desktop:~/notes/webkit/viewport$ adb logcat -c 
+jiangrui@jiangrui-desktop:~/notes/webkit/viewport$ adb logcat
+--------- beginning of /dev/log/system
+
+
+
+
+
+
+--------- beginning of /dev/log/main
+V/webview ( 2118): doFling start last=729.0 current=-18565.467 vx=377 vy=0 maxX=59 maxY=316 mScrollX=38 mScrollY=36
+
+
+
+
+
+
+
+
+V/webview ( 2118): RELEASE_SINGLE_TAP
+V/webcore ( 2118): TOUCH_UP arg1=0 arg2=0 obj=android.webkit.WebViewCore$TouchUpData@43de9bd8
+V/webcore ( 2118): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2118): webkitDraw start
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 1.5384616
+D/VtApp   ( 1845): onReceive,action:android.intent.action.SERVICE_STATE
+V/DownloadManager( 1886): Service state changed: Bundle[mParcelledData.dataSize=672]
+V/DownloadManager( 1886): roaming ------> false
+V/DownloadManager( 1886): auto download without roaming -> true
+V/DownloadManager( 1886): auto download during roaming -> false
+V/DownloadManager( 1886): mAutoDownload ------> true
+D/VtApp   ( 1845): onReceive,action:android.intent.action.ANY_DATA_STATE
+D/NotificationMgr( 1842): updateNetworkSelection()...state = 0 new network 
+D/NotificationMgr( 1842): hideDataDisconnectedRoaming()...
+
+
+
+
+
+
+
+
+
+
+
+
+
+V/webview ( 2118): doFling start last=377.0 current=-3156.514 vx=597 vy=0 maxX=59 maxY=316 mScrollX=0 mScrollY=36
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+V/webview ( 2118): doFling start last=597.0 current=-1019.8197 vx=285 vy=0 maxX=59 maxY=316 mScrollX=0 mScrollY=36
+
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 1.3333334
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43db89d8
+V/webcore ( 2118): viewSizeChanged w=320; h=401; textwrapWidth=320; scale=0.75
+V/webcore ( 2118): viewSizeChanged w=400; h=401; textwrapWidth=400; scale=0.75
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 1.3333334
+V/webview ( 2118): SHOW_RECT_MSG_ID
+V/webview ( 2118): showRectMsg=(left=0,width=158,maxWidth=300,viewWidth=240,x=-41,xPercentInDoc=0.88095236,xPercentInView=0.34924078)
+V/webview ( 2118): showRectMsg=(top=224,height=74,maxHeight=752,viewHeight=301,y=105,yPercentInDoc=0.15306123,yPercentInView=0.43171805)
+V/webcore ( 2118): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2118): webkitDraw start
+D/skia    ( 2118): purging 194K from font cache [20 entries]
+V/webcore ( 2118): SPLIT_PICTURE_SET arg1=0 arg2=0 obj=null
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 1.3333334
+D/StorageMonitor( 1842): mms freeMem:13086720, smslowflag:false,mmslowflag:false,smsThrehold:10240,mmsThreshold:317440
+D/SntpClient( 1695): request time failed: java.net.SocketException: Address family not supported by protocol
+V/cache   ( 2118): endTransaction
+V/cache   ( 2118): startTransaction
+D/VtApp   ( 1845): onReceive,action:android.intent.action.SERVICE_STATE
+V/DownloadManager( 1886): Service state changed: Bundle[mParcelledData.dataSize=672]
+V/DownloadManager( 1886): roaming ------> false
+V/DownloadManager( 1886): auto download without roaming -> true
+V/DownloadManager( 1886): auto download during roaming -> false
+V/DownloadManager( 1886): mAutoDownload ------> true
+D/NotificationMgr( 1842): updateNetworkSelection()...state = 0 new network 
+D/VtApp   ( 1845): onReceive,action:android.intent.action.ANY_DATA_STATE
+D/NotificationMgr( 1842): hideDataDisconnectedRoaming()...
+D/StorageMonitor( 1842): mms freeMem:13086720, smslowflag:false,mmslowflag:false,smsThrehold:10240,mmsThreshold:317440
+I/power   ( 1695): *** set_screen_state 0
+D/SurfaceFlinger( 1629): About to give-up screen, flinger = 0xa810
+V/BrowserActivity( 2118): BrowserActivity.onSaveInstanceState: this=com.android.browser.BrowserActivity@43d4d240
+I/TabControl( 2118): saveState
+I/TabControl( 2118): getTab
+I/Tab     ( 2118): saveState
+I/TabControl( 2118): getCurrentTab
+I/TabControl( 2118): getTab
+I/Tab     ( 2118): saveState, saving thumbnail...
+I/TabControl( 2118): getThumbnailDir
+D/lightservices1( 1695): mLedNotification NotificationRecord{43f6fee0 pkg=com.android.mms id=7b tag=null}mScreenOnfalse mInCall falsemNotificationPulseEnabled true
+I/Tab     ( 2118): populatePickerData
+V/BrowserActivity( 2118): onPause
+V/BrowserActivity( 2118): onPause mLoadsPageInOverviewMode:  true
+I/TabControl( 2118): pauseCurrentTab
+I/TabControl( 2118): getCurrentTab
+I/TabControl( 2118): getTab
+I/Tab     ( 2118): pause
+V/webcore ( 2118): ON_PAUSE arg1=0 arg2=0 obj=null
+V/BrowserActivity( 2118): pauseWebViewTimers
+I/TabControl( 2118): getCurrentTab
+D/lightservices1( 1695): mLedNotification NotificationRecord{43f6fee0 pkg=com.android.mms id=7b tag=null}mScreenOnfalse mInCall falsemNotificationPulseEnabled true
+D/lightservice( 1695): ledARGB -16711936 ledOnMS500 ledOffMS2000
+D/Lights  ( 1695): set_light_notifications color=0xff00ff00
+I/TabControl( 2118): getTab
+I/TabControl( 2118): getCurrentWebView
+I/TabControl( 2118): getTab
+V/webcore ( 2118): PAUSE_TIMERS arg1=0 arg2=0 obj=null
+V/cache   ( 2118): disableTransaction
+V/http    ( 2118): 9237738 main RequestQueue.disablePlatformNotifications() network
+D/LockPatternKeyguardView( 1695): createUnlockScreenFor,unlockMode:Pattern
+V/LockPatternKeyguardView( 1695): **** UPDATE SCREEN: mode=LockScreen last mode=LockScreen
+V/LockPatternKeyguardView( 1695): Gone=com.android.internal.policy.impl.PatternUnlockScreen@43ff1430
+V/LockPatternKeyguardView( 1695): Visible=com.android.internal.policy.impl.LockScreen@43f4ea60
+D/StatusBar( 1695): DISABLE_EXPAND: yes
+V/webcore ( 2118): SET_ACTIVE arg1=0 arg2=0 obj=null
+D/VtApp   ( 1845): onReceive,action:android.intent.action.SERVICE_STATE
+V/DownloadManager( 1886): Service state changed: Bundle[mParcelledData.dataSize=672]
+V/DownloadManager( 1886): roaming ------> false
+V/DownloadManager( 1886): auto download without roaming -> true
+V/DownloadManager( 1886): auto download during roaming -> false
+V/DownloadManager( 1886): mAutoDownload ------> true
+D/NotificationMgr( 1842): updateNetworkSelection()...state = 0 new network 
+D/VtApp   ( 1845): onReceive,action:android.intent.action.ANY_DATA_STATE
+D/NotificationMgr( 1842): hideDataDisconnectedRoaming()...
+D/StorageMonitor( 1842): mms freeMem:13086720, smslowflag:false,mmslowflag:false,smsThrehold:10240,mmsThreshold:317440
+^C
+jiangrui@jiangrui-desktop:~/notes/webkit/viewport$ 
+

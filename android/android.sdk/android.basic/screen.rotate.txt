@@ -1,0 +1,10 @@
+
+这样是让程序能够响应旋转屏幕的事件。
+然后重写onConfigurationChanged方法：
+@Override
+public void onConfigurationChanged(Configuration newConfig) {
+    // TODO Auto-generated method stub
+    super.onConfigurationChanged(newConfig);
+    Log.v(" == onConfigurationChanged");
+    processLayout();
+}

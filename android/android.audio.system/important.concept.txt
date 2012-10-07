@@ -1,0 +1,104 @@
+// question
+1. what is the "AudioSystem::popCount"
+    一个32位数中二进制1的个数
+    如何计算
+        count = 0;
+        while(bits) {
+            count++;
+            bits = bits^(bits-1);
+        }
+
+2. what is the "the input/output channel mask"?
+    mono 1, stereo 2, doby suround 5
+
+output和device之间的关系
+    一个output中可以包括多个device, 如耳机, speaker, 听筒等等
+    系统启动后，打开默认的mHardwareOutput时, 会选择speaker设备
+
+    什么时候需要多个打开多个output(openOutput)
+        Directed output (needsDirectOutput)
+            音频格式不是pcm, 则需要创建一个新的output
+
+            为什么需要direct output
+                一个output对应一个mixer。因为普通的output可以将多个AudioTrack的
+                输出进行混音。如果一个track中的格式不是pcm，就不能和其他pcm的
+                track进行混音。
+ 
+        A2DP (handleA2dpConnection)
+            // when an A2DP device is connected, open an A2DP and a duplicated output
+            DuplicatingThread
+            A2DP的控制和输出都不走alsa。是从A2dpAudioInterface出去的
+
+AudioHardwareInterface中有三种声音模式
+    NORMAL
+    RINGTONE
+    IN_CALL
+    可通过setMode来设置
+
+什么是audio_io_handle_t 
+    是一个不断增加的id
+    和一个MixerThread, 一个AudioOutputDescriptor和一个AudioStreamOut绑定
+        一个硬件output对应一个MixerThread, 一个MixerThread对应多个Track
+        一个硬件input对应一个RecordThread，对应一个Record
+    在函数AudioFlinger::openOutput中被创建
+
+AudioSystem.h
+    audio stream
+    device type
+    audio channel
+    audio mode
+    audio sessions
+    audio devices
+    forced_config
+    force_use
+    io_config_event
+
+    // request to open a direct output with getOutput() (by opposition to 
+    // sharing an output with other AudioTracks)
+    enum output_flags                  
+        OUTPUT_FLAG_INDIRECT = 0x0,  // default, 
+        OUTPUT_FLAG_DIRECT = 0x1 
+
+    enum routing_strategy {
+        STRATEGY_MEDIA,
+        STRATEGY_PHONE,
+        STRATEGY_SONIFICATION,
+        STRATEGY_DTMF,
+        STRATEGY_MEDIA_SONIFICATION,
+        NUM_STRATEGIES
+    };
+
+get output device according to:
+    strategy type + force use
+
+get input device accoring to:
+    input source + force use
+
+// stream to strategy mapping  
+AudioPolicyManagerBase::routing_strategy AudioPolicyManagerBase::
+    getStrategy(AudioSystem::stream_type stream)
+    switch (stream) {
+        case AudioSystem::VOICE_CALL:  
+        case AudioSystem::BLUETOOTH_SCO:   
+            return STRATEGY_PHONE;
+
+        case AudioSystem::RING:
+        case AudioSystem::NOTIFICATION:
+        case AudioSystem::ALARM:
+        case AudioSystem::ENFORCED_AUDIBLE:
+            return STRATEGY_SONIFICATION;
+
+        case AudioSystem::DTMF:
+            return STRATEGY_DTMF;
+
+        case AudioSystem::SYSTEM:
+            // NOTE: SYSTEM stream uses MEDIA strategy because muting music and switching outputs
+            // while key clicks are played produces a poor result
+        case AudioSystem::TTS:
+        case AudioSystem::MUSIC:
+#ifdef HAVE_FM_RADIO
+        case AudioSystem::FM:
+#endif
+            return STRATEGY_MEDIA;
+
+

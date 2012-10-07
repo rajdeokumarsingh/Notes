@@ -1,0 +1,3 @@
+
+portrait orientation (tall), vertical
+landscape orientation (wide), horizontal

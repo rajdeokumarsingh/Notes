@@ -1,0 +1,66 @@
+4.1
+lunch maguro
+
+ 项目简介
+1) android4.0 项目有四个:
+1. ontim自己的PAD项目WP8800 ：WCDMA单卡Pad
+2. 宇龙的CP7728: WCDMA双卡手机(WCDMA + GSM)
+3. 联想的S899T：TD单卡手机
+
+4. 华为的T8808D：TD双卡手机(TD+GSM)
+
+1，2，3个项目共用一套代码，放在目录 pekall-android/platform/main4.0/WP8800
+4 是另一套代码，放在目录 pekall-android/platform/main4.0/IDH8810
+
+2) android2.3 有一个项目
+宇龙的T580：TD单卡手机
+代码放在目录pekall-android/platform/main2.3/idh2.3.7
+
+二 编译方式，
+
+所有项目的编译方式类似：
+1  copy 所有项目文件到一个新的目录
+2  chmod 777 * -R
+2.5 需要将其他项目的文件都删除掉
+3  . build/envsetup.sh
+4  lunch
+5  make -j8
+
+三 烧机方式
+
+1）WP8800，CP7728，S899T的烧机方式一样
+
+以CP7728为例（不同的项目images目录下的子目录名不一样）
+1 编译完成后，进入新生成的images\CP7728_ANDROID_U8500_ontim_defconfig 目录，
+2 运行命令 sudo ./flasher -t ontim_wp8800_hz3 -L -e -e/flash0/TOC/ARB_TBL1 -e/flash0/TOC/ARB_TBL2 -c
+3 等待屏幕出现提示后将已关机的手机插上USB线即可
+
+sudo ./flasher -t ontim_sanya_hz3 -L -e -e/flash0/TOC/ARB_TBL1 -e/flash0/TOC/ARB_TBL2 -c
+sudo ./flasher -t ontim_sanya_hz3 -L -e -e/flash0/TOC/ARB_TBL1 -e/flash0/TOC/ARB_TBL2 -c
+
+
+2）T8808D和T580D的烧机方式一样
+编译完成后，直接运行 
+./f.sh all 
+然后按上键和开机键进入fastboot模式，插上usb即可 
+
+或者直接用fastboot烧机，但是烧完后要做“恢复出厂设置”
+
+T580d烧全部rom
+    选择image, 点击开始键
+    取下手机电池
+    将手机插上usb
+    按下键，同时安上电池
+
+root:
+    echo "123" > /data/local/rootable
+
+
+
+T8808D新版本联系人将数据文件移到单独分区，重刷机后可能由于权限问题打不开 导致异常。
+解决办法是手动删除数据文件，让应用重新建。
+adb shell
+rm /data/data/com.android.providers.contacts/databases
+rm /data/data/com.android.providers.contacts/files
+rm -r /user-pb/databases
+rm -r /user-pb/files

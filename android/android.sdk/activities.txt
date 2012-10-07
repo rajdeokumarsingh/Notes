@@ -1,0 +1,302 @@
+Activity
+   provides a screen with which users can interact in order to do something 
+
+Creating an Activity
+    create a subclass of Activity
+    implement following callback methods
+        onCreate()
+            called when creating the activity
+            you must call setContentView() to define the layout for the activity's user interface
+
+        onPause()
+            called when the activity is hidden (not always destroyed)
+            you should commit any changes that should be persisted beyond the current user session 
+                (because the user might not come back).
+
+Implementing a user interface
+    provided by a hierarchy of views derived from the View class
+
+    a view might be a button that initiates an action when the user touches it
+    View
+        picture, icon, ...
+        actions associated with them, e.g., touch event, gestures, ...
+
+    ready-made views
+        "Widgets"
+            derived from view
+            such as a button, text field, checkbox, or just an image. 
+
+        "Layouts"
+            derived from ViewGroup
+            provide a unique layout model for its child views
+            such as a linear layout, a grid layout, or relative layout. 
+                
+            define a layout using views is with an XML layout file
+
+Declaring the activity in the manifest
+    
+    Only one activity should have the "main" action and "launcher" category
+
+    <manifest ... >
+      <application ... >
+      <activity android:name=".ExampleActivity" android:icon="@drawable/app_icon">
+          <intent-filter>
+              <action android:name="android.intent.action.MAIN" />
+              <category android:name="android.intent.category.LAUNCHER" />
+          </intent-filter>
+      </activity>
+          ...
+      </application ... >
+      ...
+    </manifest >
+
+    Using intent filters
+
+Starting an Activity
+    startActivity()
+        passing it an Intent 
+            specifies 
+                the exact activity you want to start OR
+                describes the type of action you want to perform
+            An intent can also carry small amounts of data to be used by the activity that is started.
+
+        working within your own application
+            explicitly defines the activity, using the class name:
+            {
+                Intent intent = new Intent(this, SignInActivity.class);
+                startActivity(intent);
+            }
+                
+        perform some action                    
+            send an email, text message, or status update, using data from your activity
+
+            intent for sending an email message
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.putExtra(Intent.EXTRA_EMAIL, recipientArray);
+                startActivity(intent);
+
+Starting an activity for a result
+    call startActivityForResult() 
+    implement the onActivityResult() callback method
+        When the subsequent activity is done(the "finish()" is invoked), 
+        it returns a result in an Intent to your onActivityResult() method
+
+        {
+            private void pickContact() {
+                // Create an intent to "pick" a contact, as defined by the content provider URI
+                Intent intent = new Intent(Intent.ACTION_PICK, Contacts.CONTENT_URI);
+                startActivityForResult(intent, PICK_CONTACT_REQUEST);
+            }
+
+            @Override
+            protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+                // If the request went well (OK) and the request was PICK_CONTACT_REQUEST
+                if (resultCode == Activity.RESULT_OK && requestCode == PICK_CONTACT_REQUEST) {
+                    // Perform a query to the contact's content provider for the contact's name
+                    Cursor cursor = getContentResolver().query(data.getData(),
+                            new String[] {Contacts.DISPLAY_NAME}, null, null, null);
+                    if (cursor.moveToFirst()) { // True if the cursor is not empty
+                        int columnIndex = cursor.getColumnIndex(Contacts.DISPLAY_NAME);
+                        String name = cursor.getString(columnIndex);
+                        // Do something with the selected contact's name...
+                    }
+                }
+            }
+        }
+
+Shutting Down an Activity
+    calling its finish() method
+    shut down a separate activity that you previously started by calling finishActivity()
+
+Managing the Activity Lifecycle
+    essential states of activities
+        Resumed(running)
+            in foreground and has user focus
+
+        paused
+            coverd by another activity partially
+            completely alive
+            can be killed by the system in extremely low memory situations
+
+        Stopped
+            completely obscured by another activity 
+            in background
+
+        paused and stopped activity may be killed by system
+        save the state in onPause function
+        When the activity is opened again (after being finished or killed), 
+            it must be created all over.
+            restore the state in onCreate
+
+Implementing the lifecycle callbacks
+
+    // the entire lifecycle of an activity
+    public class ExampleActivity extends Activity {
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            // The activity is being created.
+
+            perform setup of "global" state in onCreate(),
+                defining layout
+                create views
+                bind data to lists
+
+            This method is passed a Bundle object containing the activity's previous state, 
+                if that state was captured
+
+            Always followed by onStart().
+        }
+        @Override
+        protected void onDestroy() {
+            super.onDestroy();
+            // The activity is about to be destroyed.
+            // someone called finish() on the activity
+                or because the system is temporarily destroying this instance of the activity to save space
+
+            release all remaining resources in onDestroy()
+                stop background thread
+                ...
+        }
+
+        @Override
+        protected void onStart() {
+            super.onStart();
+            // Called just before the activity becomes visible to the user. 
+
+            maintain resources that are needed to show the activity to the user
+                register a BroadcastReceiver to monitor changes that impact your UI
+
+            Followed either by onResume() or onStop() 
+        }
+        @Override
+        protected void onStop() {
+            super.onStop();
+            // The activity is no longer visible (it is now "stopped")
+            unregister the BroadcastReceiver created in onStart
+
+            Followed either by onRestart() or onDestroy()
+        }
+
+        onRestart()
+            Called after the activity has been stopped, just prior to it being started again.
+            Always followed by onStart()
+            FIXME: What for?
+
+        @Override
+        protected void onResume() {
+            super.onResume();
+            // The activity has become visible (it is now "resumed").
+            Called just before the activity starts interacting with the user. 
+
+            At this point the activity is at the top of the activity stack, with user input going to it.
+            Always followed by onPause().
+        }
+        @Override
+        protected void onPause() {
+            super.onPause();
+            // Another activity is taking focus (this activity is about to be "paused").
+            // Called when the system is about to start resuming another activity
+
+            called when the device goes to sleep or when a dialog appears.
+
+            used to commit unsaved changes to persistent data(DB), 
+                stop animations and other things that may be consuming CPU, etc.
+
+            It should do whatever it does very quickly, 
+                because the next activity will not be resumed until it returns. 
+
+            Followed either by onResume() or onStop
+        }
+    }
+
+    !!! FIXME:
+    An activity is not killable between onResume() and onPause()
+        otherwise it is killalbe
+
+    When the system memory is low, the system will kill the activity
+        onPause() is guarranteed to be called
+        onStop() and onDestroy() might not be called 
+
+        you should use onPause() to write crucial persistent data (such as user edits) to storage
+            OnPause should be quick
+
+            However, you should be selective about what information must be retained during onPause(), 
+            because any blocking procedures in this method block the transition to the next activity 
+            and slow the user experience.
+
+
+Saving activity state
+    onSaveInstanceState: save activities state 
+        void onSaveInstanceState(Bundle outState)
+            called before onStop() and possibly before onPause()
+            not guaranteed to be called
+            should use it only to record the transient state of the activity (the state of the UI)
+                use onPause to store persistent data(DB)
+
+        You can just invoke following interfaces to save data to Bundle
+            putBoolean putByte putChar putShort putInt putLong putFloat putDouble putString putCharSequence putParcelable putParcelableArray 
+            putParcelableArrayList putSparseParcelableArray putIntegerArrayList putStringArrayList putCharSequenceArrayList putSerializable 
+            putBooleanArray putByteArray putShortArray putCharArray putIntArray putLongArray putFloatArray putDoubleArray putStringArray 
+            putCharSequenceArray putBundle putIBinder 
+
+        FIXME:
+            There's no guarantee that onSaveInstanceState() will be called before your activity is destroyed, 
+            such as when the user leaves your activity using the BACK key, because the user is explicitly closing the activity
+
+            the default implementation of onSaveInstanceState() helps save the state of the UI,
+                should always call super.onSaveInstanceState() before doing any work.
+
+    onCreate: restore activities state
+        void onCreate(Bundle icicle)
+            need ot restore state of the actitivy
+
+        No need to restore state in onResume
+
+        You can just invoke following interfaces to restore data from Bundle
+            getBoolean getByte getByte getChar getChar getShort getShort getInt getInt getLong getLong getFloat getFloat 
+            getDouble getDouble getString getCharSequence getBundle getParcelable getParcelableArray getParcelableArrayList 
+            getSparseParcelableArray getSerializable getIntegerArrayList getStringArrayList getCharSequenceArrayList getBooleanArray 
+            getByteArray getShortArray getCharArray getIntArray getLongArray getFloatArray getDoubleArray getStringArray 
+            getCharSequenceArray getIBinder 
+
+    rotate the device so that the screen orientation changes
+        the system destroys and recreates the activity
+            apply alternative resources that might be available for the new orientation
+            it's very important that your activity completely restores its state when it is recreated
+
+Handling configuration changes
+    when configuration changes
+        such as screen orientation, keyboard availability, and language
+        restarts the running Activity 
+            onDestroy() is called
+            followed immediately by onCreate()
+
+    Use onSaveInstanceState() to save state
+    Use onRestoreInstanceState() (or onCreate()) to restore state
+
+Coordinating activities
+    when the two activities are in the same process and one is starting the other
+        1. Activity A's onPause() method executes.
+        2. Activity B's onCreate(), onStart(), and onResume() methods execute in sequence. (Activity B now has user focus.)
+        3. Then, if Activity A is no longer visible on screen, its onStop() method executes.
+
+
+在Launcher中显示应用
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+
+[Finished at 2011-09-05]
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,79 @@
+data
+{
+    framework
+    {
+        ./framework/net.Downloads.java
+            提供了
+                下载状态的定义
+                    STATUS_PENDING, STATUS_RUNNING, STATUS_SUCCESS, ...
+                下载位置的定义
+                    DOWNLOAD_DESTINATION_EXTERNAL, DOWNLOAD_DESTINATION_CACHE, ...
+
+        ./framework/provider.Downloads.java
+            提供了下载相关的content uri
+            定义了数据库column的字符串常量
+            定义了下载存储位置
+            下载的状态号
+            定义了权限相关的字符串
+
+        ./framework/DownloadManager.java
+            封装了一个Request内部类，用于应用程序发起下载
+            封装了发起下载，取消下载，查询下载的方法
+            主要都是对download provider的封装
+    }
+
+    provider
+    {
+        ./DownloadProvider.java
+            on going!
+    }
+}
+
+control
+{
+    ./DownloadService.java
+        最核心的控制函数
+
+    ./DownloadInfo.java
+        下载项数据在内存中的表示
+        提供
+            同步数据库数据到内存
+            查询下载重试时间
+            下载是否可以开始
+            启动下载线程
+        等等util方法   
+
+    ./DownloadHandler.java
+        提供两个下载队列，等待队列和运行队列
+        通过队列启动，管理下载线程
+
+    ./DownloadThread.java
+        on going!
+}
+
+ui
+{
+    ./ui/DownloadItem.java 
+        每一个下载项的view, RelativeLayout
+        对应 ./download_list_item.xml
+        包括一个check list
+            check list发生变化时通知DownloadList
+
+        ?? FIXME: 点击/长按非check box区域时的事件处理
+
+    ./ui/DownloadAdapter.java
+        为下载项视图提供数据
+
+    ./ui/DateSortedDownloadAdapter.java 
+    ./ui/DateSortedExpandableListAdapter.java 
+
+    // TODO:
+    ./ui/DownloadList.java
+        Activity
+
+    ./DownloadNotification.java
+}
+
+
+
+

@@ -1,0 +1,851 @@
+jiangrui@jiangrui-desktop:~$ 
+jiangrui@jiangrui-desktop:~$ 
+jiangrui@jiangrui-desktop:~$ 
+jiangrui@jiangrui-desktop:~$ adb logcat -c
+jiangrui@jiangrui-desktop:~$ adb logcat -c
+jiangrui@jiangrui-desktop:~$ adb logcat 
+--------- beginning of /dev/log/main
+V/webview ( 2118): MotionEvent{43d9ddb8 action=0 x=52.593132 y=224.34862 pressure=0.024420025 size=0.0} at 11132387 mTouchMode=3
+V/webcore ( 2118): UPDATE_FRAME_CACHE_IF_LOADING arg1=0 arg2=0 obj=null
+D/wpa_supplicant( 1954): wpa_supplicant_ctrl_iface_process: buf = DRIVER RSSI-APPROX 
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=52.527473 y=192.64612 pressure=0.024420025 size=0.0} at 11132414 mTouchMode=1
+D/wpa_supplicant( 1954): wpa_supplicant_ctrl_iface_process: buf = DRIVER LINKSPEED 
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=53.64368 y=164.10402 pressure=0.024420025 size=0.0} at 11132435 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 0)
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 1.3333334
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43e25770
+V/webcore ( 2118): viewSizeChanged w=320; h=383; textwrapWidth=320; scale=0.75
+V/webcore ( 2118): viewSizeChanged w=320; h=383; textwrapWidth=320; scale=0.75
+V/webview ( 2118): MotionEvent{43d9ddb8 action=1 x=53.64368 y=164.10402 pressure=0.024420025 size=0.0} at 11132456 mTouchMode=3
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webview ( 2118): doFling start last=704.0 current=-1815.5703 vx=0 vy=-764 maxX=0 maxY=28 mScrollX=0 mScrollY=28
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+V/webview ( 2118): RESUME_WEBCORE_PRIORITY
+V/webcore ( 2118): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2118): webkitDraw start
+V/webcore ( 2118): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2118): NEW_PICTURE_MSG_ID
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 1.3333334
+V/webview ( 2118): NEW_PICTURE_MSG_ID {0,0,320,383}
+
+
+
+
+
+
+
+
+
+
+
+
+V/webview ( 2118): MotionEvent{43d9ddb8 action=0 x=54.497253 y=112.64923 pressure=0.024420025 size=0.0} at 11136421 mTouchMode=3
+V/webcore ( 2118): UPDATE_FRAME_CACHE_IF_LOADING arg1=0 arg2=0 obj=null
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=53.315384 y=136.25325 pressure=0.024420025 size=0.0} at 11136448 mTouchMode=1
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=60.931873 y=192.64612 pressure=0.024420025 size=0.0} at 11136494 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 0)
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 1.3333334
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43dfa7d0
+V/webcore ( 2118): viewSizeChanged w=320; h=345; textwrapWidth=320; scale=0.75
+V/webcore ( 2118): viewSizeChanged w=320; h=345; textwrapWidth=320; scale=0.75
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=62.179394 y=236.00247 pressure=0.024420025 size=0.0} at 11136541 mTouchMode=3
+V/webview ( 2118): MotionEvent{43d9ddb8 action=1 x=62.179394 y=236.00247 pressure=0.024420025 size=0.0} at 11136560 mTouchMode=3
+V/webview ( 2118): doFling start last=764.0 current=-681.8601 vx=0 vy=833 maxX=0 maxY=28 mScrollX=0 mScrollY=0
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+--------- beginning of /dev/log/system
+D/WifiService( 1695): ACTION_BATTERY_CHANGED pluggedType: 2
+
+
+V/webview ( 2118): RESUME_WEBCORE_PRIORITY
+V/webcore ( 2118): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2118): webkitDraw start
+V/webcore ( 2118): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2118): NEW_PICTURE_MSG_ID
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 1.3333334
+V/webview ( 2118): NEW_PICTURE_MSG_ID {0,0,320,383}
+
+
+
+
+
+
+
+
+
+
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(32, 0)
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 1.0666667
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43e45198
+V/webcore ( 2118): viewSizeChanged w=256; h=300; textwrapWidth=256; scale=0.9375
+V/webcore ( 2118): viewSizeChanged w=256; h=300; textwrapWidth=256; scale=0.9375
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 1.0666667
+V/webcore ( 2118): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2118): webkitDraw start
+V/webcore ( 2118): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2118): SHOW_RECT_MSG_ID
+V/webview ( 2118): showRectMsg=(left=93,width=75,maxWidth=261,viewWidth=240,x=10,xPercentInDoc=0.5125,xPercentInView=0.4)
+V/webview ( 2118): showRectMsg=(top=135,height=36,maxHeight=359,viewHeight=281,y=56,yPercentInDoc=0.4473684,yPercentInView=0.3362319)
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 1.0666667
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(11, 0)
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43def458
+V/webcore ( 2118): viewSizeChanged w=256; h=315; textwrapWidth=256; scale=0.9375
+V/webcore ( 2118): viewSizeChanged w=256; h=315; textwrapWidth=256; scale=0.9375
+D/skia    ( 2118): purging 194K from font cache [16 entries]
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webview ( 2118): NEW_PICTURE_MSG_ID
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 1.0666667
+V/webview ( 2118): NEW_PICTURE_MSG_ID {0,0,278,383}
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+D/skia    ( 2118): purging 191K from font cache [13 entries]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D/wpa_supplicant( 1954): wpa_supplicant_ctrl_iface_process: buf = DRIVER RSSI-APPROX 
+D/wpa_supplicant( 1954): wpa_supplicant_ctrl_iface_process: buf = DRIVER LINKSPEED 
+V/webview ( 2118): MotionEvent{43d9ddb8 action=0 x=65.462364 y=107.90867 pressure=0.024420025 size=0.0} at 11143873 mTouchMode=3
+V/webcore ( 2118): UPDATE_FRAME_CACHE_IF_LOADING arg1=0 arg2=0 obj=null
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=71.96264 y=130.32756 pressure=0.024420025 size=0.0} at 11143899 mTouchMode=1
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=74.98296 y=181.58484 pressure=0.024420025 size=0.0} at 11143946 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(11, 0)
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 1.0666667
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43e70fc0
+V/webcore ( 2118): viewSizeChanged w=256; h=276; textwrapWidth=256; scale=0.9375
+V/webcore ( 2118): viewSizeChanged w=256; h=276; textwrapWidth=256; scale=0.9375
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=75.70522 y=215.65758 pressure=0.024420025 size=0.0} at 11143991 mTouchMode=3
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+V/webview ( 2118): MotionEvent{43d9ddb8 action=1 x=75.70522 y=215.65758 pressure=0.024420025 size=0.0} at 11144036 mTouchMode=3
+V/webview ( 2118): doFling start last=833.0 current=-1753.2861 vx=0 vy=745 maxX=20 maxY=100 mScrollX=10 mScrollY=0
+
+V/webview ( 2118): RESUME_WEBCORE_PRIORITY
+V/webcore ( 2118): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2118): webkitDraw start
+V/webcore ( 2118): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2118): NEW_PICTURE_MSG_ID
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 1.0666667
+V/webview ( 2118): NEW_PICTURE_MSG_ID {0,0,278,383}
+
+
+D/dalvikvm( 2118): GC_FOR_MALLOC freed 7568 objects / 515608 bytes in 97ms
+V/webview ( 2118): MotionEvent{43d9ddb8 action=0 x=149.76897 y=165.88173 pressure=0.024420025 size=0.0} at 11145612 mTouchMode=3
+V/webcore ( 2118): UPDATE_FRAME_CACHE_IF_LOADING arg1=0 arg2=0 obj=null
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=99.8022 y=167.56068 pressure=0.024420025 size=0.0} at 11145702 mTouchMode=1
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=58.83077 y=170.81982 pressure=0.024420025 size=0.0} at 11145749 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(21, 0)
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=34.93077 y=163.61021 pressure=0.024420025 size=0.0} at 11145792 mTouchMode=3
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=30.597254 y=162.52383 pressure=0.024420025 size=0.0} at 11145814 mTouchMode=3
+V/webview ( 2118): MotionEvent{43d9ddb8 action=1 x=30.597254 y=162.52383 pressure=0.024420025 size=0.0} at 11145834 mTouchMode=3
+V/webview ( 2118): doFling missed 0.25
+
+V/webview ( 2118): RESUME_WEBCORE_PRIORITY
+
+
+
+
+
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(47, 0)
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.85333335
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43dc5c78
+V/webcore ( 2118): viewSizeChanged w=205; h=240; textwrapWidth=205; scale=1.171875
+V/webcore ( 2118): viewSizeChanged w=205; h=240; textwrapWidth=205; scale=1.171875
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.85333335
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+D/skia    ( 2118): purging 193K from font cache [13 entries]
+V/webcore ( 2118): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2118): webkitDraw start
+V/webcore ( 2118): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2118): NEW_PICTURE_MSG_ID
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.85333335
+V/webview ( 2118): NEW_PICTURE_MSG_ID {0,0,278,383}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+V/webview ( 2118): MotionEvent{43d9ddb8 action=0 x=47.60302 y=234.52106 pressure=0.024420025 size=0.0} at 11151216 mTouchMode=3
+V/webcore ( 2118): UPDATE_FRAME_CACHE_IF_LOADING arg1=0 arg2=0 obj=null
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=48.71923 y=231.26193 pressure=0.024420025 size=0.0} at 11151242 mTouchMode=1
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=51.082966 y=222.66966 pressure=0.024420025 size=0.0} at 11151266 mTouchMode=1
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=54.43159 y=201.33716 pressure=0.024420025 size=0.0} at 11151290 mTouchMode=1
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=60.472256 y=169.5359 pressure=0.024420025 size=0.0} at 11151315 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(47, 9)
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.85333335
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43e33690
+V/webcore ( 2118): viewSizeChanged w=205; h=257; textwrapWidth=205; scale=1.171875
+V/webcore ( 2118): viewSizeChanged w=205; h=257; textwrapWidth=205; scale=1.171875
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=52.79011 y=126.870895 pressure=0.024420025 size=0.0} at 11151362 mTouchMode=3
+V/webview ( 2118): MotionEvent{43d9ddb8 action=1 x=52.79011 y=126.870895 pressure=0.024420025 size=0.0} at 11151384 mTouchMode=3
+V/webview ( 2118): doFling start last=476.0 current=-1451.466 vx=0 vy=-628 maxX=85 maxY=189 mScrollX=55 mScrollY=95
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(47, 45)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(47, 49)
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(47, 62)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(47, 75)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(47, 85)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(47, 96)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(47, 108)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(47, 117)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(47, 125)
+V/webview ( 2118): RESUME_WEBCORE_PRIORITY
+V/webcore ( 2118): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2118): webkitDraw start
+V/webcore ( 2118): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2118): NEW_PICTURE_MSG_ID
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.85333335
+V/webview ( 2118): NEW_PICTURE_MSG_ID {0,0,278,383}
+V/webview ( 2118): MotionEvent{43d9ddb8 action=0 x=142.0868 y=155.90681 pressure=0.024420025 size=0.0} at 11152369 mTouchMode=3
+V/webcore ( 2118): UPDATE_FRAME_CACHE_IF_LOADING arg1=0 arg2=0 obj=null
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=105.908516 y=155.90681 pressure=0.024420025 size=0.0} at 11152413 mTouchMode=1
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=86.34203 y=156.9932 pressure=0.024420025 size=0.0} at 11152434 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(63, 125)
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=63.952198 y=157.9808 pressure=0.024420025 size=0.0} at 11152456 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(73, 125)
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=40.708794 y=156.9932 pressure=0.024420025 size=0.0} at 11152478 mTouchMode=3
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=23.046429 y=157.09195 pressure=0.024420025 size=0.0} at 11152505 mTouchMode=3
+V/webview ( 2118): MotionEvent{43d9ddb8 action=1 x=23.046429 y=157.09195 pressure=0.024420025 size=0.0} at 11152525 mTouchMode=3
+V/webview ( 2118): doFling missed 0.75
+D/StorageMonitor( 1842): mms freeMem:13086720, smslowflag:false,mmslowflag:false,smsThrehold:10240,mmsThreshold:317440
+
+D/wpa_supplicant( 1954): wpa_supplicant_ctrl_iface_process: buf = DRIVER RSSI-APPROX 
+D/wpa_supplicant( 1954): wpa_supplicant_ctrl_iface_process: buf = DRIVER LINKSPEED 
+V/webview ( 2118): RESUME_WEBCORE_PRIORITY
+
+
+
+
+
+
+
+
+
+
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(93, 151)
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.68266666
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43d8dda8
+V/webcore ( 2118): viewSizeChanged w=164; h=205; textwrapWidth=164; scale=1.4648438
+V/webcore ( 2118): viewSizeChanged w=164; h=205; textwrapWidth=164; scale=1.4648438
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+D/skia    ( 2118): purging 198K from font cache [17 entries]
+V/webcore ( 2118): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2118): webkitDraw start
+V/webcore ( 2118): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2118): NEW_PICTURE_MSG_ID
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.68266666
+V/webview ( 2118): NEW_PICTURE_MSG_ID {0,0,278,383}
+V/webview ( 2118): MotionEvent{43d9ddb8 action=0 x=55.48214 y=239.7554 pressure=0.024420025 size=0.0} at 11156406 mTouchMode=3
+V/webcore ( 2118): UPDATE_FRAME_CACHE_IF_LOADING arg1=0 arg2=0 obj=null
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=55.350822 y=222.27461 pressure=0.024420025 size=0.0} at 11156431 mTouchMode=1
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=56.07308 y=197.48544 pressure=0.024420025 size=0.0} at 11156455 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(93, 167)
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=58.108517 y=169.5359 pressure=0.024420025 size=0.0} at 11156477 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(93, 177)
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=58.502472 y=143.66037 pressure=0.024420025 size=0.0} at 11156499 mTouchMode=3
+V/webview ( 2118): MotionEvent{43d9ddb8 action=1 x=58.502472 y=143.66037 pressure=0.024420025 size=0.0} at 11156520 mTouchMode=3
+V/webview ( 2118): doFling start last=641.0 current=-743.70386 vx=0 vy=-841 maxX=167 maxY=302 mScrollX=136 mScrollY=302
+V/webview ( 2118): MotionEvent{43d9ddb8 action=0 x=43.269505 y=122.42662 pressure=0.024420025 size=0.0} at 11157311 mTouchMode=3
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=54.956867 y=149.28978 pressure=0.024420025 size=0.0} at 11157337 mTouchMode=2
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=59.487362 y=187.70804 pressure=0.024420025 size=0.0} at 11157358 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(93, 152)
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=58.174175 y=211.31207 pressure=0.024420025 size=0.0} at 11157380 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(93, 136)
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=53.184067 y=238.27399 pressure=0.024420025 size=0.0} at 11157430 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(93, 118)
+V/webview ( 2118): MotionEvent{43d9ddb8 action=1 x=53.184067 y=238.27399 pressure=0.024420025 size=0.0} at 11157450 mTouchMode=3
+V/webview ( 2118): doFling missed 0.5
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(93, 115)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(93, 100)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(93, 88)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(93, 76)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(93, 65)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(93, 53)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(93, 42)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(93, 31)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(93, 20)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(93, 8)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(93, 0)
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.68266666
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43d51548
+V/webcore ( 2118): viewSizeChanged w=164; h=203; textwrapWidth=164; scale=1.4648438
+V/webcore ( 2118): viewSizeChanged w=164; h=203; textwrapWidth=164; scale=1.4648438
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.68266666
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(93, 0)
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43dde3a8
+V/webcore ( 2118): viewSizeChanged w=164; h=185; textwrapWidth=164; scale=1.4648438
+V/webcore ( 2118): viewSizeChanged w=164; h=185; textwrapWidth=164; scale=1.4648438
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(93, 0)
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.68266666
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43e5ee00
+V/webcore ( 2118): viewSizeChanged w=164; h=177; textwrapWidth=164; scale=1.4648438
+V/webcore ( 2118): viewSizeChanged w=164; h=177; textwrapWidth=164; scale=1.4648438
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+D/WifiService( 1695): ACTION_BATTERY_CHANGED pluggedType: 2
+
+V/webview ( 2118): RESUME_WEBCORE_PRIORITY
+V/webcore ( 2118): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2118): webkitDraw start
+V/webcore ( 2118): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2118): NEW_PICTURE_MSG_ID
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.68266666
+V/webview ( 2118): NEW_PICTURE_MSG_ID {0,0,278,383}
+
+
+
+
+
+
+
+
+
+D/WifiService( 1695): ACTION_BATTERY_CHANGED pluggedType: 2
+
+
+
+
+V/webview ( 2118): MotionEvent{43d9ddb8 action=0 x=150.22858 y=162.91888 pressure=0.024420025 size=0.0} at 11159485 mTouchMode=3
+V/webcore ( 2118): UPDATE_FRAME_CACHE_IF_LOADING arg1=0 arg2=0 obj=null
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=130.39946 y=161.3387 pressure=0.024420025 size=0.0} at 11159510 mTouchMode=1
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=108.272255 y=162.62259 pressure=0.024420025 size=0.0} at 11159534 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(108, 0)
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=91.98874 y=164.79535 pressure=0.024420025 size=0.0} at 11159555 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 0)
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=55.350822 y=169.23964 pressure=0.024420025 size=0.0} at 11159604 mTouchMode=3
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=35.98132 y=169.0421 pressure=0.024420025 size=0.0} at 11159626 mTouchMode=3
+V/webview ( 2118): DRAG_HELD_MOTIONLESS
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=26.460714 y=167.36316 pressure=0.024420025 size=0.0} at 11159650 mTouchMode=3
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=19.82912 y=162.82013 pressure=0.024420025 size=0.0} at 11159672 mTouchMode=3
+V/webview ( 2118): DRAG_HELD_MOTIONLESS
+V/webview ( 2118): MotionEvent{43d9ddb8 action=1 x=19.82912 y=162.82013 pressure=0.024420025 size=0.0} at 11159693 mTouchMode=3
+V/webview ( 2118): doFling missed 0.25
+V/webview ( 2118): RESUME_WEBCORE_PRIORITY
+
+
+V/webview ( 2118): MotionEvent{43d9ddb8 action=0 x=78.13461 y=195.21393 pressure=0.024420025 size=0.0} at 11161843 mTouchMode=3
+V/webcore ( 2118): UPDATE_FRAME_CACHE_IF_LOADING arg1=0 arg2=0 obj=null
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=77.93764 y=167.85696 pressure=0.024420025 size=0.0} at 11161868 mTouchMode=1
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=74.917305 y=141.19133 pressure=0.024420025 size=0.0} at 11161892 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 0)
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.68266666
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43da5b50
+V/webcore ( 2118): viewSizeChanged w=164; h=195; textwrapWidth=164; scale=1.4648438
+V/webview ( 2118): MotionEvent{43dda210 action=1 x=74.917305 y=141.19133 pressure=0.024420025 size=0.0} at 11161913 mTouchMode=3
+V/webcore ( 2118): viewSizeChanged w=164; h=195; textwrapWidth=164; scale=1.4648438
+V/webview ( 2118): doFling start last=547.0 current=-224.05591 vx=0 vy=-638 maxX=167 maxY=302 mScrollX=167 mScrollY=26
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.68266666
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 0)
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.68266666
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43dac4a0
+V/webcore ( 2118): viewSizeChanged w=164; h=196; textwrapWidth=164; scale=1.4648438
+V/webcore ( 2118): viewSizeChanged w=164; h=196; textwrapWidth=164; scale=1.4648438
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 7)
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43dd2e20
+V/webcore ( 2118): viewSizeChanged w=164; h=205; textwrapWidth=164; scale=1.4648438
+V/webcore ( 2118): viewSizeChanged w=164; h=205; textwrapWidth=164; scale=1.4648438
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 22)
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 35)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 44)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 51)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 59)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 66)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 74)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 81)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 87)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 93)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 99)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 104)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 110)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 115)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 121)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 126)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 130)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 134)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 139)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 143)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 150)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 154)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 158)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 160)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 164)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 167)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 169)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 172)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 174)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 176)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(114, 177)
+V/webview ( 2118): RESUME_WEBCORE_PRIORITY
+V/webcore ( 2118): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2118): webkitDraw start
+V/webcore ( 2118): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2118): NEW_PICTURE_MSG_ID
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.68266666
+V/webview ( 2118): NEW_PICTURE_MSG_ID {0,0,278,383}
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 198)
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.54613334
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43e128f8
+V/webcore ( 2118): viewSizeChanged w=131; h=164; textwrapWidth=131; scale=1.8310547
+V/webcore ( 2118): viewSizeChanged w=131; h=164; textwrapWidth=131; scale=1.8310547
+D/wpa_supplicant( 1954): wpa_supplicant_ctrl_iface_process: buf = DRIVER RSSI-APPROX 
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+D/wpa_supplicant( 1954): wpa_supplicant_ctrl_iface_process: buf = DRIVER LINKSPEED 
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+D/skia    ( 2118): purging 191K from font cache [16 entries]
+D/skia    ( 2118): purging 194K from font cache [15 entries]
+V/webcore ( 2118): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2118): webkitDraw start
+V/webcore ( 2118): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2118): NEW_PICTURE_MSG_ID
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.54613334
+V/webview ( 2118): NEW_PICTURE_MSG_ID {0,0,278,383}
+D/WifiService( 1695): ACTION_BATTERY_CHANGED pluggedType: 2
+
+
+
+
+
+
+
+V/webview ( 2118): MotionEvent{43dda210 action=0 x=55.48214 y=132.89536 pressure=0.024420025 size=0.0} at 11165924 mTouchMode=3
+V/webcore ( 2118): UPDATE_FRAME_CACHE_IF_LOADING arg1=0 arg2=0 obj=null
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=60.078297 y=165.9805 pressure=0.024420025 size=0.0} at 11165951 mTouchMode=1
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=67.62912 y=208.1517 pressure=0.024420025 size=0.0} at 11165977 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 175)
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=69.20494 y=238.76782 pressure=0.024420025 size=0.0} at 11165999 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 159)
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=65.19973 y=258.22385 pressure=0.024420025 size=0.0} at 11166022 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 149)
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=61.194508 y=269.68018 pressure=0.024420025 size=0.0} at 11166043 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 143)
+V/webview ( 2118): DRAG_HELD_MOTIONLESS
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=58.502472 y=273.92694 pressure=0.024420025 size=0.0} at 11166067 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 140)
+V/webview ( 2118): MotionEvent{43dda210 action=1 x=58.502472 y=273.92694 pressure=0.024420025 size=0.0} at 11166090 mTouchMode=3
+V/webview ( 2118): doFling start last=638.0 current=-813.4198 vx=0 vy=828 maxX=269 maxY=442 mScrollX=239 mScrollY=299
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 139)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 129)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 116)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 107)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 97)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 89)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 81)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 73)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 65)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 56)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 49)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 41)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 33)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 26)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 19)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 12)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 5)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 0)
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.54613334
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43dcd240
+V/webcore ( 2118): viewSizeChanged w=131; h=163; textwrapWidth=131; scale=1.8310547
+V/webcore ( 2118): viewSizeChanged w=131; h=163; textwrapWidth=131; scale=1.8310547
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.54613334
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 0)
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43dc09c8
+V/webcore ( 2118): viewSizeChanged w=131; h=151; textwrapWidth=131; scale=1.8310547
+V/webcore ( 2118): viewSizeChanged w=131; h=151; textwrapWidth=131; scale=1.8310547
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.54613334
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(131, 0)
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43dcb808
+V/webcore ( 2118): viewSizeChanged w=131; h=141; textwrapWidth=131; scale=1.8310547
+V/webcore ( 2118): viewSizeChanged w=131; h=141; textwrapWidth=131; scale=1.8310547
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+
+V/webview ( 2118): RESUME_WEBCORE_PRIORITY
+V/webcore ( 2118): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2118): webkitDraw start
+V/webcore ( 2118): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2118): NEW_PICTURE_MSG_ID
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.54613334
+V/webview ( 2118): NEW_PICTURE_MSG_ID {0,0,278,383}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 0)
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.43690667
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43da1f10
+V/webcore ( 2118): viewSizeChanged w=105; h=123; textwrapWidth=105; scale=2.2888184
+V/webcore ( 2118): viewSizeChanged w=105; h=123; textwrapWidth=105; scale=2.2888184
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.43690667
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+D/skia    ( 2118): purging 190K from font cache [16 entries]
+D/skia    ( 2118): purging 195K from font cache [17 entries]
+V/webcore ( 2118): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2118): webkitDraw start
+V/webcore ( 2118): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2118): NEW_PICTURE_MSG_ID
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.43690667
+V/webview ( 2118): NEW_PICTURE_MSG_ID {0,0,278,383}
+
+D/WifiService( 1695): ACTION_BATTERY_CHANGED pluggedType: 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D/wpa_supplicant( 1954): wpa_supplicant_ctrl_iface_process: buf = DRIVER RSSI-APPROX 
+D/wpa_supplicant( 1954): wpa_supplicant_ctrl_iface_process: buf = DRIVER LINKSPEED 
+D/WifiService( 1695): ACTION_BATTERY_CHANGED pluggedType: 2
+
+
+
+
+
+
+
+
+V/cache   ( 2118): endTransaction
+V/cache   ( 2118): startTransaction
+
+D/WifiService( 1695): ACTION_BATTERY_CHANGED pluggedType: 2
+
+
+
+D/wpa_supplicant( 1954): wpa_supplicant_ctrl_iface_process: buf = DRIVER RSSI-APPROX 
+
+D/wpa_supplicant( 1954): wpa_supplicant_ctrl_iface_process: buf = DRIVER LINKSPEED 
+
+
+
+
+
+D/WifiService( 1695): ACTION_BATTERY_CHANGED pluggedType: 2
+
+
+D/dalvikvm( 1695): GC_FOR_MALLOC freed 12194 objects / 663232 bytes in 162ms
+D/WifiService( 1695): ACTION_BATTERY_CHANGED pluggedType: 2
+V/webview ( 2118): MotionEvent{43dda210 action=0 x=112.80274 y=259.80402 pressure=0.024420025 size=0.0} at 11185789 mTouchMode=3
+V/webcore ( 2118): UPDATE_FRAME_CACHE_IF_LOADING arg1=0 arg2=0 obj=null
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=114.181595 y=249.8291 pressure=0.024420025 size=0.0} at 11185816 mTouchMode=1
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=115.035164 y=237.18762 pressure=0.024420025 size=0.0} at 11185840 mTouchMode=1
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=117.13626 y=185.14024 pressure=0.024420025 size=0.0} at 11185886 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 14)
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.43690667
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43e17c18
+V/webcore ( 2118): viewSizeChanged w=105; h=132; textwrapWidth=105; scale=2.2888184
+V/webcore ( 2118): viewSizeChanged w=105; h=132; textwrapWidth=105; scale=2.2888184
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=115.035164 y=131.80899 pressure=0.024420025 size=0.0} at 11185933 mTouchMode=3
+V/webview ( 2118): MotionEvent{43dda210 action=1 x=115.035164 y=131.80899 pressure=0.024420025 size=0.0} at 11185955 mTouchMode=3
+V/webview ( 2118): doFling start last=828.0 current=-6096.909 vx=0 vy=-707 maxX=396 maxY=617 mScrollX=329 mScrollY=127
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 37)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 40)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 55)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 62)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 74)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 81)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 87)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 93)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 98)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 103)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 108)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 113)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 117)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 121)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 125)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 129)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 133)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 137)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 140)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 143)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 147)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 150)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 153)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 156)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 159)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 162)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 165)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 167)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 170)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 172)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 174)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 176)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 178)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 180)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 182)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 183)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 185)
+
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 186)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 187)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 188)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 190)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 190)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 191)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 192)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 193)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 193)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 194)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 194)
+V/webview ( 2118): RESUME_WEBCORE_PRIORITY
+V/webcore ( 2118): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2118): webkitDraw start
+V/webcore ( 2118): webkitDraw NEW_PICTURE_MSG_ID
+D/WifiService( 1695): ACTION_BATTERY_CHANGED pluggedType: 2
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(144, 194)
+V/webview ( 2118): NEW_PICTURE_MSG_ID
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.43690667
+V/webview ( 2118): NEW_PICTURE_MSG_ID {0,0,278,383}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+V/webview ( 2118): MotionEvent{43dda210 action=0 x=201.90247 y=285.97586 pressure=0.024420025 size=0.0} at 11189346 mTouchMode=3
+V/webcore ( 2118): UPDATE_FRAME_CACHE_IF_LOADING arg1=0 arg2=0 obj=null
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=202.03378 y=285.77832 pressure=0.024420025 size=0.0} at 11189373 mTouchMode=1
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=201.31154 y=284.59317 pressure=0.024420025 size=0.0} at 11189397 mTouchMode=1
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=201.24588 y=284.09937 pressure=0.024420025 size=0.0} at 11189421 mTouchMode=1
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=201.8368 y=283.8031 pressure=0.024420025 size=0.0} at 11189443 mTouchMode=1
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=200.5893 y=284.7907 pressure=0.024420025 size=0.0} at 11189468 mTouchMode=1
+V/webview ( 2118): MotionEvent{43dda210 action=1 x=200.5893 y=284.7907 pressure=0.024420025 size=0.0} at 11189490 mTouchMode=1
+V/webview ( 2118): RELEASE_SINGLE_TAP
+V/webcore ( 2118): TOUCH_UP arg1=0 arg2=0 obj=android.webkit.WebViewCore$TouchUpData@43e71818
+V/webcore ( 2118): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2118): webkitDraw start
+V/webcore ( 2118): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2118): NEW_PICTURE_MSG_ID
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.43690667
+V/webview ( 2118): NEW_PICTURE_MSG_ID {77,229,80,248}
+D/WifiService( 1695): ACTION_BATTERY_CHANGED pluggedType: 2
+V/webview ( 2118): MotionEvent{43dda210 action=0 x=173.7346 y=201.83096 pressure=0.024420025 size=0.0} at 11190434 mTouchMode=7
+V/webcore ( 2118): UPDATE_FRAME_CACHE_IF_LOADING arg1=0 arg2=0 obj=null
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=153.2489 y=198.3743 pressure=0.024420025 size=0.0} at 11190461 mTouchMode=1
+D/dalvikvm( 2118): GC_FOR_MALLOC freed 8526 objects / 533032 bytes in 151ms
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=112.999725 y=205.18886 pressure=0.024420025 size=0.0} at 11190508 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(161, 194)
+V/webview ( 2118): MotionEvent{43d9ddb8 action=2 x=53.90632 y=206.5715 pressure=0.024420025 size=0.0} at 11190573 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(173, 194)
+V/webview ( 2118): MotionEvent{43dda210 action=1 x=53.90632 y=206.5715 pressure=0.024420025 size=0.0} at 11190594 mTouchMode=3
+V/webview ( 2118): doFling start last=707.0 current=-929.6261 vx=-645 vy=0 maxX=396 maxY=617 mScrollX=396 mScrollY=486
+
+V/webview ( 2118): RESUME_WEBCORE_PRIORITY
+D/WifiService( 1695): ACTION_BATTERY_CHANGED pluggedType: 2
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(184, 207)
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.34952533
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43de9c90
+V/webcore ( 2118): viewSizeChanged w=84; h=105; textwrapWidth=84; scale=2.861023
+V/webcore ( 2118): viewSizeChanged w=84; h=105; textwrapWidth=84; scale=2.861023
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+D/skia    ( 2118): purging 197K from font cache [17 entries]
+D/skia    ( 2118): purging 201K from font cache [13 entries]
+V/webcore ( 2118): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2118): webkitDraw start
+V/webcore ( 2118): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2118): NEW_PICTURE_MSG_ID
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.34952533
+V/webview ( 2118): NEW_PICTURE_MSG_ID {0,0,278,383}
+
+
+
+
+
+
+
+D/wpa_supplicant( 1954): wpa_supplicant_ctrl_iface_process: buf = DRIVER RSSI-APPROX 
+D/wpa_supplicant( 1954): wpa_supplicant_ctrl_iface_process: buf = DRIVER LINKSPEED 
+
+
+
+
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 210)
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.33333334
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43dc5c78
+V/webcore ( 2118): viewSizeChanged w=80; h=100; textwrapWidth=80; scale=3.0
+V/webcore ( 2118): viewSizeChanged w=80; h=100; textwrapWidth=80; scale=3.0
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+D/skia    ( 2118): purging 197K from font cache [11 entries]
+V/webcore ( 2118): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2118): webkitDraw start
+V/webcore ( 2118): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2118): NEW_PICTURE_MSG_ID
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.33333334
+V/webview ( 2118): NEW_PICTURE_MSG_ID {0,0,278,383}
+V/webview ( 2118): MotionEvent{43dda210 action=0 x=59.093407 y=131.31517 pressure=0.024420025 size=0.0} at 11196814 mTouchMode=3
+V/webcore ( 2118): UPDATE_FRAME_CACHE_IF_LOADING arg1=0 arg2=0 obj=null
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=59.487362 y=163.01764 pressure=0.024420025 size=0.0} at 11196839 mTouchMode=1
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=65.92198 y=202.7198 pressure=0.024420025 size=0.0} at 11196863 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 197)
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=71.43736 y=230.47183 pressure=0.024420025 size=0.0} at 11196890 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 188)
+V/webview ( 2118): MotionEvent{43dda210 action=1 x=71.43736 y=230.47183 pressure=0.024420025 size=0.0} at 11196911 mTouchMode=3
+V/webview ( 2118): doFling start last=645.0 current=-1495.8184 vx=0 vy=1116 maxX=594 maxY=890 mScrollX=556 mScrollY=605
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 187)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 179)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 173)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 166)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 159)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 152)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 145)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 139)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 132)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 123)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 117)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 109)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 101)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 96)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 90)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 83)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 78)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 72)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 67)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 61)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 56)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 51)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 46)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 41)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 35)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 30)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 25)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 20)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 15)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 10)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 5)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 0)
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 0)
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.33333334
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43d33f28
+V/webcore ( 2118): viewSizeChanged w=80; h=96; textwrapWidth=80; scale=3.0
+V/webcore ( 2118): viewSizeChanged w=80; h=96; textwrapWidth=80; scale=3.0
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.33333334
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 0)
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43dabdc0
+V/webcore ( 2118): viewSizeChanged w=80; h=88; textwrapWidth=80; scale=3.0
+V/webcore ( 2118): viewSizeChanged w=80; h=88; textwrapWidth=80; scale=3.0
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(185, 0)
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.33333334
+V/webcore ( 2118): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43db1cd0
+V/webcore ( 2118): viewSizeChanged w=80; h=86; textwrapWidth=80; scale=3.0
+V/webcore ( 2118): viewSizeChanged w=80; h=86; textwrapWidth=80; scale=3.0
+V/webcore ( 2118): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webview ( 2118): UPDATE_TEXT_ENTRY_MSG_ID
+V/webview ( 2118): RESUME_WEBCORE_PRIORITY
+V/webcore ( 2118): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2118): webkitDraw start
+V/webcore ( 2118): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2118): NEW_PICTURE_MSG_ID
+V/webview ( 2118): sendViewSizeZoom, viewWidth: 240mInvActualScale: 0.33333334
+V/webview ( 2118): NEW_PICTURE_MSG_ID {0,0,278,383}
+V/webview ( 2118): MotionEvent{43dda210 action=0 x=205.51373 y=178.12817 pressure=0.024420025 size=0.0} at 11199359 mTouchMode=3
+V/webcore ( 2118): UPDATE_FRAME_CACHE_IF_LOADING arg1=0 arg2=0 obj=null
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=201.18022 y=172.20247 pressure=0.024420025 size=0.0} at 11199384 mTouchMode=1
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=185.48764 y=165.28915 pressure=0.024420025 size=0.0} at 11199408 mTouchMode=1
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=157.25412 y=160.15356 pressure=0.024420025 size=0.0} at 11199432 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(195, 0)
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=97.3728 y=157.487 pressure=0.024420025 size=0.0} at 11199476 mTouchMode=3
+V/webcore ( 2118): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(198, 0)
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=76.427475 y=165.09164 pressure=0.024420025 size=0.0} at 11199498 mTouchMode=3
+V/webview ( 2118): MotionEvent{43dda210 action=2 x=33.420605 y=162.62259 pressure=0.024420025 size=0.0} at 11199542 mTouchMode=3
+V/webview ( 2118): DRAG_HELD_MOTIONLESS
+V/webview ( 2118): MotionEvent{43dda210 action=1 x=33.420605 y=162.62259 pressure=0.024420025 size=0.0} at 11199562 mTouchMode=3
+V/webview ( 2118): doFling missed 0.25
+V/webview ( 2118): RESUME_WEBCORE_PRIORITY
+
+D/WifiService( 1695): ACTION_BATTERY_CHANGED pluggedType: 2
+
+
+
+
+
+
+
+
+
+D/WifiService( 1695): ACTION_BATTERY_CHANGED pluggedType: 2

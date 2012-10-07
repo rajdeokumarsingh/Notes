@@ -1,0 +1,180 @@
+
+Download going through
+
+================================================================================
+// In webkit 
+void MainResourceLoader::didReceiveResponse(const ResourceResponse& r)
+    |
+    V
+PolicyChecker::checkContentPolicy(const String& MIMEType, ContentPolicyDecisionFunction function, void* argument)
+        |
+        V
+FrameLoaderClientAndroid::dispatchDecidePolicyForMIMEType(FramePolicyFunction func, 
+        const String& MIMEType, const ResourceRequest& request) 
+    // check header Content-Disposition
+    // canShowMIMEType(MIMEType)
+         action = PolicyDownload;
+            |
+            | msg
+            V
+MainResourceLoader::continueAfterContentPolicy
+    case PolicyDownload:
+        frameLoader()->client()->download(m_handle.get(), request(), m_handle.get()->request(), r);
+                |
+                V
+void FrameLoaderClientAndroid::download(ResourceHandle* handle, const ResourceRequest&, 
+        const ResourceRequest&, const ResourceResponse&) 
+    // Get the C++ side of the load listener and tell it to handle the download
+    handle->getInternal()->m_loader->downloadFile();
+                    |
+                    V
+void WebCoreResourceLoader::downloadFile()
+    env->CallVoidMethod(mJLoader, gResourceLoader.mDownloadFileMethodID);
+                        |
+                        | JNI to java
+                        V 
+base/core/java/android/webkit/LoadListener.java
+    downloadFile()
+        // remove cache
+        mBrowserFrame.getCallbackProxy().onDownloadStart(url(),
+                mBrowserFrame.getUserAgentString(),
+                mHeaders.getContentDisposition(),
+                mMimeType, mContentLength);
+        cancel(); // Let Browser do the http job
+
+================================================================================
+// In Browser and Download Manager
+
+base/core/java/android/webkit/LoadListener.java
+LoadListener.downloadFile()
+    // remove cache
+    mBrowserFrame.getCallbackProxy().onDownloadStart(url(),
+            mBrowserFrame.getUserAgentString(),
+            mHeaders.getContentDisposition(),
+            mMimeType, mContentLength);
+    |
+    V
+BrowserActivity.onDownloadStart()
+        |
+        V
+BrowserActivity.onDownloadStartNoStream()
+    // Check to see if we have an SDCard, if not, prompting failure message to user
+    //Insert a item to download DB
+    final Uri contentUri = getContentResolver().insert(Downloads.Impl.CONTENT_URI, values);
+            |
+            V
+DownloadProvider.insert() (extends ContentProvider)
+    //Check permission
+    context.startService(new Intent(context, DownloadService.class));
+    db.insert(DB_TABLE, null, filteredValues);
+                |
+                | service created
+                V
+DownloadService.onCreate()
+    mDownloads = Lists.newArrayList();
+    //register a DownloadManagerContentObserver to content data
+    mMediaScannerConnection = new MediaScannerConnection();
+
+    trimDatabase();
+    removeSpuriousFiles();
+    updateFromProvider();
+                |
+                | service started
+                V
+DownloadService.onStart()
+    updateFromProvider();
+        mUpdateThread = new UpdateThread();
+        mUpdateThread.start();
+                    |
+                    | thread started
+                    V
+UpdateThread.run()  
+    Cursor cursor = getContentResolver().query(
+        Downloads.Impl.CONTENT_URI, null, null, null,
+        Downloads.Impl._ID);
+    //inform media scanner to rescan files if needed
+    //Walk the cursor and the local array to keep them in sync.
+    while(...)
+        DownloadService.insertDownload()
+            new DownloadInfo();
+            mDownloads.add(arrayPos, info);
+            DownloadThread downloader = new DownloadThread(this, info);
+            info.mHasActiveThread = true;  
+            downloader.start();     
+                        |
+                        | thread started
+                        V
+DownloadThread.run()
+    //download buffer
+    byte data[] = new byte[Constants.BUFFER_SIZE];
+    //aquire wake lock
+
+    client = AndroidHttpClient.newInstance(userAgent(), mContext)
+    while (true)
+       HttpGet request = new HttpGet(mInfo.mUri);
+       //construct the http headers
+       response = client.execute(request);
+       //check http response
+       fileInfo = Helpers.generateSaveFile()
+            //find download directory
+       //put file info to download database
+
+       //write data to file, the downloaded file was
+       //in the content area of the http response
+       InputStream entityStream;
+       entityStream = response.getEntity().getContent();
+       stream = new FileOutputStream(filename, true);
+       while(1)
+            bytesRead = entityStream.read(data);
+            stream.write(data, 0, bytesRead);
+
+================================================================================
+// Retry process:
+// If network is down during a download, the service will retry after several seconds.
+
+// The download thread will save download status to DB if network is down.
+HttpDownload.java
+run()
+    try {
+        response = client.execute(request);
+    } catch (IOException ex) {
+        omaErrNum = -1;
+        finalStatus = Downloads.Impl.STATUS_RUNNING_PAUSED;
+        countRetry = true;
+    }   
+        
+    // save retry time into DB
+    mListener.downloadCompleted(finalStatus, countRetry,
+            retryAfter, redirectCount, gotData, filename, newUri,
+            mimeType, omaErrNum, fullMimeType);
+
+// The update thread will check the ongoing and pending download items in DB
+// And restart the pending download if it is ready(after some time).
+DownloadService.java
+UpdateThread()
+    insertDownload()
+        if (info.canUseNetwork(networkAvailable, networkRoaming))
+            if (info.isReadyToStart(now)) //check restart time from DB
+                beginDownload(info);
+        
+================================================================================
+wifi to 3g when download:
+
+// wifi down
+src/com/android/providers/downloads/DownloadThread.java
+for (;;) {
+    int bytesRead;
+    try {
+        bytesRead = entityStream.read(data);
+    } catch (IOException ex) {
+        if (Helpers.isNetworkAvailable(mContext)) {
+            Log.i(TAG, "Read Failed " + mInfo.mId + ", Net Up");
+        } else {
+            Log.i(TAG, "Read Failed " + mInfo.mId + ", Net Down");
+        }
+
+        // remember 
+
+
+
+================================================================================

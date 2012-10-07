@@ -1,0 +1,232 @@
+######################################################################
+# Questions:
+######################################################################
+写例子
+问问题，做实验
+    传递不同参数
+        base/core/java/android/os/Parcel.java
+        base/include/utils/String16.h
+        base/include/utils/String8.h
+        base/include/binder/Parcel.h
+
+    调用方式，block, 多线程
+
+    写一个java层的service, 类似service manager
+
+######################################################################
+# Conclusion:
+######################################################################
+如果java层调用一个native的service, 这个调用是block的
+    如果native方法不返回，虚拟机就会发出ANR
+    native的方式是可以重入的，如多个java client调用同一个native方法
+
+    好的方式是，native方法开启一个线程去做耗时工作，然后返回
+        耗时工作完成后，通过回调方式去通知java层.
+
+######################################################################
+#Class hierarchy:
+######################################################################
+IInterface <|--ICmmbService
+
+BpInterface<ICmmbService> <|--BpCmmbService
+
+BnInterface<ICmmbService> <|--BnCmmbService <|-- CmmbService 
+
+##################################################
+# In Java layer
+# PlayerDemo/src/com/android/playerdemo/CmmbService.java
+##################################################
+mCmmbSvc.sendTestCommand("start");
+public native final boolean sendTestCommand(String command);
+
+##################################################
+# define interfaces, for example, sendTestCommand
+# used by both BpInterface and BnInterface
+##################################################
+class ICmmbService : public IInterface
+public:
+   DECLARE_META_INTERFACE(CmmbService);
+   virtual bool sendTestCommand(const String8& command) = 0;
+
+##################################################
+# proxy side, in client process
+# Implement proxy method, just send message to remote side
+##################################################
+class BpCmmbService : public BpInterface<ICmmbService>
+    virtual bool sendTestCommand(const String8& command)
+        Parcel data, reply;
+        data.writeInterfaceToken(ICmmbService::getInterfaceDescriptor());
+        data.writeString8(command);
+        remote()->transact(SEND_TESTCOMMAND, data, &reply);
+        return reply.readInt32();
+
+##################################################
+# remote side, in server process
+# Implement onTransact(), invoke native method
+##################################################
+class BnCmmbService : public BnInterface<ICmmbService>
+public:
+    virtual status_t onTransact( uint32_t code, const Parcel& data, Parcel* reply, uint32_t flags = 0);
+        switch(code){                                                     
+            case SEND_TESTCOMMAND: {                                      
+               CHECK_INTERFACE(ICmmbService, data, reply);               
+               int ret = sendTestCommand(data.readString8());            
+               reply->writeInt32(ret);
+               return NO_ERROR;
+           } break;
+
+# Implement native method, do the job
+class CmmbService : public BnCmmbService                              
+    static void instantiate();                                        
+    virtual bool sendTestCommand(const String8& command);             
+
+######################################################################
+# Start server, remote side
+######################################################################
+external/CmmbPlayerDemo/service/server/Main_CmmbServer.cpp:21
+00009e60  main
+    sp<ProcessState> proc(ProcessState::self());
+    # add BnService to service manager
+    CmmbService::instantiate();
+        defaultServiceManager()->addService(
+        String16("com.android.cmmbdemo"), new CmmbService());
+    ProcessState::self()->startThreadPool();
+    IPCThreadState::self()->joinThreadPool();
+
+######################################################################
+# Get service manager
+######################################################################
+#3 from JNI
+#2  0x803036b2 in cmmb_sendTestCommand (env=0xaa50, obj=<value optimized out>, command=<value optimized out>)
+    at external/CmmbPlayerDemo/jni/com_android_playerdemo.cpp:47
+    #3  0x80213978 in dvmPlatformInvoke () at dalvik/vm/arch/arm/CallEABI.S:243
+
+#1  0x8030359c in getCmmbStackService () at external/CmmbPlayerDemo/jni/com_android_playerdemo.cpp:25
+    sp<IServiceManager> sm = defaultServiceManager();
+
+#0  android::defaultServiceManager () at frameworks/base/libs/binder/IServiceManager.cpp:35
+    gDefaultServiceManager = interface_cast<IServiceManager>(
+            ProcessState::self()->getContextObject(NULL));
+
+######################################################################
+# Get service from service manager
+######################################################################
+#4 from JNI
+#3  0x803036b2 in cmmb_sendTestCommand (env=0xaa50, obj=<value optimized out>, command=<value optimized out>)
+    at external/CmmbPlayerDemo/jni/com_android_playerdemo.cpp:47
+
+#2  0x803035cc in getCmmbStackService () at external/CmmbPlayerDemo/jni/com_android_playerdemo.cpp:29
+    binder = sm->getService(String16("com.android.cmmbdemo"));
+
+#1  0xa8217504 in android::BpServiceManager::getService (this=0x114600, name=<value optimized out>)
+    at frameworks/base/libs/binder/IServiceManager.cpp:137
+
+#0  android::BpServiceManager::checkService (this=0x114600, name=@0xbeac08cc) at frameworks/base/libs/binder/IServiceManager.cpp:147
+    Parcel data, reply;
+    data.writeInterfaceToken(IServiceManager::getInterfaceDescriptor());
+    data.writeString16(name);
+    remote()->transact(CHECK_SERVICE_TRANSACTION, data, &reply);
+
+    return reply.readStrongBinder();
+
+######################################################################
+# client send cmd to server
+######################################################################
+#5 from JNI
+#4  0x803036f4 in cmmb_sendTestCommand (env=0xaa50, obj=<value optimized out>, command=<value optimized out>)
+    at external/CmmbPlayerDemo/jni/com_android_playerdemo.cpp:55
+        sp<ICmmbService> cmmbStack = getCmmbStackService();
+
+        const char* command8 = env->GetStringUTFChars(command, NULL);
+        jboolean ret = cmmbStack->sendTestCommand(String8(command8));
+        env->ReleaseStringUTFChars(command, command8);
+
+#3  0x80303ab2 in BpCmmbService::sendTestCommand (this=0x20f6a8, command=<value optimized out>)
+    at external/CmmbPlayerDemo/service/client/ICmmbService.cpp:32
+        Parcel data, reply;
+        data.writeInterfaceToken(ICmmbService::getInterfaceDescriptor());
+        data.writeString8(command);
+        remote()->transact(SEND_TESTCOMMAND, data, &reply);
+        return reply.readInt32();
+
+#2  0xa8213968 in android::BpBinder::transact (this=0x2137d0, code=1, data=@0xbeac08a8, reply=0xbeac0878, flags=0)
+    at frameworks/base/libs/binder/BpBinder.cpp:165
+        status_t status = IPCThreadState::self()->transact(
+                mHandle, code, data, reply, flags);
+
+#1  0xa82167b6 in android::IPCThreadState::transact (this=0x1fbe00, handle=<value optimized out>, code=<value optimized out>, 
+    data=@0xbeac08a8, reply=0xbeac0878, flags=16) at frameworks/base/libs/binder/IPCThreadState.cpp:491
+        err = writeTransactionData(BC_TRANSACTION, flags, handle, code, data, NULL);
+            // Write data to parcel
+            mOut.writeInt32(cmd);
+            mOut.write(&tr, sizeof(tr));            
+        err = waitForResponse(reply);
+            while (1) 
+                // write data to driver
+                if ((err=talkWithDriver()) < NO_ERROR) break;
+                    if (ioctl(mProcess->mDriverFD, BINDER_WRITE_READ, &bwr) >= 0)
+
+######################################################################
+# Server get message
+######################################################################
+bionic/libc/bionic/libc_init_dynamic.c:102
+0000d542  __libc_init 
+
+external/CmmbPlayerDemo/service/server/Main_CmmbServer.cpp:21
+00009e60  main
+    sp<ProcessState> proc(ProcessState::self());
+    CmmbService::instantiate();
+        defaultServiceManager()->addService(
+        String16("com.android.cmmbdemo"), new CmmbService());
+    ProcessState::self()->startThreadPool();
+    IPCThreadState::self()->joinThreadPool();
+
+frameworks/base/libs/binder/IPCThreadState.cpp:437
+00016700  android::IPCThreadState::joinThreadPool(bool)
+    // now get the next command to be processed, waiting if necessary
+    result = talkWithDriver();
+    if (result >= NO_ERROR)
+        size_t IN = mIn.dataAvail();
+        cmd = mIn.readInt32();
+
+    result = executeCommand(cmd);
+
+frameworks/base/libs/binder/IPCThreadState.cpp:975
+0001652c  android::IPCThreadState::executeCommand(int)
+    case BR_TRANSACTION:
+        result = mIn.read(&tr, sizeof(tr));
+        Parcel buffer;
+        buffer.ipcSetDataReference(
+                reinterpret_cast<const uint8_t*>(tr.data.ptr.buffer),
+                tr.data_size,
+                reinterpret_cast<const size_t*>(tr.data.ptr.offsets),
+                tr.offsets_size/sizeof(size_t), freeBuffer, this);
+
+        if (tr.target.ptr)
+            sp<BBinder> b((BBinder*)tr.cookie);
+            const status_t error = b->transact(tr.code, buffer, &reply, 0);
+            if (error < NO_ERROR) reply.setError(error);
+
+
+frameworks/base/libs/binder/Binder.cpp:107
+000132dc  android::BBinder::transact(unsigned int, android::Parcel const&, android::Parcel*, unsigned int) 
+    switch (code) {
+        ...
+        default:
+            err = onTransact(code, data, reply, flags);
+            break;
+    }
+
+external/CmmbPlayerDemo/service/client/ICmmbService.cpp:50
+0000a3fa  BnCmmbService::onTransact(unsigned int, android::Parcel const&, android::Parcel*, unsigned int)   
+    switch(code){
+        case SEND_TESTCOMMAND: {
+           CHECK_INTERFACE(ICmmbService, data, reply);
+           int ret = sendTestCommand(data.readString8());
+           reply->writeInt32(ret);
+           return NO_ERROR;
+       } break;
+
+external/CmmbPlayerDemo/service/server/CmmbService.cpp:21
+0000a2a4  CmmbService::sendTestCommand(android::String8 const&)   
+

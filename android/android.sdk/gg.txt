@@ -1,0 +1,14 @@
+
+./app.fundamentals.txt:44:                or startActivityForResult() 
+./bluetooth.txt:69:            startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+./bluetooth.txt:149:    call startActivityForResult(Intent, int) with the ACTION_REQUEST_DISCOVERABLE action Intent.
+./android.basic/parcel.java:45:            startActivityForResult(intent,SUB_ACTIVITY); 
+./android.basic/intent.java:115:            startActivityForResult(intent, CROP_DONE);                                                                                       
+./android.basic/intent.java:121:            startActivityForResult(intent, PHOTO_PICKED);                                                                                    
+./intent.txt:10:            Activity.startActivityForResult() 
+./android.wifi/ontim.wapi.txt:26:                startActivityForResult(intent, REQUEST_CODE_PICK_ADD_CERT_FILE);
+./android.wifi/ontim.change.txt.bk:26:                startActivityForResult(intent, REQUEST_CODE_PICK_ADD_CERT_FILE);
+./android.wifi/ontim.change.txt:26:                startActivityForResult(intent, REQUEST_CODE_PICK_ADD_CERT_FILE);
+./activities.txt:79:    call startActivityForResult() 
+./activities.txt:88:                startActivityForResult(intent, PICK_CONTACT_REQUEST);
+

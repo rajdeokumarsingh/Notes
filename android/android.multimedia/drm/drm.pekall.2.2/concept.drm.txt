@@ -1,0 +1,211 @@
+DRM不同的实现方式
+    数字电视的DRM
+    Apple 的Fairplay iTunes DRM 
+    Microsoft Janus DRM 
+    OMA DRM
+    军队中使用的DRM系统
+
+DRM概念主要包括两个方面内容：
+    1）License的分发
+    2）根据license消费内容
+    对于某个具体的DRM实现，所不同的就是license分发的协议不同和消费的控制不同
+
+OMA DRM
+    三个版本
+    V1, V2，V2.1
+    V1、V2是不兼容的
+
+OMA DRMv1的概念
+    (注意: V2中这些概念有着决然不同的含义，甚至可以说在V2中，已经不需要这些概念了)
+
+    DRM Message
+        application/vnd.oma.drm.message
+        明文形式
+
+    Content
+        媒体内容
+        音乐,视频，图像等等
+
+    Right Object
+        权限对象
+        规定了Content的使用限制。
+        如音乐文件只能播放3次，或只能再2天内使用
+
+    1. Forward Lock:
+        明文, DRM Message
+        使用DRM Message封装明文的Content
+        Content在手机端可以无限制使用，但是不能传送出去
+
+    2. Combined Delivery:
+        明文, DRM Message
+        使用DRM Message封装
+            明文的Content
+            明文的Right Object
+
+        Forward Lock是Combined Delivery的一个特殊例子
+
+    3. Separate Delivery:
+        加密
+
+        Content是以加密的形式(application/vnd.oma.drm.content)来传输
+
+        加密的密钥是通过另外的渠道(WAP PUSH)以明文的Right Object形式
+            application/vnd.oma.drm.rights+xml, ---- XML形式
+            application/vnd.oma.drm.rights+wbxml --- Binary XML 形式
+
+        安全性:
+            对于Combined Delivery 和Forward Lock来说，虽然规定手机端保证内容不会传播出去. 
+            Content是以明文形式传输的，这就导致很容易发生安全问题，而达不到DRM的requirements。
+            这样就出现了Separate Delivery的概念。
+
+            Content经过了加密后传输，这可以保证内容不被泄漏，因此Separate Delivery的内容是可以传输给别人的，
+            这就是所谓的Super-Distribution
+
+            但是由于明文right object，还同样存在隐患。这样就升级到OMA DRMv2.0
+
+OMA DRMv2的概念
+
+    OMA DRM defines 
+        the format of DRM Content delivered to DRM Agents, 
+            DCF
+                DRM Content Format，application/vnd.oma.drm.dcf
+                OMADRMv2内容以DCF的文件传递
+                DCF文件是以加密的形式存在的
+                对于DCF文件，可以以任意的方式转播
+
+        the way DRM Content can be transported from a content issuer to a DRM Agent, for example 
+            HTTP, MMS, WAP Push, IrDa, Bluetooth, USB cable etc.
+
+    参与方
+        1）DRM Agent: 
+            位于手机中, 实现drm对媒体内容的管理
+                也就是我们手机中的所有drm的实现
+
+            embodies a trusted entity in a device
+            is responsible for enforcing permissions and constraints associated with DRM Content
+
+        2）Content Issuer: 
+            内容分发
+            The content issuer is an entity that delivers DRM Content. 
+
+        3）Right Issuer: 
+            权限分发
+            The rights issuer is an entity that 
+                1. assigns permissions and constraints to DRM Content
+                2. generates Rights Objects
+
+            Rights Object 
+                XML document expressing ($1, $2) associated with a piece of DRM Content. 
+                    permissions 
+                    constraints 
+
+                downloaded using the ROAP protocols
+
+        4）User: 
+            A user is the human user of DRM Content. 
+            Users can only access DRM Content through a DRM Agent.
+
+        5）Content Provider: 
+            内容提供商。这个是DRM系统之外的一个角色。
+
+        6）Off-device Storage: 
+            外部存储设备
+            DRM content is inherently secure, and may be stored by users off-device –for example in 
+                network store, PC, on removable media or similar. 
+
+            Similar, rights objects that only contain stateless permission may be stored off-device.
+            
+    交互主要
+        a)内容的分发：
+            OMADRMv2内容以DCF（DRM Content Format，application/vnd.oma.drm.dcf）的文件传递
+
+            由于DCF文件是以加密的形式存在的
+            可以以任意的方式转播，
+                如Http, Bluetooth, MMS, SD
+
+            三种分发方式
+                由Content Issuer分发到DRM Agent 
+                由DRM Agent分发到Other DRM Agent 
+                由DRM Agent 备份到off-device store
+
+        b) Rights Object(License)的分发
+            Right Object
+                通过DRM Right Expression Language描述
+                通过ROAP（Rights Object Acquisition Protocol）在($1, $2)之间传递
+                    DRM Agent 
+                    Rights Issuer
+
+OMA DRM Protection
+    如何保护内容？
+        1. 加密
+        2. 完整性
+
+    DRMV1.0中
+        这些保护的内容完全由手机端来实现的（对于Forward Lock / Combined Delivery）
+        而且这些内容在网络上是以明文的形式传输的
+
+    DRMV2.0
+        内容都是以加密的方式进行传输
+        密钥通过PKI来派发
+
+        支持OMADRMV2.0的手机一定要进行正确的provisioning
+            忘记provisioning或者provisioning 不正确是在测试中经常出现的问题
+
+
+DRM的使用者:
+    两类应用程序
+
+    Acquisition APP
+        主要对应的RO的分发的问题
+        mms, email, wap push, browser
+
+        对于Acquisition: (根据传输的MIME type的不同而区分)
+            a)application/vnd.oma.drm.message 
+            b)application/vnd.oma.drm.rights+xml
+            c)application/vnd.oma.drm.rights+wbxml
+            d)application/vnd.oma.drm.content
+            以上是OMA DRMv1特有的MIME type。
+
+            a)application/vnd.oma.drm.roap-trigger+xml
+            b)application/vnd.oma.drm.roap-pdu+xml
+            c)application/vnd.oma.drm.dcf
+            以上是OMA DRMv2特有的MIME type。
+
+    Consumption APP
+        对应的根据RO进行内容消费的问题
+        media player, browser, calling, user app, ...
+
+        对于Consumption (根据文件的后缀名称区分)
+            OMADRMv1’s right: *.drc
+            OMADRMv1’s content: *.dcf
+            OMADRMv2’s right: *.ort
+            OMADRMv2’s content: *.odf
+
+Sub-Component
+    ProtectedRO:  Server端分发的License都是以ProtectedRO (XML)格式存在的，这个模块主要完成的是ProtectedRO的分析。
+    DCF: OMA DRM的内容是以DCF的格式存在的，这个模块完成DCF的parse。
+    ROAP: 这个模块完成Roap协议的分析处理和状态机的转化。
+    RO: 这个模块完成RO的逻辑处理，比如，RO的检索，消费和保护等。
+    Domain Context: 这个模块完成的是Domain Context的处理。对于每个Domain的处理，都需要相关的Domain Context，而这个通过ROAP完成创建、更新和删除等。
+    RI Context: 这个模块完成的是RI Context的处理。DRMV2处理的一切出发点都是基于RI Context，它其实是Server端在手机端的抽象表示。它是通过ROAP完成创建、更新和删除等。
+    TransportMgr: 这是一个Utility的模块，它主要是在HTTP之上封装一层的跟OMADRM协议交互相关的操作。
+
+
+
+5.1 Consumption相关的接口
+1. DRM_IsDRMFile(file_path);
+    确定给定的文件是否是DRM文件，如果不是，按照正常的逻辑处理，否则，以DRM的方式处理。
+
+2. DRM_GetContentMetaDataInFile(file_path, **meta_data, *num);
+    获取给定的文件的DRM Meta Data。以后的处理都是在meta的的基础上进行的。
+
+3. DRM_StartRightsMeter(**session, file_path, action, ….);
+    创建以action（play, print, display, …）消费的会话。
+    当调用该接口后，如果存在right object能够消费，则会返回ACTION_ALLOWED, 
+    同时，right object也被消费了
+
+
+
+
+
+

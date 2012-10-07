@@ -1,0 +1,102 @@
+Radio Data System
+    a communications protocol standard 
+    embedding small amounts of digital information in conventional FM radio broadcasts
+
+Radio Broadcast Data System (RBDS) 
+    the official name used for the U.S. version of RDS
+    The two standards are only slightly different
+
+RDS standardises
+    several types of information transmitted
+    including 
+        time 
+        station identification 
+        programme information
+
+Content and implementation
+    The following information fields are normally contained in the RDS data:
+    AF (alternative frequencies)
+        allows a receiver to re-tune to a different frequency 
+        providing the same station
+        when the first signal becomes too weak
+            (e.g., when moving out of range)
+            utilized in car stereo systems
+
+    CT (clock time)
+        synchronize a clock in the receiver or the main clock in a car
+        only be accurate to within 100 ms of UTC
+
+    EON (enhanced other networks)
+        Allows the receiver to monitor 
+            other networks 
+            or stations for traffic programmes
+
+        automatically temporarily tune into that station
+
+    PI (programme identification)
+        the unique code that identifies the station
+        Every station receives a specific code with a country prefix
+        In the US, PI is determined by applying a formula to the station's call sign
+
+    PS (programme service)
+        simply an eight-character static display
+        represents the call letters or station identity name
+        if the station is stored in the receiver's presets,  will cache this information 
+            with the frequency and other details associated with that preset
+
+    PTY (programme type)
+        up to 31 pre-defined programme types
+            (e.g., in Europe: PTY1 News, PTY6 Drama, PTY11 Rock music) 
+
+        allows users to find similar programming by genre
+
+    REG (regional)
+        used in countries where national broadcasters run "region-specific" programming 
+        allows the user to "lock-down" the set to their current region
+        let the radio tune into other region-specific programming as they move into the other region
+
+    RT (radio text)
+        allows a radio station to transmit a 64-character free-form textual information
+        can be either 
+            static e.g. station slogans or 
+            in sync with the programming 
+                such as the title and artist of the currently playing song
+
+    TA, TP (traffic announcement, traffic programme)
+        The receiver can often be set to pay special attention to this flag 
+            for example, stop the tape/pause the CD or retune to receive a traffic bulletin
+
+        TP flag 
+            allow the user to find only those stations that regularly broadcast traffic bulletins
+
+        TA flag
+            stop the tape or raise the volume during a traffic bulletin
+
+
+    TMC (Traffic Message Channel)
+        Digitally encoded traffic information
+        Not all RDS equipment supports this
+            Often available for Automotive navigation systems
+            In many countries only encrypted data is broadcast
+                and so a subscription and appropriate decoder is required to use
+
+RDS support
+    As far as implementation is concerned, most car stereos will support at least AF, EON, REG, PS and TA/TP.
+        * More expensive car stereos will offer TMC, RT and / or PTY, perhaps with "NEWS" override.
+        * Home systems, especially hi-fi receivers, will mainly support functions like PS, RT and PTY.
+
+Example RDS usage
+    showing the PS name (programme service) field. // 比如"北京交通台"
+    showing the name and artist of the song being broadcast
+        - Duran Duran's Save a Prayer - the bottom line scrolls to reveal the rest of the text.
+        Scrolling Program Service messages are illegal in the U.K
+
+RDS chipsets
+    ST Microelectronics
+    Silicon Labs
+        part supports PS, RT, PTY, TMC, and all other RDS types 
+    NXP Semiconductors 
+
+
+reference:
+    http://en.wikipedia.org/wiki/Radio_Data_System

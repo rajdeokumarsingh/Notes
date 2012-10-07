@@ -1,0 +1,11 @@
+
+From the user's aspect, the handset appears to hang
+
+worker/background thread
+
+be thread-safe
+
+more important, less important
+
+be ranked higher/lower than 
+

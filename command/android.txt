@@ -1,0 +1,271 @@
+*#*#4636#*#* 手机信息
+
+######################################################################
+media server
+adb shell start media
+adb shell stop media
+
+######################################################################
+adb permission 问题
+sudo chown root:root adb
+sudo chmod u+s adb
+
+sudo vim /etc/udev/rules.d/51-android.rules # 创建该文件，并添加下面行
+SUBSYSTEM=="usb", ATTR{idVendor}=="1782", MODE="0666"
+# idVendor是lsusb中的下面ID
+# Bus 002 Device 008: ID 1782:5d04 Spreadtrum Communications Inc.
+
+######################################################################
+线程block住了：
+    获取java调用栈信息
+    adb shell
+    mkdir /data/anr
+
+    kill -3 pid_block_process
+        会生成 /data/anr/traces.txt
+        其中包括了java调用栈的信息
+
+    kill -6 好像不太好使
+
+    cd /proc/pid_num/
+    # cat wchan
+        jdu_dev_open#
+
+    # cat stack
+        [<bf2323c8>] jdu_dev_open+0x50/0x178 [jdu]
+        [<c09df644>] chrdev_open+0x25c/0x284
+        [<c09d9c00>] __dentry_open+0x208/0x328
+        [<c09dad18>] nameidata_to_filp+0x50/0x68
+        [<c09e86b4>] do_filp_open+0x3fc/0x7ec
+        [<c09d98e4>] do_sys_open+0x64/0x11c
+        [<c09d99d4>] sys_open+0x24/0x28
+        [<c09312e0>] ret_fast_syscall+0x0/0x50
+        [<ffffffff>] 0xffffffff
+
+    # cd /proc/2060/fd
+    # ls -l
+        lrwx------ root     root              2011-10-14 18:12 53 -> /dev/jdu/0
+
+
+    好像没有办法打出native的调用栈
+
+######################################################################
+sudo update-alternatives --config java
+######################################################################
+
+check launguage configurations
+aapt dump configurations VtApp.apk
+######################################################################
+check crash:
+E/AndroidRuntime( 2117): FATAL EXCEPTION: main
+
+check monkey
+grep System.err
+
+grep 'FATAL EXCEPTION' . -rns
+######################################################################
+
+screen lock, power lock debug:
+    adb shell dumpsys power
+
+checking connectivity:
+    busybox ifconfig
+    busybox route
+    getprop
+
+    tcpdump
+    dumpsys connectivity
+    dumpsys power
+
+    adb shell getprop|grep dns
+    adb shell getprop|grep proxy
+    egrep -i "IPACT=|pdpDroppe|CGACT:" radio.log
+    grep 'pdp_network_drop\|UNSOL_DATA_CALL_LIST_CHANGED\|active=0\|tearDown=true' . -rns 
+
+    'loadUrl\|shouldOverrideUrlLoading\|onLoadResource\|Controller.*onPause\|Controller.*onResume\|Controller.*onDestroy\|startUsingNetworkFeature\|stopUsingNetworkFeature\|onReceivedError\|updateStatus'
+
+    onReceivedError
+    onReceivedError: -8,
+
+    chromium
+    chromium(24157): Unknown chromium error: -3
+
+    网络错误列表：
+    enum WebViewClientError
+        /** Success */
+        ERROR_OK = 0,
+        /** Generic error */
+        ERROR_UNKNOWN = -1,
+        /** Server or proxy hostname lookup failed */
+        ERROR_HOST_LOOKUP = -2,
+        /** Unsupported authentication scheme (not basic or digest) */
+        ERROR_UNSUPPORTED_AUTH_SCHEME = -3,
+        /** User authentication failed on server */
+        ERROR_AUTHENTICATION = -4,
+        /** User authentication failed on proxy */
+        ERROR_PROXY_AUTHENTICATION = -5,
+        /** Failed to connect to the server */
+        ERROR_CONNECT = -6,
+        /** Failed to read or write to the server */
+        ERROR_IO = -7,
+        /** Connection timed out */
+        ERROR_TIMEOUT = -8,
+        /** Too many redirects */
+        ERROR_REDIRECT_LOOP = -9,
+        /** Unsupported URI scheme */
+        ERROR_UNSUPPORTED_SCHEME = -10,
+        /** Failed to perform SSL handshake */
+        ERROR_FAILED_SSL_HANDSHAKE = -11,
+        /** Malformed URL */
+        ERROR_BAD_URL = -12,
+        /** Generic file error */
+        ERROR_FILE = -13,
+        /** File not found */
+        ERROR_FILE_NOT_FOUND = -14,
+        /** Too many requests during this load */
+        ERROR_TOO_MANY_REQUESTS = -15,
+
+
+log :
+    httpFailure
+    java.net.SocketException:
+
+    grep 'httpFailure\|java.net.SocketException' . -rns
+
+    proxy issues:
+        proxy is null:
+            WebViewWorkerThread RequestQueue.queueRequest proxy: null
+            http1 Connection.openHttpConnection() 40240 http://www.monternet.com:80
+            http1 Failed to open connection
+
+        proxy not null:
+            WebViewWorkerThread RequestQueue.queueRequest proxy: http://10.0.0.172:80
+            http1 Connection.openHttpConnection() 20353 http://10.0.0.172:80
+
+        Connection.openHttpConnection() is always open the real address
+
+    adb logcat |grep "RequestQueue.queueRequest proxy\|Connection.openHttpConnection"
+######################################################################
+cmcc wap gateway:
+1. always change "charset" attribute in http header
+content-type: text/html; charset=iso-8859-1
+
+grep ' charset=' . -rns
+######################################################################
+
+analyze coredump:
+    objdump -S symbol.file
+
+    stack --symbols-dir=out/target/product/T8301/symbols/ stack.txt
+
+    stack.txt is like:
+        04-16 12:40:37.490 I/DEBUG   ( 1358):          #00  pc 0009e088  /system/lib/libwebcore.so
+        04-16 12:40:37.510 I/DEBUG   ( 1358):          #01  pc 0009246a  /system/lib/libwebcore.so
+        04-16 12:40:37.520 I/DEBUG   ( 1358):          #02  pc 00098630  /system/lib/libwebcore.so
+        04-16 12:40:37.520 I/DEBUG   ( 1358):          #03  pc 0004ee44  /system/lib/libwebcore.so
+        04-16 12:40:37.530 I/DEBUG   ( 1358):          #04  pc 000688ea  /system/lib/libwebcore.so
+        04-16 12:40:37.560 I/DEBUG   ( 1358):          #05  pc 0020d506  /system/lib/libwebcore.so
+        04-16 12:40:37.580 I/DEBUG   ( 1358):          #06  pc 0005e8e2  /system/lib/libwebcore.so
+        04-16 12:40:37.590 I/DEBUG   ( 1358):          #07  pc 0013bdb2  /system/lib/libwebcore.so
+        04-16 12:40:37.610 I/DEBUG   ( 1358):          #08  pc 00013974  /system/lib/libdvm.so
+
+######################################################################
+
+Looking for attributes like 'android:dropDownAnchor' in sdk directory "android-sdk/docs/reference"
+Read the SDK help first instead of the code directly
+
+
+################################################################################
+# flash K3
+################################################################################
+10 copy the system.img to 192.168.10.230\storage
+11 put the system.img in D:\
+12 Press "vlume up + back + power key" to let the phone enter the downloading mode
+13 run "fastboot -i 0x12d1 flash system system.img"
+
+fastboot -i 0x12d1 flash system out/target/product/hisik3_td/system.img
+
+################################################################################
+# Install Flash
+################################################################################
+Issue when install apk:
+W/PackageManager(  912): Native ABI mismatch from package file
+
+ro.product.cpu.abi=armeabi
+ro.product.cpu.abi2=armeabi-v7a
+
+################################################################################
+# Launguage List
+################################################################################
+build/target/product/languages_full.mk:24:PRODUCT_LOCALES
+PRODUCT_LOCALES := en_US en_GB fr_FR it_IT es_ES es_US de_DE nl_NL cs_CZ pl_PL zh_TW zh_CN ru_RU ko_KR nb_NO pt_PT pt_BR da_DK el_GR sv_SE tr_TR ja_JP
+
+################################################################################
+debug
+################################################################################
+file:///home/jiangrui/android/backup/android-sdk-2.2/docs/guide/developing/tools/traceview.html
+
+android.os.Debug class, which provides a start-tracing method
+(Debug.startMethodTracing()) and a stop-tracing method (Debug.stopMethodTracing()).
+
+APK需要添加写sd卡的权限
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+trace
+
+查看调用流程
+    dmtracedump -o test.trace > test.gg
+
+################################################################################
+build CyanogenMod
+    . build/envsetup.sh && brunch buzz
+
+issue:
+    can not use adb in root mode, report error:
+        adbd cannot run as root in production builds
+
+answer:
+    这个root需要在手机上确认
+    首先手机必须root
+    然后adb shell
+    $su
+    然后在手机上会弹出提示，确认即可
+
+################################################################################
+Send an intent in native layer(c/c++)
+    char intent[1024] = {0};
+    sprintf(intent, "am start -a com.android.browser.ProxySelector);
+    system(intent);
+
+如发送一个action为com.pekall.fmradio.volume.change , int extra, type 4, int extra, volume 0 的intent 
+    am broadcast -a com.pekall.fmradio.volume.change --ei type 4 --ei volume 0
+
+    am broadcast -a android.intent.action.FM --ei state 1 --ei speaker 1
+
+在adb shell中输入am可获取帮助
+
+reference:
+http://blog.csdn.net/eqiang8271/article/details/6592234
+
+################################################################################
+
+各位：
+目前有两种反编译工具：apktool,dex2jar
+apktool适合于反编译资源文件，基本上所有的资源文件包括.9图片，均能原样反编译；详情见：http://code.google.com/p/android-apktool/
+dex2jar适合与反编译源代码，通过jd-gui的配合，能很好的查看源代码；详情见：http://code.google.com/p/dex2jar/
+
+目前最主要的是防止源代码的反编译，在eclipse里，android2.2以上的版本均支持通过混淆达到阻止反编译。默认该选项是关闭状态，开启方法是在default.properties 中添加proguard.config = proguard.cfg，然后导出为签名的apk。大家可以查看api下的proguard说明。
+
+
+######################################################################
+blue tooth debug tool
+./hcidump
+
+
+
+ 
+
+Hi Zhidong：
+我就是从网上下载的Android 4.0.3 R2 Compatibility Test Suite (CTS)，链接如下：
+http://source.android.com/compatibility/downloads.html
+附件是我写的CTS测试说明文档，可以参考一下！

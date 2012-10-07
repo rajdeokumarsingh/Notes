@@ -1,0 +1,54 @@
+Introduction
+
+Skia is organized the Canvas object. 
+    It is the host for the "draw" calls: drawRect, drawPath, drawText, etc. 
+
+    Each of these has two components: 
+        1. the primitive being drawing (SkRect, SkPath, SkBitmap, etc.) 
+        绘制的基本内容, 点，矩形，
+
+        2. color/style attributes (SkPaint).
+            The paint holds much of the state describing how the rectangle (in this case) is drawn: 
+                what color it is, 
+                if it is filled or stroked, 
+                how it should blend with what was previously drawn.
+
+            paint（画笔）决定绘制的样式
+
+    canvas.drawRect(rect, paint); 
+
+        drawPoint, drawPoints, 
+        drawLine, drawPath, drawArc, drawSprite
+        drawRect, drawRoundRect, drawCircle, drawOval, drawShape
+        drawColor, drawBitmap
+        drawText 
+
+        What is sprite?
+
+    The canvas hold relatively little state:
+        It points to the actual pixels being draw (hosted by a Bitmap), 
+            canvas保存了绘制的像素, 在Bitmap中
+        and it maintains a stack of matrices and clips. 
+        
+        Thus in the above call, the canvas' current matrix may transform the coordinates of the rectangle 
+            (translation, rotation, skewing, perspective), 
+
+        and the canvas' current clip may restrict where on the canvas the rectangle be draw, 
+
+            canvas决定了绘制的位置，角度，缩放等等
+
+        but all other stylistic attributes of the drawing are controlled by the paint. 
+
+总结
+    skia绘图的三要素：
+        canvas: 在那儿画
+            canvas决定了绘制的位置，角度，缩放等等
+            绘制的所有pixel都(通过Bitmap)保存在canvas中
+
+        画笔: 怎么画
+            颜色，样式, 和原来内容的混合
+
+        绘制内容: 画什么
+            点，线，曲线，矩形，圆形，椭圆，颜色，位图，文字
+
+    

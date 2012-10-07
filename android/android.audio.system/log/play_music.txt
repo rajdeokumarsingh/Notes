@@ -1,0 +1,252 @@
+
+V/MediaPlayerService( 1530): getCurrentPosition
+V/GstPlayer( 1530): GstPlayer getCurrentPosition
+V/GstDriver( 1530): getPosition
+V/GstDriver( 1530): Stream position 5659 ms
+V/MediaPlayerService( 1530): [33] getCurrentPosition = 5659
+V/MediaPlayerService( 1530): [33] reset
+V/GstPlayer( 1530): GstPlayer reset
+V/GstDriver( 1530): quit
+V/GstDriver( 1530): flush bus messages
+V/GstDriver( 1530): free pipeline playbin25
+D/GstAudioFlingerSink( 1530): stopping ringbuffer
+D/audioflinger_wrapper( 1530): handle : 0xb69b8 Stop Device
+V/AudioSink( 1530): stop
+D/GstAudioFlingerSink( 1530): >gst_android_audioringbuffer_release
+D/GstAudioFlingerSink( 1530): gst_audioflinger_sink_unprepare
+D/GstAudioFlingerSink( 1530): release flinger device
+D/audioflinger_wrapper( 1530): handle : 0xb69b8 Stop Device
+V/AudioSink( 1530): stop
+D/GstAudioFlingerSink( 1530): >gst_android_audioringbuffer_close_device
+D/GstAudioFlingerSink( 1530): gst_audioflinger_sink_close
+D/GstAudioFlingerSink( 1530): release flinger device
+D/audioflinger_wrapper( 1530): handle : 0xb69b8 Stop Device
+V/AudioSink( 1530): stop
+D/audioflinger_wrapper( 1530): Enter
+D/audioflinger_wrapper( 1530): handle : 0xb69b8 Release AudioSink
+V/GstDriver( 1530): set pipeline state to NULL: 1 (0:Failure, 1:Success, 2:Async, 3:NO_PREROLL)
+V/GstDriver( 1530): exit main loop
+V/GstDriver( 1530): destructor
+V/GstDriver( 1530): constructor
+V/GstDriver( 1530): persist.gst.debug property 0
+V/GstDriver( 1530): persist.gst.trace property /dev/console
+V/GstDriver( 1530): route the trace to /dev/console
+V/GstDriver( 1530): gstreamer init check
+V/MediaPlayerService( 1530): Client(34) constructor
+V/MediaPlayerService( 1530): Create new client(34) from pid 1943, fd=13, offset=0, length=576460752303423487
+V/MediaPlayerService( 1530): setDataSource fd=13, offset=0, length=576460752303423487
+V/MediaPlayerService( 1530): st_dev  = 45825
+V/MediaPlayerService( 1530): st_mode = 32829
+V/MediaPlayerService( 1530): st_uid  = 1000
+V/MediaPlayerService( 1530): st_gid  = 1015
+V/MediaPlayerService( 1530): st_size = 40441561
+V/MediaPlayerService( 1530): calculated length = 40441561
+D/        ( 1530): proc link name is /proc/1530/fd/13
+D/        ( 1530): Check file is DRM, the file name is /sdcard/KXT/music/06 杨蕙兰比武招郎君.李大嘴施招毙煞神_影视对白.mp3
+D/        ( 1530): handle 13 is not a DRM file 
+D/MediaPlayerService( 1530): This content is not DRM file
+V/MediaPlayerService( 1530): ident = 0x6490fbff, accIdent = 0xfbff
+V/MediaPlayerService( 1530): player type = 5
+V/MediaPlayerService( 1530):  create GstPlayer
+V/GstPlayer( 1530): GstPlayer constructor
+V/GstDriver( 1530): constructor
+V/GstDriver( 1530): persist.gst.debug property 0
+V/GstDriver( 1530): persist.gst.trace property /dev/console
+V/GstDriver( 1530): route the trace to /dev/console
+V/GstDriver( 1530): gstreamer init check
+V/GstPlayer( 1530): GstPlayer send GstDriver Setup
+V/GstDriver( 1530): create playbin2
+V/GstDriver( 1530): playbin2 creation: playbin26
+V/GstDriver( 1530): persist.gst.verbose property = 0
+V/GstDriver( 1530): set up mainloop
+V/GstDriver( 1530): enter main loop
+V/GstDriver( 1530): register bus callback
+V/GstDriver( 1530): add icbandroidvideosink to playbin
+V/GstDriver( 1530): add audioflingersink to playbin
+I/GstPlayer( 1530): GstPlayer setDataSource(13, 0, 40441561)
+I/GstDriver( 1530): create source from fd 13 offset 0 lenght 40441561
+V/GstDriver( 1530): dup(fd) old 13 new 27
+D/        ( 1530): proc link name is /proc/1530/fd/27
+D/        ( 1530): Check file is DRM, the file name is /sdcard/KXT/music/06 杨蕙兰比武招郎君.李大嘴施招毙煞神_影视对白.mp3
+D/        ( 1530): handle 27 is not a DRM file 
+V/GstDriver( 1530): MediaPlayerInterface::AudioSink: 0x9c878
+D/GstAudioFlingerSink( 1530): set audiosink: 0x9c878
+V/MediaPlayerService( 1530): disconnect(33) from pid 1943
+V/GstPlayer( 1530): GstPlayer reset
+V/GstDriver( 1530): quit
+V/GstDriver( 1530): destructor
+V/GstDriver( 1530): constructor
+V/GstDriver( 1530): persist.gst.debug property 0
+V/GstDriver( 1530): persist.gst.trace property /dev/console
+V/GstDriver( 1530): route the trace to /dev/console
+V/GstDriver( 1530): gstreamer init check
+V/GstPlayer( 1530): GstPlayer destructor
+V/GstDriver( 1530): quit
+V/GstDriver( 1530): destructor
+V/MediaPlayerService( 1530): [34] setAudioStreamType(3)
+V/MediaPlayerService( 1530): Client(33) destructor pid = 1943
+V/AudioSink( 1530): close
+V/AudioPolicyManagerALSA( 1530): releaseOutput() 1
+V/MediaPlayerService( 1530): disconnect(33) from pid 1943
+V/MediaPlayerService( 1530): [34] prepareAsync
+V/GstPlayer( 1530): GstPlayer prepareAsync
+V/GstDriver( 1530): prepareAsync
+V/GstDriver( 1530): in source_changed_cb, ed is 0x153e00, ed->mFd= 27, ed->mIsDRM =0
+V/GstDriver( 1530): nd 0x80706320 : sd 0x807060ac
+V/GstDriver( 1530): got here
+V/GstDriver( 1530): create and register appsrc callbacks
+V/GstDriver( 1530): bus receive message STATE_CHANGED
+V/GstDriver( 1530): get unhandled message on bus src stream-status
+V/GstDriver( 1530): get unhandled message on bus src stream-status
+D/GstAudioFlingerSink( 1530): creating ringbuffer
+D/GstAudioFlingerSink( 1530): created ringbuffer @0x143ce0
+D/GstAudioFlingerSink( 1530): >gst_android_audioringbuffer_open_device
+D/audioflinger_wrapper( 1530): Open AudioSink successfully : 0x54308
+D/GstAudioFlingerSink( 1530): open an existed flinger, 0x54308
+D/GstAudioFlingerSink( 1530): gst_audioflinger_sink_getcaps,0x54308
+D/GstAudioFlingerSink( 1530): gst_audioflinger_sink_getcaps,0x54308
+D/GstAudioFlingerSink( 1530): gst_audioflinger_sink_getcaps,0x54308
+D/GstAudioFlingerSink( 1530): gst_audioflinger_sink_getcaps,0x54308
+V/GstDriver( 1530): get unhandled message on bus mpegaudioparse6 tag
+V/GstDriver( 1530): get unhandled message on bus mpegaudioparse6 tag
+V/GstDriver( 1530): get unhandled message on bus src stream-status
+V/GstDriver( 1530): get unhandled message on bus src stream-status
+D/GstAudioFlingerSink( 1530): gst_audioflinger_sink_getcaps,0x54308
+D/GstAudioFlingerSink( 1530): gst_audioflinger_sink_getcaps,0x54308
+D/GstAudioFlingerSink( 1530): gst_audioflinger_sink_getcaps,0x54308
+D/GstAudioFlingerSink( 1530): gst_audioflinger_sink_getcaps,0x54308
+D/GstAudioFlingerSink( 1530): gst_audioflinger_sink_getcaps,0x54308
+D/GstAudioFlingerSink( 1530): >gst_android_audioringbuffer_acquire
+D/GstAudioFlingerSink( 1530): gst_audioflinger_sink_prepare
+V/AudioSink( 1530): open(44100, 2, 1, 4)
+V/AudioSink( 1530): setVolume
+D/GstAudioFlingerSink( 1530): channels: 2, rate: 44100, width: 16, got segsize: 16384, segtotal: 10, frame count: 16384, frame size: 4
+V/GstDriver( 1530): bus receive message STATE_CHANGED
+V/GstDriver( 1530): getStreamsInfo
+V/GstDriver( 1530): receive message ASYNC DONE on bus
+V/GstDriver( 1530): Sending MEDIA_PREPARED
+V/MediaPlayerService( 1530): [34] notify (0xdff80, 1, 0, 0)
+V/MediaPlayerService( 1530): getCurrentPosition
+V/GstPlayer( 1530): GstPlayer getCurrentPosition
+V/GstDriver( 1530): getPosition
+V/GstDriver( 1530): Stream position 0 ms
+V/MediaPlayerService( 1530): [34] getCurrentPosition = 0
+V/MediaPlayerService( 1530): getDuration
+V/GstPlayer( 1530): GstPlayer getDuration
+V/GstDriver( 1530): getDuration
+E/GstDriver( 1530): Query duration failed use message duration value 0 ms
+V/MediaPlayerService( 1530): [34] getDuration = 0
+V/MediaPlayerService( 1530): [34] setLooping(0)
+V/GstPlayer( 1530): GstPlayer setLooping(0)
+V/MediaPlayerService( 1530): [34] setVolume(1.000000, 1.000000)
+V/AudioSink( 1530): setVolume(1.000000, 1.000000)
+V/MediaPlayerService( 1530): [34] start
+V/GstPlayer( 1530): GstPlayer setLooping(0)
+V/GstPlayer( 1530): GstPlayer start
+V/GstDriver( 1530): get unhandled message on bus playbin26 new-clock
+V/GstDriver( 1530): playbin26: structure name=playbin2-stream-changed
+V/GstDriver( 1530): start
+V/GstDriver( 1530): getStreamsInfo
+V/GstDriver( 1530): bus receive message STATE_CHANGED
+D/GstAudioFlingerSink( 1530): starting ringbuffer
+D/audioflinger_wrapper( 1530): handle : 0x54308 Start Device
+V/AudioSink( 1530): start
+V/AudioPolicyManagerALSA( 1530): startOutput() output 1, stream 3
+V/AudioPolicyManagerALSA( 1530): getDeviceForStrategy() strategy 0, device 2
+V/AudioPolicyManagerALSA( 1530): setOutputDevice() output 1 device 2 delayMs 0
+V/AudioPolicyManagerALSA( 1530): setOutputDevice() setting same device 2 for output 1
+V/AudioPolicyManagerALSA( 1530): changeRefCount() stream 3, count 1
+V/MediaPlayerService( 1530): getCurrentPosition
+V/GstPlayer( 1530): GstPlayer getCurrentPosition
+V/GstDriver( 1530): getPosition
+V/GstDriver( 1530): Stream position 38 ms
+V/MediaPlayerService( 1530): [34] getCurrentPosition = 38
+W/AudioHardwareALSA( 1530): Write request but device is in state SND_PCM_STATE_SETUP
+D/AudioHardwareALSA( 1530): call snd_pcm_prepare
+I/ActivityManager( 1570): Starting activity: Intent { flg=0x4000000 cmp=com.android.music/.MediaPlaybackActivity }
+W/AudioHardwareALSA( 1530): Wait for correct device state
+V/MediaPlayerService( 1530): getDuration
+V/GstPlayer( 1530): GstPlayer getDuration
+V/GstDriver( 1530): getDuration
+I/GstDriver( 1530): Stream duration 2533825 ms
+V/MediaPlayerService( 1530): [34] getDuration = 2533825
+V/MediaPlayerService( 1530): getCurrentPosition
+V/GstPlayer( 1530): GstPlayer getCurrentPosition
+V/GstDriver( 1530): getPosition
+V/GstDriver( 1530): Stream position 795 ms
+V/MediaPlayerService( 1530): [34] getCurrentPosition = 795
+I/ActivityManager( 1570): Displayed activity com.android.music/.MediaPlaybackActivity: 644 ms (total 644 ms)
+V/MediaPlayerService( 1530): getCurrentPosition
+V/GstPlayer( 1530): GstPlayer getCurrentPosition
+V/GstDriver( 1530): getPosition
+V/GstDriver( 1530): Stream position 982 ms
+V/MediaPlayerService( 1530): [34] getCurrentPosition = 982
+V/MediaPlayerService( 1530): getCurrentPosition
+V/GstPlayer( 1530): GstPlayer getCurrentPosition
+V/GstDriver( 1530): getPosition
+V/GstDriver( 1530): Stream position 1065 ms
+V/MediaPlayerService( 1530): [34] getCurrentPosition = 1065
+V/MediaPlayerService( 1530): getCurrentPosition
+V/GstPlayer( 1530): GstPlayer getCurrentPosition
+V/GstDriver( 1530): getPosition
+V/GstDriver( 1530): Stream position 1975 ms
+V/MediaPlayerService( 1530): [34] getCurrentPosition = 1975
+V/MediaPlayerService( 1530): getCurrentPosition
+V/GstPlayer( 1530): GstPlayer getCurrentPosition
+V/GstDriver( 1530): getPosition
+V/GstDriver( 1530): Stream position 2027 ms
+V/MediaPlayerService( 1530): [34] getCurrentPosition = 2027
+V/MediaPlayerService( 1530): getCurrentPosition
+V/GstPlayer( 1530): GstPlayer getCurrentPosition
+V/GstDriver( 1530): getPosition
+V/GstDriver( 1530): Stream position 3011 ms
+V/MediaPlayerService( 1530): [34] getCurrentPosition = 3011
+V/MediaPlayerService( 1530): getCurrentPosition
+V/GstPlayer( 1530): GstPlayer getCurrentPosition
+V/GstDriver( 1530): getPosition
+V/GstDriver( 1530): Stream position 4032 ms
+V/MediaPlayerService( 1530): [34] getCurrentPosition = 4032
+V/MediaPlayerService( 1530): getCurrentPosition
+V/GstPlayer( 1530): GstPlayer getCurrentPosition
+V/GstDriver( 1530): getPosition
+V/GstDriver( 1530): Stream position 5028 ms
+V/MediaPlayerService( 1530): [34] getCurrentPosition = 5028
+V/MediaPlayerService( 1530): getCurrentPosition
+V/GstPlayer( 1530): GstPlayer getCurrentPosition
+V/GstDriver( 1530): getPosition
+V/GstDriver( 1530): Stream position 6013 ms
+V/MediaPlayerService( 1530): [34] getCurrentPosition = 6013
+V/MediaPlayerService( 1530): [34] pause
+V/GstPlayer( 1530): GstPlayer pause
+V/GstDriver( 1530): pause
+D/GstAudioFlingerSink( 1530): pausing ringbuffer
+D/audioflinger_wrapper( 1530): handle : 0x54308 Pause Device
+V/AudioSink( 1530): pause
+V/AudioPolicyManagerALSA( 1530): stopOutput() output 1, stream 3
+V/AudioPolicyManagerALSA( 1530): changeRefCount() stream 3, count 0
+V/AudioPolicyManagerALSA( 1530): setOutputDevice() output 1 device 0 delayMs 372
+V/GstDriver( 1530): PAUSED THE PIPELINE - mPausedByUser = 1
+V/GstDriver( 1530): bus receive message STATE_CHANGED
+V/GstDriver( 1530): receive message ASYNC DONE on bus
+D/Lights  ( 1570): set_light_notifications color=0x00000000
+V/MediaPlayerService( 1530): getCurrentPosition
+V/GstPlayer( 1530): GstPlayer getCurrentPosition
+V/GstDriver( 1530): getPosition
+V/GstDriver( 1530): Stream position 6765 ms
+V/MediaPlayerService( 1530): [34] getCurrentPosition = 6765
+V/MediaPlayerService( 1530): getCurrentPosition
+V/GstPlayer( 1530): GstPlayer getCurrentPosition
+V/GstDriver( 1530): getPosition
+V/GstDriver( 1530): Stream position 6765 ms
+V/MediaPlayerService( 1530): [34] getCurrentPosition = 6765
+V/MediaPlayerService( 1530): getCurrentPosition
+V/GstPlayer( 1530): GstPlayer getCurrentPosition
+V/GstDriver( 1530): getPosition
+V/GstDriver( 1530): Stream position 6765 ms
+V/MediaPlayerService( 1530): [34] getCurrentPosition = 6765
+V/MediaPlayerService( 1530): getCurrentPosition
+V/GstPlayer( 1530): GstPlayer getCurrentPosition
+V/GstDriver( 1530): getPosition
+V/GstDriver( 1530): Stream position 6765 ms
+V/MediaPlayerService( 1530): [34] getCurrentPosition = 6765
+

@@ -1,0 +1,25 @@
+
+String httpContentType() const {
+return httpHeaderField("Content-Type");  }
+void setHTTPContentType(const String& httpContentType) {
+setHTTPHeaderField("Content-Type", httpContentType); }
+String httpReferrer() const { return httpHeaderField("Referer"); }
+void setHTTPReferrer(const String& httpReferrer) {
+setHTTPHeaderField("Referer", httpReferrer); }
+void clearHTTPReferrer();
+String httpOrigin() const {
+return httpHeaderField("Origin"); }
+void setHTTPOrigin(const String& httpOrigin) {
+setHTTPHeaderField("Origin", httpOrigin); }
+void clearHTTPOrigin();
+String httpUserAgent() const {
+return httpHeaderField("User-Agent"); }
+void setHTTPUserAgent(const String& httpUserAgent) {
+setHTTPHeaderField("User-Agent", httpUserAgent); }
+String httpAccept() const { return httpHeaderField("Accept"); }
+void setHTTPAccept(const String& httpAccept) {
+setHTTPHeaderField("Accept", httpAccept); }
+void setResponseContentDispositionEncodingFallbackArray(
+const String& encoding1, const String& encoding2 = String(),
+const String& encoding3 = String());
+

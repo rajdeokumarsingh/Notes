@@ -1,0 +1,12 @@
+
+framework中jni的定义目录:
+base/core/jni/
+
+
+
+应用程序堆大小的控制:
+./external/qemu/android/main.c:2659:        boot_property_add("dalvik.vm.heapsize",tmp);
+./frameworks/base/core/jni/AndroidRuntime.cpp:606:    property_get("dalvik.vm.heapsize", heapsizeOptsBuf+4, "16m");
+./frameworks/base/core/java/android/app/ActivityManager.java:67:        String vmHeapSize = SystemProperties.get("dalvik.vm.heapsize", "16m");
+
+

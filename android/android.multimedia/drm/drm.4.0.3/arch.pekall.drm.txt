@@ -1,0 +1,82 @@
+================================================================================
+DRM Service Client
+================================================================================
+
+获取内容/权限相关的应用
+    DownloadProvider
+
+        src/com/android/providers/downloads/DrmConvertSession.java
+            import android.drm.DrmConvertedStatus;
+            import android.drm.DrmManagerClient;
+
+            wrap DrmManagerClient to convert buffer to encrypted format
+
+
+    OMADownload
+        ./code/OMADownload.drm.java
+            下载完成后, 调用DrmStore的接口将文件加入到DRM系统
+
+
+    WAP push 相关
+        ./code/wap.push.framework.txt
+
+    FileManager
+        查询dcf文件信息
+        在显示DCF文件属性的时候需要获取DRM的权限信息, 
+            如类型(FL, SD, CD, ...), 权限(unlimited, 几次， ...)
+
+消费相关的应用
+    MediaPlayer
+        ./code/media.file.part.cpp
+
+    Gallery
+        没有做
+
+
+================================================================================
+DRM Service Provider
+================================================================================
+Java
+    DrmProvider.apk
+        ./code/DrmProvider.java
+
+    DrmService.apk
+        ./code/DrmService.java
+
+        notify user for right acquisition 
+        invoke Browser to acquire right according to user selection
+
+    framework
+
+        android.provider
+            ./code/DrmStore.java
+                为下载应用提供添加DRM文件到DRM系统的接口
+
+        android.drm.mobile1
+
+            DrmConstraintInfo
+                constraint info: count, start/end date, interval
+
+            ./code/DrmRawContent.java
+
+            ./code/DrmRights.java
+
+            ./code/DrmRightsManager.java
+
+Native lib
+    libdrm1_jni.so
+        Expose DRM engine function to Java layer
+        function:
+            rights acquisition
+            content and rights installation
+
+    libdrm1.so
+        1. manage DRM content and rights
+        2. encrypt Forward Lock and Combined Delivery content
+        3. decrypt DRM content during content consumption
+
+    libdrm1_plugin.so
+        Adaptor layer between OpenCORE Multimedia Engine and DRM engine, 
+        expose DRM engine function to multimedia engine, 
+        majorly those function related to rights validity checking and update, DRM content decryption
+

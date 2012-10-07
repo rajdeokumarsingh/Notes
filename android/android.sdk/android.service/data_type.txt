@@ -1,0 +1,12 @@
+
+//! This is a string holding UTF-16 characters.
+class String16
+ 
+ const char16_t*     mString;
+
+
+//! This is a string holding UTF-8 characters. Does not allow the value more
+// than 0x10FFFF, which is not valid unicode codepoint.
+class String8
+    const char* mString;
+

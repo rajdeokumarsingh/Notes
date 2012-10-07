@@ -1,0 +1,248 @@
+
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="Keywords" content="中国移动,中国移动通信,全球通,动感地带,神州行,手机,移动,中国移动通信集团,中国移动通信集团公司,飞信,无线音乐,139邮箱,移动MM,手机支付,139说客,手机游戏,余额查询,短信套餐,GPRS套餐,积分查询,停开机,服务密码
+" />
+<meta name="Description" content="欢迎您访问中国移动统一门户网站。中国移动通信集团公司，是中国规模最大的移动通信运营商，主要经营移动话音、数据、IP电话和多媒体业务，并具有计算机互联网国际联网单位经营权和国际出入口局业务经营权。" />
+<meta name="alexaVerifyID" content="-h2M5-8uMpOl3fLCyseeiBzVt8Y" />
+<!--meta id="viewport" name="viewport" content="initial-scale=0.7; minimum-scale=0.7;maximum-scale=1.0; user-scalable=1;width=device-width; height=device-height;" /-->
+<meta id="viewport" name="viewport" content="initial-scale=0.7; minimum-scale=0.7;maximum-scale=1.0; user-scalable=1;" />
+
+<title>中国移动通信集团公司</title>
+<link href="./css/stylenew.css" rel="stylesheet" type="text/css">
+
+<script type="text/JavaScript" src="./js/nav10086_new.js">
+
+
+
+
+</script>
+
+<script type="text/JavaScript" src="./js/index_new.js">
+
+
+
+
+</script>
+<script language="javascript">
+
+
+function checkFetionReg() {
+	if(checkMBPhone(document.toptransfer.phone.value)) {
+		document.cookie = "mobileNo=" + escape(document.toptransfer.phone.value) + ";path=" + "/" + ";domain=10086.cn";
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+function sumb() {
+   var forms = document.getElementById("toptransfer");
+   forms.action = 'http://www.10086.cn/service/transferTo.do';
+	if(checkMBPhone(forms.phone.value)) {
+		dcsMultiTrack('DCS.dcsuri','/nopv.gif','WT.nadlac','N006','WT.nadsub','N006');
+		forms.submit();
+	}
+}
+// 手机支付
+function sumbcmpay() {
+	var forms = document.getElementById("toptransfer");
+	forms.action = "/service/billservice/index.htm#cmpay";
+ 
+	if (forms.phone.value.length == 0 || forms.phone.value == forms.phone.defaultValue || checkMBPhone(forms.phone.value)) {
+		if (forms.phone.value.length == 0 || forms.phone.value == forms.phone.defaultValue) {
+			setCookie("phone","");
+		}
+		else {
+			setCookie("phone",forms.phone.value);
+		}
+		dcsMultiTrack('DCS.dcsuri','/nopv.gif','WT.nadlac','N008');
+		forms.submit();
+	}
+}
+
+function sumbfection() {
+	var forms = document.getElementById("toptransfer");
+	forms.action = './whatsnew/newrelease/fetion/register/';
+	if(checkFetionReg()) {
+		dcsMultiTrack('DCS.dcsuri','/nopv.gif','WT.nadlac','N007','WT.nadsub','N007');
+		forms.submit();
+	}
+}
+function sumb139(){   
+	var forms = document.getElementById("toptransfer");
+	forms.action = 'http://www.10086.cn/gotone/operation/vas/email/139.jsp';
+	if(checkFetionReg()) {
+		dcsMultiTrack('DCS.dcsuri','/nopv.gif','WT.Email139','HomeClickReg139');
+		forms.submit();
+	}
+} 
+ 
+ 
+</script>
+
+<script language="javascript">
+
+
+
+
+
+	function closeWindow() {
+		if (event.srcElement.id != "chimg") {
+			if (document.getElementById('cscf1_con').style.display == "block") {
+				document.getElementById('cscf1_con').style.display = "none";
+			}
+		}
+
+	}
+
+	function jumpService() { // 网上营业厅跳转代码2010-6-17 14:57:58
+ 
+		if (document.getElementById('cscf1_con').style.display == "block") {
+			document.getElementById('cscf1_con').style.display = "none";
+		}
+		else {
+			document.getElementById('cscf1_con').style.display = "block";
+		}
+	}
+ 
+	document.onclick = closeWindow;
+</script>
+<script src="./images/js/sdc.js" language="javascript">
+
+
+
+
+</script>
+<!--首页-->
+<META name="WT.cg_n" content="a01101"/>
+</head>
+<body>
+
+<div id="content"><!--主体结构!-->
+  <div id="header"><!--导航!-->
+  <div id="logo"><a href="./" onclick="javascript:dcsMultiTrack('DCS.dcsuri','/nopv.gif','WT.nadlac','N001','WT.nadsub','N001s01')"><img src="./images/inew-logo.gif" alt="中国移动欢迎您" width="143" height="54" /></a></div>
+  
+ 
+  
+  
+  <div id="search">
+     
+    <form name="frm_search" action="http://202.85.216.217/query" method="get" target="_blank" onSubmit="return chk_frm_search();">
+    <input type="hidden" name="charset" value="gb2312">
+    <input type="hidden" name="style" value="chinamobile">
+    <input type="hidden" name="database" value="chinamobile">
+        <input type="hidden" name="exactitude" value="1">
+        <input name="qt" type="text" class="input3" id="skeywords" title="关键字必须至少有两个汉字或英文字母" onFocus="if(this.value == this.defaultValue) this.value = ''" onBlur="if(this.value == '') this.value = this.defaultValue" value="关键字搜索" maxlength="20">
+         <input type="submit" name="Submit" value="站内" class="input2"  onClick="return search_local_click()" style="cursor:hand"> 
+         <input type="submit" style="cursor:hand" onclick="return search_network_click()" class="input2" value="站群" name="Submit2">
+       
+    </form>
+    
+  
+  </div>
+  
+  
+  </div>
+  
+  
+  
+  <div id="menu">
+  <img src="images/inewtitle.gif" alt="移动导航LOGO" width="150" height="91" />
+   <div class="nav">
+     <A href="./brand/" onclick="javascript:dcsMultiTrack('DCS.dcsuri','/nopv.gif','WT.nadlac','N001','WT.nadsub','N001s06')">品牌</A>     <span class="menuline">|</span>  
+     <A href="./newbusiness/" onclick="javascript:dcsMultiTrack('DCS.dcsuri','/nopv.gif','WT.nadlac','N001','WT.nadsub','N001s07')">产品</A> 
+     <span class="menuline">|</span>  
+     <A href="./service/" onclick="javascript:dcsMultiTrack('DCS.dcsuri','/nopv.gif','WT.nadlac','N001','WT.nadsub','N001s08')">网上营业厅</A> 
+     <span class="menuline">|</span> 
+    
+     <A href="./10086/" onclick="javascript:dcsMultiTrack('DCS.dcsuri','/nopv.gif','WT.nadlac','N001','WT.nadsub','N001s12')">客户服务</A> 
+     <br /> 
+      <A href="http://phone.10086.cn/" onclick="javascript:dcsMultiTrack('DCS.dcsuri','/nopv.gif','WT.nadlac','N001','WT.nadsub','N001s11')">手机天地</A> 
+     <span class="menuline">|</span> 
+     <A href="http://jf.10086.cn/" onclick="javascript:dcsMultiTrack('DCS.dcsuri','/nopv.gif','WT.nadlac','N001','WT.nadsub','N001s10')">积分商城</A> 
+     <span class="menuline">|</span> 
+     <A href="./focus/" onclick="javascript:dcsMultiTrack('DCS.dcsuri','/nopv.gif','WT.nadlac','N001','WT.nadsub','N001s13')">移动特辑</A>
+      
+     
+   </div> 
+  </div>
+  <!--导航!-->
+  
+  <div id="conter"><!--中间!-->
+      <div class="login">
+          
+        <div class="entrance"><img src="./images/inew-entrance.gif" alt="请选择省份" name="chimg" width="243" height="27" id="chimg" onclick="jumpService();"></div>
+        <div id="csfc1">
+            <div id="cscf1_con" style="text-align:center">
+            <ul>             
+                
+              <li><a target="_blank" href="http://www.bj.10086.cn/www/pub/new_service.jsp">北京</a></li>
+              <li><a target="_blank" href="http://gd.10086.cn/gotone/service/index.jsp">广东</a></li>                
+              <li><a target="_blank" href="https://service.sh.10086.cn/prx/000/http/smcc.com/service/">上海</a></li>
+              <li><a target="_blank" href="http://www.tj.10086.cn/service/index.jsp">天津</a></li>                
+              <li><a target="_blank" href="http://service.cq.10086.cn/cqbo_service/grouplogin">重庆</a></li>                
+              <li><a target="_blank" href="https://service.ln.10086.cn/main.jsp">辽宁</a></li>                
+              <li><a target="_blank" href="http://service.js.10086.cn/js_obsh_service/index1.jsp">江苏</a></li>                
+              <li><a target="_blank" href="http://www.hb.10086.cn/service/login.jsp">湖北</a></li>
+              <li><a target="_blank" href="http://www.sc.10086.cn/service/index.jsp">四川</a></li>
+              <li><a target="_blank" href="https://service.sn.10086.cn">陕西</a></LI>                          
+              <li><a target="_blank" href="http://www.he.10086.cn/service/index.jsp">河北</a></li>
+              <li><a target="_blank" href="http://service.sx.10086.cn/index.jsp">山西</a></li>
+              <li><a target="_blank" href="http://service.ha.10086.cn/index.action">河南</a></li>                
+              <li><a target="_blank" href="http://service.jl.10086.cn/service/index.jsp">吉林</a></li>                
+              <li><a target="_blank" href="http://www.hl.10086.cn/service/index.jsp">黑龙江</a></li>                            
+              <li><a target="_blank" href="http://service.nm.10086.cn/ueuiservice_v1/service.jsp">内蒙古</a></li>                
+              <li><a target="_blank" href="http://www.sd.10086.cn/">山东</a></li>                
+              <li><a target="_blank" href="http://service.ah.10086.cn/index.jsp">安徽</a></li>                
+              <li><a target="_blank" href="https://service.zj.10086.cn/">浙江</a></li>                
+              <li><a target="_blank" href="http://www.fj.10086.cn/service/index.jsp">福建</a></li>                
+              <li><a target="_blank" href="http://service.gx.10086.cn/ueuiservice_v1/service.jsp">广西</a></li>                
+              <li><a target="_blank" href="http://hn.10086.cn/service/e_service.jsp">湖南</a></li>                
+              <li><a target="_blank" href="http://service.jx.10086.cn/ecare/common/index.jsp">江西</a></li>                
+              <li><a target="_blank" href="http://www.gz.10086.cn/service/ueuiservice_v1/service.jsp">贵州</a></li>                
+              <li><a target="_blank" href="http://service.yn.10086.cn">云南</a></li>                
+              <li><a target="_blank" href="http://service.xz.10086.cn/aincs/ueuiservice_v1/service.jsp">西藏</a></li>                
+              <li><a target="_blank" href="http://www.hi.10086.cn/service/index.jsp">海南</a></li>                
+              <li><a target="_blank" href="http://www.gs.10086.cn/service/">甘肃</a></li>                            
+              <li><a target="_blank" href="http://www.nx.10086.cn/service/index.jsp">宁夏</a></li>                
+              <li><a target="_blank" href="http://www.qh.10086.cn/ics/app">青海</a></li>
+              <li><a target="_blank" href="http://www.xj.10086.cn/service">新疆</a></li>
+           </ul>
+         </div>
+      </div>
+         <form name="toptransfer" id="toptransfer" method="post" action="http://www.10086.cn/service/transferTo.do" target="_blank" onSubmit="return false;">                                                        
+          
+         <div class="Moblie"><input name="phone" type="text" id="phone" value="请输入手机号" class="newbd" maxlength="11" onFocus="if(this.value == this.defaultValue) this.value = ''" onBlur="if(this.value == '') this.value = this.defaultValue"></div>
+                                                        
+                                                        
+           <div class="login1">
+            <input height="30" width="110" type="image" onclick="sumb();" src="images/inew-login.gif" style="padding-right: 10px;">
+            <input height="32" width="112" type="image" onclick="sumb139();" src="images/login7.gif">
+          </div>
+        
+                                                        
+         </form>
+        </div>
+    
+  <p class="indexlink"><span>适配</span>|<a href="http://www.10086.cn/index.htm" target="_blank">标准</a></p>
+  </div><!--中间!-->
+  
+<div id="footer"><!--footer!-->
+<ul>
+  <li class="fleft"><a title="法律声明" href="./index_law_3134.shtml" target="_blank">法律声明</a>   	
+  	<span class="writet">|</span> <a title="关于我们" href="./aboutus/" target="_blank">关于我们</a> </li>  
+  <li class="fright"><span><a href="http://www.miibeian.gov.cn/" target="icp">京ICP备05002571号</a> | 中国移动通信版权所有</span></li>
+  <li class="middlegov"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202001071900001" target="right"><IMG src="./images/gov.gif" alt="gov" width=15></a></li>
+</ul>
+</div><!--footer!-->
+
+</div>
+
+
+
+
+</body>
+</html>

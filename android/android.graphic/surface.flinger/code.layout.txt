@@ -1,0 +1,16 @@
+
+Frameworks/Libs/Surfaceflinger
+
+Frameworks/base/core/jni/android_view_Surface.cpp
+
+Frameworks/base/core/java/android/view/surface.java
+
+Frameworks/base/Graphics：绘图接口
+
+Frameworks/Libs/Ui
+
+External/Skia
+    一个C++的2D图形引擎库
+    Skia完成了：文本输出，位图，点，线，图像解码等功能
+
+    Android的2D绘制系统都是建立在该基础之上.

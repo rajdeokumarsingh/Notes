@@ -1,0 +1,223 @@
+
+http://en.wikipedia.org/wiki/HTTP_cookie
+
+Cookie concept
+    a piece of text stored on a user's computer by their web browser
+    used for 
+        authentication
+        storing site preferences
+        shopping cart contents
+        the identifier for a server-based session
+        anything else that can be accomplished through storing text data
+
+    consists of
+        name-value pairs 
+
+    basic process
+        1.sent as a field in the header of the HTTP response by a web server to a web browser 
+        2.then sent back unchanged by the browser each time it accesses that server
+
+Session cookie
+    only lasts for the duration of users using the website
+    expire 
+        if a user closes his/her browser
+        if a user hasn't visited the server for certain period of time(called session idle timeout)
+
+Persistent cookie
+    will outlast user sessions
+    has its Max-Age 
+    also called tracking cookies
+
+Secure cookie
+    only used when a browser is visiting a server via HTTPS
+    always encrypted
+
+HttpOnly cookie
+    only be used when transmitting HTTP (or HTTPS) requests
+    not available to client side script (such as Javascript)
+
+First-party cookies
+    set with the same domain (or its subdomain) 
+        with domain to be the same or sub-domain of the requesting host
+        a user visiting www.example.com can have a cookie set with domain 
+            www.example.com 
+            or .example.com
+            but not .com
+
+Third-party cookie
+    set with different domains 
+    For example
+        1. a user visits www.example1.com, which sets a cookie with the domain ad.foxytracking.com
+        2. the user later visits www.example2.com, another cookie is set with the domain ad.foxytracking.com
+
+        both of these cookies will be sent to the advertiser when loading their ads or visiting their website
+        The advertiser can then use these cookies to build up a browsing history of the user across 
+            all the websites this advertiser has footprints on
+
+Super cookie
+    a cookie with a Public Suffix[9] domain, like .com, .co.uk or k12.ca.us.
+
+Zombie cookie
+    any cookie that is automatically recreated after a user has deleted it
+    accomplished by a script storing the content of the cookie in some other location
+        such as the local storage available to Flash content
+        then recreating it from the backup when the cookie's absence is detected
+
+Session management
+    implement a "shopping cart" (or "shopping basket")
+        store the list of basket contents in a database on the server side,
+            rather than storing basket items in the cookie itself
+
+        1. A web server typically sends a cookie containing a unique session identifier.
+        2. The web browser will send back that session identifier with each subsequent request 
+            and shopping basket items are stored associated with a unique session identifier
+
+    Login
+        1. the web server will first send a cookie containing a unique session identifier.
+        2. Users then submit their credentials and the web application authenticates the session 
+            and allows the user access to services
+
+Personalization
+    1. Users select their preferences by entering them in a web form and submitting the form to the server. 
+    2. The server encodes the preferences in a cookie and sends the cookie back to the browser. 
+    3. This way, every time the user accesses a page, the server is also sent the cookie where the preferences are stored, 
+        and can personalize the page according to the user preferences. 
+
+    For example:
+        the Wikipedia website allows authenticated users to choose the webpage skin they like best;
+        the Google search engine allows users (even non-registered ones) 
+            to decide how many search results per page they want to see.
+
+Tracking
+    track internet users' web browsing habits
+
+    process
+    1. If the user requests a page of the site, but the request contains no cookie, 
+        the server presumes that this is the first page visited by the user; 
+        the server creates a random string and sends it as a cookie back to the browser together with the requested page;
+    2. From this point on, the cookie will be automatically sent by the browser to the server 
+        every time a new page from the site is requested; the server sends the page as usual, 
+        but also stores the URL of the requested page, the date/time of the request, and the cookie in a log file.
+
+    By looking at the log file, it is then possible to find out which pages the user has visited and in what sequence.
+
+
+Implementation
+    Set by http header
+        browser-------→ server
+        GET /index.html HTTP/1.1
+        Host: www.example.org
+            
+        browser←------- server
+        HTTP/1.1 200 OK
+        Content-type: text/html
+        Set-Cookie: name=value
+        Set-Cookie: name2=value2; Expires=Wed, 09 Jun 2021 10:18:14 GMT
+        (content of page)
+
+        browser-------→ server
+        GET /spec.html HTTP/1.1
+        Host: www.example.org
+        Cookie: name=value; name2=value2
+        Accept: */*
+         
+    set by JavaScript
+        document.cookie = "temperature=20"
+
+Cookie attributes
+
+    Domain and Path
+        define the scope of the cookie
+            should only be sent back to the server for the given domain and path
+            If not specified, default to the domain and path of the object that was requested
+            For example:
+                // in docs.foo.com/accounts
+                Set-Cookie: LSID=DQAAAK…Eaem_vYg; Path=/accounts; Expires=Wed, 13-Jan-2021 22:23:01 GMT; Secure; HttpOnly
+                // any subdomain in .foo.com on any path
+                Set-Cookie: HSID=AYQEVn….DKrdst; Domain=.foo.com; Path=/; Expires=Wed, 13-Jan-2021 22:23:01 GMT; HttpOnly
+
+    Expires and Max-Age
+        For example:
+            Set-Cookie: lu=Rg3vHJZnehYLjVg7qi3bZjzg; expires=Tue, 15-Jan-2013 21:47:38 GMT; path=/; domain=.foo.com; httponly
+            // session cookie, deleted after the user closes his/her browser
+            Set-Cookie: made_write_conn=1295214458; path=/; domain=.foo.com
+
+            // delete a cookie, set expires to sometime in the past
+            // note that cookie will only be deleted when the domain and path attributes in the Set-Cookie field 
+                // match the values used when the cookie was created
+            Set-Cookie: reg_fb_gate=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.foo.com; httponly
+
+    Secure 
+
+    HttpOnly
+
+
+Set-Cookie: NAME=VALUE; expires=DATE; path=PATH; domain=DOMAIN_NAME; secure
+
+    domain=DOMAIN_NAME， 
+        tail matching , 匹配网站的域名。 
+        如sina.com.cn, 会匹配news.sina.com.cn, book.sina.com.cn
+        The default value of domain is the host name of the server which generated the cookie response
+
+    path=PATH
+        specify the subset of URLs in a domain for which the cookie is valid
+        The path "/foo" would match "/foobar" and "/foo/bar.html"
+        The path "/" is the most general path.
+
+    Secure
+        only be sent to HTTPS (HTTP over SSL) servers
+
+    First Example transaction sequence:
+        Client requests a document, and receives in the response: 
+            Set-Cookie: CUSTOMER=WILE_E_COYOTE; path=/; expires=Wednesday, 09-Nov-99 23:12:40 GMT
+
+        When client requests a URL in path "/" on this server, it sends: Cookie: 
+            CUSTOMER=WILE_E_COYOTE
+
+        Client requests a document, and receives in the response: 
+            Set-Cookie: PART_NUMBER=ROCKET_LAUNCHER_0001; path=/
+
+        When client requests a URL in path "/" on this server, it sends: 
+            Cookie: CUSTOMER=WILE_E_COYOTE; PART_NUMBER=ROCKET_LAUNCHER_0001
+
+        Client receives: 
+            Set-Cookie: SHIPPING=FEDEX; path=/foo
+
+        When client requests a URL in path "/" on this server, it sends: 
+            Cookie: CUSTOMER=WILE_E_COYOTE; PART_NUMBER=ROCKET_LAUNCHER_0001
+
+        When client requests a URL in path "/foo" on this server, it sends: 
+            Cookie: CUSTOMER=WILE_E_COYOTE; PART_NUMBER=ROCKET_LAUNCHER_0001; SHIPPING=FEDEX
+
+状态:new, normal, deleted, replaced
+属性： domain, path, name, value, expires,lastUpdateTime
+Request for Comments (RFC) 2965 文档“HTTP State Management Mechanism”（HTTP 状态管理机制）对 Cookie 进行了定义。
+您可以在以下 RFC Editor Web 站点找到 RFC 文档>：
+http://www.rfc-editor.org (http://www.rfc-editor.org)
+
+
+扩展
+
+1.session是什么？
+    session其实是在无状态会话的http协议下，为了实现有状态会话而设计的一种实现方法。
+
+2.如何实现session会话？简单的说，
+    就是在服务器端创建session对象，记录会话信息，同时在客户端与服务器的交互过程中，
+    通过JSESSIONID字符串唯一标识session对象
+    客户端只需要保存JSESSIONID这个字符串，服务器端只需要保存JSESSIONID和真实的session对象之间的关联关系
+    而这个JSESSIONID字符串就是通过http协议的cookie功能实现的。
+
+3.浏览器禁用cookie时会发生什么？
+    浏览器禁止了Cookie，那么第二次请求中将不包含有Cookie信息（当然更不存在JSESSIONID信息），服务器也就不会收到JSESSIONID的值，
+    于是服务器认为是新请求，又创建一个服务器session，同时将本次生成的JSESSIONID再次通过响应信息中的Set-Cookie返回给客户端。
+    如此循环交互，服务器将永远认为该客户浏览器的请求是新请求，因此无法实现session功能。
+
+    最后回到最初的那个面试问题：浏览器禁止cookie时，服务器与客户端浏览器能否保持session连接？
+    当然可以，但是现在不能依靠浏览器自动完成这个功能，而是需要服务器端通过重写URL的方法来实现，
+    就是在返回的页面中，在URL里将JSESSIONID的值作为请求参数传递给服务器端，例如<a href="http://www.java.com;JSESSIONID=4918D6ED22B81B587E7AF7517CE24E25">。
+
+问题：
+    如何实现自动登录, 和smart.mail.126一样
+    如何实现如同china-pub中2星期内自动登录
+
+

@@ -1,0 +1,52 @@
+
+base/core/java/android/view/Display.java
+    描述物理显示屏幕的特性和参数
+
+    // 有几块显示屏
+    native static int getDisplayCount();
+
+    // 本显示屏的ID
+    public int getDisplayId();
+
+    // Returns the raw width/height of the display, in pixels.
+    native public int getWidth();
+    native public int getHeight();
+
+
+    // Returns the rotation of the screen from its "natural" orientation
+    /* public static final int ROTATION_0       = 0;
+       public static final int ROTATION_90      = 1;
+       public static final int ROTATION_180     = 2;
+       public static final int ROTATION_270     = 3;
+     */
+    public int getRotation();
+
+    // Return the native pixel format of the display.
+    // 透明，半透明，不透明， RGB格式
+    public int getPixelFormat();
+
+    // Initialize a DisplayMetrics object from this display's data.
+    public void getMetrics(DisplayMetrics outMetrics)
+        outMetrics.widthPixels  = getWidth();
+        outMetrics.heightPixels = getHeight();
+
+        outMetrics.density      = mDensity;
+        outMetrics.densityDpi   = (int)((mDensity*DisplayMetrics.DENSITY_DEFAULT)+.5f);
+            // Dots Per Inch
+            // Standard quantized DPI for low-density screens.
+            public static final int DENSITY_LOW = 120;
+
+            // Standard quantized DPI for medium-density screens.
+            public static final int DENSITY_MEDIUM = 160;
+
+            // Standard quantized DPI for high-density screens.
+            public static final int DENSITY_HIGH = 240;
+
+            // Standard quantized DPI for extra-high-density screens.
+            public static final int DENSITY_XHIGH = 320;
+
+        outMetrics.scaledDensity= outMetrics.density;
+        outMetrics.xdpi         = mDpiX;
+        outMetrics.ydpi         = mDpiY;
+
+

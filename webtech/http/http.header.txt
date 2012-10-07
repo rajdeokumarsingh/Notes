@@ -1,0 +1,21 @@
+Accept-Charset
+
+reference:
+http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html
+http://www.w3.org/Protocols/rfc2616/rfc2616.html
+
+Accept-Charset = "Accept-Charset" ":"
+    1#( ( charset | "*" )[ ";" "q" "=" qvalue ] )
+
+    Each charset MAY be given an associated quality value which represents the user's preference for that charset. 
+    The default value is q=1. An example is
+        Accept-Charset: iso-8859-5, unicode-1-1;q=0.8
+            iso-8859-5: q=1 (default value)
+            unicode-1-1: q=0.8
+
+    The special value "*" matches every character set (including ISO-8859-1) 
+    If no "*" is present in an Accept-Charset field, 
+        then all character sets not explicitly mentioned get a quality value of 0, 
+        except for ISO-8859-1 ,which gets a quality value of 1 if not explicitly mentioned. 
+
+    If no Accept-Charset header is present, the default is that any character set is acceptable

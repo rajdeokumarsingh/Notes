@@ -1,0 +1,410 @@
+Services
+    in the background
+    has no user interface
+
+Service forms
+    Started
+        started by startService()
+        When the operation is done, the service should stop itself
+
+        onStartCommand()
+            callback method which allows components to start it
+
+    Bound
+        by calling bindService()
+
+        onBind() 
+            callback method which allows components to bind it
+
+The basics
+    create a subclass of Service (or one of its existing subclasses)
+    override following functions:
+        onStartCommand()
+            Invoked when another component call startService()
+            The service starts once this method executes
+
+            you need to implement stopSelf() or stopService() to stop the servie
+            No need to implement onStartCommand if only provide binding
+
+        onBind()
+            Invoked when another component call bindService()
+            must provide an IPC interface that clients use to communicate with the service
+                by returning an IBinder
+
+            must always implement this method, 
+                if don't want to allow binding, return null
+
+        onCreate()
+            invoked when the service is first created
+                before either onStartCommand() or onBind()
+            perform one-time setup procedures 
+
+        onDestroy()
+            invoked when services being destroyed
+                the last call the service receives
+            clean up any resources such as 
+                threads, registered listeners, receivers, etc. 
+
+life cycle
+    startService()-->onStartCommand()
+    stopSelf(), stopService()-->onDestroy
+
+    bindService() -NOT invoke->onStartCommand()
+        when all components unbind, the service is destroyed
+
+    killing policy
+        when memory is low
+            force-stop a service 
+
+        service is bound to an activity that has user focus
+            less likely to be killed
+
+        "foreground" service
+            almost never be killed
+
+        must design it to gracefully handle restarts by the system
+        If the system kills your service, 
+            it restarts it as soon as resources become available
+
+Declaring a service in the manifest
+    <application ... >
+        <service android:name=".ExampleService" />
+        ...
+    </application>
+
+    Make a service private
+        set android:exported attribute to "false"
+
+    Service intent filters
+        allow other components to invoke the service using implicit intents.
+        should not supply any intent filters if you plan on using your service only locally
+
+        Without any intent filters, you must start the service using 
+            an intent that explicitly names the service class. 
+
+Creating a Started Service
+    1. client ---calling--> startService()
+        public abstract ComponentName startService (Intent service)
+
+    2. system --->service::onStartCommand() 
+        The service receives this Intent in the onStartCommand() method
+
+    service stop itself
+        stopSelf()
+
+    client stop service
+        stopService()
+
+Process and thread
+    A services runs by default
+        in the same process as the application in which it is declared
+        in the main thread of that application, 
+
+        do not perform intensive or blocking operations
+            if there is UI in the application
+
+        To avoid impacting application performance, 
+            you should start a new thread inside the service.
+
+Service class
+    base class for all services
+    IMPORTANT 
+        create a new thread in which to do all the service's work
+
+    IntentService
+        subclass of Service 
+        uses a worker thread to handle all start requests, one at a time.
+        the best option 
+            if don't require that the service handle multiple requests simultaneously
+
+        All you need to do is implement onHandleIntent()
+            which receives the intent for each start request so you can do the background work
+
+Extending the IntentService class
+    The IntentService does the following:
+        Creates a default worker thread 
+            executes all intents delivered to onStartCommand() 
+            separate from your application's main thread.
+
+        Creates a work queue 
+            passes one intent at a time to your onHandleIntent() implementation
+            never have to worry about multi-threading
+
+        Stops the service after all start requests have been handled, 
+            never have to call stopSelf()
+
+        Provides default implementation of onBind() that returns null.
+
+        Provides a default implementation of onStartCommand() 
+            sends the intent to the work queue and then to your onHandleIntent() implementation.
+
+    public class HelloIntentService extends IntentService {
+
+      /** 
+       * A constructor is required, and must call the super IntentService(String)
+       * constructor with a name for the worker thread.
+       */
+      public HelloIntentService() {
+          super("HelloIntentService");
+      }
+
+      /**
+       * The IntentService calls this method from the default worker thread with
+       * the intent that started the service. When this method returns, IntentService
+       * stops the service, as appropriate.
+       */
+      @Override
+      protected void onHandleIntent(Intent intent) {
+          // Normally we would do some work here, like download a file.
+          // For our sample, we just sleep for 5 seconds.
+          long endTime = System.currentTimeMillis() + 5*1000;
+          while (System.currentTimeMillis() < endTime) {
+              synchronized (this) {
+                  try {
+                      wait(endTime - System.currentTimeMillis());
+                  } catch (Exception e) {
+                  }
+              }
+          }
+      }
+    }
+
+    If you decide to also override other callback methods, such as 
+        onCreate(), onStartCommand(), or onDestroy(), 
+        be sure to call the super implementation, 
+            so that the IntentService can properly handle the life of the worker thread.
+
+        @Override
+        public int onStartCommand(Intent intent, int flags, int startId) {
+            Toast.makeText(this, "service starting", Toast.LENGTH_SHORT).show();
+            return super.onStartCommand(intent,flags,startId);
+        }
+
+    the only method from which you don't need to call the super class is onBind() 
+        (but you only need to implement that if your service allows binding).
+
+Extending the Service class
+
+    public class HelloService extends Service {
+      private Looper mServiceLooper;
+      private ServiceHandler mServiceHandler;
+
+      // Handler that receives messages from the thread
+      private final class ServiceHandler extends Handler {
+          public ServiceHandler(Looper looper) {
+              super(looper);
+          }
+          @Override
+          public void handleMessage(Message msg) {
+              // Normally we would do some work here, like download a file.
+              // For our sample, we just sleep for 5 seconds.
+              long endTime = System.currentTimeMillis() + 5*1000;
+              while (System.currentTimeMillis() < endTime) {
+                  synchronized (this) {
+                      try {
+                          wait(endTime - System.currentTimeMillis());
+                      } catch (Exception e) {
+                      }
+                  }
+              }
+              // Stop the service using the startId, so that we don't stop
+              // the service in the middle of handling another job
+              stopSelf(msg.arg1);
+          }
+      }
+
+      @Override
+      public void onCreate() {
+        // Start up the thread running the service.  Note that we create a
+        // separate thread because the service normally runs in the process's
+        // main thread, which we don't want to block.  We also make it
+        // background priority so CPU-intensive work will not disrupt our UI.
+        HandlerThread thread = new HandlerThread("ServiceStartArguments",
+                Process.THREAD_PRIORITY_BACKGROUND);
+        thread.start();
+        
+        // Get the HandlerThread's Looper and use it for our Handler 
+        mServiceLooper = thread.getLooper();
+        mServiceHandler = new ServiceHandler(mServiceLooper);
+      }
+
+      @Override
+      public int onStartCommand(Intent intent, int flags, int startId) {
+          Toast.makeText(this, "service starting", Toast.LENGTH_SHORT).show();
+
+          // For each start request, send a message to start a job and deliver the
+          // start ID so we know which request we're stopping when we finish the job
+          Message msg = mServiceHandler.obtainMessage();
+          msg.arg1 = startId;
+          // 停止service的时候可以用
+              // stopSelf(msg.arg1);
+          mServiceHandler.sendMessage(msg);
+          
+          // If we get killed, after returning from here, restart
+          return START_STICKY;
+
+          /* the onStartCommand() method must return an integer
+              describes how the system should continue the service 
+              in the event that the system kills it.
+
+            START_NOT_STICKY
+                do NOT recreate the service
+                    If the system kills the service after onStartCommand() returns
+                    unless there are pending intents to deliver.
+
+                    This is the safest option to avoid running your service when not necessary and 
+                        when your application can simply restart any unfinished jobs.
+
+            START_STICKY
+                recreate the service and call onStartCommand(), 
+                NOT deleiver the last intent
+
+                    If the system kills the service after onStartCommand() returns
+                    but do not redeliver the last intent.
+                        Instead, the system calls onStartCommand() with a null intent
+
+                    unless there were pending intents to start the service, 
+                        in which case, those intents are delivered.
+
+                This is suitable for media players (or similar services) 
+                    that are not executing commands, 
+                    but running indefinitely and waiting for a job
+
+            START_REDELIVER_INTENT
+                recreate the service and call onStartCommand() 
+                    with the last intent that was delivered to the service
+                Any pending intents are delivered in turn. 
+
+                This is suitable for services that are actively performing a job 
+                    that should be immediately resumed, such as downloading a file.
+           */
+      }
+
+      @Override
+      public IBinder onBind(Intent intent) {
+          // We don't provide binding, so return null
+          return null;
+      }
+      
+      @Override
+      public void onDestroy() {
+        Toast.makeText(this, "service done", Toast.LENGTH_SHORT).show(); 
+      }
+    }
+
+Starting a Service
+    using an explicit intent 
+        Intent intent = new Intent(this, HelloService.class);
+        startService(intent);
+
+        client-->startService() system-->service::onCreate(if service is not running)-->service::onStartCommand()
+
+    if you want the service to send a result back, 
+        then the client that starts the service can create a PendingIntent for a broadcast (with getBroadcast()) 
+        deliver it to the service in the Intent that starts the service. The service can then use the broadcast to deliver a result.
+
+Stopping a service
+    service --> stopSelf()
+    client --> stopService()
+        Once requested to stop with stopSelf() or stopService(), 
+            the system destroys the service as soon as possible.
+
+        stop service in multithread case
+            use stopSelf(int)
+                pass the ID of the start request (the startId delivered to onStartCommand()) 
+                if the service received a new start request before you were able to call stopSelf(int), 
+                then the ID will not match and the service will not stop.
+
+    A started service must manage its own lifecycle
+        It's important that your application stops its services when it's done working, 
+        to avoid wasting system resources and consuming battery power
+
+Creating a Bound Service
+    Perform IPC with services
+
+    client-->bindService()  
+        system-->service::onBind()
+            return an IBinder to the client to perform IPC
+
+    client-->unbindService() to unbind
+        Once there are no clients bound to the service, 
+        the system destroys the service.
+
+Sending Notifications to the User
+    service can notify the user of events using Toast Notifications or Status Bar Notifications.
+
+Running a Service in the Foreground
+    The system would not try to kill the foreground service
+
+    A foreground service must provide a notification for the status bar
+
+        For example, a music player that plays music from a service should be set to run in the foreground
+
+    call startForeground() / stopForeground()
+        Notification notification = new Notification(R.drawable.icon, getText(R.string.ticker_text),
+            System.currentTimeMillis());
+        Intent notificationIntent = new Intent(this, ExampleActivity.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
+        notification.setLatestEventInfo(this, getText(R.string.notification_title),
+                getText(R.string.notification_message), pendingIntent);
+        startForeground(ONGOING_NOTIFICATION, notification);
+
+Managing the Lifecycle of a Service
+    A started service 
+        client --> startService()
+        client --> stopService()
+        service --> stopSelf()
+
+    A bound service 
+        client --> bindService()
+        client --> communicates with the service through an IBinder interface.
+        client --> unbindService()
+
+    You can also bind to a started service
+        In cases like this, stopService() or stopSelf() does 
+            NOT actually stop the service until all clients unbind. 
+
+Implementing the lifecycle callbacks
+
+    public class ExampleService extends Service {
+        int mStartMode;       // indicates how to behave if the service is killed
+        IBinder mBinder;      // interface for clients that bind
+        boolean mAllowRebind; // indicates whether onRebind should be used
+
+        @Override
+        public void onCreate() {
+            // The service is being created
+            // do initial setup
+            // For example, a music playback service could create the thread 
+                // where the music will be played in onCreate()
+        }
+        @Override
+        public int onStartCommand(Intent intent, int flags, int startId) {
+            // The service is starting, due to a call to startService()
+            return mStartMode;
+        }
+        @Override
+        public IBinder onBind(Intent intent) {
+            // A client is binding to the service with bindService()
+            return mBinder;
+        }
+        @Override
+        public boolean onUnbind(Intent intent) {
+            // All clients have unbound with unbindService()
+            return mAllowRebind;
+        }
+        @Override
+        public void onRebind(Intent intent) {
+            // A client is binding to the service with bindService(),
+            // after onUnbind() has already been called
+        }
+        @Override
+        public void onDestroy() {
+            // The service is no longer used and is being destroyed
+            // releases all remaining resources 
+                // stop the thread in onDestroy()
+        }
+    }
+
+
+

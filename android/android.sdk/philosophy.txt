@@ -1,0 +1,11 @@
+
+seperate appearance from behavior
+    layout xml file
+        define appearance
+    source code
+        define behavior
+
+User interface
+    appearance
+    actions associated with appearance, e.g., touch events, gestures, ...
+

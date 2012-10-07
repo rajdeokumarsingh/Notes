@@ -1,0 +1,38 @@
+dmesg
+
+modinfo
+    modinfo ./stkernel/neoi-956-p1/output/targetfs/lib/modules/2.6.32-nxp/extra/jdu.ko
+    filename:       ./stkernel/neoi-956-p1/output/targetfs/lib/modules/2.6.32-nxp/extra/jdu.ko
+    version:        ICODEC____VYP1140A__MNTC-DONUT-ECLAIR__V1.2
+    description:    Jpeg hw decoder management within PNX multimedia framework
+    author:         NXP Semiconductor
+    license:        Proprietary
+    depends:        libosal,framemem
+    vermagic:       2.6.32-nxp preempt mod_unload ARMv5 
+    parm:           major:int
+    parm:           minor:int
+    parm:           debug:int
+    parm:           testu:int
+
+
+process block
+    cd /proc/pid_num/
+    # cat wchan
+    jdu_dev_open# 
+
+    # cat stack
+    [<bf2323c8>] jdu_dev_open+0x50/0x178 [jdu]
+    [<c09df644>] chrdev_open+0x25c/0x284
+    [<c09d9c00>] __dentry_open+0x208/0x328
+    [<c09dad18>] nameidata_to_filp+0x50/0x68
+    [<c09e86b4>] do_filp_open+0x3fc/0x7ec
+    [<c09d98e4>] do_sys_open+0x64/0x11c
+    [<c09d99d4>] sys_open+0x24/0x28
+    [<c09312e0>] ret_fast_syscall+0x0/0x50
+    [<ffffffff>] 0xffffffff
+
+    # cd /proc/2060/fd
+    # ls -l
+        lrwx------ root     root              2011-10-14 18:12 53 -> /dev/jdu/0
+
+

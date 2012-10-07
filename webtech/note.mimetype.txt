@@ -1,0 +1,92 @@
+
+Multipurpose Internet Mail Extensions (MIME) 
+support
+    Text in character sets other than ASCII
+    Non-text attachments
+    Message bodies with multiple parts
+    Header information in non-ASCII character sets
+
+used by HTTP
+
+
+MIME headers
+    MIME-Version
+        MIME-Version: 1.0
+
+    Content-ID
+        primarily of use in multi-part messages
+        permanently globally unique identifier for a message part
+
+        Content-ID: <5.31.32252.1057009685@server01.example.net>
+
+    Content-Type
+        Content-Type: text/plain
+
+    Content-Disposition
+        specify the presentation style
+
+        inline content-disposition
+            it should be automatically displayed when the message is displayed
+
+        attachment content-disposition
+            it is not displayed automatically and requires some form of action from the user to open it
+
+        RFC 2183
+         Content-Disposition: attachment; filename=genome.jpeg;
+                  modification-date="Wed, 12 February 1997 16:29:51 -0500";
+
+    Content-Transfer-Encoding
+
+Multipart messages
+    contains a boundary in the "Content-Type: " header
+    the boundary is placed between the parts, 
+        and at the beginning and end of the body of the message
+    this boundary must not occur in any of the parts
+
+    for example:
+        MIME-Version: 1.0
+        Content-Type: multipart/mixed; boundary="frontier"
+
+        This is a message with multiple parts in MIME format.
+        --frontier
+        Content-Type: text/plain
+
+        This is the body of the message.
+        --frontier
+        Content-Type: application/octet-stream
+        Content-Transfer-Encoding: base64
+
+        PGh0bWw+CiAgPGhlYWQ+CiAgPC9oZWFkPgogIDxib2R5PgogICAgPHA+VGhpcyBpcyB0aGUg
+        Ym9keSBvZiB0aGUgbWVzc2FnZS48L3A+CiAgPC9ib2R5Pgo8L2h0bWw+Cg==
+        --frontier--
+
+    Each part consists of its own content header (zero or more Content-header fields) and a body. 
+
+    Before the first boundary is an area that is ignored by MIME-compliant clients. 
+        This area is generally used to put a message to users of old non-MIME clients.
+
+    The last boundary must have two hyphens at the end.
+
+    Multipart subtypes
+        specified in the "Content-Type" header of the overall message
+
+        multipart/mixed,...
+
+        4 subtypes: 
+            mixed
+                sending files with different "Content-Type" headers inline (or as attachments)
+            digest 
+                simple way to send multiple text messages
+                The default content-type for each part is "message/rfc822".
+            alternative 
+            parallel
+
+        should treat unrecognised subtypes as "multipart/mixed"
+
+
+
+
+
+
+
+

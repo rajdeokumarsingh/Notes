@@ -1,0 +1,10 @@
+Digest access authentication
+
+
+    an application of MD5 cryptographic hashing with usage of nonce values to discourage cryptanalysis
+    a server-generated nonce value
+
+    "quality of protection" (qop)
+
+reference:
+    http://tools.ietf.org/html/rfc2069

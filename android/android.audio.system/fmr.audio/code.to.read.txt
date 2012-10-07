@@ -1,0 +1,14 @@
+
+
+frameworks/base/media/java/android/media/AudioSystem.java
+frameworks/base/media/java/android/media/AudioManager.java
+
+frameworks/base/include/media/AudioSystem.h
+frameworks/base/media/libmedia/AudioSystem.cpp
+frameworks/base/services/audioflinger/AudioFlinger.cpp
+
+frameworks/base/services/audioflinger/AudioPolicyService.cpp
+frameworks/base/services/audioflinger/AudioPolicyManagerBase.cpp
+
+
+hardware/msm7k/libaudio/AudioHardware.cpp

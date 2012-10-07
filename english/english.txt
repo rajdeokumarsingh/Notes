@@ -1,0 +1,51 @@
+
+
+--------------------------------------------------------------------------------
+i.e., etc., 和 e.g. 的用法和区别
+
+i.e. 是拉丁文 id est 的缩写
+    它的意思就是“那就是说，换句话说”，
+    等同于“that is，in other words” ，
+    目的是用来进一步解释前面所说的观点。
+
+e.g. 是拉丁文 exempli gratia 的缩写，
+    它的意思是“举个例子，比如”，
+    等同与“for example”,
+    目的就是用几个例子来说明前面的观点。
+
+etc. 它是 etcetera 的缩写，意思是“等等”，
+    相当于“and so on”
+
+e.g. 和 etc. 不能出现在同一句话中，
+    因为 e.g. 是表示泛泛的举几个例子，并没有囊括所有的实例，其中就已经包含“等等”，
+    如果再加一个 etc. 就画蛇添足了，例如下面这句话就是错的：
+
+    Writing instructors focus on a number of complex skills that require extensive practice 
+        (e.g., organization, clear expression, logical thinking, etc.)
+
+    注意，用它们的时候，不要把“小点”给落了~
+--------------------------------------------------------------------------------
+an apple
+an X-ray
+an “NGO” (for “non-governmental organization”)
+
+a yolk
+a university
+a utensil
+
+an umpire
+an umbrella
+an understanding
+
+an honest effort
+--------------------------------------------------------------------------------
+one, another, another, ...
+    For example, an email application might have one activity that shows a list of new emails, 
+        another activity to compose an email, 
+        and another activity for reading emails. 
+--------------------------------------------------------------------------------
+Three of the four component types—activities, services, and broadcast receivers
+    —are activated by an asynchronous message called an intent
+--------------------------------------------------------------------------------
+perform some action
+--------------------------------------------------------------------------------

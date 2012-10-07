@@ -1,0 +1,836 @@
+SkColorFilter
+{
+    滤镜. 重要函数
+    SkColor     filterColor (SkColor)
+        Apply this colorfilter to the specified SkColor. 
+
+    // 如何创建滤镜
+    static SkColorFilter *  CreateModeFilter (SkColor c, SkXfermode::Mode mode)
+        SkXfermode::Mode
+            对源颜色和滤镜颜色进行线性变换，来产生不同的效果
+
+        Create a colorfilter that uses the specified color and mode.
+        {
+            /** List of predefined xfermodes.
+              The algebra for the modes uses the following symbols:
+              Sa, Sc  - source alpha and color
+              Da, Dc - destination alpha and color (before compositing)
+              [a, c] - Resulting (alpha, color) values
+              For these equations, the colors are in premultiplied state.
+              If no xfermode is specified, kSrcOver is assumed.
+             */
+            enum Mode 
+                kClear_Mode,    //!< [0, 0]    
+                kSrc_Mode,      //!< [Sa, Sc]  
+                kDst_Mode,      //!< [Da, Dc]  
+                kSrcOver_Mode,  //!< [Sa + Da - Sa*Da, Rc = Sc + (1 - Sa)*Dc]
+                kDstOver_Mode,  //!< [Sa + Da - Sa*Da, Rc = Dc + (1 - Da)*Sc]
+                kSrcIn_Mode,    //!< [Sa * Da, Sc * Da]
+                kDstIn_Mode,    //!< [Sa * Da, Sa * Dc]
+                kSrcOut_Mode,   //!< [Sa * (1 - Da), Sc * (1 - Da)]
+                kDstOut_Mode,   //!< [Da * (1 - Sa), Dc * (1 - Sa)]
+                kSrcATop_Mode,  //!< [Da, Sc * Da + (1 - Sa) * Dc]
+                kDstATop_Mode,  //!< [Sa, Sa * Dc + Sc * (1 - Da)]
+                kXor_Mode,      //!< [Sa + Da - 2 * Sa * Da, Sc * (1 - Da) + (1 - Sa) * Dc]
+                ...
+        }
+
+    static SkColorFilter *  CreateProcFilter (SkColor srcColor, SkXfermodeProc proc, SkXfermodeProc16 proc16=NULL)
+        // 通过自定义的变换函数，来合成源颜色和滤镜颜色
+        Create a colorfilter that calls through to the specified procs to filter the colors.
+        /** Define a function pointer type for combining two premultiplied colors */      
+        typedef SkPMColor (*SkXfermodeProc)(SkPMColor src, SkPMColor dst);
+
+
+    static SkColorFilter *  CreateLightingFilter (SkColor mul, SkColor add)
+        Create a colorfilter that multiplies the RGB channels by one color, and then adds a second color, 
+            pinning the result for each component to [0..255]. 
+        过滤公式 :
+        result = (orig*mul+add) mod 256
+}
+
+SkColorShader
+{
+    TODO:
+}
+
+SkColorTable
+{
+    /** \class SkColorTable
+
+      SkColorTable holds an array SkPMColors (premultiplied 32-bit colors) used by
+      8-bit bitmaps, where the bitmap bytes are interpreted as indices into the colortable.
+     */
+    class SkColorTable
+}
+
+SkBitmap
+{
+      The SkBitmap class specifies a raster bitmap. 
+      A bitmap has 
+            an integer width and height, 
+            a format (config), 
+            a pointer to the actual pixels.
+
+      Bitmaps can be drawn into a SkCanvas, 
+        but they are also used to specify the target of a SkCanvas' drawing operations.
+
+      A const SkBitmap exposes getAddr(), which lets a caller write its pixels;
+      the constness is considered to apply to the bitmap's configuration, not
+      its contents.
+
+      enum Config {
+          kNo_Config,         //!< bitmap has not been configured
+          /**
+           *  1-bit per pixel, (0 is transparent, 1 is opaque)
+           *  Valid as a destination (target of a canvas), but not valid as a src.
+           *  i.e. you can draw into a 1-bit bitmap, but you cannot draw from one.
+           */
+          kA1_Config,
+          kA8_Config,         //!< 8-bits per pixel, with only alpha specified (0 is transparent, 0xFF is opaque)
+          kIndex8_Config,     //!< 8-bits per pixel, using SkColorTable to specify the colors
+          kRGB_565_Config,    //!< 16-bits per pixel, (see SkColorPriv.h for packing)
+          kARGB_4444_Config,  //!< 16-bits per pixel, (see SkColorPriv.h for packing)
+          kARGB_8888_Config,  //!< 32-bits per pixel, (see SkColorPriv.h for packing)
+          /**
+           *  Custom compressed format, not supported on all platforms.
+           *  Cannot be used as a destination (target of a canvas).
+           *  i.e. you may be able to draw from one, but you cannot draw into one.
+           */
+          kRLE_Index8_Config,
+
+          kConfigCount
+      };
+
+      Config  config() const { return (Config)fConfig; }
+
+      int width() const { return fWidth; }
+
+      int height() const { return fHeight; }
+
+      int rowBytes() const { return fRowBytes; }
+
+      int bytesPerPixel() const { return fBytesPerPixel; }
+
+      /** Return the address of the pixels for this SkBitmap.
+       */
+      void* getPixels() const { return fPixels; }
+
+      //  Use this to assign a new pixel address for an existing bitmap.
+      void setPixels(void* p, SkColorTable* ctable = NULL);
+
+      bool copyPixelsTo(void* const dst, size_t dstSize, int dstRowBytes = -1) const;
+
+      // Use the standard HeapAllocator to create the pixelref that manages the
+      // pixel memory. It will be sized based on the current width/height/config.
+      bool allocPixels(SkColorTable* ctable = NULL) {
+          return this->allocPixels(NULL, ctable);
+      }
+
+      // Initialize the bitmap's pixels with the specified color+alpha,
+      void eraseARGB(U8CPU a, U8CPU r, U8CPU g, U8CPU b) const;
+
+      // Makes a deep copy of this bitmap, respecting the requested config.
+      bool copyTo(SkBitmap* dst, Config c, Allocator* allocator = NULL) const;
+}
+
+SkCanvas
+{
+    /** \class SkCanvas
+      A Canvas encapsulates all of the state about drawing into a device (bitmap), includes:
+        a reference to the device itself
+
+        a stack of matrix/clip values
+          For any given draw call (e.g. drawRect), 
+            the geometry of the object being drawn is transformed by the concatenation of all the matrices in the stack. 
+            The transformed geometry is clipped by the intersection of all of the clips in the stack.
+
+      While the Canvas holds the state of the drawing device
+      the state (style) of the object being drawn is held by the Paint, 
+          which is provided as a parameter to each of the draw() methods. 
+          The Paint holds attributes such as color, typeface, textSize, strokeWidth, shader (e.g. gradients, patterns), etc.
+
+        其实现类是SkDevice->SkDraw
+        SkDevice包括了SkBitmap
+
+        一个canvas可以包括多个device, 对应多个layer
+
+        当前的clip
+        当前的matrix
+     */
+
+
+    explicit SkCanvas(SkDeviceFactory* factory = NULL);
+    explicit SkCanvas(SkDevice* device);
+
+    /**
+     *  saveLayer() can create another device (which is later drawn onto
+     *  the previous device). getTopDevice() returns the top-most device current
+     *  installed. Note that this can change on other calls like save/restore,
+     *  so do not access this device after subsequent canvas calls.
+     *  The reference count of the device is not changed.
+     */
+    SkDevice* getTopDevice() const;
+
+    /** May be overridden by subclasses. This returns a compatible device
+      for this canvas, with the specified config/width/height. If the device
+      is raster, the pixels will be allocated automatically.
+     */
+    virtual SkDevice* createDevice(SkBitmap::Config, int width, int height,
+            bool isOpaque, bool forLayer = false);
+
+
+    /**
+     *  Create a new raster device and make it current. This also returns
+     *  the new device.
+     */
+    SkDevice* setBitmapDevice(const SkBitmap& bitmap, bool forLayer = false);
+
+    /**
+     *  Copy the pixels from the device into bitmap. Returns true on success.
+     *  If false is returned, then the bitmap parameter is left unchanged.
+     *  The bitmap parameter is treated as output-only, and will be completely
+     *  overwritten (if the method returns true).
+     */
+    bool readPixels(const SkIRect& srcRect, SkBitmap* bitmap);
+    bool readPixels(SkBitmap* bitmap);
+
+    /**
+     *  Similar to draw sprite, this method will copy the pixels in bitmap onto
+     *  the device, with the top/left corner specified by (x, y). The pixel
+     *  values in the device are completely replaced: there is no blending.
+     */
+    void writePixels(const SkBitmap& bitmap, int x, int y);
+
+    enum SaveFlags {
+        /** save the matrix state, restoring it on restore() */
+        kMatrix_SaveFlag            = 0x01,
+        /** save the clip state, restoring it on restore() */
+        kClip_SaveFlag              = 0x02,
+        /** the layer needs to support per-pixel alpha */
+        kHasAlphaLayer_SaveFlag     = 0x04,
+        /** the layer needs to support 8-bits per color component */
+        kFullColorLayer_SaveFlag    = 0x08,
+        /** the layer should clip against the bounds argument */
+        kClipToLayer_SaveFlag       = 0x10,
+
+        // helper masks for common choices
+        kMatrixClip_SaveFlag        = 0x03,
+        kARGB_NoClipLayer_SaveFlag  = 0x0F,
+        kARGB_ClipLayer_SaveFlag    = 0x1F
+    };
+
+    /** This call saves the current matrix, clip, and drawFilter, and pushes a
+      copy onto a private stack. Subsequent calls to translate, scale,
+      rotate, skew, concat or clipRect, clipPath, and setDrawFilter all
+      operate on this copy.
+      When the balancing call to restore() is made, the previous matrix, clip,
+      and drawFilter are restored.
+
+      @return The value to pass to restoreToCount() to balance this save()
+     */
+    virtual int save(SaveFlags flags = kMatrixClip_SaveFlag);
+
+
+    /** This behaves the same as save(), but in addition it allocates an
+      offscreen bitmap. All drawing calls are directed there, and only when
+      the balancing call to restore() is made is that offscreen transfered to
+      the canvas (or the previous layer).
+
+      @param bounds (may be null) This rect, if non-null, is used as a hint to
+      limit the size of the offscreen, and thus drawing may be
+      clipped to it, though that clipping is not guaranteed to
+      happen. If exact clipping is desired, use clipRect().
+      @param paint (may be null) This is copied, and is applied to the
+      offscreen when restore() is called
+      @param flags  LayerFlags
+      @return The value to pass to restoreToCount() to balance this save()
+     */
+    virtual int saveLayer(const SkRect* bounds, const SkPaint* paint,
+            SaveFlags flags = kARGB_ClipLayer_SaveFlag);
+
+
+    /** This call balances a previous call to save(), and is used to remove all
+      modifications to the matrix/clip/drawFilter state since the last save
+      call.
+     */
+    virtual void restore();
+
+    /** Preconcat the current matrix with the specified translation
+      @param dx   The distance to translate in X
+      @param dy   The distance to translate in Y
+      returns true if the operation succeeded (e.g. did not overflow)
+     */
+    virtual bool translate(SkScalar dx, SkScalar dy);
+
+    /** Preconcat the current matrix with the specified scale.
+      @param sx   The amount to scale in X
+      @param sy   The amount to scale in Y
+      returns true if the operation succeeded (e.g. did not overflow)
+     */
+    virtual bool scale(SkScalar sx, SkScalar sy);
+
+    /** Preconcat the current matrix with the specified rotation.
+      @param degrees  The amount to rotate, in degrees
+      returns true if the operation succeeded (e.g. did not overflow)
+     */
+    virtual bool rotate(SkScalar degrees);
+
+    /** Preconcat the current matrix with the specified skew.
+      @param sx   The amount to skew in X
+      @param sy   The amount to skew in Y
+      returns true if the operation succeeded (e.g. did not overflow)
+     */
+    virtual bool skew(SkScalar sx, SkScalar sy);
+
+    /** Preconcat the current matrix with the specified matrix.
+      @param matrix   The matrix to preconcatenate with the current matrix
+      @return true if the operation succeeded (e.g. did not overflow)
+     */
+    virtual bool concat(const SkMatrix& matrix);
+
+
+    /** Modify the current clip with the specified rectangle.
+      @param rect The rect to intersect with the current clip
+      @param op The region op to apply to the current clip
+      @return true if the canvas' clip is non-empty
+     */
+    virtual bool clipRect(const SkRect& rect,
+            SkRegion::Op op = SkRegion::kIntersect_Op);
+
+    /** Modify the current clip with the specified path.
+      @param path The path to apply to the current clip
+      @param op The region op to apply to the current clip
+      @return true if the canvas' new clip is non-empty
+     */
+    virtual bool clipPath(const SkPath& path,
+            SkRegion::Op op = SkRegion::kIntersect_Op);
+
+
+    /** Modify the current clip with the specified region. Note that unlike
+      clipRect() and clipPath() which transform their arguments by the current
+      matrix, clipRegion() assumes its argument is already in device
+      coordinates, and so no transformation is performed.
+      @param deviceRgn    The region to apply to the current clip
+      @param op The region op to apply to the current clip
+      @return true if the canvas' new clip is non-empty
+     */
+    virtual bool clipRegion(const SkRegion& deviceRgn,
+            SkRegion::Op op = SkRegion::kIntersect_Op);
+
+
+    /** Fill the entire canvas' bitmap (restricted to the current clip) with the
+      specified ARGB color, using the specified mode.
+      @param a    the alpha component (0..255) of the color to fill the canvas
+      @param r    the red component (0..255) of the color to fill the canvas
+      @param g    the green component (0..255) of the color to fill the canvas
+      @param b    the blue component (0..255) of the color to fill the canvas
+      @param mode the mode to apply the color in (defaults to SrcOver)
+          表示如何叠加alpha和颜色
+     */
+    void drawARGB(U8CPU a, U8CPU r, U8CPU g, U8CPU b,
+            SkXfermode::Mode mode = SkXfermode::kSrcOver_Mode);
+
+    /**
+     *  This erases the entire drawing surface to the specified color,
+     *  irrespective of the clip. It does not blend with the previous pixels,
+     *  but always overwrites them.
+     *
+     *  It is roughly equivalent to the following:
+     *      canvas.save();
+     *      canvas.clipRect(hugeRect, kReplace_Op);
+     *      paint.setColor(color);
+     *      paint.setXfermodeMode(kSrc_Mode);
+     *      canvas.drawPaint(paint);
+     *      canvas.restore();
+     *  though it is almost always much more efficient.
+     */
+    virtual void clear(SkColor);
+
+    /**
+     *  Fill the entire canvas' bitmap (restricted to the current clip) with the
+     *  specified paint.
+     *  @param paint    The paint used to fill the canvas
+     */
+    virtual void drawPaint(const SkPaint& paint);
+
+    enum PointMode {
+        /** drawPoints draws each point separately */
+        kPoints_PointMode,
+        /** drawPoints draws each pair of points as a line segment */
+        kLines_PointMode,
+        /** drawPoints draws the array of points as a polygon */
+        kPolygon_PointMode
+    };
+
+    /** Helper method for drawing a single point. See drawPoints() for a more
+      details.
+     */
+    void drawPoint(SkScalar x, SkScalar y, const SkPaint& paint);
+
+    void drawLine(SkScalar x0, SkScalar y0, SkScalar x1, SkScalar y1,
+            const SkPaint& paint);
+
+    virtual void drawRect(const SkRect& rect, const SkPaint& paint);
+
+    /** Draw the specified rectangle using the specified paint. The rectangle
+      will be filled or framed based on the Style in the paint.
+     */
+    void drawRectCoords(SkScalar left, SkScalar top, SkScalar right,
+            SkScalar bottom, const SkPaint& paint);
+
+    void drawOval(const SkRect& oval, const SkPaint&);
+
+    void drawCircle(SkScalar cx, SkScalar cy, 
+            SkScalar radius, const SkPaint& paint);
+
+    void drawRoundRect(const SkRect& rect, SkScalar rx, 
+            SkScalar ry, const SkPaint& paint);
+
+    virtual void drawPath(const SkPath& path, const SkPaint& paint);
+
+    /* 使用MaskFilter
+       MaskFilter类可以为Paint分配边缘效果。
+       对MaskFilter的扩展可以对一个Paint边缘的alpha通道应用转换。Android包含了下面几种MaskFilter：
+       BlurMaskFilter   指定了一个模糊的样式和半径来处理Paint的边缘。
+       EmbossMaskFilter  指定了光源的方向和环境光强度来添加浮雕效果。
+     */
+
+    /** Draw the specified bitmap, with its top/left corner at (x,y), using the
+      specified paint, transformed by the current matrix. Note: if the paint
+      contains a maskfilter that generates a mask which extends beyond the
+      bitmap's original width/height, then the bitmap will be drawn as if it
+      were in a Shader with CLAMP mode. Thus the color outside of the original
+      width/height will be the edge color replicated.
+      @param bitmap   The bitmap to be drawn
+      @param left     The position of the left side of the bitmap being drawn
+      @param top      The position of the top side of the bitmap being drawn
+      @param paint    The paint used to draw the bitmap, or NULL
+     */
+    virtual void drawBitmap(const SkBitmap& bitmap, SkScalar left, 
+            SkScalar top, const SkPaint* paint = NULL);
+
+    /** Draw the specified bitmap, with its top/left corner at (x,y),
+      NOT transformed by the current matrix. Note: if the paint
+      contains a maskfilter that generates a mask which extends beyond the
+      bitmap's original width/height, then the bitmap will be drawn as if it
+      were in a Shader with CLAMP mode. Thus the color outside of the original
+      width/height will be the edge color replicated.
+      @param bitmap   The bitmap to be drawn
+      @param left     The position of the left side of the bitmap being drawn
+      @param top      The position of the top side of the bitmap being drawn
+      @param paint    The paint used to draw the bitmap, or NULL
+     */
+    virtual void drawSprite(const SkBitmap& bitmap, int left, int top,
+            const SkPaint* paint = NULL);
+
+    /** Draw the text, with origin at (x,y), using the specified paint.
+      The origin is interpreted based on the Align setting in the paint.
+      @param text The text to be drawn
+      @param byteLength   The number of bytes to read from the text parameter
+      @param x        The x-coordinate of the origin of the text being drawn
+      @param y        The y-coordinate of the origin of the text being drawn
+      @param paint    The paint used for the text (e.g. color, size, style)
+     */
+    virtual void drawText(const void* text, size_t byteLength, SkScalar x,
+            SkScalar y, const SkPaint& paint);
+
+    /** Draw the text, with each character/glyph origin specified by the pos[]
+      array. The origin is interpreted by the Align setting in the paint.
+      @param text The text to be drawn
+      @param byteLength   The number of bytes to read from the text parameter
+      @param pos      Array of positions, used to position each character
+      @param paint    The paint used for the text (e.g. color, size, style)
+     */
+    virtual void drawPosText(const void* text, size_t byteLength,
+            const SkPoint pos[], const SkPaint& paint);
+
+    /** Draw the picture into this canvas. This method effective brackets the
+      playback of the picture's draw calls with save/restore, so the state
+      of this canvas will be unchanged after this call. This contrasts with
+      the more immediate method SkPicture::draw(), which does not bracket
+      the canvas with save/restore, thus the canvas may be left in a changed
+      state after the call.
+      @param picture The recorded drawing commands to playback into this
+      canvas.
+     */
+    virtual void drawPicture(SkPicture& picture);
+
+    enum VertexMode {
+        kTriangles_VertexMode,
+        kTriangleStrip_VertexMode,
+        kTriangleFan_VertexMode
+    };
+
+    // What is 
+    // A DrawFilter subclass can be installed in a Canvas. 
+    // When it is present, it can modify the paint that is used to draw (temporarily). 
+    // With this, a filter can disable/enable antialiasing, 
+    // or change the color for everything this is drawn.
+
+    // 一个DrawFilter实际上就是对paint进行了修改，绘制完毕后恢复paint
+        // 可修改paint的颜色，抗锯齿效果等等
+
+    /** Get the current filter object. The filter's reference count is not
+      affected. The filter is saved/restored, just like the matrix and clip.
+      @return the canvas' filter (or NULL).
+     */
+    SkDrawFilter* getDrawFilter() const;
+
+    virtual SkDrawFilter* setDrawFilter(SkDrawFilter* filter);
+
+    /** Return the current matrix on the canvas.  */
+    const SkMatrix& getTotalMatrix() const;
+
+    /** Return the current device clip (concatenation of all clip calls).  */
+    const SkRegion& getTotalClip() const;
+
+    /**
+     *  Return the current clipstack. This mirrors the result in getTotalClip()
+     *  but is represented as a stack of geometric clips + region-ops.
+     */
+    const SkClipStack& getTotalClipStack() const;
+
+    /** After calling saveLayer(), there can be any number of devices that make
+      up the top-most drawing area. LayerIter can be used to iterate through
+      those devices. Note that the iterator is only valid until the next API
+      call made on the canvas. Ownership of all pointers in the iterator stays
+      with the canvas, so none of them should be modified or deleted.
+     */
+    class SK_API LayerIter /*: SkNoncopyable*/ {
+
+        /** Return true if the iterator is done */
+        bool done() const { return fDone; }
+
+        // 每个device代表一个layer
+        /** Cycle to the next device */
+        void next();
+
+        // These reflect the current device in the iterator
+
+        SkDevice*       device() const;
+        const SkMatrix& matrix() const;
+        const SkRegion& clip() const;
+        const SkPaint&  paint() const;
+        int             x() const;
+        int             y() const;
+    }
+}
+
+SkPaint
+{
+    // The SkPaint class holds the style and color information about 
+    // how to draw geometries, text and bitmaps.  
+
+    /** Specifies the bit values that are stored in the paint's flags.  */
+    enum Flags {
+        kAntiAlias_Flag       = 0x01,   //!< mask to enable antialiasing
+        kFilterBitmap_Flag    = 0x02,   //!< mask to enable bitmap filtering
+        kDither_Flag          = 0x04,   //!< mask to enable dithering
+        kUnderlineText_Flag   = 0x08,   //!< mask to enable underline text
+        kStrikeThruText_Flag  = 0x10,   //!< mask to enable strike-thru text
+        kFakeBoldText_Flag    = 0x20,   //!< mask to enable fake-bold text
+        kLinearText_Flag      = 0x40,   //!< mask to enable linear-text
+        kSubpixelText_Flag    = 0x80,   //!< mask to enable subpixel text positioning
+        kDevKernText_Flag     = 0x100,  //!< mask to enable device kerning text
+        kLCDRenderText_Flag   = 0x200,  //!< mask to enable subpixel glyph renderering
+        kEmbeddedBitmapText_Flag = 0x400, //!< mask to enable embedded bitmap strikes
+        kAutoHinting_Flag     = 0x800,  //!< mask to force Freetype's autohinter
+        // when adding extra flags, note that the fFlags member is specified
+        // with a bit-width and you'll have to expand it.
+        kAllFlags = 0xFFF
+    };
+
+    void setAntiAlias(bool aa);
+
+    void setDither(bool dither);
+
+    void setLinearText(bool linearText);
+
+    void setSubpixelText(bool subpixelText);
+        // subpixel : 每个subpixel只能显示一种颜色, 一个pixel可由3个subpixel组成
+        // en.wikipedia.org/wiki/Subpixel#Subpixels
+
+    void setUnderlineText(bool underlineText);
+
+    void setStrikeThruText(bool strikeThruText);
+
+    void setFakeBoldText(bool fakeBoldText);
+
+
+    /** Styles apply to rect, oval, path, and text.
+            Bitmaps are always drawn in "fill", and lines are always drawn in
+                    "stroke".
+
+                            Note: strokeandfill implicitly draws the result with
+                                    SkPath::kWinding_FillType, so if the original path is even-odd, the
+                                            results may not appear the same as if it was drawn twice, filled and
+                                                    then stroked.
+                                                        */
+
+    /** Styles apply to rect, oval, path, and text.
+      Bitmaps are always drawn in "fill", 
+        and lines are always drawn in "stroke".
+
+        Note: strokeandfill implicitly draws the result with
+        SkPath::kWinding_FillType, so if the original path is even-odd, the
+        results may not appear the same as if it was drawn twice, filled and
+        then stroked.
+     */
+    enum Style {
+        kFill_Style,            //!< fill the geometry
+        kStroke_Style,          //!< stroke the geometry
+        kStrokeAndFill_Style,   //!< fill and stroke the geometry
+
+        kStyleCount,
+    };
+
+    void setStyle(Style style);
+
+    void setColor(SkColor color);
+
+    void setARGB(U8CPU a, U8CPU r, U8CPU g, U8CPU b);
+
+    /** Set the width for stroking.
+      Pass 0 to stroke in hairline mode.
+      Hairlines always draw 1-pixel wide, regardless of the matrix.
+      @param width set the paint's stroke width, used whenever the paint's
+      style is Stroke or StrokeAndFill.
+     */
+    void setStrokeWidth(SkScalar width);
+
+    /** Set the paint's stroke miter value. This is used to control the
+      behavior of miter joins when the joins angle is sharp. This value must
+      be >= 0.
+      @param miter    set the miter limit on the paint, used whenever the
+      paint's style is Stroke or StrokeAndFill.
+     */
+    void setStrokeMiter(SkScalar miter);
+
+    /** Cap enum specifies the settings for the paint's strokecap. This is the
+      treatment that is applied to the beginning and end of each non-closed
+      contour (e.g. lines).  */
+    enum Cap {
+        kButt_Cap,      //!< begin/end contours with no extension
+        kRound_Cap,     //!< begin/end contours with a semi-circle extension
+        kSquare_Cap,    //!< begin/end contours with a half square extension
+
+        kCapCount,
+        kDefault_Cap = kButt_Cap
+    };
+
+    /** Join enum specifies the settings for the paint's strokejoin. This is
+      the treatment that is applied to corners in paths and rectangles.
+     */
+    enum Join {
+        kMiter_Join,    //!< connect path segments with a sharp join
+        kRound_Join,    //!< connect path segments with a round join
+        kBevel_Join,    //!< connect path segments with a flat bevel join
+
+        kJoinCount,
+        kDefault_Join = kMiter_Join
+    };
+
+    void setStrokeCap(Cap cap);
+
+     void setStrokeJoin(Join join);
+
+     SkShader* setShader(SkShader* shader);
+
+     SkColorFilter* setColorFilter(SkColorFilter* filter);
+
+     SkXfermode* setXfermode(SkXfermode* xfermode);
+
+     SkPathEffect* setPathEffect(SkPathEffect* effect);
+
+     SkMaskFilter* setMaskFilter(SkMaskFilter* maskfilter);
+
+     SkTypeface* setTypeface(SkTypeface* typeface);
+
+     SkRasterizer* setRasterizer(SkRasterizer* rasterizer);
+
+     SkDrawLooper* setLooper(SkDrawLooper* looper);
+
+     enum Align {
+         kLeft_Align,
+         kCenter_Align,
+         kRight_Align,
+
+         kAlignCount
+     };
+
+     void    setTextAlign(Align align);
+
+     void setTextSize(SkScalar textSize);
+
+     /** Set the paint's horizontal scale factor for text. The default value
+       is 1.0. Values > 1.0 will stretch the text wider. Values < 1.0 will
+       stretch the text narrower.
+       @param scaleX   set the paint's scale factor in X for drawing/measuring
+       text.
+      */
+     void setTextScaleX(SkScalar scaleX);
+
+     /** Set the paint's horizontal skew factor for text. The default value
+       is 0. For approximating oblique text, use values around -0.25.
+       @param skewX set the paint's skew factor in X for drawing text.
+      */
+     void setTextSkewX(SkScalar skewX);
+
+     struct FontMetrics {
+         SkScalar    fTop;       //!< The greatest distance above the baseline for any glyph (will be <= 0)
+         SkScalar    fAscent;    //!< The recommended distance above the baseline (will be <= 0)
+         SkScalar    fDescent;   //!< The recommended distance below the baseline (will be >= 0)
+         SkScalar    fBottom;    //!< The greatest distance below the baseline for any glyph (will be >= 0)
+         SkScalar    fLeading;   //!< The recommended distance to add between lines of text (will be >= 0)
+         SkScalar    fAvgCharWidth;  //!< the average charactor width (>= 0)
+         SkScalar    fXMin;      //!< The minimum bounding box x value for all glyphs
+         SkScalar    fXMax;      //!< The maximum bounding box x value for all glyphs
+         SkScalar    fXHeight;   //!< the height of an 'x' in px, or 0 if no 'x' in face
+     };
+
+
+     int textToGlyphs(const void* text, size_t byteLength,
+             uint16_t glyphs[]) const;
+
+     /** Return the width of the text.
+       @param text         The text to be measured
+       @param length       Number of bytes of text to measure
+       @param bounds       If not NULL, returns the bounds of the text,
+       relative to (0, 0).
+       @param scale        If not 0, return width as if the canvas were scaled
+       by this value
+       @return             The advance width of the text
+      */
+     SkScalar measureText(const void* text, size_t length,
+             SkRect* bounds, SkScalar scale = 0) const;
+
+     /** Specify the direction the text buffer should be processed in breakText()
+      */
+     enum TextBufferDirection {
+         /** When measuring text for breakText(), begin at the start of the text
+           buffer and proceed forward through the data. This is the default.
+          */
+         kForward_TextBufferDirection,
+         /** When measuring text for breakText(), begin at the end of the text
+           buffer and proceed backwards through the data.
+          */
+         kBackward_TextBufferDirection
+     };
+
+     /** Return the width of the text.
+       @param text     The text to be measured
+       @param length   Number of bytes of text to measure
+       @param maxWidth Maximum width. Only the subset of text whose accumulated
+       widths are <= maxWidth are measured.
+       @param measuredWidth Optional. If non-null, this returns the actual
+       width of the measured text.
+       @param tbd      Optional. The direction the text buffer should be
+       traversed during measuring.
+       @return         The number of bytes of text that were measured. Will be
+       <= length.
+      */
+     size_t  breakText(const void* text, size_t length, SkScalar maxWidth,
+             SkScalar* measuredWidth = NULL,
+             TextBufferDirection tbd = kForward_TextBufferDirection)
+         const;
+}
+
+
+SkPicture
+{
+    /* The SkPicture class records the drawing commands made to a canvas, 
+       to be played back at a later time.
+
+       用于记录向canvas发送的绘制命令
+    */
+
+    /** Returns the canvas that records the drawing commands.
+      @param width the base width for the picture, as if the recording
+      canvas' bitmap had this width.
+      @param height the base width for the picture, as if the recording
+      canvas' bitmap had this height.
+      @param recordFlags optional flags that control recording.
+      @return the picture canvas.
+     */
+    SkCanvas* beginRecording(int width, int height, uint32_t recordFlags = 0);
+
+
+    /** Returns the recording canvas if one is active, or NULL if recording is
+      not active. This does not alter the refcnt on the canvas (if present).
+     */
+    SkCanvas* getRecordingCanvas() const;
+
+    /** Signal that the caller is done recording. This invalidates the canvas
+      returned by beginRecording/getRecordingCanvas, and prepares the picture
+      for drawing. Note: this happens implicitly the first time the picture
+      is drawn.
+     */
+    void endRecording();
+
+    /** Replays the drawing commands on the specified canvas. This internally
+      calls endRecording() if that has not already been called.
+      @param surface the canvas receiving the drawing commands.
+     */
+    void draw(SkCanvas* surface);
+}
+
+SkDevice
+SkDeviceFactory
+SkGpuDevice
+SkGpuDeviceFactory
+{
+    SkAutoFlipUpdate
+    SkAutoLockPixels
+    SkApplySign
+    SkAutoCanvasRestore
+    SkAutoPictureRecord
+
+    SkBlurDrawLooper
+    SkBlurMaskFilter
+}
+
+
+SkDumpCanvas
+SkBounder
+SkConvertQuadToCubic
+SkCornerPathEffect
+SkCreateRLEPixelRef
+SkCreateTypefaceFromLOGFONT
+
+SkDrawLooper
+SkDashPathEffect
+
+SkFlattenableReadBuffer
+SkFlattenableWriteBuffer
+SkFlipPixelRef
+
+SkFontHost
+SkFontID
+
+SkGeometry
+SkGradientShader
+
+SkImageDecoder
+SkImageEncoder
+SkImageRef
+
+SkLayerDrawLooper
+
+SkMatrix
+SkMatrixToCGAffineTransform
+
+SkPathEffect
+
+SkShader
+
+SkStream
+SkWStream
+
+SkXfermode
+    SkXfermode is the base class for objects that are called to implement custom "transfer-modes" in the drawing pipeline.
+
+    The static function Create(Modes) can be called to return an instance of any of the predefined subclasses as specified in the Modes enum. 
+    When an SkXfermode is assigned to an SkPaint, then objects drawn with that paint have the xfermode applied. 
+
+

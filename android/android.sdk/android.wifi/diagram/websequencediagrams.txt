@@ -1,0 +1,19 @@
+
+participant Wifi_settings
+participant Wifi_layer
+participant Wifi_enabler
+participant Wifi_state_tracker
+participant Wifi_manager
+participant Wifi_monitor
+participant Wifi_native
+participant Wifi_service
+participant android_net_wifi_Wifi.cpp
+participant hardware_wifi.c
+participant WPA_supplicant
+participant WLAN_driver
+
+Wifi_settings->Wifi_layer: new
+note over Wifi_layer: onCreate
+
+
+

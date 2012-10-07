@@ -1,0 +1,150 @@
+
+framebuffer: 系统中就是一段内存
+    GDI的工作就是把需要输出的内容放入到该段内存的某个位置
+
+
+点
+    点的格式：通常将Depth,即表示多少位表示一个点。
+        1位表示一个点
+        2位表示一个点
+        16位表示一个点
+        32位表示一个点（Alpha通道）
+
+    点内格式：RGB分量分布表示。
+        RGB(565)
+        RGB(444)
+
+    格式之间的转换
+        如图片的格式转化为屏幕设备的格式
+
+
+GDI的驱动程序中涉及到几类主要操作
+
+    区域操作(Blit)
+        在显示缓冲区上做的最多的操作就是区块搬运
+
+        很多的应用处理器使用了硬件图形加速器来完成区域搬运:blit.
+
+        1)内存区域到屏幕区域
+        2)屏幕区域到屏幕区域
+        3)屏幕区域到内存区域
+        4)内存区域到内存区域
+
+        所有屏幕上图形的移动都是显示缓冲区搬运的结果
+
+
+图形加速器
+    对于2D加速来讲，都可归结为Blit。多为数据的搬运，放大缩小，旋转等。
+
+    Android的缓冲区抽象定义
+        Gralloc
+            不同的硬件有不同的硬件图形加速设备和缓冲内存实现方法
+            消除不同的设备之间的差别，在上层看来都是同样的方法和对象
+
+            hardware/libhandware/modules/gralloc
+
+            每个动态链接库都是用相同名称的调用接口：
+                1)硬件图形加速器的抽象：BlitEngine，CopyBit的加速操作。
+                2)硬件FrameBuffer内存管理
+                3)共享缓存管理
+
+            hardware下的每个模块都通过下面变量，暴露出动态库的接口
+                HAL_MODULE_INFO_SYM
+
+                static struct hw_module_methods_t gralloc_module_methods = {
+                        open: gralloc_device_open
+                };          
+                                    
+                struct private_module_t HAL_MODULE_INFO_SYM = {
+                base: { 
+                common: {
+                tag: HARDWARE_MODULE_TAG,
+                     version_major: 1,
+                     version_minor: 0,
+                     id: GRALLOC_HARDWARE_MODULE_ID,
+                     name: "Graphics Memory Allocator Module",
+                     author: "The Android Open Source Project",
+                     methods: &gralloc_module_methods
+                        },
+                registerBuffer: gralloc_register_buffer,
+                                unregisterBuffer: gralloc_unregister_buffer,
+                                lock: gralloc_lock,
+                                unlock: gralloc_unlock,
+                      },
+                framebuffer: 0,
+                             flags: 0,
+                             numBuffers: 0,
+                             bufferMask: 0,
+                             lock: PTHREAD_MUTEX_INITIALIZER,
+                             currentBuffer: 0,
+                };
+
+
+            几个接口函数的解释
+                (1)fb_post
+                    fp_post的任务就是将一个Buffer的内容传递到硬件缓冲区。
+                    实现方式有两种
+                        1. 无需拷贝动作，是把Framebuffer的后buffer切为前buffer，然后通过IOCTRL机制告诉FB驱动切换DMA源地地址。
+                        这个实现方式的前提是Linux内核必须分配至少两个缓冲区大小的物理内存和实现切换的ioctrol，这个实现快速切换。
+
+
+                        2. 利用Copy的方式。不修改内核，则在适配层利用从拷贝的方式进行，但是这个是费时了。
+
+            (2)gralloc的主要功能是要完成：
+                1）打开屏幕设备 "/dev/fb0",，并映射硬件显示缓冲区。
+                2）提供分配共享显示缓存的接口
+                3）提供BiltEngine接口（完成硬件加速器的包装）
+
+            （3）gralloc_alloc输出buffer_handle_t句柄。
+                这个句柄是共享的基本依据
+
+        总结
+            /system/lib/hw/gralloc.xxx.so是跟硬件体系相关的一个动态链接库，也可以叫做Android的硬件抽象层。
+            他实现了Android的硬件抽象接口标准，提供显示内存的分配机制和CopyBit等的加速实现。
+            而如何具体实现这些功能，则跟硬件平台的配备有关系，所以我们看到了对于与不同的硬件架构，有不同的配置关系。
+
+
+
+Androird GDI之共享缓冲区机制
+    private_handle_t
+        是gralloc.so使用的本地缓冲区私有的数据结构，
+    Native_handle_t
+        是上层抽象的可以在进程间传递的数据结构
+
+
+
+Graphic Mapper
+    服务端（SurfaceFlinger）分配了一段内存作为Surface的作图缓冲，
+    客户端怎样在这个作图缓冲区上工作呢？
+    两个进程间如何共享内存，如何获取到共享内存？
+
+    这个就是Mapper(GraphicBufferMapper)要干的事情
+
+    需要利用到两个信息：
+        共享缓冲区设备句柄
+        分配时的偏移量
+
+
+    客户端只有lock,unlock,实质上就是mmap和ummap的操作
+    对于同样一个共享缓冲区，偏移量才是总要的，起始地址不重要。实际上他们操作了同一物理地址的内存块。
+
+
+GraphicBuffer（缓冲区代理对象）
+    GraphicBuffer :EGLNativeBase :android_native_buffer_t
+
+    Surface::Lock
+        建立一个在Client端建立了一个新的GraphicBuffer对象
+        该对象通过（1）描述的原理将SurfaceFlinger的buffer_handle_t相关数据构成新的客户端buffer_handle_t数据。
+        在客户端的Surface对象就可以使用GraphicMapper对客户端buffer_handle_t进行mmap从而获取到共享缓冲区的开始地址了。
+
+        4 总结
+
+        Android在该节使用了共享内存的方式来管理与显示相关的缓冲区，
+            设计成了两层
+                上层是缓冲区管理的代理机构GraphicBuffer,及其相关的native_buffer_t
+                下层是具体的缓冲区的分配管理及其缓冲区本身, gralloc
+
+                上层的对象是可以在经常间通过Binder传递的，
+                而在进程间并不是传递缓冲区本身，而是使用mmap来获取指向共同物理内存的映射地址。
+
+

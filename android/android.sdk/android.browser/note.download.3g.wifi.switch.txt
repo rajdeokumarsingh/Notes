@@ -1,0 +1,27 @@
+
+3g网络和wifi网络切换时， 下载自动切换的流程
+
+前提：只有http头中有etag头的下载才能pause和resume
+
+1. 3g网络和wifi网络切换时(default网络)， 系统会先发送一个disconnected消息， 然后发送一个connected消息。
+    如wifi切换到3g的时候，会有一个wifi disconnected的消息，然后一个mobile connected消息。
+    但是中间会发一些重复的消息，消息的顺序可能有时也有问题。
+
+2. 切换时，如wifi到3g, wifi消息断后，http连接会断掉。然后将该下载的状态置为pause,保存到数据库中。
+
+3. 3g连接后，DownloadReceiver会收到mobile connected的消息，会去主动start download service
+    在download service中会查询数据库，启动pause的下载
+    
+
+改动：
+    屏蔽掉3中的逻辑，连接后不去重启动下载
+    在BrowserDownloadPage中添加一个broadcast receiver, 监听网络消息。
+        如果收到connected消息，会根据目前的情况提示用户。
+
+        关键在于如何提示用户，规则的制定。
+            方法保存前10个网络消息，通过对消息序列的分析，判断如何处理
+                继续下载
+                    如果前面断掉的是同样的网络，则继续下载。如wifi断，wifi又开，则继续下载
+                提示wifi开， 继续下载
+                提示mobile开, 继续下载
+            对于复杂的状态机， 可以尽可能多的保存时间状态信息，然后对时间状态进行分析。

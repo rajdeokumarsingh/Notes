@@ -1,0 +1,34 @@
+
+////////////////////////////////////////////////////////////////////////////////
+
+xml里有typeface属性,代码里也可以用
+Typeface typeface = Typeface.create("宋体", Typeface.BOLD);后面一个是粗体参数.
+textview.setTypeface(typeface);来设置
+
+////////////////////////////////////////////////////////////////////////////////
+
+自定义字体
+android Typeface使用TTF字体文件设置字体
+
+我们可以在程序中放入ttf字体文件，在程序中使用Typeface设置字体。
+第一步，在assets目录下新建fonts目录，把ttf字体文件放到这。
+第二步，程序中调用：
+AssetManager mgr=getAssets();//得到AssetManager
+Typeface tf=Typeface.createFromAsset(mgr, "fonts/ttf.ttf");//根据路径得到Typeface
+tv.setTypeface(tf);//设置字体    
+
+2.在xml文件中使用android:textStyle=”bold” 可以将英文设置成粗体，  但是不能将中文设置成粗体， 
+将中文设置成粗体的方法是： 
+TextView tv = (TextView)findViewById(R.id.TextView01); 
+tv.getPaint().setFakeBoldText(true);//中文仿“粗体”--使用TextPaint的仿“粗体”设置setFakeBoldText为true。
+http://hi.baidu.com/spare_h/blog/item/490fa14d24325ce0d62afc34.html
+http://hi.baidu.com/spare_h/blog/item/a8a20818cfde325c42a9ad49.html
+
+
+
+字体目录:
+/system/fonts
+
+DroidSans.ttf  系统默认英文字体
+DroidSans-Bold.ttf 系统默认英文粗字体
+DroidSansFallback.ttf  系统默认中文字体

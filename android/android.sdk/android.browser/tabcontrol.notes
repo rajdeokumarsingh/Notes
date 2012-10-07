@@ -1,0 +1,80 @@
+TabControl
+
+clue:
+    createSubWindow
+
+view relationship
+    ViewGroup content
+        content.addView(mContainer, BrowserActivity.COVER_SCREEN_PARAMS);
+            mContainer = factory.inflate(R.layout.tab, null);
+                wrapper = (FrameLayout) mContainer.findViewById(R.id.webview_wrapper);
+                wrapper.addView(mMainView); //main view is the webview displayed.
+
+        content.addView(mSubViewContainer, BrowserActivity.COVER_SCREEN_PARAMS);
+            R.id.subwindow_container
+
+data
+    //each tab represents a window and contains a webview
+    //each tab can have its own children
+    ArrayList<Tab> mTabs = new ArrayList<Tab>(MAX_TABS); 
+
+   //如果从一个tab a中创建了tab b， 那么a就是b的parent。
+   //例如：从一个窗口a打开了一个链接，弹出另一个窗口b。那么a就是b的parent。
+   //每一个tab都包括一个Vector<Tab> mChildTabs, 记录每个从这个tab创建的新的窗口。
+
+    //TODO: There is a global WebViewClient. There is a SubWindowClient for each tab.
+    // Every SubWindowClient has a reference to WebViewClient.
+    // SubWindowClient is just a simple wrapper of WebViewClient.
+    class SubWindowClient
+
+    //similiar like SubWindowClient
+    class SubWindowChromeClient
+
+    class PickerData
+        mUrl; mTitle; mFavicon; mScale; mScrollX; mScrollY;
+
+    //maintaining Tabs with a main WebView and a subwindow
+    class Tab
+        private View mContainer;
+            mContainer = factory.inflate(R.layout.tab, null);
+            //including a FrameLayout webview_wrapper to wrap webview 
+
+        // Main WebView
+        private WebView mMainView;
+            mContainer.findViewById(R.id.webview_wrapper);
+
+        // Subwindow WebView
+        private WebView mSubView;
+        // Subwindow container
+        private View mSubViewContainer;
+        // Subwindow callback
+        private SubWindowClient mSubViewClient;
+        // Subwindow chrome callback
+        private SubWindowChromeClient mSubViewChromeClient;
+
+        // Saved bundle for when we are running low on memory. It contains the
+        // information needed to restore the WebView if the user goes back to
+        // the tab.
+        private Bundle mSavedState;
+            including screen shot, history item, url, appid, parent tab
+
+        // Data used when displaying the tab in the picker.
+        private PickerData mPickerData;
+
+        // Parent Tab. This is the Tab that created this Tab, or null
+        // if the Tab was created by the UI
+        private Tab mParentTab;
+
+        // Tab that constructed by this Tab. This is used when this
+        // Tab is destroyed, it clears all mParentTab values in the 
+        // children.
+        private Vector<Tab> mChildTabs;
+
+        // Application identifier used to find tabs that another application
+        // wants to reuse.
+        private String mAppId;
+
+        // Keep the original url around to avoid killing the old WebView if the
+        // url has not changed.
+        private String mOriginalUrl;
+

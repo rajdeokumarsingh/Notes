@@ -1,0 +1,556 @@
+cscope 15 $HOME/Perforce/192.168.10.220_1666/pekall.st.imc/xmm2231.12.21/android/packages/apps/DrawFullScreen -q 0000000087 0000003007
+	@AndroidManifest.xml
+
+1 <?
+xml
+ 
+	gv”siÚ
+="1.0" 
+’codšg
+="utf-8"?>
+
+2 <
+mªiã¡
+ 
+xmÊs
+:
+ªdroid
+="http://schemas.android.com/apk/res/android"
+
+3 
+·ckage
+="com.pekall.canvas"
+
+4 
+ªdroid
+:
+v”siÚCode
+="1"
+
+5 
+ªdroid
+:
+v”siÚName
+="1.0" >
+
+7 <
+u£s
+-
+sdk
+ 
+ªdroid
+:
+mšSdkV”siÚ
+="8" />
+
+9 <
+­¶iÿtiÚ
+
+
+10 
+ªdroid
+:
+icÚ
+="@drawable/ic_launcher"
+
+11 
+ªdroid
+:
+Ïb–
+="@string/app_name" >
+
+12 <
+aùiv™y
+
+
+13 
+ªdroid
+:
+Ïb–
+="@string/app_name"
+
+14 
+ªdroid
+:
+Çme
+=".DrawFullScreenActivity" >
+
+15 <
+š‹Á
+-
+f‹r
+ >
+
+16 <
+aùiÚ
+ 
+ªdroid
+:
+Çme
+="android.intent.action.MAIN" />
+
+18 <
+ÿ‹gÜy
+ 
+ªdroid
+:
+Çme
+="android.intent.category.LAUNCHER" />
+
+19 </
+š‹Á
+-
+f‹r
+>
+
+20 </
+aùiv™y
+>
+
+21 </
+­¶iÿtiÚ
+>
+
+23 </
+mªiã¡
+>
+
+	@res/layout/main.xml
+
+1 <?
+xml
+ 
+	gv”siÚ
+="1.0" 
+’codšg
+="utf-8"?>
+
+2 <
+Lš—rLayout
+ 
+xmÊs
+:
+ªdroid
+="http://schemas.android.com/apk/res/android"
+
+3 
+ªdroid
+:
+Ïyout_width
+="fill_parent"
+
+4 
+ªdroid
+:
+Ïyout_height
+="fill_parent"
+
+5 
+ªdroid
+:
+Ü›Á©iÚ
+="vertical" >
+
+7 <
+TextV›w
+
+
+8 
+ªdroid
+:
+Ïyout_width
+="fill_parent"
+
+9 
+ªdroid
+:
+Ïyout_height
+="wrap_content"
+
+10 
+ªdroid
+:
+‹xt
+="@string/hello" />
+
+12 </
+Lš—rLayout
+>
+
+	@res/values/strings.xml
+
+1 <?
+xml
+ 
+	gv”siÚ
+="1.0" 
+’codšg
+="utf-8"?>
+
+2 <
+»sourûs
+>
+
+4 <
+¡ršg
+ 
+Çme
+="h–lo">
+H–lo
+ 
+WÜld
+, 
+	gD¿wFuÎSü“nAùiv™y
+!</
+	g¡ršg
+>
+
+5 <
+¡ršg
+ 
+	gÇme
+="­p_Çme">
+D¿wFuÎSü“n
+</string>
+
+7 </
+»sourûs
+>
+
+	@src/com/pekall/canvas/DrawFullScreenActivity.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	g³k®l
+.
+	gÿnvas
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	g‹xt
+.
+	gDecim®FÜm©
+;
+
+5 
+impÜt
+ 
+	gªdroid
+.
+	g­p
+.
+	gAùiv™y
+;
+
+6 
+impÜt
+ 
+	gªdroid
+.
+	gcÚ‹Á
+.
+	gCÚ‹xt
+;
+
+7 
+impÜt
+ 
+	gªdroid
+.
+	gg¿phics
+.
+	gB™m­
+;
+
+8 
+impÜt
+ 
+	gªdroid
+.
+	gg¿phics
+.
+	gB™m­FaùÜy
+;
+
+9 
+impÜt
+ 
+	gªdroid
+.
+	gg¿phics
+.
+	gCªvas
+;
+
+10 
+impÜt
+ 
+	gªdroid
+.
+	gg¿phics
+.
+	gPašt
+;
+
+11 
+impÜt
+ 
+	gªdroid
+.
+	gos
+.
+	gBundË
+;
+
+12 
+impÜt
+ 
+	gªdroid
+.
+	gv›w
+.
+	gV›w
+;
+
+14 
+public
+ cÏs 
+	cD¿wFuÎSü“nAùiv™y
+ 
+ex‹nds
+ 
+	mAùiv™y
+ {
+
+16 
+public
+ 
+	$ÚC»©e
+(
+BundË
+ 
+§vedIn¡ªûS‹
+) {
+
+17 
+su³r
+.
+	`ÚC»©e
+(
+§vedIn¡ªûS‹
+);
+
+18 
+	`£tCÚ‹ÁV›w
+(
+Ãw
+ 
+	`MyV›w
+(
+this
+));
+
+21 şas 
+	cMyV›w
+ 
+ex‹nds
+ 
+V›w
+ {
+
+23 
+´iv©e
+ 
+B™m­
+ 
+mM­
+;
+
+25 
+´iv©e
+ 
+couÁ
+ = 0;
+
+27 
+´iv©e
+ 
+fš®
+ 
+MAX_COUNT
+ = 20.0f;
+
+29 
+´iv©e
+ 
+tÙË
+ = 0;
+
+31 
+´iv©e
+ 
+Decim®FÜm©
+ 
+mFÜm©
+;
+
+33 
+public
+ 
+	`MyV›w
+(
+CÚ‹xt
+ 
+cÚ‹xt
+) {
+
+34 
+	`su³r
+(
+cÚ‹xt
+);
+
+35 
+mM­
+ = 
+B™m­FaùÜy
+.
+	`decodeResourû
+(
+	`g‘Resourûs
+(), 
+R
+.
+d¿wabË
+.
+sü“n
+);
+
+36 
+mFÜm©
+ = 
+Ãw
+ 
+	`Decim®FÜm©
+("#.000");
+
+39 
+´Ùeùed
+ 
+	`ÚD¿w
+(
+Cªvas
+ 
+ÿnvas
+) {
+
+40 
+time
+ = 
+Sy¡em
+.
+	`cu¼’tTimeMlis
+();
+
+41 
+	`šv®id©e
+();
+
+42 
+ÿnvas
+.
+	`d¿wB™m­
+(
+mM­
+, 0, 0, 
+Ãw
+ 
+	`Pašt
+());
+
+43 
+du¿tiÚ
+ = 
+Sy¡em
+.
+	`cu¼’tTimeMlis
+(è- 
+time
+;
+
+44 ià(
+couÁ
+ >ğ
+MAX_COUNT
+) {
+
+45 
+av”age
+ = 
+tÙË
+ / 
+MAX_COUNT
+;
+
+46 
+ås
+ = (è(1000 / 
+av”age
+);
+
+47 
+Sy¡em
+.
+out
+.
+	`´šn
+("~~~~d¿w_timğ" + 
+mFÜm©
+.
+	`fÜm©
+(
+av”age
+è+ " ### FPS = " + 
+ås
+);
+
+48 
+couÁ
+ = 0;
+
+49 
+tÙË
+ = 0;
+
+51 
+couÁ
+++;
+
+52 
+tÙË
+ +ğ
+du¿tiÚ
+;
+
+55 
+	}
+}
+
+	@
+1
+.
+1
+/usr/include
+4
+113
+AndroidManifest.xml
+res/layout/main.xml
+res/values/strings.xml
+src/com/pekall/canvas/DrawFullScreenActivity.java

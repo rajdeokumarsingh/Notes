@@ -1,0 +1,21 @@
+
+安装deb包
+dpkg -i *.deb
+
+调整字体 gnome-tweak-tool
+
+安装kde
+sudo apt-get install kUbuntu-desktop
+
+选择kde的窗口管理器
+sudo dpkg-reconfigure gdm
+
+
+配置java, javac的版本
+sudo update-alternatives --config java
+sudo update-alternatives --config javac
+
+
+速度比较快的源
+/etc/apt/sources.list
+http://debian.cn99.com/.help/ubuntu.html

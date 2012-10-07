@@ -1,0 +1,8 @@
+
+host key = right ctrl
+
+host + f: full screen mode
+host + l: seamless mode
+
+
+

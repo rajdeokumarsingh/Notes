@@ -1,0 +1,299 @@
+[2011-12-01 done]
+
+Intent 
+    data structure holding an abstract description of an operation to be performed
+    broadcasts, a description of something that has happened and is being announced
+
+    used for 
+        launch an activity 
+            Context.startActivity() 
+            Activity.startActivityForResult() 
+                Activity.setResult() 
+                    return information to the calling activity 
+
+        start a service
+            Context.startService()
+            Context.bindService()
+
+        send a broadcast
+            Context.sendBroadcast()
+            Context.sendOrderedBroadcast()
+            Context.sendStickyBroadcast()
+
+Intent Objects
+    a bundle of information
+        Action
+            A string naming the action to be performed
+            system action:
+                ACTION_CALL     activity    Initiate a phone call.
+                ACTION_EDIT     activity    Display data for the user to edit.
+                ACTION_MAIN     activity    Start up as the initial activity of a task, 
+                ...
+                setAction(), getAction()
+
+        Data
+            The URI of the data to be acted on and the MIME type of that data
+            ACTION_EDIT, 
+                the data field would contain the URI of the document to be displayed for editing
+            ACTION_CALL
+                the data field would be a tel: URI with the number to call
+            ACTION_VIEW
+                the data field is an http: URI,
+            ...
+            setData(), setType(), setDataAndType() 
+                FIXME:
+                If both data and ttype need to be set, use setDataAndType() 
+                    instead of invoking setDate() then setType()
+            getData(), getType()
+
+        Category
+            additional information about the kind of component that should handle the intent.
+
+            CATEGORY_BROWSABLE
+                invoked by the browser to display data
+
+            CATEGORY_GADGET
+                embedded inside of another activity that hosts gadgets
+
+            CATEGORY_HOME
+                displays the home screen
+
+            CATEGORY_LAUNCHER
+                be the initial activity of a task
+                listed in the top-level application launcher
+
+            CATEGORY_PREFERENCE
+                a preference panel
+
+            addCategory(), removeCategory(), getCategories()
+
+        Extras
+            Key-value pairs for additional information 
+            putExtras() and getExtras()
+                These methods parallel those for Bundle objects.
+
+        Flags
+            Many instruct the Android system how to launch an activity
+
+        Component name
+            OPTIONAL
+            used for explicit intents
+
+            The name of the component that should handle the intent
+                for example "com.example.project.app.FreneticActivity"
+                setComponent(), setClass(), or setClassName() 
+                getComponent()
+
+
+Intent Resolution
+    Explicit intents 
+        designate the target component by its name
+
+    Implicit intents
+        do not name a target
+        指定一种文件类型/MIME，让系统/用户决定如何打开
+
+        Activity, service, BroadcastReceiver可通过设置intent filters来捕获intent
+
+
+Intent filters
+    an instance of the IntentFilter class
+
+    ways to define an intent filter
+        in the application's manifest file as <intent-filter> elements
+        in java code, IntentFilter class
+        broadcast receivers, Context.registerReceiver();
+
+    A filter has fields that parallel the action, data, and category fields
+
+    Action test
+        <intent-filter>
+            example:
+            <intent-filter . . . >
+                <action android:name="com.example.project.SHOW_CURRENT" />
+                <action android:name="com.example.project.SHOW_RECENT" />
+                <action android:name="com.example.project.SHOW_PENDING" />
+                . . .
+            </intent-filter>
+
+            The list cannot be empty
+            a filter must contain at least one <action> element, or 
+                all intents fail the test.
+                an Intent object that doesn't specify an action automatically passes the test 
+
+    Category test
+        example:
+            <intent-filter ...>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                    可以处理浏览器中发出的intent，如播放流媒体，等等
+                ...
+            </intent-filter>
+
+            an intent to pass the category test
+                every category in the Intent object must match a category in the filter. 
+
+           所有implicit intents都会默认认为是 android.intent.category.DEFAULT
+           所以如果activity注册了category.DEFAULT filter， 所有implicit intent都能通过category test
+
+           Filters with "android.intent.action.MAIN" and "android.intent.category.LAUNCHER" settings 
+                are the exception. They mark activities that begin new tasks and 
+                that are represented on the launcher screen. 
+                They can include "android.intent.category.DEFAULT" in the list of categories, 
+                    but don't need to.
+        
+    Data test
+        <intent-filter . . . >
+            <data android:mimeType="video/mpeg" android:scheme="http" . . . /> 
+            <data android:mimeType="audio/mpeg" android:scheme="http" . . . />
+            . . .
+        </intent-filter>
+
+            scheme://host:port/path
+                content://com.example.project:200/folder/subfolder/etc
+                the scheme is "content", the host is "com.example.project", 
+                    the port is "200", and the path is "folder/subfolder/etc"
+
+                The host and port together constitute the URI authority;
+                if a host is not specified, the port is ignored. 
+
+            MIME:
+                wildcard *
+                "text/*" or "audio/*"
+
+            test both the URI and the data type in the Intent object
+                如果filter只关心uri, intent的uri match就行
+
+                如果filter只关心type, intent的type match就行
+
+                a component is presumed to support content: and file: data 
+                    if its filter lists only a data type
+
+            Common cases
+                <data android:mimeType="image/*" />
+                    如果filter中只有type, 可默认捕获，content: 和 file:类型的uri
+
+                <data android:scheme="http" android:type="video/*" />
+
+            <intent-filter . . . >
+                <action android:name="code android.intent.action.MAIN" />
+                    Activities that can initiate applications
+                <category android:name="code android.intent.category.LAUNCHER" />
+                    be represented in the application launcher
+            </intent-filter>
+
+    Using intent matching
+        The PackageManager has a set of query...() methods that 
+            return all components that can accept a particular intent
+                queryIntentActivities() returns a list of all activities that can perform the intent passed as an argument
+                queryIntentServices() returns a similar list of services.
+                queryBroadcastReceivers(), for broadcast receivers.
+
+            a similar series of resolve...() methods that determine 
+                the best component to respond to an intent.
+
+Note Pad Example
+    NotesList
+        1. launcher item
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+        2. 
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <action android:name="android.intent.action.EDIT" />
+            <action android:name="android.intent.action.PICK" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <data android:mimeType="vnd.android.cursor.dir/vnd.google.note" />
+        </intent-filter>
+
+        view or edit the directory (via the VIEW and EDIT actions), 
+        or to pick a particular note from the directory (via the PICK action).
+        用来查看notes， 比如可以列举出所有notes, 也可以列举某一条notes
+
+        The mimeType attribute of the <data> element 
+            <data android:mimeType="vnd.android.cursor.dir/vnd.google.note" />
+                编辑/查看 目录
+            <data android:mimeType="vnd.android.cursor.item/vnd.google.note" />
+                编辑/查看一个条目
+
+            一般的自定义的mimeType的惯用法 
+
+            Therefore, the DEFAULT category is required for all filters — 
+                except for those with the MAIN action and LAUNCHER category. 
+                (Intent filters are not consulted for explicit intents.) 
+
+        3. 
+        <intent-filter>
+            <action android:name="android.intent.action.GET_CONTENT" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <data android:mimeType="vnd.android.cursor.item/vnd.google.note" />
+        </intent-filter>
+
+        return a note selected by the user
+            The GET_CONTENT action is similar to the PICK action
+                PICK 指定的mime是dir
+                GET_CONTENT 指定的mime是item
+
+            the activity returns the URI for a note selected by the user
+
+
+    Given these capabilities, the following intents will resolve to the NotesList activity:
+
+    action: android.intent.action.VIEW
+    data: content://com.google.provider.NotePad/notes
+        Asks the activity to display a list of all the notes 
+
+    action: android.intent.action.PICK
+    data: content://com.google.provider.NotePad/notes
+        Asks the activity to display a list of the notes under content://com.google.provider.NotePad/notes. 
+        The user can then pick a note from the list, and the activity will return the URI for that item back 
+        to the activity that started the NoteList activity.
+
+    action: android.intent.action.GET_CONTENT
+    data type: vnd.android.cursor.item/vnd.google.note
+        Asks the activity to supply a single item of Note Pad data. 
+
+    NoteEditor activity
+        <intent-filter android:label="@string/resolve_edit">
+            <action android:name="android.intent.action.EDIT" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <data android:mimeType="vnd.android.cursor.item/vnd.google.note" />
+        </intent-filter>
+
+        <intent-filter>
+            <action android:name="android.intent.action.INSERT" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <data android:mimeType="vnd.android.cursor.dir/vnd.google.note" />
+        </intent-filter>
+
+        action: android.intent.action.VIEW
+        data: content://com.google.provider.NotePad/notes/ID
+            Asks the activity to display the content of the note identified by ID. 
+
+        action: android.intent.action.EDIT
+        data: content://com.google.provider.NotePad/notes/ID
+            Asks the activity to display the content of the note identified by ID, and to let the user edit it.
+
+        action: android.intent.action.INSERT
+        data: content://com.google.provider.NotePad/notes
+            Asks the activity to create a new, empty note in the notes list 
+
+
+    TitleEditor
+        <intent-filter android:label="@string/resolve_title">
+            <action android:name="com.android.notepad.action.EDIT_TITLE" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.ALTERNATIVE" />
+            <category android:name="android.intent.category.SELECTED_ALTERNATIVE" />
+            <data android:mimeType="vnd.android.cursor.item/vnd.google.note" />
+        </intent-filter>
+
+        ALTERNATIVE and SELECTED_ALTERNATIVE
+            identify activities that can be presented to users in a menu of options 
+                (much as the LAUNCHER category identifies activities that 
+                should be presented to user in the application launcher).
+
+        an explicit label (via android:label="@string/resolve_title")

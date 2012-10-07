@@ -1,0 +1,227 @@
+Android JNI Tips
+
+What's JNI?
+JavaVM and JNIEnv
+jclassID, jmethodID, and jfieldID
+Local vs. Global References
+UTF-8 and UTF-16 Strings
+Primitive Arrays
+Region Calls
+Exceptions
+Extended Checking
+Native Libraries
+64-bit Considerations
+Unsupported Features
+
+What's JNI?
+
+JNI is the Java Native Interface. It defines a way for code written in the Java programming language to interact with native code, e.g. functions written in C/C++. It's VM-neutral, has support for loading code from dynamic shared libraries, and while cumbersome at times is reasonably efficient.
+
+You really should read through the JNI spec for J2SE 1.6 to get a sense for how JNI works and what features are available. Some aspects of the interface aren't immediately obvious on first reading, so you may find the next few sections handy. The more detailed JNI Programmer's Guide and Specification can be found here.
+
+JavaVM and JNIEnv
+
+JNI defines two key data structures, "JavaVM" and "JNIEnv". Both of these are essentially pointers to pointers to function tables. (In the C++ version, it's a class whose sole member is a pointer to a function table.) The JavaVM provides the "invocation interface" functions, which allow you to create and destroy the VM. In theory you can have multiple VMs per process, but Android's VMs only allow one.
+
+The JNIEnv provides most of the JNI functions. Your native functions all receive a JNIEnv as the first argument.
+
+On some VMs, the JNIEnv is used for thread-local storage. For this reason, you cannot share a JNIEnv between threads. If a piece of code has no other way to get its JNIEnv, you should share the JavaVM, and use JavaVM->GetEnv to discover the thread's JNIEnv.
+
+The C and C++ declarations of JNIEnv and JavaVM are different. "jni.h" provides different typedefs depending on whether it's included into ".c" or ".cpp". For this reason it's a bad idea to include JNIEnv arguments in header files included by both languages. (Put another way: if your header file requires "#ifdef __cplusplus", you may have to do some extra work if anything in that header refers to JNIEnv.)
+
+jclassID, jmethodID, and jfieldID
+
+If you want to access an object's field from native code, you would do the following:
+
+Get the class object reference for the class with FindClass
+Get the field ID for the field with GetFieldID
+Get the contents of the field with something appropriate, e.g. GetIntField
+Similarly, to call a method, you'd first get a class object reference and then a method ID. The IDs are often just pointers to internal VM data structures. Looking them up may require several string comparisons, but once you have them the actual call to get the field or invoke the method is very quick.
+
+If performance is important, it's useful to look the values up once and cache the results in your native code. Because we are limiting ourselves to one VM per process, it's reasonable to store this data in a static local structure.
+
+The class references, field IDs, and method IDs are guaranteed valid until the class is unloaded. Classes are only unloaded if all classes associated with a ClassLoader can be garbage collected, which is rare but will not be impossible in our system. The jclassID is a class reference and must be protected with a call to NewGlobalRef (see the next section).
+
+If you would like to cache the IDs when a class is loaded, and automatically re-cache them if the class is ever unloaded and reloaded, the correct way to initialize the IDs is to add a piece of code that looks like this to the appropriate class:
+
+    /*
+     * We use a class initializer to allow the native code to cache some
+     * field offsets.
+     */
+
+    /*
+     * A native function that looks up and caches interesting
+     * class/field/method IDs for this class.  Returns false on failure.
+     */
+    native private static boolean nativeClassInit();
+ 
+    /*
+     * Invoke the native initializer when the class is loaded.
+     */
+    static {
+        if (!nativeClassInit())
+            throw new RuntimeException("native init failed");
+    }
+Create a nativeClassInit method in your C/C++ code that performs the ID lookups. The code will be executed once, when the class is initialized. If the class is ever unloaded and then reloaded, it will be executed again. (See the implementation of java.io.FileDescriptor for an example in our source tree.)
+
+Local vs. Global References
+
+Every object that JNI returns is a "local reference". This means that it's valid for the duration of the current native method in the current thread. Even if the object itself continues to live on after the native method returns, the reference is not valid. This applies to all sub-classes of jobject, including jclass and jarray. (Dalvik VM will warn you about this when -Xcheck:jni is enabled.)
+
+If you want to hold on to a reference for a longer period, you must use a "global" reference. The NewGlobalRef function takes the local reference as an argument and returns a global one:
+
+jobject* localRef = [...];
+jobject* globalRef;
+globalRef = env->NewGlobalRef(localRef);
+The global reference is guaranteed to be valid until you call DeleteGlobalRef.
+All JNI methods accept both local and global references as arguments.
+
+Programmers are required to "not excessively allocate" local references. In practical terms this means that if you're creating large numbers of local references, perhaps while running through an array of Objects, you should free them manually with DeleteLocalRef instead of letting JNI do it for you. The VM is only required to reserve slots for 16 local references, so if you need more than that you should either delete as you go or use EnsureLocalCapacity to reserve more.
+
+Note: method and field IDs are just 32-bit identifiers, not object references, and should not be passed to NewGlobalRef. The raw data pointers returned by functions like GetStringUTFChars and GetByteArrayElements are also not objects.
+
+One unusual case deserves separate mention. If you attach a native thread to the VM with AttachCurrentThread, the code you are running will never "return" to the VM until the thread detaches from the VM. Any local references you create will have to be deleted manually unless the thread is about to exit or detach.
+
+UTF-8 and UTF-16 Strings
+
+The Java programming language uses UTF-16. For convenience, JNI provides methods that work with "modified UTF-8" encoding as well. (Some VMs use the modified UTF-8 internally to store strings; ours do not.) The modified encoding only supports the 8- and 16-bit forms, and stores ASCII NUL values in a 16-bit encoding. The nice thing about it is that you can count on having C-style zero-terminated strings, suitable for use with standard libc string functions. The down side is that you cannot pass arbitrary UTF-8 data into the VM and expect it to work correctly.
+
+It's usually best to operate with UTF-16 strings. With our current VMs, the GetStringChars method does not require a copy, whereas GetStringUTFChars requires a malloc and a UTF conversion. Note that UTF-16 strings are not zero-terminated, and \u0000 is allowed, so you need to hang on to the string length as well as the string pointer.
+
+Don't forget to Release the strings you Get. The string functions return jchar* or jbyte*, which are pointers to primitive types rather than local references. They are guaranteed valid until Release is called, which means they are not released when the native method returns.
+
+Primitive Arrays
+
+JNI provides functions for accessing the contents of array objects. While arrays of objects must be accessed one entry at a time, arrays of primitives can be read and written directly as if they were declared in C.
+
+To make the interface as efficient as possible without constraining the VM implementation, the Get<PrimitiveType>ArrayElements family of calls allows the VM to either return a pointer to the actual elements, or allocate some memory and make a copy. Either way, the raw pointer returned is guaranteed to be valid until the corresponding Release call is issued (which implies that, if the data wasn't copied, the array object will be pinned down and can't be relocated as part of compacting the heap). You must Release every array you Get. Also, if the Get call fails, you must ensure that your code doesn't try to Release a NULL pointer later.
+
+You can determine whether or not the data was copied by passing in a non-NULL pointer for the isCopy argument. This is rarely useful.
+
+The Release call takes a mode argument that can have one of three values. The actions performed by the VM depend upon whether it returned a pointer to the actual data or a copy of it:
+
+0
+Actual: the array object is un-pinned.
+Copy: data is copied back. The buffer with the copy is freed.
+JNI_COMMIT
+Actual: does nothing.
+Copy: data is copied back. The buffer with the copy is not freed.
+JNI_ABORT
+Actual: the array object is un-pinned. Earlier writes are not aborted.
+Copy: the buffer with the copy is freed; any changes to it are lost.
+One reason for checking the isCopy flag is to know if you need to call Release with JNI_COMMIT after making changes to an array -- if you're alternating between making changes and executing code that uses the contents of the array, you may be able to skip the no-op commit. Another possible reason for checking the flag is for efficient handling of JNI_ABORT. For example, you might want to get an array, modify it in place, pass pieces to other functions, and then discard the changes. If you know that JNI is making a new copy for you, there's no need to create another "editable" copy. If JNI is passing you the original, then you do need to make your own copy.
+
+Some have asserted that you can skip the Release call if *isCopy is false. This is not the case. If no copy buffer was allocated, then the original memory must be pinned down and can't be moved by the garbage collector.
+
+Also note that the JNI_COMMIT flag does NOT release the array, and you will need to call Release again with a different flag eventually.
+
+Region Calls
+
+There is an alternative to calls like Get<Type>ArrayElements and GetStringChars that may be very helpful when all you want to do is copy data in or out. Consider the following:
+
+    jbyte* data = env->GetByteArrayElements(array, NULL);
+    if (data != NULL) {
+        memcpy(buffer, data, len);
+        env->ReleaseByteArrayElements(array, data, JNI_ABORT);
+    }
+This grabs the array, copies the first len byte elements out of it, and then releases the array. Depending upon the VM policies the Get call will either pin or copy the array contents. We copy the data (for perhaps a second time), then call Release; in this case we use JNI_ABORT so there's no chance of a third copy.
+
+We can accomplish the same thing with this:
+
+    env->GetByteArrayRegion(array, 0, len, buffer);
+This accomplishes the same thing, with several advantages:
+
+Requires one JNI call instead of 3, reducing overhead.
+Doesn't require pinning or extra data copies.
+Reduces the risk of programmer error -- no need to match up Get and Release calls.
+Similarly, you can use the Set<Type>ArrayRegion call to copy data into an array, and GetStringRegion or GetStringUTFRegion to copy characters out of a String.
+
+Exceptions
+
+You may not call most JNI functions while an exception is pending. Your code is expected to notice the exception (via the function's return value, ExceptionCheck(), or ExceptionOccurred()) and return, or clear the exception and handle it.
+
+The only JNI functions that you are allowed to call while an exception is pending are:
+
+DeleteGlobalRef
+DeleteLocalRef
+DeleteWeakGlobalRef
+ExceptionCheck
+ExceptionClear
+ExceptionDescribe
+ExceptionOccurred
+MonitorExit
+PopLocalFrame
+PushLocalFrame
+ReleaseArrayElements
+ReleasePrimitiveArrayCritical
+ReleaseStringChars
+ReleaseStringCritical
+ReleaseStringUTFChars
+Note that exceptions thrown by interpreted code do not "leap over" native code, and C++ exceptions thrown by native code are not handled by Dalvik. The JNI Throw and ThrowNew instructions just set an exception pointer in the current thread. Upon returning to the VM from native code, the exception will be noted and handled appropriately.
+
+Native code can "catch" an exception by calling ExceptionCheck or ExceptionOccurred, and clear it with ExceptionClear. As usual, discarding exceptions without handling them can lead to problems.
+
+There are no built-in functions for manipulating the Throwable object itself, so if you want to (say) get the exception string you will need to find the Throwable class, look up the method ID for getMessage "()Ljava/lang/String;", invoke it, and if the result is non-NULL use GetStringUTFChars to get something you can hand to printf or a LOG macro.
+
+Extended Checking
+
+JNI does very little error checking. Calling SetFieldInt on an Object field will succeed, even if the field is marked private and final. The goal is to minimize the overhead on the assumption that, if you've written it in native code, you probably did it for performance reasons.
+
+Some VMs support extended checking with the "-Xcheck:jni" flag. If the flag is set, the VM puts a different table of functions into the JavaVM and JNIEnv pointers. These functions do an extended series of checks before calling the standard implementation.
+
+Some things that may be verified:
+
+Check for null pointers where not allowed.
+Verify argument type correctness (jclass is a class object, jfieldID points to field data, jstring is a java.lang.String).
+Field type correctness, e.g. don't store a HashMap in a String field.
+Check to see if an exception is pending on calls where pending exceptions are not legal.
+Check for calls to inappropriate functions between Critical get/release calls.
+Check that JNIEnv structs aren't being shared between threads.
+Make sure local references aren't used outside their allowed lifespan.
+UTF-8 strings contain valid "modified UTF-8" data.
+Accessibility of methods and fields (i.e. public vs. private) is not checked.
+
+The Dalvik VM supports the -Xcheck:jni flag. For a description of how to enable it for Android apps, see Controlling the Embedded VM. It's currently enabled by default in the Android emulator and on "engineering" device builds.
+
+JNI checks can be modified with the -Xjniopts command-line flag. Currently supported values include:
+
+forcecopy
+When set, any function that can return a copy of the original data (array of primitive values, UTF-16 chars) will always do so. The buffers are over-allocated and surrounded with a guard pattern to help identify code writing outside the buffer, and the contents are erased before the storage is freed to trip up code that uses the data after calling Release.
+warnonly
+By default, JNI "warnings" cause the VM to abort. With this flag it continues on.
+Native Libraries
+
+You can load native code from shared libraries with the standard System.loadLibrary() call. The preferred way to get at your native code is:
+
+Call System.loadLibrary() from a static class initializer. (See the earlier example, where one is used to call nativeClassInit().) The argument is the "undecorated" library name, e.g. to load "libfubar.so" you would pass in "fubar".
+Provide a native function: jint JNI_OnLoad(JavaVM* vm, void* reserved)
+In JNI_OnLoad, register all of your native methods. You should declare the methods "static" so the names don't take up space in the symbol table on the device.
+The JNI_OnLoad function should look something like this if written in C:
+
+jint JNI_OnLoad(JavaVM* vm, void* reserved)
+{
+    JNIEnv* env;
+    if ((*vm)->GetEnv(vm, (void**) &env, JNI_VERSION_1_4) != JNI_OK)
+        return -1;
+
+    /* get class with (*env)->FindClass */
+    /* register methods with (*env)->RegisterNatives */
+
+    return JNI_VERSION_1_4;
+}
+You can also call System.load() with the full path name of the shared library. For Android apps, you can get the full path to the application's private data storage area from the context object.
+
+Dalvik does support "discovery" of native methods that are named in a specific way (see the JNI spec for details), but this is a less desirable approach. It requires more space in the shared object symbol table, loading is slower because it requires string searches through all of the loaded shared libraries, and if a method signature is wrong you won't know about it until the first time the method is actually used.
+
+64-bit Considerations
+
+Android is currently expected to run on 32-bit platforms. In theory it could be built for a 64-bit system, but that is not a goal at this time. For the most part this isn't something that you will need to worry about when interacting with native code, but it becomes significant if you plan to store pointers to native structures in integer fields in an object. To support architectures that use 64-bit pointers, you need to stash your native pointers in a long field rather than an int.
+
+Unsupported Features
+
+All JNI 1.6 features are supported, with the following exceptions:
+
+DefineClass is not implemented. Dalvik does not use Java bytecodes or class files, so passing in binary class data doesn't work. Translation facilities may be added in a future version of the VM.
+NewWeakGlobalRef and DeleteWeakGlobalRef are not implemented. The VM supports weak references, but not JNI "weak global" references. These will be supported in a future release.
+GetObjectRefType (new in 1.6) is implemented but not fully functional -- it can't always tell the difference between "local" and "global" references.
+Copyright © 2008 The Android Open Source Project

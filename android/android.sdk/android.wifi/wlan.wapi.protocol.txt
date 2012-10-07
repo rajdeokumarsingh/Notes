@@ -1,0 +1,133 @@
+
+
+WLAN相关标准工作组
+
+IEEE
+    只定义了二层以下的协议，目前主要集中在安全性、AP之间的信令、频谱扩展等方面。
+    物理层， MAC层
+
+3GPP
+    把WLAN技术作为一种3G接入技术，工作内容主要是WLAN与3G结合的网络结构及信令交互，
+    目前已经确定了组网络原则、体系结构和认证流程。
+    STA, AP, WLAN Access Server, Authentication server
+
+其中WLAN运行在2.4到2.4835G的微波频段上
+
+
+802.11 WLAN协议栈
+    LLC层
+        为高层协议提供相应的接口，即一个或多个服务访问点，并进行流量和差错控制
+    MAC层 (802.11标准范畴)
+        装/拆帧、地址识别和差错检测丢弃出错的帧）、管理和控制对传输媒体的访问
+        与传输介质有关，它和网络的拓扑形式、传输介质的类型、介质的访问控制方式有直接关系
+
+        MAC子层采用CDMA/CA
+
+    物理层 (802.11标准范畴)
+
+    物理层:
+        PLCP子层
+            与物理介质无关
+        PMD子层
+            物理介质相关子层
+            信号传递方式
+                跳频扩频（FHSS）
+                    
+                直接序列扩频（DSSS）
+                    采用了Barker序列对数据进行编码
+                红外线物理层（IR）
+
+网络安全控制
+    无加密认证
+        以 SSID (Service Set ID)作为最基本的认证方式。 
+            开放系统认证
+            封闭系统认证
+
+    加密认证
+        使用共享密钥的方式进行身份认证，采用WEP(Wired Equivalent Privacy)密钥作为共享密钥。 
+
+    Wired Equivalent Privacy
+        基于链路层的安全协议
+        设计思想
+            通过使用RC4流密码算法加密来保护数据的机密性
+            通过问-答机制实现对用户的身份认证和接入控制
+            通过CRC32循环冗余校验码来保护数据的完整性
+
+        静态共享密钥
+        WEP 标准定义了64位比特加密
+        WEP2 标准定义了128位比特加密
+        Based on RC4
+        适合于小型办公环境或家庭办公环境(SoHo)
+
+        WEP 弱点
+        加密比特位数64bits, WEP2为128bits。
+        数据报完整性检测采用CRC-32bits, CRC为线
+            性算法，即攻击者可以根据修改的比特数重新计算CRC值。
+        加密密钥为静态，AP端和用户端使用相同的 密钥。
+        初始化向量空间有限，容易重复。
+        缺乏对用户接入的控制(认证)。
+
+    Wi-Fi Protected Access
+        核心部分称为TKIP（Temporary Key Integrity Protocol）
+
+        加密比特位数为128bits。
+        数据报完整性检测采用MIC(Message Intigrity Check)
+        加密密钥为动态。每一个用户，每一个会话， 每一个数据包使用不同的密钥
+        TKIP(Temporal Key Integrity Protocol)用于密 钥的分发及管理。密钥数可达500,000,000,000。(WEP为2^24)
+        采用802.1x用户认证方式。支持EAP-TLS, EAP-TTLS, PEAP
+
+    Wi-Fi Protected Access Version 2
+        WPA2支持128bits,192bits,256bits
+        采用AES(Advanced Encryption Standard)
+        兼容WPA1.0
+        支持TKIP, PSK
+        用来加密所有的802.11设备。(包括802.11b, 802.11a, 802.11g等等)
+        将被作为标准IEEE802.11i
+
+
+    WAPI 
+        WLAN Authentication and Privacy Infrastructure
+        including: 
+            WAI
+                WLAN Authentication Infrastructure
+            WPI
+                WLAN Privacy Infrastructure
+
+        WAI
+           用于实现STA和AP之间的互相鉴别 
+           采用公钥密码技术
+        
+        AP两类端口
+            AP提供两种访问LAN的逻辑通道
+
+            非受控端口
+                鉴别服务单元 ASU
+                只有通过了鉴别的ASU才能访问受控端口
+
+            受控端口
+                数据端口
+        
+            实体：
+                鉴别器实体
+                    authenticator entity, AE
+                鉴别请求实体
+                    authentication supplicant entiry, ASUE
+                鉴别服务实体
+                    authentication service entity, ASE
+
+        鉴别过程
+        1. STA关联AP
+        2. AP向STA发送鉴别激活，启动整个鉴别过程
+        3. STA->AP 发送接入鉴别请求， 将STA证书和当前时间发往AP
+        4. AP->ASU AP将STA证书，请求时间，AP证书及AP私钥对他们的签名 构成证书鉴别请求发送给ASU
+        5. ASU->AP ASU收到证书鉴别请求后，验证AP的签名，AP证书和STA证书的有效性, 返回结果给AP
+        6. AP->STA AP对ASU的响应进行签名验证, 确定STA的合法性, 并给STA响应
+        7. STA验证ASU签名后，得到AP证书的鉴别结果，根据结果确定是否接入到该AP
+
+        证书验证后进行密钥密钥协商
+        8. STA产生sta_random, 并使用ap公钥加密，发送给ap
+        9. AP使用私钥解密，得到sta_random。然后产生ap_random, 利用sta公钥加密，发送给sta
+        10. sta使用私钥解密，得到ap_random。生成会话密钥 session_key = sta_random O+ ap_random (模2和运算)
+
+
+

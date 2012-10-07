@@ -1,0 +1,1517 @@
+jiangrui@jr-desk:~/notes/webkit/webview/history.pic$ 
+jiangrui@jr-desk:~/notes/webkit/webview/history.pic$ 
+jiangrui@jr-desk:~/notes/webkit/webview/history.pic$ 
+jiangrui@jr-desk:~/notes/webkit/webview/history.pic$ log
+--------- beginning of /dev/log/main
+05-11 16:26:53.340  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:53.340  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:53.340  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:53.340  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:53.340  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:53.340  3783  3783 E webkit_native_draw_history: compositeRoot, 1696
+05-11 16:26:53.340  3783  3783 E webkit_native_draw_history: m_baseLayer null or no children
+05-11 16:26:53.340  3783  3783 E webkit_native_draw_history: compositeRoot, 1696
+05-11 16:26:53.340  3783  3783 E webkit_native_draw_history: m_baseLayer null or no children
+05-11 16:26:53.340  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:53.340  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:53.340  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:53.340  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:53.340  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:53.340  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:53.340  3783  3783 E webkit_native_draw_history: currentPictureCounter: 19
+05-11 16:26:53.350  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:53.350  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:53.350  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:53.350  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:53.350  3783  3783 E webkit_native_draw_history: currentPictureCounter: 19
+05-11 16:26:53.360  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:53.360  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:53.360  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:53.360  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:53.360  3783  3783 E webkit_native_draw_history: currentPictureCounter: 19
+05-11 16:26:53.380  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:53.380  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:53.380  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:53.380  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:53.380  3783  3783 E webkit_native_draw_history: currentPictureCounter: 19
+05-11 16:26:53.400  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:53.400  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:53.400  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:53.400  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:53.400  3783  3783 E webkit_native_draw_history: currentPictureCounter: 19
+05-11 16:26:53.400  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:53.410  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:53.410  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:53.410  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:53.410  3783  3783 E webkit_native_draw_history: currentPictureCounter: 19
+05-11 16:26:53.410  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:53.420  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:53.420  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:53.420  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:53.420  3783  3783 E webkit_native_draw_history: currentPictureCounter: 19
+05-11 16:26:53.420  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:53.420  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:53.420  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:53.420  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:53.420  3783  3783 E webkit_native_draw_history: currentPictureCounter: 19
+05-11 16:26:53.440  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:53.440  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:53.440  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:53.450  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:53.450  3783  3783 E webkit_native_draw_history: currentPictureCounter: 19
+05-11 16:26:53.500  3783  3783 V Controller: enter onBackKey()
+05-11 16:26:53.500  3783  3783 V Controller: enter onBackKey(), ui check done
+05-11 16:26:53.500  3783  3783 V Controller: enter onBackKey(), goBackOnePageOrQuit()
+05-11 16:26:53.500  3783  3783 V Controller: enter goBackOnePageOrQuit()
+05-11 16:26:53.500  3783  3783 V Tab     : enter canGoBack()
+05-11 16:26:53.500  3783  3783 V Controller: enter goBackOnePageOrQuit(), current.goBack()
+05-11 16:26:53.500  3783  3783 V Tab     : enter goBack()
+05-11 16:26:53.500  3783  3805 E WebCoreFrameBridge: GoBackOrForward, 1819
+05-11 16:26:53.500  3783  3805 E WebCoreFrameBridge: updateHistoryIndex, 732
+05-11 16:26:53.500  3783  3805 E WebCoreFrameBridge: loadStarted, 592
+05-11 16:26:53.500  3783  3805 E WebCoreFrameBridge: setProgress, 786
+05-11 16:26:53.500  3783  3805 E WebCoreFrameBridge: transitionToCommitted, 654
+05-11 16:26:53.510  3783  3783 V Tab     : enter onPageStarted()
+05-11 16:26:53.510  3783  3783 V Controller: enter onPageStarted()
+05-11 16:26:53.510  3783  3783 V NetworkStateHandler: enter isNetworkUp(): true
+05-11 16:26:53.510  3783  3783 V Tab     : enter isSnapshot()
+05-11 16:26:53.520  3783  3783 V Tab     : enter updateBookmarkedStatus()
+05-11 16:26:53.520  3783  3805 E WebCoreFrameBridge: GetShouldStartScrolledRight, 2258
+05-11 16:26:53.520  3783  3783 V Tab     : enter onProgressChanged(): 10
+05-11 16:26:53.530  3783  3805 E WebCoreFrameBridge: setTitle, 745
+05-11 16:26:53.720  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:53.720  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:53.720  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:53.720  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:53.720  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:53.720  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:53.720  3783  3783 E webkit_native_draw_history: currentPictureCounter: 19
+05-11 16:26:53.730  3783  3783 V Tab     : enter onReceivedTitle()
+05-11 16:26:53.730  3783  3783 V Controller: enter onReceivedTitle()
+05-11 16:26:53.750  3783  3783 V Tab     : enter isSnapshot()
+05-11 16:26:53.750  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:53.750  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:53.750  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:53.750  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:53.750  3783  3783 E webkit_native_draw_history: currentPictureCounter: 19
+05-11 16:26:53.750  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:53.750  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:53.750  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:53.750  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:53.750  3783  3783 E webkit_native_draw_history: currentPictureCounter: 19
+05-11 16:26:53.770  3783  3783 V Tab     : enter onQueryUrlIsBookmark()
+05-11 16:26:53.840  3783  3805 E WebCoreFrameBridge: didFinishLoad, 673
+05-11 16:26:53.840  3783  3783 V WebView:drawHistory: switchOutDrawHistory()
+05-11 16:26:53.840  3783  3783 V Tab     : enter onPageFinished()
+05-11 16:26:53.840  3783  3783 V Tab     : enter syncCurrentState()
+05-11 16:26:53.840  3783  3783 V Controller: enter onPageFinished()
+05-11 16:26:53.840  3783  3805 E WebCoreFrameBridge: setProgress, 786
+05-11 16:26:53.860  3783  3783 V Tab     : enter isSnapshot()
+05-11 16:26:53.860  3783  3783 V Tab     : enter isSnapshot()
+05-11 16:26:53.860  3783  3783 V Controller: onPageFinished(), ignore bookmark thumbnail
+05-11 16:26:53.860  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:53.860  3783  3783 E webkit_native_draw_history: compositeRoot, 1696
+05-11 16:26:53.860  3783  3783 E webkit_native_draw_history: m_baseLayer null or no children
+05-11 16:26:53.860  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:53.860  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:53.860  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:53.860  3783  3783 E webkit_native_draw_history: currentPictureCounter: 19
+05-11 16:26:53.860  3783  3783 V Tab     : enter onProgressChanged(): 100
+05-11 16:26:53.860  3783  3783 V WebView:drawHistory: switchOutDrawHistory()
+05-11 16:26:53.930  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:53.940  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:53.940  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:53.940  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:53.940  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:53.940  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:53.940  3783  3783 E webkit_native_draw_history: currentPictureCounter: 19
+05-11 16:26:54.040  3783  3783 V Controller: enter onSaveInstanceState()
+05-11 16:26:54.040  3783  3783 V TabControl: enter saveState()
+05-11 16:26:54.040  3783  3783 V Tab     : enter saveState()
+05-11 16:26:54.080  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:54.080  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:54.080  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:54.080  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:54.080  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:54.080  3783  3783 E webkit_native_draw_history: compositeRoot, 1696
+05-11 16:26:54.080  3783  3783 E webkit_native_draw_history: m_baseLayer null or no children
+05-11 16:26:54.080  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.080  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.080  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.080  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.080  3783  3783 V WebView:drawHistory: recordNewContentSize
+05-11 16:26:54.080  3783  3783 V WebView:drawHistory: setNewPicture: for not mDrawHistory
+05-11 16:26:54.080  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.080  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.080  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.080  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.080  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.080  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.080  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.090  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.090  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.090  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.110  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.110  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.110  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.110  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.120  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.120  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.120  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.120  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.120  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.120  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.120  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.130  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.130  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.130  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.130  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.130  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.130  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.140  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.140  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.140  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.140  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.150  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.150  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.150  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.150  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.150  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.170  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.170  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.170  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.170  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.170  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.170  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.170  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.170  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.180  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.180  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.180  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.180  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.180  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.180  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.190  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.190  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.190  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.190  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.190  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.210  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.210  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.210  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.210  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.210  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.210  3783  3805 E WebCoreFrameBridge: HasPasswordField, 2099
+05-11 16:26:54.240  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:54.240  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:54.240  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:54.240  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:54.240  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:54.240  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.240  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.240  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.240  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.240  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.240  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.240  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.240  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.240  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.240  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.240  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.270  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:54.270  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:54.270  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:54.270  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:54.270  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:54.270  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.270  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.270  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.270  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.270  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.280  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.280  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.280  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.280  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.280  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.280  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.310  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.310  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.310  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.310  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.310  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.340  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:54.340  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:54.340  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:54.340  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:54.340  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:54.340  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.340  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.340  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.340  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.340  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.340  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.340  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.340  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.340  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.340  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.340  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.370  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:54.370  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:54.370  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:54.370  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:54.370  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:54.370  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.370  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.370  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.370  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.370  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.370  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.370  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.370  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.370  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.370  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.370  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.400  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:54.400  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:54.400  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:54.410  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:54.410  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:54.410  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.410  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.410  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.410  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.410  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.410  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.410  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.410  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.410  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.410  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.410  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.440  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:54.440  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:54.440  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:54.440  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:54.440  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:54.440  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.440  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.440  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.440  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.440  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.440  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.440  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.440  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.440  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.440  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.450  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.470  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:54.470  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:54.470  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:54.470  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:54.470  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:54.470  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.470  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.470  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.470  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.470  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.470  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.470  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.470  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.470  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.470  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.470  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.510  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:54.510  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:54.510  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:54.510  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:54.510  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:54.510  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.510  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.510  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.510  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.510  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.510  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.510  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.510  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.510  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.510  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.510  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.540  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:54.540  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:54.540  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:54.540  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:54.540  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:54.540  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.540  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.540  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.540  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.540  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.540  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.540  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.540  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.540  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.540  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.540  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.580  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:54.580  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:54.580  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:54.580  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:54.580  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:54.580  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.580  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.580  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.580  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.580  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.580  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.580  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.580  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.580  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.580  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.580  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.610  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:54.610  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:54.610  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:54.610  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:54.610  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:54.610  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.610  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.610  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.610  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.610  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.610  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.610  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.610  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.610  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.610  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.610  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.640  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:54.640  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:54.640  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:54.640  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:54.640  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:54.640  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.640  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.640  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.640  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.640  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.640  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.640  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.640  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.640  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.640  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.640  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.670  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:54.670  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:54.670  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:54.670  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:54.670  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:54.670  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.670  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.670  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.670  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.680  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.680  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.680  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.680  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.680  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.680  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.680  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.700  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:54.700  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:54.700  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:54.700  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:54.700  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:54.700  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.700  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.700  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.700  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.710  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.710  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.710  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.710  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.710  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.710  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.710  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.740  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:54.740  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:54.740  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:54.740  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:54.740  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:54.740  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.740  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.740  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.740  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.740  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.740  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.740  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.740  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.740  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.740  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.740  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.770  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:54.770  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:54.770  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:54.770  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:54.770  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:54.770  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.770  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.770  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.770  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.770  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.770  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.770  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.770  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.770  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.770  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.770  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.800  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:54.800  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:54.800  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:54.800  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:54.800  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:54.800  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.800  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.800  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.800  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.810  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.810  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.810  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.810  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.810  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.810  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.810  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.840  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:54.840  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:54.840  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:54.840  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:54.840  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:54.840  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.840  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.840  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.840  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.840  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.840  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.850  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.850  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.850  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.850  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.850  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.870  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.870  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.870  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.870  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.870  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.870  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.870  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.900  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:54.900  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:54.900  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:54.900  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:54.900  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:54.900  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.900  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.900  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.900  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.900  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.910  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.910  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.910  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.910  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.910  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.910  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.950  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:54.950  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:54.950  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:54.950  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:54.950  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:54.950  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.950  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.950  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.950  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.950  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.950  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.950  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.950  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.950  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.950  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.950  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:54.980  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:54.980  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:54.980  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:54.980  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:54.980  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:54.980  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.980  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.980  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:54.980  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:54.980  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:54.980  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:54.980  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:54.980  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:54.980  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:54.980  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:54.980  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.000  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:55.000  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:55.000  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:55.000  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:55.000  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:55.000  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:55.000  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:55.000  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:55.000  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:55.000  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:55.000  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:55.000  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.000  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.000  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.000  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.000  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.040  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:55.040  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:55.040  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.040  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.040  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.040  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.040  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.070  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:55.070  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:55.070  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.070  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.070  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.070  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.070  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.110  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:55.110  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:55.110  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.110  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.110  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.110  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.110  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.140  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:55.140  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:55.140  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.140  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.140  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.140  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.140  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.170  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.170  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.170  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.170  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.170  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.210  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.210  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.210  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.210  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.210  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.240  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.240  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.240  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.240  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.240  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.270  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.270  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.270  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.270  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.270  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.300  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.300  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.300  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.300  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.300  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.330  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.330  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.330  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.330  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.330  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.370  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.370  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.370  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.370  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.370  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.400  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.400  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.400  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.400  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.400  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.440  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.440  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.440  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.440  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.440  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.470  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.470  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.470  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.470  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.470  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.500  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.500  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.500  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.500  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.500  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.540  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.540  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.540  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.540  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.540  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.570  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.570  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.570  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.570  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.570  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.610  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.610  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.610  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.610  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.610  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.640  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.640  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.640  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.640  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.640  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.670  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.670  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.670  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.670  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.670  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.700  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.700  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.700  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.700  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.700  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.740  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.740  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.740  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.740  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.740  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.770  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.770  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.770  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.770  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.770  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.800  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.800  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.800  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.800  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.800  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.840  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.840  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.840  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.840  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.840  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.870  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.870  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.870  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.870  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.870  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.900  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.900  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.900  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.900  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.900  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.930  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.930  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.930  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.930  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.930  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:55.970  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:55.970  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:55.970  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:55.970  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:55.970  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.000  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.000  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.000  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.000  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.000  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.030  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.030  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.030  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.030  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.030  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.070  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.070  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.070  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.070  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.070  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.100  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.100  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.100  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.100  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.100  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.130  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.130  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.130  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.130  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.130  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.180  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.180  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.180  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.180  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.180  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.210  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.210  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.210  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.210  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.210  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.230  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.230  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.230  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.230  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.230  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.270  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.270  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.270  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.270  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.270  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.300  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.300  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.300  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.300  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.300  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.330  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.330  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.330  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.330  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.330  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.370  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.370  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.370  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.370  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.370  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.400  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.400  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.400  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.400  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.400  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.440  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.440  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.440  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.440  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.440  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.470  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.470  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.470  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.470  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.470  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.500  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.500  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.500  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.500  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.500  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.530  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.530  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.530  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.530  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.530  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.580  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.580  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.580  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.580  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.580  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.600  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.600  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.600  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.600  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.600  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.630  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.630  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.630  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.630  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.630  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.660  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.660  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.660  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.660  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.660  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.700  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.700  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.700  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.700  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.700  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.740  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.740  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.740  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.740  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.740  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.770  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.770  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.770  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.770  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.770  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.800  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.800  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.800  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.800  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.800  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.830  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.830  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.830  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.830  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.830  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.870  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.870  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.870  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.870  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.870  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.900  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.900  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.900  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.900  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.900  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.930  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.930  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.930  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.930  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.930  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:56.960  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:56.960  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:56.960  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:56.960  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:56.960  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.000  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.000  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.000  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.000  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.000  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.030  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.030  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.030  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.030  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.030  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.060  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.070  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.070  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.070  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.070  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.100  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.100  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.100  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.100  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.100  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.130  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.130  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.130  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.130  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.130  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.160  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.160  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.160  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.160  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.160  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.200  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.200  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.200  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.200  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.200  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.230  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.230  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.230  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.230  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.230  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.270  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.270  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.270  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.270  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.270  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.300  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.300  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.300  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.300  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.300  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.330  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.330  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.330  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.330  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.330  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.370  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.370  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.370  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.370  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.370  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.400  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.400  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.400  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.400  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.400  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.430  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.430  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.430  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.430  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.430  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.460  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.460  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.460  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.460  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.460  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.500  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.500  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.500  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.500  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.500  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.530  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.530  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.530  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.530  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.530  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.560  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.560  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.560  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.560  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.560  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.610  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.610  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.610  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.610  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.610  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.630  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.630  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.630  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.630  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.630  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.660  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.660  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.660  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.660  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.660  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.700  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.700  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.700  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.700  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.700  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.730  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.730  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.730  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.730  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.730  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.760  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.760  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.760  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.760  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.760  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.790  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.790  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.790  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.790  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.790  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.830  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.830  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.830  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.830  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.830  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.860  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.860  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.860  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.860  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.860  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.900  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.900  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.900  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.900  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.900  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.940  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.940  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.940  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.940  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.940  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:57.960  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:57.960  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:57.980  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:57.980  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:57.980  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.000  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:58.000  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:58.000  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:58.000  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:58.000  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:58.000  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.000  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.000  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.000  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.000  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:58.000  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:58.000  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:58.000  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:58.000  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:58.000  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:58.000  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.040  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:58.040  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:58.040  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:58.040  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:58.040  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:58.040  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.040  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.040  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.040  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.040  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:58.040  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:58.040  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:58.040  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:58.040  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:58.040  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:58.040  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.070  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:58.070  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:58.070  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:58.070  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:58.070  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:58.070  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.070  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.070  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.070  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.070  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:58.070  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:58.070  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:58.070  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:58.070  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:58.070  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:58.070  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.100  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:58.100  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:58.100  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:58.100  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:58.100  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:58.100  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.100  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.100  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.100  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.100  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:58.100  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:58.100  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:58.100  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:58.100  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:58.100  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:58.100  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.130  3783  3783 E webkit_native_draw_history: drawGL, 611
+05-11 16:26:58.130  3783  3783 E webkit_native_draw_history: pageSwapCallback
+05-11 16:26:58.140  3783  3783 V WebView:drawHistory: pageSwapCallback(): true
+05-11 16:26:58.140  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:58.140  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:58.140  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:58.140  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:58.160  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:58.160  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.160  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.160  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.160  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.160  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:58.160  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:58.160  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:58.160  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:58.160  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:58.160  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:58.160  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.180  3783  3783 E webkit_native_draw_history: drawGL, 611
+05-11 16:26:58.180  3783  3783 E webkit_native_draw_history: pageSwapCallback
+05-11 16:26:58.180  3783  3783 V WebView:drawHistory: pageSwapCallback(): true
+05-11 16:26:58.180  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:58.180  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:58.180  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:58.180  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:58.180  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:58.180  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.190  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.190  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.190  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.190  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:58.190  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:58.190  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:58.190  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:58.190  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:58.190  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:58.190  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.200  3783  3783 E webkit_native_draw_history: drawGL, 611
+05-11 16:26:58.200  3783  3783 E webkit_native_draw_history: pageSwapCallback
+05-11 16:26:58.200  3783  3783 V WebView:drawHistory: pageSwapCallback(): true
+05-11 16:26:58.210  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:58.210  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:58.210  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:58.210  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:58.210  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.230  3783  3783 E webkit_native_draw_history: drawGL, 611
+05-11 16:26:58.230  3783  3783 E webkit_native_draw_history: pageSwapCallback
+05-11 16:26:58.230  3783  3783 V WebView:drawHistory: pageSwapCallback(): true
+05-11 16:26:58.230  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:58.230  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:58.230  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:58.230  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:58.230  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:58.230  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.230  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.230  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.230  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.230  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:58.230  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:58.230  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:58.230  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:58.230  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:58.230  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:58.230  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.260  3783  3783 E webkit_native_draw_history: drawGL, 611
+05-11 16:26:58.260  3783  3783 E webkit_native_draw_history: pageSwapCallback
+05-11 16:26:58.260  3783  3783 V WebView:drawHistory: pageSwapCallback(): true
+05-11 16:26:58.260  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:58.260  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:58.260  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:58.260  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:58.260  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:58.260  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.260  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.260  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.260  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.260  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:58.260  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:58.260  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:58.260  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:58.260  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:58.260  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:58.260  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.290  3783  3783 E webkit_native_draw_history: drawGL, 611
+05-11 16:26:58.290  3783  3783 E webkit_native_draw_history: pageSwapCallback
+05-11 16:26:58.290  3783  3783 V WebView:drawHistory: pageSwapCallback(): true
+05-11 16:26:58.300  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:58.300  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:58.300  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:58.300  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:58.300  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:58.300  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.300  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.300  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.300  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.300  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:58.300  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:58.300  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:58.300  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:58.300  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:58.300  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:58.300  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.330  3783  3783 E webkit_native_draw_history: drawGL, 611
+05-11 16:26:58.330  3783  3783 E webkit_native_draw_history: pageSwapCallback
+05-11 16:26:58.330  3783  3783 V WebView:drawHistory: pageSwapCallback(): true
+05-11 16:26:58.340  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:58.340  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:58.340  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:58.340  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:58.340  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:58.340  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.340  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.340  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.340  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.340  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:58.340  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:58.340  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:58.340  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:58.340  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:58.340  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:58.340  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.380  3783  3783 E webkit_native_draw_history: drawGL, 611
+05-11 16:26:58.380  3783  3783 E webkit_native_draw_history: pageSwapCallback
+05-11 16:26:58.380  3783  3783 V WebView:drawHistory: pageSwapCallback(): true
+05-11 16:26:58.400  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:58.400  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:58.400  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:58.400  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:58.400  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:58.400  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.400  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.400  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.400  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.400  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:58.400  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:58.400  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:58.400  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:58.400  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:58.400  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:58.400  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.400  3783  3783 E webkit_native_draw_history: drawGL, 611
+05-11 16:26:58.400  3783  3783 E webkit_native_draw_history: pageSwapCallback
+05-11 16:26:58.400  3783  3783 V WebView:drawHistory: pageSwapCallback(): true
+05-11 16:26:58.430  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:58.430  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:58.430  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:58.430  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:58.430  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:58.430  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.430  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.430  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.430  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.440  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:58.440  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:58.440  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:58.440  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:58.440  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:58.440  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:58.440  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.440  3783  3783 E webkit_native_draw_history: drawGL, 611
+05-11 16:26:58.440  3783  3783 E webkit_native_draw_history: pageSwapCallback
+05-11 16:26:58.440  3783  3783 V WebView:drawHistory: pageSwapCallback(): true
+05-11 16:26:58.480  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:58.480  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:58.480  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:58.480  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:58.480  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:58.480  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.480  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.480  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.480  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.480  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:58.480  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:58.480  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:58.480  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:58.480  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:58.480  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:58.480  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.480  3783  3783 E webkit_native_draw_history: drawGL, 611
+05-11 16:26:58.480  3783  3783 E webkit_native_draw_history: pageSwapCallback
+05-11 16:26:58.480  3783  3783 V WebView:drawHistory: pageSwapCallback(): true
+05-11 16:26:58.520  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:58.520  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:58.520  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:58.520  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:58.520  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:58.520  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.520  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.520  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.520  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.520  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:58.520  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:58.520  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:58.520  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:58.520  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:58.520  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:58.520  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.540  3783  3783 E webkit_native_draw_history: drawGL, 611
+05-11 16:26:58.540  3783  3783 E webkit_native_draw_history: pageSwapCallback
+05-11 16:26:58.540  3783  3783 V WebView:drawHistory: pageSwapCallback(): true
+
+05-11 16:26:58.550  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:58.550  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:58.550  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:58.550  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:58.550  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:58.550  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.550  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.550  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.550  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.560  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:58.560  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:58.560  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:58.560  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:58.560  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:58.560  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:58.560  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.560  3783  3783 E webkit_native_draw_history: drawGL, 611
+05-11 16:26:58.560  3783  3783 E webkit_native_draw_history: pageSwapCallback
+05-11 16:26:58.560  3783  3783 V WebView:drawHistory: pageSwapCallback(): true
+05-11 16:26:58.590  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:58.590  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:58.590  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:58.590  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:58.590  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:58.590  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.590  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.590  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.590  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.590  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:58.590  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:58.590  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:58.590  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:58.590  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:58.590  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:58.590  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.600  3783  3783 E webkit_native_draw_history: drawGL, 611
+05-11 16:26:58.600  3783  3783 E webkit_native_draw_history: pageSwapCallback
+05-11 16:26:58.600  3783  3783 V WebView:drawHistory: pageSwapCallback(): true
+05-11 16:26:58.640  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:58.640  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:58.640  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:58.640  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:58.640  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:58.640  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.640  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.640  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.640  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.640  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:58.640  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:58.640  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:58.640  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:58.640  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:58.640  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:58.640  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.640  3783  3783 E webkit_native_draw_history: drawGL, 611
+05-11 16:26:58.640  3783  3783 E webkit_native_draw_history: pageSwapCallback
+05-11 16:26:58.640  3783  3783 V WebView:drawHistory: pageSwapCallback(): true
+05-11 16:26:58.660  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:58.660  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:58.660  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:58.660  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:58.660  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:58.660  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.660  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.660  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.660  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.680  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:58.680  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:58.680  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:58.680  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:58.680  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:58.680  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:58.680  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.680  3783  3783 E webkit_native_draw_history: drawGL, 611
+05-11 16:26:58.680  3783  3783 E webkit_native_draw_history: pageSwapCallback
+05-11 16:26:58.680  3783  3783 V WebView:drawHistory: pageSwapCallback(): true
+05-11 16:26:58.700  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:58.700  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:58.700  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:58.700  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:58.700  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:58.700  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.700  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.700  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.700  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.700  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:58.700  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:58.700  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:58.700  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:58.700  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:58.700  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:58.700  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.710  3783  3783 E webkit_native_draw_history: drawGL, 611
+05-11 16:26:58.710  3783  3783 E webkit_native_draw_history: pageSwapCallback
+05-11 16:26:58.710  3783  3783 V WebView:drawHistory: pageSwapCallback(): true
+05-11 16:26:58.740  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:58.740  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:58.740  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:58.740  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:58.740  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:58.740  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.740  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.740  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.740  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.740  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:58.740  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:58.740  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:58.740  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:58.740  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:58.740  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:58.740  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.740  3783  3783 E webkit_native_draw_history: drawGL, 611
+05-11 16:26:58.740  3783  3783 E webkit_native_draw_history: pageSwapCallback
+05-11 16:26:58.740  3783  3783 V WebView:drawHistory: pageSwapCallback(): true
+05-11 16:26:58.770  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:58.770  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:58.770  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:58.770  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:58.770  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:58.770  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.770  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.770  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.770  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.770  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:58.770  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:58.770  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:58.770  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:58.770  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:58.770  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:58.770  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.780  3783  3783 E webkit_native_draw_history: drawGL, 611
+05-11 16:26:58.780  3783  3783 E webkit_native_draw_history: pageSwapCallback
+05-11 16:26:58.780  3783  3783 V WebView:drawHistory: pageSwapCallback(): true
+05-11 16:26:58.810  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:58.810  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:58.810  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:58.810  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:58.810  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:58.810  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.810  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.810  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.810  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.810  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:58.810  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:58.810  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:58.810  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:58.810  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:58.810  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:58.810  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.820  3783  3783 E webkit_native_draw_history: drawGL, 611
+05-11 16:26:58.820  3783  3783 E webkit_native_draw_history: pageSwapCallback
+05-11 16:26:58.820  3783  3783 V WebView:drawHistory: pageSwapCallback(): true
+05-11 16:26:58.850  3783  3783 E webkit_native_draw_history: setBaseLayer, 1737
+05-11 16:26:58.850  3783  3783 E webkit_native_draw_history: setBaseLayer, 1744
+05-11 16:26:58.850  3783  3783 E webkit_native_draw_history: m_glWebViewState->setBaseLayer
+05-11 16:26:58.850  3783  3783 E webkit_native_draw_history: setBaseLayer, 1758
+05-11 16:26:58.850  3783  3783 E webkit_native_draw_history: copyScrollPositionRecursive
+05-11 16:26:58.850  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.850  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.850  3783  3783 E webkit_native_draw_history: compositeRoot, 1688
+05-11 16:26:58.850  3783  3783 E webkit_native_draw_history: m_baseLayer->countChildren() == 1
+05-11 16:26:58.860  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw
+05-11 16:26:58.860  3783  3783 V WebView:drawHistory: drawCoreAndCursorRing(): canvas.isHardwareAccelerated() draw done!
+05-11 16:26:58.860  3783  3783 E webkit_native_draw_history: drawGL, 491
+05-11 16:26:58.860  3783  3783 E webkit_native_draw_history: drawGL, 549
+05-11 16:26:58.860  3783  3783 E webkit_native_draw_history: extras: 3
+05-11 16:26:58.860  3783  3783 E webkit_native_draw_history: drawGL, 580
+05-11 16:26:58.860  3783  3783 E webkit_native_draw_history: currentPictureCounter: 20
+05-11 16:26:58.860  3783  3783 E webkit_native_draw_history: drawGL, 611
+05-11 16:26:58.860  3783  3783 E webkit_native_draw_history: pageSwapCallback
+05-11 16:26:58.860  3783  3783 V WebView:drawHistory: pageSwapCallback(): true
+
+
+
+
+
+
+05-11 16:26:59.260  1670  1670 I appservice.DMAppSvcBoardCastReceiver.onReceive: Received Intent Action android.intent.action.BATTERY_CHANGED
+05-11 16:26:59.260  1670  1670 I DMApplication: getApnReg Invoked0
+05-11 16:26:59.260  1670  1670 I appservice.DMAppSvcBoardCastReceiver.onReceive: Scale:100.0Level:5.0Temp:0.0
+05-11 16:26:59.260  1670  1670 I appservice.DMAppSvcBoardCastReceiver.onReceive: Received Battary Level 5
+05-11 16:26:59.260  1457  1471 D KeyguardUpdateMonitor: received broadcast android.intent.action.BATTERY_CHANGED
+05-11 16:26:59.260  1457  1499 D KeyguardUpdateMonitor: handleBatteryUpdate
+
+
+
+
+
+
+
+
+
+
+05-11 16:26:59.610  1257  1299 D SPRDENG : eng_atauto_thread: At Auto Report
+05-11 16:26:59.610  1257  1299 D SPRDENG : eng_atauto_thread: eng_atautobuf=
+05-11 16:26:59.610  1257  1299 D SPRDENG : +CSQ: 19,99
+05-11 16:26:59.610  1257  1299 D SPRDENG : ; usb_fd=19
+05-11 16:26:59.610  1257  1299 D SPRDENG : eng_atauto_thread: usb_status=1
+05-11 16:26:59.610  1257  1299 D SPRDENG : eng_atauto_thread: write at auto report to PC
+05-11 16:26:59.610  1670  1670 I appservice.DMAppSvcBoardCastReceiver.onReceive: Received Intent Action android.intent.action.SIG_STR
+05-11 16:26:59.610  1670  1670 I DMApplication: getApnReg Invoked0
+--------- beginning of /dev/log/system
+05-11 16:26:59.610  1563  1563 D StatusBar.NetworkControllerDualSIM: phone1:onSignalStrengthsChanged signalStrength=SignalStrength: 19 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte level=4
+
+
+
+
+
+
+
+05-11 16:27:00.000  1457  1471 D KeyguardUpdateMonitor: received broadcast android.intent.action.TIME_TICK
+05-11 16:27:00.000  1457  1499 D KeyguardUpdateMonitor: handleTimeUpdate
+05-11 16:27:00.000  1257  1299 D SPRDENG : eng_atauto_thread: At Auto Report
+05-11 16:27:00.000  1257  1299 D SPRDENG : eng_atauto_thread: eng_atautobuf=
+05-11 16:27:00.000  1257  1299 D SPRDENG : +CSQ: 17,99
+05-11 16:27:00.000  1257  1299 D SPRDENG : ; usb_fd=19
+05-11 16:27:00.000  1257  1299 D SPRDENG : eng_atauto_thread: usb_status=1
+05-11 16:27:00.000  1257  1299 D SPRDENG : eng_atauto_thread: write at auto report to PC
+05-11 16:27:00.000  1563  1563 D StatusBar.NetworkControllerDualSIM: phone1:onSignalStrengthsChanged signalStrength=SignalStrength: 17 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte level=4
+05-11 16:27:00.010  1670  1670 I appservice.DMAppSvcBoardCastReceiver.onReceive: Received Intent Action android.intent.action.SIG_STR
+05-11 16:27:00.010  1670  1670 I DMApplication: getApnReg Invoked0
+05-11 16:27:00.250  1670  1670 I appservice.DMAppSvcBoardCastReceiver.onReceive: Received Intent Action android.intent.action.BATTERY_CHANGED
+05-11 16:27:00.250  1670  1670 I DMApplication: getApnReg Invoked0
+05-11 16:27:00.270  1670  1670 I appservice.DMAppSvcBoardCastReceiver.onReceive: Scale:100.0Level:5.0Temp:0.0
+05-11 16:27:00.270  1670  1670 I appservice.DMAppSvcBoardCastReceiver.onReceive: Received Battary Level 5
+05-11 16:27:00.270  1457  1471 D KeyguardUpdateMonitor: received broadcast android.intent.action.BATTERY_CHANGED
+05-11 16:27:00.270  1457  1499 D KeyguardUpdateMonitor: handleBatteryUpdate
+^C
+jiangrui@jr-desk:~/notes/webkit/webview/history.pic$ 
+

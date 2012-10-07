@@ -1,0 +1,111 @@
+# logcat
+V/MediaPlayerService( 1530): decode(28, 0, 3994)
+D/        ( 1530): proc link name is /proc/1530/fd/28
+D/        ( 1530): Check file is DRM, the file name is /system/media/audio/ui/Effect_Tick.ogg
+D/        ( 1530): handle 28 is not a DRM file 
+D/MediaPlayerService( 1530): This content is not DRM file
+V/MediaPlayerService( 1530): ident = 0x5367674f, accIdent = 0x674f
+V/MediaPlayerService( 1530): getPlayerType: OverrideStagefrightForVorbis()
+V/MediaPlayerService( 1530): player type = 3
+V/MediaPlayerService( 1530):  create VorbisPlayer
+V/MediaPlayerService( 1530): prepare
+V/AudioCache( 1530): notify(0xe2100, 1, 0, 0)
+V/AudioCache( 1530): prepared
+V/MediaPlayerService( 1530): wait for prepare
+V/AudioCache( 1530): wait - success
+V/MediaPlayerService( 1530): start
+V/MediaPlayerService( 1530): wait for playback complete
+V/AudioCache( 1530): open(44100, 1, 1, 4)
+V/AudioCache( 1530): write(0x166800, 256)
+......
+V/AudioCache( 1530): wait - success
+V/MediaPlayerService( 1530): return memory @ 0x41728000, sampleRate=44100, channelCount = 1, format = 1
+V/MediaPlayerService( 1530): decode(30, 0, 5194)
+D/        ( 1530): proc link name is /proc/1530/fd/30
+D/        ( 1530): Check file is DRM, the file name is /system/media/audio/ui/KeypressStandard.ogg
+D/        ( 1530): handle 30 is not a DRM file 
+D/MediaPlayerService( 1530): This content is not DRM file
+V/MediaPlayerService( 1530): ident = 0x5367674f, accIdent = 0x674f
+V/MediaPlayerService( 1530): getPlayerType: OverrideStagefrightForVorbis()
+V/MediaPlayerService( 1530): player type = 3
+V/MediaPlayerService( 1530):  create VorbisPlayer
+V/MediaPlayerService( 1530): prepare
+V/AudioCache( 1530): notify(0xe2100, 1, 0, 0)
+V/AudioCache( 1530): prepared
+V/MediaPlayerService( 1530): wait for prepare
+V/AudioCache( 1530): wait - success
+V/MediaPlayerService( 1530): start
+V/MediaPlayerService( 1530): wait for playback complete
+V/AudioCache( 1530): open(44100, 2, 1, 4)
+V/AudioCache( 1530): write(0x166800, 512)
+V/AudioCache( 1530): memcpy(0x41828000, 0x166800, 512)
+V/AudioCache( 1530): write(0x166800, 512)
+......
+V/AudioCache( 1530): wait - success
+V/MediaPlayerService( 1530): return memory @ 0x41828000, sampleRate=44100, channelCount = 2, format = 1
+V/MediaPlayerService( 1530): decode(30, 0, 7392)
+D/        ( 1530): proc link name is /proc/1530/fd/30
+D/        ( 1530): Check file is DRM, the file name is /system/media/audio/ui/KeypressSpacebar.ogg
+D/        ( 1530): handle 30 is not a DRM file 
+D/MediaPlayerService( 1530): This content is not DRM file
+V/MediaPlayerService( 1530): ident = 0x5367674f, accIdent = 0x674f
+V/MediaPlayerService( 1530): getPlayerType: OverrideStagefrightForVorbis()
+V/MediaPlayerService( 1530): player type = 3
+V/MediaPlayerService( 1530):  create VorbisPlayer
+V/MediaPlayerService( 1530): prepare
+V/AudioCache( 1530): notify(0xe2100, 1, 0, 0)
+V/AudioCache( 1530): prepared
+V/MediaPlayerService( 1530): wait for prepare
+V/AudioCache( 1530): wait - success
+V/MediaPlayerService( 1530): start
+V/MediaPlayerService( 1530): wait for playback complete
+V/AudioCache( 1530): open(44100, 2, 1, 4)
+V/AudioCache( 1530): write(0x166800, 512)
+V/AudioCache( 1530): memcpy(0x41b28000, 0x166800, 512)
+......
+V/AudioCache( 1530): wait - success
+V/MediaPlayerService( 1530): return memory @ 0x41b28000, sampleRate=44100, channelCount = 2, format = 1
+V/MediaPlayerService( 1530): decode(30, 0, 6193)
+D/        ( 1530): proc link name is /proc/1530/fd/30
+D/        ( 1530): Check file is DRM, the file name is /system/media/audio/ui/KeypressDelete.ogg
+D/        ( 1530): handle 30 is not a DRM file 
+D/MediaPlayerService( 1530): This content is not DRM file
+V/MediaPlayerService( 1530): ident = 0x5367674f, accIdent = 0x674f
+V/MediaPlayerService( 1530): getPlayerType: OverrideStagefrightForVorbis()
+V/MediaPlayerService( 1530): player type = 3
+V/MediaPlayerService( 1530):  create VorbisPlayer
+V/MediaPlayerService( 1530): prepare
+V/AudioCache( 1530): notify(0xe2100, 1, 0, 0)
+V/AudioCache( 1530): prepared
+V/MediaPlayerService( 1530): wait for prepare
+V/AudioCache( 1530): wait - success
+V/MediaPlayerService( 1530): start
+V/MediaPlayerService( 1530): wait for playback complete
+V/AudioCache( 1530): open(44100, 2, 1, 4)
+V/AudioCache( 1530): write(0x166800, 512)
+V/AudioCache( 1530): memcpy(0x41c28000, 0x166800, 512)
+......
+V/AudioCache( 1530): wait - success
+V/MediaPlayerService( 1530): return memory @ 0x41c28000, sampleRate=44100, channelCount = 2, format = 1
+V/MediaPlayerService( 1530): decode(30, 0, 7972)
+D/        ( 1530): proc link name is /proc/1530/fd/30
+D/        ( 1530): Check file is DRM, the file name is /system/media/audio/ui/KeypressReturn.ogg
+D/        ( 1530): handle 30 is not a DRM file 
+D/MediaPlayerService( 1530): This content is not DRM file
+V/MediaPlayerService( 1530): ident = 0x5367674f, accIdent = 0x674f
+V/MediaPlayerService( 1530): getPlayerType: OverrideStagefrightForVorbis()
+V/MediaPlayerService( 1530): player type = 3
+V/MediaPlayerService( 1530):  create VorbisPlayer
+V/MediaPlayerService( 1530): prepare
+V/AudioCache( 1530): notify(0xe2100, 1, 0, 0)
+V/AudioCache( 1530): prepared
+V/MediaPlayerService( 1530): wait for prepare
+V/AudioCache( 1530): wait - success
+V/MediaPlayerService( 1530): start
+V/MediaPlayerService( 1530): wait for playback complete
+V/AudioCache( 1530): open(44100, 2, 1, 4)
+V/AudioCache( 1530): write(0x166800, 512)
+V/AudioCache( 1530): memcpy(0x41d28000, 0x166800, 512)
+V/AudioCache( 1530): wait - success
+V/MediaPlayerService( 1530): return memory @ 0x41d28000, sampleRate=44100, channelCount = 2, format = 1
+

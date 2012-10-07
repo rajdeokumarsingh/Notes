@@ -1,0 +1,38 @@
+////////////////////////////////////////////////////////////////////////////////
+Local vs. Global References
+    Every object that JNI returns is a "local reference".
+    If you want to hold on to a reference for a longer period
+        you must use a "global" reference 
+    The global reference is guaranteed to be valid until you call DeleteGlobalRef.
+
+example:
+jobject* localRef = [...];
+jobject* globalRef;
+globalRef = env->NewGlobalRef(localRef);
+...
+env->DeleteGlobalRef(globalRef);
+
+example:
+jclass clazz = env->FindClass("com/android/playerdemo/CmmbService");
+LOGI("Got in %s, %d\n", __FUNCTION__, __LINE__);
+if(clazz == NULL) {
+    LOGI("can not find class, return");
+}
+gClass = (jclass)env->NewGlobalRef(clazz);
+
+////////////////////////////////////////////////////////////////////////////////
+proguard会阻止加载不用的java函数
+这样被c调用的java函数不会被加载。而getMethodId时，jni就会报告找不到方法.
+为了防止这种情况需要添加文件
+
+proguard.flags 
+ -keep class com.android.playerdemo.CmmbService {
+  *;
+}
+
+并在Android.mk中添加:
+LOCAL_PROGUARD_FLAGS := -include $(LOCAL_PATH)/proguard.flags
+
+
+
+

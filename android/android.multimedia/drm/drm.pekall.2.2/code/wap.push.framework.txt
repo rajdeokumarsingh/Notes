@@ -1,0 +1,43 @@
+base/core/java/android/webkit/MimeTypeMap.java:291:            sMimeTypeMap.loadEntry("application/vnd.oma.drm.content", "dcf");
+
+// set drm flag in header
+base/core/java/com/google/android/mms/pdu/PduHeaders.java:91:    public static final int DRM_CONTENT                     = 0xBB;
+
+// define drm mime type
+base/core/java/com/google/android/mms/pdu/PduContentTypes.java:98:        "application/vnd.oma.drm.message",            /* 0x48 */
+base/core/java/com/google/android/mms/pdu/PduContentTypes.java:99:        "application/vnd.oma.drm.content",            /* 0x49 */
+base/core/java/com/google/android/mms/pdu/PduContentTypes.java:100:        "application/vnd.oma.drm.rights+xml",         /* 0x4A */
+base/core/java/com/google/android/mms/pdu/PduContentTypes.java:101:        "application/vnd.oma.drm.rights+wbxml",       /* 0x4B */
+
+base/core/java/com/google/android/mms/pdu/PduPersister.java:72:     * The uri of temporary drm objects.
+base/core/java/com/google/android/mms/pdu/PduPersister.java:74:    public static final String TEMPORARY_DRM_OBJECT_URI =
+base/core/java/com/google/android/mms/pdu/PduPersister.java:1320:        Uri uri = Uri.parse(TEMPORARY_DRM_OBJECT_URI);
+
+// add support for drm content type
+base/core/java/com/google/android/mms/ContentType.java:81:    public static final String APP_DRM_CONTENT   = "application/vnd.oma.drm.content";
+base/core/java/com/google/android/mms/ContentType.java:82:    public static final String APP_DRM_MESSAGE   = "application/vnd.oma.drm.message";
+base/core/java/com/google/android/mms/ContentType.java:136:        sSupportedContentTypes.add(APP_DRM_CONTENT);
+base/core/java/com/google/android/mms/ContentType.java:137:        sSupportedContentTypes.add(APP_DRM_MESSAGE);
+base/core/java/com/google/android/mms/ContentType.java:216:    public static boolean isDrmType(String contentType) {
+base/core/java/com/google/android/mms/ContentType.java:218:                && (contentType.equals(APP_DRM_CONTENT)
+base/core/java/com/google/android/mms/ContentType.java:219:                        || contentType.equals(APP_DRM_MESSAGE));
+
+// define drm permission
+
+// wap push
+base/telephony/java/com/android/internal/telephony/WspTypeDecoder.java:37:    public static final int CONTENT_TYPE_B_DRM_RIGHTS_XML = 0x4a;
+base/telephony/java/com/android/internal/telephony/WspTypeDecoder.java:38:    public static final int CONTENT_TYPE_B_DRM_RIGHTS_WBXML = 0x4b;
+base/telephony/java/com/android/internal/telephony/WspTypeDecoder.java:47:    public static final String CONTENT_MIME_TYPE_B_DRM_RIGHTS_XML =
+base/telephony/java/com/android/internal/telephony/WspTypeDecoder.java:48:            "application/vnd.oma.drm.rights+xml";
+base/telephony/java/com/android/internal/telephony/WspTypeDecoder.java:49:    public static final String CONTENT_MIME_TYPE_B_DRM_RIGHTS_WBXML =
+base/telephony/java/com/android/internal/telephony/WspTypeDecoder.java:50:            "application/vnd.oma.drm.rights+wbxml";
+
+base/telephony/java/com/android/internal/telephony/WapPushOverSms.java:135:                case WspTypeDecoder.CONTENT_TYPE_B_DRM_RIGHTS_XML:
+base/telephony/java/com/android/internal/telephony/WapPushOverSms.java:136:                    mimeType = WspTypeDecoder.CONTENT_MIME_TYPE_B_DRM_RIGHTS_XML;
+base/telephony/java/com/android/internal/telephony/WapPushOverSms.java:138:                case WspTypeDecoder.CONTENT_TYPE_B_DRM_RIGHTS_WBXML:
+base/telephony/java/com/android/internal/telephony/WapPushOverSms.java:139:                    mimeType = WspTypeDecoder.CONTENT_MIME_TYPE_B_DRM_RIGHTS_WBXML;
+base/telephony/java/com/android/internal/telephony/WapPushOverSms.java:170:            if (mimeType.equals(WspTypeDecoder.CONTENT_MIME_TYPE_B_DRM_RIGHTS_XML)) {
+base/telephony/java/com/android/internal/telephony/WapPushOverSms.java:171:                binaryContentType = WspTypeDecoder.CONTENT_TYPE_B_DRM_RIGHTS_XML;
+base/telephony/java/com/android/internal/telephony/WapPushOverSms.java:172:            } else if (mimeType.equals(WspTypeDecoder.CONTENT_MIME_TYPE_B_DRM_RIGHTS_WBXML)) {
+base/telephony/java/com/android/internal/telephony/WapPushOverSms.java:173:                binaryContentType = WspTypeDecoder.CONTENT_TYPE_B_DRM_RIGHTS_WBXML;
+

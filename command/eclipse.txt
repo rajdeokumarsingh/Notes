@@ -1,0 +1,23 @@
+
+ctrl-shift-o
+    自动import
+
+ctrl-f11
+    run
+
+f11
+    run
+    
+ctrl-shift-f
+    自动缩进代码
+
+Window ➤ Show View ➤ Other ➤ Android.
+    打开Logcat view
+
+修改AndroidManifest的字体
+    修改xml的字体
+    右键点击AndroidManifest.xml, open with, xml editor
+
+tab 2 space
+    preference->java->code stype->formatter
+    new and edit

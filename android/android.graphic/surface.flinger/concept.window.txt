@@ -1,0 +1,32 @@
+Window类
+    定义了一个top-level窗口的显示和行为的策略
+
+        定义窗口title的显示行为和策略
+            如有没有title, 是否在title显示进度条
+
+            ./concept.window.basic.property.java
+
+        定义Callback接口，处理UI事件
+            如提供处理key事件，touch事件，需要弹出菜单等等的回调接口
+
+            ./concept.window.callbacks.java
+
+        定义了自己的WindowManager——LocalWindowManager
+            管理窗口中的view
+
+            ./WindowManager.java
+
+文件位置
+    frameworks/base/core/java/android/view/Window.java
+    abstract class
+    only implementation
+        android.policy.PhoneWindow
+
+    /**    
+     * Abstract base class for a top-level window look and behavior policy.  An
+     * instance of this class should be used as the top-level view added to the
+     * window manager. It provides standard UI policies such as a background, title
+     * area, default key processing, etc.
+     */
+
+                   

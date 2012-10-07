@@ -1,0 +1,14 @@
+
+./user.guide.txt
+
+
+
+referenece:
+G. Booch, J. Rumbaugh, I. Jacobson
+    The Unified Modeling Launguage User Guide
+    The Unified Modeling Launguage Reference Maunal
+        UML参考手册
+    The Unified Software Development Process
+        统一软件开发过程
+
+

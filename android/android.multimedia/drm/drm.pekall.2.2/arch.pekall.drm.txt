@@ -1,0 +1,358 @@
+================================================================================
+DRM relative DB 
+================================================================================
+
+com.android.providers.downloads 
+    由DownloadProvider创建
+    每一个下载的drm文件在下载数据库中都有一条记录
+        记录的mime type为
+            application/vnd.oma.drm.content or
+            application/vnd.oma.drm.message
+
+com.android.providers.drm 
+    由DrmProvider创建
+    包含了权限文件
+
+    application/vnd.oma.drm.message类型的文件会有一条记录
+
+    application/vnd.oma.drm.content类型的文件没有记录 
+
+com.android.providers.media
+    由MediaScanner创建
+    application/vnd.oma.drm.content类型的文件会有一条记录
+        记录中mime type是drm内容的类型，如audio/aac, audio/mp3, ...
+
+    application/vnd.oma.drm.message类型的文件没有记录 
+
+com.pekall.android.drm 
+    好像里面没啥东西
+
+================================================================================
+DRM Service Client
+================================================================================
+获取内容/权限相关的应用
+
+    OMADownload
+        ./code/OMADownload.drm.java
+            下载完成后
+                对于"application/vnd.oma.drm.message"类型的文件,like FL,
+                    调用DrmStore的接口将文件加入到DRM系统
+                    同时不会使用media scanner进行扫描
+
+                对于"application/vnd.oma.drm.content"类型的文件, 加密类型
+                    直接使用media scanner进行扫描
+
+    DownloadProvider
+        // same as OMADownload
+
+        下载扫描流程
+            ./flow/flow.download.scan.cpp
+
+    WAP push 相关
+        ./code/wap.push.framework.txt
+
+    FileManager
+        查询dcf文件信息
+        在显示DCF文件属性的时候需要获取DRM的权限信息, 
+            如类型(FL, SD, CD, ...), 权限(unlimited, 几次， ...)
+
+消费相关的应用
+    MediaPlayer
+        ./code/media.file.part.cpp
+
+        播放流程
+            ./flow/flow.play.cpp
+    
+    Gallery
+        没有做
+
+================================================================================
+DRM Service Provider
+================================================================================
+Java
+    DrmProvider.apk
+        ./code/DrmProvider.java
+
+    DrmService.apk
+        ./code/DrmService.java
+
+        notify user for right acquisition 
+        invoke Browser to acquire right according to user selection
+
+    framework
+
+        android.provider
+            ./code/DrmStore.java
+                为下载应用提供添加DRM文件到DRM系统的接口
+
+        android.drm.mobile1
+
+            DrmConstraintInfo
+                constraint info: count, start/end date, interval
+
+            ./code/DrmRawContent.java
+
+            ./code/DrmRights.java
+
+            ./code/DrmRightsManager.java
+
+Native lib
+    libdrm1_jni.so
+        Expose DRM engine function to Java layer
+        function:
+            rights acquisition
+            content and rights installation
+
+    libdrm1.so
+        1. manage DRM content and rights
+        2. encrypt Forward Lock and Combined Delivery content
+        3. decrypt DRM content during content consumption
+
+    libdrm1_plugin.so
+        Adaptor layer between OpenCORE Multimedia Engine and DRM engine, 
+        expose DRM engine function to multimedia engine, 
+        majorly those function related to rights validity checking and update, DRM content decryption
+
+////////////////////////////////////////////////////////////////////////////////
+// 模块之间关系
+////////////////////////////////////////////////////////////////////////////////
+
+1. Scan Flow
+Download application------------------------------------------
+    | DRM Message                                            | DCF
+    V                                                        V
+DrmStore                                                MediaScanner
+    |                                                        |
+    V                                                        V
+framework.android.drm.mobile1                          libstagefright 
+    |                                                        |
+    V                                                        V
+pekall.libdrm1_jni                                      pekall.libdrm1
+    |
+    V
+pekall.libdrm1
+
+
+2. Play Flow
+MediaPlayer
+    | DCF
+    V 
+libstagefright
+    |
+    V
+pekall.libdrm1
+
+
+Download { 
+    type: APK
+    DownloadProvider 
+    OMADownload
+} 
+
+Browser { 
+    type: APK
+    path: src/com/android/browser/ {
+        BrowserDownloadPage.java {
+        }
+    }
+} 
+
+DrmStore {
+    type: framework package
+    path: framework/base/core/java/android/provider {
+        DrmStore.java {
+            Intent addDrmFile(ContentResolver cr, 
+                    File file, String title)
+        }
+    }
+}
+
+framework.android.drm.mobile1 {
+    type: framework package
+    path: frameworks/base/media/java/android/drm/mobile1 {
+        DrmRightsManager.java
+        DrmRights.java  
+        DrmConstraintInfo.java  
+        DrmRawContent.java  
+        DrmException.java  
+    }
+}
+
+pekall.libdrm1_jni {
+    type: libdrm1_jni.so
+    path: DRM/libdrm1/src/jni {
+        drm1_jni.c
+    }
+}
+
+pekall.libdrm1 {
+    type: libdrm1.so
+
+    path: DRM/libdrm1/src/api/ {
+        cas_drm_api.c
+        cas_drm_regstruct.c
+    }
+
+    path: DRM/libdrm1/src/objmng/ {
+        drm_api.c
+        drm_rights_manager.c
+        drm_decoder.c
+        drm_file.c
+        drm_i18n.c
+        drm_time.c
+    }
+
+    path: DRM/libdrm1/src/parser/ {
+        parser_dcf.c
+        parser_dm.c
+        parser_rel.c
+    }
+
+    path: DRM/libdrm1/src/xml/ {
+        xml_tinyparser.c
+    }
+
+    path: DRM/libdrm1/src/util/ {
+        cas_drm_aes.c
+        cas_drm_util.c
+    }
+}
+
+
+flow 1: Add DRM Message
+    // convert DRM Message to DCF
+    ./flow/flow.download.scan.cpp
+
+    Download Application
+        |
+        V
+    DrmStore {
+        DrmStore.java {
+            Intent addDrmFile(ContentResolver cr, File file, String title)
+        }
+    }   |
+        |
+        V
+    android.drm.mobile1 {
+        DrmRawContent.java {
+            public String getContentType() 
+            public InputStream getContentInputStream(DrmRights rights)
+        }
+        DrmRightsManager.java {
+            public synchronized DrmRights queryRights(DrmRawContent content)
+        }
+    }       |
+            | JNI
+            V
+    pekall.libdrm1_jni {
+        drm1_jni.c {
+            JNIEXPORT jint JNICALL
+            Java_android_drm_mobile1_DrmRawContent_nativeConstructDrmContentWithFile
+              (JNIEnv * env, jobject rawContent, jobject data, jint len, 
+              jint mimeType, jstring fileName)
+
+            JNIEXPORT jint JNICALL        
+            Java_android_drm_mobile1_DrmRawContent_nativeConstructDrmContent
+              (JNIEnv * env, jobject rawContent, jobject data, jint len, 
+              jint mimeType) 
+
+            JNIEXPORT jstring JNICALL
+            Java_android_drm_mobile1_DrmRawContent_nativeGetContentType
+              (JNIEnv * env, jobject rawContent)
+
+            JNIEXPORT jint JNICALL
+            Java_android_drm_mobile1_DrmRawContent_nativeReadContent
+            (JNIEnv * env, jobject rawContent, jbyteArray buf, 
+            jint bufOff, jint len, jint mediaOff)
+        }   |
+    }       |
+            |
+            V
+    pekall.libdrm1 {
+        drm_api.c {
+            int32_t SVC_drm_openSession(T_DRM_Input_Data data)
+            int32_t SVC_drm_getContentType(int32_t session, 
+                    uint8_t* mediaType)
+        }
+    }
+
+flow 2: Scan DCF file
+    // get mimetype of DCF content
+    ./flow/flow.download.scan.cpp
+
+    Download application
+        | 
+        V
+    MediaScanner
+        |
+        V
+    libstagefright { 
+        StagefrightMediaScanner.cpp {
+            // 1. get content mimetype
+            // 2. set mimetye to media provider
+            HandleDCF(const char *filename, MediaScannerClient *client) 
+        }       |
+    }           |
+                |
+                V
+    pekall.libdrm1 {
+        cas_drm_api.c {
+            int DRM_Open(const char *filestr)
+            int32_t  DRM_GetDRMMetaDataInFile (int fn, 
+                    DRM_METADATA_T * pContentMetaData)
+            int32_t DRM_IsRightValid(int32_t fd)
+            int32_t DRM_Finalize(int32_t fn)
+        }       |
+                |
+                V
+        parser_dcf.c {
+            int32_t drm_dcfParser(uint8_t *buffer, int32_t bufferLen, 
+                    T_DRM_DCF_Info *pDcfInfo, uint8_t **ppEncryptedData)
+        }
+    }
+
+flow 3: play
+    ./code/media.file.part.cpp
+    ./flow/flow.play.cpp
+
+    // get content type, content lenght, seek, open, read DRM file
+    MediaPlayer
+        | 
+        V 
+    libstagefright {
+        FileSource.cpp {
+            void FileSource::initDrm()
+        }
+
+        AwesomePlayer.cpp {
+            status_t AwesomePlayer::setDataSource(const char *uri, 
+                    const KeyedVector<String8, String8> *headers)
+        }
+    }   |
+        |
+        V
+    pekall.libdrm1 {
+        cas_drm_api.c {
+            int32_t DRM_Initialize(int fd)
+            int DRM_Open(const char *filestr)
+            int32_t DRM_Seek(int fn, off_t offset, int whence)
+            int32_t DRM_Read(int fn, void * buf,size_t len)
+            int32_t  DRM_GetDRMMetaDataInFile (int fn, 
+                    DRM_METADATA_T * pContentMetaData)
+            int32_t DRM_Finalize(int32_t fn)
+
+            int32_t DRM_IsDRMFile(int fd)
+
+            int32_t DRM_IsRightValid(int32_t fd)
+            int32_t DRM_ConsumeRight(int32_t fd)
+            int32_t DRM_CheckLicense(int32_t fd)
+        }       |
+                |
+                V
+        cas_drm_regstruct.c {
+            DCF_CB * get_dcfcb(DCF_LIST *list, int32_t fn)
+            ...
+        }
+    }
+ 
+

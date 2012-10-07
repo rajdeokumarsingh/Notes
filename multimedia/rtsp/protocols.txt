@@ -1,0 +1,1958 @@
+
+http://www.cnblogs.com/qingquan/archive/2011/07/14/2106834.html
+
+http://tools.ietf.org/html/rfc2326
+[2011-12-08 done]
+
+questions:
+    ?? rtcp, first available channel, rtp channel, transport header
+    ?? invalid Destination parameter in the Transport field.
+    ?? must-revalidate:
+
+RTSP
+    Real Time Streaming Protocol
+
+    应用层协议, 控制协议
+
+    用途
+        establishes and controls
+            a single 
+            or several 
+                time-synchronized streams of continuous media such as audio and video
+
+        RTSP acts as a "network remote control" for multimedia servers.
+
+    类似HTTP协议的流控制协议
+    它们都使用纯文本来发送信息
+
+    RTSP协议是有状态的协议，
+    而HTTP是无状态的协议
+
+    RTSP通过维护一个session来维护其状态的转换
+        an identifier is used when needed to track concurrent sessions
+
+    RTSP协议的默认端口是554，默认的承载协议为TCP
+        uses TCP to maintain an end-to-end connection
+        while most RTSP control messages are sent by the client to the server, 
+        some commands travel in the other direction (i.e. from server to client).
+
+        554 is for both UDP (deprecated and very rarely used) and TCP transports. 
+
+    流控分离：从控制逻辑上来说RTSP和FTP相似，控制流和数据流是分开的
+    安全：RTSP 使用网页安全机制, 
+        base
+        digest
+
+    协议支持的操作
+        Retrieval of media from media server
+
+        Invitation of a media server to a conference
+            1. either to play back media into the presentation or
+            2. to record all or a subset of the media in a presentation.
+
+            teaching applications
+                Several parties in the conference may take turns "pushing the remote control buttons."
+                每个人都可以发言，收听，控制
+
+        Addition of media to an existing presentation
+            Particularly for live presentations, it is useful if the
+            server can tell the client about additional media becoming
+            available.
+
+
+    1.3 Terminology
+        Aggregate control:
+            使用单条消息控制多个stream. 如play/pause同时控制audio/video feeds
+
+        Conference:
+            a multiparty, multimedia presentation
+
+        Client:
+            The client requests continuous media data from the media server.
+
+        Connection:
+            A transport layer virtual circuit established between two programs 
+
+        Container file:
+            A file which may contain multiple media streams
+
+        Continuous media:
+            source and sink
+            the sink must reproduce the timing relationship that existed at the source
+
+        Entity:
+            The information transferred as the payload of a request or response.
+
+        Media initialization:
+            Datatype/codec specific initialization
+                clockrates
+                color tables 
+                ...
+
+        Media parameter:
+            Parameter specific to a media type 
+            如媒体清晰度
+
+        Media server:
+            providing playback or recording services 
+
+        Media server indirection:
+            Redirection of a media client to a different media server.
+
+       (Media) stream:
+            A single media instance, 
+                an audio stream 
+                or a video stream 
+                or a single whiteboard 
+                or shared application group
+
+            When using RTP, a stream consists of all RTP and RTCP packets 
+                created by a source within an RTP session. 
+
+        Message:
+            The basic unit of RTSP communication
+
+        Participant:
+            Member of a conference. A participant may be a machine, 
+                e.g., a media record or playback server.
+
+        Presentation:
+            A set of one or more streams presented to the client as a complete media feed
+
+        Presentation description:
+            contains information 
+                one or more media streams 
+                such as 
+                    encodings, 
+                    network addresses 
+                    information about the content
+        
+            和SDP的session描述符类似
+
+        Request:
+            An RTSP request. 
+
+        Response:
+            An RTSP response. 
+
+        RTSP session:
+            A complete RTSP "transaction", e.g., the viewing of a movie.
+
+            A session typically consists of a client 
+                1. setting up a transport mechanism for the continuous media stream (SETUP)
+                2. starting the stream with PLAY or RECORD
+                3. closing the stream with TEARDOWN
+
+        Transport initialization:
+            The negotiation of transport information 
+                (e.g., port numbers, transport protocols) 
+                between the client and the server.
+
+1.4 Protocol Properties
+    Extendable:
+        New methods and parameters can be easily added to RTSP.
+
+    Easy to parse:
+        RTSP can be parsed by standard HTTP or MIME parsers.
+
+    Secure:
+        re-uses web security mechanisms, HTTP authentication mechanisms 
+            basic (RFC 2068 [2, Section 11.1]) 
+            digest authentication (RFC 2069 [8])
+
+    Transport-independent:
+        RTSP may use either 
+            1. an unreliable datagram protocol (UDP) (RFC 768 [9]), 
+            2. a reliable datagram protocol (RDP, RFC 1151, not widely used [10]) 
+            3. or a reliable stream protocol such as TCP (RFC 793 [11]) 
+
+    Multi-server capable:
+        stream可以放在不同的server上
+
+        同一个Presentation中的不同stream可已在不同的server上
+        媒体同步在Transport level完成
+        The client automatically establishes several concurrent control sessions with the different media servers.
+
+    Control of recording devices:
+        The protocol can control both recording and playback devices, 
+            as well as devices that can alternate between the two modes ("VCR").
+
+    Separation of stream control and conference initiation:
+        stream control, conference initiation是相互独立的
+        the conference initiation protocol需要一个unique conference identifier
+
+        会议初始化可以由其他协议完成
+            SIP [12] or H.323 [13] may be used to invite a server to a conference.
+
+    ??  Presentation description neutral:
+        The protocol does not impose a particular presentation
+        description or metafile format and can convey the type of
+        format to be used. However, the presentation description must
+        contain at least one RTSP URI.
+
+    Proxy and firewall friendly:
+        A firewall may need to understand the SETUP method to open a "hole" for the UDP media stream.
+
+    Transport negotiation:
+        The client can negotiate the transport method 
+
+    Capability negotiation:
+        allows clients to present the appropriate user interface
+
+        For example, if seeking is not allowed, the user interface 
+            must be able to disallow moving a sliding position indicator.
+
+1.5 Extending RTSP
+    可支持PLAYBACK, 可选支持RECORD, 可选支持SEEK, 
+    
+    RTSP can be extended in three ways
+        1. Existing methods can be extended with new parameters
+        2. New methods can be added.
+            use the OPTIONS method to inquire about methods supported by the server
+            responds with error code 501 (Not implemented)
+        3. A new version of the protocol can be defined
+
+1.6 Overall Operation
+    The presentation description file contains:
+        encodings,
+        language, 
+        and other parameters 
+
+    Unicast:
+        用户点播一段影片
+
+    Multicast, server chooses address:
+        The media server picks the multicast address and port. 
+        如网络电视
+
+    Multicast, client chooses address:
+        If the server is to participate in an existing multicast conference, 
+        the multicast address, port and encryption key are given by the conference description, 
+        established by means outside the scope of this specification.  
+        多播会议的地址是由会议描述符来决定, 非本规范来确定
+
+1.7 RTSP States
+
+    SETUP:
+        Causes the server to allocate resources for a stream and start an RTSP session.
+
+    PLAY and RECORD:
+        Starts data transmission on a stream allocated via SETUP.
+
+    PAUSE:
+        Temporarily halts a stream without freeing server resources.
+
+    TEARDOWN:
+        Frees resources associated with the stream. The RTSP session ceases to exist on the server.
+
+3 Protocol Parameters
+
+    3.1 RTSP Version
+
+    3.2 RTSP URL
+        rtsp_URL  =   ( "rtsp:" | "rtspu:" ) "//" host [ ":" port ] [ abs_path ]
+
+            scheme rtsp 
+                requires a reliable protocol (TCP)
+            scheme rtspu 
+                identifies an unreliable protocol (UDP)
+
+            port 554 is assumed
+
+        一个url可指向一个presentation, 或presentation中一个单独的stream
+            presentation description中包括了stream url的信息
+
+        the RTSP URL:
+            rtsp://media.example.com:554/twister
+            identifies the presentation "twister", which may be composed of audio and video streams.
+
+            rtsp://media.example.com:554/twister/audiotrack
+            identifies the audio stream within the presentation "twister"
+
+    3.3 Conference Identifiers
+        conference-id =   1*xchar
+
+        opaque to RTSP
+        created e.g., H.323 [13] or SIP [12].
+
+        used to allow RTSP sessions to obtain parameters 
+            from multimedia conferences the media server is participating in.
+
+    3.4 Session Identifiers
+        session-id   =   1*( ALPHA | DIGIT | safe )
+
+    3.5 SMPTE Relative Timestamps
+        expresses time relative to the start of the clip
+
+        the format hours:minutes:seconds:frames.subframes
+
+        smpte-range  =   smpte-type "=" smpte-time "-" [ smpte-time ]
+        smpte-type   =   "smpte" | "smpte-30-drop" | "smpte-25"
+                           ; other timecodes may be added
+        smpte-time   =   1*2DIGIT ":" 1*2DIGIT ":" 1*2DIGIT [ ":" 1*2DIGIT ] [ "." 1*2DIGIT ]
+
+        Examples:
+        smpte=10:12:33:20-
+        smpte=10:07:33-
+        smpte=10:07:00-10:07:33:05.01
+        smpte-25=10:07:00-10:07:33:05.01
+
+    3.6 Normal Play Time
+        indicates the stream absolute position relative to the beginning of the presentation
+        Intuitively, NPT is the clock the viewer associates with a program
+
+        npt-range    =   ( npt-time "-" [ npt-time ] ) | ( "-" npt-time )
+        npt-time     =   "now" | npt-sec | npt-hhmmss
+        npt-sec      =   1*DIGIT [ "." *DIGIT ]
+        npt-hhmmss   =   npt-hh ":" npt-mm ":" npt-ss [ "." *DIGIT ]
+        npt-hh       =   1*DIGIT     ; any positive number
+        npt-mm       =   1*2DIGIT    ; 0-59
+        npt-ss       =   1*2DIGIT    ; 0-59
+
+        Examples:
+        npt=123.45-125
+        npt=12:05:35.3-
+        npt=now-
+
+    3.7 Absolute Time
+        Absolute time is expressed as ISO 8601 timestamps, using UTC (GMT).
+        Fractions of a second may be indicated.
+
+        utc-range    =   "clock" "=" utc-time "-" [ utc-time ]
+        utc-time     =   utc-date "T" utc-time "Z"
+        utc-date     =   8DIGIT                    ; < YYYYMMDD >
+        utc-time     =   6DIGIT [ "." fraction ]   ; < HHMMSS.fraction >
+
+        Example for November 8, 1996 at 14h37 and 20 and a quarter seconds UTC:
+        19961108T143720.25Z
+
+    3.8 Option Tags
+        unique identifiers used to designate new options in RTSP. 
+
+4 RTSP Message
+    text-based protocol 
+    using UTF-8 encoding
+    Lines are terminated by CRLF
+
+    4.1 Message Types
+       See [H4.1]
+
+    4.2 Message Headers
+       See [H4.2]
+
+    4.3 Message Body
+       See [H4.3]
+
+    4.4 Message Length
+        message body length:
+        1. the first empty line indicates the end of the message
+        2. Content-Length header
+        3. By the server closing the connection
+
+5 General Header Fields
+  general-header     =     Cache-Control     ; Section 12.8
+                     |     Connection        ; Section 12.10
+                     |     Date              ; Section 12.18
+                     |     Via               ; Section 12.43
+
+6 Request
+   Request      =       Request-Line          ; Section 6.1
+                *(      general-header        ; Section 5
+                |       request-header        ; Section 6.2
+                |       entity-header )       ; Section 8.1
+                        CRLF
+                        [ message-body ]      ; Section 4.3
+
+    6.1 Request Line
+      Request-Line = Method SP Request-URI SP RTSP-Version CRLF
+
+       Method         =         "DESCRIBE"              ; Section 10.2
+                      |         "ANNOUNCE"              ; Section 10.3
+                      |         "GET_PARAMETER"         ; Section 10.8
+                      |         "OPTIONS"               ; Section 10.1
+                      |         "PAUSE"                 ; Section 10.6
+                      |         "PLAY"                  ; Section 10.5
+                      |         "RECORD"                ; Section 10.11
+                      |         "REDIRECT"              ; Section 10.10
+                      |         "SETUP"                 ; Section 10.4
+                      |         "SET_PARAMETER"         ; Section 10.9
+                      |         "TEARDOWN"              ; Section 10.7
+                      |         extension-method
+
+      extension-method = token
+      Request-URI = "*" | absolute_URI
+      RTSP-Version = "RTSP" "/" 1*DIGIT "." 1*DIGIT
+
+      Request uri为*表示这个请求是针对server而非某一个资源, 例如
+          OPTIONS * RTSP/1.0
+
+
+    6.2 Request Header Fields
+      request-header  =          Accept                   ; Section 12.1
+                      |          Accept-Encoding          ; Section 12.2
+                      |          Accept-Language          ; Section 12.3
+                      |          Authorization            ; Section 12.5
+                      |          From                     ; Section 12.20
+                      |          If-Modified-Since        ; Section 12.23
+                      |          Range                    ; Section 12.29
+                      |          Referer                  ; Section 12.30
+                      |          User-Agent               ; Section 12.41
+
+7 Response
+   After receiving and interpreting a request message, 
+        the recipient responds with an RTSP response message.
+
+     Response    =     Status-Line         ; Section 7.1
+                 *(    general-header      ; Section 5
+                 |     response-header     ; Section 7.1.2
+                 |     entity-header )     ; Section 8.1
+                       CRLF
+                       [ message-body ]    ; Section 4.3
+
+    7.1 Status-Line
+        Status-Line =   RTSP-Version SP Status-Code SP Reason-Phrase CRLF
+
+        7.1.1 Status Code and Reason Phrase
+            Status-Code 
+                a 3-digit integer result code
+
+            Reason-Phrase
+                a short textual description of the Status-Code 
+
+            * 1xx: Informational - Request received, continuing process
+            * 2xx: Success - The action was successfully received, understood, and accepted
+            * 3xx: Redirection - Further action must be taken in order to complete the request
+            * 4xx: Client Error - The request contains bad syntax or cannot be fulfilled
+            * 5xx: Server Error - The server failed to fulfill an apparently valid request
+
+        7.1.2 Response Header Fields
+           response-header  =     Location             ; Section 12.25
+                    |     Proxy-Authenticate   ; Section 12.26
+                    |     Public               ; Section 12.28
+                    |     Retry-After          ; Section 12.31
+                    |     Server               ; Section 12.36
+                    |     Vary                 ; Section 12.42
+                    |     WWW-Authenticate     ; Section 12.44
+
+
+8 Entity
+
+    8.1 Entity Header Fields
+        描述实体的field
+        entity-header       =    Allow               ; Section 12.4
+                         |    Content-Base        ; Section 12.11
+                         |    Content-Encoding    ; Section 12.12
+                         |    Content-Language    ; Section 12.13
+                         |    Content-Length      ; Section 12.14
+                         |    Content-Location    ; Section 12.15
+                         |    Content-Type        ; Section 12.16
+                         |    Expires             ; Section 12.19
+                         |    Last-Modified       ; Section 12.24
+                         |    extension-header
+        extension-header    =    message-header
+
+    8.2 Entity Body
+       See [H7.2]
+
+9 Connections
+
+    * persistent transport connections used for several request-response transactions;
+    * one connection per request/response transaction;
+    * connectionless mode.
+
+    defined by the RTSP URI
+        scheme "rtsp"
+            a persistent connection is assumed
+
+        scheme "rtspu"
+            without setting up a connection.
+
+
+    9.1 Pipelining
+        "pipeline" its requests
+            (i.e., send multiple requests without waiting for each response)
+
+        A server MUST send its responses to those requests 
+            in the same order that the requests were received
+
+    9.2 Reliability and Acknowledgements
+        Requests are acknowledged by the receiver 
+        If there is no acknowledgement, the sender may resend the same message after a timeout of one round-trip time (RTT)
+            If a reliable transport protocol is used to carry RTSP, requests MUST NOT be retransmitted;
+
+        The Timestamp header (Section 12.38) is used to avoid the retransmission ambiguity problem
+
+        Each request carries a sequence number in the CSeq header 
+            incremented by one for each distinct request transmitted
+            If a request is repeated because of lack of acknowledgement, 
+                the request MUST carry the original sequence number 
+                (i.e., the sequence number is not incremented).
+
+       Systems implementing RTSP 
+            MUST support carrying RTSP over TCP 
+            and MAY support UDP. 
+
+       The default port for the RTSP server is 554 for both UDP and TCP.
+
+
+10 Method Definitions
+
+    method            direction        object     requirement
+    DESCRIBE          C->S             P,S        recommended
+    ANNOUNCE          C->S, S->C       P,S        optional
+    GET_PARAMETER     C->S, S->C       P,S        optional
+    OPTIONS           C->S, S->C       P,S        required
+                                            (S->C: optional)
+    PAUSE             C->S             P,S        recommended
+    PLAY              C->S             P,S        required
+    RECORD            C->S             P,S        optional
+    REDIRECT          S->C             P,S        optional
+    SETUP             C->S             S          required
+    SET_PARAMETER     C->S, S->C       P,S        optional
+    TEARDOWN          C->S             P,S        required
+
+    Table 2: Overview of RTSP methods, their direction, and what objects (P: presentation, S: stream) they operate on
+
+    10.1 OPTIONS
+        查询server支持的method
+
+         C->S:  OPTIONS * RTSP/1.0
+            CSeq: 1
+            Require: implicit-play
+            Proxy-Require: gzipped-messages
+
+         S->C:  RTSP/1.0 200 OK
+                CSeq: 1
+                Public: DESCRIBE, SETUP, TEARDOWN, PLAY, PAUSE
+
+    10.2 DESCRIBE
+        retrieves the description of a presentation or media object identified by the request URL
+           Example:
+
+             C->S: DESCRIBE rtsp://server.example.com/fizzle/foo RTSP/1.0
+                   CSeq: 312
+                   Accept: application/sdp, application/rtsl, application/mheg
+
+             S->C: RTSP/1.0 200 OK
+                   CSeq: 312
+                   Date: 23 Jan 1997 15:35:06 GMT
+                   Content-Type: application/sdp
+                   Content-Length: 376
+
+                   v=0
+                   o=mhandley 2890844526 2890842807 IN IP4 126.16.64.4
+                   s=SDP Seminar
+                   i=A Seminar on the session description protocol
+                   u=http://www.cs.ucl.ac.uk/staff/M.Handley/sdp.03.ps
+                   e=mjh@isi.edu (Mark Handley)
+                   c=IN IP4 224.2.17.12/127
+                   t=2873397496 2873404696
+                   a=recvonly
+                   m=audio 3456 RTP/AVP 0
+                   m=video 2232 RTP/AVP 31
+                   m=whiteboard 32416 UDP WB
+                   a=orient:portrait
+
+    Media initialization
+        three ways that an RTSP client may receive initialization information
+            * via RTSP's DESCRIBE method;
+            * via some other protocol (HTTP, email attachment, etc.);
+            * via the command line or standard input 
+
+10.3 ANNOUNCE
+    two purposes
+        有什么作用？
+        When sent from client to server, 
+            ANNOUNCE posts the description of a presentation or media object identified by the request URL to a server. 
+
+        When sent from server to client, 
+            ANNOUNCE updates the session description in real-time.
+
+    If a new media stream is added to a presentation (e.g., during a live presentation), 
+        the whole presentation description should be sent again, 
+        rather than just the additional components, so that components can be deleted.
+
+        C->S: ANNOUNCE rtsp://server.example.com/fizzle/foo RTSP/1.0
+           CSeq: 312
+           Date: 23 Jan 1997 15:35:06 GMT
+           Session: 47112344
+           Content-Type: application/sdp
+           Content-Length: 332
+
+           v=0
+           o=mhandley 2890844526 2890845468 IN IP4 126.16.64.4
+
+           s=SDP Seminar
+           i=A Seminar on the session description protocol
+           u=http://www.cs.ucl.ac.uk/staff/M.Handley/sdp.03.ps
+           e=mjh@isi.edu (Mark Handley)
+           c=IN IP4 224.2.17.12/127
+           t=2873397496 2873404696
+           a=recvonly
+           m=audio 3456 RTP/AVP 0
+           m=video 2232 RTP/AVP 31
+
+     S->C: RTSP/1.0 200 OK
+           CSeq: 312
+
+10.4 SETUP
+   The Transport header specifies 
+        the transport parameters acceptable to the client for data transmission; 
+
+   the response will contain the transport parameters selected by the server.
+
+    C->S: SETUP rtsp://example.com/foo/bar/baz.rm RTSP/1.0
+          CSeq: 302
+          Transport: RTP/AVP;unicast;client_port=4588-4589
+
+    S->C: RTSP/1.0 200 OK
+          CSeq: 302
+          Date: 23 Jan 1997 15:35:06 GMT
+          Session: 47112344
+          Transport: RTP/AVP;unicast;
+            client_port=4588-4589;server_port=6256-6257
+
+    The server generates session identifiers in response to SETUP requests
+
+10.5 PLAY
+    可以指定播放的时间范围
+       
+    PLAY requests may be pipelined (queued); 
+    a server MUST queue PLAY requests to be executed in order. 
+
+         C->S: PLAY rtsp://audio.example.com/audio RTSP/1.0
+               CSeq: 835
+               Session: 12345678
+               Range: npt=10-15
+
+         C->S: PLAY rtsp://audio.example.com/audio RTSP/1.0
+               CSeq: 836
+               Session: 12345678
+               Range: npt=20-25
+
+         C->S: PLAY rtsp://audio.example.com/audio RTSP/1.0
+               CSeq: 837
+               Session: 12345678
+               Range: npt=30-
+
+    A PLAY request without a Range header is legal
+
+    // 可以指定媒体开始播放的时间
+    The Range header may also contain a time parameter. 
+        This parameter specifies a time in UTC at which the playback should start
+
+       The following example plays the whole presentation starting at SMPTE
+       time code 0:10:20 until the end of the clip. The playback is to start
+       at 15:36 on 23 Jan 1997.
+
+         C->S: PLAY rtsp://audio.example.com/twister.en RTSP/1.0
+               CSeq: 833
+               Session: 12345678
+               Range: smpte=0:10:20-;time=19970123T153600Z
+
+         S->C: RTSP/1.0 200 OK
+               CSeq: 833
+               Date: 23 Jan 1997 15:35:06 GMT
+               Range: smpte=0:10:22-;time=19970123T153600Z
+
+       For playing back a recording of a live presentation, it may be
+       desirable to use clock units:
+
+         C->S: PLAY rtsp://audio.example.com/meeting.en RTSP/1.0
+               CSeq: 835
+               Session: 12345678
+               Range: clock=19961108T142300Z-19961108T143520Z
+
+         S->C: RTSP/1.0 200 OK
+               CSeq: 835
+               Date: 23 Jan 1997 15:35:06 GMT
+
+       A media server only supporting playback 
+            MUST support the npt format and 
+            MAY support the clock and smpte formats.
+
+10.6 PAUSE
+    暂停presentation或一路media stream
+
+     C->S: PAUSE rtsp://example.com/fizzle/foo RTSP/1.0
+           CSeq: 834
+           Session: 12345678
+
+     S->C: RTSP/1.0 200 OK
+           CSeq: 834
+           Date: 23 Jan 1997 15:35:06 GMT
+
+10.7 TEARDOWN
+   The TEARDOWN request stops the stream delivery for the given URI, 
+        freeing the resources associated with it. 
+
+   Example:
+     C->S: TEARDOWN rtsp://example.com/fizzle/foo RTSP/1.0
+           CSeq: 892
+           Session: 12345678
+
+     S->C: RTSP/1.0 200 OK
+           CSeq: 892
+
+10.8 GET_PARAMETER
+    retrieves the value of a parameter of a presentation or stream specified in the URI 
+
+    GET_PARAMETER with no entity body may be used to test client or server liveness ("ping").
+
+     S->C: GET_PARAMETER rtsp://example.com/fizzle/foo RTSP/1.0
+           CSeq: 431
+           Content-Type: text/parameters
+           Session: 12345678
+           Content-Length: 15
+
+           packets_received
+           jitter
+
+     C->S: RTSP/1.0 200 OK
+           CSeq: 431
+           Content-Length: 46
+           Content-Type: text/parameters
+
+           packets_received: 10
+           jitter: 0.3838
+
+10.9 SET_PARAMETER
+    requests to set the value of a parameter for a presentation or stream specified by the URI.
+
+    C->S: SET_PARAMETER rtsp://example.com/fizzle/foo RTSP/1.0
+        CSeq: 421
+        Content-length: 20
+        Content-type: text/parameters
+
+        barparam: barstuff
+
+    S->C: RTSP/1.0 451 Invalid Parameter
+       CSeq: 421
+       Content-length: 10
+       Content-type: text/parameters
+
+       barparam
+
+10.10 REDIRECT
+    A redirect request informs the client that it must connect to another server location
+
+     S->C: REDIRECT rtsp://example.com/fizzle/foo RTSP/1.0
+       CSeq: 732
+       Location: rtsp://bigserver.com:8001
+       Range: clock=19960213T143205Z-
+
+10.11 RECORD
+    This method initiates recording a range of media data according to the presentation description
+    The timestamp reflects start and end time (UTC)
+
+    In this example, the media server was previously invited to the conference indicated.
+
+    C->S: RECORD rtsp://example.com/meeting/audio.en RTSP/1.0
+       CSeq: 954
+       Session: 12345678
+       Conference: 128.16.64.19/32492374
+
+10.12 Embedded (Interleaved) Binary Data
+    在rtsp中传递二进制数据(media data?)
+
+    Stream data such as RTP packets is encapsulated by 
+        1. an ASCII dollar sign (24 hexadecimal), 
+        2. followed by a one-byte channel identifier, 
+        3. followed by the length of the encapsulated binary data as a binary, 
+        4. two-byte integer in network byte order. 
+        5. The stream data follows immediately afterwards, without a CRLF, 
+        6 but including the upper-layer protocol headers. 
+        
+        Each $ block contains exactly one upper-layer protocol data unit, e.g., one RTP packet.
+
+    When the transport choice is RTP, RTCP messages are also interleaved by the server over the TCP connection. 
+
+    ?? rtcp, first available channel, rtp channel, transport header
+    As a default, RTCP packets are sent on the first available channel higher than the RTP channel. 
+    The client MAY explicitly request RTCP packets on another channel.
+    This is done by specifying two channels in the interleaved parameter of the Transport header(Section 12.39).
+
+    RTCP is needed for synchronization when two or more streams are
+    interleaved in such a fashion. Also, this provides a convenient way
+    to tunnel RTP/RTCP packets through the TCP control connection when
+    required by the network configuration and transfer them onto UDP
+    when possible.
+
+     C->S: SETUP rtsp://foo.com/bar.file RTSP/1.0
+           CSeq: 2
+           Transport: RTP/AVP/TCP;interleaved=0-1
+
+     S->C: RTSP/1.0 200 OK
+           CSeq: 2
+           Date: 05 Jun 1997 18:57:18 GMT
+           Transport: RTP/AVP/TCP;interleaved=0-1
+           Session: 12345678
+
+     C->S: PLAY rtsp://foo.com/bar.file RTSP/1.0
+           CSeq: 3
+           Session: 12345678
+
+     S->C: RTSP/1.0 200 OK
+           CSeq: 3
+           Session: 12345678
+           Date: 05 Jun 1997 18:59:15 GMT
+           RTP-Info: url=rtsp://foo.com/bar.file;
+             seq=232433;rtptime=972948234
+
+     // channel 0 传递rtp消息，channel 1传递rtcp消息
+     S->C: $\000{2 byte length}{"length" bytes data, w/RTP header}
+     S->C: $\000{2 byte length}{"length" bytes data, w/RTP header}
+     S->C: $\001{2 byte length}{"length" bytes  RTCP packet}
+
+11 Status Code Definitions
+    11.1 Success 2xx
+
+        11.1.1 250 Low on Storage Space
+            RECORD时，server的存储空间不足
+
+    11.2 Redirection 3xx
+        be used for 
+            1. load balancing or 
+            2. redirecting stream requests to a server topologically closer to the client.
+
+    11.3 Client Error 4xx
+        11.3.1 405 Method Not Allowed
+            The method specified in the request is not allowed for the resource identified by the request URI.
+
+        11.3.2 451 Parameter Not Understood
+
+        11.3.3 452 Conference Not Found
+
+        11.3.4 453 Not Enough Bandwidth
+
+        11.3.5 454 Session Not Found
+            The RTSP session identifier in the Session header is missing, invalid, or has timed out.
+
+        11.3.6 455 Method Not Valid in This State
+
+        11.3.7 456 Header Field Not Valid for Resource
+            The server could not act on a required request header. 
+            For example, if PLAY contains the Range header field but the stream does not allow seeking.
+
+    11.3.8 457 Invalid Range
+        The Range value given is out of bounds, e.g., beyond the end of the presentation.
+
+    11.3.9 458 Parameter Is Read-Only
+       The parameter to be set by SET_PARAMETER can be read but not modified.
+
+    11.3.10 459 Aggregate Operation Not Allowed
+        对这个url不可使用Aggregate operation
+
+    11.3.11 460 Only Aggregate Operation Allowed
+
+    11.3.12 461 Unsupported Transport
+       The Transport field did not contain a supported transport specification.
+
+    11.3.13 462 Destination Unreachable
+        a client attempt to place an invalid Destination parameter in the Transport field.
+
+    11.3.14 551 Option not supported
+       An option given in the Require or the Proxy-Require fields was not supported.  
+
+
+12 Header Field Definitions
+
+    type "g" designates general request headers
+    type "R" designates request headers, 
+    type "r" designates response headers, 
+    type "e" designates entity header fields.
+
+   "req." MUST be implemented 
+   "opt." are optional
+
+   Header               type   support   methods
+   Accept               R      opt.      entity
+   Accept-Encoding      R      opt.      entity
+   Accept-Language      R      opt.      all
+   Allow                r      opt.      all
+   Authorization        R      opt.      all
+   Bandwidth            R      opt.      all
+   Blocksize            R      opt.      all but OPTIONS, TEARDOWN
+   Cache-Control        g      opt.      SETUP
+   Conference           R      opt.      SETUP
+   Connection           g      req.      all
+   Content-Base         e      opt.      entity
+   Content-Encoding     e      req.      SET_PARAMETER
+   Content-Encoding     e      req.      DESCRIBE, ANNOUNCE
+   Content-Language     e      req.      DESCRIBE, ANNOUNCE
+   Content-Length       e      req.      SET_PARAMETER, ANNOUNCE
+   Content-Length       e      req.      entity
+   Content-Location     e      opt.      entity
+   Content-Type         e      req.      SET_PARAMETER, ANNOUNCE
+   Content-Type         r      req.      entity
+   CSeq                 g      req.      all
+   Date                 g      opt.      all
+   Expires              e      opt.      DESCRIBE, ANNOUNCE
+   From                 R      opt.      all
+   If-Modified-Since    R      opt.      DESCRIBE, SETUP
+   Last-Modified        e      opt.      entity
+   Proxy-Authenticate
+   Proxy-Require        R      req.      all
+   Public               r      opt.      all
+   Range                R      opt.      PLAY, PAUSE, RECORD
+   Range                r      opt.      PLAY, PAUSE, RECORD
+   Referer              R      opt.      all
+   Require              R      req.      all
+   Retry-After          r      opt.      all
+   RTP-Info             r      req.      PLAY
+   Scale                Rr     opt.      PLAY, RECORD
+   Session              Rr     req.      all but SETUP, OPTIONS
+   Server               r      opt.      all
+   Speed                Rr     opt.      PLAY
+   Transport            Rr     req.      SETUP
+   Unsupported          r      req.      all
+   User-Agent           R      opt.      all
+   Via                  g      opt.      all
+   WWW-Authenticate     r      opt.      all
+
+
+
+    12.1 Accept
+        specify certain presentation description content types which are acceptable for the response.
+        发送者能够识别的响应类型
+
+        Example of use:
+            Accept: application/rtsl, application/sdp;level=2
+
+    12.4 Allow
+        The Allow response header field lists the methods supported by the resource identified by the request-URI
+        An Allow header field must be present in a 405 (Method not allowed) response.
+        告诉请求者method不支持， 并提示支持哪些方法
+
+        Example of use:
+            Allow: SETUP, PLAY, RECORD, SET_PARAMETER
+
+    12.6 Bandwidth
+       1. the estimated bandwidth available to the client
+       2. measured in bits per second
+
+       The bandwidth available to the client may change during an RTSP session, e.g., due to modem retraining.
+
+       Bandwidth = "Bandwidth" ":" 1*DIGIT
+       Example:
+         Bandwidth: 4000
+
+    12.7 Blocksize
+        sent from the client to the media server asking the server for a particular media packet size
+            仅仅是媒体数据包的大小
+        does not include lower-layer headers such as IP, UDP, or RTP
+        The server is free to use a blocksize which is lower than the one requested
+
+    12.8 Cache-Control
+        should only be specified in a SETUP request and its response. 
+
+   Cache-Control            =   "Cache-Control" ":" 1#cache-directive
+   cache-directive          =   cache-request-directive
+                            |   cache-response-directive
+   cache-request-directive  =   "no-cache"
+                            |   "max-stale"
+                            |   "min-fresh"
+                            |   "only-if-cached"
+                            |   cache-extension
+   cache-response-directive =   "public"
+                            |   "private"
+                            |   "no-cache"
+                            |   "no-transform"
+                            |   "must-revalidate"
+                            |   "proxy-revalidate"
+                            |   "max-age" "=" delta-seconds
+                            |   cache-extension
+   cache-extension          =   token [ "=" ( token | quoted-string ) ]
+
+   no-cache:
+      Indicates that the media stream MUST NOT be cached anywhere.
+   
+  public:
+      Indicates that the media stream is cacheable by any cache.
+
+   private:
+      Indicates that the media stream is intended for a single user and 
+          MUST NOT be cached by a shared cache. 
+
+      A private (non- shared) cache may cache the media stream.
+
+   no-transform:
+        Cache或proxy服务器可能会改变stream的格式，为了节省空间
+        an intermediate cache or proxy MUST NOT change the encoding of the stream
+
+   only-if-cached:
+        网络连接差的情况下，客户端可以仅仅要求返回被cache的媒体部分
+
+  max-stale:
+      Indicates that the client is willing to accept a media stream that has exceeded its expiration time. 
+
+   min-fresh:
+      the client wants a response that will still be fresh for at least the specified number of seconds.
+
+   ?? must-revalidate:
+      When the must-revalidate directive is present in a SETUP response received by a cache, 
+      that cache MUST NOT use the entry after it becomes stale to respond to a subsequent
+      request without first revalidating it with the origin server.
+
+      That is, the cache must do an end-to-end revalidation every
+      time, if, based solely on the origin server's Expires, the cached response is stale.)
+
+12.9 Conference
+    establishes a logical connection between a pre-established conference and an RTSP stream
+
+    Conference = "Conference" ":" conference-id Example:
+        Conference: 199702170042.SAA08642@obiwan.arl.wustl.edu%20Starr
+
+     A response code of 452 (452 Conference Not Found) is returned if the conference-id is not valid.
+
+
+12.10 Connection
+   See [H14.10]
+
+12.11 Content-Base
+   See [H14.11]
+
+12.12 Content-Encoding
+   See [H14.12]
+
+12.13 Content-Language
+   See [H14.13]
+
+12.14 Content-Length
+   This field contains the length of the content of the method 
+
+12.16 Content-Type
+   See [H14.18]. Note that the content types suitable for RTSP are
+   likely to be restricted in practice to presentation descriptions and
+   parameter-value types.
+
+12.17 CSeq
+   The CSeq field specifies the sequence number for an RTSP request-response pair. 
+   MUST be present in all requests and responses. 
+
+
+12.19 Expires
+   gives a date and time after which the description or media-stream should be considered stale. 
+
+   DESCRIBE response:
+        indicates a date and time after which the description should be considered stale.
+
+   Expires = "Expires" ":" HTTP-date
+   example:
+     Expires: Thu, 01 Dec 1994 16:00:00 GMT
+
+12.20 From
+   See [H14.22].
+
+12.22 If-Match
+   See [H14.25].
+   ensuring the integrity of the presentation description
+
+12.23 If-Modified-Since
+    used with the DESCRIBE and SETUP methods to make them conditional
+
+    If the requested variant has not been modified since the time specified in this field, 
+        a 304 (not modified) response will be returned without any message-body
+
+   If-Modified-Since = "If-Modified-Since" ":" HTTP-date
+   example:
+     If-Modified-Since: Sat, 29 Oct 1994 19:43:31 GMT
+
+12.24 Last-Modified
+    indicates the date and time at which the origin server believes 
+        the presentation description or media stream was last modified
+
+    DESCRIBE or ANNOUNCE, the last modification date and time of the description, 
+        for SETUP that of the media stream.
+
+12.27 Proxy-Require
+    The Proxy-Require header is used to indicate proxy-sensitive features 
+        that MUST be supported by the proxy
+
+12.29 Range
+    This request and response header field specifies a range of time.
+
+    Within RTSP, byte ranges [H14.36.1] are not meaningful and MUST NOT be used
+
+    The header may also contain a time parameter in UTC, 
+        specifying the time at which the operation is to be made effective.
+        包括一个时间参数， 指示本操作什么时候开始
+
+       Range            = "Range" ":" 1\#ranges-specifier [ ";" "time" "=" utc-time ]
+       ranges-specifier = npt-range | utc-range | smpte-range
+       Example:
+         Range: clock=19960213T143205Z-;time=19970123T143720Z
+
+12.30 Referer
+   See [H14.37]. The URL refers to that of the presentation description, typically retrieved via HTTP.
+
+12.31 Retry-After
+   See [H14.38].
+
+12.32 Require
+    clients to query the server about options that it may or may not support
+
+   Require =   "Require" ":"  1#option-tag
+   Example:
+     C->S:   SETUP rtsp://server.com/foo/bar/baz.rm RTSP/1.0
+             CSeq: 302
+             Require: funky-feature
+             Funky-Parameter: funkystuff
+
+     S->C:   RTSP/1.0 551 Option not supported
+             CSeq: 302
+             Unsupported: funky-feature
+
+     C->S:   SETUP rtsp://server.com/foo/bar/baz.rm RTSP/1.0
+             CSeq: 303
+
+     S->C:   RTSP/1.0 200 OK
+             CSeq: 303
+
+12.33 RTP-Info
+   This field is used to set RTP-specific parameters in the PLAY response.
+
+    url:
+        Indicates the stream URL which for which the following RTP parameters correspond.
+
+   seq:
+        Indicates the sequence number of the first packet of the stream.  
+
+   rtptime:
+          Indicates the RTP timestamp corresponding to the time value in the Range response header. 
+
+   Syntax:
+   RTP-Info        = "RTP-Info" ":" 1#stream-url 1*parameter
+   stream-url      = "url" "=" url
+   parameter       = ";" "seq" "=" 1*DIGIT
+                   | ";" "rtptime" "=" 1*DIGIT
+   Example:
+     RTP-Info: url=rtsp://foo.com/bar.avi/streamid=0;seq=45102,
+               url=rtsp://foo.com/bar.avi/streamid=1;seq=30211
+
+12.34 Scale
+    正常播放 : 1
+    两倍速度播放: 2
+    慢速播放: 0.5
+
+    Scale = "Scale" ":" [ "-" ] 1*DIGIT [ "." *DIGIT ]
+    Example of playing in reverse at 3.5 times normal rate: Scale: -3.5
+
+
+12.35 Speed
+    requests the server to deliver data to the client at a particular speed
+    The default is the bit rate of the stream.
+    要求server以多大的速率传输数据
+
+       Speed = "Speed" ":" 1*DIGIT [ "." *DIGIT ]
+
+       Example:
+         Speed: 2.5
+
+
+12.37 Session
+    This request and response header field identifies an RTSP session 
+        1. started by the media server in a SETUP response 
+        2. concluded by TEARDOWN on the presentation URL
+
+    The session identifier is chosen by the media server
+        Once a client receives a Session identifier, 
+        it MUST return it for any request related to that session.  
+
+    Session  = "Session" ":" session-id [ ";" "timeout" "=" delta-seconds ]
+
+    timeout parameter 
+        only allowed in a response header
+        indicate to the client how long the server is prepared to wait between RTSP commands 
+            before closing the session due to lack of activity 
+
+        measured in seconds 
+            with a default of 60 seconds
+
+    a session identifier identifies a RTSP session across transport sessions or connections
+    Control messages for more than one RTSP URL may be sent within a single RTSP session
+        一个presentation的多个media stream可以用一个session控制
+
+    The response 454 (Session Not Found) is returned if the session identifier is invalid.
+
+12.38 Timestamp
+    describes when the client sent the request to the server
+
+    Timestamp  = "Timestamp" ":" *(DIGIT) [ "." *(DIGIT) ] [ delay ]
+    delay      =  *(DIGIT) [ "." *(DIGIT) ]
+
+12.39 Transport
+    indicates which transport protocol is to be used
+    configures its parameters 
+        destination address,
+        compression, 
+        multicast 
+        time-to-live 
+        destination port
+
+    Syntax: 
+        transport/profile/lower-transport.
+
+        unicast | multicast:
+        destination:
+            The address to which a stream will be sent.
+            The client may specify the multicast address with the destination parameter.
+
+       source:
+          If the source address for the stream is different than can be
+          derived from the RTSP endpoint address (the server in playback
+          or the client in recording), the source MAY be specified.
+
+       layers:
+          The number of multicast layers to be used for this media stream.
+
+       mode:
+          PLAY/RECORD
+
+       append:
+          for RECORD, indicates that 
+            the media data should append to the existing resource rather than overwrite it. 
+
+        interleaved:
+            implies mixing the media stream with the control stream 
+            The argument provides the channel number to be used in the $ statement. 
+
+       ttl:
+              multicast time-to-live
+
+   RTP Specific:
+
+   port:
+      provides the RTP/RTCP port pair for a multicast session. 
+          It is specified as a range, e.g., port=3456-3457.
+
+   client_port:
+      This parameter provides the unicast RTP/RTCP port pair 
+        on which the client has chosen to receive media data and control information.  
+
+      It is specified as a range, e.g., client_port=3456-3457.
+
+   server_port:
+      This parameter provides the unicast RTP/RTCP port pair on which 
+            the server has chosen to receive media data and control information.  
+
+      It is specified as a range, e.g., server_port=3456-3457.
+
+   ssrc:
+        indicates the RTP SSRC [24, Sec. 3] value that 
+            should be (request) or will be (response) used by the media server. 
+        
+
+   Transport           =    "Transport" ":"
+                            1\#transport-spec
+   transport-spec      =    transport-protocol/profile[/lower-transport]
+                            *parameter
+   transport-protocol  =    "RTP"
+   profile             =    "AVP"
+   lower-transport     =    "TCP" | "UDP"
+   parameter           =    ( "unicast" | "multicast" )
+                       |    ";" "destination" [ "=" address ]
+                       |    ";" "interleaved" "=" channel [ "-" channel ]
+                       |    ";" "append"
+                       |    ";" "ttl" "=" ttl
+                       |    ";" "layers" "=" 1*DIGIT
+                       |    ";" "port" "=" port [ "-" port ]
+                       |    ";" "client_port" "=" port [ "-" port ]
+                       |    ";" "server_port" "=" port [ "-" port ]
+                       |    ";" "ssrc" "=" ssrc
+                       |    ";" "mode" = <"> 1\#mode <">
+   ttl                 =    1*3(DIGIT)
+   port                =    1*5(DIGIT)
+   ssrc                =    8*8(HEX)
+   channel             =    1*3(DIGIT)
+   address             =    host
+   mode                =    <"> *Method <"> | Method
+
+     Transport: RTP/AVP;multicast;ttl=127;mode="PLAY",
+                RTP/AVP;unicast;client_port=3456-3457;mode="PLAY"
+
+13 Caching
+    In HTTP, response-request pairs are cached.
+
+    RTSP differs significantly in that respect:
+        一般response都不会被cache
+        除非the presentation description 
+            returned by DESCRIBE or included with ANNOUNCE
+
+        continuous media data会被cache
+
+   On receiving a SETUP or PLAY request
+
+    a media cache has to store the presentation description
+
+
+14 Examples
+
+    14.1 Media on Demand (Unicast)
+        Client C
+        media server A ( audio.example.com)
+        media server V (video.example.com)
+        web server W (presentation description)
+            contains descriptions of the presentation and all its streams
+            including 
+                the codecs that are available, 
+                dynamic RTP payload types, 
+                the protocol stack, 
+                and content information 
+                    language or 
+                    copyright restrictions. 
+                an indication about the timeline of the movie
+
+    ========================================
+     // 向web server请求sdp
+     C->W: GET /twister.sdp HTTP/1.1
+           Host: www.example.com
+           Accept: application/sdp
+
+     W->C: HTTP/1.0 200 OK
+           Content-Type: application/sdp
+
+           v=0
+           o=- 2890844526 2890842807 IN IP4 192.16.24.202
+           // session中包括一路audio stream和一路video stream
+           s=RTSP Session
+           m=audio 0 RTP/AVP 0
+           a=control:rtsp://audio.example.com/twister/audio.en
+           m=video 0 RTP/AVP 31
+           a=control:rtsp://video.example.com/twister/video
+
+    ========================================        
+    // setup audio stream
+     C->A: SETUP rtsp://audio.example.com/twister/audio.en RTSP/1.0
+           CSeq: 1
+           Transport: RTP/AVP/UDP;unicast;client_port=3056-3057
+
+     A->C: RTSP/1.0 200 OK
+           CSeq: 1
+           Session: 12345678
+           Transport: RTP/AVP/UDP;unicast;client_port=3056-3057;
+                      server_port=5000-5001
+
+    ========================================        
+    // setup video stream 
+        注意audio和video的client_port不一样
+        Session id也不一样
+     C->V: SETUP rtsp://video.example.com/twister/video RTSP/1.0
+           CSeq: 1
+           Transport: RTP/AVP/UDP;unicast;client_port=3058-3059
+
+     V->C: RTSP/1.0 200 OK
+           CSeq: 1
+           Session: 23456789
+           Transport: RTP/AVP/UDP;unicast;client_port=3058-3059;
+                      server_port=5002-5003
+
+    ========================================        
+    // 播放video
+     C->V: PLAY rtsp://video.example.com/twister/video RTSP/1.0
+           CSeq: 2
+           Session: 23456789
+           Range: smpte=0:10:00-
+
+     V->C: RTSP/1.0 200 OK
+           CSeq: 2
+           Session: 23456789
+           Range: smpte=0:10:00-0:20:00
+           RTP-Info: url=rtsp://video.example.com/twister/video;
+             seq=12312232;rtptime=78712811
+
+    ========================================        
+    // 播放audio
+     C->A: PLAY rtsp://audio.example.com/twister/audio.en RTSP/1.0
+           CSeq: 2
+           Session: 12345678
+           Range: smpte=0:10:00-
+
+     A->C: RTSP/1.0 200 OK
+           CSeq: 2
+           Session: 12345678
+
+           Range: smpte=0:10:00-0:20:00
+           RTP-Info: url=rtsp://audio.example.com/twister/audio.en;
+             seq=876655;rtptime=1032181
+
+    ========================================        
+    // 结束audio
+     C->A: TEARDOWN rtsp://audio.example.com/twister/audio.en RTSP/1.0
+           CSeq: 3
+           Session: 12345678
+
+     A->C: RTSP/1.0 200 OK
+           CSeq: 3
+
+    ========================================        
+    // 结束video
+     C->V: TEARDOWN rtsp://video.example.com/twister/video RTSP/1.0
+           CSeq: 3
+           Session: 23456789
+
+     V->C: RTSP/1.0 200 OK
+           CSeq: 3
+
+    // 客户端可以通过标准的rtp方式同步两路stream
+   Even though the audio and video track are on two different servers,
+   and may start at slightly different times and may drift with respect
+   to each other, the client can synchronize the two using standard RTP
+   methods, in particular the time scale contained in the RTCP sender
+   reports.
+
+14.2 Streaming of a Container file
+    using a single RTSP session to control multiple streams.
+
+    Client C requests a presentation from media server M . 
+    The movie is stored in a container file. 
+    The client has obtained an RTSP URL to the container file.
+
+    ========================================        
+    // 通过DESCRIBE方法获取presentation description
+     C->M: DESCRIBE rtsp://foo/twister RTSP/1.0
+           CSeq: 1
+
+     M->C: RTSP/1.0 200 OK
+           CSeq: 1
+           Content-Type: application/sdp
+           Content-Length: 164
+
+           v=0
+           o=- 2890844256 2890842807 IN IP4 172.16.2.93
+           s=RTSP Session
+           i=An Example of RTSP Session Usage
+           a=control:rtsp://foo/twister
+           t=0 0
+           m=audio 0 RTP/AVP 0
+           a=control:rtsp://foo/twister/audio
+           m=video 0 RTP/AVP 26
+           a=control:rtsp://foo/twister/video
+
+    ========================================        
+    // Aggregate control
+    // audio/video stream共用一个session
+     C->M: SETUP rtsp://foo/twister/audio RTSP/1.0
+           CSeq: 2
+           Transport: RTP/AVP;unicast;client_port=8000-8001
+
+     M->C: RTSP/1.0 200 OK
+           CSeq: 2
+           Transport: RTP/AVP;unicast;client_port=8000-8001;
+                      server_port=9000-9001
+           Session: 12345678
+
+    ========================================        
+     C->M: SETUP rtsp://foo/twister/video RTSP/1.0
+           CSeq: 3
+           Transport: RTP/AVP;unicast;client_port=8002-8003
+           Session: 12345678
+
+     M->C: RTSP/1.0 200 OK
+           CSeq: 3
+           Transport: RTP/AVP;unicast;client_port=8002-8003;
+                      server_port=9004-9005
+           Session: 12345678
+
+    ========================================        
+    // 播放audio/video
+     C->M: PLAY rtsp://foo/twister RTSP/1.0
+           CSeq: 4
+           Range: npt=0-
+           Session: 12345678
+
+     M->C: RTSP/1.0 200 OK
+           CSeq: 4
+           Session: 12345678
+           RTP-Info: url=rtsp://foo/twister/video;
+             seq=9810092;rtptime=3450012
+
+    ========================================        
+    // 暂停video
+     C->M: PAUSE rtsp://foo/twister/video RTSP/1.0
+           CSeq: 5
+           Session: 12345678
+
+     M->C: RTSP/1.0 460 Only aggregate operation allowed
+           CSeq: 5
+    ========================================        
+    // 暂停presentation
+     C->M: PAUSE rtsp://foo/twister RTSP/1.0
+           CSeq: 6
+           Session: 12345678
+
+     M->C: RTSP/1.0 200 OK
+           CSeq: 6
+           Session: 12345678
+
+    ========================================        
+     C->M: SETUP rtsp://foo/twister RTSP/1.0
+           CSeq: 7
+           Transport: RTP/AVP;unicast;client_port=10000
+
+    // setup不支持aggregate operation
+     M->C: RTSP/1.0 459 Aggregate operation not allowed
+           CSeq: 7
+
+14.3 Single Stream Container Files
+
+    ========================================        
+    // 通过DESCRIBE方法获取presentation description
+     C->M: DESCRIBE rtsp://foo/twister RTSP/1.0
+          Accept: application/x-rtsp-mh, application/sdp
+           CSeq: 1
+
+    S->C  RTSP/1.0 200 OK
+          CSeq: 1
+          Content-base: rtsp://foo.com/test.wav/
+          Content-type: application/sdp
+          Content-length: 48
+
+          v=0
+          o=- 872653257 872653257 IN IP4 172.16.2.187
+          s=mu-law wave file
+          i=audio test
+          t=0 0
+          m=audio 0 RTP/AVP 0
+          a=control:streamid=0
+
+    C->S  SETUP rtsp://foo.com/test.wav/streamid=0 RTSP/1.0
+          Transport: RTP/AVP/UDP;unicast;
+                     client_port=6970-6971;mode=play
+          CSeq: 2
+
+    S->C  RTSP/1.0 200 OK
+          Transport: RTP/AVP/UDP;unicast;client_port=6970-6971;
+                     server_port=6970-6971;mode=play
+          CSeq: 2
+          Session: 2034820394
+
+    C->S  PLAY rtsp://foo.com/test.wav RTSP/1.0
+          CSeq: 3
+          Session: 2034820394
+
+    S->C  RTSP/1.0 200 OK
+          CSeq: 3
+          Session: 2034820394
+          RTP-Info: url=rtsp://foo.com/test.wav/streamid=0;
+            seq=981888;rtptime=3781123
+
+14.4 Live Media Presentation Using Multicast
+
+   The media server M chooses the multicast address and port. 
+   the web server only contains a pointer to the full description, 
+   while the media server M maintains the full description.
+
+     C->W: GET /concert.sdp HTTP/1.1
+           Host: www.example.com
+
+     W->C: HTTP/1.1 200 OK
+           Content-Type: application/x-rtsl
+
+           <session>
+             <track src="rtsp://live.example.com/concert/audio">
+           </session>
+
+     C->M: DESCRIBE rtsp://live.example.com/concert/audio RTSP/1.0
+           CSeq: 1
+
+     M->C: RTSP/1.0 200 OK
+           CSeq: 1
+           Content-Type: application/sdp
+           Content-Length: 44
+
+           v=0
+           o=- 2890844526 2890842807 IN IP4 192.16.24.202
+           s=RTSP Session
+           m=audio 3456 RTP/AVP 0
+           a=control:rtsp://live.example.com/concert/audio
+           c=IN IP4 224.2.0.1/16
+
+     C->M: SETUP rtsp://live.example.com/concert/audio RTSP/1.0
+           CSeq: 2
+           Transport: RTP/AVP;multicast
+
+     M->C: RTSP/1.0 200 OK
+           CSeq: 2
+           Transport: RTP/AVP;multicast;destination=224.2.0.1;
+                      port=3456-3457;ttl=16
+           Session: 0456804596
+
+     C->M: PLAY rtsp://live.example.com/concert/audio RTSP/1.0
+           CSeq: 3
+           Session: 0456804596
+
+     M->C: RTSP/1.0 200 OK
+           CSeq: 3
+           Session: 0456804596
+
+14.5 Playing media into an existing session
+   A conference participant C wants to have the media server M 
+        play back a demo tape into an existing conference. 
+
+   C indicates to the media server that the network addresses and encryption keys are already given by the conference, 
+        so they should not be chosen by the server.
+
+   The example omits the simple ACK responses.
+
+
+    ========================================        
+     C->M: DESCRIBE rtsp://server.example.com/demo/548/sound RTSP/1.0
+           CSeq: 1
+           Accept: application/sdp
+
+     M->C: RTSP/1.0 200 1 OK
+           Content-type: application/sdp
+           Content-Length: 44
+
+           v=0
+           o=- 2890844526 2890842807 IN IP4 192.16.24.202
+           s=RTSP Session
+           i=See above
+           t=0 0
+           m=audio 0 RTP/AVP 0
+
+    ========================================        
+    // 请求server在一个已存在的conference上播放stream
+     C->M: SETUP rtsp://server.example.com/demo/548/sound RTSP/1.0
+           CSeq: 2
+           Transport: RTP/AVP;multicast;destination=225.219.201.15;
+                      port=7000-7001;ttl=127
+           Conference: 199702170042.SAA08642@obiwan.arl.wustl.edu%20Starr
+
+     M->C: RTSP/1.0 200 OK
+           CSeq: 2
+           Transport: RTP/AVP;multicast;destination=225.219.201.15;
+                      port=7000-7001;ttl=127
+           Session: 91389234234
+           Conference: 199702170042.SAA08642@obiwan.arl.wustl.edu%20Starr
+
+     C->M: PLAY rtsp://server.example.com/demo/548/sound RTSP/1.0
+           CSeq: 3
+           Session: 91389234234
+
+     M->C: RTSP/1.0 200 OK
+           CSeq: 3
+
+14.6 Recording
+   The conference participant client C asks the media server M to record the audio and video portions of a meeting. 
+
+   The client uses the ANNOUNCE method to provide meta-information about the recorded session to the server.
+
+    ========================================        
+    // 向server上报录制需要的信息
+     C->M: ANNOUNCE rtsp://server.example.com/meeting RTSP/1.0
+           CSeq: 90
+           Content-Type: application/sdp
+           Content-Length: 121
+
+           v=0
+           o=camera1 3080117314 3080118787 IN IP4 195.27.192.36
+           s=IETF Meeting, Munich - 1
+           i=The thirty-ninth IETF meeting will be held in Munich, Germany
+           u=http://www.ietf.org/meetings/Munich.html
+           e=IETF Channel 1 <ietf39-mbone@uni-koeln.de>
+           p=IETF Channel 1 +49-172-2312 451
+           c=IN IP4 224.0.1.11/127
+           t=3080271600 3080703600
+           a=tool:sdr v2.4a6
+           a=type:test
+           m=audio 21010 RTP/AVP 5
+           c=IN IP4 224.0.1.11/127
+           a=ptime:40
+           m=video 61010 RTP/AVP 31
+           c=IN IP4 224.0.1.12/127
+
+     M->C: RTSP/1.0 200 OK
+           CSeq: 90
+
+     C->M: SETUP rtsp://server.example.com/meeting/audiotrack RTSP/1.0
+           CSeq: 91
+           Transport: RTP/AVP;multicast;destination=224.0.1.11;
+                      port=21010-21011;mode=record;ttl=127
+
+     M->C: RTSP/1.0 200 OK
+           CSeq: 91
+           Session: 50887676
+           Transport: RTP/AVP;multicast;destination=224.0.1.11;
+                      port=21010-21011;mode=record;ttl=127
+
+     C->M: SETUP rtsp://server.example.com/meeting/videotrack RTSP/1.0
+           CSeq: 92
+           Session: 50887676
+           Transport: RTP/AVP;multicast;destination=224.0.1.12;
+                      port=61010-61011;mode=record;ttl=127
+
+     M->C: RTSP/1.0 200 OK
+           CSeq: 92
+           Transport: RTP/AVP;multicast;destination=224.0.1.12;
+                      port=61010-61011;mode=record;ttl=127
+
+     C->M: RECORD rtsp://server.example.com/meeting RTSP/1.0
+           CSeq: 93
+           Session: 50887676
+           Range: clock=19961110T1925-19961110T2015
+
+     M->C: RTSP/1.0 200 OK
+           CSeq: 93
+
+16 Security Considerations
+
+Appendix A: RTSP Protocol State Machines
+
+A.1 Client State Machine
+    Init:
+      SETUP has been sent, waiting for reply.
+
+    Ready:
+      SETUP reply received or PAUSE reply received while in Playing state.
+
+    Playing:
+      PLAY reply received
+
+    Recording:
+      RECORD reply received
+
+   state       message sent     next state after response
+   Init        SETUP            Ready
+               TEARDOWN         Init
+   Ready       PLAY             Playing
+               RECORD           Recording
+               TEARDOWN         Init
+               SETUP            Ready
+   Playing     PAUSE            Ready
+               TEARDOWN         Init
+               PLAY             Playing
+               SETUP            Playing (changed transport)
+   Recording   PAUSE            Ready
+               TEARDOWN         Init
+               RECORD           Recording
+               SETUP            Recording (changed transport)
+
+Appendix B: Interaction with RTP
+
+    RTSP allows media clients to 
+        control selected, 
+        non-contiguous sections of media presentations, 
+        rendering those streams 
+
+            with an RTP media layer[24]. 
+
+        The media layer rendering the RTP stream should not be affected by jumps in NPT
+        both RTP sequence numbers and RTP timestamps MUST be 
+            continuous and monotonic across jumps of NPT.
+
+   As an example, assume 
+        1. a clock frequency of 8000 Hz, 
+        2. a packetization interval of 100 ms 
+        3. an initial sequence number and timestamp of zero. 
+
+            a. First we play NPT 10 through 15, 
+            b. then skip ahead and play NPT 18 through 20. 
+
+            The first segment is presented as RTP packets with 
+                sequence numbers 0 through 49 and 
+                timestamp 0 through 39,200. 
+            The second segment consists of RTP packets with 
+                sequence number 50 through 69, with 
+                timestamps 40,000 through 55,200.
+
+Appendix C: Use of SDP for RTSP Session Descriptions
+    aggregate control:
+        A presentation composed of streams from more servers that are not available for aggregate control
+        Such a description is typically retrieved by HTTP or other non-RTSP means. 
+        However, they may be received with ANNOUNCE methods.
+
+    non-aggregate control:
+        A presentation composed of multiple streams from a single server that are available for aggregate control.
+        Such a description is typically returned in reply to a DESCRIBE request on a URL, or received in an ANNOUNCE method.
+
+    C.1 Definitions
+        C.1.1 Control URL
+            convey the control URL
+            used both for 
+                1. the session 
+                2. media descriptions
+
+           Example: 
+            a=control:rtsp://example.com/foo
+
+           s=RTSP Session
+           i=An Example of RTSP Session Usage
+           a=control:rtsp://foo/twister
+           t=0 0
+           m=audio 0 RTP/AVP 0
+           a=control:rtsp://foo/twister/audio
+           m=video 0 RTP/AVP 26
+           a=control:rtsp://foo/twister/video
+
+        C.1.2 Media streams
+            enumerate the streams
+
+           Example:
+               m=audio 0 RTP/AVP 0
+
+        C.1.3 Payload type(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RTSP 协议格式：
+
+    请求命令的格式为：
+        METHOD URL CR LF
+        Field1:value CR LF
+        Field2:value CR LF
+        ......
+        Fieldn:value CR LF
+        CR LF
+
+    应答的格式为：
+        RTSP/major_version.minor_version status CR LF
+        Field1:value CR LF
+        Field2:value CR LF
+        ......
+        Fieldn:value CR LF
+        CR LF
+
+    基本命令
+        OPTIONS
+            An OPTIONS request returns the request types the server will accept. 
+
+        DESCRIBE
+            A DESCRIBE request includes 
+                1. an RTSP URL (rtsp://...)
+                2. the type of reply data that can be handled. 
+                    this relay includes the presentation description, 
+                        typically in Session Description Protocol (SDP) format. 
+                        the presentation description lists the media streams controlled with the aggregate URL. 
+                        In the typical case, there is one media stream each for audio and video. 
+
+        SETUP
+            A SETUP request specifies how a single media stream must be transported. 
+            This must be done before a PLAY request is sent. 
+
+            The request contains 
+                1. the media stream URL 
+                2. a transport specifier. 
+                    2.1 typically includes a local port for receiving RTP data (audio or video), 
+                    2.2 another port for RTCP data (meta information). 
+
+            The server reply usually 
+                1. confirms the chosen parameters, 
+                2. and fills in the missing parts, such as the server's chosen ports. 
+
+            Each media stream must be configured using SETUP before an aggregate play request may be sent. 
+
+        PLAY
+            A PLAY request will cause one or all media streams to be played. 
+            Play requests can be stacked by sending multiple PLAY requests. 
+
+            The URL may be the aggregate URL (to play all media streams), 
+                or a single media stream URL (to play only that stream). 
+                A range can be specified. If no range is specified, 
+                the stream is played from the beginning and plays to the end, or, 
+                if the stream is paused, it is resumed at the point it was paused. 
+
+        PAUSE
+            A PAUSE request temporarily halts one or all media streams, 
+                so it can later be resumed with a PLAY request. 
+                
+            The request contains an aggregate or media stream URL. 
+                A range parameter on a PAUSE request specifies when to pause. 
+                When the range parameter is omitted, the pause occurs immediately and indefinitely.
+
+        RECORD
+            The RECORD request can be used to send a stream to the server for storage.
+
+        TEARDOWN
+            A TEARDOWN request is used to terminate the session. 
+            It stops all media streams and frees all session related data on the server. 
+
+
+
+
+    Most RTSP servers use the Real-time Transport Protocol (RTP) for media stream delivery

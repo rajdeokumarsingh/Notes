@@ -1,0 +1,280 @@
+file:///home/jiangrui/android/backup/android-sdk/docs/guide/topics/fundamentals/bound-services.html
+
+FIXME:
+    直接绑定的service, onUnbind调用的时候，会自动退出
+        return bindService((new Intent()).setClass(this, FMRadioService.class),
+            mServConnection, Context.BIND_AUTO_CREATE);
+
+    如果不希望service, onUnbind后自动退出，或希望service延迟退出可
+        bind service:
+            startService(new Intent("com.pekall.fmradio.FMRADIO_SERVICE"));
+            return bindService(new Intent("com.pekall.fmradio.FMRADIO_SERVICE"),
+                    mServConnection, 0);
+                    
+        unbind service: 
+            unbindService(mServConnection); 
+
+        这样service端的onUnbind函数调用后不会自动退出， 除非调用
+            stopSelf();
+            或延迟退出
+            mHandler.sendEmptyMessageDelayed(
+                    FM_DELAY_STOP_SERVICE, IDLE_DELAY);
+
+如果使用AIDL接口, 需要将service包中*.aidl文件生成的*.java文件拷贝到client的src目录
+    如 client/src/com.service.aidl/test_aidl.java
+
+Bound Services
+    perform interprocess communication (IPC)
+
+    must implement the onBind() callback method
+        returns an IBinder object
+            defines the programming interface that clients 
+            can use to interact with the service
+
+    client --> bindService()
+        provide an implementation of ServiceConnection
+            monitors the connection with the service. 
+
+        Android calls onServiceConnected() on the ServiceConnection
+            deliver the IBinder that the client can use to communicate with the service.
+
+Creating a Bound Service
+    provide an IBinder 
+        Extending the Binder class
+            create your interface by extending the Binder class
+            returning an instance of it from onBind()
+
+            If your service is private to your own application and 
+                runs in the same process as the client (which is common)
+
+        Using a Messenger
+            create an interface for the service with a Messenger
+            the service defines a Handler that responds to different types of Message objects
+            allowing the client to send commands to the service using Message objects.
+            Additionally, the client can define a Messenger of its own so the service can send messages back. 
+
+            If you need your interface to work across different processes
+
+            the simplest way to perform interprocess communication (IPC)
+                because the Messenger queues all requests into a single thread 
+                so that you don't have to design your service to be thread-safe.
+
+            Messenger for your interface is simpler than implementing it with AIDL
+                Messenger queues all calls to the service,
+                a pure AIDL interface sends simultaneous requests to the service, 
+                    which must then handle multi-threading.
+
+        Using AIDL
+            Android Interface Definition Language
+            if your service don't use multi-threading, do NOT use AIDL
+                use the Messenger instead
+
+            must create an .aidl file that defines the programming interface
+
+
+Extending the Binder class
+
+    public class LocalService extends Service {
+        // Binder given to clients
+        private final IBinder mBinder = new LocalBinder();
+        // Random number generator
+        private final Random mGenerator = new Random();
+
+        /**
+         * Class used for the client Binder.  Because we know this service always
+         * runs in the same process as its clients, we don't need to deal with IPC.
+         */
+        public class LocalBinder extends Binder {
+            LocalService getService() {
+                // Return this instance of LocalService so clients can call public methods
+                return LocalService.this;
+            }
+        }
+
+        @Override
+        public IBinder onBind(Intent intent) {
+            return mBinder;
+        }
+
+        /** method for clients */
+        public int getRandomNumber() {
+            return mGenerator.nextInt(100);
+        }
+    }
+
+    public class BindingActivity extends Activity {
+        LocalService mService;
+        boolean mBound = false;
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.main);
+        }
+
+        @Override
+        protected void onStart() {
+            super.onStart();
+            // Bind to LocalService
+            Intent intent = new Intent(this, LocalService.class);
+            bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
+        }
+
+        @Override
+        protected void onStop() {
+            super.onStop();
+            // Unbind from the service
+            if (mBound) {
+                unbindService(mConnection);
+                mBound = false;
+            }
+        }
+
+        /** Called when a button is clicked (the button in the layout file attaches to
+         * this method with the android:onClick attribute) */
+        public void onButtonClick(View v) {
+            if (mBound) {
+                // Call a method from the LocalService.
+                // However, if this call were something that might hang, then this request should
+                // occur in a separate thread to avoid slowing down the activity performance.
+                int num = mService.getRandomNumber();
+                Toast.makeText(this, "number: " + num, Toast.LENGTH_SHORT).show();
+            }
+        }
+
+        /** Defines callbacks for service binding, passed to bindService() */
+        private ServiceConnection mConnection = new ServiceConnection() {
+
+            @Override
+            public void onServiceConnected(ComponentName className,
+                    IBinder service) {
+                // We've bound to LocalService, cast the IBinder and get LocalService instance
+                LocalBinder binder = (LocalBinder) service;
+                mService = binder.getService();
+                mBound = true;
+            }
+
+            @Override
+            public void onServiceDisconnected(ComponentName arg0) {
+                mBound = false;
+            }
+        };
+    }
+
+Using a Messenger
+    public class MessengerService extends Service {
+        /** Command to the service to display a message */
+        static final int MSG_SAY_HELLO = 1;
+
+        /**
+         * Handler of incoming messages from clients.
+         */
+        class IncomingHandler extends Handler {
+            @Override
+            public void handleMessage(Message msg) {
+                switch (msg.what) {
+                    case MSG_SAY_HELLO:
+                        Toast.makeText(getApplicationContext(), "hello!", Toast.LENGTH_SHORT).show();
+                        break;
+                    default:
+                        super.handleMessage(msg);
+                }
+            }
+        }
+
+        /**
+         * Target we publish for clients to send messages to IncomingHandler.
+         */
+        final Messenger mMessenger = new Messenger(new IncomingHandler());
+
+        /**
+         * When binding to the service, we return an interface to our messenger
+         * for sending messages to the service.
+         */
+        @Override
+        public IBinder onBind(Intent intent) {
+            Toast.makeText(getApplicationContext(), "binding", Toast.LENGTH_SHORT).show();
+            return mMessenger.getBinder();
+        }
+    }
+
+    public class ActivityMessenger extends Activity {
+        /** Messenger for communicating with the service. */
+        Messenger mService = null;
+
+        /** Flag indicating whether we have called bind on the service. */
+        boolean mBound;
+
+        /**
+         * Class for interacting with the main interface of the service.
+         */
+        private ServiceConnection mConnection = new ServiceConnection() {
+            public void onServiceConnected(ComponentName className, IBinder service) {
+                // This is called when the connection with the service has been
+                // established, giving us the object we can use to
+                // interact with the service.  We are communicating with the
+                // service using a Messenger, so here we get a client-side
+                // representation of that from the raw IBinder object.
+                mService = new Messenger(service);
+                mBound = true;
+            }
+
+            public void onServiceDisconnected(ComponentName className) {
+                // This is called when the connection with the service has been
+                // unexpectedly disconnected -- that is, its process crashed.
+                mService = null;
+                mBound = false;
+            }
+        };
+
+        public void sayHello(View v) {
+            if (!mBound) return;
+            // Create and send a message to the service, using a supported 'what' value
+            Message msg = Message.obtain(null, MessengerService.MSG_SAY_HELLO, 0, 0);
+            try {
+                mService.send(msg);
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        }
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.main);
+        }
+
+        @Override
+        protected void onStart() {
+            super.onStart();
+            // Bind to the service
+            bindService(new Intent(this, MessengerService.class), mConnection,
+                    Context.BIND_AUTO_CREATE);
+        }
+
+        @Override
+        protected void onStop() {
+            super.onStop();
+            // Unbind from the service
+            if (mBound) {
+                unbindService(mConnection);
+                mBound = false;
+            }
+        }
+    }
+
+    If you want the service to respond, then you need to also create a Messenger in the client. 
+    Then when the client receives the onServiceConnected() callback, it sends a Message to the service 
+        that includes the client's Messenger in the replyTo parameter of the send() method
+
+Binding to a Service
+
+Managing the Lifecycle of a Bound Service
+    bound service
+        bindService
+        unbindService
+
+    started service
+        startS
+
+

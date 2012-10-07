@@ -1,0 +1,5 @@
+
+open bluetooth and
+
+$ adb shell
+# ./hcidump

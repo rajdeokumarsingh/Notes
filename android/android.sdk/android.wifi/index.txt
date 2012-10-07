@@ -1,0 +1,29 @@
+
+./arch.txt
+
+
+├── arch.txt
+├── cmcc.req.txt
+├── cmcc.test.case.txt
+├── code.java
+
+├── diagram
+│   ├── android_wifi.png
+│   ├── disable_wifi.JPG
+│   ├── enable_wifi.JPG
+│   ├── wapi.auth2.png
+│   ├── wapi.auth.png
+│   └── websequencediagrams.txt
+├── doc
+│   ├── wapi.auth2.png
+│   └── wapi.auth.png
+
+├── log
+│   ├── password.txt
+│   └── service.txt
+
+├── ontim.change.txt
+├── ontim.change.txt.bk
+├── ontim.wapi.txt
+└── wlan.wapi.protocol.txt
+

@@ -1,0 +1,74 @@
+
+################################################################################
+# Install Flash
+################################################################################
+Issue when install apk:
+W/PackageManager(  912): Native ABI mismatch from package file
+
+ro.product.cpu.abi=armeabi
+ro.product.cpu.abi2=armeabi-v7a
+
+
+
+
+# T8301
+# cat /proc/cpuinfo
+Processor: ARM926EJ-S rev 5 (v5l)
+BogoMIPS: 228.55
+Features: swp half thumb fastmult edsp java 
+CPU implementer: 0x41
+CPU architecture: 5TEJ
+CPU variant: 0x0
+CPU part: 0x926
+CPU revision: 5
+
+Hardware: ONTIM_PNX67xx_e148b
+revision: 0000
+Serial: 0000000000000000
+
+# Samsung I9000
+$ cat /proc/cpuinfo
+Processor: ARMv7 Processor rev 2 (v7l)
+BogoMIPS: 99.40
+Features: swp half thumb fastmult vfp edsp neon vfpv3 
+CPU implementer: 0x41
+CPU architecture: 7
+CPU variant: 0x2
+CPU part: 0xc08
+CPU revision: 2
+
+Hardware: SMDKC110
+revision: 0030
+Serial: 363596d0d3ca00ec
+
+
+# Google Nextone
+# cat /proc/cpuinfo
+Processor: ARMv7 Processor rev 2 (v7l)
+BogoMIPS: 162.54
+Features: swp half thumb fastmult vfp edsp thumbee neon 
+CPU implementer: 0x51
+CPU architecture: 7
+CPU variant: 0x0
+CPU part: 0x00f
+CPU revision: 2
+
+Hardware: mahimahi
+revision: 0081
+Serial: 0000000000000000
+
+# OPhone
+# cat /proc/cpuinfo
+Processor: Marvell 88SV331x rev 0 (v5l)
+BogoMIPS: 624.95
+Features: swp half thumb fastmult edsp java iwmmxt 
+CPU implementer: 0x56
+CPU architecture: 5TE
+CPU variant: 0x1
+CPU part: 0x840
+CPU revision: 0
+
+Hardware: TD920
+revision: e020
+Serial: 0000000000000000
+

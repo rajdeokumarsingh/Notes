@@ -1,0 +1,75 @@
+
+state machine
+    Idle
+        just created using new 
+            created using new is in the Idle state
+            created with one of the overloaded convenient create methods are NOT in the Idle state
+                in the Prepared state
+
+        or after reset() is called
+    End
+        after release() is called
+        it can NO longer be used and there is NO way to bring it back to any other state
+
+    Error
+        a user supplied OnErrorListener.onError() method registered by
+            setOnErrorListener(android.media.MediaPlayer.OnErrorListener)
+
+        once an error occurs, the MediaPlayer object enters the Error state
+        reset() can be called to restore the object to its Idle state
+        good programming practice
+            register a OnErrorListener 
+
+        IllegalStateException is thrown 
+            calling prepare(), prepareAsync(), or one of 
+            the overloaded setDataSource methods in an invalid state
+
+    Initialized
+        Calling setDataSource(FileDescriptor), 
+            or setDataSource(String), 
+            or setDataSource(Context, Uri), 
+            or setDataSource(FileDescriptor, long, long) 
+            transfers a MediaPlayer object in the Idle state to the Initialized state. 
+
+        An IllegalStateException is thrown if setDataSource() is called in any other state.
+
+    Prepared
+        must first enter the Prepared state before playback can be started. 
+        synchronous 
+            prepare() 
+        asynchronous
+            prepareAsync() 
+                first transfers the object to the Preparing state, then the function returns
+                while the internal player engine continues working on the rest of preparation work
+                When the preparation completes
+                    callback method, onPrepared() of the OnPreparedListener interface invoked
+                    # setOnPreparedListener(android.media.MediaPlayer.OnPreparedListener).
+
+        While in the Prepared state, properties such as 
+            audio/sound volume, screenOnWhilePlaying, looping 
+            can be adjusted by invoking the corresponding set methods.
+
+    Started
+        After start() invokeds
+        OnBufferingUpdateListener.onBufferingUpdate() callback
+        allows applications to keep track of the buffering status while streaming audio/video
+
+    Paused
+        pause()
+
+    Stopped
+        stop() 
+            from Started, Paused, Prepared or PlaybackCompleted state to enter the Stopped state
+        should invoke prepare() or prepareAsync() to enter Prepared again
+
+    seekTo(int)
+        OnSeekComplete.onSeekComplete() 
+            setOnSeekCompleteListener(OnSeekCompleteListener)
+
+    playback completes
+        setLooping(true)
+            remain Started
+
+        setLooping(false)
+            OnCompletion.onCompletion()
+            setOnCompletionListener(OnCompletionListener)

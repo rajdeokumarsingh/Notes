@@ -1,0 +1,2476 @@
+
+
+
+jiangrui@jiangrui-desktop:~/notes/android.browser/history$ 
+jiangrui@jiangrui-desktop:~/notes/android.browser/history$ 
+jiangrui@jiangrui-desktop:~/notes/android.browser/history$ 
+jiangrui@jiangrui-desktop:~/notes/android.browser/history$ 
+jiangrui@jiangrui-desktop:~/notes/android.browser/history$ 
+jiangrui@jiangrui-desktop:~/notes/android.browser/history$ 
+jiangrui@jiangrui-desktop:~/notes/android.browser/history$ 
+jiangrui@jiangrui-desktop:~/notes/android.browser/history$ 
+jiangrui@jiangrui-desktop:~/notes/android.browser/history$ 
+jiangrui@jiangrui-desktop:~/notes/android.browser/history$ 
+jiangrui@jiangrui-desktop:~/notes/android.browser/history$ 
+jiangrui@jiangrui-desktop:~/notes/android.browser/history$ 
+jiangrui@jiangrui-desktop:~/notes/android.browser/history$ 
+jiangrui@jiangrui-desktop:~/notes/android.browser/history$ 
+jiangrui@jiangrui-desktop:~/notes/android.browser/history$ 
+jiangrui@jiangrui-desktop:~/notes/android.browser/history$ 
+jiangrui@jiangrui-desktop:~/notes/android.browser/history$ 
+jiangrui@jiangrui-desktop:~/notes/android.browser/history$ 
+jiangrui@jiangrui-desktop:~/notes/android.browser/history$ adb logcat -c
+jiangrui@jiangrui-desktop:~/notes/android.browser/history$ adb logcat
+--------- beginning of /dev/log/main
+W/KeyCharacterMap( 2018): Can't open keycharmap file
+W/KeyCharacterMap( 2018): Error loading keycharmap file '/system/usr/keychars/TSC2007_Touchscreen.kcm.bin'. hw.keyboards.65539.devname='TSC2007 Touchscreen'
+W/KeyCharacterMap( 2018): Using default keymap: /system/usr/keychars/qwerty.kcm.bin
+D/dalvikvm( 2018): GC_EXTERNAL_ALLOC freed 3031 objects / 241008 bytes in 81ms
+V/AudioPolicyManagerALSA( 1636): startOutput() output 1, stream 1
+E/AudioPolicyManagerALSA( 1636): mAvailableOutputDevices=0x3
+V/AudioPolicyManagerALSA( 1636): getDeviceForStrategy() -out- strategy 0, device 2
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 2 delayMs 0
+I/AudioFlinger( 1636): setParameters(): io 1, keyvalue routing=2, tid 1677, calling tid 1636
+D/ALSAStreamOps( 1636): setParameters() routing=2
+D/ALSAModule( 1636): v0.01 route called for devices 00000002 in mode 0...
+D/ALSAModule( 1636): Routing audio to Speakerphone
+D/ALSAModule( 1636): the same device
+V/AudioPolicyManagerALSA( 1636): applyStreamVolumes() for output 1 and device 2
+V/AudioPolicyManagerALSA( 1636): checkAndSetVolume() cannot set stream 6 volume with force use = 0 for comm
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 1
+V/AudioPolicyManagerALSA( 1636): releaseOutput() 1
+W/AudioHardwareALSA( 1636): Write request but device is in state SND_PCM_STATE_SETUP
+D/AudioHardwareALSA( 1636): call snd_pcm_prepare
+W/AudioHardwareALSA( 1636): current_state=1 - Wait for correct device state
+V/AudioPolicyManagerALSA( 1636): stopOutput() output 1, stream 1
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 0
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 0 delayMs 372
+D/AudioHardwareALSA( 1636): standby()
+D/AudioHardwareALSA( 1636): mStreamType=1, mParent->getAnalogLoop()=0
+--------- beginning of /dev/log/system
+I/ActivityManager( 1692): Starting activity: Intent { act=android.intent.action.VIEW dat=http://pim1.monternet.com/zf.html cmp=com.android.browser/.BrowserActivity (has extras) }
+E/SyncMain( 2018): SyncMain onPause is called
+V/BrowserActivity( 2027): onActivityResult
+I/TabControl( 2027): getCurrentTopWebView
+I/TabControl( 2027): getTab
+I/Tab     ( 2027): getTopWindow
+I/TabControl( 2027): getCurrentTopWebView
+I/TabControl( 2027): getTab
+I/Tab     ( 2027): getTopWindow
+V/BrowserActivity( 2027): onNewIntent
+I/ApnHandler( 2027): handleApnSettingIntent apn: wap
+V/BrowserSettings( 2027): getDataConnection: wap
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+V/BrowserActivity( 2027): onNewIntent clearcache: null
+V/BrowserActivity( 2027): handleWebSearchIntent: http://pim1.monternet.com/zf.html
+V/BrowserActivity( 2027): handleWebSearchRequest
+V/BrowserActivity( 2027): getUrlDataFromIntent
+I/TabControl( 2027): getTabFromId
+I/TabControl( 2027): findUnusedTabWithUrl: http://pim1.monternet.com/zf.html
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+I/TabControl( 2027): tabMatchesUrl: http://pim1.monternet.com/zf.html
+I/TabControl( 2027): getTab
+I/TabControl( 2027): tabMatchesUrl: http://pim1.monternet.com/zf.html
+V/BrowserActivity( 2027): onResume
+I/BrowserActivity( 2027): onResume, ignore wifi
+V/BrowserSettings( 2027): getDataConnection: wap
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+D/ApnHandler( 2027): Begin startUsingNetworkFeature: enableWAP
+D/ConnectivityServiceExt( 1692): startUsingNetworkFeature for net 0: enableWAP
+D/ConnectivityServiceExt( 1692): getMobileDataEnabled returning true
+D/ConnectivityServiceExt( 1692): adding dns 221.130.33.52 for mobile
+D/ConnectivityServiceExt( 1692): adding dns 221.130.33.60 for mobile
+D/ConnectivityServiceExt( 1692): special network already active
+D/ApnHandler( 2027): startUsingNetworkFeature: enableWAP 0
+D/ApnHandler( 2027): updateStatus
+D/ApnHandler( 2027): Interfacename: pdp_ip0
+V/webview ( 2027): bindToDevice iname: pdp_ip0
+V/network ( 2027): bindToDevice iname: pdp_ip0
+I/TabControl( 2027): resumeCurrentTab
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+I/Tab     ( 2027): resume
+V/BrowserActivity( 2027): resumeWebViewTimers
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+V/BrowserActivity( 2027): onResume mLoadsPageInOverviewMode:  false
+V/BrowserActivity( 2027): onResume done!
+V/webcore ( 2027): ON_RESUME arg1=0 arg2=0 obj=null
+V/webcore ( 2027): RESUME_TIMERS arg1=0 arg2=0 obj=null
+V/BrowserActivity( 2027): onReceive: NetworkInfo: type: mobile_wap[HSDPA], state: CONNECTED/CONNECTED, reason: simLoaded, extra: cmwap, roaming: false, failover: false, isAvailable: true, apType: enableWAP, interfaceName: pdp_ip0
+V/BrowserSettings( 2027): getDataConnection: wap
+V/BrowserActivity( 2027): onReceive current apn: wap
+I/BrowserActivity( 2027): onReceive, ignore wifi
+V/BrowserActivity( 2027): sendNetworkType
+I/TabControl( 2027): getCurrentWebView
+V/cache   ( 2027): enableTransaction
+I/TabControl( 2027): getTab
+V/webcore ( 2027): 183 arg1=0 arg2=0 obj={type=mobile_wap, subtype=hsdpa}
+E/SyncMain( 2018): SyncMain onStop is called
+W/InputManagerService( 1692): Starting input on non-focused client com.android.internal.view.IInputMethodClient$Stub$Proxy@440043c8 (uid=10005 pid=2018)
+V/BrowserActivity( 2027): openTabAndShow
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+I/TabControl( 2027): createNewTab: true null http://pim1.monternet.com/zf.html
+I/TabControl( 2027): createNewWebView
+I/WebCoreFrameBridge( 2027): CreateFrame, 927
+I/WebCoreFrameBridge( 2027): WebFrame, 208
+I/WebCoreFrameBridge( 2027): WebFrame, 276
+I/WebCoreFrameBridge( 2027): loadStarted, 544
+I/WebCoreFrameBridge( 2027): transitionToCommitted, 598
+I/WebCoreFrameBridge( 2027): transitionToCommitted, 610
+I/WebCore::FrameLoader( 2027): transitionToCommitted, mimetype: text/html
+V/WebSettings( 2027): getCmccUserAgentString: HuaweiT8100_TD/1.0 Android/2.2 Release/12.25.2010 Browser/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 AppleWebKit/533.1
+I/WebCore::FrameLoader( 2027): begin createDocument, mimetype: text/html
+I/WebCore::FrameLoader( 2027): write(): decode
+I/Tab     ( 2027): Tab: null http://pim1.monternet.com/zf.html
+I/WebCore::FrameLoader( 2027): write(): create decoder, mimetype: text/html
+I/WebCore::TextResourceDecoder( 2027): defaultEncoding, content-type: 1, default encoding: 
+I/WebCore::TextResourceDecoder( 2027): decode()
+I/WebCore::TextResourceDecoder( 2027): decode() css charset done!
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), decode source: 0
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), buffer size: 0
+I/WebCore::TextResourceDecoder( 2027): flush()
+I/WebCore::FrameLoader( 2027): write(): decode
+I/WebCore::TextResourceDecoder( 2027): decode()
+I/WebCore::TextResourceDecoder( 2027): decode() css charset done!
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), decode source: 0
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), buffer size: 0
+I/WebCore::TextResourceDecoder( 2027): flush()
+I/WebCoreFrameBridge( 2027): getRawResourceFilename, 886
+I/WebCoreFrameBridge( 2027): getRawResourceFilename, 892
+I/WebCoreFrameBridge( 2027): CreateFrame, 1010
+V/webkit  ( 2027): BrowserFrame constructor: this=Handler{43dc03c8}
+I/Tab     ( 2027): putInBackground
+I/Tab     ( 2027): pause
+I/Tab     ( 2027): removeTabFromContentView
+V/webview ( 2027): MT focusChanged false, 0
+I/Tab     ( 2027): removeSubWindow
+I/TabControl( 2027): setCurrentTab
+I/TabControl( 2027): setCurrentTab
+I/TabControl( 2027): getTab
+I/Tab     ( 2027): putInBackground
+I/Tab     ( 2027): pause
+I/Tab     ( 2027): putInForeground
+I/Tab     ( 2027): resume
+I/Tab     ( 2027): attachTabToContentView
+I/Tab     ( 2027): attachSubWindow
+I/Tab     ( 2027): getTopWindow
+V/webview ( 2027): MT focusChanged true, 130
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+V/BrowserActivity( 2027): isWifiConnected
+V/webcore ( 2027): ON_PAUSE arg1=0 arg2=0 obj=null
+V/webcore ( 2027): SET_ACTIVE arg1=0 arg2=0 obj=null
+V/webcore ( 2027): SET_ACTIVE arg1=0 arg2=0 obj=null
+V/webcore ( 2027): ON_PAUSE arg1=0 arg2=0 obj=null
+V/webcore ( 2027): ON_RESUME arg1=0 arg2=0 obj=null
+V/BrowserActivity( 2027): loadUrlDataIn: http://pim1.monternet.com/zf.html
+V/BrowserActivity( 2027): updateTitleBarForNewLoad
+I/TabControl( 2027): getCurrentTopWebView
+I/TabControl( 2027): getTab
+I/Tab     ( 2027): getTopWindow
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+V/BrowserActivity( 2027): onProgressChanged: 10
+V/TitleBar( 2027): onProgressChanged: com.android.browser.TitleBar@43d8ea68 10 false null
+V/TitleBar( 2027): onProgressChanged: delay animation
+V/BrowserActivity( 2027): onProgressChanged:  false false
+V/BrowserActivity( 2027): showFakeTitleBar: null null false
+I/TabControl( 2027): getCurrentWebView
+I/TabControl( 2027): getTab
+V/BrowserActivity( 2027): showFakeTitleBar: android.webkit.WebView@43e1ed70
+V/webcore ( 2027): LOAD_URL arg1=0 arg2=0 obj=android.webkit.WebViewCore$GetUrlData@43dc6278
+V/webcore ( 2027):  CORE loadUrl http://pim1.monternet.com/zf.html
+I/WebCoreFrameBridge( 2027): LoadUrl, 1045
+I/WebCore::FrameLoader( 2027): shouldReload, 2756
+I/WebCore::FrameLoader( 2027): frameContainsWMLContent, 1585
+I/WebCoreFrameBridge( 2027): canHandleRequest, 788
+I/WebCoreFrameBridge( 2027): canHandleRequest, 813
+I/WebCoreFrameBridge( 2027): loadStarted, 544
+V/webview ( 2027): WEBCORE_INITIALIZED_MSG_ID
+I/WebCoreFrameBridge( 2027): loadStarted, 592
+I/WebCoreFrameBridge( 2027): setProgress, 715
+I/WebCoreFrameBridge( 2027): setProgress, 724
+I/WebCoreFrameBridge( 2027): startLoadingResource, 378
+I/WebCoreFrameBridge( 2027): createJavaMapFromHTTPHeaders, 300
+I/WebCoreFrameBridge( 2027): createJavaMapFromHTTPHeaders, 327
+V/webkit  ( 2027): startLoadingResource: url=http://pim1.monternet.com/zf.html, method=GET, postData=null, isMainFramePage=true, mainResource=true, userGesture=true
+V/LoadListener( 2027): LoadListener constructor url=http://pim1.monternet.com/zf.html
+V/http    ( 2027): 414602 http0 RequestQueue.getRequest() => null
+V/http    ( 2027): 414608 http0 ConnectionThread: Waiting for work
+V/http    ( 2027): 414609 http1 RequestQueue.getRequest() => null
+V/http    ( 2027): 414612 http1 ConnectionThread: Waiting for work
+V/http    ( 2027): 414615 http2 RequestQueue.getRequest() => null
+V/http    ( 2027): 414616 http2 ConnectionThread: Waiting for work
+V/http    ( 2027): 414617 WebViewCoreThread RequestQueue.enablePlatformNotifications() network
+V/http    ( 2027): 414625 WebViewCoreThread RequestQueue.setProxyConfig active network: 0mInterfaceName: null
+D/MobileDataStateTrackerExt( 1692): mProxy is http://10.0.0.172:80/mytype wap
+D/MobileDataStateTrackerExt( 1692): mProxy is http://10.0.0.172:80/mytype wap
+V/http    ( 2027): 414645 WebViewCoreThread RequestQueue.setProxyConfig for mobile: 10.0.0.172 80
+V/http    ( 2027): 414646 WebViewCoreThread RequestQueue.setProxyConfig 10.0.0.172 80
+V/http    ( 2027): 414648 WebViewCoreThread RequestQueue.setProxyConfig done: 10.0.0.172; 80
+V/http    ( 2027): 414649 http3 RequestQueue.getRequest() => null
+V/http    ( 2027): 414649 http3 ConnectionThread: Waiting for work
+D/ConnectivityServiceExt( 1692): find feature user 6 for this pid:2027
+D/ConnectivityServiceExt( 1692): find feature user 6 for this pid:2027
+V/network ( 2027): bindToDevice iname: pdp_ip0
+V/http    ( 2027): 414654 WebViewCoreThread RequestQueue.bindToDevice() : pdp_ip0
+V/WebSettings( 2027): getUserAgentString default: HuaweiT8100_TD/1.0 Android/2.2 Release/12.25.2010 Browser/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 AppleWebKit/533.1
+I/WebCoreFrameBridge( 2027): startLoadingResource, 516
+I/WebCoreFrameBridge( 2027): LoadUrl, 1097
+V/webkit  ( 2027): getCookie: uri: http://pim1.monternet.com/zf.html But can't find cookie.
+V/cache   ( 2027): getCacheFile: http://pim1.monternet.com/zf.html
+V/webkit  ( 2027): FrameLoader: http GET load for: http://pim1.monternet.com/zf.html
+V/webview ( 2027): setCertificate=null
+V/BrowserActivity( 2027): onPageStarted
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+V/BrowserActivity( 2027): onProgressChanged: 10
+V/TitleBar( 2027): onProgressChanged: com.android.browser.TitleBar@43d8ea68 10 false android.view.ViewRoot$W@43de6408
+V/http    ( 2027): 414728 WebViewWorkerThread RequestQueue.queueRequest url:http://pim1.monternet.com/zf.html
+V/TitleBar( 2027): onProgressChanged: start animation
+V/http    ( 2027): 414732 WebViewWorkerThread RequestQueue.queueRequest uri:http://pim1.monternet.com/zf.html
+V/BrowserActivity( 2027): onProgressChanged:  false false
+V/BrowserActivity( 2027): showFakeTitleBar: Handler{43d77d88} null false
+V/http    ( 2027): 414736 WebViewWorkerThread RequestQueue.queueRequest shouldUseWifiProxy: false
+V/BrowserActivity( 2027): onProgressChanged: 10
+V/http    ( 2027): 414738 WebViewWorkerThread RequestQueue.inWifiProxyBlackList url:http://pim1.monternet.com/zf.html
+V/TitleBar( 2027): onProgressChanged: com.android.browser.TitleBar@43d8ea68 10 true android.view.ViewRoot$W@43de6408
+V/http    ( 2027): 414743 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web1: 
+V/BrowserActivity( 2027): onProgressChanged:  false false
+V/BrowserActivity( 2027): showFakeTitleBar: Handler{43d77d88} null false
+V/http    ( 2027): 414746 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web2: 
+V/http    ( 2027): 414748 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web3: 
+V/webcore ( 2027): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 0)
+V/webview ( 2027): sendOurVisibleRect=(0,19,r=240,b=320
+V/http    ( 2027): 414754 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web4: 192.168.
+V/webcore ( 2027): SET_GLOBAL_BOUNDS arg1=0 arg2=0 obj=Rect(0, 19 - 240, 320)
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/http    ( 2027): 414758 WebViewWorkerThread RequestQueue.inWifiProxyBlackList not match
+V/webcore ( 2027): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43e2abe0
+V/webcore ( 2027): viewSizeChanged w=320; h=345; textwrapWidth=320; scale=0.75
+V/webcore ( 2027): viewSizeChanged w=320; h=345; textwrapWidth=320; scale=0.75
+V/webcore ( 2027): viewSizeChanged
+V/webcore ( 2027): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/http    ( 2027): 414775 WebViewWorkerThread RequestQueue.queueRequest proxy: http://10.0.0.172:80
+V/http    ( 2027): 414800 http0 RequestQueue.getRequest() => /zf.html
+V/http    ( 2027): 414801 http0 ConnectionThread: new request http://pim1.monternet.com:80 /zf.html
+V/http    ( 2027): 414801 http0 RequestQueue.inWifiProxyBlackList url:http://pim1.monternet.com:80
+V/http    ( 2027): 414802 http0 RequestQueue.inWifiProxyBlackList web1: 
+V/http    ( 2027): 414802 http0 RequestQueue.inWifiProxyBlackList web2: 
+V/http    ( 2027): 414802 http0 RequestQueue.inWifiProxyBlackList web3: 
+V/http    ( 2027): 414802 http0 RequestQueue.inWifiProxyBlackList web4: 192.168.
+V/http    ( 2027): 414803 http0 RequestQueue.inWifiProxyBlackList not match
+V/http    ( 2027): 414803 http0 RequestQueue.determineHost host: http://pim1.monternet.com:80
+V/http    ( 2027): 414803 http0 RequestQueue.determineHost proxy: http://10.0.0.172:80
+V/http    ( 2027): 414804 http0 getConnection :http://10.0.0.172:80
+V/http    ( 2027): 414804 http0 RequestQueue.inWifiProxyBlackList url:http://10.0.0.172:80
+V/http    ( 2027): 414805 http0 RequestQueue.inWifiProxyBlackList web1: 
+V/http    ( 2027): 414805 http0 RequestQueue.inWifiProxyBlackList web2: 
+V/http    ( 2027): 414805 http0 RequestQueue.inWifiProxyBlackList web3: 
+V/http    ( 2027): 414805 http0 RequestQueue.inWifiProxyBlackList web4: 192.168.
+V/http    ( 2027): 414805 http0 RequestQueue.inWifiProxyBlackList not match
+V/http    ( 2027): 414806 http0 mInterface is pdp_ip0
+V/http    ( 2027): 414807 http0 SEND pipe 0
+V/LoadListener( 2027): LoadListener.certificate: null
+V/LoadListener( 2027): LoadListener.attachRequestHandle(): requestHandle: android.net.http.RequestHandle@43df0a68
+V/webview ( 2027): SET_SCROLLBAR_MODES
+V/webview ( 2027): SET_SCROLLBAR_MODES
+V/webview ( 2027): SET_SCROLLBAR_MODES
+V/webview ( 2027): UPDATE_TEXT_ENTRY_MSG_ID
+V/webview ( 2027): setCertificate=null
+D/dalvikvm( 2018): GC_EXPLICIT freed 836 objects / 44680 bytes in 78ms
+V/http    ( 2027): 434972 http0 InetSocketAddress addr is 10.0.0.172/10.0.0.172:80
+V/http    ( 2027): 435663 http0 Connection.openHttpConnection() 20856 http://10.0.0.172:80
+V/LoadListener( 2027): LoadListener.certificate: null
+V/webview ( 2027): setCertificate=null
+V/http    ( 2027): 435667 http0 Request.sendRequest() http://pim1.monternet.com
+V/http    ( 2027): 435671 http0 Request.requestSent() http://pim1.monternet.com/zf.html
+V/http    ( 2027): 435673 http0 READ pipe 1
+V/http    ( 2027): 435676 http0 processRequests() reading /zf.html
+V/http    ( 2027): 436118 http0 read: HTTP/1.1 200 OK, Success
+V/http    ( 2027): 436120 http0 hdr 19 content-length: 117
+V/http    ( 2027): 436122 http0 hdr 23 content-type: text/html
+V/http    ( 2027): 436123 http0 hdr 25 server: Apache-Coyote/1.1
+V/http    ( 2027): 436124 http0 hdr 27 etag: W/"121-1281577409000"
+V/http    ( 2027): 436126 http0 hdr 44 last-modified: Thu, 12 Aug 2010 01:43:29 GMT
+V/http    ( 2027): 436128 http0 hdr 35 date: Tue, 23 Aug 2011 06:35:44 GMT
+V/http    ( 2027): 436129 http0 hdr 22 content-encoding: gzip
+V/http    ( 2027): 436138 http0 Request.readResponseStatus() 24 HTTP/1.1 200 OK, Success
+V/LoadListener( 2027): LoadListener: from: http://pim1.monternet.com/zf.html major: 1 minor: 1 code: 200 reason: OK, Success
+V/LoadListener( 2027): LoadListener.headers
+V/LoadListener( 2027): Dump HTTP headers:
+V/LoadListener( 2027): content-length 117
+V/LoadListener( 2027): content-type text/html
+V/LoadListener( 2027): content-encoding gzip
+V/LoadListener( 2027): last-modified Thu, 12 Aug 2010 01:43:29 GMT
+V/LoadListener( 2027): etag W/"121-1281577409000"
+V/LoadListener( 2027): server Apache-Coyote/1.1
+V/LoadListener( 2027): date Tue, 23 Aug 2011 06:35:44 GMT
+V/LoadListener( 2027): LoadListener.parseContentTypeHeader: contentType: text/html
+V/LoadListener( 2027): loading url: http://pim1.monternet.com/zf.html
+V/LoadListener( 2027): has cookie : false, in cache black list: false
+V/LoadListener( 2027): do cache page: http://pim1.monternet.com/zf.html
+V/http    ( 2027): 436166 http0 Request.readResponse() 121
+V/cache   ( 2027): createCacheFile: http://pim1.monternet.com/zf.html
+V/cache   ( 2027): parseHeaders last-modified expires: 1314254194207
+V/LoadListener( 2027): LoadListener.data(): url: http://pim1.monternet.com/zf.html
+I/WebCore::HistoryController( 2027): WebCoreBackForward - Adding backforward item for frame http://pim1.monternet.com/zf.html
+I/WebCoreFrameBridge( 2027): addHistoryItem, 642
+I/WebCoreFrameBridge( 2027): addHistoryItem, 649
+I/WebCoreFrameBridge( 2027): updateVisitedHistory, 772
+I/WebCoreFrameBridge( 2027): updateVisitedHistory, 782
+I/WebCoreFrameBridge( 2027): transitionToCommitted, 598
+I/WebCoreFrameBridge( 2027): transitionToCommitted, 610
+I/WebCore::FrameLoader( 2027): transitionToCommitted, mimetype: text/html
+I/WebCore ( 2027): committedLoad, 693
+I/WebCore ( 2027): committedLoad: found <html> tag
+I/WebCore::FrameLoader( 2027): begin createDocument, mimetype: text/html
+I/WebCore::FrameLoader( 2027): write(): decode
+I/WebCore::FrameLoader( 2027): write(): create decoder, mimetype: text/html
+I/WebCore::TextResourceDecoder( 2027): defaultEncoding, content-type: 1, default encoding: UTF-8
+I/WebCore::TextResourceDecoder( 2027): decode()
+I/WebCore::TextResourceDecoder( 2027): decode() css charset done!
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), decode source: 0
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), buffer size: 121
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), check encoding
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), do check http encoding
+I/WebCoreFrameBridge( 2027): setProgress, 715
+I/WebCoreFrameBridge( 2027): setProgress, 724
+I/BrowserProvider( 2027): query url: content://browser/bookmarks url match: 0
+V/BrowserActivity( 2027): onProgressChanged: 50
+V/TitleBar( 2027): onProgressChanged: com.android.browser.TitleBar@43d8ea68 50 true android.view.ViewRoot$W@43de6408
+V/BrowserActivity( 2027): onProgressChanged:  false false
+V/BrowserActivity( 2027): showFakeTitleBar: Handler{43d77d88} null false
+V/LoadListener( 2027): LoadListener.endData(): url: http://pim1.monternet.com/zf.html
+V/http    ( 2027): 436243 http0 Request.readResponse(): done http://pim1.monternet.com/zf.html
+V/http    ( 2027): 436244 http0 READ pipe 0
+V/http    ( 2027): 436244 http0 IdleCache size 0 host http://10.0.0.172:80
+V/LoadListener( 2027): LoadListener.detachRequestHandle(): requestHandle: android.net.http.RequestHandle@43df0a68
+I/WebCore ( 2027): committedLoad, 693
+I/WebCore::FrameLoader( 2027): write(): decode
+I/WebCore::TextResourceDecoder( 2027): decode()
+I/WebCore::TextResourceDecoder( 2027): decode() css charset done!
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), decode source: 0
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), buffer size: 121
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), check encoding
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), do check http encoding
+I/WebCore::TextResourceDecoder( 2027): flush()
+I/WebCore::TextResourceDecoder( 2027): shouldAutoDetect, m_usesEncodingDetector: 1, m_source :0
+I/WebCore::TextResourceDecoder( 2027): flush(), hint decoding: GBK
+V/cache   ( 2027): saveCacheFile for url http://pim1.monternet.com/zf.html
+V/http    ( 2027): 436271 http0 RequestQueue.getRequest() => null
+V/http    ( 2027): 436272 http0 ConnectionThread: Waiting for work
+I/BrowserProvider( 2027): query url: content://browser/bookmarks url match: 0
+I/WebCore::TextResourceDecoder( 2027): setEncoding(), source: 1
+I/WebCore::TextResourceDecoder( 2027): setEncoding() name: GBK
+I/WebCore::FrameLoader( 2027): encoding(), from m_decoder
+I/WebCoreFrameBridge( 2027): startLoadingResource, 378
+I/WebCoreFrameBridge( 2027): createJavaMapFromHTTPHeaders, 300
+I/WebCoreFrameBridge( 2027): createJavaMapFromHTTPHeaders, 327
+V/webkit  ( 2027): startLoadingResource: url=http://pim1.monternet.com/favicon.ico, method=GET, postData=null, isMainFramePage=true, mainResource=false, userGesture=true
+V/LoadListener( 2027): LoadListener constructor url=http://pim1.monternet.com/favicon.ico
+V/WebSettings( 2027): getUserAgentString default: HuaweiT8100_TD/1.0 Android/2.2 Release/12.25.2010 Browser/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 AppleWebKit/533.1
+V/webkit  ( 2027): getCookie: uri: http://pim1.monternet.com/favicon.ico But can't find cookie.
+V/cache   ( 2027): getCacheFile: http://pim1.monternet.com/favicon.ico
+V/webkit  ( 2027): FrameLoader: http GET load for: http://pim1.monternet.com/favicon.ico
+V/http    ( 2027): 436596 WebViewWorkerThread RequestQueue.queueRequest url:http://pim1.monternet.com/favicon.ico
+V/http    ( 2027): 436596 WebViewWorkerThread RequestQueue.queueRequest uri:http://pim1.monternet.com/favicon.ico
+V/http    ( 2027): 436596 WebViewWorkerThread RequestQueue.queueRequest shouldUseWifiProxy: false
+V/http    ( 2027): 436597 WebViewWorkerThread RequestQueue.inWifiProxyBlackList url:http://pim1.monternet.com/favicon.ico
+V/http    ( 2027): 436597 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web1: 
+V/http    ( 2027): 436597 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web2: 
+V/http    ( 2027): 436598 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web3: 
+V/http    ( 2027): 436598 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web4: 192.168.
+V/http    ( 2027): 436598 WebViewWorkerThread RequestQueue.inWifiProxyBlackList not match
+V/http    ( 2027): 436599 WebViewWorkerThread RequestQueue.queueRequest proxy: http://10.0.0.172:80
+I/WebCoreFrameBridge( 2027): startLoadingResource, 516
+V/webview ( 2027): SET_SCROLLBAR_MODES
+V/webview ( 2027): SET_SCROLLBAR_MODES
+V/webview ( 2027): SET_SCROLLBAR_MODES
+V/webcore ( 2027): didFirstLayout standardLoad =true
+V/webcore ( 2027): setupViewport mRestoredScale=0 mViewScale=0.0 mTextWrapScale=0.75
+V/webcore ( 2027): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43e13a08
+V/webcore ( 2027): viewSizeChanged w=320; h=345; textwrapWidth=320; scale=0.75
+V/webcore ( 2027): viewSizeChanged w=320; h=345; textwrapWidth=320; scale=0.75
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw abort
+V/webcore ( 2027): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/http    ( 2027): 436619 http1 RequestQueue.getRequest() => /favicon.ico
+V/http    ( 2027): 436619 http1 ConnectionThread: new request http://pim1.monternet.com:80 /favicon.ico
+V/http    ( 2027): 436620 http1 RequestQueue.inWifiProxyBlackList url:http://pim1.monternet.com:80
+V/http    ( 2027): 436622 http1 RequestQueue.inWifiProxyBlackList web1: 
+V/http    ( 2027): 436622 http1 RequestQueue.inWifiProxyBlackList web2: 
+V/http    ( 2027): 436623 http1 RequestQueue.inWifiProxyBlackList web3: 
+V/http    ( 2027): 436624 http1 RequestQueue.inWifiProxyBlackList web4: 192.168.
+V/http    ( 2027): 436626 http1 RequestQueue.inWifiProxyBlackList not match
+V/LoadListener( 2027): LoadListener.attachRequestHandle(): requestHandle: android.net.http.RequestHandle@43e1de10
+V/http    ( 2027): 436639 http1 RequestQueue.determineHost host: http://pim1.monternet.com:80
+V/http    ( 2027): 436641 http1 RequestQueue.determineHost proxy: http://10.0.0.172:80
+V/http    ( 2027): 436643 http1 SEND pipe 0
+V/LoadListener( 2027): LoadListener.certificate: null
+V/http    ( 2027): 436646 http1 Request.sendRequest() http://pim1.monternet.com
+V/http    ( 2027): 436649 http1 Request.requestSent() http://pim1.monternet.com/favicon.ico
+V/http    ( 2027): 436651 http1 SEND pipe 1
+V/http    ( 2027): 436652 http1 RequestQueue.getRequest(http://10.0.0.172:80) => null
+V/webview ( 2027): UPDATE_TEXT_ENTRY_MSG_ID
+V/http    ( 2027): 436661 http1 DRAIN pipe 1
+V/http    ( 2027): 436663 http1 processRequests() reading /favicon.ico
+V/http    ( 2027): 437122 http1 read: HTTP/1.1 404 Not Found
+V/http    ( 2027): 437123 http1 hdr 19 content-length: 208
+V/http    ( 2027): 437125 http1 hdr 44 content-type: text/vnd.wap.wml;charset=UTF-8
+V/http    ( 2027): 437127 http1 hdr 25 server: Apache-Coyote/1.1
+V/http    ( 2027): 437128 http1 hdr 35 date: Tue, 23 Aug 2011 06:35:44 GMT
+V/http    ( 2027): 437129 http1 hdr 22 content-encoding: gzip
+V/http    ( 2027): 437133 http1 Request.readResponseStatus() 22 HTTP/1.1 404 Not Found
+V/LoadListener( 2027): LoadListener: from: http://pim1.monternet.com/favicon.ico major: 1 minor: 1 code: 404 reason: Not Found
+V/LoadListener( 2027): LoadListener.headers
+V/LoadListener( 2027): Dump HTTP headers:
+V/LoadListener( 2027): content-length 208
+V/LoadListener( 2027): content-type text/vnd.wap.wml;charset=UTF-8
+V/LoadListener( 2027): content-encoding gzip
+V/LoadListener( 2027): server Apache-Coyote/1.1
+V/LoadListener( 2027): date Tue, 23 Aug 2011 06:35:44 GMT
+V/LoadListener( 2027): LoadListener.parseContentTypeHeader: contentType: text/vnd.wap.wml;charset=UTF-8
+V/LoadListener( 2027): loading url: http://pim1.monternet.com/favicon.ico
+V/LoadListener( 2027): has cookie : false, in cache black list: false
+I/WebCoreFrameBridge( 2027): didReceiveIcon, 736
+V/http    ( 2027): 437148 http1 Request.readResponse() 231
+V/LoadListener( 2027): LoadListener.data(): url: http://pim1.monternet.com/favicon.ico
+I/WebCoreFrameBridge( 2027): setProgress, 715
+I/WebCoreFrameBridge( 2027): setProgress, 724
+V/LoadListener( 2027): LoadListener.endData(): url: http://pim1.monternet.com/favicon.ico
+V/BrowserActivity( 2027): onProgressChanged: 70
+V/TitleBar( 2027): onProgressChanged: com.android.browser.TitleBar@43d8ea68 70 true android.view.ViewRoot$W@43de6408
+V/BrowserActivity( 2027): onProgressChanged:  false false
+V/BrowserActivity( 2027): showFakeTitleBar: Handler{43d77d88} null false
+V/http    ( 2027): 437164 http1 Request.readResponse(): done http://pim1.monternet.com/favicon.ico
+V/http    ( 2027): 437165 http1 DRAIN pipe 0
+V/http    ( 2027): 437166 http1 IdleCache size 0 host http://10.0.0.172:80
+V/http    ( 2027): 437166 http1 RequestQueue.getRequest() => null
+V/http    ( 2027): 437166 http1 ConnectionThread: Waiting for work
+V/LoadListener( 2027): LoadListener.detachRequestHandle(): requestHandle: android.net.http.RequestHandle@43e1de10
+I/WebCoreFrameBridge( 2027): didFinishLoad, 616
+I/WebCoreFrameBridge( 2027): didFinishLoad, 636
+I/WebCoreFrameBridge( 2027): setProgress, 715
+I/WebCoreFrameBridge( 2027): setProgress, 724
+V/cache   ( 2027): endTransaction
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/BrowserActivity( 2027): onPageFinished
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+V/BrowserActivity( 2027): onProgressChanged: 100
+I/TabControl( 2027): getCurrentWebView
+I/TabControl( 2027): getTab
+V/webview ( 2027): UPDATE_TEXT_ENTRY_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {0,0,800,863}
+V/cache   ( 2027): startTransaction
+I/WebCoreFrameBridge( 2027): HasPasswordField, 1502
+I/WebCoreFrameBridge( 2027): HasPasswordField, 1514
+I/WebCoreFrameBridge( 2027): HasPasswordField, 1533
+V/cache   ( 2027): trimCacheIfNeeded
+V/websync ( 2027): CookieSyncManager::syncFromRamToFlash STARTS
+V/websync ( 2027): CookieSyncManager::syncFromRamToFlash DONE
+I/WebCore::FrameLoader( 2027): encoding(), from m_decoder
+I/WebCore::FrameLoader( 2027): shouldReload, 2756
+I/WebCore::FrameLoader( 2027): frameContainsWMLContent, 1585
+I/WebCore::FrameLoader( 2027): shouldReload, 2756
+I/WebCore::FrameLoader( 2027): frameContainsWMLContent, 1585
+I/WebCoreFrameBridge( 2027): canHandleRequest, 788
+I/WebCoreFrameBridge( 2027): loadStarted, 544
+V/webview ( 2027): setCertificate=null
+V/BrowserActivity( 2027): onPageStarted
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+V/BrowserActivity( 2027): onProgressChanged: 10
+V/TitleBar( 2027): onProgressChanged: com.android.browser.TitleBar@43d8ea68 10 false null
+I/WebCoreFrameBridge( 2027): loadStarted, 592
+I/WebCoreFrameBridge( 2027): setProgress, 715
+I/WebCoreFrameBridge( 2027): setProgress, 724
+I/WebCore::FrameLoader( 2027): encoding(), from m_decoder
+I/WebCoreFrameBridge( 2027): startLoadingResource, 378
+I/WebCoreFrameBridge( 2027): createJavaMapFromHTTPHeaders, 300
+I/WebCoreFrameBridge( 2027): createJavaMapFromHTTPHeaders, 327
+V/webkit  ( 2027): startLoadingResource: url=http://pim1.monternet.com/wap/customizeCostInfo.do, method=GET, postData=null, isMainFramePage=true, mainResource=true, userGesture=false
+V/LoadListener( 2027): LoadListener constructor url=http://pim1.monternet.com/wap/customizeCostInfo.do
+V/TitleBar( 2027): onProgressChanged: delay animation
+V/BrowserActivity( 2027): onProgressChanged:  false false
+V/BrowserActivity( 2027): showFakeTitleBar: null null false
+I/TabControl( 2027): getCurrentWebView
+I/TabControl( 2027): getTab
+V/BrowserActivity( 2027): showFakeTitleBar: android.webkit.WebView@43e1ed70
+V/WebSettings( 2027): getUserAgentString default: HuaweiT8100_TD/1.0 Android/2.2 Release/12.25.2010 Browser/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 AppleWebKit/533.1
+V/webkit  ( 2027): getCookie: uri: http://pim1.monternet.com/wap/customizeCostInfo.do But can't find cookie.
+V/cache   ( 2027): getCacheFile: http://pim1.monternet.com/wap/customizeCostInfo.do
+V/webkit  ( 2027): FrameLoader: http GET load for: http://pim1.monternet.com/wap/customizeCostInfo.do
+V/http    ( 2027): 437645 WebViewWorkerThread RequestQueue.queueRequest url:http://pim1.monternet.com/wap/customizeCostInfo.do
+V/http    ( 2027): 437646 WebViewWorkerThread RequestQueue.queueRequest uri:http://pim1.monternet.com/wap/customizeCostInfo.do
+V/http    ( 2027): 437646 WebViewWorkerThread RequestQueue.queueRequest shouldUseWifiProxy: false
+V/http    ( 2027): 437647 WebViewWorkerThread RequestQueue.inWifiProxyBlackList url:http://pim1.monternet.com/wap/customizeCostInfo.do
+V/http    ( 2027): 437647 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web1: 
+V/http    ( 2027): 437647 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web2: 
+V/http    ( 2027): 437648 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web3: 
+V/http    ( 2027): 437648 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web4: 192.168.
+V/http    ( 2027): 437648 WebViewWorkerThread RequestQueue.inWifiProxyBlackList not match
+V/http    ( 2027): 437648 WebViewWorkerThread RequestQueue.queueRequest proxy: http://10.0.0.172:80
+I/WebCoreFrameBridge( 2027): startLoadingResource, 516
+V/http    ( 2027): 437671 http2 RequestQueue.getRequest() => /wap/customizeCostInfo.do
+V/http    ( 2027): 437672 http2 ConnectionThread: new request http://pim1.monternet.com:80 /wap/customizeCostInfo.do
+V/http    ( 2027): 437672 http2 RequestQueue.inWifiProxyBlackList url:http://pim1.monternet.com:80
+V/http    ( 2027): 437673 http2 RequestQueue.inWifiProxyBlackList web1: 
+V/http    ( 2027): 437673 http2 RequestQueue.inWifiProxyBlackList web2: 
+V/http    ( 2027): 437673 http2 RequestQueue.inWifiProxyBlackList web3: 
+V/http    ( 2027): 437673 http2 RequestQueue.inWifiProxyBlackList web4: 192.168.
+V/http    ( 2027): 437674 http2 RequestQueue.inWifiProxyBlackList not match
+V/http    ( 2027): 437674 http2 RequestQueue.determineHost host: http://pim1.monternet.com:80
+V/http    ( 2027): 437674 http2 RequestQueue.determineHost proxy: http://10.0.0.172:80
+V/http    ( 2027): 437675 http2 SEND pipe 0
+V/LoadListener( 2027): LoadListener.certificate: null
+V/LoadListener( 2027): LoadListener.attachRequestHandle(): requestHandle: android.net.http.RequestHandle@43e33d90
+V/http    ( 2027): 437691 http2 Request.sendRequest() http://pim1.monternet.com
+V/http    ( 2027): 437696 http2 Request.requestSent() http://pim1.monternet.com/wap/customizeCostInfo.do
+V/BrowserActivity( 2027): onProgressChanged: 10
+V/TitleBar( 2027): onProgressChanged: com.android.browser.TitleBar@43d8ea68 10 false null
+V/TitleBar( 2027): onProgressChanged: delay animation
+V/BrowserActivity( 2027): onProgressChanged:  false false
+V/BrowserActivity( 2027): showFakeTitleBar: Handler{43dcd940} null false
+V/http    ( 2027): 437709 http2 SEND pipe 1
+V/http    ( 2027): 437712 http2 RequestQueue.getRequest(http://10.0.0.172:80) => null
+V/http    ( 2027): 437715 http2 DRAIN pipe 1
+V/http    ( 2027): 437718 http2 processRequests() reading /wap/customizeCostInfo.do
+V/webview ( 2027): setCertificate=null
+V/TitleBar( 2027): onProgressChanged: com.android.browser.TitleBar@43d8ea68 10 false android.view.ViewRoot$W@43dcdf70
+V/TitleBar( 2027): onProgressChanged: start animation
+V/http    ( 2027): 438182 http2 read: HTTP/1.1 200 OK, Success
+V/http    ( 2027): 438183 http2 hdr 19 content-length: 556
+V/http    ( 2027): 438185 http2 hdr 44 content-type: text/vnd.wap.wml;charset=UTF-8
+V/http    ( 2027): 438187 http2 hdr 25 server: Apache-Coyote/1.1
+V/http    ( 2027): 438188 http2 hdr 74 set-cookie: JSESSIONID=2D82CE8D4C279FEA3E4D1EBB154FC12A.worker1; Path=/wap
+V/http    ( 2027): 438189 http2 hdr 16 pragma: No-cache
+V/http    ( 2027): 438194 http2 hdr 23 cache-control: no-cache
+V/http    ( 2027): 438196 http2 hdr 38 expires: Thu, 01 Jan 1970 00:00:00 GMT
+V/http    ( 2027): 438197 http2 hdr 35 date: Tue, 23 Aug 2011 06:35:46 GMT
+V/http    ( 2027): 438199 http2 hdr 22 content-encoding: gzip
+V/http    ( 2027): 438206 http2 Request.readResponseStatus() 24 HTTP/1.1 200 OK, Success
+V/LoadListener( 2027): LoadListener: from: http://pim1.monternet.com/wap/customizeCostInfo.do major: 1 minor: 1 code: 200 reason: OK, Success
+V/LoadListener( 2027): LoadListener.headers
+V/webkit  ( 2027): setCookie: uri: http://pim1.monternet.com/wap/customizeCostInfo.do value: JSESSIONID=2D82CE8D4C279FEA3E4D1EBB154FC12A.worker1; Path=/wap
+V/LoadListener( 2027): Dump HTTP headers:
+V/LoadListener( 2027): content-length 556
+V/LoadListener( 2027): content-type text/vnd.wap.wml;charset=UTF-8
+V/LoadListener( 2027): content-encoding gzip
+V/LoadListener( 2027): expires Thu, 01 Jan 1970 00:00:00 GMT
+V/LoadListener( 2027): cache-control no-cache
+V/LoadListener( 2027): set-cookie JSESSIONID=2D82CE8D4C279FEA3E4D1EBB154FC12A.worker1; Path=/wap
+V/LoadListener( 2027): pragma No-cache
+V/LoadListener( 2027): server Apache-Coyote/1.1
+V/LoadListener( 2027): date Tue, 23 Aug 2011 06:35:46 GMT
+V/LoadListener( 2027): LoadListener.parseContentTypeHeader: contentType: text/vnd.wap.wml;charset=UTF-8
+V/LoadListener( 2027): loading url: http://pim1.monternet.com/wap/customizeCostInfo.do
+V/LoadListener( 2027): has cookie : true, in cache black list: false
+V/http    ( 2027): 438236 http2 Request.readResponse() 737
+V/LoadListener( 2027): LoadListener.data(): url: http://pim1.monternet.com/wap/customizeCostInfo.do
+I/WebCore::FrameLoader( 2027): frameContainsWMLContent, 1585
+I/WebCoreFrameBridge( 2027): transitionToCommitted, 598
+I/WebCoreFrameBridge( 2027): transitionToCommitted, 610
+I/WebCore::FrameLoader( 2027): transitionToCommitted, mimetype: text/vnd.wap.wml
+I/WebCore ( 2027): committedLoad, 693
+I/WebCore::FrameLoader( 2027): begin createDocument, mimetype: text/vnd.wap.wml
+V/LoadListener( 2027): LoadListener.endData(): url: http://pim1.monternet.com/wap/customizeCostInfo.do
+I/WebCore::WML( 2027): createDocument, 340
+V/http    ( 2027): 438262 http2 Request.readResponse(): done http://pim1.monternet.com/wap/customizeCostInfo.do
+V/http    ( 2027): 438264 http2 DRAIN pipe 0
+V/http    ( 2027): 438266 http2 IdleCache size 0 host http://10.0.0.172:80
+V/http    ( 2027): 438267 http2 RequestQueue.getRequest() => null
+V/http    ( 2027): 438268 http2 ConnectionThread: Waiting for work
+I/WebCore::FrameLoader( 2027): write(): decode
+I/WebCore::FrameLoader( 2027): write(): create decoder, mimetype: text/vnd.wap.wml
+I/WebCore::TextResourceDecoder( 2027): defaultEncoding, content-type: 2, default encoding: UTF-8
+I/WebCore::FrameLoader( 2027): write(): set decoder from http header
+I/WebCore::FrameLoader( 2027): utf-8
+I/WebCore::TextResourceDecoder( 2027): setEncoding(), source: 5
+I/WebCore::TextResourceDecoder( 2027): setEncoding() name: UTF-8
+I/WebCore::TextResourceDecoder( 2027): decode()
+I/WebCore::TextResourceDecoder( 2027): decode() css charset done!
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), decode source: 5
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), buffer size: 737
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), check encoding
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), check xml encoding
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), do check xml encoding
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), do check http encoding
+I/WebCoreFrameBridge( 2027): setProgress, 715
+V/BrowserActivity( 2027): onProgressChanged: 30
+V/TitleBar( 2027): onProgressChanged: com.android.browser.TitleBar@43d8ea68 30 true android.view.ViewRoot$W@43dcdf70
+V/BrowserActivity( 2027): onProgressChanged:  false false
+V/BrowserActivity( 2027): showFakeTitleBar: Handler{43dcd940} null false
+I/WebCoreFrameBridge( 2027): setProgress, 724
+V/LoadListener( 2027): LoadListener.detachRequestHandle(): requestHandle: android.net.http.RequestHandle@43e33d90
+I/WebCore ( 2027): committedLoad, 693
+I/WebCore::FrameLoader( 2027): write(): decode
+I/WebCore::TextResourceDecoder( 2027): decode()
+I/WebCore::TextResourceDecoder( 2027): decode() css charset done!
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), decode source: 5
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), buffer size: 737
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), check encoding
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), check xml encoding
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), do check xml encoding
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), do check http encoding
+I/WebCore::TextResourceDecoder( 2027): flush()
+I/WebCore::TextResourceDecoder( 2027): shouldAutoDetect, m_usesEncodingDetector: 1, m_source :5
+I/WebCore::WML( 2027): internalSubset, 1081
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCoreFrameBridge( 2027): setTitle, 681
+I/Tab     ( 2027): onReceivedTitle title: 资费 url: http://pim1.monternet.com/wap/customizeCostInfo.do
+I/Tab     ( 2027): onReceivedTitle foreground
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+I/BrowserProvider( 2027): query url: content://browser/bookmarks url match: 0
+I/WebCoreFrameBridge( 2027): setTitle, 694
+I/WebCoreFrameBridge( 2027): didReceiveIcon, 736
+V/webview ( 2027): SET_SCROLLBAR_MODES
+V/webview ( 2027): SET_SCROLLBAR_MODES
+V/webview ( 2027): SET_SCROLLBAR_MODES
+V/webcore ( 2027): didFirstLayout standardLoad =true
+V/webcore ( 2027): setupViewport mRestoredScale=0 mViewScale=0.75 mTextWrapScale=0.75
+I/WebCoreFrameBridge( 2027): didFinishLoad, 616
+V/BrowserActivity( 2027): onPageFinished
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+I/WebCoreFrameBridge( 2027): didFinishLoad, 636
+I/WebCoreFrameBridge( 2027): setProgress, 715
+I/WebCoreFrameBridge( 2027): setProgress, 724
+V/cache   ( 2027): endTransaction
+V/webcore ( 2027): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43e40220
+V/webcore ( 2027): viewSizeChanged w=320; h=345; textwrapWidth=320; scale=0.75
+V/webcore ( 2027): viewSizeChanged w=320; h=345; textwrapWidth=320; scale=0.75
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+I/TabControl( 2027): getCurrentTab
+V/cache   ( 2027): startTransaction
+I/TabControl( 2027): getTab
+V/BrowserActivity( 2027): onProgressChanged: 100
+I/TabControl( 2027): getCurrentWebView
+I/TabControl( 2027): getTab
+V/webview ( 2027): UPDATE_TEXT_ENTRY_MSG_ID
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webcore ( 2027): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+I/WebCoreFrameBridge( 2027): HasPasswordField, 1502
+I/WebCoreFrameBridge( 2027): HasPasswordField, 1514
+I/WebCoreFrameBridge( 2027): HasPasswordField, 1533
+V/cache   ( 2027): trimCacheIfNeeded
+V/websync ( 2027): CookieSyncManager::syncFromRamToFlash STARTS
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {0,0,320,345}
+V/webview ( 2027): UPDATE_TEXT_ENTRY_MSG_ID
+V/websync ( 2027): CookieSyncManager::syncFromRamToFlash DONE
+V/BrowserActivity( 2027): updateScreenshot
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+I/BrowserProvider( 2027): query url: content://browser/bookmarks url match: 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+V/webview ( 2027): MotionEvent{43d67d00 action=0 x=74.78599 y=182.47368 pressure=0.024420025 size=0.0} at 445610 mTouchMode=7
+V/webcore ( 2027): UPDATE_FRAME_CACHE_IF_LOADING arg1=0 arg2=0 obj=null
+V/webview ( 2027): MotionEvent{43d67d00 action=2 x=73.86676 y=181.58484 pressure=0.024420025 size=0.0} at 445638 mTouchMode=1
+V/webview ( 2027): MotionEvent{43d67d00 action=2 x=72.947525 y=180.49846 pressure=0.024420025 size=0.0} at 445663 mTouchMode=1
+V/webview ( 2027): MotionEvent{43d67d00 action=2 x=72.487915 y=180.30092 pressure=0.024420025 size=0.0} at 445687 mTouchMode=1
+V/webview ( 2027): MotionEvent{43d67d00 action=2 x=72.29093 y=180.20216 pressure=0.024420025 size=0.0} at 445712 mTouchMode=1
+V/webview ( 2027): MotionEvent{43d67d00 action=2 x=72.159615 y=180.30092 pressure=0.024420025 size=0.0} at 445737 mTouchMode=1
+V/webview ( 2027): MotionEvent{43d67d00 action=2 x=72.093956 y=181.18979 pressure=0.024420025 size=0.0} at 445761 mTouchMode=1
+V/webview ( 2027): MotionEvent{43df4788 action=2 x=73.14451 y=183.65883 pressure=0.024420025 size=0.0} at 445784 mTouchMode=1
+V/webview ( 2027): MotionEvent{43d67d00 action=1 x=73.14451 y=183.65883 pressure=0.024420025 size=0.0} at 445804 mTouchMode=1
+V/webview ( 2027): RELEASE_SINGLE_TAP
+V/webcore ( 2027): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 0)
+V/webcore ( 2027): VALID_NODE_BOUNDS arg1=0 arg2=0 obj=android.webkit.WebViewCore$MotionUpData@43e4f480
+V/webview ( 2027): DO_MOTION_UP
+V/webcore ( 2027): TOUCH_UP arg1=0 arg2=0 obj=android.webkit.WebViewCore$TouchUpData@43e4f930
+V/AudioPolicyManagerALSA( 1636): startOutput() output 1, stream 1
+E/AudioPolicyManagerALSA( 1636): mAvailableOutputDevices=0x3
+V/AudioPolicyManagerALSA( 1636): getDeviceForStrategy() -out- strategy 0, device 2
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 2 delayMs 0
+I/AudioFlinger( 1636): setParameters(): io 1, keyvalue routing=2, tid 1677, calling tid 1636
+D/ALSAStreamOps( 1636): setParameters() routing=2
+D/ALSAModule( 1636): v0.01 route called for devices 00000002 in mode 0...
+D/ALSAModule( 1636): Routing audio to Speakerphone
+D/ALSAModule( 1636): the same device
+V/AudioPolicyManagerALSA( 1636): applyStreamVolumes() for output 1 and device 2
+V/AudioPolicyManagerALSA( 1636): checkAndSetVolume() cannot set stream 6 volume with force use = 0 for comm
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 1
+V/AudioPolicyManagerALSA( 1636): releaseOutput() 1
+W/AudioHardwareALSA( 1636): Write request but device is in state SND_PCM_STATE_SETUP
+D/AudioHardwareALSA( 1636): call snd_pcm_prepare
+W/AudioHardwareALSA( 1636): current_state=1 - Wait for correct device state
+V/AudioPolicyManagerALSA( 1636): stopOutput() output 1, stream 1
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 0
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 0 delayMs 372
+D/AudioHardwareALSA( 1636): standby()
+D/AudioHardwareALSA( 1636): mStreamType=1, mParent->getAnalogLoop()=0
+I/WebCore::FrameLoader( 2027): encoding(), from m_decoder
+I/WebCore::FrameLoader( 2027): shouldReload, 2756
+I/WebCore::FrameLoader( 2027): frameContainsWMLContent, 1585
+I/WebCore::FrameLoader( 2027): shouldReload, 2756
+I/WebCore::FrameLoader( 2027): frameContainsWMLContent, 1585
+I/WebCoreFrameBridge( 2027): canHandleRequest, 788
+V/BrowserActivity( 2027): shouldOverrideUrlLoading: http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm android.webkit.WebView@43e1ed70
+V/BrowserActivity( 2027): updateTitleBarForNewLoad
+I/TabControl( 2027): getCurrentTopWebView
+I/TabControl( 2027): getTab
+I/Tab     ( 2027): getTopWindow
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+I/ActivityManager( 1692): Starting activity: Intent { act=android.intent.action.VIEW cat=[android.intent.category.BROWSABLE] dat=http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm cmp=com.android.browser/.BrowserActivity }
+V/BrowserActivity( 2027): onProgressChanged: 10
+V/TitleBar( 2027): onProgressChanged: com.android.browser.TitleBar@43d8ea68 10 false null
+V/TitleBar( 2027): onProgressChanged: delay animation
+V/BrowserActivity( 2027): onProgressChanged:  false false
+V/BrowserActivity( 2027): showFakeTitleBar: null null false
+I/TabControl( 2027): getCurrentWebView
+I/TabControl( 2027): getTab
+V/BrowserActivity( 2027): showFakeTitleBar: android.webkit.WebView@43e1ed70
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+I/WebCoreFrameBridge( 2027): canHandleRequest, 813
+I/WebCoreFrameBridge( 2027): loadStarted, 544
+I/WebCoreFrameBridge( 2027): loadStarted, 592
+I/WebCoreFrameBridge( 2027): setProgress, 715
+I/WebCoreFrameBridge( 2027): setProgress, 724
+I/WebCore::FrameLoader( 2027): encoding(), from m_decoder
+I/WebCoreFrameBridge( 2027): startLoadingResource, 378
+I/WebCoreFrameBridge( 2027): createJavaMapFromHTTPHeaders, 300
+I/WebCoreFrameBridge( 2027): createJavaMapFromHTTPHeaders, 327
+V/webkit  ( 2027): startLoadingResource: url=http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm, method=GET, postData=null, isMainFramePage=true, mainResource=true, userGesture=true
+V/LoadListener( 2027): LoadListener constructor url=http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+V/WebSettings( 2027): getUserAgentString default: HuaweiT8100_TD/1.0 Android/2.2 Release/12.25.2010 Browser/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 AppleWebKit/533.1
+V/webkit  ( 2027): getCookie: uri: http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm value: JSESSIONID=2D82CE8D4C279FEA3E4D1EBB154FC12A.worker1
+V/cache   ( 2027): getCacheFile: http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+V/webkit  ( 2027): FrameLoader: http GET load for: http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+V/http    ( 2027): 446677 WebViewWorkerThread RequestQueue.queueRequest url:http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+V/http    ( 2027): 446677 WebViewWorkerThread RequestQueue.queueRequest uri:http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+V/http    ( 2027): 446677 WebViewWorkerThread RequestQueue.queueRequest shouldUseWifiProxy: false
+V/http    ( 2027): 446678 WebViewWorkerThread RequestQueue.inWifiProxyBlackList url:http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+V/http    ( 2027): 446678 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web1: 
+V/http    ( 2027): 446679 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web2: 
+V/http    ( 2027): 446679 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web3: 
+V/http    ( 2027): 446679 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web4: 192.168.
+V/http    ( 2027): 446679 WebViewWorkerThread RequestQueue.inWifiProxyBlackList not match
+I/WebCoreFrameBridge( 2027): startLoadingResource, 516
+V/http    ( 2027): 446699 WebViewWorkerThread RequestQueue.queueRequest proxy: http://10.0.0.172:80
+V/http    ( 2027): 446703 http3 RequestQueue.getRequest() => /wap/wap/zh/login/inputPWD.vm
+V/http    ( 2027): 446703 http3 ConnectionThread: new request http://pim1.monternet.com:80 /wap/wap/zh/login/inputPWD.vm
+V/http    ( 2027): 446704 http3 RequestQueue.inWifiProxyBlackList url:http://pim1.monternet.com:80
+V/http    ( 2027): 446704 http3 RequestQueue.inWifiProxyBlackList web1: 
+V/http    ( 2027): 446704 http3 RequestQueue.inWifiProxyBlackList web2: 
+V/http    ( 2027): 446704 http3 RequestQueue.inWifiProxyBlackList web3: 
+V/http    ( 2027): 446704 http3 RequestQueue.inWifiProxyBlackList web4: 192.168.
+V/http    ( 2027): 446705 http3 RequestQueue.inWifiProxyBlackList not match
+V/http    ( 2027): 446706 http3 RequestQueue.determineHost host: http://pim1.monternet.com:80
+V/http    ( 2027): 446706 http3 RequestQueue.determineHost proxy: http://10.0.0.172:80
+V/http    ( 2027): 446706 http3 getConnection :http://10.0.0.172:80
+V/http    ( 2027): 446707 http3 RequestQueue.inWifiProxyBlackList url:http://10.0.0.172:80
+V/http    ( 2027): 446707 http3 RequestQueue.inWifiProxyBlackList web1: 
+V/http    ( 2027): 446707 http3 RequestQueue.inWifiProxyBlackList web2: 
+V/http    ( 2027): 446708 http3 RequestQueue.inWifiProxyBlackList web3: 
+V/http    ( 2027): 446708 http3 RequestQueue.inWifiProxyBlackList web4: 192.168.
+V/http    ( 2027): 446708 http3 RequestQueue.inWifiProxyBlackList not match
+V/http    ( 2027): 446708 http3 mInterface is pdp_ip0
+V/http    ( 2027): 446708 http3 SEND pipe 0
+V/LoadListener( 2027): LoadListener.certificate: null
+V/LoadListener( 2027): LoadListener.attachRequestHandle(): requestHandle: android.net.http.RequestHandle@43e5ae38
+V/webview ( 2027): setCertificate=null
+V/BrowserActivity( 2027): onPageStarted
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+V/BrowserActivity( 2027): onProgressChanged: 10
+V/TitleBar( 2027): onProgressChanged: com.android.browser.TitleBar@43d8ea68 10 false android.view.ViewRoot$W@43e52720
+V/TitleBar( 2027): onProgressChanged: start animation
+V/BrowserActivity( 2027): onProgressChanged:  false false
+V/BrowserActivity( 2027): showFakeTitleBar: Handler{43e520c0} null false
+V/BrowserActivity( 2027): onProgressChanged: 10
+V/TitleBar( 2027): onProgressChanged: com.android.browser.TitleBar@43d8ea68 10 true android.view.ViewRoot$W@43e52720
+V/BrowserActivity( 2027): onProgressChanged:  false false
+V/BrowserActivity( 2027): showFakeTitleBar: Handler{43e520c0} null false
+V/webview ( 2027): setCertificate=null
+V/http    ( 2027): 454281 IdleReaper IdleCache IdleReaper shutdown: cached 3 reused 2
+D/StorageMonitor( 1747): mms freeMem:10670080, smslowflag:false,mmslowflag:false,smsThrehold:10240,mmsThreshold:317440
+V/http    ( 2027): 466861 http3 InetSocketAddress addr is 10.0.0.172/10.0.0.172:80
+V/http    ( 2027): 467043 http3 Connection.openHttpConnection() 20334 http://10.0.0.172:80
+V/LoadListener( 2027): LoadListener.certificate: null
+V/http    ( 2027): 467052 http3 Request.sendRequest() http://pim1.monternet.com
+V/http    ( 2027): 467055 http3 Request.requestSent() http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+V/http    ( 2027): 467056 http3 READ pipe 1
+V/http    ( 2027): 467058 http3 processRequests() reading /wap/wap/zh/login/inputPWD.vm
+V/webview ( 2027): setCertificate=null
+V/http    ( 2027): 467552 http3 read: HTTP/1.1 200 OK, Success
+V/http    ( 2027): 467553 http3 hdr 19 content-length: 873
+V/http    ( 2027): 467555 http3 hdr 44 content-type: text/vnd.wap.wml;charset=UTF-8
+V/http    ( 2027): 467559 http3 hdr 25 server: Apache-Coyote/1.1
+V/http    ( 2027): 467564 http3 hdr 16 pragma: No-cache
+V/http    ( 2027): 467566 http3 hdr 23 cache-control: no-cache
+V/http    ( 2027): 467568 http3 hdr 38 expires: Thu, 01 Jan 1970 00:00:00 GMT
+V/http    ( 2027): 467569 http3 hdr 35 date: Tue, 23 Aug 2011 06:36:16 GMT
+V/http    ( 2027): 467573 http3 hdr 22 content-encoding: gzip
+V/http    ( 2027): 467575 http3 Request.readResponseStatus() 24 HTTP/1.1 200 OK, Success
+V/LoadListener( 2027): LoadListener: from: http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm major: 1 minor: 1 code: 200 reason: OK, Success
+V/LoadListener( 2027): LoadListener.headers
+V/LoadListener( 2027): Dump HTTP headers:
+V/LoadListener( 2027): content-length 873
+V/LoadListener( 2027): content-type text/vnd.wap.wml;charset=UTF-8
+V/LoadListener( 2027): content-encoding gzip
+V/LoadListener( 2027): expires Thu, 01 Jan 1970 00:00:00 GMT
+V/LoadListener( 2027): cache-control no-cache
+V/LoadListener( 2027): pragma No-cache
+V/LoadListener( 2027): server Apache-Coyote/1.1
+V/LoadListener( 2027): date Tue, 23 Aug 2011 06:36:16 GMT
+V/LoadListener( 2027): LoadListener.parseContentTypeHeader: contentType: text/vnd.wap.wml;charset=UTF-8
+V/LoadListener( 2027): loading url: http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+V/LoadListener( 2027): has cookie : false, in cache black list: false
+V/LoadListener( 2027): do cache page: http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+V/http    ( 2027): 467600 http3 Request.readResponse() 1777
+V/LoadListener( 2027): LoadListener.data(): url: http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+V/cache   ( 2027): createCacheFile: http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+V/LoadListener( 2027): LoadListener.endData(): url: http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+V/http    ( 2027): 467614 http3 Request.readResponse(): done http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+V/http    ( 2027): 467616 http3 READ pipe 0
+I/WebCore::FrameLoader( 2027): frameContainsWMLContent, 1585
+I/WebCore::HistoryController( 2027): WebCoreBackForward - Adding backforward item for frame http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+V/http    ( 2027): 467621 http3 IdleCache size 0 host http://10.0.0.172:80
+I/WebCoreFrameBridge( 2027): addHistoryItem, 642
+I/WebCoreFrameBridge( 2027): addHistoryItem, 649
+I/WebCoreFrameBridge( 2027): updateVisitedHistory, 772
+I/BrowserProvider( 2027): query url: content://browser/bookmarks url match: 0
+I/WebCoreFrameBridge( 2027): updateVisitedHistory, 782
+I/WebCoreFrameBridge( 2027): transitionToCommitted, 598
+I/WebCoreFrameBridge( 2027): transitionToCommitted, 610
+I/WebCore::FrameLoader( 2027): transitionToCommitted, mimetype: text/vnd.wap.wml
+I/WebCore ( 2027): committedLoad, 693
+I/WebCore::FrameLoader( 2027): begin createDocument, mimetype: text/vnd.wap.wml
+I/WebCore::WML( 2027): createDocument, 340
+I/WebCore::FrameLoader( 2027): write(): decode
+V/http    ( 2027): 467646 http3 RequestQueue.getRequest() => null
+V/http    ( 2027): 467646 http3 ConnectionThread: Waiting for work
+I/WebCore::FrameLoader( 2027): write(): create decoder, mimetype: text/vnd.wap.wml
+I/WebCore::TextResourceDecoder( 2027): defaultEncoding, content-type: 2, default encoding: UTF-8
+I/WebCore::FrameLoader( 2027): write(): set decoder from http header
+I/WebCore::FrameLoader( 2027): utf-8
+I/WebCore::TextResourceDecoder( 2027): setEncoding(), source: 5
+I/WebCore::TextResourceDecoder( 2027): setEncoding() name: UTF-8
+I/WebCore::TextResourceDecoder( 2027): decode()
+I/WebCore::TextResourceDecoder( 2027): decode() css charset done!
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), decode source: 5
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), buffer size: 1777
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), check encoding
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), check xml encoding
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), do check xml encoding
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), do check http encoding
+I/WebCore::TextResourceDecoder( 2027): decode(),  html/xml charset done! current encoding: UTF-8
+I/WebCore::TextResourceDecoder( 2027): shouldAutoDetect, m_usesEncodingDetector: 1, m_source :5
+I/WebCore::TextResourceDecoder( 2027): decode() autodetect done!
+I/WebCore::WML( 2027): internalSubset, 1081
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::FrameLoader( 2027): encoding(), from m_decoder
+I/WebCoreFrameBridge( 2027): startLoadingResource, 378
+I/WebCoreFrameBridge( 2027): createJavaMapFromHTTPHeaders, 300
+D/dalvikvm( 2027): GC_FOR_MALLOC freed 8798 objects / 549128 bytes in 120ms
+I/WebCoreFrameBridge( 2027): createJavaMapFromHTTPHeaders, 327
+V/webkit  ( 2027): startLoadingResource: url=http://pim1.monternet.com/wap/wap/zh/images/wap_tuijian.gif, method=GET, postData=null, isMainFramePage=true, mainResource=false, userGesture=true
+V/LoadListener( 2027): LoadListener constructor url=http://pim1.monternet.com/wap/wap/zh/images/wap_tuijian.gif
+V/WebSettings( 2027): getUserAgentString default: HuaweiT8100_TD/1.0 Android/2.2 Release/12.25.2010 Browser/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 AppleWebKit/533.1
+V/webkit  ( 2027): getCookie: uri: http://pim1.monternet.com/wap/wap/zh/images/wap_tuijian.gif value: JSESSIONID=2D82CE8D4C279FEA3E4D1EBB154FC12A.worker1
+V/cache   ( 2027): getCacheFile: http://pim1.monternet.com/wap/wap/zh/images/wap_tuijian.gif
+I/WebCoreFrameBridge( 2027): startLoadingResource, 516
+I/WebCore::WML( 2027): updateAltText, 602
+I/WebCore::WML( 2027): createElement, 887
+V/webkit  ( 2027): FrameLoader: http GET load for: http://pim1.monternet.com/wap/wap/zh/images/wap_tuijian.gif
+V/http    ( 2027): 467909 WebViewWorkerThread RequestQueue.queueRequest url:http://pim1.monternet.com/wap/wap/zh/images/wap_tuijian.gif
+V/http    ( 2027): 467911 WebViewWorkerThread RequestQueue.queueRequest uri:http://pim1.monternet.com/wap/wap/zh/images/wap_tuijian.gif
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+V/http    ( 2027): 467932 WebViewWorkerThread RequestQueue.queueRequest shouldUseWifiProxy: false
+V/http    ( 2027): 467934 WebViewWorkerThread RequestQueue.inWifiProxyBlackList url:http://pim1.monternet.com/wap/wap/zh/images/wap_tuijian.gif
+V/http    ( 2027): 467943 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web1: 
+V/http    ( 2027): 467943 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web2: 
+V/http    ( 2027): 467946 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web3: 
+I/WebCore::WML( 2027): createElement, 887
+V/http    ( 2027): 467953 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web4: 192.168.
+V/http    ( 2027): 467954 WebViewWorkerThread RequestQueue.inWifiProxyBlackList not match
+V/http    ( 2027): 467956 WebViewWorkerThread RequestQueue.queueRequest proxy: http://10.0.0.172:80
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+V/http    ( 2027): 467967 http0 RequestQueue.getRequest() => /wap/wap/zh/images/wap_tuijian.gif
+V/http    ( 2027): 467968 http0 ConnectionThread: new request http://pim1.monternet.com:80 /wap/wap/zh/images/wap_tuijian.gif
+V/http    ( 2027): 467968 http0 RequestQueue.inWifiProxyBlackList url:http://pim1.monternet.com:80
+V/http    ( 2027): 467969 http0 RequestQueue.inWifiProxyBlackList web1: 
+V/http    ( 2027): 467979 http0 RequestQueue.inWifiProxyBlackList web2: 
+V/http    ( 2027): 467981 http0 RequestQueue.inWifiProxyBlackList web3: 
+V/LoadListener( 2027): LoadListener.attachRequestHandle(): requestHandle: android.net.http.RequestHandle@43d7a3d8
+V/http    ( 2027): 467983 http0 RequestQueue.inWifiProxyBlackList web4: 192.168.
+V/http    ( 2027): 467983 http0 RequestQueue.inWifiProxyBlackList not match
+V/http    ( 2027): 467983 http0 RequestQueue.determineHost host: http://pim1.monternet.com:80
+V/http    ( 2027): 467984 http0 RequestQueue.determineHost proxy: http://10.0.0.172:80
+V/http    ( 2027): 467984 http0 SEND pipe 0
+V/LoadListener( 2027): LoadListener.certificate: null
+V/http    ( 2027): 467984 http0 Request.sendRequest() http://pim1.monternet.com
+V/http    ( 2027): 467986 http0 Request.requestSent() http://pim1.monternet.com/wap/wap/zh/images/wap_tuijian.gif
+V/http    ( 2027): 467987 http0 SEND pipe 1
+V/http    ( 2027): 467987 http0 RequestQueue.getRequest(http://10.0.0.172:80) => null
+V/http    ( 2027): 467988 http0 DRAIN pipe 1
+V/http    ( 2027): 467988 http0 processRequests() reading /wap/wap/zh/images/wap_tuijian.gif
+I/BrowserProvider( 2027): query url: content://browser/bookmarks url match: 0
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCoreFrameBridge( 2027): setProgress, 715
+V/BrowserActivity( 2027): onProgressChanged: 13
+V/TitleBar( 2027): onProgressChanged: com.android.browser.TitleBar@43d8ea68 13 true android.view.ViewRoot$W@43e52720
+V/BrowserActivity( 2027): onProgressChanged:  false false
+V/BrowserActivity( 2027): showFakeTitleBar: Handler{43e520c0} null false
+I/WebCoreFrameBridge( 2027): setProgress, 724
+V/LoadListener( 2027): LoadListener.detachRequestHandle(): requestHandle: android.net.http.RequestHandle@43e5ae38
+I/WebCore ( 2027): committedLoad, 693
+I/WebCore::FrameLoader( 2027): write(): decode
+I/WebCore::TextResourceDecoder( 2027): decode()
+I/WebCore::TextResourceDecoder( 2027): decode() css charset done!
+I/WebCore::TextResourceDecoder( 2027): decode(),  html/xml charset done! current encoding: UTF-8
+I/WebCore::TextResourceDecoder( 2027): shouldAutoDetect, m_usesEncodingDetector: 1, m_source :5
+I/WebCore::TextResourceDecoder( 2027): decode() autodetect done!
+I/WebCore::TextResourceDecoder( 2027): flush()
+V/cache   ( 2027): saveCacheFile for url http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+V/webview ( 2027): SET_SCROLLBAR_MODES
+V/webview ( 2027): SET_SCROLLBAR_MODES
+V/webview ( 2027): SET_SCROLLBAR_MODES
+V/webcore ( 2027): didFirstLayout standardLoad =true
+V/webcore ( 2027): setupViewport mRestoredScale=0 mViewScale=0.75 mTextWrapScale=0.75
+V/webcore ( 2027): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43d59b88
+V/webcore ( 2027): viewSizeChanged w=320; h=345; textwrapWidth=320; scale=0.75
+V/webcore ( 2027): viewSizeChanged w=320; h=345; textwrapWidth=320; scale=0.75
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {0,0,320,408}
+V/webcore ( 2027): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webview ( 2027): UPDATE_TEXT_ENTRY_MSG_ID
+V/http    ( 2027): 468462 http0 read: HTTP/1.1 200 OK, Success
+V/http    ( 2027): 468463 http0 hdr 18 content-length: 79
+V/http    ( 2027): 468465 http0 hdr 23 content-type: image/gif
+V/http    ( 2027): 468467 http0 hdr 25 server: Apache-Coyote/1.1
+V/http    ( 2027): 468468 http0 hdr 26 etag: W/"79-1277782664000"
+V/http    ( 2027): 468469 http0 hdr 44 last-modified: Tue, 29 Jun 2010 03:37:44 GMT
+V/http    ( 2027): 468473 http0 hdr 35 date: Tue, 23 Aug 2011 06:36:16 GMT
+V/http    ( 2027): 468476 http0 Request.readResponseStatus() 24 HTTP/1.1 200 OK, Success
+V/LoadListener( 2027): LoadListener: from: http://pim1.monternet.com/wap/wap/zh/images/wap_tuijian.gif major: 1 minor: 1 code: 200 reason: OK, Success
+V/LoadListener( 2027): LoadListener.headers
+V/LoadListener( 2027): Dump HTTP headers:
+V/LoadListener( 2027): content-length 79
+V/LoadListener( 2027): content-type image/gif
+V/LoadListener( 2027): last-modified Tue, 29 Jun 2010 03:37:44 GMT
+V/LoadListener( 2027): etag W/"79-1277782664000"
+V/LoadListener( 2027): server Apache-Coyote/1.1
+V/LoadListener( 2027): date Tue, 23 Aug 2011 06:36:16 GMT
+V/LoadListener( 2027): LoadListener.parseContentTypeHeader: contentType: image/gif
+V/LoadListener( 2027): loading url: http://pim1.monternet.com/wap/wap/zh/images/wap_tuijian.gif
+V/LoadListener( 2027): has cookie : false, in cache black list: false
+V/LoadListener( 2027): do cache page: http://pim1.monternet.com/wap/wap/zh/images/wap_tuijian.gif
+V/cache   ( 2027): createCacheFile: http://pim1.monternet.com/wap/wap/zh/images/wap_tuijian.gif
+V/cache   ( 2027): parseHeaders last-modified expires: 1314254226533
+V/http    ( 2027): 468493 http0 Request.readResponse() 79
+V/LoadListener( 2027): LoadListener.data(): url: http://pim1.monternet.com/wap/wap/zh/images/wap_tuijian.gif
+V/LoadListener( 2027): LoadListener.endData(): url: http://pim1.monternet.com/wap/wap/zh/images/wap_tuijian.gif
+V/http    ( 2027): 468511 http0 Request.readResponse(): done http://pim1.monternet.com/wap/wap/zh/images/wap_tuijian.gif
+V/http    ( 2027): 468512 http0 DRAIN pipe 0
+V/http    ( 2027): 468514 http0 IdleCache size 0 host http://10.0.0.172:80
+I/WebCoreFrameBridge( 2027): setProgress, 715
+I/WebCoreFrameBridge( 2027): setProgress, 724
+V/http    ( 2027): 468524 http0 RequestQueue.getRequest() => null
+V/http    ( 2027): 468525 http0 ConnectionThread: Waiting for work
+V/LoadListener( 2027): LoadListener.detachRequestHandle(): requestHandle: android.net.http.RequestHandle@43d7a3d8
+I/WebCoreFrameBridge( 2027): didReceiveIcon, 736
+I/WebCoreFrameBridge( 2027): didFinishLoad, 616
+V/BrowserActivity( 2027): onPageFinished
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+I/WebCoreFrameBridge( 2027): didFinishLoad, 636
+I/WebCoreFrameBridge( 2027): setProgress, 715
+I/WebCoreFrameBridge( 2027): setProgress, 724
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+V/cache   ( 2027): saveCacheFile for url http://pim1.monternet.com/wap/wap/zh/images/wap_tuijian.gif
+V/cache   ( 2027): endTransaction
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/cache   ( 2027): startTransaction
+V/BrowserActivity( 2027): onProgressChanged: 100
+I/TabControl( 2027): getCurrentWebView
+I/TabControl( 2027): getTab
+V/webview ( 2027): UPDATE_TEXT_ENTRY_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {8,339,23,353}
+I/WebCoreFrameBridge( 2027): HasPasswordField, 1502
+I/WebCoreFrameBridge( 2027): HasPasswordField, 1514
+I/WebCoreFrameBridge( 2027): HasPasswordField, 1533
+V/cache   ( 2027): trimCacheIfNeeded
+V/websync ( 2027): CookieSyncManager::syncFromRamToFlash STARTS
+V/websync ( 2027): CookieSyncManager::syncFromRamToFlash DONE
+V/BrowserActivity( 2027): updateScreenshot
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+I/BrowserProvider( 2027): query url: content://browser/bookmarks url match: 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+V/webview ( 2027): MotionEvent{43d67d00 action=0 x=166.38077 y=81.243034 pressure=0.024420025 size=0.0} at 474204 mTouchMode=7
+V/webcore ( 2027): UPDATE_FRAME_CACHE_IF_LOADING arg1=0 arg2=0 obj=null
+V/webview ( 2027): MotionEvent{43d67d00 action=2 x=165.5272 y=80.74923 pressure=0.024420025 size=0.0} at 474232 mTouchMode=1
+V/webview ( 2027): MotionEvent{43d67d00 action=2 x=165.46155 y=80.65046 pressure=0.024420025 size=0.0} at 474257 mTouchMode=1
+V/webview ( 2027): MotionEvent{43d67d00 action=2 x=165.78983 y=80.551704 pressure=0.024420025 size=0.0} at 474281 mTouchMode=1
+V/webview ( 2027): MotionEvent{43d67d00 action=1 x=165.78983 y=80.551704 pressure=0.024420025 size=0.0} at 474304 mTouchMode=1
+V/webview ( 2027): RELEASE_SINGLE_TAP
+V/webcore ( 2027): VALID_NODE_BOUNDS arg1=0 arg2=0 obj=android.webkit.WebViewCore$MotionUpData@43dc11b8
+V/webview ( 2027): DO_MOTION_UP
+V/webcore ( 2027): TOUCH_UP arg1=0 arg2=0 obj=android.webkit.WebViewCore$TouchUpData@43ded4d0
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): UPDATE_TEXT_SELECTION_MSG_ID
+V/webcore ( 2027): REQUEST_LABEL arg1=3246712 arg2=3973752 obj=null
+V/webview ( 2027): rebuildWebTextView null == text
+V/webview ( 2027): MT focusChanged false, 0
+V/webview ( 2027): REQUEST_KEYBOARD_WITH_SELECTION_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {87,50,284,81}
+D/dalvikvm( 1742): GC_EXTERNAL_ALLOC freed 1538 objects / 104944 bytes in 106ms
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {0,0,320,408}
+V/webcore ( 2027): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 0)
+V/webview ( 2027): sendOurVisibleRect=(0,19,r=240,b=188
+V/webcore ( 2027): SET_GLOBAL_BOUNDS arg1=0 arg2=0 obj=Rect(0, 19 - 240, 188)
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webcore ( 2027): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43db3150
+V/webcore ( 2027): viewSizeChanged w=320; h=169; textwrapWidth=320; scale=0.75
+V/webcore ( 2027): viewSizeChanged w=320; h=169; textwrapWidth=320; scale=0.75
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {0,0,323,411}
+V/webcore ( 2027): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webview ( 2027): UPDATE_TEXT_ENTRY_MSG_ID
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {93,56,96,75}
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {93,56,96,75}
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {93,56,96,75}
+V/AudioPolicyManagerALSA( 1636): startOutput() output 1, stream 1
+E/AudioPolicyManagerALSA( 1636): mAvailableOutputDevices=0x3
+V/AudioPolicyManagerALSA( 1636): getDeviceForStrategy() -out- strategy 0, device 2
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 2 delayMs 0
+I/AudioFlinger( 1636): setParameters(): io 1, keyvalue routing=2, tid 1677, calling tid 1636
+D/ALSAStreamOps( 1636): setParameters() routing=2
+D/ALSAModule( 1636): v0.01 route called for devices 00000002 in mode 0...
+D/ALSAModule( 1636): Routing audio to Speakerphone
+D/ALSAModule( 1636): the same device
+V/AudioPolicyManagerALSA( 1636): applyStreamVolumes() for output 1 and device 2
+V/AudioPolicyManagerALSA( 1636): checkAndSetVolume() cannot set stream 6 volume with force use = 0 for comm
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 1
+V/AudioPolicyManagerALSA( 1636): releaseOutput() 1
+W/AudioHardwareALSA( 1636): Write request but device is in state SND_PCM_STATE_SETUP
+D/AudioHardwareALSA( 1636): call snd_pcm_prepare
+W/AudioHardwareALSA( 1636): current_state=1 - Wait for correct device state
+V/AudioPolicyManagerALSA( 1636): stopOutput() output 1, stream 1
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 0
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 0 delayMs 372
+D/AudioHardwareALSA( 1636): standby()
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+D/AudioHardwareALSA( 1636): mStreamType=1, mParent->getAnalogLoop()=0
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {93,56,96,75}
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {93,56,96,75}
+V/AudioPolicyManagerALSA( 1636): startOutput() output 1, stream 1
+E/AudioPolicyManagerALSA( 1636): mAvailableOutputDevices=0x3
+V/AudioPolicyManagerALSA( 1636): getDeviceForStrategy() -out- strategy 0, device 2
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 2 delayMs 0
+I/AudioFlinger( 1636): setParameters(): io 1, keyvalue routing=2, tid 1677, calling tid 1636
+D/ALSAStreamOps( 1636): setParameters() routing=2
+D/ALSAModule( 1636): v0.01 route called for devices 00000002 in mode 0...
+D/ALSAModule( 1636): Routing audio to Speakerphone
+D/ALSAModule( 1636): the same device
+V/AudioPolicyManagerALSA( 1636): applyStreamVolumes() for output 1 and device 2
+V/AudioPolicyManagerALSA( 1636): checkAndSetVolume() cannot set stream 6 volume with force use = 0 for comm
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 1
+V/AudioPolicyManagerALSA( 1636): releaseOutput() 1
+W/AudioHardwareALSA( 1636): Write request but device is in state SND_PCM_STATE_SETUP
+D/AudioHardwareALSA( 1636): call snd_pcm_prepare
+W/AudioHardwareALSA( 1636): current_state=1 - Wait for correct device state
+V/AudioPolicyManagerALSA( 1636): stopOutput() output 1, stream 1
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 0
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 0 delayMs 372
+W/KeyCharacterMap( 2027): No keyboard for id 0
+W/KeyCharacterMap( 2027): Using default keymap: /system/usr/keychars/qwerty.kcm.bin
+V/webcore ( 2027): SET_SELECTION arg1=0 arg2=0 obj=null
+V/webcore ( 2027): PASS_TO_JS arg1=1 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43dd9ba8
+D/AudioHardwareALSA( 1636): standby()
+V/webcore ( 2027): PASS_TO_JS arg1=2 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43e3b098
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {90,53,281,78}
+D/AudioHardwareALSA( 1636): mStreamType=1, mParent->getAnalogLoop()=0
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {0,0,323,411}
+V/webcore ( 2027): SAVE_DOCUMENT_STATE arg1=0 arg2=0 obj=android.webkit.WebViewCore$CursorData@43e3b0b0
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {102,56,105,75}
+V/AudioPolicyManagerALSA( 1636): startOutput() output 1, stream 1
+E/AudioPolicyManagerALSA( 1636): mAvailableOutputDevices=0x3
+V/AudioPolicyManagerALSA( 1636): getDeviceForStrategy() -out- strategy 0, device 2
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 2 delayMs 0
+I/AudioFlinger( 1636): setParameters(): io 1, keyvalue routing=2, tid 1677, calling tid 1636
+D/ALSAStreamOps( 1636): setParameters() routing=2
+D/ALSAModule( 1636): v0.01 route called for devices 00000002 in mode 0...
+D/ALSAModule( 1636): Routing audio to Speakerphone
+D/ALSAModule( 1636): the same device
+V/AudioPolicyManagerALSA( 1636): applyStreamVolumes() for output 1 and device 2
+V/AudioPolicyManagerALSA( 1636): checkAndSetVolume() cannot set stream 6 volume with force use = 0 for comm
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 1
+V/AudioPolicyManagerALSA( 1636): releaseOutput() 1
+W/AudioHardwareALSA( 1636): Write request but device is in state SND_PCM_STATE_SETUP
+D/AudioHardwareALSA( 1636): call snd_pcm_prepare
+W/AudioHardwareALSA( 1636): current_state=1 - Wait for correct device state
+V/AudioPolicyManagerALSA( 1636): stopOutput() output 1, stream 1
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 0
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 0 delayMs 372
+V/webcore ( 2027): SET_SELECTION arg1=1 arg2=1 obj=null
+V/webcore ( 2027): PASS_TO_JS arg1=3 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43dda290
+V/webcore ( 2027): PASS_TO_JS arg1=4 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43de2b98
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+D/AudioHardwareALSA( 1636): standby()
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {93,56,278,75}
+D/AudioHardwareALSA( 1636): mStreamType=1, mParent->getAnalogLoop()=0
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {0,0,323,411}
+V/AudioPolicyManagerALSA( 1636): startOutput() output 1, stream 1
+E/AudioPolicyManagerALSA( 1636): mAvailableOutputDevices=0x3
+V/AudioPolicyManagerALSA( 1636): getDeviceForStrategy() -out- strategy 0, device 2
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 2 delayMs 0
+I/AudioFlinger( 1636): setParameters(): io 1, keyvalue routing=2, tid 1677, calling tid 1636
+D/ALSAStreamOps( 1636): setParameters() routing=2
+D/ALSAModule( 1636): v0.01 route called for devices 00000002 in mode 0...
+D/ALSAModule( 1636): Routing audio to Speakerphone
+D/ALSAModule( 1636): the same device
+V/AudioPolicyManagerALSA( 1636): applyStreamVolumes() for output 1 and device 2
+V/AudioPolicyManagerALSA( 1636): checkAndSetVolume() cannot set stream 6 volume with force use = 0 for comm
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 1
+W/AudioHardwareALSA( 1636): Write request but device is in state SND_PCM_STATE_SETUP
+D/AudioHardwareALSA( 1636): call snd_pcm_prepare
+V/AudioPolicyManagerALSA( 1636): releaseOutput() 1
+W/AudioHardwareALSA( 1636): current_state=1 - Wait for correct device state
+V/AudioPolicyManagerALSA( 1636): stopOutput() output 1, stream 1
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 0
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 0 delayMs 372
+V/webcore ( 2027): SET_SELECTION arg1=2 arg2=2 obj=null
+V/webcore ( 2027): PASS_TO_JS arg1=5 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43dfc890
+D/AudioHardwareALSA( 1636): standby()
+V/webcore ( 2027): PASS_TO_JS arg1=6 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43dfc940
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {93,56,278,75}
+D/AudioHardwareALSA( 1636): mStreamType=1, mParent->getAnalogLoop()=0
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {0,0,323,411}
+V/webcore ( 2027): SAVE_DOCUMENT_STATE arg1=0 arg2=0 obj=android.webkit.WebViewCore$CursorData@43dfc958
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {120,56,123,75}
+V/AudioPolicyManagerALSA( 1636): startOutput() output 1, stream 1
+E/AudioPolicyManagerALSA( 1636): mAvailableOutputDevices=0x3
+V/AudioPolicyManagerALSA( 1636): getDeviceForStrategy() -out- strategy 0, device 2
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 2 delayMs 0
+I/AudioFlinger( 1636): setParameters(): io 1, keyvalue routing=2, tid 1677, calling tid 1636
+D/ALSAStreamOps( 1636): setParameters() routing=2
+D/ALSAModule( 1636): v0.01 route called for devices 00000002 in mode 0...
+D/ALSAModule( 1636): Routing audio to Speakerphone
+D/ALSAModule( 1636): the same device
+V/AudioPolicyManagerALSA( 1636): applyStreamVolumes() for output 1 and device 2
+V/AudioPolicyManagerALSA( 1636): checkAndSetVolume() cannot set stream 6 volume with force use = 0 for comm
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 1
+V/AudioPolicyManagerALSA( 1636): releaseOutput() 1
+W/AudioHardwareALSA( 1636): Write request but device is in state SND_PCM_STATE_SETUP
+D/AudioHardwareALSA( 1636): call snd_pcm_prepare
+W/AudioHardwareALSA( 1636): current_state=1 - Wait for correct device state
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/AudioPolicyManagerALSA( 1636): stopOutput() output 1, stream 1
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 0
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 0 delayMs 372
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {120,56,123,75}
+V/webcore ( 2027): SET_SELECTION arg1=3 arg2=3 obj=null
+V/webcore ( 2027): PASS_TO_JS arg1=7 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43d46e40
+V/webcore ( 2027): PASS_TO_JS arg1=8 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43da3828
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+D/AudioHardwareALSA( 1636): standby()
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {93,56,278,75}
+D/AudioHardwareALSA( 1636): mStreamType=1, mParent->getAnalogLoop()=0
+V/AudioPolicyManagerALSA( 1636): startOutput() output 1, stream 1
+E/AudioPolicyManagerALSA( 1636): mAvailableOutputDevices=0x3
+V/AudioPolicyManagerALSA( 1636): getDeviceForStrategy() -out- strategy 0, device 2
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 2 delayMs 0
+I/AudioFlinger( 1636): setParameters(): io 1, keyvalue routing=2, tid 1677, calling tid 1636
+D/ALSAStreamOps( 1636): setParameters() routing=2
+D/ALSAModule( 1636): v0.01 route called for devices 00000002 in mode 0...
+D/ALSAModule( 1636): Routing audio to Speakerphone
+D/ALSAModule( 1636): the same device
+V/AudioPolicyManagerALSA( 1636): applyStreamVolumes() for output 1 and device 2
+V/AudioPolicyManagerALSA( 1636): checkAndSetVolume() cannot set stream 6 volume with force use = 0 for comm
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 1
+V/AudioPolicyManagerALSA( 1636): releaseOutput() 1
+W/AudioHardwareALSA( 1636): Write request but device is in state SND_PCM_STATE_SETUP
+D/AudioHardwareALSA( 1636): call snd_pcm_prepare
+W/AudioHardwareALSA( 1636): current_state=1 - Wait for correct device state
+V/AudioPolicyManagerALSA( 1636): stopOutput() output 1, stream 1
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 0
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 0 delayMs 372
+V/webcore ( 2027): SET_SELECTION arg1=4 arg2=4 obj=null
+V/webcore ( 2027): PASS_TO_JS arg1=9 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43d7d380
+V/webcore ( 2027): PASS_TO_JS arg1=10 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43ded968
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+D/AudioHardwareALSA( 1636): standby()
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {93,56,278,75}
+D/AudioHardwareALSA( 1636): mStreamType=1, mParent->getAnalogLoop()=0
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {0,0,323,411}
+V/AudioPolicyManagerALSA( 1636): startOutput() output 1, stream 1
+E/AudioPolicyManagerALSA( 1636): mAvailableOutputDevices=0x3
+V/AudioPolicyManagerALSA( 1636): getDeviceForStrategy() -out- strategy 0, device 2
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 2 delayMs 0
+I/AudioFlinger( 1636): setParameters(): io 1, keyvalue routing=2, tid 1677, calling tid 1636
+D/ALSAStreamOps( 1636): setParameters() routing=2
+D/ALSAModule( 1636): v0.01 route called for devices 00000002 in mode 0...
+D/ALSAModule( 1636): Routing audio to Speakerphone
+D/ALSAModule( 1636): the same device
+V/AudioPolicyManagerALSA( 1636): applyStreamVolumes() for output 1 and device 2
+V/AudioPolicyManagerALSA( 1636): checkAndSetVolume() cannot set stream 6 volume with force use = 0 for comm
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 1
+V/AudioPolicyManagerALSA( 1636): releaseOutput() 1
+W/AudioHardwareALSA( 1636): Write request but device is in state SND_PCM_STATE_SETUP
+D/AudioHardwareALSA( 1636): call snd_pcm_prepare
+W/AudioHardwareALSA( 1636): current_state=1 - Wait for correct device state
+V/AudioPolicyManagerALSA( 1636): stopOutput() output 1, stream 1
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 0
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 0 delayMs 372
+V/webcore ( 2027): SET_SELECTION arg1=5 arg2=5 obj=null
+V/webcore ( 2027): PASS_TO_JS arg1=11 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43e43ef8
+V/webcore ( 2027): PASS_TO_JS arg1=12 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43dd6690
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {93,56,278,75}
+D/AudioHardwareALSA( 1636): standby()
+D/AudioHardwareALSA( 1636): mStreamType=1, mParent->getAnalogLoop()=0
+V/AudioPolicyManagerALSA( 1636): startOutput() output 1, stream 1
+E/AudioPolicyManagerALSA( 1636): mAvailableOutputDevices=0x3
+V/AudioPolicyManagerALSA( 1636): getDeviceForStrategy() -out- strategy 0, device 2
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 2 delayMs 0
+I/AudioFlinger( 1636): setParameters(): io 1, keyvalue routing=2, tid 1677, calling tid 1636
+D/ALSAStreamOps( 1636): setParameters() routing=2
+D/ALSAModule( 1636): v0.01 route called for devices 00000002 in mode 0...
+D/ALSAModule( 1636): Routing audio to Speakerphone
+D/ALSAModule( 1636): the same device
+V/AudioPolicyManagerALSA( 1636): applyStreamVolumes() for output 1 and device 2
+V/AudioPolicyManagerALSA( 1636): checkAndSetVolume() cannot set stream 6 volume with force use = 0 for comm
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 1
+V/AudioPolicyManagerALSA( 1636): releaseOutput() 1
+W/AudioHardwareALSA( 1636): Write request but device is in state SND_PCM_STATE_SETUP
+D/AudioHardwareALSA( 1636): call snd_pcm_prepare
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+W/AudioHardwareALSA( 1636): current_state=1 - Wait for correct device state
+V/AudioPolicyManagerALSA( 1636): stopOutput() output 1, stream 1
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 0
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 0 delayMs 372
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webcore ( 2027): SET_SELECTION arg1=6 arg2=6 obj=null
+V/webcore ( 2027): PASS_TO_JS arg1=13 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43df92a8
+V/webcore ( 2027): PASS_TO_JS arg1=14 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43df9368
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {0,0,323,411}
+D/AudioHardwareALSA( 1636): standby()
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {93,56,278,75}
+D/AudioHardwareALSA( 1636): mStreamType=1, mParent->getAnalogLoop()=0
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {0,0,323,411}
+V/webcore ( 2027): SAVE_DOCUMENT_STATE arg1=0 arg2=0 obj=android.webkit.WebViewCore$CursorData@43df9380
+V/AudioPolicyManagerALSA( 1636): startOutput() output 1, stream 1
+E/AudioPolicyManagerALSA( 1636): mAvailableOutputDevices=0x3
+V/AudioPolicyManagerALSA( 1636): getDeviceForStrategy() -out- strategy 0, device 2
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 2 delayMs 0
+I/AudioFlinger( 1636): setParameters(): io 1, keyvalue routing=2, tid 1677, calling tid 1636
+D/ALSAStreamOps( 1636): setParameters() routing=2
+D/ALSAModule( 1636): v0.01 route called for devices 00000002 in mode 0...
+D/ALSAModule( 1636): Routing audio to Speakerphone
+D/ALSAModule( 1636): the same device
+V/AudioPolicyManagerALSA( 1636): applyStreamVolumes() for output 1 and device 2
+V/AudioPolicyManagerALSA( 1636): checkAndSetVolume() cannot set stream 6 volume with force use = 0 for comm
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 1
+V/AudioPolicyManagerALSA( 1636): releaseOutput() 1
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {155,56,158,75}
+W/AudioHardwareALSA( 1636): Write request but device is in state SND_PCM_STATE_SETUP
+D/AudioHardwareALSA( 1636): call snd_pcm_prepare
+W/AudioHardwareALSA( 1636): current_state=1 - Wait for correct device state
+V/AudioPolicyManagerALSA( 1636): stopOutput() output 1, stream 1
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 0
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 0 delayMs 372
+V/webcore ( 2027): SET_SELECTION arg1=7 arg2=7 obj=null
+V/webcore ( 2027): PASS_TO_JS arg1=15 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43e431a0
+V/webcore ( 2027): PASS_TO_JS arg1=16 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43e43260
+D/AudioHardwareALSA( 1636): standby()
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {93,56,278,75}
+D/AudioHardwareALSA( 1636): mStreamType=1, mParent->getAnalogLoop()=0
+V/http    ( 2027): 485652 IdleReaper IdleCache IdleReaper shutdown: cached 2 reused 1
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {0,0,323,411}
+V/AudioPolicyManagerALSA( 1636): startOutput() output 1, stream 1
+E/AudioPolicyManagerALSA( 1636): mAvailableOutputDevices=0x3
+V/AudioPolicyManagerALSA( 1636): getDeviceForStrategy() -out- strategy 0, device 2
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 2 delayMs 0
+I/AudioFlinger( 1636): setParameters(): io 1, keyvalue routing=2, tid 1677, calling tid 1636
+D/ALSAStreamOps( 1636): setParameters() routing=2
+D/ALSAModule( 1636): v0.01 route called for devices 00000002 in mode 0...
+D/ALSAModule( 1636): Routing audio to Speakerphone
+D/ALSAModule( 1636): the same device
+V/AudioPolicyManagerALSA( 1636): applyStreamVolumes() for output 1 and device 2
+V/AudioPolicyManagerALSA( 1636): checkAndSetVolume() cannot set stream 6 volume with force use = 0 for comm
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 1
+V/AudioPolicyManagerALSA( 1636): releaseOutput() 1
+W/AudioHardwareALSA( 1636): Write request but device is in state SND_PCM_STATE_SETUP
+D/AudioHardwareALSA( 1636): call snd_pcm_prepare
+W/AudioHardwareALSA( 1636): current_state=1 - Wait for correct device state
+V/AudioPolicyManagerALSA( 1636): stopOutput() output 1, stream 1
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 0
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 0 delayMs 372
+D/AudioHardwareALSA( 1636): standby()
+V/webcore ( 2027): SET_SELECTION arg1=8 arg2=8 obj=null
+V/webcore ( 2027): PASS_TO_JS arg1=17 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43e5aa10
+V/webcore ( 2027): PASS_TO_JS arg1=18 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43d6f400
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {93,56,278,75}
+D/AudioHardwareALSA( 1636): mStreamType=1, mParent->getAnalogLoop()=0
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {0,0,323,411}
+V/AudioPolicyManagerALSA( 1636): startOutput() output 1, stream 1
+E/AudioPolicyManagerALSA( 1636): mAvailableOutputDevices=0x3
+V/AudioPolicyManagerALSA( 1636): getDeviceForStrategy() -out- strategy 0, device 2
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 2 delayMs 0
+I/AudioFlinger( 1636): setParameters(): io 1, keyvalue routing=2, tid 1677, calling tid 1636
+D/ALSAStreamOps( 1636): setParameters() routing=2
+D/ALSAModule( 1636): v0.01 route called for devices 00000002 in mode 0...
+D/ALSAModule( 1636): Routing audio to Speakerphone
+D/ALSAModule( 1636): the same device
+V/AudioPolicyManagerALSA( 1636): applyStreamVolumes() for output 1 and device 2
+V/AudioPolicyManagerALSA( 1636): checkAndSetVolume() cannot set stream 6 volume with force use = 0 for comm
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 1
+V/AudioPolicyManagerALSA( 1636): releaseOutput() 1
+W/AudioHardwareALSA( 1636): Write request but device is in state SND_PCM_STATE_SETUP
+D/AudioHardwareALSA( 1636): call snd_pcm_prepare
+W/AudioHardwareALSA( 1636): current_state=1 - Wait for correct device state
+V/AudioPolicyManagerALSA( 1636): stopOutput() output 1, stream 1
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 0
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 0 delayMs 372
+V/webcore ( 2027): SAVE_DOCUMENT_STATE arg1=0 arg2=0 obj=android.webkit.WebViewCore$CursorData@43d6f418
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {173,56,176,75}
+V/webcore ( 2027): SET_SELECTION arg1=9 arg2=9 obj=null
+V/webcore ( 2027): PASS_TO_JS arg1=19 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43e5f578
+V/webcore ( 2027): PASS_TO_JS arg1=20 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43e51c90
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+D/AudioHardwareALSA( 1636): standby()
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {93,56,278,75}
+D/AudioHardwareALSA( 1636): mStreamType=1, mParent->getAnalogLoop()=0
+V/AudioPolicyManagerALSA( 1636): startOutput() output 1, stream 1
+E/AudioPolicyManagerALSA( 1636): mAvailableOutputDevices=0x3
+V/AudioPolicyManagerALSA( 1636): getDeviceForStrategy() -out- strategy 0, device 2
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 2 delayMs 0
+I/AudioFlinger( 1636): setParameters(): io 1, keyvalue routing=2, tid 1677, calling tid 1636
+D/ALSAStreamOps( 1636): setParameters() routing=2
+D/ALSAModule( 1636): v0.01 route called for devices 00000002 in mode 0...
+D/ALSAModule( 1636): Routing audio to Speakerphone
+D/ALSAModule( 1636): the same device
+V/AudioPolicyManagerALSA( 1636): applyStreamVolumes() for output 1 and device 2
+V/AudioPolicyManagerALSA( 1636): checkAndSetVolume() cannot set stream 6 volume with force use = 0 for comm
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 1
+V/AudioPolicyManagerALSA( 1636): releaseOutput() 1
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+W/AudioHardwareALSA( 1636): Write request but device is in state SND_PCM_STATE_SETUP
+D/AudioHardwareALSA( 1636): call snd_pcm_prepare
+W/AudioHardwareALSA( 1636): current_state=1 - Wait for correct device state
+V/AudioPolicyManagerALSA( 1636): stopOutput() output 1, stream 1
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 0
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 0 delayMs 372
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {0,0,323,411}
+V/webcore ( 2027): SET_SELECTION arg1=10 arg2=10 obj=null
+V/webcore ( 2027): PASS_TO_JS arg1=21 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43e15d08
+D/AudioHardwareALSA( 1636): standby()
+V/webcore ( 2027): PASS_TO_JS arg1=22 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43e6d0e8
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {93,56,278,75}
+D/AudioHardwareALSA( 1636): mStreamType=1, mParent->getAnalogLoop()=0
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {0,0,323,411}
+V/webview ( 2027): MotionEvent{43d67d00 action=0 x=178.79039 y=120.05635 pressure=0.024420025 size=0.0} at 488722 mTouchMode=7
+V/webcore ( 2027): UPDATE_FRAME_CACHE_IF_LOADING arg1=0 arg2=0 obj=null
+V/webview ( 2027): MotionEvent{43d67d00 action=2 x=177.93681 y=119.167496 pressure=0.024420025 size=0.0} at 488748 mTouchMode=1
+V/webview ( 2027): MotionEvent{43d67d00 action=2 x=177.87115 y=119.167496 pressure=0.024420025 size=0.0} at 488772 mTouchMode=1
+V/webview ( 2027): MotionEvent{43d67d00 action=2 x=178.39642 y=119.36502 pressure=0.024420025 size=0.0} at 488796 mTouchMode=1
+V/webview ( 2027): MotionEvent{43d67d00 action=1 x=178.39642 y=119.36502 pressure=0.024420025 size=0.0} at 488817 mTouchMode=1
+V/webcore ( 2027): SAVE_DOCUMENT_STATE arg1=0 arg2=0 obj=android.webkit.WebViewCore$CursorData@43e6d100
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {190,56,193,75}
+V/webview ( 2027): RELEASE_SINGLE_TAP
+V/webcore ( 2027): VALID_NODE_BOUNDS arg1=0 arg2=0 obj=android.webkit.WebViewCore$MotionUpData@43e5e108
+V/webview ( 2027): DO_MOTION_UP
+V/webcore ( 2027): TOUCH_UP arg1=0 arg2=0 obj=android.webkit.WebViewCore$TouchUpData@43e45198
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): UPDATE_TEXT_SELECTION_MSG_ID
+V/webcore ( 2027): REQUEST_LABEL arg1=3246712 arg2=4024864 obj=null
+V/webview ( 2027): rebuildWebTextView null == text
+V/webview ( 2027): UPDATE_TEXT_SELECTION_MSG_ID
+V/webview ( 2027): REQUEST_KEYBOARD_WITH_SELECTION_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {87,50,284,126}
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {0,0,323,411}
+V/AudioPolicyManagerALSA( 1636): startOutput() output 1, stream 1
+E/AudioPolicyManagerALSA( 1636): mAvailableOutputDevices=0x3
+V/AudioPolicyManagerALSA( 1636): getDeviceForStrategy() -out- strategy 0, device 2
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 2 delayMs 0
+I/AudioFlinger( 1636): setParameters(): io 1, keyvalue routing=2, tid 1677, calling tid 1636
+D/ALSAStreamOps( 1636): setParameters() routing=2
+D/ALSAModule( 1636): v0.01 route called for devices 00000002 in mode 0...
+D/ALSAModule( 1636): Routing audio to Speakerphone
+D/ALSAModule( 1636): the same device
+V/AudioPolicyManagerALSA( 1636): applyStreamVolumes() for output 1 and device 2
+V/AudioPolicyManagerALSA( 1636): checkAndSetVolume() cannot set stream 6 volume with force use = 0 for comm
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 1
+V/AudioPolicyManagerALSA( 1636): releaseOutput() 1
+W/AudioHardwareALSA( 1636): Write request but device is in state SND_PCM_STATE_SETUP
+D/AudioHardwareALSA( 1636): call snd_pcm_prepare
+W/AudioHardwareALSA( 1636): current_state=1 - Wait for correct device state
+V/AudioPolicyManagerALSA( 1636): stopOutput() output 1, stream 1
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 0
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 0 delayMs 372
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {93,101,96,120}
+D/AudioHardwareALSA( 1636): standby()
+V/webcore ( 2027): SET_SELECTION arg1=0 arg2=0 obj=null
+V/webcore ( 2027): PASS_TO_JS arg1=23 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43e2bbb8
+V/webcore ( 2027): PASS_TO_JS arg1=24 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43e2c020
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {90,98,281,123}
+D/AudioHardwareALSA( 1636): mStreamType=1, mParent->getAnalogLoop()=0
+V/AudioPolicyManagerALSA( 1636): startOutput() output 1, stream 1
+E/AudioPolicyManagerALSA( 1636): mAvailableOutputDevices=0x3
+V/AudioPolicyManagerALSA( 1636): getDeviceForStrategy() -out- strategy 0, device 2
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 2 delayMs 0
+I/AudioFlinger( 1636): setParameters(): io 1, keyvalue routing=2, tid 1677, calling tid 1636
+D/ALSAStreamOps( 1636): setParameters() routing=2
+D/ALSAModule( 1636): v0.01 route called for devices 00000002 in mode 0...
+D/ALSAModule( 1636): Routing audio to Speakerphone
+D/ALSAModule( 1636): the same device
+V/AudioPolicyManagerALSA( 1636): applyStreamVolumes() for output 1 and device 2
+V/AudioPolicyManagerALSA( 1636): checkAndSetVolume() cannot set stream 6 volume with force use = 0 for comm
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 1
+V/AudioPolicyManagerALSA( 1636): releaseOutput() 1
+W/AudioHardwareALSA( 1636): Write request but device is in state SND_PCM_STATE_SETUP
+D/AudioHardwareALSA( 1636): call snd_pcm_prepare
+W/AudioHardwareALSA( 1636): current_state=1 - Wait for correct device state
+V/AudioPolicyManagerALSA( 1636): stopOutput() output 1, stream 1
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 0
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 0 delayMs 372
+V/webcore ( 2027): SET_SELECTION arg1=1 arg2=1 obj=null
+V/webcore ( 2027): PASS_TO_JS arg1=25 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43e50860
+V/webcore ( 2027): PASS_TO_JS arg1=26 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43e50cf0
+D/AudioHardwareALSA( 1636): standby()
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {0,0,323,411}
+D/AudioHardwareALSA( 1636): mStreamType=1, mParent->getAnalogLoop()=0
+V/AudioPolicyManagerALSA( 1636): startOutput() output 1, stream 1
+E/AudioPolicyManagerALSA( 1636): mAvailableOutputDevices=0x3
+V/AudioPolicyManagerALSA( 1636): getDeviceForStrategy() -out- strategy 0, device 2
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 2 delayMs 0
+I/AudioFlinger( 1636): setParameters(): io 1, keyvalue routing=2, tid 1677, calling tid 1636
+D/ALSAStreamOps( 1636): setParameters() routing=2
+D/ALSAModule( 1636): v0.01 route called for devices 00000002 in mode 0...
+D/ALSAModule( 1636): Routing audio to Speakerphone
+D/ALSAModule( 1636): the same device
+V/AudioPolicyManagerALSA( 1636): applyStreamVolumes() for output 1 and device 2
+V/AudioPolicyManagerALSA( 1636): checkAndSetVolume() cannot set stream 6 volume with force use = 0 for comm
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 1
+V/AudioPolicyManagerALSA( 1636): releaseOutput() 1
+W/AudioHardwareALSA( 1636): Write request but device is in state SND_PCM_STATE_SETUP
+D/AudioHardwareALSA( 1636): call snd_pcm_prepare
+W/AudioHardwareALSA( 1636): current_state=1 - Wait for correct device state
+V/AudioPolicyManagerALSA( 1636): stopOutput() output 1, stream 1
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 0
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 0 delayMs 372
+V/webcore ( 2027): SET_SELECTION arg1=2 arg2=2 obj=null
+V/webcore ( 2027): PASS_TO_JS arg1=27 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43db8740
+V/webcore ( 2027): PASS_TO_JS arg1=28 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43db87f0
+D/AudioHardwareALSA( 1636): standby()
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {93,101,278,120}
+D/AudioHardwareALSA( 1636): mStreamType=1, mParent->getAnalogLoop()=0
+V/AudioPolicyManagerALSA( 1636): startOutput() output 1, stream 1
+E/AudioPolicyManagerALSA( 1636): mAvailableOutputDevices=0x3
+V/AudioPolicyManagerALSA( 1636): getDeviceForStrategy() -out- strategy 0, device 2
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 2 delayMs 0
+I/AudioFlinger( 1636): setParameters(): io 1, keyvalue routing=2, tid 1677, calling tid 1636
+D/ALSAStreamOps( 1636): setParameters() routing=2
+D/ALSAModule( 1636): v0.01 route called for devices 00000002 in mode 0...
+D/ALSAModule( 1636): Routing audio to Speakerphone
+D/ALSAModule( 1636): the same device
+V/AudioPolicyManagerALSA( 1636): applyStreamVolumes() for output 1 and device 2
+V/AudioPolicyManagerALSA( 1636): checkAndSetVolume() cannot set stream 6 volume with force use = 0 for comm
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 1
+V/AudioPolicyManagerALSA( 1636): releaseOutput() 1
+W/AudioHardwareALSA( 1636): Write request but device is in state SND_PCM_STATE_SETUP
+D/AudioHardwareALSA( 1636): call snd_pcm_prepare
+W/AudioHardwareALSA( 1636): current_state=1 - Wait for correct device state
+V/AudioPolicyManagerALSA( 1636): stopOutput() output 1, stream 1
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 0
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 0 delayMs 372
+D/AudioHardwareALSA( 1636): standby()
+V/webcore ( 2027): SET_SELECTION arg1=3 arg2=3 obj=null
+V/webcore ( 2027): PASS_TO_JS arg1=29 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43e5c4e0
+V/webcore ( 2027): PASS_TO_JS arg1=30 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43e5c980
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {93,101,278,120}
+D/AudioHardwareALSA( 1636): mStreamType=1, mParent->getAnalogLoop()=0
+V/AudioPolicyManagerALSA( 1636): startOutput() output 1, stream 1
+E/AudioPolicyManagerALSA( 1636): mAvailableOutputDevices=0x3
+V/AudioPolicyManagerALSA( 1636): getDeviceForStrategy() -out- strategy 0, device 2
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 2 delayMs 0
+I/AudioFlinger( 1636): setParameters(): io 1, keyvalue routing=2, tid 1677, calling tid 1636
+D/ALSAStreamOps( 1636): setParameters() routing=2
+D/ALSAModule( 1636): v0.01 route called for devices 00000002 in mode 0...
+D/ALSAModule( 1636): Routing audio to Speakerphone
+D/ALSAModule( 1636): the same device
+V/AudioPolicyManagerALSA( 1636): applyStreamVolumes() for output 1 and device 2
+V/AudioPolicyManagerALSA( 1636): checkAndSetVolume() cannot set stream 6 volume with force use = 0 for comm
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 1
+V/AudioPolicyManagerALSA( 1636): releaseOutput() 1
+W/AudioHardwareALSA( 1636): Write request but device is in state SND_PCM_STATE_SETUP
+D/AudioHardwareALSA( 1636): call snd_pcm_prepare
+W/AudioHardwareALSA( 1636): current_state=1 - Wait for correct device state
+V/AudioPolicyManagerALSA( 1636): stopOutput() output 1, stream 1
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 0
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 0 delayMs 372
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+D/AudioHardwareALSA( 1636): standby()
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webcore ( 2027): SET_SELECTION arg1=4 arg2=4 obj=null
+V/webcore ( 2027): PASS_TO_JS arg1=31 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43e3dc50
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {0,0,323,411}
+V/webcore ( 2027): PASS_TO_JS arg1=32 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43e3e0f0
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {93,101,278,120}
+D/AudioHardwareALSA( 1636): mStreamType=1, mParent->getAnalogLoop()=0
+V/AudioPolicyManagerALSA( 1636): startOutput() output 1, stream 1
+E/AudioPolicyManagerALSA( 1636): mAvailableOutputDevices=0x3
+V/AudioPolicyManagerALSA( 1636): getDeviceForStrategy() -out- strategy 0, device 2
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 2 delayMs 0
+I/AudioFlinger( 1636): setParameters(): io 1, keyvalue routing=2, tid 1677, calling tid 1636
+D/ALSAStreamOps( 1636): setParameters() routing=2
+D/ALSAModule( 1636): v0.01 route called for devices 00000002 in mode 0...
+D/ALSAModule( 1636): Routing audio to Speakerphone
+D/ALSAModule( 1636): the same device
+V/AudioPolicyManagerALSA( 1636): applyStreamVolumes() for output 1 and device 2
+V/AudioPolicyManagerALSA( 1636): checkAndSetVolume() cannot set stream 6 volume with force use = 0 for comm
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 1
+V/AudioPolicyManagerALSA( 1636): releaseOutput() 1
+W/AudioHardwareALSA( 1636): Write request but device is in state SND_PCM_STATE_SETUP
+D/AudioHardwareALSA( 1636): call snd_pcm_prepare
+W/AudioHardwareALSA( 1636): current_state=1 - Wait for correct device state
+V/AudioPolicyManagerALSA( 1636): stopOutput() output 1, stream 1
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 0
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 0 delayMs 372
+V/webcore ( 2027): SET_SELECTION arg1=5 arg2=5 obj=null
+V/webcore ( 2027): PASS_TO_JS arg1=33 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43debb58
+V/webcore ( 2027): PASS_TO_JS arg1=34 arg2=0 obj=android.webkit.WebViewCore$JSKeyData@43e380a0
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+D/AudioHardwareALSA( 1636): standby()
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {93,101,278,120}
+D/AudioHardwareALSA( 1636): mStreamType=1, mParent->getAnalogLoop()=0
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {0,0,323,411}
+V/webcore ( 2027): SAVE_DOCUMENT_STATE arg1=0 arg2=0 obj=android.webkit.WebViewCore$CursorData@43e380b8
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {130,101,133,120}
+V/webcore ( 2027): SET_SCROLL_OFFSET arg1=0 arg2=0 obj=Point(0, 0)
+V/webview ( 2027): sendOurVisibleRect=(0,19,r=240,b=320
+V/webcore ( 2027): SET_GLOBAL_BOUNDS arg1=0 arg2=0 obj=Rect(0, 19 - 240, 320)
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webcore ( 2027): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43e15770
+V/webcore ( 2027): viewSizeChanged w=320; h=345; textwrapWidth=320; scale=0.75
+V/webcore ( 2027): viewSizeChanged w=320; h=345; textwrapWidth=320; scale=0.75
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {0,0,323,411}
+V/webcore ( 2027): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/webview ( 2027): UPDATE_TEXT_ENTRY_MSG_ID
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {130,101,133,120}
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {130,101,133,120}
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {130,101,133,120}
+D/dalvikvm( 1692): GC_FOR_MALLOC freed 9639 objects / 521840 bytes in 177ms
+
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {130,101,133,120}
+
+
+
+
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {130,101,133,120}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+
+V/webview ( 2027): NEW_PICTURE_MSG_ID {130,101,133,120}
+
+
+
+
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {130,101,133,120}
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {130,101,133,120}
+V/webview ( 2027): MotionEvent{43d67d00 action=0 x=19.763462 y=223.16345 pressure=0.024420025 size=0.0} at 497724 mTouchMode=7
+V/webcore ( 2027): UPDATE_FRAME_CACHE_IF_LOADING arg1=0 arg2=0 obj=null
+V/webview ( 2027): MotionEvent{43d67d00 action=2 x=21.798903 y=222.17586 pressure=0.024420025 size=0.0} at 497749 mTouchMode=1
+V/webview ( 2027): MotionEvent{43d67d00 action=2 x=22.324177 y=221.97832 pressure=0.024420025 size=0.0} at 497774 mTouchMode=1
+V/webview ( 2027): MotionEvent{43d67d00 action=2 x=22.652473 y=222.07709 pressure=0.024420025 size=0.0} at 497797 mTouchMode=1
+V/webview ( 2027): MotionEvent{43d67d00 action=2 x=22.586813 y=222.57089 pressure=0.024420025 size=0.0} at 497822 mTouchMode=1
+V/webview ( 2027): MotionEvent{43d67d00 action=2 x=22.586813 y=222.76843 pressure=0.024420025 size=0.0} at 497846 mTouchMode=1
+V/webview ( 2027): MotionEvent{43d67d00 action=2 x=22.389835 y=222.86719 pressure=0.024420025 size=0.0} at 497893 mTouchMode=1
+V/webview ( 2027): MotionEvent{43d67d00 action=2 x=21.733242 y=223.26224 pressure=0.024420025 size=0.0} at 497915 mTouchMode=1
+V/webview ( 2027): SWITCH_TO_SHORTPRESS
+V/webcore ( 2027): SET_MOVE_MOUSE_IF_LATEST arg1=0 arg2=0 obj=android.webkit.WebViewCore$CursorData@43dc90f8
+V/webview ( 2027): MotionEvent{43d67d00 action=1 x=21.733242 y=223.26224 pressure=0.024420025 size=0.0} at 497937 mTouchMode=5
+V/webcore ( 2027): VALID_NODE_BOUNDS arg1=0 arg2=0 obj=android.webkit.WebViewCore$MotionUpData@43de7f00
+V/webview ( 2027): DO_MOTION_UP
+V/webcore ( 2027): TOUCH_UP arg1=0 arg2=0 obj=android.webkit.WebViewCore$TouchUpData@43de83b0
+V/webview ( 2027): MT focusChanged true, 2
+V/AudioPolicyManagerALSA( 1636): startOutput() output 1, stream 1
+E/AudioPolicyManagerALSA( 1636): mAvailableOutputDevices=0x3
+V/AudioPolicyManagerALSA( 1636): getDeviceForStrategy() -out- strategy 0, device 2
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 2 delayMs 0
+I/AudioFlinger( 1636): setParameters(): io 1, keyvalue routing=2, tid 1677, calling tid 1636
+D/ALSAStreamOps( 1636): setParameters() routing=2
+D/ALSAModule( 1636): v0.01 route called for devices 00000002 in mode 0...
+D/ALSAModule( 1636): Routing audio to Speakerphone
+D/ALSAModule( 1636): the same device
+V/AudioPolicyManagerALSA( 1636): applyStreamVolumes() for output 1 and device 2
+V/AudioPolicyManagerALSA( 1636): checkAndSetVolume() cannot set stream 6 volume with force use = 0 for comm
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 1
+V/AudioPolicyManagerALSA( 1636): releaseOutput() 1
+I/WebCore::FrameLoader( 2027): encoding(), from m_decoder
+I/WebCore::FrameLoader( 2027): shouldReload, 2756
+I/WebCore::FrameLoader( 2027): frameContainsWMLContent, 1585
+I/WebCore::FrameLoader( 2027): shouldReload, 2756
+I/WebCore::FrameLoader( 2027): frameContainsWMLContent, 1585
+I/WebCoreFrameBridge( 2027): loadStarted, 544
+I/WebCoreFrameBridge( 2027): loadStarted, 592
+I/WebCoreFrameBridge( 2027): setProgress, 715
+I/WebCoreFrameBridge( 2027): setProgress, 724
+I/WebCore::FrameLoader( 2027): encoding(), from m_decoder
+
+
+
+
+
+I/WebCoreFrameBridge( 2027): startLoadingResource, 378
+I/WebCoreFrameBridge( 2027): createJavaMapFromHTTPHeaders, 300
+I/WebCoreFrameBridge( 2027): createJavaMapFromHTTPHeaders, 327
+V/webkit  ( 2027): startLoadingResource: url=http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm#loginOther, method=GET, postData=null, isMainFramePage=true, mainResource=true, userGesture=true
+V/LoadListener( 2027): LoadListener constructor url=http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm#loginOther
+V/WebSettings( 2027): getUserAgentString default: HuaweiT8100_TD/1.0 Android/2.2 Release/12.25.2010 Browser/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 AppleWebKit/533.1
+V/webkit  ( 2027): getCookie: uri: http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm value: JSESSIONID=2D82CE8D4C279FEA3E4D1EBB154FC12A.worker1
+V/cache   ( 2027): getCacheFile: http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+I/WebCoreFrameBridge( 2027): startLoadingResource, 516
+V/webcore ( 2027): SET_ACTIVE arg1=0 arg2=0 obj=null
+W/AudioHardwareALSA( 1636): Write request but device is in state SND_PCM_STATE_SETUP
+D/AudioHardwareALSA( 1636): call snd_pcm_prepare
+V/webkit  ( 2027): FrameLoader: http GET load for: http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+V/http    ( 2027): 498047 WebViewWorkerThread RequestQueue.queueRequest url:http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+V/http    ( 2027): 498051 WebViewWorkerThread RequestQueue.queueRequest uri:http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+W/AudioHardwareALSA( 1636): current_state=1 - Wait for correct device state
+V/AudioPolicyManagerALSA( 1636): stopOutput() output 1, stream 1
+V/AudioPolicyManagerALSA( 1636): changeRefCount() stream 1, count 0
+V/AudioPolicyManagerALSA( 1636): setOutputDevice() output 1 device 0 delayMs 372
+V/http    ( 2027): 498053 WebViewWorkerThread RequestQueue.queueRequest shouldUseWifiProxy: false
+V/http    ( 2027): 498077 WebViewWorkerThread RequestQueue.inWifiProxyBlackList url:http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+V/http    ( 2027): 498078 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web1: 
+V/http    ( 2027): 498079 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web2: 
+V/webview ( 2027): UPDATE_TEXT_SELECTION_MSG_ID
+V/http    ( 2027): 498087 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web3: 
+V/http    ( 2027): 498088 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web4: 192.168.
+V/http    ( 2027): 498089 WebViewWorkerThread RequestQueue.inWifiProxyBlackList not match
+V/http    ( 2027): 498092 WebViewWorkerThread RequestQueue.queueRequest proxy: http://10.0.0.172:80
+V/webcore ( 2027): REQUEST_LABEL arg1=3246712 arg2=4024864 obj=null
+V/http    ( 2027): 498100 http1 RequestQueue.getRequest() => /wap/wap/zh/login/inputPWD.vm
+V/http    ( 2027): 498100 http1 ConnectionThread: new request http://pim1.monternet.com:80 /wap/wap/zh/login/inputPWD.vm
+V/http    ( 2027): 498101 http1 RequestQueue.inWifiProxyBlackList url:http://pim1.monternet.com:80
+V/http    ( 2027): 498101 http1 RequestQueue.inWifiProxyBlackList web1: 
+V/http    ( 2027): 498101 http1 RequestQueue.inWifiProxyBlackList web2: 
+V/http    ( 2027): 498101 http1 RequestQueue.inWifiProxyBlackList web3: 
+V/http    ( 2027): 498102 http1 RequestQueue.inWifiProxyBlackList web4: 192.168.
+V/http    ( 2027): 498102 http1 RequestQueue.inWifiProxyBlackList not match
+V/http    ( 2027): 498102 http1 RequestQueue.determineHost host: http://pim1.monternet.com:80
+V/http    ( 2027): 498103 http1 RequestQueue.determineHost proxy: http://10.0.0.172:80
+V/http    ( 2027): 498103 http1 getConnection :http://10.0.0.172:80
+V/http    ( 2027): 498104 http1 RequestQueue.inWifiProxyBlackList url:http://10.0.0.172:80
+V/http    ( 2027): 498104 http1 RequestQueue.inWifiProxyBlackList web1: 
+V/http    ( 2027): 498104 http1 RequestQueue.inWifiProxyBlackList web2: 
+V/http    ( 2027): 498104 http1 RequestQueue.inWifiProxyBlackList web3: 
+V/http    ( 2027): 498104 http1 RequestQueue.inWifiProxyBlackList web4: 192.168.
+V/http    ( 2027): 498105 http1 RequestQueue.inWifiProxyBlackList not match
+V/http    ( 2027): 498105 http1 mInterface is pdp_ip0
+V/http    ( 2027): 498105 http1 SEND pipe 0
+V/LoadListener( 2027): LoadListener.certificate: null
+V/LoadListener( 2027): LoadListener.attachRequestHandle(): requestHandle: android.net.http.RequestHandle@43dd91c0
+V/webview ( 2027): MT focusChanged false, 0
+V/webview ( 2027): setCertificate=null
+V/BrowserActivity( 2027): onPageStarted
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+V/BrowserActivity( 2027): onProgressChanged: 10
+V/TitleBar( 2027): onProgressChanged: com.android.browser.TitleBar@43d8ea68 10 false null
+V/TitleBar( 2027): onProgressChanged: delay animation
+V/BrowserActivity( 2027): onProgressChanged:  false false
+V/BrowserActivity( 2027): showFakeTitleBar: null null false
+I/TabControl( 2027): getCurrentWebView
+I/TabControl( 2027): getTab
+V/BrowserActivity( 2027): showFakeTitleBar: android.webkit.WebView@43e1ed70
+V/BrowserActivity( 2027): onProgressChanged: 10
+V/TitleBar( 2027): onProgressChanged: com.android.browser.TitleBar@43d8ea68 10 false null
+V/TitleBar( 2027): onProgressChanged: delay animation
+V/BrowserActivity( 2027): onProgressChanged:  false false
+V/BrowserActivity( 2027): showFakeTitleBar: Handler{43dbae20} null false
+D/AudioHardwareALSA( 1636): standby()
+V/webview ( 2027): setCertificate=null
+V/TitleBar( 2027): onProgressChanged: com.android.browser.TitleBar@43d8ea68 10 false android.view.ViewRoot$W@43dbb450
+V/TitleBar( 2027): onProgressChanged: start animation
+D/AudioHardwareALSA( 1636): mStreamType=1, mParent->getAnalogLoop()=0
+V/http    ( 2027): 518257 http1 InetSocketAddress addr is 10.0.0.172/10.0.0.172:80
+D/dalvikvm( 2027): GC_FOR_MALLOC freed 11163 objects / 658272 bytes in 104ms
+V/http    ( 2027): 518531 http1 Connection.openHttpConnection() 20425 http://10.0.0.172:80
+V/LoadListener( 2027): LoadListener.certificate: null
+V/webview ( 2027): setCertificate=null
+V/http    ( 2027): 518544 http1 Request.sendRequest() http://pim1.monternet.com
+V/http    ( 2027): 518547 http1 Request.requestSent() http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+V/http    ( 2027): 518550 http1 READ pipe 1
+V/http    ( 2027): 518553 http1 processRequests() reading /wap/wap/zh/login/inputPWD.vm
+V/http    ( 2027): 519068 http1 read: HTTP/1.1 200 OK, Success
+V/http    ( 2027): 519069 http1 hdr 19 content-length: 873
+V/http    ( 2027): 519071 http1 hdr 44 content-type: text/vnd.wap.wml;charset=UTF-8
+V/http    ( 2027): 519074 http1 hdr 25 server: Apache-Coyote/1.1
+V/http    ( 2027): 519077 http1 hdr 16 pragma: No-cache
+V/http    ( 2027): 519079 http1 hdr 23 cache-control: no-cache
+V/http    ( 2027): 519081 http1 hdr 38 expires: Thu, 01 Jan 1970 00:00:00 GMT
+V/http    ( 2027): 519083 http1 hdr 35 date: Tue, 23 Aug 2011 06:37:07 GMT
+V/http    ( 2027): 519084 http1 hdr 22 content-encoding: gzip
+V/http    ( 2027): 519086 http1 Request.readResponseStatus() 24 HTTP/1.1 200 OK, Success
+V/LoadListener( 2027): LoadListener: from: http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm major: 1 minor: 1 code: 200 reason: OK, Success
+V/LoadListener( 2027): LoadListener.headers
+V/LoadListener( 2027): Dump HTTP headers:
+V/LoadListener( 2027): content-length 873
+V/LoadListener( 2027): content-type text/vnd.wap.wml;charset=UTF-8
+V/LoadListener( 2027): content-encoding gzip
+V/LoadListener( 2027): expires Thu, 01 Jan 1970 00:00:00 GMT
+V/LoadListener( 2027): cache-control no-cache
+V/LoadListener( 2027): pragma No-cache
+V/LoadListener( 2027): server Apache-Coyote/1.1
+V/LoadListener( 2027): date Tue, 23 Aug 2011 06:37:07 GMT
+V/LoadListener( 2027): LoadListener.parseContentTypeHeader: contentType: text/vnd.wap.wml;charset=UTF-8
+V/LoadListener( 2027): loading url: http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+V/LoadListener( 2027): has cookie : false, in cache black list: false
+V/LoadListener( 2027): do cache page: http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+V/http    ( 2027): 519109 http1 Request.readResponse() 1777
+V/LoadListener( 2027): LoadListener.data(): url: http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+V/cache   ( 2027): createCacheFile: http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+V/LoadListener( 2027): LoadListener.endData(): url: http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+V/http    ( 2027): 519131 http1 Request.readResponse(): done http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+
+
+I/WebCore::FrameLoader( 2027): frameContainsWMLContent, 1585
+I/WebCore::HistoryController( 2027): WebCoreBackForward - Adding backforward item for frame http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm#loginOther
+I/WebCoreFrameBridge( 2027): addHistoryItem, 642
+I/WebCoreFrameBridge( 2027): addHistoryItem, 649
+V/http    ( 2027): 519138 http1 READ pipe 0
+I/WebCoreFrameBridge( 2027): updateVisitedHistory, 772
+V/http    ( 2027): 519146 http1 IdleCache size 0 host http://10.0.0.172:80
+I/WebCoreFrameBridge( 2027): updateVisitedHistory, 782
+I/WebCoreFrameBridge( 2027): transitionToCommitted, 598
+V/http    ( 2027): 519160 http1 RequestQueue.getRequest() => null
+V/http    ( 2027): 519163 http1 ConnectionThread: Waiting for work
+I/WebCoreFrameBridge( 2027): transitionToCommitted, 610
+I/WebCore::FrameLoader( 2027): transitionToCommitted, mimetype: text/vnd.wap.wml
+I/WebCore ( 2027): committedLoad, 693
+I/WebCore::FrameLoader( 2027): begin createDocument, mimetype: text/vnd.wap.wml
+I/WebCore::WML( 2027): createDocument, 340
+I/WebCore::FrameLoader( 2027): write(): decode
+I/WebCore::FrameLoader( 2027): write(): create decoder, mimetype: text/vnd.wap.wml
+I/BrowserProvider( 2027): query url: content://browser/bookmarks url match: 0
+I/WebCore::TextResourceDecoder( 2027): defaultEncoding, content-type: 2, default encoding: UTF-8
+I/WebCore::FrameLoader( 2027): write(): set decoder from http header
+I/WebCore::FrameLoader( 2027): utf-8
+I/WebCore::TextResourceDecoder( 2027): setEncoding(), source: 5
+I/WebCore::TextResourceDecoder( 2027): setEncoding() name: UTF-8
+I/WebCore::TextResourceDecoder( 2027): decode()
+I/WebCore::TextResourceDecoder( 2027): decode() css charset done!
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), decode source: 5
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), buffer size: 1777
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), check encoding
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), check xml encoding
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), do check xml encoding
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), do check http encoding
+I/WebCore::TextResourceDecoder( 2027): decode(),  html/xml charset done! current encoding: UTF-8
+I/WebCore::TextResourceDecoder( 2027): shouldAutoDetect, m_usesEncodingDetector: 1, m_source :5
+I/WebCore::TextResourceDecoder( 2027): decode() autodetect done!
+I/WebCore::WML( 2027): internalSubset, 1081
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): updateAltText, 602
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/BrowserProvider( 2027): query url: content://browser/bookmarks url match: 0
+I/WebCore::WML( 2027): createElement, 887
+I/WebCoreFrameBridge( 2027): setProgress, 715
+V/BrowserActivity( 2027): onProgressChanged: 30
+V/TitleBar( 2027): onProgressChanged: com.android.browser.TitleBar@43d8ea68 30 true android.view.ViewRoot$W@43dbb450
+V/BrowserActivity( 2027): onProgressChanged:  false false
+V/BrowserActivity( 2027): showFakeTitleBar: Handler{43dbae20} null false
+I/WebCoreFrameBridge( 2027): setProgress, 724
+V/LoadListener( 2027): LoadListener.detachRequestHandle(): requestHandle: android.net.http.RequestHandle@43dd91c0
+I/WebCore ( 2027): committedLoad, 693
+I/WebCore::FrameLoader( 2027): write(): decode
+I/WebCore::TextResourceDecoder( 2027): decode()
+I/WebCore::TextResourceDecoder( 2027): decode() css charset done!
+I/WebCore::TextResourceDecoder( 2027): decode(),  html/xml charset done! current encoding: UTF-8
+I/WebCore::TextResourceDecoder( 2027): shouldAutoDetect, m_usesEncodingDetector: 1, m_source :5
+I/WebCore::TextResourceDecoder( 2027): decode() autodetect done!
+I/WebCore::TextResourceDecoder( 2027): flush()
+V/cache   ( 2027): saveCacheFile for url http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm
+I/WebCoreFrameBridge( 2027): setTitle, 681
+I/Tab     ( 2027): onReceivedTitle title: 中转 url: http://pim1.monternet.com/wap/wap/zh/login/inputPWD.vm#loginOther
+I/Tab     ( 2027): onReceivedTitle foreground
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+I/WebCoreFrameBridge( 2027): setTitle, 694
+I/WebCoreFrameBridge( 2027): didReceiveIcon, 736
+I/BrowserProvider( 2027): query url: content://browser/bookmarks url match: 0
+V/webcore ( 2027): didFirstLayout standardLoad =true
+V/webcore ( 2027): setupViewport mRestoredScale=0 mViewScale=0.75 mTextWrapScale=0.75
+I/WebCoreFrameBridge( 2027): didFinishLoad, 616
+I/WebCoreFrameBridge( 2027): didFinishLoad, 636
+I/WebCoreFrameBridge( 2027): setProgress, 715
+I/WebCoreFrameBridge( 2027): setProgress, 724
+V/cache   ( 2027): endTransaction
+V/webcore ( 2027): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43dada80
+V/webview ( 2027): SET_SCROLLBAR_MODES
+V/webview ( 2027): SET_SCROLLBAR_MODES
+V/webview ( 2027): SET_SCROLLBAR_MODES
+V/BrowserActivity( 2027): onPageFinished
+V/webcore ( 2027): viewSizeChanged w=320; h=345; textwrapWidth=320; scale=0.75
+V/webcore ( 2027): viewSizeChanged w=320; h=345; textwrapWidth=320; scale=0.75
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/webcore ( 2027): webkitDraw start
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+V/BrowserActivity( 2027): onProgressChanged: 100
+I/TabControl( 2027): getCurrentWebView
+I/TabControl( 2027): getTab
+V/webview ( 2027): UPDATE_TEXT_ENTRY_MSG_ID
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webcore ( 2027): MESSAGE_RELAY arg1=0 arg2=0 obj={ what=101 when=0 arg2=16 }
+V/webcore ( 2027): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/cache   ( 2027): trimCacheIfNeeded
+V/cache   ( 2027): startTransaction
+I/WebCore::FrameLoader( 2027): encoding(), from m_decoder
+I/WebCore::FrameLoader( 2027): encoding(), from m_decoder
+I/WebCore::FrameLoader( 2027): shouldReload, 2756
+I/WebCore::FrameLoader( 2027): frameContainsWMLContent, 1585
+I/WebCoreFrameBridge( 2027): canHandleRequest, 788
+I/WebCoreFrameBridge( 2027): loadStarted, 544
+I/WebCoreFrameBridge( 2027): loadStarted, 592
+I/WebCoreFrameBridge( 2027): setProgress, 715
+I/WebCoreFrameBridge( 2027): setProgress, 724
+I/WebCore::FrameLoader( 2027): encoding(), from m_decoder
+I/WebCoreFrameBridge( 2027): startLoadingResource, 378
+I/WebCoreFrameBridge( 2027): createJavaMapFromHTTPHeaders, 300
+I/WebCoreFrameBridge( 2027): createJavaMapFromHTTPHeaders, 327
+I/WebCoreFrameBridge( 2027): HasPasswordField, 1502
+I/WebCoreFrameBridge( 2027): HasPasswordField, 1514
+I/WebCoreFrameBridge( 2027): HasPasswordField, 1533
+V/webkit  ( 2027): startLoadingResource: url=http://pim1.monternet.com/wap/waplogin.do, method=POST, postData=[B@43d436d8, isMainFramePage=true, mainResource=true, userGesture=true
+V/websync ( 2027): CookieSyncManager::syncFromRamToFlash STARTS
+V/LoadListener( 2027): LoadListener constructor url=http://pim1.monternet.com/wap/waplogin.do
+I/WebCoreFrameBridge( 2027): startLoadingResource, 516
+I/WebCoreFrameBridge( 2027): HasPasswordField, 1502
+V/WebSettings( 2027): getUserAgentString default: HuaweiT8100_TD/1.0 Android/2.2 Release/12.25.2010 Browser/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 AppleWebKit/533.1
+V/webkit  ( 2027): getCookie: uri: http://pim1.monternet.com/wap/waplogin.do value: JSESSIONID=2D82CE8D4C279FEA3E4D1EBB154FC12A.worker1
+V/webkit  ( 2027): FrameLoader: http POST load for: http://pim1.monternet.com/wap/waplogin.do
+V/http    ( 2027): 519596 WebViewWorkerThread RequestQueue.queueRequest url:http://pim1.monternet.com/wap/waplogin.do
+V/http    ( 2027): 519597 WebViewWorkerThread RequestQueue.queueRequest uri:http://pim1.monternet.com/wap/waplogin.do
+V/http    ( 2027): 519597 WebViewWorkerThread RequestQueue.queueRequest shouldUseWifiProxy: false
+V/http    ( 2027): 519597 WebViewWorkerThread RequestQueue.inWifiProxyBlackList url:http://pim1.monternet.com/wap/waplogin.do
+V/http    ( 2027): 519598 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web1: 
+V/http    ( 2027): 519598 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web2: 
+V/http    ( 2027): 519598 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web3: 
+V/http    ( 2027): 519598 WebViewWorkerThread RequestQueue.inWifiProxyBlackList web4: 192.168.
+V/http    ( 2027): 519599 WebViewWorkerThread RequestQueue.inWifiProxyBlackList not match
+V/http    ( 2027): 519599 WebViewWorkerThread RequestQueue.queueRequest proxy: http://10.0.0.172:80
+I/WebCoreFrameBridge( 2027): HasPasswordField, 1514
+I/WebCoreFrameBridge( 2027): HasPasswordField, 1533
+V/websync ( 2027): CookieSyncManager::syncFromRamToFlash DONE
+V/http    ( 2027): 519631 http2 RequestQueue.getRequest() => /wap/waplogin.do
+V/http    ( 2027): 519631 http2 ConnectionThread: new request http://pim1.monternet.com:80 /wap/waplogin.do
+V/http    ( 2027): 519632 http2 RequestQueue.inWifiProxyBlackList url:http://pim1.monternet.com:80
+V/http    ( 2027): 519632 http2 RequestQueue.inWifiProxyBlackList web1: 
+V/http    ( 2027): 519632 http2 RequestQueue.inWifiProxyBlackList web2: 
+V/http    ( 2027): 519633 http2 RequestQueue.inWifiProxyBlackList web3: 
+V/http    ( 2027): 519633 http2 RequestQueue.inWifiProxyBlackList web4: 192.168.
+V/http    ( 2027): 519633 http2 RequestQueue.inWifiProxyBlackList not match
+V/http    ( 2027): 519634 http2 RequestQueue.determineHost host: http://pim1.monternet.com:80
+V/http    ( 2027): 519634 http2 RequestQueue.determineHost proxy: http://10.0.0.172:80
+V/http    ( 2027): 519634 http2 SEND pipe 0
+V/LoadListener( 2027): LoadListener.certificate: null
+V/LoadListener( 2027): LoadListener.attachRequestHandle(): requestHandle: android.net.http.RequestHandle@43d4c978
+V/cache   ( 2027): trimCacheIfNeeded
+V/http    ( 2027): 519645 http2 Request.sendRequest() http://pim1.monternet.com
+V/http    ( 2027): 519661 http2 Request.requestSent() http://pim1.monternet.com/wap/waplogin.do
+V/http    ( 2027): 519661 http2 SEND pipe 1
+V/http    ( 2027): 519662 http2 RequestQueue.getRequest(http://10.0.0.172:80) => null
+V/http    ( 2027): 519663 http2 DRAIN pipe 1
+V/http    ( 2027): 519664 http2 processRequests() reading /wap/waplogin.do
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): MT focusChanged true, 2
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {0,0,320,345}
+V/webview ( 2027): SCROLL_TO_MSG_ID
+V/webcore ( 2027): SYNC_SCROLL arg1=0 arg2=16 obj=null
+V/webview ( 2027): UPDATE_TEXT_ENTRY_MSG_ID
+V/webview ( 2027): setCertificate=null
+V/BrowserActivity( 2027): onPageStarted
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+V/BrowserActivity( 2027): onProgressChanged: 10
+V/TitleBar( 2027): onProgressChanged: com.android.browser.TitleBar@43d8ea68 10 false null
+V/TitleBar( 2027): onProgressChanged: delay animation
+V/BrowserActivity( 2027): onProgressChanged:  false false
+V/BrowserActivity( 2027): showFakeTitleBar: null null false
+I/TabControl( 2027): getCurrentWebView
+I/TabControl( 2027): getTab
+V/BrowserActivity( 2027): showFakeTitleBar: android.webkit.WebView@43e1ed70
+V/BrowserActivity( 2027): onProgressChanged: 10
+V/TitleBar( 2027): onProgressChanged: com.android.browser.TitleBar@43d8ea68 10 false null
+V/TitleBar( 2027): onProgressChanged: delay animation
+V/BrowserActivity( 2027): onProgressChanged:  false false
+V/BrowserActivity( 2027): showFakeTitleBar: Handler{43d43d90} null false
+V/webview ( 2027): setCertificate=null
+V/TitleBar( 2027): onProgressChanged: com.android.browser.TitleBar@43d8ea68 10 false android.view.ViewRoot$W@43d93920
+V/TitleBar( 2027): onProgressChanged: start animation
+I/BrowserProvider( 2027): update url: content://browser/bookmarks values: title=中转 url match: 0
+V/http    ( 2027): 520458 http2 read: HTTP/1.1 200 OK, Success
+V/http    ( 2027): 520459 http2 hdr 19 content-length: 512
+V/http    ( 2027): 520462 http2 hdr 44 content-type: text/vnd.wap.wml;charset=UTF-8
+V/http    ( 2027): 520464 http2 hdr 25 server: Apache-Coyote/1.1
+V/http    ( 2027): 520466 http2 hdr 16 pragma: No-cache
+V/http    ( 2027): 520467 http2 hdr 23 cache-control: no-cache
+V/http    ( 2027): 520469 http2 hdr 38 expires: Thu, 01 Jan 1970 00:00:00 GMT
+V/http    ( 2027): 520471 http2 hdr 35 date: Tue, 23 Aug 2011 06:37:08 GMT
+V/http    ( 2027): 520473 http2 hdr 22 content-encoding: gzip
+V/http    ( 2027): 520475 http2 Request.readResponseStatus() 24 HTTP/1.1 200 OK, Success
+V/LoadListener( 2027): LoadListener: from: http://pim1.monternet.com/wap/waplogin.do major: 1 minor: 1 code: 200 reason: OK, Success
+V/LoadListener( 2027): LoadListener.headers
+V/LoadListener( 2027): Dump HTTP headers:
+V/LoadListener( 2027): content-length 512
+V/LoadListener( 2027): content-type text/vnd.wap.wml;charset=UTF-8
+V/LoadListener( 2027): content-encoding gzip
+V/LoadListener( 2027): expires Thu, 01 Jan 1970 00:00:00 GMT
+V/LoadListener( 2027): cache-control no-cache
+V/LoadListener( 2027): pragma No-cache
+V/LoadListener( 2027): server Apache-Coyote/1.1
+V/LoadListener( 2027): date Tue, 23 Aug 2011 06:37:08 GMT
+V/LoadListener( 2027): LoadListener.parseContentTypeHeader: contentType: text/vnd.wap.wml;charset=UTF-8
+V/LoadListener( 2027): loading url: http://pim1.monternet.com/wap/waplogin.do
+V/LoadListener( 2027): has cookie : false, in cache black list: false
+V/http    ( 2027): 520497 http2 Request.readResponse() 890
+V/LoadListener( 2027): LoadListener.data(): url: http://pim1.monternet.com/wap/waplogin.do
+V/LoadListener( 2027): LoadListener.endData(): url: http://pim1.monternet.com/wap/waplogin.do
+V/http    ( 2027): 520503 http2 Request.readResponse(): done http://pim1.monternet.com/wap/waplogin.do
+I/WebCore::FrameLoader( 2027): frameContainsWMLContent, 1585
+V/http    ( 2027): 520507 http2 DRAIN pipe 0
+V/http    ( 2027): 520508 http2 IdleCache size 0 host http://10.0.0.172:80
+V/http    ( 2027): 520512 http2 RequestQueue.getRequest() => null
+V/http    ( 2027): 520513 http2 ConnectionThread: Waiting for work
+I/WebCore::HistoryController( 2027): WebCoreBackForward - Adding backforward item for frame http://pim1.monternet.com/wap/waplogin.do
+I/WebCoreFrameBridge( 2027): addHistoryItem, 642
+I/WebCoreFrameBridge( 2027): addHistoryItem, 649
+I/WebCoreFrameBridge( 2027): updateVisitedHistory, 772
+I/WebCoreFrameBridge( 2027): updateVisitedHistory, 782
+I/WebCoreFrameBridge( 2027): transitionToCommitted, 598
+I/WebCoreFrameBridge( 2027): transitionToCommitted, 610
+I/WebCore::FrameLoader( 2027): transitionToCommitted, mimetype: text/vnd.wap.wml
+I/WebCore ( 2027): committedLoad, 693
+I/WebCore::FrameLoader( 2027): begin createDocument, mimetype: text/vnd.wap.wml
+I/WebCore::WML( 2027): createDocument, 340
+I/WebCore::FrameLoader( 2027): write(): decode
+I/WebCore::FrameLoader( 2027): write(): create decoder, mimetype: text/vnd.wap.wml
+I/BrowserProvider( 2027): query url: content://browser/bookmarks url match: 0
+I/WebCore::TextResourceDecoder( 2027): defaultEncoding, content-type: 2, default encoding: UTF-8
+I/WebCore::FrameLoader( 2027): write(): set decoder from http header
+I/WebCore::FrameLoader( 2027): utf-8
+I/WebCore::TextResourceDecoder( 2027): setEncoding(), source: 5
+I/WebCore::TextResourceDecoder( 2027): setEncoding() name: UTF-8
+I/WebCore::TextResourceDecoder( 2027): decode()
+I/WebCore::TextResourceDecoder( 2027): decode() css charset done!
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), decode source: 5
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), buffer size: 890
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), check encoding
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), check xml encoding
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), do check xml encoding
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), do check http encoding
+I/WebCoreFrameBridge( 2027): setProgress, 715
+V/BrowserActivity( 2027): onProgressChanged: 30
+V/TitleBar( 2027): onProgressChanged: com.android.browser.TitleBar@43d8ea68 30 true android.view.ViewRoot$W@43d93920
+V/BrowserActivity( 2027): onProgressChanged:  false false
+V/BrowserActivity( 2027): showFakeTitleBar: Handler{43d43d90} null false
+I/WebCoreFrameBridge( 2027): setProgress, 724
+V/LoadListener( 2027): LoadListener.detachRequestHandle(): requestHandle: android.net.http.RequestHandle@43d4c978
+I/WebCore ( 2027): committedLoad, 693
+I/WebCore::FrameLoader( 2027): write(): decode
+I/WebCore::TextResourceDecoder( 2027): decode()
+I/WebCore::TextResourceDecoder( 2027): decode() css charset done!
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), decode source: 5
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), buffer size: 890
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), check encoding
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), check xml encoding
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), do check xml encoding
+I/WebCore::TextResourceDecoder( 2027): checkForHeadCharset(), do check http encoding
+I/WebCore::TextResourceDecoder( 2027): flush()
+I/WebCore::TextResourceDecoder( 2027): shouldAutoDetect, m_usesEncodingDetector: 1, m_source :5
+I/WebCore::WML( 2027): internalSubset, 1081
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCore::WML( 2027): createElement, 887
+I/WebCoreFrameBridge( 2027): didReceiveIcon, 736
+V/webview ( 2027): SET_SCROLLBAR_MODES
+V/webview ( 2027): SET_SCROLLBAR_MODES
+V/webview ( 2027): SET_SCROLLBAR_MODES
+V/webcore ( 2027): didFirstLayout standardLoad =true
+V/webcore ( 2027): setupViewport mRestoredScale=0 mViewScale=0.75 mTextWrapScale=0.75
+I/WebCoreFrameBridge( 2027): didFinishLoad, 616
+V/BrowserActivity( 2027): onPageFinished
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+I/WebCoreFrameBridge( 2027): didFinishLoad, 636
+I/WebCoreFrameBridge( 2027): setProgress, 715
+I/WebCoreFrameBridge( 2027): setProgress, 724
+I/TabControl( 2027): getCurrentTab
+V/cache   ( 2027): endTransaction
+I/TabControl( 2027): getTab
+V/webcore ( 2027): VIEW_SIZE_CHANGED arg1=0 arg2=0 obj=android.webkit.WebView$ViewSizeData@43df0bf8
+V/webcore ( 2027): viewSizeChanged w=320; h=345; textwrapWidth=320; scale=0.75
+V/webcore ( 2027): viewSizeChanged w=320; h=345; textwrapWidth=320; scale=0.75
+V/webcore ( 2027): WEBKIT_DRAW arg1=0 arg2=0 obj=null
+V/cache   ( 2027): startTransaction
+V/webcore ( 2027): webkitDraw start
+I/BrowserProvider( 2027): query url: content://browser/bookmarks url match: 0
+V/webcore ( 2027): webkitDraw NEW_PICTURE_MSG_ID
+V/webcore ( 2027): UPDATE_CACHE_AND_TEXT_ENTRY arg1=0 arg2=0 obj=null
+V/BrowserActivity( 2027): onProgressChanged: 100
+I/TabControl( 2027): getCurrentWebView
+I/TabControl( 2027): getTab
+V/webview ( 2027): UPDATE_TEXT_ENTRY_MSG_ID
+V/webview ( 2027): NEW_PICTURE_MSG_ID
+V/webview ( 2027): sendViewSizeZoom, viewWidth: 240, mInvActualScale: 1.3333334
+V/webview ( 2027): NEW_PICTURE_MSG_ID {0,0,320,345}
+V/webview ( 2027): UPDATE_TEXT_ENTRY_MSG_ID
+I/WebCoreFrameBridge( 2027): HasPasswordField, 1502
+I/WebCoreFrameBridge( 2027): HasPasswordField, 1514
+I/WebCoreFrameBridge( 2027): HasPasswordField, 1533
+V/cache   ( 2027): trimCacheIfNeeded
+V/websync ( 2027): CookieSyncManager::syncFromRamToFlash STARTS
+V/websync ( 2027): CookieSyncManager::syncFromRamToFlash DONE
+V/BrowserActivity( 2027): updateScreenshot
+I/TabControl( 2027): getCurrentTab
+I/TabControl( 2027): getTab
+I/BrowserProvider( 2027): query url: content://browser/bookmarks url match: 0
+D/StorageMonitor( 1747): mms freeMem:10670080, smslowflag:false,mmslowflag:false,smsThrehold:10240,mmsThreshold:317440
+^C
+jiangrui@jiangrui-desktop:~/notes/android.browser/history$ 
+

@@ -1,0 +1,83 @@
+http://developer.android.com/guide/topics/renderscript/compute.html
+http://developer.android.com/guide/topics/renderscript/index.html
+http://developer.android.com/reference/renderscript/index.html
+
+
+
+RenderScript
+    用于图像处理，数学模型，或其他需要大量数学计算的操作
+    high performance computation API
+    Portability平台和体系结构无关的(CPU, GPU, DSP),
+    Usability, like eliminating JNI glue code
+
+
+Renderscript System Overview
+    control and slave architecture
+        control: 
+            high level in Java VM, framework
+            memory management
+
+            make asynchronous call to Renderscript
+
+        slave: 
+            low level runtime code
+
+
+    ==============================
+    Android Application
+            |                    ------------------------------------
+            |                                                       |
+            V                          read/write                   |
+    Reflected Layer Classes       <-----------------------------    | Allocation
+    ==============================                             |    |
+            |                                                  V    V
+            |                                                -----------------
+            |                                                | Shared Memory |
+            |                                                -----------------
+            V                                                  ^
+    ==============================                             |
+    RenderScript Runtime         <------------------------------
+       RenderScript code                read/write
+            |
+            V
+    RenderScript Graphics and 
+        Compute Engine
+    ==============================
+
+
+three layers of APIs communication between the RenderScript runtime and Android framework
+    1. The RenderScript runtime APIs
+        do the computation required by your application
+
+    2. The reflected layer APIs
+        basic wrapper of RenderScript code
+        a set of classes reflected from your RenderScript runtime code
+
+        Android build tools automatically generate the classes for this layer
+        NO need JNI
+
+    3. The Android framework layer calls to the reflected APIs to access the RenderScript runtime
+    
+================================================================================
+basic data structure
+
+Element
+    represents one cell of a memory allocation
+
+    two classes:
+        1. Basic elements 
+            Single float value
+            4 element float vector
+            single RGB-565 color
+            single unsigned int 16
+
+        2. Complex forms
+            a structure of data contain a list of sub-elements and names
+            The fields can be accessed by name from a script or shader
+
+
+================================================================================
+
+
+
+

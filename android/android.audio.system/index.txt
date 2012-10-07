@@ -1,0 +1,96 @@
+Clue: Bluetooth sco设备中发送notification的流程
+    这个新问题 SMS02481473 好像BREAK12.04 FIX的一个老SMS02409384，在/BluetoothHandsfree.java需要发送CCWA和 CIEV，
+    蓝牙耳机就可以听到通知。这是12.05发现的，我们的FIXING没有进去吗？
+
+    if ((call != 0 || callheld != 0) && sendUpdate) {
+        // call waiting
+        if ((mRemoteBrsf & BRSF_HF_CW_THREE_WAY_CALLING) != 0x0) {
+            result.addResponse("+CCWA: \"" + number + "\"," + type);
+            result.addResponse("+CIEV: 3," + callsetup);
+        }
+
+
+
+./basic.knowledge/pcm.format.txt
+
+important logic concept:
+    ./important.concept.txt
+
+Audio系统的进程和二进制文件组织
+    ./process.binary.layout
+
+code index:
+    ./index.code.framework.txt
+    ./index.code.HAL.txt
+
+how to:
+    ./dump.pcm.txt
+
+flow index:
+    声音是如何播放出来的
+        音乐整个流程
+            
+            系统启动时，会打开默认的audio output
+            蓝牙a2dp连接时，会打开a2dp audio output
+                openOutput/closeOutput
+                    code.reading/flow.open.output.cpp
+
+            播放声音之前, 会startOutput/stopOutput
+                主要是设置某个output的使用情况
+                code.reading/flow.start-stop.output.cpp
+
+            code.reading/flow.player.cpp
+
+        code.reading/flow.audiotrack.cpp
+        code.reading/flow.audioflinger.cpp
+
+        音乐播放
+
+        来电铃声播
+            vobios player
+
+        系统按键声音
+            soundpool
+
+        dtmf tone
+
+
+    声音是如何录制的
+        code.reading/flow.recorder.cpp
+        code.reading/flow.setAudioSource.cpp
+
+    声音通道如何管理
+        各种不同类型的声音从哪种设备中输出
+            audio.policy/stream.strategy.device.txt
+
+        声音通道的打开和关闭 
+            code.reading/flow.open.output.cpp
+
+        声音通道的切换
+            code.reading/flow.setParameters.cpp
+
+        声音冲突的解决
+            code.reading/flow.conflict.cpp
+            code.reading/AudioPolicyManagerBase.cpp
+            // todo: volume for stream
+
+    声音音量如何管理
+        code.reading/flow.volume.adjusting.cpp
+            code.reading/volume.audio.service.java
+                code.reading/volume.ui.java
+
+            code.reading/volume.audio.policy.manager.cpp
+
+    设备连接上的流程
+        耳机，蓝牙耳机连接/断开
+        code.reading/bt.cpp
+       
+    打电话播放铃音的流程        
+        code.reading/flow.incoming.call.cpp
+            
+audio framework相关知识学习
+    MediaPlayerService
+    AudioSink
+    stagefright
+        stagefright.txt
+

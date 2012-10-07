@@ -1,0 +1,703 @@
+CSS 指层叠样式表 
+    Cascading Style Sheets
+
+    解决内容与表现分离的问题
+    多个样式定义可层叠为一
+
+    CSS 对大小写不敏感。
+    不过存在一个例外：如果涉及到与 HTML 文档一起工作的话，
+        class 和 id 名称对大小写是敏感的
+
+
+层叠次序
+    当同一个 HTML 元素被不止一个样式定义时，会使用哪个样式呢？
+    其中数字 4 拥有最高的优先权:
+        1. 浏览器缺省设置
+        2. 外部样式表
+        3. 内部样式表（位于 <head> 标签内部）
+        4. 内联样式（在 HTML 元素内部）
+
+子元素从父元素继承属性
+    body { font-family: Verdana, sans-serif; }
+    根据上面这条规则，站点的 body 元素将使用Verdana 字体。
+    通过 CSS 继承，子元素将继承最高级元素（在本例中是 body）所拥有的属性
+        （这些子元素诸如 p, td, ul, ol, ul, li, dl, dt,和 dd）。
+
+////////////////////////////////////////////////////////////////////////////////
+syntax diagram:
+    selector_section {property_value_section}
+
+    property_value_section
+        property:value;(property:value;)+
+
+    selector_section
+        selector_prim (selector_connector selector_prim)+
+    
+    selector_connector
+        "" |    // 表示a && b
+        " " |   // 表示a的所有b子孙
+        > |     // 表示a的所有b子女
+        +       // 表示a的下一个b兄弟
+
+    selector_prim
+        element_selector |
+        class_selector |
+        id_selector|
+        attr_selector|
+        wildcard
+
+    element_selector
+        element_name
+
+    class_selector
+        .class_name
+
+    id_selector
+        #id_name
+
+    attr_selector
+        [attr_name attr_op value]
+
+    attr_op
+        = |     // 完全相等
+        ~= |    // 匹配适用于由空格分隔的属性值, 如
+        |=      // 匹配适用于由连字符分隔的属性值
+
+    wildcard
+        *
+
+////////////////////////////////////////////////////////////////////////////////
+syntax:
+    element_selector {property: value}
+
+    .class_selector {property: value}
+
+    #id_selector {property: value}
+
+    [attr_selector] {property: value}
+    [attr_selector=value] {property: value}
+    [attr_selector~=value] {property: value}
+    [attr_selector|=value] {property: value}
+
+
+    // 对s1, s2, s3, ... 应用样式
+    s1, s2, s3,...{property: value; property: value;... }
+
+    // 对selector中的子女child_selector应用样式
+    selector > child_selector {property: value}
+
+    // 对selector中的所有子孙descendant_selector应用样式
+    selector descendant_selector {property: value}
+
+    // 对selector中的兄弟sibling_selector应用样式
+    selector + sibling_selector {property: value}
+
+
+    selector : pseudo-class {property: value}
+    selector.class : pseudo-class {property: value}
+
+    selector:pseudo-element {property:value;}
+    selector.class:pseudo-element {property:value;}
+
+syntax examples:
+
+    // 选择作为 h1 元素后代的任何 em 元素
+    h1 em {color:red;}
+
+    // 选择作为 h1 元素子元素的所有 strong 元素
+    h1 > strong {color:red;}
+
+    table.company td > p
+
+    // 选择紧接在 h1 元素后出现的段落，h1 和 p 元素拥有共同的父元素
+    h1 + p {margin-top:50px;}
+
+    // 只会把列表中的第二个和第三个列表项变为粗体。第一个列表项不受影响
+    li + li {font-weight:bold;}
+
+
+    html > body table + ul {margin-top:20px;}
+    // 选择紧接在 table 元素后出现的所有兄弟 ul 元素，该 table 元素包含在一个 body 元素中，body 元素本身是 html 元素的子元素
+
+    #red {color:red;}
+    #green {color:green;}
+
+    #sidebar p {
+        font-style: italic;
+        text-align: right;
+        margin-top: 0.5em;
+    }
+
+    *.important {color:red;} // 通配符可以忽略
+    .center {text-align: center}
+
+    //匹配 <p class="important warning">
+    //不匹配 <p class="important warning urgent">
+    .important.warning {background:silver;}
+
+    [title] { color:red; }
+
+    [title=W3School] { border:5px solid blue; }
+
+    // 匹配适用于由空格分隔的属性值, 如
+    // <p title="student hello">
+    [title~=hello] { color:red; }
+
+    // 匹配适用于由连字符分隔的属性值, 如
+    // <p lang="en-us">Hi!</p>
+    [lang|=en] { color:red; }
+
+    input[type="text"] { width:150px;
+        display:block;
+        margin-bottom:10px;
+        background-color:yellow;
+        font-family: Verdana, Arial; }
+
+color
+    white, //ff0000, rgb(255,0,0), rgb(100%,0%,0%)
+
+size
+    20px, 3cm, 50%
+
+
+// 插入样式表
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css" />
+</head>
+
+<head>
+<style type="text/css">
+  hr {color: sienna;}
+</style>
+</head>
+
+key
+    background-color
+        white, gray, //00ff00, transparent, rgb(r,g,b)
+
+    background-image
+        url(/i/eg_bg_04.gif)
+
+    background-repeat
+        repeat, repeat-x, repeat-y, no-repeat
+
+    background-attachment
+        fixed
+
+    background-position
+        center, 30% 20%, 50px 100px
+
+    padding
+        20px
+
+    color // 文本颜色
+        red, //00ff00, rgb(0,255,123)
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 设置背景色
+    body {background-color: white}
+    h1 {background-color: //00ff00}
+    h2 {background-color: transparent}
+    p {background-color: rgb(250,0,255)}
+    p.no2 {background-color: gray; padding: 20px;}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 设置文本背景色
+span.highlight { background-color:yellow }
+
+<span class="highlight">这是文本。</span>  这是文本。 这是文本。 <span class="highlight">这是文本。</span>
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 设置背景图片
+body {background-image:url(/i/eg_bg_04.gif);}
+
+body {
+    background-image: url(/i/eg_bg_03.gif);
+    background-repeat: repeat; 
+    background-repeat: repeat-y; // repeat only in y axis
+    background-repeat: repeat-x; // repeat only in x axis
+    background-repeat: no-repeat; // default is repeat
+
+    // 图像不会随页面的滚动条而滚动
+    background-attachment:fixed; 
+
+    // place bg img in the page
+    background-attachment:fixed; 
+    background-position:center; 
+
+    background-attachment:fixed;
+    background-position: 30% 20%; 
+
+    background-attachment:fixed;
+    background-position: 50px 100px;
+
+    // 所有背景属性在一个声明之中
+    background: //ff0000 url(/i/eg_bg_03.gif) no-repeat fixed center;
+    }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 文本样式
+
+    // 文本颜色
+    body {color:red}
+    h1 {color://00ff00}
+    p.ex {color:rgb(0,0,255)}
+
+    // 文本背景色
+    span.highlight { background-color:yellow }
+
+    // 文本间距
+    h1 {letter-spacing: -0.5em}
+    h4 {letter-spacing: 20px}
+
+    // 行间距
+    p.small {line-height: 90%}
+    p.small {line-height: 0.9}
+    p.small {line-height: 10px}
+    p.big {line-height: 200%}
+    p.big {line-height: 30px}
+
+    // 文本对齐
+    h1 {text-align: center}
+    h2 {text-align: left}
+    h3 {text-align: right}
+
+    // 划线
+    h1 {text-decoration: overline}
+    h2 {text-decoration: line-through}
+    h3 {text-decoration: underline}
+    h4 {text-decoration:blink}
+    a {text-decoration: none}
+
+    // 段落缩进
+    p {text-indent: 1cm}
+
+    // 大小写控制
+    p.uppercase {text-transform: uppercase}
+    p.lowercase {text-transform: lowercase}
+    p.capitalize {text-transform: capitalize} // 首字幕大写
+
+    // 无折行 
+    p { white-space: nowrap }
+
+    // 单词间距
+    p.spread {word-spacing: 20px;}
+    p.tight {word-spacing: -0.5em;}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+font
+
+    // font type
+    p.serif{font-family:"Times New Roman",Georgia,Serif}
+    p.sansserif{font-family:Arial,Verdana,Sans-serif}
+
+    // font size
+    h1 {font-size: 300%}
+    p {font-size: 150%}
+
+    // font style
+    p.normal {font-style:normal}
+    p.italic {font-style:italic}
+    p.oblique {font-style:oblique}
+
+    p.normal {font-variant: normal}
+    p.small {font-variant: small-caps}
+
+    // weight
+    p.normal {font-weight: normal}
+    p.thick {font-weight: bold}
+    p.thicker {font-weight: 900}
+
+    // all in one
+    p.ex1 { font:italic arial,sans-serif; }
+    p.ex2 { font:italic bold 12px/30px arial,sans-serif; }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// border
+
+    p { border: medium double rgb(250,0,255) }
+
+    // style
+    p.dotted {border-style: dotted}
+    p.dashed {border-style: dashed}
+    p.solid {border-style: solid}
+    p.double {border-style: double}
+    p.groove {border-style: groove}
+    p.ridge {border-style: ridge}
+    p.inset {border-style: inset}
+    p.outset {border-style: outset}
+
+    // mixed style
+    p.soliddouble {border-style: solid double}
+    p.doublesolid {border-style: double solid}
+    p.groovedouble {border-style: groove double}
+    p.three {border-style: solid double groove}
+
+
+    // 粗细
+    p.one { border-style: solid; border-width: 5px }
+    p.two { border-style: solid; border-width: thick }
+    p.three { border-style: solid; border-width: 5px 10px }
+    p.four { border-style: solid; border-width: 5px 10px 1px }
+    p.five { border-style: solid; border-width: 5px 10px 1px medium }
+
+    // color
+    border-color: //0000ff
+    p.one { border-style: solid; border-color: //0000ff }
+    p.four { border-style: solid; border-color: //ff0000 //00ff00 //0000ff rgb(250,0,255) }
+
+    // bottom
+    p { border-style:solid; border-bottom:thick dotted //ff0000; }
+    p { border-style:solid; border-bottom-color://ff0000; }
+
+    p.none {border-bottom-style:none} // no bottom border
+    p.dotted {border-bottom-style:dotted}
+    p.dashed {border-bottom-style:dashed}
+    p.solid {border-bottom-style:solid}
+    p.double {border-bottom-style:double}
+    p.groove {border-bottom-style:groove}
+    p.ridge {border-bottom-style:ridge}
+    p.inset {border-bottom-style:inset}
+    p.outset {border-bottom-style:outset}
+
+    p.one { border-style: solid; border-bottom-width: 15px }
+    p.two { border-style: solid; border-bottom-width: thin }
+    // border-bottom-width(work together with border-style)
+
+    border-left/right/top/bottom
+    border-left/right/top/bottom-color
+    border-left/right/top/bottom-style
+    border-left/right/top/bottom-width (work together with border-style)
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// margin, 外边距
+    p.leftmargin {margin-left: 2cm}
+    p.rightmargin {margin-right: 8cm}
+    p.topmargin {margin-top: 5cm}
+    p.bottommargin {margin-bottom: 1cm}
+
+    p.margin {margin: 2cm 4cm 3cm 4cm}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// padding, 内边距, 相对于border而言
+    td.test1 {padding: 1.5cm}
+    td.test2 {padding: 0.5cm 2.5cm}
+
+    <table border="1">
+    <tr>
+    <td class="test1"> 这个表格单元的每个边拥有相等的内边距。 </td>
+    </tr>
+    </table>
+
+    <table border="1">
+    <tr>
+    <td class="test2">
+    这个表格单元的上和下内边距是 0.5cm，左和右内边距是 2.5cm。
+    </td>
+    </tr>
+    </table>
+
+
+    td {padding-bottom: 2cm}
+    td {padding-bottom: 10%}
+    td {padding-left: 2cm}
+    td {padding-left: 10%}
+    td {padding-right: 1cm}
+    td {padding-top: 2cm}
+    td {padding-top: 20%}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+list style
+
+    ul.disc {list-style-type: disc}
+    ul.circle {list-style-type: circle}
+    ul.square {list-style-type: square}
+    ul.none {list-style-type: none}
+    ul { list-style-image: url('/i/eg_arrow.gif') }
+
+    <ul class="disc">
+    <li>咖啡</li>
+    <li>茶</li>
+    <li>可口可乐</li>
+    </ul>
+
+    ol.decimal {list-style-type: decimal}
+    ol.lroman {list-style-type: lower-roman}
+    ol.uroman {list-style-type: upper-roman}
+    ol.lalpha {list-style-type: lower-alpha}
+    ol.ualpha {list-style-type: upper-alpha}
+
+    <ol class="decimal">
+    <li>咖啡</li>
+    <li>茶</li>
+    <li>可口可乐</li>
+    </ol>
+
+    // 所有类型
+    http://www.w3school.com.cn/tiy/t.asp?f=csse_list-style-type_all
+
+    ul.inside { list-style-position: inside }
+    ul.outside { list-style-position: outside }
+
+    ul { list-style: square inside url('/i/eg_arrow.gif') }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//table
+
+    table.one { table-layout: automatic }
+    table.two { table-layout: fixed }
+
+    <table class="one" border="1" width="100%">
+    <tr>
+    <td width="20%">1000000000000000000000000000</td>
+    <td width="40%">10000000</td>
+    <td width="40%">100</td>
+    </tr>
+    </table>
+
+    table { width:100%; }
+    th { height:50px; }
+    td { text-align:right; }
+    td { height:50px; vertical-align:bottom; }
+    td { padding:15px; }
+
+    table, td, th { border:1px solid green; }
+    th { background-color:green; color:white; }
+
+    table { border-collapse:collapse; }
+    table, td, th { border:1px solid black; }
+
+    border-collapse 属性设置是否将表格边框折叠为单一边框：
+
+    table.one { border-collapse: separate; border-spacing: 10px }
+    table.two { border-collapse: separate; border-spacing: 10px 50px }
+
+
+    caption { caption-side:bottom } // 表的title放在底部
+    <table border="1">
+    <caption>This is a caption</caption>
+    ...
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+outline, 在border的外边
+    p { border:red solid thin;
+        outline-style:dotted;
+        outline-color://00ff00; 
+        outline-width:2px }
+
+    p { border:red solid thin; 
+        outline://00ff00 dotted thick; }
+
+    p { border: red solid thin; }
+    p.dotted {outline-style: dotted}
+    p.dashed {outline-style: dashed}
+    p.solid {outline-style: solid}
+    p.double {outline-style: double}
+    p.groove {outline-style: groove}
+    p.ridge {outline-style: ridge}
+    p.inset {outline-style: inset}
+    p.outset {outline-style: outset}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+image
+    img.normal { height: auto }
+    img.big { height: 160px }
+    img.small { height: 30px }
+
+    img.big { height: 100% }
+    img.small { height: 10% }
+
+    img { width: 200px; }
+    img { width: 50% }
+
+    p { max-height: 10px } // 设置元素的最大高度
+    p { max-width: 200px } // 设置元素的最大宽度
+    p { max-width: 50% }
+    p { max-width: 300px }
+
+    p { min-height: 100px }
+    p { min-width: 1000px }
+    p { min-width: 200% }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+行间距:
+    p.small {line-height: 90%}
+    p.big {line-height: 200%}
+
+    p.small { line-height: 10px }
+    p.big { line-height: 30px }
+
+    p.small { line-height: 0.5 } // 0则两行重叠到一起了
+    p.big { line-height: 2 }
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+inline, block
+
+    p {display: inline}
+    div {display: none}
+
+    span { display: block }
+    <span>本例中的样式表把 span 元素设置为块级元素。</span>
+    <span>两个 span 元素之间产生了一个换行行为。</span>
+
+    img { float:left }
+    img { float:right; 
+        border:1px dotted black;
+        margin:0px 0px 15px 20px; }
+
+    span { float:left;
+          width:0.7em;
+          font-size:400%;
+          font-family:algerian,courier;
+          line-height:80%; }
+    <span>T</span>his is some text.
+
+    li {display:inline}
+    ul { float:left;
+        width:100%;
+        padding:0;
+        margin:0;
+        list-style-type:none; }
+
+    a { float:left;
+        width:7em;
+        text-decoration:none;
+        color:white;
+        background-color:purple;
+        padding:0.2em 0.6em;
+        border-right:1px solid white; }
+
+    a:hover {background-color://ff3300}
+
+
+    // 相对布局
+    // 元素框偏移某个距离。元素仍保持其未定位前的形状，它原本所占的空间仍保留。
+    h2.pos_left { position:relative; 
+                  left:-20px }
+    h2.pos_right { position:relative;
+                   left:20px }
+
+   相对定位会按照元素的原始位置对该元素进行移动。
+   样式 "left:-20px" 从元素的原始左侧位置减去 20 像素。
+   样式 "left:20px" 向元素的原始左侧位置增加 20 像素。
+
+    // 绝对布局
+    // 元素框从文档流完全删除，并相对于其包含块定位
+    h2.pos_abs { position:absolute;
+                left:100px; top:150px }
+    通过绝对定位，元素可以放置到页面上的任何位置。
+    下面的标题距离页面左侧 100px，距离页面顶部 150px。
+
+
+    // fixed
+    // 元素框的表现类似于将 position 设置为 absolute，
+    // 不过其包含块是视窗本身
+    p.one { position:fixed;
+            left:5px; top:5px; }
+    p.two { position:fixed;
+            top:30px; right:5px; }
+
+    h1.visible {visibility:visible}
+    h1.invisible {visibility:hidden}
+    tr.coll { visibility:collapse }
+
+    // cursor shape
+    <span style="cursor:crosshair">Crosshair</span>
+
+
+    图像的左侧和右侧均不允许出现浮动元素：
+    img { float:left;
+          clear:both; } 
+
+    img { position:absolute;
+    clip:rect(0px 50px 200px 0px) } // 剪裁图片
+
+
+    div { background-color://00FFFF;
+        width:250px; height:150px;
+        overflow: scroll/hidden/auto }
+
+    // 文字和图片对齐
+    img.top {vertical-align:text-top}
+    img.bottom {vertical-align:text-bottom}
+
+    <p> 这是一幅<img class="top" border="0" src="/i/eg_cute.gif" />位于段落中的图像。 </p> 
+
+    // z-index
+    img.x { position:absolute;
+            left:0px; top:0px;
+            z-index:-1 }
+
+img { position:absolute;
+        top:5% }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+pseudo class
+
+    在 CSS 定义中，a:hover 必须位于 a:link 和 a:visited 之后，这样才能生效 
+    在 CSS 定义中，a:active 必须位于 a:hover 之后，这样才能生效！
+
+锚伪类
+    a:link {color: //FF0000}     /* 未访问的链接 */
+    a:visited {color: //00FF00}  /* 已访问的链接 */
+    a:hover {color: //FF00FF}    /* 鼠标移动到链接上 */
+    a:active {color: //0000FF}   /* 选定的链接 */
+
+    a.two:link {color: //ff0000}
+    a.two:visited {color: //0000ff}
+    a.two:hover {font-size: 150%}
+
+    a.three:link {color: //ff0000}
+    a.three:visited {color: //0000ff}
+    a.three:hover {background: //66ff66}
+
+    a.four:link {color: //ff0000}
+    a.four:visited {color: //0000ff}
+    a.four:hover {font-family: monospace}
+
+    a.five:link {color: //ff0000; text-decoration: none}
+    a.five:visited {color: //0000ff; text-decoration: none}
+    a.five:hover {text-decoration: underline}
+
+
+    input:focus { background-color:yellow; }
+
+
+    // "作为"第一个child的<p>应用style
+    // 不是对p的第一个child应用style
+    p:first-child {font-weight: bold;}
+
+    // "作为"第一个child的<p>应用style
+    li:first-child {text-transform:uppercase;}
+
+
+    选择器匹配所有 <p> 元素中的第一个 <i> 元素：
+    p > i:first-child { font-weight:bold; } 
+    <p>some <i>text</i>. some <i>text</i>.</p>
+    <p>some <i>text</i>. some <i>text</i>.</p>
+
+
+    选择器匹配所有作为元素的第一个子元素的 <p> 元素中的所有 <i> 元素：
+    p:first-child i { color:blue; } 
+    <p>some <i>text</i>. some <i>text</i>.</p>
+    <p>some <i>text</i>. some <i>text</i>.</p>
+
+    为不同的语言定义规则
+    q:lang(no) { quotes: "~" "~" }
+    <p>一些文本 <q lang="no">段落中的引用</q> 一些文本。</p>
+
+
+pseudo-element
+    p:first-letter { color: //ff0000; font-size:xx-large }
+    p:first-line { color: //ff0000; font-variant: small-caps }
+
+
+    // 下面的例子在每个 <h1> 元素前面插入一幅图片：
+    h1:before { content:url(logo.gif); }
+    h1:after { content:url(logo.gif); }
+
+
+

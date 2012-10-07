@@ -1,0 +1,10 @@
+下面的列表是SQLite还未实现的SQL92特性，列表的顺序暗示了特性可能会添加到SQLite的时间，列表顶部的特性可能会在未来实现，而列表底部的特性暂时还没有实现的计划。
+
+* RIGHT和FULL OUTER JOIN。左外联结已经实现了，但右外联结和全外联结还没实现。
+*  完整的ALTER TABLE支持。只有RENAME TABLE和ADD COLUMN是支持的，其他类型的ALTER TABLE操作，
+    如DROP COLUMN，ALTER COLUMN，ADD CONSTRAINT等等是被忽略的。
+*  完全的触发器支持。FOR EACH ROW触发器是支持的，但FOR EACH STATEMENT触发器不支持。
+*  写视图。SQLite中的视图是只读的，不能在视图上执行DELETE，INSERT，或UPDATE语句。
+但你可以创建当试图删除、插入或更新视图时触发的触发器，并在触发器的主体中做必需的操作。
+*  GRANT和REVOKE。因为SQLite读写普通的磁盘文件，唯一需要的访问权限是正常的文件访问权限。
+GRANT和RREVOKE命令通常用于C/S的数据库管理系统中，在这里不实现是因为对于嵌入的数据库引擎来说没什么意义。

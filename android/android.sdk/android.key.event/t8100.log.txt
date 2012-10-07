@@ -1,0 +1,946 @@
+
+jiangrui@jiangrui-desktop:~/notes/android.sdk/android.key.event$ 
+jiangrui@jiangrui-desktop:~/notes/android.sdk/android.key.event$ 
+jiangrui@jiangrui-desktop:~/notes/android.sdk/android.key.event$ 
+jiangrui@jiangrui-desktop:~/notes/android.sdk/android.key.event$ adb shell
+error: device not found
+jiangrui@jiangrui-desktop:~/notes/android.sdk/android.key.event$ adb shell
+error: device not found
+jiangrui@jiangrui-desktop:~/notes/android.sdk/android.key.event$ adb shell
+error: device not found
+jiangrui@jiangrui-desktop:~/notes/android.sdk/android.key.event$ adb shell
+error: device not found
+jiangrui@jiangrui-desktop:~/notes/android.sdk/android.key.event$ adb shell
+error: device not found
+jiangrui@jiangrui-desktop:~/notes/android.sdk/android.key.event$ adb shell
+error: device not found
+jiangrui@jiangrui-desktop:~/notes/android.sdk/android.key.event$ adb shell
+error: device not found
+jiangrui@jiangrui-desktop:~/notes/android.sdk/android.key.event$ adb shell
+error: device not found
+jiangrui@jiangrui-desktop:~/notes/android.sdk/android.key.event$ adb shell
+error: device not found
+jiangrui@jiangrui-desktop:~/notes/android.sdk/android.key.event$ adb shell
+error: device not found
+jiangrui@jiangrui-desktop:~/notes/android.sdk/android.key.event$ adb shell
+error: device not found
+jiangrui@jiangrui-desktop:~/notes/android.sdk/android.key.event$ adb shell
+error: device not found
+jiangrui@jiangrui-desktop:~/notes/android.sdk/android.key.event$ adb shell
+error: device not found
+jiangrui@jiangrui-desktop:~/notes/android.sdk/android.key.event$ adb shell
+error: device not found
+jiangrui@jiangrui-desktop:~/notes/android.sdk/android.key.event$ adb shell
+error: device not found
+jiangrui@jiangrui-desktop:~/notes/android.sdk/android.key.event$ adb shell
+$ logcat
+--------- beginning of /dev/log/main
+I/DEBUG   ( 1369): debuggerd: Oct 10 2011 20:30:31
+I/Netd    ( 1368): Netd 1.0 starting
+E/SoftapController( 1368): SoftapController::SoftapController() ENTRY
+D/        ( 1376): agpsd.c : Child created, Parent exits : succes
+D/        ( 1395): agpsd.c : Child execution starts here
+I/        ( 1370): PekallServer : start FMRadio service
+I/FMRadioServiceNative( 1370): FMRadioService constructor
+I/FMRadioServiceNative( 1370): onFirstRef: FMRadioService thread power on/off chip
+I/        ( 1371): Main_CmmbServer::ServiceManager: 0x69d48
+D/MobileTVService( 1371): [static void MobileTVService::instantiate()]559 > enter -> 
+D/MobileTVService( 1371): [MobileTVService::MobileTVService()]572 > enter -> 
+D/CmmbService( 1371): [CmmbService::CmmbService()]2357 > enter...
+I/CmmbService( 1371): [virtual void CmmbService::onFirstRef()]2387 > onFirstRef:: run thread
+I/CmmbService( 1371): [virtual android::status_t CmmbService::readyToRun()]2397 > CmmbService main thread ready to run.
+D/CmmbService( 1371): [virtual bool CmmbService::threadLoop()]2406 > Enter thread->loop function
+D/CmmbService( 1371): [virtual bool CmmbService::threadLoop()]2420 > +++ mutex lock
+D/CmmbService( 1371): [virtual bool CmmbService::threadLoop()]2422 > --- mutex lock
+D/CmmbService( 1371): [virtual bool CmmbService::threadLoop()]2426 > Event queue is empty, cond wait...
+--------- beginning of /dev/log/system
+I/Vold    ( 1729): Vold 2.1 (the revenge) firing up
+D/Vold    ( 1729): Volume sdcard state changing -1 (Initializing) -> 0 (No-Media)
+D/Vold    ( 1729): Volume sdcard state changing 0 (No-Media) -> 2 (Pending)
+D/Vold    ( 1729): Volume sdcard state changing 2 (Pending) -> 1 (Idle-Unmounted)
+I/        ( 1735): ServiceManager: 0xa7a0
+I/SurfaceFlinger( 1735): SurfaceFlinger is starting
+I/SurfaceFlinger( 1735): SurfaceFlinger's main thread ready to run. Initializing graphics H/W...
+I/gralloc ( 1735): using (fd=8)
+I/gralloc ( 1735): id           = lcd-main
+I/gralloc ( 1735): xres         = 240 px
+I/gralloc ( 1735): yres         = 320 px
+I/gralloc ( 1735): xres_virtual = 240 px
+I/gralloc ( 1735): yres_virtual = 640 px
+I/gralloc ( 1735): bpp          = 16
+I/gralloc ( 1735): r            = 11:5
+I/gralloc ( 1735): g            =  5:6
+I/gralloc ( 1735): b            =  0:5
+I/gralloc ( 1735): width        = 38 mm (160.421051 dpi)
+I/gralloc ( 1735): height       = 51 mm (159.372543 dpi)
+I/gralloc ( 1735): refresh rate = 60.00 Hz
+D/libEGL  ( 1735): egl.cfg not found, using default config
+D/libEGL  ( 1735): loaded /system/lib/egl/libGLES_android.so
+I/SurfaceFlinger( 1735): EGL informations:
+I/SurfaceFlinger( 1735): # of configs : 8
+I/SurfaceFlinger( 1735): vendor    : Android
+I/SurfaceFlinger( 1735): version   : 1.4 Android META-EGL
+I/SurfaceFlinger( 1735): extensions: EGL_KHR_image EGL_KHR_image_base EGL_KHR_image_pixmap EGL_ANDROID_image_native_buffer EGL_ANDROID_swap_rectangle EGL_ANDROID_get_render_buffer 
+I/SurfaceFlinger( 1735): Client API: OpenGL ES
+I/SurfaceFlinger( 1735): EGLSurface: 5-6-5-0, config=0x1000000
+I/SurfaceFlinger( 1735): flags     : 00160000
+I/SurfaceFlinger( 1735): OpenGL informations:
+I/SurfaceFlinger( 1735): vendor    : Android
+I/SurfaceFlinger( 1735): renderer  : Android PixelFlinger 1.3
+I/SurfaceFlinger( 1735): version   : OpenGL ES-CM 1.0
+I/SurfaceFlinger( 1735): extensions: GL_OES_byte_coordinates GL_OES_fixed_point GL_OES_single_precision GL_OES_read_format GL_OES_compressed_paletted_texture GL_OES_draw_texture GL_OES_matrix_get GL_OES_query_matrix GL_OES_EGL_image GL_OES_compressed_ETC1_RGB8_texture GL_ARB_texture_compression GL_ARB_texture_non_power_of_two GL_ANDROID_user_clip_plane GL_ANDROID_vertex_buffer_object GL_ANDROID_generate_mipmap 
+I/SurfaceFlinger( 1735): GL_MAX_TEXTURE_SIZE = 4096
+I/SurfaceFlinger( 1735): GL_MAX_VIEWPORT_DIMS = 4096
+D/AndroidRuntime( 1732): 
+D/AndroidRuntime( 1732): >>>>>>>>>>>>>> AndroidRuntime START <<<<<<<<<<<<<<
+D/AndroidRuntime( 1732): CheckJNI is OFF
+D/libEGL  ( 1777): egl.cfg not found, using default config
+D/libEGL  ( 1777): loaded /system/lib/egl/libGLES_android.so
+E/SurfaceFlinger( 1735): eglSwapBuffers: EGL error 0x300c (EGL_BAD_PARAMETER)
+I/ARMAssembler( 1777): generated scanline__00000077:03010104_00008A01_00000000 [ 10 ipp] (31 ins) at [0x16540:0x165bc] in 294462 ns
+I/        ( 1741): ServiceManager: 0xb588
+V/AudioHardwareALSA( 1741): Element Master Main found and initialized [elem :0x1bc78]
+V/AudioHardwareALSA( 1741): Element A2DP found and initialized : elem : 0x24dd0
+V/AudioHardwareALSA( 1741): Element AnalogLoop found and initialized : elem : 0x24750
+V/AudioHardwareALSA( 1741): Element EchoCancelling found and initialized : elem : 0x1ca60
+V/AudioHardwareALSA( 1741): Element Input found and initialized [elem :0x24410]
+V/AudioHardwareALSA( 1741): Element Main found and initialized : elem : 0x23d90
+V/AudioHardwareALSA( 1741): Element SPD found and initialized [elem :0x1eae0]
+V/AudioHardwareALSA( 1741): Element Sec found and initialized : elem : 0x240d0
+V/AudioHardwareALSA( 1741): Element Voice Clarity found and initialized : elem : 0x1f190
+D/AudioHardwareALSA( 1741): mixer initialized.
+V/AudioHardwareALSA( 1741): Request setMasterVolume with volume 1.000000
+I/CameraService( 1741): CameraService started: pid=1741
+I/CameraService( 1741): load file ok, size = 38016
+E/CameraService( 1741): failed to open file [/data/data/com.android.phone/files/vt_user.yuv]
+I/AudioPolicyService( 1741): Using hardware specific audio policy
+I/AudioPolicyService( 1741): Using AudioPolicyManagerBase for T8100 FM test
+I/AudioPolicyService( 1741): AudioCommandThread() going to sleep
+I/AudioPolicyService( 1741): AudioCommandThread() going to sleep
+I/AudioFlinger( 1741): registerClient() 0x2572c, tid 1741, calling tid 1741
+I/AudioFlinger( 1741): Adding notification client 0x25730
+I/AudioFlinger( 1741): openOutput(), Device 2, SamplingRate 0, Format 0, Channels 0, flags 0
+D/AudioHardwareALSA( 1741): openOutputStream called for devices: 0x00000002
+D/ALSAModule( 1741): open called for devices 00000002 in mode 0...
+V/ALSAModule( 1741): Set PLAYBACK PCM format to S16_LE (Signed 16 bit Little Endian)
+V/ALSAModule( 1741): Using 2 channels for PLAYBACK.
+V/ALSAModule( 1741): Set PLAYBACK sample rate to 44100 HZ
+V/ALSAModule( 1741): Buffer size: 8192
+V/ALSAModule( 1741): Latency: 185759
+I/ALSAModule( 1741): Initialized ALSA PLAYBACK device AndroidPlayback_Speaker_normal
+E/ALSAModule( 1741): open pcm device Dummy_AndroidPlayback_Speaker_normal returned status 0. handler 0x2fca8
+E/ALSAModule( 1741): pcm device Dummy_AndroidPlayback_Speaker_normal closed
+I/AudioFlinger( 1741): openOutput() openOutputStream returned output 0x254c8, SamplingRate 44100, Format 1, Channels c, status 0
+V/ALSAStreamOps( 1741): alsa period size 8192
+V/ALSAStreamOps( 1741): alsa period size 8192
+I/AudioFlinger( 1741): sendConfigEvent() num events 1 event 0, param 0
+I/AudioFlinger( 1741): openOutput() created mixer output: ID 1 thread 0x2f7f0
+I/AudioPolicyManagerBase( 1741): setOutputDevice() output 1 device 2 delayMs 0
+I/AudioPolicyManagerBase( 1741): setOutputDevice() fm output 0
+I/AudioPolicyManagerBase( 1741): setOutputDevice() prevDevice 2
+I/AudioPolicyService( 1741): setParameters io handle: 1, key-value: routing=2, delay ms: 0
+I/AudioPolicyService( 1741): inserting command: 3 at index 0, num commands 0
+I/AudioPolicyService( 1741): AudioCommandThread() adding set parameter string routing=2, io 1 ,delay 0
+I/AudioPolicyService( 1741): AudioCommandThread() waking up
+I/AudioPolicyService( 1741): AudioCommandThread() processing set parameters string routing=2, io 1
+I/AudioFlinger( 1741): setParameters(): io 1, keyvalue routing=2, tid 1789, calling tid 1741
+I/AudioFlinger( 1741): ThreadBase::setParameters() routing=2
+I/AudioFlinger( 1741): AudioFlinger's thread 0x2f7f0 ready to run
+I/AudioFlinger( 1741): processConfigEvents() remaining events 1
+I/AudioFlinger( 1741): PlaybackThread::audioConfigChanged, thread 0x2f7f0, event 0, param 0
+I/AudioFlinger( 1741): audioConfigChanged_l() Notifying change to client 0x25730
+I/AudioSystem( 1741): ioConfigChanged() event 0
+I/AudioSystem( 1741): ioConfigChanged() new output samplingRate 44100, format 1 channels 2 frameCount 2048 latency 186
+D/ALSAStreamOps( 1741): setParameters() routing=2
+D/ALSAModule( 1741): v0.01 route called for devices 00000002 in mode 0...
+D/ALSAModule( 1741): Routing audio to Speakerphone
+D/ALSAModule( 1741): the same device
+I/AudioFlinger( 1741): Audio hardware entering standby, mixer 0x2f7f0, mSuspended 0
+D/AudioHardwareALSA( 1741): standby()
+D/AudioHardwareALSA( 1741): mStreamType=0, mParent->getAnalogLoop()=0
+I/AudioFlinger( 1741): MixerThread 0x2f7f0 TID 1791 going to sleep
+I/AudioPolicyService( 1741): AudioCommandThread() going to sleep
+I/AudioPolicyService( 1741): setParameters func return
+I/AudioPolicyManagerBase( 1741): applyStreamVolumes() for output 1 and device 2
+I/AudioPolicyManagerBase( 1741): setStreamVolume() for output 1 stream 0, volume 1.000000, delay 0
+I/AudioPolicyService( 1741): inserting command: 4 at index 0, num commands 0
+I/AudioPolicyService( 1741): AudioCommandThread() adding set voice volume volume 1.000000
+I/AudioPolicyService( 1741): AudioCommandThread() waking up
+I/AudioPolicyService( 1741): AudioCommandThread() processing set voice volume volume 1.000000
+V/AudioHardwareALSA( 1741): set voice volume 1.000000
+I/AudioHardwareALSA( 1741): setVoiceVolume. ack Switch control volume set to 10
+I/AudioPolicyService( 1741): AudioCommandThread() going to sleep
+I/AudioPolicyService( 1741): inserting command: 2 at index 0, num commands 0
+I/AudioPolicyService( 1741): AudioCommandThread() adding set volume stream 0, volume 1.000000, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() waking up
+I/AudioPolicyService( 1741): AudioCommandThread() processing set volume stream 0, volume 1.000000, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() going to sleep
+I/AudioPolicyManagerBase( 1741): setStreamVolume() for output 1 stream 1, volume 1.000000, delay 0
+I/AudioPolicyService( 1741): inserting command: 2 at index 0, num commands 0
+I/AudioPolicyService( 1741): AudioCommandThread() adding set volume stream 1, volume 1.000000, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() waking up
+I/AudioPolicyService( 1741): AudioCommandThread() processing set volume stream 1, volume 1.000000, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() going to sleep
+I/AudioPolicyManagerBase( 1741): setStreamVolume() for output 1 stream 2, volume 1.000000, delay 0
+I/AudioPolicyService( 1741): inserting command: 2 at index 0, num commands 0
+I/AudioPolicyService( 1741): AudioCommandThread() adding set volume stream 2, volume 1.000000, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() waking up
+I/AudioPolicyService( 1741): AudioCommandThread() processing set volume stream 2, volume 1.000000, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() going to sleep
+I/AudioPolicyManagerBase( 1741): setStreamVolume() for output 1 stream 3, volume 1.000000, delay 0
+I/AudioPolicyService( 1741): inserting command: 2 at index 0, num commands 0
+I/AudioPolicyService( 1741): AudioCommandThread() adding set volume stream 3, volume 1.000000, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() waking up
+I/AudioPolicyService( 1741): AudioCommandThread() processing set volume stream 3, volume 1.000000, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() going to sleep
+I/AudioPolicyManagerBase( 1741): setStreamVolume() for output 1 stream 4, volume 1.000000, delay 0
+I/AudioPolicyService( 1741): inserting command: 2 at index 0, num commands 0
+I/AudioPolicyService( 1741): AudioCommandThread() adding set volume stream 4, volume 1.000000, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() waking up
+I/AudioPolicyService( 1741): AudioCommandThread() processing set volume stream 4, volume 1.000000, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() going to sleep
+I/AudioPolicyManagerBase( 1741): setStreamVolume() for output 1 stream 5, volume 1.000000, delay 0
+I/AudioPolicyService( 1741): inserting command: 2 at index 0, num commands 0
+I/AudioPolicyService( 1741): AudioCommandThread() adding set volume stream 5, volume 1.000000, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() waking up
+I/AudioPolicyService( 1741): AudioCommandThread() processing set volume stream 5, volume 1.000000, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() going to sleep
+I/AudioPolicyManagerBase( 1741): checkAndSetVolume() cannot set stream 6 volume with force use = 0 for comm
+I/AudioPolicyManagerBase( 1741): setStreamVolume() for output 1 stream 7, volume 1.000000, delay 0
+I/AudioPolicyService( 1741): inserting command: 2 at index 0, num commands 0
+I/AudioPolicyService( 1741): AudioCommandThread() adding set volume stream 7, volume 1.000000, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() waking up
+I/AudioPolicyService( 1741): AudioCommandThread() processing set volume stream 7, volume 1.000000, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() going to sleep
+I/AudioPolicyManagerBase( 1741): setStreamVolume() for output 1 stream 8, volume 1.000000, delay 0
+I/AudioPolicyService( 1741): inserting command: 2 at index 0, num commands 0
+I/AudioPolicyService( 1741): AudioCommandThread() adding set volume stream 8, volume 1.000000, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() waking up
+I/AudioPolicyService( 1741): AudioCommandThread() processing set volume stream 8, volume 1.000000, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() going to sleep
+I/AudioPolicyManagerBase( 1741): setStreamVolume() for output 1 stream 9, volume 1.000000, delay 0
+I/AudioPolicyService( 1741): inserting command: 2 at index 0, num commands 0
+I/AudioPolicyService( 1741): AudioCommandThread() adding set volume stream 9, volume 1.000000, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() waking up
+I/AudioPolicyService( 1741): AudioCommandThread() processing set volume stream 9, volume 1.000000, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() going to sleep
+I/AudioPolicyManagerBase( 1741): setStreamVolume() for output 1 stream 10, volume 1.000000, delay 0
+I/AudioPolicyManagerBase( 1741): checkAndSetVolume() fm stream 10 index 1, output 1, device 2
+I/AudioPolicyManagerBase( 1741): checkAndSetVolume() send volume index to app: 1
+I/AudioPolicyService( 1741): inserting command: 5 at index 0, num commands 0
+I/AudioPolicyService( 1741): AudioCommandThread() adding set fm volume volume 1.000000
+I/AudioPolicyService( 1741): AudioCommandThread() waking up
+I/AudioPolicyService( 1741): AudioCommandThread() processing set fm volume volume 1.000000
+I/AudioFlinger( 1741): setFmVolume: 1
+I/AudioPolicyService( 1741): AudioCommandThread() processing set fm volume volume done!
+I/AudioPolicyService( 1741): AudioCommandThread() going to sleep
+I/AudioPolicyManagerBase( 1741): getDeviceForStrategy() strategy 0, device 2
+I/AudioPolicyManagerBase( 1741): getDeviceForStrategy() strategy 1, device 1
+I/AudioPolicyManagerBase( 1741): getDeviceForStrategy() strategy 2, device 2
+I/AudioPolicyManagerBase( 1741): getDeviceForStrategy() strategy 0, device 2
+I/AudioPolicyManagerBase( 1741): getDeviceForStrategy() strategy 3, device 2
+I/AudioPolicyManagerBase( 1741): setSystemProperty() property ro.camera.sound.forced, value 0
+I/AudioPolicyManagerBase( 1741): ENFORCED_AUDIBLE can be muted
+D/AndroidRuntime( 1732): --- registering native functions ---
+I/SamplingProfilerIntegration( 1732): Profiler is disabled.
+I/Zygote  ( 1732): Preloading classes...
+D/dalvikvm( 1732): GC_EXPLICIT freed 818 objects / 47360 bytes in 6ms
+D/dalvikvm( 1732): GC_EXPLICIT freed 219 objects / 13560 bytes in 5ms
+I/bluetooth_ScoSocket.cpp( 1732): Entry name = MY-CAR ScoTypes = 0x7f
+I/bluetooth_ScoSocket.cpp( 1732): Entry name = Motorola HF850 ScoTypes = 0x7
+D/dalvikvm( 1732): GC_EXPLICIT freed 253 objects / 14336 bytes in 7ms
+D/dalvikvm( 1732): GC_EXPLICIT freed 466 objects / 28880 bytes in 8ms
+D/dalvikvm( 1732): GC_EXPLICIT freed 2090 objects / 108336 bytes in 11ms
+D/dalvikvm( 1732): GC_EXPLICIT freed 270 objects / 15840 bytes in 10ms
+D/dalvikvm( 1732): GC_FOR_MALLOC freed 5073 objects / 225056 bytes in 22ms
+V/GstPlayer( 1741): GstPlayer constructor
+V/GstDriver( 1741): constructor
+V/GstDriver( 1741): persist.gst.debug property 0
+V/GstDriver( 1741): persist.gst.trace property /dev/console
+V/GstDriver( 1741): route the trace to /dev/console
+V/GstDriver( 1741): gstreamer init check
+V/GstPlayer( 1741): GstPlayer send GstDriver Setup
+V/GstDriver( 1741): create playbin2
+V/GstDriver( 1741): playbin2 creation: playbin20
+V/GstDriver( 1741): persist.gst.verbose property = 0
+V/GstDriver( 1741): set up mainloop
+V/GstDriver( 1741): register bus callback
+V/GstDriver( 1741): enter main loop
+V/GstDriver( 1741): add icbandroidvideosink to playbin
+D/GstAudioFlingerSink( 1741): initializing audioflinger_sink
+V/GstDriver( 1741): add audioflingersink to playbin
+I/GstPlayer( 1741): setDataSource('/system/media/audio/bootaudio.mp3')
+I/GstPlayer( 1741): GstPlayer setDataSource(/system/media/audio/bootaudio.mp3)
+I/GstDriver( 1741): create source from uri /system/media/audio/bootaudio.mp3
+V/GstDriver( 1741): set uri to playbin file:///system/media/audio/bootaudio.mp3
+D/GstDriver( 1741): GstDriver::setAudioSink: 0x9a6f8
+D/GstAudioFlingerSink( 1741): set audiosink: 0x9a6f8
+E/BootAnimation( 1777): Loading /system/media/audio/bootaudio.mp3
+V/GstPlayer( 1741): GstPlayer prepareAsync
+V/GstDriver( 1741): prepareAsync
+V/GstDriver( 1741): bus receive message[64](playbin20, state-changed), STATE_CHANGED old 1 new 2 pending 3
+V/GstDriver( 1741): get unhandled message on bus src stream-status
+V/GstDriver( 1741): prepareAsync ret=ASYNC
+V/GstDriver( 1741): get unhandled message on bus src stream-status
+D/GstAudioFlingerSink( 1741): creating ringbuffer
+D/GstAudioFlingerSink( 1741): created ringbuffer @0xcf008
+D/GstAudioFlingerSink( 1741): >gst_android_audioringbuffer_open_device
+D/GstAudioFlingerSink( 1741): gst_audioflinger_sink_open
+D/audioflinger_wrapper( 1741): Open AudioSink successfully : 0x9af00
+D/GstAudioFlingerSink( 1741): open an existed flinger, 0x9af00
+D/GstAudioFlingerSink( 1741): gst_audioflinger_sink_getcaps,0x9af00
+D/GstAudioFlingerSink( 1741): gst_audioflinger_sink_getcaps,0x9af00
+D/GstAudioFlingerSink( 1741): gst_audioflinger_sink_getcaps,0x9af00
+D/GstAudioFlingerSink( 1741): clearing ringbuffer
+D/GstAudioFlingerSink( 1741): gst_audioflinger_sink_getcaps,0x9af00
+V/GstDriver( 1741): get unhandled message on bus mpegaudioparse0 tag
+V/GstDriver( 1741): get duration message format time duration -1
+V/GstDriver( 1741): get unhandled message on bus mpegaudioparse0 tag
+V/GstDriver( 1741): get unhandled message on bus src stream-status
+V/GstDriver( 1741): get unhandled message on bus src stream-status
+D/GstAudioFlingerSink( 1741): gst_audioflinger_sink_getcaps,0x9af00
+D/GstAudioFlingerSink( 1741): gst_audioflinger_sink_getcaps,0x9af00
+D/GstAudioFlingerSink( 1741): gst_audioflinger_sink_getcaps,0x9af00
+D/GstAudioFlingerSink( 1741): gst_audioflinger_sink_getcaps,0x9af00
+D/GstAudioFlingerSink( 1741): gst_audioflinger_sink_getcaps,0x9af00
+D/GstAudioFlingerSink( 1741): >gst_android_audioringbuffer_acquire
+D/GstAudioFlingerSink( 1741): gst_audioflinger_sink_prepare
+I/AudioPolicyService( 1741): getOutput() tid 1799
+I/AudioPolicyManagerBase( 1741): getDeviceForStrategy() from cache strategy 2, device 2
+I/AudioPolicyManagerBase( 1741): getOutput() stream 2, samplingRate 0, format 0, channels c, flags 0
+I/AudioSystem( 1741): getOutputFrameCount() streamType 2, output 1, frameCount 2048
+I/AudioPolicyService( 1741): getOutput() tid 1799
+I/AudioPolicyManagerBase( 1741): getDeviceForStrategy() from cache strategy 2, device 2
+I/AudioPolicyManagerBase( 1741): getOutput() stream 2, samplingRate 0, format 0, channels c, flags 0
+I/AudioSystem( 1741): getOutputSamplingRate() reading from output desc
+I/AudioSystem( 1741): getOutputSamplingRate() streamType 2, output 1, sampling rate 44100
+I/AudioPolicyService( 1741): getOutput() tid 1799
+I/AudioPolicyManagerBase( 1741): getDeviceForStrategy() from cache strategy 2, device 2
+I/AudioPolicyManagerBase( 1741): getOutput() stream 2, samplingRate 0, format 0, channels c, flags 0
+I/AudioSystem( 1741): getOutputSamplingRate() reading from output desc
+I/AudioSystem( 1741): getOutputSamplingRate() streamType 2, output 1, sampling rate 44100
+I/AudioPolicyService( 1741): getOutput() tid 1799
+I/AudioPolicyManagerBase( 1741): getDeviceForStrategy() from cache strategy 2, device 2
+I/AudioPolicyManagerBase( 1741): getOutput() stream 2, samplingRate 0, format 0, channels c, flags 0
+I/AudioSystem( 1741): getOutputFrameCount() streamType 2, output 1, frameCount 2048
+I/AudioPolicyService( 1741): getOutput() tid 1799
+I/AudioPolicyManagerBase( 1741): getDeviceForStrategy() from cache strategy 2, device 2
+I/AudioPolicyManagerBase( 1741): getOutput() stream 2, samplingRate 0, format 0, channels c, flags 0
+I/AudioSystem( 1741): getOutputLatency() streamType 2, output 1, latency 186
+I/AudioPolicyService( 1741): getOutput() tid 1799
+I/AudioPolicyManagerBase( 1741): getDeviceForStrategy() from cache strategy 2, device 2
+I/AudioPolicyManagerBase( 1741): getOutput() stream 2, samplingRate 44100, format 1, channels c, flags 0
+I/AudioFlinger( 1741): Track constructor name 4096, calling thread 1741
+D/audioflinger_wrapper( 1741): OPEN handle : 0x9af00 : Set AudioSink, status: 0, streamType: 3, sampleRate: 44100,channelCount: 2(2), bufferCount: 8820
+D/GstAudioFlingerSink( 1741): channels: 2, rate: 44100, width: 16, got segsize: 8192, segtotal: 10, frame count: 8192, frame size: 4
+V/GstDriver( 1741): bus receive message[64](playbin20, state-changed), STATE_CHANGED old 2 new 3 pending 0
+V/GstDriver( 1741): getStreamsInfo
+V/GstDriver( 1741): receive message ASYNC DONE on bus, state[11], type[1]
+V/GstDriver( 1741): Sending MEDIA_PREPARED
+V/GstPlayer( 1741): GstPlayer getDuration
+V/GstDriver( 1741): getDuration
+I/GstDriver( 1741): Stream duration 3082 ms
+V/GstPlayer( 1741): GstPlayer seekTo(0)
+V/GstPlayer( 1741): GstPlayer getDuration
+V/GstDriver( 1741): getDuration
+I/GstDriver( 1741): Stream duration 3082 ms
+V/GstDriver( 1741): Seek to 0 ms (0 ns)
+V/GstDriver( 1741): playbin20: structure name=playbin2-stream-changed
+V/GstDriver( 1741): bus receive message[64](playbin20, state-changed), STATE_CHANGED old 3 new 3 pending 3
+D/dalvikvm( 1732): GC_FOR_MALLOC freed 11529 objects / 384248 bytes in 30ms
+D/GstAudioFlingerSink( 1741): clearing ringbuffer
+D/audioflinger_wrapper( 1741): handle : 0x9af00 Flush device
+I/AudioFlinger( 1741): flush(4096)
+V/GstDriver( 1741): Send MEDIA_SEEK_COMPLETE
+V/GstPlayer( 1741): GstPlayer setLooping(0)
+V/GstPlayer( 1741): GstPlayer setLooping(0)
+V/GstPlayer( 1741): GstPlayer start
+V/GstDriver( 1741): start
+V/GstDriver( 1741): bus receive message[64](playbin20, state-changed), STATE_CHANGED old 3 new 3 pending 4
+V/GstDriver( 1741): receive message ASYNC DONE on bus, state[13], type[1]
+V/GstDriver( 1741): get unhandled message on bus playbin20 new-clock
+D/GstAudioFlingerSink( 1741): starting ringbuffer
+D/audioflinger_wrapper( 1741): handle : 0x9af00 Start Device
+I/AudioFlinger( 1741): start(4096), calling thread 1741
+I/AudioFlinger( 1741): ? => ACTIVE (4096) on thread 0xe6198
+I/AudioPolicyService( 1741): startOutput() tid 1799
+I/AudioPolicyManagerBase( 1741): startOutput() output 1, stream 2
+I/AudioPolicyManagerBase( 1741): changeRefCount() stream 2, count 1
+I/AudioPolicyManagerBase( 1741): getDeviceForStrategy() from cache strategy 2, device 2
+I/AudioPolicyManagerBase( 1741): getNewDevice() selected device 2
+I/AudioPolicyManagerBase( 1741): setOutputDevice() output 1 device 2 delayMs 0
+I/AudioPolicyManagerBase( 1741): setOutputDevice() fm output 0
+I/AudioPolicyManagerBase( 1741): setOutputDevice() prevDevice 2
+I/AudioPolicyManagerBase( 1741): setOutputDevice() setting same device 2 or null device for output 1
+I/AudioFlinger( 1741): mWaitWorkCV.broadcast
+I/AudioFlinger( 1741): MixerThread 0x2f7f0 TID 1791 waking up
+V/GstDriver( 1741): bus receive message[64](playbin20, state-changed), STATE_CHANGED old 3 new 4 pending 0
+V/GstDriver( 1741): getStreamsInfo
+D/dalvikvm( 1732): GC_FOR_MALLOC freed 9851 objects / 462248 bytes in 36ms
+D/dalvikvm( 1732): GC_FOR_MALLOC freed 8750 objects / 423168 bytes in 37ms
+D/dalvikvm( 1732): GC_FOR_MALLOC freed 7813 objects / 455024 bytes in 39ms
+D/dalvikvm( 1732): GC_FOR_MALLOC freed 8435 objects / 510072 bytes in 44ms
+D/dalvikvm( 1732): GC_FOR_MALLOC freed 7944 objects / 502960 bytes in 41ms
+D/GstAudioFlingerSink( 1741): PADDING
+D/dalvikvm( 1732): GC_FOR_MALLOC freed 8035 objects / 479128 bytes in 43ms
+D/dalvikvm( 1732): GC_EXPLICIT freed 409 objects / 36808 bytes in 36ms
+V/GstDriver( 1741): bus receive message EOS
+V/GstDriver( 1741): getPosition eos 0
+V/GstDriver( 1741): got position from query
+V/GstDriver( 1741): Stream position 3056 ms
+V/GstDriver( 1741): getDuration
+I/GstDriver( 1741): Stream duration 3082 ms
+V/GstDriver( 1741): >> EOS: pos=3056 ms, dur=3082 ms
+D/GstAudioFlingerSink( 1741): pausing ringbuffer
+D/audioflinger_wrapper( 1741): handle : 0x9af00 Pause Device
+I/AudioFlinger( 1741): pause(4096), calling thread 1741
+I/AudioFlinger( 1741): ACTIVE/RESUMING => PAUSING (4096) on thread 0x2f7f0
+I/AudioPolicyService( 1741): stopOutput() tid 1794
+I/AudioPolicyManagerBase( 1741): stopOutput() output 1, stream 2
+I/AudioPolicyManagerBase( 1741): changeRefCount() stream 2, count 0
+I/AudioPolicyManagerBase( 1741): getNewDevice() selected device 0
+I/AudioPolicyManagerBase( 1741): setOutputDevice() output 1 device 0 delayMs 0
+I/AudioPolicyManagerBase( 1741): setOutputDevice() fm output 0
+I/AudioPolicyManagerBase( 1741): setOutputDevice() prevDevice 2
+I/AudioPolicyManagerBase( 1741): setOutputDevice() setting same device 0 or null device for output 1
+V/GstDriver( 1741): getDuration
+I/GstDriver( 1741): Stream duration 3082 ms
+V/GstDriver( 1741): getPosition eos 1
+V/GstDriver( 1741): Stream position 3082 ms
+V/GstDriver( 1741): getPosition eos 1
+V/GstDriver( 1741): Stream position 3082 ms
+V/GstDriver( 1741): getPosition eos 1
+V/GstDriver( 1741): Stream position 3082 ms
+V/GstDriver( 1741): getPosition eos 1
+V/GstDriver( 1741): Stream position 3082 ms
+V/GstDriver( 1741): getPosition eos 1
+V/GstDriver( 1741): Stream position 3082 ms
+V/GstDriver( 1741): getPosition eos 1
+V/GstDriver( 1741): Stream position 3082 ms
+V/GstDriver( 1741): getPosition eos 1
+V/GstDriver( 1741): Stream position 3082 ms
+V/GstDriver( 1741): getPosition eos 1
+V/GstDriver( 1741): Stream position 3082 ms
+V/GstDriver( 1741): set position on eos 0:00:00.000003082
+V/GstDriver( 1741): bus receive message[64](playbin20, state-changed), STATE_CHANGED old 4 new 3 pending 0
+D/dalvikvm( 1732): GC_EXPLICIT freed 606 objects / 29424 bytes in 83ms
+I/AudioFlinger( 1741): Audio hardware entering standby, mixer 0x2f7f0, mSuspended 0
+D/AudioHardwareALSA( 1741): standby()
+D/AudioHardwareALSA( 1741): mStreamType=0, mParent->getAnalogLoop()=0
+I/AudioFlinger( 1741): MixerThread 0x2f7f0 TID 1791 going to sleep
+D/dalvikvm( 1732): GC_EXPLICIT freed 463 objects / 25888 bytes in 117ms
+D/dalvikvm( 1732): GC_EXPLICIT freed 329 objects / 36160 bytes in 126ms
+D/dalvikvm( 1732): GC_EXPLICIT freed 279 objects / 18952 bytes in 128ms
+I/WebCoreFrameBridge( 1732): register_webframe, 1753
+D/dalvikvm( 1732): GC_EXPLICIT freed 335 objects / 18184 bytes in 122ms
+D/dalvikvm( 1732): GC_EXPLICIT freed 446 objects / 27904 bytes in 131ms
+D/dalvikvm( 1732): GC_EXPLICIT freed 542 objects / 53960 bytes in 131ms
+D/dalvikvm( 1732): GC_EXPLICIT freed 626 objects / 34112 bytes in 125ms
+D/dalvikvm( 1732): GC_EXPLICIT freed 862 objects / 46984 bytes in 123ms
+D/dalvikvm( 1732): GC_EXPLICIT freed 1745 objects / 85608 bytes in 148ms
+D/dalvikvm( 1732): GC_EXPLICIT freed 454 objects / 29632 bytes in 124ms
+D/dalvikvm( 1732): GC_EXPLICIT freed 317 objects / 20352 bytes in 131ms
+I/Zygote  ( 1732): ...preloaded 1264 classes in 16582ms.
+D/dalvikvm( 1732): GC_EXPLICIT freed 97 objects / 13696 bytes in 126ms
+I/Zygote  ( 1732): Preloading resources...
+D/dalvikvm( 1732): GC_EXPLICIT freed 312 objects / 15536 bytes in 129ms
+W/Zygote  ( 1732): Preloaded drawable resource #0x10801e8 (res/drawable-ldpi/jog_tab_bar_left_end_confirm_gray.9.png) that varies with configuration!!
+W/Zygote  ( 1732): Preloaded drawable resource #0x10801ec (res/drawable-ldpi/jog_tab_bar_left_end_normal.9.png) that varies with configuration!!
+W/Zygote  ( 1732): Preloaded drawable resource #0x10801ed (res/drawable-ldpi/jog_tab_bar_left_end_pressed.9.png) that varies with configuration!!
+W/Zygote  ( 1732): Preloaded drawable resource #0x10801f1 (res/drawable-ldpi/jog_tab_bar_right_end_confirm_gray.9.png) that varies with configuration!!
+W/Zygote  ( 1732): Preloaded drawable resource #0x10801f5 (res/drawable-ldpi/jog_tab_bar_right_end_normal.9.png) that varies with configuration!!
+W/Zygote  ( 1732): Preloaded drawable resource #0x10801f6 (res/drawable-ldpi/jog_tab_bar_right_end_pressed.9.png) that varies with configuration!!
+D/dalvikvm( 1732): GC_EXPLICIT freed 392 objects / 23896 bytes in 143ms
+W/Zygote  ( 1732): Preloaded drawable resource #0x10801fb (res/drawable-ldpi/jog_tab_left_confirm_gray.png) that varies with configuration!!
+W/Zygote  ( 1732): Preloaded drawable resource #0x1080200 (res/drawable-ldpi/jog_tab_left_normal.png) that varies with configuration!!
+W/Zygote  ( 1732): Preloaded drawable resource #0x1080201 (res/drawable-ldpi/jog_tab_left_pressed.png) that varies with configuration!!
+W/Zygote  ( 1732): Preloaded drawable resource #0x1080203 (res/drawable-ldpi/jog_tab_right_confirm_gray.png) that varies with configuration!!
+W/Zygote  ( 1732): Preloaded drawable resource #0x1080209 (res/drawable-ldpi/jog_tab_right_normal.png) that varies with configuration!!
+W/Zygote  ( 1732): Preloaded drawable resource #0x108020a (res/drawable-ldpi/jog_tab_right_pressed.png) that varies with configuration!!
+I/Zygote  ( 1732): ...preloaded 61 resources in 815ms.
+I/Zygote  ( 1732): ...preloaded 15 resources in 52ms.
+D/dalvikvm( 1732): GC_EXPLICIT freed 331 objects / 19976 bytes in 134ms
+D/dalvikvm( 1732): GC_EXPLICIT freed 111 objects / 4392 bytes in 139ms
+D/dalvikvm( 1732): GC_EXPLICIT freed 2 objects / 48 bytes in 142ms
+I/dalvikvm( 1732): System server process 1806 has been created
+I/Zygote  ( 1732): Accepting command socket connections
+I/sysproc ( 1806): Entered system_init()
+I/sysproc ( 1806): ServiceManager: 0x11f340
+I/sysproc ( 1806): System server: starting Android runtime.
+I/sysproc ( 1806): System server: starting Android services.
+I/SystemServer( 1806): Entered the Android system server!
+I/sysproc ( 1806): System server: entering thread pool.
+I/SystemServer( 1806): Entropy Service
+I/SystemServer( 1806): Power Manager
+I/SystemServer( 1806): Activity Manager
+I/ActivityManager( 1806): Memory class: 16
+D/dalvikvm( 1806): GC_FOR_MALLOC freed 3856 objects / 245360 bytes in 194ms
+I/SystemServer( 1806): Telephony Registry
+I/SystemServer( 1806): Package Manager
+I/installd( 1373): new connection
+I/Installer( 1806): connecting...
+I/PackageManager( 1806): Libs: android.test.runner:/system/framework/android.test.runner.jar javax.obex:/system/framework/javax.obex.jar
+I/PackageManager( 1806): Features: android.hardware.wifi android.hardware.location.network android.hardware.telephony android.hardware.location android.hardware.touchscreen.multitouch android.hardware.sensor.compass android.hardware.camera android.hardware.bluetooth android.hardware.sensor.proximity android.hardware.microphone android.hardware.location.gps android.hardware.camera.autofocus android.hardware.telephony.gsm android.hardware.touchscreen android.hardware.sensor.accelerometer
+D/dalvikvm( 1806): GC_FOR_MALLOC freed 6188 objects / 254168 bytes in 176ms
+D/PackageManager( 1806): Scanning app dir /system/framework
+D/PackageManager( 1806): Scanning app dir /system/app
+D/dalvikvm( 1806): GC_FOR_MALLOC freed 8741 objects / 551904 bytes in 199ms
+I/PackageParser( 1806): com.pekall.notepad: compat added android.permission.READ_PHONE_STATE
+I/PackageParser( 1806): com.pekall.sdringtonepicker: compat added android.permission.WRITE_EXTERNAL_STORAGE android.permission.READ_PHONE_STATE
+I/PackageParser( 1806): com.pekall.monternet: compat added android.permission.WRITE_EXTERNAL_STORAGE android.permission.READ_PHONE_STATE
+I/PackageParser( 1806): com.pekall.conversion: compat added android.permission.WRITE_EXTERNAL_STORAGE android.permission.READ_PHONE_STATE
+W/PackageParser( 1806): No actions in intent filter at /system/app/ClearPassword.apk Binary XML file line #27
+W/PackageParser( 1806): No actions in intent filter at /system/app/fetion.apk Binary XML file line #36
+W/PackageParser( 1806): Unknown element under <manifest>: receiver at /system/app/fetion.apk Binary XML file line #104
+W/PackageParser( 1806): Unknown element under <manifest>: provider at /system/app/fetion.apk Binary XML file line #111
+W/PackageParser( 1806): Unknown element under <manifest>: provider at /system/app/fetion.apk Binary XML file line #112
+I/PackageParser( 1806): cn.com.fetion: compat added android.permission.WRITE_EXTERNAL_STORAGE
+W/PackageManager( 1806): Skipping provider name cn.com.fetion (in package cn.com.fetion): name already used by cn.com.fetion
+W/PackageParser( 1806): Unknown element under <application>: support-screens at /system/app/Dictionary.apk Binary XML file line #23
+D/dalvikvm( 1806): GC_FOR_MALLOC freed 5348 objects / 297032 bytes in 200ms
+W/PackageParser( 1806): No actions in intent filter at /system/app/Bluetooth.apk Binary XML file line #129
+I/PackageParser( 1806): com.pekall.theme6: compat added android.permission.WRITE_EXTERNAL_STORAGE android.permission.READ_PHONE_STATE
+D/dalvikvm( 1806): GC_FOR_MALLOC freed 6236 objects / 336640 bytes in 215ms
+I/PackageParser( 1806): com.aspire.g3wlan.client: compat added android.permission.READ_PHONE_STATE
+D/dalvikvm( 1806): GC_FOR_MALLOC freed 6658 objects / 354968 bytes in 237ms
+I/PackageParser( 1806): com.xiexh.hcreader: compat added android.permission.WRITE_EXTERNAL_STORAGE android.permission.READ_PHONE_STATE
+I/PackageParser( 1806): com.pekall.myfavorite: compat added android.permission.READ_PHONE_STATE
+D/PackageManager( 1806): Scanning app dir /data/app
+I/PackageParser( 1806): com.jr: compat added android.permission.WRITE_EXTERNAL_STORAGE android.permission.READ_PHONE_STATE
+D/PackageManager( 1806): Scanning app dir /data/app-private
+I/PackageManager( 1806): Time to scan packages: 17.02 seconds
+W/PackageManager( 1806): Unknown permission com.google.android.googleapps.permission.GOOGLE_AUTH.mail in package com.android.contacts
+W/PackageManager( 1806): Unknown permission com.pekall.permission.READ_CH_LOCATION in package com.android.contacts
+W/PackageManager( 1806): Unknown permission android.permission.ADD_SYSTEM_SERVICE in package com.android.phone
+W/PackageManager( 1806): Unknown permission com.pekall.permission.READ_CH_LOCATION in package com.android.phone
+W/PackageManager( 1806): Not granting permission android.permission.DEVICE_POWER to package cn.com.fetion (protectionLevel=2 flags=0x8445)
+W/PackageManager( 1806): Unknown permission com.google.android.googleapps.permission.GOOGLE_AUTH in package com.android.providers.calendar
+W/PackageManager( 1806): Unknown permission com.google.android.googleapps.permission.GOOGLE_AUTH.cl in package com.android.providers.calendar
+W/PackageManager( 1806): Unknown permission android.permission.ADD_SYSTEM_SERVICE in package com.pekall.vtapp
+W/PackageManager( 1806): Unknown permission com.pekall.permission.READ_CH_LOCATION in package com.pekall.vtapp
+W/PackageManager( 1806): Unknown permission com.google.android.googleapps.permission.GOOGLE_AUTH.mail in package com.android.calendar
+W/PackageManager( 1806): Not granting permission android.permission.CLEAR_APP_USER_DATA to package com.pekall.dcd (protectionLevel=2 flags=0xbe45)
+W/PackageManager( 1806): Not granting permission android.permission.DEVICE_POWER to package com.telenav.app.android (protectionLevel=2 flags=0xbe45)
+W/PackageManager( 1806): Unknown permission com.google.android.googleapps.permission.GOOGLE_AUTH in package com.android.providers.contacts
+W/PackageManager( 1806): Unknown permission com.google.android.googleapps.permission.GOOGLE_AUTH.cp in package com.android.providers.contacts
+W/PackageManager( 1806): Unknown permission com.google.android.gm.permission.WRITE_GMAIL in package com.android.settings
+W/PackageManager( 1806): Unknown permission com.google.android.gm.permission.READ_GMAIL in package com.android.settings
+W/PackageManager( 1806): Unknown permission com.google.android.googleapps.permission.GOOGLE_AUTH in package com.android.settings
+W/PackageManager( 1806): Unknown permission android.permission.RECEIVE_SUPL_PUSH in package com.android.agpstest
+W/PackageManager( 1806): Not granting permission android.permission.HARDWARE_TEST to package com.cmcc.mv (protectionLevel=2 flags=0xbe45)
+W/PackageManager( 1806): Not granting permission android.permission.DEVICE_POWER to package com.cmcc.mv (protectionLevel=2 flags=0xbe45)
+W/PackageManager( 1806): Unknown permission android.permission.RECEIVE_SUPL_PUSH in package com.android.gpsui
+D/dalvikvm( 1806): GC_FOR_MALLOC freed 7425 objects / 383288 bytes in 249ms
+W/PackageManager( 1806): Unknown permission android.permission.ACCESS_DOWNLOAD_DATA in package com.pekall.android.omadownload
+D/dalvikvm( 1806): GC_EXPLICIT freed 4218 objects / 285032 bytes in 235ms
+I/SystemServer( 1806): Account Manager
+I/SystemServer( 1806): Content Manager
+I/SystemServer( 1806): System Content Providers
+I/ActivityThread( 1806): Publishing provider settings: com.android.providers.settings.SettingsProvider
+I/SystemServer( 1806): Battery Service
+I/SystemServer( 1806): Lights Service
+I/SystemServer( 1806): Vibrator Service
+I/SystemServer( 1806): Alarm Manager
+I/SystemServer( 1806): Init Watchdog
+I/SystemServer( 1806): Sensor Service
+I/SystemServer( 1806): Window Manager
+
+
+V/EventHub( 1806): Opening device: /dev/input/event2
+V/EventHub( 1806): Opened device: /dev/input/event2 (0 failures)
+I/EventHub( 1806): add device 1: /dev/input/event2
+I/EventHub( 1806):   bus:      0018
+I/EventHub( 1806):   vendor    0000
+I/EventHub( 1806):   product   0000
+I/EventHub( 1806):   version   0000
+I/EventHub( 1806):   name:     "U6XXX-PMU events"
+I/EventHub( 1806):   location: "input1"
+I/EventHub( 1806):   id:       ""
+I/EventHub( 1806):   version:  1.0.0
+V/EventHub( 1806): Getting keys...
+I/EventHub( 1806): MAP
+I/EventHub( 1806): 0: 0x00
+..............................
+I/EventHub( 1806): 13: 0x00
+I/EventHub( 1806): 14: 0x02
+I/EventHub( 1806): 15: 0x00
+..............................
+I/EventHub( 1806): 28: 0x00
+I/EventHub( 1806): 29: 0x10
+I/EventHub( 1806): 30: 0x00
+..............................
+I/EventHub( 1806): 43: 0x00
+I/EventHub( 1806): 44: 0x10
+I/EventHub( 1806): 45: 0x00
+I/EventHub( 1806): 46: 0x00
+I/EventHub( 1806): 47: 0x02
+I/EventHub( 1806): 48: 0x00
+..............................
+I/EventHub( 1806): 63: 0x00
+V/EventHub( 1806): Getting absolute controllers...
+I/EventHub( 1806): New keyboard: device->id=0x10000 devname='U6XXX-PMU events' propName='hw.keyboards.65536.devname' keylayout='/system/usr/keylayout/U6XXX-PMU_events.kl'
+I/EventHub( 1806): New device: path=/dev/input/event2 name=U6XXX-PMU events id=0x10000 (of 0x1) index=1 fd=39 classes=0x1
+V/EventHub( 1806): Adding device /dev/input/event2 0x22ea00 at 1, id = 0, classes = 0x1
+
+
+V/EventHub( 1806): Opening device: /dev/input/event6
+V/EventHub( 1806): Opened device: /dev/input/event6 (0 failures)
+I/EventHub( 1806): add device 2: /dev/input/event6
+I/EventHub( 1806):   bus:      0000
+I/EventHub( 1806):   vendor    0000
+I/EventHub( 1806):   product   0000
+I/EventHub( 1806):   version   0000
+I/EventHub( 1806):   name:     "acc"
+I/EventHub( 1806):   location: ""
+I/EventHub( 1806):   id:       ""
+I/EventHub( 1806):   version:  1.0.0
+V/EventHub( 1806): Getting keys...
+I/EventHub( 1806): MAP
+I/EventHub( 1806): 0: 0x00
+..............................
+I/EventHub( 1806): 63: 0x00
+V/EventHub( 1806): Getting absolute controllers...
+I/EventHub( 1806): New device: path=/dev/input/event6 name=acc id=0x10001 (of 0x2) index=2 fd=40 classes=0x0
+V/EventHub( 1806): Adding device /dev/input/event6 0x22eb68 at 2, id = 1, classes = 0x0
+
+V/EventHub( 1806): Opening device: /dev/input/event5
+V/EventHub( 1806): Opened device: /dev/input/event5 (0 failures)
+I/EventHub( 1806): add device 3: /dev/input/event5
+I/EventHub( 1806):   bus:      0000
+I/EventHub( 1806):   vendor    0000
+I/EventHub( 1806):   product   0000
+I/EventHub( 1806):   version   0000
+I/EventHub( 1806):   name:     "dsp_dlp"
+I/EventHub( 1806):   location: ""
+I/EventHub( 1806):   id:       ""
+I/EventHub( 1806):   version:  1.0.0
+V/EventHub( 1806): Getting keys...
+I/EventHub( 1806): MAP
+I/EventHub( 1806): 0: 0x00
+..............................
+I/EventHub( 1806): 63: 0x00
+V/EventHub( 1806): Getting absolute controllers...
+I/EventHub( 1806): New device: path=/dev/input/event5 name=dsp_dlp id=0x10002 (of 0x3) index=3 fd=41 classes=0x0
+V/EventHub( 1806): Adding device /dev/input/event5 0x22f508 at 3, id = 2, classes = 0x0
+
+
+V/EventHub( 1806): Opening device: /dev/input/event4
+V/EventHub( 1806): Opened device: /dev/input/event4 (0 failures)
+I/EventHub( 1806): add device 4: /dev/input/event4
+I/EventHub( 1806):   bus:      0018
+I/EventHub( 1806):   vendor    0000
+I/EventHub( 1806):   product   0000
+I/EventHub( 1806):   version   0000
+I/EventHub( 1806):   name:     "TSC2007 Touchscreen"
+I/EventHub( 1806):   location: "1-0048/input0"
+I/EventHub( 1806):   id:       ""
+I/EventHub( 1806):   version:  1.0.0
+V/EventHub( 1806): Getting keys...
+I/EventHub( 1806): MAP
+I/EventHub( 1806): 0: 0x00
+..............................
+I/EventHub( 1806): 12: 0x00
+I/EventHub( 1806): 13: 0x08
+I/EventHub( 1806): 14: 0x00
+I/EventHub( 1806): 15: 0x40
+I/EventHub( 1806): 16: 0x00
+I/EventHub( 1806): 17: 0x00
+I/EventHub( 1806): 18: 0x00
+I/EventHub( 1806): 19: 0x00
+I/EventHub( 1806): 20: 0x01
+I/EventHub( 1806): 21: 0x00
+..............................
+I/EventHub( 1806): 40: 0x00
+I/EventHub( 1806): 41: 0x04
+I/EventHub( 1806): 42: 0x00
+..............................
+I/EventHub( 1806): 63: 0x00
+V/EventHub( 1806): Getting absolute controllers...
+I/EventHub( 1806): New keyboard: device->id=0x10003 devname='TSC2007 Touchscreen' propName='hw.keyboards.65539.devname' keylayout='/system/usr/keylayout/qwerty.kl'
+I/EventHub( 1806): New device: path=/dev/input/event4 name=TSC2007 Touchscreen id=0x10003 (of 0x4) index=4 fd=42 classes=0x5
+V/EventHub( 1806): Adding device /dev/input/event4 0x22eae0 at 4, id = 3, classes = 0x5
+
+
+V/EventHub( 1806): Opening device: /dev/input/event3
+V/EventHub( 1806): Opened device: /dev/input/event3 (0 failures)
+I/EventHub( 1806): add device 5: /dev/input/event3
+I/EventHub( 1806):   bus:      0000
+I/EventHub( 1806):   vendor    0000
+I/EventHub( 1806):   product   0000
+I/EventHub( 1806):   version   0000
+I/EventHub( 1806):   name:     "compass"
+I/EventHub( 1806):   location: ""
+I/EventHub( 1806):   id:       ""
+I/EventHub( 1806):   version:  1.0.0
+V/EventHub( 1806): Getting keys...
+I/EventHub( 1806): MAP
+I/EventHub( 1806): 0: 0x00
+..............................
+I/EventHub( 1806): 63: 0x00
+V/EventHub( 1806): Getting absolute controllers...
+I/EventHub( 1806): New device: path=/dev/input/event3 name=compass id=0x10004 (of 0x5) index=5 fd=43 classes=0x0
+V/EventHub( 1806): Adding device /dev/input/event3 0x2308a0 at 5, id = 4, classes = 0x0
+
+V/EventHub( 1806): Opening device: /dev/input/event1
+V/EventHub( 1806): Opened device: /dev/input/event1 (0 failures)
+I/EventHub( 1806): add device 6: /dev/input/event1
+I/EventHub( 1806):   bus:      0019
+I/EventHub( 1806):   vendor    0123
+I/EventHub( 1806):   product   5220
+I/EventHub( 1806):   version   0100
+I/EventHub( 1806):   name:     "U6XXX-RAW-Keypad"
+I/EventHub( 1806):   location: "input1"
+I/EventHub( 1806):   id:       ""
+I/EventHub( 1806):   version:  1.0.0
+V/EventHub( 1806): Getting keys...
+I/EventHub( 1806): MAP
+I/EventHub( 1806): 0: 0x00
+..............................
+I/EventHub( 1806): 11: 0x00
+I/EventHub( 1806): 12: 0x40
+I/EventHub( 1806): 13: 0x00
+I/EventHub( 1806): 14: 0x0c
+I/EventHub( 1806): 15: 0x00
+..............................
+I/EventHub( 1806): 16: 0x00
+..............................
+I/EventHub( 1806): 63: 0x00
+V/EventHub( 1806): Getting absolute controllers...
+I/EventHub( 1806): New keyboard: device->id=0x10005 devname='U6XXX-RAW-Keypad' propName='hw.keyboards.65541.devname' keylayout='/system/usr/keylayout/qwerty.kl'
+I/EventHub( 1806): New device: path=/dev/input/event1 name=U6XXX-RAW-Keypad id=0x10005 (of 0x6) index=6 fd=44 classes=0x1
+V/EventHub( 1806): Adding device /dev/input/event1 0x2309a8 at 6, id = 5, classes = 0x1
+
+
+V/EventHub( 1806): Opening device: /dev/input/event0
+V/EventHub( 1806): Opened device: /dev/input/event0 (0 failures)
+I/EventHub( 1806): add device 7: /dev/input/event0
+I/EventHub( 1806):   bus:      0019
+I/EventHub( 1806):   vendor    0123
+I/EventHub( 1806):   product   5220
+I/EventHub( 1806):   version   0100
+I/EventHub( 1806):   name:     "U6XXX-Keypad"
+I/EventHub( 1806):   location: "input0"
+I/EventHub( 1806):   id:       ""
+I/EventHub( 1806):   version:  1.0.0
+V/EventHub( 1806): Getting keys...
+I/EventHub( 1806): MAP
+I/EventHub( 1806): 0: 0x00
+..............................
+I/EventHub( 1806): 11: 0x00
+I/EventHub( 1806): 12: 0x40
+I/EventHub( 1806): 13: 0x08
+I/EventHub( 1806): 14: 0x0c
+I/EventHub( 1806): 15: 0x00
+..............................
+I/EventHub( 1806): 16: 0x00
+I/EventHub( 1806): 24: 0x04
+I/EventHub( 1806): 63: 0x00
+V/EventHub( 1806): Getting absolute controllers...
+I/EventHub( 1806): New keyboard: device->id=0x10006 devname='U6XXX-Keypad' propName='hw.keyboards.65542.devname' keylayout='/system/usr/keylayout/U6XXX-Keypad.kl'
+I/EventHub( 1806): New device: path=/dev/input/event0 name=U6XXX-Keypad id=0x10006 (of 0x7) index=7 fd=45 classes=0x1
+V/EventHub( 1806): Adding device /dev/input/event0 0x230cd8 at 7, id = 6, classes = 0x1
+V/EventHub( 1806): Reporting device opened: id=0x10006, name=/dev/input/event0
+
+I/KeyInputQueue( 1806): Device added: id=0x10006, name=U6XXX-Keypad, classes=1
+V/EventHub( 1806): Reporting device opened: id=0x10005, name=/dev/input/event1
+I/KeyInputQueue( 1806): Device added: id=0x10005, name=U6XXX-RAW-Keypad, classes=1
+V/EventHub( 1806): Reporting device opened: id=0x10004, name=/dev/input/event3
+V/EventHub( 1806): Reporting device opened: id=0x10003, name=/dev/input/event4
+I/KeyInputQueue( 1806): Ignoring non-input device: id=0x10004, name=compass
+I/KeyInputQueue( 1806): Device added: id=0x10003, name=TSC2007 Touchscreen, classes=5
+I/KeyInputQueue( 1806):   X: min=160 max=3800 flat=0 fuzz=0
+I/KeyInputQueue( 1806):   Y: min=170 max=3400 flat=0 fuzz=0
+I/KeyInputQueue( 1806):   Pressure: min=0 max=4095 flat=0 fuzz=0
+I/KeyInputQueue( 1806):   Size: unknown values
+V/EventHub( 1806): Reporting device opened: id=0x10002, name=/dev/input/event5
+V/EventHub( 1806): Reporting device opened: id=0x10001, name=/dev/input/event6
+V/EventHub( 1806): Reporting device opened: id=0x10000, name=/dev/input/event2
+I/KeyInputQueue( 1806): Ignoring non-input device: id=0x10002, name=dsp_dlp
+I/KeyInputQueue( 1806): Ignoring non-input device: id=0x10001, name=acc
+I/KeyInputQueue( 1806): Device added: id=0x0, name=U6XXX-PMU events, classes=1
+I/SystemServer( 1806): Bluetooth Service
+W/bluedroid( 1806): open(/sys/class/rfkill/rfkill0/type) failed: No such file or directory (2)
+I/SystemServer( 1806): Device Policy
+I/SystemServer( 1806): Status Bar
+I/SystemServer( 1806): Clipboard Service
+I/SystemServer( 1806): Input Method Service
+W/ResourceType( 1806): Failure getting entry for 0x7f060000 (t=5 e=0) in package 0: 0xffffffb5
+W/ResourceType( 1806): Failure getting entry for 0x7f070000 (t=6 e=0) in package 0: 0xffffffb5
+I/InputManagerService( 1806): Enabled input methods: com.android.inputmethod.pinyin/.PinyinIME:com.android.inputmethod.latin/.LatinIME:com.pekall.inputmethod/.PekAllIME
+I/SystemServer( 1806): NetStat Service
+I/SystemServer( 1806): NetworkManagement Service
+I/SystemServer( 1806): Connectivity Service
+V/ConnectivityServiceExt( 1806): ConnectivityServiceExt starting up
+D/ConnectivityServiceExt( 1806): getMobileDataEnabled returning true
+V/ConnectivityServiceExt( 1806): Starting Wifi Service.
+D/dalvikvm( 1806): GC_FOR_MALLOC freed 3229 objects / 209992 bytes in 256ms
+I/WifiService( 1806): WifiService starting up with Wi-Fi disabled
+D/Tethering( 1806): Tethering starting
+D/NetworkManagmentService( 1806): Registering observer
+I/SystemServer( 1806): Throttle Service
+I/SystemServer( 1806): Accessibility Manager
+I/SystemServer( 1806): Mount Service
+I/SystemServer( 1806): Notification Manager
+D/VoldCmdListener( 1729): volume list
+I/NotificationService( 1806): ******updateUSBModeNotification()*****truefalse
+D/lightservices1( 1806): mLedNotification nullmScreenOntrue mInCall falsemNotificationPulseEnabled true
+I/PackageManager( 1806): Updating external media status from unmounted to unmounted
+D/lightservices1( 1806): mLedNotification nullmScreenOntrue mInCall falsemNotificationPulseEnabled true
+I/SystemServer( 1806): Device Storage Monitor
+D/VoldCmdListener( 1729): share status ums
+I/SystemServer( 1806): Location Manager
+I/SystemServer( 1806): Search Service
+I/SystemServer( 1806): DropBox Service
+I/SystemServer( 1806): Wallpaper Service
+I/SystemServer( 1806): Audio Service
+I/AudioPolicyManagerBase( 1741): initStreamVolume() stream 0, min 0, max 5
+I/AudioPolicyManagerBase( 1741): setStreamVolumeIndex() stream 0, index 5
+I/AudioPolicyManagerBase( 1741): initStreamVolume() stream 1, min 0, max 7
+I/AudioPolicyManagerBase( 1741): setStreamVolumeIndex() stream 1, index 7
+I/AudioPolicyManagerBase( 1741): initStreamVolume() stream 2, min 0, max 7
+I/AudioPolicyManagerBase( 1741): setStreamVolumeIndex() stream 2, index 3
+I/AudioPolicyManagerBase( 1741): setStreamVolume() for output 1 stream 2, volume 0.134896, delay 0
+I/AudioPolicyService( 1741): inserting command: 2 at index 0, num commands 0
+I/AudioPolicyService( 1741): AudioCommandThread() adding set volume stream 2, volume 0.134896, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() waking up
+I/AudioPolicyService( 1741): AudioCommandThread() processing set volume stream 2, volume 0.134896, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() going to sleep
+I/AudioPolicyManagerBase( 1741): initStreamVolume() stream 3, min 0, max 15
+I/AudioPolicyManagerBase( 1741): setStreamVolumeIndex() stream 3, index 1
+I/AudioPolicyManagerBase( 1741): setStreamVolume() for output 1 stream 3, volume 0.038905, delay 0
+I/AudioPolicyService( 1741): inserting command: 2 at index 0, num commands 0
+I/AudioPolicyService( 1741): AudioCommandThread() adding set volume stream 3, volume 0.038905, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() waking up
+I/AudioPolicyService( 1741): AudioCommandThread() processing set volume stream 3, volume 0.038905, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() going to sleep
+I/AudioPolicyManagerBase( 1741): initStreamVolume() stream 4, min 0, max 7
+I/AudioPolicyManagerBase( 1741): setStreamVolumeIndex() stream 4, index 7
+I/AudioPolicyManagerBase( 1741): initStreamVolume() stream 5, min 0, max 7
+I/AudioPolicyManagerBase( 1741): setStreamVolumeIndex() stream 5, index 3
+I/AudioPolicyManagerBase( 1741): setStreamVolume() for output 1 stream 5, volume 0.134896, delay 0
+I/AudioPolicyService( 1741): inserting command: 2 at index 0, num commands 0
+I/AudioPolicyService( 1741): AudioCommandThread() adding set volume stream 5, volume 0.134896, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() waking up
+I/AudioPolicyService( 1741): AudioCommandThread() processing set volume stream 5, volume 0.134896, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() going to sleep
+I/AudioPolicyManagerBase( 1741): initStreamVolume() stream 6, min 0, max 15
+I/AudioPolicyManagerBase( 1741): setStreamVolumeIndex() stream 6, index 10
+I/AudioPolicyManagerBase( 1741): checkAndSetVolume() cannot set stream 6 volume with force use = 0 for comm
+I/AudioPolicyManagerBase( 1741): initStreamVolume() stream 7, min 0, max 7
+I/AudioPolicyManagerBase( 1741): setStreamVolumeIndex() stream 7, index 7
+I/AudioPolicyManagerBase( 1741): initStreamVolume() stream 8, min 0, max 15
+I/AudioPolicyManagerBase( 1741): setStreamVolumeIndex() stream 8, index 5
+I/AudioPolicyManagerBase( 1741): setStreamVolume() for output 1 stream 8, volume 0.098855, delay 0
+I/AudioPolicyService( 1741): inserting command: 2 at index 0, num commands 0
+I/AudioPolicyService( 1741): AudioCommandThread() adding set volume stream 8, volume 0.107867, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() waking up
+I/AudioPolicyService( 1741): AudioCommandThread() processing set volume stream 8, volume 0.107867, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() going to sleep
+I/AudioPolicyManagerBase( 1741): initStreamVolume() stream 9, min 0, max 15
+I/AudioPolicyManagerBase( 1741): setStreamVolumeIndex() stream 9, index 1
+I/AudioPolicyManagerBase( 1741): setStreamVolume() for output 1 stream 9, volume 0.038905, delay 0
+I/AudioPolicyService( 1741): inserting command: 2 at index 0, num commands 0
+I/AudioPolicyService( 1741): AudioCommandThread() adding set volume stream 9, volume 0.038905, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() waking up
+I/AudioPolicyService( 1741): AudioCommandThread() processing set volume stream 9, volume 0.038905, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() going to sleep
+I/AudioPolicyManagerBase( 1741): initStreamVolume() stream 10, min 0, max 20
+I/AudioPolicyManagerBase( 1741): setStreamVolumeIndex() stream 10, index 9
+I/AudioPolicyManagerBase( 1741): setStreamVolume() for output 1 stream 10, volume 0.149624, delay 0
+I/AudioPolicyManagerBase( 1741): checkAndSetVolume() fm stream 10 index 9, output 1, device 2
+I/AudioPolicyManagerBase( 1741): checkAndSetVolume() send volume index to app: 9
+I/AudioPolicyService( 1741): inserting command: 5 at index 0, num commands 0
+I/AudioPolicyService( 1741): AudioCommandThread() adding set fm volume volume 9.000000
+I/AudioPolicyService( 1741): AudioCommandThread() waking up
+I/AudioPolicyService( 1741): AudioCommandThread() processing set fm volume volume 9.000000
+I/AudioFlinger( 1741): setFmVolume: 9
+I/AudioPolicyService( 1741): AudioCommandThread() processing set fm volume volume done!
+I/AudioPolicyService( 1741): AudioCommandThread() going to sleep
+I/AudioPolicyManagerBase( 1741): setStreamVolumeIndex() stream 5, index 3
+I/AudioPolicyManagerBase( 1741): setStreamVolumeIndex() stream 7, index 7
+I/AudioPolicyManagerBase( 1741): setStreamVolumeIndex() stream 8, index 15
+I/AudioPolicyManagerBase( 1741): setStreamVolume() for output 1 stream 8, volume 1.000000, delay 0
+I/AudioPolicyService( 1741): inserting command: 2 at index 0, num commands 0
+I/AudioPolicyService( 1741): AudioCommandThread() adding set volume stream 8, volume 1.000000, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() waking up
+I/AudioPolicyService( 1741): AudioCommandThread() processing set volume stream 8, volume 1.000000, output 1
+I/AudioPolicyService( 1741): AudioCommandThread() going to sleep
+I/AudioPolicyManagerBase( 1741): setStreamVolumeIndex() stream 9, index 1
+I/AudioPolicyService( 1741): setPhoneState() tid 1741
+I/AudioPolicyManagerBase( 1741): setPhoneState() state 0
+I/AudioPolicyManagerBase( 1741): setPhoneState() setting same state 0
+I/AudioFlinger( 1741): registerClient() 0xe4350, tid 1792, calling tid 1806
+I/AudioFlinger( 1741): Adding notification client 0xe42f8
+I/AudioFlinger( 1741): sendConfigEvent() num events 1 event 0, param 0
+I/AudioFlinger( 1741): MixerThread 0x2f7f0 TID 1791 waking up
+I/AudioFlinger( 1741): processConfigEvents() remaining events 1
+I/AudioFlinger( 1741): PlaybackThread::audioConfigChanged, thread 0x2f7f0, event 0, param 0
+I/AudioFlinger( 1741): audioConfigChanged_l() Notifying change to client 0x25730
+I/AudioSystem( 1741): ioConfigChanged() event 0
+I/AudioSystem( 1741): ioConfigChanged() opening already existing output! 1
+I/AudioFlinger( 1741): audioConfigChanged_l() Notifying change to client 0xe42f8
+I/AudioFlinger( 1741): MixerThread 0x2f7f0 TID 1791 going to sleep
+I/AudioSystem( 1806): ioConfigChanged() event 0
+I/AudioSystem( 1806): ioConfigChanged() new output samplingRate 44100, format 1 channels 2 frameCount 2048 latency 186
+V/AudioService( 1806): getActiveStreamType: Forcing STREAM_RING...
+I/AudioPolicyManagerBase( 1741): setStreamVolumeIndex() stream 2, index 3
+I/AudioPolicyManagerBase( 1741): setStreamVolumeIndex() stream 5, index 3
+I/SystemServer( 1806): Headset Observer
+I/SystemServer( 1806): Dock Observer
+W/DockObserver( 1806): This kernel does not have dock station support
+I/SystemServer( 1806): UI Mode Manager Service
+I/SystemServer( 1806): Backup Service
+V/BackupManagerService( 1806): No ancestral data
+I/BackupManagerService( 1806): Found stale backup journal, scheduling:
+I/BackupManagerService( 1806):     + com.android.inputmethod.latin
+I/BackupManagerService( 1806):     + com.android.browser
+I/BackupManagerService( 1806):     + com.android.providers.userdictionary
+I/BackupManagerService( 1806):     + android
+I/BackupManagerService( 1806):     + com.android.providers.settings
+I/BackupManagerService( 1806): Backup enabled => false
+I/SystemServer( 1806): AppWidget Service
+I/SystemServer( 1806): Recognition Service
+D/VoldCmdListener( 1729): share status ums
+D/StorageNotification( 1806): Startup with UMS connection true (media state unmounted)
+D/StatusBarPolicy( 1806): Level1: 1 Level2: 6 Level3: 11 Level4: 19
+I/SystemServer( 1806): DiskStats Service
+I/WindowManager( 1806): SAFE MODE not enabled
+W/DevicePolicyManagerService( 1806): failed parsing /data/system/device_policies.xml java.io.FileNotFoundException: /data/system/device_policies.xml (No such file or directory)
+I/ActivityManager( 1806): Config changed: { scale=1.0 imsi=0/0 loc=en_US touch=3 keys=1/1/2 nav=1/1 orien=1 layout=17 uiMode=0 seq=1}
+I/power   ( 1806): *** set_screen_state 1
+D/LockPatternKeyguardView( 1806): createUnlockScreenFor,unlockMode:Pattern
+V/LockPatternKeyguardView( 1806): **** UPDATE SCREEN: mode=LockScreen last mode=LockScreen
+V/LockPatternKeyguardView( 1806): Gone=com.android.internal.policy.impl.PatternUnlockScreen@43f45208
+V/LockPatternKeyguardView( 1806): Visible=com.android.internal.policy.impl.LockScreen@43f38cf0
+D/PowerManagerService( 1806): system ready!
+I/ActivityManager( 1806): Starting activity: Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000000 cmp=com.android.launcher/com.android.launcher2.Launcher }
+I/ActivityManager( 1806): Sending system update to: ComponentInfo{com.android.providers.calendar/com.android.providers.calendar.CalendarUpgradeReceiver}
+W/ActivityManager( 1806): pending app ProcessRecord{43f53d88 0:com.android.settings/1000} died before responding to broadcast
+I/power   ( 1806): *** set_screen_state 0
+D/SurfaceFlinger( 1735): About to give-up screen, flinger = 0xa810
+V/EventHub( 1806): revents for 5 = 0x00000001
+V/EventHub( 1806): /dev/input/event3 got: t0=89, t1=796333, type=0, code=1, v=0
+V/EventHub( 1806): revents for 2 = 0x00000001
+V/EventHub( 1806): /dev/input/event6 got: t0=89, t1=798072, type=0, code=1, v=0
+V/EventHub( 1806): revents for 3 = 0x00000001
+V/EventHub( 1806): /dev/input/event5 got: t0=89, t1=801820, type=0, code=1, v=0
+I/power   ( 1806): *** set_screen_state 1
+W/ActivityManager( 1806): goingToSleep with no resumed activity!
+D/SurfaceFlinger( 1735): Screen about to return, flinger = 0xa810
+W/StatusBar( 1806): No icon ID for slot ime
+D/dalvikvm( 1806): GC_FOR_MALLOC freed 4649 objects / 288272 bytes in 271ms
+D/LockPatternKeyguardView( 1806): createUnlockScreenFor,unlockMode:Pattern
+V/LockPatternKeyguardView( 1806): **** UPDATE SCREEN: mode=LockScreen last mode=LockScreen
+V/LockPatternKeyguardView( 1806): Gone=com.android.internal.policy.impl.PatternUnlockScreen@43f4dd28
+V/LockPatternKeyguardView( 1806): Visible=com.android.internal.policy.impl.LockScreen@43f5ff70
+V/LockPatternKeyguardView( 1806): **** UPDATE SCREEN: mode=LockScreen last mode=LockScreen
+V/LockPatternKeyguardView( 1806): Gone=com.android.internal.policy.impl.PatternUnlockScreen@43f4dd28
+V/LockPatternKeyguardView( 1806): Visible=com.android.internal.policy.impl.LockScreen@43f5ff70
+D/lightservices1( 1806): mLedNotification nullmScreenOntrue mInCall falsemNotificationPulseEnabled true
+D/StatusBar( 1806): DISABLE_EXPAND: yes
+E/Lights  ( 1806): write_int failed to open /sys/class/leds/green/delay_on
+D/lightservices1( 1806): mLedNotification nullmScreenOntrue mInCall falsemNotificationPulseEnabled true
+
+
+
+

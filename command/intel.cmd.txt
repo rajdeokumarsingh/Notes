@@ -1,0 +1,66 @@
+
+添加文件头
+* Copyright (C) 2011 Capital Alliance Software LTD (Pekall)
+
+因为Intel 2.3项目需要对 APK重新做签名，2.3上的APK的位置放到了
+package/pekallprebuilt/app下。2.2的还在device下。
+
+
+1. 增加了images目录，解决了build的问题。 简单的方法build的方式和以前一样
+. build/envsetup.sh
+chooseproduct xmm2231gl1_0
+make -j8
+
+   
+mount -o rw,remount -t ext3 /dev/block/hda1 /system
+mount -o rw,remount rootfs /
+mount -o remount rw /
+
+
+在我们的代码中不要包含6719或Haisi的字样，我加了如下的property
+ro.build.market=china_cmcc   表示这是给cmcc的build
+ro.build.market=china_open   表示这是给open市场的
+ro.build.cta_lab_test=true表示这是给CTA测试的
+ro.build.cmcc_lab_test= true表示这是给移动测试的
+
+
+Server：http://utp.intel.com/
+login name: houzh
+password: houzh26
+workflow: SMS
+
+sdcard
+# cd /data
+# busybox chmod 777 local -R
+
+am broadcast -a android.intent.action.MEDIA_MOUNTED -d file:///data/local
+am broadcast -a android.intent.action.MEDIA_MOUNTED -d file:///mnt/sdcard
+
+
+请用如下的方法修改板子自动Mount到PC端的行为（在Ubuntu上）
+1. 连接板子，运行sudo blkid -p /dev/sdb1，得到UUID如
+UUID= d9ad0f33-8539-4f4b-bfa4-fc5d155b5c3d
+2. 修改/etc/fstab，增加一行。XXXX是前面得到的UUID.
+UUID=XXXXX none            ext3    noauto         0         0
+重启PC，连接板子。运行命令mount，检查板子是否还mount到了PC端。
+
+
+向板子上push东西， 先点亮屏幕， push, 然后power down，不要reset。不然修改的东西有可能丢失
+
+
+build 2.3
+    cd android
+    chmod 0777 -R *
+    cd 3rdparty
+    ./build.products.sh sp8810ga
+
+    build a component
+    cd android
+    . build/env...sh
+    lunch
+    make ...
+
+
+
+
+

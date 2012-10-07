@@ -1,0 +1,59 @@
+
+// send request to baidu by proxy http://192.168.21.21:808
+V/http    ( 2017): 873827 http2 Connection.openHttpConnection() 69 http://192.168.21.21:808
+V/http    ( 2017): 873837 http2 Request.sendRequest() http://www.baidu.com
+V/http    ( 2017): 873844 http2 Request.requestSent() http://www.baidu.com/
+V/http    ( 2017): 873849 http2 READ pipe 1
+V/http    ( 2017): 873858 http2 processRequests() reading /
+
+
+// Receive unauthorized header
+V/http    ( 2017): 873879 http2 read: HTTP/1.0 407 Unauthorized
+V/http    ( 2017): 873887 http2 hdr 15 server: CCProxy
+V/http    ( 2017): 873889 http2 hdr 55 proxy-authenticate: Basic realm="CCProxy Authorization"
+V/http    ( 2017): 873893 http2 hdr 23 cache-control: no-cache
+V/http    ( 2017): 873903 http2 Request.readResponseStatus() 25 HTTP/1.0 407 Unauthorized
+V/LoadListener( 2017): LoadListener: from: http://www.baidu.com/ major: 1 minor: 0 code: 407 reason: Unauthorized
+V/LoadListener( 2017): LoadListener.headers
+
+
+V/http    ( 2017): 873926 WebViewCoreThread HttpAuthHeader.parseHeader(): header: Basic realm="CCProxy Authorization"
+V/http    ( 2017): 873933 WebViewCoreThread HttpAuthHeader.parseParameters(): parameters: realm="CCProxy Authorization"
+V/LoadListener( 2017): LoadListener.endData(): url: http://www.baidu.com/
+
+V/http    ( 2017): 873936 WebViewCoreThread HttpAuthHeader.parseParameter(): token: realm value: CCProxy Authorization
+V/http    ( 2017): 873938 http2 Request.readResponse(): done http://www.baidu.com/
+
+V/http    ( 2017): 873943 http2 processRequests(): no persist, closing http://192.168.21.21:808
+V/http    ( 2017): 873955 http2 Connection.clearPipe(): clearing pipe 0
+V/http    ( 2017): 873958 http2 SEND pipe 0
+V/http    ( 2017): 873961 http2 RequestQueue.getRequest(http://192.168.21.21:808) => null
+V/http    ( 2017): 873965 http2 DRAIN pipe 0
+V/http    ( 2017): 873968 http2 RequestQueue.getRequest() => null
+V/http    ( 2017): 873972 http2 ConnectionThread: Waiting for work
+
+// send authResponse to proxy
+V/LoadListener( 2017): LoadListener.handleAuthResponse: url: http://www.baidu.com/ username:  password:
+V/http    ( 2017): 874025 WebViewCoreThread setupBasicAuthResponse(): response: Og==
+V/http    ( 2017): 874026 WebViewCoreThread RequestQueue.queueRequest uri:http://www.baidu.com/
+V/http    ( 2017): 874041 WebViewCoreThread RequestQueue.queueRequest shouldUseWifiProxy: true
+V/http    ( 2017): 874042 WebViewCoreThread RequestQueue.inWifiProxyBlackList url:http://www.baidu.com/
+V/http    ( 2017): 874043 WebViewCoreThread RequestQueue.queueRequest proxy: http://192.168.21.21:808
+
+V/http    ( 2017): 874106 http1 Connection.openHttpConnection() 47 http://192.168.21.21:808
+V/LoadListener( 2017): LoadListener.certificate: null
+V/http    ( 2017): 874111 http1 Request.sendRequest() http://www.baidu.com
+V/http    ( 2017): 874124 http1 Request.requestSent() http://www.baidu.com/
+V/http    ( 2017): 874125 http1 READ pipe 1
+V/http    ( 2017): 874134 http1 processRequests() reading /
+
+// Received Unauthorized message again
+V/http    ( 2017): 874151 http1 read: HTTP/1.0 407 Unauthorized
+V/http    ( 2017): 874152 http1 hdr 15 server: CCProxy
+V/http    ( 2017): 874154 http1 hdr 55 proxy-authenticate: Basic realm="CCProxy Authorization"
+V/http    ( 2017): 874157 http1 hdr 23 cache-control: no-cache
+V/http    ( 2017): 874159 http1 Request.readResponseStatus() 25 HTTP/1.0 407 Unauthorized
+
+V/BrowserActivity( 2017): showHttpAuthentication
+
+

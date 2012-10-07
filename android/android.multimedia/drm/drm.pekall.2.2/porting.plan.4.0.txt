@@ -1,0 +1,159 @@
+Phrase 1:
+    目标:
+        支持DCF的扫描，播放
+
+    action list:
+        1. add "application/vnd.oma.drm.content", dcf to mimetype
+            libcore/luni/src/main/java/libcore/net/MimeUtils.java
+            framework/base/media/java/android/media/MediaFile.java
+
+            done!
+
+        2. replace drm lib with pekall lib
+            需要修改或去掉
+                frameworks/base/media/libdrm/Android.mk
+                frameworks/base/media/libdrm/mobile1/Android.mk
+
+            package/app/DRM
+
+            done!
+
+            TODO:
+                完善Makefile
+
+        3. framework: merge media scanner
+            frameworks/base/media/java/android/media/MediaScanner.java
+            frameworks/base/media/libstagefright/StagefrightMediaScanner.cpp
+            frameworks/base/include/media/stagefright/StagefrightMediaScanner.h
+
+            done!
+
+        4. framework: merge media player
+            base/media/libstagefright/Android.mk
+            base/media/libmediaplayerservice/Android.mk
+
+            base/media/libstagefright/FileSource.cpp
+            base/include/media/stagefright/FileSource.h
+
+            base/media/libstagefright/AwesomePlayer.cpp
+            base/media/libstagefright/include/AwesomePlayer.h
+            base/include/media/stagefright/DataSource.h
+
+            cp /home/jiangrui/android/android4.0.3/frameworks/
+                base/media/libdrm/mobile1/include/cas_drm_api.h 
+                ./base/media/libdrm/mobile1/include/cas_drm_api.h
+
+            done!
+
+            base/core/java/android/provider/DrmStore.java
+            base/media/java/android/drm/mobile1/DrmRawContent.java
+
+            DrmService.apk
+            DrmProvider.apk
+
+        5. Download page: open drm file
+            DownloadProvider/ui/src/com/android/providers/downloads/ui/DownloadList.java
+
+        6. playing drm
+            pending ...
+            depending on CMCC drm test web
+
+Phrase 2:
+        DrmService: 获取权限流程
+            done!
+
+        wap push...
+
+Phrase 3:
+    目标:
+        支持DRM Message到DCF的转化
+        转化后的扫描, 播放
+            pending...
+            depending on CMCC drm test web
+
+////////////////////////////////////////////////////////////////////////////////
+
+Phrase 4:
+
+    makefile
+        idh:
+            vendor/huawei/products/t8808d.mk
+            vendor/pekall/Android.mk
+
+        wp8:
+            vendor/pekall/Android.mk
+
+            vendor/ontim/CP7728/CP7728.mk
+            vendor/ontim/S899t/S899t.mk
+            vendor/ontim/WP8800/WP8800.mk
+
+    DownloadProvider
+        update binary
+        update code
+
+        done
+
+    DrmProvider
+        Add code
+            TODO:
+
+        Add binary
+            idh:
+                vendor/pekall/common/apps/DrmProvider.apk
+            wp8:
+                vendor/pekall/common/apps/DrmProvider.apk
+
+
+    DrmService
+        Add code
+            todo:
+
+        Add binary
+            idh:
+                vendor/pekall/common/apps/DrmService.apk
+            wp8:
+                vendor/pekall/common/apps/DrmService.apk
+
+    libdrm1
+    libdrm1_jni
+        Add code
+
+        Add binary
+            idh:
+                vendor/pekall/common/lib/libdrm1_jni.so  
+                vendor/pekall/common/lib/libdrm1.so
+            wp8:
+                vendor/pekall/common/lib/libdrm1_jni.so  
+                vendor/pekall/common/lib/libdrm1.so
+ 
+    集成代码:
+
+        add
+        frameworks/base/media/libdrm/mobile1/include/cas_drm_api.h
+
+        libcore/luni/src/main/java/libcore/net/MimeUtils.java
+
+        frameworks/base/core/java/android/provider/DrmStore.java
+        frameworks/base/media/java/android/drm/mobile1/DrmRawContent.java
+        frameworks/base/media/java/android/media/MediaFile.java
+        frameworks/base/media/java/android/media/MediaScanner.java
+        frameworks/base/media/libdrm/mobile1/Android.mk
+        frameworks/base/media/libdrm/Android.mk
+        frameworks/base/media/libmediaplayerservice/Android.mk
+        frameworks/base/media/libstagefright/include/AwesomePlayer.h
+        frameworks/base/media/libstagefright/Android.mk
+        frameworks/base/media/libstagefright/AwesomePlayer.cpp
+        frameworks/base/media/libstagefright/FileSource.cpp
+        frameworks/base/media/libstagefright/StagefrightMediaScanner.cpp
+        frameworks/base/include/media/stagefright/FileSource.h
+        frameworks/base/include/media/stagefright/DataSource.h
+
+Change 2284 submitted.
+5 files added
+17 files edited
+
+
+Change 2298 submitted.
+5 files added
+19 files edited
+

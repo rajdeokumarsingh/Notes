@@ -1,0 +1,43 @@
+
+<form action="form_action.asp">
+名字：<input type="text" name="FirstName" value="Mickey" /><br />
+姓氏：<input type="text" name="LastName" value="Mouse" /><br />
+<input type="submit" value="提交" />
+</form>
+
+<p>点击提交按钮后，表单数据将被发送到当前服务器上的form_action.asp页面。</p>
+
+<!-- 点击提交按钮后，表单数据会通过下面http请求被提交到服务器
+GET /cn/tags/form_action.asp?FirstName=Mickey&LastName=Mouse HTTP/1.1
+Host: www.w3schools.com
+Connection: keep-alive
+
+FirstName是中文“你好”
+GET /tags/form_action.asp?FirstName=%C4%E3%BA%C3&LastName=Mouse HTTP/1.1
+-->
+
+<form action="form_action.asp" method="get">
+<input type="checkbox" name="vehicle" value="自行车" /> 我有自行车<br />
+<input type="checkbox" name="vehicle" value="汽车" checked="checked" /> 我有汽车<br />
+<input type="submit" value="提交" />
+</form>
+
+<!--
+编码是gbk, 可能是根据meta标签中的charset来决定的。
+GET /cn/tags/form_action.asp?vehicle=%D7%D4%D0%D0%B3%B5&vehicle=%C6%FB%B3%B5 HTTP/1.1
+Host: www.w3schools.com
+-->
+定义及用法
+    <form>标签用于创建一个HTML表单，收集来自用户的输入。
+    可以在表单里放置多种输入控件，比如文本输入框、多选框、单选按钮、提交按钮，还有菜单、多行文本框、控件组、文本标签（label）等等。
+    表单用于向服务器发送数据。
+
+必选属性
+    action URL 指出表单数据将被发往哪里
+
+可选属性
+    method get/post 指出采用哪种HTTP方法发送表单数据
+
+
+name和value中的属性作为url的query字段发送给server
+

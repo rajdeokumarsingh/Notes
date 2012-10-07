@@ -1,0 +1,22 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Android.mk	Android.mk	1;"	F
+DrawFullScreenActivity	src/com/pekall/canvas/DrawFullScreenActivity.java	/^public class DrawFullScreenActivity extends Activity {$/;"	c
+DrawFullScreenActivity.java	src/com/pekall/canvas/DrawFullScreenActivity.java	1;"	F
+LOCAL_PACKAGE_NAME	Android.mk	/^LOCAL_PACKAGE_NAME := DrawFullScreen$/;"	m
+LOCAL_PATH	Android.mk	/^LOCAL_PATH:= $(call my-dir)$/;"	m
+LOCAL_SRC_FILES	Android.mk	/^LOCAL_SRC_FILES := \\$/;"	m
+MAX_COUNT	src/com/pekall/canvas/DrawFullScreenActivity.java	/^		private static final float MAX_COUNT = 20.0f;$/;"	f	class:DrawFullScreenActivity.MyView	file:
+MyView	src/com/pekall/canvas/DrawFullScreenActivity.java	/^		public MyView(Context context) {$/;"	m	class:DrawFullScreenActivity.MyView
+MyView	src/com/pekall/canvas/DrawFullScreenActivity.java	/^	class MyView extends View {$/;"	c	class:DrawFullScreenActivity
+com.pekall.canvas	src/com/pekall/canvas/DrawFullScreenActivity.java	/^package com.pekall.canvas;$/;"	p
+count	src/com/pekall/canvas/DrawFullScreenActivity.java	/^		private int count = 0;$/;"	f	class:DrawFullScreenActivity.MyView	file:
+mFormat	src/com/pekall/canvas/DrawFullScreenActivity.java	/^		private DecimalFormat mFormat;$/;"	f	class:DrawFullScreenActivity.MyView	file:
+mMap	src/com/pekall/canvas/DrawFullScreenActivity.java	/^		private Bitmap mMap;$/;"	f	class:DrawFullScreenActivity.MyView	file:
+onCreate	src/com/pekall/canvas/DrawFullScreenActivity.java	/^	public void onCreate(Bundle savedInstanceState) {$/;"	m	class:DrawFullScreenActivity
+onDraw	src/com/pekall/canvas/DrawFullScreenActivity.java	/^		protected void onDraw(Canvas canvas) {$/;"	m	class:DrawFullScreenActivity.MyView
+totle	src/com/pekall/canvas/DrawFullScreenActivity.java	/^		private int totle = 0;$/;"	f	class:DrawFullScreenActivity.MyView	file:

@@ -1,0 +1,96 @@
+create tokenizer
+Breakpoint 11, WebCore::HTMLDocument::createTokenizer (this=0x4280c8) at external/webkit/WebCore/html/HTMLDocument.cpp:292
+292    return new HTMLTokenizer(this, reportErrors);
+(gdb) bt
+#0  WebCore::HTMLDocument::createTokenizer (this=0x4280c8) at external/webkit/WebCore/html/HTMLDocument.cpp:292
+#1  0xa84bc97a in WebCore::Document::implicitOpen (this=0x4280c8) at external/webkit/WebCore/dom/Document.cpp:1738
+    cancelParsing();
+    m_tokenizer.clear();
+    removeChildren();
+
+    m_tokenizer = createTokenizer();
+        Tokenizer* Document::createTokenizer()
+            return new XMLTokenizer(this, view());
+
+        Tokenizer *HTMLDocument::createTokenizer()
+            return new HTMLTokenizer(this, reportErrors);
+
+        Tokenizer* HTMLViewSourceDocument::createTokenizer()
+            // Use HTMLTokenizer if applicable, otherwise use TextTokenizer.
+            if (m_type == "text/html" || m_type == "application/xhtml+xml" || m_type == "image/svg+xml" || 
+            implementation()->isXMLMIMEType(m_type)
+        #if ENABLE(XHTMLMP)
+                || m_type == "application/vnd.wap.xhtml+xml"
+        #endif
+                ) 
+                return new HTMLTokenizer(this);
+                
+            return createTextTokenizer(this);
+                return new TextTokenizer(document);
+
+        Tokenizer* FTPDirectoryDocument::createTokenizer()
+            return new FTPDirectoryTokenizer(this);
+
+        Tokenizer* ImageDocument::createTokenizer()
+            return new ImageTokenizer(this);
+
+        Tokenizer* MediaDocument::createTokenizer()
+            return new MediaTokenizer(this);
+
+        Tokenizer* PluginDocument::createTokenizer()
+            return new PluginTokenizer(this);
+
+        Tokenizer* TextDocument::createTokenizer()
+            return new TextTokenizer(this);
+    setParsing(true);
+
+#2  0xa8355d2c in WebCore::FrameLoader::begin (this=0x270128, url=<value optimized out>, dispatch=<value optimized out>, 
+origin=<value optimized out>) at external/webkit/WebCore/loader/FrameLoader.cpp:894
+#3  0xa8355dc4 in WebCore::FrameLoader::receivedFirstData (this=0x270128) at external/webkit/WebCore/loader/FrameLoader.cpp:779
+#4  0xa8355ee0 in WebCore::FrameLoader::setEncoding (this=0x270128, name=@0x4556ec7c, userChosen=false)
+at external/webkit/WebCore/loader/FrameLoader.cpp:1517
+#5  0xa843333a in android::FrameLoaderClientAndroid::committedLoad (this=0x2700e0, loader=0x390680, 
+data=0x43e87fd8 "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<!DOCTYPE wml PUBLIC \"-//WAPFORUM//DTD WML 1.1//ZH\" \"http://www.wapforum.org\r\n/DTD/wml_1.1.xml\">\r\n<wml>\r\n\r\n\t<head>\r\n    \t<meta http-equiv=\"Cache-Control\" conten"..., length=1279)
+at external/webkit/WebKit/android/WebCoreSupport/FrameLoaderClientAndroid.cpp:696
+#6  0xa8352c74 in WebCore::FrameLoader::committedLoad (this=<value optimized out>, loader=0x0, data=0xafd418dc "", length=1)
+at external/webkit/WebCore/loader/FrameLoader.cpp:3351
+#7  0xa850ac9c in WebCore::DocumentLoader::commitLoad (this=0x390680, 
+data=0x43e87fd8 "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<!DOCTYPE wml PUBLIC \"-//WAPFORUM//DTD WML 1.1//ZH\" \"http://www.wapforum.org\r\n/DTD/wml_1.1.xml\">\r\n<wml>\r\n\r\n\t<head>\r\n    \t<meta http-equiv=\"Cache-Control\" conten"..., length=1279)
+at external/webkit/WebCore/loader/DocumentLoader.cpp:284
+#8  0xa850acd0 in WebCore::DocumentLoader::receivedData (this=0x390680, 
+data=0x43e87fd8 "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<!DOCTYPE wml PUBLIC \"-//WAPFORUM//DTD WML 1.1//ZH\" \"http://www.wapforum.org\r\n/DTD/wml_1.1.xml\">\r\n<wml>\r\n\r\n\t<head>\r\n    \t<meta http-equiv=\"Cache-Control\" conten"..., length=1279)
+at external/webkit/WebCore/loader/DocumentLoader.cpp:296
+#9  0xa8354adc in WebCore::FrameLoader::receivedData (this=<value optimized out>, data=0x0, length=-1345054500)
+at external/webkit/WebCore/loader/FrameLoader.cpp:2164
+#10 0xa850c64e in WebCore::MainResourceLoader::addData (this=0x41d008, 
+data=0x43e87fd8 "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<!DOCTYPE wml PUBLIC \"-//WAPFORUM//DTD WML 1.1//ZH\" \"http://www.wapforum.org\r\n/DTD/wml_1.1.xml\">\r\n<wml>\r\n\r\n\t<head>\r\n    \t<meta http-equiv=\"Cache-Control\" conten"..., length=1279, 
+allAtOnce=<value optimized out>) at external/webkit/WebCore/loader/MainResourceLoader.cpp:150
+#11 0xa835ee18 in WebCore::ResourceLoader::didReceiveData (this=0x41d008, 
+data=0x43e87fd8 "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<!DOCTYPE wml PUBLIC \"-//WAPFORUM//DTD WML 1.1//ZH\" \"http://www.wapforum.org\r\n/DTD/wml_1.1.xml\">\r\n<wml>\r\n\r\n\t<head>\r\n    \t<meta http-equiv=\"Cache-Control\" conten"..., length=1279, 
+lengthReceived=<value optimized out>, allAtOnce=true) at external/webkit/WebCore/loader/ResourceLoader.cpp:259
+#12 0xa850c62a in WebCore::MainResourceLoader::didReceiveData (this=0x41d008, 
+data=0x43e87fd8 "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<!DOCTYPE wml PUBLIC \"-//WAPFORUM//DTD WML 1.1//ZH\" \"http://www.wapforu---Type <return> to continue, or q <return> to quit---quit
+Quit
+) at external/webkit/WebCore/loader/MainResourceLoader.cpp:415
+#13 0xa835e936 in WebCore::ResourceLoader::didReceiveData (this=0x4604c8, data=<value optimized out>, length=1, lengthReceived=1279)
+at external/webkit/WebCore/loader/ResourceLoader.cpp:409
+#14 0xa843bff6 in android::WebCoreResourceLoader::AddData (env=0x26b098, obj=<value optimized out>, dataArray=<value optimized out>, 
+length=<value optimized out>) at external/webkit/WebKit/android/jni/WebCoreResourceLoader.cpp:219
+#15 0x80213978 in dvmPlatformInvoke () at dalvik/vm/arch/arm/CallEABI.S:243
+#16 0x8023de3e in dvmCallJNIMethod_general (args=<value optimized out>, pResult=<value optimized out>, method=0x411a5820, self=0x26be08)
+at dalvik/vm/Jni.c:1726
+#17 0x8023721a in dvmCheckCallJNIMethod_general (args=0x4604c8, pResult=0x0, method=0xafd418dc, self=0x1) at dalvik/vm/CheckJni.c:136
+#18 0x80218718 in dalvik_mterp () at dalvik/vm/mterp/out/InterpAsm-armv5te.S:10170
+#19 0x8021e8c8 in dvmMterpStd (self=<value optimized out>, glue=0x4556ee30) at dalvik/vm/mterp/Mterp.c:109
+#20 0x8021d794 in dvmInterpret (self=0x26be08, method=<value optimized out>, pResult=0x4556eed8) at dalvik/vm/interp/Interp.c:1367
+#21 0x80253eee in dvmCallMethodV (self=0x26be08, method=0x4104da6c, obj=<value optimized out>, fromJni=<value optimized out>, 
+pResult=0x4556eed8, args={__ap = 0x8024825f}) at dalvik/vm/interp/Stack.c:535
+#22 0x80254106 in dvmCallMethod (self=0x4604c8, method=0x0, obj=0xafd418dc, pResult=0x26be08) at dalvik/vm/interp/Stack.c:436
+#23 0x8024825e in interpThreadStart (arg=<value optimized out>) at dalvik/vm/Thread.c:1670
+#24 0xafd11040 in __thread_entry (func=0x802481bd <interpThreadStart+1>, arg=0x26be08, tls=<value optimized out>)
+at bionic/libc/bionic/pthread.c:192
+#25 0xafd10b24 in pthread_create (thread_out=<value optimized out>, attr=0x78, start_routine=0x802481bd <interpThreadStart+1>, arg=0x26be08)
+at bionic/libc/bionic/pthread.c:328
+#26 0x00000000 in ?? ()
+
+

@@ -1,0 +1,163 @@
+什么是audio policy
+    声音输出设备： earpiece, speaker, headset, bt a2dp, ...
+    需要输出的声音： ringtone, voice call, alarm, notification, 
+                     dtmf, media player, fm radio, ...
+
+    系统需要决定各种声音需要从哪种设备中输出
+        对于media player, 如果连着耳机，就从耳机输出。
+            连着A2DP, 就从A2DP输出。
+            什么设备都没有连接，就从speaker输出
+
+        对于fm radio, 耳机是作为fm天线使用, 必须连接。 
+            默认从耳机输出， 用户也可以选择从speaker输出
+
+        对于notification, alarm, ringtone, 
+            必须从speaker中输出(就算耳机/A2DP已经连接上)
+            ringtone可以同时从bt中输出
+    
+
+Audio Control有两层逻辑
+    1. 哪种声音从哪种设备输出
+            由Audio Policy来决定
+                首先选择output, 系统默认output或a2dp
+                然后选择对应output中的device
+
+    2. 多种声音需要同时输出时, 应该输出哪种声音
+            Audio Focus机制或Application来决定
+        如播放音乐的时候，来了一条短信，需要播放短信音
+            可选的策略有：
+            1. 混音播放
+                好处是，逻辑简单， 直接混音即可
+                坏处是，如果音乐声音大，可能短信音就不容易听见
+
+            2. 暂停音乐，播放短信音，恢复音乐
+                好处，能够明显凸显短信音
+                逻辑比较复杂
+
+stream_type，strategy, device三者之间的关系：
+    AudioSystem::stream_type  音频流的类型，一共有10种类型
+
+    AudioPolicyManager::routing_strategy 音频路由策略，可以有4种策略
+        
+    AudioSystem::audio_devices  音频输入输出设备，每一个bit代表一种物理设备
+
+从stream_type获取device的过程：
+    1. getStrategy(stream_type)根据stream type，返回对应的routing strategy值，
+    2. getDeviceForStrategy()则是根据routing strategy，返回可用的device。
+    
+    Android把10种stream type归纳为4种路由策略，然后根据路由策略决定具体的输出设备。
+
+AudioSystem::stream_type 
+    DEFAULT          =-1,
+    VOICE_CALL       = 0,
+    SYSTEM           = 1,
+    RING             = 2,
+    MUSIC            = 3,
+    ALARM            = 4,
+    NOTIFICATION     = 5,
+    BLUETOOTH_SCO    = 6,
+    ENFORCED_AUDIBLE = 7, // Sounds that cannot be muted by user and must be routed to speaker
+    DTMF             = 8,
+    TTS              = 9,
+    FM              = 10,
+
+// stream type和routing strategy对应关系如下:
+AudioPolicyManagerBase::routing_strategy
+    STRATEGY_MEDIA,
+        SYSTEM           = 1,
+        MUSIC            = 3,
+        TTS              = 9,
+        FM              = 10,
+
+    STRATEGY_PHONE,
+        VOICE_CALL       = 0,
+        BLUETOOTH_SCO    = 6,
+
+    STRATEGY_SONIFICATION,
+        RING             = 2,
+        ALARM            = 4,
+        NOTIFICATION     = 5,
+        ENFORCED_AUDIBLE = 7, // Sounds that cannot be muted by user and must be routed to speaker
+
+    STRATEGY_DTMF,
+        DTMF             = 8,
+
+AudioSystem::audio_devices {
+    // output devices
+    DEVICE_OUT_EARPIECE = 0x1,
+    DEVICE_OUT_SPEAKER = 0x2,
+    DEVICE_OUT_WIRED_HEADSET = 0x4,
+    DEVICE_OUT_WIRED_HEADPHONE = 0x8,
+    DEVICE_OUT_BLUETOOTH_SCO = 0x10,
+    DEVICE_OUT_BLUETOOTH_SCO_HEADSET = 0x20,
+    DEVICE_OUT_BLUETOOTH_SCO_CARKIT = 0x40,
+    DEVICE_OUT_BLUETOOTH_A2DP = 0x80,
+    DEVICE_OUT_BLUETOOTH_A2DP_HEADPHONES = 0x100,
+    DEVICE_OUT_BLUETOOTH_A2DP_SPEAKER = 0x200,
+    DEVICE_OUT_AUX_DIGITAL = 0x400,
+    DEVICE_OUT_HDMI = 0x2000,
+#ifdef HAVE_FM_RADIO
+    DEVICE_OUT_FM = 0x800,
+    DEVICE_OUT_FM_SPEAKER = 0x1000,
+    DEVICE_OUT_FM_ALL = (DEVICE_OUT_FM | DEVICE_OUT_FM_SPEAKER),
+#endif
+    DEVICE_OUT_DEFAULT = 0x8000,
+
+// getDeviceForStrategy()则是根据routing strategy，返回可用的device
+// 从strategy获取到设备号
+    1. STRATEGY_DTMF
+        如果系统不是in call状态, 使用STRATEGY_MEDIA策略获取设备
+        否则使用STRATEGY_PHONE获取设备
+
+    2. STRATEGY_PHONE
+        首先考虑forced use设备, 然后按照优先级考虑可用设备
+            2.1 如果mForceUse[AudioSystem::FOR_COMMUNICATION]
+                AudioSystem::FORCE_BT_SCO, 既对communication强制使用蓝牙
+                    按照以下优先级选择设备 
+                    DEVICE_OUT_BLUETOOTH_SCO_CARKIT(!isInCall ||!STRATEGY_DTMF ) >
+                    DEVICE_OUT_BLUETOOTH_SCO_HEADSET >
+                    DEVICE_OUT_BLUETOOTH_SCO
+                    如果没有找到sco设备，则使用2.2的优先级选择设备
+
+                AudioSystem::FORCE_SPEAKER, 既对communication强制使用speaker
+                    DEVICE_OUT_BLUETOOTH_SCO_CARKIT (!isInCall() || !STRATEGY_DTMF) >
+                    DEVICE_OUT_BLUETOOTH_A2DP_SPEAKER (!isInCall()) >
+                    DEVICE_OUT_SPEAKER
+
+            2.2 如果没有mForceUse[AudioSystem::FOR_COMMUNICATION], 
+                按照以下优先级选择设备 
+                DEVICE_OUT_WIRED_HEADPHONE > 
+                DEVICE_OUT_WIRED_HEADSET > 
+                DEVICE_OUT_BLUETOOTH_A2DP(!isInCall) > 
+                DEVICE_OUT_BLUETOOTH_A2DP_HEADPHONES(!isInCall) >
+                DEVICE_OUT_EARPIECE
+
+    3. STRATEGY_SONIFICATION
+        如果系统in call, 使用STRATEGY_PHONE
+        否则使用
+            device = DEVICE_OUT_SPEAKER
+
+            device2 = 按照以下优先级选择一个设备 
+                DEVICE_OUT_AUX_DIGITAL > 
+                DEVICE_OUT_WIRED_HEADPHONE >
+                DEVICE_OUT_WIRED_HEADSET >
+
+                DEVICE_OUT_BLUETOOTH_A2DP >
+                DEVICE_OUT_BLUETOOTH_A2DP_HEADPHONES >
+                DEVICE_OUT_BLUETOOTH_A2DP_SPEAKER >
+
+                DEVICE_OUT_SPEAKER
+
+            device |= device2
+
+    4. STRATEGY_MEDIA
+        按照以下优先级选择设备 
+        DEVICE_OUT_AUX_DIGITAL > 
+        DEVICE_OUT_WIRED_HEADPHONE >
+        DEVICE_OUT_WIRED_HEADSET >
+
+        DEVICE_OUT_BLUETOOTH_A2DP >
+        DEVICE_OUT_BLUETOOTH_A2DP_HEADPHONES >
+        DEVICE_OUT_BLUETOOTH_A2DP_SPEAKER >
+
+        DEVICE_OUT_SPEAKER

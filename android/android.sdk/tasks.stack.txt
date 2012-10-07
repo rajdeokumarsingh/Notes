@@ -1,0 +1,187 @@
+Tasks and Back Stack
+
+Keyword:
+    task, back stack,
+    
+Review questions:
+    What is a task?
+    What is a back stack?
+
+    When does Android start a task?
+
+    How does Android start an activity or an task?
+
+    How does Android resume a task or an activity?
+
+Task
+    A task contains activities
+    A task has a back stack
+        "last in, first out"
+        activities in the back stack are never rearranged
+
+Starting a task
+    set up an activity as the entry point for a task:
+        giving it an intent filter with:
+        <activity ... >
+            <intent-filter ... >
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        causes an icon and label in the launcher
+
+    Users must be able to leave a task and then come back to it later
+        "singleTask" and ""singleInstance", should be used only 
+         when the activity has an ACTION_MAIN and a CATEGORY_LAUNCHER filter
+
+Task go to background
+    when users begin a new task 
+    go to the Home screen, via the HOME key
+
+    the back stack for the task remains intact
+
+default behavior for activities and tasks:
+    After a task goes to background via the HOME key
+        only for a while
+            select the launcher icon to let the task go to foreground
+        for a long time
+            select the launcher icon to let the task go to foreground
+                but only the root actitity is in the task
+
+    An activity popped from a back stack will be destroyed.
+        The system does not retain its state.
+
+Managing Tasks
+    Control tasks by:
+        1. <activity> manifest element
+            * taskAffinity
+            * launchMode
+            * allowTaskReparenting
+            * clearTaskOnLaunch
+            * alwaysRetainTaskState
+            * finishOnTaskLaunch
+
+        2. principal intent flags 
+            * FLAG_ACTIVITY_SINGLE_TOP
+            * FLAG_ACTIVITY_NEW_TASK
+            * FLAG_ACTIVITY_CLEAR_TOP
+
+    Defining launch modes
+        Activity A starts Activity B 
+            B can define in its manifest how it should associate with the current task 
+            A can also request how B should associate with current task
+
+            If both activities define how B should associate with a task, 
+                then A's request is honored over B's request
+
+        Using the manifest file
+            <activity> element's launchMode attribute
+                how the activity should be launched into a task
+
+                    "standard" (the default mode)
+                        creates a new instance of the activity in the task
+                        The activity can be instantiated multiple times
+                        each instance can belong to different tasks
+
+                        每次都创建一个新的activity
+                        同一个task中也可以创建多个instance
+
+                    "singleTop"
+                        same as standard mode, except
+                            Only one instance of an activity at the top of the stack
+                            The onNewIntent() method will be invoked, if the user tries to 
+                                launch the same activity at the top of the stack again
+                               
+                        A-B-C-D:    Current back stack
+                        A-B-C-D-D:  D is launched in default mode
+                        A-B-C-D:    D is launched in "singleTop" mode
+
+                        不能在任务的栈顶有多个相同activity的instance
+                            其他通standard mode
+
+                    "singleTask"
+                        creates a new task
+                        instantiates the activity at the root of the new task
+                        
+                        Only one instance of the activity can exist at a time
+                        However, if an instance of the activity already exists in a separate task
+                            onNewIntent() method will be invoked 
+
+                        T1(A) : Current back stack
+                        T1(A)-T2(B) : A launch B, which is singleTask
+                        T1(A)-T2(B) T3(X): T3 go to foreground, T3 launch B
+                                           B's onNewIntent() method will be invoked
+
+                        系统全局只能有该activity的一个instance
+                        该instance创建时候会分配到一个新的任务中
+                            launch一个已经创建的instance的时候， 该instance的onNewIntent会被调用
+
+                    "singleInstance"
+                        Same as "singleTask"
+
+                        that the system doesn't launch any other activities into the task 
+                        any activities started by this one open in a separate task
+
+                        T1(A) : Current back stack
+                        T1(A)-T2(B) : A launch B, which is singleInstance mode
+                        T1(A)-T2(B)-T3(C): B launch C, which could be any mode
+
+                        系统全局只能有该activity的一个instance, 而且该instance独占一个任务
+                            其他同singleTask
+
+        Using Intent flags
+            FLAG_ACTIVITY_NEW_TASK
+                same as "singleTask"
+
+            FLAG_ACTIVITY_SINGLE_TOP
+                same as "singleTop" 
+
+            FLAG_ACTIVITY_CLEAR_TOP
+                if the activity is already running in the current task, 
+                    all other activities on top of it are destroyed 
+                    onNewIntent() of the instance will be called
+
+                    most often used in conjunction with FLAG_ACTIVITY_NEW_TASK.
+
+Handling affinities
+    indicates which task an activity prefers to belong to
+
+    By default, all the activities from the same application have an affinity for each other
+
+    taskAffinity attribute of <activity> 
+        Launch a activity with the FLAG_ACTIVITY_NEW_TASK flag
+            If there's already an existing task with the same affinity as the new activity, 
+                the activity is launched into that task
+            If not, it begins a new task
+
+        allowTaskReparenting attribute set to "true"
+           the activity can move from the task it starts to the task it has an affinity for, 
+                when that task comes to the foreground.
+
+Clearing the back stack
+    leaves a task for a long time
+        By default, clears the task of all activities except the root activity
+
+    alwaysRetainTaskState
+        if set to "true" in the root activity 
+            The task retains all activities in its stack even after a long period
+
+    clearTaskOnLaunch
+        the opposite of alwaysRetainTaskState
+        if set to "true" in the root activity of a task
+            The user always returns to the task in its initial state, 
+                even after a leaving the task for only a moment
+        
+    finishOnTaskLaunch
+        like clearTaskOnLaunch
+        it's set to "true"
+            It can also cause any activity to go away, including the root activity.
+
+        for those cases where you don't want the user to be able to return to an activity
+
+[Finished at 2011-09-05]
+[Revised at 2011-09-06]
+
+
+

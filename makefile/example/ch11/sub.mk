@@ -1,0 +1,3 @@
+objects += command.o
+
+
