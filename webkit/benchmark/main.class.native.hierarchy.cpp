@@ -140,3 +140,8 @@ FrameView 1 ---> {
         }
     }
 }
+
+WebViewCore 1 --> {
+    WebViewCore.java [JNI binding] // 每个page都有有一个WebViewCore
+}
+

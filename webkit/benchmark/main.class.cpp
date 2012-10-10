@@ -2,8 +2,8 @@ Page
 WebFrame
 WebFrameView
 Frame 
-FrameView // TODO:
-WebViewCore
+FrameView
+WebViewCore // TODO:
 FrameLoaderClientAndroid
 Document
 FrameLoader
@@ -168,10 +168,12 @@ FrameView {
             isScrollbar
 
     view中的常规组件如button, checkbox, scroll bar的绘制一般都是通过各自的theme来实现。
-
 }
 
 WebViewCore(Frame)
+    对应Java层的WebViewCore
+    和java层之间传递各种事件
+
     WebKit/android/jni/WebViewCore.h
     ./code/WebViewCore.cpp
 
