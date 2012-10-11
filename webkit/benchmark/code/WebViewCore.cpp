@@ -1,3 +1,78 @@
+// 全局数据组成
+{
+    // Page 1 <---> WebViewCore <---> JavaGlue <--JNI--> WebViewCore
+
+    // one instance of WebViewCore per page for calling into Java's WebViewCore
+    // 每个page对应一个WebViewCore
+    // 每个WebViewCore对应一个WebView
+
+    // 所有WebViewCore都记录在一个全局的链表中
+    // 在WebViewCore的构造函数中，将其自身加入到该链表
+    // 析构函数中，将其从链表中移除
+    static SkTDArray<WebViewCore*> gInstanceList;
+
+
+    // 和java层的绑定
+    {
+        struct WebViewCore::JavaGlue {                                                                         
+            jweak       m_obj;      // 指向java层的WebViewCore对象
+            jmethodID   m_scrollTo;
+            ...
+        }
+
+        // 创建WebViewCore对象的时候，将m_obj(weak reference)指向java WebViewCore对象
+        // FIXME: 为什么是weak reference: 注释中写明了是防止内存泄漏
+        WebViewCore::WebViewCore(JNIEnv* env, jobject javaWebViewCore, WebCore::Frame* mainframe)
+        ... , m_javaGlue(new JavaGlue) ...  {
+
+            jclass clazz = env->GetObjectClass(javaWebViewCore);
+            m_javaGlue->m_obj = env->NewWeakGlobalRef(javaWebViewCore);
+            m_javaGlue->m_scrollTo = GetJMethod(env, clazz, "contentScrollTo", "(IIZZ)V");
+            ...
+        }
+
+        WebViewCore::~WebViewCore()                                                                            
+        {                                                                                                      
+            WebViewCore::removeInstance(this);                                                                 
+
+            if (m_javaGlue->m_obj) {
+                JNIEnv* env = JSC::Bindings::getJNIEnv();
+                env->DeleteWeakGlobalRef(m_javaGlue->m_obj);                                                   
+                m_javaGlue->m_obj = 0;                                                                         
+            }
+            delete m_javaGlue;
+        }  
+
+    }
+
+    // Field ids for Java WebViewCore
+    struct WebViewCoreFields {
+        // 将native的WebViewCore的指针保存到java WebViewCore中
+        jfieldID    m_nativeClass; 
+
+        // 对应meta "viewport"中的width, height, initial-scale, 
+            // maximum-scale, mimimum-scale, user-scalable
+            // target-densitydpi: (low-dpi:120, medium-dpi:160, high-dpi:240, device-dpi:0)
+
+            // 参见 ../../webtech/html/note.meta.viewport.html
+            // 参见WebCore/page/Settings.cpp
+        jfieldID    m_viewportWidth;        
+        jfieldID    m_viewportHeight;
+        jfieldID    m_viewportInitialScale;
+        jfieldID    m_viewportMinimumScale;
+        jfieldID    m_viewportMaximumScale;
+        jfieldID    m_viewportUserScalable;
+        jfieldID    m_viewportDensityDpi;
+
+        jfieldID    m_webView;
+        jfieldID    m_drawIsPaused;
+        jfieldID    m_lowMemoryUsageMb;
+        jfieldID    m_highMemoryUsageMb;
+        jfieldID    m_highUsageDeltaMb;
+    } gWebViewCoreFields;
+
+
+}
 
 // 内部数据
 {
@@ -426,26 +501,6 @@
     void scrollRenderLayer(int layer, const SkRect& rect);
 
 }
-
-
-
-
-
-// 每个WebView对应一个WebViewCore
-// one instance of WebViewCore per page for calling into Java's WebViewCore
-class WebViewCore : public WebCoreRefObject 
-
-    // 所有WebViewCore都记录在一个全局的链表中
-    // 在WebViewCore的构造函数中，将其自身加入到该链表
-    // 析构函数中，将其从链表中移除
-    static SkTDArray<WebViewCore*> gInstanceList;
-
-
-
-// Check whether a media mimeType is supported in Android media framework.
-// jni 2 cpp
-bool WebViewCore::isSupportedMediaMimeType(const WTF::String& mimeType) 
-
 
 // layout自身和其子孙
 static bool layoutIfNeededRecursive(WebCore::Frame* f)
