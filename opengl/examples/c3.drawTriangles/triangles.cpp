@@ -25,8 +25,6 @@ void RenderScene(void)
     GLfloat y = 0.0f;
     GLfloat z = 0.0f;
     GLfloat angle = 0.0f;
-    GLfloat sizeRange[2];
-    GLfloat sizeStep;
 
     // Clear the window with current clearing color
     glClear(GL_COLOR_BUFFER_BIT);
@@ -35,24 +33,38 @@ void RenderScene(void)
     glRotatef(xRot, 1.0f, 0.0f, 0.0f);
     glRotatef(yRot, 0.0f, 1.0f, 0.0f);
 
-    glGetFloatv(GL_POINT_SIZE_RANGE, sizeRange); // get min and max size
-    glGetFloatv(GL_POINT_SIZE_GRANULARITY, &sizeStep); // get size step
-    GLfloat pointSize = sizeRange[0];
-
-    z = -50.0f;
-    for(angle = 0.0f; angle <= (2.0f*GL_PI)*3.0f; angle += 0.1f) {
-        x = 50.0f * sin(angle);
-        y = 50.0f * cos(angle);
-
-        glPointSize(pointSize);
-
-        glBegin(GL_POINTS);
-            glVertex3f(x, y, z);
-        glEnd();
-
-        z += 0.5f;
-        pointSize += sizeStep;
+    // Call only once for all remaining points
+    /* 
+    glBegin(GL_TRIANGLES);
+    {
+        glVertex3f(50.0f, 0.0f, 0.0f);
+        glVertex3f(50.0f, 50.0f, 0.0f);
+        glVertex3f(0.0f, 0.0f, 0.0f);
     }
+    glEnd();
+    */
+
+    /*
+    glBegin(GL_TRIANGLE_STRIP);
+    {
+        glVertex3f(0.0f, 0.0f, 0.0f);
+        glVertex3f(50.0f, 0.0f, 0.0f);
+        glVertex3f(50.0f, 50.0f, 0.0f);
+        glVertex3f(70.0f, 80.0f, 0.0f);
+    }
+    glEnd();
+    */
+
+    glBegin(GL_TRIANGLE_FAN);
+    {
+        glVertex3f(0.0f, 0.0f, 0.0f);
+        glVertex3f(50.0f, 50.0f, 0.0f);
+        glVertex3f(50.0f, 0.0f, 0.0f);
+        glVertex3f(50.0f, -50.0f, 0.0f);
+        glVertex3f(-50.0f,-50.0f, 0.0f);
+    }
+    glEnd();
+
 
     glPopMatrix();
 
@@ -147,5 +159,4 @@ int main(int argc, char* argv[])
 
     return 0;
 }
-
 
