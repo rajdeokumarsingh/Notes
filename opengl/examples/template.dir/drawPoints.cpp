@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <math.h>
 
-static const float GL_PI = 3.1415926f;
+static const float GL_PI = 3.1415f;
 
 // Rotation amounts
 static GLfloat xRot = 0.0f;

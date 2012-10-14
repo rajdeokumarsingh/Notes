@@ -14,6 +14,13 @@ static GLfloat xRot = 0.0f;
 static GLfloat yRot = 0.0f;
 
 // Bitmap of camp fire
+GLubyte fire[12] = { 
+    0x00, 0x00, 0xFF, 0xFF,
+    0xFF, 0xFF, 0x00, 0x00,
+    0xFF, 0xFF, 0xFF, 0xFF, 
+};
+
+/*
 GLubyte fire[128] = { 0x00, 0x00, 0x00, 0x00, 
 				   0x00, 0x00, 0x00, 0x00,
 				   0x00, 0x00, 0x00, 0x00,
@@ -46,7 +53,7 @@ GLubyte fire[128] = { 0x00, 0x00, 0x00, 0x00,
 				   0x00, 0x85, 0x10, 0x00,
 				   0x00, 0x03, 0x00, 0x00,
 				   0x00, 0x00, 0x10, 0x00 };
-				   
+ */
 
 // Called to draw scene
 void RenderScene(void)
@@ -62,7 +69,11 @@ void RenderScene(void)
 	// Begin the stop sign shape,
 	// use a standard polygon for simplicity
 	glBegin(GL_POLYGON);
-		glVertex2f(-20.0f, 50.0f);
+		glVertex2f(0.0f, 0.0f);
+		glVertex2f(50.0f, 0.0f);
+		glVertex2f(50.0f, 50.0f);
+		glVertex2f(0.0f, 50.0f);
+		/*glVertex2f(-20.0f, 50.0f);
 		glVertex2f(20.0f, 50.0f);
 		glVertex2f(50.0f, 20.0f);
 		glVertex2f(50.0f, -20.0f);
@@ -70,6 +81,7 @@ void RenderScene(void)
 		glVertex2f(-20.0f, -50.0f);
 		glVertex2f(-50.0f, -20.0f);
 		glVertex2f(-50.0f, 20.0f);
+		*/
 	glEnd();
 
 	// Restore transformations

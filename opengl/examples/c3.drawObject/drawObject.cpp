@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <math.h>
 
-static const float GL_PI = 3.1415f;
+#define GL_PI 3.1415f
 
 // Rotation amounts
 static GLfloat xRot = 0.0f;
@@ -25,34 +25,59 @@ void RenderScene(void)
     GLfloat y = 0.0f;
     GLfloat z = 0.0f;
     GLfloat angle = 0.0f;
-    GLfloat sizeRange[2];
-    GLfloat sizeStep;
 
     // Clear the window with current clearing color
-    glClear(GL_COLOR_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+    glEnable(GL_CULL_FACE);
+    glEnable(GL_DEPTH_TEST);
+    // glPolygonMode(GL_BACK,GL_FILL);
 
     glPushMatrix();
     glRotatef(xRot, 1.0f, 0.0f, 0.0f);
     glRotatef(yRot, 0.0f, 1.0f, 0.0f);
 
-    glGetFloatv(GL_POINT_SIZE_RANGE, sizeRange); // get min and max size
-    glGetFloatv(GL_POINT_SIZE_GRANULARITY, &sizeStep); // get size step
-    GLfloat pointSize = sizeRange[0];
+    glBegin(GL_TRIANGLE_FAN);
+    {
+        int iPivot = 1;
+        glVertex3f(.0f, .0f, 75.0f);
+        // for(angle = 2 * GL_PI; angle >= 0.0f; angle -= (GL_PI / 8.0f))
+        for(angle = 0.0f; angle <= 2 * GL_PI; angle += (GL_PI / 8.0f))
+        {
+            x = 50.0f*sin(angle);
+            y = 50.0f*cos(angle);
 
-    z = -50.0f;
-    for(angle = 0.0f; angle <= (2.0f*GL_PI)*3.0f; angle += 0.1f) {
-        x = 50.0f * sin(angle);
-        y = 50.0f * cos(angle);
+            if(0 == iPivot % 2)
+                glColor3f(0.0f, 1.0f, 1.0f);
+            else
+                glColor3f(1.0f, 0.0f, 1.0f);
 
-        glPointSize(pointSize);
-
-        glBegin(GL_POINTS);
+            iPivot++;
             glVertex3f(x, y, z);
-        glEnd();
-
-        z += 0.5f;
-        pointSize += sizeStep;
+        }
     }
+    glEnd();
+
+    glBegin(GL_TRIANGLE_FAN);
+    {
+        int iPivot = 1;
+        glVertex3f(.0f, .0f, .0f);
+        for(angle = 2 * GL_PI; angle >= 0.0f; angle -= (GL_PI / 8.0f))
+        // for(angle = 0.0f; angle <= 2 * GL_PI; angle += (GL_PI / 8.0f))
+        {
+            x = 50.0f*sin(angle);
+            y = 50.0f*cos(angle);
+
+            if(0 == iPivot % 2)
+                glColor3f(0.0f, 1.0f, 1.0f);
+            else
+                glColor3f(1.0f, 0.0f, 1.0f);
+
+            iPivot++;
+            glVertex3f(x, y, z);
+        }
+    }
+    glEnd();
 
     glPopMatrix();
 
@@ -70,6 +95,11 @@ void SetupRC(void)
 
     // Set paint color to green
     glColor3f(0.0f, 1.0f, 0.0f);
+
+    glShadeModel(GL_FLAT);
+
+    // use triangle fan
+    glFrontFace(GL_CW);
 }
 
 
@@ -147,5 +177,4 @@ int main(int argc, char* argv[])
 
     return 0;
 }
-
 
