@@ -32,3 +32,30 @@ user-scalable：
 https://developer.mozilla.org/en/Mobile/Viewport_meta_tag
 http://developer.apple.com/library/safari/#documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html
 http://www.quirksmode.org/mobile/viewports2.html
+
+viewport参数的默认值和设置
+void Settings::resetMetadataSettings()
+{
+    m_viewport_width = -1; // 默认为-1
+    m_viewport_height = -1;
+    m_viewport_initial_scale = 0;
+    m_viewport_minimum_scale = 0;
+    m_viewport_maximum_scale = 0;
+    m_viewport_user_scalable = true;
+    m_viewport_target_densitydpi = -1;
+    ...
+}
+
+
+void Settings::setMetadataSettings(const String& key, const String& value) {
+    width :
+        default:            m_viewport_width = -1;
+        "device-width":     m_viewport_width = 0;
+
+        m_viewport_width = int value
+
+}
+
+
+
+

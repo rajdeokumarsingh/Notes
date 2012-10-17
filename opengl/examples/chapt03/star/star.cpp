@@ -19,6 +19,9 @@ static GLfloat yRot = 0.0f;
 #define MODE_LINE  1
 #define MODE_POINT 2
 
+#define TRUE true
+#define FALSE false
+
 int iMode = MODE_SOLID;
 GLboolean bEdgeFlag = TRUE;
 

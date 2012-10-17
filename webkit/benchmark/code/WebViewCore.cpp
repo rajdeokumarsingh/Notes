@@ -71,7 +71,6 @@
         jfieldID    m_highUsageDeltaMb;
     } gWebViewCoreFields;
 
-
 }
 
 // 内部数据

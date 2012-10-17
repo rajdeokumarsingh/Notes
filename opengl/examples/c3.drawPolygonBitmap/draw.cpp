@@ -11,112 +11,70 @@
 #include <stdio.h>
 #include <math.h>
 
-static const float GL_PI = 3.1415f;
+#define GL_PI 3.1415f
 
 // Rotation amounts
 static GLfloat xRot = 0.0f;
 static GLfloat yRot = 0.0f;
 
+GLubyte fire[128] = { 0x00, 0x00, 0x00, 0x00, 
+    0x00, 0x00, 0x00, 0x00,
+    0x00, 0x00, 0x00, 0x00,
+    0x00, 0x00, 0x00, 0x00,
+    0x00, 0x00, 0x00, 0x00,
+    0x00, 0x00, 0x00, 0x00,
+    0x00, 0x00, 0x00, 0xc0,
+    0x00, 0x00, 0x01, 0xf0,
+    0x00, 0x00, 0x07, 0xf0,
+    0x0f, 0x00, 0x1f, 0xe0,
+    0x1f, 0x80, 0x1f, 0xc0,
+    0x0f, 0xc0, 0x3f, 0x80,
+    0x07, 0xe0, 0x7e, 0x00,
+    0x03, 0xf0, 0xff, 0x80,
+    0x03, 0xf5, 0xff, 0xe0,
+    0x07, 0xfd, 0xff, 0xf8,
+    0x1f, 0xfc, 0xff, 0xe8,
+    0xff, 0xe3, 0xbf, 0x70, 
+    0xde, 0x80, 0xb7, 0x00,
+    0x71, 0x10, 0x4a, 0x80,
+    0x03, 0x10, 0x4e, 0x40,
+    0x02, 0x88, 0x8c, 0x20,
+    0x05, 0x05, 0x04, 0x40,
+    0x02, 0x82, 0x14, 0x40,
+    0x02, 0x40, 0x10, 0x80, 
+    0x02, 0x64, 0x1a, 0x80,
+    0x00, 0x92, 0x29, 0x00,
+    0x00, 0xb0, 0x48, 0x00,
+    0x00, 0xc8, 0x90, 0x00,
+    0x00, 0x85, 0x10, 0x00,
+    0x00, 0x03, 0x00, 0x00,
+    0x00, 0x00, 0x10, 0x00 };
+
+
 ///////////////////////////////////////////////////////////
 // Called to draw scene
 void RenderScene(void)
 {
-    GLfloat x = 0.0f;
-    GLfloat y = 0.0f;
-    GLfloat z = 0.0f;
-    GLfloat angle = 0.0f;
-
     // Clear the window with current clearing color
-    glClear(GL_COLOR_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     glPushMatrix();
     glRotatef(xRot, 1.0f, 0.0f, 0.0f);
     glRotatef(yRot, 0.0f, 1.0f, 0.0f);
 
-    // Call only once for all remaining points
-    /* glBegin(GL_LINES);
-    {
-        z = 0.0f;
-        for(angle = 0.0f; angle <= GL_PI; angle += (GL_PI / 20.0f))
-        {
-            // Top half of the circle
-            x = 50.0f*sin(angle);
-            y = 50.0f*cos(angle);
-            glVertex3f(x, y, z);
-
-            // Bottom half of the circle
-            x = 50.0f*sin(angle+GL_PI);  // angle + pi
-            y = 50.0f*cos(angle+GL_PI);  // angle + pi
-            glVertex3f(x, y, z);
-        }
-    }
+    // Begin the stop sign shape,
+    // use a standard polygon for simplicity
+    glBegin(GL_POLYGON);
+        glVertex2f(-20.0f, 50.0f);
+        glVertex2f(20.0f, 50.0f);
+        glVertex2f(50.0f, 20.0f);
+        glVertex2f(50.0f, -20.0f);
+        glVertex2f(20.0f, -50.0f);
+        glVertex2f(-20.0f, -50.0f);
+        glVertex2f(-50.0f, -20.0f);
+        glVertex2f(-50.0f, 20.0f);
     glEnd();
-    */
 
-    /* draw line with different width
-    GLfloat sizeRange[2];
-    GLfloat sizeStep;
-    glGetFloatv(GL_LINE_WIDTH_RANGE, sizeRange); // get min and max size
-    glGetFloatv(GL_LINE_WIDTH_GRANULARITY, &sizeStep); // get size step
-    GLfloat lineWidth = sizeRange[0];
-
-    {
-        z = -50.0f;
-        GLfloat xPrev = 50.0f * sin(0);
-        GLfloat yPrev = 50.0f * cos(0);
-        GLfloat zPrev = z;
-
-        GLfloat angleStep = 0.5f;
-        GLfloat angleRange = (2.0f*GL_PI)*3.0f;
-        GLfloat zStep = 100.0f / (angleRange / angleStep);
-
-        int count = 0;
-        for(angle = 0.0f; angle <= angleRange; angle += angleStep) {
-            glLineWidth(lineWidth);
-
-            x = 50.0f * sin(angle);
-            y = 50.0f * cos(angle);
-
-            glBegin(GL_LINE_STRIP);
-                glVertex3f(xPrev, yPrev, zPrev);
-                glVertex3f(x, y, z);
-            glEnd();
-
-            xPrev = x;
-            yPrev = y;
-            zPrev = z;
-
-            z += zStep;
-            count++;
-            lineWidth += 2 * sizeStep;
-        }
-    }
-    */
-
-    {
-        glEnable(GL_LINE_STIPPLE);
-
-        GLfloat y;                    // Storeage for varying Y coordinate
-        GLint factor = 3;            // Stippling factor
-        GLushort pattern = 0x00FF;    // Stipple pattern
-
-        // Step up Y axis 20 units at a time    
-        for(y = -90.0f; y < 90.0f; y += 20.0f)
-        {
-            // Reset the repeat factor and pattern
-            glLineStipple(factor,pattern);
-
-            // Draw the line
-            glBegin(GL_LINES);
-            glVertex2f(-80.0f, y);
-            glVertex2f(80.0f, y);    
-            glEnd();
-
-            factor++;
-        }
-
-        glDisable(GL_LINE_STIPPLE);
-    }
     glPopMatrix();
 
     // Flush drawing commands
@@ -133,6 +91,12 @@ void SetupRC(void)
 
     // Set paint color to green
     glColor3f(0.0f, 1.0f, 0.0f);
+
+    // Enable polygon stippling
+    glEnable(GL_POLYGON_STIPPLE);
+
+    // Specify a specific stipple pattern
+    glPolygonStipple(fire);
 }
 
 
@@ -200,7 +164,7 @@ int main(int argc, char* argv[])
 {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
-    glutInitWindowSize(800, 600);
+    //    glutInitWindowSize(800, 600);
     glutCreateWindow("GLRect");
     glutDisplayFunc(RenderScene);
     glutReshapeFunc(ChangeSize);
