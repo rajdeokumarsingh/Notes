@@ -1,0 +1,143 @@
+./command.txt
+
+./flow.java
+   
+
+TODO:
+    java反射
+
+问题
+    WindowManagerService 权限? {
+
+        // 需要通过反射
+        /** {@hide} */
+        public class WindowManagerService
+
+        startViewServer需要的权限
+
+            // root的手机能够满足要求
+            if (isSystemSecure())
+                // return "1".equals(SystemProperties.get(SYSTEM_SECURE, "1")) &&
+                                                           "ro.secure"
+                //      "0".equals(SystemProperties.get(SYSTEM_DEBUGGABLE, "0"));
+                                                           "ro.debuggable"
+                return false;
+
+            // 需要权限android.permission.DUMP
+            if (!checkCallingPermission(Manifest.permission.DUMP, "startViewServer"))
+                return false;
+    }
+
+    import android.view.ViewDebug; {
+        final Method dispatch = ViewDebug.class.getDeclaredMethod("dispatchCommand",
+                View.class, String.class, String.class, OutputStream.class);
+        dispatch.setAccessible(true);
+        dispatch.invoke(null, window, command, parameters,
+                new UncloseableOuputStream(client.getOutputStream()));
+    }
+
+    moto
+        base/core/java/android/view/PtfViewDebug.java:48:
+
+reference:
+http://space.189works.com/home-space-uid-10451712-do-blog-id-70369.html
+
+
+Android工具HierarchyViewer 代码导读
+http://www.cnblogs.com/vowei/archive/2012/07/30/2614353.html
+http://www.cnblogs.com/vowei/archive/2012/08/03/2618753.html
+http://www.cnblogs.com/vowei/archive/2012/08/08/2627614.html
+http://www.cnblogs.com/vowei/archive/2012/08/22/2650722.html
+
+https://github.com/romainguy/ViewServer.git
+
+自动测试
+
+分类：
+
+1. 使用基于Instrumentation类库及其衍生类
+
+2. 使用monkeyrunner
+    测试用例运行在PC上，通过USB或者WIFI向Android手机的应用发送测试命令
+
+HierarchyViewer
+    Android SDK工具
+    用于显示Android手机上各应用的UI布局
+
+    原理是通过与运行Android手机上的ViewServer建立一个socket连接
+        （这个连接可以通过WIFI，也可以通过USB端口），向ViewServer发送命令的形式通信
+
+        a) 例如，当HierarchyViewer发送 DUMP -1 这个指令时，
+            ViewServer就会将整个Android系统的UI树形布局回传给HierarchyViewer。
+        b) HierarchyViewer再解析回传的字符串
+
+
+HierarchyViewer工作原理
+1，如何连接ViewServer
+
+    ViewServer是Android通过4939端口提供的服务
+
+    （1）Forword端口。就是把Android设备上的4939端口映射到PC的某端口上，这样，向PC的该端口号发包都会转发到Android设备的4939端口上。
+    adb devices
+
+
+
+2，如何获取活动的Activities
+    out.write("LIST");
+    out.newLine();
+    out.flush();
+
+    // 获取到如下活动的activity列表
+    44fd1b78 com.android.internal.service.wallpaper.ImageWallpaper
+    4507aa28 com.android.launcher/com.android.launcher2.Launcher
+    45047328 com.tencent.mobileqq/com.tencent.mobileqq.activity.HomeActivity
+    450b8d18 com.tencent.mobileqq/com.tencent.mobileqq.activity.NotificationActivity
+    ...
+
+    每行前面的16进制数字，是一个每个activity的hashcode
+
+
+3，如何获取Activity的控件树
+    //out.write("DUMP ffffffff");  // ffffffff作为参数，那么就是取最前端的Activity
+    out.write("DUMP 4507aa28");     // dump com.android.launcher/com.android.launcher2.Launcher
+    out.newLine();
+    out.flush();
+
+    // 获得如下信息
+    android.widget.FrameLayout@44edba90 mForeground=52,android.graphics.drawable.NinePatchDrawable@44edc1e0 
+    ...
+
+    返回的文本中的每一行是Activity中的一个控件，里面包含了该控件的所有信息
+    HierarchyViewer正是通过解析这些信息并把它们显示在属性列表中的。
+
+    需要注意每行的开始处都包含一个“控件类型@hash code”的字段，如android.widget.FrameLayout@44edba90 
+
+    HierarchyViewer是怎么把这个文本解析成层次图的呢？
+        每行前面都有若干空格的缩进，比如缩进5个空格表示该控件在第六层
+        那么往上找，最近的缩进4个空格的控件就是它的父控件
+
+
+
+4，如何获取截图
+    在层次图上选中控件时，HierarchyViewer会显示该控件的截图
+
+    out.write("CAPTURE 4507aa28 android.widget.FrameLayout@44edba90"); // 参数是：activity hash code, 控件hashcode
+    out.newLine();
+    out.flush();
+
+HierarchyViewer 代码结构
+
+~/Android-Source/sdk/hierarchyviewer2/app   中导入hierarchyviewer项目
+~/Android-Source/sdk/hierarchyviewer2/libs/hierarchyviewerlib 导入hierarchyviewerlib项目
+ddmlib和ddmuilib是许多Android SDK工具共同依赖的包，你可以选择不导入这两个项目而直接引入jar文件
+
+
+
+AndroidDebugBridge.java : ADB API，位于ddmlib项目中。 
+    它实现了命令行版adb一样的功能，在HierarchyViewer中主要用到其连接设备，forward端口，启动ViewServer等操作。
+
+DeviceConnection.java: 
+    负责和ViewServer通信，向ViewServer发送命令并接受其返回的信息。从而获取Activity列表、控件层次结构图、截图等。
+
+
+每个控件的文本信息将被解析，所有信息将保存在ViewNode对象中。

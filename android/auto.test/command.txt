@@ -1,0 +1,32 @@
+
+    
+adb devices
+    List of devices attached
+    emulator-5554   device
+    emulator-5556   device
+
+以设备emulator-5556为例，接下来我们把它的4939端口映射到PC的4939端口上:
+    adb -s emulator-5556 forward tcp:4939 tcp:4939
+
+    # adb forward tcp:4939 tcp:4939
+
+    如果连接了多台Android设备，HierarchyViewer将把下一台Android设备的4939端口映射到PC的4940端口，以此类推。
+
+判断ViewServer是否打开:
+    adb -s emulator-5556 shell service call window 3
+    # adb shell service call window 3
+
+
+    如果返回值是"Result: Parcel(00000000 00000000 '........')"，说明ViewServer没有打开
+    Result: Parcel(00000000 00000001   '........') ， 说明ViewServer已经打开
+
+
+打开ViewServer
+    adb -s emulator-5556 shell service call window 1 i32 4939
+    # adb shell service call window 1 i32 4939
+
+关闭ViewServer
+    adb -s emulator-5556 shell service call window 2 i32 4939
+    # adb shell service call window 2 i32 4939
+
+
