@@ -14,6 +14,25 @@
     变量
         不用声明
         x = 3
+
+        对于对象变量，其行为和java一样。可将对象看成是内存区域的引用
+
+            # example 1
+            x = {}
+            y = x
+            x['key'] = 'value'
+            print y # {'key': 'value'}
+            x = {}  # refer to a new object
+            print y # {'key': 'value'}, refer to same object
+
+            # example 2
+            x = {}
+            y = x
+            x['key'] = 'value'
+            print y # {'key': 'value'}
+            x.clear() 
+            print y # {}
+
 }
 
 函数 {

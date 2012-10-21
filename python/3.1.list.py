@@ -113,6 +113,8 @@ print slist
         print 'r' in 'forward' # True
         'forward'.index(r) # 2
         'book'.count('0') # 2
+        tag.min() # 5
+        tag.max() # 5
 
     修改方法
         赋值
