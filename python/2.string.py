@@ -6,8 +6,8 @@
     str("Hello, world")     # Hello, world, 打印用户可以理解的值
     repr("Hello, world")    # 'Hello, world' , 将结果字符串转化为合法的python表达式字符串
 
-    str(1000000L)           # 1000000L
-    repr(1000000L)          # 10000L
+    str(10L)           # 10
+    repr(10L)          # 10L
 
     # 忽略换行
     print "Hello \

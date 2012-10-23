@@ -35,7 +35,7 @@
         print greeting.find("perl")
         # output: -1
 
-        # in 操作符只能够查找单个字符
+        # in 操作符也能实现find功能，但是仅仅返回True/False
 
         print greeting.find("perl", 2) # 提供起点
         print greeting.find("perl", 2, 6) # 提供起点, 结束点
