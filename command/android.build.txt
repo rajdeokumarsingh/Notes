@@ -1,0 +1,63 @@
+Building the System
+
+. build/envsetup.sh
+lunch
+
+Build name      Device              Notes
+full            emulator            fully configured with all languages, apps, input methods
+full_maguro     maguro              full build running on Galaxy Nexus GSM/HSPA+ ("maguro")
+full_panda      panda               full build running on PandaBoard ("panda")
+
+Build type          Use
+user                limited access; suited for production
+userdebug           like "user" but with root access and debuggability; preferred for debugging
+eng                 development configuration with additional debugging tools
+
+make -j4
+
+Flash a Device
+
+    要是没有adb和fastboot, build:
+        make fastboot adb
+
+
+    Place the device in fastboot mode either manually by 
+        1. holding the appropriate key combination at boot, 
+            maguro(Galaxy Nexus): Press and hold both Volume Up and Volume Down, then press and hold Power
+
+        2. or from the shell with
+            $ adb reboot bootloader
+                reboot from Android directly into the bootloader with no key combinations
+
+                $ adb reboot recovery # 进入recovery模式
+
+    Unlocking the bootloader
+        It's only possible to flash a custom system if the bootloader allows it.
+        Galaxy Nexus the bootloader is locked by default
+        With the device in fastboot mode, the bootloader is unlocked with
+
+        $ fastboot oem unlock
+        $ fastboot oem lock    # lock bootloader
+
+
+    Once the device is in fastboot mode, run
+        $ fastboot flashall -w
+        # -w option wipes the /data partition on the device
+
+
+Obtaining proprietary binaries
+    不是开源的代码
+    这些binary下载下来后，需要在root src目录下解压
+        自解压后会放到vendor目录
+
+    变更了设备后，需要调用下面语句清空上一次build产生的文件
+        $ make clobber
+        
+reference: 
+    http://source.android.com/source/building.html
+    http://source.android.com/source/building-devices.html
+
+
+
+
+
