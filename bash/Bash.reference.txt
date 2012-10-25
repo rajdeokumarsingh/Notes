@@ -245,3 +245,4 @@ do
     echo "width: "$nw " height: " $nh
     /usr/bin/convert -quality 100 -geometry "$nw"x"$nh" $i $i
 done
+
