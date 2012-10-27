@@ -1,0 +1,39 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sdk.example"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".SdkMainActivity"
+            android:label="@string/title_activity_sdk_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".adapter.AdapterExamples"
+            android:label="@string/title_activity_adapters"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name=".adapter.ArrayAdapterSimple"
+            android:label="@string/title_activity_adapter_array" >
+        </activity>
+        <activity
+            android:name=".adapter.ArrayAdapterImageText"
+            android:label="@string/title_activity_adapter_array_image_example" >
+        </activity>
+    </application>
+
+</manifest>
