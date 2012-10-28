@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.sdk.example.adapter.AdapterExamples;
+import com.sdk.example.package1.manager.PackageInfoActivity;
 
 import android.app.ListActivity;
 import android.content.Intent;
@@ -18,6 +19,8 @@ import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
 public class SdkMainActivity extends ListActivity {
+
+	public static final String CATEGORY_SDK_STUDY = "com.sdk.example.intent.category.default";
 
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
@@ -45,13 +48,14 @@ public class SdkMainActivity extends ListActivity {
 		List<Map<String, Object>> nameList = new ArrayList<Map<String, Object>>();
 
 		nameList.add(addItem(AdapterExamples.class, "Adapter Samples"));
+		nameList.add(addItem(PackageInfoActivity.class, "Package Information of SDK study"));
 
-//		for (int i = 0; i < 10; i++) {
-//			Map<String, Object> map = new HashMap<String, Object>();
-//			map.put("title", "title" + i);
-//			map.put("content", "content" + i);
-//			nameList.add(map);
-//		}
+		// for (int i = 0; i < 10; i++) {
+		// Map<String, Object> map = new HashMap<String, Object>();
+		// map.put("title", "title" + i);
+		// map.put("content", "content" + i);
+		// nameList.add(map);
+		// }
 		return nameList;
 	}
 

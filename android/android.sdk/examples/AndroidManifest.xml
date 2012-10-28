@@ -19,20 +19,45 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
             android:name=".adapter.AdapterExamples"
             android:label="@string/title_activity_adapters"
             android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.sdk.example.intent.category.default" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".adapter.ArrayAdapterSimple"
             android:label="@string/title_activity_adapter_array" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.sdk.example.intent.category.default" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".adapter.ArrayAdapterImageText"
             android:label="@string/title_activity_adapter_array_image_example" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.sdk.example.intent.category.default" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".package1.manager.PackageInfoActivity"
+            android:label="@string/title_activity_package_info" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.sdk.example.intent.category.default" />
+            </intent-filter>
         </activity>
     </application>
 

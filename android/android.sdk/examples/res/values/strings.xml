@@ -7,5 +7,6 @@
     <string name="title_activity_adapters">AdapterExamples</string>
     <string name="title_activity_adapter_array">ArrayAdapterExamples</string>
     <string name="title_activity_adapter_array_image_example">ArrayAdapterImageExample</string>
+    <string name="title_activity_package_info">Package Information of SDK Study</string>
 
 </resources>
