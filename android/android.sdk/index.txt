@@ -8,6 +8,8 @@
 ./services.txt [done]
 ./bound.services.txt
 
+./style.theme.txt
+
 ./aidl.txt
 
 ./mediaplayer.txt

@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.sdk.example.adapter.AdapterExamples;
+import com.sdk.example.app.AppExamples;
 import com.sdk.example.package1.manager.PackageInfoActivity;
 
 import android.app.ListActivity;
@@ -26,8 +27,8 @@ public class SdkMainActivity extends ListActivity {
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		Map<String, Object> map = (Map<String, Object>) l
 				.getItemAtPosition(position);
-		Toast.makeText(this, (String) map.get("title"), Toast.LENGTH_SHORT)
-				.show();
+//		Toast.makeText(this, (String) map.get("title"), Toast.LENGTH_SHORT)
+//				.show();
 
 		if (map.get("intent") != null) {
 			startActivity((Intent) map.get("intent"));
@@ -47,8 +48,9 @@ public class SdkMainActivity extends ListActivity {
 	protected List<Map<String, Object>> getData() {
 		List<Map<String, Object>> nameList = new ArrayList<Map<String, Object>>();
 
-		nameList.add(addItem(AdapterExamples.class, "Adapter Samples"));
+		nameList.add(addItem(AdapterExamples.class, "Adapter Examples"));
 		nameList.add(addItem(PackageInfoActivity.class, "Package Information of SDK study"));
+		nameList.add(addItem(AppExamples.class, "App Examples"));
 
 		// for (int i = 0; i < 10; i++) {
 		// Map<String, Object> map = new HashMap<String, Object>();
