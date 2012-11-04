@@ -1,5 +1,10 @@
 ./checklist.java
 
+
+./style.theme.txt
+./Resources.txt
+
+
 ./app.fundamentals.txt [done]
 
 ./activities.txt [done]
@@ -8,7 +13,6 @@
 ./services.txt [done]
 ./bound.services.txt
 
-./style.theme.txt
 
 ./aidl.txt
 
@@ -23,6 +27,9 @@
 ./adapter.java
 
 ./content.provider.java
+
+./sign.app.txt
+./SignedJarBuilder.java
 
 dig more:
     bluetooth

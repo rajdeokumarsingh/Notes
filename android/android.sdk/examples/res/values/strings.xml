@@ -49,6 +49,16 @@
     <string name="title_activity_theme_holo_panel">Theme Holo Panel</string>
     <string name="title_activity_theme_action_bar">Theme Action Bar</string>
     
+    <string name="title_activity_preference">Preference Activity</string>
+    
+    <string name="title_activity_content">Content Activity</string>
+    <string name="title_activity_content_assets">Assets Activity</string>
+    <string name="title_activity_content_clipboard">Clipboard Activity</string>
+    <string name="title_activity_content_packages">Packages Activity</string>
+    <string name="title_activity_content_provider">Provider Activity</string>
+    <string name="title_activity_content_resources">Resources Activity</string>
+    <string name="title_activity_content_storage">Storage Activity</string>
+    
 
     <!-- =============================== -->
     <!-- app/activity examples strings -->

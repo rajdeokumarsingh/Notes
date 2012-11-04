@@ -1,0 +1,38 @@
+
+应该将字符串，图片等资源和程序分开
+
+这些资源在res/目录下，根据不同的配置组织
+
+
+资源的分类:
+    默认的资源
+        所有配置都可以使用
+
+        res/layout/
+
+    特定配置的资源
+        res/layout-land/
+
+
+
+Providing Resources {
+
+    Grouping Resource Types {
+
+        MyProject/
+            src/  
+                MyActivity.java  
+            res/
+                drawable/  
+                    icon.png  
+                layout/  
+                    main.xml
+                    info.xml
+                values/  
+                    strings.xml
+    }
+
+
+
+}
+

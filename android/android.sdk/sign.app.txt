@@ -1,0 +1,373 @@
+command reference: {
+    手工签名过程 {
+        # 生成private key的命令
+        $ keytool -genkey -v -keystore jiangrui.release.key.keystore 
+            -alias ruikey -keyalg RSA -keysize 2048 -validity 10000
+        # -validity: 10000 days
+
+        # 为apk签名
+        $ jarsigner -keystore jiangrui.keystore 
+            my_application.apk ruikey
+
+        # 查看是否已经签名
+        $ jarsigner -verify myapp.apk
+        # $ jarsigner -verbose -verify myapp.apk
+        # $ jarsigner -verbose -certs -verify myapp.apk
+
+        # 运行zipalign
+        $ zipalign -v 4 your_project_name-unaligned.apk 
+            your_project_name.apk
+        # -v == verbose
+        # 4 字节对齐
+    }
+    
+    eclipse签名 {
+        方式1 {
+            clean project
+            right-click project --> Export -> Android 
+                -> Export Android Application
+            输入keystore的位置，密码，...
+            最后选择输出目录
+        }
+
+        方式2 {
+            AndroidManifest.xml的Manifest页面的最后选择
+                export application
+                或export an unsigned apk
+        }
+    }
+
+    Debug Keystore的位置在: ~/.android/debug.keystore
+
+    确认安装了Keytool/Jarsigner (一般安装了JDK就有)
+        ubuntu 10.04中的keytool位置：
+            /usr/bin/keytool -> /etc/alternatives/keytool -> /usr/lib/jvm/java-6-sun/jre/bin/keytool
+
+        ubuntu 10.04中的jarsigner位置：
+            /usr/bin/jarsigner -> /etc/alternatives/jarsigner -> /usr/lib/jvm/java-6-sun/bin/jarsigner
+}
+
+SDK中的签名 {
+    ADT Plugin有两种签名模式：
+
+        1. debug mode
+            适用于开发和调试时使用
+
+            build tool使用JDK中的Keytool工具, 用一个公开的alias和密码创建一对debug keystore/key 
+            每次编译的时候，build tool使用debug key对apk进行签名
+            由于password是公开的, build tool不会提示用户输入keystore/key的密码
+
+        2. release mode
+            适用于正式发布apk到市场时候
+
+            必须通过release模式build
+            必须使用用户自己的private key进行签名
+
+            两种方式：
+                1 Keytool and Jarsigner in the command-line
+                    compile your application to an unsigned .apk
+                    run Keytool manually to generate your own keystore/key
+                    then sign the .apk manually with your private key using Jarsigner (or similar tool)
+                    
+                2 Using the ADT Export Wizard                        
+                    use the Export Wizard to compile the application, 
+                    generate a private key (if necessary), 
+                    and sign the .apk, 
+                    
+                    all in a single process using the Export Wizard.
+
+            !!! run zipalign on the APK after signed
+
+}
+
+Basic Setup for Signing {
+    工具:
+        1 生成私钥: 
+            keytool 
+
+        2 签名工具: 
+            jarsigner 
+            使用私钥对apk进行签名
+
+        3 优化apk: 
+            zipalign 
+            签名完成后，对apk进行优化
+
+
+    确认安装了Keytool/Jarsigner (一般安装了JDK就有)
+        ubuntu 10.04中的keytool位置：
+            /usr/bin/keytool -> /etc/alternatives/keytool -> /usr/lib/jvm/java-6-sun/jre/bin/keytool
+
+        ubuntu 10.04中的jarsigner位置：
+            /usr/bin/jarsigner -> /etc/alternatives/jarsigner -> /usr/lib/jvm/java-6-sun/bin/jarsigner
+}
+
+Signing in Debug Mode {
+    使用debug模式build时，SDK工具自动调用keytool创建一对debug keystore/key
+    然后自动使用该debug keystore/key对apk进行签名
+
+    所以不需要使用自己的key进行签名
+
+    The SDK tools create the debug keystore/key with predetermined names/passwords:
+        Keystore name: "debug.keystore"
+        Keystore password: "android"
+        Key alias: "androiddebugkey"
+        Key password: "android"
+        CN: "CN=Android Debug,O=Android,C=US"
+
+    Debug Keystore的位置在:
+        ~/.android/debug.keystore
+
+    修改key的location/name
+        Eclipse/ADT, go to Windows > Preferences > Android > Build
+
+
+    !!! 使用debug key签名的apk不能够发布
+
+    Eclipse Users {
+        Eclipse/ADT默认自动使用debug mode签名
+            keytool + jarsigner + zipalign
+
+        用户不需要做任何事情
+    }
+
+    Expiry of the Debug Certificate {
+        debug mode的证书是self-signed certificate
+        该证书的有效期是从创建起的365天
+
+
+        证书过期后，会出现build error
+            debug:
+            [echo] Packaging bin/samples-debug.apk, and signing it with a debug key...
+            [exec] Debug Certificate expired on 8/4/08 3:43 PM
+
+            系统会在安装apk的时候验证证书的过期日期。安装后，就算证书过期了，程序也能够正常使用。
+
+            删除下面文件可以解决该问题:
+                ~/.android/debug.keystore
+    }
+}
+
+Signing for Public Release {
+    1. Obtain a suitable private key
+        不是debug key
+
+        # 生成key的命令
+        $ keytool -genkey -v -keystore my-release-key.keystore 
+            -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+
+            -genkey	        Generate a key pair (public and private keys)
+            -v	            Enable verbose output.
+            -alias <alias_name>     An alias for the key. Only the first 8 characters of the alias are used.
+            -keyalg <alg>	        The encryption algorithm to use when generating the key. Both DSA and RSA are supported.
+            -keysize <size>	        The size of each generated key (bits). 
+                                        If not supplied, Keytool uses a default key size of 1024 bits. 
+                                        In general, we recommend using a key size of 2048 bits or higher.
+            -dname <name>	        A Distinguished Name that describes who created the key. 
+                                    The value is used as the issuer and subject fields in the self-signed certificate.
+
+                                    Note that you do not need to specify this option in the command line. 
+                                    If not supplied, Jarsigner prompts you to enter each of the Distinguished Name fields 
+                                        (CN, OU, and so on).
+            -keypass <password>	    The password for the key.
+                                        As a security precaution, do not include this option in your command line. 
+                                        If not supplied, Keytool prompts you to enter the password. 
+                                        In this way, your password is not stored in your shell history.
+
+            -validity <valdays>	    The validity period for the key, in days.
+                                        Note: A value of 10000 or greater is recommended.
+            -keystore <keystore-name>.keystore	    A name for the keystore containing the private key.
+            -storepass <password>	                A password for the keystore.
+                                        As a security precaution, do not include this option in your command line. 
+                                        If not supplied, Keytool prompts you to enter the password. 
+                                        In this way, your password is not stored in your shell history.
+
+        # 生成key的过程
+        keytool -genkey -v -keystore jiangrui.release.key.keystore 
+            -alias ruikey -keyalg RSA -keysize 2048 -validity 10000
+        输入keystore密码：  
+        再次输入新密码: 
+        您的名字与姓氏是什么？
+        您的组织单位名称是什么？
+        您的组织名称是什么？
+        您所在的城市或区域名称是什么？
+        您所在的州或省份名称是什么？
+        该单位的两字母国家代码是什么
+        CN=Jiang Rui, OU=Pekall, O=Pekall, L=Bei Jing, ST=Bei Jing, C=CN 正确吗？
+        [否]：  Y
+
+        正在为以下对象生成 2,048 位 RSA 密钥对和自签名证书 (SHA1withRSA)（有效期为 10,000 天）:
+        CN=Jiang Rui, OU=Pekall, O=Pekall, L=Bei Jing, ST=Bei Jing, C=CN
+        输入<ruikey>的主密码
+        （如果和 keystore 密码相同，按回车）：  
+        [正在存储 jiangrui.release.key.keystore]
+
+    2. Compile the application in release mode
+
+    3. Sign your application with your private key
+
+        # 为apk签名
+        $ jarsigner -keystore jiangrui.keystore my_application.apk ruikey
+        # or
+        # $ jarsigner -verbose -keystore jiangrui.keystore 
+            my_application.apk ruikey
+
+        # 查看是否已经签名
+        $ jarsigner -verify myapp.apk
+        # $ jarsigner -verbose -verify myapp.apk
+        # $ jarsigner -verbose -certs -verify myapp.apk
+        !!! 可以看到使用debug mode生成的apk用的是debug key签名的
+
+    4. Align the final APK package
+        zipalign使所有的没有被压缩的数据都相对于文件开始字节对齐(4-byte??)
+        安装时的性能优化
+
+        运行时能减少内存
+        When aligned, the Android system is able to read files with mmap(), 
+            even if they contain binary data with alignment restrictions, 
+            rather than copying all of the data from the package. 
+            The benefit is a reduction in the amount of RAM consumed by the running application.
+
+        /home/jiangrui/android/android-sdk/tools/zipalign
+
+        # 运行zipalign
+        $ zipalign -v 4 your_project_name-unaligned.apk your_project_name.apk
+        # -v == verbose
+        # 4 字节对齐
+        # -f overrider original apk
+
+eclipse 
+    use the Export Wizard to perform the compile, sign, and align procedures
+    The Export Wizard even allows you to generate a new keystore and private key in the process.
+
+    clean project
+    right-click project --> Export -> Android -> Export Android Application
+        输入keystore的位置，密码，...
+        最后选择输出目录
+
+    或者在AndroidManifest.xml的Manifest页面的最后选择export application
+        或export an unsigned apk
+
+    重新签名
+        将apk解压后，删除META-INF文件夹, 然后重新打包成apk
+        然后使用新的key进行签名
+}
+
+
+
+
+Signing Strategies {
+    推荐对所有发布的apk使用相同的证书
+
+    Application upgrade
+        升级apk时，只有certificate相同的apk才能成功升级
+
+    Application modularity
+        Android允许签名相同的apk运行在同一个进程中(如果该应用请求的话)。
+            如media签名的apk可运行在media进程中
+
+        通过这种方式可将应用部署到不同的模块中
+        用户可根据需要独立更新模块
+
+    Code/data sharing through permissions
+         Android provides signature-based permissions enforcement
+         一个application可向具有特定签名的application暴露功能
+            如system, platform, media ???
+
+        通过对多个应用使用相同的证书，以及signature-based的权限检查，
+            这些应用之间可以安全的共享数据和代码
+
+            如百度签名的所有apk之间可通过签名检查机制互相共享数据和接口
+}
+
+签名的有效期 {
+
+     要对单个application进行升级
+        需要签名的有效期大于该apk的生命周期
+        推荐25年或更长时间
+
+        签名过期后，用户就不可能平滑的升级应用了
+
+    对多个不同的应用使用相同的key
+        需要签名的有效期大于所有apk的生命周期
+
+    
+    需要发布到google市场的apk
+        有效期必须到22 October 2033之后
+}
+
+签名的过程: {
+    签名的结果就是在.apk文件中生成了目录
+
+    META-INF
+        MANIFEST.MF
+            对所有apk中所有文件的SHA1摘要 (除了META-INF中所有文件)
+                    摘要算法     编码方式
+                "SHA1-Digest", base64.encode(md.digest())
+
+                文件内容如下：
+                {
+                    Manifest-Version: 1.0
+                    Created-By: 1.6.0_26 (Sun Microsystems Inc.)
+
+                    Name: res/drawable-ldpi/fav_icn_background.png
+                    SHA1-Digest: YuhlLunSOZj/XaYcBYUkhuKQ9l8=
+
+                    Name: res/layout/browser_download_item.xml
+                    SHA1-Digest: hF1arU3uFy8r6NAv1WzFvX+ajOU=
+                    ...
+                }
+
+            将摘要信息写入到MANIFEST.MF中
+
+        ANDROIDD.SF
+            对MANIFEST.MF整个文件的内容，以及文件中的每个段落进行摘要
+
+            // Digest of the entire manifest
+            // Digest of the manifest stanza for this entry.
+            文件内容:
+            {
+                Signature-Version: 1.0
+                Created-By: 1.0 (Android SignApk)
+                
+                # 对MANIFEST.MF整个文件内容的摘要
+                SHA1-Digest-Manifest: zJDzb3Tvy4r1Ho8MTRCNAGVF9nM=
+
+                Name: res/drawable-ldpi/fav_icn_background.png
+                SHA1-Digest: Vr/tO/M2MRDBPUdYNJIUdJWtAc0=     #  对MANIFEST.MF中下面段落的摘要
+                                                                    Name: res/drawable-ldpi/fav_icn_background.png
+                                                                    SHA1-Digest: YuhlLunSOZj/XaYcBYUkhuKQ9l8=
+                ...
+            }
+
+            将对MANIFEST.MF的摘要信息写入到ANDROIDD.SF/CERT.SF中
+
+        ANDROIDD.RSA
+            对ANDROIDD.SF/CERT.SF进行签名
+            将签名和证书(公钥)写入ANDROIDD.RSA/CERT.RSA
+}
+
+
+Apk中包括了certificate, 其中包括了公钥
+Apk中的被开发者的私钥签名
+在生成apk的时候，eclipse ?? 会对apk中的资源进行摘要，然后用私钥签名。
+
+在安装apk的时候，android会通过包括在apk中的证书来验证签名和摘要。
+验证签名和摘要成功后，android才会继续安装apk。
+
+SDK tool中包括了一个debug key (私钥)
+    用eclipse build出来的都是通过debug key签名的？
+
+    发布apk时:
+        you must sign it with a suitable private key.
+
+        通过debug key签名的apk不能够发布(通过google player?)
+            但是可以安装??
+
+
+You can use self-signed certificates to sign your applications. No certificate authority is needed.
+what is:
+    ??? self-signed certificates
+        不需要上一级机构的为你的证书签名???
+
+

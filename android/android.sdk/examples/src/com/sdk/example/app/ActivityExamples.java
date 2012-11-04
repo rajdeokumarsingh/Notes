@@ -15,6 +15,7 @@ public class ActivityExamples extends SdkMainActivity {
 		nameList.add(addItem(DialogActivity.class, "Dialog Activity"));
 		nameList.add(addItem(CustomTitleActivity.class, "Custom Title"));
 		nameList.add(addItem(ThemeExamples.class, "Theme Examples"));
+		nameList.add(addItem(PreferenceExamples.class, "Preference Examples"));
 		return nameList;
 	}
 }

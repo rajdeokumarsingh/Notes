@@ -7,6 +7,7 @@ Publick Key Infrastructure
         数字证书包括:
             用户身份的部分信息
             用户公钥
+
     CA使用本身的私钥为数字证书签名
 
 核心技术基础:
@@ -53,6 +54,7 @@ Publick Key Infrastructure
             Object1.info
             Object1.ca.signature
                 (signed by --CA.private.key)
+
         ++CA.public.key
                 
     Object2
@@ -63,6 +65,7 @@ Publick Key Infrastructure
             Object2.info
             Object2.ca.signature
                 (signed by --CA.private.key)
+
         ++CA.public.key
  
 
