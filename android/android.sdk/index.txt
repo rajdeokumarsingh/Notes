@@ -1,3 +1,8 @@
+
+TODO:
+http://code.google.com/events/io/2009/sessions/CodingLifeBatteryLife.html
+
+
 ./checklist.java
 
 
@@ -30,6 +35,8 @@
 
 ./sign.app.txt
 ./SignedJarBuilder.java
+
+./test/index.txt
 
 dig more:
     bluetooth
