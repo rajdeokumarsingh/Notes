@@ -1,0 +1,18 @@
+    41 Sleeper.java
+    59 DialogUtils.java
+    92 Getter.java
+   103 TextEnterer.java
+   114 Asserter.java
+   123 Checker.java
+   139 Setter.java
+   144 Presser.java
+   208 RobotiumUtils.java
+   252 Searcher.java
+   317 Scroller.java
+   379 ActivityUtils.java
+   411 ViewFetcher.java
+
+   424 Clicker.java
+   511 Waiter.java
+  2202 Solo.java
+  5519 总用量

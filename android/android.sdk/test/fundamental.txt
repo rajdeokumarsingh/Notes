@@ -1,0 +1,182 @@
+Reference:
+file:///home/jiangrui/android/android-sdk/docs/guide/topics/testing/index.html
+
+测试包的目录结构:
+MyProject/
+    AndroidManifest.xml
+    res/
+        ... (resources for main application)
+    src/
+        ... (source code for main application) ...
+    tests/
+        AndroidManifest.xml
+        res/
+            ... (resources for tests)
+        src/
+            ... (source code for tests)
+
+
+The Testing API
+     based on 
+        1 JUnit API extended with a instrumentation framework 
+        2 Android-specific testing classes
+
+
+    JUnit API
+        TestCase (in JUnit)
+            do unit testing on a plain Java object
+
+        Assert (in JUnit)
+            display test results
+
+    Android Instrumentaiont API
+        AndroidTestCase
+            use to test Android-dependent objects
+
+            extends both TestCase and Assert
+            provides the JUnit-standard setUp() and tearDown() methods
+                as well as all of JUnit's Assert methods.
+            
+            provides methods for testing permissions, 
+                and a method that guards against memory leaks by clearing out certain class references.
+
+        ApplicationTestCase
+            Be used to test the setup and teardown of Application objects
+
+        InstrumentationTestCase
+
+        Assertion classes
+             testing API also provides:
+                MoreAsserts 
+                    contains more powerful assertions 
+                        such as assertContainsRegex(String, String), 
+                            which does regular expression matching.
+
+                ViewAsserts 
+                    contains useful assertions about Views. 
+                        For example it contains assertHasScreenCoordinates(View, View, int, int) 
+                            that tests if a View has a particular X and Y position on the visible screen. 
+                            These asserts simplify testing of geometry and alignment in the UI.
+
+    Instrumentation
+        a set of control methods or "hooks" in the Android system.
+            These hooks control an Android component independently of its normal lifecycle. 
+
+        可以在Instrumentation中直接调用Activity的
+            onCreate, onDestroy, onResume, onPause, finish等等方法
+
+        Example: {
+            // Start the main activity of the application under test
+            mActivity = getActivity();
+
+            // Get a handle to the Activity object's main UI widget, a Spinner
+            mSpinner = (Spinner)mActivity.findViewById(com.android.example.spinner.R.id.Spinner01);
+
+            // Set the Spinner to a known position
+            mActivity.setSpinnerPosition(TEST_STATE_DESTROY_POSITION);
+
+            // Stop the activity - The onDestroy() method should save the state of the Spinner
+            mActivity.finish();
+
+            // Re-start the Activity - the onResume() method should restore the state of the Spinner
+            mActivity = getActivity();
+
+            // Get the Spinner's current position
+            int currentPosition = mActivity.getSpinnerPosition();
+
+            // Assert that the current position is the same as the starting position
+            assertEquals(TEST_STATE_DESTROY_POSITION, currentPosition);
+        }
+
+        Instrumentation可以使测试程序和被测程序运行在同一个进程
+        可以让一个application的content provider在另外一个进程中运行
+
+
+Mock object classes
+    测试使用的假的打桩的系统对象, 如:
+         Context, ContentProvider, ContentResolver, Service
+         Intent
+
+        MockApplication, MockContext, MockContentProvider, MockCursor, 
+        MockDialogInterface, MockPackageManager, and MockResources
+        MockContentResolver, MockResources 
+
+        Cand be found in android.test and android.test.mock.
+
+    使用时需要继承这些object, 并自己实现其中的方法
+        To use it, you override only those methods that must provide information
+
+
+Contexts for testing
+    provides two Context classes that are useful for testing
+        1. IsolatedContext
+            provides an isolated Context, File, directory, and database operations 
+            this Context has enough stub code to respond to system calls.
+
+         allows you to test an application's data operations without affecting real data
+         测试后不影响应用程序中真实的数据
+
+        2. RenamingDelegatingContext
+            provides a Context in which most functions are handled by an existing Context
+                but file and database operations are handled by a IsolatedContext.
+
+            provides a quick way to set up an isolated area for data operations
+                while keeping normal functionality for all other Context operations.
+
+Running Tests
+    InstrumentationTestRunner is the primary Android test runner class.
+        extends the JUnit test runner framework
+
+    AndroidManifest
+        需要在AndroidManifest指名InstrumentationTestRunner
+
+        <instrumentation
+            android:name="android.test.InstrumentationTestRunner"
+            android:targetPackage="com.pekall.weather" />
+
+    InstrumentationTestRunner resides in the shared library 
+        android.test.runner
+         To include it, you must specify it in a uses-library element.
+
+    测试的过程：
+        1. 系统加载并启动测试用例
+        2. Kill正在运行被测程序的进程
+        3. 启动一个新的进程，运行被测程序
+        4. 然后将控制权交给InstrumentationTestRunner, 
+            它会运行测试包中的所有测试用例
+
+        5. 测试程序控制被测application, activity, service的生命周期
+            包括启动，暂停，恢复，停止
+
+monkey and monkeyrunner
+    The SDK provides two tools for functional-level application testing:
+        1. The UI/Application Exerciser Monkey, usually called "monkey" 
+            a command-line tool
+            sends pseudo-random streams of keystrokes, touches, and gestures to a device. 
+
+        2. The monkeyrunner tool 
+            an API and execution environment for test programs written in Python
+            The API includes functions for 
+                connecting to a device, 
+                installing and uninstalling packages, 
+                taking screenshots, 
+                comparing two images, 
+                and running a test package against an application
+
+Working With Package names
+    Android package name 
+        a unique system name for a .apk file
+        set by the "android:package" attribute of the <manifest> element in the package's manifest. 
+
+            <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+                package="com.example.android.apis.test"
+                android:versionCode="1"
+                android:versionName="1.0" >
+
+        测试程序的Android包名不能和被测程序的包名一样
+            一般测试的包名比被测程序的包名多一个.test
+
+    测试程序会在其AndroidManifest中指名被测程序的包名
+        <instrumentation
+            android:name="android.test.InstrumentationTestRunner"
+            android:targetPackage="com.pekall.weather" />

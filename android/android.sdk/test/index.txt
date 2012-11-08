@@ -1,0 +1,18 @@
+TODO: JUnit
+
+./fundamental.txt [done]
+./what_to_test.txt
+
+./run.text.txt
+
+file:///home/jiangrui/android/android-sdk/docs/resources/tutorials/testing/helloandroid_test.html
+
+Component-specific test cases
+    Activity Testing
+    Content Provider Testing
+    Service Testing
+
+    not a separate class for Broadcast Receiver
+
+
+./robotium.txt

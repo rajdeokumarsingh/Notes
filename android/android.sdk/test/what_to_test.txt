@@ -1,0 +1,42 @@
+Reference:
+file:///home/jiangrui/android/android-sdk/docs/guide/topics/testing/what_to_test.html
+
+从单元测试的角度考虑，应该测试什么
+
+    Change in orientation
+        landscape
+        portrait
+            
+        当Android发现屏幕的横竖方向变化后
+            关闭前台的Activity, 并重新启动该activity
+
+        考虑的测试case:
+            1. UI绘制是否正确
+                Is the screen re-drawn correctly? 
+                Any custom UI code you have should handle changes in the orientation.
+
+            2. 应用程序的状态是否被保存了
+            Does the application maintain its state? 
+                The Activity should not lose anything that the user has already entered into the UI. 
+                The application should not "forget" its place in the current transaction.
+
+    Change in configuration
+        such as 
+            a change in the availability of a keyboard 
+            a change in system language.
+
+        当Android发现configuration变化后
+            关闭前台的Activity, 并重新启动该activity
+
+        考虑的测试case:
+            1. UI绘制是否正确
+            2. 应用程序的状态是否被保存了
+
+    Battery life
+        need to test the methods that manage battery usage
+
+    Dependence on external resources
+        测试如果network access, SMS, Bluetooth, or GPS等等资源都不在的时候
+        程序是如何表现的
+
+        需要提示网络连接不存在

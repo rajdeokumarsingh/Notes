@@ -1,0 +1,70 @@
+./robotium/DialogUtils.java
+    Contains the waitForDialogToClose() method.
+
+./robotium/Getter.java
+    Contains various get methods. Examples are: 
+        getView(int id),
+        getView(Class<T> classToFilterBy, int index),
+        getView(Class<T> classToFilterBy, String text, boolean onlyVisible) 
+
+./robotium/TextEnterer.java
+    Contains setEditText() to enter text into text fields.
+
+./robotium/Asserter.java
+    Contains assert methods examples are 
+        assertActivity()  // 确定当前的Activity的名字是什么，class是什么
+        assertLowMemory()
+
+./robotium/Checker.java
+    Contains various check methods. Examples are: 
+        isButtonChecked()
+        isSpinnerTextSelected
+
+./robotium/Setter.java
+    Contains set methods. Examples are 
+        setDatePicker(), setTimePicker() 
+        setProgressBar
+        setSlidingDrawer
+
+./robotium/Presser.java
+     Contains press methods. Examples are 
+        pressMenuItem(), pressSpinnerItem()
+
+./robotium/RobotiumUtils.java
+
+./robotium/Searcher.java
+    Contains various search methods. Examples are: 
+        searchForEditTextWithTimeout() // 查找textview中是否包括text
+        searchForTextWithTimeout()
+        searchForButtonWithTimeout()
+
+./robotium/Scroller.java
+     Contains scroll methods. Examples are:
+        scrollDown(), scrollUpList(), scrollToSide().
+
+./robotium/ActivityUtils.java
+    Contains activity related methods. Examples are:
+    getCurrentActivity(), getActivityList(), getAllOpenedActivities().
+        包括了一个activity stack, 所有有instrumentation启动的activity
+        都会被记录到该stack中
+
+./robotium/ViewFetcher.java
+    Contains view methods. Examples are :
+        getViews(), getCurrentTextViews(), getCurrentImageViews().
+
+        通过window manager获取applicaiton的mViews数组
+        通过该数组来获取, 管理application view的信息
+
+// TODO:
+./robotium/Clicker.java
+     Contains various click methods. Examples are: clickOn(),
+     clickOnText(), clickOnScreen().
+     
+./robotium/Waiter.java
+    Contains various wait methods. Examples are: 
+        waitForText(), waitForView().
+
+
+
+
+
