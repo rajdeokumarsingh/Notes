@@ -55,16 +55,15 @@
         通过window manager获取applicaiton的mViews数组
         通过该数组来获取, 管理application view的信息
 
+./robotium/Waiter.java
+    Contains various wait methods. Examples are: 
+        waitForText(), waitForView().
+
 // TODO:
 ./robotium/Clicker.java
      Contains various click methods. Examples are: clickOn(),
      clickOnText(), clickOnScreen().
      
-./robotium/Waiter.java
-    Contains various wait methods. Examples are: 
-        waitForText(), waitForView().
-
-
 
 
 

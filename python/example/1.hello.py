@@ -7,6 +7,9 @@ print "hello, world!", 2 + 2, 1.0/2.0
 #x = input("x: ")
 #print x
 
+import greenlet
+import gevent
+
 print repr("Hello")
 print repr(100000000L)
 print '''This is a very long \
@@ -22,7 +25,6 @@ print "Hello\nworld!"
 print "C:\\nowhere"
 
 print r"C:\nowhere"
-print u"C:\\nowhere 姜睿"
-
+print u"C:\\nowhere"
 
 

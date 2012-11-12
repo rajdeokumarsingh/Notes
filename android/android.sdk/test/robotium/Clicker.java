@@ -45,8 +45,8 @@ public void clickOnScreen(View view) {
     clickOnScreen(view, false, 0);
 }
 
-
 // Private method used to click on a given view.
+// click一个view的几何中心点
 public void clickOnScreen(View view, boolean longClick, int time) {
     int[] xy = new int[2];
     view.getLocationOnScreen(xy);
@@ -61,7 +61,6 @@ public void clickOnScreen(View view, boolean longClick, int time) {
     else
         clickOnScreen(x, y);
 }
-
 
 /**
  * Long clicks on a specific {@link TextView} and then selects
@@ -81,4 +80,46 @@ public void clickLongOnTextAndPress(String text, int index)
         inst.sendKeyDownUpSync(KeyEvent.KEYCODE_DPAD_DOWN);
     }
     inst.sendKeyDownUpSync(KeyEvent.KEYCODE_ENTER);
+}
+
+/**
+ * Clicks on a specific {@link TextView} displaying a given text.
+ *
+ * @param regex the text that should be clicked on. The parameter <strong>will</strong> be interpreted as a regular expression.
+ * @param longClick {@code true} if the click should be a long click
+ * @param match the regex match that should be clicked on
+ * @param scroll whether to scroll to find the regex
+ * @param time the amount of time to long click
+ */
+public void clickOnText(String regex, boolean longClick, int match, boolean scroll, int time) {
+    waiter.waitForText(regex, 0, TIMEOUT, scroll, true);
+    TextView textToClick = null;
+    ArrayList <TextView> allTextViews = viewFetcher.getCurrentViews(TextView.class);
+    allTextViews = RobotiumUtils.removeInvisibleViews(allTextViews);
+    if (match == 0) {
+        match = 1;
+    }
+    for (TextView textView : allTextViews){
+        if (RobotiumUtils.checkAndGetMatches(regex, textView, uniqueTextViews) == match) {
+            uniqueTextViews.clear();
+            textToClick = textView;
+            break;
+        }
+    }
+    if (textToClick != null) {
+        clickOnScreen(textToClick, longClick, time);
+    } else if (scroll && scroller.scroll(Scroller.DOWN)) {
+        clickOnText(regex, longClick, match, scroll, time);
+    } else {
+        int sizeOfUniqueTextViews = uniqueTextViews.size();
+        uniqueTextViews.clear();
+        if (sizeOfUniqueTextViews > 0)
+            Assert.assertTrue("There are only " + sizeOfUniqueTextViews + " matches of " + regex, false);
+        else {
+            for (TextView textView : allTextViews) {
+                Log.d(LOG_TAG, regex + " not found. Have found: " + textView.getText());
+            }
+            Assert.assertTrue("The text: " + regex + " is not found!", false);
+        }
+    }
 }
