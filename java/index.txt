@@ -13,3 +13,5 @@
         |-- handle.text.java
 
 |-- charset.java
+
+./data.struct/index.java
