@@ -65,7 +65,7 @@ private void drawCoreAndCursorRing(Canvas canvas, int color,
         Rect glRectViewport = mGLViewportEmpty ? null : mGLRectViewport;
         Rect viewRectViewport = mGLViewportEmpty ? null : mViewRectViewport;
 
-        // FIXME: 参见 ./hardware.way.cpp
+        // FIXME: 参见 ./hardware.display.way.cpp
         int functor = nativeGetDrawGLFunction(mNativeClass, glRectViewport,
                 viewRectViewport, mVisibleContentRect, getScale(), extras);
         ((HardwareCanvas) canvas).callDrawGLFunction(functor);
@@ -77,7 +77,7 @@ private void drawCoreAndCursorRing(Canvas canvas, int color,
     } else {
         // 软件方式绘制
     
-        // FIXME: 参见 ./software.way.cpp
+        // FIXME: 参见 ./software.display.way.cpp
         // XXX: Revisit splitting content.  Right now it causes a
         // synchronization problem with layers.
         int content = nativeDraw(canvas, mVisibleContentRect, color,

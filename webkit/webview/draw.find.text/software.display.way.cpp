@@ -1,6 +1,3 @@
-
-
-
 WebView.cpp
 
 static jint nativeDraw(JNIEnv *env, jobject obj, jobject canv,
@@ -14,9 +11,9 @@ static jint nativeDraw(JNIEnv *env, jobject obj, jobject canv,
     PictureSet* pictureSet = webView->draw(canvas, color, extras, split);
     return reinterpret_cast<jint>(pictureSet);
 }
-    |
-    |
-    V
+        |
+        |
+        V
 PictureSet* draw(SkCanvas* canvas, SkColor bgColor, int extras, bool split)
 {
     PictureSet* ret = 0;
@@ -80,12 +77,9 @@ PictureSet* draw(SkCanvas* canvas, SkColor bgColor, int extras, bool split)
 #endif
     if (extra) {
         IntRect dummy; // inval area, unused for now
-        extra->draw(canvas, &mainPicture, &dummy);
+        extra->draw(canvas, &mainPicture, &dummy); // XXX: FindOnPage::draw()
+                                                   // ./FindCanvas.cpp
     }
     return ret;
 }
-
-
-
-
 
