@@ -121,3 +121,6 @@ set guifont=Andale\ Mono\ 13
 "done
 
 "private final static String LOGTAG = "DrmProvider";
+
+" 50%  跳转到行
+" 50|  跳转到列
