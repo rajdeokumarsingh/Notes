@@ -1,0 +1,2 @@
+
+./example/gougou.ajax/gougou.html

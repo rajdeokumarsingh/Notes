@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- 
+    在输入框中输入后， JS就会向server发送查询
+    ## 将input element赋值给gInputQuery
+    ## 初始化一个timer，不断调用compRequest函数
+    ## 发现输入框中文字有变化
+    ## 发送向服务器json请求
+        ## 创建一个script tag
+        ## 设置script的src为:
+            'http://ac.gougou.com:80/complete?ac=' 
+                + 用户输入的字符;
+        ## 将该script tag插入到head中
+        ## 然后浏览器会自动请求该script
+
+    ## 服务器返回文本:
+    compResp("我", 
+        new Array("我不会唱歌","我不介意你恨我","我爱我家","我不后悔","我不管",
+            "我爱你你却爱着他","我爱黑涩会","我爱的男人变了心","我爱你","我不恨你"), 
+        new Array("0 结果", "0 结果", "0 结果", "0 结果", "0 结果", 
+            "0 结果", "0 结果", "0 结果", "0 结果", "0 结果"));
+
+    然后浏览器就会执行compResp函数，显示下拉列表框
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+</head>
+<body>
+
+    <div class="searchform">
+        <input id="s" type="text" value="" class="in_txt" onkeydown="enterHandler(event)" />
+        <button type="button" class="soubt" id="btn1" onclick="javascript: check()" title="search">search</button>
+    </div>
+
+<script src="./input.js"></script>
+<SCRIPT>setupAC(document.getElementById("s"),document.getElementById("btn1"));</SCRIPT> 
+
+<!-->
+setupAC = function(inputQuery, btnSearch) {
+    ## 将input element赋值给gInputQuery
+    gInputQuery = inputQuery;
+    initAC();
+};
+
+function initAC()
+{
+    gInputQuery.autocomplete = "off";
+    gInputQuery.onblur = inputQueryOnblur;
+    gInputQuery.onfocus = inputQueryOnfocus;
+    if (gInputQuery.createTextRange)
+        gInputQuery.onkeyup = new Function("return inputQueryOnkeyup(event); ");
+    else
+        gInputQuery.onkeyup = inputQueryOnkeyup;
+    gInputQuery.onsubmit = inputQueryOnsubmit;
+
+    ## 保存input中的字符串
+    gKeyword = gInputQuery.value;
+    gKeywordPre = gKeyword;
+...
+}
+
+## 初始化一个timer，不断调用compRequest函数
+setTimeout("compRequest()", 10 * gTimeFactor);
+
+compRequest = function()
+{
+    ## 发现输入框中文字有变化
+    if (gKeywordPre != gKeyword)
+    {
+        if (!gSubmitting)
+        {
+            var escaped_keyword = encodeAndEscape(gKeyword), completeStrings =
+                gCompleteStrings[gKeyword];
+            if (completeStrings)
+            {
+                compResp(gKeyword, completeStrings[0], completeStrings[1])
+            }
+            else
+            {
+                ## 发送json请求
+                gNotResponsedResquestNum++;
+                var req = 'http://ac.gougou.com:80/complete?ac=' + escaped_keyword;
+                var jsonReq = new JSONscriptRequest(req);
+                jsonReq.buildScriptTag();
+                jsonReq.addScriptTag();
+            }
+            gInputQuery.focus()
+        }
+        gSubmitting = false
+    }
+    gKeywordPre = gKeyword;
+    setTimeout("compRequest()", calcNextTimeoutInterval
+        (gNotResponsedResquestNum));
+    return true
+};
+
+
+## 发送json请求
+function JSONscriptRequest(fullUrl)
+{
+    this.fullUrl = fullUrl;
+    this.noCacheIE = '&noCacheIE=' + (new Date()).getTime();
+    this.headLoc = document.getElementsByTagName("head").item(0);
+    this.scriptId = 'JscriptId' + JSONscriptRequest.scriptCounter++;
+};
+JSONscriptRequest.scriptCounter = 1;
+
+// 创建一个script tag
+JSONscriptRequest.prototype.buildScriptTag = function()
+{
+    this.scriptObj = document.createElement("script");
+    this.scriptObj.setAttribute("type", "text/javascript");
+    this.scriptObj.setAttribute("src", this.fullUrl);
+};
+
+// 将该script tag插入到head中
+// 然后浏览器会自动请求该script
+JSONscriptRequest.prototype.addScriptTag = function()
+{
+    this.headLoc.appendChild(this.scriptObj);
+};
+<-->
+</body>
+</html>
