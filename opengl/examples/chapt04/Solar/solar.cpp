@@ -7,7 +7,6 @@
 #include "../../shared/gltools.h"	// OpenGL toolkit
 #include <math.h>
 
-
 // Lighting values
 GLfloat  whiteLight[] = { 0.2f, 0.2f, 0.2f, 1.0f };
 GLfloat  sourceLight[] = { 0.8f, 0.8f, 0.8f, 1.0f };

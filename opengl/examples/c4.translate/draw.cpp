@@ -4,7 +4,7 @@
 // Richard S. Wright Jr.
 // rwright@starstonesoftware.com
 
-// #include "../../shared/gltools.h"	// OpenGL toolkit
+// #include "../shared/gltools.h"	// OpenGL toolkit
 #include <GL/glut.h>
 
 #include <stdlib.h>
