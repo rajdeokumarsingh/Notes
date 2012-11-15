@@ -7,11 +7,16 @@
  *
  */
 
+#ifdef linux
+// #include <GL/gl_mangle.h>
+// #include <GL/glx_mangle.h>
+#include <GLee.h>
+#endif
+
 #include "gltools.h"
 #include "math3d.h"
 #include <stdio.h>
 #include <assert.h>
-
 
 ///////////////////////////////////////////////////////////////////////////////
 // Get the OpenGL version number
@@ -129,7 +134,7 @@ void *gltGetExtensionPointer(const char *szExtensionName)
 	
 #ifdef linux
     // Pretty much ditto above
-    return (void *)glXGetProcAddress(szExtensionName);
+    return (void *)glXGetProcAddress((const GLubyte*)szExtensionName);
 #endif
 
     

@@ -19,6 +19,12 @@
  *  Yes, I know all about inheritance, and it's all good....
  */
 
+#ifdef linux
+// #include <GL/gl_mangle.h>
+// #include <GL/glx_mangle.h>
+#include <GLee.h>
+#endif
+
 #include "VBOMesh.h"
 
 

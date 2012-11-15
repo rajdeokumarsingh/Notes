@@ -8,8 +8,6 @@
 #include <math.h>
 
 
-
-
 // Draw a torus (doughnut), using the current 1D texture for light shading
 void DrawTorus(M3DMatrix44f mTransform)
     {
@@ -72,7 +70,7 @@ void RenderScene(void)
     // Build a rotation matrix
     m3dRotationMatrix44(transformationMatrix, m3dDegToRad(yRot), 0.0f, 1.0f, 0.0f);
     transformationMatrix[12] = 0.0f;
-    transformationMatrix[13] = 0.0f;
+    transformationMatrix[13] = 0.5f;
     transformationMatrix[14] = -2.5f;
         
     DrawTorus(transformationMatrix);
@@ -122,7 +120,7 @@ void ChangeSize(int w, int h)
     glLoadIdentity();
 	
     // Set the clipping volume
-    gluPerspective(35.0f, fAspect, 1.0f, 50.0f);
+    gluPerspective(35.0f, fAspect, 1.0f, 500.0f);
         
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();

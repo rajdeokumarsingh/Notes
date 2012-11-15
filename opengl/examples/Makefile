@@ -4,7 +4,11 @@ CPPFLAGS += \
     -L/Developer/SDKs/MacOSX10.6.sdk/usr/X11/lib 
 endif
 
-main : *.cpp ../../shared/math3d.cpp
+ifeq (${DESKTOP_SESSION}, gnome)
+CPPFLAGS += -D__LINUX__
+endif
+
+main : *.cpp
 	g++ ${CPPFLAGS} $^ -lglut -lGL -lGLU -o $@
 
 .PHONY : clean

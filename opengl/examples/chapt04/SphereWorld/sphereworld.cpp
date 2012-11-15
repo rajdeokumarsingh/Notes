@@ -5,13 +5,61 @@
 // Program by Richard S. Wright Jr.
 
 #include "../../shared/gltools.h"	// OpenGL toolkit
-#include "../../shared/glframe.h"   // Frame Class
+#include "../../shared/glFrame.h"   // Frame Class
 #include <math.h>
 
     
 #define NUM_SPHERES      50
 GLFrame    spheres[NUM_SPHERES];
 GLFrame    frameCamera;
+
+// For best results, put this in a display list
+// Draw a torus (doughnut)  at z = fZVal... torus is in xy plane
+void gltDrawTorus(GLfloat majorRadius, GLfloat minorRadius, GLint numMajor, GLint numMinor)
+{
+    M3DVector3f vNormal;
+    double majorStep = 2.0f*M3D_PI / numMajor;
+    double minorStep = 2.0f*M3D_PI / numMinor;
+    int i, j;
+
+    for (i=0; i<numMajor; ++i) 
+    {
+        double a0 = i * majorStep;
+        double a1 = a0 + majorStep;
+        GLfloat x0 = (GLfloat) cos(a0);
+        GLfloat y0 = (GLfloat) sin(a0);
+        GLfloat x1 = (GLfloat) cos(a1);
+        GLfloat y1 = (GLfloat) sin(a1);
+
+        glBegin(GL_TRIANGLE_STRIP);
+        for (j=0; j<=numMinor; ++j) 
+        {
+            double b = j * minorStep;
+            GLfloat c = (GLfloat) cos(b);
+            GLfloat r = minorRadius * c + majorRadius;
+            GLfloat z = minorRadius * (GLfloat) sin(b);
+
+            // First point
+            glTexCoord2f((float)(i)/(float)(numMajor), (float)(j)/(float)(numMinor));
+            vNormal[0] = x0*c;
+            vNormal[1] = y0*c;
+            vNormal[2] = z/minorRadius;
+            m3dNormalizeVector(vNormal);
+            glNormal3fv(vNormal);
+            glVertex3f(x0*r, y0*r, z);
+
+            glTexCoord2f((float)(i+1)/(float)(numMajor), (float)(j)/(float)(numMinor));
+            vNormal[0] = x1*c;
+            vNormal[1] = y1*c;
+            vNormal[2] = z/minorRadius;
+            m3dNormalizeVector(vNormal);
+            glNormal3fv(vNormal);
+            glVertex3f(x1*r, y1*r, z);
+        }
+        glEnd();
+    }
+}
+
         
 //////////////////////////////////////////////////////////////////
 // This function does any needed initialization on the rendering
@@ -47,6 +95,7 @@ void DrawGround(void)
     GLint iLine;
     
     glBegin(GL_LINES);
+        // Jiang Rui: draw the cross lines
        for(iLine = -fExtent; iLine <= fExtent; iLine += fStep)
           {
           glVertex3f(iLine, y, fExtent);    // Draw Z lines
@@ -55,7 +104,6 @@ void DrawGround(void)
           glVertex3f(fExtent, y, iLine);
           glVertex3f(-fExtent, y, iLine);
           }
-    
     glEnd();
     }
 
@@ -78,12 +126,12 @@ void RenderScene(void)
         
         // Draw the randomly located spheres
         for(i = 0; i < NUM_SPHERES; i++)
-            {
+        {
             glPushMatrix();
             spheres[i].ApplyActorTransform();
             glutSolidSphere(0.1f, 13, 26);
             glPopMatrix();
-            }
+        }
 
         glPushMatrix();
             glTranslatef(0.0f, 0.0f, -2.5f);
@@ -91,7 +139,13 @@ void RenderScene(void)
             glPushMatrix();
                 glRotatef(-yRot * 2.0f, 0.0f, 1.0f, 0.0f);
                 glTranslatef(1.0f, 0.0f, 0.0f);
-                glutSolidSphere(0.1f, 13, 26);
+                // XXX: interesting thing happens if you swap 
+                    // above two sentence
+                // glTranslatef(1.0f, 0.0f, 0.0f);
+                // glRotatef(-yRot * 2.0f, 0.0f, 1.0f, 0.0f);
+
+                // glutSolidSphere(0.1f, 13, 26);
+                glutSolidSphere(0.1f, 4, 4);
             glPopMatrix();
     
             glRotatef(yRot, 0.0f, 1.0f, 0.0f);
@@ -104,7 +158,6 @@ void RenderScene(void)
     }
 
 
-
 // Respond to arrow keys by moving the camera frame of reference
 void SpecialKeys(int key, int x, int y)
     {
@@ -115,10 +168,10 @@ void SpecialKeys(int key, int x, int y)
         frameCamera.MoveForward(-0.1f);
 
     if(key == GLUT_KEY_LEFT)
-        frameCamera.RotateLocalY(0.1f);
+        frameCamera.RotateLocalY(0.01f);
         
     if(key == GLUT_KEY_RIGHT)
-        frameCamera.RotateLocalY(-0.1f);
+        frameCamera.RotateLocalY(-0.01f);
                         
     // Refresh the Window
     glutPostRedisplay();
@@ -153,7 +206,7 @@ void ChangeSize(int w, int h)
     glLoadIdentity();
 	
     // Set the clipping volume
-    gluPerspective(35.0f, fAspect, 1.0f, 50.0f);
+    gluPerspective(45.0f, fAspect, 1.0f, 50.0f);
         
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();

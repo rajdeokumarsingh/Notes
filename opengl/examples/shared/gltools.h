@@ -35,10 +35,14 @@
 
 #endif
 
+#ifndef linux
+
 #ifndef WIN32
 typedef GLvoid (*CallBack)(...);            // Visual C++ style
 #else
 typedef GLvoid (_stdcall *CallBack)();      // XCode (GNU) style
+#endif
+
 #endif
 
 // Needed for NURBS callbacks... VC++ vs. GNU
@@ -48,6 +52,10 @@ typedef GLvoid (_stdcall *CallBack)();      // XCode (GNU) style
 #define CALLBACK (GLvoid (__stdcall*)())
 #endif
 */
+
+#ifdef linux
+#include <GL/glut.h>
+#endif
 
 // Universal includes
 #include <math.h>
