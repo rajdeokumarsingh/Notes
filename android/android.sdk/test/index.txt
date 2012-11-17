@@ -16,3 +16,7 @@ Component-specific test cases
 
 
 ./robotium.txt
+
+./devtools.txt
+
+

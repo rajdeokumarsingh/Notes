@@ -244,8 +244,8 @@ void SetupRC()
     // Light values and coordinates
     GLfloat  ambientLight[] = { 0.3f, 0.3f, 0.3f, 1.0f };
     GLfloat  diffuseLight[] = { 0.7f, 0.7f, 0.7f, 1.0f };
-    GLfloat  specular[] = { 1.0f, 1.0f, 1.0f, 1.0f };
-    GLfloat  specref[] = { 1.0f, 1.0f, 1.0f, 1.0f };
+    GLfloat  specular[] = { 1.0f, 0.0f, 0.0f, 1.0f };
+    GLfloat  specref[] = { 1.0f, 0.0f, 0.0f, 1.0f };
 
     glEnable(GL_DEPTH_TEST);	// Hidden surface removal
     glFrontFace(GL_CCW);		// Counter clock-wise polygons face out
@@ -269,7 +269,8 @@ void SetupRC()
     // All materials hereafter have full specular reflectivity
     // with a high shine
     glMaterialfv(GL_FRONT, GL_SPECULAR, specref);
-    glMateriali(GL_FRONT, GL_SHININESS, 128);
+    // glMateriali(GL_FRONT, GL_SHININESS, 128);
+    glMateriali(GL_FRONT, GL_SHININESS, 64);
     
     // Light blue background
     glClearColor(0.0f, 0.0f, 1.0f, 1.0f );

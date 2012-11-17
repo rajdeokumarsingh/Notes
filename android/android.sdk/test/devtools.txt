@@ -1,0 +1,9 @@
+
+InstrumentationInfo
+
+    java.lang.Object
+        ↳android.content.pm.PackageItemInfo
+            ↳PackageItemInfoandroid.content.pm.InstrumentationInfo
+
+    Information you can retrieve about a particular piece of test instrumentation. 
+    封装了AndroidManifest.xml's <instrumentation>中的信息

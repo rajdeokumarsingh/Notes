@@ -27,22 +27,22 @@ void RenderScene(void)
     GLfloat angle = 0.0f;
 
     // Clear the window with current clearing color
-    glClear(GL_COLOR_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     glPushMatrix();
     glRotatef(xRot, 1.0f, 0.0f, 0.0f);
     glRotatef(yRot, 0.0f, 1.0f, 0.0f);
 
+    glColor3f(0.0f, 0.0f, 1.0f);
     // Call only once for all remaining points
-    /* 
     glBegin(GL_TRIANGLES);
     {
-        glVertex3f(50.0f, 0.0f, 0.0f);
-        glVertex3f(50.0f, 50.0f, 0.0f);
-        glVertex3f(0.0f, 0.0f, 0.0f);
+        // glNormal3f(0.0f, 0.0f, -1.0f);
+        glVertex3f(50.0f, 0.0f, 10.0f);
+        glVertex3f(50.0f, 50.0f, 10.0f);
+        glVertex3f(0.0f, 0.0f, 10.0f);
     }
     glEnd();
-    */
 
     /*
     glBegin(GL_TRIANGLE_STRIP);
@@ -55,6 +55,7 @@ void RenderScene(void)
     glEnd();
     */
 
+    glColor3f(1.0f, 1.0f, 0.0f);
     glBegin(GL_TRIANGLE_FAN);
     {
         glVertex3f(0.0f, 0.0f, 0.0f);
@@ -77,11 +78,17 @@ void RenderScene(void)
 // Setup the rendering state
 void SetupRC(void)
 {
+    glEnable(GL_DEPTH_TEST);
+    // glFrontFace(GL_CCW);
+    // glEnable(GL_CULL_FACE);
+    // 
+
     // Set clear color to black
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
     // Set paint color to green
     glColor3f(0.0f, 1.0f, 0.0f);
+
 }
 
 
@@ -149,7 +156,7 @@ int main(int argc, char* argv[])
 {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
-    //    glutInitWindowSize(800, 600);
+    glutInitWindowSize(800, 600);
     glutCreateWindow("GLRect");
     glutDisplayFunc(RenderScene);
     glutReshapeFunc(ChangeSize);

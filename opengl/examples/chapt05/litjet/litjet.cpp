@@ -29,7 +29,6 @@ void RenderScene(void)
     // Set material color
 	glColor3ub(128, 128, 128);
 	glBegin(GL_TRIANGLES);
-        // glNormal3f(0.0f, -1.0f, 0.0f);
 		glNormal3f(0.0f, -1.0f, 0.0f);
 		glVertex3f(0.0f, 0.0f, 60.0f);
 		glVertex3f(-15.0f, 0.0f, 30.0f);
@@ -244,7 +243,7 @@ void SetupRC()
     {
     // Light values and coordinates
     GLfloat  ambientLight[] = { 0.0f, 0.0f, 0.0f, 1.0f };
-    GLfloat  diffuseLight[] = { 0.5f, 0.5f, 0.5f, 1.0f };
+    GLfloat  diffuseLight[] = { 0.5f, 0.0f, 0.5f, 1.0f };
 
     glEnable(GL_DEPTH_TEST);	// Hidden surface removal
     glFrontFace(GL_CCW);		// Counter clock-wise polygons face out
@@ -308,8 +307,7 @@ void SpecialKeys(int key, int x, int y)
 void ChangeSize(int w, int h)
     {
     GLfloat fAspect;
-    // GLfloat lightPos[] = { -50.f, 50.0f, 100.0f, 1.0f };
-    GLfloat lightPos[] = { 0.f, 50.0f, 0.0f, 1.0f };
+    GLfloat lightPos[] = { -50.f, 50.0f, 100.0f, 1.0f };
 
     // Prevent a divide by zero
     if(h == 0)
