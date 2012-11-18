@@ -127,24 +127,30 @@ void RenderScene(void)
 // context. 
 void SetupRC()
     {
-    // Light values
-    // Bright white light
-    GLfloat ambientLight[] = { 0.3f, 0.3f, 0.3f, 1.0f };
-
     glEnable(GL_DEPTH_TEST);	// Hidden surface removal
     glEnable(GL_CULL_FACE);		// Do not calculate inside of jet
     glFrontFace(GL_CCW);		// Counter clock-wise polygons face out
 
     // Lighting stuff
-    glEnable(GL_LIGHTING);			// Enable lighting	
+    {
+        glEnable(GL_LIGHTING);			// Enable lighting	
 
-    // Set light model to use ambient light specified by ambientLight
-    glLightModelfv(GL_LIGHT_MODEL_AMBIENT,ambientLight);
+        // Light values
+        // Bright white light
+        GLfloat ambientLight[] = { 0.7f, 0.7f, 0.7f, 1.0f };
 
-    glEnable(GL_COLOR_MATERIAL);	// Enable Material color tracking
+        // Set light model to use ambient light specified by ambientLight
+        glLightModelfv(GL_LIGHT_MODEL_AMBIENT,ambientLight);
+    }
 
-    // Front material ambient and diffuse colors track glColor
-    glColorMaterial(GL_FRONT,GL_AMBIENT_AND_DIFFUSE);
+    // Material stuff 
+    {
+        glEnable(GL_COLOR_MATERIAL);	// Enable Material color tracking
+
+        // Front material ambient and diffuse colors track glColor
+        // glColorMaterial(GL_FRONT,GL_AMBIENT_AND_DIFFUSE);
+        glColorMaterial(GL_FRONT,GL_AMBIENT);
+    }
 
     // Nice light blue
     glClearColor(0.0f, 0.0f, 05.f,1.0f);

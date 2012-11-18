@@ -264,14 +264,14 @@ void RenderScene(void)
     // Save the matrix state and do the rotations
     glPushMatrix();
 
-    // Draw jet at new orientation, put light in correct position
-    // before rotating the jet
-    glEnable(GL_LIGHTING);
-    glLightfv(GL_LIGHT0,GL_POSITION,lightPos);
-    glRotatef(xRot, 1.0f, 0.0f, 0.0f);
-    glRotatef(yRot, 0.0f, 1.0f, 0.0f);
+        // Draw jet at new orientation, put light in correct position
+        // before rotating the jet
+        glEnable(GL_LIGHTING);
+        glLightfv(GL_LIGHT0,GL_POSITION,lightPos);
+        glRotatef(xRot, 1.0f, 0.0f, 0.0f);
+        glRotatef(yRot, 0.0f, 1.0f, 0.0f);
 
-    DrawJet(0);
+        DrawJet(0);
 
     // Restore original matrix state
     glPopMatrix();	
@@ -298,9 +298,9 @@ void RenderScene(void)
 
     // Draw the light source
     glPushMatrix();
-    glTranslatef(lightPos[0],lightPos[1], lightPos[2]);
-    glColor3ub(255,255,0);
-    glutSolidSphere(5.0f,10,10);
+        glTranslatef(lightPos[0],lightPos[1], lightPos[2]);
+        glColor3ub(255,255,0);
+        glutSolidSphere(5.0f,10,10);
     glPopMatrix();
 
     // Restore lighting state variables

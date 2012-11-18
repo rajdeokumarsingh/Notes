@@ -241,41 +241,45 @@ void RenderScene(void)
 // context. 
 void SetupRC()
     {
-    // Light values and coordinates
-    GLfloat  ambientLight[] = { 0.3f, 0.3f, 0.3f, 1.0f };
-    GLfloat  diffuseLight[] = { 0.7f, 0.7f, 0.7f, 1.0f };
-    GLfloat  specular[] = { 1.0f, 0.0f, 0.0f, 1.0f };
-    GLfloat  specref[] = { 1.0f, 0.0f, 0.0f, 1.0f };
-
     glEnable(GL_DEPTH_TEST);	// Hidden surface removal
     glFrontFace(GL_CCW);		// Counter clock-wise polygons face out
     glEnable(GL_CULL_FACE);		// Do not calculate inside of jet
 
-    // Enable lighting
-    glEnable(GL_LIGHTING);
+    {
+        // Enable lighting
+        glEnable(GL_LIGHTING);
 
-    // Setup and enable light 0
-    glLightfv(GL_LIGHT0,GL_AMBIENT,ambientLight);
-    glLightfv(GL_LIGHT0,GL_DIFFUSE,diffuseLight);
-    glLightfv(GL_LIGHT0,GL_SPECULAR, specular);
-    glEnable(GL_LIGHT0);
+        // Light values and coordinates
+        // GLfloat  ambientLight[] = { 0.3f, 0.3f, 0.3f, 1.0f };
+        // GLfloat  diffuseLight[] = { 0.7f, 0.7f, 0.7f, 1.0f };
+        GLfloat  specular[] = { 1.0f, 0.0f, 0.0f, 1.0f };
 
-    // Enable color tracking
-    glEnable(GL_COLOR_MATERIAL);
-	
-    // Set Material properties to follow glColor values
-    glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
+        // Setup and enable light 0
+        // glLightfv(GL_LIGHT0,GL_AMBIENT,ambientLight);
+        // glLightfv(GL_LIGHT0,GL_DIFFUSE,diffuseLight);
+        glLightfv(GL_LIGHT0,GL_SPECULAR, specular);
+        glEnable(GL_LIGHT0);
+    }
 
-    // All materials hereafter have full specular reflectivity
-    // with a high shine
-    glMaterialfv(GL_FRONT, GL_SPECULAR, specref);
-    // glMateriali(GL_FRONT, GL_SHININESS, 128);
-    glMateriali(GL_FRONT, GL_SHININESS, 64);
-    
-    // Light blue background
-    glClearColor(0.0f, 0.0f, 1.0f, 1.0f );
+    {
+        // Enable color tracking
+        glEnable(GL_COLOR_MATERIAL);
+
+        // Set Material properties to follow glColor values
+        glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
+
+        GLfloat  specref[] = { 1.0f, 0.0f, 0.0f, 1.0f };
+        // All materials hereafter have full specular reflectivity
+        // with a high shine
+        glMaterialfv(GL_FRONT, GL_SPECULAR, specref);
+        glMateriali(GL_FRONT, GL_SHININESS, 128);
+    }
     
     glEnable(GL_NORMALIZE);
+
+    // Light blue background
+    // glClearColor(0.0f, 0.0f, 1.0f, 1.0f );
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f );
     }
 
 /////////////////////////////////////////////////////
@@ -316,7 +320,6 @@ void SpecialKeys(int key, int x, int y)
 void ChangeSize(int w, int h)
     {
     GLfloat fAspect;
-    GLfloat lightPos[] = { -50.f, 50.0f, 100.0f, 1.0f };
 
     // Prevent a divide by zero
     if(h == 0)
@@ -335,6 +338,7 @@ void ChangeSize(int w, int h)
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     
+    GLfloat lightPos[] = { -50.f, 50.0f, 100.0f, 1.0f };
     glLightfv(GL_LIGHT0,GL_POSITION,lightPos);
     glTranslatef(0.0f, 0.0f, -150.0f);
     }
