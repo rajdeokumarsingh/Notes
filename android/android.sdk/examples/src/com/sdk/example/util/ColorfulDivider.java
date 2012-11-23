@@ -1,18 +1,19 @@
-package com.sdk.example.content;
+package com.sdk.example.util;
+
 
 import com.sdk.example.R;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.Log;
 
-public class WidthAndHeight extends Activity {
+public class ColorfulDivider extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		setContentView(R.layout.resources_width_and_height);
+		// draw color dividers
+		setContentView(R.layout.colorfull_divider);
 	}
+
 }

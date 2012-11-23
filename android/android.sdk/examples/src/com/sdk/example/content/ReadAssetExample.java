@@ -7,6 +7,8 @@ import com.sdk.example.R;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 import android.widget.TextView;
 
 public class ReadAssetExample extends Activity {
