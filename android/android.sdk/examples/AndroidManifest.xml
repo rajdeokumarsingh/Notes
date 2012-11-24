@@ -49,6 +49,7 @@
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
@@ -313,6 +314,141 @@
         <activity
             android:label="@string/title_activity_preference"
             android:name=".app.PreferenceExamples" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.sdk.example.intent.category.default" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/title_activity_intent"
+            android:name=".app.IntentExamples" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.sdk.example.intent.category.default" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/title_activity_receive_result"
+            android:name=".app.ReceiveActivityResult" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.sdk.example.intent.category.default" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/title_activity_send_result"
+            android:name=".app.SendActivityResult" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.sdk.example.intent.category.default" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/title_activity_intent_activity_flags"
+            android:name=".app.IntentFlagActivity" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.sdk.example.intent.category.default" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/title_activity_forwarding_activity"
+            android:name=".app.ForwardActivity" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.sdk.example.intent.category.default" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/title_activity_forwarding_activity"
+            android:name=".app.ForwardTargetActivity" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.sdk.example.intent.category.default" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/title_activity_recreate_activity"
+            android:name=".app.RecreateActivity" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.sdk.example.intent.category.default" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/title_activity_recreate_activity"
+            android:name=".app.RedirectActGetter" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.sdk.example.intent.category.default" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/title_activity_recreate_activity"
+            android:name=".app.RedirectActChooser" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.sdk.example.intent.category.default" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/title_activity_redirection_activity"
+            android:name=".app.RedirectionActivity" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.sdk.example.intent.category.default" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/title_activity_reorder_activity"
+            android:name=".app.ReorderActivity" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.sdk.example.intent.category.default" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/title_activity_reorder_activity"
+            android:name=".app.Reorder2ndActivity" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.sdk.example.intent.category.default" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/title_activity_reorder_activity"
+            android:name=".app.Reorder3rdActivity" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.sdk.example.intent.category.default" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/title_activity_reorder_activity"
+            android:name=".app.Reorder4thActivity" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.sdk.example.intent.category.default" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/title_activity_save_restore_activity"
+            android:name=".app.SaveRestoreStateActivity" >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
 

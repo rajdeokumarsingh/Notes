@@ -82,13 +82,17 @@ checking connectivity:
     egrep -i "IPACT=|pdpDroppe|CGACT:" radio.log
     grep 'pdp_network_drop\|UNSOL_DATA_CALL_LIST_CHANGED\|active=0\|tearDown=true' . -rns 
 
-    'loadUrl\|shouldOverrideUrlLoading\|Controller.*onPause\|Controller.*onResume\|Controller.*onDestroy\|startUsingNetworkFeature\|stopUsingNetworkFeature\|onReceivedError\|updateStatus\|NetworkStateHandler: onReceive: NetworkInfo: type:\|loadUrl delay\|BindToDevice'
+    'loadUrl\|shouldOverrideUrlLoading\|Controller.*onPause\|Controller.*onResume\|Controller.*onDestroy\|startUsingNetworkFeature\|stopUsingNetworkFeature\|onReceivedError\|updateStatus\|NetworkStateHandler: onReceive: NetworkInfo: type:\|loadUrl delay\|BindToDevice\|onPageStarted\|onPageFinished'
 
     onReceivedError
     onReceivedError: -8,
 
     chromium
     chromium(24157): Unknown chromium error: -3
+
+    根据Log, 浏览器使用cmnet上网，使用的socket interface是ppp0，没有使用http代理。
+    没有发现浏览器有任何异常。但是底层网络返回了-1的错误。
+    建议网络层工程师继续分析。
 
     网络错误列表：
     enum WebViewClientError

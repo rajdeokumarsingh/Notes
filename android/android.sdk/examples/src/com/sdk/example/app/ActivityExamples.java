@@ -16,6 +16,17 @@ public class ActivityExamples extends SdkMainActivity {
 		nameList.add(addItem(CustomTitleActivity.class, "Custom Title"));
 		nameList.add(addItem(ThemeExamples.class, "Theme Examples"));
 		nameList.add(addItem(PreferenceExamples.class, "Preference Examples"));
+		nameList.add(addItem(IntentExamples.class, "Intent Examples"));
+		nameList.add(addItem(ReceiveActivityResult.class,
+				"Receive Activity Result Examples"));
+		
+		nameList.add(addItem(IntentFlagActivity.class, "IntentFlagActivity"));
+		nameList.add(addItem(ForwardActivity.class, "ForwardActivity"));
+		nameList.add(addItem(RecreateActivity.class, "RecreateActivity"));
+		nameList.add(addItem(RedirectionActivity.class, "RedirectionActivity"));
+		nameList.add(addItem(ReorderActivity.class, "ReorderActivity"));
+		nameList.add(addItem(SaveRestoreStateActivity.class, "SaveRestoreStateActivity"));
+		
 		return nameList;
 	}
 }

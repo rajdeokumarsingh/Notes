@@ -228,6 +228,22 @@ Implementing the lifecycle callbacks
 
 Saving activity state
     onSaveInstanceState: save activities state 
+        系统回收资源时，可能会杀死一些后台的activity。onSaveInstanceState可用于保存activiy的UI状态。
+            场景1：
+                用户启动activity A, 然后按power键关闭屏幕
+                    onSaveInstanceState会被调用到
+                    因为a可能在屏幕关闭时被杀死
+            场景2：
+                用户启动activity A, A然后启动activity B
+                    onSaveInstanceState会被调用到
+                    因为a可能在后台被杀死
+            场景3：
+                用户启动activity A, A然后启动activity B
+                    从B返回到A
+                    B的onSaveInstanceState!!!不会!!!被调用到
+
+                    因为B已经退出了，没有什么状态需要保存
+
         void onSaveInstanceState(Bundle outState)
             called before onStop() and possibly before onPause()
             not guaranteed to be called

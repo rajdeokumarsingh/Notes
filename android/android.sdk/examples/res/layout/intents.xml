@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2008 The Android Open Source Project
+<!--
+     Copyright (C) 2008 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,24 +15,59 @@
      limitations under the License.
 -->
 
-<!-- Demonstrates launching various intents.
-     See corresponding Java code com.example.android.apis.app.Intents.java. -->
+<!--
+     Demonstrates launching various intents.
+     See corresponding Java code com.example.android.apis.app.Intents.java.
+-->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="4dip"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:padding="4dip" >
 
     <TextView
-        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="0"
         android:paddingBottom="4dip"
-        android:text="@string/intents"/>
+        android:text="@string/intents" />
 
-    <Button android:id="@+id/get_music"
-        android:layout_width="wrap_content" android:layout_height="wrap_content" 
-        android:text="@string/get_music">
+    <Button
+        android:id="@+id/get_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/get_music" >
+
+        <requestFocus />
+    </Button>
+
+    <Button
+        android:id="@+id/get_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/get_video" >
+
+        <requestFocus />
+    </Button>
+
+    <Button
+        android:id="@+id/get_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/get_text" >
+
+        <requestFocus />
+    </Button>
+    
+  	<Button
+        android:id="@+id/get_browser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/get_browser" >
+
         <requestFocus />
     </Button>
 
 </LinearLayout>
-
