@@ -1,14 +1,7 @@
-
 TODO:
 http://code.google.com/events/io/2009/sessions/CodingLifeBatteryLife.html
 
-
 ./checklist.java
-
-
-./style.theme.txt
-./Resources.txt
-
 
 ./app.fundamentals.txt [done]
 
@@ -37,6 +30,10 @@ http://code.google.com/events/io/2009/sessions/CodingLifeBatteryLife.html
 ./SignedJarBuilder.java
 
 ./test/index.txt
+
+./style.theme.txt
+./Resources.txt
+
 
 dig more:
     bluetooth

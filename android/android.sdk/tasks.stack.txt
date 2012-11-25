@@ -6,18 +6,21 @@ Keyword:
 Review questions:
     What is a task?
     What is a back stack?
-
     When does Android start a task?
+        1. start an activity from Launcher
+        2. start an activity whose task flag is singleTask or 
+            singleInstance
 
     How does Android start an activity or an task?
-
     How does Android resume a task or an activity?
+    Can we change the activity order in a back stack?
 
 Task
     A task contains activities
     A task has a back stack
         "last in, first out"
         activities in the back stack are never rearranged
+    Every activity in Launcher is a entry point of a task
 
 Starting a task
     set up an activity as the entry point for a task:
@@ -78,6 +81,10 @@ Managing Tasks
         Using the manifest file
             <activity> element's launchMode attribute
                 how the activity should be launched into a task
+                    1. 是否允许有重复的activity存在?
+                    2. 该activity是否能被安排到不同的task中？
+                    全局有多个task包括该activity?
+                    包括该activity的task能否包括别的activity?
 
                     "standard" (the default mode)
                         creates a new instance of the activity in the task
@@ -86,6 +93,7 @@ Managing Tasks
 
                         每次都创建一个新的activity
                         同一个task中也可以创建多个instance
+                        每个activity可被安排到不同的task中
 
                     "singleTop"
                         same as standard mode, except
@@ -94,11 +102,11 @@ Managing Tasks
                                 launch the same activity at the top of the stack again
                                
                         A-B-C-D:    Current back stack
-                        A-B-C-D-D:  D is launched in default mode
+                        A-B-C-D-D-D:  D is launched in default mode
                         A-B-C-D:    D is launched in "singleTop" mode
 
-                        不能在任务的栈顶有多个相同activity的instance
-                            其他通standard mode
+                        在task的顶部不允许有多个相同的activity
+                            其他同standard mode
 
                     "singleTask"
                         creates a new task
@@ -109,13 +117,23 @@ Managing Tasks
                             onNewIntent() method will be invoked 
 
                         T1(A) : Current back stack
-                        T1(A)-T2(B) : A launch B, which is singleTask
-                        T1(A)-T2(B) T3(X): T3 go to foreground, T3 launch B
+                        T1(A)->T2(B) : A launch B, which is singleTask
+                        T1(A)->T2(B) T3(X): T3 go to foreground, T3 launch B
                                            B's onNewIntent() method will be invoked
 
                         系统全局只能有该activity的一个instance
                         该instance创建时候会分配到一个新的任务中
                             launch一个已经创建的instance的时候， 该instance的onNewIntent会被调用
+
+
+                        T1(A)->T1(B) 
+                        T2(X)->T2(Y), Y是singleTask
+
+                        T1(A)->T1(B)->Y B启动Y
+                        T1(A)->T1(B)-> (T1(X)->T2(Y))
+
+                        back键的返回顺序应该是:
+                        T1(A)<-T1(B)<- (T1(X)<-T2(Y))
 
                     "singleInstance"
                         Same as "singleTask"
@@ -144,10 +162,18 @@ Managing Tasks
 
                     most often used in conjunction with FLAG_ACTIVITY_NEW_TASK.
 
+                    如果没有FLAG_ACTIVITY_CLEAR_TOP, singleTask的activity如果不再栈顶，
+                        会有什么样的情况发生？
+
+                    浏览器使用的就是
+                        FLAG_ACTIVITY_NEW_TASK+FLAG_ACTIVITY_CLEAR_TOP
+
 Handling affinities
     indicates which task an activity prefers to belong to
-
-    By default, all the activities from the same application have an affinity for each other
+    一般情况下，同一个application中的所有activity会被安排在同一个task中
+        但是可以设置：
+            不同application中的activity可以在同一个task中
+            同一个application中的activity可以在不同的task中
 
     taskAffinity attribute of <activity> 
         Launch a activity with the FLAG_ACTIVITY_NEW_TASK flag

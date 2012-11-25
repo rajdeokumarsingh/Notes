@@ -225,8 +225,10 @@ Implementing the lifecycle callbacks
             because any blocking procedures in this method block the transition to the next activity 
             and slow the user experience.
 
-
 Saving activity state
+    问题: onSaveInstanceState的作用是什么？ 
+        当你写了一个onSaveInstanceState()函数后，如何去测试它?
+
     onSaveInstanceState: save activities state 
         系统回收资源时，可能会杀死一些后台的activity。onSaveInstanceState可用于保存activiy的UI状态。
             场景1：
@@ -251,14 +253,11 @@ Saving activity state
                 use onPause to store persistent data(DB)
 
         You can just invoke following interfaces to save data to Bundle
-            putBoolean putByte putChar putShort putInt putLong putFloat putDouble putString putCharSequence putParcelable putParcelableArray 
-            putParcelableArrayList putSparseParcelableArray putIntegerArrayList putStringArrayList putCharSequenceArrayList putSerializable 
-            putBooleanArray putByteArray putShortArray putCharArray putIntArray putLongArray putFloatArray putDoubleArray putStringArray 
-            putCharSequenceArray putBundle putIBinder 
 
         FIXME:
             There's no guarantee that onSaveInstanceState() will be called before your activity is destroyed, 
-            such as when the user leaves your activity using the BACK key, because the user is explicitly closing the activity
+            such as when the user leaves your activity using the BACK key, 
+            because the user is explicitly closing the activity
 
             the default implementation of onSaveInstanceState() helps save the state of the UI,
                 should always call super.onSaveInstanceState() before doing any work.
@@ -266,15 +265,8 @@ Saving activity state
     onCreate: restore activities state
         void onCreate(Bundle icicle)
             need ot restore state of the actitivy
-
         No need to restore state in onResume
-
         You can just invoke following interfaces to restore data from Bundle
-            getBoolean getByte getByte getChar getChar getShort getShort getInt getInt getLong getLong getFloat getFloat 
-            getDouble getDouble getString getCharSequence getBundle getParcelable getParcelableArray getParcelableArrayList 
-            getSparseParcelableArray getSerializable getIntegerArrayList getStringArrayList getCharSequenceArrayList getBooleanArray 
-            getByteArray getShortArray getCharArray getIntArray getLongArray getFloatArray getDoubleArray getStringArray 
-            getCharSequenceArray getIBinder 
 
     rotate the device so that the screen orientation changes
         the system destroys and recreates the activity
@@ -305,7 +297,7 @@ Coordinating activities
     </intent-filter>
 
 [Finished at 2011-09-05]
-
+[Revised at 2012-11-25]
 
 
 

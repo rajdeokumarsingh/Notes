@@ -38,7 +38,9 @@
             android:layout_weight="1" android:background="@drawable/green"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/initial_text"
-            android:freezesText="true">
+            >
+            <!-- android:freezesText="true" -->
+            
         </EditText>
 
         <TextView
