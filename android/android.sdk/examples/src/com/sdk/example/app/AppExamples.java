@@ -14,9 +14,10 @@ public class AppExamples extends SdkMainActivity {
 	protected List<Map<String, Object>> getData() {
 		List<Map<String, Object>> nameList = new ArrayList<Map<String, Object>>();
 
-		nameList.add(addItem(AlertDlgExamples.class, "Alert Dialogs"));
-		nameList.add(addItem(ActivityExamples.class, "Activity Examples"));
-
+		nameList.add(addItem(ActivityExamples.class, "Activity"));
+		nameList.add(addItem(AlertDlgExamples.class, "Alert Dialog"));
+		nameList.add(addItem(ActionBarExamples.class, "Action Bar"));
+		
 		return nameList;
 	}
 }

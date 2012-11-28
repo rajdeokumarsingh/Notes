@@ -19,6 +19,7 @@
     <!-- This group uses the default category. -->
     <group android:id="@+id/most_used_items">
     
+    
         <item android:id="@+id/last_most_item"
             android:orderInCategory="10"
             android:title="@string/last_most_often" />
@@ -38,7 +39,8 @@
          (Furthermore, notice how the orders in each category are independent from the other
          category.) -->
     <group android:id="@+id/least_used_items"
-        android:menuCategory="secondary">
+        android:menuCategory="secondary"
+        >
         
         <item android:id="@+id/last_least_item"
             android:orderInCategory="3"

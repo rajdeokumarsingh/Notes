@@ -34,6 +34,7 @@ http://code.google.com/events/io/2009/sessions/CodingLifeBatteryLife.html
 ./style.theme.txt
 ./Resources.txt
 
+./Menu.java
 
 dig more:
     bluetooth

@@ -82,7 +82,12 @@ checking connectivity:
     egrep -i "IPACT=|pdpDroppe|CGACT:" radio.log
     grep 'pdp_network_drop\|UNSOL_DATA_CALL_LIST_CHANGED\|active=0\|tearDown=true' . -rns 
 
-    'loadUrl\|shouldOverrideUrlLoading\|Controller.*onPause\|Controller.*onResume\|Controller.*onDestroy\|startUsingNetworkFeature\|stopUsingNetworkFeature\|onReceivedError\|updateStatus\|NetworkStateHandler: onReceive: NetworkInfo: type:\|loadUrl delay\|BindToDevice\|onPageStarted\|onPageFinished'
+    'loadUrl\|shouldOverrideUrlLoading\|Controller.*onPause\|Controller.*onResume\|Controller.*onDestroy\|startUsingNetworkFeature\|stopUsingNetworkFeature\|onReceivedError\|freeMemory\|updateStatus\|NetworkStateHandler: onReceive: NetworkInfo: type:\|loadUrl delay\|BindToDevice\|onPageStarted url\|onPageFinished url\|onLoadResource():\|FlushSocketPools'
+
+    'startUsingNetworkFeature\|loadUrl delay\|NetworkStateHandler: onReceive: NetworkInfo: type:'
+
+    'onPageStarted url\|onPageFinished url'
+
 
     onReceivedError
     onReceivedError: -8,

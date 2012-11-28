@@ -26,6 +26,7 @@ public class ActivityExamples extends SdkMainActivity {
 		nameList.add(addItem(RedirectionActivity.class, "RedirectionActivity"));
 		nameList.add(addItem(ReorderActivity.class, "ReorderActivity"));
 		nameList.add(addItem(SaveRestoreStateActivity.class, "SaveRestoreStateActivity"));
+		nameList.add(addItem(MenuExamples.class, "MenuExamples"));
 		
 		return nameList;
 	}

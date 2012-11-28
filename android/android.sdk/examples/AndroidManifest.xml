@@ -456,6 +456,33 @@
             </intent-filter>
         </activity>
         <activity
+            android:label="@string/title_activity_menu_activity"
+            android:name=".app.MenuExamples" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.sdk.example.intent.category.default" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/title_activity_action_bar"
+            android:name=".app.ActionBarExamples" />
+        <activity
+            android:label="@string/title_activity_action_bar"
+            android:name=".app.ActionBarMechanicsActivity" />
+        <activity
+            android:label="@string/title_activity_action_bar"
+            android:name=".app.ActionBarTabsActivity" />
+        <activity
+            android:label="@string/title_activity_action_bar"
+            android:name=".app.ActionBarUsageActivity" />
+        <activity
+            android:label="@string/title_activity_action_bar"
+            android:name=".app.ActionProviderActivity" />
+        <activity
+            android:label="@string/title_activity_action_bar"
+            android:name=".app.DisplayOptionsActivity" />
+        <activity
             android:label="@string/title_activity_content"
             android:name=".content.ContentExamples" >
             <intent-filter >

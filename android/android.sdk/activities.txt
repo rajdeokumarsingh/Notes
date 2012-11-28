@@ -1,3 +1,8 @@
+[Finished at 2011-09-05]
+[Revised at 2012-11-25]
+[Revised at 2012-11-26: Added note for onLowMemory()]
+
+
 Activity
    provides a screen with which users can interact in order to do something 
 
@@ -289,22 +294,18 @@ Coordinating activities
         2. Activity B's onCreate(), onStart(), and onResume() methods execute in sequence. (Activity B now has user focus.)
         3. Then, if Activity A is no longer visible on screen, its onStop() method executes.
 
-
 在Launcher中显示应用
     <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
     </intent-filter>
 
-[Finished at 2011-09-05]
-[Revised at 2012-11-25]
+public abstract void onLowMemory ()
+    系统内存低的时候调用该方法
+        一般会在所有后台进程被杀死的时候, 系统准备开始杀死service和前台进程之前调用
+        避免service进程和前台进程被杀死
 
-
-
-
-
-
-
-
-
+    Application应该在该方法中释放所有cache和不必要的资源
+    在该方法返回之后，系统会进行垃圾回收
+    
 
