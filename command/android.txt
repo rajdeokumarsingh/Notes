@@ -88,7 +88,6 @@ checking connectivity:
 
     'onPageStarted url\|onPageFinished url'
 
-
     onReceivedError
     onReceivedError: -8,
 
