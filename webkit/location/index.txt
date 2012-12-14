@@ -1,10 +1,15 @@
 
+./log.google.geo.txt
+./flow.show.geo.perm.cpp
+
+
+
+
+
 base/core/java/android/webkit/GeolocationService.java
 
 base/location/java/android/location
 base/services/java/com/android/server/LocationManagerService.java
-
-
 
 ./WebCore/page/GeolocationController.cpp
 ./WebCore/page/Geolocation.cpp
@@ -18,6 +23,7 @@ base/services/java/com/android/server/LocationManagerService.java
 ./WebKit/android/WebCoreSupport/GeolocationPermissions.cpp
 
 
+
 WebCore/page/Navigator.cpp|170| <<global>> m_geolocation = Geolocation::create(m_frame);
     Geolocation* Navigator::geolocation() const
         if (!m_geolocation)
@@ -27,4 +33,5 @@ WebCore/page/Navigator.cpp|170| <<global>> m_geolocation = Geolocation::create(m
 
 Geolocation::Geolocation()
     m_service(GeolocationService::create(this))
+
 

@@ -13,6 +13,7 @@ flow/index.cpp
 
     ./flow/load.main.res.cpp
 
+    ./flow/network.error.cpp
 
 note.webkit.loading_resource.java
 
@@ -24,3 +25,5 @@ note.webkit.loading_resource.java
 essay/decoding.txt
 
 ./task/task.encoding/task.encoding.cpp
+
+

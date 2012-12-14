@@ -82,12 +82,19 @@ checking connectivity:
     egrep -i "IPACT=|pdpDroppe|CGACT:" radio.log
     grep 'pdp_network_drop\|UNSOL_DATA_CALL_LIST_CHANGED\|active=0\|tearDown=true' . -rns 
 
-    'loadUrl\|shouldOverrideUrlLoading\|Controller.*onPause\|Controller.*onResume\|Controller.*onDestroy\|startUsingNetworkFeature\|stopUsingNetworkFeature\|onReceivedError\|updateStatus\|NetworkStateHandler: onReceive: NetworkInfo: type:\|loadUrl delay\|BindToDevice\|onPageStarted url\|onPageFinished url\|onLoadResource():\|FlushSocketPools\|enablePlatformNotifications\|disablePlatformNotifications'
+    'load\( \)*[Uu]rl\( delay\)*\|shouldOverrideUrlLoading\|Controller.*\(onPause\|onResume\|onDestroy\)\|\(start\|stop\)UsingNetworkFeature\|onReceivedError\|updateStatus\|NetworkStateHandler.*NetworkInfo\|BindToDevice\|onPageStarted url\|onPageFinished url\|onLoadResource()\|FlushSocketPools\|[Pp]roxy\|JavaBridge.cpp\|WebUrlLoader\|chromium\|BrowserSettings: apn is:'
 
     'startUsingNetworkFeature\|loadUrl delay\|NetworkStateHandler: onReceive: NetworkInfo: type:'
 
     'onPageStarted url\|onPageFinished url'
     'freeMemory\|'
+
+    'NetworkInfo: type:\|onResume,\|enter handleApnResume\|enter onPause()'
+
+    'Controller.*\(onPause\|onResume\|onDestroy\)'
+
+    'onSaveInstance'
+
 
     onReceivedError
     onReceivedError: -8,

@@ -10,7 +10,6 @@ Clue: Bluetooth sco设备中发送notification的流程
         }
 
 
-
 ./basic.knowledge/pcm.format.txt
 
 important logic concept:

@@ -1,17 +1,5 @@
-
-2.2上的运行方法
-start --plan Performance --package android.performance3
-
-start --plan Android -p android.app.cts.DownloadManagerTest
-
-start --plan Android -t android.app.cts.DownloadManagerTest#testCase1
-
-
-Hi Zhidong：
-我就是从网上下载的Android 4.0.3 R2 Compatibility Test Suite (CTS)，链接如下：
+从网上下载的Android 4.0.3 R2 Compatibility Test Suite (CTS)，链接如下：
 http://source.android.com/compatibility/downloads.html
-附件是我写的CTS测试说明文档，可以参考一下！
-
 
 CTS测试步骤
 
@@ -98,5 +86,12 @@ c). 运行copy_media.sh
 默认情况下直接运行：./copy_media.sh
 如果手机支持的最大播放视频文件尺寸为720x480时, 运行命令为： ./copy_media.sh 720x480
 如果不确定手机支持的最大播放视频文件尺寸，可以运行./copy_media.sh 1920x1080，这样会把android-cts-media-1.0文件夹下所有的视频文件都拷贝到SD卡下面；
+
+2.2上的运行方法
+start --plan Performance --package android.performance3
+
+start --plan Android -p android.app.cts.DownloadManagerTest
+
+start --plan Android -t android.app.cts.DownloadManagerTest#testCase1
 
 
