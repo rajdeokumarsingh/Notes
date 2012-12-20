@@ -9,18 +9,17 @@ What is Navigation?
             MainResourceLoader从网络上获取Frame的信息，然后交给相应的解析器解析
 
 FrameLoader-->DocumentLoader-JNI->Browser(shouldOverrideURL)
-
         -JNI->DocumentLoader-->MainResourceLoader-->ResourceHandle
 */
 
+/* 
+Loader模块
+    Network 模块的客户。 
+    Loader接触到的基本上是同OS和HTTP实现无关的Network 层接口。 
 
-/* Network模块
-        提供指定资源的下载和上传功能，获取的资源可能来自网络、本地文件或者缓存。
-        对不同 HTTP 实现的适配会在 Network 层完成
-
-    Loader模块
-        Network 模块的客户。 
-        Loader接触到的基本上是同OS和HTTP实现无关的Network 层接口。 
+Network模块
+    提供指定资源的下载和上传功能，获取的资源可能来自网络、本地文件或者缓存。
+    对不同 HTTP 实现的适配会在 Network 层完成
 */
 
 //////////////////////////////////////////////////////////////////////
@@ -136,7 +135,7 @@ WebKit将预载入的资源分成了两类
     6. MainResourceLoader会从网络上获取Frame的信息，然后交给相应的解析器解析。
 
 
-ResourceLoader 通过 ResourceNotifier 类将回调传导到 FrameLoaderClient 类
+ResourceLoader通过ResourceNotifier类将回调传导到FrameLoaderClient类
 
 
 三、主资源加载过程
@@ -220,8 +219,6 @@ ResourceLoader 通过 ResourceNotifier 类将回调传导到 FrameLoaderClient �
         MemoryCache 类维护了一个 HashMap 存储所有缓存条目。
         HashMap <String,CachedResource> m_resources; 
 */
-
-
 
 
     ResourceLoader.cpp

@@ -199,7 +199,6 @@ void PolicyChecker::continueAfterNavigationPolicy(
                                 mCallbackProxy.onPageStarted(url, favicon);
                                 mWebViewCore.removeMessages(
                                         WebViewCore.EventHub.WEBKIT_DRAW);
-
             }
         }
             callback.call(shouldContinue);
@@ -320,8 +319,6 @@ bool MainResourceLoader::loadNow(ResourceRequest& r)
         m_handle = ResourceHandle::create(m_frame->loader()->networkingContext(), r, this, false, true);
 
     return false;
-
-
         |
         |
         V
@@ -422,7 +419,6 @@ PassRefPtr<WebUrlLoader> WebUrlLoader::start(FrameLoaderClient* client, WebCore:
     }
 
     return loader.release();
-
             |
             V
 void WebRequest::start()
@@ -444,5 +440,6 @@ void WebRequest::start()
             |
             V
         OwnPtr<net::URLRequest> m_request;
+
 
 

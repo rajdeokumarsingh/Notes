@@ -82,11 +82,13 @@ checking connectivity:
     egrep -i "IPACT=|pdpDroppe|CGACT:" radio.log
     grep 'pdp_network_drop\|UNSOL_DATA_CALL_LIST_CHANGED\|active=0\|tearDown=true' . -rns 
 
+onReceivedError
+
     'load\( \)*[Uu]rl\( delay\)*\|shouldOverrideUrlLoading\|Controller.*\(onPause\|onResume\|onDestroy\)\|\(start\|stop\)UsingNetworkFeature\|onReceivedError\|updateStatus\|NetworkStateHandler.*NetworkInfo\|BindToDevice\|onPageStarted url\|onPageFinished url\|onLoadResource()\|FlushSocketPools\|[Pp]roxy\|JavaBridge.cpp\|WebUrlLoader\|chromium\|BrowserSettings: apn is:'
 
     'startUsingNetworkFeature\|loadUrl delay\|NetworkStateHandler: onReceive: NetworkInfo: type:'
 
-    'onPageStarted url\|onPageFinished url'
+    'onPageStarted url\|onPageFinished url\|onProgressChanged'
     'freeMemory\|'
 
     'NetworkInfo: type:\|onResume,\|enter handleApnResume\|enter onPause()'
@@ -94,7 +96,7 @@ checking connectivity:
     'Controller.*\(onPause\|onResume\|onDestroy\)'
 
     'onSaveInstance'
-
+    'DocumentWriter\|WebCore\|WebKit\|onPageStarted\|load url\|WebRequest\|
 
     onReceivedError
     onReceivedError: -8,
@@ -102,9 +104,22 @@ checking connectivity:
     chromium
     chromium(24157): Unknown chromium error: -3
 
-    根据Log, 浏览器使用cmnet上网，使用的socket interface是ppp0，没有使用http代理。
-    没有发现浏览器有任何异常。但是底层网络返回了-1的错误。
-    建议网络层工程师继续分析。
+g/SignalStrength\|[Aa]udio\|tinyalsa\|NetworkControllerDualSIM\|ConnectivityService\|PageDownloader\|Telephony\|dalvikvm\|DeviceStorageMonitorService\|KeyguardUpdateMonitor\|LockPatternKeyguardView\|LC_DM_\|power\|Phone\|volume\|TextResourceDecoder\|wpa_\|wifi/d
+
+[Jiang Rui]
+从Log分析，浏览器使用系统默认网络上网，从系统获取的http代理为空，使用系统默认的socket interface。 
+没有发现浏览器有异常行为。但是底层网络返回-1错误。建议网络层继续分析。
+
+[Jiang Rui]
+对比Log和tcpdump, 下面这条http请求一直没有加载完成。而这个请求正是截图中正在等待加载的主页面。
+建议网络层继续分析。
+
+0007690 [CMCC外场自测][广州][20121215][5.2网页浏览（CMNET）+彩信收发]_7_A/B终端登录网页失败，一直在等待刷新
+Log:
+12-16 14:12:37.530  1047  1047 V Load_twice: onPageStarted url:http://www.karttv.cn/search.php?key=title&keyword=%C6%C6%CB%E9
+Tcpdump:
+20472012-12-16 14:12:40.08886010.68.148.121117.34.88.89HTTPGET /search.php?key=title&keyword=%C6%C6%CB%E9 HTTP/1.1 
+
 
     网络错误列表：
     enum WebViewClientError

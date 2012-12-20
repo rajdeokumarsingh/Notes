@@ -13,7 +13,7 @@ import com.sdk.example.R;
 
 public class ReceiveActivityResult extends Activity {
 
-	// Definition of the one requestCode we use for receiving resuls.
+	// Definition of the one requestCode we use for receiving results.
 	static final private int GET_CODE = 0;
 
 	private TextView mResults;

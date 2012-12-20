@@ -41,7 +41,5 @@ public class CustomTitleActivity extends Activity {
 				rightText.setText(rightEdit.getText());
 			}
 		});
-		
-		
 	}
 }

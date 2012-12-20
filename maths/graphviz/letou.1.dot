@@ -1,0 +1,10 @@
+digraph finite_state_machine {
+    P_3_7 -> P_2_7 [ label = "3" ]
+    P_3_7 -> P_3_6 [ label = "7" ]
+
+    P_2_7 -> P_1_7 [ label = "2" ]
+    P_2_7 -> P_2_6 [ label = "7" ]
+
+    P_3_6 -> P_2_6_ [ label = "3" ]
+    P_3_6 -> P_3_5 [ label = "6" ]
+}
