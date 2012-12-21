@@ -2,14 +2,20 @@
 //                              WebKit
 // ================================================================================
 
+WebCore/page/Geolocation.cpp
+    void Geolocation::requestPermission()
+
+
+WebKit/android/WebCoreSupport/ChromeClientAndroid.cpp
+    if (!m_geolocationPermissions) {
+        m_geolocationPermissions = new GeolocationPermissions(android::WebViewCore::getWebViewCore(frame->view()),
+                m_webFrame->page()->mainFrame());
+    }
+    m_geolocationPermissions->queryPermissionState(frame);
+
 WebKit/android/WebCoreSupport/GeolocationPermissions.cpp
 
 ./GeolocationPermissions.cpp
-
-
-
-
-
 
 WebKit/android/jni/WebViewCore.cpp
 void WebViewCore::geolocationPermissionsShowPrompt(const WTF::String& origin)
