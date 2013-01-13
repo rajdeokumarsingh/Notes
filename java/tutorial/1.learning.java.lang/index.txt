@@ -13,3 +13,5 @@ Trail: Learning the Java Language:
     ./abstract_class_method.java
     ./string.java
     ./autoboxing.java
+
+    ./generics.java
