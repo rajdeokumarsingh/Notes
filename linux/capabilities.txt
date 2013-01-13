@@ -1,6 +1,4 @@
-
 man 7 capabilities
-
 
 CAP_SYS_PTRACE
     Trace arbitrary processes using ptrace(2)

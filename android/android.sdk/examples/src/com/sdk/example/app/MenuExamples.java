@@ -81,7 +81,7 @@ public class MenuExamples extends Activity {
 		mSpinner.setAdapter(adapter);
 
 		layout.addView(mSpinner, new LinearLayout.LayoutParams(
-				LinearLayout.LayoutParams.FILL_PARENT,
+				LinearLayout.LayoutParams.MATCH_PARENT,
 				LinearLayout.LayoutParams.WRAP_CONTENT));
 
 		// Create help text

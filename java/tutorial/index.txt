@@ -1,14 +1,4 @@
-file:///home/jiangrui/books/java/tutorial/java/nutsandbolts/index.html
-Lesson: Language Basic    
-
-file:///home/jiangrui/books/java/tutorial/java/javaOO/index.html
-Lesson: Classes and Objects
-
-file:///home/jiangrui/books/java/tutorial/java/javaOO/summaryclasses.html
-Summary of Creating and Using Classes and Objects
-
 # build java program in command line
 ./examples/command.line/command.txt
 
-
-
+./1.learning.java.lang/index.txt

@@ -70,6 +70,8 @@
     <string name="title_activity_content_resources">Resources Activity</string>
     <string name="title_activity_content_storage">Storage Activity</string>
     
+    <string name="title_activity_services">Services</string>
+    
 
     <!-- =============================== -->
     <!-- app/activity examples strings -->

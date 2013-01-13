@@ -18,9 +18,9 @@
     <!-- For android.media.audiofx.Visualizer -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
-    <!--uses-sdk
-        android:minSdkVersion="4"
-        android:targetSdkVersion="13" /-->
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
 
     <!--
          We will request access to the camera, saying we require a camera
@@ -40,9 +40,9 @@
         <!-- android:theme="@android:style/Theme.Wallpaper.NoTitleBar" -->
 
         <activity
-            android:label="@string/title_activity_sdk_main"
-            android:name=".SdkMainActivity" >
-            <intent-filter >
+            android:name=".SdkMainActivity"
+            android:label="@string/title_activity_sdk_main" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
@@ -51,65 +51,65 @@
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_adapters"
-            android:name=".adapter.AdapterExamples" >
+            android:name=".adapter.AdapterExamples"
+            android:label="@string/title_activity_adapters" >
 
             <!-- android:theme="@style/AppTheme" -->
-            <intent-filter >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_adapter_array"
-            android:name=".adapter.ArrayAdapterSimple" >
-            <intent-filter >
+            android:name=".adapter.ArrayAdapterSimple"
+            android:label="@string/title_activity_adapter_array" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_adapter_array_image_example"
-            android:name=".adapter.ArrayAdapterImageText" >
-            <intent-filter >
+            android:name=".adapter.ArrayAdapterImageText"
+            android:label="@string/title_activity_adapter_array_image_example" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_package_info"
-            android:name=".package1.manager.PackageInfoActivity" >
-            <intent-filter >
+            android:name=".package1.manager.PackageInfoActivity"
+            android:label="@string/title_activity_package_info" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_app_examples"
-            android:name=".app.AppExamples" >
-            <intent-filter >
+            android:name=".app.AppExamples"
+            android:label="@string/title_activity_app_examples" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_app_examples"
-            android:name=".app.AlertDlgExamples" >
-            <intent-filter >
+            android:name=".app.AlertDlgExamples"
+            android:label="@string/title_activity_app_examples" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_activity_examples"
-            android:name=".app.ActivityExamples" >
-            <intent-filter >
+            android:name=".app.ActivityExamples"
+            android:label="@string/title_activity_activity_examples" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
@@ -118,478 +118,565 @@
 
         <!-- android:theme="@android:style/Theme.Dialog" -->
         <activity
-            android:label="@string/title_activity_custom_dialog"
             android:name=".app.CustomDialog"
+            android:label="@string/title_activity_custom_dialog"
             android:theme="@style/Theme.CustomDialog" >
-            <intent-filter >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_dialog_activity"
             android:name=".app.DialogActivity"
+            android:label="@string/title_activity_dialog_activity"
             android:theme="@android:style/Theme.DeviceDefault.Dialog" >
-            <intent-filter >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_custom_title"
             android:name=".app.CustomTitleActivity"
+            android:label="@string/title_activity_custom_title"
             android:theme="@android:style/Theme"
             android:windowSoftInputMode="stateVisible|adjustPan" >
-            <intent-filter >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_theme_examples"
-            android:name=".app.theme.ThemeExamples" >
-            <intent-filter >
+            android:name=".app.theme.ThemeExamples"
+            android:label="@string/title_activity_theme_examples" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_theme_dialog"
             android:name=".app.theme.ThemeDialog"
+            android:label="@string/title_activity_theme_dialog"
             android:theme="@android:style/Theme.Dialog" >
-            <intent-filter >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_theme_no_display"
             android:name=".app.theme.ThemeNoDisplay"
+            android:label="@string/title_activity_theme_no_display"
             android:theme="@android:style/Theme.NoDisplay" >
-            <intent-filter >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_theme_translucent"
             android:name=".app.theme.ThemeTranslucent"
+            android:label="@string/title_activity_theme_translucent"
             android:theme="@android:style/Theme.Translucent" >
-            <intent-filter >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_theme_wallpaper_settings"
             android:name=".app.theme.ThemeWallpaperSettings"
+            android:label="@string/title_activity_theme_wallpaper_settings"
             android:theme="@android:style/Theme.WallpaperSettings" >
-            <intent-filter >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_theme_wallpaper"
             android:name=".app.theme.ThemeWallpaper"
+            android:label="@string/title_activity_theme_wallpaper"
             android:theme="@android:style/Theme.Wallpaper" >
-            <intent-filter >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_theme_black"
             android:name=".app.theme.ThemeBlack"
+            android:label="@string/title_activity_theme_black"
             android:theme="@android:style/Theme.Black" >
-            <intent-filter >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_theme_ligth_no_title_fullscreen"
             android:name=".app.theme.ThemeLightNoTitleBarFullScreen"
+            android:label="@string/title_activity_theme_ligth_no_title_fullscreen"
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
-            <intent-filter >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_theme_light"
             android:name=".app.theme.ThemeLight"
+            android:label="@string/title_activity_theme_light"
             android:theme="@android:style/Theme.Light" >
-            <intent-filter >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_theme_no_title_fullscreen"
             android:name=".app.theme.ThemeNoTitleBarFullScreen"
+            android:label="@string/title_activity_theme_no_title_fullscreen"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
-            <intent-filter >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_theme_no_title"
             android:name=".app.theme.ThemeNoTitleBar"
+            android:label="@string/title_activity_theme_no_title"
             android:theme="@android:style/Theme.NoTitleBar" >
-            <intent-filter >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_theme_dialog_no_frame"
             android:name=".app.theme.ThemeDialogNoFrame"
+            android:label="@string/title_activity_theme_dialog_no_frame"
             android:theme="@android:style/Theme.Dialog" >
-            <intent-filter >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_theme_dialog_alert"
             android:name=".app.theme.ThemeDialogAlert"
+            android:label="@string/title_activity_theme_dialog_alert"
             android:theme="@android:style/Theme.Dialog" >
-            <intent-filter >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_theme_panel"
             android:name=".app.theme.ThemePanel"
+            android:label="@string/title_activity_theme_panel"
             android:theme="@android:style/Theme.Panel" >
-            <intent-filter >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_theme_holo_panel"
             android:name=".app.theme.ThemeHoloPanel"
+            android:label="@string/title_activity_theme_holo_panel"
             android:theme="@android:style/Theme.Holo.Panel" >
-            <intent-filter >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_theme_action_bar"
             android:name=".app.theme.ThemeActionBar"
+            android:label="@string/title_activity_theme_action_bar"
             android:theme="@android:style/Theme.WithActionBar" >
-            <intent-filter >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_preference"
-            android:name=".app.PreferenceExamples" >
-            <intent-filter >
+            android:name=".app.PreferenceExamples"
+            android:label="@string/title_activity_preference" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_intent"
-            android:name=".app.IntentExamples" >
-            <intent-filter >
+            android:name=".app.IntentExamples"
+            android:label="@string/title_activity_intent" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_receive_result"
-            android:name=".app.ReceiveActivityResult" >
-            <intent-filter >
+            android:name=".app.ReceiveActivityResult"
+            android:label="@string/title_activity_receive_result" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_send_result"
-            android:name=".app.SendActivityResult" >
-            <intent-filter >
+            android:name=".app.SendActivityResult"
+            android:label="@string/title_activity_send_result" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_intent_activity_flags"
-            android:name=".app.IntentFlagActivity" >
-            <intent-filter >
+            android:name=".app.IntentFlagActivity"
+            android:label="@string/title_activity_intent_activity_flags" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_forwarding_activity"
-            android:name=".app.ForwardActivity" >
-            <intent-filter >
+            android:name=".app.ForwardActivity"
+            android:label="@string/title_activity_forwarding_activity" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_forwarding_activity"
-            android:name=".app.ForwardTargetActivity" >
-            <intent-filter >
+            android:name=".app.ForwardTargetActivity"
+            android:label="@string/title_activity_forwarding_activity" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_recreate_activity"
-            android:name=".app.RecreateActivity" >
-            <intent-filter >
+            android:name=".app.RecreateActivity"
+            android:label="@string/title_activity_recreate_activity" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_recreate_activity"
-            android:name=".app.RedirectActGetter" >
-            <intent-filter >
+            android:name=".app.RedirectActGetter"
+            android:label="@string/title_activity_recreate_activity" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_recreate_activity"
-            android:name=".app.RedirectActChooser" >
-            <intent-filter >
+            android:name=".app.RedirectActChooser"
+            android:label="@string/title_activity_recreate_activity" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_redirection_activity"
-            android:name=".app.RedirectionActivity" >
-            <intent-filter >
+            android:name=".app.RedirectionActivity"
+            android:label="@string/title_activity_redirection_activity" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_reorder_activity"
-            android:name=".app.ReorderActivity" >
-            <intent-filter >
+            android:name=".app.ReorderActivity"
+            android:label="@string/title_activity_reorder_activity" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_reorder_activity"
-            android:name=".app.Reorder2ndActivity" >
-            <intent-filter >
+            android:name=".app.Reorder2ndActivity"
+            android:label="@string/title_activity_reorder_activity" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_reorder_activity"
-            android:name=".app.Reorder3rdActivity" >
-            <intent-filter >
+            android:name=".app.Reorder3rdActivity"
+            android:label="@string/title_activity_reorder_activity" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_reorder_activity"
-            android:name=".app.Reorder4thActivity" >
-            <intent-filter >
+            android:name=".app.Reorder4thActivity"
+            android:label="@string/title_activity_reorder_activity" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_save_restore_activity"
-            android:name=".app.SaveRestoreStateActivity" >
-            <intent-filter >
+            android:name=".app.SaveRestoreStateActivity"
+            android:label="@string/title_activity_save_restore_activity" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_menu_activity"
-            android:name=".app.MenuExamples" >
-            <intent-filter >
+            android:name=".app.MenuExamples"
+            android:label="@string/title_activity_menu_activity" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_action_bar"
-            android:name=".app.ActionBarExamples" />
+            android:name=".app.ActionBarExamples"
+            android:label="@string/title_activity_action_bar" />
         <activity
-            android:label="@string/title_activity_action_bar"
-            android:name=".app.ActionBarMechanicsActivity" />
+            android:name=".app.ActionBarMechanicsActivity"
+            android:label="@string/title_activity_action_bar" />
         <activity
-            android:label="@string/title_activity_action_bar"
-            android:name=".app.ActionBarTabsActivity" />
+            android:name=".app.ActionBarTabsActivity"
+            android:label="@string/title_activity_action_bar" />
         <activity
-            android:label="@string/title_activity_action_bar"
-            android:name=".app.ActionBarUsageActivity" />
+            android:name=".app.ActionBarUsageActivity"
+            android:label="@string/title_activity_action_bar" />
         <activity
-            android:label="@string/title_activity_action_bar"
-            android:name=".app.ActionProviderActivity" />
+            android:name=".app.ActionProviderActivity"
+            android:label="@string/title_activity_action_bar" />
         <activity
-            android:label="@string/title_activity_action_bar"
-            android:name=".app.DisplayOptionsActivity" />
+            android:name=".app.DisplayOptionsActivity"
+            android:label="@string/title_activity_action_bar" />
         <activity
-            android:label="@string/title_activity_content"
-            android:name=".content.ContentExamples" >
-            <intent-filter >
+            android:name=".app.service.ServiceExamples"
+            android:label="@string/title_activity_services" />
+
+        <service android:name=".app.service.ServiceForeground" />
+
+        <activity
+            android:name=".app.service.ServiceForeground$Controller"
+            android:label="@string/title_activity_services"
+            android:launchMode="singleTop" />
+
+        <service
+            android:name=".app.service.ServiceLocalBinding"
+            android:stopWithTask="true" />
+
+        <activity
+            android:name=".app.service.ServiceLocalBindingActivity$Controller"
+            android:label="@string/title_activity_services"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".app.service.ServiceLocalBindingActivity$Binding"
+            android:label="@string/title_activity_services"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".app.service.ServiceLocalBinding"
+            android:label="@string/title_activity_services" />
+        <activity
+            android:name=".app.service.ServiceLocalController"
+            android:label="@string/title_activity_services" />
+
+        <service
+            android:name=".app.service.ServiceMessenger"
+            android:exported="true"
+            android:process=":remote" >
+            <intent-filter>
+
+                <!--
+                     This is an action code you can use to select the service
+                     without explicitly supplying the implementation class.
+                -->
+                <action android:name="com.pekall.fmradio.FMRADIO_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".app.service.ServiceMessengerActivity$Binding"
+            android:label="@string/title_activity_services" />
+        <activity
+            android:name=".app.service.ServiceRemoteBinding"
+            android:label="@string/title_activity_services" />
+        <activity
+            android:name=".app.service.ServiceRemoteBindingOption"
+            android:label="@string/title_activity_services" />
+
+        <service
+            android:name=".app.service.ServiceRemoteController"
+            android:process=":remote" >
+            <intent-filter>
+
+                <!--
+                     These are the interfaces supported by the service, which
+                     you can bind to.
+                -->
+                <action android:name="com.sdk.example.app.service.IRemoteService" />
+                <action android:name="com.sdk.example.app.service.ISecondary" />
+                <!--
+                     This is an action code you can use to select the service
+                     without explicitly supplying the implementation class.
+                -->
+                <action android:name="com.sdk.example.app.service.REMOTE_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".app.service.ServiceRemoteController$Controller"
+            android:label="@string/title_activity_services" />
+        <activity
+            android:name=".app.service.ServiceRemoteController$Binding"
+            android:label="@string/title_activity_services" />
+        <activity
+            android:name=".app.service.ServiceRemoteController$BindingOptions"
+            android:label="@string/title_activity_services" />
+        
+        
+        <activity
+            android:name=".app.service.ServiceStartArgumentController"
+            android:label="@string/title_activity_services" />
+        <activity
+            android:name=".content.ContentExamples"
+            android:label="@string/title_activity_content" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_content_assets"
-            android:name=".content.AssetsExamples" >
-            <intent-filter >
+            android:name=".content.AssetsExamples"
+            android:label="@string/title_activity_content_assets" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_content_clipboard"
-            android:name=".content.ClipboardExamples" >
-            <intent-filter >
+            android:name=".content.ClipboardExamples"
+            android:label="@string/title_activity_content_clipboard" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_content_packages"
-            android:name=".content.PackageExamples" >
-            <intent-filter >
+            android:name=".content.PackageExamples"
+            android:label="@string/title_activity_content_packages" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_content_provider"
-            android:name=".content.ProviderExamples" >
-            <intent-filter >
+            android:name=".content.ProviderExamples"
+            android:label="@string/title_activity_content_provider" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_content_resources"
-            android:name=".content.ResourceExamples" >
-            <intent-filter >
+            android:name=".content.ResourceExamples"
+            android:label="@string/title_activity_content_resources" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_content_storage"
-            android:name=".content.StorageExamples" >
-            <intent-filter >
+            android:name=".content.StorageExamples"
+            android:label="@string/title_activity_content_storage" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_content_assets"
-            android:name=".content.ReadAssetExample" >
-            <intent-filter >
+            android:name=".content.ReadAssetExample"
+            android:label="@string/title_activity_content_assets" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_content_resources"
-            android:name=".content.LayoutReference" >
-            <intent-filter >
+            android:name=".content.LayoutReference"
+            android:label="@string/title_activity_content_resources" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_content_resources"
-            android:name=".content.ResourcesExample" >
-            <intent-filter >
+            android:name=".content.ResourcesExample"
+            android:label="@string/title_activity_content_resources" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_content_resources"
-            android:name=".content.SmallestWidth" >
-            <intent-filter >
+            android:name=".content.SmallestWidth"
+            android:label="@string/title_activity_content_resources" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_content_resources"
-            android:name=".content.StyleTextExample" >
-            <intent-filter >
+            android:name=".content.StyleTextExample"
+            android:label="@string/title_activity_content_resources" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/title_activity_content_resources"
-            android:name=".content.WidthAndHeight" >
-            <intent-filter >
+            android:name=".content.WidthAndHeight"
+            android:label="@string/title_activity_content_resources" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="com.sdk.example.intent.category.default" />

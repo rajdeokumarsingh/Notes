@@ -1,22 +1,48 @@
 // ================================================================================
+//                              V8
+// ================================================================================
+    |
+    V
+// ================================================================================
 //                              WebKit
 // ================================================================================
-
+out/target/product/S899t/obj/STATIC_LIBRARIES/libwebcore_intermediates/Source/WebCore/bindings/V8Geolocation.cpp
+WebCore/bindings/v8/custom/V8GeolocationCustom.cpp|152| <<global>> geolocation->getCurrentPosition(positionCallback.release(), positionErrorCallback.release(), positionOptions.release());
+    |
+    V
 WebCore/page/Geolocation.cpp
-    void Geolocation::requestPermission()
-
-
+void Geolocation::getCurrentPosition(PassRefPtr<PositionCallback> successCallback, 
+        PassRefPtr<PositionErrorCallback> errorCallback, PassRefPtr<PositionOptions> options)
+int Geolocation::watchPosition(PassRefPtr<PositionCallback> successCallback, 
+        PassRefPtr<PositionErrorCallback> errorCallback, PassRefPtr<PositionOptions> options)
+                |
+                V
+PassRefPtr<Geolocation::GeoNotifier> Geolocation::startRequest(PassRefPtr<PositionCallback> successCallback, PassRefPtr<PositionErrorCallback> errorCallback, PassRefPtr<PositionOptions> options)
+                |
+                V
+void Geolocation::requestPermission() {
+    m_allowGeolocation = InProgress;
+    page->chrome()->requestGeolocationPermissionForFrame(m_frame, this);
+}
+    |
+    V
 WebKit/android/WebCoreSupport/ChromeClientAndroid.cpp
+void ChromeClientAndroid::requestGeolocationPermissionForFrame(Frame* frame, Geolocation* geolocation)
+{
     if (!m_geolocationPermissions) {
         m_geolocationPermissions = new GeolocationPermissions(android::WebViewCore::getWebViewCore(frame->view()),
                 m_webFrame->page()->mainFrame());
     }
     m_geolocationPermissions->queryPermissionState(frame);
-
+}
+        |
+        V
 WebKit/android/WebCoreSupport/GeolocationPermissions.cpp
-
-./GeolocationPermissions.cpp
-
+void GeolocationPermissions::queryPermissionState(Frame* frame) {
+     m_webViewCore->geolocationPermissionsShowPrompt(originString);
+}
+            |
+            V
 WebKit/android/jni/WebViewCore.cpp
 void WebViewCore::geolocationPermissionsShowPrompt(const WTF::String& origin)
 {

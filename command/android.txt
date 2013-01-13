@@ -64,6 +64,9 @@ grep System.err
 
 grep 'FATAL EXCEPTION' . -rns
 ######################################################################
+内存信息：
+dumpsys meminfo
+######################################################################
 
 screen lock, power lock debug:
     adb shell dumpsys power
@@ -84,11 +87,14 @@ checking connectivity:
 
 onReceivedError
 
-    'load\( \)*[Uu]rl\( delay\)*\|shouldOverrideUrlLoading\|Controller.*\(onPause\|onResume\|onDestroy\)\|\(start\|stop\)UsingNetworkFeature\|onReceivedError\|updateStatus\|NetworkStateHandler.*NetworkInfo\|BindToDevice\|onPageStarted url\|onPageFinished url\|onLoadResource()\|FlushSocketPools\|[Pp]roxy\|JavaBridge.cpp\|WebUrlLoader\|chromium\|BrowserSettings: apn is:'
+    'load\( \)*[Uu]rl\( delay\)*\|shouldOverrideUrlLoading\|Controller.*\(onPause\|onResume\|onDestroy\)\|\(start\|stop\)UsingNetworkFeature\|onReceivedError\|updateStatus\|NetworkStateHandler.*NetworkInfo\|BindToDevice\|onPageStarted url\|onPageFinished url\|onLoadResource():\|FlushSocketPools\|updateStatus, setHttpProxy:\|JavaBridge.cpp\|WebUrlLoader\|chromium\|BrowserSettings: apn is:'
 
     'startUsingNetworkFeature\|loadUrl delay\|NetworkStateHandler: onReceive: NetworkInfo: type:'
 
-    'onPageStarted url\|onPageFinished url\|onProgressChanged'
+    'load\( \)*[Uu]rl\( delay\)*\|shouldOverrideUrlLoading\|onPageStarted url\|onPageFinished url\|onProgressChanged'
+    'load\( \)*[Uu]rl\( delay\)*\|shouldOverrideUrlLoading\|onPageStarted url\|onPageFinished url'
+    'load\( \)*[Uu]rl\( delay\)*\|shouldOverrideUrlLoading'
+
     'freeMemory\|'
 
     'NetworkInfo: type:\|onResume,\|enter handleApnResume\|enter onPause()'
@@ -292,9 +298,6 @@ dex2jar适合与反编译源代码，通过jd-gui的配合，能很好的查看�
 blue tooth debug tool
 ./hcidump
 
-
-
- 
 
 Hi Zhidong：
 我就是从网上下载的Android 4.0.3 R2 Compatibility Test Suite (CTS)，链接如下：

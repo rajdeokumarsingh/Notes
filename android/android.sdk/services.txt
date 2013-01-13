@@ -235,9 +235,17 @@ Extending the Service class
           // For each start request, send a message to start a job and deliver the
           // start ID so we know which request we're stopping when we finish the job
           Message msg = mServiceHandler.obtainMessage();
+
           msg.arg1 = startId;
-          // 停止service的时候可以用
-              // stopSelf(msg.arg1);
+          // startId的用途
+          // 每次onStartCommand被调用的后，会传入一个唯一的startId,
+            // 如1, 2, 3, 4, 5
+          // 停止service的时候
+              // stopSelf(startId);
+              // public final boolean stopSelfResult (int startId)
+              // 当传给stopSelfResult的参数是最后一个startId, 如5的时候，service会立即停止
+              // 否则service不会停止
+
           mServiceHandler.sendMessage(msg);
           
           // If we get killed, after returning from here, restart

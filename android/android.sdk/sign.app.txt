@@ -1,13 +1,11 @@
 commands : {
     手工签名过程 {
         # 生成private key的命令
-        $ keytool -genkey -v -keystore jiangrui.release.key.keystore 
-            -alias ruikey -keyalg RSA -keysize 2048 -validity 10000
+        $ keytool -genkey -v -keystore jiangrui.release.key.keystore -alias ruikey -keyalg RSA -keysize 2048 -validity 10000
         # -validity: 10000 days
 
         # 为apk签名
-        $ jarsigner -keystore jiangrui.keystore 
-            my_application.apk ruikey
+        $ jarsigner -keystore jiangrui.release.key.keystore my_application.apk ruikey
 
         # 查看是否已经签名
         $ jarsigner -verify myapp.apk
