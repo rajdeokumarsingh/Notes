@@ -87,7 +87,7 @@ checking connectivity:
 
 onReceivedError
 
-    'load\( \)*[Uu]rl\( delay\)*\|shouldOverrideUrlLoading\|Controller.*\(onPause\|onResume\|onDestroy\)\|\(start\|stop\)UsingNetworkFeature\|onReceivedError\|updateStatus\|NetworkStateHandler.*NetworkInfo\|BindToDevice\|onPageStarted url\|onPageFinished url\|onLoadResource():\|FlushSocketPools\|updateStatus, setHttpProxy:\|JavaBridge.cpp\|WebUrlLoader\|chromium\|BrowserSettings: apn is:'
+    'load\( \)*[Uu]rl\( delay\)*\|shouldOverrideUrlLoading\|Controller.*\(onPause\|onResume\|onDestroy\)\|\(start\|stop\)UsingNetworkFeature\|onReceivedError\|updateStatus\|NetworkStateHandler.*NetworkInfo\|BindToDevice\|onPageStarted url\|onPageFinished url\|onLoadResource():\|FlushSocketPools\|updateStatus, setHttpProxy:\|JavaBridge.cpp\|WebUrlLoader\|chromium\|BrowserSettings: apn is:\|updateProxy'
 
     'startUsingNetworkFeature\|loadUrl delay\|NetworkStateHandler: onReceive: NetworkInfo: type:'
 
@@ -111,6 +111,11 @@ onReceivedError
     chromium(24157): Unknown chromium error: -3
 
 g/SignalStrength\|[Aa]udio\|tinyalsa\|NetworkControllerDualSIM\|ConnectivityService\|PageDownloader\|Telephony\|dalvikvm\|DeviceStorageMonitorService\|KeyguardUpdateMonitor\|LockPatternKeyguardView\|LC_DM_\|power\|Phone\|volume\|TextResourceDecoder\|wpa_\|wifi/d
+
+
+download:
+"DownloadDialog:\|Download ApnHelper:\|DownloadManager:\|DownloadService:\|DownloadHandler:\|DownloadThread:\|DownloadConstants\|DownloadInfo"
+
 
 [Jiang Rui]
 从Log分析，浏览器使用系统默认网络上网，从系统获取的http代理为空，使用系统默认的socket interface。 
