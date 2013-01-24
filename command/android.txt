@@ -1,6 +1,9 @@
 *#*#4636#*#* 手机信息
 
 ######################################################################
+ndk-stack -sym out/target/product/maguro/symbols/system/lib/ -dump /tmp/gg.txt
+######################################################################
+
 media server
 adb shell start media
 adb shell stop media
