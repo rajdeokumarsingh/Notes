@@ -12,9 +12,7 @@ clues:
     ./security_overview.java
 
     code
-        ./java_class.java
-        android.permission.ACCESS_CHECKIN_PROPERTIES
-
+        ./code/index.txt
 
     ./superuser.java
 

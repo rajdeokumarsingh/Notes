@@ -1,0 +1,126 @@
+.android_subject {
+/*background-color: #FFF;*/
+/*width: 760px;*/
+}
+
+.android_subject .android_content {
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background: #fff; /*height: 100px; */
+/*width: 100px;*/
+    border: 5px solid #a5c939;
+}
+
+#content_wrap  .android_subject h3.title {
+    padding-left: 40px;
+    height: 50px;
+}
+
+.android_subject h1.title.top_title {
+/*padding-left: 40px;*/
+    text-align: center;
+}
+
+.android_content h1.title {
+    text-align: left;
+    padding: 40px 0;
+}
+
+.android_content h2.top_t {
+    background-color: #a5c939;
+    padding: 5px 0 10px 20px;
+    color: #fff;
+    margin: 0;
+}
+
+.android_part_one {
+    background-color: #f8f8f8;
+}
+
+.android_detail {
+    padding: 27px 40px 15px 50px;
+    background-image: url(../images/andorid_pie.gif);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    color: #171616;
+}
+.android_detail .step {
+    margin-bottom: 25px;
+}
+.android_detail .detail_title {
+    background-color: #cee097;
+    padding: 5px 50px 5px 10px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 22px; /*font-weight: bold;*/
+}
+
+.android_detail p.fl {
+    width: 230px;
+    padding: 0 40px 20px 0;
+    text-align: right;
+}
+
+.android_detail p.addroid_intro {
+    padding: 10px 0 20px;
+    font-size: 14px;
+    color: #171616;
+    line-height: 150%; /*font-weight: bold;            */
+}
+
+.android_part_two {
+    padding-top: 50px;
+    background-position: 0 50px;
+}
+
+.android_onsystem a {
+    display: block;
+    width: 160px;
+    height: 166px;
+    float: left;
+    background-image: url(../images/andorid_onsystem.gif);
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+
+.android_onsystem a.windows {
+    background-position: 0 0;
+}
+
+.android_onsystem a.ubuntu {
+    background-position: -165px 0;
+    margin: 0 83px;
+}
+
+.android_onsystem a.mac {
+    background-position: -332px 0;
+}
+
+.android_related_info {
+    padding: 35px 60px;
+    background-color: #d0e299;
+    margin-top: 20px; /*width: 640px;*/
+    font-size: 14px;
+    line-height: 180%;
+}
+
+.android_related_info h3 {
+    margin-top: 0;
+}
+
+.android_part_two .step p.fl a {
+    display: block;
+    height: 155px;
+    width: 248px;
+    background-image: url(../images/andorid_onsystem.gif);
+    background-position: -505px 0;
+}
+
+.android_part_two .detail_right {
+    width: 375px;
+}
+
+.android_part_two .detail_right .detail_title {
+    display: block;
+    line-height: 150%;
+}

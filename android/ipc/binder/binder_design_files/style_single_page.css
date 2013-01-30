@@ -1,0 +1,249 @@
+@charset "utf-8";
+/* CSS Document new 2011.8.30*/
+
+
+
+
+/* 正文  开始*/
+
+/* 顶部位置链接 */
+.top_link_list{
+    background-color: #F3F2ED;
+	font-size:14px;
+    padding: 4px 0px 2px 15px;
+    width:250px;
+	margin:0 0 10px 0px;
+}
+
+.top_link_list a{
+	color:#999;
+}
+
+/* 文章右上角 阴影 */
+.corner_shadow{
+    margin-left: 500px;
+}
+
+
+
+.single_content{
+    background-color: white;
+    width:575px;
+	height:auto;
+	border-right:2px solid #e0e0e0;
+	padding:32px 30px 10px 26px;
+
+
+}
+.article_post {
+    margin-bottom: 30px;
+    border-bottom: 3px solid #e0e0e0;
+}
+
+.article_content img{
+	border: 4px solid #EFEFEF;
+	float:none;
+	margin:7px 0;
+}
+/*上下有18px的空距*/
+.article_content p{
+	font-size:13px;
+	line-height:1.5;
+	margin:15px 0px;
+}
+
+.article_tags{
+	margin:16px 0px;
+}
+.article_tags span a{
+    -webkit-transition-property: background-color, color,border;
+    -webkit-transition-duration: 1s;
+    margin: 0px 0px 6px;
+    padding: 1px 5px;
+    color:#707070;
+    word-wrap: break-word;
+    word-break: normal;
+    font-weight: normal;
+}
+
+.article_tags span a:hover{
+    background: rgba(107, 148, 185, 0.398438) repeat-x 0px 50%;
+    //border: 1px solid rgba(0, 0, 0, 0.0429688);
+    border-bottom-left-radius: 12px 12px;
+    border-bottom-right-radius: 12px 12px;
+    border-top-left-radius: 12px 12px;
+    border-top-right-radius: 12px 12px;
+	text-decoration:none;
+}
+
+/* 分享 原文链接 */
+.shared_and_links{
+	padding:45px 0px;
+}
+
+.shared_and_links span.link {
+	 float:right;
+	 color:#9D9F94;
+     margin: -2px -10px 0px 30px;
+     width: 70px;
+}
+.shared_and_links a span{
+    width: 16px;
+}
+.shared_and_links .shareto_toolbox .shareto_separator{
+    margin: -2px 10px;
+}
+.shared_and_links span a:hover{
+	text-shadow:1px -1px 1px #ccc;
+	text-decoration:underline;
+}
+
+/* 评论插件 */
+#disqus_thread{
+    padding-top: 30px;
+    font-size:12px;
+}
+#disqus_thread h3{
+    font-size:12px;
+}
+/* 正文  结束*/
+
+
+
+/*Login and Out begin*/
+.side_right .login_and_out {
+	text-align:center;
+	color:#6B94B9;
+	font-size:14px;
+	font-weight:700;
+	padding-top:10px;
+	line-height: 200%;
+	height:480px;
+}
+.side_right .login_and_out p{
+	padding-top:30px;
+	color:#4e4e4e;
+	font-weight:100;
+}
+.side_right .login_and_out p a{
+	color:#000;
+	font-weight:700;
+}
+.article_post .loginandout_page h3.entry-title {
+	color:#000;
+	font-weight:700;
+	padding:3px 0 3px 18px;
+}
+.article_post .loginandout_page #loginform p{
+	text-align:center;
+	padding:10px;
+}
+.article_post .loginandout_page #loginform label {
+	padding-right:10px;
+    font-size: 14px;
+    width: 100px;
+}
+.article_post .loginandout_page #loginform input{
+  border: 1px solid #A6A6A6;
+  height: 20px;
+  width:202px;
+}
+.article_post .loginandout_page #loginform input#rememberme {
+	width:15px;
+	height:15px;
+	margin-right:5px;
+	border:0;
+}
+
+.article_post .loginandout_page #registerform p{
+	text-align:center;
+	padding:10px;
+}
+.article_post .loginandout_page #registerform p.submit{
+	padding-left:120px;
+}
+.article_post .loginandout_page #registerform label {
+	padding-right:10px;
+    font-size: 14px;
+    width: 100px;
+}
+.article_post .loginandout_page #registerform input{
+  border: 1px solid #A6A6A6;
+  height: 20px;
+  width: 202px;
+}
+.article_post .loginandout_page #registerform #reg_passmail {
+	padding-left:120px;
+}
+
+.article_post .loginandout_page  ul.tml-action-links {
+	font-size: 14px;
+	padding: 5px 0px 5px 204px;
+}
+.article_post .loginandout_page  ul.tml-action-links li{
+	float: left;
+    padding-right: 50px;
+}
+
+.article_post .loginandout_page #loginform p.submit,.article_post .loginandout_page #loginform p.submit{
+	padding-left: 204px;
+    width: 90px;
+}
+.article_post .loginandout_page #loginform .forgetmenot {
+	padding-left: 204px;
+    float: left;
+}
+.article_post .loginandout_page p.submit input#wp-submit{
+	background-image: url("../images/post_submit.jpg");
+    border: 0 none;
+    font-size: 14px;
+    font-weight: 700;
+    height: 31px;
+    width: 92px;
+}
+
+
+
+
+.article_post .loginandout_page #lostpasswordform p{
+	padding:10px;
+}
+.article_post .loginandout_page #lostpasswordform label {
+	padding-right:10px;
+    font-size: 14px;
+    width: 180px;
+}
+.article_post .loginandout_page #lostpasswordform input{
+  border: 1px solid #A6A6A6;
+  height: 20px;
+  width: 202px;
+}
+.article_post .loginandout_page #lostpasswordform #reg_passmail {
+	padding-left:120px;
+}
+.article_post .loginandout_page #lostpasswordform p.submit{
+	padding:10px 0 5px 200px;
+}
+.article_post .loginandout_page div.lost_pass ul.tml-action-links {
+	font-size: 14px;
+	padding:5px 0 15px 200px;
+}
+.article_post .loginandout_page span.edit-link {
+	padding-left:5px;
+}
+/*Login and Out end*/
+
+
+
+/*table*/
+.article_content table{
+width:auto;
+}
+.article_content table th,.article_content table td{
+border-bottom:1px solid #DDDDDD;
+vertical-align:middle;
+}
+
+
+
+

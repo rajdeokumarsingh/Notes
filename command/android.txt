@@ -90,7 +90,7 @@ checking connectivity:
 
 onReceivedError
 
-    'load\( \)*[Uu]rl\( delay\)*\|shouldOverrideUrlLoading\|Controller.*\(onPause\|onResume\|onDestroy\)\|\(start\|stop\)UsingNetworkFeature\|onReceivedError\|updateStatus\|NetworkStateHandler.*NetworkInfo\|BindToDevice\|onPageStarted url\|onPageFinished url\|onLoadResource():\|FlushSocketPools\|updateStatus, setHttpProxy:\|JavaBridge.cpp\|WebUrlLoader\|chromium\|apn is\|updateProxy'
+    '\<load\( \)*[Uu]rl\( delay\)*\|shouldOverrideUrlLoading\|Controller.*\(onPause\|onResume\|onDestroy\)\|\(start\|stop\)UsingNetworkFeature\|onReceivedError\|updateStatus\|NetworkStateHandler.*NetworkInfo\|BindToDevice\|onPageStarted url\|onPageFinished url\|onLoadResource():\|FlushSocketPools\|updateStatus, setHttpProxy:\|JavaBridge.cpp\|WebUrlLoader\|chromium\|apn is\|[Uu]pdateProxy'
 
     'startUsingNetworkFeature\|loadUrl delay\|NetworkStateHandler: onReceive: NetworkInfo: type:'
 
@@ -116,7 +116,7 @@ onReceivedError
 g/SignalStrength\|[Aa]udio\|tinyalsa\|NetworkControllerDualSIM\|ConnectivityService\|PageDownloader\|Telephony\|dalvikvm\|DeviceStorageMonitorService\|KeyguardUpdateMonitor\|LockPatternKeyguardView\|LC_DM_\|power\|Phone\|volume\|TextResourceDecoder\|wpa_\|wifi/d
 
 download:
-"DownloadDialog:\|Download ApnHelper:\|DownloadManager:\|DownloadService:\|DownloadHandler:\|DownloadThread:\|DownloadConstants\|DownloadInfo"
+"DownloadDialog\|Download ApnHelper\|DownloadManager\|DownloadService\|DownloadHandler\|DownloadThread\|DownloadConstants\|DownloadInfo\|DownloadList\|apn is:"
 
 
 [Jiang Rui]

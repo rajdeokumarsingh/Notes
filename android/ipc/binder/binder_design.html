@@ -1,0 +1,1430 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" lang="zh-CN"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Android Binder设计与实现 – 设计篇 | 第三极 | 移动开发者</title>
+<meta name="description" content="第三极网站（http://disanji.net/）是为开发者提供优质开发资源的网站，网站收录了大量与Android、iOS、HTML5、WP7相关的开发文档以及资源，我们未来的发展定位在为开发者提供有效可靠的开发资源。网站文章全部是人工采集，并都标注了出处来源，完全尊重原作者版权。">
+<meta name="keywords" content="第三极,disanji.net,Android,iOS,HTML5,WP7,ebook,电子书,Android 开发,iOS 开发">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="stylesheet" type="text/css" media="all" href="binder_design_files/style.css">
+<link rel="pingback" href="http://disanji.net/xmlrpc.php">
+
+<link href="binder_design_files/style_new.css" rel="stylesheet">
+<link href="binder_design_files/style_single_page.css" rel="stylesheet">
+<link href="binder_design_files/subject.css" rel="stylesheet">
+<meta name="generator" content="WordPress 3.0.5">
+<script type="text/javascript" src="binder_design_files/jquery-1.js"></script>
+<script type="text/javascript" src="binder_design_files/slideimg.js"></script>
+<script type="text/javascript" src="binder_design_files/fix-position.js"></script>
+<script type="text/javascript" src="binder_design_files/scrollTop.js"></script>
+<link rel="alternate" type="application/rss+xml" title="第三极 | 移动开发者 » feed" href="http://disanji.net/feed/">
+<link rel="alternate" type="application/rss+xml" title="第三极 | 移动开发者 » 评论 feed" href="http://disanji.net/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="第三极 | 移动开发者 » Android Binder设计与实现 – 设计篇 评论 feed" href="http://disanji.net/2011/02/28/android-bnder-design/feed/">
+<link rel="stylesheet" id="theme-my-login-css" href="binder_design_files/theme-my-login.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-postratings-css" href="binder_design_files/postratings-css.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp_dlmp_styles-css" href="binder_design_files/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-pagenavi-css" href="binder_design_files/pagenavi-css.css" type="text/css" media="all">
+<script type="text/javascript" src="binder_design_files/comment-reply.js"></script>
+<script type="text/javascript" src="binder_design_files/jquery.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://disanji.net/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://disanji.net/wp-includes/wlwmanifest.xml"> 
+<link rel="index" title="第三极 | 移动开发者" href="http://disanji.net/">
+<link rel="start" title="Android 创建一个可拖拽图表-第一部分" href="http://disanji.net/2010/11/21/create-a-scrollable-map-with-cells-part-i654-html/">
+<link rel="prev" title="Android 编译系统分析" href="http://disanji.net/2011/02/28/android-compile-explanation/">
+<link rel="next" title="Android 使用Oprofile分析结果系统瓶颈" href="http://disanji.net/2011/02/28/android-oprofile-analyse-system-performance/">
+<meta name="generator" content="WordPress 3.0.5">
+<link rel="canonical" href="http://disanji.net/2011/02/28/android-bnder-design/">
+<link rel="shortlink" href="http://disanji.net/?p=17152">
+	<style type="text/css">
+	.download-info .download-button {
+		background-image: url(http://disanji.net/wp-content/plugins/download-monitor/page-addon/downloadbutton.gif);
+	}
+	.download-info .more-button {
+		background-image: url(http://disanji.net/wp-content/plugins/download-monitor/page-addon/morebutton.gif);
+	}
+	</style>
+<style type="text/css">
+		.PSR_stars {
+		  height: 15px;
+		  overflow: hidden;
+		  padding: 0;
+		  margin: 0;
+		}
+		* html .PSR_stars .star {
+			display: block;
+			position: absolute;
+			height: 0;
+			width: 0;
+		}
+		.PSR_stars input {
+			display: none;
+		}
+		.PSR_no_star, .PSR_half_star, .PSR_full_star, .PSR_no_voting_star, .PSR_half_voting_star, .PSR_full_voting_star {
+		  display: block;
+		  float: left;
+		  width: 17px;
+		  height: 15px;
+		  text-indent: -1000em;
+		  text-align: left;
+		  background-repeat: no-repeat;
+		}
+		.PSR_no_star {
+		  background-image: url(http://disanji.net/wp-content/plugins/post-star-rating/img/stars/no_star.gif);
+		}
+		.PSR_full_star {
+		  background-image: url(http://disanji.net/wp-content/plugins/post-star-rating/img/stars/full_star.gif);
+		}
+		.PSR_half_star {
+		  background-image: url(http://disanji.net/wp-content/plugins/post-star-rating/img/stars/half_star.gif);
+		}
+		.PSR_no_voting_star {
+		  background-image: url(http://disanji.net/wp-content/plugins/post-star-rating/img/stars/no_star.gif);
+		}
+		.PSR_full_voting_star {
+		  background-image: url(http://disanji.net/wp-content/plugins/post-star-rating/img/stars/full_voting_star.gif);
+		}
+		.PSR_half_voting_star {
+		  background-image: url(http://disanji.net/wp-content/plugins/post-star-rating/img/stars/half_voting_star.gif);
+		}
+		.PSR_votes {
+			padding-left: .5em;
+		}
+		.PSR_moment_scores li {
+			position: relative;
+			height: 2.2ex;
+		  list-style: decimal outside;
+		}
+		* html .PSR_moment_scores li {
+		  list-style: none;
+		}
+		.PSR_moment_scores .trend_up, .PSR_moment_scores .trend_dw, .PSR_moment_scores .trend_eq {
+		  display:block;
+		  width: 14px;
+		  height: 15px;
+		  overflow: hidden;
+		  text-indent: -100em;
+		  float: left;
+		  background-repeat: no-repeat;
+			margin-right: .5em;
+		}
+		.PSR_moment_scores .trend_up {
+		  background-image: url(http://disanji.net/wp-content/plugins/post-star-rating/img/stars/up_arrow.gif);
+		}
+		.PSR_moment_scores .trend_dw {
+		  background-image: url(http://disanji.net/wp-content/plugins/post-star-rating/img/stars/dw_arrow.gif);
+		}
+		.PSR_moment_scores .trend_eq {
+		  background-image: url(http://disanji.net/wp-content/plugins/post-star-rating/img/stars/eq_arrow.gif);
+		}
+		.PSR_moment_scores .PSR_container {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 21ex;
+			text-align: right;
+		}
+		</style>
+<script type="text/javascript">
+		<!--
+		function PSR_star_over(obj, star_number) {
+			var psr=obj.parentNode;
+			var as=psr.getElementsByTagName('label');
+			for (i=0;i<star_number;++i) {
+				as[i].lastClass = as[i].className;
+				as[i].className = 'PSR_full_star';
+			}
+			for (;i<as.length;++i) {
+				as[i].lastClass = as[i].className;
+//				as[i].className = 'PSR_no_star';
+			}
+		}
+		function PSR_star_out(obj) {
+			var as=obj.getElementsByTagName('label');
+			for (i=0;i<as.length;++i) {
+				if (as[i].lastClass) {
+					as[i].className = as[i].lastClass;
+				}
+			}
+		}
+		function PSR_getHTTPObject() {
+		  var xmlhttp;
+		  /*@cc_on
+		  @if (@_jscript_version >= 5)
+		    try {
+		      xmlhttp = new ActiveXObject('Msxml2.XMLHTTP');
+		    } catch (e) {
+		      try {
+		        xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+		      } catch (E) {
+		        xmlhttp = false;
+		      }
+		    }
+		  @else
+		  xmlhttp = false;
+		  @end @*/
+		  if (!xmlhttp && typeof XMLHttpRequest != 'undefined') {
+		    try {
+		      xmlhttp = new XMLHttpRequest();
+		    } catch (e) {
+		      xmlhttp = false;
+		    }
+		  }
+		  return xmlhttp;
+		}
+		function PSR_save_vote(post, points) {
+		  if (!PSR_isWorking) {
+		  	PSR_current_post=post;
+				PSR_http.open('GET', 'http://disanji.net/wp-content/plugins/post-star-rating/psr-ajax-stars.php?p=' + PSR_current_post + '&psr_stars=' + points, true); 
+				PSR_http.onreadystatechange = PSR_update_vote; 
+			 	PSR_isWorking = true;
+				PSR_http.send(null);
+		  }
+		}
+		function PSR_update_vote() {
+		  if (PSR_http.readyState == 4) {
+		  	PSR_isWorking = false;
+		  	var cont = document.getElementById('PSR_form_' + PSR_current_post).parentNode;
+	    	cont.innerHTML=PSR_http.responseText;
+		  }
+		}
+		PSR_current_post = null;
+		PSR_http=PSR_getHTTPObject();
+	  PSR_isWorking=false;
+		//-->
+		</script>
+
+<link rel="stylesheet" href="binder_design_files/wp-syntax.css" type="text/css" media="screen">
+<!-- Wordpress Popular Posts v2.1.4 -->
+<script type="text/javascript" charset="utf-8">
+    /* <![CDATA[ */				
+	jQuery.post('http://disanji.net/wp-admin/admin-ajax.php', {action: 'wpp_update', token: 'a36be885f8', id: 17152});
+    /* ]]> */
+</script>
+<!-- End Wordpress Popular Posts v2.1.4 -->
+            
+<!-- Wordpress Popular Posts v2.1.4 -->
+<link rel="stylesheet" href="binder_design_files/wpp.css" type="text/css" media="screen">
+<!-- End Wordpress Popular Posts v2.1.4 -->
+<script type="text/javascript">
+<!--
+function ImgAuto2(i,MaxW,MaxH)
+{var o=new Image();o.src=i.src;var w=o.width;var h=o.height;var t;if (w>MaxW){t=MaxW;}else{t=w;}if ((h*t/w)>MaxH){i.height=MaxH;i.width=MaxH/h*w;}else{i.width=t;i.height=t/w*h;}}
+
+function ImgAuto(i,MaxW,MaxH){
+var o=new Image();
+o.src=i.src;
+var w=o.width;
+var h=o.height;
+i.width=MaxW;
+i.height=MaxW/w*h;
+}
+-->
+</script>
+<script src="binder_design_files/embed.js" async="" type="text/javascript"></script><script src="binder_design_files/count.js" type="text/javascript" async=""></script><script charset="UTF-8" async="" src="binder_design_files/thread.js"></script><link href="binder_design_files/defaults.css" type="text/css" rel="stylesheet"><script charset="UTF-8" async="" src="binder_design_files/disqus.js"></script><link href="binder_design_files/theme.css" type="text/css" rel="stylesheet"><script charset="UTF-8" async="" src="binder_design_files/theme.js"></script><script charset="UTF-8" async="" src="binder_design_files/zh.js"></script><script charset="UTF-8" async="" src="binder_design_files/event.js"></script></head>
+<body class="single single-post postid-17152"><link type="text/css" rel="stylesheet" href="binder_design_files/css1.css"><iframe style="position: fixed; display: none; opacity: 0;" frameborder="0"></iframe><div style="position: fixed; z-index: 1000000000; display: none; top: 50%; left: 50%; overflow: auto;"></div><div style="position: absolute; z-index: 1000000000; display: none; overflow: auto;"></div>
+<div class="top">
+    <div class="top_logo">
+        
+        <!-- add user-name-->
+	                <div class="top_login">
+	    <div class="fl">
+		<a class="logo" href="http://disanji.net/"><img src="binder_design_files/logo.png"></a>
+	    </div>
+            <div class="fr">
+            	        <a href="http://disanji.net/login" class="in">登录</a>|
+            <a href="http://disanji.net/wp-content/themes/disanji/login/?action=register" class="reg">注册</a>
+		                </div>
+	    <div class="clear"></div>
+        </div>
+    </div>
+    <div class="top_bar">
+        <div class="top_wrap">
+            <div class="access fl">
+                <ul>
+                    <li><a href="http://disanji.net/">首页</a></li>
+                    <!--<li><a href="http://disanji.net/category/android-doc/">Android</a></li>-->
+                    <li><a href="http://disanji.net/category/android-doc/">Android</a></li>
+                    <li><a href="http://disanji.net/category/iphone-doc/">iOS</a></li>
+                    <li><a href="http://disanji.net/category/wp7/">WP7</a></li>
+                    <li><a href="http://disanji.net/category/html5-doc/">HTML5</a></li>
+                    <li><a href="http://disanji.net/category/ebook/">电子书</a></li>
+                </ul>
+            </div>
+            <div class="search fr">
+                <form action="http://disanji.net/" id="searchform" method="get" role="search">
+				    <input id="s" name="s" value="SEARCH" class="keyword fl" onfocus="if (value =='SEARCH'){value =''}" onblur="if (value ==''){value='SEARCH'}" type="text">
+				    <input class="submit fr" value="" id="searchsubmit" type="submit">
+	                <div class="clear"></div>
+			</form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="content_wrap">
+    <div class="side_left">
+    	<div class="top_link_list">
+            <span>
+            	        <a href="http://disanji.net/" mce_href="#" title="Home">首页</a>
+	        &gt;
+	        <a href="http://disanji.net/category/android-doc/" title="查看 Android开发文档 的全部文章" rel="category tag">Android开发文档</a>	        	                    </span>
+        </div>
+        <div class="corner_shadow">
+            <img src="binder_design_files/corner_shadow.png">
+        </div>
+        <div class="single_content">
+        <div class="article_post">
+                           	<h1>
+                       Android Binder设计与实现 – 设计篇                       <!--这是标题 Android 这是标题 Wordpress-->
+                </h1>
+                                <div class="meta">
+                        <div class="from fl">
+                            <span>来自&nbsp;</span>
+                            <span class="edit" href="">
+                                flysolo                            </span>
+                        </div>
+                        <div class="date fl">
+                             <a title="Archive for 2011" href="http://disanji.net/2011/">2011年</a> <a title="Archive for 2011 2" href="http://disanji.net/2011/02/">2月</a> <a title="Archive for 2011 2 28" href="http://disanji.net/2011/02/28/">28日</a>                            <!--<a href="">2011</a>.<a href="">8</a>.<a href="">18</a>-->
+                        </div>
+                        <div class="read_comm">
+                            <span>
+                            22,136 次阅读						    评论（ 2 ）                            </span>
+                            <!--<span class="read">1234&nbsp;阅读</span>
+                            <span class="comm">12&nbsp;评论</a>-->
+                        </div>
+                        <div class="clear"></div>
+                </div>
+               	<div class="article_content">
+                       <p>关键词</p>
+<p>Binder Android IPC Linux 内核 驱动</p>
+<p>摘要</p>
+<p>Binder是Android系统进程间通信（IPC）方式之一。Linux已经拥有管道，system V 
+IPC，socket等IPC手段，却还要倚赖Binder来实现进程间通信，说明Binder具有无可比拟的优势。深入了解Binder并将之与传统 
+IPC做对比有助于我们深入领会进程间通信的实现和性能优化。本文将对Binder的设计细节做一个全面的阐述，首先通过介绍Binder通信模型和 
+Binder通信协议了解Binder的设计需求；然后分别阐述Binder在系统不同部分的表述方式和起的作用；最后还会解释Binder在数据接收端
+的设计考虑，包括线程池管理，内存映射和等待队列管理等。通过本文对Binder的详细介绍以及与其它IPC通信方式的对比，读者将对Binder的优势
+和使用Binder作为Android主要IPC方式的原因有深入了解。<br>
+1 引言</p>
+<p>基于Client-Server的通信方式广泛应用于从互联网和数据库访问到嵌入式手持设备内部通信等各个领域。智能手机平台特别是Android
+ 
+系统中，为了向应用开发者提供丰富多样的功能，这种通信方式更是无处不在，诸如媒体播放，视音频频捕获，到各种让手机更智能的传感器（加速度，方位，温
+度，光亮度等）都由不同的Server负责管理，应用程序只需做为Client与这些Server建立连接便可以使用这些服务，花很少的时间和精力就能开
+发出令人眩目的功能。Client-Server方式的广泛采用对进程间通信（IPC）机制是一个挑战。目前linux支持的IPC包括传统的管
+道，System V 
+IPC，即消息队列/共享内存/信号量，以及socket中只有socket支持Client-Server的通信方式。当然也可以在这些底层机制上架设
+一套协议来实现Client-Server通信，但这样增加了系统的复杂性，在手机这种条件复杂，资源稀缺的环境下可靠性也难以保证。</p>
+<p>另一方面是传输性能。socket作为一款通用接口，其传输效率低，开销大，主要用在跨网络的进程间通信和本机上进程间的低速通信。消息队列和管道
+采用存储-转发方式，即数据先从发送方缓存区拷贝到内核开辟的缓存区中，然后再从内核缓存区拷贝到接收方缓存区，至少有两次拷贝过程。共享内存虽然无需拷
+贝，但控制复杂，难以使用。</p>
+<p>表 1 各种IPC方式数据拷贝次数</p>
+<table border="1" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td valign="top" width="169"><strong>IPC</strong></td>
+<td valign="top" width="174"><strong>数据拷贝次数</strong> <strong> </strong></td>
+</tr>
+<tr>
+<td valign="top" width="169">共享内存</td>
+<td valign="top" width="174">0</td>
+</tr>
+<tr>
+<td valign="top" width="169">Binder</td>
+<td valign="top" width="174">1</td>
+</tr>
+<tr>
+<td valign="top" width="169">Socket/管道/消息队列</td>
+<td valign="top" width="174">2</td>
+</tr>
+</tbody>
+</table>
+<p>还有一点是出于安全性考虑。Android作为一个开放式，拥有众多开发者的的平台，应用程序的来源广泛，确保智能终端的安全是非常重要的。终端用
+户不希望从网上下载的程序在不知情的情况下偷窥隐私数据，连接无线网络，长期操作底层设备导致电池很快耗尽等等。传统IPC没有任何安全措施，完全依赖上
+层协议来确保。首先传统IPC的接收方无法获得对方进程可靠的UID/PID（用户ID/进程ID），从而无法鉴别对方身份。Android为每个安装好
+的应用程序分配了自己的UID，故进程的UID是鉴别进程身份的重要标志。使用传统IPC只能由用户在数据包里填入UID/PID，但这样不可靠，容易被
+恶意程序利用。可靠的身份标记只有由IPC机制本身在内核中添加。其次传统IPC访问接入点是开放的，无法建立私有通道。比如命名管道的名
+称，system 
+V的键值，socket的ip地址或文件名都是开放的，只要知道这些接入点的程序都可以和对端建立连接，不管怎样都无法阻止恶意程序通过猜测接收方地址获
+得连接。</p>
+<p>基于以上原因，Android需要建立一套新的IPC机制来满足系统对通信方式，传输性能和安全性的要求，这就是Binder。Binder基于 
+Client-Server通信模式，传输过程只需一次拷贝，为发送发添加UID/PID身份，既支持实名Binder也支持匿名Binder，安全性
+高。<br>
+2 面向对象的 Binder IPC</p>
+<p>Binder使用Client-Server通信方式：一个进程作为Server提供诸如视频/音频解码，视频捕获，地址本查询，网络连接等服务；
+多个进程作为Client向Server发起服务请求，获得所需要的服务。要想实现Client-Server通信据必须实现以下两点：一是server
+ 必须有确定的访问接入点或者说地址来接受Client的请求，并且Client可以通过某种途径获知Server的地址；二是制定Command- 
+Reply协议来传输数据。例如在网络通信中Server的访问接入点就是Server主机的IP地址+端口号，传输协议为TCP协议。对Binder而
+言，Binder可以看成Server提供的实现某个特定服务的访问接入点， 
+Client通过这个‘地址’向Server发送请求来使用该服务；对Client而言，Binder可以看成是通向Server的管道入口，要想和某个
+ Server通信首先必须建立这个管道并获得管道入口。</p>
+<p>与其它IPC不同，Binder使用了面向对象的思想来描述作为访问接入点的Binder及其在Client中的入口：Binder是一个实体位于
+ Server中的对象，该对象提供了一套方法用以实现对服务的请求，就象类的成员函数。遍布于client中的入口可以看成指向这个binder对象的
+ 
+‘指针’，一旦获得了这个‘指针’就可以调用该对象的方法访问server。在Client看来，通过Binder‘指针’调用其提供的方法和通过指针调
+用其它任何本地对象的方法并无区别，尽管前者的实体位于远端Server中，而后者实体位于本地内存中。‘指针’是C++的术语，而更通常的说法是引用，
+即Client通过Binder的引用访问Server。而软件领域另一个术语‘句柄’也可以用来表述Binder在Client中的存在方式。从通信的
+角度看，Client中的Binder也可以看作是Server 
+Binder的‘代理’，在本地代表远端Server为Client提供服务。本文中会使用‘引用’或‘句柄’这个两广泛使用的术语。</p>
+<p>面向对象思想的引入将进程间通信转化为通过对某个Binder对象的引用调用该对象的方法，而其独特之处在于Binder对象是一个可以跨进程引用
+的对象，它的实体位于一个进程中，而它的引用却遍布于系统的各个进程之中。最诱人的是，这个引用和java里引用一样既可以是强类型，也可以是弱类型，而
+且可以从一个进程传给其它进程，让大家都能访问同一Server，就象将一个对象或引用赋值给另一个引用一样。Binder模糊了进程边界，淡化了进程间
+通信过程，整个系统仿佛运行于同一个面向对象的程序之中。形形色色的Binder对象以及星罗棋布的引用仿佛粘接各个应用程序的胶水，这也是Binder
+ 在英文里的原意。</p>
+<p>当然面向对象只是针对应用程序而言，对于Binder驱动和内核其它模块一样使用C语言实现，没有类和对象的概念。Binder驱动为面向对象的进程间通信提供底层支持。<br>
+3 Binder 通信模型</p>
+<p>Binder框架定义了四个角色：Server，Client，ServiceManager（以后简称SMgr）以及驱动。其中 
+Server，Client，SMgr运行于用户空间，驱动运行于内核空间。这四个角色的关系和互联网类似：Server是服务器，Client是客户终
+端，SMgr是域名服务器（DNS），驱动是路由器。<br>
+3.1 Binder 驱动</p>
+<p>和路由器一样，Binder驱动虽然默默无闻，却是通信的核心。尽管名叫‘驱动’，实际上和硬件设备没有任何关系，只是实现方式和设备驱动程序是一
+样的：它工作于内核态，提供open()，mmap()，poll()，ioctl()等标准文件操作，以字符驱动设备中的misc设备注册在设备目录 
+/dev下，用户通过/dev/binder访问该它。驱动负责进程之间Binder通信的建立，Binder在进程之间的传递，Binder引用计数管
+理，数据包在进程之间的传递和交互等一系列底层支持。驱动和应用程序之间定义了一套接口协议，主要功能由ioctl()接口实现，不提供 
+read()，write()接口，因为ioctl()灵活方便，且能够一次调用实现先写后读以满足同步交互，而不必分别调用write()和 
+read()。<br>
+3.2 ServiceManager 与实名Binder</p>
+<p>和DNS类似，SMgr的作用是将字符形式的Binder名字转化成Client中对该Binder的引用，使得Client能够通过Binder
+ 名字获得对Server中Binder实体的引用。注册了名字的Binder叫实名Binder，就象每个网站除了有IP地址外都有自己的网址。 
+Server创建了Binder实体，为其取一个字符形式，可读易记的名字，将这个Binder连同名字以数据包的形式通过Binder驱动发送给 
+SMgr，通知SMgr注册一个名叫张三的Binder，它位于某个Server中。驱动为这个穿过进程边界的Binder创建位于内核中的实体节点以及
+ SMgr对实体的引用，将名字及新建的引用传递给SMgr。SMgr收数据包后，从中取出名字和引用填入一张查找表中。</p>
+<p>细心的读者可能会发现其中的蹊跷：SMgr是一个进程，Server是另一个进程，Server向SMgr注册Binder必然会涉及进程间通信。
+当前实现的是进程间通信却又要用到进程间通信，这就好象蛋可以孵出鸡前提却是要找只鸡来孵蛋。Binder的实现比较巧妙：预先创造一只鸡来孵蛋。 
+SMgr和其它进程同样采用Binder通信，SMgr是Server端，有自己的Binder实体，其它进程都是Client，需要通过这个 
+Binder的引用来实现Binder的注册，查询和获取。SMgr提供的Binder比较特殊，它没有名字也不需要注册，当一个进程使用 
+BINDER_SET_CONTEXT_MGR命令将自己注册成SMgr时Binder驱动会自动为它创建Binder实体（这就是那只预先造好的鸡）。
+其次这个Binder的引用在所有Client中都固定为0而无须通过其它手段获得。也就是说，一个Server若要向SMgr注册自己Binder就必
+需通过0这个引用和SMgr的Binder通信。类比网络通信，0号引用就好比域名服务器的地址，你必须手工或动态配置好。要注意这里说的Client是
+相对SMgr而言的，一个应用程序是个提供服务的Server，但对SMgr来说它仍然是个Client。<br>
+3.3 Client 获得实名Binder的引用</p>
+<p>Server向SMgr注册了Binder实体及其名字后，Client就可以通过名字获得该Binder的引用了。Client也利用保留的0号
+引用向SMgr请求访问某个Binder：我申请获得名字叫张三的Binder的引用。SMgr收到这个连接请求，从请求数据包里获得Binder的名
+字，在查找表里找到该名字对应的条目，从条目中取出Binder的引用，将该引用作为回复发送给发起请求的Client。从面向对象的角度，这个 
+Binder对象现在有了两个引用：一个位于SMgr中，一个位于发起请求的Client中。如果接下来有更多的Client请求该Binder，系统中
+就会有更多的引用指向该Binder，就象java里一个对象存在多个引用一样。而且类似的这些指向Binder的引用是强类型，从而确保只要有引用 
+Binder实体就不会被释放掉。通过以上过程可以看出，SMgr象个火车票代售点，收集了所有火车的车票，可以通过它购买到乘坐各趟火车的票，即得到某
+个Binder的引用。<br>
+3.4 匿名 Binder</p>
+<p>并不是所有Binder都需要注册给SMgr广而告之的。Server端可以通过已经建立的Binder连接将创建的Binder实体传给 
+Client，当然这条已经建立的Binder连接必须是通过实名Binder实现。由于这个Binder没有向SMgr注册名字，所以是个匿名 
+Binder。Client将会收到这个匿名Binder的引用，通过这个引用向位于Server中的实体发送请求。匿名Binder为通信双方建立一条
+私密通道，只要Server没有把匿名Binder发给别的进程，别的进程就无法通过穷举或猜测等任何方式获得该Binder的引用，向该Binder发
+送请求。</p>
+<p>下图展示了参与Binder通信的所有角色，将在以后章节中一一提到。<br>
+<img class="alignnone size-full wp-image-17153" title="bander1" src="binder_design_files/bander1.jpg" alt="" height="462" width="580"></p>
+<p>图 1 Binder通信示例</p>
+<h3><a name="_Toc286527846">4 Binder </a> 协议</h3>
+<p>Binder协议基本格式是（命令+数据），使用ioctl(fd, cmd,  arg)函数实现交互。命令由参数cmd承载，数据由参数arg承载，随cmd不同而不同。下表列举了所有命令及其所对应的数据：</p>
+<p>表 2 Binder通信命令字</p>
+<table border="1" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td valign="top" width="147"><strong>命令</strong> <strong></strong></td>
+<td valign="top" width="350"><strong>含义</strong> <strong></strong></td>
+<td valign="top" width="271"><strong>arg</strong></td>
+</tr>
+<tr>
+<td valign="top" width="147">BINDER_WRITE_READ</td>
+<td valign="top" width="350">该命令向Binder写入或读取数据。参数分为两段：写部分和读部分。如果
+write_size不为0就先将write_buffer里的数据写入 
+Binder；如果read_size不为0再从Binder中读取数据存入read_buffer中。write_consumed和 
+read_consumed表示操作完成时Binder驱动实际写入或读出的数据个数。</td>
+<td valign="top" width="271">struct binder_write_read {<p></p>
+<p>signed long write_size;</p>
+<p>signed long write_consumed;</p>
+<p>unsigned long write_buffer;</p>
+<p>signed long read_size;</p>
+<p>signed long read_consumed;</p>
+<p>unsigned long read_buffer;</p>
+<p>};</p></td>
+</tr>
+<tr>
+<td valign="top" width="147">BINDER_SET_MAX_THREADS</td>
+<td valign="top" width="350">该命令告知Binder驱动接收方（通常是Server端）线程池中最大的线程数。由于
+Client是并发向Server端发送请求 
+的，Server端必须开辟线程池为这些并发请求提供服务。告知驱动线程池的最大值是为了让驱动在线程达到该值时不要再命令接收端启动新的线程。</td>
+<td valign="top" width="271">int max_threads;</td>
+</tr>
+<tr>
+<td valign="top" width="147">BINDER_SET_CONTEXT_MGR</td>
+<td valign="top" width="350">将当前进程注册为SMgr。系统中同时只能存在一个SMgr。只要当前的SMgr没有调用close()关闭Binder驱动就不能有别的进程可以 成为SMgr。</td>
+<td valign="top" width="271">—</td>
+</tr>
+<tr>
+<td valign="top" width="147">BINDER_THREAD_EXIT</td>
+<td valign="top" width="350">通知Binder驱动当前线程退出了。Binder会为所有参与Binder通信的线程（包括Server线程池中的线程和Client发出请求的 线程）建立相应的数据结构。这些线程在退出时必须通知驱动释放相应的数据结构。</td>
+<td valign="top" width="271">—</td>
+</tr>
+<tr>
+<td valign="top" width="147">BINDER_VERSION</td>
+<td valign="top" width="350">获得Binder驱动的版本号。</td>
+<td valign="top" width="271">—</td>
+</tr>
+</tbody>
+</table>
+<p>这其中最常用的命令是BINDER_WRITE_READ。该命令的参数包括两部分数据：一部分是向Binder写入的数据，一部分是要从 
+Binder读出的数据，驱动程序先处理写部分再处理读部分。这样安排的好处是应用程序可以很灵活地处理命令的同步或异步。例如若要发送异步命令可以只填
+ 
+入写部分而将read_size置成0；若要只从Binder获得数据可以将写部分置空即write_size置成0；若要发送请求并同步等待返回数据可
+ 以将两部分都置上。</p>
+<h4><a name="_Toc286527847">4.1  BINDER_WRITE_READ </a> 之写操作</h4>
+<p>Binder写操作的数据时格式同样也是（命令+数据）。这时候命令和数据都存放在binder_write_read  
+结构write_buffer域指向的内存空间里，多条命令可以连续存放。数据紧接着存放在命令后面，格式根据命令不同而不同。下表列举了Binder写
+ 操作支持的命令：</p>
+<p>表 3 Binder写操作命令字</p>
+<table border="1" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td valign="top" width="159"><strong>cmd</strong></td>
+<td valign="top" width="366"><strong>含义</strong> <strong></strong></td>
+<td valign="top" width="246"><strong>arg</strong></td>
+</tr>
+<tr>
+<td valign="top" width="159">BC_TRANSACTION<br>
+BC_REPLY</td>
+<td valign="top" width="366">BC_TRANSACTION用于写入请求数据；BC_REPLY用于写入回复数据。其后面紧接着一个 binder_transaction_data结构体表明要写入的数据。</td>
+<td valign="top" width="246">struct binder_transaction_data</td>
+</tr>
+<tr>
+<td valign="top" width="159">BC_ACQUIRE_RESULT<br>
+BC_ATTEMPT_ACQUIRE</td>
+<td valign="top" width="366">暂未实现</td>
+<td valign="top" width="246">—</td>
+</tr>
+<tr>
+<td valign="top" width="159">BC_FREE_BUFFER</td>
+<td valign="top" width="366">释放一块映射的内存。Binder接收方通过mmap()映射一块较大的内存空
+间，Binder驱动基于这片内存采用最佳匹配算法实现接收数据缓存 
+的动态分配和释放，满足并发请求对接收缓存区的需求。应用程序处理完这片数据后必须尽快使用该命令释放缓存区，否则会因为缓存区耗尽而无法接收新数据。</td>
+<td valign="top" width="246">指向需要释放的缓存区的指针；该指针位于收到的Binder数据包中</td>
+</tr>
+<tr>
+<td valign="top" width="159">BC_INCREFS<br>
+BC_ACQUIRE<br>
+BC_RELEASE<br>
+BC_DECREFS</td>
+<td valign="top" width="366">这组命令增加或减少Binder的引用计数，用以实现强指针或弱指针的功能。</td>
+<td valign="top" width="246">32位Binder引用号</td>
+</tr>
+<tr>
+<td valign="top" width="159">BC_INCREFS_DONE<br>
+BC_ACQUIRE_DONE</td>
+<td valign="top" width="366">第一次增加Binder实体引用计数时，驱动向Binder实体所在的进程发送BR_INCREFS，  BR_ACQUIRE消息；Binder实体所在的进程处理完毕回馈BC_INCREFS_DONE，BC_ACQUIRE_DONE</td>
+<td valign="top" width="246">void *ptr：Binder实体在用户空间中的指针<p></p>
+<p>void *cookie：与该实体相关的附加数据</p></td>
+</tr>
+<tr>
+<td valign="top" width="159">BC_REGISTER_LOOPER<br>
+BC_ENTER_LOOPER<br>
+BC_EXIT_LOOPER</td>
+<td valign="top" width="366">这组命令同BINDER_SET_MAX_THREADS一道实现Binder驱动对接收方
+线程池管理。BC_REGISTER_LOOPER通知 
+驱动线程池中一个线程已经创建了；BC_ENTER_LOOPER通知驱动该线程已经进入主循环，可以接收数据；BC_EXIT_LOOPER通知驱动该
+ 线程退出主循环，不再接收数据。</td>
+<td valign="top" width="246">—</td>
+</tr>
+<tr>
+<td valign="top" width="159">BC_REQUEST_DEATH_NOTIFICATION</td>
+<td valign="top" width="366">获得Binder引用的进程通过该命令要求驱动在Binder实体销毁得到通知。虽说强指针
+可以确保只要有引用就不会销毁实体，但这毕竟是个跨进程 
+的引用，谁也无法保证实体由于所在的Server关闭Binder驱动或异常退出而消失，引用者能做的是要求Server在此刻给出通知。</td>
+<td valign="top" width="246">uint32 *ptr; 需要得到死亡通知的Binder引用<p></p>
+<p>void **cookie: 与死亡通知相关的信息，驱动会在发出死亡通知时返回给发出请求的进程。</p></td>
+</tr>
+<tr>
+<td valign="top" width="159">BC_DEAD_BINDER_DONE</td>
+<td valign="top" width="366">收到实体死亡通知书的进程在删除引用后用本命令告知驱动。</td>
+<td valign="top" width="246">void **cookie</td>
+</tr>
+</tbody>
+</table>
+<p>在这些命令中，最常用的是BC_TRANSACTION/BC_REPLY命令对，Binder数据通过这对命令发送给接收方。这对命令所承载的数
+ 据包由结构体struct  
+binder_transaction_data定义。Binder交互有同步和异步之分，利用binder_transaction_data中 
+flag域区分。如果flag域的TF_ONE_WAY位为1则为异步交互，即Client端发送完请求交互即结束，  
+Server端不再返回BC_REPLY数据包；否则Server会返回BC_REPLY数据包，Client端必须等待接收完该数据包方才完成一次交 
+互。</p>
+<h4><a name="_Toc286527848">4.2  BINDER_WRITE_READ </a> ：从Binder读出数据</h4>
+<p>从Binder里读出的数据格式和向Binder中写入的数据格式一样，采用（消息ID+数据）形式，并且多条消息可以连续存放。下表列举了从 Binder读出的命令字及其相应的参数：</p>
+<p>表 4 Binder读操作消息ID</p>
+<table border="1" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td valign="top" width="195"><strong>消息</strong> <strong></strong></td>
+<td valign="top" width="347"><strong>含义</strong> <strong></strong></td>
+<td valign="top" width="227"><strong>参数</strong> <strong></strong></td>
+</tr>
+<tr>
+<td valign="top" width="195">BR_ERROR</td>
+<td valign="top" width="347">发生内部错误（如内存分配失败）</td>
+<td valign="top" width="227">—</td>
+</tr>
+<tr>
+<td valign="top" width="195">BR_OK<br>
+BR_NOOP</td>
+<td valign="top" width="347">操作完成</td>
+<td valign="top" width="227">—</td>
+</tr>
+<tr>
+<td valign="top" width="195">BR_SPAWN_LOOPER</td>
+<td valign="top" width="347">该消息用于接收方线程池管理。当驱动发现接收方所有线程都处于忙碌状态且线程池里的线程总数没有超过BINDER_SET_MAX_THREADS 设置的最大线程数时，向接收方发送该命令要求创建更多线程以备接收数据。</td>
+<td valign="top" width="227">—</td>
+</tr>
+<tr>
+<td valign="top" width="195">BR_TRANSACTION<br>
+BR_REPLY</td>
+<td valign="top" width="347">这两条消息分别对应发送方的BC_TRANSACTION和BC_REPLY，表示当前接收的数据是请求或是回复。</td>
+<td valign="top" width="227">binder_transaction_data</td>
+</tr>
+<tr>
+<td valign="top" width="195">BR_ACQUIRE_RESULT<br>
+BR_ATTEMPT_ACQUIRE<br>
+BR_FINISHED</td>
+<td valign="top" width="347">尚未实现</td>
+<td valign="top" width="227">—</td>
+</tr>
+<tr>
+<td valign="top" width="195">BR_DEAD_REPLY</td>
+<td valign="top" width="347">交互过程中如果发现对方进程或线程已经死亡则返回该消息</td>
+<td valign="top" width="227">—</td>
+</tr>
+<tr>
+<td valign="top" width="195">BR_TRANSACTION_COMPLETE</td>
+<td valign="top" width="347">发送方通过BC_TRANSACTION或BC_REPLY发送完一个数据包后，都能收到该消息做为成功发送的反馈。这和BR_REPLY不一样， 是驱动告知发送方已经发送成功，而不是接收方返回请求数据。所以不管同步还是异步交互接收方都能获得本消息。</td>
+<td valign="top" width="227">—</td>
+</tr>
+<tr>
+<td valign="top" width="195">BR_INCREFS<br>
+BR_ACQUIRE<br>
+BR_RELEASE<br>
+BR_DECREFS</td>
+<td valign="top" width="347">这一组消息用于管理强/弱指针的引用计数。只有提供Binder实体的进程才能收到这组消息。</td>
+<td valign="top" width="227">void *ptr：Binder实体在用户空间中的指针<p></p>
+<p>void *cookie：与该实体相关的附加数据</p></td>
+</tr>
+<tr>
+<td valign="top" width="195">BR_DEAD_BINDER<br>
+BR_CLEAR_DEATH_NOTIFICATION_DONE</td>
+<td valign="top" width="347">向获得Binder引用的进程发送Binder实体死亡通知书；收到死亡通知书的进程接下来会返回BC_DEAD_BINDER_DONE做确认。</td>
+<td valign="top" width="227">void **cookie：在使用BC_REQUEST_DEATH_NOTIFICATION注册死亡通知时的附加参数。</td>
+</tr>
+<tr>
+<td valign="top" width="195">BR_FAILED_REPLY</td>
+<td valign="top" width="347">如果发送非法引用号则返回该消息</td>
+<td valign="top" width="227">—</td>
+</tr>
+</tbody>
+</table>
+<p>和写数据一样，其中最重要的消息是BR_TRANSACTION  或BR_REPLY，表明收到了一个格式为binder_transaction_data的请求数据包（BR_TRANSACTION）或返回数据包 （BR_REPLY）。</p>
+<h4><a name="_Toc286527849">4.3  struct binder_transaction_data </a> ：收发数据包结构</h4>
+<p>该结构是Binder接收/发送数据包的标准格式，每个成员定义如下：</p>
+<p>表 5 Binder收发数据包结构：binder_transaction_data</p>
+<table border="1" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td valign="top" width="202"><strong>成员</strong> <strong></strong></td>
+<td valign="top" width="567"><strong>含义</strong> <strong></strong></td>
+</tr>
+<tr>
+<td valign="top" width="202">union {<p></p>
+<p>size_t handle;</p>
+<p>void *ptr;</p>
+<p>} target;</p></td>
+<td valign="top" width="567">对于发送数据包的一方，该成员指明发送目的地。由于目的是在远端，所以这里填入的是对Binder实体的引用，存放在target.handle 中。如前述，Binder的引用在代码中也叫句柄（handle）。<p></p>
+<p>当数据包到达接收方时，驱动已将该成员修改成Binder实体，即指向Binder对象内存的指针，使用target.ptr来获得。该指针是接收
+ 
+方在将Binder实体传输给其它进程时提交给驱动的，驱动程序能够自动将发送方填入的引用转换成接收方Binder对象的指针，故接收方可以直接将其当
+ 做对象指针来使用（通常是将其reinterpret_cast成相应类）。</p></td>
+</tr>
+<tr>
+<td valign="top" width="202">void *cookie;</td>
+<td valign="top" width="567">发送方忽略该成员；接收方收到数据包时，该成员存放的是创建Binder实体时由该接收方自定义的任意数值，做为与Binder指针相关的额外信息 存放在驱动中。驱动基本上不关心该成员。</td>
+</tr>
+<tr>
+<td valign="top" width="202">unsigned int code;</td>
+<td valign="top" width="567">该成员存放收发双方约定的命令码，驱动完全不关心该成员的内容。通常是Server端定义的公共接口函数的编号。</td>
+</tr>
+<tr>
+<td valign="top" width="202">unsigned int flags;</td>
+<td valign="top" width="567">与交互相关的标志位，其中最重要的是TF_ONE_WAY位。如果该位置上表明这次交互是异
+步的，接收方不会返回任何数据。驱动利用该位来决定是否 
+构建与返回有关的数据结构。另外一位TF_ACCEPT_FDS是出于安全考虑，如果发起请求的一方不希望在收到的回复中接收文件形式的Binder可以
+ 将该位置上。因为收到一个文件形式的Binder会自动为接收方打开一个文件，使用该位可以防止打开文件过多。</td>
+</tr>
+<tr>
+<td valign="top" width="202">pid_t sender_pid;<p></p>
+<p>uid_t sender_euid;</p></td>
+<td valign="top" width="567">该成员存放发送方的进程ID和用户ID，由驱动负责填入，接收方可以读取该成员获知发送方的身份。</td>
+</tr>
+<tr>
+<td valign="top" width="202">size_t data_size;</td>
+<td valign="top" width="567">该成员表示data.buffer指向的缓冲区存放的数据长度。发送数据时由发送方填入，表示即将发送的数据长度；在接收方用来告知接收到数据的长 度。</td>
+</tr>
+<tr>
+<td valign="top" width="202">size_t offsets_size;</td>
+<td valign="top" width="567">驱动一般情况下不关心data.buffer里存放什么数据，但如果有Binder在其中传输则需要将其相对data.buffer的偏移位置指出 来让驱动知道。有可能存在多个Binder同时在数据中传递，所以须用数组表示所有偏移位置。本成员表示该数组的大小。</td>
+</tr>
+<tr>
+<td valign="top" width="202">union {<p></p>
+<p>struct {</p>
+<p>const void *buffer;</p>
+<p>const void *offsets;</p>
+<p>} ptr;</p>
+<p>uint8_t buf[8];</p>
+<p>} data;</p></td>
+<td valign="top" width="567">data.bufer存放要发送或接收到的数据；data.offsets指向Binder
+偏移位置数组，该数组可以位于data.buffer 
+中，也可以在另外的内存空间中，并无限制。buf[8]是为了无论保证32位还是64位平台，成员data的大小都是8个字节。</td>
+</tr>
+</tbody>
+</table>
+<p>这里有必要再强调一下offsets_size和data.offsets两个成员，这是Binder通信有别于其它IPC的地方。如前 
+述，Binder采用面向对象的设计思想，一个Binder实体可以发送给其它进程从而建立许多跨进程的引用；另外这些引用也可以在进程之间传递，就象 
+java里将一个引用赋给另一个引用一样。为Binder在不同进程中建立引用必须有驱动的参与，由驱动在内核创建并注册相关的数据结构后接收方才能使用
+ 该引用。而且这些引用可以是强类型，需要驱动为其维护引用计数。然而这些跨进程传递的Binder混杂在引用程序发送的数据包里，数据格式完全由用户定
+ 
+义，如果不把它们一一标记出来告知驱动，驱动将无法从数据中将它们提取出来。于是就使用数组data.offsets存放用户数据中每个Binder相对
+ data.buffer的偏移量，用offsets_size表示这个数组的大小。驱动在发送数据包时会根据data.offsets和 
+offset_size将散落于data.buffer中的Binder找出来并一一为它们创建相关的数据结构。在数据包中传输的Binder是类型为 
+struct flat_binder_object的结构体，详见后文。</p>
+<p>对于接收方来说，该结构只相当于一个定长的消息头，真正的用户数据存放在data.buffer所指向的缓存区中。如果发送方在数据中内嵌了一个或
+ 
+多个Binder，接收到的数据包中同样会用data.offsets和offset_size指出每个Binder的位置和总个数。不过通常接收方可以
+ 忽略这些信息，因为接收方是知道数据格式的，参考双方约定的格式定义就能知道这些Binder在什么位置。</p>
+<p><img class="alignnone size-full wp-image-17154" title="bander2" src="binder_design_files/bander2.jpg" alt="" height="363" width="580"></p>
+<p>图 2 BINDER_WRITE_READ数据包实例</p>
+<h3><a name="_Toc286527850">5 Binder </a> 的表述</h3>
+<p>考察一次Binder通信的全过程会发现，Binder存在于系统以下几个部分中：</p>
+<p>· 应用程序进程：又分为Server进程和Client进程</p>
+<p>· Binder驱动：Server和Client有不同表述形式</p>
+<p>· 传输数据：由于Binder可以跨进程传递，需要在传输数据中予以表述</p>
+<p>在系统不同部分，Binder实现的功能不同，表现形式也不一样的。接下来逐一探讨Binder在各部分所扮演的角色和使用的数据结构。</p>
+<h4><a name="_Toc286527851">5.1  Binder </a> 在应用程序中的表述</h4>
+<p>虽然Binder用到了面向对象的思想，但并不限制应用程序一定要使用面向对象的语言，无论是C语言还是C++语言都可以很容易的使用Binder
+ 
+来通信。例如尽管Android主要使用java或C++，象SMgr这么重要的进程就是用C语言实现的。不过面向对象的方式表述起来更方便，所以本文假
+ 设应用程序是用面向对象语言实现的。</p>
+<p>Binder本质上只是一种底层通信方式，和具体服务没有关系。为了提供具体服务，Server必须提供一套接口函数以便Client通过远程访问
+ 
+使用各种服务。这时通常采用Proxy设计模式：将接口函数定义在一个抽象类中，Server和Client都会以该抽象类为基类实现所有接口函数，所不
+ 
+同的是Server端是真正的功能实现，而Client端是对这些函数远程调用请求的包装。如何将Binder和Proxy设计模式结合起来是应用程序实
+ 现面向对象Binder通信的根本问题。</p>
+<h5><a name="_Toc286527852">5.1.1  Binder </a> 在Server端的表述 – Binder实体</h5>
+<p>做为Proxy设计模式的基础，首先定义一个抽象接口类封装Server所有功能，其中包含一系列纯虚函数留待Server和Proxy各自实现。
+ 
+由于这些函数需要跨进程调用，须为其一一编号，从而Server可以根据收到的编号决定调用哪个函数。其次就要引入Binder了。Server端定义另
+ 
+一个Binder抽象类处理来自Client的Binder请求数据包，其中最重要的成员是虚函数onTransact()。该函数分析收到的数据包，调
+ 用相应的接口函数处理请求。</p>
+<p>接下来采用继承方式以接口类和Binder抽象类为基类构建Binder在Server中的实体，实现基类里所有的虚函数，包括公共接口函数以及数
+ 
+据包处理函数：onTransact()。这个函数的输入是来自Client的binder_transaction_data结构的数据包。前面提到，
+ 该结构里有个成员code，包含这次请求的接口函数编号。onTransact()将case-by-case地解析code值，从数据包里取出函数参
+ 
+数，调用接口类中相应的，已经实现的公共接口函数。函数执行完毕，如果需要返回数据就再构建一个binder_transaction_data包将返回
+ 数据包填入其中。</p>
+<p>那么各个Binder实体的onTransact()又是什么时候调用呢？这就需要驱动参与了。前面说过，Binder实体须要以Binde传输结
+ 
+构flat_binder_object形式发送给其它进程才能建立Binder通信，而Binder实体指针就存放在该结构的handle域中。驱动根
+ 
+据Binder位置数组从传输数据中获取该Binder的传输结构，为它创建位于内核中的Binder节点，将Binder实体指针记录在该节点中。如果
+ 接下来有其它进程向该Binder发送数据，驱动会根据节点中记录的信息将Binder实体指针填入binder_transaction_data的
+ target.ptr中返回给接收线程。接收线程从数据包中取出该指针，reinterpret_cast成Binder抽象类并调用 
+onTransact()函数。由于这是个虚函数，不同的Binder实体中有各自的实现，从而可以调用到不同Binder实体提供的 
+onTransact()。</p>
+<h5><a name="_Toc286527853">5.1.2  Binder </a> 在Client端的表述 – Binder引用</h5>
+<p>做为Proxy设计模式的一部分，Client端的Binder同样要继承Server提供的公共接口类并实现公共函数。但这不是真正的实现，而是
+ 
+对远程函数调用的包装：将函数参数打包，通过Binder向Server发送申请并等待返回值。为此Client端的Binder还要知道Binder实
+ 体的相关信息，即对Binder实体的引用。该引用或是由SMgr转发过来的，对实名Binder的引用或是由另一个进程直接发送过来的，匿名 
+Binder的引用。</p>
+<p>由于继承了同样的公共接口类，Client Binder提供了与Server  
+Binder一样的函数原型，使用户感觉不出Server是运行在本地还是远端。Client  
+Binder中，公共接口函数的实现方式是：创建一个binder_transaction_data数据包，将其对应的编码填入code域，将调用该函
+ 数所需的参数填入data.buffer指向的缓存中，并指明数据包的目的地，那就是已经获得的对Binder实体的引用，填入数据包的 
+target.handle中。注意这里和Server的区别：实际上target域是个联合体，包括ptr和handle两个成员，前者用于作为响应方
+ 的Server，指向  
+Binder实体对应的内存空间；后者用于作为请求方的Client，存放Binder实体的引用，告知驱动数据包将路由给哪个实体。数据包准备好后，通
+ 过驱动接口发送出去。经过BC_TRANSACTION/BC_REPLY回合完成函数的远程调用并得到返回值。</p>
+<h4><a name="_Toc286527854">5.2  Binder </a> 在传输数据中的表述</h4>
+<p>Binder可以塞在数据包的有效数据中越进程边界从一个进程传递给另一个进程，这些传输中的Binder用结构 flat_binder_object表示，如下表所示：</p>
+<p>表 6 Binder传输结构：flat_binder_object</p>
+<table border="1" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td valign="top" width="147"><strong>成员</strong> <strong></strong></td>
+<td valign="top" width="622"><strong>含义</strong> <strong></strong></td>
+</tr>
+<tr>
+<td valign="top" width="147">unsigned long type</td>
+<td valign="top" width="622">表明该Binder的类型，包括以下几种：<p></p>
+<p>BINDER_TYPE_BINDER：表示传递的是Binder实体，并且指向该实体的引用都是强类型；</p>
+<p>BINDER_TYPE_WEAK_BINDER：表示传递的是Binder实体，并且指向该实体的引用都是弱类型；</p>
+<p>BINDER_TYPE_HANDLE：表示传递的是Binder强类型的引用</p>
+<p>BINDER_TYPE_WEAK_HANDLE：表示传递的是Binder弱类型的引用</p>
+<p>BINDER_TYPE_FD：表示传递的是文件形式的Binder，详见下节</p></td>
+</tr>
+<tr>
+<td valign="top" width="147">unsigned long flags</td>
+<td valign="top" width="622">该域只对第一次传递Binder实体时有效，因为此刻驱动需要在内核中创建相应的实体节点，有些参数需要从该域取出：<p></p>
+<p>第0-7位：代码中用FLAT_BINDER_FLAG_PRIORITY_MASK取得，表示处理本实体请求数据包的线程的最低优先级。当一个应 用程序提供多个实体时，可以通过该参数调整分配给各个实体的处理能力。</p>
+<p>第8位：代码中用FLAT_BINDER_FLAG_ACCEPTS_FDS取得，置1表示该实体可以接收其它进程发过来的文件形式的 Binder。由于接收文件形式的Binder会在本进程中自动打开文件，有些Server可以用该标志禁止该功能，以防打开过多文件。</p></td>
+</tr>
+<tr>
+<td valign="top" width="147">union {<p></p>
+<p>void *binder;</p>
+<p>signed long handle;</p>
+<p>};</p></td>
+<td valign="top" width="622">当传递的是Binder实体时使用binder域，指向Binder实体在应用程序中的地址。<p></p>
+<p>当传递的是Binder引用时使用handle域，存放Binder在进程中的引用号。</p></td>
+</tr>
+<tr>
+<td valign="top" width="147">void *cookie;</td>
+<td valign="top" width="622">该域只对Binder实体有效，存放与该Binder有关的附加信息。</td>
+</tr>
+</tbody>
+</table>
+<p>无论是Binder实体还是对实体的引用都从属与某个进程，所以该结构不能透明地在进程之间传输，必须有驱动的参与。例如当Server把 
+Binder实体传递给Client时，在发送数据中，flat_binder_object中的type是 
+BINDER_TYPE_BINDER，binder指向Server进程用户空间地址。如果透传给接收端将毫无用处，驱动必须对数据流中的这个 
+Binder做修改：将type该成BINDER_TYPE_HANDLE；为这个Binder在接收进程中创建位于内核中的引用并将引用号填入 
+handle中。对于发生数据流中引用类型的Binder也要做同样转换。经过处理后接收进程从数据流中取得的Binder引用才是有效的，才可以将其填
+ 入数据包binder_transaction_data的target.handle域，向Binder实体发送请求。</p>
+<p>这样做也是出于安全性考虑：应用程序不能随便猜测一个引用号填入target.handle中就可以向Server请求服务了，因为驱动并没有为你
+ 
+在内核中创建该引用，必定会驱动被拒绝。唯有经过身份认证确认合法后，由‘权威机构’通过数据流授予你的Binder才能使用，因为这时驱动已经在内核中
+ 为你建立了引用，交给你的引用号是合法的。</p>
+<p>下表总结了当flat_binder_object结构穿过驱动时驱动所做的操作：</p>
+<p>表 7 驱动对flat_binder_object的操作</p>
+<table border="1" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td valign="top" width="195"><strong>Binder</strong> <strong>类型（</strong> <strong>type</strong> <strong>域）</strong> <strong></strong></td>
+<td valign="top" width="228"><strong>在发送方的操作</strong> <strong></strong></td>
+<td valign="top" width="343"><strong>在接收方的操作</strong> <strong></strong></td>
+</tr>
+<tr>
+<td valign="top" width="195">BINDER_TYPE_BINDER<p></p>
+<p>BINDER_TYPE_WEAK_BINDER</p></td>
+<td valign="top" width="228">只有实体所在的进程能发送该类型的Binder。如果是第一次发送驱动将创建实体在内核中的节点，并保存binder，cookie，flag域。</td>
+<td valign="top" width="343">如果是第一次接收该Binder则创建实体在内核中的引用；将handle域替换为新建的引用号；将type域替换为 BINDER_TYPE_(WEAK_)HANDLE</td>
+</tr>
+<tr>
+<td valign="top" width="195">BINDER_TYPE_HANDLE<p></p>
+<p>BINDER_TYPE_WEAK_HANDLE</p></td>
+<td valign="top" width="228">获得Binder引用的进程都能发送该类型Binder。驱动根据handle域提供的引用号查找建立在内核的引用。如果找到说明引用号合法，否则 拒绝该发送请求。</td>
+<td valign="top" width="343">如果收到的Binder实体位于接收进程中：将ptr域替换为保存在节点中的binder值；cookie替换为保存在节点中的cookie 值；type替换为BINDER_TYPE_(WEAK_)BINDER。<p></p>
+<p>如果收到的Binder实体不在接收进程中：如果是第一次接收则创建实体在内核中的引用；将handle域替换为新建的引用号</p></td>
+</tr>
+<tr>
+<td valign="top" width="195">BINDER_TYPE_FD</td>
+<td valign="top" width="228">验证handle域中提供的打开文件号是否有效，无效则拒绝该发送请求。</td>
+<td valign="top" width="343">在接收方创建新的打开文件号并将其与提供的打开文件描述结构绑定。</td>
+</tr>
+</tbody>
+</table>
+<h5><a name="_Toc286527855">5.2.1  文件形式的 </a> Binder</h5>
+<p>除了通常意义上用来通信的Binder，还有一种特殊的Binder：文件Binder。这种Binder的基本思想是：将文件看成Binder实
+ 
+体，进程打开的文件号看成Binder的引用。一个进程可以将它打开文件的文件号传递给另一个进程，从而另一个进程也打开了同一个文件，就象Binder
+ 的引用在进程之间传递一样。</p>
+<p>一个进程打开一个文件，就获得与该文件绑定的打开文件号。从Binder的角度，linux在内核创建的打开文件描述结构struct  
+file是Binder的实体，打开文件号是该进程对该实体的引用。既然是Binder那么就可以在进程之间传递，故也可以用 
+flat_binder_object结构将文件Binder通过数据包发送至其它进程，只是结构中type域的值为BINDER_TYPE_FD，表明
+ 
+该Binder是文件Binder。而结构中的handle域则存放文件在发送方进程中的打开文件号。我们知道打开文件号是个局限于某个进程的值，一旦跨
+ 
+进程就没有意义了。这一点和Binder实体用户指针或Binder引用号是一样的，若要跨进程同样需要驱动做转换。驱动在接收Binder的进程空间创
+ 建一个新的打开文件号，将它与已有的打开文件描述结构struct  
+file勾连上，从此该Binder实体又多了一个引用。新建的打开文件号覆盖flat_binder_object中原来的文件号交给接收进程。接收进
+ 程利用它可以执行read()，write()等文件操作。</p>
+<p>传个文件为啥要这么麻烦，直接将文件名用Binder传过去，接收方用open()打开不就行了吗？其实这还是有区别的。首先对同一个打开文件共享
+ 的层次不同：使用文件Binder打开的文件共享linux VFS中的struct file，struct dentry，struct  
+inode结构，这意味着一个进程使用read()/write()/seek()改变了文件指针另一个进程的文件指针也会改变；而如果两个进程分别使用
+ 文件名打开同一文件则有各自的struct file结构，从而各自独立维护文件指针，互不干扰。其次是一些特殊设备文件要求在struct  
+file一级共享才能使用，例如android的另一个驱动ashmem，它和Binder一样也是misc设备，用以实现进程间的共享内存。一个进程打
+ 
+开的ashmem文件只有通过文件Binder发送到另一个进程才能实现内存共享，这大大提高了内存共享的安全性，道理和Binder增强了IPC的安全
+ 性是一样的。</p>
+<h4><a name="_Toc286527856">5.3  Binder </a> 在驱动中的表述</h4>
+<p>驱动是Binder通信的核心，系统中所有的Binder实体以及每个实体在各个进程中的引用都登记在驱动中；驱动需要记录Binder引用 
+-&gt;实体之间多对一的关系；为引用找到对应的实体；在某个进程中为实体创建或查找到对应的引用；记录Binder的归属地（位于哪个进程中）；通过
+ 管理Binder的强/弱引用创建/销毁Binder实体等等。</p>
+<p>驱动里的Binder是什么时候创建的呢？前面提到过，为了实现实名Binder的注册，系统必须创建第一只鸡 –  
+为SMgr创建的，注册实名Binder专用的Binder实体，负责实名Binder注册过程中的进程间通信。既然创建了实体也要有对应的引用：驱动将
+ 
+所有进程中的0号引用都预留给该Binder实体，即一开始所有进程的0号引用都指注册实名Binder专用的Binder，无须特殊操作任何进程通过0
+ 
+号引用都可以注册实名Binder。接下来随着应用程序通过不断地注册实名Binder，不断向SMgr索要Binder的引用，不断将Binder从一
+ 个进程传递给另一个进程，越来越多的Binder以传输结构 –  
+flat_binder_object的形式穿越驱动做跨进程的迁徙。由于binder_transaction_data中data.offset数组
+ 
+的存在，所有流经驱动的Binder都逃不过驱动的眼睛。Binder将对每个穿越进程边界的Binder做如下操作：检查传输结构的type域，如果是
+ BINDER_TYPE_BINDER或BINDER_TYPE_WEAK_BINDER则创建Binder的实体；如果是 
+BINDER_TYPE_HANDLE或BINDER_TYPE_WEAK_HANDLE则创建Binder的引用；如果是 
+BINDER_TYPE_HANDLE则为进程打开文件，无须创建任何数据结构。详细过程可参考表7。随着越来越多的Binder实体或引用穿过驱动在进
+ 程间传递，驱动会在内核里创建越来越多的节点或引用，当然这个过程对用户来说是透明的。</p>
+<h5><a name="_Toc286527857">5.3.1  Binder </a> 实体在驱动中的表述</h5>
+<p>驱动中的Binder实体也叫‘节点’，隶属于提供实体的进程，由struct binder_node结构来表示：</p>
+<p>表 8 Binder节点描述结构：binder_node</p>
+<table border="1" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td valign="top" width="266"><strong>成员</strong> <strong></strong></td>
+<td valign="top" width="503"><strong>含义</strong> <strong></strong></td>
+</tr>
+<tr>
+<td valign="top" width="266">int debug_id;</td>
+<td valign="top" width="503">用于调试</td>
+</tr>
+<tr>
+<td valign="top" width="266">struct binder_work work;</td>
+<td valign="top" width="503">当本节点引用计数发生改变，需要通知所属进程时，通过该成员挂入所属进程的to-do队列里，唤醒所属进程执行Binder实体引用计数的修改。</td>
+</tr>
+<tr>
+<td valign="top" width="266">union {<p></p>
+<p>struct rb_node rb_node;</p>
+<p>struct hlist_node dead_node;</p>
+<p>};</p></td>
+<td valign="top" width="503">每个进程都维护一棵红黑树，以Binder实体在用户空间的指针，即本结构的ptr成员为索引存放该进程所有的Binder实体。这样驱动可以根据 Binder实体在用户空间的指针很快找到其位于内核的节点。rb_node用于将本节点链入该红黑树中。<p></p>
+<p>销毁节点时须将rb_node从红黑树中摘除，但如果本节点还有引用没有切断，就用dead_node将节点隔离到另一个链表中，直到通知所有进程 切断与该节点的引用后，该节点才可能被销毁。</p></td>
+</tr>
+<tr>
+<td valign="top" width="266">struct binder_proc *proc;</td>
+<td valign="top" width="503">本成员指向节点所属的进程，即提供该节点的进程。</td>
+</tr>
+<tr>
+<td valign="top" width="266">struct hlist_head refs;</td>
+<td valign="top" width="503">本成员是队列头，所有指向本节点的引用都链接在该队列里。这些引用可能隶属于不同的进程。通过该队列可以遍历指向该节点的所有引用。</td>
+</tr>
+<tr>
+<td valign="top" width="266">int internal_strong_refs;</td>
+<td valign="top" width="503">用以实现强指针的计数器：产生一个指向本节点的强引用该计数就会加1。</td>
+</tr>
+<tr>
+<td valign="top" width="266">int local_weak_refs;</td>
+<td valign="top" width="503">驱动为传输中的Binder设置的弱引用计数。如果一个Binder打包在数据包中从一个进程发送到另一个进程，驱动会为该Binder增加引用计 数，直到接收进程通过BC_FREE_BUFFER通知驱动释放该数据包的数据区为止。</td>
+</tr>
+<tr>
+<td valign="top" width="266">int local_strong_refs;</td>
+<td valign="top" width="503">驱动为传输中的Binder设置的强引用计数。同上。</td>
+</tr>
+<tr>
+<td valign="top" width="266">void __user *ptr;</td>
+<td valign="top" width="503">指向用户空间Binder实体的指针，来自于flat_binder_object的binder成员</td>
+</tr>
+<tr>
+<td valign="top" width="266">void __user *cookie;</td>
+<td valign="top" width="503">指向用户空间的附加指针，来自于flat_binder_object的cookie成员</td>
+</tr>
+<tr>
+<td valign="top" width="266">unsigned has_strong_ref;<p></p>
+<p>unsigned pending_strong_ref;</p>
+<p>unsigned has_weak_ref;</p>
+<p>unsigned pending_weak_ref</p></td>
+<td valign="top" width="503">这一组标志用于控制驱动与Binder实体所在进程交互式修改引用计数</td>
+</tr>
+<tr>
+<td valign="top" width="266">unsigned has_async_transaction；</td>
+<td valign="top" width="503">该成员表明该节点在to-do队列中有异步交互尚未完成。驱动将所有发送往接收端的数据包暂
+存在接收进程或线程开辟的to-do队列里。对于异步交 
+互，驱动做了适当流控：如果to-do队列里有异步交互尚待处理则该成员置1，这将导致新到的异步交互存放在本结构成员 –  
+asynch_todo队列中，而不直接送到to-do队列里。目的是为同步交互让路，避免长时间阻塞发送端。</td>
+</tr>
+<tr>
+<td valign="top" width="266">unsigned accept_fds</td>
+<td valign="top" width="503">表明节点是否同意接受文件方式的Binder，来自flat_binder_object中
+flags成员的 
+FLAT_BINDER_FLAG_ACCEPTS_FDS位。由于接收文件Binder会为进程自动打开一个文件，占用有限的文件描述符，节点可以设置
+ 该位拒绝这种行为。</td>
+</tr>
+<tr>
+<td valign="top" width="266">int min_priority</td>
+<td valign="top" width="503">设置处理Binder请求的线程的最低优先级。发送线程将数据提交给接收线程处理时，驱动会将发送线程的优先级也赋予接收线程，使得数据即使跨了进 程也能以同样优先级得到处理。不过如果发送线程优先级过低，接收线程将以预设的最小值运行。<p></p>
+<p>该域的值来自于flat_binder_object中flags成员。</p></td>
+</tr>
+<tr>
+<td valign="top" width="266">struct list_head async_todo</td>
+<td valign="top" width="503">异步交互等待队列；用于分流发往本节点的异步交互包</td>
+</tr>
+</tbody>
+</table>
+<p>每个进程都有一棵红黑树用于存放创建好的节点，以Binder在用户空间的指针作为索引。每当在传输数据中侦测到一个代表Binder实体的 
+flat_binder_object，先以该结构的binder指针为索引搜索红黑树；如果没找到就创建一个新节点添加到树中。由于对于同一个进程来说
+ 内存地址是唯一的，所以不会重复建设造成混乱。</p>
+<h5><a name="_Toc286527858">5.3.2  Binder </a> 引用在驱动中的表述</h5>
+<p>和实体一样，Binder的引用也是驱动根据传输数据中的flat_binder_object创建的，隶属于获得该引用的进程，用struct  binder_ref结构体表示：</p>
+<p>表 9 Binder引用描述结构：binder_ref</p>
+<table border="1" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td valign="top" width="272"><strong>成员</strong> <strong></strong></td>
+<td valign="top" width="499"><strong>含义</strong> <strong></strong></td>
+</tr>
+<tr>
+<td valign="top" width="272">int debug_id;</td>
+<td valign="top" width="499">调试用</td>
+</tr>
+<tr>
+<td valign="top" width="272">struct rb_node rb_node_desc;</td>
+<td valign="top" width="499">每个进程有一棵红黑树，进程所有引用以引用号（即本结构的desc域）为索引添入该树中。本成员用做链接到该树的一个节点。</td>
+</tr>
+<tr>
+<td valign="top" width="272">struct rb_node rb_node_node;</td>
+<td valign="top" width="499">每个进程又有一棵红黑树，进程所有引用以节点实体在驱动中的内存地址（即本结构的node域）为所引添入该树中。本成员用做链接到该树的一个节点。</td>
+</tr>
+<tr>
+<td valign="top" width="272">struct hlist_node node_entry;</td>
+<td valign="top" width="499">该域将本引用做为节点链入所指向的Binder实体结构binder_node中的refs队列</td>
+</tr>
+<tr>
+<td valign="top" width="272">struct binder_proc *proc;</td>
+<td valign="top" width="499">本引用所属的进程</td>
+</tr>
+<tr>
+<td valign="top" width="272">struct binder_node *node;</td>
+<td valign="top" width="499">本引用所指向的节点（Binder实体）</td>
+</tr>
+<tr>
+<td valign="top" width="272">uint32_t desc;</td>
+<td valign="top" width="499">本结构的引用号</td>
+</tr>
+<tr>
+<td valign="top" width="272">int strong;</td>
+<td valign="top" width="499">强引用计数</td>
+</tr>
+<tr>
+<td valign="top" width="272">int weak;</td>
+<td valign="top" width="499">弱引用计数</td>
+</tr>
+<tr>
+<td valign="top" width="272">struct binder_ref_death *death;</td>
+<td valign="top" width="499">应用程序向驱动发送BC_REQUEST_DEATH_NOTIFICATION或BC_CLEAR_DEATH_NOTIFICATION命令从 而当Binder实体销毁时能够收到来自驱动的提醒。该域不为空表明用户订阅了对应实体销毁的‘噩耗’。</td>
+</tr>
+</tbody>
+</table>
+<p>就象一个对象有很多指针一样，同一个Binder实体可能有很多引用，不同的是这些引用可能分布在不同的进程中。和实体一样，每个进程使用红黑树存 放所有该进程正在使用的引用。但Binder的引用可以通过两个键值索引：</p>
+<p>·  
+对应实体在内核中的地址。注意这里指的是驱动创建于内核中的binder_node结构的地址，而不是Binder实体在用户进程中的地址。实体在内核中
+ 
+的地址是唯一的，用做索引不会产生二义性；但实体可能来自不同用户进程，而实体在不同用户进程中的地址可能重合，不能用来做索引。驱动利用该红黑树在一个
+ 进程中快速查找某个Binder实体所对应的引用（一个实体在一个进程中只建立一个引用）。</p>
+<p>·  
+引用号。引用号是驱动为引用分配的一个32位标识，在一个进程内是唯一的，而在不同进程中可能会有同样的值，这和进程的打开文件号很类似。引用号将返回给
+ 
+应用程序，可以看作Binder引用在用户进程中的句柄。除了0号引用在所有进程里都保留给SMgr，其它值由驱动在创建引用时动态分配。向Binder
+ 发送数据包时，应用程序通过将引用号填入binder_transaction_data结构的target.handle域中表明该数据包的目的 
+Binder。驱动根据该引用号在红黑树中找到引用的binder_ref结构，进而通过其node域知道目标Binder实体所在的进程及其它相关信 
+息，实现数据包的路由。</p>
+<h3><a name="_Toc286527859">6 Binder </a> 内存映射和接收缓存区管理</h3>
+<p>暂且撇开Binder，考虑一下传统的IPC方式中，数据是怎样从发送端到达接收端的呢？通常的做法是，发送方将准备好的数据存放在缓存区中，调用
+ 
+API通过系统调用进入内核中。内核服务程序在内核空间分配内存，将数据从发送方缓存区复制到内核缓存区中。接收方读数据时也要提供一块缓存区，内核将数
+ 
+据从内核缓存区拷贝到接收方提供的缓存区中并唤醒接收线程，完成一次数据发送。这种存储-转发机制有两个缺陷：首先是效率低下，需要做两次拷贝：用户空间
+ 
+-&gt;内核空间-&gt;用户空间。Linux使用copy_from_user()和copy_to_user()实现这两个跨空间拷贝，在此过程
+ 中如果使用了高端内存（high  
+memory），这种拷贝需要临时建立/取消页面映射，造成性能损失。其次是接收数据的缓存要由接收方提供，可接收方不知道到底要多大的缓存才够用，只能
+ 开辟尽量大的空间或先调用API接收消息头获得消息体大小，再开辟适当的空间接收消息体。两种做法都有不足，不是浪费空间就是浪费时间。</p>
+<p>Binder采用一种全新策略：由Binder驱动负责管理数据接收缓存。我们注意到Binder驱动实现了mmap()系统调用，这对字符设备是
+ 
+比较特殊的，因为mmap()通常用在有物理存储介质的文件系统上，而象Binder这样没有物理介质，纯粹用来通信的字符设备没必要支持mmap()。
+ Binder驱动当然不是为了在物理介质和用户空间做映射，而是用来创建数据接收的缓存空间。先看mmap()是如何使用的：</p>
+<p>fd = open(“/dev/binder”, O_RDWR);</p>
+<p>mmap(NULL, MAP_SIZE, PROT_READ, MAP_PRIVATE, fd, 0);</p>
+<p>这样Binder的接收方就有了一片大小为MAP_SIZE的接收缓存区。mmap()的返回值是内存映射在用户空间的地址，不过这段空间是由驱动 管理，用户不必也不能直接访问（映射类型为PROT_READ，只读映射）。</p>
+<p>接收缓存区映射好后就可以做为缓存池接收和存放数据了。前面说过，接收数据包的结构为binder_transaction_data，但这只是消
+ 
+息头，真正的有效负荷位于data.buffer所指向的内存中。这片内存不需要接收方提供，恰恰是来自mmap()映射的这片缓存池。在数据从发送方向
+ 接收方拷贝时，驱动会根据发送数据包的大小，使用最佳匹配算法从缓存池中找到一块大小合适的空间，将数据从发送缓存区复制过来。要注意的是，存放 
+binder_transaction_data结构本身以及表4中所有消息的内存空间还是得由接收者提供，但这些数据大小固定，数量也不多，不会给接收
+ 
+方造成不便。映射的缓存池要足够大，因为接收方的线程池可能会同时处理多条并发的交互，每条交互都需要从缓存池中获取目的存储区，一旦缓存池耗竭将产生导
+ 致无法预期的后果。</p>
+<p>有分配必然有释放。接收方在处理完数据包后，就要通知驱动释放data.buffer所指向的内存区。在介绍Binder协议时已经提到，这是由命 令BC_FREE_BUFFER完成的。</p>
+<p>通过上面介绍可以看到，驱动为接收方分担了最为繁琐的任务：分配/释放大小不等，难以预测的有效负荷缓存区，而接收方只需要提供缓存来存放大小固 
+定，可以预测的消息头即可。在效率上，由于mmap()分配的内存是映射在接收方用户空间里的，所有总体效果就相当于对有效负荷数据做了一次从发送方用户
+ 
+空间到接收方用户空间的直接数据拷贝，省去了内核中暂存这个步骤，提升了一倍的性能。顺便再提一点，Linux内核实际上没有从一个用户空间到另一个用户
+ 
+空间直接拷贝的函数，需要先用copy_from_user()拷贝到内核空间，再用copy_to_user()拷贝到另一个用户空间。为了实现用户空
+ 
+间到用户空间的拷贝，mmap()分配的内存除了映射进了接收方进程里，还映射进了内核空间。所以调用copy_from_user()将数据拷贝进内核
+ 空间也相当于拷贝进了接收方的用户空间，这就是Binder只需一次拷贝的‘秘密’。</p>
+<h3><a name="_Toc286527860">7 Binder </a> 接收线程管理</h3>
+<p>Binder通信实际上是位于不同进程中的线程之间的通信。假如进程S是Server端，提供Binder实体，线程T1从Client进程C1中
+ 
+通过Binder的引用向进程S发送请求。S为了处理这个请求需要启动线程T2，而此时线程T1处于接收返回数据的等待状态。T2处理完请求就会将处理结
+ 
+果返回给T1，T1被唤醒得到处理结果。在这过程中，T2仿佛T1在进程S中的代理，代表T1执行远程任务，而给T1的感觉就是象穿越到S中执行一段代码
+ 
+又回到了C1。为了使这种穿越更加真实，驱动会将T1的一些属性赋给T2，特别是T1的优先级nice，这样T2会使用和T1类似的时间完成任务。很多资
+ 
+料会用‘线程迁移’来形容这种现象，容易让人产生误解。一来线程根本不可能在进程之间跳来跳去，二来T2除了和T1优先级一样，其它没有相同之处，包括身
+ 份，打开文件，栈大小，信号处理，私有数据等。</p>
+<p>对于Server进程S，可能会有许多Client同时发起请求，为了提高效率往往开辟线程池并发处理收到的请求。怎样使用线程池实现并发处理呢？
+ 
+这和具体的IPC机制有关。拿socket举例，Server端的socket设置为侦听模式，有一个专门的线程使用该socket侦听来自Client
+ 的连接请求，即阻塞在accept()上。这个socket就象一只会生蛋的鸡，一旦收到来自Client的请求就会生一个蛋 –  
+创建新socket并从accept()返回。侦听线程从线程池中启动一个工作线程并将刚下的蛋交给该线程。后续业务处理就由该线程完成并通过这个单与 
+Client实现交互。</p>
+<p>可是对于Binder来说，既没有侦听模式也不会下蛋，怎样管理线程池呢？一种简单的做法是，不管三七二十一，先创建一堆线程，每个线程都用 
+BINDER_WRITE_READ命令读Binder。这些线程会阻塞在驱动为该Binder的等待队列上，一旦有来自Client的数据驱动会从队列
+ 
+中唤醒一个线程来处理。这样做简单直观，省去了线程池，但一开始就创建一堆线程有点浪费资源。于是Binder协议设置了专门命令或消息帮助用户管理线程
+ 池，包括：</p>
+<p>· INDER_SET_MAX_THREADS</p>
+<p>· BC_REGISTER_LOOP</p>
+<p>· BC_ENTER_LOOP</p>
+<p>· BC_EXIT_LOOP</p>
+<p>· BR_SPAWN_LOOPER</p>
+<p>首先要管理线程池就要知道池子有多大，应用程序通过INDER_SET_MAX_THREADS告诉驱动最多可以创建几个线程。以后每个线程在创 
+建，进入主循环，退出主循环时都要分别使用BC_REGISTER_LOOP，BC_ENTER_LOOP，BC_EXIT_LOOP告知驱动，以便驱动
+ 
+收集和记录当前线程池的状态。每当驱动接收完数据包返回读Binder的线程时，都要检查一下是不是已经没有闲置线程了。如果是，而且线程总数不会超出线
+ 
+程池最大线程数，就会在当前读出的数据包后面再追加一条BR_SPAWN_LOOPER消息，告诉用户线程即将不够用了，请再启动一些，否则下一个请求可
+ 
+能不能及时响应。新线程一启动又会通过BC_xxx_LOOP告知驱动更新状态。这样只要线程没有耗尽，总是有空闲线程在等待队列中随时待命，及时处理请
+ 求。</p>
+<p>关于工作线程的启动，Binder驱动还做了一点小小的优化。当进程P1的线程T1向进程P2发送请求时，驱动会先查看一下线程T1是否也正在处理
+ 
+来自P2某个线程请求但尚未完成（没有发送回复）。这种情况通常发生在两个进程都有Binder实体并互相对发时请求时。假如驱动在进程P2中发现了这样
+ 
+的线程，比如说T2，就会要求T2来处理T1的这次请求。因为T2既然向T1发送了请求尚未得到返回包，说明T2肯定（或将会）阻塞在读取返回包的状态。
+ 这时候可以让T2顺便做点事情，总比等在那里闲着好。而且如果T2不是线程池中的线程还可以为线程池分担部分工作，减少线程池使用率。</p>
+<h3><a name="_Toc286527861">8  数据包接收队列与（线程）等待队列管理 </a></h3>
+<p>通常数据传输的接收端有两个队列：数据包接收队列和（线程）等待队列，用以缓解供需矛盾。当超市里的进货（数据包）太多，货物会堆积在仓库里；购物
+ 
+的人（线程）太多，会排队等待在收银台，道理是一样的。在驱动中，每个进程有一个全局的接收队列，也叫to-do队列，存放不是发往特定线程的数据包；相
+ 
+应地有一个全局等待队列，所有等待从全局接收队列里收数据的线程在该队列里排队。每个线程有自己私有的to-do队列，存放发送给该线程的数据包；相应的
+ 
+每个线程都有各自私有等待队列，专门用于本线程等待接收自己to-do队列里的数据。虽然名叫队列，其实线程私有等待队列中最多只有一个线程，即它自己。</p>
+<p>由于发送时没有特别标记，驱动怎么判断哪些数据包该送入全局to-do队列，哪些数据包该送入特定线程的to-do队列呢？这里有两条规则。规则 
+1：Client发给Server的请求数据包都提交到Server进程的全局to-do队列。不过有个特例，就是上节谈到的Binder对工作线程启动
+ 的优化。经过优化，来自T1的请求不是提交给P2的全局to-do队列，而是送入了T2的私有to-do队列。规则2：对同步请求的返回数据包（由 
+BC_REPLY发送的包）都发送到发起请求的线程的私有to-do队列中。如上面的例子，如果进程P1的线程T1发给进程P2的线程T2的是同步请求，
+ 那么T2返回的数据包将送进T1的私有to-do队列而不会提交到P1的全局to-do队列。</p>
+<p>数据包进入接收队列的潜规则也就决定了线程进入等待队列的潜规则，即一个线程只要不接收返回数据包则应该在全局等待队列中等待新任务，否则就应该在
+ 
+其私有等待队列中等待Server的返回数据。还是上面的例子，T1在向T2发送同步请求后就必须等待在它私有等待队列中，而不是在P1的全局等待队列中
+ 排队，否则将得不到T2的返回的数据包。</p>
+<p>这些潜规则是驱动对Binder通信双方施加的限制条件，体现在应用程序上就是同步请求交互过程中的线程一致性：1)  
+Client端，等待返回包的线程必须是发送请求的线程，而不能由一个线程发送请求包，另一个线程等待接收包，否则将收不到返回包；2)  
+Server端，发送对应返回数据包的线程必须是收到请求数据包的线程，否则返回的数据包将无法送交发送请求的线程。这是因为返回数据包的目的 
+Binder不是用户指定的，而是驱动记录在收到请求数据包的线程里，如果发送返回包的线程不是收到请求包的线程驱动将无从知晓返回包将送往何处。</p>
+<p>接下来探讨一下Binder驱动是如何递交同步交互和异步交互的。我们知道，同步交互和异步交互的区别是同步交互的发送（client）端在发出请
+ 
+求数据包后须要等待接收（Server）端的返回数据包，而异步交互的发送端发出请求数据包后交互即结束。对于这两种交互的请求数据包，驱动可以不管三七
+ 二十一，统统丢到接收端的to-do队列中一个个处理。但驱动并没有这样做，而是对异步交互做了限流，令其为同步交互让路，具体做法是：对于某个 
+Binder实体，只要有一个异步交互没有处理完毕，例如正在被某个线程处理或还在任意一条to-do队列中排队，那么接下来发给该实体的异步交互包将不
+ 
+再投递到to-do队列中，而是阻塞在驱动为该实体开辟的异步交互接收队列（Binder节点的async_todo域）中，但这期间同步交互依旧不受限
+ 
+制直接进入to-do队列获得处理。一直到该异步交互处理完毕下一个异步交互方可以脱离异步交互队列进入to-do队列中。之所以要这么做是因为同步交互
+ 
+的请求端需要等待返回包，必须迅速处理完毕以免影响请求端的响应速度，而异步交互属于‘发射后不管’，稍微延时一点不会阻塞其它线程。所以用专门队列将过
+ 多的异步交互暂存起来，以免突发大量异步交互挤占Server端的处理能力或耗尽线程池里的线程，进而阻塞同步交互。</p>
+<h3><a name="_Toc286527862">9 总结 </a></h3>
+<p>Binder使用Client-Server通信方式，安全性好，简单高效，再加上其面向对象的设计思想，独特的接收缓存管理和线程池管理方式，成 为Android进程间通信的中流砥柱。</p>
+<p>原文作者：universus</p>
+<p>原文链接：http://blog.csdn.net/universus/archive/2011/02/27/6211589.aspx</p>
+                                      	</div>
+                <div class="article_tags">
+                    			<div class="p_tag">
+                        <h5 style="float:left;">Tags: &nbsp;</h5>
+                        <span>
+                            <span class="entry-utility-prep entry-utility-prep-tag-links"></span> <a href="http://disanji.net/tag/android/" rel="tag">Android</a><a href="http://disanji.net/tag/bind/" rel="tag">BIND</a><a href="http://disanji.net/tag/binder/" rel="tag">Binder</a><a href="http://disanji.net/tag/%e4%bb%8a%e6%97%a5%e6%9c%80%e6%96%b0/" rel="tag">今日最新</a>                        </span>
+			</div>
+			                </div>
+                <div class="shared_and_links">
+                    <span class="link fr"><a class="more" href="">查看原文</a></span>
+                    <!-- ShareTo Button BEGIN -->
+                    <div class="shareto_toolbox fr">
+                        <a href="http://shareto.com.cn/share.html" class="shareto_button_compact st_button stico stico_shareto">分享到</a>
+                        <span class="shareto_separator">|</span>
+                        <a title="分享到tsina" href="javascript:void(0);" class="shareto_button_tsina"><span class="stico st_button stico_tsina"></span></a>
+                        <a title="分享到kaixin001" href="javascript:void(0);" class="shareto_button_kaixin001"><span class="stico st_button stico_kaixin001"></span></a>
+                        <a title="分享到renren" href="javascript:void(0);" class="shareto_button_renren"><span class="stico st_button stico_renren"></span></a>
+                        <a title="分享到douban" href="javascript:void(0);" class="shareto_button_douban"><span class="stico st_button stico_douban"></span></a>
+                    </div>
+                    <script type="text/javascript" src="binder_design_files/shareto_button.js" charset="utf-8"></script><script src="binder_design_files/analytics.asc"></script><script src="binder_design_files/analytics.js" type="text/javascript"></script><script src="binder_design_files/h.js" type="text/javascript"></script>
+                    <!-- ShareTo Button END -->
+                    <div class="clear"></div>
+                </div>
+        </div>
+
+        
+<div id="disqus_thread"><div class="clearfix" style="display: block;" id="dsq-content">      <div id="dsq-global-toolbar" class="dsq-clearfix">        <ul class="dsq-global-toolbar-right dsq-clearfix">                            <li class="dsq-community-box">                <a href="#" class="dsq-toolbar-item dsq-tt" onclick="DISQUS.dtpl.actions.fire('community.show'); return false" title="更多社区信息"><span class="dsq-toolbar-icon"></span></a>            </li>                            <li class="dsq-global-toolbar-dropdown-container">                    <div id="dsq-toolbar-dropdown">    <a href="#" class="dsq-toolbar-logo dsq-toolbar-item dsq-clearfix"><span class="dsq-toolbar-icon">Disqus</span></a>    <div id="dsq-toolbar-dropdown-wrap" style="display: none">      <ul class="dsq-clearfix">                    <li class="dsq-login-link"><a href="#" onclick="DISQUS.dtpl.actions.fire('auth.login'); return false"><span class="dsq-toolbar-icon"></span><span class="dsq-toolbar-label">登录</span></a></li>                    <li class="dsq-about-link"><a href="http://disqus.com/" target="_blank"><span class="dsq-toolbar-icon"></span><span class="dsq-toolbar-label">About Disqus</span></a></li>      </ul>    </div>  </div>            </li>        </ul>                <ul class="dsq-global-toolbar-left dsq-clearfix">            <li class="dsq-like-thread">                <a href="#" id="dsq-like-thread-button" class="dsq-toolbar-item dsq-clearfix  dsq-tt" onclick="DISQUS.dtpl.actions.fire('thread.vote', 1); return false;" title="I like this page">                    <span class="dsq-toolbar-icon"></span>                    <span class="dsq-toolbar-label">喜欢</span>                </a>            </li>            <li class="dsq-dislike-thread">                <a href="#" id="dsq-dislike-thread-button" class="dsq-toolbar-item dsq-clearfix  dsq-tt" onclick="DISQUS.dtpl.actions.fire('thread.vote', -1); return false" title="I don't like this page">                    <span class="dsq-toolbar-icon">Dislike</span>                </a>            </li>            <li class="dsq-like-panel">                <ul class="dsq-like-faces dsq-clearfix">                        <li class="dsq-like-activity">        19 people liked this.    </li>                </ul>            </li>        </ul>            </div>    <div id="dsq-like-tooltip">      <div id="dsq-share-step-1" class="dsq-share-step">        <h3>Glad you liked it. Would you like to share?</h3>        <p class="dsq-tooltip-checkbox"><input id="dsq-share-thread-facebook" value="Facebook" type="checkbox"><label for="dsq-share-thread-facebook"><span class="dsq-facebook">Facebook</span></label></p>        <p class="dsq-tooltip-checkbox"><input id="dsq-share-thread-twitter" value="Twitter" type="checkbox"><label for="dsq-share-thread-twitter"><span class="dsq-twitter">Twitter</span></label></p>        <ul id="dsq-tooltip-actions">                        <li><a href="#" onclick="DISQUS.dtpl.actions.fire('thread.share.send'); return false" class="dsq-primary-action">Share</a></li>                    <li><a href="#" onclick="DISQUS.dtpl.actions.fire('thread.share.cancel'); return false" class="dsq-secondary-action">No thanks</a></li>        </ul>      </div>      <div id="dsq-share-step-2" class="dsq-share-step" style="display:none !important">        <p>Sharing this page …</p>      </div>      <div id="dsq-share-step-3" class="dsq-share-step" style="display:none !important">        <p>Thanks! <a href="#" class="dsq-tooltip-decline" onclick="DISQUS.dtpl.actions.fire('thread.share.cancel'); return false">Close</a></p>      </div>    </div>                                <div class="dsq-reply " id="dsq-reply">          <div id="dsq-account-dropdown">                  <a href="#" onclick="DISQUS.dtpl.actions.fire('auth.login'); return false;">登录</a>              </div>      <h3>添加新的评论</h3>        <div class="dsq-avatar">              <img src="binder_design_files/noavatar32.png">          </div>    <div class="dsq-textarea dsq-textarea-reply">      <div class="dsq-textarea-background">        <div style="height: auto;" class="dsq-textarea-wrapper">          <!-- filled dynamically -->        <iframe style="height: 58px;" src="binder_design_files/reply.html" id="easyXDM_DISQUS_net_default6353_provider" name="easyXDM_DISQUS_net_default6353_provider" frameborder="0" scrolling="no"></iframe></div>                  <div id="dsq-media-preview" class="dsq-media-preview" style="display:none">          </div>                <div class="dsq-post-tools">          <ul>            <li class="dsq-post-as">                                <button type="button" class="dsq-button" onclick="DISQUS.dtpl.actions.fire('comments.validate', null, this);">                    以什么身份发表 …                  </button>                          </li>                          <li class="dsq-attach-media">                <div class="dsq-attach-media-container">                  <span>Image</span>                  <!-- filled dynamically -->                <iframe src="binder_design_files/upload.html" id="easyXDM_DISQUS_net_default6354_provider" name="easyXDM_DISQUS_net_default6354_provider" frameborder="0" scrolling="no"></iframe></div>              </li>                        <li class="dsq-share-on dsq-clearfix">                            </li>          </ul>        </div>      </div>    </div>  </div>                              <div id="dsq-sort-by">    <select id="dsq-sort-select" onchange="DISQUS.dtpl.actions.fire('thread.sort', this.value);">              <option value="hot" selected="selected">          排序 受欢迎的        </option>              <option value="best">          排序 best rating        </option>              <option value="newest">          排序 后发表在前        </option>              <option value="oldest">          排序 先发表在前        </option>          </select>  </div>      <h3>            显示 <span id="dsq-num-posts">2</span> 评论        </h3>        <ul id="dsq-comments">            <li id="comment-689765551">  </li><li id="dsq-comment-689765551" data-dsq-comment-id="689765551" class="dsq-comment dsq-clearfix                        " style="margin-left:0px;">    <div class="dsq-avatar dsq-tt" title="Expand Chenzheng110120's profile">      <a href="http://disqus.com/guest/f248615a0a5b12b5de58755d9b6730bb/" onclick="DISQUS.dtpl.actions.fire('profile.show', 689765551, null); return false">        <img src="binder_design_files/noavatar32.png" class="dsq-deferred-avatar" data-src="http://mediacdn.disqus.com/1359151009/images/noavatar32.png" alt="">      </a>    </div>    <div id="dsq-comment-body-689765551" class="dsq-comment-body">      <div class="dsq-comment-header">        <span class="dsq-commenter-name">Chenzheng110120</span>                <span class="dsq-collapsed-count">                      1 comment collapsed                  </span>                <a href="#" class="dsq-collapse-toggle dsq-collapse" title="Collapse thread" onclick="DISQUS.dtpl.actions.fire('comments.collapse', 689765551); return false;"><span>Collapse</span></a>        <a href="#" class="dsq-collapse-toggle dsq-expand" title="Expand thread" onclick="DISQUS.dtpl.actions.fire('comments.expand', 689765551); return false;"><span>Expand</span></a>      </div>        <div class="dsq-comment-message" id="dsq-comment-message-689765551">                <div class="dsq-comment-text" id="dsq-comment-text-689765551">        <p>作者牛逼,文章写的很好</p>      </div>                        </div>            <!-- edit box dynamically inserted here -->      <div id="dsq-append-edit-689765551"></div>        <div class="dsq-comment-footer">    <ul class="dsq-comment-actions">              <li id="dsq-like-689765551">          <span class="dsq-like-thumb dsq-font">A</span>          <a href="#" onclick="DISQUS.dtpl.actions.fire('comments.like', this,689765551); return false">喜欢</a>        </li>                          <li>          <a href="#" class="dsq-comment-reply" onclick="DISQUS.dtpl.actions.fire('comments.reply',689765551, this); return false">回复</a>        </li>         </ul>    <ul class="dsq-comment-meta">      <li>  <a href="#comment-689765551" onclick="DISQUS.dtpl.actions.fire('comments.permalink', 689765551);" title="Link to comment by Chenzheng110120">          3 月前      </a></li>            <li style="display:none">          <a href="#" id="dsq-comment-like-count-689765551" class="dsq-comment-like-count" onclick="return DISQUS.dtpl.actions.fire('comments.showUserVotes', 689765551); return false">0          喜欢      </a>      </li>              <li class="dsq-comment-flag" style="visibility: hidden">          <a href="#" class="dsq-comment-flag dsq-font" onclick="return DISQUS.dtpl.actions.fire('comments.report', 689765551, false);">F</a>        </li>          </ul>  </div>      <!-- reply box dynamically inserted here -->      <div id="dsq-append-reply-689765551"></div>    </div>  </li>  <!-- new replies dynamically inserted here -->  <li id="dsq-append-post-689765551"></li>            <li id="comment-554380520">  </li><li id="dsq-comment-554380520" data-dsq-comment-id="554380520" class="dsq-comment dsq-clearfix                        " style="margin-left:0px;">    <div class="dsq-avatar dsq-tt" title="Expand Deng Joye's profile">      <a href="http://disqus.com/google-5e56d39ec7e2966276cf74fe86e729a7/" onclick="DISQUS.dtpl.actions.fire('profile.show', 554380520, null); return false">        <img src="binder_design_files/noavatar32.png" class="dsq-deferred-avatar" data-src="http://mediacdn.disqus.com/1359151009/images/noavatar32.png" alt="">      </a>    </div>    <div id="dsq-comment-body-554380520" class="dsq-comment-body">      <div class="dsq-comment-header">        <span class="dsq-commenter-name">Deng Joye</span>                <span class="dsq-collapsed-count">                      1 comment collapsed                  </span>                <a href="#" class="dsq-collapse-toggle dsq-collapse" title="Collapse thread" onclick="DISQUS.dtpl.actions.fire('comments.collapse', 554380520); return false;"><span>Collapse</span></a>        <a href="#" class="dsq-collapse-toggle dsq-expand" title="Expand thread" onclick="DISQUS.dtpl.actions.fire('comments.expand', 554380520); return false;"><span>Expand</span></a>      </div>        <div class="dsq-comment-message" id="dsq-comment-message-554380520">                <div class="dsq-comment-text" id="dsq-comment-text-554380520">        <p>此文牛逼</p>      </div>                        </div>            <!-- edit box dynamically inserted here -->      <div id="dsq-append-edit-554380520"></div>        <div class="dsq-comment-footer">    <ul class="dsq-comment-actions">              <li id="dsq-like-554380520">          <span class="dsq-like-thumb dsq-font">A</span>          <a href="#" onclick="DISQUS.dtpl.actions.fire('comments.like', this,554380520); return false">喜欢</a>        </li>                          <li>          <a href="#" class="dsq-comment-reply" onclick="DISQUS.dtpl.actions.fire('comments.reply',554380520, this); return false">回复</a>        </li>         </ul>    <ul class="dsq-comment-meta">      <li>  <a href="#comment-554380520" onclick="DISQUS.dtpl.actions.fire('comments.permalink', 554380520);" title="Link to comment by Deng Joye">          7 月前      </a></li>            <li style="display:none">          <a href="#" id="dsq-comment-like-count-554380520" class="dsq-comment-like-count" onclick="return DISQUS.dtpl.actions.fire('comments.showUserVotes', 554380520); return false">0          喜欢      </a>      </li>              <li class="dsq-comment-flag" style="visibility: hidden">          <a href="#" class="dsq-comment-flag dsq-font" onclick="return DISQUS.dtpl.actions.fire('comments.report', 554380520, false);">F</a>        </li>          </ul>  </div>      <!-- reply box dynamically inserted here -->      <div id="dsq-append-reply-554380520"></div>    </div>  </li>  <!-- new replies dynamically inserted here -->  <li id="dsq-append-post-554380520"></li>      </ul>        <div id="dsq-pagination">      <ul id="dsq-footer" class="dsq-clearfix">        <div id="dsq-subscribe">            <li>      <a href="#" class="dsq-subscribe-email" onclick="return DISQUS.dtpl.actions.fire('thread.subscribe');">        <span class="dsq-font">M</span> <em>通过邮件订阅</em>      </a>    </li>    <li>    <a href="http://disanji.disqus.com/android_binder_8211/latest.rss" class="dsq-subscribe-rss">      <span class="dsq-font">S</span> <em>RSS</em>    </a>  </li>    </div>  </ul>    </div>                  <div class="dsq-trackback-url">      引用通告网址      <input onclick="this.select()" readonly="true" value="http://disanji.net/2011/02/28/android-bnder-design/trackback/">    </div>      </div><div>  </div></div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var disqus_url = 'http://disanji.net/2011/02/28/android-bnder-design/';
+    var disqus_identifier = '17152 http://disanji.net/?p=17152';
+    var disqus_container_id = 'disqus_thread';
+    var disqus_domain = 'disqus.com';
+    var disqus_shortname = 'disanji';
+    var disqus_title = "Android Binder设计与实现 &#8211; 设计篇";
+        var disqus_config = function () {
+        var config = this; // Access to the config object
+
+        /*
+           All currently supported events:
+            * preData — fires just before we request for initial data
+            * preInit - fires after we get initial data but before we load any dependencies
+            * onInit  - fires when all dependencies are resolved but before dtpl template is rendered
+            * afterRender - fires when template is rendered but before we show it
+            * onReady - everything is done
+         */
+
+        config.callbacks.preData.push(function() {
+            // clear out the container (its filled for SEO/legacy purposes)
+            document.getElementById(disqus_container_id).innerHTML = '';
+        });
+                config.callbacks.onReady.push(function() {
+            // sync comments in the background so we don't block the page
+            DISQUS.request.get('?cf_action=sync_comments&post_id=17152');
+        });
+                    };
+    var facebookXdReceiverPath = 'http://disanji.net/wp-content/plugins/disqus-comment-system/xd_receiver.htm';
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var DsqLocal = {
+        'trackbacks': [
+        ],
+        'trackback_url': "http:\/\/disanji.net\/2011\/02\/28\/android-bnder-design\/trackback\/"    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.' + disqus_domain + '/embed.js?pname=wordpress&pver=2.69';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+/* ]]> */
+</script>
+        <div class="clear"></div>
+        </div>
+        	</div>
+        
+        <div class="side_right">
+          <div class="icon_bar">
+            <div class="rss fl">
+                <a href="http://disanji.net/2011/02/28/android-bnder-design/?feed=rss2"></a>
+            </div>
+            <div class="sina fl">
+                <a href="http://weibo.com/disanjidev"></a>
+            </div>
+            <div class="mail fl">
+                <a href="http://disanji.net/contact-us"></a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="ad">
+            <div class="img_border"><a href="http://www.umeng.com/?s=53d70e7007ec9927a170e9a6360a57a0"><img src="binder_design_files/umeng-ad.jpg"></a></div>
+            <div class="clear"></div>
+        </div>
+	 <div class="related_post s_border">
+            <div class="s_title">
+                <span>相关文章</span>
+            </div>
+            <div class="s_list">
+                <ul class="related_post"><li><a href="http://disanji.net/2010/12/04/android-2-2-api-46-simpleadapter/" title="Android 2.2 API 中文文档系列（46） —— SimpleAdapter">Android 2.2 API 中文文档系列（46） —— SimpleAdapter</a></li><li><a href="http://disanji.net/2011/08/18/android%e6%97%a5%e5%bf%97%e7%b3%bb%e7%bb%9flogcat%e6%ba%90%e4%bb%a3%e7%a0%81%e7%ae%80%e8%a6%81%e5%88%86%e6%9e%90/" title="Android日志系统Logcat源代码简要分析">Android日志系统Logcat源代码简要分析</a></li><li><a href="http://disanji.net/2011/08/15/android-%e6%96%b0%e6%b5%aa%e5%be%ae%e5%8d%9axauth%e6%96%b9%e5%bc%8f%e6%8e%88%e6%9d%83%e4%b8%8e%e5%8f%91%e9%80%81/" title="Android 新浪微博XAuth方式授权与发送">Android 新浪微博XAuth方式授权与发送</a></li><li><a href="http://disanji.net/2011/08/13/android%e7%b3%bb%e7%bb%9f%e8%bf%9b%e7%a8%8b%e9%97%b4%e9%80%9a%e4%bf%a1%ef%bc%88ipc%ef%bc%89%e6%9c%ba%e5%88%b6binder%e4%b8%ad%e7%9a%84client%e8%8e%b7%e5%be%97server%e8%bf%9c%e7%a8%8b%e6%8e%a5%e5%8f%a3/" title="Android系统进程间通信（IPC）机制Binder中的Client获得Server远程接口过程源代码分析">Android系统进程间通信（IPC）机制Binder中的Client获得Server远程接口过程源代码分析</a></li><li><a href="http://disanji.net/2011/08/13/android%e7%b3%bb%e7%bb%9f%e8%bf%9b%e7%a8%8b%e9%97%b4%e9%80%9a%e4%bf%a1%ef%bc%88ipc%ef%bc%89%e6%9c%ba%e5%88%b6binder%e4%b8%ad%e7%9a%84server%e5%90%af%e5%8a%a8%e8%bf%87%e7%a8%8b%e6%ba%90%e4%bb%a3/" title="Android系统进程间通信（IPC）机制Binder中的Server启动过程源代码分析">Android系统进程间通信（IPC）机制Binder中的Server启动过程源代码分析</a></li><li><a href="http://disanji.net/2011/08/12/%e6%b5%85%e8%b0%88service-manager%e6%88%90%e4%b8%baandroid%e8%bf%9b%e7%a8%8b%e9%97%b4%e9%80%9a%e4%bf%a1%ef%bc%88ipc%ef%bc%89%e6%9c%ba%e5%88%b6binder%e5%ae%88%e6%8a%a4%e8%bf%9b%e7%a8%8b%e4%b9%8b/" title="浅谈Service Manager成为Android进程间通信（IPC）机制Binder守护进程之路">浅谈Service Manager成为Android进程间通信（IPC）机制Binder守护进程之路</a></li><li><a href="http://disanji.net/2011/07/30/android-%e4%b8%ad%e8%87%aa%e5%ae%9a%e4%b9%89%e6%8e%a7%e4%bb%b6%e5%92%8c%e5%b1%9e%e6%80%a7attr-xmldeclare-styleabletypedarray%e7%9a%84%e6%96%b9%e6%b3%95%e5%92%8c%e4%bd%bf%e7%94%a8/" title="Android 中自定义控件和属性(attr.xml,declare-styleable,TypedArray)的方法和使用">Android 中自定义控件和属性(attr.xml,declare-styleable,TypedArray)的方法和使用</a></li><li><a href="http://disanji.net/2011/07/28/android-%e5%8a%a8%e7%94%bb%e6%a1%86%e6%9e%b6%e8%af%a6%e8%a7%a3%ef%bc%8c%e7%ac%ac-2-%e9%83%a8%e5%88%86/" title="Android 动画框架详解，第 2 部分">Android 动画框架详解，第 2 部分</a></li><li><a href="http://disanji.net/2011/07/15/%e5%9c%a8-android-%e4%b8%8a%e4%bd%bf%e7%94%a8-xml-%e5%92%8c-json%ef%bc%8c%e7%ac%ac-1-%e9%83%a8%e5%88%86-%e5%9c%a8-android-%e5%ba%94%e7%94%a8%e7%a8%8b%e5%ba%8f%e4%b8%8a%e7%a0%94%e7%a9%b6-json/" title="在 Android 上使用 XML 和 JSON，第 1 部分: 在 Android 应用程序上研究 JSON 和 XML 益处">在 Android 上使用 XML 和 JSON，第 1 部分: 在 Android 应用程序上研究 JSON 和 XML 益处</a></li><li><a href="http://disanji.net/2011/07/14/android%e4%b8%ad%e7%9a%84sharedpreferences%e5%ad%98%e5%82%a8%e6%95%b0%e6%8d%ae%e6%96%b9%e5%bc%8f/" title="Android中的SharedPreferences存储数据方式">Android中的SharedPreferences存储数据方式</a></li></ul>
+            </div>
+	    <div class="clear"></div>
+        </div>
+        <div class="ebook s_border">
+            <div class="s_title">
+                <span>电子书推荐</span>
+            </div>
+            <div class="e_content">
+                <ul style="left: 0pt;">
+									
+			
+							
+			
+							
+			
+							
+			
+							
+			
+							
+			
+		    <script type="text/javascript">
+    // <![CDATA[
+        var disqus_shortname = 'disanji';
+        var disqus_domain = 'disqus.com';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('rel'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = 'http://' + disqus_domain + '/forums/' + disqus_shortname + '/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    //]]>
+    </script>
+
+                <li><a href="http://disanji.net/2011/09/03/ebook-html5-solutions-essential-techniques-for-html5-developers/">
+				<img src="binder_design_files/HTML5-Solutions-Essential-Techniques-for-HTML5-Developers.png" onload="ImgAuto(this,78,100)" height="96" width="78">
+			</a></li><li><a href="http://disanji.net/2011/08/31/ebook-jquery-ui-themes-beginner%e2%80%99s-guide/">
+				<img src="binder_design_files/jQuery-UI-Themes-Beginners-Guide.jpg" onload="ImgAuto(this,78,100)" height="100" width="78">
+			</a></li><li><a href="http://disanji.net/2011/08/28/ebook-gamification-by-design/">
+				<img src="binder_design_files/Gamification-by-Design.jpg" onload="ImgAuto(this,78,100)" height="102" width="78">
+			</a></li><li><a href="http://disanji.net/2011/08/27/ebook-beginning-ajax-with-php/">
+				<img src="binder_design_files/Beginning-Ajax-with-PHP.png" onload="ImgAuto(this,78,100)" height="103" width="78">
+			</a></li><li><a href="http://disanji.net/2011/08/26/ebook-beginning-android-tablet-application-development/">
+				<img src="binder_design_files/Beginning-Android-Tablet-Application-Development1.png" onload="ImgAuto(this,78,100)" height="110" width="78">
+			</a></li><li><a href="http://disanji.net/2011/08/26/ebook-pragmatic-version-control-using-git/">
+				<img src="binder_design_files/Pragmatic-Version-Control-Using-Git.jpg" onload="ImgAuto(this,78,100)" height="93" width="78">
+			</a></li></ul>
+            </div>
+	    <div class="clear"></div>
+        </div>
+<!--
+       <div class="ad">
+            <div class="img_border"><a href="http://www.umeng.com/？s=53d70e7007ec9927a170e9a6360a57a0"><img src="http://disanji.net/wp-content/themes/disanji/images/design-disanji/disanji/right/umeng-ad.jpg" /></a></div>
+            <div class="img_border"><a href="http://www.umeng.com/？s=53d70e7007ec9927a170e9a6360a57a0"><img src="http://disanji.net/wp-content/themes/disanji/images/design-disanji/disanji/right/umeng-ad.jpg" /></a></div>
+        </div>
+-->
+	</div>
+
+   <div id="sidebar" style="position: fixed; bottom: 215px; left: 87%; display: block;">
+		<a href="#" class="goTop"></a>
+	</div>
+    <div class="clear"></div>
+
+</div>
+
+
+<div id="bottom">
+<!--
+    <div class="bottom_bar">
+        <img src="/images/design-disanji/disanji/bottom/bottom_bar.jpg" />
+    </div>
+-->
+    <div class="bottom_wrap">
+        <div class="bottom_content">
+            <ul>
+	        <!-- limit the num of block link -->
+	        	        	        <li id="linkcat-3869" class="linkcat" style="height:150px;"><h4 class="title">Android技术博客</h4>
+	<ul class="xoxo blogroll">
+<li><a href="http://android.yaohuiji.com/">Android学习指南</a></li>
+<li><a href="http://blog.csdn.net/hellogv/category/761980.aspx">Hellogv的博客</a></li>
+<li><a href="http://over140.cnblogs.com/" title="关于Android API的翻译">农民伯伯</a></li>
+<li><a href="http://www.cnblogs.com/TerryBlog/">Terry_龙的博客</a></li>
+<li><a href="http://www.cnblogs.com/skynet">吴秦的博客</a></li>
+
+	</ul>
+</li>
+<li id="linkcat-3905" class="linkcat" style="height:150px;"><h4 class="title">Html5博客</h4>
+	<ul class="xoxo blogroll">
+<li><a href="http://www.css3-html5.com/">CSS3-HTML5</a></li>
+<li><a href="http://www.woaicss.com/">CSS笔记</a></li>
+<li><a href="http://www.html5china.com/">Html5China</a></li>
+<li><a href="http://www.17html5.com/portal.php">一起Html5</a></li>
+
+	</ul>
+</li>
+<li id="linkcat-3870" class="linkcat" style="height:150px;"><h4 class="title">iOS技术博客</h4>
+	<ul class="xoxo blogroll">
+<li><a href="http://www.sunsetlakesoftware.com/" title="Madison Area Technical College – Advanced iPhone Development – Spring 2010- On iTunes U.">MATC(iTunes U)讲师</a></li>
+<li><a href="http://www.yifeiyang.net/" target="_blank">易飞扬的博客</a></li>
+<li><a href="http://www.iphone-geek.cn/" target="_blank">iPhoneGeek 爱疯极客</a></li>
+<li><a href="http://libaohan.javaeye.com/">翰李斋</a></li>
+<li><a href="http://www.cocoawithlove.com/">CocoaWithLove</a></li>
+
+	</ul>
+</li>
+<li id="linkcat-2" class="linkcat" style="height:150px;"><h4 class="title">第三极推荐</h4>
+	<ul class="xoxo blogroll">
+<li><a href="http://www.bymg.co.uk/" title="提供各种自行开发的中文Wordpress插件和模板" target="_blank">MG Core Team</a></li>
+<li><a href="http://en.gravatar.com/">Gravatar设置显示头像</a></li>
+<li><a href="http://cocoaheadsbj.org/" title="CocoaHeads 北京" target="_blank">CocoaHeads Beijing</a></li>
+<li><a href="http://blog.csdn.net/umengcom/" title="友盟移动开发技术专栏">友盟移动开发技术专栏</a></li>
+
+	</ul>
+</li>
+
+	        </ul>
+            <div class="logo_info">
+                <a href=""><img src="binder_design_files/bottom-logo.png"></a>
+                <p><a href="http://disanji.net/2011/02/28/android-bnder-design/about/">关于第三极</a></p>
+                <p><a href="http://disanji.net/2011/02/28/android-bnder-design/contact-us/">联系我们</a></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+</div>
+
+<div id="copyright_wrap">
+	<div class="copyright">
+	 	<span class="">©2010 第三极 京ICP备11017579号-1</span>
+        <div class="clear"></div>
+	</div>
+</div>
+<script type="text/javascript">
+function wp_attempt_focus() {
+setTimeout( function() {
+try {
+d = document.getElementById('user_login');
+d.value = '';
+d.focus();
+} catch(e){}
+}, 200 );
+}
+wp_attempt_focus();
+if(typeof wpOnload=='function')wpOnload()
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var ratingsL10n = {
+	plugin_url: "http://disanji.net/wp-content/plugins/wp-postratings",
+	ajax_url: "http://disanji.net/wp-content/plugins/wp-postratings/wp-postratings.php",
+	text_wait: "Please rate only 1 post at a time.",
+	image: "stars",
+	image_ext: "gif",
+	max: "5",
+	show_loading: "0",
+	show_fading: "1",
+	custom: "0"
+};
+var ratings_mouseover_image=new Image();ratings_mouseover_image.src=ratingsL10n.plugin_url+"/images/"+ratingsL10n.image+"/rating_over."+ratingsL10n.image_ext;
+/* ]]> */
+</script>
+<script type="text/javascript" src="binder_design_files/postratings-js.js"></script>
+
+<div style="display:none;">
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F47a3633944303b7c3de8fe48f0ae3163' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="binder_design_files/h_002.js" type="text/javascript"></script>
+</div>
+
+
+
+
+
+
+
+<iframe src="binder_design_files/def.html" style="position: absolute; top: -2000px; left: 0px;" id="easyXDM_DISQUS_net_default6352_provider" name="easyXDM_DISQUS_net_default6352_provider" frameborder="0"></iframe><script charset="UTF-8" src="binder_design_files/a.html"></script></body></html>
