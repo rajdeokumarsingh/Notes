@@ -1,0 +1,18 @@
+clues:
+
+    ./sdk.security.permissions.java
+        file:///home/jiangrui/android/android-sdk/docs/guide/topics/security/security.html
+        http://source.android.com/tech/security/index.html
+
+    AndroidManifest.xml permission:
+        基本概念
+        ./protection.level.java
+        ./shared.user.id.java
+
+    ./security_overview.java
+
+    code
+        ./code/index.txt
+
+    ./superuser.java
+

@@ -1,0 +1,3 @@
+12-10-19 下午4:25: No settings file; creating initial state
+12-11-8 下午3:18: System package com.android.browser signature changed; retaining data.
+12-11-24 上午8:38: Need to read from backup settings file

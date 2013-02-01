@@ -1,0 +1,298 @@
+--------- beginning of /dev/log/main
+launcher
+01-31 18:31:13.678  2177  2177 I ActivityManagerProxy: enter startActivity
+
+system_server
+01-31 18:31:13.698  1832  2192 I ActivityManagerService: startActivity
+01-31 18:31:13.698  1832  2192 I ActivityManagerService: intent: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.example.android.apis/.ApiDemos bnds=[270,415][390,565] }
+01-31 18:31:13.698  1832  2192 I ActivityStack: startActivityMayWait
+01-31 18:31:13.698  1832  2192 I ActivityStack: activity info: ActivityInfo{414eb680 com.example.android.apis.ApiDemos}
+01-31 18:31:13.708  1832  2192 I ActivityStack: startActivityLocked, checkComponentPermission: , permission: null, callingPid: 2177, callingUid: 10030, aInfo.applicationInfo.uid: 10077, aInfo.exported: true
+01-31 18:31:13.708  1832  2192 I ActivityManagerService: checkComponentPermission: , permission: null, pid: 2177, uid: 10030, owningUid: 10077, exported: true
+01-31 18:31:13.708  1832  2192 I ActivityStack: startActivityLocked, create ActivityRecordActivityRecord{415b62d8 com.example.android.apis/.ApiDemos}
+01-31 18:31:13.708  1832  2192 I ActivityStack: startActivityUncheckedLocked
+01-31 18:31:13.708  1832  2192 I ActivityStack: startActivityLocked 2
+01-31 18:31:13.708  1832  1900 V ContentResolver: enter ContentResolver()
+01-31 18:31:13.708  1832  1900 V ApplicationContentResolver: enter ApplicationContentResolver()
+--------- beginning of /dev/log/system
+01-31 18:31:13.708  1832  2192 I ActivityManager: START {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.example.android.apis/.ApiDemos bnds=[270,415][390,565]} from pid 2177
+01-31 18:31:13.718  1832  1900 D PackageItemInfo: load application icon : com.example.android.apis
+01-31 18:31:13.748  1832  2192 V ApplicationThreadProxy: enter schedulePauseActivity()
+
+// launcher
+01-31 18:31:13.748  2177  2188 I ApplicationThreadNative: onTransact, SCHEDULE_PAUSE_ACTIVITY_TRANSACTION
+01-31 18:31:13.748  2177  2188 I ApplicationThreadNative: onTransact, SCHEDULE_PAUSE_ACTIVITY_TRANSACTION, done!
+01-31 18:31:13.758  1529  1625 I libblt_hw: Library opened (handle = 1, fd = 27)
+01-31 18:31:13.768  2177  2177 I R5      : Launcher onSaveInstanceState before super.
+
+
+// system_server
+01-31 18:31:13.788  1832  1843 I ActivityManagerService: checkComponentPermission: , permission: android.permission.WAKE_LOCK, pid: 2027, uid: 1001, owningUid: -1, exported: true
+01-31 18:31:13.788  1832  1843 I PackageManagerService: checkUidPermission: , permName: android.permission.WAKE_LOCK, uid: 1001
+01-31 18:31:13.798  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:13.798  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+
+// launch
+01-31 18:31:13.798  2177  2177 I R5      : Launcher onSaveInstanceState after super.
+01-31 18:31:13.798  2177  2177 I R5      : Launcher onSaveInstanceState touch return.
+01-31 18:31:13.808  2177  2177 I R5      : Launcher onPause before super.
+01-31 18:31:13.808  2177  2177 I R5      : Launcher onPause after super.
+01-31 18:31:13.808  2177  2177 I R5      : Launcher onPause touch return.
+01-31 18:31:13.808  2177  2177 V ActivityManagerProxy: enter activityPaused()
+
+
+// system_server
+01-31 18:31:13.808  1832  2243 I ActivityManagerService: checkComponentPermission: , permission: android.permission.CHANGE_COMPONENT_ENABLED_STATE, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:13.808  1832  2243 I ActivityManagerService: startProcessLocked: name=com.example.android.apis, app= null
+01-31 18:31:13.808  1832  2243 I ActivityManagerService: startProcessLocked func 2
+01-31 18:31:13.838  3447  3447 D dalvikvm: Not late-enabling CheckJNI (already on)
+01-31 18:31:13.838  1832  2243 I ActivityManagerService: startProcessLocked 2, Process.start(): Start proc com.example.android.apis for activity com.example.android.apis/.ApiDemos: pid=3447 uid=10077 gids={3003, 1015, 1006}
+01-31 18:31:13.838  1832  2243 I ActivityManager: Start proc com.example.android.apis for activity com.example.android.apis/.ApiDemos: pid=3447 uid=10077 gids={3003, 1015, 1006}
+01-31 18:31:13.858  1832  1844 I ActivityManagerService: checkComponentPermission: , permission: android.permission.WAKE_LOCK, pid: 2027, uid: 1001, owningUid: -1, exported: true
+01-31 18:31:13.858  1832  1844 I PackageManagerService: checkUidPermission: , permName: android.permission.WAKE_LOCK, uid: 1001
+01-31 18:31:13.868  1832  2073 I ActivityManagerService: checkComponentPermission: , permission: android.permission.MODIFY_PHONE_STATE, pid: 2027, uid: 1001, owningUid: -1, exported: true
+01-31 18:31:13.868  1832  2073 I PackageManagerService: checkUidPermission: , permName: android.permission.MODIFY_PHONE_STATE, uid: 1001
+01-31 18:31:13.868  1832  2073 I ActivityManagerService: checkComponentPermission: , permission: android.permission.BROADCAST_STICKY, pid: 2027, uid: 1001, owningUid: -1, exported: true
+01-31 18:31:13.878  1832  2073 I PackageManagerService: checkUidPermission: , permName: android.permission.BROADCAST_STICKY, uid: 1001
+01-31 18:31:13.878  1832  1857 V ApplicationThreadProxy: enter scheduleRegisteredReceiver()
+01-31 18:31:13.878  1937  1937 D StatusBar.NetworkController: onSignalStrengthsChanged signalStrength=SignalStrength: 138 -1 -1 -1 -1 -1 -1 0 0 0 0 0 gsm|lte level=5
+01-31 18:31:13.878  1937  1937 D StatusBar.NetworkController: updateTelephonySignalStrength: !hasService()
+01-31 18:31:13.908  2027  2050 I ApplicationThreadNative: onTransact, SCHEDULE_REGISTERED_RECEIVER_TRANSACTION
+01-31 18:31:13.908  2027  2050 I ApplicationThreadNative: onTransact, SCHEDULE_REGISTERED_RECEIVER_TRANSACTION, done!
+01-31 18:31:13.908  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:13.908  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+
+// apidemo
+01-31 18:31:13.918  3447  3447 V ActivityManagerNative: enter create()
+01-31 18:31:13.918  1832  2072 I ApplicationThreadProxy: enter bindApplication
+01-31 18:31:13.918  3447  3458 I ApplicationThreadNative: onTransact, BIND_APPLICATION_TRANSACTION
+01-31 18:31:13.918  1832  1921 I ActivityManagerService: checkComponentPermission: , permission: android.permission.MANAGE_NETWORK_POLICY, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:13.918  1832  1921 I ActivityManagerService: checkComponentPermission: , permission: android.permission.MANAGE_NETWORK_POLICY, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:13.918  1832  1921 I ActivityManagerService: checkComponentPermission: , permission: android.permission.MANAGE_NETWORK_POLICY, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:13.918  1832  1921 I ActivityManagerService: checkComponentPermission: , permission: android.permission.MODIFY_NETWORK_ACCOUNTING, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:13.918  1832  1921 I ActivityManagerService: checkComponentPermission: , permission: android.permission.MANAGE_NETWORK_POLICY, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:13.918  3447  3458 I ApplicationThreadNative: onTransact, BIND_APPLICATION_TRANSACTION, done!
+01-31 18:31:13.928  1832  2072 V ApplicationThreadProxy: enter scheduleLaunchActivity()
+01-31 18:31:13.928  2177  2177 D OpenGLRenderer: Flushing caches (mode 1)
+
+01-31 18:31:13.928  3447  3459 I ApplicationThreadNative: onTransact, SCHEDULE_LAUNCH_ACTIVITY_TRANSACTION
+01-31 18:31:13.928  3447  3459 I ApplicationThreadNative: onTransact, SCHEDULE_LAUNCH_ACTIVITY_TRANSACTION, done!
+
+01-31 18:31:13.938  2177  2177 D OpenGLRenderer: Flushing caches (mode 0)
+01-31 18:31:13.938  1832  2072 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:13.938  1832  2072 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:13.948  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:13.948  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:13.958  1832  2241 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:13.958  1832  2241 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:13.958  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:13.958  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:13.968  3447  3447 V ContentResolver: enter ContentResolver()
+01-31 18:31:13.968  3447  3447 V ApplicationContentResolver: enter ApplicationContentResolver()
+01-31 18:31:13.978  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:13.978  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:13.988  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:13.988  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.009  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.009  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.009  3447  3447 V ContentResolver: enter ContentResolver()
+01-31 18:31:14.009  3447  3447 V ApplicationContentResolver: enter ApplicationContentResolver()
+01-31 18:31:14.009  3447  3447 V ActivityThread: enter installContentProviders()
+01-31 18:31:14.009  3447  3447 I ActivityThread: Pub com.example.android.apis.content.FileProvider: com.example.android.apis.content.FileProvider
+01-31 18:31:14.009  3447  3447 V ActivityThread: enter installProvider()
+01-31 18:31:14.009  3447  3447 V ActivityThread: enter installProvider() 1
+01-31 18:31:14.009  3447  3447 V ActivityThread: enter installProvider() 2
+01-31 18:31:14.009  3447  3447 V ActivityThread: enter installProvider() 3
+01-31 18:31:14.009  3447  3447 V ContentProviderNative: enter ContentProviderNative()
+01-31 18:31:14.009  3447  3447 V ContentProvider: enter ContentProvider()
+01-31 18:31:14.009  3447  3447 V ContentProvider: enter getIContentProvider()
+01-31 18:31:14.009  3447  3447 V ContentProvider: enter attachInfo()
+01-31 18:31:14.019  1832  2192 I ActivityManagerService: checkComponentPermission: , permission: null, pid: 3447, uid: 10077, owningUid: 10060, exported: true
+01-31 18:31:14.019  3447  3447 V ContentProvider: enter setReadPermission(): null
+01-31 18:31:14.019  3447  3447 V ContentProvider: enter setWritePermission(): null
+01-31 18:31:14.019  3447  3447 V ContentProvider: enter setPathPermissions()
+01-31 18:31:14.019  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.019  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.029  3447  3447 V ContentProvider: attachInfo(), readPermission: null, writePermission: null, pathPermissions: null, exported: true
+01-31 18:31:14.029  3447  3447 V ActivityThread: enter installProvider() 4
+01-31 18:31:14.029  3447  3447 V ActivityThread: enter installContentProviders() 1
+01-31 18:31:14.029  3447  3447 I ActivityThread: Pub com.example.android.apis.app.LoaderThrottle: com.example.android.apis.app.LoaderThrottle$SimpleProvider
+01-31 18:31:14.029  3447  3447 V ActivityThread: enter installProvider()
+01-31 18:31:14.029  3447  3447 V ActivityThread: enter installProvider() 1
+01-31 18:31:14.029  3447  3447 V ActivityThread: enter installProvider() 2
+01-31 18:31:14.029  3447  3447 V ActivityThread: enter installProvider() 3
+01-31 18:31:14.029  3447  3447 V ContentProviderNative: enter ContentProviderNative()
+01-31 18:31:14.029  3447  3447 V ContentProvider: enter ContentProvider()
+01-31 18:31:14.029  3447  3447 V ContentProvider: enter getIContentProvider()
+01-31 18:31:14.029  3447  3447 V ContentProvider: enter attachInfo()
+01-31 18:31:14.039  1832  1843 I ActivityManagerService: checkComponentPermission: , permission: null, pid: 3447, uid: 10077, owningUid: 10060, exported: true
+01-31 18:31:14.039  3447  3447 V ContentProvider: enter setReadPermission(): null
+01-31 18:31:14.039  3447  3447 V ContentProvider: enter setWritePermission(): null
+01-31 18:31:14.039  3447  3447 V ContentProvider: enter setPathPermissions()
+01-31 18:31:14.039  3447  3447 V ContentProvider: attachInfo(), readPermission: null, writePermission: null, pathPermissions: null, exported: true
+01-31 18:31:14.039  3447  3447 V ActivityThread: enter installProvider() 4
+01-31 18:31:14.039  3447  3447 V ActivityThread: enter installContentProviders() 1
+01-31 18:31:14.039  3447  3447 I ActivityThread: Pub com.example.android.apis.SuggestionProvider: com.example.android.apis.app.SearchSuggestionSampleProvider
+01-31 18:31:14.039  3447  3447 V ActivityThread: enter installProvider()
+01-31 18:31:14.039  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.039  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.039  3447  3447 V ActivityThread: enter installProvider() 1
+01-31 18:31:14.039  3447  3447 V ActivityThread: enter installProvider() 2
+01-31 18:31:14.039  3447  3447 V ActivityThread: enter installProvider() 3
+01-31 18:31:14.039  3447  3447 V ContentProviderNative: enter ContentProviderNative()
+01-31 18:31:14.039  3447  3447 V ContentProvider: enter ContentProvider()
+01-31 18:31:14.039  3447  3447 V ContentProvider: enter getIContentProvider()
+01-31 18:31:14.049  3447  3447 V ContentProvider: enter attachInfo()
+01-31 18:31:14.049  1832  2243 I ActivityManagerService: checkComponentPermission: , permission: null, pid: 3447, uid: 10077, owningUid: 10060, exported: true
+01-31 18:31:14.049  3447  3447 V ContentProvider: enter setReadPermission(): null
+01-31 18:31:14.049  3447  3447 V ContentProvider: enter setWritePermission(): null
+01-31 18:31:14.049  3447  3447 V ContentProvider: enter setPathPermissions()
+01-31 18:31:14.049  3447  3447 V ContentProvider: attachInfo(), readPermission: null, writePermission: null, pathPermissions: null, exported: true
+01-31 18:31:14.049  3447  3447 V ActivityThread: enter installProvider() 4
+01-31 18:31:14.049  3447  3447 V ActivityThread: enter installContentProviders() 1
+01-31 18:31:14.049  3447  3447 V ActivityThread: enter installContentProviders() 2
+01-31 18:31:14.049  1832  1844 V ContentProviderNative: enter asInterface()
+01-31 18:31:14.049  1832  1844 V ContentProviderProxy: enter ContentProviderProxy()
+01-31 18:31:14.049  1832  1844 V ContentProviderNative: enter asInterface()
+01-31 18:31:14.049  1832  1844 V ContentProviderProxy: enter ContentProviderProxy()
+01-31 18:31:14.049  1832  1844 V ContentProviderNative: enter asInterface()
+01-31 18:31:14.049  1832  1844 V ContentProviderProxy: enter ContentProviderProxy()
+01-31 18:31:14.049  1832  1844 I ActivityManagerService: publishContentProviders
+01-31 18:31:14.049  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.049  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.059  3447  3447 V ActivityThread: enter installContentProviders() 2
+01-31 18:31:14.059  3447  3447 I ActivityThread: performLaunchActivity
+01-31 18:31:14.059  3447  3447 I ActivityThread: ActivityClientRecord: ActivityRecord{41351320 token=android.os.BinderProxy@41350af0 {com.example.android.apis/com.example.android.apis.ApiDemos}}
+01-31 18:31:14.059  3447  3447 V ContentResolver: enter ContentResolver()
+01-31 18:31:14.059  3447  3447 V ApplicationContentResolver: enter ApplicationContentResolver()
+01-31 18:31:14.069  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.069  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.089  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.089  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.099  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.099  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.119  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.119  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.129  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.129  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.159  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.159  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.159  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.159  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.179  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.179  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.189  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.189  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.199  3447  3448 D dalvikvm: GC_CONCURRENT freed 106K, 2% free 9493K/9671K, paused 2ms+2ms
+01-31 18:31:14.209  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.209  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.219  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.219  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.239  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.239  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.249  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.249  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.269  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.269  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.279  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.279  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.289  3447  3447 D PackageItemInfo: load activity icon : com.example.android.apis.ApiDemos
+01-31 18:31:14.289  3447  3447 D PackageItemInfo: load application icon : com.example.android.apis
+01-31 18:31:14.299  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.299  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.319  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.319  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.329  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.329  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.339  3447  3448 D dalvikvm: GC_CONCURRENT freed 595K, 8% free 9340K/10055K, paused 2ms+2ms
+01-31 18:31:14.349  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.349  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.359  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.359  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.379  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.379  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.389  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.389  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.409  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.409  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.419  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.419  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.439  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.439  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.459  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.459  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.469  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.469  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.489  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.489  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.489  1832  2176 D dalvikvm: GC_EXPLICIT freed 593K, 10% free 14478K/16071K, paused 4ms+6ms
+01-31 18:31:14.499  3447  3447 V ContentProvider.mPermConnection: enter onServiceConnected()
+01-31 18:31:14.499  3447  3447 V ContentProvider.mPermConnection: enter onServiceConnected()
+01-31 18:31:14.499  3447  3447 V ContentProvider.mPermConnection: enter onServiceConnected()
+01-31 18:31:14.499  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.499  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.509  1529  1625 I libblt_hw: Library opened (handle = 5, fd = 24)
+01-31 18:31:14.509  1832  1901 I ActivityManagerService: checkComponentPermission: , permission: android.permission.STATUS_BAR_SERVICE, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.509  1832  1901 I ActivityManagerService: checkComponentPermission: , permission: android.permission.STATUS_BAR, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.519  1832  2243 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.519  1832  2243 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.529  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.529  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.539  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.539  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.559  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.559  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.569  1529  1625 I libblt_hw: Library closed (handle = 0, fd = 23)
+01-31 18:31:14.599  3447  3447 D OpenGLRenderer: Enabling debug mode 0
+01-31 18:31:14.709  1832  1832 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.709  1832  1832 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.709  1832  1900 I ActivityManager: Displayed com.example.android.apis/.ApiDemos: +901ms
+01-31 18:31:14.719  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.719  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.729  3447  3447 V ActivityManagerProxy: enter activityIdle()
+01-31 18:31:14.729  1832  2191 V ApplicationThreadProxy: enter scheduleStopActivity()
+01-31 18:31:14.729  2177  2194 I ApplicationThreadNative: onTransact, SCHEDULE_STOP_ACTIVITY_TRANSACTION
+01-31 18:31:14.729  2177  2194 I ApplicationThreadNative: onTransact, SCHEDULE_STOP_ACTIVITY_TRANSACTION, done!
+01-31 18:31:14.729  2177  2177 V ActivityManagerProxy: enter activityStopped()
+01-31 18:31:14.729  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.729  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.739  1832  1921 I ActivityManagerService: checkComponentPermission: , permission: android.permission.MANAGE_NETWORK_POLICY, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.739  1832  1921 I ActivityManagerService: checkComponentPermission: , permission: android.permission.MANAGE_NETWORK_POLICY, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.739  1832  1921 I ActivityManagerService: checkComponentPermission: , permission: android.permission.MANAGE_NETWORK_POLICY, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.739  1832  1921 I ActivityManagerService: checkComponentPermission: , permission: android.permission.MODIFY_NETWORK_ACCOUNTING, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.739  1832  1921 I ActivityManagerService: checkComponentPermission: , permission: android.permission.MANAGE_NETWORK_POLICY, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.749  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.749  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.759  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.759  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.779  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.779  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.789  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.789  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.809  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.809  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.819  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.819  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.839  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.839  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.849  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.849  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.869  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.869  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.879  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.879  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.899  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.899  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.899  1529  2055 I libblt_hw: Library closed (handle = 1, fd = 27)
+01-31 18:31:14.899  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:14.899  1832  1900 I ActivityManagerService: checkComponentPermission: , permission: android.permission.DEVICE_POWER, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:16.931  1832  1896 I ActivityManagerService: checkComponentPermission: , permission: android.permission.BROADCAST_STICKY, pid: 1832, uid: 1000, owningUid: -1, exported: true
+01-31 18:31:16.931  1832  1857 V ApplicationThreadProxy: enter scheduleRegisteredReceiver()
+01-31 18:31:16.931  1832  1857 V ApplicationThreadProxy: enter scheduleRegisteredReceiver()
+01-31 18:31:16.931  1832  1857 V ApplicationThreadProxy: enter scheduleRegisteredReceiver()
+01-31 18:31:16.931  1937  1952 I ApplicationThreadNative: onTransact, SCHEDULE_REGISTERED_RECEIVER_TRANSACTION
+01-31 18:31:16.931  1937  1952 I ApplicationThreadNative: onTransact, SCHEDULE_REGISTERED_RECEIVER_TRANSACTION, done!
+01-31 18:31:16.931  1937  1952 I ApplicationThreadNative: onTransact, SCHEDULE_REGISTERED_RECEIVER_TRANSACTION
+01-31 18:31:16.931  1937  1952 I ApplicationThreadNative: onTransact, SCHEDULE_REGISTERED_RECEIVER_TRANSACTION, done!
+01-31 18:31:16.931  2027  2244 I ApplicationThreadNative: onTransact, SCHEDULE_REGISTERED_RECEIVER_TRANSACTION
+01-31 18:31:16.931  2027  2244 I ApplicationThreadNative: onTransact, SCHEDULE_REGISTERED_RECEIVER_TRANSACTION, done!

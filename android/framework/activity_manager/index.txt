@@ -1,0 +1,86 @@
+参考文章：
+http://blog.csdn.net/luoshengyang/article/details/6685853
+
+ActivityManagerService
+    负责管理
+        Activity, Service
+
+    ActivityStack
+        通过堆栈管理activity
+        Task
+
+    ActivityInfo
+    ActivityRecord
+    TaskRecord
+
+应用程序
+    ActivityThread
+        应用程序的主线程
+
+    ApplicationThread实例
+        对应一个ActivityThread
+        Binder对象，ActivityThread创建后会将ApplicationThread传递给ActivityManagerService
+            ActivityManagerService通过ApplicationThread和ActivityThread进行通信
+
+
+
+Component
+    |
+    | startActivity()
+    V
+--------------------------------------------------------------------------------
+               process:  system_server
+--------------------------------------------------------------------------------
+ActivityManagerService
+    |
+    | startActivityMayWait
+    V
+ActivityStack
+        |
+        | scheduleLaunchActivity
+        V
+--------------------------------------------------------------------------------
+               process:  application 
+--------------------------------------------------------------------------------
+ApplicationThread
+        |
+        | performLaunchActivity
+        V
+    ActivityThread
+
+
+
+
+ResolveInfo rInfo =
+    AppGlobals.getPackageManager().resolveIntent(
+            intent, resolvedType,
+            PackageManager.MATCH_DEFAULT_ONLY
+            | ActivityManagerService.STOCK_PM_FLAGS);
+
+ResolveInfo
+    public ActivityInfo     activityInfo
+        aInfo.applicationInfo.packageName
+        aInfo.name
+
+        app.info.uid; 
+        |
+        V获取权限??
+
+    public IntentFilter     filter
+    public String           resolvePackageName
+    public ServiceInfo  serviceInfo
+
+ActivityInfo aInfo = r.activityInfo;  
+if (r.packageInfo == null) {  
+    r.packageInfo = getPackageInfo(aInfo.applicationInfo,  
+            Context.CONTEXT_INCLUDE_CODE);  
+}  
+
+ComponentName component = r.intent.getComponent();  
+if (component == null) {  
+    component = r.intent.resolveActivity(  
+            mInitialApplication.getPackageManager());  
+    r.intent.setComponent(component);  
+}  
+    component = new ComponentName(r.activityInfo.packageName,  
+                r.activityInfo.targetActivity);  

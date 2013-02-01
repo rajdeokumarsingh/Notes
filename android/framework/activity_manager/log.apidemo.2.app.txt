@@ -1,0 +1,89 @@
+--------- beginning of /dev/log/main
+02-01 10:19:43.043  2787  2787 V ContentResolver: enter acquireProvider()
+02-01 10:19:43.043  2787  2787 V ApplicationContentResolver: enter acquireProvider()
+02-01 10:19:43.053  2787  2787 V ActivityThread: enter acquireProvider() 1
+02-01 10:19:43.053  2787  2787 V ActivityThread: enter acquireExistingProvider()
+02-01 10:19:43.053  2787  2787 V ActivityThread: enter acquireProvider() 2
+02-01 10:19:43.053  1830  2057 I ActivityManagerService: getContentProvider: settings
+02-01 10:19:43.053  1830  2057 I ActivityManagerService: getContentProviderImpl: settings
+02-01 10:19:43.053  1830  2057 I ActivityManagerService: checkContentProviderPermissionLocked: , readPermission: null, writePermission: android.permission.WRITE_SETTINGS, callingPid: 2787, callingUid: 10077, cpi.applicationInfo.uid: 1000, cpi.exported: true
+02-01 10:19:43.053  1830  2057 I ActivityManagerService: checkComponentPermission: , permission: null, pid: 2787, uid: 10077, owningUid: 1000, exported: true
+02-01 10:19:43.053  2787  2787 V ContentProviderNative: enter asInterface()
+02-01 10:19:43.053  2787  2787 V ContentProviderProxy: enter ContentProviderProxy()
+02-01 10:19:43.053  2787  2787 V ActivityThread: enter acquireProvider() 3
+02-01 10:19:43.053  2787  2787 V ActivityThread: enter installProvider()
+02-01 10:19:43.053  2787  2787 V ActivityThread: enter acquireProvider() 4
+02-01 10:19:43.053  2787  2787 V ContentProviderProxy: enter call(), method: GET_system, request: sound_effects_enabled
+02-01 10:19:43.053  1830  2169 V ContentProviderNative: enter onTransact()
+02-01 10:19:43.053  1830  2169 V ContentProviderNative: enter onTransact(), CALL_TRANSACTION
+02-01 10:19:43.053  1830  2169 V ContentProvider.Transport: enter call(), method: GET_system, arg: sound_effects_enabled
+02-01 10:19:43.053  1830  2169 V ContentProviderNative: enter onTransact(), CALL_TRANSACTION, done!
+
+
+02-01 10:19:43.063  2787  2787 I Activity: startActivity
+02-01 10:19:43.063  2787  2787 I Activity: startActivityForResult
+02-01 10:19:43.063  2787  2787 I Instrumentation: execStartActivity
+02-01 10:19:43.063  2787  2787 I ActivityManagerProxy: enter startActivity
+
+
+02-01 10:19:43.063  1830  1830 I ActivityManagerService: startActivity
+02-01 10:19:43.063  1830  1830 I ActivityManagerService: intent: Intent { cmp=com.example.android.apis/.ApiDemos (has extras) }
+02-01 10:19:43.063  1830  1830 I ActivityStack: startActivityMayWait
+02-01 10:19:43.063  1830  1830 I ActivityStack: activity info: ActivityInfo{414ee110 com.example.android.apis.ApiDemos}
+02-01 10:19:43.063  1830  1830 I ActivityStack: startActivityLocked, checkComponentPermission: , permission: null, callingPid: 2787, callingUid: 10077, aInfo.applicationInfo.uid: 10077, aInfo.exported: true
+02-01 10:19:43.063  1830  1830 I ActivityManagerService: checkComponentPermission: , permission: null, pid: 2787, uid: 10077, owningUid: 10077, exported: true
+02-01 10:19:43.063  1830  1830 I ActivityStack: startActivityLocked, create ActivityRecordActivityRecord{419dd5e0 com.example.android.apis/.ApiDemos}
+02-01 10:19:43.063  1830  1830 I ActivityStack: startActivityUncheckedLocked
+02-01 10:19:43.063  1830  1830 I ActivityStack: startActivityLocked 2
+02-01 10:19:43.063  1830  1830 I ActivityStack: resumeTopActivityLocked
+02-01 10:19:43.063  1830  1830 I ActivityStack: resumeTopActivityLocked: pause current activity
+02-01 10:19:43.063  1830  1830 I ActivityStack: startPausingLocked
+--------- beginning of /dev/log/system
+02-01 10:19:43.063  1830  1830 I ActivityManager: START {cmp=com.example.android.apis/.ApiDemos (has extras)} from pid 2787
+02-01 10:19:43.173  1830  1830 V ApplicationThreadProxy: enter schedulePauseActivity()
+
+02-01 10:19:43.173  2787  2798 I ApplicationThreadNative: onTransact, SCHEDULE_PAUSE_ACTIVITY_TRANSACTION
+02-01 10:19:43.173  2787  2798 I ApplicationThread: schedulePauseActivity
+02-01 10:19:43.173  2787  2798 I ApplicationThreadNative: onTransact, SCHEDULE_PAUSE_ACTIVITY_TRANSACTION, done!
+02-01 10:19:43.183  2787  2787 I ActivityThread: PAUSE_ACTIVITY
+02-01 10:19:43.183  2787  2787 I ActivityThread: handlePauseActivity
+02-01 10:19:43.183  2787  2787 I ActivityThread: performPauseActivity
+02-01 10:19:43.183  2787  2787 I ActivityThread: performPauseActivity, onPause
+02-01 10:19:43.183  2787  2787 V ActivityManagerProxy: enter activityPaused()
+
+02-01 10:19:43.183  1830  2205 I ActivityManagerService: activityPaused
+02-01 10:19:43.183  1830  2205 I ActivityStack: activityPaused
+02-01 10:19:43.183  1830  2205 I ActivityStack: completePauseLocked
+02-01 10:19:43.183  1830  2205 I ActivityStack: resumeTopActivityLocked
+02-01 10:19:43.183  1830  2205 I ActivityStack: resumeTopActivityLocked: pause current activity
+02-01 10:19:43.183  1830  2205 I ActivityManagerService: checkComponentPermission: , permission: android.permission.CHANGE_COMPONENT_ENABLED_STATE, pid: 1830, uid: 1000, owningUid: -1, exported: true
+02-01 10:19:43.183  1830  2205 I ActivityStack: startSpecificActivityLocked: ActivityRecord{419dd5e0 com.example.android.apis/.ApiDemos}
+02-01 10:19:43.183  1830  2205 I ActivityStack: realStartActivityLocked
+02-01 10:19:43.193  1830  2205 I ActivityStack: realStartActivityLocked, scheduleRelaunchActivity
+02-01 10:19:43.193  1830  2205 V ApplicationThreadProxy: enter scheduleLaunchActivity()
+
+02-01 10:19:43.193  2787  2799 I ApplicationThreadNative: onTransact, SCHEDULE_LAUNCH_ACTIVITY_TRANSACTION
+02-01 10:19:43.193  2787  2799 I ApplicationThread: scheduleLaunchActivity
+02-01 10:19:43.193  2787  2799 I ApplicationThreadNative: onTransact, SCHEDULE_LAUNCH_ACTIVITY_TRANSACTION, done!
+02-01 10:19:43.203  2787  2787 I ActivityThread: LAUNCH_ACTIVITY
+02-01 10:19:43.203  2787  2787 I ActivityThread: handleLaunchActivity
+02-01 10:19:43.203  2787  2787 I ActivityThread: performLaunchActivity
+02-01 10:19:43.203  2787  2787 I ActivityThread: ActivityClientRecord: ActivityRecord{413f4550 token=android.os.BinderProxy@413ec890 {com.example.android.apis/com.example.android.apis.ApiDemos}}
+02-01 10:19:43.203  2787  2787 I ActivityThread: performLaunchActivity, create activity
+02-01 10:19:43.203  2787  2787 I ActivityThread: Performing launch of ActivityRecord{413f4550 token=android.os.BinderProxy@413ec890 {com.example.android.apis/com.example.android.apis.ApiDemos}}
+02-01 10:19:43.203  2787  2787 I ActivityThread: ActivityRecord{413f4550 token=android.os.BinderProxy@413ec890 {com.example.android.apis/com.example.android.apis.ApiDemos}}: app=com.example.android.apis.ApiDemosApplication@41374118, appName=com.example.android.apis, pkg=com.example.android.apis, comp={com.example.android.apis/com.example.android.apis.ApiDemos}, dir=/data/app/com.example.android.apis-1.apk
+02-01 10:19:43.203  2787  2787 V ContentResolver: enter ContentResolver()
+02-01 10:19:43.203  2787  2787 V ApplicationContentResolver: enter ApplicationContentResolver()
+02-01 10:19:43.203  2787  2787 I ActivityThread: performLaunchActivity, oncreate
+02-01 10:19:43.373  2787  2787 D PackageItemInfo: load activity icon : com.example.android.apis.ApiDemos
+02-01 10:19:43.373  2787  2787 D PackageItemInfo: load application icon : com.example.android.apis
+02-01 10:19:43.403  1830  1889 I ActivityManagerService: checkComponentPermission: , permission: android.permission.STATUS_BAR_SERVICE, pid: 1830, uid: 1000, owningUid: -1, exported: true
+02-01 10:19:43.403  1830  1889 I ActivityManagerService: checkComponentPermission: , permission: android.permission.STATUS_BAR, pid: 1830, uid: 1000, owningUid: -1, exported: true
+02-01 10:19:43.443  1830  1841 I ActivityManagerService: checkComponentPermission: , permission: android.permission.STATUS_BAR, pid: 1830, uid: 1000, owningUid: -1, exported: true
+02-01 10:19:43.473  1830  1888 I ActivityManager: Displayed com.example.android.apis/.ApiDemos: +290ms
+
+02-01 10:19:43.503  2787  2787 V ActivityManagerProxy: enter activityIdle()
+02-01 10:19:43.703  1830  1844 V ApplicationThreadProxy: enter scheduleStopActivity()
+02-01 10:19:43.703  2787  2799 I ApplicationThreadNative: onTransact, SCHEDULE_STOP_ACTIVITY_TRANSACTION
+02-01 10:19:43.703  2787  2799 I ApplicationThreadNative: onTransact, SCHEDULE_STOP_ACTIVITY_TRANSACTION, done!
+02-01 10:19:43.713  2787  2787 V ActivityManagerProxy: enter activityStopped()

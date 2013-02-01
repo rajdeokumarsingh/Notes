@@ -1,0 +1,25 @@
+Process: com.android.phone
+Flags: 0x83e05
+Package: com.android.stk v15 (4.0.3-01)
+Package: com.stericsson.atservice v15 (4.0.3-20121011.110419)
+Package: com.android.phone v15 (4.0.3-01)
+Package: com.android.providers.telephony v15 (4.0.3-01)
+Subject: NotificationMgr
+Build: Lenovo/S899t/S899t:4.0.3/S-2-20/20121011.110419:eng/test-keys
+
+android.util.Log$TerribleFailure: init() called multiple times!  sInstance = com.android.phone.NotificationMgr@413a7b80
+	at android.util.Log.wtf(Log.java:276)
+	at android.util.Log.wtf(Log.java:255)
+	at com.android.phone.NotificationMgr.init(NotificationMgr.java:151)
+	at com.android.phone.CallNotifier.onCfiChanged(CallNotifier.java:1557)
+	at com.android.phone.CallNotifier.access$100(CallNotifier.java:64)
+	at com.android.phone.CallNotifier$1.onCallForwardingIndicatorChanged(CallNotifier.java:456)
+	at android.telephony.PhoneStateListener$2.handleMessage(PhoneStateListener.java:342)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:137)
+	at android.app.ActivityThread.main(ActivityThread.java:4424)
+	at java.lang.reflect.Method.invokeNative(Native Method)
+	at java.lang.reflect.Method.invoke(Method.java:511)
+	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:784)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:551)
+	at dalvik.system.NativeStart.main(Native Method)

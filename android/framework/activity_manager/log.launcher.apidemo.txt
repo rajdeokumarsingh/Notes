@@ -1,0 +1,189 @@
+system    1830  1529  383536 54256 ffffffff 4002e680 S system_server
+app_30    2185  1529  313404 45836 ffffffff 4002f394 S com.lenovo.launcher
+app_77    2787  1529  306344 36588 ffffffff 4002f394 S com.example.android.apis
+
+// launcher
+02-01 09:56:30.014  2185  2185 I Activity: startActivity
+02-01 09:56:30.014  2185  2185 I Activity: startActivityForResult
+02-01 09:56:30.024  2185  2185 I Instrumentation: execStartActivity
+02-01 09:56:30.024  2185  2185 I ActivityManagerProxy: enter startActivity
+
+// system_server
+02-01 09:56:30.034  1830  1842 I ActivityManagerService: startActivity
+02-01 09:56:30.034  1830  1842 I ActivityManagerService: intent: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.example.android.apis/.ApiDemos bnds=[270,415][390,565] }
+02-01 09:56:30.034  1830  1842 I ActivityStack: startActivityMayWait
+02-01 09:56:30.034  1830  1842 I ActivityStack: activity info: ActivityInfo{414ee110 com.example.android.apis.ApiDemos}
+02-01 09:56:30.034  1830  1842 I ActivityStack: startActivityLocked, checkComponentPermission: , permission: null, callingPid: 2185, callingUid: 10030, aInfo.applicationInfo.uid: 10077, aInfo.exported: true
+02-01 09:56:30.034  1830  1842 I ActivityManagerService: checkComponentPermission: , permission: null, pid: 2185, uid: 10030, owningUid: 10077, exported: true
+--------- beginning of /dev/log/system
+02-01 09:56:30.034  1830  1842 I ActivityManager: START {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.example.android.apis/.ApiDemos bnds=[270,415][390,565]} from pid 2185
+02-01 09:56:30.044  1830  1842 V ContentResolver: enter ContentResolver()
+02-01 09:56:30.044  1830  1842 V ApplicationContentResolver: enter ApplicationContentResolver()
+02-01 09:56:30.044  1830  1842 I ActivityStack: startActivityLocked, create ActivityRecordActivityRecord{4174eaf0 com.example.android.apis/.ApiDemos}
+02-01 09:56:30.044  1830  1842 I ActivityStack: startActivityUncheckedLocked
+02-01 09:56:30.044  1830  1842 I ActivityStack: startActivityUncheckedLocked, create TaskRecord
+02-01 09:56:30.044  1830  1842 I ActivityStack: startActivityLocked 2
+02-01 09:56:30.044  1830  1888 V ContentResolver: enter ContentResolver()
+02-01 09:56:30.044  1830  1888 V ApplicationContentResolver: enter ApplicationContentResolver()
+02-01 09:56:30.054  1830  1888 D PackageItemInfo: load application icon : com.example.android.apis
+02-01 09:56:30.054  1830  1842 I ActivityStack: resumeTopActivityLocked
+02-01 09:56:30.054  1830  1842 I ActivityStack: resumeTopActivityLocked: pause current activity
+02-01 09:56:30.054  1830  1842 I ActivityStack: startPausingLocked
+02-01 09:56:30.094  1830  1842 V ApplicationThreadProxy: enter schedulePauseActivity()
+
+// launcher
+02-01 09:56:30.104  2185  2199 I ApplicationThreadNative: onTransact, SCHEDULE_PAUSE_ACTIVITY_TRANSACTION
+02-01 09:56:30.104  2185  2199 I ApplicationThread: schedulePauseActivity
+02-01 09:56:30.104  2185  2199 I ApplicationThreadNative: onTransact, SCHEDULE_PAUSE_ACTIVITY_TRANSACTION, done!
+
+
+02-01 09:56:30.164  2185  2185 I ActivityThread: PAUSE_ACTIVITY
+02-01 09:56:30.164  2185  2185 I ActivityThread: handlePauseActivity
+02-01 09:56:30.164  2185  2185 I ActivityThread: performPauseActivity
+02-01 09:56:30.164  2185  2185 I ActivityThread: performPauseActivity, onSaveInstanceState
+02-01 09:56:30.164  2185  2185 I R5      : Launcher onSaveInstanceState before super.
+02-01 09:56:30.174  2185  2185 I R5      : Launcher onSaveInstanceState after super.
+02-01 09:56:30.174  2185  2185 I R5      : Launcher onSaveInstanceState touch return.
+02-01 09:56:30.174  2185  2185 I ActivityThread: performPauseActivity, onPause
+02-01 09:56:30.174  2185  2185 I R5      : Launcher onPause before super.
+02-01 09:56:30.174  2185  2185 I R5      : Launcher onPause after super.
+02-01 09:56:30.174  2185  2185 I R5      : Launcher onPause touch return.
+02-01 09:56:30.174  2185  2185 V ActivityManagerProxy: enter activityPaused()
+
+
+02-01 09:56:30.184  1830  2077 I ActivityManagerService: activityPaused
+02-01 09:56:30.184  1830  2077 I ActivityStack: activityPaused
+02-01 09:56:30.184  1830  2077 I ActivityStack: completePauseLocked
+02-01 09:56:30.184  1830  2077 I ActivityStack: resumeTopActivityLocked
+02-01 09:56:30.184  1830  2077 I ActivityStack: resumeTopActivityLocked: pause current activity
+02-01 09:56:30.184  1830  2077 I ActivityManagerService: checkComponentPermission: , permission: android.permission.CHANGE_COMPONENT_ENABLED_STATE, pid: 1830, uid: 1000, owningUid: -1, exported: true
+02-01 09:56:30.184  1830  2077 I ActivityStack: startSpecificActivityLocked: ActivityRecord{4174eaf0 com.example.android.apis/.ApiDemos}
+02-01 09:56:30.184  1830  2077 I ActivityManagerService: startProcessLocked: name=com.example.android.apis, app= null
+02-01 09:56:30.184  1830  2077 I ActivityManagerService: startProcessLocked func 2
+02-01 09:56:30.184  1830  2077 I ActivityManagerService: startProcessLocked, create a process with class: android.app.ActivityThread
+
+// apidemo
+02-01 09:56:30.224  2787  2787 I ActivityThread: main
+02-01 09:56:30.224  1830  2077 I ActivityManagerService: startProcessLocked 2, Process.start(): Start proc com.example.android.apis for activity com.example.android.apis/.ApiDemos: pid=2787 uid=10077 gids={3003, 1015, 1006}
+02-01 09:56:30.224  1830  2077 I ActivityManager: Start proc com.example.android.apis for activity com.example.android.apis/.ApiDemos: pid=2787 uid=10077 gids={3003, 1015, 1006}
+02-01 09:56:30.234  2787  2787 I ActivityThread: attach, system: false
+02-01 09:56:30.234  2787  2787 V ActivityManagerNative: enter create()
+02-01 09:56:30.234  2787  2787 V ActivityManagerProxy: enter attachApplication()
+
+02-01 09:56:30.234  1830  2169 I ActivityManagerNative: onTransact, ATTACH_APPLICATION_TRANSACTION
+02-01 09:56:30.234  1830  2169 I ActivityManagerService: attachApplication
+02-01 09:56:30.234  1830  2169 I ActivityManagerService: attachApplicationLocked, pid: 2787
+02-01 09:56:30.244  1830  2169 I PackageManager: Running dexopt on: com.example.android.apis
+02-01 09:56:33.207  1830  2169 I ApplicationThreadProxy: enter bindApplication
+
+02-01 09:56:33.217  2787  2798 I ApplicationThreadNative: onTransact, BIND_APPLICATION_TRANSACTION
+
+02-01 09:56:33.217  1830  2169 I ActivityManagerService: attachApplicationLocked, real start activity
+02-01 09:56:33.217  1830  2169 I ActivityStack: realStartActivityLocked
+02-01 09:56:33.217  1830  1909 I ActivityManagerService: checkComponentPermission: , permission: android.permission.MODIFY_NETWORK_ACCOUNTING, pid: 1830, uid: 1000, owningUid: -1, exported: true
+02-01 09:56:33.217  2787  2798 I ApplicationThreadNative: onTransact, BIND_APPLICATION_TRANSACTION, done!
+
+
+02-01 09:56:33.227  1830  2169 I ActivityStack: realStartActivityLocked, scheduleRelaunchActivity
+02-01 09:56:33.227  1830  2169 V ApplicationThreadProxy: enter scheduleLaunchActivity()
+
+02-01 09:56:33.227  2787  2799 I ApplicationThreadNative: onTransact, SCHEDULE_LAUNCH_ACTIVITY_TRANSACTION
+02-01 09:56:33.237  2787  2799 I ApplicationThread: scheduleLaunchActivity
+02-01 09:56:33.237  2787  2799 I ApplicationThreadNative: onTransact, SCHEDULE_LAUNCH_ACTIVITY_TRANSACTION, done!
+
+02-01 09:56:33.267  1830  2169 I ActivityManagerNative: onTransact, ATTACH_APPLICATION_TRANSACTION, done!
+
+02-01 09:56:33.367  2787  2787 V ContentResolver: enter ContentResolver()
+02-01 09:56:33.367  2787  2787 V ApplicationContentResolver: enter ApplicationContentResolver()
+02-01 09:56:33.467  2787  2787 V ContentResolver: enter ContentResolver()
+02-01 09:56:33.467  2787  2787 V ApplicationContentResolver: enter ApplicationContentResolver()
+02-01 09:56:33.467  2787  2787 V ActivityThread: enter installContentProviders()
+02-01 09:56:33.467  2787  2787 I ActivityThread: Pub com.example.android.apis.content.FileProvider: com.example.android.apis.content.FileProvider
+02-01 09:56:33.467  2787  2787 V ActivityThread: enter installProvider()
+02-01 09:56:33.467  2787  2787 V ActivityThread: enter installProvider() 1
+02-01 09:56:33.467  2787  2787 V ActivityThread: enter installProvider() 2
+02-01 09:56:33.467  2787  2787 V ActivityThread: enter installProvider() 3
+02-01 09:56:33.467  2787  2787 V ContentProviderNative: enter ContentProviderNative()
+02-01 09:56:33.477  2787  2787 V ContentProvider: enter ContentProvider()
+02-01 09:56:33.477  2787  2787 V ContentProvider: enter getIContentProvider()
+02-01 09:56:33.477  2787  2787 V ContentProvider: enter attachInfo()
+02-01 09:56:33.477  1830  1842 I ActivityManagerService: checkComponentPermission: , permission: null, pid: 2787, uid: 10077, owningUid: 10060, exported: true
+02-01 09:56:33.477  2787  2787 V ContentProvider: enter setReadPermission(): null
+02-01 09:56:33.477  2787  2787 V ContentProvider: enter setWritePermission(): null
+02-01 09:56:33.477  2787  2787 V ContentProvider: enter setPathPermissions()
+02-01 09:56:33.477  2787  2787 V ContentProvider: attachInfo(), readPermission: null, writePermission: null, pathPermissions: null, exported: true
+02-01 09:56:33.477  2787  2787 V ActivityThread: enter installProvider() 4
+02-01 09:56:33.477  2787  2787 V ActivityThread: enter installContentProviders() 1
+02-01 09:56:33.477  2787  2787 I ActivityThread: Pub com.example.android.apis.app.LoaderThrottle: com.example.android.apis.app.LoaderThrottle$SimpleProvider
+02-01 09:56:33.477  2787  2787 V ActivityThread: enter installProvider()
+02-01 09:56:33.477  2787  2787 V ActivityThread: enter installProvider() 1
+02-01 09:56:33.477  2787  2787 V ActivityThread: enter installProvider() 2
+02-01 09:56:33.477  2787  2787 V ActivityThread: enter installProvider() 3
+02-01 09:56:33.477  2787  2787 V ContentProviderNative: enter ContentProviderNative()
+02-01 09:56:33.477  2787  2787 V ContentProvider: enter ContentProvider()
+02-01 09:56:33.477  2787  2787 V ContentProvider: enter getIContentProvider()
+02-01 09:56:33.477  2787  2787 V ContentProvider: enter attachInfo()
+02-01 09:56:33.477  1830  2077 I ActivityManagerService: checkComponentPermission: , permission: null, pid: 2787, uid: 10077, owningUid: 10060, exported: true
+02-01 09:56:33.487  2787  2787 V ContentProvider: enter setReadPermission(): null
+02-01 09:56:33.487  2787  2787 V ContentProvider: enter setWritePermission(): null
+02-01 09:56:33.487  2787  2787 V ContentProvider: enter setPathPermissions()
+02-01 09:56:33.487  2787  2787 V ContentProvider: attachInfo(), readPermission: null, writePermission: null, pathPermissions: null, exported: true
+02-01 09:56:33.487  2787  2787 V ActivityThread: enter installProvider() 4
+02-01 09:56:33.487  2787  2787 V ActivityThread: enter installContentProviders() 1
+02-01 09:56:33.487  2787  2787 I ActivityThread: Pub com.example.android.apis.SuggestionProvider: com.example.android.apis.app.SearchSuggestionSampleProvider
+02-01 09:56:33.487  2787  2787 V ActivityThread: enter installProvider()
+02-01 09:56:33.487  2787  2787 V ActivityThread: enter installProvider() 1
+02-01 09:56:33.487  2787  2787 V ActivityThread: enter installProvider() 2
+02-01 09:56:33.487  2787  2787 V ActivityThread: enter installProvider() 3
+02-01 09:56:33.487  2787  2787 V ContentProviderNative: enter ContentProviderNative()
+02-01 09:56:33.487  2787  2787 V ContentProvider: enter ContentProvider()
+02-01 09:56:33.487  2787  2787 V ContentProvider: enter getIContentProvider()
+02-01 09:56:33.487  2787  2787 V ContentProvider: enter attachInfo()
+02-01 09:56:33.487  1830  2168 I ActivityManagerService: checkComponentPermission: , permission: null, pid: 2787, uid: 10077, owningUid: 10060, exported: true
+02-01 09:56:33.487  2787  2787 V ContentProvider: enter setReadPermission(): null
+02-01 09:56:33.487  2787  2787 V ContentProvider: enter setWritePermission(): null
+02-01 09:56:33.487  2787  2787 V ContentProvider: enter setPathPermissions()
+02-01 09:56:33.497  2787  2787 V ContentProvider: attachInfo(), readPermission: null, writePermission: null, pathPermissions: null, exported: true
+02-01 09:56:33.497  2787  2787 V ActivityThread: enter installProvider() 4
+02-01 09:56:33.497  2787  2787 V ActivityThread: enter installContentProviders() 1
+02-01 09:56:33.497  2787  2787 V ActivityThread: enter installContentProviders() 2
+
+02-01 09:56:33.497  1830  2057 V ContentProviderNative: enter asInterface()
+02-01 09:56:33.497  1830  2057 V ContentProviderProxy: enter ContentProviderProxy()
+02-01 09:56:33.497  1830  2057 V ContentProviderNative: enter asInterface()
+02-01 09:56:33.497  1830  2057 V ContentProviderProxy: enter ContentProviderProxy()
+02-01 09:56:33.497  1830  2057 V ContentProviderNative: enter asInterface()
+02-01 09:56:33.497  1830  2057 V ContentProviderProxy: enter ContentProviderProxy()
+02-01 09:56:33.497  1830  2057 I ActivityManagerService: publishContentProviders
+
+02-01 09:56:33.497  2787  2787 V ActivityThread: enter installContentProviders() 2
+02-01 09:56:33.497  2787  2787 I ActivityThread: LAUNCH_ACTIVITY
+02-01 09:56:33.497  2787  2787 I ActivityThread: handleLaunchActivity
+02-01 09:56:33.497  2787  2787 I ActivityThread: performLaunchActivity
+02-01 09:56:33.497  2787  2787 I ActivityThread: ActivityClientRecord: ActivityRecord{41349c60 token=android.os.BinderProxy@413493d0 {com.example.android.apis/com.example.android.apis.ApiDemos}}
+02-01 09:56:33.497  2787  2787 I ActivityThread: performLaunchActivity, create activity
+02-01 09:56:33.507  2787  2787 I ActivityThread: Performing launch of ActivityRecord{41349c60 token=android.os.BinderProxy@413493d0 {com.example.android.apis/com.example.android.apis.ApiDemos}}
+02-01 09:56:33.507  2787  2787 I ActivityThread: ActivityRecord{41349c60 token=android.os.BinderProxy@413493d0 {com.example.android.apis/com.example.android.apis.ApiDemos}}: app=com.example.android.apis.ApiDemosApplication@41374118, appName=com.example.android.apis, pkg=com.example.android.apis, comp={com.example.android.apis/com.example.android.apis.ApiDemos}, dir=/data/app/com.example.android.apis-1.apk
+02-01 09:56:33.507  2787  2787 V ContentResolver: enter ContentResolver()
+02-01 09:56:33.507  2787  2787 V ApplicationContentResolver: enter ApplicationContentResolver()
+02-01 09:56:33.507  2787  2787 I ActivityThread: performLaunchActivity, oncreate
+02-01 09:56:33.827  2787  2787 D PackageItemInfo: load activity icon : com.example.android.apis.ApiDemos
+02-01 09:56:33.827  2787  2787 D PackageItemInfo: load application icon : com.example.android.apis
+02-01 09:56:33.918  2787  2787 V ContentProvider.mPermConnection: enter onServiceConnected()
+02-01 09:56:33.918  2787  2787 V ContentProvider.mPermConnection: enter onServiceConnected()
+02-01 09:56:33.918  2787  2787 V ContentProvider.mPermConnection: enter onServiceConnected()
+
+02-01 09:56:33.928  1830  1889 I ActivityManagerService: checkComponentPermission: , permission: android.permission.STATUS_BAR_SERVICE, pid: 1830, uid: 1000, owningUid: -1, exported: true
+02-01 09:56:33.928  1830  1889 I ActivityManagerService: checkComponentPermission: , permission: android.permission.STATUS_BAR, pid: 1830, uid: 1000, owningUid: -1, exported: true
+02-01 09:56:34.128  1830  1888 I ActivityManager: Displayed com.example.android.apis/.ApiDemos: +3s950ms
+
+02-01 09:56:34.128  2787  2787 V ActivityManagerProxy: enter activityIdle()
+
+02-01 09:56:34.128  1830  2057 V ApplicationThreadProxy: enter scheduleStopActivity()
+
+
+// launcher stop
+02-01 09:56:34.128  2185  2202 I ApplicationThreadNative: onTransact, SCHEDULE_STOP_ACTIVITY_TRANSACTION
+02-01 09:56:34.128  2185  2202 I ApplicationThreadNative: onTransact, SCHEDULE_STOP_ACTIVITY_TRANSACTION, done!
+02-01 09:56:34.128  2185  2185 V ActivityManagerProxy: enter activityStopped()
+02-01 09:56:34.138  1830  1909 I ActivityManagerService: checkComponentPermission: , permission: android.permission.MODIFY_NETWORK_ACCOUNTING, pid: 1830, uid: 1000, owningUid: -1, exported: true
