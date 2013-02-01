@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
-<services>
-<service uid="10026" authority="com.lenovo.lsf.account" accountType="com.lenovo.lsf.account" />
-<service uid="10018" authority="com.android.contacts" accountType="com.android.exchange" />
-<service uid="10017" authority="com.android.email.provider" accountType="com.android.email" />
-<service uid="10018" authority="com.android.email.provider" accountType="com.android.exchange" />
-<service uid="10018" authority="com.android.calendar" accountType="com.android.exchange" />
-</services>

@@ -1,6 +1,0 @@
-Build: Lenovo/S899t/S899t:4.0.3/S-2-20/20121011.110419:eng/test-keys
-Hardware: montblanc
-Bootloader: unknown
-Radio: unknown
-Kernel: Linux version 3.0.8+ (Android-bot@Android-server) (gcc version 4.4.3 (GCC) ) #2 SMP PREEMPT Thu Jun 21 22:35:48 CST 2012
-

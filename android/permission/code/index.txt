@@ -1,8 +1,0 @@
-./code/java_class.java
-android.permission.ACCESS_CHECKIN_PROPERTIES
-
-./code/content_provider/ContentProvider.java
-
-
-
-

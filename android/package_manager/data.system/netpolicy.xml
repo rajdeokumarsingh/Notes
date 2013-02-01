@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
-<policy-list version="3" restrictBackground="false">
-<network-policy networkTemplate="1" subscriberId="460023110005651" cycleDay="19" warningBytes="2147483648" limitBytes="-1" lastSnooze="-1" />
-<network-policy networkTemplate="1" cycleDay="21" warningBytes="2147483648" limitBytes="-1" lastSnooze="-1" />
-<network-policy networkTemplate="1" subscriberId="460000993116325" cycleDay="14" warningBytes="2147483648" limitBytes="-1" lastSnooze="-1" />
-</policy-list>
