@@ -118,6 +118,31 @@ g/SignalStrength\|[Aa]udio\|tinyalsa\|NetworkControllerDualSIM\|ConnectivityServ
 download:
 "DownloadDialog\|Download ApnHelper\|DownloadManager\|DownloadService\|DownloadHandler\|DownloadThread\|DownloadConstants\|DownloadInfo\|DownloadList\|apn is:"
 
+net/base/net_error_list.h {
+// Ranges:
+//     0- 99 System related errors
+//   100-199 Connection related errors
+//   200-299 Certificate errors
+//   300-399 HTTP errors
+//   400-499 Cache errors
+//   500-599 ?
+//   600-699 FTP errors
+//   700-799 Certificate manager errors
+// An asynchronous IO operation is not yet complete.  This usually does not
+// indicate a fatal error.  Typically this error will be generated as a
+// notification to wait for some external notification that the IO operation
+// finally completed.
+NET_ERROR(IO_PENDING, -1)
+
+// A generic failure occurred.
+NET_ERROR(FAILED, -2)
+
+// An operation was aborted (due to user action).
+NET_ERROR(ABORTED, -3)
+...
+
+}
+
 
 [Jiang Rui]
 从Log分析，浏览器使用系统默认网络上网，从系统获取的http代理为空，使用系统默认的socket interface。 
