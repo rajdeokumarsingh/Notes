@@ -1,9 +1,16 @@
-preposterous
-swap
-contend
+Mozart, Bach, Beethoven
+Debussy
+Tchaikovsky
+Richard Strauss
+	Zarathustra
+
+Moonlight
+ode to joy
 
 the beat of the piece
 the meter of the piece
+	duple meter
+	triple meter
 the mode of the piece
 any chords
 follow the base line
@@ -11,6 +18,10 @@ follow the base line
 rhythm, melody, harmony
 musical form
     verse and chorus
+
+melody
+	motive
+	theme
 
 major chords and minor chords
 
@@ -28,23 +39,70 @@ syllabus
 instil
 impart
 
-cello
-brass instrument, trumpet
+string instrument
+	violin
+		bow
+		string, metallic
+	viola
+	cello
+
+brass instrument
+	triumpet, triumphant, triumph
+	French horn
+	oboe
+	low tuba
+	saxophone
+
 percussion instrument
+	timpani
+	kettledrum
 
-intuitively
+woodwind instrument
+	basson
 
-a big banner
+	double reed instrument
+
+donimant note
+
+low pitches
+
+languid
+octave
+
+
 synthetic sound
 
 left and right auditory cortex
 
-old dog
-you old goat
+symphony
+	has four movements
+concerto
+	three movements
+serenade
+tone poem
+opera
+cantatas
+sonatas
+ballets
 
-Mozart, Bach, Beethoven
-Debussy
+lyrics, lyrical movement
+genra
+finale
+pizzicato
 
-Moonlight
+prophet
+a big banner
 
-ode to joy
+different overtone
+
+泛音
+	partial
+	1/2, 2/3, 3/4, 4/5, 5/6, ...
+timbre
+dissonance conssonance
+cadenza
+
+preposterous
+swap
+contend
+
