@@ -1,0 +1,13 @@
+
+music notation
+
+    whole note
+        half notes
+            quarter notes
+                eighth notes
+    rests
+
+   四分音符通常用于表示节拍
+
+   一个单元
+        bar, measure
