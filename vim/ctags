@@ -1,0 +1,4 @@
+$ ctags --extra=f -R *
+
+"这是告诉vim在当前目录找不到tags文件时请到上层目录查找
+set tags=tags;/
