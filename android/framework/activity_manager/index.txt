@@ -49,8 +49,6 @@ ApplicationThread
     ActivityThread
 
 
-
-
 ResolveInfo rInfo =
     AppGlobals.getPackageManager().resolveIntent(
             intent, resolvedType,

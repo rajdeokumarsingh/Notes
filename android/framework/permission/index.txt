@@ -1,5 +1,4 @@
 clues:
-
     ./sdk.security.permissions.java
         file:///home/jiangrui/android/android-sdk/docs/guide/topics/security/security.html
         http://source.android.com/tech/security/index.html
@@ -9,10 +8,17 @@ clues:
         ./protection.level.java
         ./shared.user.id.java
 
+        uid的定义和创建:
+        ./uid.cpp  
+
     ./security_overview.java
 
     code
         ./code/index.txt
 
-    ./superuser.java
+    superuser
+        ./superuser.java
+        ./su.orig.c
+        ./su.superuser.c
 
+    

@@ -11,9 +11,9 @@ EXPORT void benchmark(const char* url, int reloadCount, int width, int height)
     // 返回一个假的虚拟机, 作为benchmark的调用JNI时使用
     InitializeJavaVM();
 
-    // 什么是Timer Client 
+    // 什么是TimerClient
         // 定时的回调机制, 设置一个callback和延时，超时后会回调这个timer
-    // 什么是Cookie Client
+    // 什么是CookieClient
         // 设置和获取cookie; 一个cookie是一个url和string组成的值对
     MyJavaSharedClient client; // 什么都没有干
     JavaSharedClient::SetTimerClient(&client);
@@ -106,6 +106,5 @@ EXPORT void benchmark(const char* url, int reloadCount, int width, int height)
     // Tear down the world.
     frame->loader()->detachFromParent();
     delete page;
-
 
 

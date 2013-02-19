@@ -10,7 +10,25 @@ FrameLoader
 RenderView
 
 ./main.class.java.hierarchy.java
+    [done]  需要进一步阅读每个类的关系
+
 ./main.class.native.hierarchy.cpp
+
+全局拓扑结构 {
+    所有Page集合, 保存了所有的页面指针
+        static HashSet<Page*>* allPages;
+
+    访问一个Page中的所有Frame {
+        一个Page使用一个m_mainFrame指向该页面的main Frame, 
+            并通过m_frameCount保存页面中的frame数量
+
+        可通过Frame的tree()方法获取FrameTree, 进而访问页面中的所有的Frame
+    }
+
+    一个frame可以通过其成员变量FrameTree遍历其兄弟节点
+        FrameTree* tree() const;
+        ./code/FrameTree.h
+}
 
 Page {
     代表一个完整的网页页面
@@ -32,6 +50,7 @@ Page {
         全局结构，所有创建的Page对象都会加入allPages
         Page对象销毁前会从allPages中移除
 
+    // Page包括了一个PageClients
     PageClients {
         ChromeClientAndroid
         EditorClientAndroid

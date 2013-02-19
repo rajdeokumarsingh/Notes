@@ -1,5 +1,5 @@
 基本流程
-    ./code.cpp
+    ./code.cpp [done]
 
 主要类的关系
     ./main.class.cpp

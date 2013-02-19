@@ -1,7 +1,6 @@
 ./basic.java
 ./code_clues.java
 
-
 ./data.system
     /data/system/目录
         扫描apk后生成的xml文件
@@ -14,7 +13,6 @@
         
 
 <<Application Security for the Android Platform>>
-
 
 Android授权机制扩展
     数据结构的扩展
