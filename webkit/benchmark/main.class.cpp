@@ -14,6 +14,45 @@ RenderView
 
 ./main.class.native.hierarchy.cpp
 
+WebCoreFrameBridge {
+    实现：
+        WebKit/android/jni/WebCoreFrameBridge.cpp
+
+    WebCoreFrameBridge包括了两大部分：
+        1. java层BrowserFrame向下的jni调用
+            ./code/WebFrame.java2cpp.cpp
+                java向cpp发送事件的接口
+                接口的实现者一般是Frame
+
+                重要方法
+                    CreateFrame
+                        创建Page, PageClient
+                            WebFrame, WebFrameView
+                            Frame, FrameView, FrameLoaderClientAndroid 
+                            WebViewCore
+
+                        // Set the mNativeFrame field in Frame
+                        SET_NATIVE_FRAME(env, obj, (int)frame);
+
+        2. cpp层向java层BrowserFrame向上的jni调用
+            WebFrame {
+                对应Java层的BrowserFrame 
+
+                ./code/WebFrame.cpp
+                    cpp向java发送通知，回调事件的接口
+                    将WebKit的各种事件通知给java层
+                        如加载的开始，进度，收到title, 收到favicon, 结束, 错误, 需要下载等等
+                        添加，更新历史项
+                        创建新窗口，关闭窗口
+                        需要鉴权
+
+                // TODO;                
+                constructor {
+                }
+            }
+}
+
+
 全局拓扑结构 {
     所有Page集合, 保存了所有的页面指针
         static HashSet<Page*>* allPages;
@@ -36,9 +75,9 @@ Page {
     主要的工作
         ./code/Page.cpp
 
-        向所有Frame的document, domWindow, loader, editor, view发送各种事件
-        通过BackForwardController完成历史项的goBack, goForward的操作
-        PageGroup操作
+        1. 向所有Frame的document, domWindow, loader, editor, view发送各种事件
+        2. 通过BackForwardController完成历史项的goBack, goForward的操作
+        3. PageGroup操作
         // TODO: 什么是PageGroup?
             ./code/PageGroup.cpp
 
@@ -103,35 +142,6 @@ Page {
                const WindowFeatures& features, const NavigationAction&)
 
    }
-}
-
-WebFrame {
-    WebKit/android/jni/WebCoreFrameBridge.cpp
-
-    对应Java层的BrowserFrame 
-
-    ./code/WebFrame.java2cpp.cpp
-        java向cpp发送事件的接口
-        接口的实现者一般是Frame
-
-        重要方法
-            CreateFrame
-                创建Page, PageClient
-                    WebFrame, WebFrameView
-                    Frame, FrameView, FrameLoaderClientAndroid 
-                    WebViewCore
-
-    ./code/WebFrame.cpp
-        cpp向java发送通知，回调事件的接口
-        将WebKit的各种事件通知给java层
-            如加载的开始，进度，收到title, 收到favicon, 结束, 错误, 需要下载等等
-            添加，更新历史项
-            创建新窗口，关闭窗口
-            需要鉴权
-
-    // TODO;                
-    constructor {
-    }
 }
 
 WebFrameView : public WebCoreViewBridge {
