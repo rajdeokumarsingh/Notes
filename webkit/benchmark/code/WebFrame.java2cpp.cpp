@@ -16,7 +16,6 @@
         nativeAddJavascriptInterface
     }
 
-
     {
         nativeSslClientCert
         nativeSslCertErrorCancel
