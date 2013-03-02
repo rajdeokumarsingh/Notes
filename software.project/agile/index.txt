@@ -1,16 +1,16 @@
+敏捷开发
+    面临迅速变化的需求，快速开发软件的能力
+
 基本原则
     ./agile.declaration.principle.txt
     ./agile.practice.txt
     ./oo.principle.txt
 
-
-敏捷开发
-    面临迅速变化的需求，快速开发软件的能力
-
 page:
     index: 24
 
-
 ./1.practice.txt
 ./2.extreme.programming.txt
+./3.plan.txt
+
 

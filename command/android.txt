@@ -108,7 +108,6 @@ onReceivedError
     'DocumentWriter\|WebCore\|WebKit\|onPageStarted\|load url\|WebRequest\|
 
     onReceivedError
-    onReceivedError: -8,
 
     chromium
     chromium(24157): Unknown chromium error: -3
@@ -117,6 +116,11 @@ g/SignalStrength\|[Aa]udio\|tinyalsa\|NetworkControllerDualSIM\|ConnectivityServ
 
 download:
 "DownloadDialog\|Download ApnHelper\|DownloadManager\|DownloadService\|DownloadHandler\|DownloadThread\|DownloadConstants\|DownloadInfo\|DownloadList\|apn is:"
+
+
+"Aborting request for download\|StopRequestException\|initiating download for"
+
+
 
 net/base/net_error_list.h {
 // Ranges:
