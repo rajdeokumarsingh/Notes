@@ -28,6 +28,10 @@
     unicode字符串
         一个unicode字符有16bit
         普通的字符为8bit
+
+    import string
+    i = string.atoi("845") # string to int
+    f = string.atof("845.12") # string to float
 }
 
 

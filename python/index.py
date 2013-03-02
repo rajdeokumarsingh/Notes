@@ -13,8 +13,12 @@
 # TODO: 生成器
 ./9.class.magic.property.method.py
 
+./100.sys.py
+
 ./800.util.py
 ./801.class.info.py
+./802.help.py
+
 ./999.error.py
 
 p130

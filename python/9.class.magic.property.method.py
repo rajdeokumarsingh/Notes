@@ -1,4 +1,3 @@
-
 构造方法
 
 class Foobar:
