@@ -120,8 +120,6 @@ download:
 
 "Aborting request for download\|StopRequestException\|initiating download for"
 
-
-
 net/base/net_error_list.h {
 // Ranges:
 //     0- 99 System related errors

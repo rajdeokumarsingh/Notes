@@ -1,4 +1,5 @@
 公钥加密， 私钥解密
+公钥验证签名， 私钥签名
 
 Publick Key Infrastructure
 
@@ -41,47 +42,47 @@ Publick Key Infrastructure
 
     常用RSA加密算法
 
-
     CA
-        --CA.private.key
-        ++CA.public.key
+        -CA.private.key
+        +CA.public.key
 
     Object1
-        --Object1.private.key
+        -Object1.private.key
 
-        ++Object1.Certificate
+        +Object1.Certificate
             Object1.public.key
             Object1.info
             Object1.ca.signature
-                (signed by --CA.private.key)
+                (signed by -CA.private.key)
 
-        ++CA.public.key
+        +CA.public.key
                 
     Object2
-        --Object2.private.key
+        -Object2.private.key
 
-        ++Object2.Certificate
+        +Object2.Certificate
             Object2.public.key
             Object2.info
             Object2.ca.signature
-                (signed by --CA.private.key)
+                (signed by -CA.private.key)
 
-        ++CA.public.key
+        +CA.public.key
  
 
                 Object1 ----------------------------------------------------> Object2
-                                    1. ++Object1.Certificate
-                                                                    2. use ++CA.public.key verify Object1.ca.signature
+                                    1. +Object1.Certificate
+                                                                    2. use +CA.public.key verify Object1.ca.signature
 
-                                                                    3. use Object1.public.key encrypt ++Object2.Certificate
+                                                                    3. use Object1.public.key encrypt +Object2.Certificate
                 Object1 <---------------------------------------------------- Object2
-                                    4. encrypt ++Object2.Certificate
+                                    4. encrypt +Object2.Certificate
 
-    5. user --Object1.private.key decripyt 
-        ++Object2.Certificate
+    5. user -Object1.private.key decripyt 
+        +Object2.Certificate
 
-    6. use ++CA.public.key verify Object2.ca.signature
+    6. use +CA.public.key verify Object2.ca.signature
 
     Until now Object1 and Object2 certificate both side and have public key of peer side
+
 
 
