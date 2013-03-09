@@ -17,6 +17,9 @@ commands : {
             your_project_name.apk
         # -v == verbose
         # 4 字节对齐
+
+        # 验证证书
+        $keytool -printcert -file cert_file
     }
     
     eclipse签名 {
