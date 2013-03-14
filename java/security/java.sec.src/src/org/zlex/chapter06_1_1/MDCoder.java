@@ -42,7 +42,7 @@ public abstract class MDCoder {
 	public static byte[] encodeMD5(byte[] data) throws Exception {
 		// 初始化MessageDigest
 		MessageDigest md = MessageDigest.getInstance("MD5");
-
+		
 		// 执行消息摘要
 		return md.digest(data);
 	}

@@ -10,4 +10,6 @@ Java:
 Android:
 ../android/android.sdk/sign.app.txt
 
+../android/android.sdk/get.app.sign.txt
+    如何在apk中检查自己的签名
 

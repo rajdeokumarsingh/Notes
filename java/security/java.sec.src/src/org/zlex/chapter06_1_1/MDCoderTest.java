@@ -47,6 +47,9 @@ public class MDCoderTest {
 		byte[] data1 = MDCoder.encodeMD5(str.getBytes());
 		byte[] data2 = MDCoder.encodeMD5(str.getBytes());
 
+		System.out.println("len: " + data1.length);
+		System.out.println(data1);
+		
 		// 校验
 		assertArrayEquals(data1, data2);
 	}

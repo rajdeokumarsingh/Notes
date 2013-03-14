@@ -29,6 +29,11 @@ public class MD5CoderTest {
 		byte[] data1 = MD5Coder.encodeMD5(str);
 		byte[] data2 = MD5Coder.encodeMD5(str);
 
+		System.err.println("原文：\t" + str);
+		
+		System.err.println("MD5Hex-1：\t" + data1);
+		System.err.println("MD5Hex-2：\t" + data2);
+
 		// 校验
 		assertArrayEquals(data1, data2);
 	}

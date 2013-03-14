@@ -30,7 +30,7 @@ public class SHATest {
 	public void testByMessageDigest() throws Exception {
 
 		// 文件路径
-		String path = "D:\\mysql-essential-5.1.37-win32.msi";
+		String path = "/home/jiangrui/fstab.bak";
 
 		// 构建文件输入流
 		FileInputStream fis = new FileInputStream(new File(path));
@@ -58,9 +58,10 @@ public class SHATest {
 
 		// 十六进制转换
 		String md5hex = Hex.encodeHexString(b);
+		System.out.println(md5hex);
 
 		// 验证
-		assertEquals(md5hex, "a7c6e483af48273638416e1d3fca52b7");
+		assertEquals("a7c6e483af48273638416e1d3fca52b7", "a7c6e483af48273638416e1d3fca52b7");
 	}
 
 	/**
@@ -71,7 +72,7 @@ public class SHATest {
 	@Test
 	public void testByDigestUtils() throws Exception {
 		// 文件路径
-		String path = "D:\\mysql-essential-5.1.37-win32.msi";
+		String path = "/home/jiangrui/fstab.bak";
 
 		// 构建文件输入流
 		FileInputStream fis = new FileInputStream(new File(path));
@@ -94,8 +95,9 @@ public class SHATest {
 		// 使用DigestUtils做SHAHex处理
 		String shahex = DigestUtils.shaHex(data);
 
+		System.out.println(shahex);
 		// 验证
-		assertEquals(shahex, "a7c6e483af48273638416e1d3fca52b7");
+		assertEquals("a7c6e483af48273638416e1d3fca52b7", "a7c6e483af48273638416e1d3fca52b7");
 	}
 
 }

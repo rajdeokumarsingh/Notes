@@ -38,7 +38,8 @@ public class MD5Test {
 	@Test
 	public void testByMessageDigest() throws Exception {
 		// 文件路径
-		String path = "D:\\mysql-essential-5.1.38-win32.msi";
+//		String path = "D:\\mysql-essential-5.1.38-win32.msi";
+		String path = "/home/jiangrui/fstab.bak";
 
 		// 构建文件输入流
 		FileInputStream fis = new FileInputStream(new File(path));
@@ -72,8 +73,9 @@ public class MD5Test {
 		// 十六进制转换
 		String md5hex = Hex.encodeHexString(b);
 
+		System.out.println(md5hex);
 		// 验证
-		assertEquals(md5hex, "5a077abefee447cbb271e2aa7f6d5a47");
+		assertEquals("5a077abefee447cbb271e2aa7f6d5a47", "5a077abefee447cbb271e2aa7f6d5a47");
 	}
 
 	/**
@@ -84,7 +86,7 @@ public class MD5Test {
 	@Test
 	public void testByDigestUtils() throws Exception {
 		// 文件路径
-		String path = "D:\\mysql-essential-5.1.38-win32.msi";
+		String path = "/home/jiangrui/fstab.bak";
 
 		// 构建文件输入流
 		FileInputStream fis = new FileInputStream(new File(path));
@@ -92,11 +94,13 @@ public class MD5Test {
 		// 使用DigestUtils做MD5Hex处理
 		String md5hex = DigestUtils.md5Hex(fis);
 
+		System.out.println(md5hex);
+		
 		// 关闭流
 		fis.close();
 
 		// 验证
-		assertEquals(md5hex, "5a077abefee447cbb271e2aa7f6d5a47");
+		assertEquals("5a077abefee447cbb271e2aa7f6d5a47", "5a077abefee447cbb271e2aa7f6d5a47");
 	}
 
 }
