@@ -35,13 +35,6 @@ public class ServiceExamples extends SdkMainActivity {
 		nameList.add(addItem(ServiceStartArgumentController.class,
 				"ServiceStartArgumentController"));
 
-		ConnectivityManager con;
-		try {
-			Class c = Class.forName("android.net.ConnectivityManager");
-			Log.i(LOGTAG, "get class: " + c);
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
 		return nameList;
 	}
 }

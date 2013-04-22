@@ -70,7 +70,7 @@ public class ServiceMessenger extends Service {
 		@Override
 		public void handleMessage(Message msg) {
 			if (ENABLE_LOG)
-				Log.v(LOGTAG, "enter handleMessage()");
+				Log.v(LOGTAG, "enter handleMessage(): " + msg.what);
 
 			switch (msg.what) {
 

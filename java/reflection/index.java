@@ -33,9 +33,9 @@ Lesson: Classes
 
         it is the entry point for all of the Reflection APIs            
 
-    ./reflection/class.1.retrieve_class.java
-    ./reflection/class.2.class_type_modifier.java
-    ./reflection/class.3.class_members.java
+    ./class.1.retrieve_class.java
+    ./class.2.class_type_modifier.java
+    ./class.3.class_members.java
 
 Lesson: Members
     Reflection defines an interface java.lang.reflect.Member which is implemented by 
@@ -55,7 +55,7 @@ Fields
 
 Methods
     ./reflection/method.1.obtain_type.java
-    ./reflection/method.2.invoke.java
+    ./method.2.invoke.java
 
 Constructor
     ./reflection/ctor.java

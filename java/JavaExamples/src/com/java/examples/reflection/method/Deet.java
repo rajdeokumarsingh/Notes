@@ -42,6 +42,7 @@ public class Deet<T> {
 			Object t = c.newInstance();
 
 			Method methodTest = c.getDeclaredMethod("testBar", int.class);
+			methodTest.setAccessible(true);
 			methodTest.invoke(t, 25);
 			Method[] allMethods = c.getDeclaredMethods();
 			

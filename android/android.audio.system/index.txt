@@ -1,19 +1,11 @@
-Clue: Bluetooth sco设备中发送notification的流程
-    这个新问题 SMS02481473 好像BREAK12.04 FIX的一个老SMS02409384，在/BluetoothHandsfree.java需要发送CCWA和 CIEV，
-    蓝牙耳机就可以听到通知。这是12.05发现的，我们的FIXING没有进去吗？
-
-    if ((call != 0 || callheld != 0) && sendUpdate) {
-        // call waiting
-        if ((mRemoteBrsf & BRSF_HF_CW_THREE_WAY_CALLING) != 0x0) {
-            result.addResponse("+CCWA: \"" + number + "\"," + type);
-            result.addResponse("+CIEV: 3," + callsetup);
-        }
-
-
-./basic.knowledge/pcm.format.txt
-
 important logic concept:
     ./important.concept.txt
+    ./basic.knowledge/pcm.format.txt
+
+    音频策略管理
+    stream_type，strategy, device三者之间的关系：
+    ./audio.policy/stream.strategy.device.txt
+
 
 Audio系统的进程和二进制文件组织
     ./process.binary.layout

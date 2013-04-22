@@ -12,11 +12,12 @@
 
     上层
         AudioManager, Applicaiton
+
     下层
         AudioSystem, Settings,
 
     主要提供：
-        音量控制的UI, 设置和实现(调用AudioSystem接口)
+        音量控制的UI, 实现(调用AudioSystem接口), 保存(通过Settings)
         铃音，振动的设置，控制
 
     implement a separate thread 
@@ -189,7 +190,6 @@ public AudioService(Context context)
 
     // create stream state array from System.VOLUME_SETTINGS
     createStreamStates();
-        
 
     loadSoundEffects();
     mBluetoothHeadset = new BluetoothHeadset(
@@ -362,7 +362,7 @@ private void setRingerModeInt(int ringerMode, boolean persist)
             putExtra(AudioManager.EXTRA_VIBRATE_SETTING, getVibrateSetting(vibrateType))
         */
 
-
+    // 该Handler绑定到一个AudioSystemThread
     private class AudioHandler extends Handler
         // set volume to low level
         // Post a persist volume msg

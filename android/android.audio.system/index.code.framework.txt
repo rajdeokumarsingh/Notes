@@ -1,4 +1,3 @@
-
 音频策略管理
     stream_type，strategy, device三者之间的关系：
     ./audio.policy/stream.strategy.device.txt

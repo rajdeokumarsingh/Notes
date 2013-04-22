@@ -31,6 +31,23 @@ frameworks/base/services/audioflinger/AudioPolicyService.cpp
             return BAD_VALUE;                         
 
         return mpPolicyManager->setDeviceConnectionState(device, state, device_address);
+        return mpAudioPolicy->set_device_connection_state(  // 4.2
+            mpAudioPolicy, device, state, device_address);
+================================================================================
+hardware/libhardware/include/hardware/audio_policy.h
+
+hardware/libhardware/modules/audio/audio_hw.c
+hardware/libhardware/modules/audio/audio_policy.c
+
+hardware/libhardware_legacy/audio/audio_hw_hal.cpp
+hardware/libhardware_legacy/audio/audio_policy_hal.cpp
+    create_legacy_ap
+        lap->policy.set_device_connection_state = ap_set_device_connection_state;
+        createAudioPolicyManager
+
+hardware/qcom/audio/alsa_sound/audio_hw_hal.cpp 
+hardware/qcom/audio/alsa_sound/audio_policy_hal.cpp
+================================================================================
                 |
                 V function call
 frameworks/base/services/audioflinger/AudioPolicyManagerBase.cpp
@@ -48,6 +65,8 @@ frameworks/base/services/audioflinger/AudioPolicyManagerBase.cpp
                     case AudioSystem::DEVICE_STATE_AVAILABLE:
                         // register new device as available
                         mAvailableOutputDevices |= device;
+                       // XXX: should be in setOutputDevice
+                       // TODO: what is mOutputs
                     #ifdef HAVE_FM_RADIO
                         if (AudioSystem::isFmDevice(device))
                             AudioOutputDescriptor *hwOutputDesc = mOutputs.valueFor(mHardwareOutput);
@@ -112,6 +131,12 @@ frameworks/base/media/libmedia/AudioSystem.cpp
                         |
                         v IPC call
 frameworks/base/services/audioflinger/AudioFlinger.cpp
+    // XXX: what is mAudioHwDevs
+    // 通过status_t AudioPolicyManagerBase::loadAudioPolicyConfig(const char *path)
+    // 加载而来 // 打出log // 加载时会
+    // #define AUDIO_POLICY_VENDOR_CONFIG_FILE "/vendor/etc/audio_policy.conf"
+
+
     status_t AudioFlinger::setParameters(int ioHandle, const String8& keyValuePairs)
     mHardwareStatus = AUDIO_SET_PARAMETER;
     result = mAudioHardware->setParameters(keyValuePairs);

@@ -1,15 +1,13 @@
-// question
-1. what is the "AudioSystem::popCount"
-    一个32位数中二进制1的个数
-    如何计算
-        count = 0;
-        while(bits) {
-            count++;
-            bits = bits^(bits-1);
-        }
+声音控制的两类基本问题：
+1. 系统中有多种声音设备，speaker, headset, microphone, BT, ...
+    声音需要从哪种设备播放出来
 
-2. what is the "the input/output channel mask"?
-    mono 1, stereo 2, doby suround 5
+    stream-->strategy + force use--->device
+
+2. 如果系统中有多种声音需要同时播放出来， 播放哪种声音
+    如多个音乐应用同时播放歌曲， 音乐和FM Radio, 音乐和来电铃声
+
+    audio focus
 
 output和device之间的关系
     一个output中可以包括多个device, 如耳机, speaker, 听筒等等
@@ -100,5 +98,19 @@ AudioPolicyManagerBase::routing_strategy AudioPolicyManagerBase::
         case AudioSystem::FM:
 #endif
             return STRATEGY_MEDIA;
+
+
+// question
+1. what is the "AudioSystem::popCount"
+    一个32位数中二进制1的个数
+    如何计算
+        count = 0;
+        while(bits) {
+            count++;
+            bits = bits^(bits-1);
+        }
+
+2. what is the "the input/output channel mask"?
+    mono 1, stereo 2, doby suround 5
 
 

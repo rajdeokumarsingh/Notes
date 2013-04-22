@@ -1,5 +1,6 @@
 package com.java.examples.basic.classs;
 
+
 class FinalSuper {
     public FinalSuper() {
         test(); // will invoke test() of subclass

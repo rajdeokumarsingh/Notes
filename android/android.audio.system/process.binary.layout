@@ -14,7 +14,8 @@ base/services/java/com/android/server/SystemServer.java
         Slog.e(TAG, "Failure starting Audio Service", e);
     } 
 
-base/media/mediaserver/main_mediaserver.cpp
+frameworks/av/media/mediaserver/main_mediaserver.cpp (4.2)
+base/media/mediaserver/main_mediaserver.cpp(2.3)
 int main(int argc, char** argv)
     sp<ProcessState> proc(ProcessState::self());
     sp<IServiceManager> sm = defaultServiceManager();
@@ -59,7 +60,6 @@ mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
 3. AudioService不会被应用程序调用到
 
-
 相关进程
 # ps
 USER     PID   PPID  VSIZE  RSS     WCHAN    PC         NAME
@@ -69,11 +69,14 @@ app_20    1847  1627  112016 19556 ffffffff afd0ee58 S android.process.media
 
 ================================================================================
 二进制文件结构
-package android.media in framework.jar // in application processes
+package android.media in framework.jar // most in application processes
     base/media/java/android/media
     {
-        AudioManager.java IAudioFocusDispatcher.aidl
-        AudioService.java IAudioService.aidl
+        AudioManager.java   -------------- Binder ----------------> { AudioService.java IAudioService.aidl }  
+                                                                       (in system server processes)
+        IAudioFocusDispatcher.aidl                                      Volume UI, volume/ringtone mode, ..., persist,
+                                                                        Force use, ...
+
         AudioSystem.java
 
         AudioRecord.java
@@ -88,7 +91,7 @@ package android.media in framework.jar // in application processes
             | JNI from java to cpp
             V
 base/core/jni  // JNI cpp implementation
-               // in application processes
+               // most in application processes
     LOCAL_MODULE:= libandroid_runtime {
         android_media_AudioSystem.cpp
         android_media_AudioRecord.cpp
@@ -98,7 +101,7 @@ base/core/jni  // JNI cpp implementation
                 |
                 V
 base/media/libmedia/    // provide service interface for JNI cpp layer
-                        // in application processes
+                        // most in application processes
                         // implement binder(Bp/Bn) interface
     LOCAL_MODULE:= libmedia {
         AudioSystem.cpp 
@@ -170,6 +173,4 @@ hardware/alsa_sound
         AudioStreamOutALSA.cpp
         ALSAStreamOps.cpp
     }
-
-
 

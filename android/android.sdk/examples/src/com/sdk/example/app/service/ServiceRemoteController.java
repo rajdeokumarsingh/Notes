@@ -46,7 +46,8 @@ public class ServiceRemoteController extends Service {
 	 * Note that this is package scoped (instead of private) so that it can be
 	 * accessed more efficiently from inner classes.
 	 */
-	final RemoteCallbackList<IRemoteServiceCallback> mCallbacks = new RemoteCallbackList<IRemoteServiceCallback>();
+	final RemoteCallbackList<IRemoteServiceCallback> mCallbacks = 
+			new RemoteCallbackList<IRemoteServiceCallback>();
 
 	int mValue = 0;
 	NotificationManager mNM;
