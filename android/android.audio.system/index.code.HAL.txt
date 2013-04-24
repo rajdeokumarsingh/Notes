@@ -1,6 +1,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 // Android HAL interfaces
 
+./Audio.HAL.config.cpp
+
+
 AudioHardwareInterface
     Audio HAL设备控制的总体接口
         code.reading/AudioHardwareInterface.cpp
