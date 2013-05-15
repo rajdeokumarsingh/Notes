@@ -28,22 +28,48 @@ AudioPolicyService::AudioPolicyService()
     {
         //  加载下面几个so文件之一
         // #define AUDIO_POLICY_HARDWARE_MODULE_ID "audio_policy"
+        // /system/lib/hw/audio_policy.default.so, 
         // /vendor/lib/hw/audio_policy.vendor_name(like sc8825).so, 
         // /system/lib/hw/audio_policy.vendor_name(like sc8825).so, 
-        // /system/lib/hw/audio_policy.default.so, 
         static int load(const char *id, // "audio_policy"
                 const char *path,       // "/vendor/lib/hw/audio_policy.vendor_name(like sc8825).so"
                 const struct hw_module_t **pHmi)
 
         {
             handle = dlopen(path, RTLD_NOW);
+            /* Get the address of the struct hal_module_info. */
+            const char *sym = HAL_MODULE_INFO_SYM_AS_STR;
             hmi = (struct hw_module_t *)dlsym(handle, sym);
+            // 加载类库中的hw_module_t信息，关键函数是open, for example: legacy_ap_dev_open
+            {
+                static struct hw_module_methods_t legacy_ap_module_methods = {
+                    open: legacy_ap_dev_open
+                };
+
+                struct legacy_ap_module HAL_MODULE_INFO_SYM = {
+                    module: {
+                        common: {
+                            tag: HARDWARE_MODULE_TAG,
+                            version_major: 1,
+                            version_minor: 0,
+                            id: AUDIO_POLICY_HARDWARE_MODULE_ID,
+                            name: "LEGACY Audio Policy HAL",
+                            author: "The Android Open Source Project",
+                            methods: &legacy_ap_module_methods,
+                            dso : NULL,
+                            reserved : {0},
+                        },
+                    },
+                };
+            }
+            hmi->dso = handle;
+            *pHmi = hmi;  // 这时module就被赋值了为hmi了
         }
     }
 
     rc = audio_policy_dev_open(module, &mpAudioPolicyDev);
     {
-        // 打开audio_policy.xxx.so动态库的open函数
+        // 打开audio_policy.default.so动态库的open函数
         return module->methods->open(module, AUDIO_POLICY_INTERFACE,
                 (hw_device_t**)device);
             {
@@ -135,6 +161,12 @@ AudioPolicyService::AudioPolicyService()
         return 0;
     }
 
+    rc = mpAudioPolicy->init_check(mpAudioPolicy); // 基本没有干啥事
+    {
+        status_t AudioPolicyManagerBase::initCheck()
+            return (mPrimaryOutput == 0) ? NO_INIT : NO_ERROR;
+    }
+     
     // 加载声音效果配置文件
     // load audio pre processing modules
     // #define AUDIO_EFFECT_DEFAULT_CONFIG_FILE "/system/etc/audio_effects.conf"
@@ -146,9 +178,20 @@ AudioPolicyService::AudioPolicyService()
     }
 }
 
-
 // AudioPolicyManagerBase的初始化
 AudioPolicyManagerBase::AudioPolicyManagerBase(AudioPolicyClientInterface *clientInterface)
+    // 初始化内部变量
+    mPrimaryOutput((audio_io_handle_t)0),
+    mAvailableOutputDevices(AUDIO_DEVICE_NONE),
+    mPhoneState(AudioSystem::MODE_NORMAL),
+    mLimitRingtoneVolume(false), 
+    mLastVoiceVolume(-1.0f),
+    mTotalEffectsCpuLoad(0), 
+    mTotalEffectsMemory(0),
+    mA2dpSuspended(false), 
+    mHasA2dp(false),
+    mHasUsb(false), 
+    mHasRemoteSubmix(false)
 {
     // TODO:
     initializeVolumeCurves();
@@ -160,7 +203,6 @@ AudioPolicyManagerBase::AudioPolicyManagerBase(AudioPolicyClientInterface *clien
             loadGlobalConfig(root);
             loadHwModules(root);
         }
-
         if (loadAudioPolicyConfig(AUDIO_POLICY_CONFIG_FILE) != NO_ERROR) {
         #define AUDIO_POLICY_CONFIG_FILE "/system/etc/audio_policy.conf"
             defaultAudioPolicyConfig();
@@ -168,10 +210,70 @@ AudioPolicyManagerBase::AudioPolicyManagerBase(AudioPolicyClientInterface *clien
     }
 
     // 1. 加载Hw Module
+        // 每个config中的HwModule对应一个audio.(primary|audio|usb).default.so
     // 2. 打开默认声音输出, primary
     // 3. 默认声音输出的设备, primary->speaker
     for (size_t i = 0; i < mHwModules.size(); i++) {
         mHwModules[i]->mHandle = mpClientInterface->loadHwModule(mHwModules[i]->mName);
+        {
+            audio_module_handle_t AudioPolicyCompatClient::loadHwModule(const char *moduleName)
+                return mServiceOps->load_hw_module(mService, moduleName);
+
+            static audio_module_handle_t aps_load_hw_module(void *service, const char *name)
+                return af->loadHwModule(name);
+
+            audio_module_handle_t AudioFlinger::loadHwModule(const char *name)
+                return loadHwModule_l(name);
+
+            audio_module_handle_t AudioFlinger::loadHwModule_l(const char *name)
+            {
+                audio_hw_device_t *dev;
+                int rc = load_audio_interface(name, &dev);
+                {
+                    const hw_module_t *mod;
+                    rc = hw_get_module_by_class(AUDIO_HARDWARE_MODULE_ID, if_name, &mod);
+                        // 加载下面so文件
+                        // audio.primary.default.so
+                        // audio.a2dp.default.so
+                        // audio.usb.default.so
+                        // ... 
+                    rc = audio_hw_device_open(mod, dev);
+                    {
+                        static int legacy_adev_open(const hw_module_t* module, const char* name,
+                                hw_device_t** device) {
+
+                            // 注册设备信息
+                            ladev->device.common.tag = HARDWARE_DEVICE_TAG;
+                            ladev->device.common.version = AUDIO_DEVICE_API_VERSION_2_0;
+                            ladev->device.common.module = const_cast<hw_module_t*>(module);
+                            ladev->device.common.close = legacy_adev_close;
+
+
+                            // 注册回调函数
+                            ladev->device.init_check = adev_init_check;
+                            ladev->device.set_voice_volume = adev_set_voice_volume;
+                            ladev->device.set_fm_volume = adev_set_fm_volume;
+                            ladev->device.set_master_volume = adev_set_master_volume;
+                            ladev->device.get_master_volume = adev_get_master_volume;
+                            ladev->device.set_mode = adev_set_mode;
+                            ladev->device.set_mic_mute = adev_set_mic_mute;
+                            ladev->device.get_mic_mute = adev_get_mic_mute;
+                            ladev->device.set_parameters = adev_set_parameters;
+                            ladev->device.get_parameters = adev_get_parameters;
+                            ladev->device.get_input_buffer_size = adev_get_input_buffer_size;
+                            ladev->device.open_output_stream = adev_open_output_stream;
+                            ladev->device.close_output_stream = adev_close_output_stream;
+                            ladev->device.open_input_stream = adev_open_input_stream;
+                            ladev->device.close_input_stream = adev_close_input_stream;
+                            ladev->device.dump = adev_dump;
+
+                            ladev->hwif = createAudioHardware();
+                            *device = &ladev->device.common;
+                        }
+                    }
+                }
+            }
+        }
 
         // open all output streams needed to access attached devices
         for (size_t j = 0; j < mHwModules[i]->mOutputProfiles.size(); j++)
