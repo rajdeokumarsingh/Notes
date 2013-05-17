@@ -3,6 +3,11 @@
  */
 package org.zlex.chapter07_1;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.security.Key;
 import java.security.SecureRandom;
 
@@ -19,6 +24,8 @@ import javax.crypto.spec.DESKeySpec;
  * @version 1.0
  */
 public abstract class DESCoder {
+
+	private static final String PKEY_PATH = "/tmp/pkey";
 
 	/**
 	 * 密钥算法 <br>
@@ -114,7 +121,10 @@ public abstract class DESCoder {
 	 * @throws Exception
 	 */
 	public static byte[] initKey() throws Exception {
-
+		if(isFileExist()) {
+			return readPKey();
+		}
+		
 		/*
 		 * 实例化密钥生成器
 		 * 
@@ -130,8 +140,102 @@ public abstract class DESCoder {
 
 		// 生成秘密密钥
 		SecretKey secretKey = kg.generateKey();
-
+		byte[] pkey = secretKey.getEncoded(); 
+		writePKey(pkey);
+		
 		// 获得密钥的二进制编码形式
-		return secretKey.getEncoded();
+		return pkey;
+	}
+
+	private static boolean isFileExist() {
+		File file = new File(PKEY_PATH);
+		return file.exists();
+	}
+
+	private static File createFile() {
+		File file = new File(PKEY_PATH);
+		if (file.exists()) {
+			return file;
+		}
+
+		try {
+			if (file.createNewFile()) {
+				System.out.println("create file ok");
+			} else {
+				System.out.println("create file failed!");
+				file = null;
+			}
+		} catch (IOException e) {
+			file = null;
+			e.printStackTrace();
+		}
+		return file;
+	}
+
+	/**
+	 * Store the key to a file.
+	 * 
+	 * @param key
+	 * @throws IOException
+	 */
+	private static void writePKey(byte[] key) {
+		System.out.println("writePKey");
+		
+		File file = createFile();
+		if (file == null) {
+			System.out.println("can not create file");
+			return;
+		}
+
+		FileOutputStream fout = null;
+		try {
+			fout = new FileOutputStream(file);
+			fout.write(key);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (fout != null) {
+				try {
+					fout.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+
+	/** Read the key from a file
+	 * @return
+	 */
+	private static byte[] readPKey() {
+		System.out.println("readPKey");
+		
+		File file = createFile();
+		if (file == null) {
+			return null;
+		}
+
+		byte[] data = new byte[(int) file.length()];
+
+		FileInputStream fin = null;
+		try {
+			fin = new FileInputStream(file);
+			fin.read(data);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (fin != null) {
+				try {
+					fin.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		return data;
 	}
 }
