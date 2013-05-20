@@ -210,7 +210,11 @@ AudioPolicyManagerBase::AudioPolicyManagerBase(AudioPolicyClientInterface *clien
     }
 
     // 1. 加载Hw Module
+<<<<<<< HEAD
         // 每个config中的HwModule对应一个audio.(primary|a2dp|usb).default.so
+=======
+        // 每个config中的HwModule对应一个audio.(primary|audio|usb).default.so
+>>>>>>> a8862944d8b095cc4ae22aa3da5cde4e4dbebb13
     // 2. 打开默认声音输出, primary
     // 3. 默认声音输出的设备, primary->speaker
     for (size_t i = 0; i < mHwModules.size(); i++) {
