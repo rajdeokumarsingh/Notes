@@ -6,9 +6,6 @@
     ./agile.practice.txt
     ./oo.principle.txt
 
-page:
-    index: 24
-
 ./01.practice.txt
 ./02.extreme.programming.txt
 ./03.plan.txt
