@@ -1,6 +1,11 @@
 敏捷开发
     面临迅速变化的需求，快速开发软件的能力
 
+关键词
+   迭代
+   增量  
+   测试
+
 基本原则
     ./agile.declaration.principle.txt
     ./agile.practice.txt
@@ -12,5 +17,9 @@
 ./04.unit.test.txt
 ./05.refactoring.txt
 ./06.practice.txt
+./07.agile.design.txt
+./08.agile.design.SRP.txt
+./09.agile.design.OCP.txt
+./10.agile.design.LSP.txt
 
 page: 55
