@@ -21,5 +21,7 @@
 ./08.agile.design.SRP.txt
 ./09.agile.design.OCP.txt
 ./10.agile.design.LSP.txt
+./11.agile.design.DIP.txt
+./12.agile.design.ISP.txt
 
-page: 55
+page: 160
