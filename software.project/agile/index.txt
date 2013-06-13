@@ -12,7 +12,7 @@
     ./agile.practice.txt
     ./oo.principle.txt
 
-./01.practice.txt
+./01.practice.txt：
 ./02.extreme.programming.txt
 ./03.plan.txt
 ./04.unit.test.txt
@@ -24,5 +24,19 @@
 ./10.agile.design.LSP.txt
 ./11.agile.design.DIP.txt
 ./12.agile.design.ISP.txt
+
+18
+数据库不应该成为前期设计的重心
+
+画出类图后，一定要先定义好类的接口
+
+几顶帽子：
+研究的帽子：文档，google，书籍
+设计的帽子：工具vp_uml
+测试的帽子：工具eclipse
+实现的帽子：工具eclipse
+重构的帽子：工具eclipse
+
+如果实现进行不下去了，可以考虑带上其他的帽子
 
 page: 200

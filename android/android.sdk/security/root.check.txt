@@ -1,0 +1,6 @@
+android中如何通过代码检测是否有root权限？
+
+http://www.dewen.org/q/1462
+
+Android 检测是否有ROOT权限
+http://blog.csdn.net/wop_niaoren19870227/article/details/7077786

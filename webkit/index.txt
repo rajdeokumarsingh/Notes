@@ -1,3 +1,5 @@
+./net_resource.txt
+
 deps: {
     // 将当前页面的render tree以text形式表示, 调试使用
     static jstring ExternalRepresentation(

@@ -26,9 +26,10 @@ http://code.google.com/events/io/2009/sessions/CodingLifeBatteryLife.html
 
 ./content.provider.java
 
-./sign.app.txt
-./SignedJarBuilder.java
-./get.app.sign.txt
+./security/sign.app.txt
+./security/get.app.sign.txt
+./security/SignedJarBuilder.java
+./security/root.check.txt
 
 ./test/index.txt
 
