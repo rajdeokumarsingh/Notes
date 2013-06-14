@@ -9,10 +9,23 @@ package com.agile.payroll;
  */
 public class PayCheck {
 
+
     private double payDate;
     private double grossPay;
     private double netPay;
     private double deductions;
+
+    public void setNetPay(double netPay) {
+        this.netPay = netPay;
+    }
+
+    public void setDeductions(double deductions) {
+        this.deductions = deductions;
+    }
+
+    public void setGrossPay(double grossPay) {
+        this.grossPay = grossPay;
+    }
 
     public double getPayDate() {
         return payDate;
@@ -29,4 +42,9 @@ public class PayCheck {
     public double getDeductions() {
         return deductions;
     }
+
+    public void setPayDate(double payDate) {
+        this.payDate = payDate;
+    }
 }
+

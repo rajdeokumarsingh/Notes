@@ -2,6 +2,13 @@ package com.java.examples.basic.date;
 
 import java.util.Date;
 
+/* XXX: Note
+    Date date = new Date(int year, int month, int day);
+        year: from 1900, 2013 -> 113
+        month: from 0,   1 -> 0
+        day: is day
+*/
+
 /**
  * Created with IntelliJ IDEA.
  * User: jiangrui

@@ -9,8 +9,7 @@ public class SalariedClassification implements PaymentClassification {
     
     @Override
     public double calculatePay(long date) {
-        // TODO Auto-generated method pay
-        return 0;
+        return salary;
     }
 
     @Override

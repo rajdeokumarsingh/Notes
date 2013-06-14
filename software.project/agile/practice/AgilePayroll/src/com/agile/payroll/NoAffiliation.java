@@ -1,14 +1,12 @@
 package com.agile.payroll;
 
-import java.util.Date;
-
 /**
  * Null Object for Affiliation
  */
 public class NoAffiliation implements Affiliation {
 
     @Override
-    public double getFee(Date d) {
+    public double getFee(long date) {
         return 0;
     }
 

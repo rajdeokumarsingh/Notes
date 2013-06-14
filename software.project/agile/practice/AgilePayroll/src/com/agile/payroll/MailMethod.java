@@ -15,7 +15,7 @@ public class MailMethod implements PaymentMethod {
     }
 
     @Override
-    public void pay(double amount) {
+    public void pay(PayCheck pay) {
         //To change body of implemented methods use File | Settings | File Templates.
     }
 

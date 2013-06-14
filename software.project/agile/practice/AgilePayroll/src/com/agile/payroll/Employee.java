@@ -85,16 +85,20 @@ public class Employee {
         this.memberId = memberId;
     }
 
-    public void payDay(long date) {
-        if(!paySchedule.isPayDay(date)) {
-            return;
-        }
+    public boolean isPayDay(long date) {
+        return paySchedule.isPayDay(date);
+    }
+
+    public void payDay(long date, PayCheck payCheck) {
         double amount = payClass.calculatePay(date);
-        payMethod.pay(amount);
+        double deduction = affiliation.getFee(date);
+        double netPay = amount - deduction;
 
-        payClass.post(date);
-        affiliation.post(date);
+        payCheck.setGrossPay(amount);
+        payCheck.setDeductions(deduction);
+        payCheck.setNetPay(netPay);
 
+        payMethod.pay(payCheck);
     }
 
     @Override

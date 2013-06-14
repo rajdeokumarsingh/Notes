@@ -5,8 +5,14 @@ import java.util.HashMap;
 
 public class HourlyClassification implements PaymentClassification{
 
+    public static final int WORKING_HOURS = 8;
+    public static final double OVERTIME_RATE = 1.5;
+
     private HashMap<Long, TimeCard> timeCards = new HashMap<Long, TimeCard>();
     private double rate;
+
+    public HourlyClassification() {
+    }
 
     public double getRate() {
         return rate;
@@ -26,8 +32,30 @@ public class HourlyClassification implements PaymentClassification{
     
     @Override
     public double calculatePay(long date) {
-        // TODO Auto-generated method pay
-        return 0;
+        double amount = 0;
+
+        long begin = DateUtils.weekBeginDate(date);
+        for (Long d : timeCards.keySet()) {
+            long ll = d.longValue();
+            if(ll < begin || ll > date) {
+                continue;
+            }
+
+            double hours = ((TimeCard)timeCards.get(d)).getHours();
+            double pay = 0;
+            if(DateUtils.isWorkingDay(ll)) {
+                if(hours <= WORKING_HOURS) {
+                    pay = hours * rate;
+                } else {  // overtime in weekday
+                    pay += WORKING_HOURS * rate;
+                    pay += OVERTIME_RATE * (hours - WORKING_HOURS) * rate;
+                }
+            } else {  // overtime in sunday, saturday
+                pay = OVERTIME_RATE * hours * rate;
+            }
+            amount += pay;
+        }
+        return amount;
     }
 
     @Override

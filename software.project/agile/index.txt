@@ -6,6 +6,10 @@
    增量  
    测试驱动
 
+   封闭代码
+   找出潜在的抽象
+   集中变化
+
 
 基本原则
     ./agile.declaration.principle.txt
@@ -24,11 +28,13 @@
 ./10.agile.design.LSP.txt
 ./11.agile.design.DIP.txt
 ./12.agile.design.ISP.txt
+./20.agile.design.package.txt
 
 18
 数据库不应该成为前期设计的重心
 
-画出类图后，一定要先定义好类的接口
+画出类图后，先定义好类的接口
+
 
 几顶帽子：
 研究的帽子：文档，google，书籍
@@ -38,5 +44,9 @@
 重构的帽子：工具eclipse
 
 如果实现进行不下去了，可以考虑带上其他的帽子
+
+build pipelines
+
+aim-shoot
 
 page: 200

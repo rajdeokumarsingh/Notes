@@ -23,8 +23,18 @@ public class CommissionedClassification implements PaymentClassification {
     
     @Override
     public double calculatePay(long date) {
-        // TODO Auto-generated method pay
-        return 0;
+        double commit = 0;
+
+        long begin = DateUtils.monthBeginDate(date);
+        for(Long l : mSales.keySet()) {
+            long ll = l.longValue();
+            if(ll < begin || ll > date) {
+                continue;
+            }
+            commit += ((SalesReceipt)mSales.get(l)).getAmount() * mCommRate;
+        }
+
+        return mSalary + commit;
     }
 
     @Override

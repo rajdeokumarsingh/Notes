@@ -1,6 +1,5 @@
 package com.agile.payroll;
 
-import java.util.Date;
 import java.util.HashMap;
 
 public class UnionAffiliation implements Affiliation {
@@ -23,7 +22,7 @@ public class UnionAffiliation implements Affiliation {
     }
 
     @Override
-    public double getFee(Date d) {
+    public double getFee(long date) {
         // TODO Auto-generated method pay
         return 0;
     }
