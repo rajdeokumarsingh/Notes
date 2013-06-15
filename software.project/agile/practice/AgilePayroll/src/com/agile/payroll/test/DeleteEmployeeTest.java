@@ -1,9 +1,9 @@
 package com.agile.payroll.test;
 
-import com.agile.payroll.Employee;
-import com.agile.payroll.PayrollDatabase;
-import com.agile.payroll.transaction.AddCommissionedEmployee;
-import com.agile.payroll.transaction.DeleteEmployee;
+import com.agile.payroll.domain.Employee;
+import com.agile.payroll.database.PayrollDatabase;
+import com.agile.payroll.transactions.AddCommissionedEmployee;
+import com.agile.payroll.transactions.DeleteEmployee;
 
 import junit.framework.TestCase;
 

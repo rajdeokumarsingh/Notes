@@ -1,10 +1,9 @@
 package com.agile.payroll.test;
 
-import com.agile.payroll.Employee;
-import com.agile.payroll.PayCheck;
-import com.agile.payroll.PayrollDatabase;
-import com.agile.payroll.transaction.AddSalariedEmployee;
-import com.agile.payroll.transaction.PaydayTransaction;
+import com.agile.payroll.domain.Employee;
+import com.agile.payroll.database.PayrollDatabase;
+import com.agile.payroll.transactions.AddSalariedEmployee;
+import com.agile.payroll.transactions.PaydayTransaction;
 import junit.framework.TestCase;
 
 import java.util.Date;

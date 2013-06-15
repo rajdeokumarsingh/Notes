@@ -1,7 +1,7 @@
 package com.agile.payroll.test;
 
-import com.agile.payroll.CommissionedClassification;
-import com.agile.payroll.SalesReceipt;
+import com.agile.payroll.classifications.CommissionedClassification;
+import com.agile.payroll.classifications.SalesReceipt;
 import junit.framework.TestCase;
 
 import java.util.Date;

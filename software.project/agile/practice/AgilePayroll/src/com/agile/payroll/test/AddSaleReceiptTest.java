@@ -1,13 +1,13 @@
 
 package com.agile.payroll.test;
 
-import com.agile.payroll.CommissionedClassification;
-import com.agile.payroll.Employee;
-import com.agile.payroll.PayrollDatabase;
-import com.agile.payroll.SalesReceipt;
-import com.agile.payroll.transaction.AddCommissionedEmployee;
-import com.agile.payroll.transaction.AddSalariedEmployee;
-import com.agile.payroll.transaction.AddSaleReceiptTransaction;
+import com.agile.payroll.classifications.CommissionedClassification;
+import com.agile.payroll.domain.Employee;
+import com.agile.payroll.database.PayrollDatabase;
+import com.agile.payroll.classifications.SalesReceipt;
+import com.agile.payroll.transactions.AddCommissionedEmployee;
+import com.agile.payroll.transactions.AddSalariedEmployee;
+import com.agile.payroll.classifications.AddSaleReceipt;
 
 import junit.framework.TestCase;
 
@@ -21,7 +21,7 @@ public class AddSaleReceiptTest extends TestCase {
         Employee e = PayrollDatabase.getInstance().getEmployee(empId);
         assertNotNull(e);
 
-        AddSaleReceiptTransaction art = new AddSaleReceiptTransaction(1234567, 500.0,
+        AddSaleReceipt art = new AddSaleReceipt(1234567, 500.0,
                 empId);
         art.execute();
 
@@ -37,7 +37,7 @@ public class AddSaleReceiptTest extends TestCase {
         assertNull(e);
 
         try {
-            AddSaleReceiptTransaction art = new AddSaleReceiptTransaction(
+            AddSaleReceipt art = new AddSaleReceipt(
                     1111111, 500.0, empId);
             art.execute();
         } catch (IllegalArgumentException ex) {
@@ -57,7 +57,7 @@ public class AddSaleReceiptTest extends TestCase {
         assertNotNull(e);
 
         try {
-            AddSaleReceiptTransaction art = new AddSaleReceiptTransaction(
+            AddSaleReceipt art = new AddSaleReceipt(
                     1111112, 500.0, empId);
             art.execute();
         } catch (IllegalArgumentException ex) {

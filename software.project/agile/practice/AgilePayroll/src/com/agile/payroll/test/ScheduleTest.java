@@ -1,6 +1,6 @@
 package com.agile.payroll.test;
 
-import com.agile.payroll.MonthlySchedule;
+import com.agile.payroll.schedules.MonthlySchedule;
 import junit.framework.TestCase;
 
 import java.util.Date;

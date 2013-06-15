@@ -8,24 +8,24 @@
     <file path="/TestEmployeeChangeName.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1370600552279" ignored="false" />
     <file path="/TestChangeEmpClass.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1370604093781" ignored="false" />
     <file path="/TestServiceCharge.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1370671153319" ignored="false" />
-    <file path="/fragment.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1371170427896" ignored="false" />
-    <file path="/ChangeHourlyTransaction.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1370604053559" ignored="false" />
+    <file path="/fragment.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1371270037920" ignored="false" />
+    <file path="/ChangeHourlyTransaction.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1371267203675" ignored="false" />
     <file path="/HourlyClassification.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1371174446699" ignored="false" />
-    <file path="/ChangeSalariedTransaction.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1370606741373" ignored="false" />
+    <file path="/ChangeSalariedTransaction.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1371268860506" ignored="false" />
     <file path="/ChangeSalariedTransactionTest.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1370607310795" ignored="false" />
     <file path="/ChangeHoldMethod.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1370661172136" ignored="false" />
     <file path="/ChangeHoldMethodTest.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1370669122862" ignored="false" />
     <file path="/PaymentMethod.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1370690040009" ignored="false" />
-    <file path="/ChangeDirectTransaction.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1370669558061" ignored="false" />
+    <file path="/ChangeDirectTransaction.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1371267070218" ignored="false" />
     <file path="/DirectMethod.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1370669477861" ignored="false" />
     <file path="/ChangeDirectTransactionTest.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1370670449792" ignored="false" />
-    <file path="/ChangeMailTransaction.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1370669950453" ignored="false" />
+    <file path="/ChangeMailTransaction.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1371267221758" ignored="false" />
     <file path="/MailMethod.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1370669966627" ignored="false" />
     <file path="/ChangeMailTransactionTest.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1370670273876" ignored="false" />
     <file path="/SalariedClassification.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1371091119997" ignored="false" />
-    <file path="/Employee.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1371095341354" ignored="false" />
+    <file path="/Employee.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1371269116333" ignored="false" />
     <file path="/ChangeAffiliationTransaction.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1370682053959" ignored="false" />
-    <file path="/ChangeEmployeeTransaction.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1370679751841" ignored="false" />
+    <file path="/ChangeEmployeeTransaction.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1371267158499" ignored="false" />
     <file path="/PayrollDatabase.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1370691541841" ignored="false" />
     <file path="/ChangeAffiliationTransactionTest.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1370684560762" ignored="false" />
     <file path="/UnionAffiliation.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1370680717671" ignored="false" />
@@ -64,6 +64,7 @@
     <file path="/CommissionedClassificationTest.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1371093453602" ignored="false" />
     <file path="/PaydayTransactionTest.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1371176311221" ignored="false" />
     <file path="/DateUtils.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1371175721242" ignored="false" />
+    <file path="/TimeCardTransaction.java" changelist="c66d9c1d-30df-41ec-bba2-86d1e5bd0cd9" time="1371268727046" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,97 +125,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HourlyClassificationTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/test/HourlyClassificationTest.java">
+      <file leaf-file-name="AddCommissionedEmployee.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/transactions/AddCommissionedEmployee.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="25" selection-start="1341" selection-end="1341" vertical-scroll-proportion="0.0">
+            <state line="7" column="13" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PaydayTransactionTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/test/PaydayTransactionTest.java">
+      <file leaf-file-name="Affiliation.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/domain/Affiliation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="23" selection-start="3414" selection-end="3414" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HourlyClassification.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/HourlyClassification.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="32" selection-start="814" selection-end="814" vertical-scroll-proportion="0.0">
+            <state line="2" column="17" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Affiliation.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/Affiliation.java">
+      <file leaf-file-name="Employee.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/domain/Employee.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="148" selection-end="148" vertical-scroll-proportion="0.47648904">
+            <state line="17" column="22" selection-start="421" selection-end="421" vertical-scroll-proportion="0.44705883">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimeCardTransaction.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/TimeCardTransaction.java">
+      <file leaf-file-name="PayCheck.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/domain/PayCheck.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="11" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
+            <state line="9" column="13" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DateUtils.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/DateUtils.java">
+      <file leaf-file-name="PaymentClassification.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/domain/PaymentClassification.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="0" selection-start="3311" selection-end="3311" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UtilsTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/test/UtilsTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="4" selection-start="2146" selection-end="2146" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddHourlyEmployee.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/transaction/AddHourlyEmployee.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="19" selection-start="668" selection-end="668" vertical-scroll-proportion="0.0">
+            <state line="2" column="17" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WeeklySchedule.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/WeeklySchedule.java">
+      <file leaf-file-name="Transaction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/transactions/Transaction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="33" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
+            <state line="2" column="17" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BiWeekSchedule.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/BiWeekSchedule.java">
+      <file leaf-file-name="Debug.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/utils/Debug.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0">
+            <state line="13" column="17" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PaymentMethod.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/domain/PaymentMethod.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="17" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PaymentSchedule.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/domain/PaymentSchedule.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="17" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChangeSalariedClass.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/classifications/ChangeSalariedClass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="31" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -230,22 +225,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/agile/payroll/test/CommissionedClassificationTest.java" />
-        <option value="$PROJECT_DIR$/src/com/agile/payroll/ServiceCharge.java" />
-        <option value="$PROJECT_DIR$/src/com/agile/payroll/Affiliation.java" />
-        <option value="$PROJECT_DIR$/src/com/agile/payroll/PayCheck.java" />
-        <option value="$PROJECT_DIR$/src/com/agile/payroll/transaction/PaydayTransaction.java" />
-        <option value="$PROJECT_DIR$/src/com/agile/payroll/PaymentMethod.java" />
-        <option value="$PROJECT_DIR$/src/com/agile/payroll/Employee.java" />
-        <option value="$PROJECT_DIR$/src/com/agile/payroll/test/ScheduleTest.java" />
-        <option value="$PROJECT_DIR$/src/com/agile/payroll/Utils.java" />
-        <option value="$PROJECT_DIR$/src/com/agile/payroll/HourlyClassification.java" />
-        <option value="$PROJECT_DIR$/src/com/agile/payroll/WeeklySchedule.java" />
-        <option value="$PROJECT_DIR$/src/com/agile/payroll/BiWeekSchedule.java" />
-        <option value="$PROJECT_DIR$/src/com/agile/payroll/DateUtils.java" />
-        <option value="$PROJECT_DIR$/src/com/agile/payroll/test/HourlyClassificationTest.java" />
-        <option value="$PROJECT_DIR$/src/com/agile/payroll/test/PaydayTransactionTest.java" />
-        <option value="$PROJECT_DIR$/src/com/agile/payroll/test/UtilsTest.java" />
+        <option value="$PROJECT_DIR$/src/com/agile/payroll/classifications/TimeCard.java" />
+        <option value="$PROJECT_DIR$/src/com/agile/payroll/domain/PaymentSchedule.java" />
+        <option value="$PROJECT_DIR$/src/com/agile/payroll/affiliations/ServiceCharge.java" />
+        <option value="$PROJECT_DIR$/src/com/agile/payroll/affiliations/ChangeAffiliation.java" />
+        <option value="$PROJECT_DIR$/src/com/agile/payroll/methods/ChangeDirectMethod.java" />
+        <option value="$PROJECT_DIR$/src/com/agile/payroll/classifications/ChangeHourlyClass.java" />
+        <option value="$PROJECT_DIR$/src/com/agile/payroll/classifications/AddSaleReceipt.java" />
+        <option value="$PROJECT_DIR$/src/com/agile/payroll/affiliations/ChangeNoAffiliation.java" />
+        <option value="$PROJECT_DIR$/src/com/agile/payroll/affiliations/ServiceChargeTransaction.java" />
+        <option value="$PROJECT_DIR$/src/com/agile/payroll/classifications/TimeCardTransaction.java" />
+        <option value="$PROJECT_DIR$/src/com/agile/payroll/classifications/AddTimeCard.java" />
+        <option value="$PROJECT_DIR$/src/com/agile/payroll/classifications/ChangeSalariedTransaction.java" />
+        <option value="$PROJECT_DIR$/src/com/agile/payroll/classifications/ChangeSalariedClass.java" />
+        <option value="$PROJECT_DIR$/src/com/agile/payroll/domain/Employee.java" />
+        <option value="$PROJECT_DIR$/src/com/agile/payroll/transaction/Transaction.java" />
+        <option value="$PROJECT_DIR$/src/com/agile/payroll/domain/Transaction.java" />
       </list>
     </option>
   </component>
@@ -318,6 +313,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -372,26 +368,8 @@
               <option name="myItemId" value="payroll" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AgilePayroll" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AgilePayroll" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payroll" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="transaction" />
+              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -413,13 +391,162 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="transactions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgilePayroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgilePayroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="payroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgilePayroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgilePayroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="payroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="schedules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgilePayroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgilePayroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="payroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="methods" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgilePayroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgilePayroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="payroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgilePayroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgilePayroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="payroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgilePayroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgilePayroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="payroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classifications" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgilePayroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgilePayroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="payroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="affiliations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -438,20 +565,27 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.agile.payroll.test" />
-    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="junit.framework.TestCase" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.agile.payroll.test" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.agile.payroll" />
       <recent name="com.agile.payroll.transaction" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.agile.payroll.transactions" />
+      <recent name="com.agile.payroll.domain" />
+      <recent name="com.agile.payroll.classifications" />
+      <recent name="com.agile.payroll.affiliations" />
+      <recent name="com.agile.payroll.methods" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.com.agile.payroll.test in AgilePayroll">
@@ -579,6 +713,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -604,19 +751,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -712,6 +846,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928944" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -726,7 +861,6 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928944" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928944" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
     </layout>
@@ -796,122 +930,116 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/UnionAffiliation.java">
+    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/transactions/ChangeEmployeeProperty.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="13" selection-start="721" selection-end="721" vertical-scroll-proportion="0.24716981">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/PayCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="933" selection-end="933" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/HoldMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="19" selection-start="2184" selection-end="2184" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/test/AddTimeCardTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="449" selection-end="449" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/transaction/PaydayTransaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="4" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#480#498#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/TimeCardTransaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="11" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/transaction/AddHourlyEmployee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="19" selection-start="668" selection-end="668" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/BiWeekSchedule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/WeeklySchedule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="33" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/HourlyClassification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="32" selection-start="814" selection-end="814" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/DateUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="0" selection-start="3311" selection-end="3311" vertical-scroll-proportion="0.0">
+        <state line="5" column="22" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/test/HourlyClassificationTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/affiliations/ChangeNoAffiliation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="25" selection-start="1341" selection-end="1341" vertical-scroll-proportion="0.0">
+        <state line="14" column="13" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/test/PaydayTransactionTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/affiliations/ServiceChargeTransaction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="23" selection-start="3414" selection-end="3414" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="9" column="13" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/test/UtilsTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/classifications/SalesReceipt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="4" selection-start="2146" selection-end="2146" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="3" column="13" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/Affiliation.java">
+    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/classifications/AddSaleReceipt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="148" selection-end="148" vertical-scroll-proportion="0.47648904">
+        <state line="9" column="21" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/classifications/AddTimeCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="26" selection-start="487" selection-end="487" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/transactions/AddCommissionedEmployee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/classifications/ChangeSalariedClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="31" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/domain/Affiliation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="17" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/domain/PayCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/domain/PaymentMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="17" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/domain/PaymentSchedule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="17" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/domain/PaymentClassification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="17" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/transactions/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="17" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/utils/Debug.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="17" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/agile/payroll/domain/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="22" selection-start="421" selection-end="421" vertical-scroll-proportion="0.44705883">
           <folding />
         </state>
       </provider>

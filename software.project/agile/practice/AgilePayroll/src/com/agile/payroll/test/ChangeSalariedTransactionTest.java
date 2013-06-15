@@ -1,8 +1,11 @@
 package com.agile.payroll.test;
 
-import com.agile.payroll.*;
-import com.agile.payroll.transaction.AddSalariedEmployee;
-import com.agile.payroll.transaction.ChangeSalariedTransaction;
+import com.agile.payroll.classifications.ChangeSalariedClass;
+import com.agile.payroll.classifications.SalariedClassification;
+import com.agile.payroll.database.PayrollDatabase;
+import com.agile.payroll.domain.Employee;
+import com.agile.payroll.domain.PaymentClassification;
+import com.agile.payroll.transactions.AddSalariedEmployee;
 import junit.framework.TestCase;
 
 /**
@@ -23,7 +26,7 @@ public class ChangeSalariedTransactionTest extends TestCase {
         assertTrue(pc instanceof SalariedClassification);
         assertEquals(1000.0, ((SalariedClassification) pc).getSalary());
 
-        ChangeSalariedTransaction trans = new ChangeSalariedTransaction(empId, 1200.0);
+        ChangeSalariedClass trans = new ChangeSalariedClass(empId, 1200.0);
         trans.execute();
 
         PaymentClassification pct = e.getClassification();

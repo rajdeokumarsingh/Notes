@@ -1,15 +1,9 @@
 package com.agile.payroll.test;
 
-import com.agile.payroll.Employee;
-import com.agile.payroll.HoldMethod;
-import com.agile.payroll.MonthlySchedule;
-import com.agile.payroll.PaymentClassification;
-import com.agile.payroll.PaymentMethod;
-import com.agile.payroll.PaymentSchedule;
-import com.agile.payroll.PayrollDatabase;
-import com.agile.payroll.SalariedClassification;
-import com.agile.payroll.transaction.AddSalariedEmployee;
-import com.agile.payroll.transaction.ChangeNameTransaction;
+import com.agile.payroll.domain.Employee;
+import com.agile.payroll.database.PayrollDatabase;
+import com.agile.payroll.transactions.AddSalariedEmployee;
+import com.agile.payroll.transactions.ChangeNameTransaction;
 
 import junit.framework.TestCase;
 

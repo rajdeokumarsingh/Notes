@@ -1,14 +1,14 @@
 
 package com.agile.payroll.test;
 
-import com.agile.payroll.Employee;
-import com.agile.payroll.HourlyClassification;
-import com.agile.payroll.PaymentClassification;
-import com.agile.payroll.PayrollDatabase;
-import com.agile.payroll.TimeCard;
-import com.agile.payroll.TimeCardTransaction;
-import com.agile.payroll.transaction.AddHourlyEmployee;
-import com.agile.payroll.transaction.AddSalariedEmployee;
+import com.agile.payroll.classifications.AddTimeCard;
+import com.agile.payroll.domain.Employee;
+import com.agile.payroll.classifications.HourlyClassification;
+import com.agile.payroll.domain.PaymentClassification;
+import com.agile.payroll.database.PayrollDatabase;
+import com.agile.payroll.classifications.TimeCard;
+import com.agile.payroll.transactions.AddHourlyEmployee;
+import com.agile.payroll.transactions.AddSalariedEmployee;
 
 import junit.framework.TestCase;
 
@@ -24,7 +24,7 @@ public class AddTimeCardTest extends TestCase {
         PaymentClassification pc = e.getClassification();
         assertTrue(pc instanceof HourlyClassification);
 
-        TimeCardTransaction tc = new TimeCardTransaction(1234567, 6.0, empId);
+        AddTimeCard tc = new AddTimeCard(1234567, 6.0, empId);
         tc.execute();
 
         HourlyClassification hc = (HourlyClassification) pc;
@@ -41,10 +41,10 @@ public class AddTimeCardTest extends TestCase {
         Employee e = PayrollDatabase.getInstance().getEmployee(empId);
         assertNotNull(e);
 
-        // Since e is not a Hourly employee, TimeCardTransaction should throw
+        // Since e is not a Hourly employee, AddTimeCard should throw
         // exception.
         try {
-            TimeCardTransaction tc = new TimeCardTransaction(123456, 6.0, empId);
+            AddTimeCard tc = new AddTimeCard(123456, 6.0, empId);
             tc.execute();
         } catch (IllegalArgumentException ex) {
             assertTrue(true);
@@ -60,10 +60,10 @@ public class AddTimeCardTest extends TestCase {
         Employee e = PayrollDatabase.getInstance().getEmployee(empId);
         assertNull(e);
 
-        // Since the employee is not exist, TimeCardTransaction should throw
+        // Since the employee is not exist, AddTimeCard should throw
         // exception.
         try {
-            TimeCardTransaction tc = new TimeCardTransaction(123456, 6.0, empId);
+            AddTimeCard tc = new AddTimeCard(123456, 6.0, empId);
             tc.execute();
         } catch (IllegalArgumentException ex) {
             assertTrue(true);

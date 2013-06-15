@@ -1,6 +1,6 @@
 package com.agile.payroll.test;
 
-import com.agile.payroll.DateUtils;
+import com.agile.payroll.utils.DateUtils;
 import junit.framework.TestCase;
 
 import java.util.Date;

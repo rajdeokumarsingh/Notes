@@ -1,7 +1,7 @@
 package com.agile.payroll.test;
 
-import com.agile.payroll.HourlyClassification;
-import com.agile.payroll.TimeCard;
+import com.agile.payroll.classifications.HourlyClassification;
+import com.agile.payroll.classifications.TimeCard;
 import junit.framework.TestCase;
 
 import java.util.Date;

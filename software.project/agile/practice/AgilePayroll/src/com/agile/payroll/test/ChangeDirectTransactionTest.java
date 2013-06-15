@@ -1,9 +1,11 @@
 package com.agile.payroll.test;
 
-import com.agile.payroll.*;
-import com.agile.payroll.transaction.AddHourlyEmployee;
-import com.agile.payroll.transaction.ChangeDirectTransaction;
-import com.agile.payroll.transaction.ChangeHoldMethod;
+import com.agile.payroll.database.PayrollDatabase;
+import com.agile.payroll.domain.Employee;
+import com.agile.payroll.methods.DirectMethod;
+import com.agile.payroll.methods.HoldMethod;
+import com.agile.payroll.transactions.AddHourlyEmployee;
+import com.agile.payroll.methods.ChangeDirectMethod;
 import junit.framework.TestCase;
 
 /**
@@ -21,9 +23,9 @@ public class ChangeDirectTransactionTest extends TestCase {
 
         Employee e = PayrollDatabase.getInstance().getEmployee(empId);
         assertNotNull(e);
-        e.setMethd(new HoldMethod());
+        e.setMethod(new HoldMethod());
 
-        ChangeDirectTransaction trans = new ChangeDirectTransaction(empId, "CCB", "111ccbc");
+        ChangeDirectMethod trans = new ChangeDirectMethod(empId, "CCB", "111ccbc");
         trans.execute();
         assertTrue(e.getMethod() instanceof DirectMethod);
         DirectMethod method = (DirectMethod) e.getMethod();

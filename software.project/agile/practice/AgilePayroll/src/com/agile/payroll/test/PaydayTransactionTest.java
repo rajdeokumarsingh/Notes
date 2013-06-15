@@ -1,9 +1,9 @@
 package com.agile.payroll.test;
 
-import com.agile.payroll.PayCheck;
-import com.agile.payroll.TimeCardTransaction;
-import com.agile.payroll.transaction.AddHourlyEmployee;
-import com.agile.payroll.transaction.PaydayTransaction;
+import com.agile.payroll.classifications.AddTimeCard;
+import com.agile.payroll.domain.PayCheck;
+import com.agile.payroll.transactions.AddHourlyEmployee;
+import com.agile.payroll.transactions.PaydayTransaction;
 import junit.framework.TestCase;
 
 import java.util.Date;
@@ -54,7 +54,7 @@ public class PaydayTransactionTest extends TestCase {
         aht.execute();
         assertNotNull(aht);
 
-        TimeCardTransaction tt = new TimeCardTransaction(new Date(113, 5, 14).getTime(), 8, id);
+        AddTimeCard tt = new AddTimeCard(new Date(113, 5, 14).getTime(), 8, id);
         tt.execute();
 
         PaydayTransaction pdt = new PaydayTransaction(new Date(113, 5, 14).getTime());
@@ -74,27 +74,27 @@ public class PaydayTransactionTest extends TestCase {
         assertNotNull(aht);
 
         // week day
-        TimeCardTransaction tt1 = new TimeCardTransaction(
+        AddTimeCard tt1 = new AddTimeCard(
                 new Date(113, 5, 10).getTime(), 2, id);
         tt1.execute();
 
         // week day
-        TimeCardTransaction tt2 = new TimeCardTransaction(
+        AddTimeCard tt2 = new AddTimeCard(
                 new Date(113, 5, 14).getTime(), 3, id);
         tt2.execute();
 
         // not a week day
-        TimeCardTransaction tt3 = new TimeCardTransaction(
+        AddTimeCard tt3 = new AddTimeCard(
                 new Date(113, 5, 16).getTime(), 4, id);
         tt3.execute();
 
         // last saturday, pay
-        TimeCardTransaction tt4 = new TimeCardTransaction(
+        AddTimeCard tt4 = new AddTimeCard(
                 new Date(113, 5, 8).getTime(), 4, id);
         tt4.execute();
 
         // not a week day
-        TimeCardTransaction tt5 = new TimeCardTransaction(
+        AddTimeCard tt5 = new AddTimeCard(
             new Date(113, 5, 7).getTime(), 4, id);
         tt5.execute();
 
@@ -118,17 +118,17 @@ public class PaydayTransactionTest extends TestCase {
         assertNotNull(aht);
 
         // not working day, overtime, 1.5 * 1 * 100
-        TimeCardTransaction sundayTrans = new TimeCardTransaction(
+        AddTimeCard sundayTrans = new AddTimeCard(
                 new Date(113, 5, 9).getTime(), 1, id);
         sundayTrans.execute();
 
         // working day, 2 * 100
-        TimeCardTransaction tuesdayTrans = new TimeCardTransaction(
+        AddTimeCard tuesdayTrans = new AddTimeCard(
                 new Date(113, 5, 11).getTime(), 2, id);
         tuesdayTrans.execute();
 
         // last saturday, not working day, overtime, 1.5 * 4 * 100
-        TimeCardTransaction saturdayTrans = new TimeCardTransaction(
+        AddTimeCard saturdayTrans = new AddTimeCard(
                 new Date(113, 5, 8).getTime(), 4, id);
         saturdayTrans.execute();
 
@@ -151,7 +151,7 @@ public class PaydayTransactionTest extends TestCase {
         assertNotNull(aht);
 
         // overtime in weekday, 8 * 100 + 2 * 100 * 1.5
-        TimeCardTransaction tt = new TimeCardTransaction(new Date(113, 5, 14).getTime(), 10, id);
+        AddTimeCard tt = new AddTimeCard(new Date(113, 5, 14).getTime(), 10, id);
         tt.execute();
 
         PaydayTransaction pdt = new PaydayTransaction(new Date(113, 5, 14).getTime());

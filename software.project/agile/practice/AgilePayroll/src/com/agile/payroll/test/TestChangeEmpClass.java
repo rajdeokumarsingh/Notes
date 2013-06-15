@@ -1,9 +1,13 @@
 package com.agile.payroll.test;
 
-import com.agile.payroll.*;
-import com.agile.payroll.transaction.AddHourlyEmployee;
-import com.agile.payroll.transaction.AddSalariedEmployee;
-import com.agile.payroll.transaction.ChangeHourlyTransaction;
+import com.agile.payroll.classifications.HourlyClassification;
+import com.agile.payroll.classifications.SalariedClassification;
+import com.agile.payroll.database.PayrollDatabase;
+import com.agile.payroll.domain.Employee;
+import com.agile.payroll.schedules.WeeklySchedule;
+import com.agile.payroll.transactions.AddHourlyEmployee;
+import com.agile.payroll.transactions.AddSalariedEmployee;
+import com.agile.payroll.classifications.ChangeHourlyClass;
 import junit.framework.TestCase;
 
 /**
@@ -26,7 +30,7 @@ public class TestChangeEmpClass extends TestCase {
         HourlyClassification hc = (HourlyClassification) e.getClassification();
         assertEquals(hc.getRate(), 0.5);
 
-        ChangeHourlyTransaction trans = new ChangeHourlyTransaction(empId, 0.6);
+        ChangeHourlyClass trans = new ChangeHourlyClass(empId, 0.6);
         trans.execute();
 
         assertEquals(hc.getRate(), 0.6);
@@ -40,7 +44,7 @@ public class TestChangeEmpClass extends TestCase {
         Employee e = PayrollDatabase.getInstance().getEmployee(empId);
         assertTrue(e.getClassification() instanceof SalariedClassification);
 
-        ChangeHourlyTransaction trans = new ChangeHourlyTransaction(empId, 0.7);
+        ChangeHourlyClass trans = new ChangeHourlyClass(empId, 0.7);
         trans.execute();
 
         assertTrue(e.getSchedule() instanceof WeeklySchedule);

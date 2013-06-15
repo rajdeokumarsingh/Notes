@@ -1,12 +1,12 @@
 package com.agile.payroll.test;
 
-import com.agile.payroll.Employee;
-import com.agile.payroll.NoAffiliation;
-import com.agile.payroll.PayrollDatabase;
-import com.agile.payroll.UnionAffiliation;
-import com.agile.payroll.transaction.AddSalariedEmployee;
-import com.agile.payroll.transaction.ChangeAffiliationTransaction;
-import com.agile.payroll.transaction.ChangeNoAffiliationTransaction;
+import com.agile.payroll.domain.Employee;
+import com.agile.payroll.affiliations.NoAffiliation;
+import com.agile.payroll.database.PayrollDatabase;
+import com.agile.payroll.affiliations.UnionAffiliation;
+import com.agile.payroll.transactions.AddSalariedEmployee;
+import com.agile.payroll.affiliations.ChangeAffiliation;
+import com.agile.payroll.affiliations.ChangeNoAffiliation;
 import junit.framework.TestCase;
 
 /**
@@ -25,7 +25,7 @@ public class ChangeNoAffiliationTransactionTest extends TestCase {
             t.execute();
 
             Employee e = PayrollDatabase.getInstance().getEmployee(empId);
-            ChangeAffiliationTransaction trans = new ChangeAffiliationTransaction(empId, mbId, 50.0);
+            ChangeAffiliation trans = new ChangeAffiliation(empId, mbId, 50.0);
             trans.execute();
 
             assertEquals(e, PayrollDatabase.getInstance().getUnionMember(mbId));
@@ -33,7 +33,7 @@ public class ChangeNoAffiliationTransactionTest extends TestCase {
             UnionAffiliation uaf = (UnionAffiliation) e.getAffiliation();
             assertEquals(uaf.getDues(), 50.0);
 
-            ChangeNoAffiliationTransaction trans2 = new ChangeNoAffiliationTransaction(empId);
+            ChangeNoAffiliation trans2 = new ChangeNoAffiliation(empId);
             trans2.execute();
 
             assertNull(PayrollDatabase.getInstance().getUnionMember(mbId));

@@ -1,6 +1,6 @@
 package com.agile.payroll.test;
 
-import com.agile.payroll.SalariedClassification;
+import com.agile.payroll.classifications.SalariedClassification;
 import junit.framework.TestCase;
 
 import java.util.Date;

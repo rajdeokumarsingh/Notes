@@ -1,12 +1,12 @@
 
 package com.agile.payroll.test;
 
-import com.agile.payroll.Employee;
-import com.agile.payroll.PayrollDatabase;
-import com.agile.payroll.ServiceCharge;
-import com.agile.payroll.UnionAffiliation;
-import com.agile.payroll.transaction.AddCommissionedEmployee;
-import com.agile.payroll.transaction.ServiceChargeTransaction;
+import com.agile.payroll.domain.Employee;
+import com.agile.payroll.database.PayrollDatabase;
+import com.agile.payroll.affiliations.ServiceCharge;
+import com.agile.payroll.affiliations.UnionAffiliation;
+import com.agile.payroll.transactions.AddCommissionedEmployee;
+import com.agile.payroll.affiliations.ServiceChargeTransaction;
 
 import junit.framework.TestCase;
 

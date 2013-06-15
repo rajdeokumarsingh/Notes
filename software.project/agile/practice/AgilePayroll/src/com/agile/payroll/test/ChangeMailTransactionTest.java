@@ -1,13 +1,11 @@
 package com.agile.payroll.test;
 
-import com.agile.payroll.Employee;
-import com.agile.payroll.HoldMethod;
-import com.agile.payroll.MailMethod;
-import com.agile.payroll.PayrollDatabase;
-import com.agile.payroll.transaction.AddHourlyEmployee;
-import com.agile.payroll.transaction.AddSalariedEmployee;
-import com.agile.payroll.transaction.ChangeHoldMethod;
-import com.agile.payroll.transaction.ChangeMailTransaction;
+import com.agile.payroll.domain.Employee;
+import com.agile.payroll.methods.HoldMethod;
+import com.agile.payroll.methods.MailMethod;
+import com.agile.payroll.database.PayrollDatabase;
+import com.agile.payroll.transactions.AddSalariedEmployee;
+import com.agile.payroll.methods.ChangeMailMethod;
 import junit.framework.TestCase;
 
 /**
@@ -26,10 +24,10 @@ public class ChangeMailTransactionTest extends TestCase {
         Employee e = PayrollDatabase.getInstance().getEmployee(empId);
         assertNotNull(e);
 
-        e.setMethd(new HoldMethod());
+        e.setMethod(new HoldMethod());
         assertTrue(e.getMethod() instanceof HoldMethod);
 
-        ChangeMailTransaction trans = new ChangeMailTransaction(empId, "Beijing");
+        ChangeMailMethod trans = new ChangeMailMethod(empId, "Beijing");
         trans.execute();
 
         assertTrue(e.getMethod() instanceof MailMethod);

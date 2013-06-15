@@ -1,21 +1,21 @@
 
 package com.agile.payroll.test;
 
-import com.agile.payroll.BiWeekSchedule;
-import com.agile.payroll.CommissionedClassification;
-import com.agile.payroll.Employee;
-import com.agile.payroll.HoldMethod;
-import com.agile.payroll.HourlyClassification;
-import com.agile.payroll.MonthlySchedule;
-import com.agile.payroll.PaymentClassification;
-import com.agile.payroll.PaymentMethod;
-import com.agile.payroll.PaymentSchedule;
-import com.agile.payroll.PayrollDatabase;
-import com.agile.payroll.SalariedClassification;
-import com.agile.payroll.WeeklySchedule;
-import com.agile.payroll.transaction.AddCommissionedEmployee;
-import com.agile.payroll.transaction.AddHourlyEmployee;
-import com.agile.payroll.transaction.AddSalariedEmployee;
+import com.agile.payroll.schedules.BiWeekSchedule;
+import com.agile.payroll.classifications.CommissionedClassification;
+import com.agile.payroll.domain.Employee;
+import com.agile.payroll.methods.HoldMethod;
+import com.agile.payroll.classifications.HourlyClassification;
+import com.agile.payroll.schedules.MonthlySchedule;
+import com.agile.payroll.domain.PaymentClassification;
+import com.agile.payroll.domain.PaymentMethod;
+import com.agile.payroll.domain.PaymentSchedule;
+import com.agile.payroll.database.PayrollDatabase;
+import com.agile.payroll.classifications.SalariedClassification;
+import com.agile.payroll.schedules.WeeklySchedule;
+import com.agile.payroll.transactions.AddCommissionedEmployee;
+import com.agile.payroll.transactions.AddHourlyEmployee;
+import com.agile.payroll.transactions.AddSalariedEmployee;
 
 import junit.framework.TestCase;
 
