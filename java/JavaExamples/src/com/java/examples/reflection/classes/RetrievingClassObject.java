@@ -22,12 +22,12 @@ public class RetrievingClassObject {
 	 * @throws SecurityException 
 	 */
 	public static void main(String[] args) throws ClassNotFoundException, SecurityException, NoSuchFieldException {
-//		testGetClass();
-//		testDotClass();
-//		testClassForName();
-//		testSuperClass();
-//		testDeclaringClass();
-//		System.out.println(o.getClass().getEnclosingClass());
+		testGetClass();
+		testDotClass();
+		testClassForName();
+		testSuperClass();
+		testDeclaringClass();
+		System.out.println(o.getClass().getEnclosingClass());
 		testGetClasses();
 		
 		System.out.println("end");
