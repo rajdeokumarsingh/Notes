@@ -1,4 +1,3 @@
-
 Good practice:
 # Make sure assert.h is included before assert is defined
 LOCAL_CFLAGS += -include "assert.h"
@@ -297,6 +296,7 @@ foo : $(objects)
 
     vpath关键字,非变量
 	    为不同类型的文件定不同的搜索目录
+	    vpath *.cpp src
 
     1、vpath <pattern> <directories>
         多个目录使用空格或者冒号分开

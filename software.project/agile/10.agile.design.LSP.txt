@@ -25,7 +25,6 @@ Liskov替换原则
                     因为Rectangle具有setWidth, setHeight方法
                     而Square从概念上只有setLenght方法，退化了Rectangle的方法
 
-
     违反LSP的情况：
 
         子类中有和基类的假设或概念不同的东西

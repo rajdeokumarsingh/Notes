@@ -1,57 +1,68 @@
 敏捷开发
     面临迅速变化的需求，快速开发软件的能力
 
-关键词
-   迭代 增量  测试驱动
-        需求 设计 代码
+敏捷关键词
+   迭代 增量 测试
 
-   封闭代码
-   找出潜在的抽象
-   集中变化
+   螺旋上升过程
 
-   敏捷设计
-        区分：
-            界面，业务逻辑，数据, 通信层
-                
-    流程
+敏捷流程:
+    熟悉业务上下文
+        业务可视化
+            spec reading
+            UML简图
+            表格
+            ...
 
-    快速参考：java sdk, android sdk, ...
+    熟悉技术上下文
+        列举出技术上的依赖，黑色，灰色区域
 
-    快速实践
-        快速视觉化
+        学习，复习相关的系统模型, 系统api, 语言api
+            快速参考：java sdk, android sdk, ...
 
-        立即代码, 测试
-            想到就可以立即写出来
+        写出程序，测试程序
 
-    原子操作要封闭完成
-            
-    深入研究 ？？
+            快速实践
+                快速视觉化
 
-    build pipelines
+                立即代码, 测试
+                    想到就可以立即写出来
 
+            原子操作要封闭完成
+                    
+        学习的过程, 作笔记的过程和写程序的过程统一起来
+        在技术上下文环境中应该首先打开：
+            research:
+                firefox for api, 
+                chromium for stackoverflow
+            note, design:
+                vim 
+                vp_uml 
+            code:
+                eclipse, intellij
+
+                几顶帽子：
+                研究的帽子：文档，google，书籍
+                设计的帽子：工具vp_uml
+                测试的帽子：工具eclipse
+                实现的帽子：工具eclipse
+                重构的帽子：工具eclipse
+                如果实现进行不下去了，可以考虑带上其他的帽子
+
+        项目的前期应该解决关键技术上的风险
+
+    流水线
+        build pipelines
     aim-shoot
-
-
-几顶帽子：
-研究的帽子：文档，google，书籍
-设计的帽子：工具vp_uml
-测试的帽子：工具eclipse
-实现的帽子：工具eclipse
-重构的帽子：工具eclipse
-
-如果实现进行不下去了，可以考虑带上其他的帽子
-
-
 基本原则
     ./agile.declaration.principle.txt
     ./agile.practice.txt
     ./oo.principle.txt
 
-./01.practice.txt：
+./01.practice.txt
 ./02.extreme.programming.txt
 ./03.plan.txt
 ./04.unit.test.txt
-./05.refactoring.txt
 ./06.practice.txt
 ./07.agile.design.txt
 ./08.agile.design.SRP.txt
@@ -60,9 +71,7 @@
 ./11.agile.design.DIP.txt
 ./12.agile.design.ISP.txt
 ./20.agile.design.package.txt
-
 ./30.framework.txt
-
 
 
 
