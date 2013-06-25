@@ -1,0 +1,15 @@
+# incremental data. DO NOT EDIT.
+# format is <lastModified> <length> <SHA-1> <path>
+# Encoding is UTF-8
+1371796569000 361 2fc983cf37222ccce6935767f73caf69e7cbedfc /home/jiangrui/git/note/software.project/agile/practice/BrowserExampleProject/BrowserExample/build/classes/debug/com/example/browserexample/BuildConfig.class
+1371796569000 427 5b2c6bb7aad5793623bc0c1e7ecd9788fbaeb492 /home/jiangrui/git/note/software.project/agile/practice/BrowserExampleProject/BrowserExample/build/classes/debug/com/example/browserexample/R$layout.class
+1371796569000 485 51aff85f96f323a26cf0fa7430b20bc9f375682c /home/jiangrui/git/note/software.project/agile/practice/BrowserExampleProject/BrowserExample/build/classes/debug/com/example/browserexample/R$dimen.class
+1371796569000 417 34b5605d78e7deb536ce888aa7c000f983bec172 /home/jiangrui/git/note/software.project/agile/practice/BrowserExampleProject/BrowserExample/build/classes/debug/com/example/browserexample/R$id.class
+1371796526000 484258 bd6479f5dd592790607e0504e66e0f31c2b4d308 /home/jiangrui/git/note/software.project/agile/practice/BrowserExampleProject/BrowserExample/libs/android-support-v4.jar
+1371796569000 496 f189ee304fb5ae2ee5f3a9cf42fe091ad56c0150 /home/jiangrui/git/note/software.project/agile/practice/BrowserExampleProject/BrowserExample/build/classes/debug/com/example/browserexample/R$string.class
+1371796569000 757 d7e4f0364b7e468b69a0bbfcc82109263441e189 /home/jiangrui/git/note/software.project/agile/practice/BrowserExampleProject/BrowserExample/build/classes/debug/com/example/browserexample/R.class
+1371796569000 412 99ea060e49086403d9d333207ae42b060b098de9 /home/jiangrui/git/note/software.project/agile/practice/BrowserExampleProject/BrowserExample/build/classes/debug/com/example/browserexample/R$menu.class
+1371796569000 833 c635c91e1576f6366ff780e7c7c329641aaf55d6 /home/jiangrui/git/note/software.project/agile/practice/BrowserExampleProject/BrowserExample/build/classes/debug/com/example/browserexample/MainActivity.class
+1371796569000 455 83a65ffe732ad667dbe5e1b5f46a41633ef05cee /home/jiangrui/git/note/software.project/agile/practice/BrowserExampleProject/BrowserExample/build/classes/debug/com/example/browserexample/R$style.class
+1371796569000 364 21887ccd001ac29e1a84b4e8a6b6adc017f8595f /home/jiangrui/git/note/software.project/agile/practice/BrowserExampleProject/BrowserExample/build/classes/debug/com/example/browserexample/R$attr.class
+1371796569000 431 ea1b1594efb4f56e5a8f2065d062da9e16988447 /home/jiangrui/git/note/software.project/agile/practice/BrowserExampleProject/BrowserExample/build/classes/debug/com/example/browserexample/R$drawable.class

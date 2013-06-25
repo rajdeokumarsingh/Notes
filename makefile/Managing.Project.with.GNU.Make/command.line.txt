@@ -1,0 +1,9 @@
+--debug=v
+    显示make的详细流程
+
+--just-print (-n)
+    显示make的工作流程，但是并不执行命令
+
+--print-data-base (-p)
+    输出所有的隐藏规则和内部变量
+

@@ -1,0 +1,40 @@
+Makefile的规则
+
+target1 target2 ... : prerequisite1 prerequisite2 ...
+    <TAB>command1
+    <TAB>command2
+    <TAB> ...
+
+    target
+        目标文件
+        可以有一个或多个目标
+
+    prerequisite
+        生成target所需要的文件
+
+        可以有零个或多个依赖
+        如果没有依赖时，只有target文件不存在时， 才会执行命令
+
+    command
+        make需要执行的命令（任意shell命令）
+        命令必须要以Tab键开始
+
+make核心思想:
+    make比较targets件和prerequisites文件的修改时间
+    如果prerequisites文件的时间比targets文件的时间新，或者target不存在,
+        make就会执行后续定义的命令
+
+        Unix文件的三种时间：
+            1. atime 最近被读取时间
+            2. ctime 模式被改变的时间
+            3. mtime 最近被修改时间
+
+        Make系统使用mtime
+
+自上而下的结构：
+    默认会检查最上层的数据结构
+        Makefile中的第一条规则是默认目标(default rule)
+
+        删除临时文件的clean目标一般都放在最后
+
+
