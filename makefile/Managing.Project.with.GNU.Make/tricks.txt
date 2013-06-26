@@ -1,0 +1,29 @@
+trick 1:
+
+find:
+	# PWD = $(PWD)
+	# $(findstring jiangrui,$(PWD))
+	# $(findstring home,$(PWD))
+	# $(findstring good,$(PWD))
+
+make find时, #后面的命令会在自己的subshell中执行，并输出结果
+
+
+
+trick 2:
+make -f- goal <<< 'goal:;# $(MAKECMDGOALS)'
+	-f- 表示从stdin读入数据
+	<<<将字符串送到stdin
+
+	等价于
+	echo 'goal:;# $(MAKECMDGOALS)' | make -f- goal
+
+	输出：
+	# goal
+
+trick 3:
+# recursive expand variable
+NO_SPACE_MSG := No space left
+STATE_CODE := NO_SPACE_MSG
+
+$(error $($(STATE_CODE)))

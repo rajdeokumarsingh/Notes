@@ -55,9 +55,9 @@
     $(info $(imd)) # main.o
 
     变量定义解析的规则如下：
+    IMMEDIATE := IMMEDIATE
     IMMEDIATE = DEFERRED
     IMMEDIATE ?= DEFERRED
-    IMMEDIATE := IMMEDIATE
     IMMEDIATE += DEFERRED or IMMEDIATE
     define IMMEDIATE
         DEFERRED
@@ -116,7 +116,6 @@ GNU的make工作时的执行步骤入下
         $(CC) $(CPPFLAGS) -c $< -o $@
 
 变量的来源
-
     文件
         include
 
@@ -161,5 +160,71 @@ GNU的make工作时的执行步骤入下
         unexport DISPLAY    # 避免变量被导出到下一层makefile中
 
 
+if-condition
+    [
+        ifdef variable-name
+        ifndef variable-name
+            # variable-name 不能使用$()括起来
+            # 命令行变量，环境变量会被认为是define的
 
+        ifeq test
+        ifneq test
+            # test 可表示为 "a" "b" , 或(a, b)
+            # ifeq "a" "a"
+            # ifeq $(strip $(OPTION)) "-d"
+    ]
+
+    do something
+else
+    do something else
+endif
+
+include
+    可以include多个文件，shell通配符以及make变量
+    include test.mk
+    include *.mk
+    include $(SUB_MK)
+
+    查找makefile
+        ./
+        “-I”或“--include-dir”命令行参数
+        如果目录<prefix>/include（一般是：/usr/local/bin或/usr/include）存在的话，make也会去找
+
+标准make变量
+    MAKE_VERSION
+        make的版本
+
+    CURDIR
+        make当前的目录
+
+    MAKEFILE_LIST
+        如果a.mk include b.mk, b.mk include c.mk,
+        那么MAKEFILE_LIST等于 "a.mk b.mk c.mk"
+
+    MAKECMDGOALS
+        MAKECMDGOALS记录了命令行参数指定的目标列表
+        如：“make clean”
+
+        make -f- goal <<< 'goal:;# $(MAKECMDGOALS)'
+            -f- 表示从stdin读入数据
+            <<<将字符串送到stdin
+
+            等价于
+            echo 'goal:;# $(MAKECMDGOALS)' | make -f- goal
+
+    .VARIABLES
+        被展开以后是此引用点之前, makefile文件中所定义的所有全局变量列表
+        包括空变量（未赋值的变量）和make的内嵌变量，但不包含目标指定的变量
+
+./example/c03.000.var.type/Makefile
+./example/c03.010.var.cmdline/Makefile
+./example/c03.011.var.env/Makefile
+./example/c03.013.var.include/Makefile
+./example/c03.014.var.sequence/Makefile
+./example/c03.015.var.specific/Makefile
+./example/c03.016.var.standard/Makefile
+./example/c03.020.if/Makefile
+./example/c03.030.include/Makefile
+./example/c03.030.include.reparse/Makefile
+./example/c03.050.macro/Makefile
 

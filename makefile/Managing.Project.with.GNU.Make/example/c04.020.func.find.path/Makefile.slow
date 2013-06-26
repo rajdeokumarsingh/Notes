@@ -1,0 +1,19 @@
+define find-prog
+    $(filter %$1,     \
+        $(wildcard     \
+            $(addsuffix /*,    \
+                $(sort     \
+                    $(subst :, ,    \
+                        $(subst ::,:.:,    \
+                            $(patsubst :%,.:%,    \
+                                $(patsubst %:,%:.,$(PATH))    \
+                            )    \
+                        )    \
+                    )    \
+                )    \
+            )    \
+        )    \
+    )
+endef
+
+$(info find gvim, $(call find-prog,gvim))

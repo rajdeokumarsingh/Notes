@@ -6,14 +6,14 @@
         pattern rule
         使用通配符 wildcard
 
+    静态模式规则：
+        static pattern rule
+
     隐式规则：
         implicit rule
 
         makefile内置的规则
         可以是pattern rule或suffix rule
-
-    静态模式规则：
-        static pattern rule
 
 显示规则：
     example
@@ -236,4 +236,19 @@ vpath
     如果“bar.c”被修改那么“Newprog”将根据“bar.c”被重建。
 
     当同一个目标出现在多个双冒号规则中时，规则的执行顺序和普通规则的执行顺序一样，按照其在Makefile中的书写顺序执行。
+
+./example/c02.010.vpath/Makefile
+./example/c02.020.phony/Makefile
+./example/c02.030.pattern.rule/Makefile
+./example/c02.031.static.pattern.rule/Makefile
+./example/c02.032.suffix.rule/Makefile
+./example/c02.040.auto.deps.header/Makefile
+./example/c02.041.auto.deps.header.optimized/Makefile
+./example/c02.050.intermediate.obj/Makefile
+./example/c02.070.archiv.fast/Makefile
+./example/c02.070.archiv.link/Makefile
+./example/c02.070.archiv/Makefile
+./example/c02.090.help/Makefile
+./example/c02.double.colon/Makefile
+./example/c02.empty.targe/Makefile
 

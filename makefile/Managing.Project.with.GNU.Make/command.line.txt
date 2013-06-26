@@ -7,3 +7,5 @@
 --print-data-base (-p)
     输出所有的隐藏规则和内部变量
 
+--directory=dir-name (-C dir-name)
+    到指定目录中执行make

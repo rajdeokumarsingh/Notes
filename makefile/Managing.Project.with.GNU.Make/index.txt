@@ -3,8 +3,10 @@ Part one: Basic Concept
 ./ch01.basic.rule.txt
 ./ch02.rules.txt
 ./ch03.variable.macro.txt
+./ch04.function.txt
 
 
 
 
 ./command.line.txt
+./tricks.txt
