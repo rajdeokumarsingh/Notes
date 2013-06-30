@@ -1,0 +1,70 @@
+1. 下载superuser
+http://code.google.com/p/superuser/
+
+安装好/system/bin/su和superuser.apk 
+
+修改su.c, 让它调用个"mysh"。下面步骤会制作"mysh"
+256     /* Default exec shell. */
+257     // execlp("/system/bin/sh", "sh", NULL);
+258     execlp("/system/bin/mysh", "mysh", NULL);
+259     fprintf(stderr, "su: exec failed\n");
+260     return 1;
+261 }
+
+
+2.为ash增加log:
+android-4.0.3/system/core/sh/input.c
+
+186 static int
+187 preadfd(void)
+188 {
+...
+256         nr = read(parsefile->fd, buf, BUFSIZ - 8);
+257         TRACE(("pekallsh preadfd: %s\n", buf));
+258 
+
+/system/core/sh/show.c
+376 void
+377 opentrace(void)
+378 {
+379     char s[100];
+...
+// 将log输出到/tmp/trace
+403     // scopy("./trace", s);
+404     scopy("/tmp/trace", s);
+
+3.重新编译ash, 添加DEBUG命令行参数
+make -j4 ash DEBUG=2
+
+4. 将编译好的ash放到 "/system/bin/mysh"
+adb push out/target/product/generic/system/bin/ash /system/bin/mysh
+
+这之后通过/system/bin/su执行的脚本命令，都可以在/tmp/trace中看到。
+
+
+如百度手机助手在后台自动安装apk的命令行如下：
+第一条命令：
+cmdloop(1) called
+pekallsh preadfd: export LD_LIBRARY_PATH=/vendor/lib:/system/lib
+pekallsh preadfd: pm install -r '/mnt/sdcard/baidu/AppSearch/downloads/财神有道_高清版__v_2_09.apk'
+
+第二条命令：
+cmdloop(1) called
+pekallsh preadfd: # Script to start "pm" on the device, which has a very rudimentary
+# shell.
+#
+base=/system
+export CLASSPATH=$base/framework/pm.jar
+exec app_process $base/bin com.android.commands.pm.Pm "$@"
+pekallsh preadfd: exit
+
+
+LBE安全大师的root流程
+cmdloop(1) called
+pekallsh preadfd: /data/data/com.lbe.security/app_hips/bootstrap com.lbe.security
+
+pekallsh preadfd: exit
+
+# make -j4 strace可编译出strace
+# arm-eabi-objdump -d bootstrap 
+

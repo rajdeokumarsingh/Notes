@@ -1,0 +1,4 @@
+./c05.000.command.basic/a.mk
+./c05.000.command.basic/Makefile
+./c05.000.command.eval/Makefile
+
