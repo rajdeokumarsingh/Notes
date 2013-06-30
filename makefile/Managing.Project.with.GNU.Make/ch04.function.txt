@@ -1,6 +1,6 @@
 定义函数：
 define func1
-    @echo func1, args: $1 $2
+    @echo func1, args: $1 $2 # $0是函数的名称
 endef
 
 调用函数:
@@ -12,10 +12,10 @@ all:
         参数以逗号分隔开
         参数中间的空格会被保留
 
-./example/c04.000.func.basic/Makefile
-./example/c04.010.func.filename/Makefile
-./example/c04.010.func.misc/Makefile
-./example/c04.010.func.string/Makefile
-./example/c04.020.func.find.path/Makefile
-./example/c04.030.control/Makefile
-
+./c04.000.func.basic/Makefile
+./c04.010.func.filename/Makefile
+./c04.010.func.misc/Makefile
+./c04.010.func.string/Makefile
+./c04.020.func.find.path/Makefile
+./c04.030.control/Makefile
+./c04.040.eval/Makefile

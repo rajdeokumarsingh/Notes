@@ -16,5 +16,5 @@ $(binaries) : $(src)
 
 .PHONY : clean
 clean :
-	-@rm -f $(binaries)
+	rm -f $(binaries)
 

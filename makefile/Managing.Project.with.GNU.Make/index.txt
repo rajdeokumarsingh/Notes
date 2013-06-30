@@ -4,9 +4,11 @@ Part one: Basic Concept
 ./ch02.rules.txt
 ./ch03.variable.macro.txt
 ./ch04.function.txt
+./ch05.command.txt
 
 
 
 
 ./command.line.txt
 ./tricks.txt
+./error.txt

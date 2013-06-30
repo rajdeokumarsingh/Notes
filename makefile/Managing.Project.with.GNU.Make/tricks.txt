@@ -8,8 +8,6 @@ find:
 
 make find时, #后面的命令会在自己的subshell中执行，并输出结果
 
-
-
 trick 2:
 make -f- goal <<< 'goal:;# $(MAKECMDGOALS)'
 	-f- 表示从stdin读入数据
@@ -27,3 +25,12 @@ NO_SPACE_MSG := No space left
 STATE_CODE := NO_SPACE_MSG
 
 $(error $($(STATE_CODE)))
+
+trick 4:
+输出顺序是info在最前面
+all:
+	@echo something
+	@echo something more ...
+	$(info make function in command mode, output before something)
+
+

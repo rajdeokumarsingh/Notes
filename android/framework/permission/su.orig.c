@@ -49,6 +49,7 @@ int main(int argc, char **argv)
     if(argc < 2) {
         uid = gid = 0;
     } else {
+        // su root
         pw = getpwnam(argv[1]);
 
         if(pw == 0) {
@@ -74,6 +75,7 @@ int main(int argc, char **argv)
     }
 
     /* User specified command for exec. */
+    // su 1000 ls
     if (argc == 3 ) {
         if (execlp(argv[2], argv[2], NULL) < 0) {
             fprintf(stderr, "su: exec failed for %s Error:%s\n", argv[2],
@@ -93,6 +95,7 @@ int main(int argc, char **argv)
     }
 
     /* Default exec shell. */
+    // su
     execlp("/system/bin/sh", "sh", NULL);
 
     fprintf(stderr, "su: exec failed\n");

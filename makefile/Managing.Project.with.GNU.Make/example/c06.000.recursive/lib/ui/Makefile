@@ -1,0 +1,3 @@
+.PHONY: libui
+libui :
+	@touch $@

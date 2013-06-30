@@ -1,3 +1,7 @@
+hack tools:
+    http://java.decompiler.free.fr/?q=jdgui
+    http://code.google.com/p/dex2jar/downloads/list
+
 clues:
     ./sdk.security.permissions.java
         file:///home/jiangrui/android/android-sdk/docs/guide/topics/security/security.html
@@ -21,4 +25,4 @@ clues:
         ./su.orig.c
         ./su.superuser.c
 
-    
+

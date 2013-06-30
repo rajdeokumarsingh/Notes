@@ -15,6 +15,7 @@ Android原生su分析:
 
     /system/xbin/su
     -rwsr-xr-x root     root         5432 2013-01-08 15:26 su
+    06755
     注意上面权限的s位(set user ID upon execution)
 
 superuser分析：
