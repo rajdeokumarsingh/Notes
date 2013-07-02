@@ -1,0 +1,26 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="android.sdk.example">
+
+    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="16"/>
+
+    <uses-permission android:name="android.sdk.example.permission.READ"/>
+    <uses-permission android:name="android.sdk.example.permission.WRITE"/>
+
+    <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@style/AppTheme">
+
+        <uses-library android:name="android.test.runner"/>
+
+        <activity android:label="@string/app_name" android:name="android.sdk.example.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="android.sdk.example.PrefActivity"/>
+
+        <provider android:authorities="android.sdk.example.provider" android:exported="true" android:multiprocess="true" android:name="android.sdk.example.provider.SdkExampleProvider" android:readPermission="android.sdk.example.permission.READ" android:writePermission="android.sdk.example.permission.WRITE">
+        </provider>
+    </application>
+
+    <instrumentation android:label="Tests for SDK Example Provider" android:name="android.test.InstrumentationTestRunner" android:targetPackage="android.sdk.example"/>
+</manifest>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SdkExample005SaveData/SdkExample005SaveData.iml" filepath="$PROJECT_DIR$/SdkExample005SaveData/SdkExample005SaveData.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SdkExample005SaveDataProject.iml" filepath="$PROJECT_DIR$/SdkExample005SaveDataProject.iml" />
+    </modules>
+  </component>
+</project>
+

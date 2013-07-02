@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" >SdkExample005SaveData
+    </string>
+    <string name="action_settings" >Settings
+    </string>
+    <string name="description" >Example of Saving Data</string>
+
+    <string name="btn_pref" >Preference Activity</string>
+    <string name="btn_file" >File Activity</string>
+    <string name="btn_db" >DB Activity</string>
+
+    <string name="edit_txt_hint" >Please input</string>
+    <string name="edit_txt_save" >Save Preference</string>
+
+    <string name="preference_file_key">preference file key</string>
+    <string name="pref_key_name">name</string>
+    <string name="pref_key_score">score</string>
+
+    <string name="player_name">Player Name: </string>
+    <string name="player_score">Player Score: </string>
+
+    <string name="best_player">Best Player: </string>
+    <string name="best_score">Best Score:</string>
+    <string name="data_saved">Data saved.</string>
+</resources>

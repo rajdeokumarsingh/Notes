@@ -12,10 +12,10 @@ all:
         参数以逗号分隔开
         参数中间的空格会被保留
 
-./c04.000.func.basic/Makefile
-./c04.010.func.filename/Makefile
-./c04.010.func.misc/Makefile
-./c04.010.func.string/Makefile
-./c04.020.func.find.path/Makefile
-./c04.030.control/Makefile
-./c04.040.eval/Makefile
+./examples/c04.000.func.basic/Makefile
+./examples/c04.010.func.filename/Makefile
+./examples/c04.010.func.misc/Makefile
+./examples/c04.010.func.string/Makefile
+./examples/c04.020.func.find.path/Makefile
+./examples/c04.030.control/Makefile
+./examples/c04.040.eval/Makefile

@@ -5,6 +5,8 @@ Part one: Basic Concept
 ./ch03.variable.macro.txt
 ./ch04.function.txt
 ./ch05.command.txt
+./ch06.big.project.txt
+./ch08.cpp.project.txt
 
 
 

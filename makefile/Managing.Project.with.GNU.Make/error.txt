@@ -34,3 +34,15 @@ source :=
     mv $@.tmp $@
 
 
+错误3: 为多个对象添加前缀
+wrong:
+deps += $(out_dir)/$(notdir $(subst .cpp,.d,$(local_src)))
+
+right:
+deps += $(addprefix $(out_dir)/,$(notdir $(subst .cpp,.d,$(local_src))))
+
+
+
+
+
+

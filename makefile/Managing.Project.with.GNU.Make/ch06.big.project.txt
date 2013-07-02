@@ -1,0 +1,9 @@
+./example/c06.000.recursive/Makefile
+    ./example/c06.000.recursive/app/player/Makefile
+    ./example/c06.000.recursive/lib/codec/Makefile
+    ./example/c06.000.recursive/lib/db/Makefile
+    ./example/c06.000.recursive/lib/ui/Makefile
+
+./example/c06.010.non_recursive/Makefile
+./example/c06.011.non_recursive2/Makefile
+
