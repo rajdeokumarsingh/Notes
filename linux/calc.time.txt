@@ -1,0 +1,5 @@
+测量命令的时间
+
+time make clean
+time make -j8
+time cp android ~/src/

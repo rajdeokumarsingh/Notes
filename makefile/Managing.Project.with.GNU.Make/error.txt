@@ -44,5 +44,14 @@ deps += $(addprefix $(out_dir)/,$(notdir $(subst .cpp,.d,$(local_src))))
 
 
 
+错误4:
+# $(call file-exists,filename)
+file-exists := $(wildcard $1)
+
+定义函数时，需要使用defer形式
+# $(call file-exists,filename)
+file-exists = $(wildcard $1)
+
+
 
 

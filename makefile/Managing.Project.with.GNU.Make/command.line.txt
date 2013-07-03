@@ -19,3 +19,7 @@
 --ignore-errors (-i)
 
 --keep-going (-k)
+
+--load-average (-l) float
+    make -l 3.5
+

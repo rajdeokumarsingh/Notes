@@ -6,6 +6,8 @@ Part one: Basic Concept
 ./ch04.function.txt
 ./ch05.command.txt
 ./ch06.big.project.txt
+
+// todo:
 ./ch08.cpp.project.txt
 
 

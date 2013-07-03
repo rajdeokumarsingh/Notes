@@ -1,11 +1,3 @@
-var1 := hello world
-var2 := var1
-
-$(info $($(var2)))
-
-$(eval source := a.c b.c)
-
-
 # $(call generate-files, prefix, file-list)
 define generate-files
 	$1_src := $(filter %.c,$2)
