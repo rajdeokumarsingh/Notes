@@ -5,6 +5,7 @@ find:
 	# $(findstring jiangrui,$(PWD))
 	# $(findstring home,$(PWD))
 	# $(findstring good,$(PWD))
+	# $(filter jiang,$(PWD)) 
 
 make find时, #后面的命令会在自己的subshell中执行，并输出结果
 

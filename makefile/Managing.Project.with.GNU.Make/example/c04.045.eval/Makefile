@@ -15,7 +15,7 @@ all: $(PROGRAMS)
 
 #$(1): $$($(1)_OBJS) $$($(1)_OBJS:%.o=%.h)
 define PROGRAM_template
-$(1): $($(1)_OBJS) $($(1)_OBJS:%.o=%.h)
+$(1): $$($(1)_OBJS) $$($(1)_OBJS:%.o=%.h)
 	$(CC) $$^ -o $$@
 endef
 

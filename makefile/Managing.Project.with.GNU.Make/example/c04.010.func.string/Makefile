@@ -2,14 +2,18 @@ obj = foo.c bar.c x.cpp y.l a.o b.p d.o .o
 
 # % 等价于 .*
 $(info test filter...)
+$(info origin, $(obj))
 $(info filter .o, $(filter %.o,$(obj)))
+$(info filter .o .c, $(filter %.o %c,$(obj)))
 $(info )
 
 # filter 是全字符串匹配的， 如/usr/bin/vim, %vim可匹配，但是vim却不能匹配
 # XXX 文本中仅仅只能包括一个%， 其他的%被看成是文本符号 literal character
 
 $(info test filter-out...)
+$(info origin, $(obj))
 $(info filter-out .o, $(filter-out %.o,$(obj)))
+$(info filter-out .o .l, $(filter-out %.o %.l,$(obj)))
 $(info )
 
 $(info test findstring...)

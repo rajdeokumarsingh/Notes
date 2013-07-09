@@ -10,9 +10,6 @@ Part one: Basic Concept
 // todo:
 ./ch08.cpp.project.txt
 
-
-
-
 ./command.line.txt
 ./tricks.txt
 ./error.txt
