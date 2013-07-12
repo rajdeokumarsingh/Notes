@@ -1,0 +1,120 @@
+XML 的属性值须加引号, 单双引号都可以
+    <!-- wrong -->
+    <note date=08/08/2008>
+        ...
+    </note> 
+
+    <!-- correct -->
+    <note date="08/08/2008">
+        ...
+    </note> 
+
+实体引用
+    <!-- wrong -->
+    <message>if salary < 1000 then</message>
+
+    <!-- correct -->
+    <message>if salary &lt; 1000 then</message>
+
+    在 XML 中，有 5 个预定义的实体引用：
+        &lt;    <   小于
+        &gt;    >   大于
+        &amp;   &   和号
+        &apos;  '   单引号
+        &quot;  "   引号
+
+XML 以 LF 存储换行
+    windows         回车符 (CR) 和换行符 (LF)
+    unix            LF
+    Mac             CR
+
+XML 元素
+    从（且包括）开始标签直到（且包括）结束标签的部分
+
+    元素可包含
+        其他元素
+        文本
+        或者两者的混合物
+
+        属性
+
+最佳命名习惯
+    名称应当比较简短，比如：<book_title>
+
+    避免 "-" 字符, "first-name", NG
+    避免 "." 字符, "first.name", NG
+    避免 ":" 字符
+
+XML 元素 vs. 属性
+    在 XML 中，您应该尽量避免使用属性。如果信息感觉起来很像数据，那么请使用子元素吧
+
+    好的实践:
+    
+    <!-- NG -->
+    <note date="08/08/2008">
+    <to>George</to>
+    <from>John</from>
+    <heading>Reminder</heading>
+    <body>Don't forget the meeting!</body>
+    </note> 
+
+    <!-- NG -->
+    <note>
+    <date>08/08/2008</date>
+    <to>George</to>
+    <from>John</from>
+    <heading>Reminder</heading>
+    <body>Don't forget the meeting!</body>
+    </note> 
+
+    <!-- GOOD -->
+    <note>
+    <date>
+        <day>08</day>
+        <month>08</month>
+        <year>2008</year>
+    </date>
+    <to>George</to>
+    <from>John</from>
+    <heading>Reminder</heading>
+    <body>Don't forget the meeting!</body>
+    </note>
+
+避免 XML 属性？
+
+    因使用属性而引起的一些问题：
+
+        属性无法包含多重的值（元素可以）
+        属性无法描述树结构（元素可以）
+        属性不易扩展（为未来的变化）
+        属性难以阅读和维护
+
+        请尽量使用元素来描述数据。而仅仅使用属性来提供与数据无关的信息。
+
+        <!-- BAD -->
+        <note day="08" month="08" year="2008"
+            to="George" from="John" heading="Reminder" 
+            body="Don't forget the meeting!">
+        </note>
+
+针对元数据的 XML 属性
+
+    <messages>
+        <note id="501">
+            <to>George</to>
+            <from>John</from>
+            <heading>Reminder</heading>
+            <body>Don't forget the meeting!</body>
+        </note>
+        <note id="502">
+            <to>John</to>
+            <from>George</from>
+            <heading>Re: Reminder</heading>
+            <body>I will not</body>
+        </note> 
+    </messages>
+
+    ID 仅仅是一个标识符，用于标识不同的便签。它并不是便签数据的组成部分
+
+    元数据（有关数据的数据）应当存储为属性，而数据本身应当存储为元素
+

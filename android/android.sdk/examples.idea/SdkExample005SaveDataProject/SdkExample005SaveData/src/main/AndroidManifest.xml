@@ -8,8 +8,18 @@
         android:minSdkVersion="7"
         android:targetSdkVersion="16" />
 
+    <permission
+            android:name="android.sdk.example.permission.READ"
+            android:protectionLevel="dangerous" />
+    <permission
+            android:name="android.sdk.example.permission.WRITE"
+            android:protectionLevel="dangerous" />
+
     <uses-permission android:name="android.sdk.example.permission.READ" />
     <uses-permission android:name="android.sdk.example.permission.WRITE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"

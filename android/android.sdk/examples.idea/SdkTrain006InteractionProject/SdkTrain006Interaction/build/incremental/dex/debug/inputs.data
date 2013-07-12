@@ -1,0 +1,19 @@
+# incremental data. DO NOT EDIT.
+# format is <lastModified> <length> <SHA-1> <path>
+# Encoding is UTF-8
+1373523827000 377 fe70a1de859baf9c2f40a12d8ca61bb7425497ed /home/jiangrui/git/note/android/android.sdk/examples.idea/SdkTrain006InteractionProject/SdkTrain006Interaction/build/classes/debug/com/example/sdktrain006interaction/BuildConfig.class
+1373526912000 1563 271e85084e20453d75c91d03012218d57ac440f0 /home/jiangrui/git/note/android/android.sdk/examples.idea/SdkTrain006InteractionProject/SdkTrain006Interaction/build/classes/debug/com/example/sdktrain006interaction/MainActivity$4.class
+1373523827000 509 59b99053a460c1ccf07aa8addf048b3c9ca23776 /home/jiangrui/git/note/android/android.sdk/examples.idea/SdkTrain006InteractionProject/SdkTrain006Interaction/build/classes/debug/com/example/sdktrain006interaction/R$dimen.class
+1373526912000 2433 273b0434abdd75c6fef83831a2511157b262505e /home/jiangrui/git/note/android/android.sdk/examples.idea/SdkTrain006InteractionProject/SdkTrain006Interaction/build/classes/debug/com/example/sdktrain006interaction/MainActivity$3.class
+1373523827000 388 a2f6ab96dee061003230f491e6272bdc912326a0 /home/jiangrui/git/note/android/android.sdk/examples.idea/SdkTrain006InteractionProject/SdkTrain006Interaction/build/classes/debug/com/example/sdktrain006interaction/R$attr.class
+1373526912000 1777 6e81acad75025dbf38a40f4e991a507184ab8ec6 /home/jiangrui/git/note/android/android.sdk/examples.idea/SdkTrain006InteractionProject/SdkTrain006Interaction/build/classes/debug/com/example/sdktrain006interaction/MainActivity.class
+1373523827000 455 da664498a54157405b73d3124678d3d1147c150d /home/jiangrui/git/note/android/android.sdk/examples.idea/SdkTrain006InteractionProject/SdkTrain006Interaction/build/classes/debug/com/example/sdktrain006interaction/R$drawable.class
+1373525561000 436 f25aff079ea87702e0577b0ca6a7f84beb62ee68 /home/jiangrui/git/note/android/android.sdk/examples.idea/SdkTrain006InteractionProject/SdkTrain006Interaction/build/classes/debug/com/example/sdktrain006interaction/R$menu.class
+1373525561000 479 3f41d5a627ecb464f5a2548e31b0b8272f9747e4 /home/jiangrui/git/note/android/android.sdk/examples.idea/SdkTrain006InteractionProject/SdkTrain006Interaction/build/classes/debug/com/example/sdktrain006interaction/R$style.class
+1373525561000 837 20594c1cbf29f778b8c612fc9c75b6c441810791 /home/jiangrui/git/note/android/android.sdk/examples.idea/SdkTrain006InteractionProject/SdkTrain006Interaction/build/classes/debug/com/example/sdktrain006interaction/R.class
+1373526525000 1238 186cd2645e6712b60182b210400e8b60a8656cf4 /home/jiangrui/git/note/android/android.sdk/examples.idea/SdkTrain006InteractionProject/SdkTrain006Interaction/build/classes/debug/com/example/sdktrain006interaction/MainActivity$1.class
+1373526525000 1292 9869da97a3e0c65f8d53c2b739df6307c4d1e22c /home/jiangrui/git/note/android/android.sdk/examples.idea/SdkTrain006InteractionProject/SdkTrain006Interaction/build/classes/debug/com/example/sdktrain006interaction/MainActivity$2.class
+1373523809000 484258 bd6479f5dd592790607e0504e66e0f31c2b4d308 /home/jiangrui/git/note/android/android.sdk/examples.idea/SdkTrain006InteractionProject/SdkTrain006Interaction/libs/android-support-v4.jar
+1373525561000 520 33a0365c5ab28605ac5cdfb99871da6ab47780d1 /home/jiangrui/git/note/android/android.sdk/examples.idea/SdkTrain006InteractionProject/SdkTrain006Interaction/build/classes/debug/com/example/sdktrain006interaction/R$string.class
+1373525561000 451 8495f258c08d26f5fdd499a0986ddf9726d4f1f5 /home/jiangrui/git/note/android/android.sdk/examples.idea/SdkTrain006InteractionProject/SdkTrain006Interaction/build/classes/debug/com/example/sdktrain006interaction/R$layout.class
+1373525561000 605 483307b23754d0be058fcb4350628f45618b3d8a /home/jiangrui/git/note/android/android.sdk/examples.idea/SdkTrain006InteractionProject/SdkTrain006Interaction/build/classes/debug/com/example/sdktrain006interaction/R$id.class

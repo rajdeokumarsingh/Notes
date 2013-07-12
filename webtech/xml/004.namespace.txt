@@ -1,0 +1,64 @@
+命名冲突
+
+    这两个 XML 文档被一起使用，由于两个文档都包含带有不同内容和定义的 <table> 元素，就会发生命名冲突。 
+    <table>
+        <tr>
+            <td>Apples</td>
+            <td>Bananas</td>
+        </tr>
+    </table>
+
+
+    <table>
+        <name>African Coffee Table</name>
+        <width>80</width>
+        <length>120</length>
+    </table>
+
+使用前缀来避免命名冲突
+    <h:table>
+        <h:tr>
+        <h:td>Apples</h:td>
+        <h:td>Bananas</h:td>
+        </h:tr>
+    </h:table>
+
+    <f:table>
+        <f:name>African Coffee Table</f:name>
+        <f:width>80</f:width>
+        <f:length>120</f:length>
+    </f:table>
+
+使用命名空间（Namespaces）
+    <h:table xmlns:h="http://www.w3.org/TR/html4/">
+        <h:tr>
+        <h:td>Apples</h:td>
+        <h:td>Bananas</h:td>
+        </h:tr>
+    </h:table>
+
+    <f:table xmlns:f="http://www.w3school.com.cn/furniture">
+        <f:name>African Coffee Table</f:name>
+        <f:width>80</f:width>
+        <f:length>120</f:length>
+    </f:table>
+
+XML Namespace (xmlns) 属性
+    XML 命名空间属性被放置于元素的开始标签之中
+
+默认的命名空间（Default Namespaces）
+    为元素定义默认的命名空间可以让我们省去在所有的子元素中使用前缀的工作。
+    xmlns="namespaceURI"
+
+    <table xmlns="http://www.w3.org/TR/html4/">
+        <tr>
+            <td>Apples</td>
+            <td>Bananas</td>
+        </tr>
+    </table>
+
+    <table xmlns="http://www.w3school.com.cn/furniture">
+        <name>African Coffee Table</name>
+        <width>80</width>
+        <length>120</length>
+    </table>

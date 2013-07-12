@@ -6,6 +6,8 @@ ndk-stack -sym out/target/product/maguro/symbols/system/lib/ -dump /tmp/gg.txt
 
 adb shell monkey -s 0 -p com.android.browser --pct-touch 30 --throttle 1000 -v 150000 --ignore-crashes --monitor-native-crashes
 
+"am broadcast -a android.intent.action.BOOT_COMPLETED" 
+
 ######################################################################
 
 media server
@@ -83,6 +85,7 @@ checking connectivity:
     busybox route
     getprop
 
+    ping ...
     tcpdump
     dumpsys connectivity
     dumpsys power

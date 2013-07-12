@@ -1,0 +1,126 @@
+使用cat输入
+    cat > /tmp/test.sh
+    who|wc -l
+    ^D
+
+shell执行一个脚本时，会创建一个进程，然后在新的进程中执行脚本
+
+脚本的开头
+    #! /bin/csh -f
+    #! /bin/awk -f
+
+    由内核来解析这一行
+
+    一般都以下面行为开头
+    #! /bin/sh
+
+        注意去掉ending space
+
+命令的格式
+    command [short-option] [long-option]
+        short-option:
+            ls -l text.cpp
+
+        long-option:
+            patch --verbose
+
+分号
+    在同一行中执行多条命令
+
+&
+    在后台执行命令
+
+命令的分类：
+    内建命令
+        cd, read, test, echo, printf
+
+    shell函数
+
+    外部命令
+        /bin/ls, /bin/awk
+        执行过程：
+            
+            1. Shell进程fork一个新的子进程
+            2. 在新的进程中，从PATH变量中找到执行的命令的绝对路径
+                awk --> /usr/bin/awk
+            3. 在新的进程中, exec找到的命令
+            4. Shell进程等待命令结束 
+            5. 命令执行完毕后，shell从终端/脚本中读取下一条命令继续执行
+
+
+变量定义：
+
+    var=value        
+        注意等号前后都没有空格 
+
+变量使用：
+    echo $var
+
+    echo -n test        # 输出后不换行
+
+
+printf "Hello world!\n"
+printf "%s, %s\n" hello world 
+
+
+基本I/O重定向
+    $cat
+    test
+    test 将标准输入发送到标准输出
+    good
+    good
+    ^D
+
+    program < file # 将progame的标准输入修改为file
+    program > file # 将progame的标准输出修改为file
+    program >> file # 将progame的标准输出修改为file, 附加到文件尾部
+
+        tr -d '\r' < dos-format.txt         # 删除dos-format.txt中的carriage return
+        tr -d '\r' < dos-format.txt > unix-format
+
+    以 | 建立管道
+        progame1 | progame2  # 将program1的输出作为program2的输入
+
+            tr -d '\r' < dos-format.txt | sort > unix-file.txt
+
+特殊文件/dev/null与/dev/tty
+
+/dev/null
+    输入到该文件的数据都被丢掉
+
+    检查推出状态
+    if grep pattern file > /dev/null
+    then
+        ...
+    else
+        ...
+    fi
+
+    # index.txt中包括shell
+    $ grep shell index.txt  > /dev/null
+    $ echo $? # 0
+
+    # index.txt中不包括testte
+    $ grep testte index.txt > /dev/null
+    $ echo $? # 1
+
+
+    stty -echo # 关闭命令行的echo功能
+
+命令查找
+    $PATH
+
+shell脚本的参数
+    $0                  脚本名称
+    $1 $2 ... ${10}     参数名称
+    $#                  参数个数
+
+Locale环境变量
+    LANG            未设置任何LC_xxx变量时使用的默认值
+    LC_ALL          用来覆盖其他所有LC_xxx变量
+                    强制设置单一的locale
+
+# 查看系统中支持的语言
+locale -a 
+
+

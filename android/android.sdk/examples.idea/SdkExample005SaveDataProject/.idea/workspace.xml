@@ -20,13 +20,15 @@
     <file path="/PrefActivity.java" changelist="3fa618b1-034d-42c3-9641-b3600a35dd6e" time="1372649330804" ignored="false" />
     <file path="/Dummy.txt" changelist="3fa618b1-034d-42c3-9641-b3600a35dd6e" time="1372646656753" ignored="false" />
     <file path="/prefence_activity.xml" changelist="3fa618b1-034d-42c3-9641-b3600a35dd6e" time="1372648415785" ignored="false" />
-    <file path="/fragment.java" changelist="3fa618b1-034d-42c3-9641-b3600a35dd6e" time="1372662658940" ignored="false" />
+    <file path="/fragment.java" changelist="3fa618b1-034d-42c3-9641-b3600a35dd6e" time="1373514727937" ignored="false" />
     <file path="$PROJECT_DIR$/SdkExample005SaveData/build/res/all/debug/layout/activity_main.xml" changelist="3fa618b1-034d-42c3-9641-b3600a35dd6e" time="1372648805441" ignored="false" />
     <file path="/SdkExampleProvider.java" changelist="3fa618b1-034d-42c3-9641-b3600a35dd6e" time="1372674792423" ignored="false" />
     <file path="/ProviderConstants.java" changelist="3fa618b1-034d-42c3-9641-b3600a35dd6e" time="1372667983233" ignored="false" />
     <file path="/SdkExampleProviderTest.java" changelist="3fa618b1-034d-42c3-9641-b3600a35dd6e" time="1372668213777" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="3fa618b1-034d-42c3-9641-b3600a35dd6e" time="1372668200322" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="3fa618b1-034d-42c3-9641-b3600a35dd6e" time="1373514936624" ignored="false" />
     <file path="/a.dummy" changelist="3fa618b1-034d-42c3-9641-b3600a35dd6e" time="1372674748999" ignored="false" />
+    <file path="/FileOperation.java" changelist="3fa618b1-034d-42c3-9641-b3600a35dd6e" time="1373515091392" ignored="false" />
+    <file path="/FileOperationTest.java" changelist="3fa618b1-034d-42c3-9641-b3600a35dd6e" time="1373523500971" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +43,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -78,6 +79,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -90,10 +92,8 @@
       <file leaf-file-name="SdkExampleProvider.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SdkExample005SaveData/src/main/java/android/sdk/example/provider/SdkExampleProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="18" selection-start="4010" selection-end="4010" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="24" column="11" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -102,20 +102,16 @@
         <entry file="file://$PROJECT_DIR$/SdkExample005SaveData/src/main/java/android/sdk/example/provider/ProviderConstants.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="12" column="31" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SdkExampleProviderTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SdkExampleProviderTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SdkExample005SaveData/src/main/java/android/sdk/example/test/SdkExampleProviderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="31" selection-start="3947" selection-end="3947" vertical-scroll-proportion="0.42105263">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="98" column="0" selection-start="4342" selection-end="4342" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,7 +119,56 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SdkExample005SaveData/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="66" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0">
+            <state line="20" column="4" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrefActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SdkExample005SaveData/src/main/java/android/sdk/example/PrefActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="0" selection-start="675" selection-end="675" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SdkExample005SaveData/src/main/java/android/sdk/example/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="24" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileOperationTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SdkExample005SaveData/src/main/java/android/sdk/example/test/FileOperationTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="67" column="48" selection-start="2558" selection-end="2558" vertical-scroll-proportion="2.172355">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Context.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/content/Context.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="119" column="28" selection-start="6029" selection-end="6029" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Environment.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/os/Environment.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="22" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -146,18 +191,20 @@
         <option value="$PROJECT_DIR$/SdkExample005SaveData/build/source/r/debug/android/sdk/example/R.java" />
         <option value="$PROJECT_DIR$/SdkExample005SaveData/src/main/java/android/sdk/example/PrefActivity.java" />
         <option value="$PROJECT_DIR$/SdkExample005SaveData/src/main/java/test/SdkExampleProviderTest.java" />
-        <option value="$PROJECT_DIR$/SdkExample005SaveData/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/SdkExample005SaveData/src/main/java/android/sdk/example/provider/ProviderConstants.java" />
         <option value="$PROJECT_DIR$/SdkExample005SaveData/src/main/java/android/sdk/example/provider/SdkExampleProvider.java" />
         <option value="$PROJECT_DIR$/SdkExample005SaveData/src/main/java/android/sdk/example/test/SdkExampleProviderTest.java" />
+        <option value="$PROJECT_DIR$/SdkExample005SaveData/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/SdkExample005SaveData/src/main/java/android/sdk/example/test/FileOperation.java" />
+        <option value="$PROJECT_DIR$/SdkExample005SaveData/src/main/java/android/sdk/example/test/FileOperationTest.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
-    <option name="width" value="1315" />
-    <option name="height" value="728" />
+    <option name="x" value="64" />
+    <option name="y" value="-7" />
+    <option name="width" value="1303" />
+    <option name="height" value="776" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -194,116 +241,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SdkExample005SaveData" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SdkExample005SaveDataProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SdkExample005SaveData" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SdkExample005SaveDataProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SdkExample005SaveData" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SdkExample005SaveData" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SdkExample005SaveDataProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SdkExample005SaveData" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SdkExample005SaveData" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SdkExample005SaveDataProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SdkExample005SaveData" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="example" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SdkExample005SaveData" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SdkExample005SaveDataProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SdkExample005SaveData" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="example" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="provider" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -316,107 +253,111 @@
     <property name="OverrideImplement.combined" value="true" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="44AACE63883F8807B236233D6029169" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="MyAvd0" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
+    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="android.test.AndroidTestCase" />
-      <recent name="" />
-    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="android.sdk.example.test" />
       <recent name="test" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="android.test.AndroidTestCase" />
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager" selected="Android Tests.SdkExampleProviderTest">
-    <configuration default="false" name="PrefActivity" type="AndroidRunConfigurationType" factoryName="Android Application" temporary="true">
-      <module name="SdkExample005SaveData" />
-      <option name="ACTIVITY_CLASS" value="android.sdk.example.PrefActivity" />
-      <option name="MODE" value="specific_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="SdkExampleProviderTest.testQuery" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true">
-      <module name="SdkExample005SaveData" />
-      <option name="TESTING_TYPE" value="3" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="testQuery" />
-      <option name="CLASS_NAME" value="android.sdk.example.test.SdkExampleProviderTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <RunnerSettings RunnerId="AndroidDebugRunner" />
-      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="SdkExampleProviderTest.testUpdate" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true">
-      <module name="SdkExample005SaveData" />
-      <option name="TESTING_TYPE" value="3" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="testUpdate" />
-      <option name="CLASS_NAME" value="android.sdk.example.test.SdkExampleProviderTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <RunnerSettings RunnerId="AndroidDebugRunner" />
-      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="SdkExampleProviderTest.test005Update" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true">
-      <module name="SdkExample005SaveData" />
-      <option name="TESTING_TYPE" value="3" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="test005Update" />
-      <option name="CLASS_NAME" value="android.sdk.example.test.SdkExampleProviderTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <RunnerSettings RunnerId="AndroidDebugRunner" />
-      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="SdkExampleProviderTest" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true">
+  <component name="RunManager" selected="Android Tests.FileOperationTest.testWriteInternalFile">
+    <configuration default="false" name="FileOperationTest" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true">
       <module name="SdkExample005SaveData" />
       <option name="TESTING_TYPE" value="2" />
       <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
       <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="android.sdk.example.test.SdkExampleProviderTest" />
+      <option name="CLASS_NAME" value="android.sdk.example.test.FileOperationTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <RunnerSettings RunnerId="AndroidDebugRunner" />
+      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="FileOperationTest.testCreateTempFile" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true">
+      <module name="SdkExample005SaveData" />
+      <option name="TESTING_TYPE" value="3" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="testCreateTempFile" />
+      <option name="CLASS_NAME" value="android.sdk.example.test.FileOperationTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <RunnerSettings RunnerId="AndroidDebugRunner" />
+      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="FileOperationTest.testExtStorageState" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true">
+      <module name="SdkExample005SaveData" />
+      <option name="TESTING_TYPE" value="3" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="testExtStorageState" />
+      <option name="CLASS_NAME" value="android.sdk.example.test.FileOperationTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <RunnerSettings RunnerId="AndroidDebugRunner" />
+      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="FileOperationTest.testInternalStorage" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true">
+      <module name="SdkExample005SaveData" />
+      <option name="TESTING_TYPE" value="3" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="testInternalStorage" />
+      <option name="CLASS_NAME" value="android.sdk.example.test.FileOperationTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <RunnerSettings RunnerId="AndroidDebugRunner" />
+      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="FileOperationTest.testWriteInternalFile" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true">
+      <module name="SdkExample005SaveData" />
+      <option name="TESTING_TYPE" value="3" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="testWriteInternalFile" />
+      <option name="CLASS_NAME" value="android.sdk.example.test.FileOperationTest" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="PREFERRED_AVD" value="" />
@@ -540,19 +481,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Android Application.SdkExample005SaveData" />
-      <item index="1" class="java.lang.String" itemvalue="Android Application.PrefActivity" />
-      <item index="2" class="java.lang.String" itemvalue="Android Tests.SdkExampleProviderTest.testQuery" />
-      <item index="3" class="java.lang.String" itemvalue="Android Tests.SdkExampleProviderTest.testUpdate" />
-      <item index="4" class="java.lang.String" itemvalue="Android Tests.SdkExampleProviderTest.test005Update" />
-      <item index="5" class="java.lang.String" itemvalue="Android Tests.SdkExampleProviderTest" />
+      <item index="1" class="java.lang.String" itemvalue="Android Tests.FileOperationTest" />
+      <item index="2" class="java.lang.String" itemvalue="Android Tests.FileOperationTest.testCreateTempFile" />
+      <item index="3" class="java.lang.String" itemvalue="Android Tests.FileOperationTest.testExtStorageState" />
+      <item index="4" class="java.lang.String" itemvalue="Android Tests.FileOperationTest.testInternalStorage" />
+      <item index="5" class="java.lang.String" itemvalue="Android Tests.FileOperationTest.testWriteInternalFile" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Android Tests.SdkExampleProviderTest" />
-        <item index="1" class="java.lang.String" itemvalue="Android Tests.SdkExampleProviderTest" />
-        <item index="2" class="java.lang.String" itemvalue="Android Tests.SdkExampleProviderTest.test005Update" />
-        <item index="3" class="java.lang.String" itemvalue="Android Tests.SdkExampleProviderTest" />
-        <item index="4" class="java.lang.String" itemvalue="Android Tests.SdkExampleProviderTest.testUpdate" />
+        <item index="0" class="java.lang.String" itemvalue="Android Tests.FileOperationTest.testWriteInternalFile" />
+        <item index="1" class="java.lang.String" itemvalue="Android Tests.FileOperationTest.testWriteInternalFile" />
+        <item index="2" class="java.lang.String" itemvalue="Android Tests.FileOperationTest.testInternalStorage" />
+        <item index="3" class="java.lang.String" itemvalue="Android Tests.FileOperationTest.testInternalStorage" />
+        <item index="4" class="java.lang.String" itemvalue="Android Tests.FileOperationTest.testInternalStorage" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
@@ -581,38 +522,41 @@
       <created>1372645424998</created>
       <updated>1372645424998</updated>
       <workItem from="1372645439396" duration="22266000" />
+      <workItem from="1373445819258" duration="206000" />
+      <workItem from="1373446097732" duration="42000" />
+      <workItem from="1373514280623" duration="6111000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22266000" />
+    <option name="totallyTimeSpent" value="28625000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1315" height="728" extended-state="0" />
-    <editor active="true" />
+    <frame x="64" y="-7" width="1303" height="776" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991317" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940805" sideWeight="0.42634314" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928944" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940805" sideWeight="0.42634314" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940805" sideWeight="0.67071056" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928944" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24940239" sideWeight="0.672" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991317" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -647,7 +591,7 @@
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
     <option name="LIMIT_HISTORY" value="true" />
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
@@ -676,140 +620,102 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SdkExample005SaveData/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="28" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SdkExample005SaveData/build/source/r/debug/android/sdk/example/R.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="55" selection-start="1838" selection-end="1838" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#2829#0" expanded="false" />
-            <marker date="1372674857420" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1372674857420" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SdkExample005SaveData/src/main/java/android/sdk/example/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="244" selection-end="244" vertical-scroll-proportion="0.2413793">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#507#783#0" expanded="true" />
-            <element signature="e#772#773#0" expanded="true" />
-            <element signature="e#885#1189#0" expanded="true" />
-            <element signature="e#1178#1179#0" expanded="true" />
-            <element signature="e#1285#1587#0" expanded="true" />
-            <element signature="e#1576#1577#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SdkExample005SaveData/src/main/res/layout/prefence_activity.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="4" selection-start="4" selection-end="4" vertical-scroll-proportion="-0.0">
-          <folding>
-            <element signature="e#751#772#0" expanded="true" />
-            <element signature="e#1005#1028#0" expanded="true" />
-            <element signature="e#1634#1657#0" expanded="true" />
-            <element signature="e#1856#1879#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/java/lang/Integer.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="36" selection-start="2368" selection-end="2368" vertical-scroll-proportion="0.33271375">
-          <folding />
-        </state>
+        <state line="58" column="36" selection-start="2368" selection-end="2368" vertical-scroll-proportion="0.33271375" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/test/AndroidTestRunner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="1945" selection-end="1945" vertical-scroll-proportion="0.67241377">
-          <folding />
-        </state>
+        <state line="48" column="0" selection-start="1945" selection-end="1945" vertical-scroll-proportion="0.67241377" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/content/ContentResolver.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="21" selection-start="4257" selection-end="4257" vertical-scroll-proportion="0.33271375">
-          <folding />
-        </state>
+        <state line="65" column="21" selection-start="4257" selection-end="4257" vertical-scroll-proportion="0.33271375" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/provider/BaseColumns.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="17" selection-start="163" selection-end="163" vertical-scroll-proportion="0.1724138">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SdkExample005SaveData/src/main/java/android/sdk/example/PrefActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="22" selection-start="1879" selection-end="1879" vertical-scroll-proportion="0.4827586">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SdkExample005SaveData/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="66" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="6" column="17" selection-start="163" selection-end="163" vertical-scroll-proportion="0.1724138" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/content/UriMatcher.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="16" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="11" column="16" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/content/ContentProvider.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="44" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="31" column="44" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/database/sqlite/SQLiteDatabase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="147" column="23" selection-start="8708" selection-end="8708" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SdkExample005SaveData/src/main/java/android/sdk/example/PrefActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="675" selection-end="675" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SdkExample005SaveData/src/main/java/android/sdk/example/provider/ProviderConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="31" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/database/sqlite/SQLiteDatabase.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="23" selection-start="8708" selection-end="8708" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SdkExample005SaveData/src/main/java/android/sdk/example/provider/SdkExampleProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="18" selection-start="4010" selection-end="4010" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="24" column="11" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SdkExample005SaveData/src/main/java/android/sdk/example/test/SdkExampleProviderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="31" selection-start="3947" selection-end="3947" vertical-scroll-proportion="0.42105263">
+        <state line="98" column="0" selection-start="4342" selection-end="4342" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SdkExample005SaveData/src/main/java/android/sdk/example/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="24" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SdkExample005SaveData/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="4" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/os/Environment.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="22" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/content/Context.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="28" selection-start="6029" selection-end="6029" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SdkExample005SaveData/src/main/java/android/sdk/example/test/FileOperationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="48" selection-start="2558" selection-end="2558" vertical-scroll-proportion="2.172355">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

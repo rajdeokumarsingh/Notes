@@ -1,0 +1,24 @@
+PCDATA
+    PCDATA 指的是被解析的字符数据（Parsed Character Data）
+
+CDATA
+    不应由 XML 解析器进行解析的文本数据（Unparsed Character Data）
+
+CDATA 部分由 "<![CDATA[" 开始，由 "]]>" 结束
+<script>
+<![CDATA[
+function matchwo(a,b)
+{
+    if (a < b && a < 0) then
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+]]>
+</script>
+
+
