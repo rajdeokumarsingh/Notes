@@ -2,42 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d05af76a-361e-4942-a8be-6d36ab3b7d5a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../software.project/agile/practice/design.pattern/proxy_new/src/com/design/pattern/proxy/test/MemoryDBTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../software.project/agile/practice/design.pattern/proxy_new/src/com/design/pattern/proxy/MemoryDb.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../software.project/agile/practice/design.pattern/proxy_new/src/com/design/pattern/proxy/Order.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../software.project/agile/practice/design.pattern/proxy_new/src/com/design/pattern/proxy/OrderData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../software.project/agile/practice/design.pattern/proxy_new/src/com/design/pattern/proxy/test/OrderTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../software.project/agile/practice/design.pattern/proxy_new/src/com/design/pattern/proxy/Product.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../software.project/agile/practice/design.pattern/proxy_new/src/com/design/pattern/proxy/ProductImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../software.project/agile/practice/design.pattern/proxy_new/src/com/design/pattern/proxy/ProductProxy.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Intellij/HelloWorld/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Intellij/HelloWorld/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Intellij/HelloWorld/.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Intellij/HelloWorld/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Intellij/HelloWorld/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Intellij/HelloWorld/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Intellij/HelloWorld/.idea/scopes/scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Intellij/HelloWorld/.idea/uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Intellij/HelloWorld/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Intellij/HelloWorld/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Intellij/HelloWorld/HelloWorld.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Intellij/HelloWorld/src/com/example/helloworld/HelloWorld.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../software.project/agile/20.agile.design.package.txt" afterPath="$PROJECT_DIR$/../../software.project/agile/20.agile.design.package.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/examples/reflection/classes/RetrievingClassObject.java" afterPath="$PROJECT_DIR$/src/com/java/examples/reflection/classes/RetrievingClassObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../software.project/agile/index.txt" afterPath="$PROJECT_DIR$/../../software.project/agile/index.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/java/examples/xml/SaxExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/java/examples/xml/WriteXmlFile.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/jiangrui.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../software.project/agile/practice/AgilePayroll/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../software.project/agile/practice/AgilePayroll/.idea/workspace.xml" />
     </list>
     <ignored path="JavaExamples.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1371626761897" ignored="false" />
+    <file path="/Dummy.txt" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373675311728" ignored="false" />
     <file path="/Calendar.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1370830648444" ignored="false" />
     <file path="/fragment.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1370828266002" ignored="false" />
     <file path="/Format.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1370829790557" ignored="false" />
     <file path="/DateExample.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1370831527906" ignored="false" />
     <file path="/CalendarExample.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1370836572102" ignored="false" />
+    <file path="/SaxExample.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373674490615" ignored="false" />
+    <file path="/WriteXmlFile.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373677632794" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +77,28 @@
     <favorites_list name="JavaExamples" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="SaxExample.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/SaxExample.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="3" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WriteXmlFile.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/WriteXmlFile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="8" selection-start="2421" selection-end="2421" vertical-scroll-proportion="0.6185567">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -122,14 +123,16 @@
         <option value="$PROJECT_DIR$/src/com/java/examples/basic/date/CalendarExample.java" />
         <option value="$PROJECT_DIR$/src/com/java/examples/basic/date/Format.java" />
         <option value="$PROJECT_DIR$/src/com/java/examples/reflection/classes/RetrievingClassObject.java" />
+        <option value="$PROJECT_DIR$/src/com/java/examples/xml/SaxExample.java" />
+        <option value="$PROJECT_DIR$/src/com/java/examples/xml/WriteXmlFile.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
-    <option name="width" value="1301" />
-    <option name="height" value="728" />
+    <option name="x" value="12" />
+    <option name="y" value="31" />
+    <option name="width" value="1260" />
+    <option name="height" value="760" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -158,6 +161,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -173,6 +177,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="JavaExamples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaExamples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaExamples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -216,168 +242,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaExamples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaExamples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reflection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="method" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaExamples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaExamples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reflection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="filed" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaExamples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaExamples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reflection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaExamples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaExamples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaExamples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaExamples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="MemberChooser.sorted" value="false" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="Application.ConsoleCharset">
-    <configuration default="false" name="CalendarExample" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.java.examples.basic.date.CalendarExample" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="JavaExamples" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.WriteXmlFile">
     <configuration default="false" name="AccessClassMembers" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.java.examples.reflection.classes.AccessClassMembers" />
       <option name="VM_PARAMETERS" />
@@ -428,6 +312,22 @@
     </configuration>
     <configuration default="false" name="ConsoleCharset" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.java.examples.reflection.method.ConsoleCharset" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JavaExamples" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="WriteXmlFile" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.java.examples.xml.WriteXmlFile" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -539,19 +439,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.CalendarExample" />
-      <item index="1" class="java.lang.String" itemvalue="Application.AccessClassMembers" />
-      <item index="2" class="java.lang.String" itemvalue="Application.ClassModifiers" />
-      <item index="3" class="java.lang.String" itemvalue="Application.RetrievingClassObject" />
-      <item index="4" class="java.lang.String" itemvalue="Application.ConsoleCharset" />
+      <item index="0" class="java.lang.String" itemvalue="Application.AccessClassMembers" />
+      <item index="1" class="java.lang.String" itemvalue="Application.ClassModifiers" />
+      <item index="2" class="java.lang.String" itemvalue="Application.RetrievingClassObject" />
+      <item index="3" class="java.lang.String" itemvalue="Application.ConsoleCharset" />
+      <item index="4" class="java.lang.String" itemvalue="Application.WriteXmlFile" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.ConsoleCharset" />
-        <item index="1" class="java.lang.String" itemvalue="Application.RetrievingClassObject" />
-        <item index="2" class="java.lang.String" itemvalue="Application.ClassModifiers" />
-        <item index="3" class="java.lang.String" itemvalue="Application.AccessClassMembers" />
-        <item index="4" class="java.lang.String" itemvalue="Application.CalendarExample" />
+        <item index="0" class="java.lang.String" itemvalue="Application.WriteXmlFile" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ConsoleCharset" />
+        <item index="2" class="java.lang.String" itemvalue="Application.RetrievingClassObject" />
+        <item index="3" class="java.lang.String" itemvalue="Application.ClassModifiers" />
+        <item index="4" class="java.lang.String" itemvalue="Application.AccessClassMembers" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -591,8 +491,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1301" height="728" extended-state="0" />
-    <editor active="false" />
+    <frame x="12" y="31" width="1260" height="760" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -602,16 +502,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24958813" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866043" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19473264" sideWeight="0.67071056" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33043477" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19439869" sideWeight="0.6703125" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928944" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -681,27 +581,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/java/examples/security/signature/GenSig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/examples/security/signature/GenSig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="32" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.35947713">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/examples/basic/string/StringBuilderDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="43" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/basic/classs/InheritanceTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="0" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0" />
@@ -714,9 +593,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/basic/date/DateExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="14" column="0" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/basic/date/CalendarExample.java">
@@ -726,64 +603,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/basic/date/Format.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="5" selection-start="998" selection-end="998" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="36" column="5" selection-start="998" selection-end="998" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/reflection/classes/AccessClassMembers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="30" selection-start="849" selection-end="849" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="31" column="30" selection-start="849" selection-end="849" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/reflection/classes/ClassModifiers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="752" selection-end="752" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="28" column="0" selection-start="752" selection-end="752" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/reflection/classes/RetrievingClassObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="24" selection-start="1079" selection-end="1079" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="43" column="24" selection-start="1079" selection-end="1079" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/reflection/method/ConsoleCharset.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="8" column="13" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/reflection/method/ConstructorAccess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="5" column="13" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/reflection/method/Deet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="549" selection-end="549" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="21" column="0" selection-start="549" selection-end="549" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/reflection/method/InvokeMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="6" column="13" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/reflection/method/MethodSpy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="33" selection-start="382" selection-end="382" vertical-scroll-proportion="0.3779385">
+        <state line="15" column="33" selection-start="382" selection-end="382" vertical-scroll-proportion="0.3779385" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/SaxExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="3" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/javax/xml/transform/stream/StreamResult.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="503" selection-end="503" vertical-scroll-proportion="0.20618556">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/WriteXmlFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="8" selection-start="2421" selection-end="2421" vertical-scroll-proportion="0.6185567">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
