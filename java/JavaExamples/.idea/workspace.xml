@@ -21,6 +21,7 @@
     <file path="/PersonSimpleConverter.java" changelist="a45cfccd-c597-406b-9af6-cc3bf91e9bf4" time="1374378081463" ignored="false" />
     <file path="/PersonSimpleConverter2.java" changelist="a45cfccd-c597-406b-9af6-cc3bf91e9bf4" time="1374378898933" ignored="false" />
     <file path="/DateConverter.java" changelist="a45cfccd-c597-406b-9af6-cc3bf91e9bf4" time="1374384537461" ignored="false" />
+    <file path="/BirthdayConverter.java" changelist="a45cfccd-c597-406b-9af6-cc3bf91e9bf4" time="1374411691614" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,9 +86,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/annotation/RendezvousMessageTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="68" column="0" selection-start="2418" selection-end="2418" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -105,6 +104,15 @@
         <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/converter/PersonTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="93" column="0" selection-start="3068" selection-end="3068" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DateConverter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/converter/DateConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="8" selection-start="1764" selection-end="1764" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,10 +120,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DateConverter.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/converter/DateConverter.java">
+      <file leaf-file-name="Birthday.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/converter/Birthday.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="47" selection-start="1905" selection-end="1905" vertical-scroll-proportion="0.6779661">
+            <state line="40" column="16" selection-start="757" selection-end="757" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BirthdayConverter.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/converter/BirthdayConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="14" selection-start="531" selection-end="531" vertical-scroll-proportion="0.5050505">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,9 +144,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/converter/PersonConverter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="18" column="34" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -138,9 +153,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/converter/PersonSimpleConverter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="15" column="13" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -154,33 +167,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RendezvousMessage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/annotation/RendezvousMessage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="21" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SingleAttributeValueMsg.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/annotation/SingleAttributeValueMsg.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="13" selection-start="693" selection-end="693" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CalendarStringConverter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/annotation/CalendarStringConverter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="23" column="13" selection-start="747" selection-end="747" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -195,8 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/java/examples/xml/xstream/list/Entry.java" />
-        <option value="$PROJECT_DIR$/src/com/java/examples/xml/xstream/list/Author.java" />
         <option value="$PROJECT_DIR$/src/com/java/examples/xml/xstream/list/Blog.java" />
         <option value="$PROJECT_DIR$/src/com/java/examples/xml/xstream/list/AuthorConverter.java" />
         <option value="$PROJECT_DIR$/src/com/java/examples/xml/xstream/list/BlogTest.java" />
@@ -211,6 +200,8 @@
         <option value="$PROJECT_DIR$/src/com/java/examples/xml/xstream/converter/Person.java" />
         <option value="$PROJECT_DIR$/src/com/java/examples/xml/xstream/converter/PersonTest.java" />
         <option value="$PROJECT_DIR$/src/com/java/examples/xml/xstream/converter/DateConverter.java" />
+        <option value="$PROJECT_DIR$/src/com/java/examples/xml/xstream/converter/Birthday.java" />
+        <option value="$PROJECT_DIR$/src/com/java/examples/xml/xstream/converter/BirthdayConverter.java" />
       </list>
     </option>
   </component>
@@ -246,6 +237,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -426,23 +419,21 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="OverrideImplement.combined" value="true" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.sorted" value="false" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="dynamic.classpath" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -587,6 +578,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -612,19 +616,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -720,7 +711,6 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -730,6 +720,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -799,20 +790,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/alias/Author.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="914" selection-end="914" vertical-scroll-proportion="0.46731234">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/alias/Entry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="0" selection-start="1450" selection-end="1450" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/alias/Blog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="21" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
@@ -836,9 +813,7 @@
     </entry>
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/util/Date.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="16" selection-start="3166" selection-end="3166" vertical-scroll-proportion="0.3125">
-          <folding />
-        </state>
+        <state line="136" column="16" selection-start="3166" selection-end="3166" vertical-scroll-proportion="0.3125" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/annotation/SingleAttributeValueMsg.java">
@@ -851,36 +826,28 @@
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/annotation/RendezvousMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="21" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/annotation/RendezvousMessageTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="0" selection-start="2418" selection-end="2418" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/converter/PersonConverter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="34" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/converter/PersonSimpleConverter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="13" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -901,24 +868,36 @@
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/annotation/CalendarStringConverter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="13" selection-start="747" selection-end="747" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/converter/PersonTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="93" column="0" selection-start="3068" selection-end="3068" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/converter/DateConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="8" selection-start="1764" selection-end="1764" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/converter/DateConverter.java">
+    <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/converter/Birthday.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="47" selection-start="1905" selection-end="1905" vertical-scroll-proportion="0.6779661">
+        <state line="40" column="16" selection-start="757" selection-end="757" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/xstream/converter/BirthdayConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="14" selection-start="531" selection-end="531" vertical-scroll-proportion="0.5050505">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
