@@ -2,22 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d05af76a-361e-4942-a8be-6d36ab3b7d5a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/java/examples/xml/SaxExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/java/examples/xml/WriteXmlFile.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/jiangrui.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/java/examples/xml/Data.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/java/examples/xml/SAXLocalNameCount.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/lib3.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/java/examples/xml/SaxExample.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/examples/net/http/H01QuickStart.java" afterPath="$PROJECT_DIR$/src/com/java/examples/net/http/H01QuickStart.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/examples/net/http/H02HttpsConnection.java" afterPath="$PROJECT_DIR$/src/com/java/examples/net/http/H02HttpsConnection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/examples/xml/WriteXmlFile.java" afterPath="$PROJECT_DIR$/src/com/java/examples/xml/WriteXmlFile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/lib2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/lib2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../android/android.sdk/examples.idea/XmlProject/.idea/misc.xml" afterPath="$PROJECT_DIR$/../../android/android.sdk/examples.idea/XmlProject/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../android/android.sdk/examples.idea/XmlProject/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../android/android.sdk/examples.idea/XmlProject/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaExamples.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373675311728" ignored="false" />
+    <file path="/Dummy.txt" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373871260170" ignored="false" />
     <file path="/Calendar.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1370830648444" ignored="false" />
-    <file path="/fragment.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1370828266002" ignored="false" />
+    <file path="/fragment.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373887844561" ignored="false" />
     <file path="/Format.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1370829790557" ignored="false" />
     <file path="/DateExample.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1370831527906" ignored="false" />
     <file path="/CalendarExample.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1370836572102" ignored="false" />
     <file path="/SaxExample.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373674490615" ignored="false" />
     <file path="/WriteXmlFile.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373677632794" ignored="false" />
+    <file path="/Data.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373871688321" ignored="false" />
+    <file path="/SAXLocalNameCount.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373872596888" ignored="false" />
+    <file path="/H01QuickStart.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373871986661" ignored="false" />
+    <file path="/H02HttpsConnection.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373871998246" ignored="false" />
+    <file path="$USER_HOME$/browser.workspace/Browser/src/com/pekall/browser/sebrowser/api/XMLParser.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373873637762" ignored="false" />
+    <file path="/XMLParser.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373873638740" ignored="false" />
+    <file path="$USER_HOME$/browser.workspace/Browser/src/com/pekall/browser/sebrowser/api/XmlStateMachine.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373890267860" ignored="false" />
+    <file path="$USER_HOME$/browser.workspace/Browser/src/com/pekall/browser/sebrowser/api/XmlParser.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373887764489" ignored="false" />
+    <file path="/XmlStateMachine.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373890167128" ignored="false" />
+    <file path="$USER_HOME$/browser.workspace/Browser/src/com/pekall/browser/sebrowser/api/XmlData.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373890762576" ignored="false" />
+    <file path="/XmlData.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373890657734" ignored="false" />
+    <file path="/XmlParser.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373888430867" ignored="false" />
+    <file path="$USER_HOME$/browser.workspace/Browser/src/com/pekall/browser/sebrowser/api/XmlHandler.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373888434277" ignored="false" />
+    <file path="$USER_HOME$/browser.workspace/Browser/src/com/pekall/browser/sebrowser/test/XmlHandlerTest.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373936529399" ignored="false" />
+    <file path="$USER_HOME$/browser.workspace/Browser/src/com/pekall/browser/sebrowser/test/XmlData.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373887928616" ignored="false" />
+    <file path="/XmlHandlerTest.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373890397136" ignored="false" />
+    <file path="$USER_HOME$/browser.workspace/Browser/src/com/pekall/browser/sebrowser/api/SeDebug.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373888686622" ignored="false" />
+    <file path="/SeDebug.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373888686312" ignored="false" />
+    <file path="$USER_HOME$/browser.workspace/Browser/src/com/pekall/browser/sebrowser/api/UrlMatchRule.java" changelist="d05af76a-361e-4942-a8be-6d36ab3b7d5a" time="1373890244796" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +59,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -68,7 +96,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -78,22 +105,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SaxExample.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/SaxExample.java">
+      <file leaf-file-name="WriteXmlFile.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/WriteXmlFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="3" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="16" column="0" selection-start="554" selection-end="554" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WriteXmlFile.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/WriteXmlFile.java">
+      <file leaf-file-name="SAXLocalNameCount.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/SAXLocalNameCount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="8" selection-start="2421" selection-end="2421" vertical-scroll-proportion="0.6185567">
+            <state line="188" column="0" selection-start="7288" selection-end="7288" vertical-scroll-proportion="8.1">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Data.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/Data.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="61" column="34" selection-start="1864" selection-end="1864" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -125,14 +163,18 @@
         <option value="$PROJECT_DIR$/src/com/java/examples/reflection/classes/RetrievingClassObject.java" />
         <option value="$PROJECT_DIR$/src/com/java/examples/xml/SaxExample.java" />
         <option value="$PROJECT_DIR$/src/com/java/examples/xml/WriteXmlFile.java" />
+        <option value="$PROJECT_DIR$/src/com/java/examples/net/http/H01QuickStart.java" />
+        <option value="$PROJECT_DIR$/src/com/java/examples/net/http/H02HttpsConnection.java" />
+        <option value="$PROJECT_DIR$/src/com/java/examples/xml/SAXLocalNameCount.java" />
+        <option value="$PROJECT_DIR$/src/com/java/examples/xml/Data.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="12" />
-    <option name="y" value="31" />
-    <option name="width" value="1260" />
-    <option name="height" value="760" />
+    <option name="x" value="64" />
+    <option name="y" value="-7" />
+    <option name="width" value="1303" />
+    <option name="height" value="776" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -160,8 +202,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -244,40 +284,21 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="preferences.keymap" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
-  <component name="RunManager" selected="Application.WriteXmlFile">
-    <configuration default="false" name="AccessClassMembers" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.java.examples.reflection.classes.AccessClassMembers" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="JavaExamples" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.SAXLocalNameCount">
     <configuration default="false" name="ClassModifiers" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.java.examples.reflection.classes.ClassModifiers" />
       <option name="VM_PARAMETERS" />
@@ -342,10 +363,20 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+    <configuration default="false" name="SAXLocalNameCount" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.java.examples.xml.SAXLocalNameCount" />
+      <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JavaExamples" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="true" type="GriffonRunConfigurationType" factoryName="Griffon">
@@ -362,33 +393,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -439,19 +443,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.AccessClassMembers" />
-      <item index="1" class="java.lang.String" itemvalue="Application.ClassModifiers" />
-      <item index="2" class="java.lang.String" itemvalue="Application.RetrievingClassObject" />
-      <item index="3" class="java.lang.String" itemvalue="Application.ConsoleCharset" />
-      <item index="4" class="java.lang.String" itemvalue="Application.WriteXmlFile" />
+      <item index="0" class="java.lang.String" itemvalue="Application.ClassModifiers" />
+      <item index="1" class="java.lang.String" itemvalue="Application.RetrievingClassObject" />
+      <item index="2" class="java.lang.String" itemvalue="Application.ConsoleCharset" />
+      <item index="3" class="java.lang.String" itemvalue="Application.WriteXmlFile" />
+      <item index="4" class="java.lang.String" itemvalue="Application.SAXLocalNameCount" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.WriteXmlFile" />
-        <item index="1" class="java.lang.String" itemvalue="Application.ConsoleCharset" />
-        <item index="2" class="java.lang.String" itemvalue="Application.RetrievingClassObject" />
-        <item index="3" class="java.lang.String" itemvalue="Application.ClassModifiers" />
-        <item index="4" class="java.lang.String" itemvalue="Application.AccessClassMembers" />
+        <item index="0" class="java.lang.String" itemvalue="Application.SAXLocalNameCount" />
+        <item index="1" class="java.lang.String" itemvalue="Application.WriteXmlFile" />
+        <item index="2" class="java.lang.String" itemvalue="Application.ConsoleCharset" />
+        <item index="3" class="java.lang.String" itemvalue="Application.RetrievingClassObject" />
+        <item index="4" class="java.lang.String" itemvalue="Application.ClassModifiers" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -487,30 +491,34 @@
       <changelist id="d05af76a-361e-4942-a8be-6d36ab3b7d5a" name="Default" comment="" />
       <created>1370826145023</created>
       <updated>1370826145023</updated>
+      <workItem from="1373871258288" duration="3980000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3980000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="12" y="31" width="1260" height="760" extended-state="0" />
+    <frame x="64" y="-7" width="1303" height="776" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24958813" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866043" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19439869" sideWeight="0.6703125" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1936255" sideWeight="0.6704" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -581,21 +589,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/java/examples/basic/classs/InheritanceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/examples/basic/date/CurrentMillis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/examples/basic/date/DateExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/basic/date/CalendarExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="3" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.0" />
@@ -646,23 +639,46 @@
         <state line="15" column="33" selection-start="382" selection-end="382" vertical-scroll-proportion="0.3779385" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/SaxExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="3" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/javax/xml/transform/stream/StreamResult.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="503" selection-end="503" vertical-scroll-proportion="0.20618556">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/WriteXmlFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="8" selection-start="2421" selection-end="2421" vertical-scroll-proportion="0.6185567">
+        <state line="16" column="0" selection-start="554" selection-end="554" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/examples/net/http/H02HttpsConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="14" selection-start="2245" selection-end="2245" vertical-scroll-proportion="0.52671754">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/examples/net/http/H01QuickStart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="137" column="34" selection-start="4415" selection-end="4415" vertical-scroll-proportion="0.56743">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/org/xml/sax/XMLReader.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="9" selection-start="1304" selection-end="1304" vertical-scroll-proportion="0.65">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="34" selection-start="1864" selection-end="1864" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/SAXLocalNameCount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="188" column="0" selection-start="7288" selection-end="7288" vertical-scroll-proportion="8.1">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

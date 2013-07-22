@@ -131,9 +131,11 @@ public class H01QuickStart {
 			HttpEntity entity1 = response1.getEntity();
 			// do something useful with the response body
 			// and ensure it is fully consumed
-			EntityUtils.consume(entity1);
+            // FIXME:
+			// EntityUtils.consume(entity1);
 		} finally {
-			httpGet.releaseConnection();
+            // FIXME:
+			// httpGet.releaseConnection();
 		}
 	}
 

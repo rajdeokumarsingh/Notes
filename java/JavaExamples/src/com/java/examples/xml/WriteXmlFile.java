@@ -1,6 +1,5 @@
 package com.java.examples.xml;
 
-import com.sun.xml.internal.ws.api.server.SDDocumentSource;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
