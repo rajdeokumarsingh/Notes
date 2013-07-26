@@ -30,14 +30,14 @@ public class GenSig {
 	private PrivateKey mPrivateKey;
 	private PublicKey mPublicKey;
 
-	private void savePubKey2File() throws FileNotFoundException, IOException {
+	private void savePubKey2File() throws IOException {
 		byte[] key = mPublicKey.getEncoded();
 		FileOutputStream keyfos = new FileOutputStream(pubKeyFile);
 		keyfos.write(key);
 		keyfos.close();
 	}
 
-	private void saveSign2File() throws FileNotFoundException, IOException {
+	private void saveSign2File() throws IOException {
 		FileOutputStream fos = new FileOutputStream(sigFileName);
 		fos.write(mRealSig);
 		fos.close();
@@ -64,7 +64,7 @@ public class GenSig {
 	 */
 	private void signData(String fileName) throws NoSuchAlgorithmException,
 			NoSuchProviderException, InvalidKeyException,
-			FileNotFoundException, IOException, SignatureException {
+            IOException, SignatureException {
 
 		// Algorithm is "SHA1withDSA", provider is "SUN"
 		// SHA-1 message digest algorithm

@@ -2,82 +2,72 @@ package com.java.examples.security.signature;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.security.InvalidKeyException;
-import java.security.KeyFactory;
-import java.security.NoSuchAlgorithmException;
-import java.security.NoSuchProviderException;
-import java.security.PrivateKey;
-import java.security.PublicKey;
-import java.security.Signature;
-import java.security.SignatureException;
+import java.security.*;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 
 public class VerSig {
-	private static final String fileName = "/home/jiangrui/.signature_test/change.fmradio.frw.txt";
-	private static final String sigFileName = "/home/jiangrui/.signature_test/change.fmradio.frw.txt_sig";
-	private static final String pubKeyFile = "/home/jiangrui/.signature_test/pubkey";
+    private static final String fileName = "/home/jiangrui/.signature_test/change.fmradio.frw.txt";
+    private static final String sigFileName = "/home/jiangrui/.signature_test/change.fmradio.frw.txt_sig";
+    private static final String pubKeyFile = "/home/jiangrui/.signature_test/pubkey";
 
-	private static PublicKey mPubKey;
-	private static byte[] mEncKey;
-	private byte[] mSigToVerifies;
+    private static PublicKey mPubKey;
+    private byte[] mSigToVerifies;
 
-	public static void main(String[] args) {
-		/* Verify a DSA signature */
-		VerSig verSig = new VerSig();
+    public static void main(String[] args) {
+        /* Verify a DSA signature */
+        VerSig verSig = new VerSig();
 
-		try {
-			verSig.loadPublicKey();
-			verSig.loadSignature();
-			verSig.verifySignature();
+        try {
+            verSig.loadPublicKey();
+            verSig.loadSignature();
+            verSig.verifySignature();
 
-		} catch (Exception e) {
-			System.err.println("Caught exception " + e.toString());
-		}
-	}
+        } catch (Exception e) {
+            System.err.println("Caught exception " + e.toString());
+        }
+    }
 
-	private void verifySignature() throws NoSuchAlgorithmException,
-			NoSuchProviderException, InvalidKeyException,
-			FileNotFoundException, IOException, SignatureException {
-		Signature sig = Signature.getInstance("SHA1withDSA", "SUN");
-		sig.initVerify(mPubKey); // need public key to verify signature
+    private void verifySignature() throws NoSuchAlgorithmException,
+            NoSuchProviderException, InvalidKeyException,
+            IOException, SignatureException {
+        Signature sig = Signature.getInstance("SHA1withDSA", "SUN");
+        sig.initVerify(mPubKey); // need public key to verify signature
 
-		FileInputStream datafis = new FileInputStream(fileName);
-		BufferedInputStream bufin = new BufferedInputStream(datafis);
-		byte[] buffer = new byte[1024];
-		int len;
-		while (bufin.available() != 0) {
-			len = bufin.read(buffer);
-			sig.update(buffer, 0, len);
-		}
-		;
-		bufin.close();
+        FileInputStream datafis = new FileInputStream(fileName);
+        BufferedInputStream bufin = new BufferedInputStream(datafis);
+        byte[] buffer = new byte[1024];
+        int len;
+        while (bufin.available() != 0) {
+            len = bufin.read(buffer);
+            sig.update(buffer, 0, len);
+        }
+        bufin.close();
 
-		boolean verifies = sig.verify(mSigToVerifies);
-		System.out.println("signature verifies: " + verifies);
-	}
+        boolean verifies = sig.verify(mSigToVerifies);
+        System.out.println("signature verifies: " + verifies);
+    }
 
-	private void loadSignature() throws FileNotFoundException, IOException {
-		FileInputStream sigfis = new FileInputStream(sigFileName);
-		mSigToVerifies = new byte[sigfis.available()];
-		sigfis.read(mSigToVerifies);
-		sigfis.close();
-	}
+    private void loadSignature() throws IOException {
+        FileInputStream sigfis = new FileInputStream(sigFileName);
+        mSigToVerifies = new byte[sigfis.available()];
+        sigfis.read(mSigToVerifies);
+        sigfis.close();
+    }
 
-	private void loadPublicKey() throws FileNotFoundException, IOException,
-			NoSuchAlgorithmException, NoSuchProviderException,
-			InvalidKeySpecException {
-		// Read public key from file
-		FileInputStream keyfis = new FileInputStream(pubKeyFile);
-		mEncKey = new byte[keyfis.available()];
-		keyfis.read(mEncKey);
-		keyfis.close();
+    private void loadPublicKey() throws IOException,
+            NoSuchAlgorithmException, NoSuchProviderException,
+            InvalidKeySpecException {
+        // Read public key from file
+        FileInputStream keyfis = new FileInputStream(pubKeyFile);
+        byte[] mEncKey = new byte[keyfis.available()];
+        keyfis.read(mEncKey);
+        keyfis.close();
 
 		/*
-		 * instantiate a DSA public key from its encoding
+         * instantiate a DSA public key from its encoding
 		 * 
 		 * KeyFactory class provides conversions between opaque keys (of type
 		 * Key) and key specifications
@@ -94,24 +84,24 @@ public class VerSig {
 		 * the key was generated with the built-in DSA key-pair generator
 		 * supplied by the SUN provider
 		 */
-		// Get key specification
-		X509EncodedKeySpec pubKeySpec = new X509EncodedKeySpec(mEncKey);
-		// Convert key specification to opaque key
-		KeyFactory keyFactory = KeyFactory.getInstance("DSA", "SUN");
-		mPubKey = keyFactory.generatePublic(pubKeySpec);
-	}
+        // Get key specification
+        X509EncodedKeySpec pubKeySpec = new X509EncodedKeySpec(mEncKey);
+        // Convert key specification to opaque key
+        KeyFactory keyFactory = KeyFactory.getInstance("DSA", "SUN");
+        mPubKey = keyFactory.generatePublic(pubKeySpec);
+    }
 
-	void loadPrivateKey(String fileName) throws IOException,
-			NoSuchAlgorithmException, InvalidKeySpecException {
+    void loadPrivateKey(String fileName) throws IOException,
+            NoSuchAlgorithmException, InvalidKeySpecException {
 
-		FileInputStream keyfis = new FileInputStream(fileName);
-		byte[] encKey = new byte[keyfis.available()];
-		keyfis.read(encKey);
-		keyfis.close();
+        FileInputStream keyfis = new FileInputStream(fileName);
+        byte[] encKey = new byte[keyfis.available()];
+        keyfis.read(encKey);
+        keyfis.close();
 
-		PKCS8EncodedKeySpec privKeySpec = new PKCS8EncodedKeySpec(encKey);
+        PKCS8EncodedKeySpec privKeySpec = new PKCS8EncodedKeySpec(encKey);
 
-		KeyFactory keyFactory = KeyFactory.getInstance("DSA");
-		PrivateKey privKey = keyFactory.generatePrivate(privKeySpec);
-	}
+        KeyFactory keyFactory = KeyFactory.getInstance("DSA");
+        PrivateKey privKey = keyFactory.generatePrivate(privKeySpec);
+    }
 }
