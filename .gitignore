@@ -1,3 +1,5 @@
 *.class
-/home/jiangrui/git/note/computer.science/languages/java/JavaExamples/bin
-/home/jiangrui/git/note/computer.science/languages/java/JavaExamples/out
+computer.science/android/android.sdk/examples/gen/
+computer.science/android/android.sdk/examples/bin/
+computer.science/languages/java/JavaExamples/bin/
+computer.science/languages/java/JavaExamples/out/
