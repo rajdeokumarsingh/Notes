@@ -1,0 +1,67 @@
+错误1:
+
+主Makefile
+sources =
+
+include a.mk
+sources += a.cpp
+# source = a.cpp
+
+include b.mk
+source += b.cpp
+# source = b.cpp b.cpp
+
+
+include c.mk
+source += c.cpp
+# source = b.cpp b.cpp
+
+修改
+source :=
+在主makefile中定义的变量，并用于在子make之添加的需要使用立即变量
+
+
+错误2:
+.d文件中一定要定义绝对路径
+
+%.d: %.cpp
+    $(CC) -M $(CPPFLAGS) $< | \
+    sed 's,\($(notdir $*)\.o\) *:,$(dir $@)\1 $@: ,' > $@.tmp; \
+    mv $@.tmp $@
+
+
+错误3: 为多个对象添加前缀
+wrong:
+deps += $(out_dir)/$(notdir $(subst .cpp,.d,$(local_src)))
+
+right:
+deps += $(addprefix $(out_dir)/,$(notdir $(subst .cpp,.d,$(local_src))))
+
+
+
+
+错误4:
+# $(call file-exists,filename)
+file-exists := $(wildcard $1)
+
+定义函数时，需要使用defer形式
+# $(call file-exists,filename)
+file-exists = $(wildcard $1)
+
+错误5:
+foo:
+    # $SOURCE为makefile变量
+    # $SOURCE将被扩展为 OURCE
+    for f in $SOURCE; \
+    do  \
+        ... \
+    done
+
+正确写法：
+foo:
+    for f in $(SOURCE); \
+    do  \
+        ... \
+    done
+
+

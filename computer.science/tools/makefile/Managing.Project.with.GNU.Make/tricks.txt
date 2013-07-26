@@ -1,0 +1,58 @@
+trick 1:
+
+find:
+	# PWD = $(PWD)
+	# $(findstring jiangrui,$(PWD))
+	# $(findstring home,$(PWD))
+	# $(findstring good,$(PWD))
+	# $(filter jiang,$(PWD)) 
+
+make find时, #后面的命令会在自己的subshell中执行，并输出结果
+
+trick 2:
+make -f- goal <<< 'goal:;# $(MAKECMDGOALS)'
+	-f- 表示从stdin读入数据
+	<<<将字符串送到stdin
+
+	等价于
+	echo 'goal:;# $(MAKECMDGOALS)' | make -f- goal
+
+	输出：
+	# goal
+
+trick 3:
+# recursive expand variable
+NO_SPACE_MSG := No space left
+STATE_CODE := NO_SPACE_MSG
+
+$(error $($(STATE_CODE)))
+
+trick 4:
+输出顺序是info在最前面
+all:
+	@echo something
+	@echo something more ...
+	$(info make function in command mode, output before something)
+
+
+trick 5:
+# $(call file-exists,filename)
+file-exists = $(wildcard $1)
+
+
+trick 6:
+使用$$在命令中进行转义。当awk中需要使用$1, $2等等变量时,或shell需要使用$PATH时
+define file-exists2
+	@echo $PATH is not ok  			# ATP
+	@echo '$PATH' is still not ok   # ATP
+	@echo '$$PATH' is name  		# $PATH
+	@echo $$PATH is value  			# /home/jiangrui/bin/jdk64/jdk1.6.0_37/bin:/home/jiangrui/bin: ...
+
+	@echo '$$1' for shell var,      # $1
+	@echo $1 for make var
+endef
+
+.PHONY: all
+all:
+	$(call file-exists2,test def)
+

@@ -1,0 +1,9 @@
+
+sqlite基础
+    ./sqlite.txt
+
+    ./sqlite.trick.txt
+
+sqlite.unsupport.sql.txt
+sql.txt
+

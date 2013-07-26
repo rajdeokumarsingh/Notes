@@ -1,0 +1,4 @@
+ua profile:
+base/core/java/android/webkit/FrameLoader.java
+    mHeaders.put("x-wap-profile", mSettings.getUserAgentProfile());
+

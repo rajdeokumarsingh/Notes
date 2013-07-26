@@ -1,0 +1,52 @@
+Debug option:
+    --debug=v
+        显示make的详细流程
+
+        basic
+            基本调试功能
+
+        verbose
+            依赖关系，重建规则
+
+        implicit
+            在basic的基础上添加隐藏规则
+
+        jobs
+            现实job信息
+
+        all
+            所以上述信息
+
+
+
+    --just-print (-n)
+        显示make的工作流程，但是并不执行命令
+
+    --print-data-base (-p)
+        输出所有的隐藏规则和内部变量
+
+    --warn-undefined-variable
+        使用未定义变量时，输出警告
+
+
+    make SHELL="sh -x"
+        输出makefile之中调用$(shell)函数的脚本命令
+
+
+
+--directory=dir-name (-C dir-name)
+    到指定目录中执行make
+
+--file (-f)
+    指定makefile文件。但是不能进入makefile文件的目录
+
+--silent (-s)
+    不现实执行的命令
+
+--ignore-errors (-i)
+
+--keep-going (-k)
+
+--load-average (-l) float
+    make -l 3.5
+

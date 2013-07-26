@@ -1,0 +1,72 @@
+ 
+1. Change code and android.mk file.
+    1.1 In "$XMM2231_ROOT_DIR/2231/android/hardware/ril/libril/Android.mk:22" , add
+        LOCAL_CFLAGS  += -fprofile-arcs -ftest-coverage
+        LOCAL_LDFLAGS += -lgcov -lgcc
+        #LOCAL_LDFLAGS += -lgcov
+
+    1.2 In "$XMM2231_ROOT_DIR/2231/android/hardware/ril/libril/ril.cpp:2531", add
+        extern "C" void __gcov_flush(void); /* check in gcc sources gcc/gcov-io.h for the prototype */
+        Line 2537, add
+        __gcov_flush();
+
+    1.3 In "$XMM2231_ROOT_DIR/2231/android/device/imc/xmm2231ff1_0/init.rc:24", add
+        export GCOV_PREFIX /data/local/gcda
+        export GCOV_PREFIX_STRIP 1
+
+2. Build android
+    2.1 remove the old files of the library
+        rm –rf $XMM2231_ROOT_DIR/build/android/target/product/xmm2231ff1_0/obj/SHARED_LIBRARIES/libril_intermediates
+
+    2.2 build
+        $XMM2231_ROOT_DIR/scripts/build_native_ALL.sh xmm2231ff1_0
+
+3. Check and flash to FF
+    2.1 Verify the <sourcefile>.gcno
+        #find $XMM2231_ROOT_DIR/build -name "*gcno"
+
+    2.2 Flash the board with the images.
+
+4. Power on and telnet to FF
+    4.1 adb shell
+
+    4.2 mkdir /data/local/gcda
+
+5. run and output gcov data
+    5.1 make a call
+    5.2 adb shell
+    5.3 busybox killall -USR1 rild
+    5.4 check the output file in /data/local/gcda
+
+6. pull gcov data and see output
+    6.1 cd "$XMM2231_ROOT_DIR\android”   (if not in the folder, can’t find cpp file)
+
+    6.2 adb pull /data/local/gcda/gao/2231/android/out/target/product/xmm2231ff1_0/obj/SHARED_LIBRARIES/libril_intermediates
+
+    adb pull /data/local/gcda/jiangrui/192.168.10.220_1666/xmm2231.1.11.oprofile/android/out/target/product/xmm2231ff1_0/obj/EXECUTABLES/fmradio_ut_intermediates/test
+
+    6.3 cp ../build/release/android/target/product/xmm2231ff1_0/obj/SHARED_LIBRARIES/libril_intermediates/ril.* .
+
+    cp out/target/product/xmm2231ff1_0/obj/EXECUTABLES/fmradio_ut_intermediates/test/* .
+
+    6.4 ./prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin/arm-eabi-gcov -abcf ./hardware/ril/libril/ril.cpp   (option -o doesn’t work fine in my system)
+    ./prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin/arm-eabi-gcov -b -c 
+
+    FIXME: if you add more case and build a new binary, please 
+    1 adb shell rm /data/local/gcda/jiangrui/192.168.10.220_1666/xmm2231.1.11.oprofile/android/out/target/product/
+        xmm2231ff1_0/obj/EXECUTABLES/fmradio_ut_intermediates/test
+    2 test again
+    3  6.2 6.3 6.4
+
+7. check the result in ril.cpp.gcov.
+    File 'hardware/ril/libril/ril.cpp'
+    Lines executed:2.82% of 1314
+    Branches executed:1.42% of 563
+    Taken at least once:0.89% of 563
+    No calls
+    hardware/ril/libril/ril.cpp:creating 'ril.cpp.gcov'
+ 
+                
+
+
+

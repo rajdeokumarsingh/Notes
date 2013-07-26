@@ -1,0 +1,39 @@
+make -j 4 PRODUCT-umts_sholes-eng PLATFORM_VERSION=STCU_N_00.10.05I LPID=0015 PRODUCT=umts_sholes PRODUCT_MODEL=p3_sholes_tablet_cu 
+
+PRODUCT-umts_sholes-eng £ºPRODUCT(Keyword), umts_sholes(TARGET_PRODUCT), eng(TARGET_BUILD_VARIANT)
+
+PRODUCT_OUT := out/target/pr/$(TARGET_PRODUCT)/
+
+build/core
+
+main.mk
+	config.mk
+		pathmap.mk
+		buildspec.mk (this file at build/)
+		envsetup.mk
+			version_defaults.mk
+			product_config.mk
+				node_fns.mk
+				product.mk
+				device.mk
+				AndroidProducts.mk (this file at vendor/*/$(TARGET_PRODUCT)/)
+		BoardConfig.mk (this file at vendor/*/$(TARGET_PRODUCT)/)
+		combo/select.mk (combo_target := HOST_)
+			combo/linux-x86.mk
+		combo/select.mk (combo_target := TARGET_)
+			combo/linux-arm.mk
+		combo/javac.mk
+	cleanbuild.mk
+		cleanspec.mk (this file at build/)
+		clean_steps.mk (this file at out/target/pr/$(TARGET_PRODUCT)/)
+	versions_checked.mk (this file at out/)
+	definitions.mk
+	
+	Android.mk(this file at build/target/board)
+		AndroidBoard.mk (this file at vendor/*/$(TARGET_PRODUCT)/)
+		
+	Android.mk (find out all Android.mk)
+	
+	frameworks/policies/base/PolicyConfig.mk
+	
+	Makefile

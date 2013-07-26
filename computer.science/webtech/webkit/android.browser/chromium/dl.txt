@@ -1,0 +1,1740 @@
+02-25 08:13:02.905    78   178 W ThrottleService: unable to find stats for iface rmnet0
+02-25 08:13:07.245   538   538 V BrowserActivity: enter dispatchTouchEvent()
+02-25 08:13:07.245   538   538 V Controller: enter dispatchTouchEvent()
+02-25 08:13:07.255   538   561 E WebViewCore: UpdateFrameCacheIfLoading, 4389
+02-25 08:13:07.255   538   561 E WebViewCore: updateFrameCacheIfLoading, 1823
+02-25 08:13:07.395   538   538 V BrowserActivity: enter dispatchTouchEvent()
+02-25 08:13:07.395   538   538 V Controller: enter dispatchTouchEvent()
+02-25 08:13:07.455   538   538 E WebViewCore: updateCursorBounds, 810
+02-25 08:13:07.455   538   538 E WebViewCore: updateCursorBounds, 832
+02-25 08:13:07.465   538   561 E WebViewCore: MoveMouseIfLatest, 4809
+02-25 08:13:07.465   538   561 E WebViewCore: moveMouseIfLatest, 2280
+02-25 08:13:07.465   538   561 E WebViewCore: moveMouse, 2318
+02-25 08:13:07.465   538   561 E WebViewCore: updateCacheOnNodeChange, 1726
+02-25 08:13:07.475   538   538 E WebViewCore: updateCursorBounds, 810
+02-25 08:13:07.475   538   538 E WebViewCore: updateCursorBounds, 832
+02-25 08:13:07.704   538   538 E WebViewCore: updateCursorBounds, 810
+02-25 08:13:07.704   538   538 E WebViewCore: updateCursorBounds, 832
+02-25 08:13:07.714   538   561 E WebViewCore: MoveMouseIfLatest, 4809
+02-25 08:13:07.714   538   561 E WebViewCore: moveMouseIfLatest, 2280
+02-25 08:13:07.714   538   561 E WebViewCore: moveMouse, 2318
+02-25 08:13:07.714   538   561 E WebViewCore: updateCacheOnNodeChange, 1726
+02-25 08:13:07.724   538   561 E WebViewCore: ValidNodeAndBounds, 5107
+02-25 08:13:07.724   538   561 E WebViewCore: jrect_to_webrect, 5097
+02-25 08:13:07.724   538   561 E WebViewCore: validNodeAndBounds, 4188
+02-25 08:13:07.734   538   538 E WebViewCore: updateCursorBounds, 810
+02-25 08:13:07.734   538   538 E WebViewCore: updateCursorBounds, 832
+02-25 08:13:07.734   538   561 E WebViewCore: TouchUp, 4725
+02-25 08:13:07.734   538   561 E WebViewCore: touchUp, 3504
+02-25 08:13:07.734   538   561 E WebViewCore: moveMouse, 2318
+02-25 08:13:07.734   538   561 E WebViewCore: updateCacheOnNodeChange, 1726
+02-25 08:13:07.734   538   561 E WebViewCore: handleMouseClick, 3555
+02-25 08:13:07.734   538   561 E WebViewCore: drawIsPaused, 4286
+02-25 08:13:07.734   538   561 E WebViewCore: contentInvalidate, 1103
+02-25 08:13:07.734   538   561 E WebViewCore: contentDraw, 1079
+02-25 08:13:07.744   538   561 E WebViewCore: contentInvalidate, 1103
+02-25 08:13:07.744   538   561 E WebViewCore: contentDraw, 1079
+02-25 08:13:07.744   538   561 E WebViewCore: contentInvalidate, 1103
+02-25 08:13:07.744   538   561 E WebViewCore: contentDraw, 1079
+02-25 08:13:07.744   538   561 E WebViewCore: drawIsPaused, 4286
+02-25 08:13:07.744   538   561 E WebViewCore: contentInvalidate, 1103
+02-25 08:13:07.744   538   561 E WebViewCore: contentDraw, 1079
+02-25 08:13:07.744   538   561 E WebViewCore: contentInvalidate, 1103
+02-25 08:13:07.744   538   561 E WebViewCore: contentDraw, 1079
+02-25 08:13:07.744   538   561 E WebViewCore: contentInvalidate, 1103
+02-25 08:13:07.744   538   561 E WebViewCore: contentDraw, 1079
+02-25 08:13:07.754   538   561 E WebCoreFrameBridge: userAgentForURL, 804
+02-25 08:13:07.754   538   561 E WebCoreFrameBridge: canHandleRequest, 876
+02-25 08:13:07.774   538   538 E WebViewCore: updateCursorBounds, 810
+02-25 08:13:07.774   538   538 E WebViewCore: updateCursorBounds, 832
+02-25 08:13:07.784   538   538 V Controller: enter shouldOverrideUrlLoading(): http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:07.784   538   538 V PageDownloader: reset()
+02-25 08:13:07.795   538   538 V PageDownloader: add(): http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:07.805   538   538 V Controller: enter isMenuDown()
+02-25 08:13:07.805   538   561 E WebCoreFrameBridge: loadStarted, 592
+02-25 08:13:07.805   538   561 E WebCoreFrameBridge: setProgress, 786
+02-25 08:13:07.805   538   561 E WebCoreFrameBridge: userAgentForURL, 804
+02-25 08:13:07.805   538   561 E WebCoreFrameBridge: userAgentForURL, 804
+02-25 08:13:07.805   538   561 E WebViewCore: webRequestContext, 4318
+02-25 08:13:07.805   538   561 E WebViewCore: webRequestContext, 4326
+02-25 08:13:07.805   538   561 E WebCoreFrameBridge: maybeSavePassword, 1219
+02-25 08:13:07.805   538   561 E         : external/chromium/net/http/http_request_headers.cc, HttpRequestHeaders, 95
+02-25 08:13:07.805   538   561 E         : external/chromium/net/http/http_request_headers.cc, SetHeader, 132
+02-25 08:13:07.805   538   561 E WebCoreFrameBridge: shouldInterceptRequest, 525
+02-25 08:13:07.805   538   561 E         : external/chromium/net/http/http_request_headers.cc, HttpRequestHeaders, 95
+02-25 08:13:07.805   538   561 E         : external/chromium/net/http/http_vary_data.cc, HttpVaryData, 23
+02-25 08:13:07.805   538   561 E         : external/chromium/net/http/http_response_info.cc, HttpResponseInfo, 71
+02-25 08:13:07.805   538   561 E         : external/chromium/net/http/http_request_headers.cc, ~HttpRequestHeaders, 101
+02-25 08:13:07.805   538   568 E         : external/chromium/net/http/http_request_headers.cc, HttpRequestHeaders, 95
+02-25 08:13:07.805   538   568 E         : external/chromium/net/http/http_request_info.cc, HttpRequestInfo, 18
+02-25 08:13:07.805   538   568 E         : external/chromium/net/http/http_request_headers.cc, SetHeaderIfMissing, 146
+02-25 08:13:07.805   538   568 E         : external/chromium/net/http/http_request_headers.cc, SetHeader, 132
+02-25 08:13:07.805   538   568 E         : external/chromium/net/http/http_request_headers.cc, SetHeaderIfMissing, 146
+02-25 08:13:07.805   538   568 E         : external/chromium/net/http/http_request_headers.cc, SetHeaderIfMissing, 146
+02-25 08:13:07.805   538   568 E         : external/chromium/net/http/http_cache.cc, CreateTransaction, 610
+02-25 08:13:07.805   538   568 E         : external/chromium/net/http/http_vary_data.cc, HttpVaryData, 23
+02-25 08:13:07.805   538   568 E         : external/chromium/net/http/http_response_info.cc, HttpResponseInfo, 71
+02-25 08:13:07.805   538   568 E         : external/chromium/net/http/http_vary_data.cc, HttpVaryData, 23
+02-25 08:13:07.805   538   568 E         : external/chromium/net/http/http_response_info.cc, HttpResponseInfo, 71
+02-25 08:13:07.805   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, Transaction, 142
+02-25 08:13:07.805   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, Start, 262
+02-25 08:13:07.805   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, SetRequest, 1712
+02-25 08:13:07.805   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, DoGetBackend, 690
+02-25 08:13:07.805   538   568 E         : external/chromium/net/http/http_cache.cc, GetBackendForTransaction, 697
+02-25 08:13:07.805   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, DoGetBackendComplete, 702
+02-25 08:13:07.805   538   568 E         : external/chromium/net/http/http_cache.cc, GenerateCacheKey, 717
+02-25 08:13:07.805   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, DoInitEntry, 900
+02-25 08:13:07.805   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, DoOpenEntry, 921
+02-25 08:13:07.805   538   568 E         : external/chromium/net/http/http_cache.cc, OpenEntry, 957
+02-25 08:13:07.805   538   568 E         : external/chromium/net/http/http_cache.cc, FindActiveEntry, 841
+02-25 08:13:07.815   538   568 E         : external/chromium/net/http/http_cache.cc, OnIOComplete, 1342
+02-25 08:13:07.815   538   568 E         : external/chromium/net/http/http_cache.cc, DeletePendingOp, 925
+02-25 08:13:07.815   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, OnIOComplete, 2543
+02-25 08:13:07.815   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, DoOpenEntryComplete, 934
+02-25 08:13:07.815   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, DoCreateEntry, 978
+02-25 08:13:07.815   538   568 E         : external/chromium/net/http/http_cache.cc, CreateEntry, 995
+02-25 08:13:07.825   538   561 E WebViewCore: handleMouseClick, 3685
+02-25 08:13:07.825   538   561 E WebViewCore: clearTextEntry, 4019
+02-25 08:13:07.825   538   561 E WebViewCore: handleMouseClick, 3690
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_cache.cc, OnIOComplete, 1342
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_cache.cc, ActivateEntry, 852
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_cache.cc, ActiveEntry, 131
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_cache.cc, DeletePendingOp, 925
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, OnIOComplete, 2543
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, DoCreateEntryComplete, 991
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, DoAddToEntry, 1053
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_cache.cc, AddTransactionToEntry, 1042
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, DoAddToEntryComplete, 1068
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, DoSendRequest, 759
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_network_layer.cc, CreateTransaction, 182
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_network_layer.cc, GetSession, 204
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_vary_data.cc, HttpVaryData, 23
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_response_info.cc, HttpResponseInfo, 71
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_request_headers.cc, HttpRequestHeaders, 95
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_network_transaction.cc, HttpNetworkTransaction, 130
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_network_transaction.cc, Start, 189
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_network_transaction.cc, DoLoop, 629
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_network_transaction.cc, DoCreateStream, 729
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_stream_factory_impl.cc, RequestStream, 76
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_stream_factory_impl_request.cc, Request, 30
+02-25 08:13:07.825   538   568 E         : request url: http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_vary_data.cc, HttpVaryData, 23
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_response_info.cc, HttpResponseInfo, 71
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, Job, 69
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_stream_factory_impl_request.cc, AttachJob, 82
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, Start, 104
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, StartInternal, 588
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, RunLoop, 419
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, DoLoop, 528
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, DoResolveProxy, 604
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, DoResolveProxyComplete, 628
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, DoInitConnection, 709
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, ShouldForceSpdySSL, 666
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, IsHttpsProxyAndHttpUrl, 1105
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, ShouldForceSpdyWithoutSSL, 676
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, IsPreconnecting, 1321
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, ShouldForceSpdySSL, 666
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_vary_data.cc, HttpVaryData, 23
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_response_info.cc, HttpResponseInfo, 71
+02-25 08:13:07.825   538   568 E         : external/chromium/net/http/http_response_info.cc, ~HttpResponseInfo, 100
+02-25 08:13:07.835   538   538 V Controller: enter shouldShowErrorConsole()
+02-25 08:13:07.835   538   538 V Controller: enter onPageStarted()
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, OnIOComplete, 410
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, RunLoop, 419
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, DoLoop, 528
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, DoInitConnectionComplete, 801
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, IsPreconnecting, 1321
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, ShouldForceSpdyWithoutSSL, 676
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, LogHttpConnectedMetrics, 1283
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, DoCreateStream, 941
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, SetSocketMotivation, 1092
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_basic_stream.cc, HttpBasicStream, 30
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, DoCreateStreamComplete, 1025
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, IsPreconnecting, 1321
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, OnStreamReadyCallback, 271
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, IsOrphaned, 1331
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, IsPreconnecting, 1321
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, was_npn_negotiated, 221
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, using_spdy, 230
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_factory_impl_request.cc, Complete, 96
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_factory_impl_request.cc, OnStreamReady, 116
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_factory_impl_request.cc, OrphanJobsExcept, 368
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_factory_impl_request.cc, OrphanJobs, 384
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_factory_impl_request.cc, RemoveRequestFromSpdySessionRequestMap, 301
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, OnStreamReady, 471
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, OnIOComplete, 618
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, DoLoop, 629
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, DoCreateStreamComplete, 747
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, HandleSSLHandshakeError, 1453
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_factory_impl_request.cc, ~Request, 46
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_factory_impl_request.cc, RemoveRequestFromSpdySessionRequestMap, 301
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_factory_impl_job.cc, ~Job, 79
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_request_info.cc, ~HttpRequestInfo, 26
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_request_headers.cc, ~HttpRequestHeaders, 101
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, DoInitStream, 776
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_basic_stream.cc, InitializeStream, 47
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_parser.cc, HttpStreamParser, 52
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, DoInitStreamComplete, 787
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, DoGenerateProxyAuthToken, 807
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, ShouldApplyProxyAuth, 1600
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, is_https_request, 594
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, DoGenerateProxyAuthTokenComplete, 828
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, DoGenerateServerAuthToken, 840
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, AuthURL, 1665
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, ShouldApplyServerAuth, 1610
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, DoGenerateServerAuthTokenComplete, 861
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, DoBuildRequest, 954
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, BuildRequestHeaders, 873
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_request_headers.cc, SetHeader, 132
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_request_headers.cc, SetHeader, 132
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, ShouldApplyProxyAuth, 1600
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, is_https_request, 594
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, ShouldApplyServerAuth, 1610
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, HaveAuth, 1655
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_request_headers.cc, HttpRequestHeaders, 95
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_request_headers.cc, RemoveHeader, 157
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_request_headers.cc, MergeFrom, 242
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_request_headers.cc, SetHeader, 132
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_request_headers.cc, SetHeader, 132
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_request_headers.cc, SetHeader, 132
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_request_headers.cc, SetHeader, 132
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_request_headers.cc, SetHeader, 132
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_request_headers.cc, ~HttpRequestHeaders, 101
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, DoBuildRequestComplete, 993
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, DoSendRequest, 1006
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_basic_stream.cc, SendRequest, 64
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_parser.cc, SendRequest, 75
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_parser.cc, DoLoop, 227
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_parser.cc, DoSendHeaders, 287
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_parser.cc, DoSendHeaders, 287
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, DoSendRequestComplete, 1018
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_network_transaction.cc, DoReadHeaders, 1030
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_basic_stream.cc, ReadResponseHeaders, 91
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_parser.cc, ReadResponseHeaders, 123
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_parser.cc, DoLoop, 227
+02-25 08:13:07.845   538   568 E         : external/chromium/net/http/http_stream_parser.cc, DoReadHeaders, 419
+02-25 08:13:07.845   538   538 V websync : *** WebSyncManager resetSync ***
+02-25 08:13:07.845   538   538 V Controller: enter endActionMode()
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_stream_parser.cc, OnIOComplete, 194
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_stream_parser.cc, DoLoop, 227
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_stream_parser.cc, DoReadHeadersComplete, 440
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_stream_parser.cc, ParseResponseHeaders, 677
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_stream_parser.cc, DoParseResponseHeaders, 715
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_response_headers.cc, HttpResponseHeaders, 155
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_response_headers.cc, Parse, 398
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_response_headers.cc, ParseStatusLine, 732
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_response_headers.cc, AddHeader, 839
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_response_headers.cc, AddHeader, 839
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_response_headers.cc, AddHeader, 839
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_response_headers.cc, AddHeader, 839
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_response_headers.cc, AddHeader, 839
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_response_headers.cc, AddHeader, 839
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_vary_data.cc, Init, 32
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_stream_parser.cc, CalculateResponseBodySize, 759
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_network_transaction.cc, OnIOComplete, 618
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_network_transaction.cc, DoLoop, 629
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_network_transaction.cc, DoReadHeadersComplete, 1056
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_network_transaction.cc, ProcessAlternateProtocol, 72
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_network_transaction.cc, HandleAuthChallenge, 1619
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_network_transaction.cc, GetResponseHeaders, 1555
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_network_transaction.cc, is_https_request, 594
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_network_transaction.cc, DoCallback, 603
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, OnIOComplete, 2543
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, DoSendRequestComplete, 778
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, DoSuccessfulSendRequest, 810
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_network_transaction.cc, GetResponseInfo, 422
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, ValidatePartialResponse, 2201
+02-25 08:13:07.855   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, DoOverwriteCachedResponse, 1311
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, DoCacheWriteResponse, 1489
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, WriteResponseInfoToEntry, 2379
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_response_info.cc, Persist, 225
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_response_headers.cc, Persist, 193
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_response_headers.cc, AddNonCacheableHeaders, 878
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_response_headers.cc, AddCookieHeaders, 944
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_response_headers.cc, AddChallengeHeaders, 954
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_response_headers.cc, AddHopByHopHeaders, 934
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_response_headers.cc, AddHopContentRangeHeaders, 964
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, OnIOComplete, 2543
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, DoCacheWriteResponseComplete, 1511
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, DoTruncateCachedData, 1345
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, WriteToEntry, 2359
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, OnIOComplete, 2543
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, DoTruncateCachedDataComplete, 1362
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, DoTruncateCachedMetadata, 1380
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, WriteToEntry, 2359
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, OnIOComplete, 2543
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, DoTruncateCachedMetadataComplete, 1396
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, DoPartialHeadersReceived, 1419
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, HandleResult, 506
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, GetResponseInfo, 449
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, GetResponseInfo, 449
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, GetResponseInfo, 449
+02-25 08:13:07.865   538   568 E         : external/chromium/net/http/http_network_transaction.cc, IsReadyToRestartForAuth, 367
+02-25 08:13:07.865   538   561 E WebCoreFrameBridge: downloadStart, 1091
+02-25 08:13:07.865   538   561 E WebCoreFrameBridge: didFinishLoad, 673
+02-25 08:13:07.875   538   561 E WebCoreFrameBridge: setProgress, 786
+02-25 08:13:07.875   538   561 E WebViewCore: notifyProgressFinished, 1271
+02-25 08:13:07.875   538   561 E WebViewCore: sendNotifyProgressFinished, 1051
+02-25 08:13:07.875   538   561 E WebViewCore: sendPluginEvent, 2225
+02-25 08:13:07.875   538   561 E WebViewCore: sendPluginVisibleScreen, 2196
+02-25 08:13:07.875   538   561 E WebViewCore: getVisibleScreen, 2186
+02-25 08:13:07.875   538   561 E WebViewCore: RecordContent, 4605
+02-25 08:13:07.875   538   561 E WebViewCore: recordContent, 986
+02-25 08:13:07.875   538   561 E WebViewCore: recordPictureSet, 591
+02-25 08:13:07.875   538   561 E WebViewCore: layoutIfNeededRecursive, 529
+02-25 08:13:07.875   538   561 E WebViewCore: rebuildPictureSet, 884
+02-25 08:13:07.875   538   561 E WebViewCore: rebuildPicture, 856
+02-25 08:13:07.875   538   561 E WebViewCore: createBaseLayer, 946
+02-25 08:13:07.875   538   561 E WebViewCore: layoutIfNeededRecursive, 529
+02-25 08:13:07.875   538   561 E WebViewCore: FocusBoundsChanged, 4979
+02-25 08:13:07.875   538   561 E WebViewCore: focusBoundsChanged, 847
+02-25 08:13:07.875   538   561 E WebViewCore: GetContentMinPrefWidth, 4834
+02-25 08:13:07.885   538   538 V PhoneUi : enter onProgressChanged(): 5
+02-25 08:13:07.885   538   538 V PhoneUi : enter setTitleGravity()
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, Read, 382
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, ReadFromNetwork, 2333
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, DoNetworkRead, 870
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_network_transaction.cc, Read, 378
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_network_transaction.cc, GetResponseHeaders, 1555
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_network_transaction.cc, DoLoop, 629
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_network_transaction.cc, DoReadBody, 1154
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_basic_stream.cc, ReadResponseBody, 110
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_stream_parser.cc, ReadResponseBody, 169
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_stream_parser.cc, DoLoop, 227
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_stream_parser.cc, DoReadBody, 553
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_stream_parser.cc, DoReadBodyComplete, 594
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_stream_parser.cc, IsResponseBodyComplete, 828
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_network_transaction.cc, DoReadBodyComplete, 1168
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_basic_stream.cc, IsResponseBodyComplete, 140
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_stream_parser.cc, IsResponseBodyComplete, 828
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, DoNetworkReadComplete, 880
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, DoCacheWriteData, 1654
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, AppendResponseDataToEntry, 2428
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, WriteToEntry, 2359
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, ~Transaction, 153
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_cache.cc, DoneWithEntry, 1090
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, AddTruncatedFlag, 216
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_cache_transaction.cc, CanResume, 2522
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_cache.cc, DoneWritingToEntry, 1120
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_cache.cc, DestroyEntry, 1028
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_cache.cc, DeactivateEntry, 864
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_cache.cc, ~ActiveEntry, 139
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_response_info.cc, ~HttpResponseInfo, 100
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_response_info.cc, ~HttpResponseInfo, 100
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_network_transaction.cc, ~HttpNetworkTransaction, 141
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_network_transaction.cc, GetResponseHeaders, 1555
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_basic_stream.cc, CanFindEndOfResponse, 149
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_stream_parser.cc, CanFindEndOfResponse, 842
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_basic_stream.cc, IsResponseBodyComplete, 140
+02-25 08:13:07.885   538   568 E         : external/chromium/net/http/http_stream_parser.cc, IsResponseBodyComplete, 828
+02-25 08:13:07.905   538   538 V Controller: enter onProgressChanged()
+02-25 08:13:07.905   538   538 V websync : *** WebSyncManager sync ***
+02-25 08:13:07.915   538   538 V PhoneUi : enter onProgressChanged(): 100
+02-25 08:13:07.915   538   538 V Controller: enter onLoadResource(): http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:07.915   538   538 V PageDownloader: add(): http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_response_body_drainer.cc, HttpResponseBodyDrainer, 28
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_response_body_drainer.cc, Start, 42
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_response_body_drainer.cc, DoLoop, 65
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_response_body_drainer.cc, DoDrainResponseBody, 96
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_basic_stream.cc, ReadResponseBody, 110
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_stream_parser.cc, ReadResponseBody, 169
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_stream_parser.cc, DoLoop, 227
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_stream_parser.cc, DoReadBody, 553
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_stream_parser.cc, IsResponseBodyComplete, 828
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_stream_parser.cc, DoReadBodyComplete, 594
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_stream_parser.cc, IsResponseBodyComplete, 828
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_response_body_drainer.cc, DoDrainResponseBodyComplete, 109
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_basic_stream.cc, IsResponseBodyComplete, 140
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_stream_parser.cc, IsResponseBodyComplete, 828
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_response_body_drainer.cc, Finish, 158
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_basic_stream.cc, Close, 119
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_stream_parser.cc, Close, 157
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_vary_data.cc, HttpVaryData, 23
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_response_info.cc, HttpResponseInfo, 71
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_response_info.cc, ~HttpResponseInfo, 100
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_response_body_drainer.cc, ~HttpResponseBodyDrainer, 35
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_basic_stream.cc, ~HttpBasicStream, 38
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_vary_data.cc, HttpVaryData, 23
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_response_info.cc, HttpResponseInfo, 71
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_response_info.cc, ~HttpResponseInfo, 100
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_response_info.cc, ~HttpResponseInfo, 100
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_stream_parser.cc, ~HttpStreamParser, 61
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_request_headers.cc, ~HttpRequestHeaders, 101
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_response_info.cc, ~HttpResponseInfo, 100
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_request_info.cc, ~HttpRequestInfo, 26
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_request_headers.cc, ~HttpRequestHeaders, 101
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_response_info.cc, ~HttpResponseInfo, 100
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_response_headers.cc, ~HttpResponseHeaders, 666
+02-25 08:13:07.915   538   568 E         : external/chromium/net/http/http_request_headers.cc, ~HttpRequestHeaders, 101
+02-25 08:13:08.015   538   552 V websync : *** WebSyncManager sync ***
+02-25 08:13:08.015   538   552 V websync : CookieSyncManager::syncFromRamToFlash STARTS
+02-25 08:13:08.075   538   538 E WebViewCore: updateCursorBounds, 810
+02-25 08:13:08.075   538   538 E WebViewCore: updateCursorBounds, 832
+02-25 08:13:08.095   538   538 V DownloadHandler: enter onDownloadStart(), url: http://192.168.10.224:8080/test-browser/drm/huasha.dcf, ua: Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; Full Android on Emulator Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30, contentDisposition: , mimetype: application/vnd.oma.drm.content
+02-25 08:13:08.095   538   538 V DownloadHandler: enter onDownloadStartNewPolicy(), url: http://192.168.10.224:8080/test-browser/drm/huasha.dcf, ua: Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; Full Android on Emulator Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30, contentDisposition: , mimetype: application/vnd.oma.drm.content
+02-25 08:13:08.095   538   538 V DownloadHandler: No one can handle the file, just download it,onDownloadStartNoStream
+02-25 08:13:08.095   538   538 V DownloadHandler: enter onDownloadStartNoStream(), url: http://192.168.10.224:8080/test-browser/drm/huasha.dcf, ua: Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; Full Android on Emulator Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30, contentDisposition: , mimetype: application/vnd.oma.drm.content
+02-25 08:13:08.105   538   538 V DownloadHandler: enter encodePath()
+02-25 08:13:08.105   538   538 V DownloadHandler: download file uri: file:///mnt/sdcard/user/huasha.dcf
+02-25 08:13:08.135   368   418 V DownloadManager: initiating download with UID 10000
+02-25 08:13:08.165   538   561 E WebViewCore: SetSize, 4398
+02-25 08:13:08.165   538   561 E WebViewCore: setSizeScreenWidthAndScale, 1365
+02-25 08:13:08.165   538   561 E WebViewCore: sendPluginVisibleScreen, 2196
+02-25 08:13:08.165   538   561 E WebViewCore: getVisibleScreen, 2186
+02-25 08:13:08.165   538   561 E WebViewCore: UpdateFrameCache, 4822
+02-25 08:13:08.165   538   561 E WebViewCore: updateFrameCache, 1756
+02-25 08:13:08.165   538   561 E WebViewCore: graphicsRootLayer, 3405
+02-25 08:13:08.185   538   538 V Controller: enter bookmarkedStatusHasChanged()
+02-25 08:13:08.195   538   561 E WebViewCore: recordPicture, 563
+02-25 08:13:08.195   538   561 E WebViewCore: layoutIfNeededRecursive, 529
+02-25 08:13:08.205   368   368 V DownloadManager: Service onStart
+02-25 08:13:08.215   368   368 V Download ApnHelper: onReceive: NetworkInfo: type: mobile[UMTS], state: CONNECTED/CONNECTED, reason: simLoaded, extra: epc.tmobile.com, roaming: false, failover: false, isAvailable: true
+02-25 08:13:08.225   538   538 E WebViewCore: updateCursorBounds, 810
+02-25 08:13:08.225   368   602 V DownloadManager: starting query, database is not null; projection is null; selection is null; selectionArgs is null; sort is null.
+02-25 08:13:08.235   368   602 V DownloadManager: created cursor android.database.sqlite.SQLiteCursor@41089a18 on behalf of 368
+02-25 08:13:08.235   368   602 I DownloadManager: number of rows from downloads-db: 10
+02-25 08:13:08.235   368   602 V DownloadManager: processing updated download 13, status: 200
+02-25 08:13:08.235   368   602 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:08.235   368   602 D Download ApnHelper: tryOmaDownload
+02-25 08:13:08.245   538   538 E WebViewCore: updateCursorBounds, 832
+02-25 08:13:08.275   368   368 V DownloadManager: Service ContentObserver received notification
+02-25 08:13:08.295    78   488 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.message (has extras) }: not found
+02-25 08:13:08.335   368   602 V DownloadManager: processing updated download 14, status: 200
+02-25 08:13:08.395   538   538 V PhoneUi : enter setTitleGravity()
+02-25 08:13:08.455   538   538 V Controller: enter onSaveInstanceState()
+02-25 08:13:08.485   538   555 V BrowserCrashRecovery: Saving crash recovery state
+02-25 08:13:08.714   368   602 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:08.744   368   602 D Download ApnHelper: tryOmaDownload
+02-25 08:13:08.744    78    90 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:08.855   368   602 V DownloadManager: processing updated download 15, status: 200
+02-25 08:13:08.865   368   602 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:08.865   368   602 D Download ApnHelper: tryOmaDownload
+02-25 08:13:08.875    78   220 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:08.875   368   602 V DownloadManager: processing updated download 16, status: 200
+02-25 08:13:08.875   368   602 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:08.875   368   602 D Download ApnHelper: tryOmaDownload
+02-25 08:13:08.885    78    78 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:08.885   368   602 V DownloadManager: processing updated download 17, status: 200
+02-25 08:13:08.885   368   602 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:08.885   368   602 D Download ApnHelper: tryOmaDownload
+02-25 08:13:08.895    78   490 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:08.895   368   602 V DownloadManager: processing updated download 18, status: 200
+02-25 08:13:08.895   368   602 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:08.905   368   602 D Download ApnHelper: tryOmaDownload
+02-25 08:13:08.905    78   486 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:08.915   368   602 V DownloadManager: processing updated download 19, status: 200
+02-25 08:13:08.915   368   602 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:08.915   368   602 D Download ApnHelper: tryOmaDownload
+02-25 08:13:08.915    78   234 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:08.925   368   602 V DownloadManager: processing updated download 20, status: 200
+02-25 08:13:08.925   368   602 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:08.925   368   602 D Download ApnHelper: tryOmaDownload
+02-25 08:13:08.925    78   231 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:08.945   368   602 V DownloadManager: processing updated download 21, status: 200
+02-25 08:13:08.945   368   602 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:08.945   368   602 D Download ApnHelper: tryOmaDownload
+02-25 08:13:08.945    78    89 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:08.965   368   602 V DownloadManager: processing inserted download 22
+02-25 08:13:08.965   368   602 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:08.965   368   602 D Download ApnHelper: tryOmaDownload
+02-25 08:13:08.965    78   216 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:08.965   368   602 V DownloadManager: Service spawning thread to handle download 22
+02-25 08:13:08.985   368   368 V DownloadManager: Service ContentObserver received notification
+02-25 08:13:08.985   368   602 I DownloadHandler: enqueued download. id: 22, uri: http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:08.985   368   602 I DownloadHandler: started download for : 22
+02-25 08:13:09.255   368   603 V DownloadManager: initiating download for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:09.355   139   143 D dalvikvm: GC_CONCURRENT freed 492K, 14% free 7504K/8647K, paused 3ms+4ms
+02-25 08:13:09.555   368   603 I DownloadManager: Initiating request for download 22
+02-25 08:13:09.775   368   602 V DownloadManager: starting query, database is not null; projection is null; selection is null; selectionArgs is null; sort is null.
+02-25 08:13:09.785   368   602 V DownloadManager: created cursor android.database.sqlite.SQLiteCursor@410a76d8 on behalf of 368
+02-25 08:13:09.805   368   602 I DownloadManager: number of rows from downloads-db: 10
+02-25 08:13:09.815   368   602 V DownloadManager: processing updated download 13, status: 200
+02-25 08:13:09.834   368   602 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:09.834   368   602 D Download ApnHelper: tryOmaDownload
+02-25 08:13:09.834    78   216 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.message (has extras) }: not found
+02-25 08:13:09.896   368   602 V DownloadManager: processing updated download 14, status: 200
+02-25 08:13:09.896   368   602 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:09.905   368   602 D Download ApnHelper: tryOmaDownload
+02-25 08:13:09.925   368   372 D dalvikvm: GC_CONCURRENT freed 421K, 8% free 6689K/7239K, paused 2ms+4ms
+02-25 08:13:09.925   368   383 V MediaScanner: enter finalize()
+02-25 08:13:09.925   368   383 E         : frameworks/base/media/libstagefright/StagefrightMediaScanner.cpp, ~StagefrightMediaScanner, 47
+02-25 08:13:09.925   368   383 V MediaScanner: enter finalize()
+02-25 08:13:09.935   368   383 E         : frameworks/base/media/libstagefright/StagefrightMediaScanner.cpp, ~StagefrightMediaScanner, 47
+02-25 08:13:09.945    78   485 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:09.955   368   602 V DownloadManager: processing updated download 15, status: 200
+02-25 08:13:09.955   368   602 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:09.965   368   602 D Download ApnHelper: tryOmaDownload
+02-25 08:13:09.965    78   487 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:09.965   368   602 V DownloadManager: processing updated download 16, status: 200
+02-25 08:13:09.985   368   602 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:09.985   368   602 D Download ApnHelper: tryOmaDownload
+02-25 08:13:09.985    78   489 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:09.995   368   602 V DownloadManager: processing updated download 17, status: 200
+02-25 08:13:09.995   368   602 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:09.995   368   602 D Download ApnHelper: tryOmaDownload
+02-25 08:13:10.005    78   220 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:10.015   368   603 I qtaguid : Tagging socket 50 with tag 7fffff0100000000(-255) for uid 10000 failed errno=-2
+02-25 08:13:10.015   368   602 V DownloadManager: processing updated download 18, status: 200
+02-25 08:13:10.015   368   602 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:10.015   368   602 D Download ApnHelper: tryOmaDownload
+02-25 08:13:10.025    78    78 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:10.025   368   602 V DownloadManager: processing updated download 19, status: 200
+02-25 08:13:10.025   368   603 I NetworkManagementSocketTagger: tagSocketFd(50, -255, 10000) failed with errno-2
+02-25 08:13:10.025   368   602 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:10.045   368   602 D Download ApnHelper: tryOmaDownload
+02-25 08:13:10.045    78    90 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:10.055   368   602 V DownloadManager: processing updated download 20, status: 200
+02-25 08:13:10.055   368   602 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:10.055   368   602 D Download ApnHelper: tryOmaDownload
+02-25 08:13:10.065    78   490 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:10.065   368   602 V DownloadManager: processing updated download 21, status: 200
+02-25 08:13:10.075   368   602 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:10.075   368   602 D Download ApnHelper: tryOmaDownload
+02-25 08:13:10.075    78   486 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:10.095   368   602 V DownloadManager: processing updated download 22, status: 192
+02-25 08:13:10.095   368   602 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:10.105   368   602 D Download ApnHelper: tryOmaDownload
+02-25 08:13:10.105    78   234 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:10.115   368   603 I DownloadManager: recevd_status = 200, mContinuingDownload = false
+02-25 08:13:10.115   368   603 V DownloadManager: received response for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:10.125   368   603 V DownloadManager: Content-Disposition: null
+02-25 08:13:10.125   368   603 V DownloadManager: Content-Length: 1371942
+02-25 08:13:10.125   368   603 V DownloadManager: Content-Location: null
+02-25 08:13:10.125   368   603 V DownloadManager: Content-Type: application/vnd.oma.drm.content
+02-25 08:13:10.125   368   603 V DownloadManager: ETag: W/"1371942-1329719297000"
+02-25 08:13:10.125   368   603 V DownloadManager: Transfer-Encoding: null
+02-25 08:13:10.135   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:10.135   368   603 I DownloadManager: in verifySpace, destination: 4, path: /mnt/sdcard/user/huasha.dcf, length: 1371942
+02-25 08:13:11.185   368   603 I DownloadManager: available space (in bytes) in filesystem rooted at: /mnt/sdcard is: 526069760
+02-25 08:13:11.185   368   603 V DownloadManager: target file: /mnt/sdcard/user/huasha.dcf
+02-25 08:13:11.185   368   603 V DownloadManager: file with sequence number 1 exists
+02-25 08:13:11.185   368   603 V DownloadManager: file with sequence number 2 exists
+02-25 08:13:11.195   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.195   368   603 V DownloadManager: writing http://192.168.10.224:8080/test-browser/drm/huasha.dcf to /mnt/sdcard/user/huasha-3.dcf
+02-25 08:13:11.195   368   603 V DownloadManager: starting query, database is not null; projection[0] is title; selection is null; selectionArgs is null; sort is null.
+02-25 08:13:11.215   368   603 V DownloadManager: created cursor android.database.sqlite.SQLiteCursor@4101bd10 on behalf of 368
+02-25 08:13:11.235   368   368 V DownloadManager: Service ContentObserver received notification
+02-25 08:13:11.245   368   605 V DownloadManager: starting query, database is not null; projection is null; selection is null; selectionArgs is null; sort is null.
+02-25 08:13:11.255   368   605 V DownloadManager: created cursor android.database.sqlite.SQLiteCursor@41052988 on behalf of 368
+02-25 08:13:11.255   368   605 I DownloadManager: number of rows from downloads-db: 10
+02-25 08:13:11.255   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.275   368   603 V DownloadManager: downloaded 4096 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.275   368   605 V DownloadManager: processing updated download 13, status: 200
+02-25 08:13:11.275   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.275   368   605 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:11.275   368   605 D Download ApnHelper: tryOmaDownload
+02-25 08:13:11.285    78   234 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.message (has extras) }: not found
+02-25 08:13:11.285   368   605 V DownloadManager: processing updated download 14, status: 200
+02-25 08:13:11.295   368   605 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:11.295   368   605 D Download ApnHelper: tryOmaDownload
+02-25 08:13:11.295    78   231 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:11.295   368   605 V DownloadManager: processing updated download 15, status: 200
+02-25 08:13:11.305   368   605 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:11.305   368   605 D Download ApnHelper: tryOmaDownload
+02-25 08:13:11.305    78    89 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:11.315   368   605 V DownloadManager: processing updated download 16, status: 200
+02-25 08:13:11.315   368   368 V DownloadManager: Service ContentObserver received notification
+02-25 08:13:11.315   368   603 V DownloadManager: downloaded 7983 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.335   368   605 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:11.335   368   605 D Download ApnHelper: tryOmaDownload
+02-25 08:13:11.335   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.335    78   485 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:11.335   368   603 V DownloadManager: downloaded 12079 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.345   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.345   368   603 V DownloadManager: downloaded 16175 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.345   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.345   368   603 V DownloadManager: downloaded 20271 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.345   368   605 V DownloadManager: processing updated download 17, status: 200
+02-25 08:13:11.345   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.355   368   605 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:11.355   368   605 D Download ApnHelper: tryOmaDownload
+02-25 08:13:11.355    78   487 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:11.355   368   603 V DownloadManager: downloaded 24367 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.355   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.355   368   603 V DownloadManager: downloaded 28463 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.355   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.355   368   603 V DownloadManager: downloaded 32559 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.365   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.365   368   603 V DownloadManager: downloaded 36655 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.365   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.365   368   603 V DownloadManager: downloaded 40751 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.365   368   605 V DownloadManager: processing updated download 18, status: 200
+02-25 08:13:11.365   368   605 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:11.365   368   605 D Download ApnHelper: tryOmaDownload
+02-25 08:13:11.375    78   489 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:11.375   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.375   368   605 V DownloadManager: processing updated download 19, status: 200
+02-25 08:13:11.375   368   603 V DownloadManager: downloaded 44847 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.375   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.375   368   603 V DownloadManager: downloaded 48943 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.395   368   605 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:11.395   368   605 D Download ApnHelper: tryOmaDownload
+02-25 08:13:11.395    78   220 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:11.414   368   605 V DownloadManager: processing updated download 20, status: 200
+02-25 08:13:11.414   368   605 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:11.414   368   605 D Download ApnHelper: tryOmaDownload
+02-25 08:13:11.414    78    78 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:11.425   368   605 V DownloadManager: processing updated download 21, status: 200
+02-25 08:13:11.425   368   605 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:11.425   368   605 D Download ApnHelper: tryOmaDownload
+02-25 08:13:11.425    78    90 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:11.435   368   605 V DownloadManager: processing updated download 22, status: 192
+02-25 08:13:11.435   368   605 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:11.435   368   605 D Download ApnHelper: tryOmaDownload
+02-25 08:13:11.435    78   490 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:11.455   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.455   368   603 V DownloadManager: downloaded 53039 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.455   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.495   368   603 V DownloadManager: downloaded 57135 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.495   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.505   368   603 V DownloadManager: downloaded 61231 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.545   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.555   368   603 V DownloadManager: downloaded 65327 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.575   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.575   368   603 V DownloadManager: downloaded 69423 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.575   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.575   368   603 V DownloadManager: downloaded 73519 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.585   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.585   368   603 V DownloadManager: downloaded 77615 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.585   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.585   368   603 V DownloadManager: downloaded 81711 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.585   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.594   368   603 V DownloadManager: downloaded 85807 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.594   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.594   368   603 V DownloadManager: downloaded 89903 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.594   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.594   368   603 V DownloadManager: downloaded 93999 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.664   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.664   368   603 V DownloadManager: downloaded 98095 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.684   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.684   368   603 V DownloadManager: downloaded 102191 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.684   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.684   368   603 V DownloadManager: downloaded 106287 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.694   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.694   368   603 V DownloadManager: downloaded 110383 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.694   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.694   368   603 V DownloadManager: downloaded 114479 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.754   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.786   368   603 V DownloadManager: downloaded 118575 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.786   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.795   368   603 V DownloadManager: downloaded 122671 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.795   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.795   368   603 V DownloadManager: downloaded 126767 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.795   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.795   368   603 V DownloadManager: downloaded 130863 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.795   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.835   368   603 V DownloadManager: downloaded 134959 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.845   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.895   368   603 V DownloadManager: downloaded 139055 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.895   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.895   368   603 V DownloadManager: downloaded 143151 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.905   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.905   368   603 V DownloadManager: downloaded 147247 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.905   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.905   368   603 V DownloadManager: downloaded 151343 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.905   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.905   368   603 V DownloadManager: downloaded 155439 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.935   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.965   368   603 V DownloadManager: downloaded 159535 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:11.995   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:11.995   368   605 V DownloadManager: starting query, database is not null; projection is null; selection is null; selectionArgs is null; sort is null.
+02-25 08:13:12.005   368   603 V DownloadManager: downloaded 163631 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.005   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.015   368   603 V DownloadManager: downloaded 167727 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.015   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.015   368   603 V DownloadManager: downloaded 171823 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.015   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.015   368   603 V DownloadManager: downloaded 175919 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.015   368   605 V DownloadManager: created cursor android.database.sqlite.SQLiteCursor@41054530 on behalf of 368
+02-25 08:13:12.015   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.015   368   603 V DownloadManager: downloaded 180015 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.025   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.025   368   603 V DownloadManager: downloaded 184111 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.025   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.025   368   603 V DownloadManager: downloaded 188207 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.025   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.035   368   605 I DownloadManager: number of rows from downloads-db: 10
+02-25 08:13:12.035   368   603 V DownloadManager: downloaded 192303 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.035   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.035   368   603 V DownloadManager: downloaded 196399 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.035   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.035   368   603 V DownloadManager: downloaded 200495 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.035   368   605 V DownloadManager: processing updated download 13, status: 200
+02-25 08:13:12.035   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.035   368   603 V DownloadManager: downloaded 204591 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.045   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.045   368   603 V DownloadManager: downloaded 208687 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.045   368   605 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:12.045   368   605 D Download ApnHelper: tryOmaDownload
+02-25 08:13:12.045    78   486 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.message (has extras) }: not found
+02-25 08:13:12.045   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.045   368   603 V DownloadManager: downloaded 212783 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.055   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.055   368   603 V DownloadManager: downloaded 216879 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.055   368   605 V DownloadManager: processing updated download 14, status: 200
+02-25 08:13:12.055   368   605 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:12.055   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.055   368   605 D Download ApnHelper: tryOmaDownload
+02-25 08:13:12.055    78   234 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:12.065   368   603 V DownloadManager: downloaded 220975 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.065   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.065   368   605 V DownloadManager: processing updated download 15, status: 200
+02-25 08:13:12.065   368   603 V DownloadManager: downloaded 225071 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.065   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.065   368   605 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:12.065   368   605 D Download ApnHelper: tryOmaDownload
+02-25 08:13:12.075    78   231 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:12.075   368   603 V DownloadManager: downloaded 229167 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.075   368   605 V DownloadManager: processing updated download 16, status: 200
+02-25 08:13:12.075   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.075   368   603 V DownloadManager: downloaded 233263 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.085   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.085   368   603 V DownloadManager: downloaded 237359 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.085   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.085   368   603 V DownloadManager: downloaded 241455 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.085   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.085   368   603 V DownloadManager: downloaded 245551 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.085   368   605 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:12.085   368   605 D Download ApnHelper: tryOmaDownload
+02-25 08:13:12.085    78    89 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:12.095   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.095   368   605 V DownloadManager: processing updated download 17, status: 200
+02-25 08:13:12.095   368   603 V DownloadManager: downloaded 249647 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.095   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.095   368   603 V DownloadManager: downloaded 253743 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.095   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.095   368   603 V DownloadManager: downloaded 257839 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.095   368   605 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:12.095   368   605 D Download ApnHelper: tryOmaDownload
+02-25 08:13:12.105    78   216 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:12.105   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.105   368   603 V DownloadManager: downloaded 261935 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.105   368   605 V DownloadManager: processing updated download 18, status: 200
+02-25 08:13:12.105   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.115   368   603 V DownloadManager: downloaded 266031 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.115   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.115   368   603 V DownloadManager: downloaded 270127 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.115   368   605 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:12.115   368   605 D Download ApnHelper: tryOmaDownload
+02-25 08:13:12.115    78   488 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:12.115   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.115   368   603 V DownloadManager: downloaded 274223 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.125   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.125   368   603 V DownloadManager: downloaded 278319 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.125   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.125   368   603 V DownloadManager: downloaded 282415 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.125   368   605 V DownloadManager: processing updated download 19, status: 200
+02-25 08:13:12.125   368   605 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:12.125   368   605 D Download ApnHelper: tryOmaDownload
+02-25 08:13:12.125   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.125   368   603 V DownloadManager: downloaded 286511 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.125    78   485 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:12.135   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.135   368   603 V DownloadManager: downloaded 290607 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.135   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.135   368   603 V DownloadManager: downloaded 294703 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.135   368   605 V DownloadManager: processing updated download 20, status: 200
+02-25 08:13:12.135   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.135   368   603 V DownloadManager: downloaded 298799 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.135   368   605 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:12.135   368   605 D Download ApnHelper: tryOmaDownload
+02-25 08:13:12.145    78   487 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:12.145   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.145   368   603 V DownloadManager: downloaded 302895 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.145   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.155   368   603 V DownloadManager: downloaded 306991 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.155   368   605 V DownloadManager: processing updated download 21, status: 200
+02-25 08:13:12.155   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.155   368   603 V DownloadManager: downloaded 311087 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.155   368   605 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:12.155   368   605 D Download ApnHelper: tryOmaDownload
+02-25 08:13:12.155    78   489 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:12.165   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.165   368   603 V DownloadManager: downloaded 315183 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.165   368   605 V DownloadManager: processing updated download 22, status: 192
+02-25 08:13:12.165   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.165   368   603 V DownloadManager: downloaded 319279 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.165   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.165   368   605 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:12.165   368   605 D Download ApnHelper: tryOmaDownload
+02-25 08:13:12.175    78   220 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:12.175   368   603 V DownloadManager: downloaded 323375 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.175   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.175   368   603 V DownloadManager: downloaded 327471 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.185   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.185   368   603 V DownloadManager: downloaded 331567 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.185   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.185   368   603 V DownloadManager: downloaded 335663 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.185   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.185   368   603 V DownloadManager: downloaded 339759 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.195   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.195   368   603 V DownloadManager: downloaded 343855 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.195   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.195   368   603 V DownloadManager: downloaded 347951 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.195   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.195   368   603 V DownloadManager: downloaded 352047 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.205   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.205   368   603 V DownloadManager: downloaded 356143 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.255   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.265   368   603 V DownloadManager: downloaded 360239 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.305   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.305   368   603 V DownloadManager: downloaded 364335 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.305   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.315   368   603 V DownloadManager: downloaded 368431 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.315   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.315   368   603 V DownloadManager: downloaded 372527 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.345   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.345   368   603 V DownloadManager: downloaded 376623 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.395   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.405   368   603 V DownloadManager: downloaded 380719 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.405   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.405   368   603 V DownloadManager: downloaded 384815 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.415   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.415   368   603 V DownloadManager: downloaded 388911 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.425   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.505   368   603 V DownloadManager: downloaded 393007 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.515   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.515   368   603 V DownloadManager: downloaded 397103 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.515   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.515   368   603 V DownloadManager: downloaded 401199 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.515   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.525   368   603 V DownloadManager: downloaded 405295 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.525   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.525   368   603 V DownloadManager: downloaded 409391 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.575   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.604   368   603 V DownloadManager: downloaded 413487 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.604   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.615   368   603 V DownloadManager: downloaded 417583 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.615   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.615   368   603 V DownloadManager: downloaded 421679 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.615   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.615   368   603 V DownloadManager: downloaded 425775 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.615   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.624   368   603 V DownloadManager: downloaded 429871 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.624   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.624   368   603 V DownloadManager: downloaded 433967 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.634   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.634   368   603 V DownloadManager: downloaded 438063 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.634   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.634   368   603 V DownloadManager: downloaded 442159 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.634   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.695   368   603 V DownloadManager: downloaded 446255 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.714   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.714   368   603 V DownloadManager: downloaded 450351 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.724   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.724   368   603 V DownloadManager: downloaded 454447 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.724   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.724   368   603 V DownloadManager: downloaded 458543 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.724   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.724   368   603 V DownloadManager: downloaded 462639 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.724   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.724   368   603 V DownloadManager: downloaded 466735 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.734   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.734   368   603 V DownloadManager: downloaded 470831 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.734   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.734   368   603 V DownloadManager: downloaded 474927 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.734   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.734   368   603 V DownloadManager: downloaded 479023 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.734   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.744   368   603 V DownloadManager: downloaded 483119 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.744   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.744   368   603 V DownloadManager: downloaded 487215 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.744   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.744   368   603 V DownloadManager: downloaded 491311 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.744   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.744   368   603 V DownloadManager: downloaded 495407 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.744   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.744   368   603 V DownloadManager: downloaded 499503 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.744   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.754   368   603 V DownloadManager: downloaded 503599 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.754   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.754   368   603 V DownloadManager: downloaded 507695 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.754   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.754   368   603 V DownloadManager: downloaded 511791 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.754   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.754   368   603 V DownloadManager: downloaded 515887 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.754   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.754   368   603 V DownloadManager: downloaded 519983 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.754   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.754   368   603 V DownloadManager: downloaded 524079 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.754   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.754   368   603 V DownloadManager: downloaded 528175 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.765   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.765   368   603 V DownloadManager: downloaded 532271 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.765   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.765   368   603 V DownloadManager: downloaded 536367 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.765   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.765   368   603 V DownloadManager: downloaded 540463 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.765   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.765   368   603 V DownloadManager: downloaded 544559 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.765   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.805   368   368 V DownloadManager: Service ContentObserver received notification
+02-25 08:13:12.805   368   603 V DownloadManager: downloaded 548655 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.805   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.805   368   606 V DownloadManager: starting query, database is not null; projection is null; selection is null; selectionArgs is null; sort is null.
+02-25 08:13:12.815   368   603 V DownloadManager: downloaded 552751 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.815   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.815   368   603 V DownloadManager: downloaded 556847 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.815   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.815   368   603 V DownloadManager: downloaded 560943 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.815   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.815   368   603 V DownloadManager: downloaded 565039 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.815   368   606 V DownloadManager: created cursor android.database.sqlite.SQLiteCursor@410700a0 on behalf of 368
+02-25 08:13:12.825   368   606 I DownloadManager: number of rows from downloads-db: 10
+02-25 08:13:12.825   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.825   368   603 V DownloadManager: downloaded 569135 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.835   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.835   368   603 V DownloadManager: downloaded 573231 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.835   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.835   368   603 V DownloadManager: downloaded 577327 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.835   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.835   368   603 V DownloadManager: downloaded 581423 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.835   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.835   368   603 V DownloadManager: downloaded 585519 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.835   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.835   368   603 V DownloadManager: downloaded 589615 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.835   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.845   368   606 V DownloadManager: processing updated download 13, status: 200
+02-25 08:13:12.845   368   603 V DownloadManager: downloaded 593711 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.845   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.845   368   603 V DownloadManager: downloaded 597807 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.845   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.845   368   606 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:12.845   368   603 V DownloadManager: downloaded 601903 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.845   368   606 D Download ApnHelper: tryOmaDownload
+02-25 08:13:12.855    78   490 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.message (has extras) }: not found
+02-25 08:13:12.855   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.855   368   603 V DownloadManager: downloaded 605999 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.855   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.855   368   603 V DownloadManager: downloaded 610095 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.855   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.855   368   603 V DownloadManager: downloaded 614191 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.855   368   606 V DownloadManager: processing updated download 14, status: 200
+02-25 08:13:12.855   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.855   368   606 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:12.855   368   606 D Download ApnHelper: tryOmaDownload
+02-25 08:13:12.865    78   486 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:12.865   368   603 V DownloadManager: downloaded 618287 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.865   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.865   368   603 V DownloadManager: downloaded 622383 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.865   368   606 V DownloadManager: processing updated download 15, status: 200
+02-25 08:13:12.875   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.875   368   603 V DownloadManager: downloaded 626479 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.875   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.875   368   606 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:12.875   368   606 D Download ApnHelper: tryOmaDownload
+02-25 08:13:12.875    78   234 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:12.875   368   603 V DownloadManager: downloaded 630575 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.875   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.885   368   603 V DownloadManager: downloaded 634671 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.885   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.885   368   606 V DownloadManager: processing updated download 16, status: 200
+02-25 08:13:12.885   368   603 V DownloadManager: downloaded 638767 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.885   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.885   368   606 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:12.885   368   606 D Download ApnHelper: tryOmaDownload
+02-25 08:13:12.895    78   231 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:12.895   368   603 V DownloadManager: downloaded 642863 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.895   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.895   368   603 V DownloadManager: downloaded 646959 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.905   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.905   368   603 V DownloadManager: downloaded 651055 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.905   368   606 V DownloadManager: processing updated download 17, status: 200
+02-25 08:13:12.905   368   606 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:12.905   368   606 D Download ApnHelper: tryOmaDownload
+02-25 08:13:12.905   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.905    78    89 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:12.915   368   603 V DownloadManager: downloaded 655151 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.915   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.915   368   603 V DownloadManager: downloaded 659247 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.915   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.915   368   606 V DownloadManager: processing updated download 18, status: 200
+02-25 08:13:12.915   368   603 V DownloadManager: downloaded 663343 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.915   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.915   368   603 V DownloadManager: downloaded 667439 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.915   368   606 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:12.925   368   606 D Download ApnHelper: tryOmaDownload
+02-25 08:13:12.925    78   216 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:12.925   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.925   368   603 V DownloadManager: downloaded 671535 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.925   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.925   368   603 V DownloadManager: downloaded 675631 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.934   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.934   368   603 V DownloadManager: downloaded 679727 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.934   368   606 V DownloadManager: processing updated download 19, status: 200
+02-25 08:13:12.934   368   606 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:12.934   368   606 D Download ApnHelper: tryOmaDownload
+02-25 08:13:12.934   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.934    78   488 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:12.945   368   606 V DownloadManager: processing updated download 20, status: 200
+02-25 08:13:12.945   368   603 V DownloadManager: downloaded 683823 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.945   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.945   368   603 V DownloadManager: downloaded 687919 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.945   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.945   368   606 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:12.945   368   606 D Download ApnHelper: tryOmaDownload
+02-25 08:13:12.955    78   485 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:12.955   368   603 V DownloadManager: downloaded 692015 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.955   368   606 V DownloadManager: processing updated download 21, status: 200
+02-25 08:13:12.955   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.955   368   603 V DownloadManager: downloaded 696111 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.955   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.965   368   606 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:12.965   368   606 D Download ApnHelper: tryOmaDownload
+02-25 08:13:12.965    78   487 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:12.965   368   603 V DownloadManager: downloaded 700207 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.975   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.975   368   603 V DownloadManager: downloaded 704303 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.975   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.975   368   603 V DownloadManager: downloaded 708399 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.975   368   606 V DownloadManager: processing updated download 22, status: 192
+02-25 08:13:12.975   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.975   368   606 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:12.975   368   606 D Download ApnHelper: tryOmaDownload
+02-25 08:13:12.985    78   489 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:12.985   368   603 V DownloadManager: downloaded 712495 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.985   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.985   368   603 V DownloadManager: downloaded 716591 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.985   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.985   368   603 V DownloadManager: downloaded 720687 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.995   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.995   368   603 V DownloadManager: downloaded 724783 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.995   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.995   368   603 V DownloadManager: downloaded 728879 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:12.995   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:12.995   368   603 V DownloadManager: downloaded 732975 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.005   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.005   368   603 V DownloadManager: downloaded 737071 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.014   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.014   368   603 V DownloadManager: downloaded 741167 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.014   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.014   368   603 V DownloadManager: downloaded 745263 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.014   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.095   368   603 V DownloadManager: downloaded 749359 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.095   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.095   368   603 V DownloadManager: downloaded 753455 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.115   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.115   368   603 V DownloadManager: downloaded 757551 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.115   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.115   368   603 V DownloadManager: downloaded 761647 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.125   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.125   368   603 V DownloadManager: downloaded 765743 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.125   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.125   368   603 V DownloadManager: downloaded 769839 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.185   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.215   368   603 V DownloadManager: downloaded 773935 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.215   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.215   368   603 V DownloadManager: downloaded 778031 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.215   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.215   368   603 V DownloadManager: downloaded 782127 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.215   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.225   368   603 V DownloadManager: downloaded 786223 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.235   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.235   368   603 V DownloadManager: downloaded 790319 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.265   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.265   368   603 V DownloadManager: downloaded 794415 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.285   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.325   368   603 V DownloadManager: downloaded 798511 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.325   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.325   368   603 V DownloadManager: downloaded 802607 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.325   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.335   368   603 V DownloadManager: downloaded 806703 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.335   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.365   368   603 V DownloadManager: downloaded 810799 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.375   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.425   368   603 V DownloadManager: downloaded 814895 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.425   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.435   368   603 V DownloadManager: downloaded 818991 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.435   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.435   368   603 V DownloadManager: downloaded 823087 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.445   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.445   368   603 V DownloadManager: downloaded 827183 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.445   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.445   368   603 V DownloadManager: downloaded 831279 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.445   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.495   368   603 V DownloadManager: downloaded 835375 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.525   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.535   368   603 V DownloadManager: downloaded 839471 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.535   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.535   368   603 V DownloadManager: downloaded 843567 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.535   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.535   368   603 V DownloadManager: downloaded 847663 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.535   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.535   368   603 V DownloadManager: downloaded 851759 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.535   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.535   368   603 V DownloadManager: downloaded 855855 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.535   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.545   368   603 V DownloadManager: downloaded 859951 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.545   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.545   368   603 V DownloadManager: downloaded 864047 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.545   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.545   368   603 V DownloadManager: downloaded 868143 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.545   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.545   368   603 V DownloadManager: downloaded 872239 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.545   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.545   368   603 V DownloadManager: downloaded 876335 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.545   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.555   368   603 V DownloadManager: downloaded 880431 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.555   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.555   368   603 V DownloadManager: downloaded 884527 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.555   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.555   368   603 V DownloadManager: downloaded 888623 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.555   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.555   368   603 V DownloadManager: downloaded 892719 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.555   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.555   368   603 V DownloadManager: downloaded 896815 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.555   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.555   368   603 V DownloadManager: downloaded 900911 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.555   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.555   368   603 V DownloadManager: downloaded 905007 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.565   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.565   368   603 V DownloadManager: downloaded 909103 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.565   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.565   368   603 V DownloadManager: downloaded 913199 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.565   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.565   368   603 V DownloadManager: downloaded 917295 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.565   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.565   368   603 V DownloadManager: downloaded 921391 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.575   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.575   368   603 V DownloadManager: downloaded 925487 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.575   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.575   368   603 V DownloadManager: downloaded 929583 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.575   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.575   368   603 V DownloadManager: downloaded 933679 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.575   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.575   368   603 V DownloadManager: downloaded 937775 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.575   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.575   368   603 V DownloadManager: downloaded 941871 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.575   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.585   368   603 V DownloadManager: downloaded 945967 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.585   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.585   368   603 V DownloadManager: downloaded 950063 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.585   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.585   368   603 V DownloadManager: downloaded 954159 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.585   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.585   368   603 V DownloadManager: downloaded 958255 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.585   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.595   368   603 V DownloadManager: downloaded 962351 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.595   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.595   368   603 V DownloadManager: downloaded 966447 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.595   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.595   368   603 V DownloadManager: downloaded 970543 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.595   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.595   368   603 V DownloadManager: downloaded 974639 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.595   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.595   368   603 V DownloadManager: downloaded 978735 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.604   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.604   368   603 V DownloadManager: downloaded 982831 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.604   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.604   368   603 V DownloadManager: downloaded 986927 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.604   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.604   368   603 V DownloadManager: downloaded 991023 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.604   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.604   368   603 V DownloadManager: downloaded 995119 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.604   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.614   368   603 V DownloadManager: downloaded 999215 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.614   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.614   368   603 V DownloadManager: downloaded 1003311 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.614   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.614   368   603 V DownloadManager: downloaded 1007407 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.614   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.614   368   603 V DownloadManager: downloaded 1011503 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.614   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.624   368   603 V DownloadManager: downloaded 1015599 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.624   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.624   368   603 V DownloadManager: downloaded 1019695 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.624   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.624   368   603 V DownloadManager: downloaded 1023791 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.624   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.624   368   603 V DownloadManager: downloaded 1027887 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.624   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.624   368   603 V DownloadManager: downloaded 1031983 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.624   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.634   368   603 V DownloadManager: downloaded 1036079 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.634   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.634   368   603 V DownloadManager: downloaded 1040175 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.634   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.634   368   603 V DownloadManager: downloaded 1044271 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.634   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.634   368   603 V DownloadManager: downloaded 1048367 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.634   368   603 I DownloadManager: in verifySpace, destination: 4, path: /mnt/sdcard/user/huasha-3.dcf, length: 4096
+02-25 08:13:13.644   368   603 I DownloadManager: available space (in bytes) in filesystem rooted at: /mnt/sdcard is: 525021184
+02-25 08:13:13.644   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.644   368   603 V DownloadManager: downloaded 1052463 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.644   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.644   368   603 V DownloadManager: downloaded 1056559 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.644   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.644   368   603 V DownloadManager: downloaded 1060655 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.644   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.654   368   603 V DownloadManager: downloaded 1064751 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.654   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.654   368   603 V DownloadManager: downloaded 1068847 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.654   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.654   368   603 V DownloadManager: downloaded 1072943 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.654   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.654   368   603 V DownloadManager: downloaded 1077039 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.654   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.654   368   603 V DownloadManager: downloaded 1081135 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.664   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.664   368   603 V DownloadManager: downloaded 1085231 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.664   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.664   368   603 V DownloadManager: downloaded 1088951 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.664   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.664   368   603 V DownloadManager: downloaded 1093047 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.664   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.664   368   603 V DownloadManager: downloaded 1097143 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.664   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.664   368   603 V DownloadManager: downloaded 1101239 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.674   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.674   368   603 V DownloadManager: downloaded 1105011 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.674   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.704   368   603 V DownloadManager: downloaded 1109107 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.704   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.714   368   603 V DownloadManager: downloaded 1113203 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.714   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.734   368   372 D dalvikvm: GC_CONCURRENT freed 381K, 8% free 6723K/7239K, paused 3ms+6ms
+02-25 08:13:13.734   368   603 V DownloadManager: downloaded 1117299 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.734   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.744   368   603 V DownloadManager: downloaded 1121395 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.744   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.744   368   603 V DownloadManager: downloaded 1125491 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.754   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.754   368   603 V DownloadManager: downloaded 1129587 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.754   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.754   368   603 V DownloadManager: downloaded 1133683 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.754   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.754   368   603 V DownloadManager: downloaded 1137779 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.754   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.754   368   603 V DownloadManager: downloaded 1141875 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.765   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.765   368   603 V DownloadManager: downloaded 1145971 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.765   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.765   368   603 V DownloadManager: downloaded 1150067 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.765   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.765   368   603 V DownloadManager: downloaded 1154163 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.765   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.765   368   603 V DownloadManager: downloaded 1158259 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.765   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.775   368   603 V DownloadManager: downloaded 1161951 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.775   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.775   368   603 V DownloadManager: downloaded 1166047 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.775   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.775   368   603 V DownloadManager: downloaded 1166331 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.775   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.785   368   603 V DownloadManager: downloaded 1170427 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.785   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.785   368   603 V DownloadManager: downloaded 1174523 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.785   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.785   368   603 V DownloadManager: downloaded 1178619 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.785   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.785   368   603 V DownloadManager: downloaded 1179471 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.785   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.796   368   603 V DownloadManager: downloaded 1183567 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.796   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.796   368   603 V DownloadManager: downloaded 1183851 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.796   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.796   368   603 V DownloadManager: downloaded 1187947 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.796   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.796   368   603 V DownloadManager: downloaded 1188231 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.796   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.796   368   603 V DownloadManager: downloaded 1192327 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.796   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.805   368   603 V DownloadManager: downloaded 1192611 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.805   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.805   368   603 V DownloadManager: downloaded 1196707 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.805   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.805   368   603 V DownloadManager: downloaded 1196991 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.805   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.805   368   603 V DownloadManager: downloaded 1201087 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.805   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.805   368   603 V DownloadManager: downloaded 1201371 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.805   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.805   368   603 V DownloadManager: downloaded 1205467 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.805   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.815   368   603 V DownloadManager: downloaded 1207211 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.815   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.815   368   603 V DownloadManager: downloaded 1211307 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.815   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.815   368   603 V DownloadManager: downloaded 1211591 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.815   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.815   368   603 V DownloadManager: downloaded 1215687 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.815   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.815   368   603 V DownloadManager: downloaded 1215971 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.825   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.825   368   603 V DownloadManager: downloaded 1220067 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.825   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.825   368   603 V DownloadManager: downloaded 1220351 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.825   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.825   368   603 V DownloadManager: downloaded 1224447 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.825   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.825   368   603 V DownloadManager: downloaded 1224731 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.834   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.834   368   603 V DownloadManager: downloaded 1228827 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.834   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.834   368   603 V DownloadManager: downloaded 1229111 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.834   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.834   368   603 V DownloadManager: downloaded 1233207 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.834   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.834   368   603 V DownloadManager: downloaded 1233491 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.834   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.845   368   603 V DownloadManager: downloaded 1237587 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.845   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.845   368   603 V DownloadManager: downloaded 1237871 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.845   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.845   368   603 V DownloadManager: downloaded 1241967 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.845   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.855   368   603 V DownloadManager: downloaded 1242251 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.855   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.855   368   603 V DownloadManager: downloaded 1246347 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.855   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.855   368   603 V DownloadManager: downloaded 1250443 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.855   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.865   368   603 V DownloadManager: downloaded 1254539 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.865   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.865   368   603 V DownloadManager: downloaded 1258635 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.865   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.865   368   603 V DownloadManager: downloaded 1262731 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.865   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.865   368   603 V DownloadManager: downloaded 1266827 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.865   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.865   368   603 V DownloadManager: downloaded 1270923 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.865   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.875   368   603 V DownloadManager: downloaded 1272911 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.875   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.875   368   603 V DownloadManager: downloaded 1277007 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.875   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.875   368   603 V DownloadManager: downloaded 1277291 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.875   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.875   368   603 V DownloadManager: downloaded 1281387 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.875   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.875   368   603 V DownloadManager: downloaded 1281671 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.875   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.885   368   603 V DownloadManager: downloaded 1285767 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.885   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.885   368   603 V DownloadManager: downloaded 1286051 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.885   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.885   368   603 V DownloadManager: downloaded 1290147 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.885   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.885   368   603 V DownloadManager: downloaded 1290431 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.885   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.885   368   603 V DownloadManager: downloaded 1294527 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.885   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.895   368   603 V DownloadManager: downloaded 1298623 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.895   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.895   368   603 V DownloadManager: downloaded 1302719 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.895   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.895   368   603 V DownloadManager: downloaded 1306815 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.895   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.895   368   603 V DownloadManager: downloaded 1310911 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.895   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.895   368   603 V DownloadManager: downloaded 1312331 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.895   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.895   368   603 V DownloadManager: downloaded 1316427 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.895   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.895   368   603 V DownloadManager: downloaded 1316711 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.905   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.905   368   603 V DownloadManager: downloaded 1320807 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.905   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.905   368   603 V DownloadManager: downloaded 1321091 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.905   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.905   368   603 V DownloadManager: downloaded 1325187 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.905   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.905   368   603 V DownloadManager: downloaded 1325471 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.915   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.915   368   603 V DownloadManager: downloaded 1329567 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.915   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.915   368   603 V DownloadManager: downloaded 1329851 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.915   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.915   368   603 V DownloadManager: downloaded 1333947 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.915   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.915   368   603 V DownloadManager: downloaded 1334231 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.915   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.925   368   603 V DownloadManager: downloaded 1338327 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.925   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.925   368   603 V DownloadManager: downloaded 1338611 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.925   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.925   368   603 V DownloadManager: downloaded 1342707 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.925   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.925   368   603 V DownloadManager: downloaded 1344451 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.925   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.925   368   603 V DownloadManager: downloaded 1348547 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.925   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.925   368   603 V DownloadManager: downloaded 1348831 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.925   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.925   368   603 V DownloadManager: downloaded 1352927 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:13.925   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:13.925   368   603 V DownloadManager: downloaded 1353211 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:14.005   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:14.005   368   603 V DownloadManager: downloaded 1357307 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:14.005   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:14.005   368   603 V DownloadManager: downloaded 1361403 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:14.005   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:14.005   368   603 V DownloadManager: downloaded 1365499 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:14.005   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:14.005   368   603 V DownloadManager: downloaded 1369595 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:14.005   368   603 V DownloadDrmHelper: enter isDrmConvertNeeded(): application/vnd.oma.drm.content
+02-25 08:13:14.005   368   603 V DownloadManager: downloaded 1371942 for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:14.005   368   603 I qtaguid : Untagging socket 50 failed errno=-2
+02-25 08:13:14.015   368   603 W NetworkManagementSocketTagger: untagSocket(50) failed with errno -2
+02-25 08:13:14.025   368   368 V DownloadManager: Service ContentObserver received notification
+02-25 08:13:14.025   368   603 V DownloadManager: download completed for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:14.035   368   607 V DownloadManager: starting query, database is not null; projection is null; selection is null; selectionArgs is null; sort is null.
+02-25 08:13:14.045   368   603 V DownloadManager: starting query, database is not null; projection[0] is title; selection is null; selectionArgs is null; sort is null.
+02-25 08:13:14.055   368   607 V DownloadManager: created cursor android.database.sqlite.SQLiteCursor@410a9480 on behalf of 368
+02-25 08:13:14.055   368   607 I DownloadManager: number of rows from downloads-db: 10
+02-25 08:13:14.065   368   603 V DownloadManager: created cursor android.database.sqlite.SQLiteCursor@410a30b8 on behalf of 368
+02-25 08:13:14.075   368   607 V DownloadManager: processing updated download 13, status: 200
+02-25 08:13:14.075   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:14.075   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:14.075    78   234 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.message (has extras) }: not found
+02-25 08:13:14.085   368   607 V DownloadManager: processing updated download 14, status: 200
+02-25 08:13:14.085   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:14.085   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:14.095    78   231 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:14.095   368   607 V DownloadManager: processing updated download 15, status: 200
+02-25 08:13:14.105   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:14.105   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:14.105    78   216 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:14.115   368   607 V DownloadManager: processing updated download 16, status: 200
+02-25 08:13:14.115   368   368 V DownloadManager: Service ContentObserver received notification
+02-25 08:13:14.115   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:14.125   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:14.125    78   487 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:14.125   368   607 V DownloadManager: processing updated download 17, status: 200
+02-25 08:13:14.135   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:14.135   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:14.135    78    78 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:14.145   368   607 V DownloadManager: processing updated download 18, status: 200
+02-25 08:13:14.145   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:14.145   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:14.145    78    90 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:14.145   368   607 V DownloadManager: processing updated download 19, status: 200
+02-25 08:13:14.145   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:14.145   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:14.155    78   490 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:14.155   368   607 V DownloadManager: processing updated download 20, status: 200
+02-25 08:13:14.155   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:14.155   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:14.155    78   486 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:14.165   368   607 V DownloadManager: processing updated download 21, status: 200
+02-25 08:13:14.165   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:14.165   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:14.165    78   234 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:14.175   368   607 V DownloadManager: processing updated download 22, status: 192
+02-25 08:13:14.175   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:14.175   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:14.175    78   231 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:14.175   368   607 V DownloadManager: Service spawning thread to handle download 22
+02-25 08:13:14.175   368   607 I DownloadHandler: enqueued download. id: 22, uri: http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:14.175   368   607 I DownloadHandler: started download for : 22
+02-25 08:13:14.315   368   608 V DownloadManager: initiating download for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:14.365   368   608 I DownloadManager: Initiating request for download 22
+02-25 08:13:14.375   368   608 I DownloadManager: have run thread before for id: 22, and state.mFilename: /mnt/sdcard/user/huasha-3.dcf
+02-25 08:13:14.435   368   608 I DownloadManager: resuming download for id: 22, and state.mFilename: /mnt/sdcard/user/huasha-3.dcf
+02-25 08:13:14.455   368   608 I DownloadManager: resuming download for id: 22, and starting with file of length: 1371942
+02-25 08:13:14.465   368   608 I DownloadManager: resuming download for id: 22, state.mCurrentBytes: 1371942, and setting mContinuingDownload to true: 
+02-25 08:13:14.475   368   608 I DownloadManager: Adding Range header: bytes=1371942-
+02-25 08:13:14.475   368   608 I DownloadManager:   totalBytes = 1371942
+02-25 08:13:14.475   368   608 I DownloadManager: Skipping initiating request for download 22; already completed
+02-25 08:13:14.475   368   608 V DownloadManager: download completed for http://192.168.10.224:8080/test-browser/drm/huasha.dcf
+02-25 08:13:14.515   368   608 V DownloadManager: starting query, database is not null; projection[0] is title; selection is null; selectionArgs is null; sort is null.
+02-25 08:13:14.594   368   608 V DownloadManager: created cursor android.database.sqlite.SQLiteCursor@41036368 on behalf of 368
+02-25 08:13:14.654    78    81 D dalvikvm: GC_CONCURRENT freed 848K, 14% free 8442K/9735K, paused 4ms+7ms
+02-25 08:13:14.714   368   607 V DownloadManager: starting query, database is not null; projection is null; selection is null; selectionArgs is null; sort is null.
+02-25 08:13:14.775   368   607 V DownloadManager: created cursor android.database.sqlite.SQLiteCursor@41044ba0 on behalf of 368
+02-25 08:13:14.785   368   607 I DownloadManager: number of rows from downloads-db: 10
+02-25 08:13:14.794   368   368 V DownloadManager: Service ContentObserver received notification
+02-25 08:13:14.794   368   607 V DownloadManager: processing updated download 13, status: 200
+02-25 08:13:14.794   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:14.805   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:14.805    78   486 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.message (has extras) }: not found
+02-25 08:13:14.805   368   607 V DownloadManager: processing updated download 14, status: 200
+02-25 08:13:14.805   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:14.805   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:14.805    78   234 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:14.815   368   607 V DownloadManager: processing updated download 15, status: 200
+02-25 08:13:14.815   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:14.815   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:14.815    78   231 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:14.824   368   607 V DownloadManager: processing updated download 16, status: 200
+02-25 08:13:14.824   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:14.824   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:14.824    78    89 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:14.824   368   607 V DownloadManager: processing updated download 17, status: 200
+02-25 08:13:14.824   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:14.824   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:14.835    78   216 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:14.835   368   607 V DownloadManager: processing updated download 18, status: 200
+02-25 08:13:14.835   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:14.835   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:14.845    78   488 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:14.845   368   607 V DownloadManager: processing updated download 19, status: 200
+02-25 08:13:14.845   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:14.845   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:14.845    78   485 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:14.855   368   607 V DownloadManager: processing updated download 20, status: 200
+02-25 08:13:14.855   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:14.855   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:14.855    78   487 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:14.865   368   607 V DownloadManager: processing updated download 21, status: 200
+02-25 08:13:14.865   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:14.865   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:14.865    78   489 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:14.875   368   607 V DownloadManager: processing updated download 22, status: 200
+02-25 08:13:14.904   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:14.925   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:14.925    78   490 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:15.045   139   143 D dalvikvm: GC_CONCURRENT freed 396K, 13% free 7609K/8647K, paused 3ms+7ms
+02-25 08:13:15.405   368   368 V MediaScannerService: enter onCreate()
+02-25 08:13:15.435   368   368 V MediaScannerService: enter onBind()
+02-25 08:13:15.435   368   607 V DownloadManager: starting query, database is not null; projection is null; selection is null; selectionArgs is null; sort is null.
+02-25 08:13:15.465   368   368 V DownloadManager: Connected to Media Scanner
+02-25 08:13:15.505   368   610 V MediaScannerService: enter run()
+02-25 08:13:15.555   538   538 E WebViewCore: SetIsPaused, 4986
+02-25 08:13:15.555   538   561 E WebViewCore: SetFocusControllerActive, 4549
+02-25 08:13:15.555   538   561 E WebViewCore: setFocusControllerActive, 3213
+02-25 08:13:15.714   368   607 V DownloadManager: created cursor android.database.sqlite.SQLiteCursor@41055c38 on behalf of 368
+02-25 08:13:15.774   368   607 I DownloadManager: number of rows from downloads-db: 10
+02-25 08:13:15.774   368   607 V DownloadManager: processing updated download 13, status: 200
+02-25 08:13:15.774   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:15.774   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:15.774    78   487 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.message (has extras) }: not found
+02-25 08:13:15.825   368   607 V DownloadManager: processing updated download 14, status: 200
+02-25 08:13:15.975   139   143 D dalvikvm: GC_CONCURRENT freed 470K, 13% free 7542K/8647K, paused 3ms+5ms
+02-25 08:13:15.975   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:15.975   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:15.975    78   231 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:15.985   368   607 V DownloadManager: processing updated download 15, status: 200
+02-25 08:13:15.985   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:15.985   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:15.995    78    89 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:15.995   368   607 V DownloadManager: processing updated download 16, status: 200
+02-25 08:13:15.995   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:15.995   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:15.995    78   216 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:16.005   368   607 V DownloadManager: processing updated download 17, status: 200
+02-25 08:13:16.005   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:16.005   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:16.005    78   488 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:16.015   368   607 V DownloadManager: processing updated download 18, status: 200
+02-25 08:13:16.015   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:16.015   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:16.025    78   485 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:16.025   368   607 V DownloadManager: processing updated download 19, status: 200
+02-25 08:13:16.025   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:16.025   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:16.025    78   487 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:16.025   368   607 V DownloadManager: processing updated download 20, status: 200
+02-25 08:13:16.025   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:16.025   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:16.035    78   489 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:16.035   368   607 V DownloadManager: processing updated download 21, status: 200
+02-25 08:13:16.035   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:16.035   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:16.045    78   220 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:16.045   368   607 V DownloadManager: processing updated download 22, status: 200
+02-25 08:13:16.045   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:16.045   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:16.055    78    78 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:16.055   368   607 V DownloadManager: Scanning file /mnt/sdcard/user/huasha-3.dcf
+02-25 08:13:16.055   368   607 V MediaScannerService: enter requestScanFile()
+02-25 08:13:16.065   368   368 V MediaScannerService: enter onStartCommand()
+02-25 08:13:16.065   368   610 V MediaScannerService: enter handleMessage()
+02-25 08:13:16.075   368   610 V MediaScannerService: enter scanFile(): /mnt/sdcard/user/huasha-3.dcf, mimeType: application/vnd.oma.drm.content
+02-25 08:13:16.075   368   610 V MediaScannerService: enter openDatabase()
+02-25 08:13:16.075   368   610 V MediaProvider: enter insert()
+02-25 08:13:16.075   368   610 V MediaProvider: enter insertInternal()
+02-25 08:13:16.075   368   610 V MediaProvider: enter getDatabaseForUri()
+02-25 08:13:16.075   368   610 V MediaProvider: enter attachVolume()
+02-25 08:13:16.075   368   610 V MediaScannerService: enter createMediaScanner()
+02-25 08:13:16.075   368   610 V MediaScanner: enter MediaScanner()
+02-25 08:13:16.075   368   610 E         : frameworks/base/media/libstagefright/StagefrightMediaScanner.cpp, StagefrightMediaScanner, 40
+02-25 08:13:16.075   368   610 V MediaScanner: enter setDefaultRingtoneFileNames()
+02-25 08:13:16.075   368   610 V MediaScanner: enter scanSingleFile(): /mnt/sdcard/user/huasha-3.dcf, volumeName: external, mimeType: application/vnd.oma.drm.content
+02-25 08:13:16.075   368   610 V MediaScanner: enter initialize()
+02-25 08:13:16.085   368   610 V MediaScanner: enter prescan()
+02-25 08:13:16.085   368   610 V MediaProvider: enter query()
+02-25 08:13:16.085   368   610 V MediaProvider: enter getDatabaseForUri()
+02-25 08:13:16.085   368   610 V MediaProvider: enter combine()
+02-25 08:13:16.095   368   610 V MediaProvider: enter query()
+02-25 08:13:16.095   368   610 V MediaProvider: enter getDatabaseForUri()
+02-25 08:13:16.105   368   610 V MediaProvider: enter combine()
+02-25 08:13:16.215   368   610 V MediaScanner: enter doScanFile(), path:/mnt/sdcard/user/huasha-3.dcf, mimeType:application/vnd.oma.drm.content, lastModified:1330157594, fileSize:1371942, isDirectory:false, scanAlways:true, noMedia:false
+02-25 08:13:16.225   368   610 V MediaScanner: enter beginFile(), path:/mnt/sdcard/user/huasha-3.dcf, mimeType:application/vnd.oma.drm.content, lastModified:1330157594, fileSize:1371942, isDirectory:false, noMedia:false
+02-25 08:13:16.225   368   610 V MediaScanner: enter isNoMediaFile()
+02-25 08:13:16.225   368   610 V MediaScanner: beginFile(), no media:false
+02-25 08:13:16.225   368   610 V MediaScanner: beginFile(), file type:52
+02-25 08:13:16.225   368   610 V MediaScanner: beginFile(), got file type:52
+02-25 08:13:16.225   368   610 V MediaScanner: beginFile(), got mime type:application/vnd.oma.drm.content
+02-25 08:13:16.315   368   610 V MediaScanner: enter isDrmEnabled()
+02-25 08:13:16.315   368   610 V MediaScanner: enter FileCacheEntry()
+02-25 08:13:16.325   368   610 V MediaScanner: doScanFile, media file, type: 52
+02-25 08:13:16.335   368   610 E         : frameworks/base/media/libstagefright/StagefrightMediaScanner.cpp, processFile, 201
+02-25 08:13:16.335   368   610 V StagefrightMediaScanner: processFile '/mnt/sdcard/user/huasha-3.dcf'.
+02-25 08:13:16.335   368   610 E         : frameworks/base/media/libstagefright/StagefrightMediaScanner.cpp, processFileInternal, 218
+02-25 08:13:16.335   368   610 E         : frameworks/base/media/libstagefright/StagefrightMediaScanner.cpp, FileHasAcceptableExtension, 54
+02-25 08:13:16.335   368   610 E         : frameworks/base/media/libstagefright/StagefrightMediaScanner.cpp, HandleDCF, 147
+02-25 08:13:16.335   368   610 D         : DRM_Open fd =63
+02-25 08:13:16.365   368   610 D         : Enter directIO_open_dcfcb_init
+02-25 08:13:16.365   368   610 D         : enter init_with_mmap
+02-25 08:13:16.385   368   610 D         : enter init_with_pointer
+02-25 08:13:16.385   368   610 D         : ret is 0, cid is cid:z20091229032 
+02-25 08:13:16.435   368   610 D         : drm_getKey error
+02-25 08:13:16.455   368   610 V StagefrightMediaScanner: content type is audio/mpeg
+02-25 08:13:16.455   368   610 V MediaScanner: enter setMimeType()
+02-25 08:13:16.455   368   610 E         : drm_readFromUidTxt error in DRM_IsRightValid
+02-25 08:13:16.455   368   610 E StagefrightMediaScanner: invalid Rights for 63
+02-25 08:13:16.465   368   610 V MediaScanner: enter endFile()
+02-25 08:13:16.505   368   610 V MediaScanner: enter toValues()
+02-25 08:13:16.505   368   610 V MediaProvider: enter insert()
+02-25 08:13:16.565   368   610 V MediaProvider: enter insertInternal()
+02-25 08:13:16.565   368   610 V MediaProvider: enter getDatabaseForUri()
+02-25 08:13:16.565   368   610 V MediaProvider: enter getWritableDatabase()
+02-25 08:13:16.565   368   610 V MediaProvider: enter insertFile()
+02-25 08:13:16.565   368   610 V MediaProvider: enter getWritableDatabase()
+02-25 08:13:16.674   368   607 V DownloadManager: Disconnecting from Media Scanner
+02-25 08:13:16.674   368   610 V MediaProvider: enter makeBestName()
+02-25 08:13:16.684   368   607 V DownloadManager: starting query, database is not null; projection is null; selection is null; selectionArgs is null; sort is null.
+02-25 08:13:16.695   368   607 V DownloadManager: created cursor android.database.sqlite.SQLiteCursor@410abcd0 on behalf of 368
+02-25 08:13:16.704   368   607 I DownloadManager: number of rows from downloads-db: 10
+02-25 08:13:16.704   368   607 V DownloadManager: processing updated download 13, status: 200
+02-25 08:13:16.714   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:16.714   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:16.714    78   489 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.message (has extras) }: not found
+02-25 08:13:16.714   368   607 V DownloadManager: processing updated download 14, status: 200
+02-25 08:13:16.714   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:16.724   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:16.724    78   220 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:16.724   368   610 V MediaProvider: enter makeBestName()
+02-25 08:13:16.734   368   610 V MediaProvider: enter computeDisplayName()
+02-25 08:13:16.734   368   607 V DownloadManager: processing updated download 15, status: 200
+02-25 08:13:16.734   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:16.734   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:16.734    78    78 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:16.744   368   610 V MediaProvider: enter computeBucketValues()
+02-25 08:13:16.744   368   610 V MediaProvider: enter getParent()
+02-25 08:13:16.744   368   607 V DownloadManager: processing updated download 16, status: 200
+02-25 08:13:16.744   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:16.744   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:16.744    78    90 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:16.754   368   607 V DownloadManager: processing updated download 17, status: 200
+02-25 08:13:16.754   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:16.754   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:16.765    78   490 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:16.765   368   607 V DownloadManager: processing updated download 18, status: 200
+02-25 08:13:16.765   368   610 V MediaProvider: enter getStorageId()
+02-25 08:13:16.775   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:16.775   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:16.775    78   234 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:16.775   368   607 V DownloadManager: processing updated download 19, status: 200
+02-25 08:13:16.775   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:16.775   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:16.784    78   486 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:16.794   368   607 V DownloadManager: processing updated download 20, status: 200
+02-25 08:13:16.794   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:16.794   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:16.794    78   231 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:16.794   368   607 V DownloadManager: processing updated download 21, status: 200
+02-25 08:13:16.805   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:16.805   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:16.805    78    89 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:16.815   368   607 V DownloadManager: processing updated download 22, status: 200
+02-25 08:13:16.815   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:16.815   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:16.815    78   216 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:16.865   368   610 V MediaProvider: enter sendObjectAdded()
+02-25 08:13:17.235   368   368 V DownloadManager: Service ContentObserver received notification
+02-25 08:13:17.265   368   368 V MediaScannerService: enter onDestroy()
+02-25 08:13:17.435    78   220 D dalvikvm: GC_EXPLICIT freed 220K, 14% free 8429K/9735K, paused 5ms+7ms
+02-25 08:13:17.465   368   607 V DownloadManager: starting query, database is not null; projection is null; selection is null; selectionArgs is null; sort is null.
+02-25 08:13:17.475   368   607 V DownloadManager: created cursor android.database.sqlite.SQLiteCursor@410211d8 on behalf of 368
+02-25 08:13:17.475   368   368 V MediaScannerService: enter onCreate()
+02-25 08:13:17.485   368   368 V MediaScannerService: enter onBind()
+02-25 08:13:17.495   368   368 V DownloadManager: Connected to Media Scanner
+02-25 08:13:17.495   368   611 V MediaScannerService: enter run()
+02-25 08:13:17.495   368   607 I DownloadManager: number of rows from downloads-db: 10
+02-25 08:13:17.505   368   607 V DownloadManager: processing updated download 13, status: 200
+02-25 08:13:17.505   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:17.505   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:17.505    78    89 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.message (has extras) }: not found
+02-25 08:13:17.515   368   607 V DownloadManager: processing updated download 14, status: 200
+02-25 08:13:17.515   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:17.515   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:17.515    78   216 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:17.525   368   607 V DownloadManager: processing updated download 15, status: 200
+02-25 08:13:17.525   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:17.525   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:17.525    78   488 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:17.525   368   607 V DownloadManager: processing updated download 16, status: 200
+02-25 08:13:17.525   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:17.525   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:17.535    78   485 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:17.535   368   607 V DownloadManager: processing updated download 17, status: 200
+02-25 08:13:17.535   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:17.535   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:17.545    78   487 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:17.545   368   607 V DownloadManager: processing updated download 18, status: 200
+02-25 08:13:17.545   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:17.545   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:17.545    78   489 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:17.555   368   607 V DownloadManager: processing updated download 19, status: 200
+02-25 08:13:17.555   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:17.555   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:17.555    78    78 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:17.565   368   607 V DownloadManager: processing updated download 20, status: 200
+02-25 08:13:17.565   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:17.565   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:17.565    78    90 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:17.565   368   607 V DownloadManager: processing updated download 21, status: 200
+02-25 08:13:17.575   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:17.575   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:17.575    78   220 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:17.575   368   607 V DownloadManager: processing updated download 22, status: 200
+02-25 08:13:17.575   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:17.585   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:17.585    78   490 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:18.015   368   607 V DownloadManager: Disconnecting from Media Scanner
+02-25 08:13:18.065   368   368 V MediaScannerService: enter onDestroy()
+02-25 08:13:18.095   368   607 V DownloadManager: starting query, database is not null; projection is null; selection is null; selectionArgs is null; sort is null.
+02-25 08:13:18.095   368   607 V DownloadManager: created cursor android.database.sqlite.SQLiteCursor@41070b98 on behalf of 368
+02-25 08:13:18.105   368   607 I DownloadManager: number of rows from downloads-db: 10
+02-25 08:13:18.105   368   607 V DownloadManager: processing updated download 13, status: 200
+02-25 08:13:18.105   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:18.105   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:18.105    78   216 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.message (has extras) }: not found
+02-25 08:13:18.125   368   607 V DownloadManager: processing updated download 14, status: 200
+02-25 08:13:18.125   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:18.125   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:18.125    78   485 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:18.135   368   607 V DownloadManager: processing updated download 15, status: 200
+02-25 08:13:18.135   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:18.135   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:18.135    78   487 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:18.135   368   607 V DownloadManager: processing updated download 16, status: 200
+02-25 08:13:18.135   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:18.135   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:18.145    78   489 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:18.145   368   607 V DownloadManager: processing updated download 17, status: 200
+02-25 08:13:18.145   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:18.145   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:18.155    78    78 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:18.155   368   607 V DownloadManager: processing updated download 18, status: 200
+02-25 08:13:18.155   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:18.155   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:18.155    78    90 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:18.165   368   607 V DownloadManager: processing updated download 19, status: 200
+02-25 08:13:18.165   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:18.165   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:18.165    78   220 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:18.165   368   607 V DownloadManager: processing updated download 20, status: 200
+02-25 08:13:18.175   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:18.175   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:18.175    78   490 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:18.175   368   607 V DownloadManager: processing updated download 21, status: 200
+02-25 08:13:18.175   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:18.175   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:18.185    78   234 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found
+02-25 08:13:18.185   368   607 V DownloadManager: processing updated download 22, status: 200
+02-25 08:13:18.185   368   607 V Download ApnHelper: beginDownload type: -1
+02-25 08:13:18.185   368   607 D Download ApnHelper: tryOmaDownload
+02-25 08:13:18.195    78   486 W ActivityManager: Unable to start service Intent { act=com.android.providers.downloads.action.download.dd typ=application/vnd.oma.drm.content (has extras) }: not found

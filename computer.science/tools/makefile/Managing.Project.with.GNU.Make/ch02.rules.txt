@@ -1,0 +1,254 @@
+规则分类：
+    显示规则：
+        explicit rule
+
+    模式规则：
+        pattern rule
+        使用通配符 wildcard
+
+    静态模式规则：
+        static pattern rule
+
+    隐式规则：
+        implicit rule
+
+        makefile内置的规则
+        可以是pattern rule或suffix rule
+
+显示规则：
+    example
+        vpath.o variable.o : make.h config.h getopt.h gettext.h dep.h
+
+        等效于下面两条独立的规则：
+            vpath.o : make.h config.h getopt.h gettext.h dep.h
+            variable.o : make.h config.h getopt.h gettext.h dep.h
+
+伪目标:
+    .PHONY : clean      # “.PHONY”表示，clean是个伪目标文件。
+    clean :             
+        -rm edit $(objects)  #减号的意思就是，也许某些文件出现问题，但不要管，继续做后面的事
+
+    clean :
+        rm edit $(objects) # 如果这样写，假设当前目录下有一个clean的文件，由于clean没有依赖，
+        # 那么make会报告 make: `clean' is up to date.  
+
+    PHONY目标总是需要更新的
+
+    通过伪目标编译多个文件
+        .PHONY : all
+        all : hello hi  # 如果这里没有all, 那么仅仅只会编译默认目标hello
+
+        hello : hello.cpp
+            g++ $< -o $@
+
+        hi : hi.cpp
+            g++ $< -o $@
+
+    通过伪目标作为脚本
+        .PHONY : make-doc
+        make-doc : df       # 调用函数一样
+            @echo "make doc..."
+
+        .PHONY : df         # 可以重用df命令
+        df :
+            @df -k .
+
+
+    标准的PHONY目标：
+        all             编译所有的应用程序
+        install         安装二进制文件
+        clean           删除编译产生的二进制文件
+        distclean       删除编译产生的任何文件，包括
+                            中间文件，二进制， configure产生的makefile等等
+        TAGS            ctags文件
+        info            Texinfo
+        check           执行应用程序相关的测试
+
+空目标：
+    empty target
+    # TODO:
+
+变量
+    $(variable_name)
+    自动变量
+
+        $@  
+            规则中的目标文件
+
+        $%
+            仅当目标是函数库文件中，表示规则中的目标成员名。
+
+            例如，如果一个目标是"foo.a(bar.o)"，那么，"$%"就是"bar.o"，"$@"就是"foo.a"。
+            如果目标不是函数库文件（Unix下是[.a]，Windows下是[.lib]），那么，其值为空。
+
+        $<
+            依赖目标中的第一个目标名字。
+            如果依赖目标是以模式（即"%"）定义的，那么"$<"将是符合模式的一系列的文件集。注意，其是一个一个取出来的。
+
+        $^
+            所有的依赖目标的集合。以空格分隔。
+            如果在依赖目标中有多个重复的，那个这个变量会去除重复的依赖目标，只保留一份。
+
+        $+
+            这个变量很像"$^"，也是所有依赖目标的集合。只是它不去除重复的依赖目标。
+
+        $?
+            所有比目标新的依赖目标的集合。以空格分隔。
+
+        $* 
+            // TODO:
+
+vpath
+    VPATH变量
+        makefile通过VPATH列表来搜索依赖文件和目标文件
+        通过空格或冒号隔开
+        
+        如果VPATH多个目录中出现同一个文件名，makefile只会选择第一个
+
+        VPATH = src include     # 告诉makefile在./src, ./include目录中查找依赖中的文件
+
+    举例：
+        源代码结构如下：
+            ├── Makefile
+            ├── include
+            │   └── lucky.h
+            └── src
+                ├── hello.cpp
+                └── lucky.cpp
+
+        Makefile
+            # gcc会通过-I来查找gcc需要的头文件
+            hello : hello.o lucky.o
+                g++ $(CPPFLAGS) $^ -o $@
+
+            # makefile会在src, include中查找依赖中的cpp和头文件
+            VPATH = src include
+            hello.o : lucky.h hello.cpp 
+            lucky.o : lucky.h lucky.cpp
+
+            CPPFLAGS += -I include # 告诉gcc在include下查找头文件
+            CPPFLAGS += -I./include # 等效上一行
+            CPPFLAGS += -Iinclude # 等效上一行
+
+    vpath 指令
+        vpath pattern dir_list
+        例如：
+            vpath %.cpp src
+            vpath %.h include
+
+模式规则：
+    %.o : %.c
+        $(CC) -c $<
+
+    % : %.o
+        $(CC) -o $@ $<
+
+静态模式规则：
+   $(obj): %.o : %.c
+        $(CC) -c $(CFLAGS) $< -o $@
+    
+    这条规则仅仅能够用在$(obj)对应的目标上
+    参见example c2.static.pattern.rule
+
+
+后缀规则:
+    .c.o:
+        $(CC) -c $<
+
+    .cpp.o: lucky.h         # 没有将lucky.h包括到依赖中
+        $(CC) -c $(CPPFLAGS) $< -o $@
+        @echo suffix rule!
+
+    删除所有后缀规则
+        .SUFFIXS:
+        或--no-builtin-rulles(-r)
+    
+    不建议使用后缀规则
+
+隐藏规则：
+    由模式规则和后缀规则组成
+
+    删除隐藏规则
+        %.o: %.l
+        %.c: %.l
+
+        没有指定命令的规则会导致隐藏规则被删除
+
+    隐藏规则的结构：
+        %.o: %c
+            $(COMPILE.c) $(OUTPUT_OPTION) $<
+
+        COMPILE.c = $(CC) $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+        CC = gcc
+        OUTPUT_OPTION = -o $@
+
+特殊工作目标：
+    .INTERMEDIATE:
+        目标“.INTERMEDIATE”的依赖文件在make时被作为中间过程文件对待。
+        没有任何依赖文件的目标“.INTERMEDIATE”没有意义。
+
+        例如：
+        .INTERMEDIATE: main.o kbd.o command.o display.o \
+                insert.o search.o files.o utils.o
+        编译完成后这些.o文件就会被删除。 注意不能使用"%.o"这样的通配符
+
+    .SECONDARY:
+        目标“.SECONDARY”的依赖文件被作为中间过程文件对待。但这些文件不会被自动删除。
+        没有任何依赖文件的目标“.SECONDARY”的含义是：将所有的文件作为中间过程文件（不会自动删除任何文件）。
+
+    .PRECIOUS:
+        目标“.PRECIOUS”的所有依赖文件在make过程中会被特殊处理：
+        当命令在执行过程中被中断时，make不会删除它们。
+
+        另外，目标“.PRECIOUS”的依赖文件也可以是一个模式，例如“%.o”。这样可以保留有规则创建的中间过程文件。
+
+    .DELETE_ON_ERROR:
+        如果规则的命令执行错误，将删除已经被修改的目标文件。
+        和.PRECIOUS正好相反
+
+
+管理库程序
+    库包括多个o文件
+
+    ar rv libtest.a a.o b.o
+        # r表示替换libtest中存在的目标文件
+        # v表示输出详细的log信息
+
+    liblife.a : funny.o lucky.o
+        $(AR) $(ARFLAGS) $@ $^
+
+    # $? are prerequisites newer than the targe
+    liblife.a : funny.o lucky.o
+        $(AR) $(ARFLAGS) $@ $?
+
+
+双冒号规则：
+    提供一种根据依赖的更新情况而执行不同的命令来重建同一目标的机制
+    一般这种需要的情况很少
+
+    Newprog :: foo.c
+        $(CC) $(CFLAGS) $< -o $@ 
+
+    Newprog :: bar.c
+        $(CC) $(CFLAGS) $< -o $@
+
+    如果“foo.c”文件被修改，执行make以后将根据“foo.c”文件重建目标“Newprog”。
+    如果“bar.c”被修改那么“Newprog”将根据“bar.c”被重建。
+
+    当同一个目标出现在多个双冒号规则中时，规则的执行顺序和普通规则的执行顺序一样，按照其在Makefile中的书写顺序执行。
+
+./example/c02.010.vpath/Makefile
+./example/c02.020.phony/Makefile
+./example/c02.030.pattern.rule/Makefile
+./example/c02.031.static.pattern.rule/Makefile
+./example/c02.032.suffix.rule/Makefile
+./example/c02.040.auto.deps.header/Makefile
+./example/c02.041.auto.deps.header.optimized/Makefile
+./example/c02.050.intermediate.obj/Makefile
+./example/c02.070.archiv.fast/Makefile
+./example/c02.070.archiv.link/Makefile
+./example/c02.070.archiv/Makefile
+./example/c02.090.help/Makefile
+./example/c02.double.colon/Makefile
+./example/c02.empty.targe/Makefile
+

@@ -1,0 +1,23 @@
+basic.java
+    unsigned.int.java // read unsigned int from binary data
+    comments.java
+    bits operation.java
+    override.java
+    override.java
+    string.java
+
+stream.java
+    data.stream.java
+    file.stream.java    // read bytes
+    text.stream.java    // read characters (unicode)
+        handle.text.java
+
+|-- charset.java
+
+./data.struct/index.java
+
+./reflection/index.java
+
+todo:
+import static java.lang.System.out;
+import static java.lang.System.err;

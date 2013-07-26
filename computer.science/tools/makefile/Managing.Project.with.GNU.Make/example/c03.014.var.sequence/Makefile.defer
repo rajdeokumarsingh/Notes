@@ -1,0 +1,8 @@
+vim = $(dir)vim
+bash = $(dir)bash
+
+dir = /usr/bin/
+
+$(info dir, $(dir))
+$(info vim, $(vim))
+$(info bash, $(bash))

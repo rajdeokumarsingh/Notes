@@ -1,0 +1,91 @@
+Breakpoint 1, CachedScript (this=0x2aaab80285a0, url=..., charset=...) at ../../../WebCore/loader/CachedScript.cpp:45
+45	    setAccept("*/*");
+(gdb) bt
+#0  CachedScript (this=0x2aaab80285a0, url=..., charset=...) at ../../../WebCore/loader/CachedScript.cpp:45
+#1  0x00002aaaac844bc3 in createResource (type=WebCore::CachedResource::Script, url=..., charset=...)
+    at ../../../WebCore/loader/Cache.cpp:77
+#2  0x00002aaaac844ebc in WebCore::Cache::requestResource (this=0x707c80, docLoader=0x2aaab800ecc0, type=WebCore::CachedResource::Script, 
+    url=..., charset=..., requestIsPreload=false) at ../../../WebCore/loader/Cache.cpp:117
+#3  0x00002aaaac85e15a in WebCore::DocLoader::requestResource (this=0x2aaab800ecc0, type=WebCore::CachedResource::Script, url=..., 
+    charset=..., isPreload=false) at ../../../WebCore/loader/DocLoader.cpp:251
+#4  0x00002aaaac85dc7d in WebCore::DocLoader::requestScript (this=0x2aaab800ecc0, url=..., charset=...)
+    at ../../../WebCore/loader/DocLoader.cpp:148
+#5  0x00002aaaac7e1fa8 in WebCore::HTMLTokenizer::scriptHandler (this=0x2aaab801f490, state=...)
+    at ../../../WebCore/html/HTMLTokenizer.cpp:445
+
+    (cs = m_doc->docLoader()->requestScript(m_scriptTagSrcAttrValue, m_scriptTagCharsetAttrValue)))
+
+    m_scriptTagCharsetAttrValue = m_scriptNode->scriptCharset();
+    String ScriptElementData::scriptCharset() const
+        // First we try to get encoding from charset attribute.
+        String charset = m_scriptElement->charsetAttributeValue().stripWhiteSpace();
+
+        // If charset has not been declared in script tag, fall back to frame encoding.
+        if (charset.isEmpty()) {
+            if (Frame* frame = m_element->document()->frame())
+                charset = frame->loader()->encoding(); 
+        return charset;
+
+#6  0x00002aaaac7e162f in WebCore::HTMLTokenizer::parseNonHTMLText (this=0x2aaab801f490, src=..., state=...)
+    at ../../../WebCore/html/HTMLTokenizer.cpp:353
+#7  0x00002aaaac7e70c7 in WebCore::HTMLTokenizer::parseTag (this=0x2aaab801f490, src=..., state=...)
+    at ../../../WebCore/html/HTMLTokenizer.cpp:1524
+#8  0x00002aaaac7e7e75 in WebCore::HTMLTokenizer::write (this=0x2aaab801f490, str=..., appendData=true)
+    at ../../../WebCore/html/HTMLTokenizer.cpp:1757
+#9  0x00002aaaac87abe3 in WebCore::FrameLoader::write (this=0x748a50, 
+    str=0x2aaab805e8d8 " <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta http-equiv=\"Conte"..., len=12103, flush=false)
+    at ../../../WebCore/loader/FrameLoader.cpp:920
+#10 0x00002aaaac87db64 in WebCore::FrameLoader::addData (this=0x748a50, 
+    bytes=0x2aaab805e8d8 " <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta http-equiv=\"Conte"..., length=12103)
+    at ../../../WebCore/loader/FrameLoader.cpp:1475
+#11 0x00002aaaacbab104 in WebCore::FrameLoaderClientQt::committedLoad (this=0x741ad0, loader=0x9dcf70, 
+    data=0x2aaab805e8d8 " <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta http-equiv=\"Conte"..., length=12103)
+    at ../../../WebKit/qt/WebCoreSupport/FrameLoaderClientQt.cpp:726
+#12 0x00002aaaac8873f2 in WebCore::FrameLoader::committedLoad (this=0x748a50, loader=0x9dcf70, 
+    data=0x2aaab805e8d8 " <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta http-equiv=\"Conte"..., length=12103)
+    at ../../../WebCore/loader/FrameLoader.cpp:3240
+---Type <return> to continue, or q <return> to quit---
+#13 0x00002aaaac86768c in WebCore::DocumentLoader::commitLoad (this=0x9dcf70, 
+    data=0x2aaab805e8d8 " <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta http-equiv=\"Conte"..., length=12103)
+    at ../../../WebCore/loader/DocumentLoader.cpp:342
+#14 0x00002aaaac86776c in WebCore::DocumentLoader::receivedData (this=0x9dcf70, 
+    data=0x2aaab805e8d8 " <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta http-equiv=\"Conte"..., length=12103)
+    at ../../../WebCore/loader/DocumentLoader.cpp:354
+#15 0x00002aaaac8821d3 in WebCore::FrameLoader::receivedData (this=0x748a50, 
+    data=0x2aaab805e8d8 " <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta http-equiv=\"Conte"..., length=12103)
+    at ../../../WebCore/loader/FrameLoader.cpp:2088
+#16 0x00002aaaac8acb15 in WebCore::MainResourceLoader::addData (this=0x9df050, 
+    data=0x2aaab805e8d8 " <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta http-equiv=\"Conte"..., length=12103, allAtOnce=false)
+    at ../../../WebCore/loader/MainResourceLoader.cpp:143
+#17 0x00002aaaac8bb6c1 in WebCore::ResourceLoader::didReceiveData (this=0x9df050, 
+    data=0x2aaab805e8d8 " <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta http-equiv=\"Conte"..., length=12103, lengthReceived=12103, 
+    allAtOnce=false) at ../../../WebCore/loader/ResourceLoader.cpp:248
+#18 0x00002aaaac8adc1d in WebCore::MainResourceLoader::didReceiveData (this=0x9df050, 
+    data=0x2aaab805e8d8 " <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta http-equiv=\"Conte"..., length=12103, lengthReceived=12103, 
+    allAtOnce=false) at ../../../WebCore/loader/MainResourceLoader.cpp:374
+#19 0x00002aaaac8bc00c in WebCore::ResourceLoader::didReceiveData (this=0x9df050, 
+    data=0x2aaab805e8d8 " <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta http-equiv=\"Conte"..., length=12103, lengthReceived=12103)
+    at ../../../WebCore/loader/ResourceLoader.cpp:398
+#20 0x00002aaaacb807a5 in WebCore::QNetworkReplyHandler::forwardData (this=0x9df540)
+    at ../../../WebCore/platform/network/qt/QNetworkReplyHandler.cpp:368
+#21 0x00002aaaacb81272 in WebCore::QNetworkReplyHandler::qt_metacall (this=0x9df540, _c=QMetaObject::InvokeMetaMethod, _id=3, 
+    _a=0x2aaab8072eb0) at ./moc_QNetworkReplyHandler.cpp:78
+#22 0x00002aaaaf4e1d49 in QObject::event(QEvent*) () from /usr/lib/libQtCore.so.4
+---Type <return> to continue, or q <return> to quit---
+#23 0x00002aaaae55d22c in QApplicationPrivate::notify_helper(QObject*, QEvent*) () from /usr/lib/libQtGui.so.4
+#24 0x00002aaaae5636fb in QApplication::notify(QObject*, QEvent*) () from /usr/lib/libQtGui.so.4
+#25 0x00002aaaaf4d206c in QCoreApplication::notifyInternal(QObject*, QEvent*) () from /usr/lib/libQtCore.so.4
+#26 0x00002aaaaf4d47e7 in QCoreApplicationPrivate::sendPostedEvents(QObject*, int, QThreadData*) () from /usr/lib/libQtCore.so.4
+#27 0x00002aaaaf4fb9d3 in ?? () from /usr/lib/libQtCore.so.4
+#28 0x00002aaab1a678c2 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+#29 0x00002aaab1a6b748 in ?? () from /lib/libglib-2.0.so.0
+#30 0x00002aaab1a6b8fc in g_main_context_iteration () from /lib/libglib-2.0.so.0
+#31 0x00002aaaaf4fb513 in QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /usr/lib/libQtCore.so.4
+#32 0x00002aaaae60d46e in ?? () from /usr/lib/libQtGui.so.4
+#33 0x00002aaaaf4d0992 in QEventLoop::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /usr/lib/libQtCore.so.4
+#34 0x00002aaaaf4d0d6c in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /usr/lib/libQtCore.so.4
+#35 0x00002aaaaf4d4aab in QCoreApplication::exec() () from /usr/lib/libQtCore.so.4
+#36 0x0000000000418523 in launcherMain (app=...) at /home/jiangrui/webkit/webkit/WebKit/qt/QtLauncher/main.cpp:591
+#37 0x0000000000418e38 in main (argc=1, argv=0x7fffffffe3e8) at /home/jiangrui/webkit/webkit/WebKit/qt/QtLauncher/main.cpp:654
+(gdb) 
+

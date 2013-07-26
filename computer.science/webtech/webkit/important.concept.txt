@@ -1,0 +1,29 @@
+搜索技巧：
+
+所有和android相关的代码
+
+    ./JavaScriptCore/wtf/android
+    ./WebCore/history/android
+    ./WebCore/page/android
+    ./WebCore/platform/network/android
+    ./WebCore/platform/graphics/android
+    ./WebCore/platform/android
+    ./WebCore/platform/text/android
+    ./WebCore/loader/archive/android
+    ./WebCore/plugins/android
+    ./WebCore/editing/android
+
+    ./WebKit/android
+
+JNI相关的代码
+    ./WebCore/bridge/jni
+    ./WebKit/android/jni
+
+
+常识：
+    加载相关的逻辑
+        WebCore/loader
+
+        WebKit/android/WebCoreSupport
+            底层网络相关代码
+            和chromium_net相关的接口

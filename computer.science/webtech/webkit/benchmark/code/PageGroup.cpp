@@ -1,0 +1,17 @@
+
+Page类中维护了PageGroup的指针，并提供了group接口，这是个lazy接口，
+    如果m_group不存在，会调用InitGroup来创建一个。
+    对于Page类来说，如果没有设置GroupName，则在初始化的时候会生成一个空GroupName的PageGroup，
+        由m_singlePageGroup维护，并把指针赋给m_group，
+    如果以非空的名字调用了setGroupName，则会重新创建PageGroup，此时这个PageGroup由m_group来维护。 
+
+PageGroup并不是用来对Page进行管理的，而是设计用来将一些具有共同的属性或者设置的Page编成组的，以方便对这些属性进行管理。目前这样的属性包括localStorage的属性，IndexDB，User Script，User StyleSheet等。最常见的同PageGroup相关的操作是维护已访问链接（如addVisitedLink等接口）。根据地瓜的理解，假设WebKit内核之上架设多个应用（浏览器是一个应用），比较可能的是，一个应用独立一个PageGroup。这里同多tab页没有关系，多tab页属于同一个PageGroup。地瓜曾在mailing group上就这个问题咨询过，一位RIM的同学给我举了一个例子，比如一个基于WebKit的邮件程序，一方面他可能调用基于webkit的browser来显示网页，另外他本身也基于webkit来显示一些邮件，这两个之间的setting有很大可能不一样，他们就使用不同的PageGroup。 
+
+PageGroup中有这个Group已经安装并且使用的User Script和User StyleSheet的集合，一般在网页解析完毕后，这些User Script和User StyleSheet会插入到Document中。 
+
+PageGroup中还维护了Local Storage和Index DB相关的设置，比如它们的Path，上限等，通过GroupSettings类实现。 
+
+PageGroup创建以后，每次创建一个新的Page对象，会通过addPage接口加入到这个PageGroup的m_pages中。 
+
+每次有导航行为发生的时候，会调用addVisitedLink来将url加入到已访问链接中。如果浏览器要跟踪已访问的接口，则在初始化的时候必须调用PageGroup::setShouldTrackVisitedLinks，且参数为true。此处shouldTrackVisitedLinks是一个静态的全局变量，也就是说，所有应用维护一样的行为（一个应用将其设置为false会影响到其它同样基于此核的应用）？ 
+

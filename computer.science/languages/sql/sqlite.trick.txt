@@ -1,0 +1,58 @@
+INTEGER PRIMARY KEY
+    VS.
+INTEGER PRIMARY KEY AUTOINCREMENT 
+
+
+SQLite Autoincrement
+    INTEGER PRIMARY KEY
+
+    If no ROWID is specified on the insert, or if the specified ROWID has a value of NULL, 
+    then an appropriate ROWID is created automatically. 
+    The usual algorithm is to give the newly created row a ROWID that is one larger than 
+        the largest ROWID in the table prior to the insert. 
+
+
+The AUTOINCREMENT Keyword
+    INTEGER PRIMARY KEY AUTOINCREMENT 
+
+    The ROWID chosen for the new row is at least one larger than 
+        the largest ROWID that has ever before existed in that same table. 
+
+举例说明：
+
+原始数据
+id: 1, title: 百度, url: www.baidu.com
+id: 2, title: Sina, url: www.sina.com.cn
+id: 3, title: sohu, url: www.sohu.cn
+id: 4, title: Google, url: www.google.com
+id: 5, title: yahoo, url: www.yahoo.com
+
+删除两行
+id: 1, title: 百度, url: www.baidu.com
+id: 2, title: Sina, url: www.sina.com.cn
+id: 4, title: Google, url: www.google.com
+
+    INTEGER PRIMARY KEY
+    增加一行
+    id: 1, title: 百度, url: www.baidu.com
+    id: 2, title: Sina, url: www.sina.com.cn
+    id: 4, title: Google, url: www.google.com
+    // 5 = 4 + 1
+    // larger than the largest ROWID in the table prior to the insert. 
+    id: 5, title: Baidu Mobile, url: m.baidu.com
+
+
+    INTEGER PRIMARY KEY AUTOINCREMENT 
+    增加一行
+    id: 1, title: 百度, url: www.baidu.com
+    id: 2, title: Sina, url: www.sina.com.cn
+    id: 4, title: Google, url: www.google.com
+    // id: 5, title: yahoo, url: www.yahoo.com
+    // 6 = 5 + 1 
+    // larger than the largest ROWID that has ever before existed in that same table
+    id: 6, title: Baidu Mobile, url: m.baidu.com
+
+
+
+
+

@@ -1,0 +1,253 @@
+JNI Notes
+
+JNI 相关的code在android/dalvik中
+signature的类型， 如I, D, .. 可在代码中查寻jvalue的定义。
+
+修改了JNI后一定要将*.jar和*.so全部都拷贝到手机中.
+
+使用工具打印signature:
+    javap -s -p InstanceFieldAccess -classpath ./classpath(.class文件的目录)
+
+JNI 参数含义：
+void onCallRecordsFound(JNIEnv *env, jobject obj, jobjectArray jobjArray, jstring juuid)
+    第一个参数: env
+    JNIEnv *env-->pointer(内部虚拟机数据结构)-->指针数组(每个指针分别指向不同的接口函数)
+
+    第二个参数: obj
+    就是一个java object的this指针(或者class的引用,对于静态方法)
+    The second argument to an instance native method is a reference to the object
+        on which the method is invoked, similar to the this pointer in C++.
+        The second argument to a static native method is a reference to the class in which the method is defined
+
+reference 类型
+    local reference
+        自动释放
+            当native方法返回到java vm中后， local reference会被自动释放
+            但是为什么需要DeleteLocalRef
+                因为如果创建了大量的local ref, 可能会导致ref table溢出
+                native方法有可能不会返回，比如消息循环
+
+            Java 2 SDK Release 1.2中新的方法：
+            1.
+            /* The number of local references to be created is equal to the length of the array. */
+            if ((*env)->EnsureLocalCapacity(env, len)) < 0) {
+                ... /* out of memory */
+            }
+
+            for (i = 0; i < len; i++) {
+                jstring jstr = (*env)->GetObjectArrayElement(env, arr, i);
+                ... /* process jstr */
+                /* DeleteLocalRef is no longer necessary */
+            }
+
+        2.(推荐使用)
+       #define N_REFS ... /* the maximum number of local references used in each iteration */
+        for (i = 0; i < len; i++) {
+            if ((*env)->PushLocalFrame(env, N_REFS) < 0) { //创建一个local ref的作用域
+                ... /* out of memory */
+            }
+            jstr = (*env)->GetObjectArrayElement(env, arr, i);
+            ... /* process jstr */
+            (*env)->PopLocalFrame(env, NULL);        //删除local ref的作用域中所有ref
+        }           
+
+        引用对象不可GC回收   
+        不能使用static 变量保存local reference
+        只能在创建其的线程中使用
+
+    global reference
+        程序释放
+        引用对象不可GC回收
+        可使用static 变量保存
+        可在不同线程中使用
+        都是通过NewGlobalRef来创建， DeleteGlobalRef释放
+            stringClass = (*env)->NewGlobalRef(env, localRefCls);
+
+    weak global reference
+        程序释放
+        允许被引用的对象被GC回收
+
+异常处理：
+    (*env)->CallVoidMethod(env, obj, mid);
+    exc = (*env)->ExceptionOccurred(env);
+    ExceptionClear()
+
+    It is extremely important to check, handle, and clear a pending exception
+        before calling any subsequent JNI functions
+
+线程：
+每个线程有一个独立的JNI interface指针
+    JNIEnv pointer
+    不要使用别的线程的JNIEnv指针
+    不要使用别的线程的local reference
+
+锁：
+synchronized (obj) {
+... // synchronized block
+}
+JNI中等效的代码：
+if ((*env)->MonitorEnter(env, obj) != JNI_OK) {
+... /* error handling */
+}
+... /* synchronized block */
+if ((*env)->MonitorExit(env, obj) != JNI_OK) {
+... /* error handling */
+};
+
+
+
+
+Native的方法在System.loadLibrary()时被加载:
+    package pkg;
+    class Cls {
+         native double f(int i, String s);
+         static {
+             System.loadLibrary(“pkg_Cls”);    //pkg_Cls.so是库
+         }
+     }    
+
+System.loadLibrary()时， 函数
+    JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *jvm, void *reserved);
+    会被调用。该函数一般用于保存JavaVM pointer, class references, or method and field IDs
+
+虚拟机卸载native库时，JNI_OnUnload会被调用到。 可能在不同的线程环境中被调用， 最好避免同步方法。
+    Keep in mind that classes have been unloaded when the JNI_OnUnload handler is invoked
+
+
+JNI 写法问题
+====================================================
+C++代码:
+
+    //函数返回空指针
+    jmethodID getInstanceMethod = env->GetStaticMethodID(cameraClass,
+            "getInstance", "()Ljava/lang/Object;");
+
+    //正确
+    jmethodID getInstanceMethod = env->GetStaticMethodID(cameraClass,
+            "getObjectInstance", "()Ljava/lang/Object;");
+
+java代码:
+
+    //JNI不支持返回一个JNICameraInterface
+    public static JNICameraInterface getInstance() {
+        return instance;
+    }
+    
+    //支持
+    public static Object getObjectInstance() {
+        return instance;
+    }
+=======================================================
+不光jni 的signature要写对, 调用的方法也是参数相关的
+
+signature:
+ "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+
+调用方法:
+
+    //error: CallObjectMethod的类型是返回jobject
+    env->CallObjectMethod(osgObj, sendMethod,
+        env->NewStringUTF(uuid), env->NewStringUTF("widget id for test"),
+        env->NewStringUTF(tmp), env->NewStringUTF(strSMSContent),
+        env->NewStringUTF(strServiceID), env->NewStringUTF(strSubServiceID));
+
+
+    //ok:CallVoidMethod的返回类型是空. 这个也需要和jni的signature对上
+    env->CallVoidMethod(osgObj, sendMethod,
+        env->NewStringUTF(uuid), env->NewStringUTF("widget id for test"),
+        env->NewStringUTF(tmp), env->NewStringUTF(strSMSContent),
+        env->NewStringUTF(strServiceID), env->NewStringUTF(strSubServiceID));
+
+I/JSOsg   (  900): sendSMS() was invoked.
+I/JNIOsg  (  900): JNIOsgSendSms: uuid [0], content [this is a test sms through OSG!], id [10000001], subid [ 2000000088
+88]
+W/dalvikvm(  900): JNI WARNING: expected return type 'L'
+W/dalvikvm(  900):              calling Lcom/huawei/jni/JNIOsgInterface;.SendSms (Ljava/lang/String;Ljava/lang/String;Lj
+ava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+=======================================================
+如果发现如下程序无法启动错误：
+W/dalvikvm(  589): ERROR: Unable to find decl for native Landroid/webkit/WebViewCore;.nativeSetSize (IIIFIIZ)V
+E/JNIHelp (  589): RegisterNatives failed for 'android/webkit/WebViewCore'
+W/dalvikvm(  589): JNI_OnLoad returned bad version (-1) in /system/lib/libwebcore.so 0x0
+W/dalvikvm(  589): Exception Ljava/lang/UnsatisfiedLinkError; thrown during Landroid/webkit/WebViewCore;.<clinit>
+E/Zygote  (  589): Error preloading android.webkit.WebViewCore.
+
+检查以下三者是否一致：
+1. java中jni接口声明：
+    private native void nativeSetSize(int width, int height, int screenWidth,
+            float scale, int realScreenWidth, int screenHeight, int anchorX,
+            int anchorY, boolean ignoreHeight);
+
+2. C++中jni接口声明：
+static void SetSize(JNIEnv *env, jobject obj, jint width, jint height,
+        jint screenWidth, jfloat scale, jint realScreenWidth, jint screenHeight,
+        jint tmp_x, jint tmp_y, jboolean ignoreHeight)
+
+3. C++中jni注册：
+    { "nativeSetSize", "(IIIFIIIIZ)V",
+        (void*) SetSize },
+
+4. 是否将*.jar和*.so全部都拷贝到手机中，一个也不能少
+
+////////////////////////////////////////////////////////////////////////////////
+Local vs. Global References
+Every object that JNI returns is a "local reference".
+If you want to hold on to a reference for a longer period
+you must use a "global" reference 
+The global reference is guaranteed to be valid until you call DeleteGlobalRef.
+
+example:
+jobject* localRef = [...];
+jobject* globalRef;
+globalRef = env->NewGlobalRef(localRef);
+...
+env->DeleteGlobalRef(globalRef);
+
+example:
+jclass clazz = env->FindClass("com/android/playerdemo/CmmbService");
+LOGI("Got in %s, %d\n", __FUNCTION__, __LINE__);
+if(clazz == NULL) {
+LOGI("can not find class, return");
+}
+gClass = (jclass)env->NewGlobalRef(clazz);
+
+////////////////////////////////////////////////////////////////////////////////
+proguard会阻止加载不用的java函数
+这样被c调用的java函数不会被加载。而getMethodId时，jni就会报告找不到方法.
+为了防止这种情况需要添加文件
+
+proguard.flags 
+-keep class com.android.playerdemo.CmmbService {
+*;
+}
+
+并在Android.mk中添加:
+LOCAL_PROGUARD_FLAGS := -include $(LOCAL_PATH)/proguard.flags
+
+
+Java VM Type Signatures
+Signature	Java Type
+Z	boolean
+B	byte
+C	char
+S	short
+I	int
+J	long
+F	float
+D	double
+L fully-qualified-class ; 	fully-qualified-class
+[ type	type[]
+( arg-types ) ret-type	method type
+
+For example, the Prompt.getLine method has the signature:
+
+    (Ljava/lang/String;)Ljava/lang/String;
+
+whereas the Callbacks.main method has the signature:
+
+    ([Ljava/lang/String;)V
+
+
+
+

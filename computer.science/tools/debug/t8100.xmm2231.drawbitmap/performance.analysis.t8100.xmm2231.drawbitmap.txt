@@ -1,0 +1,51 @@
+The resolution of XMM2231 is 400X240, T8100 is 320X240, so the pixel ratio is 400/320=5/4
+The cpu frequency of XM2231 is 300MHz, T8100 is 400MHz, so the ratio is 3/4
+
+So in theory, the drawing time ratio of XMM2231 and T8100 should be 5/3=1.666.
+From java profile, the ratio is 1.875ms/1.049ms(about 1.8)
+
+Regards,
+Jiang Rui
+
+Hi Zhidong,
+
+The performance analysis is as follows.
+
+1. Java layer profile
+Launch a test application which only draws a full screen bitmap.
+Use android "traceview" to profile.
+
+Do the profile in both XMM2231 and T8100(Huawei) devices.
+The result were attached.
+
+According to the profile result, the whole process of XMM2231 took 3.04ms, and T8100 took 1.92ms. The delta was 1.12ms
+And the main different was in the function android/graphics/Canvas.native_drawBitmap()
+In XMM2231, it took 1.875ms. And in T8100, it tooks 1.049ms. The delta was 0.826ms which was about 80% of the whole delta.
+
+So we focused on the native function android/graphics/Canvas.native_drawBitmap()
+
+2. Native layer profile
+Since the "traceview" can only do native profile in android emulater, and there is also a bug to generate the profile result,
+we can only add time stamp in the code.
+
+The function android/graphics/Canvas.native_drawBitmap() finally invokes into skia Sprite_D16_S16_Opaque::blitRect(),
+which copies the bitmap data from memory to graphic device through memcpy().
+
+According to the log, durations of the Sprite_D16_S16_Opaque::blitRect() is as follows:
+XMM2231:      2ms     3ms    2ms    2ms    3ms
+T8100 :            1ms     1ms    1ms    1ms     1ms
+
+And the delta was about 1ms(wall clock time), which is similar with result of the java layer profile 0.826ms(cpu time)
+
+So we believe the main different of drawing a bitmap between XMM2231 and T8100 is copying data from memory to graphic device.
+
+The test application and traceview result were also attached.
+
+The traceview result could be displayed by:
+android-sdk/tools/traceviewtraceview xmm2231/dmtrace.trace
+
+Regards,
+Jiang Rui
+
+
+
