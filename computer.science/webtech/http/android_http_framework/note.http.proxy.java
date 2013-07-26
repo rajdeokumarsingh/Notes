@@ -1,7 +1,3 @@
-
-
-
-
 // base/core/java/android/webkit/Network.java
     public boolean isValidProxySet()
     public String getProxyHostname() 
