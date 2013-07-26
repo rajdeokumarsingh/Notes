@@ -1,3 +1,0 @@
-.PHONY: main
-main:
-	@touch $@

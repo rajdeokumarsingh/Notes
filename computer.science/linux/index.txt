@@ -1,5 +1,4 @@
 ./capabilities.txt
-
 ./setuid.cpp
 ./sticky.bit.cpp
 

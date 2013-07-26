@@ -1,3 +1,0 @@
-.PHONY: libcodec
-libcodec:
-	@touch $@

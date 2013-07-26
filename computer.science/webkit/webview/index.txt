@@ -1,6 +1,0 @@
-
-./draw
-    页面绘制相关
-
-WebView是如何绘制查找字符的高亮框和高亮背景的
-    ./draw/draw.find.text/index.txt

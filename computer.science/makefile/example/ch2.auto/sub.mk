@@ -1,1 +1,0 @@
-objects += kbd.o

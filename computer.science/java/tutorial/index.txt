@@ -1,4 +1,0 @@
-# build java program in command line
-./examples/command.line/command.txt
-
-./1.learning.java.lang/index.txt

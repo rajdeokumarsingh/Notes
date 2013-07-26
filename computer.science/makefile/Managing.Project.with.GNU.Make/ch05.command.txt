@@ -1,4 +1,0 @@
-./examples/c05.000.command.basic/a.mk
-./examples/c05.000.command.basic/Makefile
-./examples/c05.000.command.eval/Makefile
-

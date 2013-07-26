@@ -1,7 +1,0 @@
-
-code reading:
-    code/DecodedDataDocumentParser.cpp  
-        code/HTMLViewSourceParser.cpp
-
-    code/DocumentWriter.cpp  
-    code/TextResourceDecoder.cpp
