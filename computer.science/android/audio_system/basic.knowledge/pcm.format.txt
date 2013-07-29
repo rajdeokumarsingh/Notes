@@ -18,6 +18,7 @@ PCM文件
         用多少位表示一个声音强度
         也可以说是声卡的分辨率
         它的数值越大，分辨率也就越高
+        pcm_16
 
     采样频率
         即取样频率,指每秒钟取得声音样本的次数
@@ -28,6 +29,9 @@ PCM文件
         22KHz、16Bit的声音效果近似于立体声（FM Stereo）广播，称作：广播音质；
         11kHz、8Bit的声音，称作：电话音质。 
         微软的WAV文件就是pcm编码的一种
+
+        1 / sample rate = time for a frame
+        played frame number/sample rate = played time
     
     如果把PCM放到二维空间, x轴是时间，y轴是强度。
         那么 采样频率 可以看成是x轴的分辨率。

@@ -1,9 +1,3 @@
-
-// TODO:
-frameworks/av/media/libstagefright/AudioPlayer.cpp
-frameworks/av/media/libmedia/AudioTrack.cpp
-
-
 important logic concept:
     ./important.concept.txt
     ./basic.knowledge/pcm.format.txt
@@ -36,6 +30,16 @@ flow index:
 
         code.reading/flow.audiotrack.cpp
         code.reading/flow.audioflinger.cpp
+
+            // TODO:
+            frameworks/av/media/libstagefright/AudioPlayer.cpp
+                How to user AudioTracker
+            frameworks/av/media/libmedia/AudioTrack.cpp
+            frameworks/base/core/jni/android_media_AudioTrack.cpp
+            frameworks/av/services/audioflinger/AudioFlinger.cpp
+                9816 LOC
+
+
 
         音乐播放
 
