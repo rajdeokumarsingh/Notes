@@ -1,3 +1,9 @@
+
+// TODO:
+frameworks/av/media/libstagefright/AudioPlayer.cpp
+frameworks/av/media/libmedia/AudioTrack.cpp
+
+
 important logic concept:
     ./important.concept.txt
     ./basic.knowledge/pcm.format.txt
@@ -9,10 +15,6 @@ important logic concept:
 
 Audio系统的进程和二进制文件组织
     ./process.binary.layout
-
-code index:
-    ./index.code.framework.txt
-    ./index.code.HAL.txt
 
 how to:
     ./dump.pcm.txt
@@ -84,4 +86,9 @@ audio framework相关知识学习
     AudioSink
     stagefright
         stagefright.txt
+
+code index:
+    ./index.code.framework.txt
+    ./index.code.HAL.txt
+
 
