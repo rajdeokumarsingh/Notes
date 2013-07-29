@@ -83,12 +83,16 @@ printf "%s, %s\n" hello world
 
             tr -d '\r' < dos-format.txt | sort > unix-file.txt
 
+    | 和 < >的区别 
+        | 的右边是程序
+        < > 的右边是文件
+
 特殊文件/dev/null与/dev/tty
 
 /dev/null
     输入到该文件的数据都被丢掉
 
-    检查推出状态
+    检查退出状态
     if grep pattern file > /dev/null
     then
         ...
@@ -103,7 +107,6 @@ printf "%s, %s\n" hello world
     # index.txt中不包括testte
     $ grep testte index.txt > /dev/null
     $ echo $? # 1
-
 
     stty -echo # 关闭命令行的echo功能
 

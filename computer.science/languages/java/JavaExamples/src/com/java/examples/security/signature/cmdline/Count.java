@@ -36,7 +36,7 @@ public class Count {
 	private static final String fileName = 
 			"/home/jiangrui/.signature_test/change.fmradio.frw.txt";
 	
-    public static void countChars(InputStream in) throws IOException
+    private static void countChars(InputStream in) throws IOException
     {
         int count = 0;
  

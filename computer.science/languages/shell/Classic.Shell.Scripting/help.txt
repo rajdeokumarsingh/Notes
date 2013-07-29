@@ -1,4 +1,3 @@
-
 man open (man 1 open) # 查询脚本命令
 man 2 open          # 查询系统调用
 man 3 printf        # 查询c库函数 

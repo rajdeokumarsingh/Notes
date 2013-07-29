@@ -1,4 +1,3 @@
-
 tr
     # 翻译
     tr a-z A-Z
@@ -17,9 +16,7 @@ tr
 
 # 系统中有谁登陆
 who
-
 whoami
-
 
 # 计数
 wc
