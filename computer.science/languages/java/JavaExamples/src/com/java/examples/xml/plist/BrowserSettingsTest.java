@@ -6,6 +6,7 @@ import junit.framework.TestCase;
 
 import java.io.ByteArrayOutputStream;
 import java.lang.reflect.*;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -45,10 +46,6 @@ public class BrowserSettingsTest extends TestCase {
         System.out.println("xml: " + bos.toString());
     }
 
-    public void testBrowserData() throws Exception {
-        BrowserXmlData data = createBrowserData();
-    }
-
     private BrowserXmlData createBrowserData() {
         QuickLaunch quickLaunches = new QuickLaunch();
         quickLaunches.addQuickLaunch(new QuickLaunchItem("", "Test1", "http://www.sina.com"));
@@ -61,22 +58,9 @@ public class BrowserSettingsTest extends TestCase {
         data.addWhiteListItem(new UrlMatchRule("baidu.com", UrlMatchRule.MATCH_TYPE_EQUAL));
         data.addWhiteListItem(new UrlMatchRule("24", "baidu.com", UrlMatchRule.MATCH_TYPE_EQUAL));
         data.addHistoryItem(new HistoryWatchItem("baidu"));
-        data.addHistoryItem(new HistoryWatchItem("baidu", UrlMatchRule.MATCH_TYPE_PREFIX));
+        data.addHistoryItem(new HistoryWatchItem("sina", UrlMatchRule.MATCH_TYPE_PREFIX));
 
         return data;
-    }
-
-    public void testBrowserClass() throws Exception {
-        Constructor ctor = BrowserXmlData.class.getConstructor();
-        ctor.setAccessible(true);
-        BrowserXmlData data = (BrowserXmlData) ctor.newInstance();
-
-        Field[] fields = BrowserXmlData.class.getDeclaredFields();
-        for (Field field : fields) {
-            System.out.println(field.getName());
-            Class type = field.getType();
-            System.out.println(type.getName());
-        }
     }
 
     public void testSuperClass() throws Exception {
@@ -104,59 +88,80 @@ public class BrowserSettingsTest extends TestCase {
         }
     }
 
-    public void testBrowser2Plist() throws Exception {
-        NSDictionary root = createNdict(createBrowserData());
-
-        ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        PropertyListParser.saveAsXML(root, bos);
-        System.out.println("xml: " + bos.toString());
+    public void testBean2Ndict() throws Exception {
+        NSDictionary root = PlistBeanConverter.createNdictFromBean(createBrowserData());
+        System.out.println("xml: " + PlistXmlParser.toXml(root));
     }
 
-    private NSDictionary createNdict(Object data) throws IllegalAccessException {
-        NSDictionary root = new NSDictionary();
-        appendData2Ndict(data, root);
-        return root;
+    public void testNdict2Bean() throws Exception {
+        NSDictionary root = PlistBeanConverter.createNdictFromBean(createBrowserData());
+        BrowserXmlData data = (BrowserXmlData) createBeanFromNdict(root, BrowserSettingsTest.class);
+        PlistDebug.log(data.toString());
     }
 
-    private void appendData2Ndict(Object data, NSDictionary root) throws IllegalAccessException {
-        Field[] fields = data.getClass().getDeclaredFields();
-        for (Field field : fields) {
-            field.setAccessible(true);
-            Class type = field.getType();
+    private Object createBeanFromNdict(NSDictionary root, Class clz) throws
+            NoSuchMethodException,  IllegalAccessException,
+            InvocationTargetException, InstantiationException {
 
-            System.out.println("========================================");
-            System.out.println(field.getName());
-            System.out.println(type.getName());
-            System.out.println("declaring: " + type.getDeclaringClass());
+        Constructor ctor = clz.getConstructor();
+        ctor.setAccessible(true);
+        Object data =  ctor.newInstance();
 
-            // Ignore final fields
-            if ((field.getModifiers() & Modifier.FINAL) != 0) {
-                System.out.println("final field, continue!");
-                continue;
-            }
+        for(Field field : clz.getDeclaredFields()) {
+            String fieldName = field.getName();
+            Class fieldClass = field.getType();
 
-            if (int.class.equals(type)) {
-                root.put(field.getName(), field.getInt(data));
-            } else if (String.class.equals(type)) {
-                root.put(field.getName(), (String) field.get(data));
-            } else if (List.class.equals(type)) {
-                System.out.println("type list");
-                List list = (List) field.get(data);
-                NSArray array = new NSArray(list.size());
-                for (int i = 0; i < list.size(); i++) {
-                    array.setValue(i, createNdict(list.get(i)));
+            NSObject nsObject = root.objectForKey(fieldName);
+            if(nsObject == null)  continue;
+            if (NSNumber.class.equals(nsObject.getClass())) {
+                NSNumber number = (NSNumber) nsObject;
+                switch(number.type()) {
+                    case NSNumber.BOOLEAN:
+                        if (fieldClass.equals(boolean.class)) {
+                            field.setBoolean(data, number.boolValue());
+                        } else {
+                            PlistDebug.log("Convert type error!");
+                        }
+                        break;
+                    case NSNumber.INTEGER :
+                        if (fieldClass.equals(int.class)) {
+                            field.setInt(data, number.intValue());
+                        } else if (fieldClass.equals(long.class)) {
+                            field.setLong(data, number.longValue());
+                        } else {
+                            PlistDebug.log("Convert type error!");
+                        }
+                        break;
+                    case NSNumber.REAL : {
+                        if (fieldClass.equals(float.class)) {
+                            field.setFloat(data, number.floatValue());
+                        } else if (fieldClass.equals(double.class)) {
+                            field.setDouble(data, number.doubleValue());
+                        } else {
+                            PlistDebug.log("Convert type error!");
+                        }
+                        break;
+                    }
                 }
-                root.put(field.getName(), array);
-            } else if (byte[].class.equals(type)) {
-                System.out.println("type byte[]");
-                root.put(field.getName(), new NSData((byte[]) field.get(data)));
-            } else {
-                System.out.println("type object");
-                Object obj = field.get(data);
-                NSDictionary dictionary = createNdict(obj);
-                // TODO: handle super class, see testSuperClass
-                root.put(field.getName(), dictionary);
             }
         }
+        /*
+        {
+        NSDictionary rootDict = (NSDictionary) PlistXmlParser.fromXml(TEST_XML);
+        NSArray array = (NSArray) rootDict.objectForKey("People");
+
+        NSDictionary person1 = (NSDictionary) array.objectAtIndex(0);
+        NSString name1 = (NSString) person1.objectForKey("Name");
+        String sname1 = name1.getContent();
+        NSDate date1 = (NSDate) person1.objectForKey("RegistrationDate");
+        Date ddate1 = date1.getDate();
+        NSNumber number1 = (NSNumber) person1.objectForKey("Age");
+        int age1 = number1.intValue();
+
+        System.out.println("parse data: " + sname1 + "," + ddate1 + "," + age1);
+        }
+        */
+
+        return null;
     }
 }

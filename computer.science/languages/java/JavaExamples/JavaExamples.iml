@@ -7,9 +7,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="xstream-1.4.4" level="project" />
+    <orderEntry type="library" name="lib1" level="project" />
     <orderEntry type="library" name="lib" level="project" />
-    <orderEntry type="library" name="dd-plist" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
