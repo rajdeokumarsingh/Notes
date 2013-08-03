@@ -2,29 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69da3d8b-6d6b-4fea-96b9-7ecdc74f1500" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/java/examples/xml/plist/BasicConvertTest.java" afterPath="$PROJECT_DIR$/src/com/java/examples/xml/plist/PlistXmlParserTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/examples/xml/plist/BrowserSettingsTest.java" afterPath="$PROJECT_DIR$/src/com/java/examples/xml/plist/BrowserSettingsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaExamples.iml" afterPath="$PROJECT_DIR$/JavaExamples.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/jiangrui.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/jiangrui.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/examples/xml/plist/browser/BrowserXmlData.java" afterPath="$PROJECT_DIR$/src/com/java/examples/xml/plist/browser/BrowserXmlData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/examples/xml/plist/PlistBeanConverter.java" afterPath="$PROJECT_DIR$/src/com/java/examples/xml/plist/PlistBeanConverter.java" />
     </list>
     <ignored path="JavaExamples.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="69da3d8b-6d6b-4fea-96b9-7ecdc74f1500" time="1375495098179" ignored="false" />
-    <file path="/fragment.java" changelist="69da3d8b-6d6b-4fea-96b9-7ecdc74f1500" time="1375498858257" ignored="false" />
+    <file path="/Dummy.txt" changelist="69da3d8b-6d6b-4fea-96b9-7ecdc74f1500" time="1375513938147" ignored="false" />
+    <file path="/fragment.java" changelist="69da3d8b-6d6b-4fea-96b9-7ecdc74f1500" time="1375517577878" ignored="false" />
     <file path="/BasicConvert.java" changelist="69da3d8b-6d6b-4fea-96b9-7ecdc74f1500" time="1375259619534" ignored="false" />
     <file path="/BasicConvertTest.java" changelist="69da3d8b-6d6b-4fea-96b9-7ecdc74f1500" time="1375496890842" ignored="false" />
-    <file path="/BrowserSettingsTest.java" changelist="69da3d8b-6d6b-4fea-96b9-7ecdc74f1500" time="1375502512203" ignored="false" />
+    <file path="/BrowserSettingsTest.java" changelist="69da3d8b-6d6b-4fea-96b9-7ecdc74f1500" time="1375521669142" ignored="false" />
     <file path="/UrlMatchRule.java" changelist="69da3d8b-6d6b-4fea-96b9-7ecdc74f1500" time="1375322101388" ignored="false" />
     <file path="/QuickLaunch.java" changelist="69da3d8b-6d6b-4fea-96b9-7ecdc74f1500" time="1375264207130" ignored="false" />
-    <file path="/BrowserXmlData.java" changelist="69da3d8b-6d6b-4fea-96b9-7ecdc74f1500" time="1375267213371" ignored="false" />
+    <file path="/BrowserXmlData.java" changelist="69da3d8b-6d6b-4fea-96b9-7ecdc74f1500" time="1375518245225" ignored="false" />
     <file path="/HistoryWatchItem.java" changelist="69da3d8b-6d6b-4fea-96b9-7ecdc74f1500" time="1375321857888" ignored="false" />
     <file path="/PlistXmlParser.java" changelist="69da3d8b-6d6b-4fea-96b9-7ecdc74f1500" time="1375496389483" ignored="false" />
     <file path="/PlistXmlParserTest.java" changelist="69da3d8b-6d6b-4fea-96b9-7ecdc74f1500" time="1375496890530" ignored="false" />
     <file path="/PlistBeanConverter.java" changelist="69da3d8b-6d6b-4fea-96b9-7ecdc74f1500" time="1375499196119" ignored="false" />
     <file path="/PlistDeug.java" changelist="69da3d8b-6d6b-4fea-96b9-7ecdc74f1500" time="1375498898011" ignored="false" />
     <file path="/PlistDebug.java" changelist="69da3d8b-6d6b-4fea-96b9-7ecdc74f1500" time="1375498895805" ignored="false" />
+    <file path="/InternalData.java" changelist="69da3d8b-6d6b-4fea-96b9-7ecdc74f1500" time="1375517853516" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,62 +86,37 @@
       <file leaf-file-name="BrowserSettingsTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/plist/BrowserSettingsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="123" column="9" selection-start="5004" selection-end="5004" vertical-scroll-proportion="0.93663913">
+            <state line="173" column="19" selection-start="7290" selection-end="7290" vertical-scroll-proportion="0.69825435">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#testSuperClass#0;class#BrowserSettingsTest#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NSNumber.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/dd-plist.jar!/com/dd/plist/NSNumber.class">
+      <file leaf-file-name="BrowserXmlData.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/plist/browser/BrowserXmlData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="28" selection-start="353" selection-end="353" vertical-scroll-proportion="-6.4">
+            <state line="25" column="23" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlistBeanConverter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/plist/PlistBeanConverter.java">
+      <file leaf-file-name="TypeVariable.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/bin/jdk64/jdk1.6.0_37/src.zip!/java/lang/reflect/TypeVariable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="0" selection-start="3686" selection-end="3686" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlistDebug.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/plist/PlistDebug.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="23" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlistXmlParserTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/plist/PlistXmlParserTest.java">
+      <file leaf-file-name="Class.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/bin/jdk64/jdk1.6.0_37/src.zip!/java/lang/Class.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="0" selection-start="2544" selection-end="2544" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlistXmlParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/plist/PlistXmlParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="13" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="607" column="11" selection-start="25369" selection-end="25369" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -166,10 +139,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/java/examples/xml/plist/browser/HistoryWatch.java" />
         <option value="$PROJECT_DIR$/src/com/java/examples/xml/plist/browser/WhiteList.java" />
         <option value="$PROJECT_DIR$/src/com/java/examples/xml/plist/browser/QuickLaunch.java" />
-        <option value="$PROJECT_DIR$/src/com/java/examples/xml/plist/browser/BrowserXmlData.java" />
         <option value="$PROJECT_DIR$/src/com/java/examples/xml/plist/browser/QuickLaunchItem.java" />
         <option value="$PROJECT_DIR$/src/com/java/examples/xml/plist/browser/UrlMatchRule.java" />
         <option value="$PROJECT_DIR$/src/com/java/examples/xml/plist/browser/HistoryWatchItem.java" />
@@ -181,6 +152,8 @@
         <option value="$PROJECT_DIR$/src/com/java/examples/xml/plist/PlistDeug.java" />
         <option value="$PROJECT_DIR$/src/com/java/examples/xml/plist/PlistDebug.java" />
         <option value="$PROJECT_DIR$/src/com/java/examples/xml/plist/PlistBeanConverter.java" />
+        <option value="$PROJECT_DIR$/src/com/java/examples/xml/plist/browser/InternalData.java" />
+        <option value="$PROJECT_DIR$/src/com/java/examples/xml/plist/browser/BrowserXmlData.java" />
         <option value="$PROJECT_DIR$/src/com/java/examples/xml/plist/BrowserSettingsTest.java" />
       </list>
     </option>
@@ -219,8 +192,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -321,6 +292,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -329,26 +302,26 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.java.examples.xml.plist" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.java.examples.xml.plist" />
       <recent name="com.java.examples.xml.plist.browser" />
+      <recent name="com.java.examples.xml.plist" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BrowserSettingsTest.testBrowser2Plist">
+  <component name="RunManager" selected="JUnit.BrowserSettingsTest.testListType">
     <configuration default="false" name="BrowserSettingsTest.testBrowser2Plist" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -362,90 +335,6 @@
       <option name="PACKAGE_NAME" value="com.java.examples.xml.plist" />
       <option name="MAIN_CLASS_NAME" value="com.java.examples.xml.plist.BrowserSettingsTest" />
       <option name="METHOD_NAME" value="testBrowser2Plist" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="BrowserSettingsTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.java.examples.xml.plist.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="JavaExamples" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.java.examples.xml.plist" />
-      <option name="MAIN_CLASS_NAME" value="com.java.examples.xml.plist.BrowserSettingsTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="BrowserSettingsTest.testSuperClass" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.java.examples.xml.plist.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="JavaExamples" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.java.examples.xml.plist" />
-      <option name="MAIN_CLASS_NAME" value="com.java.examples.xml.plist.BrowserSettingsTest" />
-      <option name="METHOD_NAME" value="testSuperClass" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="PlistXmlParserTest.testCreatePlist" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.java.examples.xml.plist.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="JavaExamples" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.java.examples.xml.plist" />
-      <option name="MAIN_CLASS_NAME" value="com.java.examples.xml.plist.PlistXmlParserTest" />
-      <option name="METHOD_NAME" value="testCreatePlist" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -489,6 +378,90 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="BrowserSettingsTest.testNdict2Bean" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.java.examples.xml.plist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="JavaExamples" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.java.examples.xml.plist" />
+      <option name="MAIN_CLASS_NAME" value="com.java.examples.xml.plist.BrowserSettingsTest" />
+      <option name="METHOD_NAME" value="testNdict2Bean" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="BrowserSettingsTest.testBean2Ndict" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.java.examples.xml.plist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="JavaExamples" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.java.examples.xml.plist" />
+      <option name="MAIN_CLASS_NAME" value="com.java.examples.xml.plist.BrowserSettingsTest" />
+      <option name="METHOD_NAME" value="testBean2Ndict" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="BrowserSettingsTest.testListType" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.java.examples.xml.plist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="JavaExamples" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.java.examples.xml.plist" />
+      <option name="MAIN_CLASS_NAME" value="com.java.examples.xml.plist.BrowserSettingsTest" />
+      <option name="METHOD_NAME" value="testListType" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -501,19 +474,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -542,6 +502,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -582,18 +555,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.BrowserSettingsTest.testBrowser2Plist" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.BrowserSettingsTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.BrowserSettingsTest.testSuperClass" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.PlistXmlParserTest.testCreatePlist" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.PlistXmlParserTest.testParseXml" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.PlistXmlParserTest.testParseXml" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.BrowserSettingsTest.testNdict2Bean" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.BrowserSettingsTest.testBean2Ndict" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.BrowserSettingsTest.testListType" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.BrowserSettingsTest.testBrowser2Plist" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.PlistXmlParserTest.testParseXml" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.PlistXmlParserTest.testCreatePlist" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BrowserSettingsTest.testSuperClass" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.BrowserSettingsTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.BrowserSettingsTest.testListType" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BrowserSettingsTest.testNdict2Bean" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.BrowserSettingsTest.testBean2Ndict" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.BrowserSettingsTest.testBrowser2Plist" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.PlistXmlParserTest.testParseXml" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -654,7 +627,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24940048" sideWeight="0.69628435" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940048" sideWeight="0.69628435" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30371568" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -728,53 +701,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/java/examples/reflection/classes/AccessClassMembers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/examples/reflection/classes/RetrievingClassObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/bin/jdk64/jdk1.6.0_37/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1650" column="26" selection-start="68558" selection-end="68558" vertical-scroll-proportion="0.034722224">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/plist/browser/BrowserXmlData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="138" selection-end="138" vertical-scroll-proportion="0.033955857">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/plist/browser/HistoryWatch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="21" selection-start="317" selection-end="317" vertical-scroll-proportion="0.033955857">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/bin/jdk64/jdk1.6.0_37/src.zip!/java/lang/reflect/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="15" selection-start="5298" selection-end="5298" vertical-scroll-proportion="0.03629764">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/bin/jdk64/jdk1.6.0_37/src.zip!/java/lang/reflect/Modifier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="282" column="28" selection-start="10260" selection-end="10260" vertical-scroll-proportion="0.03629764">
-          <folding />
-        </state>
+        <state line="282" column="28" selection-start="10260" selection-end="10260" vertical-scroll-proportion="0.03629764" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/plist/browser/UrlMatchRule.java">
@@ -793,58 +722,91 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/dd-plist.jar!/com/dd/plist/NSDictionary.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="155" selection-end="155" vertical-scroll-proportion="0.19011407">
-          <folding />
-        </state>
+        <state line="6" column="13" selection-start="155" selection-end="155" vertical-scroll-proportion="0.19011407" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/plist/PlistXmlParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="13" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="27" column="13" selection-start="736" selection-end="736" vertical-scroll-proportion="0.35162094">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/plist/PlistDebug.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="23" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
+        <state line="10" column="23" selection-start="243" selection-end="243" vertical-scroll-proportion="0.49875313">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/plist/PlistXmlParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="0" selection-start="2544" selection-end="2544" vertical-scroll-proportion="0.05154639">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/dd-plist.jar!/com/dd/plist/NSNumber.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="28" selection-start="353" selection-end="353" vertical-scroll-proportion="0.055096418">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/dd-plist.jar!/com/dd/plist/NSString.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="28" selection-start="709" selection-end="709" vertical-scroll-proportion="-12.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/plist/browser/QuickLaunch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="18" selection-start="554" selection-end="554" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/plist/PlistBeanConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="0" selection-start="3686" selection-end="3686" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="68" column="60" selection-start="2620" selection-end="2620" vertical-scroll-proportion="0.15463917">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/plist/PlistXmlParserTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/plist/browser/InternalData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="0" selection-start="2544" selection-end="2544" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="76" column="0" selection-start="1898" selection-end="1898" vertical-scroll-proportion="0.69148934">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/dd-plist.jar!/com/dd/plist/NSNumber.class">
+    <entry file="jar://$USER_HOME$/bin/jdk64/jdk1.6.0_37/src.zip!/java/lang/Class.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="28" selection-start="353" selection-end="353" vertical-scroll-proportion="-6.4">
+        <state line="607" column="11" selection-start="25369" selection-end="25369" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/bin/jdk64/jdk1.6.0_37/src.zip!/java/lang/reflect/TypeVariable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/plist/browser/BrowserXmlData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="23" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/examples/xml/plist/BrowserSettingsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="9" selection-start="5004" selection-end="5004" vertical-scroll-proportion="0.93663913">
+        <state line="173" column="19" selection-start="7290" selection-end="7290" vertical-scroll-proportion="0.69825435">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#testSuperClass#0;class#BrowserSettingsTest#0" expanded="false" />
           </folding>
         </state>
       </provider>

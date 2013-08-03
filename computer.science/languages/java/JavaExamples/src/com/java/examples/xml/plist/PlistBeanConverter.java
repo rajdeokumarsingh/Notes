@@ -55,16 +55,10 @@ public class PlistBeanConverter {
                     root.put(field.getName(), field.getBoolean(data));
                 } else if (byte.class.equals(type)) {
                     root.put(field.getName(), field.getByte(data));
-                } else if (char.class.equals(type)) {
-                    root.put(field.getName(), field.getChar(data));
-                } else if (short.class.equals(type)) {
-                    root.put(field.getName(), field.getShort(data));
                 } else if (int.class.equals(type)) {
                     root.put(field.getName(), field.getInt(data));
                 } else if (long.class.equals(type)) {
                     root.put(field.getName(), field.getLong(data));
-                } else if (float.class.equals(type)) {
-                    root.put(field.getName(), field.getFloat(data));
                 } else if (double.class.equals(type)) {
                     root.put(field.getName(), field.getDouble(data));
                 } else if (String.class.equals(type)) {

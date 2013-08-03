@@ -6,6 +6,7 @@ import junit.framework.TestCase;
 
 import java.io.ByteArrayOutputStream;
 import java.lang.reflect.*;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -63,28 +64,18 @@ public class BrowserSettingsTest extends TestCase {
         return data;
     }
 
-    public void testSuperClass() throws Exception {
-        Object item = new HistoryWatchItem("http://www.baidu.com");
-        Class clz = item.getClass();
+    public void testListType() throws Exception {
+        BrowserXmlData data = createBrowserData();
 
-        while (clz != null && !clz.equals(Object.class)) {
-            System.out.println("----------------------------------------");
-            System.out.println("class: " + clz);
-            for (Field field : clz.getDeclaredFields()) {
-                field.setAccessible(true);
-                Class type = field.getType();
-                if (int.class.equals(type)) {
-                    System.out.println("int: " +
-                            field.getName() + "," + field.getInt(item));
-                } else if (String.class.equals(type)) {
-                    System.out.println("string: " +
-                            field.getName() + "," + (String)field.get(item));
-                } else {
-                    System.out.println("object: " +
-                            field.getName() + "," + field.get(item).toString());
-                }
+        Field field = data.getClass().getDeclaredField("whiteList");
+        Type genericFieldType = field.getGenericType();
+        if(genericFieldType instanceof ParameterizedType){
+            ParameterizedType aType = (ParameterizedType) genericFieldType;
+            Type[] fieldArgTypes = aType.getActualTypeArguments();
+            for(Type fieldArgType : fieldArgTypes){
+                Class fieldArgClass = (Class) fieldArgType;
+                System.out.println("fieldArgClass = " + fieldArgClass);
             }
-            clz = clz.getSuperclass();
         }
     }
 
@@ -95,7 +86,7 @@ public class BrowserSettingsTest extends TestCase {
 
     public void testNdict2Bean() throws Exception {
         NSDictionary root = PlistBeanConverter.createNdictFromBean(createBrowserData());
-        BrowserXmlData data = (BrowserXmlData) createBeanFromNdict(root, BrowserSettingsTest.class);
+        BrowserXmlData data = (BrowserXmlData) createBeanFromNdict(root, BrowserXmlData.class);
         PlistDebug.log(data.toString());
     }
 
@@ -108,60 +99,112 @@ public class BrowserSettingsTest extends TestCase {
         Object data =  ctor.newInstance();
 
         for(Field field : clz.getDeclaredFields()) {
-            String fieldName = field.getName();
-            Class fieldClass = field.getType();
+            PlistDebug.log("----------------------------------------");
+            PlistDebug.log("field name: " + field.getName());
+            PlistDebug.log("field class: " + field.getType());
 
-            NSObject nsObject = root.objectForKey(fieldName);
+            field.setAccessible(true);
+
+            NSObject nsObject = root.objectForKey(field.getName());
             if(nsObject == null)  continue;
-            if (NSNumber.class.equals(nsObject.getClass())) {
-                NSNumber number = (NSNumber) nsObject;
-                switch(number.type()) {
-                    case NSNumber.BOOLEAN:
-                        if (fieldClass.equals(boolean.class)) {
-                            field.setBoolean(data, number.boolValue());
-                        } else {
-                            PlistDebug.log("Convert type error!");
-                        }
-                        break;
-                    case NSNumber.INTEGER :
-                        if (fieldClass.equals(int.class)) {
-                            field.setInt(data, number.intValue());
-                        } else if (fieldClass.equals(long.class)) {
-                            field.setLong(data, number.longValue());
-                        } else {
-                            PlistDebug.log("Convert type error!");
-                        }
-                        break;
-                    case NSNumber.REAL : {
-                        if (fieldClass.equals(float.class)) {
-                            field.setFloat(data, number.floatValue());
-                        } else if (fieldClass.equals(double.class)) {
-                            field.setDouble(data, number.doubleValue());
-                        } else {
-                            PlistDebug.log("Convert type error!");
-                        }
-                        break;
+            if (nsObject.getClass().equals(NSNumber.class)) {
+                assignNumberField(data, field, (NSNumber) nsObject);
+            } else if(nsObject.getClass().equals(NSString.class)) {
+                assignStringField(data, field, (NSString) nsObject);
+            } else if(nsObject.getClass().equals(NSDate.class)) {
+                assignDateField(data, field, (NSDate) nsObject);
+            } else if(nsObject.getClass().equals(NSData.class)) {
+                assignByteArrayField(data, field, (NSData) nsObject);
+            } else if(nsObject.getClass().equals(NSDictionary.class)) {
+                NSDictionary dict = (NSDictionary) nsObject;
+                field.set(data, createBeanFromNdict(dict, field.getType()));
+            } else if(nsObject.getClass().equals(NSArray.class)) {
+                // TODO: refactory to method
+                Class fieldArgClass = null;
+                Type genericFieldType = field.getGenericType();
+                if(genericFieldType instanceof ParameterizedType){
+                    ParameterizedType aType = (ParameterizedType) genericFieldType;
+                    Type[] fieldArgTypes = aType.getActualTypeArguments();
+                    for(Type fieldArgType : fieldArgTypes){
+                        fieldArgClass = (Class) fieldArgType;
+                        System.out.println("fieldArgClass = " + fieldArgClass);
                     }
                 }
+                if (fieldArgClass != null && List.class.isAssignableFrom(field.getType())) {
+                    NSArray array = (NSArray) nsObject;
+                    field.set(data, createListFromNSArray(array, fieldArgClass));
+                } else {
+                    PlistDebug.log("error type!");
+                }
+                PlistDebug.log("TODO:");
+            } else {
+                PlistDebug.log("error type!");
             }
         }
-        /*
-        {
-        NSDictionary rootDict = (NSDictionary) PlistXmlParser.fromXml(TEST_XML);
-        NSArray array = (NSArray) rootDict.objectForKey("People");
+        return data;
+    }
 
-        NSDictionary person1 = (NSDictionary) array.objectAtIndex(0);
-        NSString name1 = (NSString) person1.objectForKey("Name");
-        String sname1 = name1.getContent();
-        NSDate date1 = (NSDate) person1.objectForKey("RegistrationDate");
-        Date ddate1 = date1.getDate();
-        NSNumber number1 = (NSNumber) person1.objectForKey("Age");
-        int age1 = number1.intValue();
-
-        System.out.println("parse data: " + sname1 + "," + ddate1 + "," + age1);
+    private void assignByteArrayField(Object data, Field field, NSData nsObject) throws IllegalAccessException {
+        if(field.getType().equals(byte[].class)) {
+            field.set(data, ((NSData) nsObject).bytes());
+        } else {
+            PlistDebug.log("error type!");
         }
-        */
+    }
 
-        return null;
+    private void assignDateField(Object data, Field field, NSDate nsObject) throws IllegalAccessException {
+        if(field.getType().equals(Date.class)) {
+            field.set(data, ((NSDate) nsObject).getDate());
+        } else {
+            PlistDebug.log("error type!");
+        }
+    }
+
+    private void assignStringField(Object data, Field field, NSString nsObject) throws IllegalAccessException {
+        if(field.getType().equals(String.class)) {
+            field.set(data, ((NSString) nsObject).getContent());
+        } else {
+            PlistDebug.log("error type!");
+        }
+    }
+
+    public List createListFromNSArray(NSArray array, Class elementClass) {
+        ArrayList list = new ArrayList();
+        for (NSObject nsObject : array.getArray()) {
+            // TODO:
+        }
+        return list;
+    }
+
+    private void assignNumberField(Object data, Field field, NSNumber number) throws IllegalAccessException {
+        Class fieldClass = field.getType();
+        switch(number.type()) {
+            case NSNumber.BOOLEAN:
+                if (fieldClass.equals(boolean.class)) {
+                    field.setBoolean(data, number.boolValue());
+                } else {
+                    PlistDebug.log("Convert type error!");
+                }
+                break;
+            case NSNumber.INTEGER :
+                if (fieldClass.equals(int.class)) {
+                    field.setInt(data, number.intValue());
+                } else if (fieldClass.equals(long.class)) {
+                    field.setLong(data, number.longValue());
+                } else {
+                    PlistDebug.log("Convert type error!");
+                }
+                break;
+            case NSNumber.REAL : {
+                if (fieldClass.equals(float.class)) {
+                    field.setFloat(data, number.floatValue());
+                } else if (fieldClass.equals(double.class)) {
+                    field.setDouble(data, number.doubleValue());
+                } else {
+                    PlistDebug.log("Convert type error!");
+                }
+                break;
+            }
+        }
     }
 }

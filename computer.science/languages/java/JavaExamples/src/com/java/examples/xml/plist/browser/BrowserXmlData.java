@@ -13,6 +13,9 @@ public class BrowserXmlData {
      * 主页的URL地址
      */
     private String homePageUrl = "";
+
+    private InternalData internalData = new InternalData();
+
     /**
      * 快速启动列表
      */
@@ -109,5 +112,31 @@ public class BrowserXmlData {
             result = 31 * result + item.hashCode();
         }
         return result;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("{");
+        for (UrlMatchRule rule : whiteList) {
+            sb.append(rule.toString());
+        }
+        sb.append("}");
+
+        StringBuilder sb1 = new StringBuilder();
+        sb1.append("{");
+        for (HistoryWatchItem item : historyWatch) {
+            sb1.append(item.toString());
+        }
+        sb1.append("}");
+
+        return "BrowserXmlData{" +
+                "addressBarDisplay=" + addressBarDisplay +
+                ", homePageUrl='" + homePageUrl + '\'' +
+                ", internalData='" + internalData.toString() + '\'' +
+                ", quickLaunch=" + quickLaunch.toString() +
+                ", whiteList=" + sb.toString() +
+                ", historyWatch=" + sb1.toString() +
+                '}';
     }
 }
