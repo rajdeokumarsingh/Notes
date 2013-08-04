@@ -4,13 +4,13 @@ import java.util.Arrays;
 
 public class QuickLaunchItem {
     /** DB id */
-    private String mId;
+    private String mId = "";
 
     /** Title of the quick launch */
-    private String mTitle;
+    private String mTitle = "";
 
     /** Web address of the quick launch */
-    private String mUrl;
+    private String mUrl = "";
 
     /**
      * Whether need to update the icon. At first, each quick launch item
@@ -20,9 +20,9 @@ public class QuickLaunchItem {
     private int mNeedUpdate = 1;
 
     /** icon of the quick launch */
-    private byte[] mBlob;
+    private byte[] mBlob = new byte[0];
 
-    private QuickLaunchItem() {
+    public QuickLaunchItem() {
         this("", "", "", new byte[0]);
     }
 
@@ -171,5 +171,15 @@ public class QuickLaunchItem {
         result = 31 * result + mNeedUpdate;
         result = 31 * result + Arrays.hashCode(mBlob);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "QuickLaunchItem{" +
+                "mId='" + mId + '\'' +
+                ", mTitle='" + mTitle + '\'' +
+                ", mUrl='" + mUrl + '\'' +
+                ", mNeedUpdate=" + mNeedUpdate +
+                '}';
     }
 }

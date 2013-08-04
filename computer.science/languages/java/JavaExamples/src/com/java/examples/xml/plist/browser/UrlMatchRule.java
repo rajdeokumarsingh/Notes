@@ -31,13 +31,13 @@ public class UrlMatchRule {
     private static final int MATCH_TYPE_END = MATCH_TYPE_EQUAL;
 
     /** Id in provider */
-    private String mId;
+    private String mId = "";
 
     /** Rule URL*/
-    private String mUrl;
+    private String mUrl = "";
 
     /** Match type */
-    private int mMatchType;
+    private int mMatchType = MATCH_TYPE_CONTAIN;
 
     public static boolean isValidType(int type) {
         if (type < MATCH_TYPE_BEGIN || type > MATCH_TYPE_END) {
@@ -79,7 +79,7 @@ public class UrlMatchRule {
         this("", url, MATCH_TYPE_CONTAIN);
     }
 
-    private UrlMatchRule() {
+    public UrlMatchRule() {
         this("", "", MATCH_TYPE_CONTAIN);
     }
 

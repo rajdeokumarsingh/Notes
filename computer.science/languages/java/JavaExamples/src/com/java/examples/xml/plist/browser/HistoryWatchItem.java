@@ -29,7 +29,7 @@ public class HistoryWatchItem extends UrlMatchRule {
         super(url);
     }
 
-    private HistoryWatchItem() {
+    public HistoryWatchItem() {
         super("");
     }
 
