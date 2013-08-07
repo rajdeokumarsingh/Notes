@@ -106,18 +106,19 @@ public class PlistBeanConverter {
         for (NSObject nsObject : array.getArray()) {
             if (Boolean.class.equals(elementClass)) {
                 list.add(((NSNumber) nsObject).boolValue());
-            } else if (Byte.class.equals(elementClass)) {
-                list.add(((NSNumber) nsObject).intValue());
             } else if (Integer.class.equals(elementClass)) {
                 list.add(((NSNumber) nsObject).intValue());
             } else if (Long.class.equals(elementClass)) {
                 list.add(((NSNumber) nsObject).longValue());
             } else if (Double.class.equals(elementClass)) {
                 list.add(((NSNumber) nsObject).doubleValue());
-            } else if (Byte[].class.equals(elementClass)) {
-                list.add(((NSData) nsObject).bytes());
             } else if (String.class.equals(elementClass)) {
                 list.add(((NSString) nsObject).getContent());
+            } else if (Date.class.equals(elementClass)) {
+                list.add(((NSDate) nsObject).getDate());
+            } else if (byte[].class.equals(elementClass)) {
+                // TODO:
+                list.add(((NSData) nsObject).bytes());
             } else if (List.class.equals(elementClass)) {
                 // TODO: nest list
             } else {
@@ -191,21 +192,34 @@ public class PlistBeanConverter {
                         List list = (List) field.get(data);
                         NSArray array = new NSArray(list.size());
                         for (int i = 0; i < list.size(); i++) {
-                            // TODO:
                             Object object = list.get(i);
+                            if(object == null) continue;
+
                             if (object.getClass().equals(Boolean.class)) {
-                                array.setValue(i, NSObject.wrap(new NSNumber(((Boolean)object)).boolValue()));
-                            } else if (object.getClass().equals(Byte.class)) {
-                            } else if (object.getClass().equals(Character.class)) {
+                                array.setValue(i, NSObject.wrap(
+                                        new NSNumber(((Boolean) object)).boolValue()));
                             } else if (object.getClass().equals(Integer.class)) {
-                                array.setValue(i, NSObject.wrap(new NSNumber(((Integer) object)).intValue()));
+                                array.setValue(i, NSObject.wrap(
+                                        new NSNumber(((Integer) object)).intValue()));
                             } else if (object.getClass().equals(Long.class)) {
-                            } else if (object.getClass().equals(Float.class)) {
+                                array.setValue(i, NSObject.wrap(
+                                        new NSNumber(((Long) object)).longValue()));
                             } else if (object.getClass().equals(Double.class)) {
+                                array.setValue(i, NSObject.wrap(
+                                        new NSNumber(((Double) object)).doubleValue()));
                             } else if (object.getClass().equals(String.class)) {
-                                array.setValue(i, NSObject.wrap(new NSString((String)object)));
+                                array.setValue(i, NSObject.wrap(
+                                        new NSString((String)object)));
+                            } else if (object.getClass().equals(Date.class)) {
+                                array.setValue(i, NSObject.wrap(
+                                        new NSDate((Date)object)));
+                            } else if (object.getClass().equals(byte[].class)) {
+                                // TODO:
+                                array.setValue(i, NSObject.wrap(
+                                        new NSData((byte[])object)));
                             } else if (List.class.isAssignableFrom(object.getClass())) {
-                                PlistDebug.logVerbose("TODO:");
+                                // TODO: List<List<E>>
+                                PlistDebug.log("TODO: support nest list");
                             } else {
                                 array.setValue(i, createNdictFromBean(list.get(i)));
                             }
@@ -242,8 +256,12 @@ public class PlistBeanConverter {
             ParameterizedType aType = (ParameterizedType) genericFieldType;
             Type[] fieldArgTypes = aType.getActualTypeArguments();
             for (Type fieldArgType : fieldArgTypes) {
+                // TODO: support List<byte[]>
+                // java.lang.ClassCastException: sun.reflect.generics.reflectiveObjects.GenericArrayTypeImpl
+                // cannot be cast to java.lang.Class
                 fieldArgClass = (Class) fieldArgType;
                 PlistDebug.logVerbose("fieldArgClass = " + fieldArgClass);
+                break;
             }
         }
         return fieldArgClass;

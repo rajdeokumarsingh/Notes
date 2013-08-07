@@ -4,10 +4,7 @@ import com.dd.plist.*;
 import com.pekall.plist.beans.*;
 import junit.framework.TestCase;
 
-import java.lang.reflect.*;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.Calendar;
 
 /**
  * Created with IntelliJ IDEA.
@@ -60,8 +57,30 @@ public class PlistBeanConverterTest extends TestCase {
 
     public void testNsdictWithArray() throws Exception {
         BeanWithList beanWithList = new BeanWithList();
-        beanWithList.addListItem(createBeanBasicType());
-        beanWithList.addListItem(createBeanBasicType());
+        beanWithList.addObject(createBeanBasicType());
+        beanWithList.addObject(createBeanBasicType());
+        beanWithList.addBoolean(true);
+        beanWithList.addBoolean(false);
+        beanWithList.addInteger(100);
+        beanWithList.addInteger(200);
+        beanWithList.addLong(1000l);
+        beanWithList.addLong(2000l);
+        beanWithList.addDouble(987654.0);
+        beanWithList.addDouble(123456.0);
+        beanWithList.addString("hello world");
+        beanWithList.addString("test world");
+
+        Calendar cal = Calendar.getInstance();
+        cal.set(2011, 1, 13, 9, 28, 49);
+        beanWithList.addDate(cal.getTime());
+        beanWithList.addDate(cal.getTime());
+
+        /* byte[] byte_array = new byte[50];
+        for (int i = 0; i < byte_array.length; i++) {
+            byte_array[i] = (byte) i;
+        }
+        beanWithList.addByteArray(byte_array);
+        beanWithList.addByteArray(byte_array); */
 
         NSDictionary dictionary = PlistBeanConverter.createNdictFromBean(beanWithList);
         String xml = PlistXmlParser.toXml(dictionary);
