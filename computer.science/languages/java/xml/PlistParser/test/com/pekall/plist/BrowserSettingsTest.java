@@ -1,11 +1,15 @@
 package com.pekall.plist;
 
-import com.dd.plist.*;
+import com.dd.plist.NSArray;
+import com.dd.plist.NSDictionary;
+import com.dd.plist.PropertyListParser;
 import com.pekall.plist.beans.*;
 import junit.framework.TestCase;
 
 import java.io.ByteArrayOutputStream;
-import java.lang.reflect.*;
+import java.lang.reflect.Field;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 
 /**
  * Created with IntelliJ IDEA.

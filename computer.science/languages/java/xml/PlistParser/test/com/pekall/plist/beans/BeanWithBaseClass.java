@@ -1,10 +1,7 @@
 package com.pekall.plist.beans;
 
-import com.pekall.plist.PlistDebug;
-
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -58,7 +55,7 @@ public class BeanWithBaseClass extends BeanBasicType {
         if (!foo.equals(that.foo)) return false;
         if (!bar.equals(that.bar)) return false;
 
-        if(this.hashCode() != that.hashCode()) return false;
+        if (this.hashCode() != that.hashCode()) return false;
 
         return true;
     }
@@ -107,4 +104,5 @@ public class BeanWithBaseClass extends BeanBasicType {
                 ", foo=" + foo.toString() +
                 ", bar=" + bar.toString() +
                 '}';
-    }}
+    }
+}

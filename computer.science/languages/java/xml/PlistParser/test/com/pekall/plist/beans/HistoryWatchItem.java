@@ -4,16 +4,20 @@ import java.util.Date;
 
 public class HistoryWatchItem extends UrlMatchRule {
 
-    /** Visit count */
+    /**
+     * Visit count
+     */
     private int mCount = 0;
 
-    /** The format of the date is ";long1;long2;long3;...;longn"*/
+    /**
+     * The format of the date is ";long1;long2;long3;...;longn"
+     */
     private String mDates = "";
 
     /**
      * Constructor
      *
-     * @param url to watch
+     * @param url  to watch
      * @param type of the watch list, see {@link UrlMatchRule.MATCH_TYPE_CONTAIN, ...}
      */
     public HistoryWatchItem(String url, int type) {

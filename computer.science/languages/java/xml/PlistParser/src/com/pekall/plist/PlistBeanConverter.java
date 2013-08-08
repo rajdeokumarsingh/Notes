@@ -2,6 +2,7 @@ package com.pekall.plist;
 
 import com.dd.plist.*;
 
+import java.io.IOException;
 import java.lang.reflect.*;
 import java.util.ArrayList;
 import java.util.Date;
@@ -28,6 +29,22 @@ public class PlistBeanConverter {
             </array>
         </array>
      */
+
+    /**
+     * 通过传入的对象，直接转换为对应的plist，如果出入的对象为空，返回一个空的plist。
+     * @param data 需要抓换的bean
+     * @return
+     */
+    public static String createPlistXmlFromBean(Object data){
+        NSDictionary root = createNdictFromBean(data);
+        String result = "";
+        try {
+            result =  PlistXmlParser.toXml(root);
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+        return result;
+    }
 
     /**
      * Create an NSDictionary object from a bean object
@@ -141,7 +158,10 @@ public class PlistBeanConverter {
     }
 
     private static void appendData2Ndict(Object data, NSDictionary root) {
-        if (data == null || root == null) {
+        if(data == null){
+            return;
+        }
+        if (root == null) {
             PlistDebug.logError("appendData2Ndict null argument," +
                     " data: " + data + ", root: " + root);
             return;

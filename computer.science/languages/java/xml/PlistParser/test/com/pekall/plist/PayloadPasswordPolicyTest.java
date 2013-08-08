@@ -1,9 +1,10 @@
-package com.pekall.plist.beans;
+package com.pekall.plist;
 
 import com.dd.plist.NSArray;
 import com.dd.plist.NSDictionary;
 import com.dd.plist.NSObject;
-import com.pekall.plist.*;
+import com.pekall.plist.beans.PayloadBase;
+import com.pekall.plist.beans.PayloadPasswordPolicy;
 import junit.framework.TestCase;
 
 public class PayloadPasswordPolicyTest extends TestCase {
@@ -14,7 +15,7 @@ public class PayloadPasswordPolicyTest extends TestCase {
         NSDictionary dictionary = (NSDictionary) PlistXmlParser.fromXml(
                 EnrollProfileData.ENROLL_PROFILE);
 
-        NSObject content =  dictionary.objectForKey(Constants.KEY_PL_CONTENT);
+        NSObject content = dictionary.objectForKey(Constants.KEY_PL_CONTENT);
         if (content instanceof NSDictionary) {
         } else if (content instanceof NSArray) {
             NSArray array = (NSArray) content;
@@ -33,6 +34,7 @@ public class PayloadPasswordPolicyTest extends TestCase {
                 }
             }
         }
+
         PlistDebug.logTest("password policy: " + policy.toString());
         assertEquals(policy.getPayloadDescription(), "配置与安全相关的项目。");
         assertEquals(policy.getPayloadDisplayName(), "密码");

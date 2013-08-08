@@ -1,6 +1,6 @@
 package com.pekall.plist;
 
-import com.dd.plist.*;
+import com.dd.plist.NSDictionary;
 import com.pekall.plist.beans.*;
 import junit.framework.TestCase;
 

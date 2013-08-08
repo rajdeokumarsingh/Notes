@@ -40,7 +40,7 @@ public class WhiteList {
         WhiteList whiteList = (WhiteList) o;
 
         // if (!whiteList.equals(whiteList.whiteList)) return false;
-        if(this.hashCode() != this.hashCode()) return false;
+        if (this.hashCode() != this.hashCode()) return false;
 
         return true;
     }

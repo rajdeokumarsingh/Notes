@@ -1,9 +1,9 @@
-package com.pekall.plist.beans;
+package com.pekall.plist;
 
 import com.dd.plist.NSArray;
 import com.dd.plist.NSDictionary;
 import com.dd.plist.NSNumber;
-import com.pekall.plist.*;
+import com.pekall.plist.beans.PayloadBase;
 import junit.framework.TestCase;
 
 /**

@@ -131,7 +131,7 @@ public class BeanComboType {
 
         if (!foo.equals(that.foo)) return false;
         if (!bar.equals(that.bar)) return false;
-        if(this.hashCode() != that.hashCode()) return false;
+        if (this.hashCode() != that.hashCode()) return false;
 
         return true;
     }

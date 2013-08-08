@@ -1,6 +1,7 @@
 package com.pekall.plist.beans;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.

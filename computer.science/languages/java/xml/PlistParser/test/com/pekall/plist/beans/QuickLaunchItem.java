@@ -3,13 +3,19 @@ package com.pekall.plist.beans;
 import java.util.Arrays;
 
 public class QuickLaunchItem {
-    /** DB id */
+    /**
+     * DB id
+     */
     private String mId = "";
 
-    /** Title of the quick launch */
+    /**
+     * Title of the quick launch
+     */
     private String mTitle = "";
 
-    /** Web address of the quick launch */
+    /**
+     * Web address of the quick launch
+     */
     private String mUrl = "";
 
     /**
@@ -19,7 +25,9 @@ public class QuickLaunchItem {
      */
     private int mNeedUpdate = 1;
 
-    /** icon of the quick launch */
+    /**
+     * icon of the quick launch
+     */
     private byte[] mBlob = new byte[0];
 
     public QuickLaunchItem() {
@@ -29,10 +37,10 @@ public class QuickLaunchItem {
     /**
      * Constructor
      *
-     * @param id of the item
-     * @param title of the item
-     * @param url of the item
-     * @param icon of the item
+     * @param id     of the item
+     * @param title  of the item
+     * @param url    of the item
+     * @param icon   of the item
      * @param update whether the icon should be updated
      */
     public QuickLaunchItem(String id, String title, String url, byte[] icon, int update) {
@@ -46,10 +54,10 @@ public class QuickLaunchItem {
     /**
      * Constructor
      *
-     * @param id of the item
+     * @param id    of the item
      * @param title of the item
-     * @param url of the item
-     * @param icon of the item
+     * @param url   of the item
+     * @param icon  of the item
      */
     public QuickLaunchItem(String id, String title, String url, byte[] icon) {
         this(id, title, url, new byte[0], 1);
@@ -58,9 +66,9 @@ public class QuickLaunchItem {
     /**
      * Constructor
      *
-     * @param id of the item
+     * @param id    of the item
      * @param title of the item
-     * @param url of the item
+     * @param url   of the item
      */
     public QuickLaunchItem(String id, String title, String url) {
         this(id, title, url, new byte[0]);
@@ -141,6 +149,7 @@ public class QuickLaunchItem {
 
     /**
      * Get whether the icon need to update
+     *
      * @return whether the icon need to update
      */
     public int getNeedUpdate() {

@@ -30,13 +30,19 @@ public class UrlMatchRule {
 
     private static final int MATCH_TYPE_END = MATCH_TYPE_EQUAL;
 
-    /** Id in provider */
+    /**
+     * Id in provider
+     */
     private String mId = "";
 
-    /** Rule URL*/
+    /**
+     * Rule URL
+     */
     private String mUrl = "";
 
-    /** Match type */
+    /**
+     * Match type
+     */
     private int mMatchType = MATCH_TYPE_CONTAIN;
 
     public static boolean isValidType(int type) {
@@ -48,8 +54,9 @@ public class UrlMatchRule {
 
     /**
      * Constructor
-     * @param id in the provider
-     * @param url to match web address
+     *
+     * @param id   in the provider
+     * @param url  to match web address
      * @param type of rule
      */
     public UrlMatchRule(String id, String url, int type) {
@@ -64,7 +71,8 @@ public class UrlMatchRule {
 
     /**
      * Constructor
-     * @param url to match web address
+     *
+     * @param url  to match web address
      * @param type of rule
      */
     public UrlMatchRule(String url, int type) {
@@ -73,6 +81,7 @@ public class UrlMatchRule {
 
     /**
      * Constructor
+     *
      * @param url to match web address
      */
     public UrlMatchRule(String url) {
@@ -119,6 +128,7 @@ public class UrlMatchRule {
 
     /**
      * Get the db id
+     *
      * @return db id
      */
     public String getId() {
@@ -127,6 +137,7 @@ public class UrlMatchRule {
 
     /**
      * Set the db id
+     *
      * @param id
      */
     public void setId(String id) {
@@ -138,6 +149,7 @@ public class UrlMatchRule {
 
     /**
      * Get the url rule
+     *
      * @return the url rule
      */
     public String getUrl() {
@@ -146,6 +158,7 @@ public class UrlMatchRule {
 
     /**
      * Set the url rule
+     *
      * @param url the url rule
      */
     public void setUrl(String url) {
@@ -157,6 +170,7 @@ public class UrlMatchRule {
 
     /**
      * Get the match type of this rule
+     *
      * @return the match type of this rule
      */
     public int getMatchType() {
@@ -165,6 +179,7 @@ public class UrlMatchRule {
 
     /**
      * Set the match type of this rule
+     *
      * @param matchType
      */
     public void setMatchType(int matchType) {

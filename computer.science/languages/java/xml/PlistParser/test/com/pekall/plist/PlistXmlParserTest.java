@@ -28,12 +28,12 @@ public class PlistXmlParserTest extends TestCase {
     }
 
     private void assertNsdictWithBasicType(NSDictionary root) {
-        assertEquals(((NSString)root.objectForKey("string")).getContent(), "test string");
-        assertEquals(((NSNumber)root.objectForKey("integer")).intValue(), 10);
-        assertEquals(((NSNumber)root.objectForKey("long")).longValue(), 100l);
-        assertEquals(((NSNumber)root.objectForKey("double")).doubleValue(), 3.1415926);
-        assertEquals(((NSNumber)root.objectForKey("float")).floatValue(), 3.1415926f);
-        assertEquals(((NSNumber)root.objectForKey("boolean")).boolValue(), true);
+        assertEquals(((NSString) root.objectForKey("string")).getContent(), "test string");
+        assertEquals(((NSNumber) root.objectForKey("integer")).intValue(), 10);
+        assertEquals(((NSNumber) root.objectForKey("long")).longValue(), 100l);
+        assertEquals(((NSNumber) root.objectForKey("double")).doubleValue(), 3.1415926);
+        assertEquals(((NSNumber) root.objectForKey("float")).floatValue(), 3.1415926f);
+        assertEquals(((NSNumber) root.objectForKey("boolean")).boolValue(), true);
 
         Calendar cal = Calendar.getInstance();
         cal.set(2011, 1, 13, 9, 28, 49);
@@ -130,10 +130,10 @@ public class PlistXmlParserTest extends TestCase {
     }
 
     private void assertNsarrayInternal(NSArray array) {
-        assertEquals(((NSString)array.objectAtIndex(0)).getContent(), "test string");
-        assertEquals(((NSNumber)array.objectAtIndex(1)).doubleValue(), 10.0);
-        assertEquals(((NSNumber)array.objectAtIndex(2)).intValue(), 5);
-        assertEquals(((NSNumber)array.objectAtIndex(3)).boolValue(), true);
+        assertEquals(((NSString) array.objectAtIndex(0)).getContent(), "test string");
+        assertEquals(((NSNumber) array.objectAtIndex(1)).doubleValue(), 10.0);
+        assertEquals(((NSNumber) array.objectAtIndex(2)).intValue(), 5);
+        assertEquals(((NSNumber) array.objectAtIndex(3)).boolValue(), true);
 
         Calendar cal = Calendar.getInstance();
         cal.set(2011, 1, 13, 9, 28, 49);

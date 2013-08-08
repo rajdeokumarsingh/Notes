@@ -2,6 +2,7 @@ package com.pekall.plist;
 
 /**
  * A example profile
+ * FIXME: Do NOT change this file
  */
 public class EnrollProfileData {
     public static final String ENROLL_PROFILE = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +

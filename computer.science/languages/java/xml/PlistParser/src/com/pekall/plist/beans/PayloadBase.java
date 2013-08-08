@@ -13,7 +13,7 @@ public class PayloadBase {
     private String PayloadOrganization = "";
     private boolean PayloadRemovalDisallowed;
 
-    // TODO: PayloadContent could be <dict>, <array> or <data>
+    // PayloadContent could be <dict>, <array> or <data>
     // private Object PayloadContent;
 
     public PayloadBase() {
@@ -94,6 +94,24 @@ public class PayloadBase {
 
     public void setPayloadRemovalDisallowed(boolean payloadRemovalDisallowed) {
         PayloadRemovalDisallowed = payloadRemovalDisallowed;
+    }
+
+    public boolean baseEquals(Object o) {
+        if (this == o) return true;
+        if (o == null || !PayloadBase.class.isAssignableFrom(o.getClass())) return false;
+
+        PayloadBase that = (PayloadBase) o;
+
+        if (PayloadRemovalDisallowed != that.PayloadRemovalDisallowed) return false;
+        if (PayloadVersion != that.PayloadVersion) return false;
+        if (!PayloadDescription.equals(that.PayloadDescription)) return false;
+        if (!PayloadDisplayName.equals(that.PayloadDisplayName)) return false;
+        if (!PayloadIdentifier.equals(that.PayloadIdentifier)) return false;
+        if (!PayloadOrganization.equals(that.PayloadOrganization)) return false;
+        if (!PayloadType.equals(that.PayloadType)) return false;
+        if (!PayloadUUID.equals(that.PayloadUUID)) return false;
+
+        return true;
     }
 
     @Override
