@@ -1,11 +1,10 @@
 package com.pekall.plist.beans;
 
-import com.pekall.plist.PlistDebug;
-
 import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Representing an profile to install.
  * IOS payload in which "PayloadContent" contains an payload array.
  */
 public class PayloadArrayWrapper extends PayloadBase {
@@ -30,15 +29,12 @@ public class PayloadArrayWrapper extends PayloadBase {
 
     @Override
     public boolean equals(Object o) {
-        PlistDebug.logTest("equals 1");
         if (this == o) return true;
         if (!(o instanceof PayloadArrayWrapper)) return false;
         if (!super.equals(o)) return false;
 
         PayloadArrayWrapper that = (PayloadArrayWrapper) o;
 
-        PlistDebug.logTest("equals 2, this hash code: " + this.hashCode());
-        PlistDebug.logTest("equals 2, that hash code: " + that.hashCode());
         if (this.hashCode() != that.hashCode()) return false;
 
         return true;
@@ -47,7 +43,6 @@ public class PayloadArrayWrapper extends PayloadBase {
     @Override
     public int hashCode() {
         int result = super.hashCode();
-        PlistDebug.logTest("super hash: " + result);
         for (PayloadBase payloadBase : PayloadContent) {
             result += payloadBase.hashCode();
         }

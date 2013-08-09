@@ -1,7 +1,11 @@
 package com.pekall.plist;
 
+import com.dd.plist.NSArray;
 import com.dd.plist.NSDictionary;
 import com.pekall.plist.beans.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Parser for XML status messages, just a simple wrapper
@@ -18,6 +22,19 @@ public class CommandStatusMsgParser {
             if (root.objectForKey("QueryResponses") != null) {
                 mMessage = (CommandStatusMsg) PlistBeanConverter
                         .createBeanFromNdict(root, CommandDeviceInfoStatus.class);
+            } else if (root.objectForKey("ProfileList") != null) {
+                List<PayloadArrayWrapper> wrappers = new ArrayList<PayloadArrayWrapper>();
+                NSArray profiles = (NSArray) root.objectForKey("ProfileList");
+                for (int i = 0; i < profiles.count(); i++) {
+                    NSDictionary profile = (NSDictionary) profiles.objectAtIndex(i);
+                    PayloadXmlMsgParser parser = new PayloadXmlMsgParser(profile);
+                    wrappers.add((PayloadArrayWrapper) parser.getPayloadDescriptor());
+                }
+
+                CommandProfileListStatus statusMsg = (CommandProfileListStatus) PlistBeanConverter
+                        .createBeanFromNdict(root, CommandProfileListStatus.class);
+                statusMsg.setProfileList(wrappers);
+                mMessage = statusMsg;
             }
         } catch (Exception e) {
             e.printStackTrace();

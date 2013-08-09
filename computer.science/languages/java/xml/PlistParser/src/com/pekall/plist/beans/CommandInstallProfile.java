@@ -6,7 +6,7 @@ import com.pekall.plist.Utils;
 import java.util.Arrays;
 
 /**
- * Command to install a configuration profile
+ * Command to install configuration profiles
  */
 public class CommandInstallProfile extends CommandObject {
     /**

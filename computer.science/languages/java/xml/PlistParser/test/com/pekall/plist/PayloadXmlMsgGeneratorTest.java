@@ -49,7 +49,7 @@ public class PayloadXmlMsgGeneratorTest extends TestCase {
         PayloadXmlMsgGenerator generator = new PayloadXmlMsgGenerator(wrapper);
         String xml = generator.getXml();
 
-        PlistDebug.logTest("xml: " + xml);
+        PlistDebug.logTest(xml);
 
         PayloadXmlMsgParser parser = new PayloadXmlMsgParser(xml);
         assertEquals(policy, parser.getPasswordPolicy());

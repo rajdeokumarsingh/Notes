@@ -24,6 +24,12 @@ public class CommandObject {
     /**  Install a Configuration Profile */
     public static final String REQ_TYPE_INST_PROF = "InstallProfile";
 
+    /** Remove a Profile From the Device */
+    public static final String REQ_TYPE_RM_PROF = "RemoveProfile";
+
+    /** Get a list of installed profiles */
+    public static final String REQ_TYPE_PROF_LIST = "ProfileList";
+
     // Request type, see REQ_TYPE_DEVICE_LOCK, ....
     private String RequestType;
 

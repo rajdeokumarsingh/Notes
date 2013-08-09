@@ -16,10 +16,8 @@ public class PayloadXmlMsgParser {
 
     // root object of the payload message
     private NSDictionary nsRoot;
-
     // array for the PayloadContent part of the payload message
     private NSArray nsArray;
-
     private PayloadArrayWrapper wrapper;
     private PayloadPasswordPolicy passwordPolicy;
 
@@ -30,14 +28,32 @@ public class PayloadXmlMsgParser {
      */
     public PayloadXmlMsgParser(String xml) {
         try {
-            nsRoot = (NSDictionary) PlistXmlParser.fromXml(xml);
+            NSDictionary root = (NSDictionary) PlistXmlParser.fromXml(xml);
+            internalParse(root);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Constructor, in which the xml string parameter will be parsed into beans
+     *
+     * @param root of the profile
+     */
+    public PayloadXmlMsgParser(NSDictionary root) {
+        internalParse(root);
+    }
+
+    private void internalParse(NSDictionary root) {
+        try {
+            nsRoot = root;
             NSObject nsObject = nsRoot.objectForKey(Constants.KEY_PL_CONTENT);
 
             wrapper = (PayloadArrayWrapper) PlistBeanConverter
                     .createBeanFromNdict(nsRoot, PayloadArrayWrapper.class);
             if(nsObject == null) return;
             if(!(nsObject instanceof NSArray)) {
-                // TODO: handle NSDictionary?
+                PlistDebug.logError("Payload format not correct!");
                 return;
             }
 
@@ -52,8 +68,10 @@ public class PayloadXmlMsgParser {
                     NSDictionary dict = (NSDictionary) nsArray.objectAtIndex(i);
                     passwordPolicy = (PayloadPasswordPolicy) PlistBeanConverter
                             .createBeanFromNdict(dict, PayloadPasswordPolicy.class);
+                    newBases.add(passwordPolicy);
                 }
             }
+            wrapper.setPayloadContent(newBases);
         } catch (Exception e) {
             e.printStackTrace();
         }
