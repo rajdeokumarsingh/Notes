@@ -21,6 +21,9 @@ public class CommandObject {
     /** Get information about the device */
     public static final String REQ_TYPE_DEVICE_INFO = "DeviceInformation";
 
+    /**  Install a Configuration Profile */
+    public static final String REQ_TYPE_INST_PROF = "InstallProfile";
+
     // Request type, see REQ_TYPE_DEVICE_LOCK, ....
     private String RequestType;
 

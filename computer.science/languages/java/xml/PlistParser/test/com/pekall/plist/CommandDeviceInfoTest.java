@@ -70,7 +70,7 @@ public class CommandDeviceInfoTest extends TestCase {
         NSDictionary root = PlistBeanConverter.createNdictFromBean(msg);
         String xml = PlistXmlParser.toXml(root);
 
-        PlistDebug.logTest("xml: " + xml);
+        PlistDebug.logTest(xml);
         assertEquals(xml, TEST_XML);
     }
 

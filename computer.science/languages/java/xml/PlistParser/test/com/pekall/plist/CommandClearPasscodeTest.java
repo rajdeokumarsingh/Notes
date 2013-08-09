@@ -30,6 +30,7 @@ public class CommandClearPasscodeTest extends TestCase {
             "\t</dict>\n" +
             "</dict>\n" +
             "</plist>";
+
     private static final java.lang.String XML_MSG_WITH_TOKEN = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
             "<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n" +
             "<plist version=\"1.0\">\n" +
@@ -54,7 +55,7 @@ public class CommandClearPasscodeTest extends TestCase {
         NSDictionary root = PlistBeanConverter.createNdictFromBean(msg);
         String xml = PlistXmlParser.toXml(root);
 
-        PlistDebug.logTest("xml: " + xml);
+        PlistDebug.logTest(xml);
         assertEquals(xml, XML_MSG_WITH_NO_TOKEN);
     }
 
@@ -69,7 +70,7 @@ public class CommandClearPasscodeTest extends TestCase {
         NSDictionary root = PlistBeanConverter.createNdictFromBean(msg);
         String xml = PlistXmlParser.toXml(root);
 
-        PlistDebug.logTest("xml: " + xml);
+        PlistDebug.logTest(xml);
         assertEquals(xml, XML_MSG_WITH_TOKEN);
     }
 
