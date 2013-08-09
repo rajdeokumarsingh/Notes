@@ -8,7 +8,6 @@ import com.pekall.plist.beans.PayloadPasswordPolicy;
 import junit.framework.TestCase;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -79,7 +78,12 @@ public class CommandProfileListStatusTest extends TestCase {
 
     private PayloadArrayWrapper createProfile() {
         PayloadPasswordPolicy policy = createPasswordPolicy();
+        PayloadArrayWrapper wrapper = createWrapper();
+        wrapper.addPayLoadContent(policy);
+        return wrapper;
+    }
 
+    private PayloadArrayWrapper createWrapper() {
         PayloadArrayWrapper wrapper = new PayloadArrayWrapper();
         wrapper.setPayloadDescription("描述文件描述。wjl 测试");
         wrapper.setPayloadDisplayName("Pekall MDM Profile");
@@ -89,14 +93,17 @@ public class CommandProfileListStatusTest extends TestCase {
         wrapper.setPayloadType("Configuration");
         wrapper.setPayloadUUID("2ED160FF-4B6C-47DD-8105-769231367D2A");
         wrapper.setPayloadVersion(1);
-
-        wrapper.addPayLoadContent(policy);
         return wrapper;
     }
 
     private PayloadArrayWrapper createProfileSettings() {
         PayloadPasswordPolicy policy = createPasswordPolicy();
+        PayloadArrayWrapper wrapper = createSettingWrapper();
+        wrapper.addPayLoadContent(policy);
+        return wrapper;
+    }
 
+    private PayloadArrayWrapper createSettingWrapper() {
         PayloadArrayWrapper wrapper = new PayloadArrayWrapper();
         wrapper.setPayloadDescription("描述文件描述");
         wrapper.setPayloadDisplayName("Pekall MDM Setting");
@@ -106,8 +113,6 @@ public class CommandProfileListStatusTest extends TestCase {
         wrapper.setPayloadType("Configuration");
         wrapper.setPayloadUUID("2ED160FF-4B6C-47DD-1234-56789012345A");
         wrapper.setPayloadVersion(1);
-
-        wrapper.addPayLoadContent(policy);
         return wrapper;
     }
 
