@@ -16,9 +16,8 @@ public class CommandStatusMsgParser {
     public CommandStatusMsgParser(String xml) {
         try {
             NSDictionary root = (NSDictionary) PlistXmlParser.fromXml(xml);
-            CommandStatusMsg msg = (CommandStatusMsg) PlistBeanConverter
+            mMessage = (CommandStatusMsg) PlistBeanConverter
                     .createBeanFromNdict(root, CommandStatusMsg.class);
-            mMessage = msg;
             if (root.objectForKey("QueryResponses") != null) {
                 mMessage = (CommandStatusMsg) PlistBeanConverter
                         .createBeanFromNdict(root, CommandDeviceInfoStatus.class);
@@ -35,6 +34,18 @@ public class CommandStatusMsgParser {
                         .createBeanFromNdict(root, CommandProfileListStatus.class);
                 statusMsg.setProfileList(wrappers);
                 mMessage = statusMsg;
+            } else if (root.objectForKey("ProvisioningProfileList") != null) {
+                mMessage = (CommandStatusMsg) PlistBeanConverter
+                        .createBeanFromNdict(root, CommandProvisionProfileListStatus.class);
+            } else if (root.objectForKey("CertificateList") != null) {
+                mMessage = (CommandStatusMsg) PlistBeanConverter
+                        .createBeanFromNdict(root, CommandCertificateListStatus.class);
+            } else if (root.objectForKey("InstalledApplicationList") != null) {
+                mMessage = (CommandStatusMsg) PlistBeanConverter
+                        .createBeanFromNdict(root, CommandInstalledAppListStatus.class);
+            } else if (root.objectForKey("SecurityInfo") != null) {
+                mMessage = (CommandStatusMsg) PlistBeanConverter
+                        .createBeanFromNdict(root, CommandSecurityInfoStatus.class);
             }
         } catch (Exception e) {
             e.printStackTrace();

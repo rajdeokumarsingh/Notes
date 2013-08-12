@@ -14,6 +14,27 @@ import junit.framework.TestCase;
  */
 public class CommandStatusMsgTest extends TestCase {
 
+    private static final java.lang.String EMPTY_MSG_XML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+            "<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n" +
+            "<plist version=\"1.0\">\n" +
+            "<dict>\n" +
+            "</dict>\n" +
+            "</plist>";
+
+    public void testGenEmptyMsg() throws Exception {
+        CommandStatusMsg msg = new CommandStatusMsg();
+
+        NSDictionary root = PlistBeanConverter.createNdictFromBean(msg);
+        String xml = PlistXmlParser.toXml(root);
+
+        PlistDebug.logTest("xml: " + xml);
+        assertEquals(xml, EMPTY_MSG_XML);
+        NSDictionary rootParsed = (NSDictionary) PlistXmlParser.fromXml(xml);
+        CommandStatusMsg msgParsed = (CommandStatusMsg) PlistBeanConverter
+                .createBeanFromNdict(rootParsed, CommandStatusMsg.class);
+        assertEquals(msg, msgParsed);
+    }
+
     public void testParseIdleMsg() throws Exception {
         NSDictionary root = (NSDictionary) PlistXmlParser.fromXml(IDLE_XML_MSG);
         CommandStatusMsg msg = (CommandStatusMsg) PlistBeanConverter
@@ -36,7 +57,7 @@ public class CommandStatusMsgTest extends TestCase {
         NSDictionary rootParsed = (NSDictionary) PlistXmlParser.fromXml(xml);
         CommandStatusMsg msgParsed = (CommandStatusMsg) PlistBeanConverter
                 .createBeanFromNdict(rootParsed, CommandStatusMsg.class);
-        assertEquals(root, rootParsed);
+        assertEquals(msg, msgParsed);
     }
 
     public void testParseAckMessage() throws Exception {

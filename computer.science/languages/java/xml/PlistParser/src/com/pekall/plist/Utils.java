@@ -3,11 +3,7 @@ package com.pekall.plist;
 import com.pekall.plist.beans.CommandObject;
 
 /**
- * Created with IntelliJ IDEA.
- * User: jiangrui
- * Date: 8/8/13
- * Time: 1:29 PM
- * To change this template use File | Settings | File Templates.
+ * Utility class
  */
 public class Utils {
 

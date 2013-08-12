@@ -16,7 +16,7 @@ public class PlistXmlParser {
      * @return XML string
      * @throws IOException
      */
-    public final static String toXml(NSObject root) throws IOException {
+    public static String toXml(NSObject root) throws IOException {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         PropertyListParser.saveAsXML(root, bos);
         return bos.toString();
@@ -28,7 +28,7 @@ public class PlistXmlParser {
      * @return NSObject
      * @throws Exception
      */
-    public final static NSObject fromXml(String xml) throws Exception {
+    public static NSObject fromXml(String xml) throws Exception {
         return PropertyListParser.parse(xml.getBytes());
     }
 }

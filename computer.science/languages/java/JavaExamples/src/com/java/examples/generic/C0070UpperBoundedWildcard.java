@@ -9,14 +9,27 @@ import java.util.List;
  *  List<Number> and
  *  List<? extends Number>
  */
-public class C007UpperBoundedWildcard {
+public class C0070UpperBoundedWildcard {
     public static void outputNumberList(List<Number> list) {
+        // The list must be a List<Number>, and Integer and Double are Number,
+        // so, they could be added into the list
+        list.add(Integer.valueOf(20));
+        list.add(Double.valueOf(30.5));
+
         for (Number n : list) {
             System.out.println(n.toString());
         }
     }
 
     public static void outputNumberWildcardList(List<? extends Number> list) {
+        // The list may be a List<Integer>, List<Float>, List<Double>
+        // since its type is unknown , we can not add an Integer or Double to it
+
+        // Compile error
+        // list.add(Integer.valueOf(20));
+        // list.add(Double.valueOf(30.5));
+        // list.add((Object) Integer.valueOf(20));
+
         for (Number n : list) {
             System.out.println(n.toString());
         }
@@ -41,14 +54,14 @@ public class C007UpperBoundedWildcard {
         integers.add(30);
         integers.add(40);
 
-        C007UpperBoundedWildcard.outputNumberList(numbers);
+        C0070UpperBoundedWildcard.outputNumberList(numbers);
         // Compile error:
-        // C007UpperBoundedWildcard.outputNumberList(integers);
-        C007UpperBoundedWildcard.outputNumberWildcardList(numbers);
-        C007UpperBoundedWildcard.outputNumberWildcardList(integers);
+        // C0070UpperBoundedWildcard.outputNumberList(integers);
+        C0070UpperBoundedWildcard.outputNumberWildcardList(numbers);
+        C0070UpperBoundedWildcard.outputNumberWildcardList(integers);
 
         List<Integer> integerList = Arrays.asList(1, 2, 3);
         System.out.println("sum of integer list is: " +
-            C007UpperBoundedWildcard.sumOfList(integerList));
+            C0070UpperBoundedWildcard.sumOfList(integerList));
     }
 }

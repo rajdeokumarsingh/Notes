@@ -30,6 +30,24 @@ public class CommandObject {
     /** Get a list of installed profiles */
     public static final String REQ_TYPE_PROF_LIST = "ProfileList";
 
+    /** Get a List of Installed Provisioning Profiles */
+    public static final String REQ_TYPE_PROV_PROF_LIST = "ProvisioningProfileList";
+
+    /** Install Provisioning Profiles */
+    public static final String REQ_TYPE_INST_PROV_PROF = "InstallProvisioningProfile";
+
+    /** Remove Installed Provisioning Profiles */
+    public static final String REQ_TYPE_RM_PROV_PROF = "RemoveProvisioningProfile";
+
+    /** Get a List of Installed Certificates */
+    public static final String REQ_TYPE_CERT_LIST = "CertificateList";
+
+    /** Get a List of Third-Party Applications */
+    public static final String REQ_TYPE_INST_APP_LIST = "InstalledApplicationList";
+
+    /** Request Security-Related Information */
+    public static final String REQ_TYPE_SECURITY_INFO = "SecurityInfo";
+
     // Request type, see REQ_TYPE_DEVICE_LOCK, ....
     private String RequestType;
 

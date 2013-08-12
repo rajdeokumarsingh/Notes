@@ -9,6 +9,7 @@ import java.util.Arrays;
  * Command to install configuration profiles
  */
 public class CommandInstallProfile extends CommandObject {
+
     /**
      * The profile to install. May be signed and/or encrypted for
      * any identity installed on the device.

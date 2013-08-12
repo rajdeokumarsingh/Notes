@@ -11,7 +11,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class BeanWithNestArray {
-    List<Integer> integers = new ArrayList<Integer>();
+    private List<Integer> integers = new ArrayList<Integer>();
 
     List<ArrayList<BeanBasicType>> lists = new ArrayList<ArrayList<BeanBasicType>>();
 

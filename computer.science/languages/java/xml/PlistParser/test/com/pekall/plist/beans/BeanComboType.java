@@ -10,14 +10,14 @@ import java.util.*;
  * To change this template use File | Settings | File Templates.
  */
 public class BeanComboType {
-    String string = "";
-    float float_number;
-    double double_number;
-    int int_number;
-    long long_number;
-    boolean boolean_value = true;
-    Date date;
-    byte[] byte_array;
+    private String string = "";
+    private float float_number;
+    private double double_number;
+    private int int_number;
+    private long long_number;
+    private boolean boolean_value = true;
+    private Date date;
+    private byte[] byte_array;
 
     private List<BeanBasicType> list = new ArrayList<BeanBasicType>();
 

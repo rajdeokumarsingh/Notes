@@ -14,10 +14,6 @@ import java.util.ArrayList;
  */
 public class PayloadXmlMsgParser {
 
-    // root object of the payload message
-    private NSDictionary nsRoot;
-    // array for the PayloadContent part of the payload message
-    private NSArray nsArray;
     private PayloadArrayWrapper wrapper;
     private PayloadPasswordPolicy passwordPolicy;
 
@@ -46,18 +42,17 @@ public class PayloadXmlMsgParser {
 
     private void internalParse(NSDictionary root) {
         try {
-            nsRoot = root;
-            NSObject nsObject = nsRoot.objectForKey(Constants.KEY_PL_CONTENT);
+            NSObject nsObject = root.objectForKey(Constants.KEY_PL_CONTENT);
 
             wrapper = (PayloadArrayWrapper) PlistBeanConverter
-                    .createBeanFromNdict(nsRoot, PayloadArrayWrapper.class);
+                    .createBeanFromNdict(root, PayloadArrayWrapper.class);
             if(nsObject == null) return;
             if(!(nsObject instanceof NSArray)) {
                 PlistDebug.logError("Payload format not correct!");
                 return;
             }
 
-            nsArray = (NSArray) nsObject;
+            NSArray nsArray = (NSArray) nsObject;
             ArrayList<PayloadBase> bases = (ArrayList<PayloadBase>) wrapper.getPayloadContent();
             ArrayList<PayloadBase> newBases = new ArrayList<PayloadBase>();
 

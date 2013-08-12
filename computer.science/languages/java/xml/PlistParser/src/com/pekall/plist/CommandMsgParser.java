@@ -32,6 +32,14 @@ public class CommandMsgParser {
                 CommandRemoveProfile msg1 = (CommandRemoveProfile) PlistBeanConverter
                         .createBeanFromNdict(pc, CommandRemoveProfile.class);
                 mMessage.setCommand(msg1);
+            } else if (CommandObject.REQ_TYPE_INST_PROV_PROF.equals(msg.getRequestType())) {
+                CommandInstallProvisionProfile msg1 = (CommandInstallProvisionProfile) PlistBeanConverter
+                        .createBeanFromNdict(pc, CommandInstallProvisionProfile.class);
+                mMessage.setCommand(msg1);
+            } else if (CommandObject.REQ_TYPE_RM_PROV_PROF.equals(msg.getRequestType())) {
+                CommandRemoveProvisionProfile msg1 = (CommandRemoveProvisionProfile) PlistBeanConverter
+                        .createBeanFromNdict(pc, CommandRemoveProvisionProfile.class);
+                mMessage.setCommand(msg1);
             }
         } catch (Exception e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
