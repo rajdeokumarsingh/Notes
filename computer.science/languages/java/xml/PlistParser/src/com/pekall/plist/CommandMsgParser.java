@@ -15,34 +15,39 @@ public class CommandMsgParser {
             CommandMsg msg = (CommandMsg) PlistBeanConverter
                     .createBeanFromNdict(root, CommandMsg.class);
             mMessage = msg;
+
+            CommandObject command = null;
             NSDictionary pc = (NSDictionary) root.objectForKey("Command");
             if (CommandObject.REQ_TYPE_CLEAR_PASSCODE.equals(msg.getRequestType())) {
-                CommandClearPasscode msg1 = (CommandClearPasscode) PlistBeanConverter
+                command = (CommandObject) PlistBeanConverter
                         .createBeanFromNdict(pc, CommandClearPasscode.class);
-                mMessage.setCommand(msg1);
             } else if (CommandObject.REQ_TYPE_DEVICE_INFO.equals(msg.getRequestType())) {
-                CommandDeviceInfo msg1 = (CommandDeviceInfo) PlistBeanConverter
-                        .createBeanFromNdict(pc, CommandDeviceInfo.class);
-                mMessage.setCommand(msg1);
+                command = (CommandObject) PlistBeanConverter.createBeanFromNdict(pc, CommandDeviceInfo.class);
             } else if (CommandObject.REQ_TYPE_INST_PROF.equals(msg.getRequestType())) {
-                CommandInstallProfile msg1 = (CommandInstallProfile) PlistBeanConverter
+                command = (CommandObject) PlistBeanConverter
                         .createBeanFromNdict(pc, CommandInstallProfile.class);
-                mMessage.setCommand(msg1);
             } else if (CommandObject.REQ_TYPE_RM_PROF.equals(msg.getRequestType())) {
-                CommandRemoveProfile msg1 = (CommandRemoveProfile) PlistBeanConverter
+                command = (CommandObject) PlistBeanConverter
                         .createBeanFromNdict(pc, CommandRemoveProfile.class);
-                mMessage.setCommand(msg1);
             } else if (CommandObject.REQ_TYPE_INST_PROV_PROF.equals(msg.getRequestType())) {
-                CommandInstallProvisionProfile msg1 = (CommandInstallProvisionProfile) PlistBeanConverter
+                command = (CommandObject) PlistBeanConverter
                         .createBeanFromNdict(pc, CommandInstallProvisionProfile.class);
-                mMessage.setCommand(msg1);
             } else if (CommandObject.REQ_TYPE_RM_PROV_PROF.equals(msg.getRequestType())) {
-                CommandRemoveProvisionProfile msg1 = (CommandRemoveProvisionProfile) PlistBeanConverter
+                command = (CommandObject) PlistBeanConverter
                         .createBeanFromNdict(pc, CommandRemoveProvisionProfile.class);
-                mMessage.setCommand(msg1);
+            } else if (CommandObject.REQ_TYPE_RESTRICTIONS.equals(msg.getRequestType())) {
+                command = (CommandObject) PlistBeanConverter
+                        .createBeanFromNdict(pc, CommandRestrictions.class);
+            } else if (CommandObject.REQ_TYPE_INST_APP.equals(msg.getRequestType())) {
+                command = (CommandObject) PlistBeanConverter
+                        .createBeanFromNdict(pc, CommandInstallApp.class);
+            } else if (CommandObject.REQ_TYPE_APPLY_REDEMPTION_CODE.equals(msg.getRequestType())) {
+                command = (CommandObject) PlistBeanConverter
+                        .createBeanFromNdict(pc, CommandApplyRedemptionCode.class);
             }
+            if (command != null)  mMessage.setCommand(command);
         } catch (Exception e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         }
     }
 

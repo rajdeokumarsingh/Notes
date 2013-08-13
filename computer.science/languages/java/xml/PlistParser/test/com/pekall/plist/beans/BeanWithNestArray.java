@@ -10,6 +10,7 @@ import java.util.List;
  * Time: 7:40 PM
  * To change this template use File | Settings | File Templates.
  */
+@SuppressWarnings("ALL")
 public class BeanWithNestArray {
     private List<Integer> integers = new ArrayList<Integer>();
 

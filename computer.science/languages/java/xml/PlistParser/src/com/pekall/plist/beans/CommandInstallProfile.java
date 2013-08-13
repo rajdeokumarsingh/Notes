@@ -10,6 +10,7 @@ import java.util.Arrays;
  */
 public class CommandInstallProfile extends CommandObject {
 
+    public static final String KEY_PAYLOAD = "Payload";
     /**
      * The profile to install. May be signed and/or encrypted for
      * any identity installed on the device.

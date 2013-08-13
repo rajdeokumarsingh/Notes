@@ -1,6 +1,7 @@
 package com.pekall.plist;
 
 import com.dd.plist.*;
+import com.pekall.plist.beans.KeyFieldTranslation;
 
 import java.io.IOException;
 import java.lang.reflect.*;
@@ -86,7 +87,11 @@ public class PlistBeanConverter {
 
                 field.setAccessible(true);
 
-                NSObject nsObject = root.objectForKey(field.getName());
+                String keyName = KeyFieldTranslation.translateJavaField(field.getName());
+                if (keyName == null) {
+                    keyName = field.getName();
+                }
+                NSObject nsObject = root.objectForKey(keyName);
                 if (nsObject == null) continue;
 
                 if (nsObject.getClass().equals(NSNumber.class)) {
@@ -202,6 +207,26 @@ public class PlistBeanConverter {
                         root.put(field.getName(), field.getFloat(data));
                     } else if (double.class.equals(type)) {
                         root.put(field.getName(), field.getDouble(data));
+                    } else if (Boolean.class.equals(type)) {
+                        if (field.get(data) == null) continue;
+
+                        root.put(field.getName(), field.get(data));
+                    } else if (Integer.class.equals(type)) {
+                        if (field.get(data) == null) continue;
+
+                        root.put(field.getName(), field.get(data));
+                    } else if (Long.class.equals(type)) {
+                        if (field.get(data) == null) continue;
+
+                        root.put(field.getName(), field.get(data));
+                    } else if (Float.class.equals(type)) {
+                        if (field.get(data) == null) continue;
+
+                        root.put(field.getName(), field.get(data));
+                    } else if (Double.class.equals(type)) {
+                        if (field.get(data) == null) continue;
+
+                        root.put(field.getName(), field.get(data));
                     } else if (String.class.equals(type)) {
                         if (field.get(data) == null) continue;
 
@@ -255,9 +280,14 @@ public class PlistBeanConverter {
                         root.put(field.getName(), new NSDate((Date) field.get(data)));
                     } else {
                         if (field.get(data) == null) continue;
-
+                        // Since some key names are illegal for a java field name,
+                        // we need to do a translation.
+                        String keyName = KeyFieldTranslation.translateJavaField(field.getName());
+                        if (keyName == null) {
+                            keyName = field.getName();
+                        }
                         NSDictionary dictionary = createNdictFromBean(field.get(data));
-                        root.put(field.getName(), dictionary);
+                        root.put(keyName, dictionary);
                     }
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
@@ -289,7 +319,7 @@ public class PlistBeanConverter {
 
     private static void assignByteArrayField(Object data, Field field, NSData nsObject) throws IllegalAccessException {
         if (field.getType().equals(byte[].class)) {
-            field.set(data, ((NSData) nsObject).bytes());
+            field.set(data, nsObject.bytes());
         } else {
             PlistDebug.logError("error type!");
         }
@@ -297,7 +327,7 @@ public class PlistBeanConverter {
 
     private static void assignDateField(Object data, Field field, NSDate nsObject) throws IllegalAccessException {
         if (field.getType().equals(Date.class)) {
-            field.set(data, ((NSDate) nsObject).getDate());
+            field.set(data, nsObject.getDate());
         } else {
             PlistDebug.logError("error type!");
         }
@@ -305,12 +335,11 @@ public class PlistBeanConverter {
 
     private static void assignStringField(Object data, Field field, NSString nsObject) throws IllegalAccessException {
         if (field.getType().equals(String.class)) {
-            field.set(data, ((NSString) nsObject).getContent());
+            field.set(data, nsObject.getContent());
         } else {
             PlistDebug.logError("error type!");
         }
     }
-
 
     private static void assignNumberField(Object data, Field field, NSNumber number) throws IllegalAccessException {
         Class fieldClass = field.getType();
@@ -318,6 +347,8 @@ public class PlistBeanConverter {
             case NSNumber.BOOLEAN:
                 if (fieldClass.equals(boolean.class)) {
                     field.setBoolean(data, number.boolValue());
+                } else if (fieldClass.equals(Boolean.class)) {
+                    field.set(data, Boolean.valueOf(number.boolValue()));
                 } else {
                     PlistDebug.logError("Convert type error!");
                 }
@@ -325,8 +356,12 @@ public class PlistBeanConverter {
             case NSNumber.INTEGER:
                 if (fieldClass.equals(int.class)) {
                     field.setInt(data, number.intValue());
+                } else if (fieldClass.equals(Integer.class)) {
+                    field.set(data, Integer.valueOf(number.intValue()));
                 } else if (fieldClass.equals(long.class)) {
                     field.setLong(data, number.longValue());
+                } else if (fieldClass.equals(Long.class)) {
+                    field.set(data, Long.valueOf(number.longValue()));
                 } else {
                     PlistDebug.logError("Convert type error!");
                 }
@@ -334,8 +369,12 @@ public class PlistBeanConverter {
             case NSNumber.REAL: {
                 if (fieldClass.equals(float.class)) {
                     field.setFloat(data, number.floatValue());
+                } else if (fieldClass.equals(Float.class)) {
+                    field.set(data, Float.valueOf(number.floatValue()));
                 } else if (fieldClass.equals(double.class)) {
                     field.setDouble(data, number.doubleValue());
+                } else if (fieldClass.equals(Double.class)) {
+                    field.set(data, Double.valueOf(number.doubleValue()));
                 } else {
                     PlistDebug.logError("Convert type error!");
                 }

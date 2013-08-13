@@ -46,6 +46,14 @@ public class CommandStatusMsgParser {
             } else if (root.objectForKey("SecurityInfo") != null) {
                 mMessage = (CommandStatusMsg) PlistBeanConverter
                         .createBeanFromNdict(root, CommandSecurityInfoStatus.class);
+            } else if (root.objectForKey("GlobalRestrictions") != null ||
+                    root.objectForKey("ProfileRestrictions") != null) {
+                mMessage = (CommandStatusMsg) PlistBeanConverter
+                        .createBeanFromNdict(root, CommandRestrictionsStatus.class);
+            } else if (root.objectForKey("Identifier") != null ||
+                    root.objectForKey("RejectionReason") != null) {
+                mMessage = (CommandStatusMsg) PlistBeanConverter
+                        .createBeanFromNdict(root, CommandInstallAppStatus.class);
             }
         } catch (Exception e) {
             e.printStackTrace();

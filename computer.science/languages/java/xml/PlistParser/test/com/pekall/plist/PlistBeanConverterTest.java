@@ -39,6 +39,41 @@ public class PlistBeanConverterTest extends TestCase {
             "</dict>\n" +
             "</plist>";
 
+    private static final java.lang.String BASIC_OBJ_XML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+            "<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n" +
+            "<plist version=\"1.0\">\n" +
+            "<dict>\n" +
+            "\t<key>boolean_value</key>\n" +
+            "\t<true/>\n" +
+            "\t<key>int_number</key>\n" +
+            "\t<integer>5</integer>\n" +
+            "\t<key>long_number</key>\n" +
+            "\t<integer>900</integer>\n" +
+            "\t<key>float_number</key>\n" +
+            "\t<real>3.5</real>\n" +
+            "\t<key>double_number</key>\n" +
+            "\t<real>4.3</real>\n" +
+            "</dict>\n" +
+            "</plist>";
+
+    private static final java.lang.String BASIC_OBJ_NULL_XML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+            "<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n" +
+            "<plist version=\"1.0\">\n" +
+            "<dict>\n" +
+            "</dict>\n" +
+            "</plist>";
+
+    private static final java.lang.String BASIC_OBJ_PART_XML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+            "<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n" +
+            "<plist version=\"1.0\">\n" +
+            "<dict>\n" +
+            "\t<key>boolean_value</key>\n" +
+            "\t<false/>\n" +
+            "\t<key>double_number</key>\n" +
+            "\t<real>5.6</real>\n" +
+            "</dict>\n" +
+            "</plist>";
+
     public void testNsdictWithBasicType2Xml() throws Exception {
         BeanBasicType bean = createBeanBasicType();
         NSDictionary dictionary = PlistBeanConverter.createNdictFromBean(bean);
@@ -178,5 +213,72 @@ public class PlistBeanConverterTest extends TestCase {
         String xml = PlistXmlParser.toXml(dictionary);
 
         PlistDebug.logTest(xml);
+    }
+
+    public void testBasicObjectType2Xml() throws Exception {
+        BeanBasicObjectType bean = new BeanBasicObjectType(Float.valueOf(3.5f), Double.valueOf(4.3),
+                Integer.valueOf(5), Long.valueOf(900), Boolean.valueOf(true));
+        NSDictionary root = PlistBeanConverter.createNdictFromBean(bean);
+        String xml = PlistXmlParser.toXml(root);
+
+        PlistDebug.logTest(xml);
+        assertEquals(xml, BASIC_OBJ_XML);
+    }
+
+    public void testNullBasicObjectType2Xml() throws Exception {
+        BeanBasicObjectType bean = new BeanBasicObjectType();
+        NSDictionary root = PlistBeanConverter.createNdictFromBean(bean);
+        String xml = PlistXmlParser.toXml(root);
+
+        PlistDebug.logTest(xml);
+        assertEquals(xml, BASIC_OBJ_NULL_XML);
+    }
+
+    public void testPartialBasicObjectType2Xml() throws Exception {
+        BeanBasicObjectType bean = new BeanBasicObjectType();
+        bean.setBoolean_value(false);
+        bean.setDouble_number(5.6);
+        NSDictionary root = PlistBeanConverter.createNdictFromBean(bean);
+        String xml = PlistXmlParser.toXml(root);
+
+        PlistDebug.logTest(xml);
+        assertEquals(xml, BASIC_OBJ_PART_XML);
+    }
+
+    public void testParseXmlBasicObjectTyp() throws Exception {
+        NSDictionary root = (NSDictionary) PlistXmlParser.fromXml(BASIC_OBJ_XML);
+        BeanBasicObjectType bean = (BeanBasicObjectType) PlistBeanConverter
+                .createBeanFromNdict(root, BeanBasicObjectType.class);
+
+        BeanBasicObjectType bean1 = new BeanBasicObjectType(
+                Float.valueOf(3.5f), Double.valueOf(4.3),
+                Integer.valueOf(5), Long.valueOf(900), Boolean.valueOf(true));
+
+        PlistDebug.logTest(bean.toString());
+        assertEquals(bean, bean1);
+    }
+
+    public void testParseXmlNullBasicObjectType() throws Exception {
+        NSDictionary root = (NSDictionary) PlistXmlParser.fromXml(BASIC_OBJ_NULL_XML);
+        BeanBasicObjectType bean = (BeanBasicObjectType) PlistBeanConverter
+                .createBeanFromNdict(root, BeanBasicObjectType.class);
+
+        BeanBasicObjectType bean1 = new BeanBasicObjectType();
+
+        PlistDebug.logTest(bean.toString());
+        assertEquals(bean, bean1);
+    }
+
+    public void testParseXmlPartialBasicObjectType() throws Exception {
+        NSDictionary root = (NSDictionary) PlistXmlParser.fromXml(BASIC_OBJ_PART_XML);
+        BeanBasicObjectType bean = (BeanBasicObjectType) PlistBeanConverter
+                .createBeanFromNdict(root, BeanBasicObjectType.class);
+
+        BeanBasicObjectType bean1 = new BeanBasicObjectType();
+        bean1.setBoolean_value(false);
+        bean1.setDouble_number(5.6);
+
+        PlistDebug.logTest(bean.toString());
+        assertEquals(bean, bean1);
     }
 }

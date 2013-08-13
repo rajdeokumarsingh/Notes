@@ -8,6 +8,8 @@ import java.util.Arrays;
  * Command to install provisioning profiles
  */
 public class CommandInstallProvisionProfile extends CommandObject {
+
+    public static final String KEY_PROVISIONING_PROFILE = "ProvisioningProfile";
     /**
      * The provisioning profile to install.
      */

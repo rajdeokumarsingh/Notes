@@ -18,7 +18,7 @@ public class CommandStatusMsg {
     public static final String CMD_STAT_ERROR = "Error";
 
     /** A protocol error has occurred. The command may be malformed. */
-    public static final String CMD_STAT_FMT_Error = "CommandFormatError";
+    public static final String CMD_STAT_FMT_ERROR = "CommandFormatError";
 
     /** The device is idle (there is no status) */
     public static final String CMD_STAT_IDLE = "Idle";

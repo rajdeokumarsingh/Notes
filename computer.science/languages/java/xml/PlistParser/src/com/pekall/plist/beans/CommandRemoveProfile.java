@@ -8,6 +8,8 @@ import java.util.Arrays;
  * Command to remove configuration profiles
  */
 public class CommandRemoveProfile extends CommandObject {
+
+    public static final String KEY_IDENTIFIER = "Identifier";
     /**
      * The "PayloadIdentifier" value for the profile to remove.
      */

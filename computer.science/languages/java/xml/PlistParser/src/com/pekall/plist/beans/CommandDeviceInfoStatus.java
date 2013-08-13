@@ -4,7 +4,7 @@ package com.pekall.plist.beans;
  * Status response for DeviceInformation
  */
 public class CommandDeviceInfoStatus extends CommandStatusMsg {
-    DeviceInfoResp QueryResponses = new DeviceInfoResp();
+    private DeviceInfoResp QueryResponses = new DeviceInfoResp();
 
     public CommandDeviceInfoStatus() {
     }

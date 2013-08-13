@@ -48,6 +48,15 @@ public class CommandObject {
     /** Request Security-Related Information */
     public static final String REQ_TYPE_SECURITY_INFO = "SecurityInfo";
 
+    /** Get a List of Installed Restrictions */
+    public static final String REQ_TYPE_RESTRICTIONS = "Restrictions";
+
+    /** Install a third-party application */
+    public static final String REQ_TYPE_INST_APP = "InstallApplication";
+
+    /** Install Paid Applications via Redemption Code */
+    public static final String REQ_TYPE_APPLY_REDEMPTION_CODE = "ApplyRedemptionCode";
+
     // Request type, see REQ_TYPE_DEVICE_LOCK, ....
     private String RequestType;
 

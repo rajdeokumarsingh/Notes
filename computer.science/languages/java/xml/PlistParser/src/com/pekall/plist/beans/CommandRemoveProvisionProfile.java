@@ -6,6 +6,8 @@ import com.pekall.plist.Utils;
  * Command to remove a provisioning profile
  */
 public class CommandRemoveProvisionProfile extends CommandObject {
+
+    public static final String KEY_UUID = "UUID";
     /**
      * The UUID of the provisioning profile to remove.
      */
