@@ -51,7 +51,7 @@ public class CommandApplyRedemptionCodeTest extends TestCase {
 
     public void testParseXml() throws Exception {
         CommandMsgParser parser = new CommandMsgParser(TEST_XML);
-        CommandMsg msg =  parser.getMessage();
+        CommandMsg msg = parser.getMessage();
 
         CommandMsg msg1 = new CommandMsg(
                 "aa483d15-168d-4022-b69f-dac292096176", createCommandApplyRedemptionCode());
@@ -60,7 +60,7 @@ public class CommandApplyRedemptionCodeTest extends TestCase {
 
     public void testTwoWay() throws Exception {
         CommandMsgParser parser = new CommandMsgParser(TEST_XML);
-        CommandMsg msg =  parser.getMessage();
+        CommandMsg msg = parser.getMessage();
 
         NSDictionary root = PlistBeanConverter.createNdictFromBean(msg);
         String xml = PlistXmlParser.toXml(root);

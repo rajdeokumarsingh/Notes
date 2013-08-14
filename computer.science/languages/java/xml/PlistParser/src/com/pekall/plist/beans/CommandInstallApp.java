@@ -4,6 +4,10 @@ package com.pekall.plist.beans;
  * InstallApplication command install a third-party application
  */
 public class CommandInstallApp extends CommandObject {
+
+    public static final String KEY_ITUNESSTOREID = "iTunesStoreID";
+    public static final String KEY_MANIFESTURL = "ManifestURL";
+    public static final String KEY_MANAGEMENTFLAGS = "ManagementFlags";
     /**
      * The application's iTunes Store ID.
      * For example, the numeric ID for Keynote is 361285480 as found in the App Store link

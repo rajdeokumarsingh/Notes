@@ -39,7 +39,6 @@ public class PayloadXmlMsgGeneratorTest extends TestCase {
         wrapper.setPayloadDisplayName("Pekall MDM Profile");
         wrapper.setPayloadIdentifier("com.pekall.profile");
         wrapper.setPayloadOrganization("Pekall Capital");
-        wrapper.setPayloadRemovalDisallowed(false);
         wrapper.setPayloadType("Configuration");
         wrapper.setPayloadUUID("2ED160FF-4B6C-47DD-8105-769231367D2A");
         wrapper.setPayloadVersion(1);

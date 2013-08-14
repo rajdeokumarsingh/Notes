@@ -54,6 +54,22 @@ public class CommandStatusMsgParser {
                     root.objectForKey("RejectionReason") != null) {
                 mMessage = (CommandStatusMsg) PlistBeanConverter
                         .createBeanFromNdict(root, CommandInstallAppStatus.class);
+            } else if (root.objectForKey("ManagedApplicationList") != null) {
+                CommandManageAppListStatus status = (CommandManageAppListStatus) PlistBeanConverter
+                        .createBeanFromNdict(root, CommandManageAppListStatus.class);
+
+                NSDictionary nsAppList = (NSDictionary) root.objectForKey("ManagedApplicationList");
+                if (nsAppList != null) {
+                    for (String s : nsAppList.keySet()) {
+                        ManagedAppInfo info = (ManagedAppInfo) PlistBeanConverter.createBeanFromNdict(
+                                (NSDictionary) nsAppList.objectForKey(s), ManagedAppInfo.class);
+                        status.addAppInfo(s, info);
+                    }
+                }
+                mMessage = status;
+            } else if (root.objectForKey("Settings") != null) {
+                mMessage = (CommandStatusMsg) PlistBeanConverter
+                        .createBeanFromNdict(root, CommandSettingsStatus.class);
             }
         } catch (Exception e) {
             e.printStackTrace();

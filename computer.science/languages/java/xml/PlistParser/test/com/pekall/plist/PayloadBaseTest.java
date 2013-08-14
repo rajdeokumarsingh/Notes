@@ -23,7 +23,6 @@ public class PayloadBaseTest extends TestCase {
         assertEquals(base.getPayloadDisplayName(), "Pekall MDM Profile");
         assertEquals(base.getPayloadIdentifier(), "com.pekall.profile");
         assertEquals(base.getPayloadOrganization(), "Pekall Capital");
-        assertEquals(base.isPayloadRemovalDisallowed(), false);
         assertEquals(base.getPayloadType(), "Configuration");
         assertEquals(base.getPayloadUUID(), "2ED160FF-4B6C-47DD-8105-769231367D2A");
         assertEquals(base.getPayloadVersion(), 1);
@@ -35,7 +34,6 @@ public class PayloadBaseTest extends TestCase {
         base.setPayloadDisplayName("Pekall MDM Profile");
         base.setPayloadIdentifier("com.pekall.profile");
         base.setPayloadOrganization("Pekall Capital");
-        base.setPayloadRemovalDisallowed(false);
         base.setPayloadType("Configuration");
         base.setPayloadUUID("2ED160FF-4B6C-47DD-8105-769231367D2A");
         base.setPayloadVersion(1);
@@ -53,6 +51,6 @@ public class PayloadBaseTest extends TestCase {
         NSDictionary root1 = (NSDictionary) PlistXmlParser.fromXml(xml);
         PayloadBase base1 = (PayloadBase) PlistBeanConverter
                 .createBeanFromNdict(root1, PayloadBase.class);
-        assertEquals(root, root1);
+        assertEquals(base, base1);
     }
 }

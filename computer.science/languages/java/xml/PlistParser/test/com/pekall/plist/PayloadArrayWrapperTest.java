@@ -22,7 +22,6 @@ public class PayloadArrayWrapperTest extends TestCase {
         assertEquals(wrapper.getPayloadDisplayName(), "Pekall MDM Profile");
         assertEquals(wrapper.getPayloadIdentifier(), "com.pekall.profile");
         assertEquals(wrapper.getPayloadOrganization(), "Pekall Capital");
-        assertEquals(wrapper.isPayloadRemovalDisallowed(), false);
         assertEquals(wrapper.getPayloadType(), "Configuration");
         assertEquals(wrapper.getPayloadUUID(), "2ED160FF-4B6C-47DD-8105-769231367D2A");
         assertEquals(wrapper.getPayloadVersion(), 1);

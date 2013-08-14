@@ -44,16 +44,16 @@ public class PayloadPasswordPolicyTest extends TestCase {
         assertEquals(policy.getPayloadUUID(), "3808D742-5D21-401E-B83C-AED1E990332D");
         assertEquals(policy.getPayloadVersion(), 1);
 
-        assertEquals(policy.isAllowSimple(), false);
-        assertEquals(policy.isForcePIN(), true);
-        assertEquals(policy.getMaxFailedAttempts(), 7);
-        assertEquals(policy.getMaxGracePeriod(), 1);
-        assertEquals(policy.getMaxInactivity(), 2);
-        assertEquals(policy.getMaxPINAgeInDays(), 2);
-        assertEquals(policy.getMinComplexChars(), 2);
-        assertEquals(policy.getMinLength(), 4);
-        assertEquals(policy.getPinHistory(), 50);
-        assertEquals(policy.isRequireAlphanumeric(), true);
+        assertEquals(policy.getAllowSimple(), Boolean.valueOf(false));
+        assertEquals(policy.getForcePIN(), Boolean.valueOf(true));
+        assertEquals(policy.getMaxFailedAttempts(), Integer.valueOf(7));
+        assertEquals(policy.getMaxGracePeriod(), Integer.valueOf(1));
+        assertEquals(policy.getMaxInactivity(), Integer.valueOf(2));
+        assertEquals(policy.getMaxPINAgeInDays(), Integer.valueOf(2));
+        assertEquals(policy.getMinComplexChars(), Integer.valueOf(2));
+        assertEquals(policy.getMinLength(), Integer.valueOf(4));
+        assertEquals(policy.getPinHistory(), Integer.valueOf(50));
+        assertEquals(policy.getRequireAlphanumeric(), Boolean.valueOf(true));
     }
 
     public void testBean2Xml() throws Exception {

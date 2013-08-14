@@ -1,7 +1,6 @@
 package com.pekall.plist;
 
 import com.dd.plist.NSDictionary;
-import com.pekall.plist.beans.CommandMsg;
 import com.pekall.plist.beans.CommandSecurityInfoStatus;
 import com.pekall.plist.beans.CommandStatusMsg;
 import com.pekall.plist.beans.SecInfo;

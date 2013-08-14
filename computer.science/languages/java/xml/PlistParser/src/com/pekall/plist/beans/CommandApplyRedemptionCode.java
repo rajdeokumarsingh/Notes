@@ -4,6 +4,9 @@ package com.pekall.plist.beans;
  * ApplyRedemptionCode Commands Install Paid Applications via Redemption Code
  */
 public class CommandApplyRedemptionCode extends CommandObject {
+    public static final String KEY_IDENTIFIER = "Identifier";
+    public static final String KEY_REDEMPTIONCODE = "RedemptionCode";
+
     /**
      * The App ID returned by the InstallApplication command
      */

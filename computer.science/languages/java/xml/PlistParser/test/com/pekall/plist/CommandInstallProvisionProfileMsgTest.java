@@ -119,7 +119,7 @@ public class CommandInstallProvisionProfileMsgTest extends TestCase {
         String profile = new String(cmd.getProvisioningProfile());
         PlistDebug.logTest(profile);
 
-        assertEquals(PROF_XML,profile );
+        assertEquals(PROF_XML, profile);
 
         CommandMsg msg1 = new CommandMsg(
                 "27ec28ef-5001-44c8-8e3b-81f8dc0013f0",

@@ -1,7 +1,12 @@
 package com.pekall.plist.beans;
 
+import com.dd.plist.NSDictionary;
+import com.pekall.plist.Constants;
+import com.pekall.plist.PlistBeanConverter;
+import com.pekall.plist.PlistXmlParser;
 import com.pekall.plist.Utils;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,6 +32,12 @@ public class CommandStatusMsg {
      this time. The device will poll the server again in the future. */
     public static final String CMD_STAT_NOT_NOW = "NotNow";
 
+    /** Added for Android */
+    public static final String CMD_STAT_INSTALLING = "Installing";
+
+    /** Added for Android */
+    public static final String CMD_STAT_UNINSTALLING = "Uninstalling";
+
     // Status code for the device, see CMD_STAT_ACKNOWLEDGED, CMD_STAT_...
     private String Status;
 
@@ -48,6 +59,17 @@ public class CommandStatusMsg {
         Status = status;
         this.UDID = UDID;
         CommandUUID = commandUUID;
+    }
+
+    public String toXml() {
+        NSDictionary dictionary = PlistBeanConverter.createNdictFromBean(this);
+        String xml = Constants.EMPTY_PLIST_XML;
+        try {
+            xml = PlistXmlParser.toXml(dictionary);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return xml;
     }
 
     public String getStatus() {

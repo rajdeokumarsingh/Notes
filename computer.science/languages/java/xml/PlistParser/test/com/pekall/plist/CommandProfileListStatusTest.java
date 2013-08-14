@@ -89,10 +89,10 @@ public class CommandProfileListStatusTest extends TestCase {
         wrapper.setPayloadDisplayName("Pekall MDM Profile");
         wrapper.setPayloadIdentifier("com.pekall.profile");
         wrapper.setPayloadOrganization("Pekall Capital");
-        wrapper.setPayloadRemovalDisallowed(false);
         wrapper.setPayloadType("Configuration");
         wrapper.setPayloadUUID("2ED160FF-4B6C-47DD-8105-769231367D2A");
         wrapper.setPayloadVersion(1);
+        wrapper.setPayloadRemovalDisallowed(true);
         return wrapper;
     }
 
@@ -109,10 +109,10 @@ public class CommandProfileListStatusTest extends TestCase {
         wrapper.setPayloadDisplayName("Pekall MDM Setting");
         wrapper.setPayloadIdentifier("com.pekall.setting");
         wrapper.setPayloadOrganization("Pekall Capital");
-        wrapper.setPayloadRemovalDisallowed(false);
         wrapper.setPayloadType("Configuration");
         wrapper.setPayloadUUID("2ED160FF-4B6C-47DD-1234-56789012345A");
         wrapper.setPayloadVersion(1);
+        wrapper.setPayloadRemovalDisallowed(true);
         return wrapper;
     }
 
@@ -154,8 +154,6 @@ public class CommandProfileListStatusTest extends TestCase {
             "\t\t\t\t\t<true/>\n" +
             "\t\t\t\t\t<key>maxFailedAttempts</key>\n" +
             "\t\t\t\t\t<integer>7</integer>\n" +
-            "\t\t\t\t\t<key>maxGracePeriod</key>\n" +
-            "\t\t\t\t\t<integer>1</integer>\n" +
             "\t\t\t\t\t<key>maxInactivity</key>\n" +
             "\t\t\t\t\t<integer>2</integer>\n" +
             "\t\t\t\t\t<key>maxPINAgeInDays</key>\n" +
@@ -164,44 +162,44 @@ public class CommandProfileListStatusTest extends TestCase {
             "\t\t\t\t\t<integer>2</integer>\n" +
             "\t\t\t\t\t<key>minLength</key>\n" +
             "\t\t\t\t\t<integer>4</integer>\n" +
-            "\t\t\t\t\t<key>pinHistory</key>\n" +
-            "\t\t\t\t\t<integer>50</integer>\n" +
             "\t\t\t\t\t<key>requireAlphanumeric</key>\n" +
             "\t\t\t\t\t<true/>\n" +
-            "\t\t\t\t\t<key>PayloadIdentifier</key>\n" +
-            "\t\t\t\t\t<string>com.pekall.profile.passcodepolicy</string>\n" +
+            "\t\t\t\t\t<key>pinHistory</key>\n" +
+            "\t\t\t\t\t<integer>50</integer>\n" +
+            "\t\t\t\t\t<key>maxGracePeriod</key>\n" +
+            "\t\t\t\t\t<integer>1</integer>\n" +
             "\t\t\t\t\t<key>PayloadType</key>\n" +
             "\t\t\t\t\t<string>com.apple.mobiledevice.passwordpolicy</string>\n" +
-            "\t\t\t\t\t<key>PayloadUUID</key>\n" +
-            "\t\t\t\t\t<string>3808D742-5D21-401E-B83C-AED1E990332D</string>\n" +
             "\t\t\t\t\t<key>PayloadVersion</key>\n" +
             "\t\t\t\t\t<integer>1</integer>\n" +
-            "\t\t\t\t\t<key>PayloadDescription</key>\n" +
-            "\t\t\t\t\t<string>配置与安全相关的项目。</string>\n" +
+            "\t\t\t\t\t<key>PayloadIdentifier</key>\n" +
+            "\t\t\t\t\t<string>com.pekall.profile.passcodepolicy</string>\n" +
+            "\t\t\t\t\t<key>PayloadUUID</key>\n" +
+            "\t\t\t\t\t<string>3808D742-5D21-401E-B83C-AED1E990332D</string>\n" +
             "\t\t\t\t\t<key>PayloadDisplayName</key>\n" +
             "\t\t\t\t\t<string>密码</string>\n" +
+            "\t\t\t\t\t<key>PayloadDescription</key>\n" +
+            "\t\t\t\t\t<string>配置与安全相关的项目。</string>\n" +
             "\t\t\t\t\t<key>PayloadOrganization</key>\n" +
             "\t\t\t\t\t<string>Pekall Capital</string>\n" +
-            "\t\t\t\t\t<key>PayloadRemovalDisallowed</key>\n" +
-            "\t\t\t\t\t<false/>\n" +
             "\t\t\t\t</dict>\n" +
             "\t\t\t</array>\n" +
-            "\t\t\t<key>PayloadIdentifier</key>\n" +
-            "\t\t\t<string>com.pekall.profile</string>\n" +
+            "\t\t\t<key>PayloadRemovalDisallowed</key>\n" +
+            "\t\t\t<true/>\n" +
             "\t\t\t<key>PayloadType</key>\n" +
             "\t\t\t<string>Configuration</string>\n" +
-            "\t\t\t<key>PayloadUUID</key>\n" +
-            "\t\t\t<string>2ED160FF-4B6C-47DD-8105-769231367D2A</string>\n" +
             "\t\t\t<key>PayloadVersion</key>\n" +
             "\t\t\t<integer>1</integer>\n" +
-            "\t\t\t<key>PayloadDescription</key>\n" +
-            "\t\t\t<string>描述文件描述。wjl 测试</string>\n" +
+            "\t\t\t<key>PayloadIdentifier</key>\n" +
+            "\t\t\t<string>com.pekall.profile</string>\n" +
+            "\t\t\t<key>PayloadUUID</key>\n" +
+            "\t\t\t<string>2ED160FF-4B6C-47DD-8105-769231367D2A</string>\n" +
             "\t\t\t<key>PayloadDisplayName</key>\n" +
             "\t\t\t<string>Pekall MDM Profile</string>\n" +
+            "\t\t\t<key>PayloadDescription</key>\n" +
+            "\t\t\t<string>描述文件描述。wjl 测试</string>\n" +
             "\t\t\t<key>PayloadOrganization</key>\n" +
             "\t\t\t<string>Pekall Capital</string>\n" +
-            "\t\t\t<key>PayloadRemovalDisallowed</key>\n" +
-            "\t\t\t<false/>\n" +
             "\t\t</dict>\n" +
             "\t\t<dict>\n" +
             "\t\t\t<key>PayloadContent</key>\n" +
@@ -213,8 +211,6 @@ public class CommandProfileListStatusTest extends TestCase {
             "\t\t\t\t\t<true/>\n" +
             "\t\t\t\t\t<key>maxFailedAttempts</key>\n" +
             "\t\t\t\t\t<integer>7</integer>\n" +
-            "\t\t\t\t\t<key>maxGracePeriod</key>\n" +
-            "\t\t\t\t\t<integer>1</integer>\n" +
             "\t\t\t\t\t<key>maxInactivity</key>\n" +
             "\t\t\t\t\t<integer>2</integer>\n" +
             "\t\t\t\t\t<key>maxPINAgeInDays</key>\n" +
@@ -223,44 +219,44 @@ public class CommandProfileListStatusTest extends TestCase {
             "\t\t\t\t\t<integer>2</integer>\n" +
             "\t\t\t\t\t<key>minLength</key>\n" +
             "\t\t\t\t\t<integer>4</integer>\n" +
-            "\t\t\t\t\t<key>pinHistory</key>\n" +
-            "\t\t\t\t\t<integer>50</integer>\n" +
             "\t\t\t\t\t<key>requireAlphanumeric</key>\n" +
             "\t\t\t\t\t<true/>\n" +
-            "\t\t\t\t\t<key>PayloadIdentifier</key>\n" +
-            "\t\t\t\t\t<string>com.pekall.profile.passcodepolicy</string>\n" +
+            "\t\t\t\t\t<key>pinHistory</key>\n" +
+            "\t\t\t\t\t<integer>50</integer>\n" +
+            "\t\t\t\t\t<key>maxGracePeriod</key>\n" +
+            "\t\t\t\t\t<integer>1</integer>\n" +
             "\t\t\t\t\t<key>PayloadType</key>\n" +
             "\t\t\t\t\t<string>com.apple.mobiledevice.passwordpolicy</string>\n" +
-            "\t\t\t\t\t<key>PayloadUUID</key>\n" +
-            "\t\t\t\t\t<string>3808D742-5D21-401E-B83C-AED1E990332D</string>\n" +
             "\t\t\t\t\t<key>PayloadVersion</key>\n" +
             "\t\t\t\t\t<integer>1</integer>\n" +
-            "\t\t\t\t\t<key>PayloadDescription</key>\n" +
-            "\t\t\t\t\t<string>配置与安全相关的项目。</string>\n" +
+            "\t\t\t\t\t<key>PayloadIdentifier</key>\n" +
+            "\t\t\t\t\t<string>com.pekall.profile.passcodepolicy</string>\n" +
+            "\t\t\t\t\t<key>PayloadUUID</key>\n" +
+            "\t\t\t\t\t<string>3808D742-5D21-401E-B83C-AED1E990332D</string>\n" +
             "\t\t\t\t\t<key>PayloadDisplayName</key>\n" +
             "\t\t\t\t\t<string>密码</string>\n" +
+            "\t\t\t\t\t<key>PayloadDescription</key>\n" +
+            "\t\t\t\t\t<string>配置与安全相关的项目。</string>\n" +
             "\t\t\t\t\t<key>PayloadOrganization</key>\n" +
             "\t\t\t\t\t<string>Pekall Capital</string>\n" +
-            "\t\t\t\t\t<key>PayloadRemovalDisallowed</key>\n" +
-            "\t\t\t\t\t<false/>\n" +
             "\t\t\t\t</dict>\n" +
             "\t\t\t</array>\n" +
-            "\t\t\t<key>PayloadIdentifier</key>\n" +
-            "\t\t\t<string>com.pekall.setting</string>\n" +
+            "\t\t\t<key>PayloadRemovalDisallowed</key>\n" +
+            "\t\t\t<true/>\n" +
             "\t\t\t<key>PayloadType</key>\n" +
             "\t\t\t<string>Configuration</string>\n" +
-            "\t\t\t<key>PayloadUUID</key>\n" +
-            "\t\t\t<string>2ED160FF-4B6C-47DD-1234-56789012345A</string>\n" +
             "\t\t\t<key>PayloadVersion</key>\n" +
             "\t\t\t<integer>1</integer>\n" +
-            "\t\t\t<key>PayloadDescription</key>\n" +
-            "\t\t\t<string>描述文件描述</string>\n" +
+            "\t\t\t<key>PayloadIdentifier</key>\n" +
+            "\t\t\t<string>com.pekall.setting</string>\n" +
+            "\t\t\t<key>PayloadUUID</key>\n" +
+            "\t\t\t<string>2ED160FF-4B6C-47DD-1234-56789012345A</string>\n" +
             "\t\t\t<key>PayloadDisplayName</key>\n" +
             "\t\t\t<string>Pekall MDM Setting</string>\n" +
+            "\t\t\t<key>PayloadDescription</key>\n" +
+            "\t\t\t<string>描述文件描述</string>\n" +
             "\t\t\t<key>PayloadOrganization</key>\n" +
             "\t\t\t<string>Pekall Capital</string>\n" +
-            "\t\t\t<key>PayloadRemovalDisallowed</key>\n" +
-            "\t\t\t<false/>\n" +
             "\t\t</dict>\n" +
             "\t</array>\n" +
             "\t<key>Status</key>\n" +
@@ -271,5 +267,4 @@ public class CommandProfileListStatusTest extends TestCase {
             "\t<string>1ed5063d-7486-483a-a53b-44364b5191e1</string>\n" +
             "</dict>\n" +
             "</plist>";
-
 }

@@ -4,10 +4,7 @@ import com.dd.plist.NSDictionary;
 import com.pekall.plist.beans.CertificateItem;
 import com.pekall.plist.beans.CommandCertificateListStatus;
 import com.pekall.plist.beans.CommandStatusMsg;
-import com.pekall.plist.beans.ProvisionProfileItem;
 import junit.framework.TestCase;
-
-import java.util.Calendar;
 
 /**
  * Created with IntelliJ IDEA.
@@ -149,7 +146,7 @@ public class CommandCertificateListStatusTest extends TestCase {
     private CertificateItem createCertItem() {
         byte[] bytes = new byte[50];
         for (int i = 0; i < bytes.length; i++) {
-            bytes[i] = (byte)i;
+            bytes[i] = (byte) i;
         }
         return new CertificateItem("test certificate item", false, bytes);
     }

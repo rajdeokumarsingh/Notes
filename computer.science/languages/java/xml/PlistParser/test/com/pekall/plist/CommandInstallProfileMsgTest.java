@@ -124,7 +124,7 @@ public class CommandInstallProfileMsgTest extends TestCase {
         String profile = new String(cmd.getPayload());
         PlistDebug.logTest(profile);
 
-        assertEquals(PROF_XML,profile );
+        assertEquals(PROF_XML, profile);
         /*
         byte[] bytes = new byte[50];
         for (int i = 0; i < bytes.length; i++) {

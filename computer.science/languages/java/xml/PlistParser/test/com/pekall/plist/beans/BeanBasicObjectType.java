@@ -1,9 +1,5 @@
 package com.pekall.plist.beans;
 
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Date;
-
 /**
  * Test bean class for PlistBeanConverter
  * Only includes basic types

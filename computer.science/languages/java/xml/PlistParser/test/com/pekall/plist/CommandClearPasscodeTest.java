@@ -1,9 +1,6 @@
 package com.pekall.plist;
 
 import com.dd.plist.NSDictionary;
-import com.pekall.plist.PlistBeanConverter;
-import com.pekall.plist.PlistDebug;
-import com.pekall.plist.PlistXmlParser;
 import com.pekall.plist.beans.CommandClearPasscode;
 import com.pekall.plist.beans.CommandMsg;
 import com.pekall.plist.beans.CommandObject;
@@ -62,7 +59,7 @@ public class CommandClearPasscodeTest extends TestCase {
     public void testGenXmlMsgWithToken() throws Exception {
         byte[] bytes = new byte[50];
         for (int i = 0; i < bytes.length; i++) {
-            bytes[i] = (byte)i;
+            bytes[i] = (byte) i;
         }
         CommandMsg msg = new CommandMsg(
                 "51da6d87-8bd0-4c43-a7c3-377bdb260516",
@@ -91,7 +88,7 @@ public class CommandClearPasscodeTest extends TestCase {
     public void testParseXmlMsgWithToken() throws Exception {
         byte[] bytes = new byte[50];
         for (int i = 0; i < bytes.length; i++) {
-            bytes[i] = (byte)i;
+            bytes[i] = (byte) i;
         }
         CommandMsgParser parser = new CommandMsgParser(XML_MSG_WITH_TOKEN);
         CommandMsg msg = parser.getMessage();
@@ -110,7 +107,7 @@ public class CommandClearPasscodeTest extends TestCase {
     public void testTwoWay() throws Exception {
         byte[] bytes = new byte[50];
         for (int i = 0; i < bytes.length; i++) {
-            bytes[i] = (byte)i;
+            bytes[i] = (byte) i;
         }
         CommandMsgParser parser = new CommandMsgParser(XML_MSG_WITH_TOKEN);
         CommandMsg msg = parser.getMessage();

@@ -1,17 +1,44 @@
 package com.pekall.plist.beans;
 
 /**
- * Base class for an ios payload
+ * Base class for an ios payload, containing keys common to all payloads
  */
 public class PayloadBase {
-    private String PayloadIdentifier = "";
-    private String PayloadType = "";
-    private String PayloadUUID = "";
+
+    /**
+     * Payload types
+     */
+    public static final String PAYLOAD_TYPE_PASSWORD_POLICY = "com.apple.mobiledevice.passwordpolicy";
+    public static final String PAYLOAD_TYPE_WIFI_MANAGED = "com.apple.wifi.managed";
+
+    /**
+     * The payload type, see PAYLOAD_TYPE_...
+     */
+    private String PayloadType;
+    /**
+     * The version number of the individual payload.
+     */
     private int PayloadVersion;
-    private String PayloadDescription = "";
-    private String PayloadDisplayName = "";
-    private String PayloadOrganization = "";
-    private boolean PayloadRemovalDisallowed;
+    /**
+     * A reverse-DNS-style identifier for the specific payload.
+     */
+    private String PayloadIdentifier;
+    /**
+     * A globally unique identifier for the payload.
+     */
+    private String PayloadUUID;
+    /**
+     * Optional. A human-readable name for the profile payload.
+     */
+    private String PayloadDisplayName;
+    /**
+     * Optional. A human-readable description of this payload.
+     */
+    private String PayloadDescription;
+    /**
+     * Optional. A human-readable string containing the name of the organization that provided the profile.
+     */
+    private String PayloadOrganization;
 
     // PayloadContent could be <dict>, <array> or <data>
     // private Object PayloadContent;
@@ -21,7 +48,7 @@ public class PayloadBase {
 
     public PayloadBase(String payloadIdentifier, String payloadType, String payloadUUID,
                        int payloadVersion, String payloadDescription, String payloadDisplayName,
-                       String payloadOrganization, boolean payloadRemovalDisallowed) {
+                       String payloadOrganization) {
         PayloadIdentifier = payloadIdentifier;
         PayloadType = payloadType;
         PayloadUUID = payloadUUID;
@@ -29,7 +56,6 @@ public class PayloadBase {
         PayloadDescription = payloadDescription;
         PayloadDisplayName = payloadDisplayName;
         PayloadOrganization = payloadOrganization;
-        PayloadRemovalDisallowed = payloadRemovalDisallowed;
     }
 
     public String getPayloadIdentifier() {
@@ -88,21 +114,12 @@ public class PayloadBase {
         PayloadOrganization = payloadOrganization;
     }
 
-    public boolean isPayloadRemovalDisallowed() {
-        return PayloadRemovalDisallowed;
-    }
-
-    public void setPayloadRemovalDisallowed(boolean payloadRemovalDisallowed) {
-        PayloadRemovalDisallowed = payloadRemovalDisallowed;
-    }
-
     public boolean baseEquals(Object o) {
         if (this == o) return true;
         if (o == null || !PayloadBase.class.isAssignableFrom(o.getClass())) return false;
 
         PayloadBase that = (PayloadBase) o;
 
-        if (PayloadRemovalDisallowed != that.PayloadRemovalDisallowed) return false;
         if (PayloadVersion != that.PayloadVersion) return false;
         if (!PayloadDescription.equals(that.PayloadDescription)) return false;
         if (!PayloadDisplayName.equals(that.PayloadDisplayName)) return false;
@@ -117,46 +134,47 @@ public class PayloadBase {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof PayloadBase)) return false;
 
-        PayloadBase that = (PayloadBase) o;
+        PayloadBase base = (PayloadBase) o;
 
-        if (PayloadRemovalDisallowed != that.PayloadRemovalDisallowed) return false;
-        if (PayloadVersion != that.PayloadVersion) return false;
-        if (!PayloadDescription.equals(that.PayloadDescription)) return false;
-        if (!PayloadDisplayName.equals(that.PayloadDisplayName)) return false;
-        if (!PayloadIdentifier.equals(that.PayloadIdentifier)) return false;
-        if (!PayloadOrganization.equals(that.PayloadOrganization)) return false;
-        if (!PayloadType.equals(that.PayloadType)) return false;
-        if (!PayloadUUID.equals(that.PayloadUUID)) return false;
+        if (PayloadVersion != base.PayloadVersion) return false;
+        if (PayloadDescription != null ? !PayloadDescription.equals(base.PayloadDescription) : base.PayloadDescription != null)
+            return false;
+        if (PayloadDisplayName != null ? !PayloadDisplayName.equals(base.PayloadDisplayName) : base.PayloadDisplayName != null)
+            return false;
+        if (PayloadIdentifier != null ? !PayloadIdentifier.equals(base.PayloadIdentifier) : base.PayloadIdentifier != null)
+            return false;
+        if (PayloadOrganization != null ? !PayloadOrganization.equals(base.PayloadOrganization) : base.PayloadOrganization != null)
+            return false;
+        if (PayloadType != null ? !PayloadType.equals(base.PayloadType) : base.PayloadType != null) return false;
+        if (PayloadUUID != null ? !PayloadUUID.equals(base.PayloadUUID) : base.PayloadUUID != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = PayloadIdentifier.hashCode();
-        result = 31 * result + PayloadType.hashCode();
-        result = 31 * result + PayloadUUID.hashCode();
+        int result = PayloadType != null ? PayloadType.hashCode() : 0;
         result = 31 * result + PayloadVersion;
-        result = 31 * result + PayloadDescription.hashCode();
-        result = 31 * result + PayloadDisplayName.hashCode();
-        result = 31 * result + PayloadOrganization.hashCode();
-        result = 31 * result + (PayloadRemovalDisallowed ? 1 : 0);
+        result = 31 * result + (PayloadIdentifier != null ? PayloadIdentifier.hashCode() : 0);
+        result = 31 * result + (PayloadUUID != null ? PayloadUUID.hashCode() : 0);
+        result = 31 * result + (PayloadDisplayName != null ? PayloadDisplayName.hashCode() : 0);
+        result = 31 * result + (PayloadDescription != null ? PayloadDescription.hashCode() : 0);
+        result = 31 * result + (PayloadOrganization != null ? PayloadOrganization.hashCode() : 0);
         return result;
     }
 
     @Override
     public String toString() {
         return "PayloadBase{" +
-                "PayloadIdentifier='" + PayloadIdentifier + '\'' +
-                ", PayloadType='" + PayloadType + '\'' +
-                ", PayloadUUID='" + PayloadUUID + '\'' +
+                "PayloadType='" + PayloadType + '\'' +
                 ", PayloadVersion=" + PayloadVersion +
-                ", PayloadDescription='" + PayloadDescription + '\'' +
+                ", PayloadIdentifier='" + PayloadIdentifier + '\'' +
+                ", PayloadUUID='" + PayloadUUID + '\'' +
                 ", PayloadDisplayName='" + PayloadDisplayName + '\'' +
+                ", PayloadDescription='" + PayloadDescription + '\'' +
                 ", PayloadOrganization='" + PayloadOrganization + '\'' +
-                ", PayloadRemovalDisallowed=" + PayloadRemovalDisallowed +
                 '}';
     }
 }

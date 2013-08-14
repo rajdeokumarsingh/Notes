@@ -1,20 +1,57 @@
 package com.example.algorithm.lec1;
 
+import com.example.algorithm.Utility;
 import junit.framework.TestCase;
 
 import java.util.Arrays;
 
 public class InsertSortTest extends TestCase {
-    public void testSort() throws Exception {
+    public void testBoundary() throws Exception {
+        InsertSort.sort(null);
+
+        double[] array1 = {};
+        double[] array2 = {};
+        InsertSort.sort(array1);
+        assertTrue(Arrays.equals(array1, array2));
+
+        double[] array3 = {0};
+        double[] array4 = {0};
+        InsertSort.sort(array3);
+        assertTrue(Arrays.equals(array3, array4));
+    }
+
+    public void testNormalSort() throws Exception {
         double[] array1 = {8, 2, 4, 9, 3, 6};
         double[] array2 = {8, 2, 4, 9, 3, 6};
         InsertSort.sort(array1);
         Arrays.sort(array2);
-
-        System.out.println("array 1 : " + Arrays.toString(array1));
-        System.out.println("array 2 : " + Arrays.toString(array2));
         assertTrue(Arrays.equals(array1, array2));
 
-        // TODO: more test
+        double[] array3 = {8, 2, 4, 2, 3, 6};
+        double[] array4 = {8, 2, 4, 2, 3, 6};
+        InsertSort.sort(array3);
+        Arrays.sort(array4);
+        assertTrue(Arrays.equals(array3, array4));
+
+        double[] array5 = {8, 8, 4, 2, 3, 6};
+        double[] array6 = {8, 8, 4, 2, 3, 6};
+        InsertSort.sort(array5);
+        Arrays.sort(array6);
+        assertTrue(Arrays.equals(array5, array6));
+    }
+
+    public void testRandomTest() throws Exception {
+        for (int i = 0; i < 10000; i++) {
+            double[] array = Utility.randomDoubleArray();
+            double[] array1 = Arrays.copyOf(array, array.length);
+            assertTrue(Arrays.equals(array, array1));
+            // System.out.println("before sort: " + Arrays.toString(array));
+
+            InsertSort.sort(array);
+            Arrays.sort(array1);
+            // System.out.println("after sort: " + Arrays.toString(array));
+
+            assertTrue(Arrays.equals(array, array1));
+        }
     }
 }

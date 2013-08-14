@@ -6,6 +6,7 @@ import com.dd.plist.NSObject;
 import com.pekall.plist.beans.PayloadArrayWrapper;
 import com.pekall.plist.beans.PayloadBase;
 import com.pekall.plist.beans.PayloadPasswordPolicy;
+import com.pekall.plist.beans.PayloadWifiConfig;
 
 import java.util.ArrayList;
 
@@ -16,6 +17,7 @@ public class PayloadXmlMsgParser {
 
     private PayloadArrayWrapper wrapper;
     private PayloadPasswordPolicy passwordPolicy;
+    private PayloadWifiConfig wifiConfig;
 
     /**
      * Constructor, in which the xml string parameter will be parsed into beans
@@ -58,12 +60,16 @@ public class PayloadXmlMsgParser {
 
             for (int i = 0; i < bases.size(); i++) {
                 PayloadBase base = bases.get(i);
-                if (Constants.PL_ID_PASSWORD_POLICY.equals(base.getPayloadIdentifier()) ||
-                        Constants.PL_TYPE_PASSWORD_POLICY.equals(base.getPayloadType())) {
+                if (PayloadBase.PAYLOAD_TYPE_PASSWORD_POLICY.equals(base.getPayloadType())) {
                     NSDictionary dict = (NSDictionary) nsArray.objectAtIndex(i);
                     passwordPolicy = (PayloadPasswordPolicy) PlistBeanConverter
                             .createBeanFromNdict(dict, PayloadPasswordPolicy.class);
                     newBases.add(passwordPolicy);
+                } else if (PayloadBase.PAYLOAD_TYPE_WIFI_MANAGED.equals(base.getPayloadType())) {
+                    NSDictionary dict = (NSDictionary) nsArray.objectAtIndex(i);
+                    wifiConfig = (PayloadWifiConfig) PlistBeanConverter
+                            .createBeanFromNdict(dict, PayloadWifiConfig.class);
+                    newBases.add(wifiConfig);
                 }
             }
             wrapper.setPayloadContent(newBases);
@@ -82,10 +88,19 @@ public class PayloadXmlMsgParser {
     }
 
     /**
-     * Get bean password policy
+     * Get bean of password policy
      * @return password policy
      */
     public PayloadPasswordPolicy getPasswordPolicy() {
         return passwordPolicy;
     }
+
+    /**
+     * Get bean of wifi config
+     * @return wifi config
+     */
+    public PayloadWifiConfig getWifiConfig() {
+        return wifiConfig;
+    }
+
 }

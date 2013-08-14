@@ -88,4 +88,14 @@ public class CommandError {
         result = 31 * result + ErrorCode;
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "CommandError{" +
+                "LocalizedDescription='" + LocalizedDescription + '\'' +
+                ", USEnglishDescription='" + USEnglishDescription + '\'' +
+                ", ErrorDomain='" + ErrorDomain + '\'' +
+                ", ErrorCode=" + ErrorCode +
+                '}';
+    }
 }

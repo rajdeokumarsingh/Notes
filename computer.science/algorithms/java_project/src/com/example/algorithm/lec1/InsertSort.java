@@ -6,6 +6,12 @@ public class InsertSort {
     public static void sort(double[] array) {
         if (array == null)  return;
 
+        /* Assumption: elements before i are sorted
+           Procedure:
+           compare a[i] with a[j:j<i]
+           if (a[i] <= a[j])
+                insert a[i] before a[j]
+         */
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < i; j++) {
                 if(array[i] > array[j]) continue;
@@ -18,9 +24,5 @@ public class InsertSort {
                 break;
             }
         }
-    }
-
-    public static void main(String[] args) {
-
     }
 }

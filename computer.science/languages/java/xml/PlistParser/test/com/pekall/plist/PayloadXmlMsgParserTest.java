@@ -21,7 +21,6 @@ public class PayloadXmlMsgParserTest extends TestCase {
         assertEquals(desc.getPayloadDisplayName(), "Pekall MDM Profile");
         assertEquals(desc.getPayloadIdentifier(), "com.pekall.profile");
         assertEquals(desc.getPayloadOrganization(), "Pekall Capital");
-        assertEquals(desc.isPayloadRemovalDisallowed(), false);
         assertEquals(desc.getPayloadType(), "Configuration");
         assertEquals(desc.getPayloadUUID(), "2ED160FF-4B6C-47DD-8105-769231367D2A");
         assertEquals(desc.getPayloadVersion(), 1);

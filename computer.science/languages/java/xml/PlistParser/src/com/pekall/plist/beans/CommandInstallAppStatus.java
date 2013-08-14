@@ -15,6 +15,11 @@ public class CommandInstallAppStatus extends CommandStatusMsg {
     public static final String REJECT_REASON_APP_STORE_DISABLED = "AppStoreDisabled";
 
     /**
+     * If the state is NeedsRedemption, the server needs to send a redemption code to complete the app installation.
+     */
+    public static final String RESPONSE_STATE_NEEDSREDEMPTION = "NeedsRedemption";
+
+    /**
      * The app's identifier (Bundle ID)
      */
     private String Identifier;
