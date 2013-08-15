@@ -50,6 +50,12 @@ public class CommandMsgParser {
             } else if (CommandObject.REQ_TYPE_SETTINGS.equals(msg.getRequestType())) {
                 command = (CommandObject) PlistBeanConverter
                         .createBeanFromNdict(pc, CommandSettings.class);
+            } else if (CommandObject.REQ_TYPE_INST_DOC.equals(msg.getRequestType())) {
+                command = (CommandObject) PlistBeanConverter
+                        .createBeanFromNdict(pc, CommandInstallDocument.class);
+            } else if (CommandObject.REQ_TYPE_RM_DOC.equals(msg.getRequestType())) {
+                command = (CommandObject) PlistBeanConverter
+                        .createBeanFromNdict(pc, CommandRemoveDocument.class);
             }
             if (command != null)  mMessage.setCommand(command);
         } catch (Exception e) {

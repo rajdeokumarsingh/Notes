@@ -81,9 +81,6 @@ public class PlistBeanConverter {
         // append fields of its ancestors.
         while (clz != null && !clz.equals(Object.class)) {
             for (Field field : clz.getDeclaredFields()) {
-                PlistDebug.logVerbose("----------------------------------------");
-                PlistDebug.logVerbose("field name: " + field.getName());
-                PlistDebug.logVerbose("field class: " + field.getType());
 
                 field.setAccessible(true);
 
@@ -93,6 +90,10 @@ public class PlistBeanConverter {
                 }
                 NSObject nsObject = root.objectForKey(keyName);
                 if (nsObject == null) continue;
+
+                PlistDebug.logVerbose("----------------------------------------");
+                PlistDebug.logVerbose("field name: " + field.getName());
+                PlistDebug.logVerbose("field class: " + field.getType());
 
                 if (nsObject.getClass().equals(NSNumber.class)) {
                     assignNumberField(data, field, (NSNumber) nsObject);
@@ -356,16 +357,27 @@ public class PlistBeanConverter {
             case NSNumber.INTEGER:
                 if (fieldClass.equals(int.class)) {
                     field.setInt(data, number.intValue());
+                    break;
                 } else if (fieldClass.equals(Integer.class)) {
                     field.set(data, Integer.valueOf(number.intValue()));
+                    break;
                 } else if (fieldClass.equals(long.class)) {
                     field.setLong(data, number.longValue());
+                    break;
                 } else if (fieldClass.equals(Long.class)) {
                     field.set(data, Long.valueOf(number.longValue()));
-                } else {
+                    break;
+                }
+                /* else {
                     PlistDebug.logError("Convert type error!");
                 }
-                break;
+                break; */
+
+                // Plist library will convert "<real>1</real>" to NSNumber.INTEGER,
+                // but actually it is a float or double type. So we need to also
+                // check double and float type for NSNumber.INTEGER
+
+                // Not break, Fall though
             case NSNumber.REAL: {
                 if (fieldClass.equals(float.class)) {
                     field.setFloat(data, number.floatValue());

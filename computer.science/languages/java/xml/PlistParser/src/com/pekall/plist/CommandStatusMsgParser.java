@@ -70,6 +70,10 @@ public class CommandStatusMsgParser {
             } else if (root.objectForKey("Settings") != null) {
                 mMessage = (CommandStatusMsg) PlistBeanConverter
                         .createBeanFromNdict(root, CommandSettingsStatus.class);
+            } else if (root.objectForKey("Longitude") != null ||
+                    root.objectForKey("Latitude") != null) {
+                mMessage = (CommandStatusMsg) PlistBeanConverter
+                        .createBeanFromNdict(root, CommandLocationStatus.class);
             }
         } catch (Exception e) {
             e.printStackTrace();

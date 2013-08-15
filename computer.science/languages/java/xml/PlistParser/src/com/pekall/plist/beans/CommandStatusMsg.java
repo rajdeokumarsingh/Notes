@@ -1,12 +1,7 @@
 package com.pekall.plist.beans;
 
-import com.dd.plist.NSDictionary;
-import com.pekall.plist.Constants;
-import com.pekall.plist.PlistBeanConverter;
-import com.pekall.plist.PlistXmlParser;
 import com.pekall.plist.Utils;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,28 +9,42 @@ import java.util.List;
  * Status message from client to server to report client status
  * or last command result
  */
-public class CommandStatusMsg {
+public class CommandStatusMsg extends BeanBase {
 
-    /** Everything went well. */
+    /**
+     * Everything went well.
+     */
     public static final String CMD_STAT_ACKNOWLEDGED = "Acknowledged";
 
-    /** An error has occurred. See the ErrorChain for details. */
+    /**
+     * An error has occurred. See the ErrorChain for details.
+     */
     public static final String CMD_STAT_ERROR = "Error";
 
-    /** A protocol error has occurred. The command may be malformed. */
+    /**
+     * A protocol error has occurred. The command may be malformed.
+     */
     public static final String CMD_STAT_FMT_ERROR = "CommandFormatError";
 
-    /** The device is idle (there is no status) */
+    /**
+     * The device is idle (there is no status)
+     */
     public static final String CMD_STAT_IDLE = "Idle";
 
-    /** The device received the command, but cannot perform it at
-     this time. The device will poll the server again in the future. */
+    /**
+     * The device received the command, but cannot perform it at
+     * this time. The device will poll the server again in the future.
+     */
     public static final String CMD_STAT_NOT_NOW = "NotNow";
 
-    /** Added for Android */
+    /**
+     * Added for Android
+     */
     public static final String CMD_STAT_INSTALLING = "Installing";
 
-    /** Added for Android */
+    /**
+     * Added for Android
+     */
     public static final String CMD_STAT_UNINSTALLING = "Uninstalling";
 
     // Status code for the device, see CMD_STAT_ACKNOWLEDGED, CMD_STAT_...
@@ -59,17 +68,6 @@ public class CommandStatusMsg {
         Status = status;
         this.UDID = UDID;
         CommandUUID = commandUUID;
-    }
-
-    public String toXml() {
-        NSDictionary dictionary = PlistBeanConverter.createNdictFromBean(this);
-        String xml = Constants.EMPTY_PLIST_XML;
-        try {
-            xml = PlistXmlParser.toXml(dictionary);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return xml;
     }
 
     public String getStatus() {
@@ -117,7 +115,7 @@ public class CommandStatusMsg {
         if (!(o instanceof CommandStatusMsg)) return false;
 
         CommandStatusMsg that = (CommandStatusMsg) o;
-        if(this.hashCode() != that.hashCode()) return false;
+        if (this.hashCode() != that.hashCode()) return false;
 
         return true;
     }

@@ -1,17 +1,11 @@
 package com.pekall.plist.beans;
 
-import com.dd.plist.NSDictionary;
-import com.pekall.plist.Constants;
-import com.pekall.plist.PlistBeanConverter;
-import com.pekall.plist.PlistXmlParser;
 import com.pekall.plist.Utils;
-
-import java.io.IOException;
 
 /**
  * Command message from server to client
  */
-public class CommandMsg {
+public class CommandMsg extends BeanBase {
 
     // UUID of the command
     private String CommandUUID;
@@ -28,17 +22,6 @@ public class CommandMsg {
     public CommandMsg(String commandUUID, CommandObject command) {
         CommandUUID = commandUUID;
         Command = command;
-    }
-
-    public String toXml() {
-        NSDictionary dictionary = PlistBeanConverter.createNdictFromBean(this);
-        String xml = Constants.EMPTY_PLIST_XML;
-        try {
-            xml = PlistXmlParser.toXml(dictionary);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return xml;
     }
 
     public boolean isEmptyCommand() {

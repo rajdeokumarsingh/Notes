@@ -3,10 +3,7 @@ package com.pekall.plist;
 import com.dd.plist.NSArray;
 import com.dd.plist.NSDictionary;
 import com.dd.plist.NSObject;
-import com.pekall.plist.beans.PayloadArrayWrapper;
-import com.pekall.plist.beans.PayloadBase;
-import com.pekall.plist.beans.PayloadPasswordPolicy;
-import com.pekall.plist.beans.PayloadWifiConfig;
+import com.pekall.plist.beans.*;
 
 import java.util.ArrayList;
 
@@ -18,6 +15,7 @@ public class PayloadXmlMsgParser {
     private PayloadArrayWrapper wrapper;
     private PayloadPasswordPolicy passwordPolicy;
     private PayloadWifiConfig wifiConfig;
+    private PayloadRestrictionsPolicy restrictionsPolicy;
 
     /**
      * Constructor, in which the xml string parameter will be parsed into beans
@@ -70,6 +68,11 @@ public class PayloadXmlMsgParser {
                     wifiConfig = (PayloadWifiConfig) PlistBeanConverter
                             .createBeanFromNdict(dict, PayloadWifiConfig.class);
                     newBases.add(wifiConfig);
+                } else if (PayloadBase.PAYLOAD_TYPE_RESTRICTIONS.equals(base.getPayloadType())) {
+                    NSDictionary dict = (NSDictionary) nsArray.objectAtIndex(i);
+                    restrictionsPolicy = (PayloadRestrictionsPolicy) PlistBeanConverter
+                            .createBeanFromNdict(dict, PayloadRestrictionsPolicy.class);
+                    newBases.add(restrictionsPolicy);
                 }
             }
             wrapper.setPayloadContent(newBases);
@@ -103,4 +106,11 @@ public class PayloadXmlMsgParser {
         return wifiConfig;
     }
 
+    /**
+     * Get bean of restrictions policy
+     * @return restrictions policy
+     */
+    public PayloadRestrictionsPolicy getRestrictionsPolicy() {
+        return restrictionsPolicy;
+    }
 }

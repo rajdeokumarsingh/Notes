@@ -94,6 +94,21 @@ public class CommandObject {
      */
     public static final String REQ_TYPE_SETTINGS = "Settings";
 
+    /**
+     * Install document
+     */
+    public static final String REQ_TYPE_INST_DOC = "InstallDocument";
+
+    /**
+     * Remove document
+     */
+    public static final String REQ_TYPE_RM_DOC = "RemoveDocument";
+
+    /**
+     * Get location of device
+     */
+    public static final String REQ_TYPE_LOCATION = "Location";
+
     // Request type, see REQ_TYPE_DEVICE_LOCK, ....
     private String RequestType;
 

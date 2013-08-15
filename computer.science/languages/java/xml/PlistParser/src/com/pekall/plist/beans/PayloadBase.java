@@ -1,15 +1,23 @@
 package com.pekall.plist.beans;
 
+import com.dd.plist.NSDictionary;
+import com.pekall.plist.Constants;
+import com.pekall.plist.PlistBeanConverter;
+import com.pekall.plist.PlistXmlParser;
+
+import java.io.IOException;
+
 /**
  * Base class for an ios payload, containing keys common to all payloads
  */
-public class PayloadBase {
+public class PayloadBase extends BeanBase {
 
     /**
      * Payload types
      */
     public static final String PAYLOAD_TYPE_PASSWORD_POLICY = "com.apple.mobiledevice.passwordpolicy";
     public static final String PAYLOAD_TYPE_WIFI_MANAGED = "com.apple.wifi.managed";
+    public static final String PAYLOAD_TYPE_RESTRICTIONS = "com.apple.applicationaccess";
 
     /**
      * The payload type, see PAYLOAD_TYPE_...
