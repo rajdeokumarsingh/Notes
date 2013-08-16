@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * Base class for all beans
  */
-public class BeanBase {
+public abstract class BeanBase {
     /**
      * Convert bean to xml string
      * @return xml for the bean object

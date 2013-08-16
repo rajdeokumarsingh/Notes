@@ -11,5 +11,6 @@ import junit.framework.TestCase;
  */
 public class ReflectionExperiment extends TestCase {
     public void testName() throws Exception {
+        assertTrue(null == null);
     }
 }
