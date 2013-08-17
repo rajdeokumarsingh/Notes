@@ -1,6 +1,7 @@
 package com.pekall.plist;
 
 import java.lang.reflect.Field;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -12,6 +13,8 @@ public class ObjectComparator {
      * @return true if two objects are equal, otherwise false
      */
     public static boolean equals(Object thiz, Object that) {
+        PlistDebug.logVerbose("equals 1");
+
         if (thiz == that) return true;
         if (thiz == null || that == null) return false;
 
@@ -19,6 +22,7 @@ public class ObjectComparator {
 
         Class clz = thiz.getClass();
 
+        PlistDebug.logVerbose("equals 2");
         // If the bean object has super classes, need to also
         // check fields of its ancestors.
         while (clz != null && !clz.equals(Object.class)) {
@@ -26,13 +30,16 @@ public class ObjectComparator {
                 try {
                     field.setAccessible(true);
 
-                    // primitive type
+                    PlistDebug.logVerbose("type name: " + field.getName());
+                    PlistDebug.logVerbose("type : " + field.getType());
+
+                     // primitive type
                     if (!Object.class.isAssignableFrom(field.getType())) {
+                        PlistDebug.logVerbose("comparePrimitiveType");
                         if (!comparePrimitiveType(thiz, that, field)) return false;
                         continue;
                     }
-
-                    // object type
+                   // object type
                     Object thisObj = field.get(thiz);
                     Object thatObj = field.get(that);
 
@@ -44,6 +51,9 @@ public class ObjectComparator {
                         if (!thisObj.toString().equals(thatObj.toString())) return false;
                     } else if (List.class.isAssignableFrom(field.getType())) {
                         if (!compareListType((List) thisObj, (List) thatObj)) return false;
+                    } else if(isPrimitiveArray(field.getType())) {
+                        if(!comparePrimitiveArray(thisObj, thatObj, field)) return false;
+                        // TODO: object array
                     } else {
                         if (!thisObj.equals(thatObj)) return false;
                     }
@@ -100,8 +110,43 @@ public class ObjectComparator {
             if (field.getLong(thiz) != field.getLong(that)) return false;
         } else if (float.class.equals(field.getType())) {
             if (Float.compare(field.getFloat(thiz), field.getFloat(that)) != 0) return false;
-        } else if (Double.class.equals(field.getType())) {
+        } else if (double.class.equals(field.getType())) {
             if (Double.compare(field.getDouble(thiz), field.getDouble(that)) != 0) return false;
+        }
+        return true;
+    }
+
+    private static boolean isPrimitiveArray(Class clz) {
+        if (boolean[].class.equals(clz) ||
+                byte[].class.equals(clz) ||
+                char[].class.equals(clz) ||
+                short[].class.equals(clz) ||
+                int[].class.equals(clz) ||
+                long[].class.equals(clz) ||
+                float[].class.equals(clz) ||
+                double[].class.equals(clz)) {
+            return true;
+        }
+        return false;
+    }
+
+    private static boolean comparePrimitiveArray(Object thisObj, Object thatObj, Field field) {
+        if(boolean[].class.equals(field.getType())) {
+            if(!Arrays.equals((boolean[])thisObj, (boolean[])thatObj)) return false;
+        } else if(byte[].class.equals(field.getType())) {
+            if(!Arrays.equals((byte[])thisObj, (byte[])thatObj)) return false;
+        } else if(char[].class.equals(field.getType())) {
+            if(!Arrays.equals((char[])thisObj, (char[])thatObj)) return false;
+        } else if(short[].class.equals(field.getType())) {
+            if(!Arrays.equals((short[])thisObj, (short[])thatObj)) return false;
+        } else if(int[].class.equals(field.getType())) {
+            if(!Arrays.equals((int[])thisObj, (int[])thatObj)) return false;
+        } else if(long[].class.equals(field.getType())) {
+            if(!Arrays.equals((long[])thisObj, (long[])thatObj)) return false;
+        } else if(float[].class.equals(field.getType())) {
+            if(!Arrays.equals((float[])thisObj, (float[])thatObj)) return false;
+        } else if(double[].class.equals(field.getType())) {
+            if(!Arrays.equals((double[])thisObj, (double[])thatObj)) return false;
         }
         return true;
     }

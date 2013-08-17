@@ -1,8 +1,6 @@
 package com.example.algorithm.lec1;
 
-import java.util.Arrays;
-
-public class InsertSort {
+public class InsertSorter {
     public static void sort(double[] array) {
         if (array == null)  return;
 

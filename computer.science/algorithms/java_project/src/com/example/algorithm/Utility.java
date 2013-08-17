@@ -14,4 +14,16 @@ public class Utility {
         }
         return ret;
     }
+
+    public static int[] randomIntegerArray() {
+        Random random = new Random(System.currentTimeMillis());
+
+        int len = random.nextInt(100);
+        int[] ret = new int[len];
+
+        for (int i = 0; i < ret.length; i++) {
+            ret[i] = random.nextInt(900);
+        }
+        return ret;
+    }
 }
