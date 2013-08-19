@@ -58,8 +58,10 @@ public class CommandProfileListStatus extends CommandStatusMsg {
     @Override
     public int hashCode() {
         int result = super.hashCode();
-        for (PayloadArrayWrapper wrapper : ProfileList) {
-            result += wrapper.hashCode();
+        if (ProfileList != null) {
+            for (PayloadArrayWrapper wrapper : ProfileList) {
+                result += wrapper.hashCode();
+            }
         }
         return result;
     }

@@ -13,6 +13,7 @@ public class BasicObjectType {
     private Long aLong;
     private Float aFloat;
     private Double aDouble;
+    private String aString;
 
     public Boolean getBoolean() {
         return aBoolean;
@@ -78,10 +79,18 @@ public class BasicObjectType {
         this.aDouble = aDouble;
     }
 
+    public String getString() {
+        return aString;
+    }
+
+    public void setString(String aString) {
+        this.aString = aString;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof BasicObjectType)) return false;
 
         BasicObjectType that = (BasicObjectType) o;
 
@@ -93,6 +102,7 @@ public class BasicObjectType {
         if (aInt != null ? !aInt.equals(that.aInt) : that.aInt != null) return false;
         if (aLong != null ? !aLong.equals(that.aLong) : that.aLong != null) return false;
         if (aShort != null ? !aShort.equals(that.aShort) : that.aShort != null) return false;
+        if (aString != null ? !aString.equals(that.aString) : that.aString != null) return false;
 
         return true;
     }
@@ -107,6 +117,7 @@ public class BasicObjectType {
         result = 31 * result + (aLong != null ? aLong.hashCode() : 0);
         result = 31 * result + (aFloat != null ? aFloat.hashCode() : 0);
         result = 31 * result + (aDouble != null ? aDouble.hashCode() : 0);
+        result = 31 * result + (aString != null ? aString.hashCode() : 0);
         return result;
     }
 
@@ -121,6 +132,7 @@ public class BasicObjectType {
                 ", aLong=" + aLong +
                 ", aFloat=" + aFloat +
                 ", aDouble=" + aDouble +
+                ", aString='" + aString + '\'' +
                 '}';
     }
 }

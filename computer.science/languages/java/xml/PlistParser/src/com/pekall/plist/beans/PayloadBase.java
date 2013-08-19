@@ -18,6 +18,7 @@ public class PayloadBase extends BeanBase {
     public static final String PAYLOAD_TYPE_PASSWORD_POLICY = "com.apple.mobiledevice.passwordpolicy";
     public static final String PAYLOAD_TYPE_WIFI_MANAGED = "com.apple.wifi.managed";
     public static final String PAYLOAD_TYPE_RESTRICTIONS = "com.apple.applicationaccess";
+    public static final String PAYLOAD_TYPE_EMAIL = "com.apple.mail.managed";
 
     /**
      * The payload type, see PAYLOAD_TYPE_...

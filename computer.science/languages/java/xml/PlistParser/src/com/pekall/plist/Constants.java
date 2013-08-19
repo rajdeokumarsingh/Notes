@@ -21,6 +21,7 @@ public class Constants {
             "com.apple.mobiledevice.passwordpolicy";
 
     public static final String PL_TYPE_WIFI_MANAGED = "com.apple.wifi.managed";
+    public static final String PL_TYPE_RESTRICTIONS_POLICY = "com.apple.applicationaccess";
 
     public static final String EMPTY_PLIST_XML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
             "<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n" +

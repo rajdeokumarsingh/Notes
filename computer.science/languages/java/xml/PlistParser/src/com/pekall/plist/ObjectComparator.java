@@ -5,6 +5,17 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Comparator of two objects. It compares fields with following types
+ *
+ * 1. Primitive type
+ * 2. Primitive array type
+ * 3. Primitive object type
+ * 4.. Primitive object array type
+ * 5. String type
+ * 6. Date type
+ * 7. List type
+ */
 public class ObjectComparator {
     /**
      * Compare two object
@@ -22,40 +33,46 @@ public class ObjectComparator {
 
         Class clz = thiz.getClass();
 
-        PlistDebug.logVerbose("equals 2");
         // If the bean object has super classes, need to also
         // check fields of its ancestors.
         while (clz != null && !clz.equals(Object.class)) {
             for (Field field : clz.getDeclaredFields()) {
+                Class fieldType = field.getType();
                 try {
                     field.setAccessible(true);
 
                     PlistDebug.logVerbose("type name: " + field.getName());
-                    PlistDebug.logVerbose("type : " + field.getType());
+                    PlistDebug.logVerbose("type : " + fieldType);
 
                      // primitive type
-                    if (!Object.class.isAssignableFrom(field.getType())) {
+                    if (!Object.class.isAssignableFrom(fieldType)) {
                         PlistDebug.logVerbose("comparePrimitiveType");
                         if (!comparePrimitiveType(thiz, that, field)) return false;
                         continue;
                     }
-                   // object type
+
+                    // object type
                     Object thisObj = field.get(thiz);
                     Object thatObj = field.get(that);
-
                     if (thisObj == thatObj) continue;
                     if (thisObj == null || thatObj == null) return false;
 
-                    // FIXME: Hack for Date field, just compare its toString
-                    if (Date.class.isAssignableFrom(field.getType())) {
-                        if (!thisObj.toString().equals(thatObj.toString())) return false;
-                    } else if (List.class.isAssignableFrom(field.getType())) {
-                        if (!compareListType((List) thisObj, (List) thatObj)) return false;
-                    } else if(isPrimitiveArray(field.getType())) {
-                        if(!comparePrimitiveArray(thisObj, thatObj, field)) return false;
-                        // TODO: object array
-                    } else {
+                    if (isPrimitiveObject(fieldType) || String.class.equals(fieldType)) {
+                        PlistDebug.logVerbose("compare primitive object type or string");
                         if (!thisObj.equals(thatObj)) return false;
+                        continue;
+                    } else if (Date.class.isAssignableFrom(fieldType)) {
+                        // FIXME: Hack for Date field, just compare its toString
+                        if (!thisObj.toString().equals(thatObj.toString())) return false;
+                    } else if (List.class.isAssignableFrom(fieldType)) {
+                        if (!compareListType((List) thisObj, (List) thatObj)) return false;
+                    } else if(isPrimitiveArray(fieldType)) {
+                        if(!comparePrimitiveArray(thisObj, thatObj, field)) return false;
+                    } else if (Object[].class.isAssignableFrom(fieldType)) {
+                        if(!compareObjectArray((Object[])thisObj, (Object[])thatObj)) return false;
+                    } else {
+                        // complex object, check recursively
+                        if (!equals(thisObj, thatObj)) return false;
                     }
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
@@ -65,6 +82,19 @@ public class ObjectComparator {
             clz = clz.getSuperclass();
         }
         return true;
+    }
+
+    private static boolean isPrimitiveObject(Class<?> type) {
+        if (Boolean.class.equals(type) || Byte.class.equals(type) ||
+                Character.class.equals(type) || Short.class.equals(type) ||
+                Integer.class.equals(type) || Long.class.equals(type) ||
+                Float.class.equals(type) || Double.class.equals(type)) {
+            PlistDebug.logVerbose("isPrimitiveObject true");
+            return true;
+        }
+
+        PlistDebug.logVerbose("isPrimitiveObject false");
+        return false;
     }
 
     /**
@@ -81,7 +111,22 @@ public class ObjectComparator {
             Object ListThatObj = thatObj.get(i);
             if (ListThisObj == ListThatObj) continue;
             if (ListThisObj == null || ListThatObj == null) return false;
-            if (!ListThisObj.equals(ListThatObj)) return false;
+
+            if (!equals(ListThisObj, ListThatObj)) return false;
+        }
+        return true;
+    }
+
+    private static boolean compareObjectArray(Object[] array1, Object[] array2) {
+        if (array1.length != array2.length) return false;
+
+        for (int i = 0; i < array1.length; i++) {
+            Object object1 = array1[i];
+            Object object2 = array2[i];
+            if (object1 == object2) continue;
+            if (object1 == null || object2 == null) return false;
+
+            if (!equals(object1, object2)) return false;
         }
         return true;
     }
@@ -117,14 +162,10 @@ public class ObjectComparator {
     }
 
     private static boolean isPrimitiveArray(Class clz) {
-        if (boolean[].class.equals(clz) ||
-                byte[].class.equals(clz) ||
-                char[].class.equals(clz) ||
-                short[].class.equals(clz) ||
-                int[].class.equals(clz) ||
-                long[].class.equals(clz) ||
-                float[].class.equals(clz) ||
-                double[].class.equals(clz)) {
+        if (boolean[].class.equals(clz) || byte[].class.equals(clz) ||
+                char[].class.equals(clz) || short[].class.equals(clz) ||
+                int[].class.equals(clz) || long[].class.equals(clz) ||
+                float[].class.equals(clz) || double[].class.equals(clz)) {
             return true;
         }
         return false;

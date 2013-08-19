@@ -17,8 +17,7 @@ public class CommandInstallAppTest extends TestCase {
     public void testGenXml() throws Exception {
         CommandMsg msg = new CommandMsg(
                 "aa483d15-168d-4022-b69f-dac292096176", createCommandInstallApplication());
-        NSDictionary root = PlistBeanConverter.createNdictFromBean(msg);
-        String xml = PlistXmlParser.toXml(root);
+        String xml = msg.toXml();
 
         PlistDebug.logTest(xml);
         assertEquals(xml, TEST_XML);
@@ -27,8 +26,7 @@ public class CommandInstallAppTest extends TestCase {
     public void testGenPartialXml() throws Exception {
         CommandMsg msg = new CommandMsg(
                 "aa483d15-168d-4022-b69f-dac292096176", createPartialCommand());
-        NSDictionary root = PlistBeanConverter.createNdictFromBean(msg);
-        String xml = PlistXmlParser.toXml(root);
+        String xml = msg.toXml();
 
         PlistDebug.logTest(xml);
         assertEquals(xml, TEST_PART_XML);
@@ -37,8 +35,7 @@ public class CommandInstallAppTest extends TestCase {
     public void testGenEmptyXml() throws Exception {
         CommandMsg msg = new CommandMsg(
                 "aa483d15-168d-4022-b69f-dac292096176", new CommandInstallApp());
-        NSDictionary root = PlistBeanConverter.createNdictFromBean(msg);
-        String xml = PlistXmlParser.toXml(root);
+        String xml = msg.toXml();
 
         PlistDebug.logTest(xml);
         assertEquals(xml, TEST_EMPTY_XML);
@@ -72,11 +69,13 @@ public class CommandInstallAppTest extends TestCase {
         cmd.setITunesStoreID(Long.valueOf(361285480));
         cmd.setManifestURL("http://itunes.apple.com/us/app/keynote/id361285480?mt=8");
         cmd.setManagementFlags(Integer.valueOf(1));
+        cmd.setPackageName("com.pekall.mdm");
         return cmd;
     }
 
     private CommandInstallApp createPartialCommand() {
         CommandInstallApp cmd = new CommandInstallApp();
+        cmd.setPackageName("com.pekall.mdm");
         cmd.setManifestURL("http://itunes.apple.com/us/app/keynote/id361285480?mt=8");
         return cmd;
     }
@@ -95,6 +94,8 @@ public class CommandInstallAppTest extends TestCase {
             "\t\t<string>http://itunes.apple.com/us/app/keynote/id361285480?mt=8</string>\n" +
             "\t\t<key>ManagementFlags</key>\n" +
             "\t\t<integer>1</integer>\n" +
+            "\t\t<key>PackageName</key>\n" +
+            "\t\t<string>com.pekall.mdm</string>\n" +
             "\t\t<key>RequestType</key>\n" +
             "\t\t<string>InstallApplication</string>\n" +
             "\t</dict>\n" +
@@ -125,6 +126,8 @@ public class CommandInstallAppTest extends TestCase {
             "\t<dict>\n" +
             "\t\t<key>ManifestURL</key>\n" +
             "\t\t<string>http://itunes.apple.com/us/app/keynote/id361285480?mt=8</string>\n" +
+            "\t\t<key>PackageName</key>\n" +
+            "\t\t<string>com.pekall.mdm</string>\n" +
             "\t\t<key>RequestType</key>\n" +
             "\t\t<string>InstallApplication</string>\n" +
             "\t</dict>\n" +

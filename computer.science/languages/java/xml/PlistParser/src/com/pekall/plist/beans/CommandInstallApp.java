@@ -27,6 +27,12 @@ public class CommandInstallApp extends CommandObject {
      */
     private Integer ManagementFlags;
 
+
+    /**
+     * Package name,  just for Android
+     */
+    private String PackageName;
+
     public CommandInstallApp() {
         super(CommandObject.REQ_TYPE_INST_APP);
     }
@@ -55,6 +61,14 @@ public class CommandInstallApp extends CommandObject {
         ManagementFlags = managementFlags;
     }
 
+    public String getPackageName() {
+        return PackageName;
+    }
+
+    public void setPackageName(String packageName) {
+        PackageName = packageName;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -66,6 +80,7 @@ public class CommandInstallApp extends CommandObject {
         if (ManagementFlags != null ? !ManagementFlags.equals(that.ManagementFlags) : that.ManagementFlags != null)
             return false;
         if (ManifestURL != null ? !ManifestURL.equals(that.ManifestURL) : that.ManifestURL != null) return false;
+        if (PackageName != null ? !PackageName.equals(that.PackageName) : that.PackageName != null) return false;
         if (iTunesStoreID != null ? !iTunesStoreID.equals(that.iTunesStoreID) : that.iTunesStoreID != null)
             return false;
 
@@ -78,6 +93,7 @@ public class CommandInstallApp extends CommandObject {
         result = 31 * result + (iTunesStoreID != null ? iTunesStoreID.hashCode() : 0);
         result = 31 * result + (ManifestURL != null ? ManifestURL.hashCode() : 0);
         result = 31 * result + (ManagementFlags != null ? ManagementFlags.hashCode() : 0);
+        result = 31 * result + (PackageName != null ? PackageName.hashCode() : 0);
         return result;
     }
 
@@ -85,9 +101,10 @@ public class CommandInstallApp extends CommandObject {
     public String toString() {
         return "CommandInstallApp{" +
                 "super=" + super.toString() +
-                "iTunesStoreID=" + iTunesStoreID +
+                ", iTunesStoreID=" + iTunesStoreID +
                 ", ManifestURL='" + ManifestURL + '\'' +
                 ", ManagementFlags=" + ManagementFlags +
+                ", PackageName='" + PackageName + '\'' +
                 '}';
     }
 }

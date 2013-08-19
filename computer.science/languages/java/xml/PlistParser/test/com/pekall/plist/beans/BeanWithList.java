@@ -12,13 +12,13 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class BeanWithList {
-    private List<Boolean> booleans = new ArrayList<Boolean>();
-    private List<Integer> integers = new ArrayList<Integer>();
-    private List<Long> longs = new ArrayList<Long>();
-    private List<Double> doubles = new ArrayList<Double>();
-    private List<String> strings = new ArrayList<String>();
-    private List<Date> dates = new ArrayList<Date>();
-    private List<BeanBasicType> objects = new ArrayList<BeanBasicType>();
+    private List<Boolean> booleans;
+    private List<Integer> integers;
+    private List<Long> longs;
+    private List<Double> doubles;
+    private List<String> strings;
+    private List<Date> dates;
+    private List<BeanBasicType> objects;
     // TODO:
     // private List<byte[]> byteArrays = new ArrayList<byte[]>();
     // TODO: nest array, List<List<E>>
@@ -92,26 +92,44 @@ public class BeanWithList {
     } */
 
     public void addBoolean(Boolean b) {
+        if (booleans == null) {
+            booleans = new ArrayList<Boolean>();
+        }
         booleans.add(b);
     }
 
     public void addInteger(Integer integer) {
+        if (integers == null) {
+            integers = new ArrayList<Integer>();
+        }
         integers.add(integer);
     }
 
     public void addLong(Long l) {
+        if (longs == null) {
+            longs = new ArrayList<Long>();
+        }
         longs.add(l);
     }
 
     public void addDouble(Double d) {
+        if (doubles == null) {
+            doubles = new ArrayList<Double>();
+        }
         doubles.add(d);
     }
 
     public void addString(String s) {
+        if (strings == null) {
+            strings = new ArrayList<String>();
+        }
         strings.add(s);
     }
 
     public void addDate(Date date) {
+        if (dates == null) {
+            dates = new ArrayList<Date>();
+        }
         dates.add(date);
     }
 
@@ -121,6 +139,9 @@ public class BeanWithList {
     } */
 
     public void addObject(BeanBasicType item) {
+        if (objects == null) {
+            objects = new ArrayList<BeanBasicType>();
+        }
         this.objects.add(item);
     }
 

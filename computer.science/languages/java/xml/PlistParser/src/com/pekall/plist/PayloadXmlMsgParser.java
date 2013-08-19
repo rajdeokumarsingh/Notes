@@ -16,6 +16,7 @@ public class PayloadXmlMsgParser {
     private PayloadPasswordPolicy passwordPolicy;
     private PayloadWifiConfig wifiConfig;
     private PayloadRestrictionsPolicy restrictionsPolicy;
+    private PayloadEmail email;
 
     /**
      * Constructor, in which the xml string parameter will be parsed into beans
@@ -73,6 +74,11 @@ public class PayloadXmlMsgParser {
                     restrictionsPolicy = (PayloadRestrictionsPolicy) PlistBeanConverter
                             .createBeanFromNdict(dict, PayloadRestrictionsPolicy.class);
                     newBases.add(restrictionsPolicy);
+                } else if (PayloadBase.PAYLOAD_TYPE_EMAIL.equals(base.getPayloadType())) {
+                    NSDictionary dict = (NSDictionary) nsArray.objectAtIndex(i);
+                    email = (PayloadEmail) PlistBeanConverter
+                            .createBeanFromNdict(dict, PayloadEmail.class);
+                    newBases.add(email);
                 }
             }
             wrapper.setPayloadContent(newBases);
@@ -112,5 +118,9 @@ public class PayloadXmlMsgParser {
      */
     public PayloadRestrictionsPolicy getRestrictionsPolicy() {
         return restrictionsPolicy;
+    }
+
+    public PayloadEmail getEmail() {
+        return email;
     }
 }
