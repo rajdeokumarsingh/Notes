@@ -1,5 +1,8 @@
 package com.pekall.plist.beans;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Entry of the InstalledApplicationList
  */
@@ -27,6 +30,11 @@ public class InstalledAppInfo {
      * Availability: Available in iOS 5.0 and later.
      */
     long DynamicSize;
+
+   /**
+     * Permissions requested, just for Android
+     */
+    List<String> AppPermissions;
 
     public InstalledAppInfo() {
     }
@@ -89,19 +97,36 @@ public class InstalledAppInfo {
         DynamicSize = dynamicSize;
     }
 
+    public List<String> getAppPermissions() {
+        return AppPermissions;
+    }
+
+    public void setAppPermissions(List<String> appPermissions) {
+        AppPermissions = appPermissions;
+    }
+
+    public void addAppPermission(String perm) {
+        if (AppPermissions == null) {
+            AppPermissions = new ArrayList<String>();
+        }
+        AppPermissions.add(perm);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof InstalledAppInfo)) return false;
 
-        InstalledAppInfo that = (InstalledAppInfo) o;
+        InstalledAppInfo info = (InstalledAppInfo) o;
 
-        if (BundleSize != that.BundleSize) return false;
-        if (DynamicSize != that.DynamicSize) return false;
-        if (Identifier != null ? !Identifier.equals(that.Identifier) : that.Identifier != null) return false;
-        if (Name != null ? !Name.equals(that.Name) : that.Name != null) return false;
-        if (ShortVersion != null ? !ShortVersion.equals(that.ShortVersion) : that.ShortVersion != null) return false;
-        if (Version != null ? !Version.equals(that.Version) : that.Version != null) return false;
+        if (BundleSize != info.BundleSize) return false;
+        if (DynamicSize != info.DynamicSize) return false;
+        if (AppPermissions != null ? !AppPermissions.equals(info.AppPermissions) : info.AppPermissions != null)
+            return false;
+        if (Identifier != null ? !Identifier.equals(info.Identifier) : info.Identifier != null) return false;
+        if (Name != null ? !Name.equals(info.Name) : info.Name != null) return false;
+        if (ShortVersion != null ? !ShortVersion.equals(info.ShortVersion) : info.ShortVersion != null) return false;
+        if (Version != null ? !Version.equals(info.Version) : info.Version != null) return false;
 
         return true;
     }
@@ -112,8 +137,9 @@ public class InstalledAppInfo {
         result = 31 * result + (Version != null ? Version.hashCode() : 0);
         result = 31 * result + (ShortVersion != null ? ShortVersion.hashCode() : 0);
         result = 31 * result + (Name != null ? Name.hashCode() : 0);
-        result = 31 * result + (int)BundleSize;
-        result = 31 * result + (int)DynamicSize;
+        result = 31 * result + (int) (BundleSize ^ (BundleSize >>> 32));
+        result = 31 * result + (int) (DynamicSize ^ (DynamicSize >>> 32));
+        result = 31 * result + (AppPermissions != null ? AppPermissions.hashCode() : 0);
         return result;
     }
 
@@ -126,6 +152,7 @@ public class InstalledAppInfo {
                 ", Name='" + Name + '\'' +
                 ", BundleSize=" + BundleSize +
                 ", DynamicSize=" + DynamicSize +
+                ", AppPermissions=" + AppPermissions +
                 '}';
     }
 }

@@ -17,6 +17,11 @@ public class PayloadXmlMsgParser {
     private PayloadWifiConfig wifiConfig;
     private PayloadRestrictionsPolicy restrictionsPolicy;
     private PayloadEmail email;
+    private PayloadRemovalPassword removalPassword;
+    private PayloadWebClip webClip;
+    private PayloadLDAP ldap;
+    private PayloadExchange exchange;
+    private PayloadVPN vpn;
 
     /**
      * Constructor, in which the xml string parameter will be parsed into beans
@@ -79,6 +84,31 @@ public class PayloadXmlMsgParser {
                     email = (PayloadEmail) PlistBeanConverter
                             .createBeanFromNdict(dict, PayloadEmail.class);
                     newBases.add(email);
+                } else if (PayloadBase.PAYLOAD_TYPE_REMOVAL_PASSWORD.equals(base.getPayloadType())) {
+                    NSDictionary dict = (NSDictionary) nsArray.objectAtIndex(i);
+                    removalPassword = (PayloadRemovalPassword) PlistBeanConverter
+                            .createBeanFromNdict(dict, PayloadRemovalPassword.class);
+                    newBases.add(removalPassword);
+                } else if (PayloadBase.PAYLOAD_TYPE_WEB_CLIP.equals(base.getPayloadType())) {
+                    NSDictionary dict = (NSDictionary) nsArray.objectAtIndex(i);
+                    webClip = (PayloadWebClip) PlistBeanConverter
+                            .createBeanFromNdict(dict, PayloadWebClip.class);
+                    newBases.add(webClip);
+                } else if (PayloadBase.PAYLOAD_TYPE_LDAP.equals(base.getPayloadType())) {
+                    NSDictionary dict = (NSDictionary) nsArray.objectAtIndex(i);
+                    ldap = (PayloadLDAP) PlistBeanConverter
+                            .createBeanFromNdict(dict, PayloadLDAP.class);
+                    newBases.add(ldap);
+                } else if (PayloadBase.PAYLOAD_TYPE_IOS_EXCHANGE.equals(base.getPayloadType())) {
+                    NSDictionary dict = (NSDictionary) nsArray.objectAtIndex(i);
+                    exchange = (PayloadExchange) PlistBeanConverter
+                            .createBeanFromNdict(dict, PayloadExchange.class);
+                    newBases.add(exchange);
+                } else if (PayloadBase.PAYLOAD_TYPE_VPN.equals(base.getPayloadType())) {
+                    NSDictionary dict = (NSDictionary) nsArray.objectAtIndex(i);
+                    vpn = (PayloadVPN) PlistBeanConverter
+                            .createBeanFromNdict(dict, PayloadVPN.class);
+                    newBases.add(vpn);
                 }
             }
             wrapper.setPayloadContent(newBases);
@@ -120,7 +150,51 @@ public class PayloadXmlMsgParser {
         return restrictionsPolicy;
     }
 
+    /**
+     * Get bean object of email policy
+     * @return bean object of email policy
+     */
     public PayloadEmail getEmail() {
         return email;
+    }
+
+    /**
+     * Get bean object of removal password policy
+     * @return bean object of removal password policy
+     */
+    public PayloadRemovalPassword getRemovalPassword() {
+        return removalPassword;
+    }
+
+    /**
+     * Get bean object of web clip
+     * @return bean object of web clip
+     */
+    public PayloadWebClip getWebClip() {
+        return webClip;
+    }
+
+    /**
+     * Get bean object of LDAP policy
+     * @return bean object of LDAP policy
+     */
+    public PayloadLDAP getLDAP() {
+        return ldap;
+    }
+
+    /**
+     * Get bean object of Exchange policy
+     * @return bean object of Exchange policy
+     */
+    public PayloadExchange getExchange() {
+        return exchange;
+    }
+
+    /**
+     * Get bean object of VPN policy
+     * @return bean object of VPN policy
+     */
+    public PayloadVPN getVPN() {
+        return vpn;
     }
 }

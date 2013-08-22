@@ -8,6 +8,7 @@ public class CommandInstallApp extends CommandObject {
     public static final String KEY_ITUNESSTOREID = "iTunesStoreID";
     public static final String KEY_MANIFESTURL = "ManifestURL";
     public static final String KEY_MANAGEMENTFLAGS = "ManagementFlags";
+    public static final String KEY_PACKAGENAME = "PackageName";
     /**
      * The application's iTunes Store ID.
      * For example, the numeric ID for Keynote is 361285480 as found in the App Store link

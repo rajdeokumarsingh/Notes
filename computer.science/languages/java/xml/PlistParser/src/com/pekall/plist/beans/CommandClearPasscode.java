@@ -8,6 +8,12 @@ import java.util.Arrays;
  * Command to clear the passcode for a device
  */
 public class CommandClearPasscode extends CommandObject {
+
+    public static final String KEY_NEW_PASSCODE = "NewPasscode";
+    /**
+     * just used for Android. indicate new passcode for android device.
+     */
+    private String NewPasscode;
     /**
      * Optional. If the device has given an UnlockToken value in the “TokenUpdate”
      * check-in message, the server must pass the data blob back to the device for
@@ -30,6 +36,14 @@ public class CommandClearPasscode extends CommandObject {
 
     public void setUnlockToken(byte[] unlockToken) {
         UnlockToken = unlockToken;
+    }
+
+    public String getNewPasscode() {
+        return NewPasscode;
+    }
+
+    public void setNewPasscode(String newPasscode) {
+        NewPasscode = newPasscode;
     }
 
     @Override

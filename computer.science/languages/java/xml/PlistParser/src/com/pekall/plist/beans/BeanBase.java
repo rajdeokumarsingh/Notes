@@ -50,4 +50,26 @@ public abstract class BeanBase {
         }
         return bean;
     }
+
+
+    /**
+     * Create a bean from xml string.
+     *
+     * @param xml
+     * @param clz
+     * @param <T>
+     * @return
+     */
+    public static <T> T fromXmlT(String xml, Class<T> clz) {
+        NSDictionary root;
+        BeanBase bean = null;
+        Object object = null;
+        try {
+            root = (NSDictionary) PlistXmlParser.fromXml(xml);
+            object = PlistBeanConverter.createBeanFromNdict(root, clz);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return (T)object;
+    }
 }

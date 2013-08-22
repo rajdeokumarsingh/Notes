@@ -19,6 +19,12 @@ public class PayloadBase extends BeanBase {
     public static final String PAYLOAD_TYPE_WIFI_MANAGED = "com.apple.wifi.managed";
     public static final String PAYLOAD_TYPE_RESTRICTIONS = "com.apple.applicationaccess";
     public static final String PAYLOAD_TYPE_EMAIL = "com.apple.mail.managed";
+    public static final String PAYLOAD_TYPE_REMOVAL_PASSWORD = "com.apple.profileRemovalPassword";
+    public static final String PAYLOAD_TYPE_WEB_CLIP = "com.apple.webClip.managed";
+    public static final String PAYLOAD_TYPE_LDAP = "com.apple.ldap.account";
+    public static final String PAYLOAD_TYPE_IOS_EXCHANGE = "com.apple.eas.account";
+    public static final String PAYLOAD_TYPE_OSX_EXCHANGE = "com.apple.ews.account";
+    public static final String PAYLOAD_TYPE_VPN = "com.apple.vpn.managed";
 
     /**
      * The payload type, see PAYLOAD_TYPE_...

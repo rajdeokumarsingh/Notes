@@ -18,6 +18,10 @@ public class CommandInstallAppStatus extends CommandStatusMsg {
      * If the state is NeedsRedemption, the server needs to send a redemption code to complete the app installation.
      */
     public static final String RESPONSE_STATE_NEEDSREDEMPTION = "NeedsRedemption";
+    /**
+     * app is in queue, that will being install.
+     */
+    public static final String RESPONSE_STATE_QUEUED = "Queued";
 
     /**
      * The app's identifier (Bundle ID)
