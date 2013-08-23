@@ -3,5 +3,27 @@
 Extreme Programming Explained
 
 
+写测试用例的同时，也就是设计外部API的过程。
+    需要考虑设计出好的API
+
+设计原则：
+
+    设计常量对象
+        如一个Dollar对象，如果为其设定了值，那么经过各种操作后，其值应该还是不变的。
+
+Best practice
+    需要有一个todo list
+    是否在代码中直接写todo就行呢？ 工具是否支持？
+
 ./c00.prolog.txt
+Part One
+
+./c01.money.example.txt
+./c02.bad.object.txt
+./c03.txt
+./c04.privacy.txt
+    empty
+
+./c05.clone.and.abstract.txt
+./c08.hide.concrete.obj.txt
 
