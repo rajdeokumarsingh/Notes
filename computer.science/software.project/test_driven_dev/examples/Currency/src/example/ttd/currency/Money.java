@@ -1,16 +1,35 @@
 package example.ttd.currency;
 
-public abstract class Money {
-
+public class Money implements Expression {
     // TODO: amount must be an integer?
     protected int amount;
 
-    static Money dollar(int amount) {
-        return new Dollar(amount);
+    protected String currency;
+
+    public Money(int amount, String currency) {
+        this.amount = amount;
+        this.currency = currency;
     }
 
-    public static Franc franc(int amount) {
-        return new Franc(amount);
+    static Money dollar(int amount) {
+        return new Money(amount, "USD");
+    }
+
+    static Money franc(int amount) {
+        return new Money(amount, "CHF");
+    }
+
+    // TODO: normal multiple
+    public Money times(int multiplier) {
+        return new Money(amount * multiplier, currency);
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public String currency() {
+        return currency;
     }
 
     // TODO: equals with different money types
@@ -36,7 +55,15 @@ public abstract class Money {
         return amount;
     }
 
-    abstract public Money times(int i);
+    @Override
+    public String toString() {
+        return "Money{" +
+                "amount=" + amount +
+                ", currency='" + currency + '\'' +
+                '}';
+    }
 
-
+    public Expression plus(Money added) {
+        return new Money(this.amount + added.amount, currency);
+    }
 }
