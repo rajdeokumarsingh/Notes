@@ -3,7 +3,7 @@ package example.ttd.currency;
 /**
  * Debug utility class
  */
-public class Debug {
+class Debug {
     private static boolean verboseDebugLog = false;
 
     /**

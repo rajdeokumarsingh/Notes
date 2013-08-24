@@ -2,9 +2,9 @@ package example.ttd.currency;
 
 public class Money implements Expression {
     // TODO: amount must be an integer?
-    protected int amount;
+    private final int amount;
 
-    protected String currency;
+    private final String currency;
 
     public Money(int amount, String currency) {
         this.amount = amount;
@@ -19,11 +19,6 @@ public class Money implements Expression {
         return new Money(amount, "CHF");
     }
 
-    // TODO: normal multiple
-    public Money times(int multiplier) {
-        return new Money(amount * multiplier, currency);
-    }
-
     public int getAmount() {
         return amount;
     }
@@ -32,27 +27,39 @@ public class Money implements Expression {
         return currency;
     }
 
-    // TODO: equals with different money types
+    public Money reduce(Bank bank, String to) {
+        int rate = bank.rate(currency, to);
+        return new Money(getAmount() / rate, to);
+    }
+
+    @Override
+    public Expression times(int multiplier) {
+        return new Money(amount * multiplier, currency);
+    }
+
+    @Override
+    public Expression plus(Expression added) {
+        return new Sum(this, added);
+    }
+
     @Override
     public boolean equals(Object o) {
-        Debug.logVerbose("enter Money.equals()");
         if (this == o) return true;
-        if (!(o instanceof Money)) return false;
-
-        if(!this.getClass().equals(o.getClass())) return false;
+        if (o == null || getClass() != o.getClass()) return false;
 
         Money money = (Money) o;
 
-        Debug.logVerbose("Money.equals() 2");
         if (amount != money.amount) return false;
+        if (currency != null ? !currency.equals(money.currency) : money.currency != null) return false;
 
-        Debug.logVerbose("Money.equals() 3");
         return true;
     }
 
     @Override
     public int hashCode() {
-        return amount;
+        int result = amount;
+        result = 31 * result + (currency != null ? currency.hashCode() : 0);
+        return result;
     }
 
     @Override
@@ -61,9 +68,5 @@ public class Money implements Expression {
                 "amount=" + amount +
                 ", currency='" + currency + '\'' +
                 '}';
-    }
-
-    public Expression plus(Money added) {
-        return new Money(this.amount + added.amount, currency);
     }
 }
