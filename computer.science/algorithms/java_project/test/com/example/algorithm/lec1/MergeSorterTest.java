@@ -35,7 +35,6 @@ public class MergeSorterTest extends TestCase {
         int[] array8 = {0, 1, 5};
         MergeSorter.sort(array7, 0, array7.length);
         assertTrue(Arrays.equals(array8, array8));
-
     }
 
     public void testNormalSort() throws Exception {
@@ -63,11 +62,9 @@ public class MergeSorterTest extends TestCase {
             int[] array = Utility.randomIntegerArray();
             int[] array1 = Arrays.copyOf(array, array.length);
             assertTrue(Arrays.equals(array, array1));
-            // System.out.println("before sort: " + Arrays.toString(array));
 
             MergeSorter.sort(array, 0, array.length);
             Arrays.sort(array1);
-            // System.out.println("after sort: " + Arrays.toString(array));
 
             assertTrue(Arrays.equals(array, array1));
         }
