@@ -26,6 +26,12 @@ public class PayloadBase extends BeanBase {
     public static final String PAYLOAD_TYPE_OSX_EXCHANGE = "com.apple.ews.account";
     public static final String PAYLOAD_TYPE_VPN = "com.apple.vpn.managed";
 
+    // Just for SU MDM project
+    public static final String PAYLOAD_TYPE_SE_BROWSER_SETTINGS = "com.pekall.sebrowser.settings";
+    public static final String PAYLOAD_TYPE_SYSTEM_SETTINGS = "com.pekall.system.settings";
+    public static final String PAYLOAD_TYPE_LAUNCHER_SETTINGS = "com.pekall.launcher.settings";
+    public static final String PAYLOAD_TYPE_ADVT_SETTINGS = "com.pekall.advertise.settings";
+
     /**
      * The payload type, see PAYLOAD_TYPE_...
      */

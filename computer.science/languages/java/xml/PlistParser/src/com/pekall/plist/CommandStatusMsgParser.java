@@ -3,6 +3,8 @@ package com.pekall.plist;
 import com.dd.plist.NSArray;
 import com.dd.plist.NSDictionary;
 import com.pekall.plist.beans.*;
+import com.pekall.plist.su.settings.advertise.AdvertiseInfo;
+import com.pekall.plist.su.settings.browser.BrowserUploadData;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -74,6 +76,12 @@ public class CommandStatusMsgParser {
                     root.objectForKey("Latitude") != null) {
                 mMessage = (CommandStatusMsg) PlistBeanConverter
                         .createBeanFromNdict(root, CommandLocationStatus.class);
+            } else if (root.objectForKey("advertiseStaInfos") != null) {
+                mMessage = (CommandStatusMsg) PlistBeanConverter
+                        .createBeanFromNdict(root, AdvertiseInfo.class);
+            } else if (root.objectForKey("historyWatchItems") != null) {
+                mMessage = (CommandStatusMsg) PlistBeanConverter
+                        .createBeanFromNdict(root, BrowserUploadData.class);
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,0 +1,172 @@
+_bookmark
+26 ./src/com/android/browser/BrowserBookmarksAdapterItem.java
+    BrowserBookmarksAdapter的数据项目, 包括了url, title, thumbnail等信息
+
+_preference
+36 ./src/com/android/browser/preferences/LabPreferencesFragment.java
+    lab preference
+
+44 ./src/com/android/browser/BackgroundHandler.java
+    实现一个后台低优先级线程，完成一些cpu密集型任务
+        BrowserSettings中初始化
+        controller中删除thumbnail, 打开icon数据库
+        CrashRecoveryHandler中处理recovery消息
+
+_bookmark
+44 ./src/com/android/browser/BookmarkSearch.java
+    处理用户点击global search中search 建议时产生的intent
+    将这个intent转化为显示的对BrowserActivity.class的intent
+
+_main_activity
+47 ./src/com/android/browser/Browser.java
+    继承Application
+    onCreate方法中创建CookieSyncManager， BrowserSettings， Preloader
+
+_preference
+48 ./src/com/android/browser/preferences/NonformattingListPreference.java
+    继承ListPreference
+    Homepage用到了这个类
+
+_ui
+48 ./src/com/android/browser/view/CustomScreenLinearLayout.java
+    继承LinearLayout, 但是却按照倒序layout children
+    custom_screen.xml使用了这个类
+
+52 ./src/com/android/browser/KeyChainLookup.java
+    Inherit AsyncTask
+    Handle cretificate request
+
+_preference
+52 ./src/com/android/browser/preferences/DebugPreferencesFragment.java
+
+_ui _bookmark
+53 ./src/com/android/browser/AddNewBookmark.java
+    R.layout.add_new_bookmark
+    没有人用
+
+53 ./src/com/android/browser/widget/BookmarkWidgetProxy.java
+59 ./src/com/android/browser/LogTag.java
+59 ./src/com/android/browser/view/SnapshotGridView.java
+60 ./src/com/android/browser/BrowserYesNoPreference.java
+61 ./src/com/android/browser/preferences/PrivacySecurityPreferencesFragment.java
+61 ./src/com/android/browser/UrlSelectionActionMode.java
+62 ./src/com/android/browser/search/SearchEnginePreference.java
+63 ./src/com/android/browser/preferences/BandwidthPreferencesFragment.java
+64 ./src/com/android/browser/search/SearchEngine.java
+69 ./src/com/android/browser/search/SearchEngines.java
+70 ./src/com/android/browser/BookmarksLoader.java
+70 ./src/com/android/browser/BrowserWebViewFactory.java
+72 ./src/com/android/browser/ShortcutActivity.java
+73 ./src/com/android/browser/preferences/FontSizePreview.java
+74 ./src/com/android/browser/ActivityController.java
+74 ./src/com/android/browser/DataUri.java
+74 ./src/com/android/browser/view/EventRedirectingFrameLayout.java
+83 ./src/com/android/browser/view/PieListView.java
+84 ./src/com/android/browser/PreloadedTabControl.java
+89 ./src/com/android/browser/preferences/SeekBarSummaryPreference.java
+90 ./src/com/android/browser/AccountsChangedReceiver.java
+90 ./src/com/android/browser/HistoryItem.java
+91 ./src/com/android/browser/preferences/InvertedContrastPreview.java
+91 ./src/com/android/browser/WebViewTimersControl.java
+92 ./src/com/android/browser/addbookmark/FolderSpinner.java
+94 ./src/com/android/browser/OpenDownloadReceiver.java
+98 ./src/com/android/browser/view/StopProgressView.java
+101 ./src/com/android/browser/BrowserPreferencesPage.java
+101 ./src/com/android/browser/preferences/WebViewPreview.java
+104 ./src/com/android/browser/view/BookmarkContainer.java
+104 ./src/com/android/browser/view/PieStackView.java
+109 ./src/com/android/browser/NfcHandler.java
+116 ./src/com/android/browser/UiController.java
+117 ./src/com/android/browser/PageProgressView.java
+118 ./src/com/android/browser/widget/BookmarkThumbnailWidgetProvider.java
+120 ./src/com/android/browser/GeolocationPermissionsPrompt.java
+121 ./src/com/android/browser/NetworkStateHandler.java
+122 ./src/com/android/browser/PreferenceKeys.java
+123 ./src/com/android/browser/WebViewController.java
+124 ./src/com/android/browser/homepages/HomeProvider.java
+125 ./src/com/android/browser/preferences/AccessibilityPreferencesFragment.java
+130 ./src/com/android/browser/BrowserBookmarksAdapter.java
+131 ./src/com/android/browser/search/DefaultSearchEngine.java
+132 ./src/com/android/browser/NavTabView.java
+133 ./src/com/android/browser/Performance.java
+134 ./src/com/android/browser/PreloadRequestReceiver.java
+138 ./src/com/android/browser/widget/BookmarkWidgetConfigure.java
+139 ./src/com/android/browser/BrowserWebView.java
+139 ./src/com/android/browser/FetchUrlMimeType.java
+143 ./src/com/android/browser/DeviceAccountLogin.java
+144 ./src/com/android/browser/UrlBarAutoShowManager.java
+145 ./src/com/android/browser/AutologinBar.java
+152 ./src/com/android/browser/stub/NullController.java
+152 ./src/com/android/browser/UI.java
+154 ./src/com/android/browser/AutoFillProfileDatabase.java
+156 ./src/com/android/browser/preferences/AdvancedPreferencesFragment.java
+159 ./src/com/android/browser/view/PieItem.java
+162 ./src/com/android/browser/view/BasePieView.java
+163 ./src/com/android/browser/addbookmark/FolderSpinnerAdapter.java
+166 ./src/com/android/browser/HttpAuthenticationDialog.java
+175 ./src/com/android/browser/UrlUtils.java
+176 ./src/com/android/browser/search/SearchEngineInfo.java
+178 ./src/com/android/browser/Preloader.java
+195 ./src/com/android/browser/BookmarkItem.java
+198 ./src/com/android/browser/DownloadTouchIcon.java
+198 ./src/com/android/browser/WallpaperHandler.java
+203 ./src/com/android/browser/SystemAllowGeolocationOrigins.java
+209 ./src/com/android/browser/SnapshotBar.java
+212 ./src/com/android/browser/util/ThreadedCursorAdapter.java
+214 ./src/com/android/browser/preferences/GeneralPreferencesFragment.java
+224 ./src/com/android/browser/BrowserBackupAgent.java
+226 ./src/com/android/browser/Bookmarks.java
+232 ./src/com/android/browser/DownloadHandler.java
+243 ./src/com/android/browser/SnapshotTab.java
+248 ./src/com/android/browser/CrashRecoveryHandler.java
+249 ./src/com/android/browser/ComboViewActivity.java
+250 ./src/com/android/browser/provider/SQLiteContentProvider.java
+262 ./src/com/android/browser/BookmarkUtils.java
+262 ./src/com/android/browser/TabScrollView.java
+263 ./src/com/android/browser/UploadHandler.java
+264 ./src/com/android/browser/homepages/RequestHandler.java
+265 ./src/com/android/browser/NavigationBarPhone.java
+265 ./src/com/android/browser/NavScreen.java
+268 ./src/com/android/browser/provider/SnapshotProvider.java
+273 ./src/com/android/browser/PreloadController.java
+274 ./src/com/android/browser/NavigationBarBase.java
+281 ./src/com/android/browser/homepages/Template.java
+283 ./src/com/android/browser/AutofillHandler.java
+291 ./src/com/android/browser/AutoFillSettingsFragment.java
+294 ./src/com/android/browser/GoogleAccountLogin.java
+299 ./src/com/android/browser/BrowserSnapshotPage.java
+299 ./src/com/android/browser/search/OpenSearchSearchEngine.java
+302 ./src/com/android/browser/DataController.java
+307 ./src/com/android/browser/BrowserActivity.java
+307 ./src/com/android/browser/XLargeUi.java
+329 ./src/com/android/browser/ErrorConsoleView.java
+342 ./src/com/android/browser/NavigationBarTablet.java
+344 ./src/com/android/browser/UrlHandler.java
+345 ./src/com/android/browser/PieControl.java
+356 ./src/com/android/browser/UrlInputView.java
+357 ./src/com/android/browser/widget/BookmarkThumbnailWidgetService.java
+378 ./src/com/android/browser/DateSortedExpandableListAdapter.java
+380 ./src/com/android/browser/BreadCrumbView.java
+383 ./src/com/android/browser/IntentHandler.java
+399 ./src/com/android/browser/PageDialogsHandler.java
+422 ./src/com/android/browser/WebStorageSizeManager.java
+447 ./src/com/android/browser/TitleBar.java
+453 ./src/com/android/browser/view/BookmarkExpandableView.java
+534 ./src/com/android/browser/TabBar.java
+544 ./src/com/android/browser/PhoneUi.java
+568 ./src/com/android/browser/NavTabScroller.java
+569 ./src/com/android/browser/SuggestionsAdapter.java
+636 ./src/com/android/browser/view/PieMenu.java
+662 ./src/com/android/browser/BrowserBookmarksPage.java
+666 ./src/com/android/browser/BrowserHistoryPage.java
+697 ./src/com/android/browser/TabControl.java
+703 ./src/com/android/browser/preferences/WebsiteSettingsFragment.java
+879 ./src/com/android/browser/BaseUi.java
+966 ./src/com/android/browser/BrowserSettings.java
+1040 ./src/com/android/browser/provider/BrowserProvider.java
+1165 ./src/com/android/browser/AddBookmarkPage.java
+1869 ./src/com/android/browser/view/ScrollerView.java
+2043 ./src/com/android/browser/Tab.java
+2230 ./src/com/android/browser/provider/BrowserProvider2.java
+2899 ./src/com/android/browser/Controller.java
+39243 total

@@ -109,6 +109,17 @@ public class CommandObject {
      */
     public static final String REQ_TYPE_LOCATION = "Location";
 
+
+    /**
+     * Get advertise statistic information
+     */
+    public static final String REQ_TYPE_ADVT_STA_INFO = "AdvertiseStatisticInformation";
+
+    /**
+     * Get browser statistic information
+     */
+     public static final String REQ_TYPE_BROWSER_STA_INFO = "BrowserStatisticInformation";
+
     // Request type, see REQ_TYPE_DEVICE_LOCK, ....
     private String RequestType;
 
