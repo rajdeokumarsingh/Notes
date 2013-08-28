@@ -1,10 +1,14 @@
-package com.pekall.plist.su.settings.browser;
+package com.pekall.plist.su.settings;
 
 import com.pekall.plist.ObjectComparator;
 import com.pekall.plist.PayloadXmlMsgParser;
 import com.pekall.plist.PlistDebug;
 import com.pekall.plist.beans.PayloadArrayWrapper;
 import com.pekall.plist.beans.PayloadBase;
+import com.pekall.plist.su.settings.browser.BrowserSettings;
+import com.pekall.plist.su.settings.browser.HistoryWatchItem;
+import com.pekall.plist.su.settings.browser.QuickLaunchItem;
+import com.pekall.plist.su.settings.browser.UrlMatchRule;
 import junit.framework.TestCase;
 
 import java.util.ArrayList;

@@ -21,55 +21,55 @@ public class AppInfo {
     /**
      * Name of the application
      */
-    private String app_name;
+    private String appName;
 
     /**
      * Control type
      * 0: must install， 1: white list， 2: black list， 3:grey list
      */
-    private int control_type;
+    private int controlType;
 
     /**
      * Application name match rule, 0 for include the name, 1 for equal the name
      */
-    private int match_rule = 1;
+    private int matchRule = 1;
     /**
      * Package name of the application
      */
-    private String package_name;
+    private String packageName;
 
     /**
      * Version code of the application
      */
-    private String version_code;
+    private String versionCode;
 
     /**
      * Download url for the application
      */
-    private String download_url;
+    private String downloadUrl;
 
     public AppInfo() {
         this("", -1, "", "", "");
     }
 
-    public AppInfo(String app_name, int control_type, String package_name,
-                   String version_code, String download_url) {
-        this.app_name = app_name;
-        this.control_type = control_type;
-        this.package_name = package_name;
-        this.version_code = version_code;
-        this.download_url = download_url;
+    public AppInfo(String appName, int controlType, String packageName,
+                   String versionCode, String downloadUrl) {
+        this.appName = appName;
+        this.controlType = controlType;
+        this.packageName = packageName;
+        this.versionCode = versionCode;
+        this.downloadUrl = downloadUrl;
     }
 
     @Override
     public String toString() {
         return "AppInfo{" +
-                "app_name='" + app_name + '\'' +
-                ", control_type=" + control_type +
-                ", match_rule=" + match_rule +
-                ", package_name='" + package_name + '\'' +
-                ", version_code='" + version_code + '\'' +
-                ", download_url='" + download_url + '\'' +
+                "appName='" + appName + '\'' +
+                ", controlType=" + controlType +
+                ", matchRule=" + matchRule +
+                ", packageName='" + packageName + '\'' +
+                ", versionCode='" + versionCode + '\'' +
+                ", downloadUrl='" + downloadUrl + '\'' +
                 '}';
     }
 
@@ -80,72 +80,72 @@ public class AppInfo {
 
         AppInfo appInfo = (AppInfo) o;
 
-        if (control_type != appInfo.control_type) return false;
-        if (!app_name.equals(appInfo.app_name)) return false;
-        if (!download_url.equals(appInfo.download_url)) return false;
-        if (!package_name.equals(appInfo.package_name)) return false;
-        if (!version_code.equals(appInfo.version_code)) return false;
-        if (match_rule != appInfo.match_rule) return false;
+        if (controlType != appInfo.controlType) return false;
+        if (!appName.equals(appInfo.appName)) return false;
+        if (!downloadUrl.equals(appInfo.downloadUrl)) return false;
+        if (!packageName.equals(appInfo.packageName)) return false;
+        if (!versionCode.equals(appInfo.versionCode)) return false;
+        if (matchRule != appInfo.matchRule) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = app_name.hashCode();
-        result = 31 * result + control_type;
-        result = 31 * result + match_rule;
-        result = 31 * result + package_name.hashCode();
-        result = 31 * result + version_code.hashCode();
-        result = 31 * result + download_url.hashCode();
+        int result = appName.hashCode();
+        result = 31 * result + controlType;
+        result = 31 * result + matchRule;
+        result = 31 * result + packageName.hashCode();
+        result = 31 * result + versionCode.hashCode();
+        result = 31 * result + downloadUrl.hashCode();
         return result;
     }
 
     public String getAppName() {
-        return app_name;
+        return appName;
     }
 
     public void setAppName(String app_name) {
-        this.app_name = app_name;
+        this.appName = app_name;
     }
 
     public int getControlType() {
-        return control_type;
+        return controlType;
     }
 
     public void setControlType(int control_type) {
-        this.control_type = control_type;
+        this.controlType = control_type;
     }
 
     public String getPackageName() {
-        return package_name;
+        return packageName;
     }
 
     public void setPackageName(String package_name) {
-        this.package_name = package_name;
+        this.packageName = package_name;
     }
 
     public String getVersionCode() {
-        return version_code;
+        return versionCode;
     }
 
     public void setVersionCode(String version_code) {
-        this.version_code = version_code;
+        this.versionCode = version_code;
     }
 
     public String getDownloadUrl() {
-        return download_url;
+        return downloadUrl;
     }
 
     public void setDownloadUrl(String download_url) {
-        this.download_url = download_url;
+        this.downloadUrl = download_url;
     }
 
     public int getMatchRule() {
-        return match_rule;
+        return matchRule;
     }
 
     public void setMatchRule(int match_rule) {
-        this.match_rule = match_rule;
+        this.matchRule = match_rule;
     }
 }

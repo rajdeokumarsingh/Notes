@@ -3,13 +3,6 @@ package com.pekall.plist.beans;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created with IntelliJ IDEA.
- * User: jiangrui
- * Date: 8/8/13
- * Time: 7:08 PM
- * To change this template use File | Settings | File Templates.
- */
 public class CommandDeviceInfo extends CommandObject {
     private List<String> Queries = new ArrayList<String>();
 

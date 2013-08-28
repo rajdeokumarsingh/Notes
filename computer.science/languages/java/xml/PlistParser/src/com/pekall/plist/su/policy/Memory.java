@@ -20,28 +20,36 @@ public class Memory {
     /**
      * Detailed memory information, see {@link MemoryLimit}
      */
-    MemoryLimit memory_limit;
+    MemoryLimit memoryLimit;
 
     /**
      * Detailed disk information, see {@link DiskLimit}
      */
-    DiskLimit disk_limit;
+    DiskLimit diskLimit;
 
     public Memory() {
         this(new MemoryLimit(), new DiskLimit());
     }
 
-    public Memory(MemoryLimit memory_limit, DiskLimit disk_limit) {
-        this.memory_limit = memory_limit;
-        this.disk_limit = disk_limit;
+    public Memory(MemoryLimit memoryLimit, DiskLimit diskLimit) {
+        this.memoryLimit = memoryLimit;
+        this.diskLimit = diskLimit;
     }
 
-    @Override
-    public String toString() {
-        return "Memory{" +
-                "memory_limit=" + memory_limit.toString() +
-                "disk_limit=" + disk_limit.toString() +
-                '}';
+    public MemoryLimit getMemoryLimit() {
+        return memoryLimit;
+    }
+
+    public void setMemoryLimit(MemoryLimit memory_limit) {
+        this.memoryLimit = memory_limit;
+    }
+
+    public DiskLimit getDiskLimit() {
+        return diskLimit;
+    }
+
+    public void setDiskLimit(DiskLimit disk_limit) {
+        this.diskLimit = disk_limit;
     }
 
     @Override
@@ -51,25 +59,25 @@ public class Memory {
 
         Memory memory = (Memory) o;
 
-        if (!memory_limit.equals(memory.memory_limit)) return false;
-        if (!disk_limit.equals(memory.disk_limit)) return false;
+        if (diskLimit != null ? !diskLimit.equals(memory.diskLimit) : memory.diskLimit != null) return false;
+        if (memoryLimit != null ? !memoryLimit.equals(memory.memoryLimit) : memory.memoryLimit != null)
+            return false;
 
         return true;
     }
 
-    public MemoryLimit getMemoryLimit() {
-        return memory_limit;
+    @Override
+    public int hashCode() {
+        int result = memoryLimit != null ? memoryLimit.hashCode() : 0;
+        result = 31 * result + (diskLimit != null ? diskLimit.hashCode() : 0);
+        return result;
     }
 
-    public void setMemoryLimit(MemoryLimit memory_limit) {
-        this.memory_limit = memory_limit;
-    }
-
-    public DiskLimit getDiskLimit() {
-        return disk_limit;
-    }
-
-    public void setDiskLimit(DiskLimit disk_limit) {
-        this.disk_limit = disk_limit;
+    @Override
+    public String toString() {
+        return "Memory{" +
+                "memoryLimit=" + memoryLimit +
+                ", diskLimit=" + diskLimit +
+                '}';
     }
 }

@@ -4,6 +4,9 @@ import com.dd.plist.NSArray;
 import com.dd.plist.NSDictionary;
 import com.dd.plist.NSObject;
 import com.pekall.plist.beans.*;
+import com.pekall.plist.su.policy.AppControlList;
+import com.pekall.plist.su.policy.MemorySizePolicy;
+import com.pekall.plist.su.policy.SystemExceptionPolicy;
 import com.pekall.plist.su.settings.SystemSettings;
 import com.pekall.plist.su.settings.advertise.AdvertiseDownloadSettings;
 import com.pekall.plist.su.settings.browser.BrowserSettings;
@@ -34,6 +37,9 @@ public class PayloadXmlMsgParser {
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_SYSTEM_SETTINGS, SystemSettings.class);
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_LAUNCHER_SETTINGS, LauncherSettings.class);
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_ADVT_SETTINGS, AdvertiseDownloadSettings.class);
+        payloadTypes.put(PayloadBase.PAYLOAD_TYPE_MEMORY_POLICY, MemorySizePolicy.class);
+        payloadTypes.put(PayloadBase.PAYLOAD_TYPE_APP_CONTROL_POLICY, AppControlList.class);
+        payloadTypes.put(PayloadBase.PAYLOAD_TYPE_SYSTEM_EXCEPTION_POLICY, SystemExceptionPolicy.class);
     }
 
     private HashMap<String, PayloadBase> payloads = new HashMap<String, PayloadBase>();

@@ -8,18 +8,18 @@ public class AppInfoWrapper {
 
     private List<AppInfo> infos = new ArrayList<AppInfo>();
 
-    String event_id = "";
+    String eventId = "";
 
     public AppInfoWrapper() {
     }
 
     public AppInfoWrapper(String id) {
-        event_id = id;
+        eventId = id;
     }
 
-    public AppInfoWrapper(List<AppInfo> infos, String event_id) {
+    public AppInfoWrapper(List<AppInfo> infos, String eventId) {
         this.infos = infos;
-        this.event_id = event_id;
+        this.eventId = eventId;
     }
 
     public List<AppInfo> getInfos() {
@@ -35,11 +35,11 @@ public class AppInfoWrapper {
     }
 
     public String getEventId() {
-        return event_id;
+        return eventId;
     }
 
     public void setEventId(String event_id) {
-        this.event_id = event_id;
+        this.eventId = event_id;
     }
 
     @Override
@@ -49,7 +49,7 @@ public class AppInfoWrapper {
 
         AppInfoWrapper that = (AppInfoWrapper) o;
 
-        if (!event_id.equals(that.event_id)) return false;
+        if (!eventId.equals(that.eventId)) return false;
         if (!infos.equals(that.infos)) return false;
 
         return true;
@@ -58,7 +58,7 @@ public class AppInfoWrapper {
     @Override
     public int hashCode() {
         int result = infos.hashCode();
-        result = 31 * result + event_id.hashCode();
+        result = 31 * result + eventId.hashCode();
         return result;
     }
 
@@ -66,7 +66,7 @@ public class AppInfoWrapper {
     public String toString() {
         return "AppInfoWrapper{" +
                 "infos=" + infos +
-                ", event_id='" + event_id + '\'' +
+                ", eventId='" + eventId + '\'' +
                 '}';
     }
 }

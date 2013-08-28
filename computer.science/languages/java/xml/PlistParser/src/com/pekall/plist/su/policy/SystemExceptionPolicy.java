@@ -27,11 +27,14 @@ public class SystemExceptionPolicy extends Policy {
     public SystemExceptionPolicy() {
         super();
         exceptions = new ArrayList<SystemException>();
+        setPayloadType(PAYLOAD_TYPE_SYSTEM_EXCEPTION_POLICY);
     }
     public SystemExceptionPolicy(String name, int status, String description,
                                  List<SystemException> exceptions) {
         super(name, status, description);
         this.exceptions = exceptions;
+
+        setPayloadType(PAYLOAD_TYPE_SYSTEM_EXCEPTION_POLICY);
     }
 
     @Override

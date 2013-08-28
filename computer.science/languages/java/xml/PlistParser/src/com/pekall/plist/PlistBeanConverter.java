@@ -73,7 +73,7 @@ public class PlistBeanConverter {
             InvocationTargetException, InstantiationException {
         // TODO: remove unused exception
 
-        Constructor ctor = clz.getConstructor();
+        Constructor ctor = clz.getDeclaredConstructor();
         ctor.setAccessible(true);
         Object data = ctor.newInstance();
 

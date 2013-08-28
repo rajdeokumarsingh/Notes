@@ -32,17 +32,17 @@ public class SystemException {
     /**
      * 异常发生时需要触发的事件
      */
-    private String event_id;
+    private String eventId;
 
     public SystemException() {
         this(-1, "", "", "");
     }
     public SystemException(int status, String type,
-                           String description, String event_id) {
+                           String description, String eventId) {
         this.status = status;
         this.type = type;
         this.description = description;
-        this.event_id = event_id;
+        this.eventId = eventId;
     }
 
     @Override
@@ -51,7 +51,7 @@ public class SystemException {
                 "status=" + status +
                 ", type='" + type + '\'' +
                 ", description='" + description + '\'' +
-                ", event_id='" + event_id + '\'' +
+                ", eventId='" + eventId + '\'' +
                 '}';
     }
 
@@ -64,7 +64,7 @@ public class SystemException {
 
         if (status != that.status) return false;
         if (!description.equals(that.description)) return false;
-        if (!event_id.equals(that.event_id)) return false;
+        if (!eventId.equals(that.eventId)) return false;
         if (!type.equals(that.type)) return false;
 
         return true;
@@ -75,7 +75,7 @@ public class SystemException {
         int result = status;
         result = 31 * result + type.hashCode();
         result = 31 * result + description.hashCode();
-        result = 31 * result + event_id.hashCode();
+        result = 31 * result + eventId.hashCode();
         return result;
     }
 
@@ -104,10 +104,10 @@ public class SystemException {
     }
 
     public String getEventId() {
-        return event_id;
+        return eventId;
     }
 
     public void setEventId(String id) {
-        this.event_id = id;
+        this.eventId = id;
     }
 }

@@ -32,6 +32,10 @@ public class PayloadBase extends BeanBase {
     public static final String PAYLOAD_TYPE_LAUNCHER_SETTINGS = "com.pekall.launcher.settings";
     public static final String PAYLOAD_TYPE_ADVT_SETTINGS = "com.pekall.advertise.settings";
 
+    public static final String PAYLOAD_TYPE_MEMORY_POLICY = "com.pekall.memory.policy";
+    public static final String PAYLOAD_TYPE_APP_CONTROL_POLICY = "com.pekall.app.control.policy";
+    public static final String PAYLOAD_TYPE_SYSTEM_EXCEPTION_POLICY = "com.pekall.system.exception.policy";
+
     /**
      * The payload type, see PAYLOAD_TYPE_...
      */

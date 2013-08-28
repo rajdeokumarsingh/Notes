@@ -14,34 +14,42 @@
 package com.pekall.plist.su.policy;
 
 /**
- * XML element for "memory_size_policy.memory.disk_limit"
+ * XML element for "memory_size_policy.memory.diskLimit"
  */
 public class DiskLimit {
     /**
      * Maximum usage ratio of handset memory
      */
-    int max_ratio;
+    int maxRatio;
 
     /**
      * Event name for punishment
      */
-    String event_id;
+    String eventId;
 
     public DiskLimit() {
         this(-1, "");
     }
 
-    public DiskLimit(int max_ratio, String event_id) {
-        this.max_ratio = max_ratio;
-        this.event_id = event_id;
+    public DiskLimit(int maxRatio, String eventId) {
+        this.maxRatio = maxRatio;
+        this.eventId = eventId;
     }
 
-    @Override
-    public String toString() {
-        return "DiskLimit{" +
-                "max_ratio=" + max_ratio +
-                ", event_id='" + event_id + '\'' +
-                '}';
+    public int getMaxRatio() {
+        return maxRatio;
+    }
+
+    public void setMaxRatio(int max_ratio) {
+        this.maxRatio = max_ratio;
+    }
+
+    public String getEventId() {
+        return eventId;
+    }
+
+    public void setEventId(String id) {
+        this.eventId = id;
     }
 
     @Override
@@ -49,27 +57,26 @@ public class DiskLimit {
         if (this == o) return true;
         if (!(o instanceof DiskLimit)) return false;
 
-        DiskLimit that = (DiskLimit) o;
+        DiskLimit diskLimit = (DiskLimit) o;
 
-        if (max_ratio != that.max_ratio) return false;
-        if (!event_id.equals(that.event_id)) return false;
+        if (maxRatio != diskLimit.maxRatio) return false;
+        if (eventId != null ? !eventId.equals(diskLimit.eventId) : diskLimit.eventId != null) return false;
 
         return true;
     }
 
-    public int getMaxRatio() {
-        return max_ratio;
+    @Override
+    public int hashCode() {
+        int result = maxRatio;
+        result = 31 * result + (eventId != null ? eventId.hashCode() : 0);
+        return result;
     }
 
-    public void setMaxRatio(int max_ratio) {
-        this.max_ratio = max_ratio;
-    }
-
-    public String getEventId() {
-        return event_id;
-    }
-
-    public void setEventId(String id) {
-        this.event_id = id;
+    @Override
+    public String toString() {
+        return "DiskLimit{" +
+                "maxRatio=" + maxRatio +
+                ", eventId='" + eventId + '\'' +
+                '}';
     }
 }

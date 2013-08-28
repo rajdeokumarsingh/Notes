@@ -25,41 +25,13 @@ public class MemorySizePolicy extends Policy {
 
     public MemorySizePolicy() {
         this("", -1, "", new Memory());
+        setPayloadType(PAYLOAD_TYPE_MEMORY_POLICY);
     }
 
     public MemorySizePolicy(String name, int status, String description, Memory memory) {
         super(name, status, description);
-        /*
-        this.name = name;
-        this.status = status;
-        this.description = description;
-        */
         this.memory = memory;
-    }
-
-    @Override
-    public String toString() {
-        return "MemorySizePolicy{" +
-                "name='" + name + '\'' +
-                ", status=" + status +
-                ", description='" + description + '\'' +
-                ", memory=" + memory.toString() +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof MemorySizePolicy)) return false;
-
-        MemorySizePolicy that = (MemorySizePolicy) o;
-
-        if (status != that.status) return false;
-        if (!description.equals(that.description)) return false;
-        if (!memory.equals(that.memory)) return false;
-        if (!name.equals(that.name)) return false;
-
-        return true;
+        setPayloadType(PAYLOAD_TYPE_MEMORY_POLICY);
     }
 
     public Memory getMemory() {
@@ -68,5 +40,32 @@ public class MemorySizePolicy extends Policy {
 
     public void setMemory(Memory memory) {
         this.memory = memory;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof MemorySizePolicy)) return false;
+        if (!super.equals(o)) return false;
+
+        MemorySizePolicy that = (MemorySizePolicy) o;
+
+        if (memory != null ? !memory.equals(that.memory) : that.memory != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + (memory != null ? memory.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "MemorySizePolicy{" +
+                "memory=" + memory +
+                '}';
     }
 }

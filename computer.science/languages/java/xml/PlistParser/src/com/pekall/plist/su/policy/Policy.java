@@ -14,10 +14,12 @@
 package com.pekall.plist.su.policy;
 
 
+import com.pekall.plist.beans.PayloadBase;
+
 /**
  * Base class for policy XML configuration
  */
-public class Policy {
+public class Policy extends PayloadBase {
     /**
      * Policy name
      */
@@ -31,7 +33,7 @@ public class Policy {
     /**
      * Whether is is a default policy
      */
-    boolean mDefault = false;
+    boolean defaultPolicy = false;
 
     /**
      * Policy description
@@ -46,31 +48,6 @@ public class Policy {
         this.name = name;
         this.status = status;
         this.description = description;
-    }
-
-    @Override
-    public String toString() {
-        return "Policy{" +
-                "name='" + name + '\'' +
-                ", default=" + mDefault +
-                ", status=" + status +
-                ", description='" + description + '\'' +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Policy)) return false;
-
-        Policy policy = (Policy) o;
-
-        if (status != policy.status) return false;
-        if (!description.equals(policy.description)) return false;
-        if (!name.equals(policy.name)) return false;
-        if (mDefault != policy.mDefault) return false;
-
-        return true;
     }
 
     public String getName() {
@@ -98,10 +75,47 @@ public class Policy {
     }
 
     public boolean isDefault() {
-        return mDefault;
+        return defaultPolicy;
     }
 
     public void setDefault(boolean mDefault) {
-        this.mDefault = mDefault;
+        this.defaultPolicy = mDefault;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Policy)) return false;
+        if (!super.equals(o)) return false;
+
+        Policy policy = (Policy) o;
+
+        if (defaultPolicy != policy.defaultPolicy) return false;
+        if (status != policy.status) return false;
+        if (description != null ? !description.equals(policy.description) : policy.description != null) return false;
+        if (name != null ? !name.equals(policy.name) : policy.name != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + status;
+        result = 31 * result + (defaultPolicy ? 1 : 0);
+        result = 31 * result + (description != null ? description.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Policy{" +
+                "super=" + super.toString() + "," +
+                "name='" + name + '\'' +
+                ", status=" + status +
+                ", defaultPolicy=" + defaultPolicy +
+                ", description='" + description + '\'' +
+                '}';
     }
 }

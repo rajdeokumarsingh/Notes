@@ -41,7 +41,7 @@ public class InstallInfo {
         this.date = date;
     }
 
-    public InstallInfo() {
+    private InstallInfo() {
         this("", "", "", 0);
     }
 

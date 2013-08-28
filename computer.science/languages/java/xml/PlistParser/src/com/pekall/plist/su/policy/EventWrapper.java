@@ -43,7 +43,7 @@ public class EventWrapper {
     @Override
     public String toString() {
         return "EventWrapper{" +
-                "event_id='" + event_id + '\'' +
+                "eventId='" + event_id + '\'' +
                 '}';
     }
 }

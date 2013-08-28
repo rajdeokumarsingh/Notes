@@ -40,7 +40,7 @@ public class FailedAttempt {
     public String toString() {
         return "FailedAttempt{" +
                 "max_retry_num=" + max_retry_num +
-                ", event_id='" + event_id + '\'' +
+                ", eventId='" + event_id + '\'' +
                 '}';
     }
 

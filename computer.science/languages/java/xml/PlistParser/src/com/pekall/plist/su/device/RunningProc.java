@@ -36,10 +36,9 @@ public class RunningProc {
         this.package_name = package_name;
     }
 
-    public RunningProc() {
+    private RunningProc() {
         this("", "", "");
     }
-
 
     public String getType() {
         return type;

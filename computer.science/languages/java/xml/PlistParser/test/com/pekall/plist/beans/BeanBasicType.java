@@ -8,7 +8,7 @@ import java.util.Date;
  * Test bean class for PlistBeanConverter
  * Only includes basic types
  */
-public class BeanBasicType {
+public class BeanBasicType implements Comparable {
 
     String string = "";
     float float_number;
@@ -144,5 +144,14 @@ public class BeanBasicType {
                 ", date=" + date +
                 ", byte_array=" + Arrays.toString(byte_array) +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        if (this == o) return 0;
+        if (!(o instanceof BeanBasicType)) return 1;
+
+        BeanBasicType that = (BeanBasicType) o;
+        return (this.hashCode() - that.hashCode());
     }
 }

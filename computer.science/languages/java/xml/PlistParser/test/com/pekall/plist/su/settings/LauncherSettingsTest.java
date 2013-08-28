@@ -1,10 +1,13 @@
-package com.pekall.plist.su.settings.launcher;
+package com.pekall.plist.su.settings;
 
 import com.pekall.plist.ObjectComparator;
 import com.pekall.plist.PayloadXmlMsgParser;
 import com.pekall.plist.PlistDebug;
 import com.pekall.plist.beans.PayloadArrayWrapper;
 import com.pekall.plist.beans.PayloadBase;
+import com.pekall.plist.su.settings.launcher.ApkItem;
+import com.pekall.plist.su.settings.launcher.LauncherSettings;
+import com.pekall.plist.su.settings.launcher.WebItem;
 import junit.framework.TestCase;
 
 public class LauncherSettingsTest extends TestCase {

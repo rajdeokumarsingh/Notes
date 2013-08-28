@@ -14,59 +14,60 @@
 package com.pekall.plist.su.policy;
 
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * XML configuration for "app_control_list"
  */
 public class AppControlList extends Policy {
 
-    private AppInfoWrapper must_install = new AppInfoWrapper();
-    private AppInfoWrapper white_list = new AppInfoWrapper();
-    private AppInfoWrapper black_list = new AppInfoWrapper();
-    private AppInfoWrapper grey_list = new AppInfoWrapper();
+    private AppInfoWrapper mustInstall = new AppInfoWrapper();
+    private AppInfoWrapper whiteList = new AppInfoWrapper();
+    private AppInfoWrapper blackList = new AppInfoWrapper();
+    private AppInfoWrapper greyList = new AppInfoWrapper();
 
     public AppControlList() {
         super();
+        setPayloadType(PAYLOAD_TYPE_APP_CONTROL_POLICY);
     }
 
     public AppControlList(String name, int status, String description) {
         super(name, status, description);
+        setPayloadType(PAYLOAD_TYPE_APP_CONTROL_POLICY);
     }
 
     public AppControlList(String name, int status, String description,
-                          AppInfoWrapper must_install,
-                          AppInfoWrapper white_list,
-                          AppInfoWrapper black_list,
-                          AppInfoWrapper grey_list) {
+                          AppInfoWrapper mustInstall,
+                          AppInfoWrapper whiteList,
+                          AppInfoWrapper blackList,
+                          AppInfoWrapper greyList) {
         super(name, status, description);
-        this.must_install = must_install;
-        this.white_list = white_list;
-        this.black_list = black_list;
-        this.grey_list = grey_list;
+        this.mustInstall = mustInstall;
+        this.whiteList = whiteList;
+        this.blackList = blackList;
+        this.greyList = greyList;
+
+        setPayloadType(PAYLOAD_TYPE_APP_CONTROL_POLICY);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("must_install{");
-        for (AppInfo info : must_install.getInfos()) {
+        sb.append("mustInstall{");
+        for (AppInfo info : mustInstall.getInfos()) {
             sb.append(info.toString() + ",");
         }
         sb.append("}");
-        sb.append(",white_list{");
-        for (AppInfo info : white_list.getInfos()) {
+        sb.append(",whiteList{");
+        for (AppInfo info : whiteList.getInfos()) {
             sb.append(info.toString() + ",");
         }
         sb.append("}");
-        sb.append(",black_list{");
-        for (AppInfo info : black_list.getInfos()) {
+        sb.append(",blackList{");
+        for (AppInfo info : blackList.getInfos()) {
             sb.append(info.toString() + ",");
         }
         sb.append("}");
-        sb.append(",grey_list{");
-        for (AppInfo info : grey_list.getInfos()) {
+        sb.append(",greyList{");
+        for (AppInfo info : greyList.getInfos()) {
             sb.append(info.toString() + ",");
         }
         sb.append("}");
@@ -92,50 +93,50 @@ public class AppControlList extends Policy {
     @Override
     public int hashCode() {
         int result = 0;
-        for (AppInfo info : must_install.getInfos()) {
+        for (AppInfo info : mustInstall.getInfos()) {
             result = 31 * result + info.hashCode();
         }
-        for (AppInfo info : white_list.getInfos()) {
+        for (AppInfo info : whiteList.getInfos()) {
             result = 31 * result + info.hashCode();
         }
-        for (AppInfo info : black_list.getInfos()) {
+        for (AppInfo info : blackList.getInfos()) {
             result = 31 * result + info.hashCode();
         }
-        for (AppInfo info : grey_list.getInfos()) {
+        for (AppInfo info : greyList.getInfos()) {
             result = 31 * result + info.hashCode();
         }
         return result;
     }
 
     public AppInfoWrapper getMustInstall() {
-        return must_install;
+        return mustInstall;
     }
 
     public void setMustInstall(AppInfoWrapper must_install) {
-        this.must_install = must_install;
+        this.mustInstall = must_install;
     }
 
     public AppInfoWrapper getWhiteList() {
-        return white_list;
+        return whiteList;
     }
 
     public void setWhiteList(AppInfoWrapper white_list) {
-        this.white_list = white_list;
+        this.whiteList = white_list;
     }
 
     public AppInfoWrapper getBlackList() {
-        return black_list;
+        return blackList;
     }
 
     public void setBlackList(AppInfoWrapper black_list) {
-        this.black_list = black_list;
+        this.blackList = black_list;
     }
 
     public AppInfoWrapper getGreyList() {
-        return grey_list;
+        return greyList;
     }
 
     public void setGreyList(AppInfoWrapper grey_list) {
-        this.grey_list = grey_list;
+        this.greyList = grey_list;
     }
 }

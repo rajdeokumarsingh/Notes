@@ -3,6 +3,8 @@ package com.pekall.plist;
 import com.dd.plist.NSArray;
 import com.dd.plist.NSDictionary;
 import com.pekall.plist.beans.*;
+import com.pekall.plist.su.CommandDeviceInfoStatusSU;
+import com.pekall.plist.su.CommandSettingsStatusSU;
 import com.pekall.plist.su.settings.advertise.AdvertiseInfo;
 import com.pekall.plist.su.settings.browser.BrowserUploadData;
 
@@ -82,6 +84,12 @@ public class CommandStatusMsgParser {
             } else if (root.objectForKey("historyWatchItems") != null) {
                 mMessage = (CommandStatusMsg) PlistBeanConverter
                         .createBeanFromNdict(root, BrowserUploadData.class);
+            } else if (root.objectForKey("settingsSU") != null) {
+                mMessage = (CommandStatusMsg) PlistBeanConverter
+                        .createBeanFromNdict(root, CommandSettingsStatusSU.class);
+            } else if (root.objectForKey("QueryResponsesSU") != null) {
+                mMessage = (CommandStatusMsg) PlistBeanConverter
+                        .createBeanFromNdict(root, CommandDeviceInfoStatusSU.class);
             }
         } catch (Exception e) {
             e.printStackTrace();

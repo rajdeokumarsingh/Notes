@@ -67,7 +67,7 @@ public class GraceTime {
     public String toString() {
         return "GraceTime{" +
                 "time=" + time +
-                ", event_id='" + event_id + '\'' +
+                ", eventId='" + event_id + '\'' +
                 '}';
     }
 }

@@ -111,14 +111,19 @@ public class CommandObject {
 
 
     /**
-     * Get advertise statistic information
+     * Get advertise statistic information, just use for SU
      */
     public static final String REQ_TYPE_ADVT_STA_INFO = "AdvertiseStatisticInformation";
 
     /**
-     * Get browser statistic information
+     * Get browser statistic information, just use for SU
      */
      public static final String REQ_TYPE_BROWSER_STA_INFO = "BrowserStatisticInformation";
+
+    /**
+     * Upload settings, just use for Su
+     */
+    public static final String REQ_TYPE_UPLOAD_SETTINGS = "UploadSettings";
 
     // Request type, see REQ_TYPE_DEVICE_LOCK, ....
     private String RequestType;
