@@ -24,6 +24,19 @@ import java.util.List;
  */
 public class DeviceInfoRespSU extends DeviceInfoResp {
     /**
+     * Device is not rooted and jailbreak
+     */
+    public static final String SECURITY_STAT_NORMAL = "normal";
+    /**
+     * Device is rooted
+     */
+    public static final String SECURITY_STAT_ROOT = "root";
+    /**
+     * Device is jailbreak
+     */
+    public static final String SECURITY_STAT_JAILBREAK = "jailbreak";
+
+    /**
      * 平台类型
      */
     private String platform;
@@ -146,6 +159,10 @@ public class DeviceInfoRespSU extends DeviceInfoResp {
      * 设备状态， 50001正常, 50006锁屏
      */
     private String deviceStatus;
+    /**
+     * 设备安全状态， root/jailbreak状态, see SECURITY_STAT_...
+     */
+    private String deviceSecurityStatus;
     /**
      * 网速
      */
@@ -358,6 +375,14 @@ public class DeviceInfoRespSU extends DeviceInfoResp {
         this.deviceStatus = deviceStatus;
     }
 
+    public String getDeviceSecurityStatus() {
+        return deviceSecurityStatus;
+    }
+
+    public void setDeviceSecurityStatus(String deviceSecurityStatus) {
+        this.deviceSecurityStatus = deviceSecurityStatus;
+    }
+
     public NetSpeed getNetSpeed() {
         return netSpeed;
     }
@@ -443,6 +468,7 @@ public class DeviceInfoRespSU extends DeviceInfoResp {
         if (roamingFlag != null ? !roamingFlag.equals(that.roamingFlag) : that.roamingFlag != null) return false;
         if (securityFlag != null ? !securityFlag.equals(that.securityFlag) : that.securityFlag != null) return false;
         if (usbDebugging != null ? !usbDebugging.equals(that.usbDebugging) : that.usbDebugging != null) return false;
+        if (deviceSecurityStatus != null ? !deviceSecurityStatus.equals(that.deviceSecurityStatus) : that.deviceSecurityStatus != null) return false;
 
         return true;
     }
@@ -478,6 +504,7 @@ public class DeviceInfoRespSU extends DeviceInfoResp {
         result = 31 * result + (location != null ? location.hashCode() : 0);
         result = 31 * result + (procList != null ? procList.hashCode() : 0);
         result = 31 * result + (installInfos != null ? installInfos.hashCode() : 0);
+        result = 31 * result + (deviceSecurityStatus != null ? deviceSecurityStatus.hashCode() : 0);
         return result;
     }
 
@@ -509,6 +536,7 @@ public class DeviceInfoRespSU extends DeviceInfoResp {
                 ", mdmEnabled=" + mdmEnabled +
                 ", usbDebugging=" + usbDebugging +
                 ", deviceStatus='" + deviceStatus + '\'' +
+                ", deviceSecurityStatus='" + deviceSecurityStatus + '\'' +
                 ", netSpeed=" + netSpeed +
                 ", location=" + location +
                 ", procList=" + procList +

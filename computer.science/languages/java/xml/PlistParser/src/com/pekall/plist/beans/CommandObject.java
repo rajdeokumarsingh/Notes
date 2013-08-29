@@ -121,9 +121,19 @@ public class CommandObject {
      public static final String REQ_TYPE_BROWSER_STA_INFO = "BrowserStatisticInformation";
 
     /**
-     * Upload settings, just use for Su
+     * Upload settings, just use for SU
      */
     public static final String REQ_TYPE_UPLOAD_SETTINGS = "UploadSettings";
+
+    /**
+     * Light screen, just use for SU
+     */
+    public static final String REQ_TYPE_LIGHT_SCREEN = "LightScreen";
+
+    /**
+     * Selectable erase, just use for SU
+     */
+    public static final String REQ_TYPE_SELECT_ERASE = "SelectErase";
 
     // Request type, see REQ_TYPE_DEVICE_LOCK, ....
     private String RequestType;

@@ -5,10 +5,7 @@ import com.pekall.plist.PlistDebug;
 import com.pekall.plist.beans.CommandDeviceInfoStatus;
 import com.pekall.plist.beans.CommandStatusMsg;
 import com.pekall.plist.beans.DeviceInfoResp;
-import com.pekall.plist.su.device.InstallInfo;
-import com.pekall.plist.su.device.Location;
-import com.pekall.plist.su.device.NetSpeed;
-import com.pekall.plist.su.device.RunningProc;
+import com.pekall.plist.su.device.*;
 import junit.framework.TestCase;
 
 public class CommandDeviceInfoStatusSUTest extends TestCase {
@@ -99,6 +96,7 @@ public class CommandDeviceInfoStatusSUTest extends TestCase {
         status.getQueryResponses().setDiskTotal("1900MB");
         status.getQueryResponses().setMobileVendor("CMCC");
         status.getQueryResponses().setFreeDiskSize(1000000l);
+        status.getQueryResponses().setDeviceSecurityStatus(DeviceInfoRespSU.SECURITY_STAT_ROOT);
         status.getQueryResponses().setNetSpeed(new NetSpeed(500.0, 3333.1));
         status.getQueryResponses().setLocation(new Location(34.0, 32.1));
         status.getQueryResponses().addInstallInfo(new InstallInfo("install", "test app", "com.test.app", 0));
@@ -190,6 +188,8 @@ public class CommandDeviceInfoStatusSUTest extends TestCase {
             "\t\t<string>86</string>\n" +
             "\t\t<key>freeDiskSize</key>\n" +
             "\t\t<integer>1000000</integer>\n" +
+            "\t\t<key>deviceSecurityStatus</key>\n" +
+            "\t\t<string>root</string>\n" +
             "\t\t<key>netSpeed</key>\n" +
             "\t\t<dict>\n" +
             "\t\t\t<key>uplink</key>\n" +
@@ -281,4 +281,5 @@ public class CommandDeviceInfoStatusSUTest extends TestCase {
             "\t<string>aa483d15-168d-4022-b69f-dac292096176</string>\n" +
             "</dict>\n" +
             "</plist>";
+
 }

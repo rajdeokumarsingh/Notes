@@ -12,4 +12,7 @@ The divide-and-conquer design paradigm
     3. Combine subproblem solutions
 
 
+Reference:
 
+    Java linear algebar library
+        http://math.nist.gov/javanumerics/jama/

@@ -16,6 +16,7 @@
 
 package com.android.browser;
 
+
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.DownloadManager;

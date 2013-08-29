@@ -19,8 +19,10 @@ public class BinarySearch {
         if (target == array[middle]) {
             return middle;  // found
         } else if (target < array[middle]) {
+            // search low partition
             return searchInternal(target, array, begin, middle - 1);
         } else {
+            // search high partition
             return searchInternal(target, array, middle + 1, end);
         }
     }
