@@ -164,6 +164,10 @@ public class DeviceInfoRespSU extends DeviceInfoResp {
      */
     private String deviceSecurityStatus;
     /**
+     * 客户端版本
+     */
+    private String clientVersion;
+    /**
      * 网速
      */
     private NetSpeed netSpeed;
@@ -383,6 +387,14 @@ public class DeviceInfoRespSU extends DeviceInfoResp {
         this.deviceSecurityStatus = deviceSecurityStatus;
     }
 
+    public String getClientVersion() {
+        return clientVersion;
+    }
+
+    public void setClientVersion(String clientVersion) {
+        this.clientVersion = clientVersion;
+    }
+
     public NetSpeed getNetSpeed() {
         return netSpeed;
     }
@@ -469,6 +481,7 @@ public class DeviceInfoRespSU extends DeviceInfoResp {
         if (securityFlag != null ? !securityFlag.equals(that.securityFlag) : that.securityFlag != null) return false;
         if (usbDebugging != null ? !usbDebugging.equals(that.usbDebugging) : that.usbDebugging != null) return false;
         if (deviceSecurityStatus != null ? !deviceSecurityStatus.equals(that.deviceSecurityStatus) : that.deviceSecurityStatus != null) return false;
+        if (clientVersion != null ? !clientVersion.equals(that.clientVersion) : that.clientVersion != null) return false;
 
         return true;
     }
@@ -505,6 +518,7 @@ public class DeviceInfoRespSU extends DeviceInfoResp {
         result = 31 * result + (procList != null ? procList.hashCode() : 0);
         result = 31 * result + (installInfos != null ? installInfos.hashCode() : 0);
         result = 31 * result + (deviceSecurityStatus != null ? deviceSecurityStatus.hashCode() : 0);
+        result = 31 * result + (clientVersion != null ? clientVersion.hashCode() : 0);
         return result;
     }
 
@@ -537,6 +551,7 @@ public class DeviceInfoRespSU extends DeviceInfoResp {
                 ", usbDebugging=" + usbDebugging +
                 ", deviceStatus='" + deviceStatus + '\'' +
                 ", deviceSecurityStatus='" + deviceSecurityStatus + '\'' +
+                ", clientVersion='" + clientVersion + '\'' +
                 ", netSpeed=" + netSpeed +
                 ", location=" + location +
                 ", procList=" + procList +

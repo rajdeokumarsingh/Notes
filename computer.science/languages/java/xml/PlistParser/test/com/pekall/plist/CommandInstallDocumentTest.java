@@ -26,6 +26,8 @@ public class CommandInstallDocumentTest extends TestCase {
             "\t\t<true/>\n" +
             "\t\t<key>DocumentUUID</key>\n" +
             "\t\t<string>23456d87-xxd0-4ff3-axx3-gg7ssb2dd516</string>\n" +
+            "\t\t<key>Version</key>\n" +
+            "\t\t<string>test version</string>\n" +
             "\t\t<key>DocumentDescription</key>\n" +
             "\t\t<string>测试文档</string>\n" +
             "\t\t<key>RequestType</key>\n" +
@@ -67,6 +69,7 @@ public class CommandInstallDocumentTest extends TestCase {
         cmd.setDownloadURL("http://www.pekall.com/test.cc");
         cmd.setNeedEncryption(true);
         cmd.setDocumentFormat(".doc");
+        cmd.setVersion("test version");
 
         return new CommandMsg("51da6d87-8bd0-4c43-a7c3-377bdb260516", cmd);
     }

@@ -44,6 +44,11 @@ public class CommandInstallDocument extends CommandObject {
     private String DocumentUUID;
 
     /**
+     * Just use for PEKALL MDM
+     */
+    private String Version;
+
+    /**
      * Document description
      */
     private String DocumentDescription;
@@ -108,6 +113,14 @@ public class CommandInstallDocument extends CommandObject {
         DocumentFormat = documentFormat;
     }
 
+    public String getVersion() {
+        return Version;
+    }
+
+    public void setVersion(String version) {
+        Version = version;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -126,6 +139,7 @@ public class CommandInstallDocument extends CommandObject {
         if (DownloadURL != null ? !DownloadURL.equals(that.DownloadURL) : that.DownloadURL != null) return false;
         if (NeedEncryption != null ? !NeedEncryption.equals(that.NeedEncryption) : that.NeedEncryption != null)
             return false;
+        if (Version != null ? !Version.equals(that.Version) : that.Version != null) return false;
 
         return true;
     }
@@ -139,6 +153,7 @@ public class CommandInstallDocument extends CommandObject {
         result = 31 * result + (DownloadURL != null ? DownloadURL.hashCode() : 0);
         result = 31 * result + (NeedEncryption != null ? NeedEncryption.hashCode() : 0);
         result = 31 * result + (DocumentUUID != null ? DocumentUUID.hashCode() : 0);
+        result = 31 * result + (Version != null ? Version.hashCode() : 0);
         result = 31 * result + (DocumentDescription != null ? DocumentDescription.hashCode() : 0);
         return result;
     }
@@ -153,6 +168,7 @@ public class CommandInstallDocument extends CommandObject {
                 ", DownloadURL='" + DownloadURL + '\'' +
                 ", NeedEncryption=" + NeedEncryption +
                 ", DocumentUUID='" + DocumentUUID + '\'' +
+                ", Version='" + Version + '\'' +
                 ", DocumentDescription='" + DocumentDescription + '\'' +
                 '}';
     }

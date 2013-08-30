@@ -63,6 +63,7 @@ public class LauncherSettingsTest extends TestCase {
         settings.setDeviceState("active");
         settings.setIsRegistered(1);
         settings.setAdminPassword("123456");
+        settings.setWallpaper("test.png");
         ApkItem item1 = new ApkItem("浏览器", "com.android.browser",
                 "com.android.browser.BrowserActivity",
                 "http://www.pekall.com/icon/1234", 3, 3, 3);
@@ -130,6 +131,8 @@ public class LauncherSettingsTest extends TestCase {
             "\t\t\t<integer>1</integer>\n" +
             "\t\t\t<key>adminPassword</key>\n" +
             "\t\t\t<string>123456</string>\n" +
+            "\t\t\t<key>wallpaper</key>\n" +
+            "\t\t\t<string>test.png</string>\n" +
             "\t\t\t<key>apkItems</key>\n" +
             "\t\t\t<array>\n" +
             "\t\t\t\t<dict>\n" +
@@ -251,6 +254,8 @@ public class LauncherSettingsTest extends TestCase {
             "\t<integer>1</integer>\n" +
             "\t<key>adminPassword</key>\n" +
             "\t<string>123456</string>\n" +
+            "\t<key>wallpaper</key>\n" +
+            "\t<string>test.png</string>\n" +
             "\t<key>apkItems</key>\n" +
             "\t<array>\n" +
             "\t\t<dict>\n" +
@@ -333,4 +338,5 @@ public class LauncherSettingsTest extends TestCase {
             "\t<string>Pekall Capital</string>\n" +
             "</dict>\n" +
             "</plist>";
+
 }

@@ -56,7 +56,10 @@ public class LauncherSettings extends PayloadBase {
      * 管理员密码(由于协议是https的，暂不考虑加密)
      */
     private String adminPassword;
-
+    /**
+     * 壁纸文件
+     */
+    private String wallpaper;
     /**
      * List contains application package/class/screen information
      */
@@ -94,6 +97,7 @@ public class LauncherSettings extends PayloadBase {
         result = 31 * result + (deviceState != null ? deviceState.hashCode() : 0);
         result = 31 * result + (isRegistered != null ? isRegistered.hashCode() : 0);
         result = 31 * result + (adminPassword != null ? adminPassword.hashCode() : 0);
+        result = 31 * result + (wallpaper != null ? wallpaper.hashCode() : 0);
         if(webItems != null) {
             for (WebItem item : webItems) {
                 result += item.hashCode();
@@ -169,6 +173,14 @@ public class LauncherSettings extends PayloadBase {
 
     public void setAdminPassword(String adminPassword) {
         this.adminPassword = adminPassword;
+    }
+
+    public String getWallpaper() {
+        return wallpaper;
+    }
+
+    public void setWallpaper(String wallpaper) {
+        this.wallpaper = wallpaper;
     }
 
     public List<ApkItem> getApkItems() {

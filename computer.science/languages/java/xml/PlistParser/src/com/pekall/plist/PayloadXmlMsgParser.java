@@ -103,6 +103,10 @@ public class PayloadXmlMsgParser {
         }
     }
 
+    public static Class getPayloadClass(String type) {
+        return payloadTypes.get(type);
+    }
+
     /**
      * Get descriptor for the payload, which is encapsulated in the wrapper
      *

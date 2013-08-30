@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="60dip"
+    android:layout_height="90dip"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:clickable="true"
+   
+    android:id="@+id/quick_navigation_line"
+     >
+    
+    <ImageView android:id="@+id/quick_navigation_thumb"
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:background="@drawable/quick_home_img"
+        android:clickable="true"
+        android:descendantFocusability="blocksDescendants"
+        android:src="@drawable/ic_add"/>
+    
+    <TextView android:id="@+id/quick_navigation_title"
+        style="@android:style/TextAppearance.Small"
+        android:layout_width="60dip"
+        android:layout_height="20dip"
+        android:gravity="center"
+        android:singleLine="true"
+        android:descendantFocusability="blocksDescendants"
+        android:text="@string/add_new_quick_navigation"/>
+
+</LinearLayout>
