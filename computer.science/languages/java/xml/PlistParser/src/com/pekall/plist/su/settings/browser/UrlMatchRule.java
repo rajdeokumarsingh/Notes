@@ -171,7 +171,7 @@ public class UrlMatchRule {
      * @param matchType
      */
     public void setMatchType(int matchType) {
-        if (isValidType(matchType)) {
+        if (!isValidType(matchType)) {
             throw new IllegalArgumentException();
         }
         this.matchType = matchType;

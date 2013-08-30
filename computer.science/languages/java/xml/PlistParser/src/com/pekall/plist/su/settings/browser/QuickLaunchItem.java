@@ -19,7 +19,7 @@ public class QuickLaunchItem {
     /**
      * Whether need to update the icon. At first, each quick launch item
      * has a default icon. After user visits the website, the browser will
-     * capture a bitmap for its icon and set mNeedupdate to 0.
+     * capture a bitmap for its icon and set needUpdate to 0.
      */
     private int needUpdate = 1;
 
