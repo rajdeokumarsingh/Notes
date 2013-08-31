@@ -1,13 +1,7 @@
 package com.java.examples.generic;
 
-/**
- * Created with IntelliJ IDEA.
- * User: jiangrui
- * Date: 13-8-10
- * Time: 下午4:04
- * To change this template use File | Settings | File Templates.
- */
 public class C004GenericMethod {
+
     public static <K, V> boolean compare(
             C003Pair<K, V> p1, C003Pair<K, V> p2) {
         return p1.getKey().equals(p2.getKey()) &&

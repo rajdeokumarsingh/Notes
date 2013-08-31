@@ -1,12 +1,5 @@
 package com.java.examples.generic;
 
-/**
- * Created with IntelliJ IDEA.
- * User: jiangrui
- * Date: 13-8-10
- * Time: 下午4:17
- * To change this template use File | Settings | File Templates.
- */
 public class C005BoundedTypeParam<U extends Number>{
 
     private U number;

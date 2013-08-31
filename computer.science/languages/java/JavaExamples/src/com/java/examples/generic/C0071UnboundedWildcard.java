@@ -4,13 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created with IntelliJ IDEA.
- * User: jiangrui
- * Date: 8/12/13
- * Time: 9:20 AM
- * To change this template use File | Settings | File Templates.
- */
 public class C0071UnboundedWildcard {
     // only output List<Object>
     public static void printObjectList(List<Object> list) {

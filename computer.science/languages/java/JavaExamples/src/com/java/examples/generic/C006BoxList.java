@@ -3,13 +3,6 @@ package com.java.examples.generic;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created with IntelliJ IDEA.
- * User: jiangrui
- * Date: 13-8-11
- * Time: 上午9:06
- * To change this template use File | Settings | File Templates.
- */
 public class C006BoxList {
     public static <U> void addBox(U u, List<Box<U>> boxes) {
         Box<U> box = new Box<U>(u);

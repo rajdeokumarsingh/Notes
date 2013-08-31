@@ -1,12 +1,5 @@
 package com.java.examples.generic;
 
-/**
- * Created with IntelliJ IDEA.
- * User: jiangrui
- * Date: 13-8-10
- * Time: 下午3:50
- * To change this template use File | Settings | File Templates.
- */
 public class C003OrderedPair<K, V> implements C003Pair<K, V> {
     private K key;
     private V value;

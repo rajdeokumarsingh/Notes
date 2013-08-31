@@ -3,13 +3,6 @@ package com.java.examples.generic;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created with IntelliJ IDEA.
- * User: jiangrui
- * Date: 8/12/13
- * Time: 9:54 AM
- * To change this template use File | Settings | File Templates.
- */
 public class C0072LowerBoundedWildcard {
     /**
      * The term List<Integer> is more restrictive than List<? super Integer>

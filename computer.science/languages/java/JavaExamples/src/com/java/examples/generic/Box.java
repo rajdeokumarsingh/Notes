@@ -1,12 +1,5 @@
 package com.java.examples.generic;
 
-/**
- * Created with IntelliJ IDEA.
- * User: jiangrui
- * Date: 13-8-11
- * Time: 上午9:02
- * To change this template use File | Settings | File Templates.
- */
 public class Box<T> {
     private T t;
 
