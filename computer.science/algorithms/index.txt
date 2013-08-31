@@ -16,3 +16,5 @@ Reference:
 
     Java linear algebar library
         http://math.nist.gov/javanumerics/jama/
+
+error.txt

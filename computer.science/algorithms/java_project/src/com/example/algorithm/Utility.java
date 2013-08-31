@@ -6,7 +6,7 @@ public class Utility {
     public static double[] randomDoubleArray() {
         Random random = new Random(System.currentTimeMillis());
 
-        int len = random.nextInt(100) + 1;
+        int len = random.nextInt(10000) + 1;
         double[] ret = new double[len];
 
         for (int i = 0; i < ret.length; i++) {
