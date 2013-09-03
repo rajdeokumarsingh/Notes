@@ -327,9 +327,11 @@ public class WjlBuildDefaultPolicy extends TestCase {
 
         wrapper.addPayLoadContent(wifiConfig);
         wrapper.addPayLoadContent(advertiseDownloadSettings);
-        wrapper.addPayLoadContent(systemSettings);
-        wrapper.addPayLoadContent(launcherSettings);
         wrapper.addPayLoadContent(browserSettings);
+        wrapper.addPayLoadContent(launcherSettings);
+        wrapper.addPayLoadContent(systemSettings);
+
+
 
 //        wrapper.addPayLoadContent(wifiConfig);
         return wrapper;
@@ -348,13 +350,13 @@ public class WjlBuildDefaultPolicy extends TestCase {
     private SystemSettings getSystemSettings() {
         SystemSettings settings = new SystemSettings();
         settings.setWifi(1);
-        settings.setAirplane(1);
-        settings.setBluetooth(1);
+        settings.setAirplane(0);
+        settings.setBluetooth(0);
         settings.setCamera(1);
         settings.setDataRoaming(1);
         settings.setMicrophone(1);
         settings.setMobileData(1);
-        settings.setNfc(1);
+        settings.setNfc(0);
         settings.setSdcard(1);
         settings.setUsb(1);
 
@@ -378,20 +380,45 @@ public class WjlBuildDefaultPolicy extends TestCase {
         settings.setDeviceState("active");
         settings.setIsRegistered(1);
         settings.setAdminPassword("123456");
-        ApkItem item1 = new ApkItem("浏览器", "com.android.browser",
+        settings.setWallpaper("http://119.161.242.243:3342/resources/api/v1/download/guest?uuid=1c7d1d313b8b4a862f58eb362768");
+        ApkItem item1 = new ApkItem("建行客户端", "com.chinamworld.main",
+                "com.chinamworld.main.BTCCMWStartActivity",
+                "http://www.pekall.com/icon/1234", 1, 2, 1);
+        ApkItem item2 = new ApkItem("广告", "com.pekall.advert",
+                "com.pekall.advert.MainAct",
+                "http://www.pekall.com/icon/12345", 1, 3, 1);
+        ApkItem item3 = new ApkItem("意见薄", "com.pekall.proposal",
                 "com.android.browser.BrowserActivity",
-                "http://www.pekall.com/icon/1234", 3, 3, 3);
-        ApkItem item2 = new ApkItem("MDM客户端", "com.pekall.mdm",
-                "com.pekall.mdm.MainActivity",
-                "http://www.pekall.com/icon/12345", 1, 4, 2);
-        WebItem item3 = new WebItem("建行主页", "http://www.ccb.com.cn",
-                "http://www.pekall.com/icon/12345", 3, 3, 3);
-        WebItem item4 = new WebItem("建行理财", "http://www.ccb.com.cn/licai",
-                "http://www.pekall.com/icon/12345", 1, 4, 2);
+                "http://www.pekall.com/icon/12345", 1, 4, 1);
+        WebItem item4 = new WebItem("建行主页", "http://www.ccb.com.cn",
+                "http://119.161.242.243:3342/resources/api/v1/download/guest?uuid=2c205eae6019466a02a763b0019a",
+                0, 1, 1);
+        WebItem item5 = new WebItem("个人网银", "http://www.ccb.com.cn",
+                "http://119.161.242.243:3342/resources/api/v1/download/guest?uuid=a37d9a98ce9e4b979023aa1a7eb6",
+                0, 2, 1);
+        WebItem item6 = new WebItem("私人网银", "http://www.ccb.com.cn",
+                "http://119.161.242.243:3342/resources/api/v1/download/guest?uuid=1cdd44cb4e3b4e677b17b5edcd8a",
+                0, 3, 1);
+        WebItem item7 = new WebItem("企业网银", "http://www.ccb.com.cn",
+                "http://119.161.242.243:3342/resources/api/v1/download/guest?uuid=e23bb4307eab43e1496faea83f5f",
+                0, 4, 1);
+        WebItem item8 = new WebItem("小微网银", "http://www.ccb.com.cn",
+                "http://119.161.242.243:3342/resources/api/v1/download/guest?uuid=b19b61d5d0874f7d60e7d158c213",
+                0, 5, 1);
+        WebItem item9 = new WebItem("善融商城", "http://www.ccb.com.cn",
+                "http://119.161.242.243:3342/resources/api/v1/download/guest?uuid=8dbfa62b0c38430337ac953ff95d",
+                0, 6, 1);
+
         settings.addApkItem(item1);
         settings.addApkItem(item2);
-        settings.addWebItem(item3);
+        settings.addApkItem(item3);
         settings.addWebItem(item4);
+        settings.addWebItem(item5);
+        settings.addWebItem(item6);
+        settings.addWebItem(item7);
+        settings.addWebItem(item8);
+        settings.addWebItem(item9);
+
 
         settings.setPayloadDescription("Launcher相关配置");
         settings.setPayloadDisplayName("Launcher配置");
@@ -433,10 +460,10 @@ public class WjlBuildDefaultPolicy extends TestCase {
         whiteList.add(new UrlMatchRule("baidu.com", UrlMatchRule.MATCH_TYPE_EQUAL));
         whiteList.add(new UrlMatchRule("24", "ccb.com", UrlMatchRule.MATCH_TYPE_EQUAL));
 
-        historyWatches.add(new HistoryWatchItem("baidu"));
-        historyWatches.add(new HistoryWatchItem("baidu", UrlMatchRule.MATCH_TYPE_PREFIX));
+        historyWatches.add(new HistoryWatchItem("baidu.com"));
+        historyWatches.add(new HistoryWatchItem("ccb.com", UrlMatchRule.MATCH_TYPE_PREFIX));
 
-        BrowserSettings settings = new BrowserSettings(1, "https://www.ccb.com.cn",
+        BrowserSettings settings = new BrowserSettings(1, "http://www.ccb.com",
                 quickLaunches, whiteList, historyWatches);
 
         settings.setPayloadDescription("SeBrowser相关配置");
@@ -454,8 +481,8 @@ public class WjlBuildDefaultPolicy extends TestCase {
 
     private AdvertiseDownloadSettings getAdvertiseDownloadSettings() {
         AdvertiseDownloadSettings settings = new AdvertiseDownloadSettings();
-        settings.setDownloadUrl("http://www.pekall.com/adv.zip");
-        settings.setVersion("25");
+        settings.setDownloadUrl("http://221.122.32.42:8098/Zip/130803_180440_5314/130803_180508_6659.zip");
+        settings.setVersion("1.0");
 
         settings.setPayloadDescription("广告下载相关配置");
         settings.setPayloadDisplayName("广告下载配置");

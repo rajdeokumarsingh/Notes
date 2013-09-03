@@ -2,12 +2,6 @@ package com.pekall.plist.beans;
 
 import java.util.Arrays;
 
-/**
- * Created with IntelliJ IDEA.
- * User: wjl
- * Date: 13-8-8
- * Time: 下午4:50
- */
 public class ClearPasscodeReq extends CommandObject {
     public static final String KEY_UNLOCKTOKEN = "UnlockToken";
     private byte[] UnlockToken;
