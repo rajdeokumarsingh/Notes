@@ -7,8 +7,6 @@
 100 ./src/com/android/providers/downloads/RealSystemFacade.java
     实现SystemFacade api
 
-110 ./src/com/android/providers/downloads/DownloadDrmHelper.java
-
 123 ./src/com/android/providers/downloads/DownloadHandler.java
 
     // 维护一个下载pending队列mDownloadsQueue 
@@ -101,7 +99,6 @@
 
 1024 ./src/com/android/providers/downloads/DownloadThread.java
 1264 ./src/com/android/providers/downloads/DownloadProvider.java
-
 
 60 ./ui/src/com/android/providers/downloads/ui/DateSortedDownloadAdapter.java
 149 ./ui/src/com/android/providers/downloads/ui/DownloadItem.java
