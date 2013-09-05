@@ -1,5 +1,6 @@
 package com.pekall.plist;
 
+import com.pekall.plist.beans.BeanBase;
 import com.pekall.plist.beans.PayloadArrayWrapper;
 import com.pekall.plist.beans.PayloadEmail;
 import junit.framework.TestCase;
@@ -23,6 +24,8 @@ public class PayloadEmailTest extends TestCase {
             "\t\t\t<string>rui.jiang@pekall.com</string>\n" +
             "\t\t\t<key>IncomingMailServerAuthentication</key>\n" +
             "\t\t\t<string>EmailAuthPassword</string>\n" +
+            "\t\t\t<key>IncomingMailServerHostName</key>\n" +
+            "\t\t\t<string>192.168.10.230</string>\n" +
             "\t\t\t<key>IncomingMailServerPortNumber</key>\n" +
             "\t\t\t<integer>8088</integer>\n" +
             "\t\t\t<key>IncomingMailServerUseSSL</key>\n" +
@@ -108,6 +111,7 @@ public class PayloadEmailTest extends TestCase {
         email.setEmailAccountType(PayloadEmail.EMAIL_TYPE_POP);
         email.setEmailAccountName("Jiang Rui");
         email.setEmailAddress("rui.jiang@pekall.com");
+        email.setIncomingMailServerHostName("192.168.10.230");
         email.setIncomingMailServerAuthentication(PayloadEmail.EMAIL_AUTH_PASSWORD);
         email.setIncomingMailServerPortNumber(8088);
         email.setIncomingMailServerUseSSL(true);

@@ -1,0 +1,111 @@
+37 ./src/com/android/providers/downloads/StopRequestException.java
+    下载停止时抛出的异常, 包括一个message和final status
+    
+69 ./src/com/android/providers/downloads/SystemFacade.java
+    接口，提供系统api
+
+100 ./src/com/android/providers/downloads/RealSystemFacade.java
+    实现SystemFacade api
+
+110 ./src/com/android/providers/downloads/DownloadDrmHelper.java
+
+123 ./src/com/android/providers/downloads/DownloadHandler.java
+
+    // 维护一个下载pending队列mDownloadsQueue 
+    // 将DownloadInfo添加到队列中， 并启动下载线程
+    public synchronized void enqueueDownload(DownloadInfo info) {
+        if (!mDownloadsQueue.containsKey(info.mId)) {
+            mDownloadsQueue.put(info.mId, info);
+
+            startDownloadThreadLocked(); {
+
+                // 将DownloadInfo从pending队列中移动到in progress队列中
+                // 并开启下载线程
+                Iterator<Long> keys = mDownloadsQueue.keySet().iterator();
+                ArrayList<Long> ids = new ArrayList<Long>();
+                while (mDownloadsInProgress.size() < mMaxConcurrentDownloadsAllowed && keys.hasNext()) {
+                    Long id = keys.next();
+                    DownloadInfo info = mDownloadsQueue.get(id);
+                    // TODO: link
+                    info.startDownloadThread();
+                    ids.add(id);
+                    mDownloadsInProgress.put(id, mDownloadsQueue.get(id));
+                }
+                // 将已经添加的DownloadInfo从pending队列中移除
+                for (Long id : ids) {
+                    mDownloadsQueue.remove(id);
+                }
+            }
+        }
+    }
+
+    // 检查pending和in-progress队列中是否有对应id的DownloadInfo
+    public synchronized boolean hasDownloadInQueue(long id)
+
+    // 从In-progress队列中移除id对应的DownloadInfo
+    public synchronized void dequeueDownload(long id)
+
+125 ./src/com/android/providers/downloads/OpenHelper.java
+    提供一个帮助方法，生成intent去打开id位置的下载文件
+
+    // Build an Intent to view the download at current Cursor
+    // position, handling subtleties around installing packages.
+    public static Intent buildViewIntent(Context context, long id)
+ 
+137 ./src/com/android/providers/downloads/SizeLimitActivity.java
+    当下载使用的流量超过系统限制时，提示用户。
+    用户可以选择删除正在下载的文件，或忽略限制。
+
+242 ./src/com/android/providers/downloads/DownloadReceiver.java
+    BroadcastReceiver, receives system broadcasts (boot, network connectivity)
+
+    if (action.equals(Intent.ACTION_BOOT_COMPLETED)) {
+        startService(context);
+    } else if (action.equals(Intent.ACTION_MEDIA_MOUNTED)) {
+        startService(context);
+    } else if (action.equals(ConnectivityManager.CONNECTIVITY_ACTION)) {
+        // 网络连接上时
+        startService(context);
+    } else if (action.equals(Constants.ACTION_RETRY)) {
+        startService(context);
+    } else if (action.equals(Constants.ACTION_OPEN)
+            || action.equals(Constants.ACTION_LIST)
+            || action.equals(Constants.ACTION_HIDE)) {
+        // Handle any broadcast related to a system notification.
+        handleNotificationBroadcast(context, intent);
+            点击notification时打开下载文件，等等
+    }
+
+
+318 ./src/com/android/providers/downloads/DownloadNotifier.java
+    创建，更新下载Notification items
+    
+484 ./src/com/android/providers/downloads/StorageManager.java
+    管理系统的下载空间
+
+573 ./src/com/android/providers/downloads/DownloadService.java
+    通过DownloadManagerContentObserver extends ContentObserver, 观察下载数据库。
+        当数据库发生变化时，更新本地内存数据结构
+
+    通过MediaScannerConnection implements ServiceConnection 连接media scanner
+
+    通过一个UpdateThread同步数据库和内存数据结构, 并通过DownloadNotifier更新notification items
+
+    MVC 模式中的controller
+
+598 ./src/com/android/providers/downloads/DownloadInfo.java
+    一个下载项目的内存数据
+
+694 ./src/com/android/providers/downloads/Helpers.java
+    帮助类，主要用来从url生成文件名
+
+1024 ./src/com/android/providers/downloads/DownloadThread.java
+1264 ./src/com/android/providers/downloads/DownloadProvider.java
+
+
+60 ./ui/src/com/android/providers/downloads/ui/DateSortedDownloadAdapter.java
+149 ./ui/src/com/android/providers/downloads/ui/DownloadItem.java
+215 ./ui/src/com/android/providers/downloads/ui/DownloadAdapter.java
+354 ./ui/src/com/android/providers/downloads/ui/DateSortedExpandableListAdapter.java
+789 ./ui/src/com/android/providers/downloads/ui/DownloadList.java
+

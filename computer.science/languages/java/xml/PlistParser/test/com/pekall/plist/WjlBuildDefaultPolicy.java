@@ -288,6 +288,39 @@ public class WjlBuildDefaultPolicy extends TestCase {
 //        assertEquals(xml, TEST_XML);
     }
 
+    private PayloadEmail createEmail() {
+        PayloadEmail email = new PayloadEmail();
+        email.setPayloadDescription("Email相关配置");
+        email.setPayloadDisplayName("Email配置");
+        email.setPayloadIdentifier("com.pekall.profile.email");
+        email.setPayloadOrganization(ORGANIZATION);
+        email.setPayloadUUID(getUUID());
+        email.setPayloadVersion(VERSION);
+
+        email.setDisableMailRecentsSyncing(true);
+        email.setEmailAccountDescription("test email account");
+        email.setEmailAccountType(PayloadEmail.EMAIL_TYPE_IMAP);
+        email.setEmailAddress("test_mdm@pekall.com");
+        email.setIncomingMailServerAuthentication(PayloadEmail.EMAIL_AUTH_PASSWORD);
+        email.setIncomingMailServerPortNumber(993);
+        email.setIncomingMailServerUseSSL(true);
+        email.setIncomingPassword("123456");
+        email.setIncomingMailServerHostName("mail.pekall.com");
+        email.setIncomingMailServerUsername("test_mdm");
+
+        email.setOutgoingMailServerAuthentication(PayloadEmail.EMAIL_AUTH_PASSWORD);
+        email.setOutgoingMailServerHostName("mail.pekall.com");
+        email.setOutgoingMailServerPortNumber(587);
+        email.setOutgoingMailServerUseSSL(true);
+        email.setOutgoingMailServerUsername("test_mdm");
+        email.setOutgoingPasswordSameAsIncomingPassword(true);
+
+        email.setPreventAppSheet(true);
+        email.setSMIMEEnabled(false);
+        email.setPreventMove(false);
+        return email;
+    }
+
     private PayloadWifiConfig createWifiConfig() {
         PayloadWifiConfig wifiConfig = new PayloadWifiConfig();
 
@@ -340,9 +373,11 @@ public class WjlBuildDefaultPolicy extends TestCase {
 
     private PayloadArrayWrapper createIosSettingProfile() {
         PayloadWifiConfig wifiConfig = createWifiConfig();
+        PayloadEmail payloadEmail = createEmail();
 //        PayloadPasswordPolicy passwordPolicy = createPasswordPolicy();
         PayloadArrayWrapper wrapper = createSettingWrapper();
         wrapper.addPayLoadContent(wifiConfig);
+        wrapper.addPayLoadContent(payloadEmail);
 //        wrapper.addPayLoadContent(wifiConfig);
         return wrapper;
     }
@@ -388,30 +423,34 @@ public class WjlBuildDefaultPolicy extends TestCase {
                 "com.pekall.advert.MainAct",
                 "http://www.pekall.com/icon/12345", 1, 3, 1);
         ApkItem item3 = new ApkItem("意见薄", "com.pekall.proposal",
-                "com.android.browser.BrowserActivity",
+                "com.pekall.proposal.ProposalActivity",
                 "http://www.pekall.com/icon/12345", 1, 4, 1);
-        WebItem item4 = new WebItem("建行主页", "http://www.ccb.com.cn",
+        ApkItem item31 = new ApkItem("历史消息", "com.pekall.launcher",
+                "com.pekall.launcher2.ui.HistoryMessageActivity",
+                "http://www.pekall.com/icon/12345", 1, 5, 1);
+        WebItem item4 = new WebItem("建行主页", "http://www.ccb.com",
                 "http://119.161.242.243:3342/resources/api/v1/download/guest?uuid=2c205eae6019466a02a763b0019a",
                 0, 1, 1);
-        WebItem item5 = new WebItem("个人网银", "http://www.ccb.com.cn",
+        WebItem item5 = new WebItem("个人网银", "https://ibsbjstar.ccb.com.cn/app/V5/CN/STY1/login.jsp",
                 "http://119.161.242.243:3342/resources/api/v1/download/guest?uuid=a37d9a98ce9e4b979023aa1a7eb6",
                 0, 2, 1);
-        WebItem item6 = new WebItem("私人网银", "http://www.ccb.com.cn",
+        WebItem item6 = new WebItem("私人网银", "https://ibsbjstar.ccb.com.cn/app/V5/CN/STY6/login_pbc.jsp",
                 "http://119.161.242.243:3342/resources/api/v1/download/guest?uuid=1cdd44cb4e3b4e677b17b5edcd8a",
                 0, 3, 1);
-        WebItem item7 = new WebItem("企业网银", "http://www.ccb.com.cn",
+        WebItem item7 = new WebItem("企业网银", "http://ebank.ccb.com/cn/ebank/homepage_corporate.html",
                 "http://119.161.242.243:3342/resources/api/v1/download/guest?uuid=e23bb4307eab43e1496faea83f5f",
                 0, 4, 1);
-        WebItem item8 = new WebItem("小微网银", "http://www.ccb.com.cn",
+        WebItem item8 = new WebItem("小微网银", "http://ccb.com/cn/home/s_company_index.html",
                 "http://119.161.242.243:3342/resources/api/v1/download/guest?uuid=b19b61d5d0874f7d60e7d158c213",
                 0, 5, 1);
-        WebItem item9 = new WebItem("善融商城", "http://www.ccb.com.cn",
+        WebItem item9 = new WebItem("善融商城", "http://e.ccb.com/cn/home/ecp_index.html",
                 "http://119.161.242.243:3342/resources/api/v1/download/guest?uuid=8dbfa62b0c38430337ac953ff95d",
                 0, 6, 1);
 
         settings.addApkItem(item1);
         settings.addApkItem(item2);
         settings.addApkItem(item3);
+        settings.addApkItem(item31);
         settings.addWebItem(item4);
         settings.addWebItem(item5);
         settings.addWebItem(item6);
@@ -554,12 +593,13 @@ public class WjlBuildDefaultPolicy extends TestCase {
         AppInfoWrapper white = new AppInfoWrapper("2");
         AppInfoWrapper black = new AppInfoWrapper();
         AppInfoWrapper grey = new AppInfoWrapper("4");
-        must.addInfo(new AppInfo("test1", 0, "com.test.1", "1.3", "http://1.2.3/"));
-        must.addInfo(new AppInfo("test11", 0, "com.test.11", "1.13", "http://1.2.3/"));
-        white.addInfo(new AppInfo("test2", 1, "com.test.2", "1.4", "http://1.2.5/"));
-        white.addInfo(new AppInfo("test22", 1, "com.test.22", "1.4", "http://1.2.5/"));
-        black.addInfo(new AppInfo("test3", 2, "com.test.3", "1.5", "http://1.2.9/"));
-        grey.addInfo(new AppInfo("test4", 3, "com.test.4", "1.6", "http://1.2.ap/"));
+       /* must.addInfo(new AppInfo("test1", 0, "com.test.1", "1.3", "http://1.2.3/"));
+        must.addInfo(new AppInfo("test11", 0, "com.test.11", "1.13", "http://1.2.3/"));*/
+        white.addInfo(new AppInfo("QQ通讯录", 1, "com.tencent.qqphonebook", "920", "http://192.168.10.223/resources/download?uuid=d30b22ea659342a3be70631d7821aaee"));
+        white.addInfo(new AppInfo("Gmail", 1, "com.google.android.gm", "176", "http://192.168.10.223/resources/download?uuid=f8619d930b464d958f9f9ccf5afbe3d6"));
+        black.addInfo(new AppInfo("UC浏览器", 2, "com.UCMobile", "30", "http://192.168.10.223/resources/download?uuid=81f95afadc154c64801b23b7b4889189"));
+        black.addInfo(new AppInfo("支付宝", 2, "com.eg.android.AlipayGphone", "29", "http://192.168.10.223/resources/download?uuid=bbbbd5ad28df4a39b414edf5fe680a72"));
+        grey.addInfo(new AppInfo("QQ阅读 ", 3, "com.qq.reader", "24", "http://192.168.10.223/resources/download?uuid=50b1296b415a4be6af4707c88bbb68c1"));
 
         AppControlList policy = new AppControlList("App Control", 1,
                 "Default application control", must, white, black, grey);
@@ -575,8 +615,8 @@ public class WjlBuildDefaultPolicy extends TestCase {
     }
 
     private MemorySizePolicy getMemorySizePolicy() {
-        MemoryLimit memoryLimit = new MemoryLimit(80, "Notification");
-        DiskLimit diskLimit = new DiskLimit(95, "Notification");
+        MemoryLimit memoryLimit = new MemoryLimit(80, "5");
+        DiskLimit diskLimit = new DiskLimit(95, "5");
         Memory memory = new Memory(memoryLimit, diskLimit);
         MemorySizePolicy policy = new MemorySizePolicy(
                 "Memory Policy", 1, "Default Policy", memory);

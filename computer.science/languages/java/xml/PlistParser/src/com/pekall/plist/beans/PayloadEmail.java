@@ -50,6 +50,11 @@ public class PayloadEmail extends PayloadBase {
     private String IncomingMailServerAuthentication;
 
     /**
+     * Designates the incoming mail server host name (or IP address).
+     */
+    private String IncomingMailServerHostName;
+
+    /**
      * Optional. Designates the incoming mail server port number.
      * If no port number is specified, the default port for a given protocol is used.
      */
@@ -193,6 +198,14 @@ public class PayloadEmail extends PayloadBase {
 
     public void setIncomingMailServerAuthentication(String incomingMailServerAuthentication) {
         IncomingMailServerAuthentication = incomingMailServerAuthentication;
+    }
+
+    public String getIncomingMailServerHostName() {
+        return IncomingMailServerHostName;
+    }
+
+    public void setIncomingMailServerHostName(String incomingMailServerHostName) {
+        IncomingMailServerHostName = incomingMailServerHostName;
     }
 
     public Integer getIncomingMailServerPortNumber() {
@@ -348,6 +361,8 @@ public class PayloadEmail extends PayloadBase {
         if (EmailAddress != null ? !EmailAddress.equals(that.EmailAddress) : that.EmailAddress != null) return false;
         if (IncomingMailServerAuthentication != null ? !IncomingMailServerAuthentication.equals(that.IncomingMailServerAuthentication) : that.IncomingMailServerAuthentication != null)
             return false;
+        if (IncomingMailServerHostName != null ? !IncomingMailServerHostName.equals(that.IncomingMailServerHostName) : that.IncomingMailServerHostName != null)
+            return false;
         if (IncomingMailServerPortNumber != null ? !IncomingMailServerPortNumber.equals(that.IncomingMailServerPortNumber) : that.IncomingMailServerPortNumber != null)
             return false;
         if (IncomingMailServerUseSSL != null ? !IncomingMailServerUseSSL.equals(that.IncomingMailServerUseSSL) : that.IncomingMailServerUseSSL != null)
@@ -392,6 +407,7 @@ public class PayloadEmail extends PayloadBase {
         result = 31 * result + (EmailAccountType != null ? EmailAccountType.hashCode() : 0);
         result = 31 * result + (EmailAddress != null ? EmailAddress.hashCode() : 0);
         result = 31 * result + (IncomingMailServerAuthentication != null ? IncomingMailServerAuthentication.hashCode() : 0);
+        result = 31 * result + (IncomingMailServerHostName != null ? IncomingMailServerHostName.hashCode() : 0);
         result = 31 * result + (IncomingMailServerPortNumber != null ? IncomingMailServerPortNumber.hashCode() : 0);
         result = 31 * result + (IncomingMailServerUseSSL != null ? IncomingMailServerUseSSL.hashCode() : 0);
         result = 31 * result + (IncomingMailServerUsername != null ? IncomingMailServerUsername.hashCode() : 0);
@@ -421,6 +437,7 @@ public class PayloadEmail extends PayloadBase {
                 ", EmailAccountType='" + EmailAccountType + '\'' +
                 ", EmailAddress='" + EmailAddress + '\'' +
                 ", IncomingMailServerAuthentication='" + IncomingMailServerAuthentication + '\'' +
+                ", IncomingMailServerHostName='" + IncomingMailServerHostName + '\'' +
                 ", IncomingMailServerPortNumber=" + IncomingMailServerPortNumber +
                 ", IncomingMailServerUseSSL=" + IncomingMailServerUseSSL +
                 ", IncomingMailServerUsername='" + IncomingMailServerUsername + '\'' +
