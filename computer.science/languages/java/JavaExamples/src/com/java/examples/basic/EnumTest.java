@@ -20,7 +20,6 @@ class NetworkInfo {
     }
 }
 
-
 public class EnumTest {
     public static void main(String[] args) {
         NetworkInfo info = new NetworkInfo();

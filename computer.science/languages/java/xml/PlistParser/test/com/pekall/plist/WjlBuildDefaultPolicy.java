@@ -321,6 +321,28 @@ public class WjlBuildDefaultPolicy extends TestCase {
         return email;
     }
 
+    private PayloadExchange createExchange() {
+        PayloadExchange exchange = new PayloadExchange();
+        exchange.setPayloadDescription("Exchange相关配置");
+        exchange.setPayloadDisplayName("Exchange配置");
+        exchange.setPayloadIdentifier("com.pekall.profile.exchange");
+        exchange.setPayloadOrganization(ORGANIZATION);
+        exchange.setPayloadUUID(getUUID());
+        exchange.setPayloadVersion(1);
+
+        exchange.setMailNumberOfPastDaysToSync(3);
+        exchange.setDisableMailRecentsSyncing(false);
+        exchange.setEmailAddress("xiaoliang.li@mdm.com");
+        exchange.setHost("192.168.10.239");
+        exchange.setUserName("mdm\\bingxing.wang");
+        exchange.setPassword("Pekall123");
+        exchange.setSSL(false);
+        exchange.setSMIMEEnabled(false);
+        exchange.setPreventAppSheet(false);
+
+        return exchange;
+    }
+
     private PayloadWifiConfig createWifiConfig() {
         PayloadWifiConfig wifiConfig = new PayloadWifiConfig();
 
@@ -551,12 +573,15 @@ public class WjlBuildDefaultPolicy extends TestCase {
         PayloadPasswordPolicy passwordPolicy = createPasswordPolicy();
         PayloadRestrictionsPolicy restrictionsPolicy = createIosRestrictionsPolicy();
 
+        PayloadExchange payloadExchange = createExchange();
+
         MemorySizePolicy memorySizePolicy = getMemorySizePolicy();
         AppControlList appControlList = getAppControlList();
         SystemExceptionPolicy systemExceptionPolicy = getSystemExceptionPolicy();
 
         PayloadArrayWrapper wrapper = createWrapper();
         wrapper.addPayLoadContent(passwordPolicy);
+        wrapper.addPayLoadContent(payloadExchange);
         wrapper.addPayLoadContent(restrictionsPolicy);
         wrapper.addPayLoadContent(memorySizePolicy);
         wrapper.addPayLoadContent(appControlList);
@@ -635,12 +660,14 @@ public class WjlBuildDefaultPolicy extends TestCase {
 //        PayloadWifiConfig wifiConfig = createWifiConfig();
         PayloadPasswordPolicy passwordPolicy = createPasswordPolicy();
         PayloadRestrictionsPolicy restrictionsPolicy = createIosRestrictionsPolicy();
+        PayloadExchange payloadExchange = createExchange();
 
         PayloadRemovalPassword removalPassword = createRemovalPassword();
 
         PayloadArrayWrapper wrapper = createWrapper();
         wrapper.addPayLoadContent(passwordPolicy);
         wrapper.addPayLoadContent(restrictionsPolicy);
+        wrapper.addPayLoadContent(payloadExchange);
 //        wrapper.addPayLoadContent(removalPassword);
 //        wrapper.addPayLoadContent(wifiConfig);
         return wrapper;
