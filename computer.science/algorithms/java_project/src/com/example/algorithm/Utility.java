@@ -22,7 +22,7 @@ public class Utility {
         int[] ret = new int[len];
 
         for (int i = 0; i < ret.length; i++) {
-            ret[i] = random.nextInt(900);
+            ret[i] = random.nextInt(900) + 1;
         }
         return ret;
     }
