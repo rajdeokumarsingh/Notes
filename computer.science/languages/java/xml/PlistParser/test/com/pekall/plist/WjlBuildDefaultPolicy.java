@@ -334,7 +334,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
         exchange.setDisableMailRecentsSyncing(false);
         exchange.setEmailAddress("xiaoliang.li@mdm.com");
         exchange.setHost("192.168.10.239");
-        exchange.setUserName("mdm\\bingxing.wang");
+        exchange.setUserName("mdm\\xiaoliang.li");
         exchange.setPassword("Pekall123");
         exchange.setSSL(false);
         exchange.setSMIMEEnabled(false);
@@ -373,6 +373,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
         PayloadWifiConfig wifiConfig = createWifiConfig();
 //        PayloadPasswordPolicy passwordPolicy = createPasswordPolicy();
         PayloadArrayWrapper wrapper = createSettingWrapper();
+        PayloadEmail payloadEmail = createEmail();
 
         AdvertiseDownloadSettings advertiseDownloadSettings = getAdvertiseDownloadSettings();
         SystemSettings systemSettings = getSystemSettings();
@@ -381,10 +382,11 @@ public class WjlBuildDefaultPolicy extends TestCase {
 
 
         wrapper.addPayLoadContent(wifiConfig);
-        wrapper.addPayLoadContent(advertiseDownloadSettings);
-        wrapper.addPayLoadContent(browserSettings);
-        wrapper.addPayLoadContent(launcherSettings);
-        wrapper.addPayLoadContent(systemSettings);
+        wrapper.addPayLoadContent(payloadEmail);
+//        wrapper.addPayLoadContent(advertiseDownloadSettings);
+//        wrapper.addPayLoadContent(browserSettings);
+//        wrapper.addPayLoadContent(launcherSettings);
+//        wrapper.addPayLoadContent(systemSettings);
 
 
 
@@ -396,10 +398,12 @@ public class WjlBuildDefaultPolicy extends TestCase {
     private PayloadArrayWrapper createIosSettingProfile() {
         PayloadWifiConfig wifiConfig = createWifiConfig();
         PayloadEmail payloadEmail = createEmail();
+        PayloadVPN payloadVPN = createVPN();
 //        PayloadPasswordPolicy passwordPolicy = createPasswordPolicy();
         PayloadArrayWrapper wrapper = createSettingWrapper();
         wrapper.addPayLoadContent(wifiConfig);
         wrapper.addPayLoadContent(payloadEmail);
+        wrapper.addPayLoadContent(payloadVPN);
 //        wrapper.addPayLoadContent(wifiConfig);
         return wrapper;
     }
@@ -583,9 +587,9 @@ public class WjlBuildDefaultPolicy extends TestCase {
         wrapper.addPayLoadContent(passwordPolicy);
         wrapper.addPayLoadContent(payloadExchange);
         wrapper.addPayLoadContent(restrictionsPolicy);
-        wrapper.addPayLoadContent(memorySizePolicy);
-        wrapper.addPayLoadContent(appControlList);
-        wrapper.addPayLoadContent(systemExceptionPolicy);
+//        wrapper.addPayLoadContent(memorySizePolicy);
+//        wrapper.addPayLoadContent(appControlList);
+//        wrapper.addPayLoadContent(systemExceptionPolicy);
 //        wrapper.addPayLoadContent(removalPassword);
 //        wrapper.addPayLoadContent(wifiConfig);
         return wrapper;
@@ -742,6 +746,45 @@ public class WjlBuildDefaultPolicy extends TestCase {
         policy.setAllowUIConfigurationProfileInstallation(true);
 
         return policy;
+    }
+
+    private PayloadVPN createVPN() {
+        PayloadVPN vpn = new PayloadVPN();
+        vpn.setPayloadDescription("VPN相关配置");
+        vpn.setPayloadDisplayName("VPN配置");
+        vpn.setPayloadIdentifier("com.pekall.profile.VPN");
+        vpn.setPayloadOrganization(ORGANIZATION);
+        vpn.setPayloadUUID(getUUID());
+        vpn.setPayloadVersion(VERSION);
+
+        vpn.setOverridePrimary(true);
+        vpn.setUserDefinedName("test vpn");
+        vpn.setVPNType(PayloadVPN.TYPE_PPTP);
+
+        PPPInfo pppInfo = new PPPInfo();
+//        pppInfo.enableAuthEAPPlugins();
+//        pppInfo.enableAuthProtocol();
+        pppInfo.setAuthName("ooo4561213");
+        pppInfo.setAuthPassword("xxxxxxxx");
+        pppInfo.setCCPEnabled(false);
+        pppInfo.setCCPMPPE128Enabled(false);
+        pppInfo.setCommRemoteAddress("mail.pekall.com");
+        vpn.setPPP(pppInfo);
+
+//        IPSecInfo ipSecInfo = new IPSecInfo();
+//        ipSecInfo.setAuthenticationMethod("test method");
+//        ipSecInfo.setLocalIdentifier("my ipsec id");
+//        ipSecInfo.setLocalIdentifierType("key id 1003");
+//        ipSecInfo.setPromptForVPNPIN(true);
+//        ipSecInfo.setXAuthEnabled(1);
+//        byte[] data = new byte[10];
+//        for (int i = 0; i < data.length; i++) {
+//            data[i] = (byte) i;
+//        }
+//        ipSecInfo.setSharedSecret(data);
+//        vpn.setIPSec(ipSecInfo);
+
+        return vpn;
     }
 
 

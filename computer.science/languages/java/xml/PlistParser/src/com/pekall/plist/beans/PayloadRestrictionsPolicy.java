@@ -129,6 +129,18 @@ public class PayloadRestrictionsPolicy extends PayloadBase {
      */
     private Boolean allowUIConfigurationProfileInstallation;
 
+    private Boolean allowVoiceDialing;
+    private Boolean allowInAppPurchases;
+    private Boolean allowMultiplayerGaming;
+    private Boolean allowAddingGameCenterFriends;
+    private Boolean safariAllowAutoFill;
+    private Boolean safariAllowJavaScript;
+    private Boolean safariAllowPopups;
+    private Boolean safariForceFraudWarning;
+    private Boolean safariAcceptCookies;
+    private Boolean forceEncryptedBackUp;
+    private Boolean allowGlobalBackgroundFetchWhenRoaming;
+
     public PayloadRestrictionsPolicy() {
         setPayloadType(PayloadBase.PAYLOAD_TYPE_RESTRICTIONS);
     }
@@ -301,6 +313,94 @@ public class PayloadRestrictionsPolicy extends PayloadBase {
         this.allowUIConfigurationProfileInstallation = allowUIConfigurationProfileInstallation;
     }
 
+    public Boolean getAllowVoiceDialing() {
+        return allowVoiceDialing;
+    }
+
+    public void setAllowVoiceDialing(Boolean allowVoiceDialing) {
+        this.allowVoiceDialing = allowVoiceDialing;
+    }
+
+    public Boolean getAllowInAppPurchases() {
+        return allowInAppPurchases;
+    }
+
+    public void setAllowInAppPurchases(Boolean allowInAppPurchases) {
+        this.allowInAppPurchases = allowInAppPurchases;
+    }
+
+    public Boolean getAllowMultiplayerGaming() {
+        return allowMultiplayerGaming;
+    }
+
+    public void setAllowMultiplayerGaming(Boolean allowMultiplayerGaming) {
+        this.allowMultiplayerGaming = allowMultiplayerGaming;
+    }
+
+    public Boolean getAllowAddingGameCenterFriends() {
+        return allowAddingGameCenterFriends;
+    }
+
+    public void setAllowAddingGameCenterFriends(Boolean allowAddingGameCenterFriends) {
+        this.allowAddingGameCenterFriends = allowAddingGameCenterFriends;
+    }
+
+    public Boolean getSafariAllowAutoFill() {
+        return safariAllowAutoFill;
+    }
+
+    public void setSafariAllowAutoFill(Boolean safariAllowAutoFill) {
+        this.safariAllowAutoFill = safariAllowAutoFill;
+    }
+
+    public Boolean getSafariAllowJavaScript() {
+        return safariAllowJavaScript;
+    }
+
+    public void setSafariAllowJavaScript(Boolean safariAllowJavaScript) {
+        this.safariAllowJavaScript = safariAllowJavaScript;
+    }
+
+    public Boolean getSafariAllowPopups() {
+        return safariAllowPopups;
+    }
+
+    public void setSafariAllowPopups(Boolean safariAllowPopups) {
+        this.safariAllowPopups = safariAllowPopups;
+    }
+
+    public Boolean getSafariForceFraudWarning() {
+        return safariForceFraudWarning;
+    }
+
+    public void setSafariForceFraudWarning(Boolean safariForceFraudWarning) {
+        this.safariForceFraudWarning = safariForceFraudWarning;
+    }
+
+    public Boolean getSafariAcceptCookies() {
+        return safariAcceptCookies;
+    }
+
+    public void setSafariAcceptCookies(Boolean safariAcceptCookies) {
+        this.safariAcceptCookies = safariAcceptCookies;
+    }
+
+    public Boolean getForceEncryptedBackUp() {
+        return forceEncryptedBackUp;
+    }
+
+    public void setForceEncryptedBackUp(Boolean forceEncryptedBackUp) {
+        this.forceEncryptedBackUp = forceEncryptedBackUp;
+    }
+
+    public Boolean getAllowGlobalBackgroundFetchWhenRoaming() {
+        return allowGlobalBackgroundFetchWhenRoaming;
+    }
+
+    public void setAllowGlobalBackgroundFetchWhenRoaming(Boolean allowGlobalBackgroundFetchWhenRoaming) {
+        this.allowGlobalBackgroundFetchWhenRoaming = allowGlobalBackgroundFetchWhenRoaming;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -309,6 +409,8 @@ public class PayloadRestrictionsPolicy extends PayloadBase {
 
         PayloadRestrictionsPolicy that = (PayloadRestrictionsPolicy) o;
 
+        if (allowAddingGameCenterFriends != null ? !allowAddingGameCenterFriends.equals(that.allowAddingGameCenterFriends) : that.allowAddingGameCenterFriends != null)
+            return false;
         if (allowAppInstallation != null ? !allowAppInstallation.equals(that.allowAppInstallation) : that.allowAppInstallation != null)
             return false;
         if (allowAssistant != null ? !allowAssistant.equals(that.allowAssistant) : that.allowAssistant != null)
@@ -330,6 +432,12 @@ public class PayloadRestrictionsPolicy extends PayloadBase {
             return false;
         if (allowGameCenter != null ? !allowGameCenter.equals(that.allowGameCenter) : that.allowGameCenter != null)
             return false;
+        if (allowGlobalBackgroundFetchWhenRoaming != null ? !allowGlobalBackgroundFetchWhenRoaming.equals(that.allowGlobalBackgroundFetchWhenRoaming) : that.allowGlobalBackgroundFetchWhenRoaming != null)
+            return false;
+        if (allowInAppPurchases != null ? !allowInAppPurchases.equals(that.allowInAppPurchases) : that.allowInAppPurchases != null)
+            return false;
+        if (allowMultiplayerGaming != null ? !allowMultiplayerGaming.equals(that.allowMultiplayerGaming) : that.allowMultiplayerGaming != null)
+            return false;
         if (allowPassbookWhileLocked != null ? !allowPassbookWhileLocked.equals(that.allowPassbookWhileLocked) : that.allowPassbookWhileLocked != null)
             return false;
         if (allowPhotoStream != null ? !allowPhotoStream.equals(that.allowPhotoStream) : that.allowPhotoStream != null)
@@ -343,9 +451,23 @@ public class PayloadRestrictionsPolicy extends PayloadBase {
             return false;
         if (allowUntrustedTLSPrompt != null ? !allowUntrustedTLSPrompt.equals(that.allowUntrustedTLSPrompt) : that.allowUntrustedTLSPrompt != null)
             return false;
+        if (allowVoiceDialing != null ? !allowVoiceDialing.equals(that.allowVoiceDialing) : that.allowVoiceDialing != null)
+            return false;
         if (allowYouTube != null ? !allowYouTube.equals(that.allowYouTube) : that.allowYouTube != null) return false;
         if (allowiTunes != null ? !allowiTunes.equals(that.allowiTunes) : that.allowiTunes != null) return false;
+        if (forceEncryptedBackUp != null ? !forceEncryptedBackUp.equals(that.forceEncryptedBackUp) : that.forceEncryptedBackUp != null)
+            return false;
         if (forceITunesStorePasswordEntry != null ? !forceITunesStorePasswordEntry.equals(that.forceITunesStorePasswordEntry) : that.forceITunesStorePasswordEntry != null)
+            return false;
+        if (safariAcceptCookies != null ? !safariAcceptCookies.equals(that.safariAcceptCookies) : that.safariAcceptCookies != null)
+            return false;
+        if (safariAllowAutoFill != null ? !safariAllowAutoFill.equals(that.safariAllowAutoFill) : that.safariAllowAutoFill != null)
+            return false;
+        if (safariAllowJavaScript != null ? !safariAllowJavaScript.equals(that.safariAllowJavaScript) : that.safariAllowJavaScript != null)
+            return false;
+        if (safariAllowPopups != null ? !safariAllowPopups.equals(that.safariAllowPopups) : that.safariAllowPopups != null)
+            return false;
+        if (safariForceFraudWarning != null ? !safariForceFraudWarning.equals(that.safariForceFraudWarning) : that.safariForceFraudWarning != null)
             return false;
 
         return true;
@@ -375,6 +497,17 @@ public class PayloadRestrictionsPolicy extends PayloadBase {
         result = 31 * result + (allowPassbookWhileLocked != null ? allowPassbookWhileLocked.hashCode() : 0);
         result = 31 * result + (allowSharedStream != null ? allowSharedStream.hashCode() : 0);
         result = 31 * result + (allowUIConfigurationProfileInstallation != null ? allowUIConfigurationProfileInstallation.hashCode() : 0);
+        result = 31 * result + (allowVoiceDialing != null ? allowVoiceDialing.hashCode() : 0);
+        result = 31 * result + (allowInAppPurchases != null ? allowInAppPurchases.hashCode() : 0);
+        result = 31 * result + (allowMultiplayerGaming != null ? allowMultiplayerGaming.hashCode() : 0);
+        result = 31 * result + (allowAddingGameCenterFriends != null ? allowAddingGameCenterFriends.hashCode() : 0);
+        result = 31 * result + (safariAllowAutoFill != null ? safariAllowAutoFill.hashCode() : 0);
+        result = 31 * result + (safariAllowJavaScript != null ? safariAllowJavaScript.hashCode() : 0);
+        result = 31 * result + (safariAllowPopups != null ? safariAllowPopups.hashCode() : 0);
+        result = 31 * result + (safariForceFraudWarning != null ? safariForceFraudWarning.hashCode() : 0);
+        result = 31 * result + (safariAcceptCookies != null ? safariAcceptCookies.hashCode() : 0);
+        result = 31 * result + (forceEncryptedBackUp != null ? forceEncryptedBackUp.hashCode() : 0);
+        result = 31 * result + (allowGlobalBackgroundFetchWhenRoaming != null ? allowGlobalBackgroundFetchWhenRoaming.hashCode() : 0);
         return result;
     }
 
@@ -402,6 +535,17 @@ public class PayloadRestrictionsPolicy extends PayloadBase {
                 ", allowPassbookWhileLocked=" + allowPassbookWhileLocked +
                 ", allowSharedStream=" + allowSharedStream +
                 ", allowUIConfigurationProfileInstallation=" + allowUIConfigurationProfileInstallation +
+                ", allowVoiceDialing=" + allowVoiceDialing +
+                ", allowInAppPurchases=" + allowInAppPurchases +
+                ", allowMultiplayerGaming=" + allowMultiplayerGaming +
+                ", allowAddingGameCenterFriends=" + allowAddingGameCenterFriends +
+                ", safariAllowAutoFill=" + safariAllowAutoFill +
+                ", safariAllowJavaScript=" + safariAllowJavaScript +
+                ", safariAllowPopups=" + safariAllowPopups +
+                ", safariForceFraudWarning=" + safariForceFraudWarning +
+                ", safariAcceptCookies=" + safariAcceptCookies +
+                ", forceEncryptedBackUp=" + forceEncryptedBackUp +
+                ", allowGlobalBackgroundFetchWhenRoaming=" + allowGlobalBackgroundFetchWhenRoaming +
                 '}';
     }
 }
