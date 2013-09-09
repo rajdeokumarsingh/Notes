@@ -4,37 +4,16 @@ import com.dd.plist.NSArray;
 import com.dd.plist.NSDictionary;
 import com.dd.plist.NSObject;
 import com.pekall.plist.beans.BeanBase;
+import com.pekall.plist.beans.PayloadArrayWrapper;
 import com.pekall.plist.beans.PayloadBase;
 import com.pekall.plist.beans.PayloadPasswordPolicy;
 import junit.framework.TestCase;
 
 public class PayloadPasswordPolicyTest extends TestCase {
     public void testXml2Bean() throws Exception {
-        PayloadPasswordPolicy policy = null;
-
-        // The dictionary represents the whole xml data
-        NSDictionary dictionary = (NSDictionary) PlistXmlParser.fromXml(
-                EnrollProfileData.ENROLL_PROFILE);
-
-        NSObject content = dictionary.objectForKey(Constants.KEY_PL_CONTENT);
-        if (content instanceof NSDictionary) {
-        } else if (content instanceof NSArray) {
-            NSArray array = (NSArray) content;
-            for (int i = 0; i < array.count(); i++) {
-                NSObject nsObject = array.objectAtIndex(i);
-                if (nsObject instanceof NSDictionary) {
-                    NSDictionary dict = (NSDictionary) nsObject;
-                    PayloadBase base = (PayloadBase) PlistBeanConverter
-                            .createBeanFromNdict(dict, PayloadBase.class);
-                    if (Constants.PL_TYPE_PASSWORD_POLICY.equals(base.getPayloadType())
-                            || Constants.PL_ID_PASSWORD_POLICY.equals(base.getPayloadIdentifier())) {
-                        policy = (PayloadPasswordPolicy) PlistBeanConverter
-                                .createBeanFromNdict(dict, PayloadPasswordPolicy.class);
-                        break;
-                    }
-                }
-            }
-        }
+        PayloadXmlMsgParser parser = new PayloadXmlMsgParser(EnrollProfileData.ENROLL_PROFILE);
+        PayloadPasswordPolicy policy = (PayloadPasswordPolicy) parser.getPayload(
+                PayloadBase.PAYLOAD_TYPE_PASSWORD_POLICY);
 
         PlistDebug.logTest("password policy: " + policy.toString());
         assertEquals(policy.getPayloadDescription(), "配置与安全相关的项目。");
@@ -59,17 +38,12 @@ public class PayloadPasswordPolicyTest extends TestCase {
 
     public void testBean2Xml() throws Exception {
         PayloadPasswordPolicy policy = createPasswordPolicy();
-
-        NSDictionary root = PlistBeanConverter.createNdictFromBean(policy);
-        String xml = PlistXmlParser.toXml(root);
+        String xml = policy.toXml();
         PlistDebug.logTest("xml: " + xml);
 
-        NSDictionary root1 = (NSDictionary) PlistXmlParser.fromXml(xml);
-        PayloadPasswordPolicy policy1 = (PayloadPasswordPolicy) PlistBeanConverter
-                .createBeanFromNdict(root1, PayloadPasswordPolicy.class);
+        PayloadPasswordPolicy policy1 = BeanBase.fromXmlT(xml, PayloadPasswordPolicy.class);
         assertEquals(policy, policy1);
     }
-
 
     public void testToXml() throws Exception {
         PayloadPasswordPolicy policy = createPasswordPolicy();
@@ -103,6 +77,8 @@ public class PayloadPasswordPolicyTest extends TestCase {
         policy.setMinLength(4);
         policy.setPinHistory(50);
         policy.setRequireAlphanumeric(true);
+
+        policy.setQuality(PayloadPasswordPolicy.QUALITY_ALPHABETIC);
         return policy;
     }
 }

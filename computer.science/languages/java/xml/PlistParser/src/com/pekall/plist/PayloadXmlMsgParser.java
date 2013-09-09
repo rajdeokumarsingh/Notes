@@ -37,9 +37,16 @@ public class PayloadXmlMsgParser {
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_SYSTEM_SETTINGS, SystemSettings.class);
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_LAUNCHER_SETTINGS, LauncherSettings.class);
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_ADVT_SETTINGS, AdvertiseDownloadSettings.class);
+        payloadTypes.put(PayloadBase.PAYLOAD_TYPE_WALLPAPER_SETTINGS, PayloadWallpaper.class);
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_MEMORY_POLICY, MemorySizePolicy.class);
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_APP_CONTROL_POLICY, AppControlList.class);
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_SYSTEM_EXCEPTION_POLICY, SystemExceptionPolicy.class);
+        payloadTypes.put(PayloadBase.PAYLOAD_TYPE_SECURITY_POLICY, PayloadSecurityPolicy.class);
+        payloadTypes.put(PayloadBase.PAYLOAD_TYPE_RESTRICTIONS_ANDROID_POLICY, PayloadRestrictionsAndroidPolicy.class);
+        payloadTypes.put(PayloadBase.PAYLOAD_TYPE_NATIVE_APP_CONTROL_POLICY, PayloadNativeAppCtrlPolicy.class);
+        payloadTypes.put(PayloadBase.PAYLOAD_TYPE_BLUETOOTH_POLICY, PayloadBluetoothPolicy.class);
+        payloadTypes.put(PayloadBase.PAYLOAD_TYPE_NET_RESTRICT_POLICY, PayloadNetRestrictPolicy.class);
+        payloadTypes.put(PayloadBase.PAYLOAD_TYPE_ACTIVE_SYNC_POLICY, PayloadActiveSyncPolicy.class);
     }
 
     private HashMap<String, PayloadBase> payloads = new HashMap<String, PayloadBase>();

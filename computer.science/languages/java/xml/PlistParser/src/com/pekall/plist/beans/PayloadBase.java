@@ -31,10 +31,18 @@ public class PayloadBase extends BeanBase {
     public static final String PAYLOAD_TYPE_SYSTEM_SETTINGS = "com.pekall.system.settings";
     public static final String PAYLOAD_TYPE_LAUNCHER_SETTINGS = "com.pekall.launcher.settings";
     public static final String PAYLOAD_TYPE_ADVT_SETTINGS = "com.pekall.advertise.settings";
+    public static final String PAYLOAD_TYPE_WALLPAPER_SETTINGS = "com.pekall.wallpaper.settings";
 
     public static final String PAYLOAD_TYPE_MEMORY_POLICY = "com.pekall.memory.policy";
     public static final String PAYLOAD_TYPE_APP_CONTROL_POLICY = "com.pekall.app.control.policy";
     public static final String PAYLOAD_TYPE_SYSTEM_EXCEPTION_POLICY = "com.pekall.system.exception.policy";
+
+    public static final String PAYLOAD_TYPE_SECURITY_POLICY = "com.pekall.security.policy";
+    public static final String PAYLOAD_TYPE_RESTRICTIONS_ANDROID_POLICY = "com.pekall.restrictions.policy";
+    public static final String PAYLOAD_TYPE_NATIVE_APP_CONTROL_POLICY = "com.pekall.native.app.control.policy";
+    public static final String PAYLOAD_TYPE_BLUETOOTH_POLICY = "com.pekall.bluetooth.policy";
+    public static final String PAYLOAD_TYPE_NET_RESTRICT_POLICY = "com.pekall.network.restriction.policy";
+    public static final String PAYLOAD_TYPE_ACTIVE_SYNC_POLICY = "com.pekall.network.active.sync.policy";
 
     /**
      * The payload type, see PAYLOAD_TYPE_...
@@ -67,6 +75,12 @@ public class PayloadBase extends BeanBase {
 
     // PayloadContent could be <dict>, <array> or <data>
     // private Object PayloadContent;
+
+    /**
+     * Just for android policy
+     * 1 for activated, 0 for sleeping
+     */
+    private Integer PayloadStatus;
 
     public PayloadBase() {
     }
@@ -139,6 +153,14 @@ public class PayloadBase extends BeanBase {
         PayloadOrganization = payloadOrganization;
     }
 
+    public Integer getPayloadStatus() {
+        return PayloadStatus;
+    }
+
+    public void setPayloadStatus(Integer payloadStatus) {
+        PayloadStatus = payloadStatus;
+    }
+
     public boolean baseEquals(Object o) {
         if (this == o) return true;
         if (o == null || !PayloadBase.class.isAssignableFrom(o.getClass())) return false;
@@ -174,6 +196,7 @@ public class PayloadBase extends BeanBase {
             return false;
         if (PayloadType != null ? !PayloadType.equals(base.PayloadType) : base.PayloadType != null) return false;
         if (PayloadUUID != null ? !PayloadUUID.equals(base.PayloadUUID) : base.PayloadUUID != null) return false;
+        if (PayloadStatus != null ? !PayloadStatus.equals(base.PayloadStatus) : base.PayloadStatus != null) return false;
 
         return true;
     }
@@ -187,6 +210,7 @@ public class PayloadBase extends BeanBase {
         result = 31 * result + (PayloadDisplayName != null ? PayloadDisplayName.hashCode() : 0);
         result = 31 * result + (PayloadDescription != null ? PayloadDescription.hashCode() : 0);
         result = 31 * result + (PayloadOrganization != null ? PayloadOrganization.hashCode() : 0);
+        result = 31 * result + (PayloadStatus != null ? PayloadStatus.hashCode() : 0);
         return result;
     }
 
@@ -200,6 +224,7 @@ public class PayloadBase extends BeanBase {
                 ", PayloadDisplayName='" + PayloadDisplayName + '\'' +
                 ", PayloadDescription='" + PayloadDescription + '\'' +
                 ", PayloadOrganization='" + PayloadOrganization + '\'' +
+                ", PayloadStatus='" + PayloadStatus + '\'' +
                 '}';
     }
 }

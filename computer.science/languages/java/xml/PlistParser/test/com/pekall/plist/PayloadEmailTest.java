@@ -38,6 +38,20 @@ public class PayloadEmailTest extends TestCase {
             "\t\t\t<string>192.168.10.230</string>\n" +
             "\t\t\t<key>disableMailRecentsSyncing</key>\n" +
             "\t\t\t<true/>\n" +
+            "\t\t\t<key>defaultAccount</key>\n" +
+            "\t\t\t<true/>\n" +
+            "\t\t\t<key>acceptAllCertForIncomingMail</key>\n" +
+            "\t\t\t<true/>\n" +
+            "\t\t\t<key>acceptAllCertForOutgoingMail</key>\n" +
+            "\t\t\t<false/>\n" +
+            "\t\t\t<key>senderName</key>\n" +
+            "\t\t\t<string>Ray</string>\n" +
+            "\t\t\t<key>signature</key>\n" +
+            "\t\t\t<string>BRs</string>\n" +
+            "\t\t\t<key>vibrateOnNewEmail</key>\n" +
+            "\t\t\t<false/>\n" +
+            "\t\t\t<key>vibrateOnNewEmailIfSilent</key>\n" +
+            "\t\t\t<true/>\n" +
             "\t\t\t<key>PayloadType</key>\n" +
             "\t\t\t<string>com.apple.mail.managed</string>\n" +
             "\t\t\t<key>PayloadVersion</key>\n" +
@@ -52,6 +66,8 @@ public class PayloadEmailTest extends TestCase {
             "\t\t\t<string>Email相关配置</string>\n" +
             "\t\t\t<key>PayloadOrganization</key>\n" +
             "\t\t\t<string>Pekall Capital</string>\n" +
+            "\t\t\t<key>PayloadStatus</key>\n" +
+            "\t\t\t<integer>1</integer>\n" +
             "\t\t</dict>\n" +
             "\t</array>\n" +
             "\t<key>PayloadRemovalDisallowed</key>\n" +
@@ -105,6 +121,7 @@ public class PayloadEmailTest extends TestCase {
         email.setPayloadOrganization("Pekall Capital");
         email.setPayloadUUID("3808D742-5D21-401E-B83C-AED1E990332D");
         email.setPayloadVersion(1);
+        email.setPayloadStatus(1);
 
         email.setDisableMailRecentsSyncing(true);
         email.setEmailAccountDescription("test email account");
@@ -118,6 +135,13 @@ public class PayloadEmailTest extends TestCase {
         email.setIncomingPassword("123456");
         email.setOutgoingMailServerHostName("192.168.10.230");
         email.setOutgoingPasswordSameAsIncomingPassword(true);
+        email.setDefaultAccount(true);
+        email.setAcceptAllCertForIncomingMail(true);
+        email.setAcceptAllCertForOutgoingMail(false);
+        email.setSenderName("Ray");
+        email.setSignature("BRs");
+        email.setVibrateOnNewEmail(false);
+        email.setVibrateOnNewEmailIfSilent(true);
         return email;
     }
 

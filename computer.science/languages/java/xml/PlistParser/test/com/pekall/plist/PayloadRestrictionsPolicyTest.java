@@ -152,10 +152,10 @@ public class PayloadRestrictionsPolicyTest extends TestCase {
         PayloadXmlMsgParser parser = new PayloadXmlMsgParser(TEST_XML);
         PayloadArrayWrapper profile = (PayloadArrayWrapper) parser.getPayloadDescriptor();
 
+        assertEquals(parser.getRestrictionsPolicy(), createRestrictionsPolicy());
         assertEquals(profile, createProfile());
         assertEquals(parser.getPasswordPolicy(), createPasswordPolicy());
         assertEquals(parser.getWifiConfig(), createWifiConfig());
-        assertEquals(parser.getRestrictionsPolicy(), createRestrictionsPolicy());
     }
 
     public void testTwoWay() throws Exception {
