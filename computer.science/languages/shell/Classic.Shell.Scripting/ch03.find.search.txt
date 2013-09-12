@@ -44,5 +44,23 @@ Sed 的运作方式
     
     sed每次读取文件中的一行，将读取到的行放到一个内存区域。该区域成为“模式空间”
 
+sed -n '/<HTML>/p' *.html # -n表示默认不输出， p表示输出
+                          # 表示仅仅输出包含<HTML>的行
+
+sed匹配特定行
+    /oldfunc/ s/$/# XXX: depreciated, use newfunc instead/
+    /Tom/ s//& and Jerry/g
+    /used/ !s/new/used/g    #将不包括used的行中的所有new替换为used
+    
+    sed -n '1,20p' foo.xml
+    sed -n '/foo/,/bar/ s/baz/quazz/g' foo.xml # 从含有foo的行开始，到含有bar的行结束
+
+取出文本中的列
+cut -d : -f 6 /etc/passwd
+cut -d : -f 1,5 /etc/passwd
+
+
+
+
 
 

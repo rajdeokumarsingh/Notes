@@ -6,6 +6,8 @@ import junit.framework.TestCase;
 
 import java.io.ByteArrayOutputStream;
 import java.lang.reflect.*;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -45,79 +47,52 @@ public class BrowserSettingsTest extends TestCase {
         System.out.println("xml: " + bos.toString());
     }
 
-    public void testBrowserData() throws Exception {
-        BrowserXmlData data = createBrowserData();
-    }
-
     private BrowserXmlData createBrowserData() {
         QuickLaunch quickLaunches = new QuickLaunch();
-        quickLaunches.addQuickLaunch(new QuickLaunchItem("", "Test1", "http://www.sina.com"));
-        quickLaunches.addQuickLaunch(new QuickLaunchItem("", "Test2", "http://wap.sina.com"));
-        quickLaunches.addQuickLaunch(new QuickLaunchItem("", "测试", "http://m.sina.com"));
+        quickLaunches.addQuickLaunch(new QuickLaunchItem("1", "Test1", "http://www.sina.com"));
+        quickLaunches.addQuickLaunch(new QuickLaunchItem("2", "Test2", "http://wap.sina.com"));
+        quickLaunches.addQuickLaunch(new QuickLaunchItem("3", "测试", "http://m.sina.com"));
 
         BrowserXmlData data = new BrowserXmlData(1, "https://www.ccb.com.cn");
         data.setQuickLaunch(quickLaunches);
         data.addWhiteListItem(new UrlMatchRule("sina.com"));
         data.addWhiteListItem(new UrlMatchRule("baidu.com", UrlMatchRule.MATCH_TYPE_EQUAL));
         data.addWhiteListItem(new UrlMatchRule("24", "baidu.com", UrlMatchRule.MATCH_TYPE_EQUAL));
-        data.addHistoryItem(new HistoryWatchItem("baidu"));
-        data.addHistoryItem(new HistoryWatchItem("baidu", UrlMatchRule.MATCH_TYPE_PREFIX));
+
+        HistoryWatchItem item = new HistoryWatchItem("baidu");
+        item.setCount(20);
+        item.setDate(";1234;3234234;23432");
+        data.addHistoryItem(item);
+        HistoryWatchItem item1 = new HistoryWatchItem("www.baidu.com",
+                UrlMatchRule.MATCH_TYPE_EQUAL);
+        item1.setCount(4);
+        item1.setDate(";1234;3234234;23432");
+        data.addHistoryItem(item1);
 
         return data;
     }
 
-    public void testBrowserClass() throws Exception {
-        Constructor ctor = BrowserXmlData.class.getConstructor();
-        ctor.setAccessible(true);
-        BrowserXmlData data = (BrowserXmlData) ctor.newInstance();
+    public void testListType() throws Exception {
+        BrowserXmlData data = createBrowserData();
 
-        Field[] fields = BrowserXmlData.class.getDeclaredFields();
-        for (Field field : fields) {
-            System.out.println(field.getName());
-            Class type = field.getType();
-            System.out.println(type.getName());
-        }
-    }
-
-    public void testSuperClass() throws Exception {
-        Object item = new HistoryWatchItem("http://www.baidu.com");
-        Class clz = item.getClass();
-
-        while (clz != null && !clz.equals(Object.class)) {
-            System.out.println("----------------------------------------");
-            System.out.println("class: " + clz);
-            for (Field field : clz.getDeclaredFields()) {
-                field.setAccessible(true);
-                Class type = field.getType();
-                if (int.class.equals(type)) {
-                    System.out.println("int: " +
-                            field.getName() + "," + field.getInt(item));
-                } else if (String.class.equals(type)) {
-                    System.out.println("string: " +
-                            field.getName() + "," + (String)field.get(item));
-                } else {
-                    System.out.println("object: " +
-                            field.getName() + "," + field.get(item).toString());
-                }
+        Field field = data.getClass().getDeclaredField("whiteList");
+        Type genericFieldType = field.getGenericType();
+        if (genericFieldType instanceof ParameterizedType) {
+            ParameterizedType aType = (ParameterizedType) genericFieldType;
+            Type[] fieldArgTypes = aType.getActualTypeArguments();
+            for (Type fieldArgType : fieldArgTypes) {
+                Class fieldArgClass = (Class) fieldArgType;
+                System.out.println("fieldArgClass = " + fieldArgClass);
             }
-            clz = clz.getSuperclass();
         }
     }
 
-    public void testBrowser2Plist() throws Exception {
-        NSDictionary root = createNdict(createBrowserData());
-
-        ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        PropertyListParser.saveAsXML(root, bos);
-        System.out.println("xml: " + bos.toString());
+    public void testBean2Ndict() throws Exception {
+        NSDictionary root = PlistBeanConverter.createNdictFromBean(createBrowserData());
+        System.out.println("xml: " + PlistXmlParser.toXml(root));
     }
 
-    private NSDictionary createNdict(Object data) throws IllegalAccessException {
-        NSDictionary root = new NSDictionary();
-        appendData2Ndict(data, root);
-        return root;
-    }
-
+<<<<<<< HEAD
     private void appendData2Ndict(Object data, NSDictionary root) throws IllegalAccessException {
         Class clz = data.getClass();
         while (clz != null && !clz.equals(Object.class)) {
@@ -163,5 +138,12 @@ public class BrowserSettingsTest extends TestCase {
             }
             clz = clz.getSuperclass();
         }
+=======
+    public void testNdict2Bean() throws Exception {
+        NSDictionary root = PlistBeanConverter.createNdictFromBean(createBrowserData());
+        BrowserXmlData data = (BrowserXmlData) PlistBeanConverter.createBeanFromNdict(root, BrowserXmlData.class);
+        PlistDebug.log(data.toString());
+        assertEquals(data, createBrowserData());
+>>>>>>> 94401df891d73d5a3f580ed6c2b1ebfa66443f86
     }
 }

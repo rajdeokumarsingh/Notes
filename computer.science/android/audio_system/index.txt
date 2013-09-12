@@ -27,9 +27,12 @@ flow index:
                 code.reading/flow.start-stop.output.cpp
 
             code.reading/flow.player.cpp
-
-        code.reading/flow.audiotrack.cpp
-        code.reading/flow.audioflinger.cpp
+                |
+                V
+            code.reading/flow.audiotrack.cpp
+                |
+                V
+            code.reading/flow.audioflinger.cpp
 
             // TODO:
             frameworks/av/media/libstagefright/AudioPlayer.cpp

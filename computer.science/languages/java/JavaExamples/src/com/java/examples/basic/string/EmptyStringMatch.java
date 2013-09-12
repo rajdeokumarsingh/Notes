@@ -9,4 +9,5 @@ public class EmptyStringMatch {
         System.out.println("whether".startsWith(""));
         System.out.println("whether".endsWith(""));
     }
+
 }

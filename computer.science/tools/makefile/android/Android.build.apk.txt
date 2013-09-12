@@ -1,0 +1,155 @@
+jiangrui@jiangrui-Lenovo-IdeaPad-Y400:~/perforce/marvell/marvell_nokernel2$ make showcommands -j4 DownloadProvider
+============================================
+PLATFORM_VERSION_CODENAME=REL
+PLATFORM_VERSION=4.2.2
+TARGET_PRODUCT=A788t
+TARGET_BUILD_VARIANT=userdebug
+TARGET_BUILD_TYPE=release
+TARGET_BUILD_APPS=
+TARGET_ARCH=arm
+TARGET_ARCH_VARIANT=armv7-a-neon
+HOST_ARCH=x86
+HOST_OS=linux
+HOST_OS_EXTRA=Linux-3.8.0-29-generic-x86_64-with-Ubuntu-13.04-raring
+HOST_BUILD_TYPE=release
+BUILD_ID=S-1-01
+OUT_DIR=out
+============================================
+build/tools/signapk/Android.mk:31: *****  You are using lenovo signjar device/ontim/A788t/security/signapk.jar
+
+target R.java/Manifest.java: DownloadProvider (out/target/common/obj/APPS/DownloadProvider_intermediates/src/R.stamp) 
+out/host/linux-x86/bin/aapt package -z -m  -J out/target/common/obj/APPS/DownloadProvider_intermediates/src -M packages/providers/DownloadProvider/AndroidManifest.xml -P out/target/common/obj/APPS/DownloadProvider_intermediates/public_resources.xml -S packages/providers/DownloadProvider/res  -I out/target/common/obj/APPS/framework-res_intermediates/package-export.apk -G out/target/common/obj/APPS/DownloadProvider_intermediates/proguard_options --min-sdk-version 17 --target-sdk-version 17 --version-code 17 --version-name 4.2.2-eng.jiangrui.20130904.092425  
+
+out/host/linux-x86/bin/aapt package -z 
+-m -J out/target/common/obj/APPS/DownloadProvider_intermediates/src 
+    指明创建文件的目录
+-M packages/providers/DownloadProvider/AndroidManifest.xml 
+    指明AndroidManifest.xml的位置
+-P out/target/common/obj/APPS/DownloadProvider_intermediates/public_resources.xml 
+    输出公共资源的位置， public_resources.xml中包括AndroidManifest.mk使用到的字符串文件
+-S packages/providers/DownloadProvider/res  
+    指明resource的位置
+-I out/target/common/obj/APPS/framework-res_intermediates/package-export.apk 
+    需要增加的apk
+-G out/target/common/obj/APPS/DownloadProvider_intermediates/proguard_options 
+    保存proguard options
+--min-sdk-version 17 
+--target-sdk-version 17 
+--version-code 17 
+--version-name 4.2.2-eng.jiangrui.20130904.092425  
+
+
+for GENERATED_MANIFEST_FILE in `find out/target/common/obj/APPS/DownloadProvider_intermediates/src \
+					-name Manifest.java 2> /dev/null`; do \
+		dir=`awk '/package/{gsub(/\./,"/",$2);gsub(/;/,"",$2);print $2;exit}' $GENERATED_MANIFEST_FILE`; \
+		mkdir -p out/target/common/R/$dir; \
+		out/host/linux-x86/bin/acp -fp $GENERATED_MANIFEST_FILE out/target/common/R/$dir; \
+	done;
+for GENERATED_R_FILE in `find out/target/common/obj/APPS/DownloadProvider_intermediates/src \
+					-name R.java 2> /dev/null`; do \
+		dir=`awk '/package/{gsub(/\./,"/",$2);gsub(/;/,"",$2);print $2;exit}' $GENERATED_R_FILE`; \
+		mkdir -p out/target/common/R/$dir; \
+		out/host/linux-x86/bin/acp -fp $GENERATED_R_FILE out/target/common/R/$dir \
+			|| exit 31; \
+		out/host/linux-x86/bin/acp -fp $GENERATED_R_FILE out/target/common/obj/APPS/DownloadProvider_intermediates/src/R.stamp || exit 32; \
+	done; \
+
+target Java: DownloadProvider (out/target/common/obj/APPS/DownloadProvider_intermediates/classes)
+rm -f out/target/common/obj/APPS/DownloadProvider_intermediates/classes-full-debug.jar
+rm -rf out/target/common/obj/APPS/DownloadProvider_intermediates/classes
+mkdir -p out/target/common/obj/APPS/DownloadProvider_intermediates/
+mkdir -p out/target/common/obj/APPS/DownloadProvider_intermediates/classes
+
+
+for f in  out/target/common/obj/JAVA_LIBRARIES/guava_intermediates/javalib.jar; do if [ ! -f $f ]; then echo Missing file $f; exit 1; fi; unzip -qo $f -d out/target/common/obj/APPS/DownloadProvider_intermediates/classes; done ;rm -rf out/target/common/obj/APPS/DownloadProvider_intermediates/classes/META-INF
+
+查找所有的java文件, 并排序后输出到java-source-list-uniq
+if [ -d "out/target/common/obj/APPS/DownloadProvider_intermediates/src" ]; then find out/target/common/obj/APPS/DownloadProvider_intermediates/src -name '*.java' >> out/target/common/obj/APPS/DownloadProvider_intermediates/classes/java-source-list; fi
+tr ' ' '\n' < out/target/common/obj/APPS/DownloadProvider_intermediates/classes/java-source-list | sort -u > out/target/common/obj/APPS/DownloadProvider_intermediates/classes/java-source-list-uniq
+
+
+编译java文件
+if [ -s out/target/common/obj/APPS/DownloadProvider_intermediates/classes/java-source-list-uniq ] ; then javac -J-Xmx512M -target 1.5 -Xmaxerrs 9999999 -encoding UTF-8 -g  -bootclasspath out/target/common/obj/JAVA_LIBRARIES/core_intermediates/classes.jar -classpath out/target/common/obj/JAVA_LIBRARIES/core_intermediates/classes.jar:out/target/common/obj/JAVA_LIBRARIES/core-junit_intermediates/classes.jar:out/target/common/obj/JAVA_LIBRARIES/ext_intermediates/classes.jar:out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/classes.jar:out/target/common/obj/JAVA_LIBRARIES/guava_intermediates/javalib.jar  -extdirs "" -d out/target/common/obj/APPS/DownloadProvider_intermediates/classes  \@out/target/common/obj/APPS/DownloadProvider_intermediates/classes/java-source-list-uniq || ( rm -rf out/target/common/obj/APPS/DownloadProvider_intermediates/classes ; exit 41 ) fi
+
+javac 
+-J-Xmx512M ,内存
+-target 1.5, 兼容1.5vm, 默认兼容1.6
+-Xmaxerrs 9999999 
+-encoding UTF-8 源代码的encoding
+-g  生成所有调试信息
+-bootclasspath out/target/common/obj/JAVA_LIBRARIES/core_intermediates/classes.jar -extdirs "" 
+    与不同java平台进行交叉编译
+
+-classpath out/target/common/obj/JAVA_LIBRARIES/core_intermediates/classes.jar:out/target/common/obj/JAVA_LIBRARIES/core-junit_intermediates/classes.jar:out/target/common/obj/JAVA_LIBRARIES/ext_intermediates/classes.jar:out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/classes.jar:out/target/common/obj/JAVA_LIBRARIES/guava_intermediates/javalib.jar  
+    在哪儿查找class
+
+-d out/target/common/obj/APPS/DownloadProvider_intermediates/classes  
+    输出class文件的路径
+
+\@out/target/common/obj/APPS/DownloadProvider_intermediates/classes/java-source-list-uniq 
+    输入java文件列表
+
+Note: packages/providers/DownloadProvider/src/com/android/providers/downloads/DownloadService.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+
+rm -f out/target/common/obj/APPS/DownloadProvider_intermediates/classes/java-source-list
+rm -f out/target/common/obj/APPS/DownloadProvider_intermediates/classes/java-source-list-uniq
+
+将编译好的class文件打包成jar
+jar -cf out/target/common/obj/APPS/DownloadProvider_intermediates/classes-full-debug.jar  -C out/target/common/obj/APPS/DownloadProvider_intermediates/classes .
+
+拷贝文件
+Copying: out/target/common/obj/APPS/DownloadProvider_intermediates/classes-jarjar.jar
+out/host/linux-x86/bin/acp -fp out/target/common/obj/APPS/DownloadProvider_intermediates/classes-full-debug.jar out/target/common/obj/APPS/DownloadProvider_intermediates/classes-jarjar.jar
+Copying: out/target/common/obj/APPS/DownloadProvider_intermediates/emma_out/lib/classes-jarjar.jar
+out/host/linux-x86/bin/acp -fp out/target/common/obj/APPS/DownloadProvider_intermediates/classes-jarjar.jar out/target/common/obj/APPS/DownloadProvider_intermediates/emma_out/lib/classes-jarjar.jar
+Copying: out/target/common/obj/APPS/DownloadProvider_intermediates/classes.jar
+out/host/linux-x86/bin/acp -fp out/target/common/obj/APPS/DownloadProvider_intermediates/emma_out/lib/classes-jarjar.jar out/target/common/obj/APPS/DownloadProvider_intermediates/classes.jar
+
+进行proguard:
+Proguard: out/target/common/obj/APPS/DownloadProvider_intermediates/proguard.classes.jar
+external/proguard/bin/proguard.sh -injars out/target/common/obj/APPS/DownloadProvider_intermediates/classes.jar -outjars out/target/common/obj/APPS/DownloadProvider_intermediates/proguard.classes.jar -libraryjars out/target/common/obj/JAVA_LIBRARIES/core_intermediates/classes.jar -libraryjars out/target/common/obj/JAVA_LIBRARIES/core-junit_intermediates/classes.jar -libraryjars out/target/common/obj/JAVA_LIBRARIES/ext_intermediates/classes.jar -libraryjars out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/classes.jar -include build/core/proguard.flags -forceprocessing -printmapping out/target/common/obj/APPS/DownloadProvider_intermediates/proguard_dictionary -include out/target/common/obj/APPS/DownloadProvider_intermediates/proguard_options   
+ProGuard, version 4.4
+Reading program jar [/home/jiangrui/perforce/marvell/marvell_nokernel2/out/target/common/obj/APPS/DownloadProvider_intermediates/classes.jar]
+Reading library jar [/home/jiangrui/perforce/marvell/marvell_nokernel2/out/target/common/obj/JAVA_LIBRARIES/core_intermediates/classes.jar]
+Reading library jar [/home/jiangrui/perforce/marvell/marvell_nokernel2/out/target/common/obj/JAVA_LIBRARIES/core-junit_intermediates/classes.jar]
+Reading library jar [/home/jiangrui/perforce/marvell/marvell_nokernel2/out/target/common/obj/JAVA_LIBRARIES/ext_intermediates/classes.jar]
+Reading library jar [/home/jiangrui/perforce/marvell/marvell_nokernel2/out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/classes.jar]
+Preparing output jar [/home/jiangrui/perforce/marvell/marvell_nokernel2/out/target/common/obj/APPS/DownloadProvider_intermediates/proguard.classes.jar]
+  Copying resources from program jar [/home/jiangrui/perforce/marvell/marvell_nokernel2/out/target/common/obj/APPS/DownloadProvider_intermediates/classes.jar]
+
+
+DEX
+target Dex: DownloadProvider
+out/host/linux-x86/bin/dx -JXms16M -JXmx2048M --dex --output=out/target/common/obj/APPS/DownloadProvider_intermediates/proguard.classes-with-local.dex     out/target/common/obj/APPS/DownloadProvider_intermediates/proguard.classes.jar
+Copying: out/target/common/obj/APPS/DownloadProvider_intermediates/proguard.classes.dex
+out/host/linux-x86/bin/acp -fp out/target/common/obj/APPS/DownloadProvider_intermediates/proguard.classes-with-local.dex out/target/common/obj/APPS/DownloadProvider_intermediates/proguard.classes.dex
+
+target Package: DownloadProvider (out/target/product/A788t/obj/APPS/DownloadProvider_intermediates/package.apk)
+touch out/target/product/A788t/obj/APPS/DownloadProvider_intermediates//dummy
+(cd out/target/product/A788t/obj/APPS/DownloadProvider_intermediates/ && jar cf package.apk dummy)
+zip -qd out/target/product/A788t/obj/APPS/DownloadProvider_intermediates/package.apk dummy
+rm out/target/product/A788t/obj/APPS/DownloadProvider_intermediates//dummy
+out/host/linux-x86/bin/aapt package -u -z -c hdpi,mdpi,zh_CN,en_US,nodpi  -M packages/providers/DownloadProvider/AndroidManifest.xml -S packages/providers/DownloadProvider/res  -I out/target/common/obj/APPS/framework-res_intermediates/package-export.apk --min-sdk-version 17 --target-sdk-version 17 --product default --version-code 17 --version-name 4.2.2-eng.jiangrui.20130904.092425   -F out/target/product/A788t/obj/APPS/DownloadProvider_intermediates/package.apk
+
+_adtp_classes_dex=out/target/common/obj/APPS/DownloadProvider_intermediates/classes.dex; cp out/target/common/obj/APPS/DownloadProvider_intermediates/proguard.classes.dex $_adtp_classes_dex && out/host/linux-x86/bin/aapt add -k out/target/product/A788t/obj/APPS/DownloadProvider_intermediates/package.apk $_adtp_classes_dex && rm -f $_adtp_classes_dex
+
+ 'out/target/common/obj/APPS/DownloadProvider_intermediates/classes.dex' as 'classes.dex'...
+if [ -d out/target/common/obj/APPS/DownloadProvider_intermediates/classes ] ; then java_res_jar_flags=$(find out/target/common/obj/APPS/DownloadProvider_intermediates/classes -type f -a -not -name "*.class" | sed -e "s?^out/target/common/obj/APPS/DownloadProvider_intermediates/classes/? -C out/target/common/obj/APPS/DownloadProvider_intermediates/classes ?"); if [ -n "$java_res_jar_flags" ] ; then echo $java_res_jar_flags >out/target/product/A788t/obj/APPS/DownloadProvider_intermediates/java_res_jar_flags; jar uf out/target/product/A788t/obj/APPS/DownloadProvider_intermediates/package.apk $java_res_jar_flags; fi; fi
+
+签名
+mv out/target/product/A788t/obj/APPS/DownloadProvider_intermediates/package.apk out/target/product/A788t/obj/APPS/DownloadProvider_intermediates/package.apk.unsigned
+java -jar out/host/linux-x86/framework/signapk.jar device/ontim/A788t/security/media.x509.pem device/ontim/A788t/security/media.pk8 out/target/product/A788t/obj/APPS/DownloadProvider_intermediates/package.apk.unsigned out/target/product/A788t/obj/APPS/DownloadProvider_intermediates/package.apk.signed
+mv out/target/product/A788t/obj/APPS/DownloadProvider_intermediates/package.apk.signed out/target/product/A788t/obj/APPS/DownloadProvider_intermediates/package.apk
+mv out/target/product/A788t/obj/APPS/DownloadProvider_intermediates/package.apk out/target/product/A788t/obj/APPS/DownloadProvider_intermediates/package.apk.unaligned
+
+字节对齐
+out/host/linux-x86/bin/zipalign -f 4 out/target/product/A788t/obj/APPS/DownloadProvider_intermediates/package.apk.unaligned out/target/product/A788t/obj/APPS/DownloadProvider_intermediates/package.apk.aligned
+mv out/target/product/A788t/obj/APPS/DownloadProvider_intermediates/package.apk.aligned out/target/product/A788t/obj/APPS/DownloadProvider_intermediates/package.apk
+
+
+拷贝文件到目标目录
+Install: out/target/product/A788t/system/app/DownloadProvider.apk
+out/host/linux-x86/bin/acp -fp out/target/product/A788t/obj/APPS/DownloadProvider_intermediates/package.apk out/target/product/A788t/system/app/DownloadProvider.apk
+

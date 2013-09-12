@@ -1,0 +1,33 @@
+Principle:
+    Simple
+        No JNI change
+    WML
+        Less change
+
+    Recording
+
+    刷机环境
+
+Browser porting
+    porting webkit, chromium
+    porting framework
+    porting browser
+
+    change.list.4.0.3/webkit.txt
+        done!
+    change.list.4.0.3/framework.txt
+        partial done!
+
+    change.list.4.0.3/chromium.txt
+        done! 
+        maybe added more error log ...
+
+    change.list.4.0.3/libxml2.txt
+        done!
+
+    change.list.4.0.3/v8.txt
+        done!
+
+Download porting
+    porting framework
+    porting DownloadProvider

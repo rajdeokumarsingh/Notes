@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="application_name" msgid="1935869255545976415">"瀏覽器"</string>
+    <string name="choose_upload" msgid="3649366287575002063">"選擇要上載的檔案"</string>
+    <string name="uploads_disabled" msgid="463761197575372994">"檔案上傳功能已停用。"</string>
+    <string name="new_tab" msgid="7971857320679510529">"新分頁"</string>
+    <string name="new_incognito_tab" msgid="3606197964239039478">"新無痕式分頁"</string>
+    <string name="tab_bookmarks" msgid="2305793036003473653">"書籤"</string>
+    <string name="tab_most_visited" msgid="1077402532455000703">"最常造訪"</string>
+    <string name="tab_history" msgid="1979267558744613746">"記錄"</string>
+    <string name="tab_snapshots" msgid="1449241204980265186">"已儲存的網頁"</string>
+    <string name="added_to_bookmarks" msgid="4028710765672851635">"已加入書籤。"</string>
+    <string name="removed_from_bookmarks" msgid="546648923924996722">"已從書籤中移除。"</string>
+    <string name="sign_in_to" msgid="5939425800148759165">"登入到 <xliff:g id="HOSTNAME">%s1</xliff:g>「<xliff:g id="REALM">%s2</xliff:g>」"</string>
+    <string name="username" msgid="5057566336518215922">"名字"</string>
+    <string name="password" msgid="1177138552305184404">"密碼"</string>
+    <string name="action" msgid="183105774472071343">"登入"</string>
+    <string name="bookmarks_search" msgid="5229596268214362873">"瀏覽器"</string>
+    <string name="cancel" msgid="3017274947407233702">"取消"</string>
+    <string name="ok" msgid="1509280796718850364">"確定"</string>
+    <string name="title_bar_loading" msgid="7438217780834640678">"載入中..."</string>
+    <string name="page_info" msgid="4048529256302257195">"頁面資訊"</string>
+    <string name="page_info_view" msgid="5303490449842635158">"檢視頁面資訊"</string>
+    <string name="page_info_address" msgid="2222306609532903254">"位址："</string>
+    <string name="ssl_warnings_header" msgid="79744901983636370">"此網站的安全性憑證有問題。"</string>
+    <string name="ssl_continue" msgid="8031515015829358457">"繼續"</string>
+    <string name="security_warning" msgid="6607795404322797541">"安全性警告"</string>
+    <string name="view_certificate" msgid="1472768887529093862">"檢視憑證"</string>
+    <string name="ssl_go_back" msgid="4598951822061593819">"返回"</string>
+    <string name="ssl_untrusted" msgid="7754507359360636447">"這個憑證並非來自信任的授權單位。"</string>
+    <string name="ssl_mismatch" msgid="3809794439740523641">"網站名稱與憑證上的名稱不相符。"</string>
+    <string name="ssl_expired" msgid="5739349389499575559">"此憑證已過期"</string>
+    <string name="ssl_not_yet_valid" msgid="8193083327719048247">"這個憑證尚未生效。"</string>
+    <string name="ssl_date_invalid" msgid="3705563379257285534">"這個憑證的日期無效。"</string>
+    <string name="ssl_invalid" msgid="9041704741505449967">"這個憑證無效。"</string>
+    <string name="ssl_unknown" msgid="5679243486524754571">"不明的憑證錯誤。"</string>
+    <string name="stopping" msgid="4839698519340302982">"停止中…"</string>
+    <string name="stop" msgid="5687251076030630074">"停止"</string>
+    <string name="reload" msgid="8585220783228408062">"重新整理"</string>
+    <string name="back" msgid="8414603107175713668">"上一頁"</string>
+    <string name="forward" msgid="4288210890526641577">"下一頁"</string>
+    <string name="save" msgid="5922311934992468496">"確定"</string>
+    <string name="do_not_save" msgid="6777633870113477714">"取消"</string>
+    <string name="location" msgid="3411848697912600125">"地址"</string>
+    <string name="account" msgid="5179824606448077042">"帳戶"</string>
+    <string name="containing_folder" msgid="6771180232953030479">"新增至"</string>
+    <string name="new_folder" msgid="7743540149088867917">"新資料夾"</string>
+    <string name="edit_folder" msgid="621817453133656156">"編輯資料夾"</string>
+    <string name="delete_folder" msgid="2046483129024501116">"刪除資料夾"</string>
+    <string name="no_subfolders" msgid="3303645239686962674">"沒有子資料夾。"</string>
+    <string name="add_to_bookmarks_menu_option" msgid="4449323955122214389">"書籤"</string>
+    <string name="add_to_homescreen_menu_option" msgid="1461447829242963790">"主螢幕"</string>
+    <string name="add_to_other_folder_menu_option" msgid="5947586525822134105">"其他資料夾"</string>
+    <string name="name" msgid="5462672162695365387">"標籤"</string>
+    <string name="http" msgid="2163722670597250102">"http://"</string>
+    <string name="save_to_bookmarks" msgid="1679286010089780932">"儲存至書籤"</string>
+    <string name="bookmark_this_page" msgid="7530739804320811054">"將這個網頁加入書籤"</string>
+    <string name="remove" msgid="7820112494467011374">"移除"</string>
+    <string name="edit_bookmark" msgid="5024089053490231905">"編輯書籤"</string>
+    <string name="create_shortcut_bookmark" msgid="1995095662095484289">"新增捷徑至主螢幕"</string>
+    <string name="open_bookmark" msgid="8473581305759935790">"開啟"</string>
+    <string name="remove_bookmark" msgid="8407495852801410891">"刪除書籤"</string>
+    <string name="remove_from_bookmarks" msgid="4374080666576982775">"從書籤中移除"</string>
+    <string name="remove_history_item" msgid="5021424935726728618">"從記錄中移除"</string>
+    <string name="set_as_homepage" msgid="4752937379414905560">"設為首頁"</string>
+    <string name="bookmark_saved" msgid="2766434679871317557">"已儲存至書籤。"</string>
+    <string name="bookmark_not_saved" msgid="1077732557310662080">"無法儲存書籤。"</string>
+    <string name="homepage_set" msgid="8768087280310966395">"已設定為首頁。"</string>
+    <string name="bookmark_needs_title" msgid="6245900436119218187">"請輸入書籤名稱。"</string>
+    <string name="bookmark_needs_url" msgid="7809876865972755158">"請選取書籤位置。"</string>
+    <string name="bookmark_url_not_valid" msgid="4917440933384496211">"這個網址無效。"</string>
+    <string name="bookmark_cannot_save_url" msgid="7836064647943671126">"無法將這個網址加入書籤。"</string>
+    <string name="bookmark_page" msgid="6845189305130307274">"將最後瀏覽的網頁加入書籤"</string>
+    <string name="bookmark_thumbnail_view" msgid="3164068314718522138">"縮圖"</string>
+    <string name="bookmark_list_view" msgid="7848510619500937839">"清單"</string>
+    <string name="current_page" msgid="7510129573681663135">"來源 "</string>
+    <string name="delete_bookmark_warning" msgid="7825328496411904321">"刪除「<xliff:g id="BOOKMARK">%s</xliff:g>」書籤？"</string>
+    <string name="open_all_in_new_window" msgid="455786763426575293">"在新分頁中開啟所有書籤"</string>
+    <string name="goto_dot" msgid="3895839050522602723">"前往"</string>
+    <string name="select_dot" msgid="6299170761900561967">"選取文字"</string>
+    <string name="bookmarks" msgid="1961279134885867815">"書籤"</string>
+    <string name="shortcut_bookmark" msgid="3974876480401135895">"書籤"</string>
+    <string name="shortcut_bookmark_title" msgid="7570786275916681296">"選擇書籤"</string>
+    <string name="history" msgid="2451240511251410032">"記錄"</string>
+    <string name="menu_view_download" msgid="2124570321712995120">"下載"</string>
+    <string name="copy_page_url" msgid="1188679152608889555">"複製網頁網址"</string>
+    <string name="share_page" msgid="593756995297268343">"分享網頁"</string>
+    <string name="menu_save_snapshot" msgid="6935080344031126139">"儲存頁面以供離線閱讀"</string>
+    <string name="snapshot_failed" msgid="4584580873565876033">"無法儲存網頁以供離線閱讀。"</string>
+    <string name="contextheader_folder_bookmarkcount" msgid="353987136645619089">"<xliff:g id="BOOKMARK_COUNT">%d</xliff:g> 個書籤"</string>
+    <string name="contextheader_folder_empty" msgid="974171637803391651">"空資料夾"</string>
+    <string name="contextmenu_openlink" msgid="7237961252214188935">"開啟"</string>
+    <string name="contextmenu_openlink_newwindow" msgid="1205313604181761403">"在新分頁中開啟"</string>
+    <string name="contextmenu_openlink_newwindow_background" msgid="4690381019116746687">"在新背景分頁中開啟"</string>
+    <string name="contextmenu_savelink" msgid="5508554930832538184">"儲存連結"</string>
+    <string name="contextmenu_sharelink" msgid="5392275392280130331">"分享連結"</string>
+    <string name="contextmenu_copy" msgid="398860586635404030">"複製"</string>
+    <string name="contextmenu_copylink" msgid="5153657160294534270">"複製連結網址"</string>
+    <string name="contextmenu_download_image" msgid="4243829645180686912">"儲存圖片"</string>
+    <string name="contextmenu_view_image" msgid="3870625602053600905">"檢視圖片"</string>
+    <string name="contextmenu_set_wallpaper" msgid="3691902960115350686">"設為桌布"</string>
+    <string name="contextmenu_dial_dot" msgid="5856550683415933806">"撥打…"</string>
+    <string name="contextmenu_add_contact" msgid="3183511922223645716">"新增聯絡人"</string>
+    <string name="contextmenu_send_mail" msgid="1014513374828775660">"傳送電子郵件"</string>
+    <string name="contextmenu_map" msgid="7471390435434034912">"地圖"</string>
+    <string name="choosertitle_sharevia" msgid="4600490613341909086">"分享方式："</string>
+    <string name="clear" msgid="7070043081700011461">"清除"</string>
+    <string name="replace" msgid="4843033491070384047">"取代"</string>
+    <string name="browser_bookmarks_page_bookmarks_text" msgid="6787605028726162673">"書籤"</string>
+    <string name="menu_preferences" msgid="6709237687234102240">"設定"</string>
+    <string name="pref_content_title" msgid="3834107397725342174">"網頁內容"</string>
+    <string name="pref_content_load_images" msgid="2125616852957377561">"載入圖片"</string>
+    <string name="pref_content_load_images_summary" msgid="5055874125248398584">"顯示網頁上的圖片"</string>
+    <string name="pref_content_block_popups" msgid="4158524847764470895">"封鎖彈出式視窗"</string>
+    <string name="pref_content_javascript" msgid="4570972030299516843">"啟用 JavaScript"</string>
+    <string name="pref_content_open_in_background" msgid="824123779725118663">"在背景中開啟"</string>
+    <string name="pref_content_plugins" msgid="7231944644794301582">"啟用外掛程式"</string>
+  <string-array name="pref_content_plugins_choices">
+    <item msgid="6745108155096660725">"永遠開啟"</item>
+    <item msgid="2484126708670016519">"隨選"</item>
+    <item msgid="8547442717307793863">"關閉"</item>
+  </string-array>
+    <string name="pref_content_open_in_background_summary" msgid="955411158407739504">"在目前分頁的後面開啟新分頁"</string>
+    <string name="pref_content_homepage" msgid="3324574611613105696">"設定首頁"</string>
+    <string name="pref_content_search_engine" msgid="1620101310821644144">"設定搜尋引擎"</string>
+    <string name="pref_content_search_engine_summary" msgid="304003941861818133">"選擇搜尋引擎"</string>
+    <string name="pref_set_homepage_to" msgid="7838684355145561242">"設為"</string>
+  <string-array name="pref_homepage_choices">
+    <item msgid="844041670142910837">"目前網頁"</item>
+    <item msgid="4430498748295169195">"空白網頁"</item>
+    <item msgid="5747608191946904074">"預設網頁"</item>
+    <item msgid="6092441301001006473">"常用網站"</item>
+    <item msgid="6569304572171444894">"其他"</item>
+  </string-array>
+    <string name="pref_content_autofit" msgid="8260474534053660809">"自動調整頁面"</string>
+    <string name="pref_content_autofit_summary" msgid="324810555822572112">"配合螢幕大小調整網頁版面"</string>
+    <string name="pref_general_title" msgid="1946872771219249323">"一般設定"</string>
+    <string name="pref_general_sync_title" msgid="3138637035975860324">"同步處理"</string>
+    <string name="pref_general_autofill_title" msgid="547881256865816858">"自動填入"</string>
+    <string name="pref_autofill_enabled" msgid="1015751713312396713">"表單自動填入"</string>
+    <string name="pref_autofill_enabled_summary" msgid="7659954073892471496">"輕觸一下即可填妥網頁表單"</string>
+    <string name="pref_autofill_profile_editor" msgid="8934844472922113166">"自動填入文字"</string>
+    <string name="pref_autofill_profile_editor_summary" msgid="4864447251676856190">"設定要在網路表單中自動填入的文字"</string>
+    <string name="pref_autologin_title" msgid="4421187193809267096">"自動登入 Google"</string>
+    <string name="pref_autologin_progress" msgid="8333244467048833461">"正使用 <xliff:g id="ID_1">%s</xliff:g> 登入 Google 網站"</string>
+    <string name="autologin_bar_text" msgid="3684581827167173371">"登入身分"</string>
+    <string name="autologin_bar_login_text" msgid="3336615320510851879">"登入"</string>
+    <string name="autologin_bar_hide_text" msgid="3629355974385859580">"隱藏"</string>
+    <string name="autologin_bar_error" msgid="7470001207395920811">"無法登入。"</string>
+    <string name="autofill_profile_editor_heading" msgid="4798644544927738078">"輸入您要在網路表單中自動填入的文字。"</string>
+    <string name="autofill_profile_editor_name" msgid="8566130291459685955">"全名："</string>
+    <string name="autofill_profile_editor_email_address" msgid="7967585896612797173">"電子郵件："</string>
+    <string name="autofill_profile_editor_company_name" msgid="2813443159949210417">"公司名稱："</string>
+    <string name="autofill_profile_editor_address_line_1" msgid="836433242509243081">"地址行 1："</string>
+    <string name="autofill_profile_editor_address_line_1_hint" msgid="5965659598509327172">"路街巷弄、郵政信箱、代收人"</string>
+    <string name="autofill_profile_editor_address_line_2" msgid="8194745202893822479">"地址行 2："</string>
+    <string name="autofill_profile_editor_address_line_2_hint" msgid="8529642768127569254">"門牌號碼、樓層等"</string>
+    <string name="autofill_profile_editor_city" msgid="7306716145784997135">"鄉/鎮/市/區："</string>
+    <string name="autofill_profile_editor_state" msgid="2150403366835080407">"州/省/地區："</string>
+    <string name="autofill_profile_editor_zip_code" msgid="283668573295656671">"郵遞區號："</string>
+    <string name="autofill_profile_editor_country" msgid="7234470301239156656">"國家/地區："</string>
+    <string name="autofill_profile_editor_phone_number" msgid="4938852821413729276">"電話："</string>
+    <string name="autofill_profile_editor_phone_number_invalid" msgid="6795411298467068957">"電話號碼無效。"</string>
+    <string name="autofill_profile_editor_save_profile" msgid="3230301454458581157">"儲存"</string>
+    <string name="autofill_profile_successful_save" msgid="5691459703493331983">"已儲存自動填入文字。"</string>
+    <string name="autofill_profile_successful_delete" msgid="1790262652460723127">"已刪除自動填入文字。"</string>
+    <string name="autofill_profile_editor_delete_profile" msgid="3098369314558164153">"刪除"</string>
+    <string name="autofill_setup_dialog_message" msgid="1096164985825394616">"瀏覽器可以自動完成這類網路表單，您要設定自動填入文字嗎？"</string>
+    <string name="autofill_setup_dialog_negative_toast" msgid="3288881675232206984">"您隨時可以前往 [瀏覽器] &gt; [設定] &gt; [一般] 畫面設定自動填入文字。"</string>
+    <string name="disable_autofill" msgid="8305901059849400354">"停用自動填入功能"</string>
+    <string name="pref_privacy_security_title" msgid="3480313968942160914">"隱私權與安全性"</string>
+    <string name="pref_privacy_clear_cache" msgid="3380316479925886998">"清除快取"</string>
+    <string name="pref_privacy_clear_cache_summary" msgid="2216463577207991454">"清除本機快取內容與資料庫"</string>
+    <string name="pref_privacy_clear_cache_dlg" msgid="4344512581716422465">"刪除本機快取內容和資料庫？"</string>
+    <string name="pref_privacy_cookies_title" msgid="6763274282214830526">"Cookie"</string>
+    <string name="pref_privacy_clear_cookies" msgid="3095583579133780331">"清除所有 Cookie"</string>
+    <string name="pref_privacy_clear_cookies_summary" msgid="6962742063990677520">"清除瀏覽器中所有 Cookie"</string>
+    <string name="pref_privacy_clear_cookies_dlg" msgid="1493252163164621278">"刪除所有 Cookie？"</string>
+    <string name="pref_privacy_clear_history" msgid="8723795508825198477">"清除記錄"</string>
+    <string name="pref_privacy_clear_history_summary" msgid="6868501330708940734">"清除瀏覽記錄"</string>
+    <string name="pref_privacy_clear_history_dlg" msgid="6934317391642846227">"刪除瀏覽器的瀏覽記錄？"</string>
+    <string name="pref_privacy_formdata_title" msgid="6549813837982050424">"表單資料"</string>
+    <string name="pref_privacy_clear_form_data" msgid="4232668196344383987">"清除表單資料"</string>
+    <string name="pref_privacy_clear_form_data_summary" msgid="7702091143640546200">"清除所有已儲存的表單資料"</string>
+    <string name="pref_privacy_clear_form_data_dlg" msgid="8205626042241338983">"刪除所有已儲存的表單資料？"</string>
+    <string name="pref_privacy_clear_passwords" msgid="4750234112289277480">"清除密碼"</string>
+    <string name="pref_privacy_clear_passwords_summary" msgid="8856782718942903335">"清除所有已儲存密碼"</string>
+    <string name="pref_privacy_clear_passwords_dlg" msgid="5836576259947160045">"刪除所有已儲存的密碼？"</string>
+    <string name="pref_privacy_location_title" msgid="7458378016606081067">"位置"</string>
+    <string name="pref_privacy_enable_geolocation" msgid="1395040170290765686">"啟用定位功能"</string>
+    <string name="pref_privacy_enable_geolocation_summary" msgid="8437020934664306205">"允許網站向您要求位置資訊存取權"</string>
+    <string name="pref_privacy_clear_geolocation_access" msgid="6649680770030042980">"清除位置資訊存取權"</string>
+    <string name="pref_privacy_clear_geolocation_access_summary" msgid="7750143359497314679">"清除所有網站的位置資訊存取權"</string>
+    <string name="pref_privacy_clear_geolocation_access_dlg" msgid="3190928760598034346">"清除網站的位置資訊存取權？"</string>
+    <string name="pref_security_passwords_title" msgid="5734190542383756711">"密碼"</string>
+    <string name="pref_security_remember_passwords" msgid="6492957683454529549">"記住密碼"</string>
+    <string name="pref_security_remember_passwords_summary" msgid="256388703356349137">"儲存您的使用者名稱和密碼"</string>
+    <string name="pref_security_save_form_data" msgid="1213669802810198893">"儲存表單資料"</string>
+    <string name="pref_security_save_form_data_summary" msgid="4994074685153708026">"儲存輸入的表單資料"</string>
+    <string name="pref_security_show_security_warning" msgid="8901135676266754559">"顯示安全性警告"</string>
+    <string name="pref_security_show_security_warning_summary" msgid="5260098316025397525">"網站的安全性有問題時顯示警告"</string>
+    <string name="pref_security_accept_cookies" msgid="3201367661925047989">"接受 Cookie"</string>
+    <string name="pref_security_accept_cookies_summary" msgid="1907951236154433751">"允許網站儲存及讀取 Cookie 資料"</string>
+  <string-array name="pref_text_size_choices">
+    <item msgid="4952686548944739548">"最小"</item>
+    <item msgid="1950030433642671460">"小"</item>
+    <item msgid="4338347520133294584">"適中"</item>
+    <item msgid="5043128215356351184">"大"</item>
+    <item msgid="7201512237890458902">"最大"</item>
+  </string-array>
+    <string name="pref_min_font_size" msgid="8811125835817449131">"最小字型大小"</string>
+    <string name="pref_min_font_size_value" msgid="2924708480509060209">"<xliff:g id="FONT_SIZE">%d</xliff:g>pt"</string>
+    <string name="pref_text_zoom" msgid="5171056101805125497">"文字比例"</string>
+    <string name="pref_zoom_on_double_tap" msgid="902786475250741795">"輕按兩下即可縮放"</string>
+    <string name="pref_force_userscalable" msgid="5641500562399892621">"強制啟用縮放功能"</string>
+    <string name="pref_force_userscalable_summary" msgid="3613242300617172230">"覆寫網站的控制縮放行為要求"</string>
+    <string name="pref_inverted_category" msgid="1280639705117152207">"畫面色彩反轉"</string>
+    <string name="pref_inverted" msgid="7613556986776824112">"色彩反轉"</string>
+    <string name="pref_inverted_summary" msgid="7357225897413923085">"黑色轉換成白色，反之亦然"</string>
+    <string name="pref_inverted_contrast" msgid="8527441236225288169">"對比"</string>
+    <string name="pref_default_zoom" msgid="8076142259097187395">"預設縮放"</string>
+  <string-array name="pref_default_zoom_choices">
+    <item msgid="549583171195154919">"遠"</item>
+    <item msgid="5619034257768161024">"中"</item>
+    <item msgid="3840999588443167001">"近"</item>
+  </string-array>
+    <string name="pref_default_zoom_dialogtitle" msgid="6095974367125109021">"預設縮放"</string>
+    <string name="pref_content_load_page" msgid="2219810141690955452">"以總覽模式開啟網頁"</string>
+    <string name="pref_content_load_page_summary" msgid="9168803276420332955">"顯示新開啟網頁的總覽畫面"</string>
+    <string name="pref_extras_title" msgid="7075456173747370647">"進階"</string>
+    <string name="pref_extras_website_settings" msgid="67866640052455549">"網站設定"</string>
+    <string name="pref_extras_website_settings_summary" msgid="1656771443223494406">"個別網站的進階設定"</string>
+    <string name="pref_extras_reset_default_title" msgid="3579760449455761762">"重設預設值"</string>
+    <string name="pref_extras_reset_default" msgid="8904000515846202110">"還原至初始設定"</string>
+    <string name="pref_extras_reset_default_summary" msgid="4247870778270414501">"還原預設設定"</string>
+    <string name="pref_extras_reset_default_dlg" msgid="7922814420184322450">"將設定回復成預設值？"</string>
+    <string name="pref_development_title" msgid="3263854204533056480">"偵錯"</string>
+    <string name="pref_default_text_encoding" msgid="5742965543955558478">"文字編碼"</string>
+  <string-array name="pref_default_text_encoding_choices">
+    <item msgid="7275223955790513818">"Latin-1 (ISO-8859-1)"</item>
+    <item msgid="2456597866837587140">"Unicode (UTF-8)"</item>
+    <item msgid="6122474363777211732">"中文 (GBK)"</item>
+    <item msgid="373372275931607040">"中文 (Big5)"</item>
+    <item msgid="891615911084608570">"日文 (ISO-2022-JP)"</item>
+    <item msgid="5589150448475151241">"日文 (SHIFT_JIS)"</item>
+    <item msgid="7356792686950371843">"日文 (EUC-JP)"</item>
+    <item msgid="2193955365569270096">"韓文 (EUC-KR)"</item>
+  </string-array>
+    <string name="pref_default_text_encoding_dialogtitle" msgid="5508255018084978547">"文字編碼"</string>
+    <string name="pref_accessibility_title" msgid="5127836981587423215">"協助工具"</string>
+    <string name="pref_font_size_category" msgid="6683754355084218254">"文字大小"</string>
+    <string name="pref_lab_title" msgid="5571091610359629423">"研究室"</string>
+    <string name="pref_lab_quick_controls" msgid="3267606522082281367">"快速控制介面"</string>
+    <string name="pref_lab_quick_controls_summary" msgid="3149664132600968775">"姆指從左側邊緣或右側邊緣滑動，即可開啟快速控制項並隱藏應用程式和網址列"</string>
+    <string name="pref_use_instant_search" msgid="1119176077760723740">"Google 互動智慧搜尋"</string>
+    <string name="pref_use_instant_search_summary" msgid="839320474961917522">"使用「Google 搜尋」時啟用「Google 互動智慧搜尋」功能，一邊打字一邊顯示搜尋結果 (這會增加資料傳輸量)。"</string>
+    <string name="pref_lab_fullscreen" msgid="8173609016657987973">"全螢幕"</string>
+    <string name="pref_lab_fullscreen_summary" msgid="7694738112219376740">"使用全螢幕模式以隱藏狀態列"</string>
+    <string name="pref_data_title" msgid="7255058703417796578">"頻寬管理"</string>
+    <string name="pref_data_preload_title" msgid="4479320472980292873">"預先載入搜尋結果"</string>
+  <string-array name="pref_data_preload_choices">
+    <item msgid="5180466923190095508">"永不載入"</item>
+    <item msgid="1791664748778640002">"僅限 Wi-Fi 連線時載入"</item>
+    <item msgid="3944061253437827617">"一律載入"</item>
+  </string-array>
+    <string name="pref_data_preload_summary" msgid="3809168910751382727">"允許瀏覽器在背景預先載入可信度高的搜尋結果"</string>
+    <string name="pref_data_preload_dialogtitle" msgid="8421297746110796536">"預先載入搜尋結果"</string>
+    <string name="browserFrameNetworkErrorLabel" msgid="8102515020625680714">"發生連線問題"</string>
+    <string name="browserFrameFileErrorLabel" msgid="4703792279852977350">"檔案發生問題"</string>
+    <string name="browserFrameFormResubmitLabel" msgid="2385512101948178841"></string>
+    <string name="browserFrameFormResubmitMessage" msgid="5244059279866705254">"您要瀏覽的網頁包含已提交的資料 (「POSTDATA」)。如果您重新傳送資料，系統將重複執行該網頁表單上的作業 (例如搜尋或線上購物)。"</string>
+    <string name="loadSuspendedTitle" msgid="6453376579109644551">"無網路連線"</string>
+    <string name="loadSuspended" msgid="3843343290039218668">"沒有網際網路連線，因此瀏覽器無法載入這個網頁。"</string>
+    <string name="clear_history" msgid="5998307092715979619">"清除記錄"</string>
+    <string name="browser_history" msgid="2979476257919939232">"最近瀏覽的頁面"</string>
+    <string name="empty_history" msgid="7013369425484218985">"沒有瀏覽器記錄。"</string>
+    <string name="go_home" msgid="109129207276086793">"首頁"</string>
+    <string name="add_new_bookmark" msgid="3158497555612337238">"新增書籤"</string>
+    <string name="add_bookmark_short" msgid="3783984330998103735">"新增"</string>
+    <string name="search_hint" msgid="4647356319916631820">"搜尋或輸入網址"</string>
+    <string name="search_button_text" msgid="5235226933877634410">"前往"</string>
+    <string name="search_settings_description" msgid="1422401062529014107">"書籤與網頁記錄"</string>
+    <string name="popup_window_attempt" msgid="31565781154067629">"允許這個網站開啟彈出式視窗？"</string>
+    <string name="allow" msgid="1157313689171991335">"允許"</string>
+    <string name="block" msgid="9172175889884707800">"封鎖"</string>
+    <string name="too_many_windows_dialog_title" msgid="5709782301477380438">"已達分頁數量上限"</string>
+    <string name="too_many_windows_dialog_message" msgid="3644234634638290304">"您必須關閉一個分頁，才能開啟新分頁。"</string>
+    <string name="too_many_subwindows_dialog_title" msgid="3805453941587725944">"已開啟快顯視窗"</string>
+    <string name="too_many_subwindows_dialog_message" msgid="2164725447981195556">"一次只能開啟一個彈出式視窗。"</string>
+    <string name="download_no_sdcard_dlg_title" product="nosdcard" msgid="56777245081568508">"沒有可用的 USB 儲存裝置"</string>
+    <string name="download_no_sdcard_dlg_title" product="default" msgid="605904452159416792">"沒有 SD 卡"</string>
+    <string name="download_no_sdcard_dlg_msg" product="nosdcard" msgid="3144652102051031721">"必須掛接 USB 儲存裝置才能下載 <xliff:g id="FILENAME">%s</xliff:g>。"</string>
+    <string name="download_no_sdcard_dlg_msg" product="default" msgid="2616399456116301518">"需要 SD 卡下載 <xliff:g id="FILENAME">%s</xliff:g>。"</string>
+    <string name="download_sdcard_busy_dlg_title" product="nosdcard" msgid="8081445664689818973">"沒有可用的 USB 儲存裝置"</string>
+    <string name="download_sdcard_busy_dlg_title" product="default" msgid="6877712666046917741">"無法使用 SD 卡"</string>
+    <string name="download_sdcard_busy_dlg_msg" product="nosdcard" msgid="8412543086906716875">"USB 儲存裝置忙碌中。如要允許下載，請輕觸通知中的 [關閉 USB 儲存裝置]。"</string>
+    <string name="download_sdcard_busy_dlg_msg" product="default" msgid="2629425950473358591">"SD 卡忙碌中。如要允許下載，請輕觸通知中的 [關閉 USB 儲存裝置]。"</string>
+    <string name="cannot_download" msgid="8150552478556798780">"僅可下載「http」或「https」網址的檔案。"</string>
+    <string name="download_pending" msgid="2599683668575349559">"正在開始下載..."</string>
+    <string name="help_page" msgid="2906208423557552540">"說明"</string>
+    <string name="search_the_web" msgid="6046130189241962337">"搜尋網頁"</string>
+    <string name="webstorage_outofspace_notification_title" msgid="1160474608059771788">"瀏覽器儲存空間已滿"</string>
+    <string name="webstorage_outofspace_notification_text" msgid="47273584426988640">"輕觸即可釋放儲存空間。"</string>
+    <string name="webstorage_clear_data_title" msgid="689484577124333977">"清除儲存的資料"</string>
+    <string name="webstorage_clear_data_dialog_message" msgid="6200681632891775881">"刪除這個網站儲存的所有資料？"</string>
+    <string name="webstorage_clear_data_dialog_ok_button" msgid="6682570951259237542">"確定"</string>
+    <string name="webstorage_clear_data_dialog_cancel_button" msgid="2028867751958942762">"取消"</string>
+    <string name="webstorage_origin_summary_mb_stored" msgid="1985885826292236210">"您手機的儲存空間使用量 (MB)"</string>
+    <string name="loading_video" msgid="7886324933131962321">"正在載入影片..."</string>
+    <string name="geolocation_permissions_prompt_message" msgid="356796102004052471">"<xliff:g id="WEBSITE_ORIGIN">%s</xliff:g> 想取得您的位置資訊"</string>
+    <string name="geolocation_permissions_prompt_share" msgid="9084486342048347976">"分享位置資訊"</string>
+    <string name="geolocation_permissions_prompt_dont_share" msgid="6303025160237860300">"拒絕"</string>
+    <string name="geolocation_permissions_prompt_remember" msgid="3118526300707348308">"記住偏好設定"</string>
+    <string name="geolocation_permissions_prompt_toast_allowed" msgid="7201417941112726112">"這個網站可以存取您的位置資訊，您可以前往 [設定] &gt; [進階] &gt; [網站] 畫面變更這項設定。"</string>
+    <string name="geolocation_permissions_prompt_toast_disallowed" msgid="156443445797377409">"這個網站無法存取您的位置資訊，您可以前往 [設定] &gt; [進階] &gt; [網站] 畫面變更這項設定。"</string>
+    <string name="geolocation_settings_page_title" msgid="1745477985097536528">"清除位置資訊存取權"</string>
+    <string name="geolocation_settings_page_summary_allowed" msgid="9180251524290811398">"此網站目前可以存取您的位置資訊"</string>
+    <string name="geolocation_settings_page_summary_not_allowed" msgid="7941769772784366199">"這個網站目前無法存取您的位置資訊"</string>
+    <string name="geolocation_settings_page_dialog_message" msgid="8772923416296868537">"清除這個網站的位置資訊存取權？"</string>
+    <string name="geolocation_settings_page_dialog_ok_button" msgid="2113465477131017852">"確定"</string>
+    <string name="geolocation_settings_page_dialog_cancel_button" msgid="7941036504673409747">"取消"</string>
+    <string name="website_settings_clear_all" msgid="8739804325997655980">"全部清除"</string>
+    <string name="website_settings_clear_all_dialog_message" msgid="1551164275687475061">"刪除所有網站資料和位置存取權限？"</string>
+    <string name="website_settings_clear_all_dialog_ok_button" msgid="7858504776529106243">"確定"</string>
+    <string name="website_settings_clear_all_dialog_cancel_button" msgid="1896757051856611674">"取消"</string>
+    <string name="progress_dialog_setting_wallpaper" msgid="2031391201442335889">"正在設定桌布..."</string>
+    <string name="defaultBookmarksUpButton" msgid="2303951020715704735">"書籤"</string>
+    <string name="empty_bookmarks_folder" msgid="6239830231917618556">"沒有書籤。"</string>
+    <string name="rlz_access_point" msgid="7165847807377650632">"Y1"</string>
+    <string name="account_chooser_dialog_title" msgid="3314204833188808194">"選擇帳戶"</string>
+    <string name="import_bookmarks_dialog_title" msgid="3325557652271172128">"與 Google 帳戶保持同步"</string>
+    <string name="import_bookmarks_dialog_description" msgid="2362897194870789609">"這個裝置上的書籤尚未與 Google 帳戶建立關聯。您可以將這些書籤新增至帳戶中加以儲存；如果您不想同步處理這些書籤，只需將其刪除即可。"</string>
+    <string name="import_bookmarks_dialog_select_add_account" msgid="7643058662272484895">"新增這個裝置上現有的書籤，並開始與 Google 帳戶同步化"</string>
+    <string name="import_bookmarks_dialog_delete_select_account" msgid="4333848003180415516">"刪除這個裝置上現有的書籤，並開始與 Google 帳戶同步化"</string>
+    <string name="import_bookmarks_dialog_confirm_delete" msgid="2204771572755630570">"要刪除這個裝置上現有的書籤，並開始與 <xliff:g id="GOOGLE_ACCOUNT">%s</xliff:g> 的書籤同步化嗎？"</string>
+    <string name="import_bookmarks_dialog_confirm_add" msgid="8942794112340838111">"要新增這個裝置上現有的書籤，並開始與 <xliff:g id="GOOGLE_ACCOUNT">%s</xliff:g> 的書籤同步化嗎？"</string>
+    <string name="import_bookmarks_dialog_remove" msgid="5984607822851800902">"刪除書籤"</string>
+    <string name="import_bookmarks_wizard_next" msgid="7578143961884352676">"繼續"</string>
+    <string name="import_bookmarks_wizard_previous" msgid="8551440353688257031">"返回"</string>
+    <string name="import_bookmarks_wizard_cancel" msgid="4936061122806506634">"取消"</string>
+    <string name="import_bookmarks_wizard_done" msgid="1446247092194489191">"完成"</string>
+    <string name="import_bookmarks_dialog_add" msgid="1743359725294101189">"將書籤新增至 Google 帳戶"</string>
+    <string name="import_bookmarks_dialog_import" msgid="6933613853573899218">"將您的 Android 書籤新增至 <xliff:g id="GOOGLE_ACCOUNT">%s</xliff:g> 的書籤"</string>
+    <string name="menu_share_url" msgid="5851814357333739700">"分享"</string>
+    <string name="max_tabs_warning" msgid="4122034303809457570">"已無分頁可供使用"</string>
+    <string name="instant_search_label" msgid="8769284297650716935">"使用 Google 互動智慧搜尋 (研究室)"</string>
+    <string name="preview" msgid="6450823514561689038">"預覽"</string>
+    <string name="local_bookmarks" msgid="533816851415228520">"本機"</string>
+    <string name="ua_switcher_desktop" msgid="220097077327558435">"要求桌面版網站"</string>
+    <string name="permission_preload_label" msgid="4856971662337877316">"預先載入結果"</string>
+    <string name="empty_snapshots_folder" msgid="7675378008107026013">"沒有已儲存的網頁。"</string>
+    <string name="remove_snapshot" msgid="1624447424544976849">"刪除儲存的頁面"</string>
+    <string name="snapshot_go_live" msgid="1209542802541168497">"載入實際版本"</string>
+    <string name="accessibility_button_back" msgid="6194680634245279407">"返回"</string>
+    <string name="accessibility_button_forward" msgid="1236827218480658168">"往前"</string>
+    <string name="accessibility_button_refresh" msgid="1023441396241841313">"重新整理頁面"</string>
+    <string name="accessibility_button_stop" msgid="6793644120043222148">"停止載入網頁"</string>
+    <string name="accessibility_button_addbookmark" msgid="4787844912630006181">"將網頁加入書籤"</string>
+    <string name="accessibility_button_search" msgid="5357014102136055376">"搜尋"</string>
+    <string name="accessibility_button_voice" msgid="152016375096083337">"開始語音搜尋"</string>
+    <string name="accessibility_button_bookmarks" msgid="7435055677299151649">"書籤"</string>
+    <string name="accessibility_button_closetab" msgid="6954807842756927737">"關閉分頁"</string>
+    <string name="accessibility_button_newtab" msgid="4116986240706315748">"開啟新分頁"</string>
+    <string name="accessibility_button_newincognitotab" msgid="5254901889040012964">"開啟新的無痕式分頁"</string>
+    <string name="accessibility_button_clear" msgid="6943152307986161598">"清除輸入"</string>
+    <string name="accessibility_button_uaswitch" msgid="6286804719724282339">"切換使用者代理程式"</string>
+    <string name="accessibility_button_go" msgid="1182818872083055958">"開始"</string>
+    <string name="accessibility_button_navscreen" msgid="9142904748728713075">"網頁管理員"</string>
+    <string name="accessibility_button_more" msgid="3054251446394224216">"更多選項"</string>
+    <string name="accessibility_state_incognito" msgid="5786038488425202355">"無痕式頁面"</string>
+    <string name="accessibility_state_frozen" msgid="8041539250447035570">"儲存的頁面"</string>
+    <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"分頁管理"</string>
+
+    <string name="download_way">請選擇操作</string>
+    <string name="online_play">播放文件</string>
+    <string name="download_location">下載文件</string>
+
+    <string name="homepage">"主頁"</string>
+    <string name="full_screen_on">全屏模式</string>
+    <string name="full_screen_off">取消全屏</string>
+    <string name="pref_new_tab_context" >"打開新窗口設置"</string>
+    <string-array name="pref_new_tab_context_choices">
+        <item >"主頁"</item>
+        <item >"空白頁"</item>
+    </string-array>
+    <string name="pref_new_tab_context_dialogtitle">打開新窗口設置</string>
+    <string name="sort_history" >"排序記錄"</string>
+    <string name="sort_history_title">排序方式</string>
+    <string-array name="sort_type">
+        <item>時間</item>
+        <item>訪問次數</item>
+        <item>地址</item>
+    </string-array>
+    <string name="clear_today_history" msgid="5998307092715979619">"清除今日記錄"</string>
+    <string name="download_menu_delete_files"  >"刪除下載文件"</string>
+    <string name="download_menu_delete_dialog_msg"  >"從下載列表中刪除所選項？"</string>
+    <string name="download_menu_delete_dialog_msg_add"  >"同時刪除下載文件(臨時文件)"</string>
+    <string name="exit">"退出"</string>
+    <string name="pref_content_fullscreen_mode">全屏模式</string>
+    <string name="pref_content_fullscreen_mode_summary">以全屏模式顯示網頁</string>
+    <string name="pref_save_directory">選擇保存目錄</string>
+    <string name="pref_download_dir">下載文件保存目錄</string>
+    <string name="pref_data_connection">數據連接</string>
+    <string name="pref_data_connection_dialogtitle">數據連接</string>
+    <string-array name="pref_data_connection_choices_T8808D">
+        <item>CMWAP</item>
+        <item>CMNET</item>
+        <item>CMNET2</item>
+        <item>系統默認</item>
+    </string-array>
+    <string name="default_folder_name">我的收藏</string>
+    <string name="delete_bookmarks">删除書籤</string>
+    <string name="delete_bookmarks_msg">刪除所有選中的書簽？</string>
+    <string name="delete_bookmarks_waiting">正在刪除書簽，請等待...</string>
+    <string name="select_all">全選/反選</string>
+    <string name="folder">收藏夾</string>
+    <string name="choose_folder">選擇收藏夾</string>
+    <string name="rename_folder">重命名收藏夾</string>
+    <string name="folder_removed">收藏夾已刪除</string>
+    <string name="delete_folder_warning">將會刪除收藏夾<xliff:g id="BOOKMARK">%s</xliff:g></string>
+    <string name="folder_exist">收藏夾已存在</string>
+    <string name="folder_created">收藏夾創建成功</string>
+    <string name="folder_not_saved">無法創建收藏夾</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="wifi_connected">WLAN網絡已連接</string>
+    <string name="wifi_disconnected_title">WLAN網絡中斷</string>
+    <string name="wifi_disconnected">WLAN網絡已中斷, 使用移動網絡?</string>
+    <string name="wifi_close_save_operation">自動選擇移動網絡，並不再提示</string>
+    <string name="wifi_available_title">有可用WLAN網絡</string>
+    <string name="wifi_available">有可用WLAN網絡，是否選擇?(否將使用移動網絡)</string>
+    <string name="wifi_available_net">有可用WLAN網絡，是否選擇?</string>
+    <string name="using_mobile_network">已連接移動網絡</string>
+    <string name="continue_with_wifi">發現WLAN信號%1$s，是否使用WLAN網絡？ (使用該網絡可能使部分數據業務中斷)</string>
+    <string name="continue_with_mobile">使用移動網絡繼續下載(將會產生流量費用)?</string>
+    <string name="exit_browser_title">退出瀏覽器</string>
+    <string name="exit_browser">確認退出瀏覽器?</string>
+    <string name="not_enough_memory_space">手機內存不足！！！</string>
+    <string name="bookmark_read_ony_delete">無法刪除預置書籤</string>
+    <string name="bookmark_read_ony_edit">無法編輯預置書籤</string>
+    <string name="download_pending_network" msgid="6548714525679461053">"等待資料連線中…"</string>
+    <string name="replace_bookmark_tip">是否保存？</string>
+    <string name="download_new">新建</string>
+    <string name="new_file">文件名:</string>
+    <string name="new_save_path">保存目錄:</string>
+    <string name="change_download_path_report">當前不是默認下載路徑，文件將保存在新路徑中。</string>
+
+    <string name="move_bookmark">移動書簽</string>
+    <string name="move_action">移動</string>
+    <string name="go_homepage">主頁</string>
+    <string name="tab_switch">頁面切換</string>
+    <string name="tab_menu_history">"曆史"</string>
+    <string name="save_link_to_bookmark">將鏈接保存至書簽</string>
+    <string name="url_write_limit">您輸入的網址已達最大上限！</string>
+    <string name="alert_dialog_not_format">警告：手機不支持當前下載文件的格式!</string>
+    <string name="switch_page">轉到網址</string>
+    <string name="history_today">今天</string>
+    <string name="history_yesterday">昨天</string>
+    <string name="history_last_week">上周</string>
+    <string name="history_week_ago">一周以前</string>
+    <string name="older">往前</string>
+    <string name="create_new_folder">添加目錄</string>
+    <string name="pref_setting_agent_title">設置代理</string>
+    <string name="pref_setting_agent_message">設置代理可能導致浏覽器不能上網，確認設定？</string>
+    <string name="pref_setting_agent_summary">接入點代理設置</string>
+    <string name="pref_setting_ip">代理</string>
+    <string name="pref_setting_port">端口</string> 
+    <string name="not_set">未設置</string>
+    <string name="page_info_page">頁面屬性</string>
+    <string name="page_info_Url">顯示URL地址</string>
+    <string name="cu_download_size">您下載的文件大小約爲 <xliff:g id="contentSize">%s</xliff:g>，確認下載？</string>
+    <string name="cu_download_no_size">確認下載？</string>
+    <string name="cu_download">下載</string>
+    <string name="url_write_limit2">該鏈接長度已達最大上限，無法打開！</string>
+    <string name="pref_privacy_clear_today_history_dlg">"要刪除今天的曆史記錄嗎？"</string>
+    <string name="match_url">請輸入合法的網址</string>
+    <string name="save_bookmark_label">添加書簽</string>
+    <string name="quick_navigation">頁面導航</string>
+    <string name="add_new_quick_navigation">新增</string>
+    <string name="delete_quick_navigation_prompt">刪除 %s ?</string>
+    <string name="edit_quick_navigation">編輯</string>
+    <string name="delete_quick_navigation">刪除</string>
+    <string name="homepage_default_page_android">網址導航</string>
+    <string name="download_no_sdcard_dlg_title_init">"不存在 USB 存儲設備且內部存儲區域不可用"</string>
+    <string name="add_replace_bookmark_tip">書簽已存在，是否覆蓋？</string>
+    <string name="base_decode_failed">圖片數據解碼失敗！</string>
+    <string name="language_change">系統語言設置改變，浏覽器跳到導航界面！</string>
+    <string name="screen_not_double">該快捷方式已存在！</string>
+
+
+    <string name="upload_file" msgid=";';0'">"選擇文件"</string>
+    <string name="no_file_chosen" msgid=";'0">"未選定任何文件"</string>
+    <string name="reset" msgid=";'00;00">"重置"</string>
+    <string name="submit" msgid="'0;;0'''">"提交"</string>
+    <string name="js_dialog_before_unload" msgid="'0''0">"是否從該頁面導航至它處？"\n\n"<xliff:g id="MESSAGE">%s</xliff:g>"\n\n"選擇“確定”繼續，或選擇“取消”留在當前頁面。"</string>
+    <string name="js_dialog_title" msgid="''000'0">"來自“<xliff:g id="TITLE">%s</xliff:g>”的提示："</string>
+    <string name="js_dialog_title_default" msgid="'0;';">"JavaScript"</string>
+    <string name="httpErrorOk" msgid="''''0;;0">"確定"</string>
+    <string name="httpError" msgid="00;;'00">"發生網絡錯誤。"</string>
+    <string name="httpErrorLookup" msgid="'00'">"找不到該網址。"</string>
+    <string name="httpErrorUnsupportedAuthScheme" msgid=";'0'0;;">"不支持此網站身份驗證方案。"</string>
+    <string name="httpErrorAuth" msgid=";00;0;">"身份驗證失敗。"</string>
+    <string name="httpErrorProxyAuth" msgid="';00'00''">"通過代理服務器進行身份驗證失敗。"</string>
+    <string name="httpErrorConnect" msgid=";0;00">"未能連接到服務器。"</string>
+    <string name="httpErrorIO" msgid=";00">"服務器無法通信，請稍後重試。"</string>
+    <string name="httpErrorTimeout" msgid="00;">"與服務器的連接超時。"</string>
+    <string name="httpErrorRedirectLoop" msgid="00;'">"該頁面包含太多服務器重定向。"</string>
+    <string name="httpErrorUnsupportedScheme" msgid=";';'00">"不支持該協議。"</string>
+    <string name="httpErrorFailedSslHandshake" msgid="0;0000;'">"無法建立安全連接。"</string>
+    <string name="httpErrorBadUrl" msgid="0'''">"網址無效，此網頁無法打開。"</string>
+    <string name="httpErrorFile" msgid=";00'''">"無法訪問該文件。"</string>
+    <string name="httpErrorFileNotFound" msgid="0;0''0">"找不到請求的文件。"</string>
+    <string name="httpErrorTooManyRequests" msgid="';;0';">"正在處理的請求太多，請稍後重試。"</string>
+    <string name="last_month" msgid="0;">"上月"</string>
+    <plurals name="last_num_days">
+     <item quantity="other" msgid="0;0'';">"過去 <xliff:g id="COUNT">%d</xliff:g> 天"</item>
+    </plurals>
+    <string name="today">今天</string>
+    <string name="yesterday">昨天</string>
+    <string name="no_matches" msgid="';;'0'0">"無匹配項"</string>
+  <plurals name="matches_found">
+    <item quantity="one" msgid="''0''">"' 個匹配項"</item>
+    <item quantity="other" msgid="';00'">"第<xliff:g id="INDEX">%d</xliff:g>項，共<xliff:g id="TOTAL">%d</xliff:g>項"</item>
+  </plurals>
+    <string name="autofill_address_name_separator" msgid=";000;'">" "</string>
+    <string name="autofill_address_summary_name_format" msgid=";0'0;'">"$'$;$"</string>
+    <string name="autofill_address_summary_separator" msgid="0'0;';">"， "</string>
+    <string name="autofill_address_summary_format" msgid=";">"$'$;$"</string>
+    <string name="autofill_province" msgid=";;'0;;00">"省/直轄市/自治區"</string>
+    <string name="autofill_postal_code" msgid="00'0">"郵政編碼"</string>
+    <string name="autofill_state" msgid="';00'">"州"</string>
+    <string name="autofill_zip_code" msgid=";;;;">"郵政編碼"</string>
+    <string name="autofill_county" msgid=";0'0;0;'">"郡"</string>
+    <string name="autofill_island" msgid="0;0'000;">"島"</string>
+    <string name="autofill_district" msgid="000;;;">"地區"</string>
+    <string name="autofill_department" msgid=";;0">"省"</string>
+    <string name="autofill_prefecture" msgid=";0;000'">"縣/府/都/道"</string>
+    <string name="autofill_parish" msgid=";0;;0'0;00">"行政區"</string>
+    <string name="autofill_area" msgid="000;;">"區域"</string>
+    <string name="autofill_emirate" msgid=";0'">"酋長國"</string>
+    <string name="open_permission_deny" msgid="''0;;;;">"您無權打開此網頁。"</string>
+    <string name="textSelectionCABTitle" msgid=";00;0">"文字選擇"</string>
+    <string name="save_password_label" msgid="0;';0">"確認"</string>
+    <string name="double_tap_toast" msgid="'0;';;">"提示：點按兩次可放大和縮小。"</string>
+    <string name="find_on_page" msgid="';;;;0">"在網頁上查找"</string>
+    <string name="selectAll" msgid="';';'">"全選"</string>
+    <string name="copy" msgid=";';;''">"複制"</string>
+    <string name="share" msgid="'';00''">"分享"</string>
+    <string name="find" msgid="0;000;;0">"查找"</string>
+    <string name="websearch" msgid="'00;''">"網頁搜索"</string>
+    <string name="rotary_system">跟隨系統</string>
+    <string name="rotary_vertical">鎖定豎屏</string>
+    <string name="rotary_horizontal">鎖定橫屏</string>
+    <string name="rotary_screen">旋轉屏幕</string>    
+    <string name="hello">Hello World, FileManagerActivity!</string>
+    <string name="app_name">文件管理器</string>
+    <string name="title_category">分類浏覽</string>
+    <string name="title_sdcard">文件管理</string>
+    <string name="title_internal_sdcard">內部SD卡</string>
+    <string name="title_external_sdcard">外部SD卡</string>
+    <string name="title_default_sdcard">SD卡</string>
+    <string name="title_inside_sdcard">內置存儲卡</string>
+    <string name="no_sdcard">無SD卡</string>
+    <string name="file_size">%d 字節</string>
+    <string name="root_path_text">根目錄</string>
+    <string name="category_music">音樂</string>
+    <string name="category_video">視頻</string>
+    <string name="category_picture">圖片</string>
+    <string name="category_theme">主題</string>
+    <string name="category_document">文檔</string>
+    <string name="category_zip">壓縮包</string>
+    <string name="category_apk">安裝包</string>
+    <string name="category_other">其它</string>
+    <string name="category_favorite">收藏夾</string>
+    <string name="category_search">查詢</string>
+    <string name="no_file">空文件夾</string>
+    <string name="enable_sd_card">無可用SD卡，請插入或連接SD卡</string>
+    <string name="confirm">確定</string>
+    <string name="operation_cancel">取消</string>
+    <string name="menu_item_search">搜索</string>
+    <string name="operation_create_folder">新建文件夾</string>
+    <string name="menu_item_sort">排序</string>
+    <string name="menu_item_sort_name">名稱</string>
+    <string name="menu_item_sort_size">大小</string>
+    <string name="menu_item_sort_date">時間</string>
+    <string name="menu_item_sort_type">類型</string>
+    <string name="operation_favorite">添加書簽</string>
+    <string name="operation_unfavorite">移除書簽</string>
+    <string name="operation_copy">複制</string>
+    <string name="operation_copy_path">複制路徑</string>
+    <string name="operation_paste">粘貼</string>
+    <string name="operation_copying">複制中...</string>
+    <string name="operation_move">剪切</string>
+    <string name="operation_moving">移動中...</string>
+    <string name="operation_send">發送</string>
+    <string name="operation_rename">重命名</string>
+    <string name="operation_delete">刪除</string>
+    <string name="operation_info">詳情</string>
+    <string name="operation_refresh">刷新</string>
+    <string name="operation_selectall">全選</string>
+    <string name="operation_cancel_selectall">取消全選</string>
+    <string name="operation_show_sys">顯示點文件和隱藏文件</string>
+    <string name="operation_hide_sys">隱藏點文件和隱藏文件</string>
+    <string name="operation_rename_message">請輸入新名稱</string>
+    <string name="operation_create_folder_message">請輸入文件夾名稱</string>
+    <string name="operation_delete_confirm_message">確認刪除?</string>
+    <string name="operation_deleting">刪除中...</string>
+    <string name="operation_bugmenu">""</string>
+    <string name="operation_select_operation">文件操作</string>
+    <string name="operation_search">搜索</string>
+    <string name="operation_create_shortcut">創建快捷方式</string>
+    <string name="menu_setting">設置</string>
+    <string name="menu_exit">退出</string>
+    <string name="new_folder_name">新建文件夾</string>
+    <string name="fail_to_create_folder">創建文件夾失敗！</string>
+    <string name="fail_to_create_folder_exist">創建文件夾失敗，文件夾已存在。</string>
+    <string name="multi_select_title">已選擇 %1$s 個</string>
+    <string name="dialog_select_type">選擇文件類型</string>
+    <string name="dialog_type_text">文本</string>
+    <string name="dialog_type_audio">音頻</string>
+    <string name="dialog_type_video">視頻</string>
+    <string name="dialog_type_image">圖像</string>
+    <string name="error_info_cant_send_folder">不能發送文件夾</string>
+    <string name="file_info_location">位置:</string>
+    <string name="file_info_size">大小:</string>
+    <string name="file_info_modified">時間:</string>
+    <string name="file_info_canread">可讀:</string>
+    <string name="file_info_canwrite">可寫:</string>
+    <string name="file_info_ishidden">隱藏:</string>
+
+    <string name="confirm_know">關閉</string>
+    <string name="added_favorite">已加入收藏夾</string>
+    <string name="removed_favorite">已從收藏夾移除</string>
+    <string name="toast_select_file">請選擇要操作的文件</string>
+    <string name="toast_keywords_isempty">關鍵字不能爲空</string>
+    <string name="hint_search">請輸入搜索關鍵字</string>
+    <string name="str_settings_normal">基本設置</string>
+    <string name="str_settings_show_hidefile">顯示隱藏文件</string>
+    <string name="str_only_show_name">只顯示文件名稱</string>
+    <string name="summary_on_onlyshowname">只顯示文件名稱</string>
+    <string name="summary_off_onlyshowname">顯示詳細信息</string>
+    <string name="str_display_settings">顯示設置</string>
+    <string name="str_sort_settings">排序設置</string>
+    <string name="str_sort_desc">降序</string>
+    <string name="summary_on_sortdesc">降序排序</string>
+    <string name="summary_off_sortdesc">升序排序</string>
+    <string name="summary_on_show_hidefile">顯示以"."開頭的隱藏文件</string>
+    <string name="summary_off_show_hidefile">不顯示以"."開頭的隱藏文件</string>
+    <string name="toast_rename_file_exist">重命名失敗：文件已存在</string>
+    <string name="toast_move_file_exist">移動失敗 : 源文件與目標文件相同</string>
+    <string name="toast_no_file_operation">無可操作文件</string>
+    <string name="toast_no_support">暫時不支持此類型</string>
+    <string name="toast_rename_success">重命名成功</string>
+    <string name="toast_special_characters">重命名失敗：請不要使用特殊字符</string>
+    <string name="toast_filename_is_not_empty">文件名不能爲空</string>
+    <string name="toast_no_left_space_on_device">存儲空間不足</string>
+    <string name="cover_file_same_file">遇到同名文件，執行覆蓋操作！</string>
+    <string name="message_data_to_large">數據量過大，加載中...</string>
+    <string name="menu_operation_cover">相同文件（覆蓋）</string>
+    <string name="menu_operation_not_cover">相同文件（不覆蓋）</string>
+    <string name="menu_cover">覆蓋</string>
+    <string name="menu_not_cover">不覆蓋</string>
+    <string name="toast_folder_readonly">當前文件夾爲只讀文件夾</string>
+    <string name="file_manager">文件管理</string>
+    <string name="move_comfire">確認移動書簽？</string>
+    <string name="pref_data_connection_default">系統默認</string>
+    <string-array name="pref_data_connection_choices">
+        <item>CMWAP</item>
+        <item>CMNET</item>
+        <item>系統默認</item>
+    </string-array>
+    <string name="tabmenu_bookmark">書簽</string>
+    <string name="tabmenu_add_bookmark">添加書簽</string>
+    <string name="tabmenu_refresh">刷新</string>
+    <string name="tabmenu_full_screen">全屏</string>
+    <string name="tabmenu_stop_full_screen">取消全屏</string>
+    <string name="tabmenu_download">下載</string>
+    <string name="tabmenu_exit">退出</string>
+    <string name="tabmenu_share">分享</string>
+    <string name="tabmenu_night">頁內查找</string>
+    <string name="tabmenu_save_page">保存網頁</string>
+    <string name="tabmenu_switch">轉到網址</string>
+    <string name="tabmenu_homepage">主頁</string>
+    <string name="tabmenu_add_tab">新頁面</string>
+    <string name="tabmenu_history">曆史</string>
+    <string name="tabmenu_change_screen">旋轉屏幕</string>
+    <string name="tabmenu_change_page">翻頁按鈕</string>
+    <string name="tabmenu_settings">設置</string>
+    <string name="tabmenu_title_one">常用</string>
+    <string name="tabmenu_title_two">其他</string>
+    <string name="snap_Coverage">該網頁已存在，是否覆蓋？</string>
+</resources>

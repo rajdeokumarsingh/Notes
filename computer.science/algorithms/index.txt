@@ -1,0 +1,20 @@
+Solving recurrences
+    1. Guess    the form of the solution
+    2. Verify   by induction
+    3. Solve    for constants.
+
+Recursion Tree
+    Draw Recursion tree
+
+The divide-and-conquer design paradigm
+    1. Divide the problem into subproblems
+    2. Conquer the subproblems by solving them recursively
+    3. Combine subproblem solutions
+
+Quantification
+
+Reference:
+    Java linear algebar library
+        http://math.nist.gov/javanumerics/jama/
+
+error.txt

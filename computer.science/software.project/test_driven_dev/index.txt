@@ -1,0 +1,6 @@
+./00.philosophy.txt
+./10.process.txt
+./15.test.guideline.txt
+./17.test.guideline.2.txt
+./20.design.txt
+

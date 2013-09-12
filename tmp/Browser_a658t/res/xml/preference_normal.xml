@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/str_display_settings" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="showhidefile"
+            android:summaryOff="@string/summary_off_show_hidefile"
+            android:summaryOn="@string/summary_on_show_hidefile"
+            android:title="@string/str_settings_show_hidefile" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="onlyshowname"
+            android:summaryOff="@string/summary_off_onlyshowname"
+            android:summaryOn="@string/summary_on_onlyshowname"
+            android:title="@string/str_only_show_name" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/str_sort_settings" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="sortdesc"
+            android:summaryOff="@string/summary_off_sortdesc"
+            android:summaryOn="@string/summary_on_sortdesc"
+            android:title="@string/str_sort_desc" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

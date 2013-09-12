@@ -1,0 +1,74 @@
+将压力转化为平日的琐事
+    越是感到紧张，越是多地运行测试
+    测试给人一种状态良好的感觉，并且减少出错的次数，从而继续减少压力
+
+相互独立的测试
+    测试之间的功能性应该是相互独立的。
+        努力使软件达到“高内聚，低耦合”的目标
+
+    运行测试次序的先后是独立的
+
+不是从设计对象开始，而是从写测试用例开始
+
+Test Focus
+    condition
+    iteration(boundary)
+    polymorphism
+
+代码和测试程序之间的依赖关系
+    不可能修改其中一个而不修改另一个
+    如果修改了一个，另一个不用修改，那就很有可能出问题
+
+如果预期测试无法通过，但是却意外通过了，那么需要分析原因。
+有些用例的确无法通过，那么就需要将其记录下来，作为系统的限制，或以后需要完成的工作。
+
+Questions:
+. 测试是否能够覆盖到所有的功能
+    code coverage
+. 多长时间运行一次测试
+    尽早，尽快运行测试
+. 重构的粒度
+    小步快走
+
+Child Test
+    for a big test
+        divide and conquer
+
+    keep the cycle fast
+        non-runnable, runnable, refactory
+        not more than 10 minutes
+ 
+不用为toString函数编写测试用例
+
+
+测试equality的使用一般需要正向测试和反向测试
+    public void testEquality() throws Exception {
+        assertTrue(new Dollar(5).equals(new Dollar(5)));
+        assertFalse(new Dollar(5).equals(new Dollar(6)));
+    }
+
+
+如果对于java的语法有疑问，写测试用例进行验证。
+
+对于一些简单的帮助类，可以不用写测试程序。
+
+消除代码和测试之间的重复设计。
+
+休息一下
+    如果感觉累了，休息一下
+    喝一杯，散散步，打个盹
+
+    如果没有思路，休息一下
+
+    如果知道怎么实现，实现它。否则做一个伪实现或workaround。等到有思路的时候再去完成真正的实现。
+
+重新开始
+    迷失方向时， 扔掉原来的代码，重新开始
+
+    迷失方向了，也休息过了，仍然摸不到方向
+    
+
+便宜的桌子，舒适的椅子
+    坐得不舒服的话，是编写不出好的程序的
+
+

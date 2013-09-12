@@ -6,8 +6,6 @@ import java.util.HashMap;
 import java.util.Set;
 
 public class SortHashMap {
-
-    
     /**
      * @param args
      */
@@ -19,7 +17,8 @@ public class SortHashMap {
         map.put(210, "test3");
         map.put(120, "test4");
         map.put(67, "test5");
-        
+
+        // sort hash map by its keys
         Set<Integer> key = map.keySet();
         ArrayList<Integer> list = new ArrayList<Integer>(key);
         Collections.sort(list);

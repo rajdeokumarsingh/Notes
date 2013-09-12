@@ -59,6 +59,10 @@
     ./agile.practice.txt
     ./oo.principle.txt
 
+    重构的重要目标：
+        消除重复代码
+        提高代码的可读性
+
 ./01.practice.txt
 ./02.extreme.programming.txt
 ./03.plan.txt

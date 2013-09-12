@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_csvjsonconverter" default="compile.module.csvjsonconverter">
+  <dirname property="module.csvjsonconverter.basedir" file="${ant.file.module_csvjsonconverter}"/>
+  
+  <property name="module.jdk.home.csvjsonconverter" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.csvjsonconverter" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.csvjsonconverter" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.csvjsonconverter" value="${compiler.args}"/>
+  
+  <property name="csvjsonconverter.output.dir" value="${module.csvjsonconverter.basedir}/out/production/CsvJsonConverter"/>
+  <property name="csvjsonconverter.testoutput.dir" value="${module.csvjsonconverter.basedir}/out/test/CsvJsonConverter"/>
+  
+  <path id="csvjsonconverter.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="csvjsonconverter.module.production.classpath">
+    <path refid="${module.jdk.classpath.csvjsonconverter}"/>
+    <pathelement location="${idea.home}/lib/junit.jar"/>
+    <path refid="library.gson-2.1.classpath"/>
+  </path>
+  
+  <path id="csvjsonconverter.runtime.production.module.classpath">
+    <pathelement location="${csvjsonconverter.output.dir}"/>
+    <pathelement location="${idea.home}/lib/junit.jar"/>
+    <path refid="library.gson-2.1.classpath"/>
+  </path>
+  
+  <path id="csvjsonconverter.module.classpath">
+    <path refid="${module.jdk.classpath.csvjsonconverter}"/>
+    <pathelement location="${csvjsonconverter.output.dir}"/>
+    <pathelement location="${idea.home}/lib/junit.jar"/>
+    <path refid="library.gson-2.1.classpath"/>
+  </path>
+  
+  <path id="csvjsonconverter.runtime.module.classpath">
+    <pathelement location="${csvjsonconverter.testoutput.dir}"/>
+    <pathelement location="${csvjsonconverter.output.dir}"/>
+    <pathelement location="${idea.home}/lib/junit.jar"/>
+    <path refid="library.gson-2.1.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.csvjsonconverter">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.csvjsonconverter">
+    <patternset refid="excluded.from.module.csvjsonconverter"/>
+  </patternset>
+  
+  <path id="csvjsonconverter.module.sourcepath">
+    <dirset dir="${module.csvjsonconverter.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  <path id="csvjsonconverter.module.test.sourcepath">
+    <dirset dir="${module.csvjsonconverter.basedir}">
+      <include name="test"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.csvjsonconverter" depends="compile.module.csvjsonconverter.production,compile.module.csvjsonconverter.tests" description="Compile module CsvJsonConverter"/>
+  
+  <target name="compile.module.csvjsonconverter.production" depends="register.custom.compilers" description="Compile module CsvJsonConverter; production classes">
+    <mkdir dir="${csvjsonconverter.output.dir}"/>
+    <javac2 destdir="${csvjsonconverter.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.csvjsonconverter}/javac">
+      <compilerarg line="${compiler.args.csvjsonconverter}"/>
+      <bootclasspath refid="csvjsonconverter.module.bootclasspath"/>
+      <classpath refid="csvjsonconverter.module.production.classpath"/>
+      <src refid="csvjsonconverter.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.csvjsonconverter"/>
+    </javac2>
+    
+    <copy todir="${csvjsonconverter.output.dir}">
+      <fileset dir="${module.csvjsonconverter.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.csvjsonconverter.tests" depends="register.custom.compilers,compile.module.csvjsonconverter.production" description="compile module CsvJsonConverter; test classes" unless="skip.tests">
+    <mkdir dir="${csvjsonconverter.testoutput.dir}"/>
+    <javac2 destdir="${csvjsonconverter.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.csvjsonconverter}/javac">
+      <compilerarg line="${compiler.args.csvjsonconverter}"/>
+      <bootclasspath refid="csvjsonconverter.module.bootclasspath"/>
+      <classpath refid="csvjsonconverter.module.classpath"/>
+      <src refid="csvjsonconverter.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.csvjsonconverter"/>
+    </javac2>
+    
+    <copy todir="${csvjsonconverter.testoutput.dir}">
+      <fileset dir="${module.csvjsonconverter.basedir}/test">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.csvjsonconverter" description="cleanup module">
+    <delete dir="${csvjsonconverter.output.dir}"/>
+    <delete dir="${csvjsonconverter.testoutput.dir}"/>
+  </target>
+</project>
