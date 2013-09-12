@@ -119,44 +119,49 @@ public class BrowserSettingsTest extends TestCase {
     }
 
     private void appendData2Ndict(Object data, NSDictionary root) throws IllegalAccessException {
-        Field[] fields = data.getClass().getDeclaredFields();
-        for (Field field : fields) {
-            field.setAccessible(true);
-            Class type = field.getType();
+        Class clz = data.getClass();
+        while (clz != null && !clz.equals(Object.class)) {
+            // Field[] fields = data.getClass().getDeclaredFields();
+            Field[] fields = clz.getDeclaredFields();
+            for (Field field : fields) {
+                field.setAccessible(true);
+                Class type = field.getType();
 
-            System.out.println("========================================");
-            System.out.println(field.getName());
-            System.out.println(type.getName());
-            System.out.println("declaring: " + type.getDeclaringClass());
+                System.out.println("========================================");
+                System.out.println(field.getName());
+                System.out.println(type.getName());
+                System.out.println("declaring: " + type.getDeclaringClass());
 
-            // Ignore final fields
-            if ((field.getModifiers() & Modifier.FINAL) != 0) {
-                System.out.println("final field, continue!");
-                continue;
-            }
-
-            if (int.class.equals(type)) {
-                root.put(field.getName(), field.getInt(data));
-            } else if (String.class.equals(type)) {
-                root.put(field.getName(), (String) field.get(data));
-            } else if (List.class.equals(type)) {
-                System.out.println("type list");
-                List list = (List) field.get(data);
-                NSArray array = new NSArray(list.size());
-                for (int i = 0; i < list.size(); i++) {
-                    array.setValue(i, createNdict(list.get(i)));
+                // Ignore final fields
+                if ((field.getModifiers() & Modifier.FINAL) != 0) {
+                    System.out.println("final field, continue!");
+                    continue;
                 }
-                root.put(field.getName(), array);
-            } else if (byte[].class.equals(type)) {
-                System.out.println("type byte[]");
-                root.put(field.getName(), new NSData((byte[]) field.get(data)));
-            } else {
-                System.out.println("type object");
-                Object obj = field.get(data);
-                NSDictionary dictionary = createNdict(obj);
-                // TODO: handle super class, see testSuperClass
-                root.put(field.getName(), dictionary);
+
+                if (int.class.equals(type)) {
+                    root.put(field.getName(), field.getInt(data));
+                } else if (String.class.equals(type)) {
+                    root.put(field.getName(), (String) field.get(data));
+                } else if (List.class.equals(type)) {
+                    System.out.println("type list");
+                    List list = (List) field.get(data);
+                    NSArray array = new NSArray(list.size());
+                    for (int i = 0; i < list.size(); i++) {
+                        array.setValue(i, createNdict(list.get(i)));
+                    }
+                    root.put(field.getName(), array);
+                } else if (byte[].class.equals(type)) {
+                    System.out.println("type byte[]");
+                    root.put(field.getName(), new NSData((byte[]) field.get(data)));
+                } else {
+                    System.out.println("type object");
+                    Object obj = field.get(data);
+                    NSDictionary dictionary = createNdict(obj);
+                    // TODO: handle super class, see testSuperClass
+                    root.put(field.getName(), dictionary);
+                }
             }
+            clz = clz.getSuperclass();
         }
     }
 }
