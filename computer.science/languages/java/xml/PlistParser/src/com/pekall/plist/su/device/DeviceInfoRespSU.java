@@ -168,6 +168,10 @@ public class DeviceInfoRespSU extends DeviceInfoResp {
      */
     private String clientVersion;
     /**
+     * 流量统计
+     */
+    private Long trafficBytes;
+    /**
      * 网速
      */
     private NetSpeed netSpeed;
@@ -395,6 +399,14 @@ public class DeviceInfoRespSU extends DeviceInfoResp {
         this.clientVersion = clientVersion;
     }
 
+    public Long getTrafficBytes() {
+        return trafficBytes;
+    }
+
+    public void setTrafficBytes(Long trafficBytes) {
+        this.trafficBytes = trafficBytes;
+    }
+
     public NetSpeed getNetSpeed() {
         return netSpeed;
     }
@@ -482,6 +494,7 @@ public class DeviceInfoRespSU extends DeviceInfoResp {
         if (usbDebugging != null ? !usbDebugging.equals(that.usbDebugging) : that.usbDebugging != null) return false;
         if (deviceSecurityStatus != null ? !deviceSecurityStatus.equals(that.deviceSecurityStatus) : that.deviceSecurityStatus != null) return false;
         if (clientVersion != null ? !clientVersion.equals(that.clientVersion) : that.clientVersion != null) return false;
+        if (trafficBytes != null ? !trafficBytes.equals(that.trafficBytes) : that.trafficBytes != null) return false;
 
         return true;
     }
@@ -519,6 +532,7 @@ public class DeviceInfoRespSU extends DeviceInfoResp {
         result = 31 * result + (installInfos != null ? installInfos.hashCode() : 0);
         result = 31 * result + (deviceSecurityStatus != null ? deviceSecurityStatus.hashCode() : 0);
         result = 31 * result + (clientVersion != null ? clientVersion.hashCode() : 0);
+        result = 31 * result + (trafficBytes != null ? trafficBytes.hashCode() : 0);
         return result;
     }
 
@@ -552,6 +566,7 @@ public class DeviceInfoRespSU extends DeviceInfoResp {
                 ", deviceStatus='" + deviceStatus + '\'' +
                 ", deviceSecurityStatus='" + deviceSecurityStatus + '\'' +
                 ", clientVersion='" + clientVersion + '\'' +
+                ", trafficBytes='" + trafficBytes + '\'' +
                 ", netSpeed=" + netSpeed +
                 ", location=" + location +
                 ", procList=" + procList +

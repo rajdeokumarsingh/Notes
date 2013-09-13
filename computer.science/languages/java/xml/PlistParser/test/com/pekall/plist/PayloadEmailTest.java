@@ -1,5 +1,6 @@
 package com.pekall.plist;
 
+import com.pekall.plist.beans.BeanBase;
 import com.pekall.plist.beans.PayloadArrayWrapper;
 import com.pekall.plist.beans.PayloadEmail;
 import junit.framework.TestCase;
@@ -23,6 +24,8 @@ public class PayloadEmailTest extends TestCase {
             "\t\t\t<string>rui.jiang@pekall.com</string>\n" +
             "\t\t\t<key>IncomingMailServerAuthentication</key>\n" +
             "\t\t\t<string>EmailAuthPassword</string>\n" +
+            "\t\t\t<key>IncomingMailServerHostName</key>\n" +
+            "\t\t\t<string>192.168.10.230</string>\n" +
             "\t\t\t<key>IncomingMailServerPortNumber</key>\n" +
             "\t\t\t<integer>8088</integer>\n" +
             "\t\t\t<key>IncomingMailServerUseSSL</key>\n" +
@@ -34,6 +37,20 @@ public class PayloadEmailTest extends TestCase {
             "\t\t\t<key>OutgoingMailServerHostName</key>\n" +
             "\t\t\t<string>192.168.10.230</string>\n" +
             "\t\t\t<key>disableMailRecentsSyncing</key>\n" +
+            "\t\t\t<true/>\n" +
+            "\t\t\t<key>defaultAccount</key>\n" +
+            "\t\t\t<true/>\n" +
+            "\t\t\t<key>acceptAllCertForIncomingMail</key>\n" +
+            "\t\t\t<true/>\n" +
+            "\t\t\t<key>acceptAllCertForOutgoingMail</key>\n" +
+            "\t\t\t<false/>\n" +
+            "\t\t\t<key>senderName</key>\n" +
+            "\t\t\t<string>Ray</string>\n" +
+            "\t\t\t<key>signature</key>\n" +
+            "\t\t\t<string>BRs</string>\n" +
+            "\t\t\t<key>vibrateOnNewEmail</key>\n" +
+            "\t\t\t<false/>\n" +
+            "\t\t\t<key>vibrateOnNewEmailIfSilent</key>\n" +
             "\t\t\t<true/>\n" +
             "\t\t\t<key>PayloadType</key>\n" +
             "\t\t\t<string>com.apple.mail.managed</string>\n" +
@@ -49,6 +66,8 @@ public class PayloadEmailTest extends TestCase {
             "\t\t\t<string>Email相关配置</string>\n" +
             "\t\t\t<key>PayloadOrganization</key>\n" +
             "\t\t\t<string>Pekall Capital</string>\n" +
+            "\t\t\t<key>PayloadStatus</key>\n" +
+            "\t\t\t<integer>1</integer>\n" +
             "\t\t</dict>\n" +
             "\t</array>\n" +
             "\t<key>PayloadRemovalDisallowed</key>\n" +
@@ -102,18 +121,27 @@ public class PayloadEmailTest extends TestCase {
         email.setPayloadOrganization("Pekall Capital");
         email.setPayloadUUID("3808D742-5D21-401E-B83C-AED1E990332D");
         email.setPayloadVersion(1);
+        email.setPayloadStatus(1);
 
         email.setDisableMailRecentsSyncing(true);
         email.setEmailAccountDescription("test email account");
         email.setEmailAccountType(PayloadEmail.EMAIL_TYPE_POP);
         email.setEmailAccountName("Jiang Rui");
         email.setEmailAddress("rui.jiang@pekall.com");
+        email.setIncomingMailServerHostName("192.168.10.230");
         email.setIncomingMailServerAuthentication(PayloadEmail.EMAIL_AUTH_PASSWORD);
         email.setIncomingMailServerPortNumber(8088);
         email.setIncomingMailServerUseSSL(true);
         email.setIncomingPassword("123456");
         email.setOutgoingMailServerHostName("192.168.10.230");
         email.setOutgoingPasswordSameAsIncomingPassword(true);
+        email.setDefaultAccount(true);
+        email.setAcceptAllCertForIncomingMail(true);
+        email.setAcceptAllCertForOutgoingMail(false);
+        email.setSenderName("Ray");
+        email.setSignature("BRs");
+        email.setVibrateOnNewEmail(false);
+        email.setVibrateOnNewEmailIfSilent(true);
         return email;
     }
 

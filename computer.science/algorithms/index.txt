@@ -11,9 +11,9 @@ The divide-and-conquer design paradigm
     2. Conquer the subproblems by solving them recursively
     3. Combine subproblem solutions
 
+Decision tree model
 
 Reference:
-
     Java linear algebar library
         http://math.nist.gov/javanumerics/jama/
 

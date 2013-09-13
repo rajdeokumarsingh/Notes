@@ -13,6 +13,11 @@ public class PayloadVPN extends PayloadBase {
     public static final String TYPE_IPSEC = "IPSec";
 
     /**
+     * See userAuth
+     */
+    public static final String USR_AUTH_PASSWORD = "password";
+    public static final String USR_AUTH_RSA_SEC_ID = "RSA SecurId";
+    /**
      * Description of the VPN connection displayed on the device.
      */
     private String UserDefinedName;
@@ -33,6 +38,62 @@ public class PayloadVPN extends PayloadBase {
 
     private PPPInfo PPP;
     private IPSecInfo IPSec;
+
+    /**
+     * Host name or ip address of the VPN server
+     * Just for android.
+     */
+    private String serverHostName;
+
+    /**
+     * Just for android.
+     */
+    private String account;
+
+
+    /**
+     * See USR_AUTH_...
+     * Just for android
+     */
+    private String userAuth;
+
+    /**
+     * Just for android.
+     */
+    private String password;
+
+    /**
+     * Just for android.
+     */
+    private String sharedPassword;
+
+    /**
+     * Just for android.
+     */
+    private Boolean vpnForAllTraffic;
+
+    /**
+     * Just for android.
+     */
+    private String proxyHost;
+    /**
+     * Just for android.
+     */
+    private Integer proxyPort;
+    /**
+     * Just for android.
+     */
+    private String proxyUserName;
+    /**
+     * Just for android.
+     */
+    private String proxyPassword;
+
+    /* todo, maas360
+    private Boolean enableL2TPSecret;
+    private String L2TPSecret;
+    private String DNSSearchDomains;
+    */
 
     public PayloadVPN() {
         setPayloadType(PayloadBase.PAYLOAD_TYPE_VPN);
@@ -78,10 +139,90 @@ public class PayloadVPN extends PayloadBase {
         this.IPSec = IPSec;
     }
 
+    public String getServerHostName() {
+        return serverHostName;
+    }
+
+    public void setServerHostName(String serverHostName) {
+        this.serverHostName = serverHostName;
+    }
+
+    public String getAccount() {
+        return account;
+    }
+
+    public void setAccount(String account) {
+        this.account = account;
+    }
+
+    public String getUserAuth() {
+        return userAuth;
+    }
+
+    public void setUserAuth(String userAuth) {
+        this.userAuth = userAuth;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getSharedPassword() {
+        return sharedPassword;
+    }
+
+    public void setSharedPassword(String sharedPassword) {
+        this.sharedPassword = sharedPassword;
+    }
+
+    public Boolean getVpnForAllTraffic() {
+        return vpnForAllTraffic;
+    }
+
+    public void setVpnForAllTraffic(Boolean vpnForAllTraffic) {
+        this.vpnForAllTraffic = vpnForAllTraffic;
+    }
+
+    public String getProxyHost() {
+        return proxyHost;
+    }
+
+    public void setProxyHost(String proxyHost) {
+        this.proxyHost = proxyHost;
+    }
+
+    public Integer getProxyPort() {
+        return proxyPort;
+    }
+
+    public void setProxyPort(Integer proxyPort) {
+        this.proxyPort = proxyPort;
+    }
+
+    public String getProxyUserName() {
+        return proxyUserName;
+    }
+
+    public void setProxyUserName(String proxyUserName) {
+        this.proxyUserName = proxyUserName;
+    }
+
+    public String getProxyPassword() {
+        return proxyPassword;
+    }
+
+    public void setProxyPassword(String proxyPassword) {
+        this.proxyPassword = proxyPassword;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof PayloadVPN)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
 
         PayloadVPN that = (PayloadVPN) o;
@@ -93,6 +234,21 @@ public class PayloadVPN extends PayloadBase {
         if (UserDefinedName != null ? !UserDefinedName.equals(that.UserDefinedName) : that.UserDefinedName != null)
             return false;
         if (VPNType != null ? !VPNType.equals(that.VPNType) : that.VPNType != null) return false;
+        if (account != null ? !account.equals(that.account) : that.account != null) return false;
+        if (password != null ? !password.equals(that.password) : that.password != null) return false;
+        if (proxyHost != null ? !proxyHost.equals(that.proxyHost) : that.proxyHost != null) return false;
+        if (proxyPassword != null ? !proxyPassword.equals(that.proxyPassword) : that.proxyPassword != null)
+            return false;
+        if (proxyPort != null ? !proxyPort.equals(that.proxyPort) : that.proxyPort != null) return false;
+        if (proxyUserName != null ? !proxyUserName.equals(that.proxyUserName) : that.proxyUserName != null)
+            return false;
+        if (serverHostName != null ? !serverHostName.equals(that.serverHostName) : that.serverHostName != null)
+            return false;
+        if (sharedPassword != null ? !sharedPassword.equals(that.sharedPassword) : that.sharedPassword != null)
+            return false;
+        if (userAuth != null ? !userAuth.equals(that.userAuth) : that.userAuth != null) return false;
+        if (vpnForAllTraffic != null ? !vpnForAllTraffic.equals(that.vpnForAllTraffic) : that.vpnForAllTraffic != null)
+            return false;
 
         return true;
     }
@@ -105,6 +261,16 @@ public class PayloadVPN extends PayloadBase {
         result = 31 * result + (VPNType != null ? VPNType.hashCode() : 0);
         result = 31 * result + (PPP != null ? PPP.hashCode() : 0);
         result = 31 * result + (IPSec != null ? IPSec.hashCode() : 0);
+        result = 31 * result + (serverHostName != null ? serverHostName.hashCode() : 0);
+        result = 31 * result + (account != null ? account.hashCode() : 0);
+        result = 31 * result + (userAuth != null ? userAuth.hashCode() : 0);
+        result = 31 * result + (password != null ? password.hashCode() : 0);
+        result = 31 * result + (sharedPassword != null ? sharedPassword.hashCode() : 0);
+        result = 31 * result + (vpnForAllTraffic != null ? vpnForAllTraffic.hashCode() : 0);
+        result = 31 * result + (proxyHost != null ? proxyHost.hashCode() : 0);
+        result = 31 * result + (proxyPort != null ? proxyPort.hashCode() : 0);
+        result = 31 * result + (proxyUserName != null ? proxyUserName.hashCode() : 0);
+        result = 31 * result + (proxyPassword != null ? proxyPassword.hashCode() : 0);
         return result;
     }
 
@@ -116,6 +282,16 @@ public class PayloadVPN extends PayloadBase {
                 ", VPNType='" + VPNType + '\'' +
                 ", PPP=" + PPP +
                 ", IPSec=" + IPSec +
+                ", serverHostName='" + serverHostName + '\'' +
+                ", account='" + account + '\'' +
+                ", userAuth='" + userAuth + '\'' +
+                ", password='" + password + '\'' +
+                ", sharedPassword='" + sharedPassword + '\'' +
+                ", vpnForAllTraffic=" + vpnForAllTraffic +
+                ", proxyHost='" + proxyHost + '\'' +
+                ", proxyPort=" + proxyPort +
+                ", proxyUserName='" + proxyUserName + '\'' +
+                ", proxyPassword='" + proxyPassword + '\'' +
                 '}';
     }
 }

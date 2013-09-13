@@ -27,6 +27,8 @@ public class PayloadExchangeTest extends TestCase {
             "\t\t\t<string>ssss-xxx-xxdd-xx-dd-xx</string>\n" +
             "\t\t\t<key>disableMailRecentsSyncing</key>\n" +
             "\t\t\t<false/>\n" +
+            "\t\t\t<key>MailNumberOfPastDaysToSync</key>\n" +
+            "\t\t\t<integer>50</integer>\n" +
             "\t\t\t<key>PayloadType</key>\n" +
             "\t\t\t<string>com.apple.eas.account</string>\n" +
             "\t\t\t<key>PayloadVersion</key>\n" +
@@ -109,6 +111,7 @@ public class PayloadExchangeTest extends TestCase {
         exchange.setEmailAddress("rui.jiang@pekall.com");
         exchange.setPreventAppSheet(true);
         exchange.setPayloadCertificateUUID("ssss-xxx-xxdd-xx-dd-xx");
+        exchange.setMailNumberOfPastDaysToSync(50);
         byte[] data = new byte[80];
         for (int i = 0; i < data.length; i++) {
             data[i] = (byte) i;

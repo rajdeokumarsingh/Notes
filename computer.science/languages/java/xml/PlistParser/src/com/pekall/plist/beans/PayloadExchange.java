@@ -92,6 +92,8 @@ public class PayloadExchange extends PayloadBase {
      */
     private Boolean disableMailRecentsSyncing;
 
+    private Integer MailNumberOfPastDaysToSync;
+
     public PayloadExchange() {
         setPayloadType(PayloadBase.PAYLOAD_TYPE_IOS_EXCHANGE);
     }
@@ -216,6 +218,14 @@ public class PayloadExchange extends PayloadBase {
         this.disableMailRecentsSyncing = disableMailRecentsSyncing;
     }
 
+    public Integer getMailNumberOfPastDaysToSync() {
+        return MailNumberOfPastDaysToSync;
+    }
+
+    public void setMailNumberOfPastDaysToSync(Integer mailNumberOfPastDaysToSync) {
+        MailNumberOfPastDaysToSync = mailNumberOfPastDaysToSync;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -245,6 +255,8 @@ public class PayloadExchange extends PayloadBase {
         if (UserName != null ? !UserName.equals(that.UserName) : that.UserName != null) return false;
         if (disableMailRecentsSyncing != null ? !disableMailRecentsSyncing.equals(that.disableMailRecentsSyncing) : that.disableMailRecentsSyncing != null)
             return false;
+        if (MailNumberOfPastDaysToSync != null ? !MailNumberOfPastDaysToSync.equals(that.MailNumberOfPastDaysToSync) : that.MailNumberOfPastDaysToSync != null)
+            return false;
 
         return true;
     }
@@ -267,6 +279,7 @@ public class PayloadExchange extends PayloadBase {
         result = 31 * result + (SMIMESigningCertificateUUID != null ? SMIMESigningCertificateUUID.hashCode() : 0);
         result = 31 * result + (SMIMEEncryptionCertificateUUID != null ? SMIMEEncryptionCertificateUUID.hashCode() : 0);
         result = 31 * result + (disableMailRecentsSyncing != null ? disableMailRecentsSyncing.hashCode() : 0);
+        result = 31 * result + (MailNumberOfPastDaysToSync != null ? MailNumberOfPastDaysToSync.hashCode() : 0);
         return result;
     }
 
@@ -288,6 +301,7 @@ public class PayloadExchange extends PayloadBase {
                 ", SMIMESigningCertificateUUID='" + SMIMESigningCertificateUUID + '\'' +
                 ", SMIMEEncryptionCertificateUUID='" + SMIMEEncryptionCertificateUUID + '\'' +
                 ", disableMailRecentsSyncing=" + disableMailRecentsSyncing +
+                ", MailNumberOfPastDaysToSync=" + MailNumberOfPastDaysToSync +
                 '}';
     }
 }

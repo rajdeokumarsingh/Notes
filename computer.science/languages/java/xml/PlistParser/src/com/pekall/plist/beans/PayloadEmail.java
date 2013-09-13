@@ -50,6 +50,11 @@ public class PayloadEmail extends PayloadBase {
     private String IncomingMailServerAuthentication;
 
     /**
+     * Designates the incoming mail server host name (or IP address).
+     */
+    private String IncomingMailServerHostName;
+
+    /**
      * Optional. Designates the incoming mail server port number.
      * If no port number is specified, the default port for a given protocol is used.
      */
@@ -151,6 +156,47 @@ public class PayloadEmail extends PayloadBase {
      */
     private Boolean disableMailRecentsSyncing;
 
+    /**
+     * Whether it is a default email account.
+     * Just for android.
+     */
+    private Boolean defaultAccount;
+
+    /**
+     * Accept all certificates for incoming mail
+     * Just for android.
+     */
+    private Boolean acceptAllCertForIncomingMail;
+
+    /**
+     * Accept All Certificates for Outgoing Mail
+     * Just for android.
+     */
+    private Boolean acceptAllCertForOutgoingMail;
+
+    /**
+     * Name of the sender
+     * Just for android.
+     */
+    private String senderName;
+
+    /**
+     * Just for android.
+     */
+    private String signature;
+
+    /**
+     * Always vibrate on new email notification
+     * Just for android.
+     */
+    private Boolean vibrateOnNewEmail;
+
+    /**
+     * Vibrate on new email notification if device is silent
+     * Just for android.
+     */
+    private Boolean vibrateOnNewEmailIfSilent;
+
     public PayloadEmail() {
         setPayloadType(PayloadBase.PAYLOAD_TYPE_EMAIL);
     }
@@ -193,6 +239,14 @@ public class PayloadEmail extends PayloadBase {
 
     public void setIncomingMailServerAuthentication(String incomingMailServerAuthentication) {
         IncomingMailServerAuthentication = incomingMailServerAuthentication;
+    }
+
+    public String getIncomingMailServerHostName() {
+        return IncomingMailServerHostName;
+    }
+
+    public void setIncomingMailServerHostName(String incomingMailServerHostName) {
+        IncomingMailServerHostName = incomingMailServerHostName;
     }
 
     public Integer getIncomingMailServerPortNumber() {
@@ -331,10 +385,70 @@ public class PayloadEmail extends PayloadBase {
         this.disableMailRecentsSyncing = disableMailRecentsSyncing;
     }
 
+    public Boolean isDefaultAccount() {
+        return defaultAccount;
+    }
+
+    public void setDefaultAccount(Boolean defaultAccount) {
+        this.defaultAccount = defaultAccount;
+    }
+
+    public Boolean getDefaultAccount() {
+        return defaultAccount;
+    }
+
+    public Boolean getAcceptAllCertForIncomingMail() {
+        return acceptAllCertForIncomingMail;
+    }
+
+    public void setAcceptAllCertForIncomingMail(Boolean acceptAllCertForIncomingMail) {
+        this.acceptAllCertForIncomingMail = acceptAllCertForIncomingMail;
+    }
+
+    public Boolean getAcceptAllCertForOutgoingMail() {
+        return acceptAllCertForOutgoingMail;
+    }
+
+    public void setAcceptAllCertForOutgoingMail(Boolean acceptAllCertForOutgoingMail) {
+        this.acceptAllCertForOutgoingMail = acceptAllCertForOutgoingMail;
+    }
+
+    public String getSenderName() {
+        return senderName;
+    }
+
+    public void setSenderName(String senderName) {
+        this.senderName = senderName;
+    }
+
+    public String getSignature() {
+        return signature;
+    }
+
+    public void setSignature(String signature) {
+        this.signature = signature;
+    }
+
+    public Boolean getVibrateOnNewEmail() {
+        return vibrateOnNewEmail;
+    }
+
+    public void setVibrateOnNewEmail(Boolean vibrateOnNewEmail) {
+        this.vibrateOnNewEmail = vibrateOnNewEmail;
+    }
+
+    public Boolean getVibrateOnNewEmailIfSilent() {
+        return vibrateOnNewEmailIfSilent;
+    }
+
+    public void setVibrateOnNewEmailIfSilent(Boolean vibrateOnNewEmailIfSilent) {
+        this.vibrateOnNewEmailIfSilent = vibrateOnNewEmailIfSilent;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof PayloadEmail)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
 
         PayloadEmail that = (PayloadEmail) o;
@@ -347,6 +461,8 @@ public class PayloadEmail extends PayloadBase {
             return false;
         if (EmailAddress != null ? !EmailAddress.equals(that.EmailAddress) : that.EmailAddress != null) return false;
         if (IncomingMailServerAuthentication != null ? !IncomingMailServerAuthentication.equals(that.IncomingMailServerAuthentication) : that.IncomingMailServerAuthentication != null)
+            return false;
+        if (IncomingMailServerHostName != null ? !IncomingMailServerHostName.equals(that.IncomingMailServerHostName) : that.IncomingMailServerHostName != null)
             return false;
         if (IncomingMailServerPortNumber != null ? !IncomingMailServerPortNumber.equals(that.IncomingMailServerPortNumber) : that.IncomingMailServerPortNumber != null)
             return false;
@@ -378,7 +494,19 @@ public class PayloadEmail extends PayloadBase {
             return false;
         if (SMIMESigningCertificateUUID != null ? !SMIMESigningCertificateUUID.equals(that.SMIMESigningCertificateUUID) : that.SMIMESigningCertificateUUID != null)
             return false;
+        if (acceptAllCertForIncomingMail != null ? !acceptAllCertForIncomingMail.equals(that.acceptAllCertForIncomingMail) : that.acceptAllCertForIncomingMail != null)
+            return false;
+        if (acceptAllCertForOutgoingMail != null ? !acceptAllCertForOutgoingMail.equals(that.acceptAllCertForOutgoingMail) : that.acceptAllCertForOutgoingMail != null)
+            return false;
+        if (defaultAccount != null ? !defaultAccount.equals(that.defaultAccount) : that.defaultAccount != null)
+            return false;
         if (disableMailRecentsSyncing != null ? !disableMailRecentsSyncing.equals(that.disableMailRecentsSyncing) : that.disableMailRecentsSyncing != null)
+            return false;
+        if (senderName != null ? !senderName.equals(that.senderName) : that.senderName != null) return false;
+        if (signature != null ? !signature.equals(that.signature) : that.signature != null) return false;
+        if (vibrateOnNewEmail != null ? !vibrateOnNewEmail.equals(that.vibrateOnNewEmail) : that.vibrateOnNewEmail != null)
+            return false;
+        if (vibrateOnNewEmailIfSilent != null ? !vibrateOnNewEmailIfSilent.equals(that.vibrateOnNewEmailIfSilent) : that.vibrateOnNewEmailIfSilent != null)
             return false;
 
         return true;
@@ -392,6 +520,7 @@ public class PayloadEmail extends PayloadBase {
         result = 31 * result + (EmailAccountType != null ? EmailAccountType.hashCode() : 0);
         result = 31 * result + (EmailAddress != null ? EmailAddress.hashCode() : 0);
         result = 31 * result + (IncomingMailServerAuthentication != null ? IncomingMailServerAuthentication.hashCode() : 0);
+        result = 31 * result + (IncomingMailServerHostName != null ? IncomingMailServerHostName.hashCode() : 0);
         result = 31 * result + (IncomingMailServerPortNumber != null ? IncomingMailServerPortNumber.hashCode() : 0);
         result = 31 * result + (IncomingMailServerUseSSL != null ? IncomingMailServerUseSSL.hashCode() : 0);
         result = 31 * result + (IncomingMailServerUsername != null ? IncomingMailServerUsername.hashCode() : 0);
@@ -409,18 +538,25 @@ public class PayloadEmail extends PayloadBase {
         result = 31 * result + (SMIMESigningCertificateUUID != null ? SMIMESigningCertificateUUID.hashCode() : 0);
         result = 31 * result + (SMIMEEncryptionCertificateUUID != null ? SMIMEEncryptionCertificateUUID.hashCode() : 0);
         result = 31 * result + (disableMailRecentsSyncing != null ? disableMailRecentsSyncing.hashCode() : 0);
+        result = 31 * result + (defaultAccount != null ? defaultAccount.hashCode() : 0);
+        result = 31 * result + (acceptAllCertForIncomingMail != null ? acceptAllCertForIncomingMail.hashCode() : 0);
+        result = 31 * result + (acceptAllCertForOutgoingMail != null ? acceptAllCertForOutgoingMail.hashCode() : 0);
+        result = 31 * result + (senderName != null ? senderName.hashCode() : 0);
+        result = 31 * result + (signature != null ? signature.hashCode() : 0);
+        result = 31 * result + (vibrateOnNewEmail != null ? vibrateOnNewEmail.hashCode() : 0);
+        result = 31 * result + (vibrateOnNewEmailIfSilent != null ? vibrateOnNewEmailIfSilent.hashCode() : 0);
         return result;
     }
 
     @Override
     public String toString() {
         return "PayloadEmail{" +
-                "super='" + super.toString() + '\'' +
                 "EmailAccountDescription='" + EmailAccountDescription + '\'' +
                 ", EmailAccountName='" + EmailAccountName + '\'' +
                 ", EmailAccountType='" + EmailAccountType + '\'' +
                 ", EmailAddress='" + EmailAddress + '\'' +
                 ", IncomingMailServerAuthentication='" + IncomingMailServerAuthentication + '\'' +
+                ", IncomingMailServerHostName='" + IncomingMailServerHostName + '\'' +
                 ", IncomingMailServerPortNumber=" + IncomingMailServerPortNumber +
                 ", IncomingMailServerUseSSL=" + IncomingMailServerUseSSL +
                 ", IncomingMailServerUsername='" + IncomingMailServerUsername + '\'' +
@@ -438,6 +574,13 @@ public class PayloadEmail extends PayloadBase {
                 ", SMIMESigningCertificateUUID='" + SMIMESigningCertificateUUID + '\'' +
                 ", SMIMEEncryptionCertificateUUID='" + SMIMEEncryptionCertificateUUID + '\'' +
                 ", disableMailRecentsSyncing=" + disableMailRecentsSyncing +
+                ", defaultAccount=" + defaultAccount +
+                ", acceptAllCertForIncomingMail=" + acceptAllCertForIncomingMail +
+                ", acceptAllCertForOutgoingMail=" + acceptAllCertForOutgoingMail +
+                ", senderName='" + senderName + '\'' +
+                ", signature='" + signature + '\'' +
+                ", vibrateOnNewEmail=" + vibrateOnNewEmail +
+                ", vibrateOnNewEmailIfSilent=" + vibrateOnNewEmailIfSilent +
                 '}';
     }
 }

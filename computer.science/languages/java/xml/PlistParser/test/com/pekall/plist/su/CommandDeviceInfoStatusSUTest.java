@@ -98,6 +98,7 @@ public class CommandDeviceInfoStatusSUTest extends TestCase {
         status.getQueryResponses().setFreeDiskSize(1000000l);
         status.getQueryResponses().setDeviceSecurityStatus(DeviceInfoRespSU.SECURITY_STAT_ROOT);
         status.getQueryResponses().setClientVersion("test version");
+        status.getQueryResponses().setTrafficBytes(1000l);
         status.getQueryResponses().setNetSpeed(new NetSpeed(500.0, 3333.1));
         status.getQueryResponses().setLocation(new Location(34.0, 32.1));
         status.getQueryResponses().addInstallInfo(new InstallInfo("install", "test app", "com.test.app", 0));
@@ -193,6 +194,8 @@ public class CommandDeviceInfoStatusSUTest extends TestCase {
             "\t\t<string>root</string>\n" +
             "\t\t<key>clientVersion</key>\n" +
             "\t\t<string>test version</string>\n" +
+            "\t\t<key>trafficBytes</key>\n" +
+            "\t\t<integer>1000</integer>\n" +
             "\t\t<key>netSpeed</key>\n" +
             "\t\t<dict>\n" +
             "\t\t\t<key>uplink</key>\n" +

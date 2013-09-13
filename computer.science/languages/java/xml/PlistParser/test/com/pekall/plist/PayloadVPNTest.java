@@ -77,6 +77,17 @@ public class PayloadVPNTest extends TestCase {
         ipSecInfo.setSharedSecret(data);
         vpn.setIPSec(ipSecInfo);
 
+        vpn.setServerHostName("192.168.10.220");
+        vpn.setAccount("ray");
+        vpn.setPassword("123456");
+        vpn.setSharedPassword("qwert");
+        vpn.setUserAuth(PayloadVPN.USR_AUTH_PASSWORD);
+        vpn.setVpnForAllTraffic(true);
+        vpn.setProxyHost("192.168.0.1");
+        vpn.setProxyPort(889);
+        vpn.setProxyUserName("Ray");
+        vpn.setProxyPassword("qwert");
+
         return vpn;
     }
 
@@ -144,6 +155,26 @@ public class PayloadVPNTest extends TestCase {
             "\t\t\t\t<key>PromptForVPNPIN</key>\n" +
             "\t\t\t\t<true/>\n" +
             "\t\t\t</dict>\n" +
+            "\t\t\t<key>serverHostName</key>\n" +
+            "\t\t\t<string>192.168.10.220</string>\n" +
+            "\t\t\t<key>account</key>\n" +
+            "\t\t\t<string>ray</string>\n" +
+            "\t\t\t<key>userAuth</key>\n" +
+            "\t\t\t<string>password</string>\n" +
+            "\t\t\t<key>password</key>\n" +
+            "\t\t\t<string>123456</string>\n" +
+            "\t\t\t<key>sharedPassword</key>\n" +
+            "\t\t\t<string>qwert</string>\n" +
+            "\t\t\t<key>vpnForAllTraffic</key>\n" +
+            "\t\t\t<true/>\n" +
+            "\t\t\t<key>proxyHost</key>\n" +
+            "\t\t\t<string>192.168.0.1</string>\n" +
+            "\t\t\t<key>proxyPort</key>\n" +
+            "\t\t\t<integer>889</integer>\n" +
+            "\t\t\t<key>proxyUserName</key>\n" +
+            "\t\t\t<string>Ray</string>\n" +
+            "\t\t\t<key>proxyPassword</key>\n" +
+            "\t\t\t<string>qwert</string>\n" +
             "\t\t\t<key>PayloadType</key>\n" +
             "\t\t\t<string>com.apple.vpn.managed</string>\n" +
             "\t\t\t<key>PayloadVersion</key>\n" +

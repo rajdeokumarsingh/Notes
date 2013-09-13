@@ -5,6 +5,15 @@ package com.pekall.plist.beans;
  */
 public class PayloadPasswordPolicy extends PayloadBase {
     /**
+     * See quality
+     */
+    public static final String QUALITY_PATTERN = "pattern";
+    public static final String QUALITY_NUMERIC = "numeric";
+    public static final String QUALITY_ALPHABETIC = "alphabetic";
+    public static final String QUALITY_ALPHANUMERIC = "alphanumeric";
+    public static final String QUALITY_COMPLEX = "complex";
+
+    /**
      * Optional. Default true. Determines whether a simple passcode is allowed.
      * A simple passcode is defined as containing repeated characters,
      * or increasing/decreasing characters (such as 123 or CBA).
@@ -70,6 +79,13 @@ public class PayloadPasswordPolicy extends PayloadBase {
      * a passcode. Default is 0, that is no grace period, which requires a passcode immediately.
      */
     private Integer maxGracePeriod;
+
+
+    /**
+     * Just for android.
+     * See QUALITY_...
+     */
+    private String quality;
 
     public PayloadPasswordPolicy() {
         setPayloadType(PayloadBase.PAYLOAD_TYPE_PASSWORD_POLICY);
@@ -155,10 +171,18 @@ public class PayloadPasswordPolicy extends PayloadBase {
         this.maxGracePeriod = maxGracePeriod;
     }
 
+    public String getQuality() {
+        return quality;
+    }
+
+    public void setQuality(String quality) {
+        this.quality = quality;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof PayloadPasswordPolicy)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
 
         PayloadPasswordPolicy policy = (PayloadPasswordPolicy) o;
@@ -177,6 +201,7 @@ public class PayloadPasswordPolicy extends PayloadBase {
             return false;
         if (minLength != null ? !minLength.equals(policy.minLength) : policy.minLength != null) return false;
         if (pinHistory != null ? !pinHistory.equals(policy.pinHistory) : policy.pinHistory != null) return false;
+        if (quality != null ? !quality.equals(policy.quality) : policy.quality != null) return false;
         if (requireAlphanumeric != null ? !requireAlphanumeric.equals(policy.requireAlphanumeric) : policy.requireAlphanumeric != null)
             return false;
 
@@ -196,6 +221,7 @@ public class PayloadPasswordPolicy extends PayloadBase {
         result = 31 * result + (requireAlphanumeric != null ? requireAlphanumeric.hashCode() : 0);
         result = 31 * result + (pinHistory != null ? pinHistory.hashCode() : 0);
         result = 31 * result + (maxGracePeriod != null ? maxGracePeriod.hashCode() : 0);
+        result = 31 * result + (quality != null ? quality.hashCode() : 0);
         return result;
     }
 
@@ -212,6 +238,7 @@ public class PayloadPasswordPolicy extends PayloadBase {
                 ", requireAlphanumeric=" + requireAlphanumeric +
                 ", pinHistory=" + pinHistory +
                 ", maxGracePeriod=" + maxGracePeriod +
+                ", quality='" + quality + '\'' +
                 '}';
     }
 }

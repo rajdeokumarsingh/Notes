@@ -5,7 +5,7 @@ import com.pekall.plist.Utils;
 /**
  * Dictionary QueryResponses for DeviceInformation command
  */
-public class DeviceInfoResp {
+public class DeviceInfoResp extends BeanBase{
     /** The unique device identifier (UDID) of the device. */
     private String UDID;
     /** The name given to the iOS device via iTunes or the OS X device
