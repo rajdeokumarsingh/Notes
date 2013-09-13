@@ -1,0 +1,113 @@
+启动测试
+    从测试某个实际上不做任何工作的操作开始
+
+    对于新的操作，第一个问题是”这个操作隶属于那个类？“
+
+    问题：
+        Polygon Reducer: 
+            输入是一组多边形组成的网格， 输出也是一组多边形组成的网格。输出能够精确地覆盖输入。
+            但是输出使用尽可能少的多边形
+
+            测试之前是否需要阅读论文
+
+        启动测试：
+            输入和输出应该一样，比如输入一组无法精简的多边形
+            输入应该经可能的少，如一个多边形，甚至是一个空的多边形列表
+
+            第一个测试
+            Reducer r = new Reducer(new Polygon());
+            assertEquals(0, r.result().npoints);
+
+    根据开发程序的难度来完成启动测试
+        难度大，没有经验的项目
+            启动测试使用一步测试
+
+        难度小，有经验的项目
+            启动测试使用有一两步操作的测试
+
+断言优先:
+    从哪儿开始构建系统？
+        从对最终系统的描述开始
+
+    从哪儿开始编写一项功能？
+        从最希望代码能够通过的测试开始
+
+    从哪儿开始编写一个测试？
+        从测试完成时能够通过的断言开始
+    
+        强大的简化效果
+
+        最开始需要回答的问题：
+            1. 什么是正确的结果
+            2. 怎么去检查结果的正确性
+
+测试数据:
+    使用容易让人理解的数据
+        
+    不要使用同一个常量表达多个意思
+        如测试加法，可以尝试1+1。如果顺序颠倒了，结果会如何
+        第一个参数可以是1, 第二个参数应该不是1了，如2
+
+
+    使用真实数据
+
+使数据直观化
+
+    让人能够直接从代码中清晰地看出测试的意图
+        如100 FRC转化为50 USD 中间需要收1.5%的手续费
+
+        // 一般写法
+        assert(new Money(49.25, "USD"), result);
+
+        // 直观的写法
+        assert(new Money(100 / 2 * (1-0.015), "USD"), result);
+    
+说明测试
+    利用测试提供说明
+
+    不要强迫其他人改变他的工作方式
+
+    使用测试用例向其他工程师说明自己的想法
+
+学习测试
+    什么时候使用学习测试？
+        第一次使用某个包中的一项功能时
+
+        对于未知的新的API，不应该直接使用
+            应该写一个测试程序，验证它是否满足我们的期望
+
+回归测试
+    发现一个bug后，需要为这个bug添加一个测试程序。
+        以后每次回归都要保证所有测试都通过
+
+
+Mock Object
+    for example, test depends on database, write a mock database
+
+crash test dummy
+    test when file system is full
+        create a mock file system api
+        throw IOException from this api
+
+    Use annonymous inner method:
+        public void testFSError() {
+            File file = new File("foo") {
+                public boolean createNewFile() throws IOException {
+                    throw new IOException();
+                }
+            };
+            try {
+                saveAs(f);
+                fail();
+            } catch (IOException e) {
+            }
+        }
+
+How make your test runnable quickly?
+
+    1. fake implementation(until ok)
+        return a constant,
+        then replace the constant with correct expression
+
+    2. triangle method
+        write 2 or more test cases

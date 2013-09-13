@@ -1,0 +1,53 @@
+术语
+
+数据业务类型,主要包括:
+    业务类型一:
+        指定 APN、且 APN 不为 CMNET 的业务,即通过移动蜂窝网络才能访问的业务。
+        cmwap, cmmail, ...
+
+
+    业务类型二:
+        没有指定 APN 或指定 APN 为 CMNET 的业务,即通过 WLAN和蜂窝网都能访问的业务。
+        cmnet, wlan
+
+
+WLAN 接入点分类
+    1. 默认信任接入点: 
+        SSID 是 CMCC、 CMCC-EDU,且设置安全类型为 open 的接 入点;
+
+    2. 自定义信任接入点:
+        用户曾经成功连接过、并且已保存相关信息的接入点,或 用户根据个人需求,添加的接入点;
+
+    3. 未知接入点:
+        除了默认信任接入点、自定义信任接入点之外的其他接入点。
+
+
+[需求编号]: TS-WLAN-FUNC-CONNECT-AUTO-000001
+[需求描述]: 终端能够自动连接 WLAN。
+
+[需求编号]: TS-WLAN-FUNC-CONNECT-AUTO-000002
+[需求描述]: 终端只允许自动连接默认信任接入点、自定义信任接入点。
+
+8.2.
+业务启动时的优选要求
+
+void BrowserPreStart() {
+    if(!发起的业务属于业务类型二, cmnet)
+        return;
+
+    if(已连接 WLAN) {                               // connected状态
+        使用 WLAN 传输数据
+    } else {                                        // not connected状态
+        if(WLAN 未打开) {                           // power off
+            使用蜂窝网接入
+        } else {                                    // power on, but not connected
+            if(存在可用的WLAN 接入点) {             // 能够找到附近的AP
+                弹出 WLAN 的 SSID 列表及蜂窝网选项,
+                提示用户选择所需使用的 SSID 或蜂窝网络。
+            } else {                                // 不存在可用的WLAN接入点, 附件没有任何AP
+                提示用户是否使用移动网。如用户选择“是”,则继续使用中国移动蜂窝网。
+                并且允许用户在 “无WLAN时使用蜂窝网”设置中选择“不再提示”。
+            }
+        }
+    }
+}
