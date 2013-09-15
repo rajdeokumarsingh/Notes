@@ -43,7 +43,7 @@ public class QuickSortTest extends TestCase {
 
     public void testRandomTest() throws Exception {
         long begin = System.currentTimeMillis();
-        for (int i = 0; i < 500000; i++) {
+        for (int i = 0; i < 500; i++) {
             double[] array = Utility.randomDoubleArray();
             double[] array1 = Arrays.copyOf(array, array.length);
             assertTrue(Arrays.equals(array, array1));
@@ -53,7 +53,7 @@ public class QuickSortTest extends TestCase {
 
             assertTrue(Arrays.equals(array, array1));
         }
-        Debug.logTest("" + (System.currentTimeMillis() - begin));
+        Debug.logTest("Quick, Random Test: " + (System.currentTimeMillis() - begin));
     }
 
     public void testPerformance() throws Exception {
@@ -62,7 +62,7 @@ public class QuickSortTest extends TestCase {
             double[] array = Utility.randomDoubleArray();
             QuickSort.sort(array);
         }
-        Debug.logTest("" + (System.currentTimeMillis() - begin));
+        Debug.logTest("Quick, Perf test: " + (System.currentTimeMillis() - begin));
     }
 
     public void testStdPerformance() throws Exception {
@@ -71,6 +71,6 @@ public class QuickSortTest extends TestCase {
             double[] array = Utility.randomDoubleArray();
             Arrays.sort(array);
         }
-        Debug.logTest("" + (System.currentTimeMillis() - begin));
+        Debug.logTest("Std, perf test" + (System.currentTimeMillis() - begin));
     }
 }

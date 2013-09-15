@@ -11,11 +11,16 @@ The divide-and-conquer design paradigm
     2. Conquer the subproblems by solving them recursively
     3. Combine subproblem solutions
 
-<<<<<<< HEAD
 Decision tree model
-=======
 Quantification
->>>>>>> 2f841b9362c2036e0ddd17b2069d6b5067d30899
+
+Progam an algorithm
+    1. write frame
+    2. check boundary
+        if not sure, simplify:
+            let all input variable be zero
+            let all input variable be maximium value
+    3. test
 
 Reference:
     Java linear algebar library
