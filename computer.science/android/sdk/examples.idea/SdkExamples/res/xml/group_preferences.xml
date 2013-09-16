@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+            android:key="quick_control"
+            android:title="@string/pref_lab_quick_controls">
+
+        <CheckBoxPreference
+                android:key="enable_quick_controls"
+                android:defaultValue="false"
+                android:title="@string/pref_lab_quick_controls"
+                android:summary="@string/pref_lab_quick_controls_summary"/>
+
+        <CheckBoxPreference
+                android:key="enable_quick_controls1"
+                android:defaultValue="false"
+                android:title="@string/pref_lab_quick_controls"
+                android:summary="@string/pref_lab_quick_controls_summary"/>
+
+        <CheckBoxPreference
+                android:key="enable_quick_controls2"
+                android:defaultValue="false"
+                android:title="@string/pref_lab_quick_controls"
+                android:summary="@string/pref_lab_quick_controls_summary"/>
+    </PreferenceCategory>
+
+    <!--SwitchPreference
+        android:key="enable_quick_controls_switch"
+        android:defaultValue="false"
+        android:title="@string/pref_lab_quick_controls"
+        android:summary="@string/pref_lab_quick_controls_summary" /-->
+
+    <PreferenceCategory
+            android:key="js_engine_category"
+            android:title="@string/js_engine_flags">
+
+        <EditTextPreference
+                android:key="js_engine_flags"
+                android:title="@string/js_engine_flags"
+                android:defaultValue="test 1"
+                android:summary="@string/pref_lab_quick_controls_summary"
+                android:singleLine="true"/>
+
+        <EditTextPreference
+                android:key="js_engine_flags1"
+                android:title="@string/js_engine_flags"
+                android:defaultValue="test 2"
+                android:summary="@string/pref_lab_quick_controls_summary"
+                android:singleLine="true"/>
+
+        <EditTextPreference
+                android:key="js_engine_flags2"
+                android:title="@string/js_engine_flags"
+                android:defaultValue="test 3"
+                android:summary="@string/pref_lab_quick_controls_summary"
+                android:singleLine="true"/>
+    </PreferenceCategory>
+
+    <ListPreference
+            android:key="plugin_state"
+            android:title="@string/pref_content_plugins"
+            android:defaultValue="ON"
+            android:entries="@array/pref_content_plugins_choices"
+            android:entryValues="@array/pref_content_plugins_values"
+            android:dialogTitle="@string/pref_content_plugins"/>
+
+    <PreferenceScreen
+            android:key="sub_screen"
+            android:title="Sub Screen">
+
+        <CheckBoxPreference
+                android:key="enable_quick_controls"
+                android:defaultValue="false"
+                android:title="@string/pref_lab_quick_controls"
+                android:summary="@string/pref_lab_quick_controls_summary"/>
+
+        <EditTextPreference
+                android:key="js_engine_flags"
+                android:title="@string/js_engine_flags"
+                android:defaultValue="@string/js_engine_flags"
+                android:summary="@string/pref_lab_quick_controls_summary"
+                android:singleLine="true"/>
+
+        <ListPreference
+                android:key="plugin_state"
+                android:title="@string/pref_content_plugins"
+                android:defaultValue="ON"
+                android:entries="@array/pref_content_plugins_choices"
+                android:entryValues="@array/pref_content_plugins_values"
+                android:dialogTitle="@string/pref_content_plugins"/>
+    </PreferenceScreen>
+
+    <Preference android:title="View Baidu" >
+        <intent android:action="android.intent.action.VIEW"
+                android:data="http://www.baidu.com" />
+    </Preference>
+
+    <com.example.sdk.preference.MyYesNoPreference
+            android:key="privacy_clear_cache"
+            android:title="@string/pref_privacy_clear_cache"
+            android:summary="@string/pref_privacy_clear_cache_summary"
+            android:dialogMessage="@string/pref_privacy_clear_cache_dlg"
+            android:dialogIcon="@android:drawable/ic_dialog_alert" />
+
+</PreferenceScreen>

@@ -1,0 +1,43 @@
+Priciple:
+    Practice is learning, and vice versa.
+
+    Agile methods
+        PIIT
+    BRAIN
+
+Roadmap:
+    Android Browser
+        Browser
+            code reading
+            pratice project
+            
+        ./plan-week-2013.09.16.txt
+        ./plan-week-2013.09.23.txt
+        ./plan-week-2013.09.30.txt
+        ./plan-week-2013.10.07.txt
+
+        Framework webkit go through
+            code reading
+            practice project
+
+        Webkit digging
+            code reading
+            debug project
+                log control system
+
+    Web tech
+        HTML
+        CSS
+        Javascript
+
+        SQL
+
+        Practice
+            Web Server
+            Build a website
+            Deploy you experiment website
+
+    Webkit
+        Qt port
+        Debug
+

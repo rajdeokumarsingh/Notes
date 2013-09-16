@@ -1,0 +1,8 @@
+Build practice environment
+
+    1. Try IDEA module
+    2. Buid a API demo work space
+    3. Write code for preference, ....
+
+
+

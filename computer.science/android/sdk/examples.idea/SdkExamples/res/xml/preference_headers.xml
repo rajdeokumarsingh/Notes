@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <header android:fragment="com.example.sdk.preference.P030SimplePrefFragment"
+            android:title="Simple Preference" />
+
+    <header android:fragment="com.example.sdk.preference.P050GroupPrefFragment"
+            android:title="Group Preference" />
+</preference-headers>

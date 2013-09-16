@@ -2,6 +2,9 @@
     面临迅速变化的需求，快速开发软件的能力
 
 敏捷关键词
+    Agile, Iteration, Incrementation, Test, Persistency, Acceleration
+    A is PATII
+
    迭代 增量 测试
 
    螺旋上升过程
@@ -53,6 +56,7 @@
 
     流水线
         build pipelines
+
     aim-shoot
 基本原则
     ./agile.declaration.principle.txt
@@ -62,6 +66,9 @@
     重构的重要目标：
         消除重复代码
         提高代码的可读性
+
+        提前重构意识
+            当第一颗变化的子弹来临时
 
 ./01.practice.txt
 ./02.extreme.programming.txt

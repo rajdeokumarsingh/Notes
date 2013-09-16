@@ -2,6 +2,7 @@ package com.pekall.plist;
 
 import com.dd.plist.NSDictionary;
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import com.pekall.plist.beans.*;
 import com.pekall.plist.json.PayloadJsonWrapper;
 import com.pekall.plist.su.policy.*;
@@ -36,84 +37,80 @@ public class WjlBuildDefaultPolicy extends TestCase {
             "\t<key>PayloadContent</key>\n" +
             "\t<array>\n" +
             "\t\t<dict>\n" +
-            "\t\t\t<key>allowSimple</key>\n" +
-            "\t\t\t<false/>\n" +
-            "\t\t\t<key>forcePIN</key>\n" +
+            "\t\t\t<key>SSID_STR</key>\n" +
+            "\t\t\t<string>test ssid</string>\n" +
+            "\t\t\t<key>HIDDEN_NETWORK</key>\n" +
             "\t\t\t<true/>\n" +
-            "\t\t\t<key>maxFailedAttempts</key>\n" +
-            "\t\t\t<integer>7</integer>\n" +
+            "\t\t\t<key>AutoJoin</key>\n" +
+            "\t\t\t<true/>\n" +
+            "\t\t\t<key>EncryptionType</key>\n" +
+            "\t\t\t<string>WEP</string>\n" +
+            "\t\t\t<key>Password</key>\n" +
+            "\t\t\t<string>123456</string>\n" +
+            "\t\t\t<key>ProxyType</key>\n" +
+            "\t\t\t<string>Manual</string>\n" +
+            "\t\t\t<key>ProxyServer</key>\n" +
+            "\t\t\t<string>192.168.10.210</string>\n" +
+            "\t\t\t<key>ProxyServerPort</key>\n" +
+            "\t\t\t<integer>80</integer>\n" +
+            "\t\t\t<key>ProxyUsername</key>\n" +
+            "\t\t\t<string>jiangrui</string>\n" +
+            "\t\t\t<key>ProxyPassword</key>\n" +
+            "\t\t\t<string>123456</string>\n" +
+            "\t\t\t<key>ProxyPACURL</key>\n" +
+            "\t\t\t<string>1.2.3.4</string>\n" +
             "\t\t\t<key>PayloadType</key>\n" +
-            "\t\t\t<string>com.apple.mobiledevice.passwordpolicy</string>\n" +
+            "\t\t\t<string>com.apple.wifi.managed</string>\n" +
             "\t\t\t<key>PayloadVersion</key>\n" +
             "\t\t\t<integer>1</integer>\n" +
             "\t\t\t<key>PayloadIdentifier</key>\n" +
-            "\t\t\t<string>com.pekall.profile.passcodepolicy</string>\n" +
+            "\t\t\t<string>com.pekall.config.wifi.managed</string>\n" +
             "\t\t\t<key>PayloadUUID</key>\n" +
-            "\t\t\t<string>51a9cfc2-b1a0-458e-a7cc-32c2775933b4</string>\n" +
+            "\t\t\t<string>3808D742-5D21-401E-B83C-AED1E990332D</string>\n" +
             "\t\t\t<key>PayloadDisplayName</key>\n" +
-            "\t\t\t<string>密码</string>\n" +
+            "\t\t\t<string>WIFI配置</string>\n" +
             "\t\t\t<key>PayloadDescription</key>\n" +
-            "\t\t\t<string>配置与安全相关的项目。</string>\n" +
+            "\t\t\t<string>WIFI相关配置</string>\n" +
             "\t\t\t<key>PayloadOrganization</key>\n" +
             "\t\t\t<string>Pekall Capital</string>\n" +
             "\t\t</dict>\n" +
             "\t\t<dict>\n" +
-            "\t\t\t<key>allowAppInstallation</key>\n" +
+            "\t\t\t<key>SSID_STR</key>\n" +
+            "\t\t\t<string>test ssid</string>\n" +
+            "\t\t\t<key>HIDDEN_NETWORK</key>\n" +
             "\t\t\t<true/>\n" +
-            "\t\t\t<key>allowAssistant</key>\n" +
+            "\t\t\t<key>AutoJoin</key>\n" +
             "\t\t\t<true/>\n" +
-            "\t\t\t<key>allowAssistantWhileLocked</key>\n" +
-            "\t\t\t<true/>\n" +
-            "\t\t\t<key>allowCamera</key>\n" +
-            "\t\t\t<true/>\n" +
-            "\t\t\t<key>allowDiagnosticSubmission</key>\n" +
-            "\t\t\t<true/>\n" +
-            "\t\t\t<key>allowExplicitContent</key>\n" +
-            "\t\t\t<true/>\n" +
-            "\t\t\t<key>allowGameCenter</key>\n" +
-            "\t\t\t<true/>\n" +
-            "\t\t\t<key>allowScreenShot</key>\n" +
-            "\t\t\t<true/>\n" +
-            "\t\t\t<key>allowYouTube</key>\n" +
-            "\t\t\t<true/>\n" +
-            "\t\t\t<key>allowiTunes</key>\n" +
-            "\t\t\t<true/>\n" +
-            "\t\t\t<key>forceITunesStorePasswordEntry</key>\n" +
-            "\t\t\t<true/>\n" +
-            "\t\t\t<key>allowSafari</key>\n" +
-            "\t\t\t<true/>\n" +
-            "\t\t\t<key>allowUntrustedTLSPrompt</key>\n" +
-            "\t\t\t<true/>\n" +
-            "\t\t\t<key>allowCloudBackup</key>\n" +
-            "\t\t\t<true/>\n" +
-            "\t\t\t<key>allowCloudDocumentSync</key>\n" +
-            "\t\t\t<true/>\n" +
-            "\t\t\t<key>allowPhotoStream</key>\n" +
-            "\t\t\t<true/>\n" +
-            "\t\t\t<key>allowBookstore</key>\n" +
-            "\t\t\t<true/>\n" +
-            "\t\t\t<key>allowBookstoreErotica</key>\n" +
-            "\t\t\t<true/>\n" +
-            "\t\t\t<key>allowPassbookWhileLocked</key>\n" +
-            "\t\t\t<true/>\n" +
-            "\t\t\t<key>allowSharedStream</key>\n" +
-            "\t\t\t<true/>\n" +
-            "\t\t\t<key>allowUIConfigurationProfileInstallation</key>\n" +
-            "\t\t\t<true/>\n" +
+            "\t\t\t<key>EncryptionType</key>\n" +
+            "\t\t\t<string>WEP</string>\n" +
+            "\t\t\t<key>Password</key>\n" +
+            "\t\t\t<string>123456</string>\n" +
+            "\t\t\t<key>ProxyType</key>\n" +
+            "\t\t\t<string>Manual</string>\n" +
+            "\t\t\t<key>ProxyServer</key>\n" +
+            "\t\t\t<string>192.168.10.210</string>\n" +
+            "\t\t\t<key>ProxyServerPort</key>\n" +
+            "\t\t\t<integer>80</integer>\n" +
+            "\t\t\t<key>ProxyUsername</key>\n" +
+            "\t\t\t<string>jiangrui</string>\n" +
+            "\t\t\t<key>ProxyPassword</key>\n" +
+            "\t\t\t<string>123456</string>\n" +
+            "\t\t\t<key>ProxyPACURL</key>\n" +
+            "\t\t\t<string>1.2.3.4</string>\n" +
             "\t\t\t<key>PayloadType</key>\n" +
-            "\t\t\t<string>com.apple.applicationaccess</string>\n" +
+            "\t\t\t<string>com.apple.wifi.managed</string>\n" +
             "\t\t\t<key>PayloadVersion</key>\n" +
             "\t\t\t<integer>1</integer>\n" +
             "\t\t\t<key>PayloadIdentifier</key>\n" +
-            "\t\t\t<string>com.pekall.profile.applicationaccess</string>\n" +
+            "\t\t\t<string>com.pekall.config.wifi.managed</string>\n" +
             "\t\t\t<key>PayloadUUID</key>\n" +
-            "\t\t\t<string>ff571cc5-1f23-4315-8bda-08c5709b140b</string>\n" +
+            "\t\t\t<string>3808D742-5D21-401E-B83C-AED1E990332D</string>\n" +
             "\t\t\t<key>PayloadDisplayName</key>\n" +
-            "\t\t\t<string>限制</string>\n" +
+            "\t\t\t<string>WIFI配置</string>\n" +
             "\t\t\t<key>PayloadDescription</key>\n" +
-            "\t\t\t<string>配置与设备限制相关的项目</string>\n" +
+            "\t\t\t<string>WIFI相关配置</string>\n" +
             "\t\t\t<key>PayloadOrganization</key>\n" +
-            "\t\t\t<string>Pekall Captital</string>\n" +
+            "\t\t\t<string>Pekall Capital</string>\n" +
             "\t\t</dict>\n" +
             "\t</array>\n" +
             "\t<key>PayloadRemovalDisallowed</key>\n" +
@@ -123,13 +120,13 @@ public class WjlBuildDefaultPolicy extends TestCase {
             "\t<key>PayloadVersion</key>\n" +
             "\t<integer>1</integer>\n" +
             "\t<key>PayloadIdentifier</key>\n" +
-            "\t<string>com.pekall.profile.policy</string>\n" +
+            "\t<string>com.pekall.profile</string>\n" +
             "\t<key>PayloadUUID</key>\n" +
-            "\t<string>0c9846e2-a6e3-4119-8eaa-13db0db5dee6</string>\n" +
+            "\t<string>2ED160FF-4B6C-47DD-8105-769231367D2A</string>\n" +
             "\t<key>PayloadDisplayName</key>\n" +
-            "\t<string>Pekall Default Policy</string>\n" +
+            "\t<string>Pekall MDM Profile</string>\n" +
             "\t<key>PayloadDescription</key>\n" +
-            "\t<string>策略文件</string>\n" +
+            "\t<string>描述文件描述。wjl 测试</string>\n" +
             "\t<key>PayloadOrganization</key>\n" +
             "\t<string>Pekall Capital</string>\n" +
             "</dict>\n" +
@@ -138,214 +135,55 @@ public class WjlBuildDefaultPolicy extends TestCase {
 
     public static final String JSON_CONTENT = "{\n" +
             "    \"PayloadContent\": {\n" +
-            "        \"payloadPasswordPolicy\": {\n" +
-            "            \"allowSimple\": false,\n" +
-            "            \"forcePIN\": true,\n" +
-            "            \"maxFailedAttempts\": 7,\n" +
-            "            \"quality\": \"numeric\",\n" +
-            "            \"PayloadType\": \"com.apple.mobiledevice.passwordpolicy\",\n" +
-            "            \"PayloadVersion\": 1,\n" +
-            "            \"PayloadIdentifier\": \"com.pekall.profile.passcodepolicy\",\n" +
-            "            \"PayloadUUID\": \"c3dff07e-7865-4cfd-b5bd-bae15e699332\",\n" +
-            "            \"PayloadDisplayName\": \"密码\",\n" +
-            "            \"PayloadDescription\": \"配置与安全相关的项目。\",\n" +
-            "            \"PayloadOrganization\": \"Pekall Capital\"\n" +
-            "        },\n" +
-            "        \"appControlList\": {\n" +
-            "            \"mustInstall\": {\n" +
-            "                \"infos\": [],\n" +
-            "                \"eventId\": \"1\"\n" +
+            "        \"payloadWifiConfigs\": [\n" +
+            "            {\n" +
+            "                \"SSID_STR\": \"test ssid\",\n" +
+            "                \"HIDDEN_NETWORK\": true,\n" +
+            "                \"AutoJoin\": true,\n" +
+            "                \"EncryptionType\": \"WEP\",\n" +
+            "                \"Password\": \"123456\",\n" +
+            "                \"ProxyType\": \"Manual\",\n" +
+            "                \"ProxyServer\": \"192.168.10.210\",\n" +
+            "                \"ProxyServerPort\": 80,\n" +
+            "                \"ProxyUsername\": \"jiangrui\",\n" +
+            "                \"ProxyPassword\": \"123456\",\n" +
+            "                \"ProxyPACURL\": \"1.2.3.4\",\n" +
+            "                \"PayloadType\": \"com.apple.wifi.managed\",\n" +
+            "                \"PayloadVersion\": 1,\n" +
+            "                \"PayloadIdentifier\": \"com.pekall.config.wifi.managed\",\n" +
+            "                \"PayloadUUID\": \"3808D742-5D21-401E-B83C-AED1E990332D\",\n" +
+            "                \"PayloadDisplayName\": \"WIFI配置\",\n" +
+            "                \"PayloadDescription\": \"WIFI相关配置\",\n" +
+            "                \"PayloadOrganization\": \"Pekall Capital\"\n" +
             "            },\n" +
-            "            \"whiteList\": {\n" +
-            "                \"infos\": [\n" +
-            "                    {\n" +
-            "                        \"appName\": \"QQ通讯录\",\n" +
-            "                        \"controlType\": 1,\n" +
-            "                        \"matchRule\": 1,\n" +
-            "                        \"packageName\": \"com.tencent.qqphonebook\",\n" +
-            "                        \"versionCode\": \"920\",\n" +
-            "                        \"downloadUrl\": \"http://192.168.10.223/resources/download?uuid=d30b22ea659342a3be70631d7821aaee\"\n" +
-            "                    },\n" +
-            "                    {\n" +
-            "                        \"appName\": \"Gmail\",\n" +
-            "                        \"controlType\": 1,\n" +
-            "                        \"matchRule\": 1,\n" +
-            "                        \"packageName\": \"com.google.android.gm\",\n" +
-            "                        \"versionCode\": \"176\",\n" +
-            "                        \"downloadUrl\": \"http://192.168.10.223/resources/download?uuid=f8619d930b464d958f9f9ccf5afbe3d6\"\n" +
-            "                    }\n" +
-            "                ],\n" +
-            "                \"eventId\": \"2\"\n" +
-            "            },\n" +
-            "            \"blackList\": {\n" +
-            "                \"infos\": [\n" +
-            "                    {\n" +
-            "                        \"appName\": \"UC浏览器\",\n" +
-            "                        \"controlType\": 2,\n" +
-            "                        \"matchRule\": 1,\n" +
-            "                        \"packageName\": \"com.UCMobile\",\n" +
-            "                        \"versionCode\": \"30\",\n" +
-            "                        \"downloadUrl\": \"http://192.168.10.223/resources/download?uuid=81f95afadc154c64801b23b7b4889189\"\n" +
-            "                    },\n" +
-            "                    {\n" +
-            "                        \"appName\": \"支付宝\",\n" +
-            "                        \"controlType\": 2,\n" +
-            "                        \"matchRule\": 1,\n" +
-            "                        \"packageName\": \"com.eg.android.AlipayGphone\",\n" +
-            "                        \"versionCode\": \"29\",\n" +
-            "                        \"downloadUrl\": \"http://192.168.10.223/resources/download?uuid=bbbbd5ad28df4a39b414edf5fe680a72\"\n" +
-            "                    }\n" +
-            "                ],\n" +
-            "                \"eventId\": \"\"\n" +
-            "            },\n" +
-            "            \"greyList\": {\n" +
-            "                \"infos\": [\n" +
-            "                    {\n" +
-            "                        \"appName\": \"QQ阅读 \",\n" +
-            "                        \"controlType\": 3,\n" +
-            "                        \"matchRule\": 1,\n" +
-            "                        \"packageName\": \"com.qq.reader\",\n" +
-            "                        \"versionCode\": \"24\",\n" +
-            "                        \"downloadUrl\": \"http://192.168.10.223/resources/download?uuid=50b1296b415a4be6af4707c88bbb68c1\"\n" +
-            "                    }\n" +
-            "                ],\n" +
-            "                \"eventId\": \"4\"\n" +
-            "            },\n" +
-            "            \"name\": \"App Control\",\n" +
-            "            \"status\": 1,\n" +
-            "            \"defaultPolicy\": false,\n" +
-            "            \"description\": \"Default application control\",\n" +
-            "            \"PayloadType\": \"com.pekall.app.control.policy\",\n" +
-            "            \"PayloadVersion\": 1,\n" +
-            "            \"PayloadIdentifier\": \"com.pekall.policy.app.control\",\n" +
-            "            \"PayloadUUID\": \"3808D742-5D21-401E-B83C-AED1E990332D\",\n" +
-            "            \"PayloadDisplayName\": \"App Control\",\n" +
-            "            \"PayloadDescription\": \"App Control相关配置\",\n" +
-            "            \"PayloadOrganization\": \"Pekall Capital\"\n" +
-            "        },\n" +
-            "        \"payloadSecurityPolicy\": {\n" +
-            "            \"enforceEncryption\": false,\n" +
-            "            \"enforceSDCardEncryption\": false,\n" +
-            "            \"allowSDCardWrite\": true,\n" +
-            "            \"disableKeyguardFeatures\": \"all feature\",\n" +
-            "            \"allowNonGoogleApp\": \"user controlled\",\n" +
-            "            \"enforceAppVerify\": \"user controlled\",\n" +
-            "            \"allowScreenCapture\": true,\n" +
-            "            \"allowClipboard\": true,\n" +
-            "            \"backupMyData\": \"user controlled\",\n" +
-            "            \"automaticRestore\": \"user controlled\",\n" +
-            "            \"visiblePasswords\": \"user controlled\",\n" +
-            "            \"allowUSBDebugging\": true,\n" +
-            "            \"allowGoogleCrashReport\": true,\n" +
-            "            \"allowFactoryReset\": true,\n" +
-            "            \"allowOTAUpgrade\": true,\n" +
-            "            \"PayloadType\": \"com.pekall.security.policy\",\n" +
-            "            \"PayloadVersion\": 1,\n" +
-            "            \"PayloadIdentifier\": \"com.pekall.policy.security\",\n" +
-            "            \"PayloadUUID\": \"d19ff869-9bd4-4793-bdc1-b0eca2c759d4\",\n" +
-            "            \"PayloadDisplayName\": \"Security配置\",\n" +
-            "            \"PayloadDescription\": \"Security相关配置\",\n" +
-            "            \"PayloadOrganization\": \"Pekall Captital\"\n" +
-            "        },\n" +
-            "        \"payloadRestrictionsAndroidPolicy\": {\n" +
-            "            \"backgroundDataSync\": \"user controlled\",\n" +
-            "            \"autoSync\": \"user controlled\",\n" +
-            "            \"camera\": \"user controlled\",\n" +
-            "            \"bluetooth\": \"user controlled\",\n" +
-            "            \"allowUSBMassStorage\": \"user controlled\",\n" +
-            "            \"allowUsbMediaPlayer\": true,\n" +
-            "            \"useNetworkDateTime\": \"user controlled\",\n" +
-            "            \"allowMicrophone\": \"user controlled\",\n" +
-            "            \"allowNFC\": \"user controlled\",\n" +
-            "            \"useWirelessNetworkForLocation\": \"user controlled\",\n" +
-            "            \"useGPSForLocation\": \"user controlled\",\n" +
-            "            \"useSensorAidingForLocation\": \"user controlled\",\n" +
-            "            \"allowMockLocation\": \"user controlled\",\n" +
-            "            \"PayloadType\": \"com.pekall.restrictions.policy\",\n" +
-            "            \"PayloadVersion\": 1,\n" +
-            "            \"PayloadIdentifier\": \"com.pekall.policy.restriction\",\n" +
-            "            \"PayloadUUID\": \"a980cb44-bb44-4b94-ba64-ef913b1a2604\",\n" +
-            "            \"PayloadDisplayName\": \"Restriction配置\",\n" +
-            "            \"PayloadDescription\": \"Restriction相关配置\",\n" +
-            "            \"PayloadOrganization\": \"Pekall Captital\"\n" +
-            "        },\n" +
-            "        \"payloadNativeAppCtrlPolicy\": {\n" +
-            "            \"youtube\": false,\n" +
-            "            \"browser\": true,\n" +
-            "            \"settings\": true,\n" +
-            "            \"gallery\": false,\n" +
-            "            \"gmail\": true,\n" +
-            "            \"googleMap\": true,\n" +
-            "            \"voiceDialer\": true,\n" +
-            "            \"PayloadType\": \"com.pekall.native.app.control.policy\",\n" +
-            "            \"PayloadVersion\": 1,\n" +
-            "            \"PayloadIdentifier\": \"com.pekall.policy.native.app\",\n" +
-            "            \"PayloadUUID\": \"1f7bbc20-f0bd-47dd-9c99-3b158003d766\",\n" +
-            "            \"PayloadDisplayName\": \"Native app配置\",\n" +
-            "            \"PayloadDescription\": \"Native app相关配置\",\n" +
-            "            \"PayloadOrganization\": \"Pekall Captital\"\n" +
-            "        },\n" +
-            "        \"payloadNetRestrictPolicy\": {\n" +
-            "            \"allowEmgCallOnly\": true,\n" +
-            "            \"allowWifi\": true,\n" +
-            "            \"WhitelistedSSIDs\": [\n" +
-            "                \"xx-xxxx-xx-xx-xx\"\n" +
-            "            ],\n" +
-            "            \"BlacklistedSSIDs\": [\n" +
-            "                \"xxxx-xx-xx-xx\"\n" +
-            "            ],\n" +
-            "            \"allowDataNetwork\": \"user controlled\",\n" +
-            "            \"mobileAP\": \"disable\",\n" +
-            "            \"allowMessage\": \"enabled\",\n" +
-            "            \"PayloadType\": \"com.pekall.network.restriction.policy\",\n" +
-            "            \"PayloadVersion\": 1,\n" +
-            "            \"PayloadIdentifier\": \"com.pekall.policy.network.restriction\",\n" +
-            "            \"PayloadUUID\": \"b3b6b3e4-e865-47ef-a1ec-0e4c4d705115\",\n" +
-            "            \"PayloadDisplayName\": \"Network Restriction配置\",\n" +
-            "            \"PayloadDescription\": \"Network Restriction相关配置\",\n" +
-            "            \"PayloadOrganization\": \"Pekall Captital\"\n" +
-            "        },\n" +
-            "        \"payloadBluetoothPolicy\": {\n" +
-            "            \"allowDeviceDiscovery\": true,\n" +
-            "            \"allowHeadset\": true,\n" +
-            "            \"allowA2DP\": true,\n" +
-            "            \"allowOutgoingCalls\": true,\n" +
-            "            \"allowDataTransfer\": true,\n" +
-            "            \"allow2Desktop\": false,\n" +
-            "            \"PayloadType\": \"com.pekall.bluetooth.policy\",\n" +
-            "            \"PayloadVersion\": 1,\n" +
-            "            \"PayloadIdentifier\": \"com.pekall.policy.bluetooth\",\n" +
-            "            \"PayloadUUID\": \"83f8b125-4334-46a7-adb6-a63b5d7df2cb\",\n" +
-            "            \"PayloadDisplayName\": \"Bluetooth配置\",\n" +
-            "            \"PayloadDescription\": \"Bluetooth相关配置\",\n" +
-            "            \"PayloadOrganization\": \"Pekall Captital\"\n" +
-            "        },\n" +
-            "        \"payloadActiveSyncPolicy\": {\n" +
-            "            \"hostName\": \"test host\",\n" +
-            "            \"account\": \"ray\",\n" +
-            "            \"displayName\": \"my active sync\",\n" +
-            "            \"acceptAllCertificates\": true,\n" +
-            "            \"configurePasscode\": true,\n" +
-            "            \"allowBackup\": true,\n" +
-            "            \"allowHtmlEmail\": true,\n" +
-            "            \"allowAttachments\": false,\n" +
-            "            \"emailSignature\": \"BRs\",\n" +
-            "            \"policyKey\": \"xx-xx-xxxx-xx-x\",\n" +
-            "            \"PayloadType\": \"com.pekall.network.active.sync.policy\",\n" +
-            "            \"PayloadVersion\": 1,\n" +
-            "            \"PayloadIdentifier\": \"com.pekall.policy.active.sync\",\n" +
-            "            \"PayloadUUID\": \"3808D742-5D21-401E-B83C-AED1E990332D\",\n" +
-            "            \"PayloadDisplayName\": \"Active Sync配置\",\n" +
-            "            \"PayloadDescription\": \"Active Sync相关配置\",\n" +
-            "            \"PayloadOrganization\": \"Pekall Capital\"\n" +
-            "        }\n" +
+            "            {\n" +
+            "                \"SSID_STR\": \"test ssid\",\n" +
+            "                \"HIDDEN_NETWORK\": true,\n" +
+            "                \"AutoJoin\": true,\n" +
+            "                \"EncryptionType\": \"WEP\",\n" +
+            "                \"Password\": \"123456\",\n" +
+            "                \"ProxyType\": \"Manual\",\n" +
+            "                \"ProxyServer\": \"192.168.10.210\",\n" +
+            "                \"ProxyServerPort\": 80,\n" +
+            "                \"ProxyUsername\": \"jiangrui\",\n" +
+            "                \"ProxyPassword\": \"123456\",\n" +
+            "                \"ProxyPACURL\": \"1.2.3.4\",\n" +
+            "                \"PayloadType\": \"com.apple.wifi.managed\",\n" +
+            "                \"PayloadVersion\": 1,\n" +
+            "                \"PayloadIdentifier\": \"com.pekall.config.wifi.managed\",\n" +
+            "                \"PayloadUUID\": \"3808D742-5D21-401E-B83C-AED1E990332D\",\n" +
+            "                \"PayloadDisplayName\": \"WIFI配置\",\n" +
+            "                \"PayloadDescription\": \"WIFI相关配置\",\n" +
+            "                \"PayloadOrganization\": \"Pekall Capital\"\n" +
+            "            }\n" +
+            "        ]\n" +
             "    },\n" +
             "    \"PayloadType\": \"Configuration\",\n" +
             "    \"PayloadVersion\": 1,\n" +
-            "    \"PayloadIdentifier\": \"com.pekall.profile.policy\",\n" +
-            "    \"PayloadUUID\": \"63b59cfe-3018-4b7f-bb32-abcfbbaa771f\",\n" +
-            "    \"PayloadDisplayName\": \"Pekall Default Policy\",\n" +
-            "    \"PayloadDescription\": \"策略文件\",\n" +
+            "    \"PayloadIdentifier\": \"com.pekall.profile\",\n" +
+            "    \"PayloadUUID\": \"2ED160FF-4B6C-47DD-8105-769231367D2A\",\n" +
+            "    \"PayloadDisplayName\": \"Pekall MDM Profile\",\n" +
+            "    \"PayloadDescription\": \"描述文件描述。wjl 测试\",\n" +
             "    \"PayloadOrganization\": \"Pekall Capital\"\n" +
             "}";
 
@@ -492,11 +330,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
         exchange.setDisableMailRecentsSyncing(false);
         exchange.setEmailAddress("xiaoliang.li@mdm.com");
         exchange.setHost("192.168.10.239");
-<<<<<<< HEAD
-        exchange.setUserName("mdm\\bingxing.wang");
-=======
         exchange.setUserName("mdm\\xiaoliang.li");
->>>>>>> 2f841b9362c2036e0ddd17b2069d6b5067d30899
         exchange.setPassword("Pekall123");
         exchange.setSSL(false);
         exchange.setSMIMEEnabled(false);
@@ -537,6 +371,9 @@ public class WjlBuildDefaultPolicy extends TestCase {
         PayloadArrayWrapper wrapper = createSettingWrapper();
         PayloadEmail payloadEmail = createEmail();
 
+//        PayloadVPN payloadVPN = createVPN();
+
+        PayloadWallpaper payloadWallpaper = createPayloadWallpaper();
         AdvertiseDownloadSettings advertiseDownloadSettings = getAdvertiseDownloadSettings();
         SystemSettings systemSettings = getSystemSettings();
         LauncherSettings launcherSettings = getLauncherSettings();
@@ -544,18 +381,13 @@ public class WjlBuildDefaultPolicy extends TestCase {
 
 
         wrapper.addPayLoadContent(wifiConfig);
-<<<<<<< HEAD
+        wrapper.addPayLoadContent(payloadEmail);
+//        wrapper.addPayLoadContent(payloadVPN);
+        wrapper.addPayLoadContent(payloadWallpaper);
         wrapper.addPayLoadContent(advertiseDownloadSettings);
         wrapper.addPayLoadContent(browserSettings);
         wrapper.addPayLoadContent(launcherSettings);
         wrapper.addPayLoadContent(systemSettings);
-=======
-        wrapper.addPayLoadContent(payloadEmail);
-//        wrapper.addPayLoadContent(advertiseDownloadSettings);
-//        wrapper.addPayLoadContent(browserSettings);
-//        wrapper.addPayLoadContent(launcherSettings);
-//        wrapper.addPayLoadContent(systemSettings);
->>>>>>> 2f841b9362c2036e0ddd17b2069d6b5067d30899
 
 
 
@@ -567,20 +399,30 @@ public class WjlBuildDefaultPolicy extends TestCase {
     private PayloadArrayWrapper createIosSettingProfile() {
         PayloadWifiConfig wifiConfig = createWifiConfig();
         PayloadEmail payloadEmail = createEmail();
-<<<<<<< HEAD
-=======
-        PayloadVPN payloadVPN = createVPN();
->>>>>>> 2f841b9362c2036e0ddd17b2069d6b5067d30899
+//        PayloadVPN payloadVPN = createVPN();
 //        PayloadPasswordPolicy passwordPolicy = createPasswordPolicy();
         PayloadArrayWrapper wrapper = createSettingWrapper();
         wrapper.addPayLoadContent(wifiConfig);
         wrapper.addPayLoadContent(payloadEmail);
-<<<<<<< HEAD
-=======
-        wrapper.addPayLoadContent(payloadVPN);
->>>>>>> 2f841b9362c2036e0ddd17b2069d6b5067d30899
+//        wrapper.addPayLoadContent(payloadVPN);
 //        wrapper.addPayLoadContent(wifiConfig);
         return wrapper;
+    }
+
+    private PayloadWallpaper createPayloadWallpaper() {
+        PayloadWallpaper settings = new PayloadWallpaper();
+        settings.setPayloadDescription("Wallpaper相关配置");
+        settings.setPayloadDisplayName("Wallpaper配置");
+        settings.setPayloadIdentifier("com.pekall.settings.wallpaper");
+        settings.setPayloadOrganization(ORGANIZATION);
+        settings.setPayloadUUID(getUUID());
+        settings.setPayloadVersion(VERSION);
+
+        settings.setConfigWallpaper(true);
+        settings.setAllowUsrChangeWallpaper(false);
+        settings.setLowResolution("320x240");
+
+        return settings;
     }
 
     private SystemSettings getSystemSettings() {
@@ -750,14 +592,14 @@ public class WjlBuildDefaultPolicy extends TestCase {
     private PayloadArrayWrapper createAndroidPolicyProfile() {
 //        PayloadWifiConfig wifiConfig = createWifiConfig();
         PayloadPasswordPolicy passwordPolicy = createPasswordPolicy();
-        PayloadSecurityPolicy payloadSecurityPolicy =  createAndroidSecurityPolicy();
-        PayloadRestrictionsAndroidPolicy payloadRestrictionsAndroidPolicy = createAndroidRestrictionsPolicy();
-        AppControlList appControlList = getAppControlList();
-        PayloadActiveSyncPolicy payloadActiveSyncPolicy =   createAndroidActiveSyncPolicy();
-        PayloadNativeAppCtrlPolicy payloadNativeAppCtrlPolicy = createAndroidNativeAppCtrlPolicy();
-
-        PayloadNetRestrictPolicy payloadNetRestrictPolicy = createAndroidNetRestrictPolicy();
-        PayloadBluetoothPolicy payloadBluetoothPolicy = createAndroidBluetoothPolicy();
+//        PayloadSecurityPolicy payloadSecurityPolicy =  createAndroidSecurityPolicy();
+//        PayloadRestrictionsAndroidPolicy payloadRestrictionsAndroidPolicy = createAndroidRestrictionsPolicy();
+//        AppControlList appControlList = getAppControlList();
+//        PayloadActiveSyncPolicy payloadActiveSyncPolicy =   createAndroidActiveSyncPolicy();
+//        PayloadNativeAppCtrlPolicy payloadNativeAppCtrlPolicy = createAndroidNativeAppCtrlPolicy();
+//
+//        PayloadNetRestrictPolicy payloadNetRestrictPolicy = createAndroidNetRestrictPolicy();
+//        PayloadBluetoothPolicy payloadBluetoothPolicy = createAndroidBluetoothPolicy();
 
 //        MemorySizePolicy memorySizePolicy = getMemorySizePolicy();
 //        AppControlList appControlList = getAppControlList();
@@ -765,14 +607,14 @@ public class WjlBuildDefaultPolicy extends TestCase {
 
         PayloadArrayWrapper wrapper = createWrapper();
         wrapper.addPayLoadContent(passwordPolicy);
-        wrapper.addPayLoadContent(payloadActiveSyncPolicy);
-        wrapper.addPayLoadContent(payloadRestrictionsAndroidPolicy);
-        wrapper.addPayLoadContent(payloadSecurityPolicy);
-        wrapper.addPayLoadContent(payloadBluetoothPolicy);
-        wrapper.addPayLoadContent(payloadNativeAppCtrlPolicy);
-        wrapper.addPayLoadContent(payloadNetRestrictPolicy);
-//        wrapper.addPayLoadContent(memorySizePolicy);
-        wrapper.addPayLoadContent(appControlList);
+//        wrapper.addPayLoadContent(payloadActiveSyncPolicy);
+//        wrapper.addPayLoadContent(payloadRestrictionsAndroidPolicy);
+//        wrapper.addPayLoadContent(payloadSecurityPolicy);
+//        wrapper.addPayLoadContent(payloadBluetoothPolicy);
+//        wrapper.addPayLoadContent(payloadNativeAppCtrlPolicy);
+//        wrapper.addPayLoadContent(payloadNetRestrictPolicy);
+////        wrapper.addPayLoadContent(memorySizePolicy);
+//        wrapper.addPayLoadContent(appControlList);
 //        wrapper.addPayLoadContent(systemExceptionPolicy);
 //        wrapper.addPayLoadContent(removalPassword);
 //        wrapper.addPayLoadContent(wifiConfig);
@@ -1020,18 +862,16 @@ public class WjlBuildDefaultPolicy extends TestCase {
         policy.setPayloadOrganization("Pekall Capital");
         policy.setPayloadUUID(UUID.randomUUID().toString());
         policy.setPayloadVersion(1);
-        policy.setAllowSimple(false);
+        policy.setAllowSimple(true);
         policy.setForcePIN(true);
-        policy.setMaxFailedAttempts(7);
-
-//        policy.setMaxGracePeriod(1);
-//        policy.setMaxInactivity(2);
-//        policy.setMaxPINAgeInDays(2);
-//        policy.setMinComplexChars(2);
-//        policy.setMinLength(4);
-//        policy.setPinHistory(50);
-//        policy.setRequireAlphanumeric(true);
-
+        policy.setMaxFailedAttempts(10);
+//        policy.setMaxGracePeriod(-1);
+        policy.setPinHistory(50);
+        policy.setMaxPINAgeInDays(730);
+        policy.setMinLength(4);
+        policy.setMaxInactivity(1);//自动锁定
+        policy.setRequireAlphanumeric(false);
+//        policy.setMinComplexChars(-1);
 
         policy.setQuality(PayloadPasswordPolicy.QUALITY_NUMERIC);
         return policy;
@@ -1059,7 +899,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
         policy.setAllowScreenShot(true);
         policy.setAllowYouTube(true);
         policy.setAllowiTunes(true);
-        policy.setForceITunesStorePasswordEntry(true);
+        policy.setForceITunesStorePasswordEntry(false);
         policy.setAllowSafari(true);
         policy.setAllowUntrustedTLSPrompt(true);
         policy.setAllowCloudBackup(true);
@@ -1125,5 +965,19 @@ public class WjlBuildDefaultPolicy extends TestCase {
 
         removalPassword.setRemovalPassword("123456");
         return removalPassword;
+    }
+
+
+    public void testJson(){
+        String respond = "{\n" +
+                "    \"result\": \"123\"\n" +
+                "}";
+
+
+        Gson gson = new Gson();
+
+        JsonObject jsonObject =  gson.fromJson(respond,JsonObject.class);
+        System.out.println(jsonObject);
+        System.out.println(jsonObject.get("result").getAsInt());
     }
 }

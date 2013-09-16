@@ -9,6 +9,8 @@ import com.pekall.plist.su.settings.advertise.AdvertiseDownloadSettings;
 import com.pekall.plist.su.settings.browser.BrowserSettings;
 import com.pekall.plist.su.settings.launcher.LauncherSettings;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: wjl
@@ -18,6 +20,7 @@ import com.pekall.plist.su.settings.launcher.LauncherSettings;
 public class PayloadJsonObject {
 
     private PayloadPasswordPolicy payloadPasswordPolicy;
+    private List<PayloadWifiConfig> payloadWifiConfigs;
     private PayloadWifiConfig payloadWifiConfig;
     private PayloadRestrictionsPolicy payloadRestrictionsPolicy;
     private PayloadEmail payloadEmail;

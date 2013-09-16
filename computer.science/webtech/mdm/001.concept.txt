@@ -1,6 +1,0 @@
-MDM payload
-
-Device
-    Identity certificate
-    push notification device token
-        The server send push message to the device by this token
