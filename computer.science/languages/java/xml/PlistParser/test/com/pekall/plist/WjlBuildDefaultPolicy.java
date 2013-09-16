@@ -142,61 +142,219 @@ public class WjlBuildDefaultPolicy extends TestCase {
             "            \"allowSimple\": false,\n" +
             "            \"forcePIN\": true,\n" +
             "            \"maxFailedAttempts\": 7,\n" +
+            "            \"quality\": \"numeric\",\n" +
             "            \"PayloadType\": \"com.apple.mobiledevice.passwordpolicy\",\n" +
             "            \"PayloadVersion\": 1,\n" +
             "            \"PayloadIdentifier\": \"com.pekall.profile.passcodepolicy\",\n" +
-            "            \"PayloadUUID\": \"51a9cfc2-b1a0-458e-a7cc-32c2775933b4\",\n" +
+            "            \"PayloadUUID\": \"c3dff07e-7865-4cfd-b5bd-bae15e699332\",\n" +
             "            \"PayloadDisplayName\": \"密码\",\n" +
             "            \"PayloadDescription\": \"配置与安全相关的项目。\",\n" +
             "            \"PayloadOrganization\": \"Pekall Capital\"\n" +
             "        },\n" +
-            "        \"payloadRestrictionsPolicy\": {\n" +
-            "            \"allowAppInstallation\": true,\n" +
-            "            \"allowAssistant\": true,\n" +
-            "            \"allowAssistantWhileLocked\": true,\n" +
-            "            \"allowCamera\": true,\n" +
-            "            \"allowDiagnosticSubmission\": true,\n" +
-            "            \"allowExplicitContent\": true,\n" +
-            "            \"allowGameCenter\": true,\n" +
-            "            \"allowScreenShot\": true,\n" +
-            "            \"allowYouTube\": true,\n" +
-            "            \"allowiTunes\": true,\n" +
-            "            \"forceITunesStorePasswordEntry\": true,\n" +
-            "            \"allowSafari\": true,\n" +
-            "            \"allowUntrustedTLSPrompt\": true,\n" +
-            "            \"allowCloudBackup\": true,\n" +
-            "            \"allowCloudDocumentSync\": true,\n" +
-            "            \"allowPhotoStream\": true,\n" +
-            "            \"allowBookstore\": true,\n" +
-            "            \"allowBookstoreErotica\": true,\n" +
-            "            \"allowPassbookWhileLocked\": true,\n" +
-            "            \"allowSharedStream\": true,\n" +
-            "            \"allowUIConfigurationProfileInstallation\": true,\n" +
-            "            \"PayloadType\": \"com.apple.applicationaccess\",\n" +
+            "        \"appControlList\": {\n" +
+            "            \"mustInstall\": {\n" +
+            "                \"infos\": [],\n" +
+            "                \"eventId\": \"1\"\n" +
+            "            },\n" +
+            "            \"whiteList\": {\n" +
+            "                \"infos\": [\n" +
+            "                    {\n" +
+            "                        \"appName\": \"QQ通讯录\",\n" +
+            "                        \"controlType\": 1,\n" +
+            "                        \"matchRule\": 1,\n" +
+            "                        \"packageName\": \"com.tencent.qqphonebook\",\n" +
+            "                        \"versionCode\": \"920\",\n" +
+            "                        \"downloadUrl\": \"http://192.168.10.223/resources/download?uuid=d30b22ea659342a3be70631d7821aaee\"\n" +
+            "                    },\n" +
+            "                    {\n" +
+            "                        \"appName\": \"Gmail\",\n" +
+            "                        \"controlType\": 1,\n" +
+            "                        \"matchRule\": 1,\n" +
+            "                        \"packageName\": \"com.google.android.gm\",\n" +
+            "                        \"versionCode\": \"176\",\n" +
+            "                        \"downloadUrl\": \"http://192.168.10.223/resources/download?uuid=f8619d930b464d958f9f9ccf5afbe3d6\"\n" +
+            "                    }\n" +
+            "                ],\n" +
+            "                \"eventId\": \"2\"\n" +
+            "            },\n" +
+            "            \"blackList\": {\n" +
+            "                \"infos\": [\n" +
+            "                    {\n" +
+            "                        \"appName\": \"UC浏览器\",\n" +
+            "                        \"controlType\": 2,\n" +
+            "                        \"matchRule\": 1,\n" +
+            "                        \"packageName\": \"com.UCMobile\",\n" +
+            "                        \"versionCode\": \"30\",\n" +
+            "                        \"downloadUrl\": \"http://192.168.10.223/resources/download?uuid=81f95afadc154c64801b23b7b4889189\"\n" +
+            "                    },\n" +
+            "                    {\n" +
+            "                        \"appName\": \"支付宝\",\n" +
+            "                        \"controlType\": 2,\n" +
+            "                        \"matchRule\": 1,\n" +
+            "                        \"packageName\": \"com.eg.android.AlipayGphone\",\n" +
+            "                        \"versionCode\": \"29\",\n" +
+            "                        \"downloadUrl\": \"http://192.168.10.223/resources/download?uuid=bbbbd5ad28df4a39b414edf5fe680a72\"\n" +
+            "                    }\n" +
+            "                ],\n" +
+            "                \"eventId\": \"\"\n" +
+            "            },\n" +
+            "            \"greyList\": {\n" +
+            "                \"infos\": [\n" +
+            "                    {\n" +
+            "                        \"appName\": \"QQ阅读 \",\n" +
+            "                        \"controlType\": 3,\n" +
+            "                        \"matchRule\": 1,\n" +
+            "                        \"packageName\": \"com.qq.reader\",\n" +
+            "                        \"versionCode\": \"24\",\n" +
+            "                        \"downloadUrl\": \"http://192.168.10.223/resources/download?uuid=50b1296b415a4be6af4707c88bbb68c1\"\n" +
+            "                    }\n" +
+            "                ],\n" +
+            "                \"eventId\": \"4\"\n" +
+            "            },\n" +
+            "            \"name\": \"App Control\",\n" +
+            "            \"status\": 1,\n" +
+            "            \"defaultPolicy\": false,\n" +
+            "            \"description\": \"Default application control\",\n" +
+            "            \"PayloadType\": \"com.pekall.app.control.policy\",\n" +
             "            \"PayloadVersion\": 1,\n" +
-            "            \"PayloadIdentifier\": \"com.pekall.profile.applicationaccess\",\n" +
-            "            \"PayloadUUID\": \"ff571cc5-1f23-4315-8bda-08c5709b140b\",\n" +
-            "            \"PayloadDisplayName\": \"限制\",\n" +
-            "            \"PayloadDescription\": \"配置与设备限制相关的项目\",\n" +
+            "            \"PayloadIdentifier\": \"com.pekall.policy.app.control\",\n" +
+            "            \"PayloadUUID\": \"3808D742-5D21-401E-B83C-AED1E990332D\",\n" +
+            "            \"PayloadDisplayName\": \"App Control\",\n" +
+            "            \"PayloadDescription\": \"App Control相关配置\",\n" +
+            "            \"PayloadOrganization\": \"Pekall Capital\"\n" +
+            "        },\n" +
+            "        \"payloadSecurityPolicy\": {\n" +
+            "            \"enforceEncryption\": false,\n" +
+            "            \"enforceSDCardEncryption\": false,\n" +
+            "            \"allowSDCardWrite\": true,\n" +
+            "            \"disableKeyguardFeatures\": \"all feature\",\n" +
+            "            \"allowNonGoogleApp\": \"user controlled\",\n" +
+            "            \"enforceAppVerify\": \"user controlled\",\n" +
+            "            \"allowScreenCapture\": true,\n" +
+            "            \"allowClipboard\": true,\n" +
+            "            \"backupMyData\": \"user controlled\",\n" +
+            "            \"automaticRestore\": \"user controlled\",\n" +
+            "            \"visiblePasswords\": \"user controlled\",\n" +
+            "            \"allowUSBDebugging\": true,\n" +
+            "            \"allowGoogleCrashReport\": true,\n" +
+            "            \"allowFactoryReset\": true,\n" +
+            "            \"allowOTAUpgrade\": true,\n" +
+            "            \"PayloadType\": \"com.pekall.security.policy\",\n" +
+            "            \"PayloadVersion\": 1,\n" +
+            "            \"PayloadIdentifier\": \"com.pekall.policy.security\",\n" +
+            "            \"PayloadUUID\": \"d19ff869-9bd4-4793-bdc1-b0eca2c759d4\",\n" +
+            "            \"PayloadDisplayName\": \"Security配置\",\n" +
+            "            \"PayloadDescription\": \"Security相关配置\",\n" +
             "            \"PayloadOrganization\": \"Pekall Captital\"\n" +
+            "        },\n" +
+            "        \"payloadRestrictionsAndroidPolicy\": {\n" +
+            "            \"backgroundDataSync\": \"user controlled\",\n" +
+            "            \"autoSync\": \"user controlled\",\n" +
+            "            \"camera\": \"user controlled\",\n" +
+            "            \"bluetooth\": \"user controlled\",\n" +
+            "            \"allowUSBMassStorage\": \"user controlled\",\n" +
+            "            \"allowUsbMediaPlayer\": true,\n" +
+            "            \"useNetworkDateTime\": \"user controlled\",\n" +
+            "            \"allowMicrophone\": \"user controlled\",\n" +
+            "            \"allowNFC\": \"user controlled\",\n" +
+            "            \"useWirelessNetworkForLocation\": \"user controlled\",\n" +
+            "            \"useGPSForLocation\": \"user controlled\",\n" +
+            "            \"useSensorAidingForLocation\": \"user controlled\",\n" +
+            "            \"allowMockLocation\": \"user controlled\",\n" +
+            "            \"PayloadType\": \"com.pekall.restrictions.policy\",\n" +
+            "            \"PayloadVersion\": 1,\n" +
+            "            \"PayloadIdentifier\": \"com.pekall.policy.restriction\",\n" +
+            "            \"PayloadUUID\": \"a980cb44-bb44-4b94-ba64-ef913b1a2604\",\n" +
+            "            \"PayloadDisplayName\": \"Restriction配置\",\n" +
+            "            \"PayloadDescription\": \"Restriction相关配置\",\n" +
+            "            \"PayloadOrganization\": \"Pekall Captital\"\n" +
+            "        },\n" +
+            "        \"payloadNativeAppCtrlPolicy\": {\n" +
+            "            \"youtube\": false,\n" +
+            "            \"browser\": true,\n" +
+            "            \"settings\": true,\n" +
+            "            \"gallery\": false,\n" +
+            "            \"gmail\": true,\n" +
+            "            \"googleMap\": true,\n" +
+            "            \"voiceDialer\": true,\n" +
+            "            \"PayloadType\": \"com.pekall.native.app.control.policy\",\n" +
+            "            \"PayloadVersion\": 1,\n" +
+            "            \"PayloadIdentifier\": \"com.pekall.policy.native.app\",\n" +
+            "            \"PayloadUUID\": \"1f7bbc20-f0bd-47dd-9c99-3b158003d766\",\n" +
+            "            \"PayloadDisplayName\": \"Native app配置\",\n" +
+            "            \"PayloadDescription\": \"Native app相关配置\",\n" +
+            "            \"PayloadOrganization\": \"Pekall Captital\"\n" +
+            "        },\n" +
+            "        \"payloadNetRestrictPolicy\": {\n" +
+            "            \"allowEmgCallOnly\": true,\n" +
+            "            \"allowWifi\": true,\n" +
+            "            \"WhitelistedSSIDs\": [\n" +
+            "                \"xx-xxxx-xx-xx-xx\"\n" +
+            "            ],\n" +
+            "            \"BlacklistedSSIDs\": [\n" +
+            "                \"xxxx-xx-xx-xx\"\n" +
+            "            ],\n" +
+            "            \"allowDataNetwork\": \"user controlled\",\n" +
+            "            \"mobileAP\": \"disable\",\n" +
+            "            \"allowMessage\": \"enabled\",\n" +
+            "            \"PayloadType\": \"com.pekall.network.restriction.policy\",\n" +
+            "            \"PayloadVersion\": 1,\n" +
+            "            \"PayloadIdentifier\": \"com.pekall.policy.network.restriction\",\n" +
+            "            \"PayloadUUID\": \"b3b6b3e4-e865-47ef-a1ec-0e4c4d705115\",\n" +
+            "            \"PayloadDisplayName\": \"Network Restriction配置\",\n" +
+            "            \"PayloadDescription\": \"Network Restriction相关配置\",\n" +
+            "            \"PayloadOrganization\": \"Pekall Captital\"\n" +
+            "        },\n" +
+            "        \"payloadBluetoothPolicy\": {\n" +
+            "            \"allowDeviceDiscovery\": true,\n" +
+            "            \"allowHeadset\": true,\n" +
+            "            \"allowA2DP\": true,\n" +
+            "            \"allowOutgoingCalls\": true,\n" +
+            "            \"allowDataTransfer\": true,\n" +
+            "            \"allow2Desktop\": false,\n" +
+            "            \"PayloadType\": \"com.pekall.bluetooth.policy\",\n" +
+            "            \"PayloadVersion\": 1,\n" +
+            "            \"PayloadIdentifier\": \"com.pekall.policy.bluetooth\",\n" +
+            "            \"PayloadUUID\": \"83f8b125-4334-46a7-adb6-a63b5d7df2cb\",\n" +
+            "            \"PayloadDisplayName\": \"Bluetooth配置\",\n" +
+            "            \"PayloadDescription\": \"Bluetooth相关配置\",\n" +
+            "            \"PayloadOrganization\": \"Pekall Captital\"\n" +
+            "        },\n" +
+            "        \"payloadActiveSyncPolicy\": {\n" +
+            "            \"hostName\": \"test host\",\n" +
+            "            \"account\": \"ray\",\n" +
+            "            \"displayName\": \"my active sync\",\n" +
+            "            \"acceptAllCertificates\": true,\n" +
+            "            \"configurePasscode\": true,\n" +
+            "            \"allowBackup\": true,\n" +
+            "            \"allowHtmlEmail\": true,\n" +
+            "            \"allowAttachments\": false,\n" +
+            "            \"emailSignature\": \"BRs\",\n" +
+            "            \"policyKey\": \"xx-xx-xxxx-xx-x\",\n" +
+            "            \"PayloadType\": \"com.pekall.network.active.sync.policy\",\n" +
+            "            \"PayloadVersion\": 1,\n" +
+            "            \"PayloadIdentifier\": \"com.pekall.policy.active.sync\",\n" +
+            "            \"PayloadUUID\": \"3808D742-5D21-401E-B83C-AED1E990332D\",\n" +
+            "            \"PayloadDisplayName\": \"Active Sync配置\",\n" +
+            "            \"PayloadDescription\": \"Active Sync相关配置\",\n" +
+            "            \"PayloadOrganization\": \"Pekall Capital\"\n" +
             "        }\n" +
             "    },\n" +
-            "    \"PayloadRemovalDisallowed\": true,\n" +
             "    \"PayloadType\": \"Configuration\",\n" +
             "    \"PayloadVersion\": 1,\n" +
             "    \"PayloadIdentifier\": \"com.pekall.profile.policy\",\n" +
-            "    \"PayloadUUID\": \"0c9846e2-a6e3-4119-8eaa-13db0db5dee6\",\n" +
+            "    \"PayloadUUID\": \"63b59cfe-3018-4b7f-bb32-abcfbbaa771f\",\n" +
             "    \"PayloadDisplayName\": \"Pekall Default Policy\",\n" +
             "    \"PayloadDescription\": \"策略文件\",\n" +
             "    \"PayloadOrganization\": \"Pekall Capital\"\n" +
             "}";
 
     public void testXMl2Json(){
-        System.out.println(xml2Json(CONTENT));;
+        System.out.println(xml2Json(CONTENT));
     }
 
     public void testJson2Xml(){
-        System.out.println(json2Xml(JSON_CONTENT));;
+        System.out.println(json2Xml(JSON_CONTENT));
     }
 
     public String json2Xml(String json) {
@@ -212,7 +370,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
                 xml = wrapper.getPayloadArrayWrapper().toXml();
             }
         } catch (Exception e) {
-            System.out.println("json 解析异常");
+            System.out.println("json 解析异常" + e);
         }
         return xml;
     }
@@ -441,7 +599,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
         settings.setDeviceState("active");
         settings.setIsRegistered(1);
         settings.setAdminPassword("123456");
-        settings.setWallpaper("http://119.161.242.243:3342/resources/api/v1/download/guest?uuid=1c7d1d313b8b4a862f58eb362768");
+        settings.setWallpaper("wallpaper_sky.jpg");
         ApkItem item1 = new ApkItem("建行客户端", "com.chinamworld.main",
                 "com.chinamworld.main.BTCCMWStartActivity",
                 "http://www.pekall.com/icon/1234", 1, 2, 1);
@@ -455,22 +613,22 @@ public class WjlBuildDefaultPolicy extends TestCase {
                 "com.pekall.launcher2.ui.HistoryMessageActivity",
                 "http://www.pekall.com/icon/12345", 1, 5, 1);
         WebItem item4 = new WebItem("建行主页", "http://www.ccb.com",
-                "http://119.161.242.243:3342/resources/api/v1/download/guest?uuid=2c205eae6019466a02a763b0019a",
+                "http://119.161.242.248:3342/resources/api/v1/download/guest?uuid=de6e5f8b63bc46ea32d7f46c0c33",
                 0, 1, 1);
         WebItem item5 = new WebItem("个人网银", "https://ibsbjstar.ccb.com.cn/app/V5/CN/STY1/login.jsp",
-                "http://119.161.242.243:3342/resources/api/v1/download/guest?uuid=a37d9a98ce9e4b979023aa1a7eb6",
+                "http://119.161.242.248:3342/resources/api/v1/download/guest?uuid=8a81ac2ae7534d64b2c7e166e69c",
                 0, 2, 1);
         WebItem item6 = new WebItem("私人网银", "https://ibsbjstar.ccb.com.cn/app/V5/CN/STY6/login_pbc.jsp",
-                "http://119.161.242.243:3342/resources/api/v1/download/guest?uuid=1cdd44cb4e3b4e677b17b5edcd8a",
+                "http://119.161.242.248:3342/resources/api/v1/download/guest?uuid=e431cf4fb8334374eb1919fd51f9",
                 0, 3, 1);
         WebItem item7 = new WebItem("企业网银", "http://ebank.ccb.com/cn/ebank/homepage_corporate.html",
-                "http://119.161.242.243:3342/resources/api/v1/download/guest?uuid=e23bb4307eab43e1496faea83f5f",
+                "http://119.161.242.248:3342/resources/api/v1/download/guest?uuid=ab8d412191d64c1d891e7f55676f",
                 0, 4, 1);
         WebItem item8 = new WebItem("小微网银", "http://ccb.com/cn/home/s_company_index.html",
-                "http://119.161.242.243:3342/resources/api/v1/download/guest?uuid=b19b61d5d0874f7d60e7d158c213",
+                "http://119.161.242.248:3342/resources/api/v1/download/guest?uuid=293e4ac13cc74a08b13304ed06f1",
                 0, 5, 1);
         WebItem item9 = new WebItem("善融商城", "http://e.ccb.com/cn/home/ecp_index.html",
-                "http://119.161.242.243:3342/resources/api/v1/download/guest?uuid=8dbfa62b0c38430337ac953ff95d",
+                "http://119.161.242.248:3342/resources/api/v1/download/guest?uuid=5c318e33a3e340b40bcbfe20816f",
                 0, 6, 1);
 
         settings.addApkItem(item1);
@@ -575,24 +733,171 @@ public class WjlBuildDefaultPolicy extends TestCase {
     private PayloadArrayWrapper createAndroidPolicyProfile() {
 //        PayloadWifiConfig wifiConfig = createWifiConfig();
         PayloadPasswordPolicy passwordPolicy = createPasswordPolicy();
-        PayloadRestrictionsPolicy restrictionsPolicy = createIosRestrictionsPolicy();
-
-        PayloadExchange payloadExchange = createExchange();
-
-        MemorySizePolicy memorySizePolicy = getMemorySizePolicy();
+        PayloadSecurityPolicy payloadSecurityPolicy =  createAndroidSecurityPolicy();
+        PayloadRestrictionsAndroidPolicy payloadRestrictionsAndroidPolicy = createAndroidRestrictionsPolicy();
         AppControlList appControlList = getAppControlList();
-        SystemExceptionPolicy systemExceptionPolicy = getSystemExceptionPolicy();
+        PayloadActiveSyncPolicy payloadActiveSyncPolicy =   createAndroidActiveSyncPolicy();
+        PayloadNativeAppCtrlPolicy payloadNativeAppCtrlPolicy = createAndroidNativeAppCtrlPolicy();
+
+        PayloadNetRestrictPolicy payloadNetRestrictPolicy = createAndroidNetRestrictPolicy();
+        PayloadBluetoothPolicy payloadBluetoothPolicy = createAndroidBluetoothPolicy();
+
+//        MemorySizePolicy memorySizePolicy = getMemorySizePolicy();
+//        AppControlList appControlList = getAppControlList();
+//        SystemExceptionPolicy systemExceptionPolicy = getSystemExceptionPolicy();
 
         PayloadArrayWrapper wrapper = createWrapper();
         wrapper.addPayLoadContent(passwordPolicy);
-        wrapper.addPayLoadContent(payloadExchange);
-        wrapper.addPayLoadContent(restrictionsPolicy);
+        wrapper.addPayLoadContent(payloadActiveSyncPolicy);
+        wrapper.addPayLoadContent(payloadRestrictionsAndroidPolicy);
+        wrapper.addPayLoadContent(payloadSecurityPolicy);
+        wrapper.addPayLoadContent(payloadBluetoothPolicy);
+        wrapper.addPayLoadContent(payloadNativeAppCtrlPolicy);
+        wrapper.addPayLoadContent(payloadNetRestrictPolicy);
 //        wrapper.addPayLoadContent(memorySizePolicy);
-//        wrapper.addPayLoadContent(appControlList);
+        wrapper.addPayLoadContent(appControlList);
 //        wrapper.addPayLoadContent(systemExceptionPolicy);
 //        wrapper.addPayLoadContent(removalPassword);
 //        wrapper.addPayLoadContent(wifiConfig);
         return wrapper;
+    }
+    private PayloadActiveSyncPolicy createAndroidActiveSyncPolicy() {
+
+        PayloadActiveSyncPolicy policy = new PayloadActiveSyncPolicy();
+        policy.setPayloadDescription("Active Sync相关配置");
+        policy.setPayloadDisplayName("Active Sync配置");
+        policy.setPayloadIdentifier("com.pekall.policy.active.sync");
+        policy.setPayloadOrganization("Pekall Capital");
+        policy.setPayloadUUID("3808D742-5D21-401E-B83C-AED1E990332D");
+        policy.setPayloadVersion(1);
+
+        policy.setAcceptAllCertificates(true);
+        policy.setAccount("ray");
+        policy.setAllowAttachments(false);
+        policy.setAllowHtmlEmail(true);
+        policy.setAllowBackup(true);
+        policy.setConfigurePasscode(true);
+        policy.setPolicyKey("xx-xx-xxxx-xx-x");
+        policy.setDisplayName("my active sync");
+        policy.setEmailSignature("BRs");
+        policy.setHostName("test host");
+        return policy;
+    }
+
+    private PayloadBluetoothPolicy createAndroidBluetoothPolicy() {
+
+        PayloadBluetoothPolicy policy = new PayloadBluetoothPolicy();
+        policy.setPayloadDescription("Bluetooth相关配置");
+        policy.setPayloadDisplayName("Bluetooth配置");
+        policy.setPayloadIdentifier("com.pekall.policy.bluetooth");
+        policy.setPayloadOrganization(ORGANIZATION);
+        policy.setPayloadUUID(getUUID());
+        policy.setPayloadVersion(VERSION);
+
+        policy.setAllow2Desktop(false);
+        policy.setAllowA2DP(true);
+        policy.setAllowDataTransfer(true);
+        policy.setAllowDeviceDiscovery(true);
+        policy.setAllowHeadset(true);
+        policy.setAllowOutgoingCalls(true);
+        return policy;
+    }
+
+
+    private PayloadNetRestrictPolicy createAndroidNetRestrictPolicy() {
+
+        PayloadNetRestrictPolicy policy = new PayloadNetRestrictPolicy();
+        policy.setPayloadDescription("Network Restriction相关配置");
+        policy.setPayloadDisplayName("Network Restriction配置");
+        policy.setPayloadIdentifier("com.pekall.policy.network.restriction");
+        policy.setPayloadOrganization(ORGANIZATION);
+        policy.setPayloadUUID(getUUID());
+        policy.setPayloadVersion(VERSION);
+
+        policy.setAllowDataNetwork(PayloadNetRestrictPolicy.CTRL_USR_CONTROLLED);
+        policy.setAllowEmgCallOnly(true);
+        policy.setAllowMessage(PayloadNetRestrictPolicy.CTRL_ENABLED);
+        policy.addBlacklistedSSIDs("xxxx-xx-xx-xx");
+        policy.addWhitelistedSSID("xx-xxxx-xx-xx-xx");
+        policy.setAllowWifi(true);
+        policy.setMobileAP(PayloadNetRestrictPolicy.CTRL_DISABLE);
+        return policy;
+    }
+
+    private PayloadNativeAppCtrlPolicy createAndroidNativeAppCtrlPolicy() {
+
+        PayloadNativeAppCtrlPolicy policy = new PayloadNativeAppCtrlPolicy();
+        policy.setPayloadDescription("Native app相关配置");
+        policy.setPayloadDisplayName("Native app配置");
+        policy.setPayloadIdentifier("com.pekall.policy.native.app");
+        policy.setPayloadOrganization(ORGANIZATION);
+        policy.setPayloadUUID(getUUID());
+        policy.setPayloadVersion(VERSION);
+
+        policy.setBrowser(true);
+        policy.setGallery(false);
+        policy.setGmail(true);
+        policy.setGoogleMap(true);
+        policy.setSettings(true);
+        policy.setYoutube(false);
+        policy.setVoiceDialer(true);
+        return policy;
+    }
+
+    private PayloadRestrictionsAndroidPolicy createAndroidRestrictionsPolicy() {
+
+        PayloadRestrictionsAndroidPolicy policy = new PayloadRestrictionsAndroidPolicy();
+        policy.setPayloadDescription("Restriction相关配置");
+        policy.setPayloadDisplayName("Restriction配置");
+        policy.setPayloadIdentifier("com.pekall.policy.restriction");
+        policy.setPayloadOrganization(ORGANIZATION);
+        policy.setPayloadUUID(getUUID());
+        policy.setPayloadVersion(VERSION);
+
+
+        policy.setBackgroundDataSync(PayloadRestrictionsAndroidPolicy.CTRL_USR_CONTROLLED);
+        policy.setAutoSync(PayloadRestrictionsAndroidPolicy.CTRL_USR_CONTROLLED);
+        policy.setCamera(PayloadRestrictionsAndroidPolicy.CTRL_USR_CONTROLLED);
+        policy.setBluetooth(PayloadRestrictionsAndroidPolicy.CTRL_USR_CONTROLLED);
+        policy.setAllowUSBMassStorage(PayloadRestrictionsAndroidPolicy.CTRL_USR_CONTROLLED);
+        policy.setAllowUsbMediaPlayer(true);
+        policy.setUseNetworkDateTime(PayloadRestrictionsAndroidPolicy.CTRL_USR_CONTROLLED);
+        policy.setAllowMicrophone(PayloadRestrictionsAndroidPolicy.CTRL_USR_CONTROLLED);
+        policy.setAllowNFC(PayloadRestrictionsAndroidPolicy.CTRL_USR_CONTROLLED);
+        policy.setUseWirelessNetworkForLocation(PayloadRestrictionsAndroidPolicy.CTRL_USR_CONTROLLED);
+        policy.setUseGPSForLocation(PayloadRestrictionsAndroidPolicy.CTRL_USR_CONTROLLED);
+        policy.setUseSensorAidingForLocation(PayloadRestrictionsAndroidPolicy.CTRL_USR_CONTROLLED);
+        policy.setAllowMockLocation(PayloadRestrictionsAndroidPolicy.CTRL_USR_CONTROLLED);
+        return policy;
+    }
+
+    private PayloadSecurityPolicy createAndroidSecurityPolicy() {
+
+        PayloadSecurityPolicy policy = new PayloadSecurityPolicy();
+        policy.setPayloadDescription("Security相关配置");
+        policy.setPayloadDisplayName("Security配置");
+        policy.setPayloadIdentifier("com.pekall.policy.security");
+        policy.setPayloadOrganization(ORGANIZATION);
+        policy.setPayloadUUID(getUUID());
+        policy.setPayloadVersion(VERSION);
+
+        policy.setEnforceEncryption(false);
+        policy.setEnforceSDCardEncryption(false);
+        policy.setAllowSDCardWrite(true);
+        policy.setDisableKeyguardFeatures(PayloadSecurityPolicy.KEYGUARD_FEATURE_ALL_FEATURES);
+        policy.setAllowNonGoogleApp(PayloadSecurityPolicy.APP_USR_CONTROLLED);
+        policy.setEnforceAppVerify(PayloadSecurityPolicy.APP_USR_CONTROLLED);
+        policy.setAllowScreenCapture(true);
+
+        policy.setAllowClipboard(true);
+        policy.setBackupMyData(PayloadSecurityPolicy.APP_USR_CONTROLLED);
+        policy.setAutomaticRestore(PayloadSecurityPolicy.APP_USR_CONTROLLED);
+        policy.setVisiblePasswords(PayloadSecurityPolicy.APP_USR_CONTROLLED);
+        policy.setAllowUSBDebugging(true);
+        policy.setAllowGoogleCrashReport(true);
+        policy.setAllowFactoryReset(true);
+        policy.setAllowOTAUpgrade(true);
+        return policy;
     }
 
     private SystemExceptionPolicy getSystemExceptionPolicy() {
@@ -701,6 +1006,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
         policy.setAllowSimple(false);
         policy.setForcePIN(true);
         policy.setMaxFailedAttempts(7);
+
 //        policy.setMaxGracePeriod(1);
 //        policy.setMaxInactivity(2);
 //        policy.setMaxPINAgeInDays(2);
@@ -708,6 +1014,9 @@ public class WjlBuildDefaultPolicy extends TestCase {
 //        policy.setMinLength(4);
 //        policy.setPinHistory(50);
 //        policy.setRequireAlphanumeric(true);
+
+
+        policy.setQuality(PayloadPasswordPolicy.QUALITY_NUMERIC);
         return policy;
     }
 

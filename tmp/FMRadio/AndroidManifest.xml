@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright (C) 2013 Capital Alliance Software LTD (Pekall)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pekall.fmradio" >
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <application
+        android:icon="@drawable/fmradio_icon"
+        android:label="@string/app_name" >
+        <uses-library android:name="android.test.runner" />
+
+        <provider
+            android:name=".FMDataProvider"
+            android:authorities="com.pekall.provider.fmradio" >
+        </provider>
+
+        <activity
+            android:name=".FMRadio"
+            android:label="@string/app_name"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter >
+                <action android:name="com.pekall.fmradio.LAUNCHEFMRADIO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".FMSaveChannel"
+            android:label="FMSaveChannel"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".FMClearChannel"
+            android:label="FMClearChannel"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".CopyRightActivity"
+            android:label="@string/copyright"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".RecordListActivity"
+            android:label="RecordListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- service android:name="FMRadioService" android:process=":remote" -->
+        <service
+            android:exported="true"
+            android:name=".FMRadioService" >
+            <intent-filter >
+                <!--
+                     This is an action code you can use to select the service
+                     without explicitly supplying the implementation class.
+                -->
+                <action android:name="com.pekall.fmradio.FMRADIO_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.pekall.fmradio.MediaButtonIntentReceiver" >
+            <intent-filter >
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".FMRadioAppWidgetProvider" >
+            <intent-filter >
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/fm_widget" />
+        </receiver>
+    </application>
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:label="FMR test"
+        android:targetPackage="com.pekall.fmradio" />
+
+</manifest>

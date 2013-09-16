@@ -99,6 +99,9 @@ onReceivedError
 
     '\<load\( \)*[Uu]rl\( delay\)*\|shouldOverrideUrlLoading\|Controller.*\(onPause\|onResume\|onDestroy\)\|\(start\|stop\)UsingNetworkFeature\|onReceivedError\|updateStatus\|NetworkStateHandler.*NetworkInfo\|BindToDevice\|onPageStarted url\|onPageFinished url\|onLoadResource():\|FlushSocketPools\|updateStatus, setHttpProxy:\|JavaBridge.cpp\|WebUrlLoader\|chromium\|apn is\|[Uu]pdateProxy'
 
+'\<Controller\|onReceivedError\|NetworkStateHandler.*NetworkInfo\|JavaBridge.cpp\|WebUrlLoader\|chromium\|apn is\|[Uu]pdateProxy'
+
+
     'startUsingNetworkFeature\|loadUrl delay\|NetworkStateHandler: onReceive: NetworkInfo: type:'
 
     'load\( \)*[Uu]rl\( delay\)*\|shouldOverrideUrlLoading\|onPageStarted url\|onPageFinished url\|onProgressChanged'
@@ -118,6 +121,7 @@ onReceivedError
 
     chromium
     chromium(24157): Unknown chromium error: -3
+
 
 g/SignalStrength\|[Aa]udio\|tinyalsa\|NetworkControllerDualSIM\|ConnectivityService\|PageDownloader\|Telephony\|dalvikvm\|DeviceStorageMonitorService\|KeyguardUpdateMonitor\|LockPatternKeyguardView\|LC_DM_\|power\|Phone\|volume\|TextResourceDecoder\|wpa_\|wifi/d
 

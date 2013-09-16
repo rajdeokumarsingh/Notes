@@ -1,3 +1,5 @@
+lines                   file
+
 _bookmark
 26 ./src/com/android/browser/BrowserBookmarksAdapterItem.java
     BrowserBookmarksAdapter的数据项目, 包括了url, title, thumbnail等信息

@@ -69,7 +69,27 @@ public class PayloadJsonWrapper extends PayloadBase {
                     this.PayloadContent.setAppControlList((AppControlList) payload);
                 } else if (PayloadBase.PAYLOAD_TYPE_SYSTEM_EXCEPTION_POLICY.equalsIgnoreCase(payload.getPayloadType())) {
                     this.PayloadContent.setSystemExceptionPolicy((SystemExceptionPolicy) payload);
+                } else if (PayloadBase.PAYLOAD_TYPE_SECURITY_POLICY.equalsIgnoreCase(payload.getPayloadType())) {
+                    this.PayloadContent.setPayloadSecurityPolicy((PayloadSecurityPolicy)payload);
+                }else if (PayloadBase.PAYLOAD_TYPE_RESTRICTIONS_ANDROID_POLICY.equalsIgnoreCase(payload.getPayloadType())) {
+                    this.PayloadContent.setPayloadRestrictionsAndroidPolicy((PayloadRestrictionsAndroidPolicy)payload);
                 }
+                else if (PayloadBase.PAYLOAD_TYPE_NATIVE_APP_CONTROL_POLICY.equalsIgnoreCase(payload.getPayloadType())) {
+                    this.PayloadContent.setPayloadNativeAppCtrlPolicy((PayloadNativeAppCtrlPolicy)payload);
+                }
+                else if (PayloadBase.PAYLOAD_TYPE_BLUETOOTH_POLICY.equalsIgnoreCase(payload.getPayloadType())) {
+                    this.PayloadContent.setPayloadBluetoothPolicy((PayloadBluetoothPolicy)payload);
+                }
+                else if (PayloadBase.PAYLOAD_TYPE_NET_RESTRICT_POLICY.equalsIgnoreCase(payload.getPayloadType())) {
+                    this.PayloadContent.setPayloadNetRestrictPolicy((PayloadNetRestrictPolicy)payload);
+                }
+                else if (PayloadBase.PAYLOAD_TYPE_ACTIVE_SYNC_POLICY.equalsIgnoreCase(payload.getPayloadType())) {
+                    this.PayloadContent.setPayloadActiveSyncPolicy((PayloadActiveSyncPolicy)payload);
+                }
+                else if (PayloadBase.PAYLOAD_TYPE_WALLPAPER_SETTINGS.equalsIgnoreCase(payload.getPayloadType())) {
+                    this.PayloadContent.setPayloadWallpaper((PayloadWallpaper)payload);
+                }
+
             }
         }
     }
@@ -309,6 +329,41 @@ public class PayloadJsonWrapper extends PayloadBase {
         if(systemExceptionPolicy != null){
             wrapper.addPayLoadContent(systemExceptionPolicy);
         }
+
+        PayloadSecurityPolicy payloadSecurityPolicy = payloadContent.getPayloadSecurityPolicy();
+        if(payloadSecurityPolicy != null){
+            wrapper.addPayLoadContent(payloadSecurityPolicy);
+        }
+
+        PayloadRestrictionsAndroidPolicy payloadRestrictionsAndroidPolicy = payloadContent.getPayloadRestrictionsAndroidPolicy();
+        if(payloadRestrictionsAndroidPolicy != null){
+            wrapper.addPayLoadContent(payloadRestrictionsAndroidPolicy);
+        }
+
+        PayloadNativeAppCtrlPolicy payloadNativeAppCtrlPolicy = payloadContent.getPayloadNativeAppCtrlPolicy();
+        if(payloadNativeAppCtrlPolicy != null){
+            wrapper.addPayLoadContent(payloadNativeAppCtrlPolicy);
+        }
+
+        PayloadBluetoothPolicy payloadBluetoothPolicy = payloadContent.getPayloadBluetoothPolicy();
+        if(payloadBluetoothPolicy != null){
+            wrapper.addPayLoadContent(payloadBluetoothPolicy);
+        }
+        PayloadNetRestrictPolicy payloadNetRestrictPolicy = payloadContent.getPayloadNetRestrictPolicy();
+        if(payloadNetRestrictPolicy != null){
+            wrapper.addPayLoadContent(payloadNetRestrictPolicy);
+        }
+
+        PayloadActiveSyncPolicy payloadActiveSyncPolicy = payloadContent.getPayloadActiveSyncPolicy();
+        if(payloadActiveSyncPolicy != null){
+            wrapper.addPayLoadContent(payloadActiveSyncPolicy);
+        }
+        PayloadWallpaper payloadWallpaper = payloadContent.getPayloadWallpaper();
+        if(payloadWallpaper != null){
+            wrapper.addPayLoadContent(payloadWallpaper);
+        }
+
+
 
         return wrapper;
     }

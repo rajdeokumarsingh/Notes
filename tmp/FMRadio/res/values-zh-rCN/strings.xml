@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright (C) 2013 Capital Alliance Software LTD (Pekall)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<resources>
+
+    <string name="app_name">FM收音机</string>
+    <string name="fmradio_service_label">FM收音机</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="exit">退出</string>
+    <string name="rds_charset">RDS字符编码</string>
+    <string name="fm">FM</string>
+    <string name="mhz">MHz</string>
+    <string name="preset">频道</string>
+    <string name="channels">个频道...</string>
+    <string name="scanned_channels">个频道</string>
+    <string name="empty">空</string>
+    <string name="clear_presets">清除频道</string>
+    <string name="found">搜索到</string>
+    <string name="saved">已保存</string>
+    <string name="scan">搜索</string>
+    <string name="by_loudspeaker">扬声器方式</string>
+    <string name="by_headset">耳机方式</string>
+    <string name="play_preset"> 播放频道 </string>
+    <string name="replace_preset"> 替换频道 </string>
+    <string name="clear_preset"> 清除频道 </string>
+    <string name="add_preset"> 添加频道 </string>
+    <string name="clear">清除</string>
+    <string name="select_all">全选</string>
+    <string name="unselect_all">取消全选</string>
+    <string name="select">选择</string>
+    <string name="clear_done">完成</string>
+    <string name="fmradio_record_btn_switch">FM正在录音，请勿关闭</string>
+    <string name="fmradio_scan_begin_msg">搜索到0个频道...</string>
+    <string name="fmradio_scan_confirm_msg">是否搜索所有有效频道？</string>
+    <string name="fmradio_clear_confirm_msg">在搜索之前将清除所有保存的频道。是否继续？</string>
+    <string name="fmradio_no_headset_in_listen">收听FM收音机需插入耳机设备.请插入耳机。</string>
+    <string name="fmradio_airplane_mode_enable_at_begin">使用FM收音机，请先关闭飞行模式。</string>
+    <string name="fmradio_airplane_mode_enable_in_listen">飞行模式下FM收音机将自动关闭。</string>
+    <string name="fmradio_waiting_for_power_on">FM收音机正在启动中，请稍候...</string>
+    <string name="service_start_error_msg">未知原因导致FM收音机服务失败，即将终止FM收音机。</string>
+    <string name="service_start_error_button">退出</string>
+    <string name="confirm_replace_preset">是否以当前播放电台替换选中的频道?</string>
+    <string name="confirm_add_preset">是否将当前播放电台添加到播放列表中?</string>
+    <string name="confirm_clear_preset">是否清除选中的频道?</string>
+    <string name="confirm_clear_presets">是否清除选中的频道?</string>
+    <string name="copyright">关于</string>
+    <string name="support">support@pekall.com</string>
+    <string name="website">www.pekall.com</string>
+    <string name="supportlable">技术支持：</string>
+    <string name="websitelable">如需获得更多信息，请访问：</string>
+    <string name="channel_string">频道</string>
+    <string name="records_list">录音列表</string>
+    <string name="start_record">开始录音</string>
+    <string name="stop_record">停止录音</string>
+    <string name="sdcard_not_mounted">没有插入SD卡。</string>
+    <string name="delete">删除</string>
+    <string name="deleting">正在删除。。。</string>
+    <string name="delete_complete">删除成功。</string>
+    <string name="cancel_deleting">取消删除。</string>
+    <string name="delete_records">删除录音</string>
+    <string name="delete_selected_records">删除所选的录音文件？</string>
+    <string name="no_records">没有FM录音文件。</string>
+    <string name="recording">请先停止录音。</string>
+    <string name="error_app_internal">内部应用程序错误</string>
+    <string name="sdcard_no_space_record">SD卡没有足够空间可供录音</string>
+    <string name="fmrecord_error">FM录音发生未知错误</string>
+    <string name="fmradio_call_state_enable_at_begin">电话中不能开启FM收音机。</string>
+    <string name="fmradio_not_launch">收音机还没有开启。</string>
+    <string name="fmradio_close_tx">开启收音机前，请关闭FM传输!</string>
+
+</resources>

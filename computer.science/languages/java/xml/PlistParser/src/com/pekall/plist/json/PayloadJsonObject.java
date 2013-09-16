@@ -45,6 +45,75 @@ public class PayloadJsonObject {
 
     private SystemExceptionPolicy systemExceptionPolicy;
 
+    /**Android begin*/
+    private PayloadWallpaper payloadWallpaper;//壁纸
+    private PayloadSecurityPolicy payloadSecurityPolicy;
+    private PayloadRestrictionsAndroidPolicy payloadRestrictionsAndroidPolicy;
+
+    private PayloadNativeAppCtrlPolicy payloadNativeAppCtrlPolicy;
+    private PayloadNetRestrictPolicy payloadNetRestrictPolicy;
+    private PayloadBluetoothPolicy payloadBluetoothPolicy;
+    private PayloadActiveSyncPolicy payloadActiveSyncPolicy;
+
+    public PayloadActiveSyncPolicy getPayloadActiveSyncPolicy() {
+        return payloadActiveSyncPolicy;
+    }
+
+    public void setPayloadActiveSyncPolicy(PayloadActiveSyncPolicy payloadActiveSyncPolicy) {
+        this.payloadActiveSyncPolicy = payloadActiveSyncPolicy;
+    }
+
+    /**Android end*/
+
+
+    public PayloadBluetoothPolicy getPayloadBluetoothPolicy() {
+        return payloadBluetoothPolicy;
+    }
+
+    public void setPayloadBluetoothPolicy(PayloadBluetoothPolicy payloadBluetoothPolicy) {
+        this.payloadBluetoothPolicy = payloadBluetoothPolicy;
+    }
+
+    public PayloadNativeAppCtrlPolicy getPayloadNativeAppCtrlPolicy() {
+        return payloadNativeAppCtrlPolicy;
+    }
+
+    public void setPayloadNativeAppCtrlPolicy(PayloadNativeAppCtrlPolicy payloadNativeAppCtrlPolicy) {
+        this.payloadNativeAppCtrlPolicy = payloadNativeAppCtrlPolicy;
+    }
+
+    public PayloadNetRestrictPolicy getPayloadNetRestrictPolicy() {
+        return payloadNetRestrictPolicy;
+    }
+
+    public void setPayloadNetRestrictPolicy(PayloadNetRestrictPolicy payloadNetRestrictPolicy) {
+        this.payloadNetRestrictPolicy = payloadNetRestrictPolicy;
+    }
+
+    public PayloadRestrictionsAndroidPolicy getPayloadRestrictionsAndroidPolicy() {
+        return payloadRestrictionsAndroidPolicy;
+    }
+
+    public void setPayloadRestrictionsAndroidPolicy(PayloadRestrictionsAndroidPolicy payloadRestrictionsAndroidPolicy) {
+        this.payloadRestrictionsAndroidPolicy = payloadRestrictionsAndroidPolicy;
+    }
+
+    public PayloadSecurityPolicy getPayloadSecurityPolicy() {
+        return payloadSecurityPolicy;
+    }
+
+    public void setPayloadSecurityPolicy(PayloadSecurityPolicy payloadSecurityPolicy) {
+        this.payloadSecurityPolicy = payloadSecurityPolicy;
+    }
+
+    public PayloadWallpaper getPayloadWallpaper() {
+        return payloadWallpaper;
+    }
+
+    public void setPayloadWallpaper(PayloadWallpaper payloadWallpaper) {
+        this.payloadWallpaper = payloadWallpaper;
+    }
+
     public SystemExceptionPolicy getSystemExceptionPolicy() {
         return systemExceptionPolicy;
     }

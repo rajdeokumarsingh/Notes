@@ -13,13 +13,18 @@
 
 package com.pekall.plist.su.settings.advertise;
 
-
 import com.pekall.plist.beans.PayloadBase;
 
 /**
  * XML configuration for advertise download
  */
 public class AdvertiseDownloadSettings extends PayloadBase {
+    /**
+     * See playType
+     */
+    public static final String PLAY_TYPE_AUTO = "auto";
+    public static final String PLAY_TYPE_MANUAL = "manual";
+
     /**
      * 下载文件的版本
      */
@@ -29,13 +34,20 @@ public class AdvertiseDownloadSettings extends PayloadBase {
      */
     private String downloadUrl;
 
+    /**
+     * 播放类型， 手动/自动
+     * See PLAY_TYPE_MANUAL, PLAY_TYPE_AUTO
+     */
+    private String playType;
+
     public AdvertiseDownloadSettings() {
         setPayloadType(PAYLOAD_TYPE_ADVT_SETTINGS);
     }
 
-    public AdvertiseDownloadSettings(String version, String downloadUrl) {
+    public AdvertiseDownloadSettings(String version, String downloadUrl, String playType) {
         this.version = version;
         this.downloadUrl = downloadUrl;
+        this.playType = playType;
 
         setPayloadType(PAYLOAD_TYPE_ADVT_SETTINGS);
     }
@@ -56,6 +68,14 @@ public class AdvertiseDownloadSettings extends PayloadBase {
         this.downloadUrl = url;
     }
 
+    public String getPlayType() {
+        return playType;
+    }
+
+    public void setPlayType(String playType) {
+        this.playType = playType;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -65,6 +85,7 @@ public class AdvertiseDownloadSettings extends PayloadBase {
         AdvertiseDownloadSettings that = (AdvertiseDownloadSettings) o;
 
         if (downloadUrl != null ? !downloadUrl.equals(that.downloadUrl) : that.downloadUrl != null) return false;
+        if (playType != null ? !playType.equals(that.playType) : that.playType != null) return false;
         if (version != null ? !version.equals(that.version) : that.version != null) return false;
 
         return true;
@@ -75,6 +96,7 @@ public class AdvertiseDownloadSettings extends PayloadBase {
         int result = super.hashCode();
         result = 31 * result + (version != null ? version.hashCode() : 0);
         result = 31 * result + (downloadUrl != null ? downloadUrl.hashCode() : 0);
+        result = 31 * result + (playType != null ? playType.hashCode() : 0);
         return result;
     }
 
@@ -83,6 +105,7 @@ public class AdvertiseDownloadSettings extends PayloadBase {
         return "AdvertiseDownloadSettings{" +
                 "version='" + version + '\'' +
                 ", downloadUrl='" + downloadUrl + '\'' +
+                ", playType='" + playType + '\'' +
                 '}';
     }
 }

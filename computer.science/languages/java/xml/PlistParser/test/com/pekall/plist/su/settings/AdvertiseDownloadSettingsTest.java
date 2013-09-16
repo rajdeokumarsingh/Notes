@@ -56,6 +56,7 @@ public class AdvertiseDownloadSettingsTest extends TestCase {
         AdvertiseDownloadSettings settings = new AdvertiseDownloadSettings();
         settings.setDownloadUrl("http://www.pekall.com/adv.zip");
         settings.setVersion("25");
+        settings.setPlayType(AdvertiseDownloadSettings.PLAY_TYPE_AUTO);
 
         settings.setPayloadDescription("广告下载相关配置");
         settings.setPayloadDisplayName("广告下载配置");
@@ -97,6 +98,8 @@ public class AdvertiseDownloadSettingsTest extends TestCase {
             "\t\t\t<string>25</string>\n" +
             "\t\t\t<key>downloadUrl</key>\n" +
             "\t\t\t<string>http://www.pekall.com/adv.zip</string>\n" +
+            "\t\t\t<key>playType</key>\n" +
+            "\t\t\t<string>auto</string>\n" +
             "\t\t\t<key>PayloadType</key>\n" +
             "\t\t\t<string>com.pekall.advertise.settings</string>\n" +
             "\t\t\t<key>PayloadVersion</key>\n" +
@@ -140,6 +143,8 @@ public class AdvertiseDownloadSettingsTest extends TestCase {
             "\t<string>25</string>\n" +
             "\t<key>downloadUrl</key>\n" +
             "\t<string>http://www.pekall.com/adv.zip</string>\n" +
+            "\t<key>playType</key>\n" +
+            "\t<string>auto</string>\n" +
             "\t<key>PayloadType</key>\n" +
             "\t<string>com.pekall.advertise.settings</string>\n" +
             "\t<key>PayloadVersion</key>\n" +

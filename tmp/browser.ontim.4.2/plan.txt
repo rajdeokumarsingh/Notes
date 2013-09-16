@@ -31,3 +31,30 @@ Browser porting
 Download porting
     porting framework
     porting DownloadProvider
+
+================================================================================
+4.3 porting
+================================================================================
+webkit done!
+todo:
+4.2.2
+/home/jiangrui/perforce/Arsenal_nokernel/common/external/webkit/Source/WebKit/android/jni/MIMETypeRegistry.cpp
+4.3
+/home/jiangrui/perforce/hjc_1920_nokernel/external/webkit/Source/WebKit/android/jni/MIMETypeRegistryAndroid.cpp
+
+framework
+    done!
+    frameworks/base/core/java/android/
+
+chromium
+    done!
+
+libxml2
+    done!
+
+v8
+    done!
+
+socket
+    done!
+

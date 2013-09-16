@@ -14,6 +14,7 @@ import com.pekall.plist.su.settings.launcher.LauncherSettings;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * XML parser for ios a whole payload message
@@ -31,6 +32,7 @@ public class PayloadXmlMsgParser {
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_LDAP, PayloadLDAP.class);
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_IOS_EXCHANGE, PayloadExchange.class);
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_VPN, PayloadVPN.class);
+        payloadTypes.put(PayloadBase.PAYLOAD_TYPE_CERTIFICATE, PayloadCertificate.class);
 
         // Just for SU MDM
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_SE_BROWSER_SETTINGS, BrowserSettings.class);
@@ -217,8 +219,32 @@ public class PayloadXmlMsgParser {
      * Get bean object of the payload
      * @param payloadType type of the payload
      * @return bean object
+     * @deprecated use getPayloads
      */
     public PayloadBase getPayload(String payloadType) {
         return payloads.get(payloadType);
+    }
+
+    /**
+     * Get bean objects of the payload
+     * @param type type of the payload
+     * @return bean objects
+     */
+    public List<PayloadBase> getPayloads(String type) {
+        List<PayloadBase> payloads = new ArrayList<PayloadBase>();
+
+        if (type == null || wrapper == null || wrapper.getPayloadContent() == null) {
+            return payloads;
+        }
+
+        for (PayloadBase payload : wrapper.getPayloadContent()) {
+            if (payload == null) {
+                continue;
+            }
+            if(payload.getPayloadType().equals(type)) {
+                payloads.add(payload);
+            }
+        }
+        return payloads;
     }
 }

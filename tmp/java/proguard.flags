@@ -1,0 +1,3 @@
+ -keep class com.pekall.fmradio.FMRadioNativeInterface {
+*;
+}
