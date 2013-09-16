@@ -9,16 +9,16 @@ import java.util.Arrays;
 public class CountingSortTest extends TestCase {
 
     public void testBoundary() throws Exception {
-        CountingSort.sort(null);
+        CountingSort.sort2(null);
 
         int[] array1 = {};
         int[] array2 = {};
-        CountingSort.sort(array1);
+        CountingSort.sort2(array1);
         assertTrue(Arrays.equals(array1, array2));
 
         int[] array3 = {0};
         int[] array4 = {0};
-        CountingSort.sort(array3);
+        CountingSort.sort2(array3);
         assertTrue(Arrays.equals(array3, array4));
     }
 
@@ -50,40 +50,38 @@ public class CountingSortTest extends TestCase {
         int[] array1 = {4,1,3,4,3};
         int[] array2 = {4,1,3,4,3};
         Arrays.sort(array2);
-        assertTrue(Arrays.equals(CountingSort.sort(array1), array2));
+        assertTrue(Arrays.equals(CountingSort.sort2(array1), array2));
 
         int[] array3 = {8, 2, 4, 2, 3, 6};
         int[] array4 = {8, 2, 4, 2, 3, 6};
-        CountingSort.sort(array3);
+        CountingSort.sort2(array3);
         Arrays.sort(array4);
-        assertTrue(Arrays.equals(CountingSort.sort(array3), array4));
+        assertTrue(Arrays.equals(CountingSort.sort2(array3), array4));
 
         int[] array5 = {8, 8, 4, 2, 3, 6};
         int[] array6 = {8, 8, 4, 2, 3, 6};
         Arrays.sort(array6);
-        assertTrue(Arrays.equals(CountingSort.sort(array5), array6));
+        assertTrue(Arrays.equals(CountingSort.sort2(array5), array6));
     }
 
     public void testRandomTest() throws Exception {
         long begin = System.currentTimeMillis();
-        for (int i = 0; i < 500000; i++) {
+        for (int i = 0; i < 500; i++) {
             int[] array = Utility.randomIntegerArray();
             int[] array1 = Arrays.copyOf(array, array.length);
-            assertTrue(Arrays.equals(array, array1));
-
-            // CountingSort.sort(array);
+            // CountingSort.sort2(array);
             Arrays.sort(array1);
-            assertTrue(Arrays.equals(CountingSort.sort(array), array1));
+            assertTrue(Arrays.equals(CountingSort.sort2(array), array1));
         }
-        Debug.logTest("" + (System.currentTimeMillis() - begin));
+        Debug.logTest("Counting, Random Test: " + (System.currentTimeMillis() - begin));
     }
 
     public void testPerformance() throws Exception {
         long begin = System.currentTimeMillis();
         for (int i = 0; i < 500; i++) {
             int[] array = Utility.randomIntegerArray();
-            CountingSort.sort(array);
+            CountingSort.sort2(array);
         }
-        Debug.logTest("" + (System.currentTimeMillis() - begin));
+        Debug.logTest("Counting, Perf Test: " + (System.currentTimeMillis() - begin));
     }
 }

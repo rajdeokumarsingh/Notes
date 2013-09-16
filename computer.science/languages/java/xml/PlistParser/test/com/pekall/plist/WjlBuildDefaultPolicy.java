@@ -492,7 +492,11 @@ public class WjlBuildDefaultPolicy extends TestCase {
         exchange.setDisableMailRecentsSyncing(false);
         exchange.setEmailAddress("xiaoliang.li@mdm.com");
         exchange.setHost("192.168.10.239");
+<<<<<<< HEAD
+        exchange.setUserName("mdm\\bingxing.wang");
+=======
         exchange.setUserName("mdm\\xiaoliang.li");
+>>>>>>> 2f841b9362c2036e0ddd17b2069d6b5067d30899
         exchange.setPassword("Pekall123");
         exchange.setSSL(false);
         exchange.setSMIMEEnabled(false);
@@ -540,11 +544,18 @@ public class WjlBuildDefaultPolicy extends TestCase {
 
 
         wrapper.addPayLoadContent(wifiConfig);
+<<<<<<< HEAD
+        wrapper.addPayLoadContent(advertiseDownloadSettings);
+        wrapper.addPayLoadContent(browserSettings);
+        wrapper.addPayLoadContent(launcherSettings);
+        wrapper.addPayLoadContent(systemSettings);
+=======
         wrapper.addPayLoadContent(payloadEmail);
 //        wrapper.addPayLoadContent(advertiseDownloadSettings);
 //        wrapper.addPayLoadContent(browserSettings);
 //        wrapper.addPayLoadContent(launcherSettings);
 //        wrapper.addPayLoadContent(systemSettings);
+>>>>>>> 2f841b9362c2036e0ddd17b2069d6b5067d30899
 
 
 
@@ -556,12 +567,18 @@ public class WjlBuildDefaultPolicy extends TestCase {
     private PayloadArrayWrapper createIosSettingProfile() {
         PayloadWifiConfig wifiConfig = createWifiConfig();
         PayloadEmail payloadEmail = createEmail();
+<<<<<<< HEAD
+=======
         PayloadVPN payloadVPN = createVPN();
+>>>>>>> 2f841b9362c2036e0ddd17b2069d6b5067d30899
 //        PayloadPasswordPolicy passwordPolicy = createPasswordPolicy();
         PayloadArrayWrapper wrapper = createSettingWrapper();
         wrapper.addPayLoadContent(wifiConfig);
         wrapper.addPayLoadContent(payloadEmail);
+<<<<<<< HEAD
+=======
         wrapper.addPayLoadContent(payloadVPN);
+>>>>>>> 2f841b9362c2036e0ddd17b2069d6b5067d30899
 //        wrapper.addPayLoadContent(wifiConfig);
         return wrapper;
     }
