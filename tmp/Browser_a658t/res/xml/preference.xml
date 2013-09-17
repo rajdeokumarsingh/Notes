@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <com.android.browser.filemanager.IconPreferenceScreen   android:title="@string/str_settings_normal">
-
-    </com.android.browser.filemanager.IconPreferenceScreen>
-
-</PreferenceScreen>

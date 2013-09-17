@@ -33,7 +33,7 @@
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
-        <activity android:name=".preference.MyYesNoPreference" android:label="My Yes/No Preference"/>
+        <activity android:name=".preference.P012MyYesNoPreference" android:label="My Yes/No Preference"/>
         <activity android:name=".preference.YesNoPreference" android:label="Yes/No Preference"/>
     </application>
 </manifest>

@@ -96,11 +96,6 @@
                 android:data="http://www.baidu.com" />
     </Preference>
 
-    <com.example.sdk.preference.MyYesNoPreference
-            android:key="privacy_clear_cache"
-            android:title="@string/pref_privacy_clear_cache"
-            android:summary="@string/pref_privacy_clear_cache_summary"
-            android:dialogMessage="@string/pref_privacy_clear_cache_dlg"
-            android:dialogIcon="@android:drawable/ic_dialog_alert" />
+
 
 </PreferenceScreen>

@@ -43,4 +43,12 @@
             android:entries="@array/pref_content_plugins_choices"
             android:entryValues="@array/pref_content_plugins_values"
             android:dialogTitle="@string/pref_content_plugins" />
+
+    <com.example.sdk.preference.P012MyYesNoPreference
+            android:key="privacy_clear_cache"
+            android:title="@string/pref_privacy_clear_cache"
+            android:summary="@string/pref_privacy_clear_cache_summary"
+            android:dialogMessage="@string/pref_privacy_clear_cache_dlg"
+            android:dialogIcon="@android:drawable/ic_dialog_alert" />
+
 </PreferenceScreen>
