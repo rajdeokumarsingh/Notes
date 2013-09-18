@@ -9,7 +9,10 @@ import com.pekall.csv.bean.ImportDeviceInfoVo;
 import com.pekall.csv.bean.ImportUserVo;
 import com.sun.org.apache.xpath.internal.functions.FuncUnparsedEntityURI;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -87,13 +90,6 @@ public class Converter {
         String[] tmp = new String[lines.size()];
         lines.toArray(tmp);
         return csv2Json(tmp);
-    }
-
-    public static String csv2Json(File file) {
-        if (file == null || !file.exists() || !file.isFile()) {
-            throw new IllegalArgumentException("file should not be null");
-        }
-        return csv2Json(file.getAbsolutePath());
     }
 
     private static List<ImportUserVo> convertCsvInfo2Vo(CsvFile csvFile) {

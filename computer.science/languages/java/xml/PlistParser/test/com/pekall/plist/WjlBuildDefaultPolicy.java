@@ -297,6 +297,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
         email.setEmailAccountDescription("test email account");
         email.setEmailAccountType(PayloadEmail.EMAIL_TYPE_IMAP);
         email.setEmailAddress("test_mdm@pekall.com");
+
         email.setIncomingMailServerAuthentication(PayloadEmail.EMAIL_AUTH_PASSWORD);
         email.setIncomingMailServerPortNumber(993);
         email.setIncomingMailServerUseSSL(true);
@@ -830,6 +831,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
         PayloadRestrictionsPolicy restrictionsPolicy = createIosRestrictionsPolicy();
         PayloadExchange payloadExchange = createExchange();
 
+//        PayloadRoamingPolicy payloadRomingPolicy =
         PayloadRemovalPassword removalPassword = createRemovalPassword();
 
         PayloadArrayWrapper wrapper = createWrapper();
@@ -978,6 +980,6 @@ public class WjlBuildDefaultPolicy extends TestCase {
 
         JsonObject jsonObject =  gson.fromJson(respond,JsonObject.class);
         System.out.println(jsonObject);
-        System.out.println(jsonObject.get("result").getAsInt());
+        // System.out.println(jsonObject.get("result").getAsInt());
     }
 }

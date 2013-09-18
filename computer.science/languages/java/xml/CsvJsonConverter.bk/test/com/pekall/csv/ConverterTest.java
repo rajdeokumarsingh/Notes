@@ -4,7 +4,6 @@ import com.pekall.csv.bean.CsvFile;
 import com.pekall.csv.bean.CsvLine;
 import junit.framework.TestCase;
 
-import java.io.File;
 import java.io.FileWriter;
 
 public class ConverterTest extends TestCase {
@@ -71,24 +70,6 @@ public class ConverterTest extends TestCase {
         String json = Converter.csv2Json(CSV_PATH);
         Debug.logVerbose(json);
         assertEquals(json, TEMPLATE_JSON);
-    }
-
-    public void testConverterFile() {
-        String json = Converter.csv2Json(new File(CSV_PATH));
-        Debug.logVerbose(json);
-        assertEquals(json, TEMPLATE_JSON);
-
-        try {
-            Converter.csv2Json(new File("/tmp"));
-            fail();
-        } catch (IllegalArgumentException e) {
-        }
-
-        try {
-            Converter.csv2Json(new File("/tmp/41234738074891820934"));
-            fail();
-        } catch (IllegalArgumentException e) {
-        }
     }
 
     public void testPartialInfo1() throws Exception {

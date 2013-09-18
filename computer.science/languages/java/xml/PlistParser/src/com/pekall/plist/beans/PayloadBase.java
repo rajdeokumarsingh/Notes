@@ -44,6 +44,7 @@ public class PayloadBase extends BeanBase {
     public static final String PAYLOAD_TYPE_BLUETOOTH_POLICY = "com.pekall.bluetooth.policy";
     public static final String PAYLOAD_TYPE_NET_RESTRICT_POLICY = "com.pekall.network.restriction.policy";
     public static final String PAYLOAD_TYPE_ACTIVE_SYNC_POLICY = "com.pekall.network.active.sync.policy";
+    public static final String PAYLOAD_TYPE_ROAMING_POLICY = "com.pekall.roaming.policy";
 
     /**
      * The payload type, see PAYLOAD_TYPE_...

@@ -21,6 +21,23 @@ public class PayloadJsonObject {
 
     private PayloadPasswordPolicy payloadPasswordPolicy;
     private List<PayloadWifiConfig> payloadWifiConfigs;
+
+//    public List<PayloadWifiConfig> getPayloadWifiConfigs() {
+//        return payloadWifiConfigs;
+//    }
+//
+//    public void setPayloadWifiConfigs(List<PayloadWifiConfig> payloadWifiConfigs) {
+//        this.payloadWifiConfigs = payloadWifiConfigs;
+//    }
+//
+//    public void addPayloadWifiConfig(PayloadWifiConfig payloadWifiConfig) {
+//        if(this.payloadWifiConfigs == null){
+//            this.payloadWifiConfigs = new ArrayList<PayloadWifiConfig>();
+//        }
+//        this.payloadWifiConfigs.add(payloadWifiConfig);
+//    }
+
+
     private PayloadWifiConfig payloadWifiConfig;
     private PayloadRestrictionsPolicy payloadRestrictionsPolicy;
     private PayloadEmail payloadEmail;
@@ -57,6 +74,16 @@ public class PayloadJsonObject {
     private PayloadNetRestrictPolicy payloadNetRestrictPolicy;
     private PayloadBluetoothPolicy payloadBluetoothPolicy;
     private PayloadActiveSyncPolicy payloadActiveSyncPolicy;
+
+    private PayloadRoamingPolicy payloadRoamingPolicy;
+
+    public PayloadRoamingPolicy getPayloadRoamingPolicy() {
+        return payloadRoamingPolicy;
+    }
+
+    public void setPayloadRoamingPolicy(PayloadRoamingPolicy payloadRoamingPolicy) {
+        this.payloadRoamingPolicy = payloadRoamingPolicy;
+    }
 
     public PayloadActiveSyncPolicy getPayloadActiveSyncPolicy() {
         return payloadActiveSyncPolicy;

@@ -40,6 +40,8 @@ public class PayloadJsonWrapper extends PayloadBase {
                 if (PayloadBase.PAYLOAD_TYPE_EMAIL.equalsIgnoreCase(payload.getPayloadType())) {
                     this.PayloadContent.setPayloadEmail((PayloadEmail) payload);
                 } else if (PayloadBase.PAYLOAD_TYPE_WIFI_MANAGED.equalsIgnoreCase(payload.getPayloadType())) {
+
+//                    this.PayloadContent.addPayloadWifiConfig((PayloadWifiConfig) payload);
                     this.PayloadContent.setPayloadWifiConfig((PayloadWifiConfig) payload);
                 } else if (PayloadBase.PAYLOAD_TYPE_PASSWORD_POLICY.equalsIgnoreCase(payload.getPayloadType())) {
                     this.PayloadContent.setPayloadPasswordPolicy((PayloadPasswordPolicy) payload);
@@ -89,7 +91,9 @@ public class PayloadJsonWrapper extends PayloadBase {
                 else if (PayloadBase.PAYLOAD_TYPE_WALLPAPER_SETTINGS.equalsIgnoreCase(payload.getPayloadType())) {
                     this.PayloadContent.setPayloadWallpaper((PayloadWallpaper)payload);
                 }
-
+                else if (PayloadBase.PAYLOAD_TYPE_ROAMING_POLICY.equalsIgnoreCase(payload.getPayloadType())) {
+                    this.PayloadContent.setPayloadRoamingPolicy((PayloadRoamingPolicy) payload);
+                }
             }
         }
     }
@@ -259,11 +263,17 @@ public class PayloadJsonWrapper extends PayloadBase {
             wrapper.addPayLoadContent(payloadEmail);
         }
 
+//        List<PayloadWifiConfig> payloadWifiConfigs = payloadContent.getPayloadWifiConfigs();
+//        for(PayloadWifiConfig payloadWifiConfig : payloadWifiConfigs){
+//            if(payloadWifiConfig != null){
+//                wrapper.addPayLoadContent(payloadWifiConfig);
+//            }
+//
+//        }
         PayloadWifiConfig payloadWifiConfig = payloadContent.getPayloadWifiConfig();
         if(payloadWifiConfig != null){
             wrapper.addPayLoadContent(payloadWifiConfig);
         }
-
         PayloadPasswordPolicy payloadPasswordPolicy = payloadContent.getPayloadPasswordPolicy();
         if(payloadPasswordPolicy != null){
             wrapper.addPayLoadContent(payloadPasswordPolicy);
@@ -363,6 +373,10 @@ public class PayloadJsonWrapper extends PayloadBase {
             wrapper.addPayLoadContent(payloadWallpaper);
         }
 
+        PayloadRoamingPolicy payloadRoamingPolicy = payloadContent.getPayloadRoamingPolicy();
+        if(payloadRoamingPolicy != null){
+            wrapper.addPayLoadContent(payloadRoamingPolicy);
+        }
 
 
         return wrapper;
