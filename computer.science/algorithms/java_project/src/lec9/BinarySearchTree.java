@@ -1,51 +1,14 @@
 package lec9;
 
-import com.example.algorithm.Debug;
-
-class BinaryNode {
-    int value;
-    BinaryNode left;
-    BinaryNode right;
-
-    BinaryNode(int value) {
-        this.value = value;
-    }
-
-    boolean hasChild() {
-        return (left != null || right != null);
-    }
-
-    boolean hasTwoChildren() {
-        return (left != null && right != null);
-    }
-
-    int getValue() {
-        return value;
-    }
-
-    void setValue(int value) {
-        this.value = value;
-    }
-
-    BinaryNode getLeft() {
-        return left;
-    }
-
-    void setLeft(BinaryNode left) {
-        this.left = left;
-    }
-
-    BinaryNode getRight() {
-        return right;
-    }
-
-    void setRight(BinaryNode right) {
-        this.right = right;
-    }
-}
-
 public class BinarySearchTree {
     BinaryNode root;
+
+    // for dump debug information
+    private int currentLevel = -1;
+
+    public BinaryNode getRoot() {
+        return root;
+    }
 
     void insert(int value) {
         if (root == null) {
@@ -76,56 +39,105 @@ public class BinarySearchTree {
     }
 
     public BinaryNode delete(int value) {
-        return deleteInternal(null, root, value);
+        BinaryNode sentry = new BinaryNode(Integer.MIN_VALUE);
+        sentry.setRight(root);
+
+        BinaryNode ret =  deleteInternal(sentry, sentry.getRight(), value);
+        root = sentry.getRight();
+        return ret;
     }
 
     private BinaryNode deleteInternal(BinaryNode parent, BinaryNode node, int value) {
-        if(node == null) {
-            return null;
-        }
+        if(node == null) return null;
+
         if(node.getValue() == value) {
-            // delete node
-            if(parent == null) {
-                // todo
-            } else {
-                if(!node.hasChild()) {
-                    // delete node
-                    if (node == parent.getLeft()) {
-                        parent.setLeft(null);
-                    }
-                    if (node == parent.getRight()) {
-                        parent.setRight(null);
-                    }
-                    return node;
-                } else if (node.hasTwoChildren()) {
+            if (node.hasTwoChildren()) {
+                return deleteNodeWithTwoChild(node);
+            } else if (node.hasLeftChild() || node.hasRightChild()) {
+                // node has one child
+                BinaryNode child = null;
+                if(node.hasLeftChild()) {
+                    child = node.getLeft();
                 } else {
-                    // node has one child
-                    // todo:
+                    child = node.getRight();
+                }
+                if (node == parent.getLeft()) {
+                    parent.setLeft(child);
+                } else if (node == parent.getRight()) {
+                    parent.setRight(child);
+                }
+            } else {
+                // node has no child
+                if (node == parent.getLeft()) {
+                    parent.setLeft(null);
+                } else if (node == parent.getRight()) {
+                    parent.setRight(null);
                 }
             }
-            return true;
-        }
-        if (value < node.getValue()) {
+            return node;
+        } else if (value < node.getValue()) {
             return deleteInternal(node, node.getLeft(), value);
-        }
-        if (value > node.getValue()) {
+        } else {
+            // (value > node.getValue())
             return deleteInternal(node, node.getRight(), value);
         }
-        return false;
     }
 
-    public void printTree() {
-        printTreeInternal(root);
+    private BinaryNode deleteNodeWithTwoChild(BinaryNode node) {
+        int ret = node.getValue();
+        BinaryNode p = node;
+        BinaryNode q = node.getRight();
+        while (q.hasLeftChild()) {
+            p = q;
+            q = q.getLeft();
+        }
+        node.setValue(q.getValue());
+        if(p.getLeft() == q) {
+            p.setLeft(q.getRight());
+        } else if (p.getRight() == q) {
+            p.setRight(q.getRight());
+        }
+        return new BinaryNode(ret);
     }
 
-    private void printTreeInternal(BinaryNode node) {
-        if(node == null) return;
-        Debug.log("Node:" + node.getValue());
-
-        Debug.logTest("Left tree: ");
-        printTreeInternal(node.getLeft());
-
-        Debug.logTest("Right tree: ");
-        printTreeInternal(node.getRight());
+    private void printTreeLevel(BinaryNode node, int level) {
+        currentLevel++;
+        try {
+            if(node == null) return;
+            if(currentLevel == level) {
+                StringBuilder sb = new StringBuilder(node.getValue() + "(");
+                if (node.getLeft() != null) {
+                    sb.append(node.getLeft().getValue() + ",");
+                } else {
+                    sb.append("null,");
+                }
+                if (node.getRight() != null) {
+                    sb.append(node.getRight().getValue() + ")  ");
+                } else {
+                    sb.append("null)  ");
+                }
+                System.out.print(sb.toString());
+                return;
+            }
+            if (currentLevel > level) {
+                return;
+            }
+            printTreeLevel(node.getLeft(), level);
+            printTreeLevel(node.getRight(), level);
+        } finally {
+            currentLevel--;
+        }
     }
+
+    public void dump() {
+        currentLevel = -1;
+        System.out.println("tree dump:");
+
+        // todo: just hard code 10 here, need a function to detect the high or a node
+        for (int i = 0; i < 8; i++) {
+            printTreeLevel(root, i);
+            System.out.println();
+        }
+    }
+
 }
