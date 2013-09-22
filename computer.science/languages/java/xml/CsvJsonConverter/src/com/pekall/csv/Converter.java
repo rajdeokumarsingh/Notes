@@ -23,7 +23,6 @@ import java.util.List;
  * 2 可含或不含列名，含列名则居文件第一行。
  * 3 一行数据不垮行，无空行。
  * 4 以半角逗号（即,）作分隔符，列为空也要表达其存在。
- * TODO: support comma in content
  * 5 列内容如存在半角逗号（即,）则用半角引号（即""）将该字段值包含起来。
  * TODO: support quote in content
  * 6 列内容如存在半角引号（即"）则应替换成半角双引号（""）转义，并用半角引号（即""）将该字段值包含起来。
@@ -94,6 +93,37 @@ public class Converter {
             throw new IllegalArgumentException("file should not be null");
         }
         return csv2Json(file.getAbsolutePath());
+    }
+
+    /**
+     * Convert a CSV file to json string by OSS openCSV
+     * @param file CSV
+     * @return json string
+     */
+    public static String csv2JsonOSS(File file) {
+        if (file == null || !file.exists() || !file.isFile()) {
+            throw new IllegalArgumentException("file should not be null");
+        }
+        CsvFile info = new CsvFile();
+        try {
+            FileReader fileReader = new FileReader(file);
+            CSVReader csvReader = new CSVReader(fileReader);
+            String[] tokens = null;
+            while ((tokens = csvReader.readNext())!= null) {
+                CsvLine csvLine = CsvLine.fromCsv(tokens);
+                Debug.logVerbose(csvLine.toString());
+                info.addLine(csvLine);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Type listType = new TypeToken<List<ImportUserVo>>() {}.getType();
+        List<ImportUserVo> users = convertCsvInfo2Vo(info);
+        Gson gson = new GsonBuilder().serializeNulls().create();
+        return gson.toJson(users, listType);
     }
 
     private static List<ImportUserVo> convertCsvInfo2Vo(CsvFile csvFile) {

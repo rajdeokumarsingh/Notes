@@ -34,13 +34,25 @@ public class CsvLine {
 
     /**
      * Convert a CSV line to a bean object
+     * @param tokens
+     * @return bean object
+     */
+    public static CsvLine fromCsv(String[] tokens) {
+        return createCsvLine(tokens);
+    }
+
+    /**
+     * Convert a CSV line to a bean object
      * @param line
      * @return bean object
      */
     public static CsvLine fromCsv(String line) {
-        CsvLine userInfo = new CsvLine();
         String[] tokens = combineTokens(line.split(","));
+        return createCsvLine(tokens);
+    }
 
+    private static CsvLine createCsvLine(String[] tokens) {
+        CsvLine userInfo = new CsvLine();
         for (int i = 0; i < tokens.length; i++) {
             try {
                 if (tokens[i] == null || "".equals(tokens[i])) continue;
@@ -60,11 +72,12 @@ public class CsvLine {
                 } else if (field.getType().equals(Double.class)) {
                     field.set(userInfo, Double.valueOf(tokens[i]));
                 } else if (field.getType().equals(String.class)) {
-                    if ("\"\"".equals(tokens[i])) {
+                    /* if ("\"\"".equals(tokens[i])) {
                         field.set(userInfo, "");
                     } else {
                         field.set(userInfo, String.valueOf(tokens[i]));
-                    }
+                    } */
+                    field.set(userInfo, String.valueOf(tokens[i]));
                 }
             } catch (NoSuchFieldException e) {
                 e.printStackTrace();
@@ -75,11 +88,15 @@ public class CsvLine {
         return userInfo;
     }
 
+    /* Handle commas in a CSV field. If there is a comma in a CSV field,
+        the field will be surrounded by double quotes.
+    */
     static String[] combineTokens(String[] tokens) {
         ArrayList<String> combinedTokens = new ArrayList<String>();
         String combine = null;
         for (String token : tokens) {
-            if (token.startsWith("\"")) {
+            if (combine == null && token.startsWith("\"")) {
+                // start to combine tokens in quotes
                 combine = token;
                 continue;
             }
@@ -92,6 +109,7 @@ public class CsvLine {
                 }
                 continue;
             }
+            // normal tokens
             combinedTokens.add(token);
         }
 
@@ -299,4 +317,5 @@ public class CsvLine {
                 ", tmpUuid='" + tmpUuid + '\'' +
                 '}';
     }
+
 }

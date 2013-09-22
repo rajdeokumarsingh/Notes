@@ -1,14 +1,13 @@
 package com.pekall.csv;
 
-import com.pekall.csv.bean.CsvFile;
-import com.pekall.csv.bean.CsvLine;
 import junit.framework.TestCase;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class ConverterTest extends TestCase {
+public class ConverterOssTest extends TestCase {
+
     @Override
     public void setUp() throws Exception {
         super.setUp();
@@ -30,22 +29,15 @@ public class ConverterTest extends TestCase {
     }
 
     public void testParseEmptyCsvFile() throws Exception {
-        String json = Converter.csv2Json(EMPTY_CSV_PATH);
+        String json = Converter.csv2JsonOSS(new File(EMPTY_CSV_PATH));
         Debug.logVerbose(json);
 
         // Empty CSV file should be converted to empty json array
         assertEquals("[]", json);
     }
 
-    public void testParseEmptyCsvString() throws Exception {
-        String json = Converter.csv2Json(new String[]{});
-        Debug.logVerbose(json);
-
-        assertEquals("[]", json);
-    }
-
-   public void testParseEmptyLineCsv() throws Exception {
-        String json = Converter.csv2Json(EMPTY_LINE_CSV_PATH);
+    public void testParseEmptyLineCsv() throws Exception {
+        String json = Converter.csv2Json(new File(EMPTY_LINE_CSV_PATH));
         Debug.logVerbose(json);
 
         // Empty lines should be ignored
@@ -53,7 +45,8 @@ public class ConverterTest extends TestCase {
     }
 
     public void testParseEmptyLineCsv1() throws Exception {
-        String json = Converter.csv2Json(new String[]{"", "\n", ""});
+        saveStrings(new String[]{"", "\n", ""});
+        String json = Converter.csv2JsonOSS(new File(TMP_PATH));
         Debug.logVerbose(json);
 
         assertEquals("[]", json);
@@ -61,31 +54,32 @@ public class ConverterTest extends TestCase {
 
     public void testError() throws Exception {
         try {
-            Converter.csv2Json(new String[]{"!&^,@*^&,@<@,Y@&^,3478478,3,@&*@&@*"});
+            saveStrings(new String[]{"!&^,@*^&,@<@,Y@&^,3478478,3,@&*@&@*"});
+            Converter.csv2JsonOSS(new File(TMP_PATH));
             fail();
         } catch (NumberFormatException e) {
         }
     }
 
     public void testConverter() {
-        String json = Converter.csv2Json(CSV_PATH);
+        String json = Converter.csv2JsonOSS(new File(CSV_PATH));
         Debug.logVerbose(json);
         assertEquals(json, TEMPLATE_JSON);
     }
 
     public void testConverterFile() {
-        String json = Converter.csv2Json(new File(CSV_PATH));
+        String json = Converter.csv2JsonOSS(new File(CSV_PATH));
         Debug.logVerbose(json);
         assertEquals(json, TEMPLATE_JSON);
 
         try {
-            Converter.csv2Json(new File("/tmp"));
+            Converter.csv2JsonOSS(new File("/tmp"));
             fail();
         } catch (IllegalArgumentException e) {
         }
 
         try {
-            Converter.csv2Json(new File("/tmp/41234738074891820934"));
+            Converter.csv2JsonOSS(new File("/tmp/41234738074891820934"));
             fail();
         } catch (IllegalArgumentException e) {
         }
@@ -93,11 +87,8 @@ public class ConverterTest extends TestCase {
 
     public void testPartialInfo1() throws Exception {
         // no user type and phone
-        String json = Converter.csv2Json(new String[]{
-                "username1",
-                "",
-                "username2,"
-        });
+        saveStrings(new String[]{"username1", "", "username2,"});
+        String json = Converter.csv2JsonOSS(new File(TMP_PATH));
         Debug.logVerbose(json);
 
         // device field should be null
@@ -106,9 +97,8 @@ public class ConverterTest extends TestCase {
 
     public void testSingleUserPartialInfo() throws Exception {
         // no user type and phone
-        String json = Converter.csv2Json(new String[]{
-                "username1,,user1@aa.com,,fullName1,firstName1,lastName1,"
-        });
+        saveStrings(new String[]{"username1,,user1@aa.com,,fullName1,firstName1,lastName1,"});
+        String json = Converter.csv2JsonOSS(new File(TMP_PATH));
         Debug.logVerbose(json);
 
         // device field should be null
@@ -116,9 +106,10 @@ public class ConverterTest extends TestCase {
     }
 
     public void testSingleUserNoDevice() throws Exception {
-        String json = Converter.csv2Json(new String[]{
+        saveStrings(new String[]{
                 "user1,password1,user1@aa.com,51302,李成成,成成,李,13800000000"
         });
+        String json = Converter.csv2JsonOSS(new File(TMP_PATH));
         Debug.logVerbose(json);
 
         // device field should be null
@@ -126,9 +117,8 @@ public class ConverterTest extends TestCase {
     }
 
     public void testSingleUserNoDevice2() throws Exception {
-        String json = Converter.csv2Json(new String[]{
-                "user1,password1,user1@aa.com,51302,李成成,成成,李,13800000000,,,,"
-        });
+        saveStrings(new String[]{"user1,password1,user1@aa.com,51302,李成成,成成,李,13800000000,,,,"});
+        String json = Converter.csv2JsonOSS(new File(TMP_PATH));
         Debug.logVerbose(json);
 
         // device field should be null
@@ -136,23 +126,37 @@ public class ConverterTest extends TestCase {
     }
 
     public void testSingleUserDevicePartial() throws Exception {
-        String json = Converter.csv2Json(new String[]{
+        saveStrings(new String[]{
                 "user2,password2,user2@aa.com,,,firstName2,,13800000001," +
                         "50701,51202,,securityInfo,"
         });
+        String json = Converter.csv2JsonOSS(new File(TMP_PATH));
         Debug.logVerbose(json);
 
         assertEquals(json, SINGLE_USER_DEVICE_PARTIAL);
     }
 
     public void testEscapeCommas() throws Exception {
-        String json = Converter.csv2Json(new String[]{
+        saveStrings(new String[]{
                 "\"Jacky, 成\",\"123,456,,\",user2@aa.com,,,firstName2,,\"1380,000, 0001\"," +
                         "50701,51202,,\",security,Info\","
         });
+        String json = Converter.csv2JsonOSS(new File(TMP_PATH));
         Debug.logVerbose(json);
 
         assertEquals(json, SINGLE_USER_COMMA);
+    }
+
+    public void testEscapeQuotes() throws Exception {
+        saveStrings(new String[]{
+                "\"\"\"\",\"\"\"\"\"\",\"\"\"\"\"\"\"\"",
+                "\"\"\"test\"\"\",\"\"\"test\",\"test me\"\"\"",
+                "\"\"\"test, test\"\"\",\"\"\",test\"\"\",\"\"\"test,\"\"\""
+        });
+        String json = Converter.csv2JsonOSS(new File(TMP_PATH));
+        Debug.logVerbose(json);
+
+        assertEquals(json, SINGLE_USER_QUOTES);
     }
 
     private File saveStrings(String[] lines) throws IOException {
@@ -194,4 +198,6 @@ public class ConverterTest extends TestCase {
     private static final String SINGLE_USER_PART1 = "[{\"username\":\"username1\",\"password\":null,\"email\":null,\"type\":null,\"firstName\":null,\"lastName\":null,\"fullName\":null,\"phone\":null,\"devices\":null},{\"username\":\"username2\",\"password\":null,\"email\":null,\"type\":null,\"firstName\":null,\"lastName\":null,\"fullName\":null,\"phone\":null,\"devices\":null}]";
 
     private static final String SINGLE_USER_COMMA = "[{\"username\":\"Jacky, 成\",\"password\":\"123,456,,\",\"email\":\"user2@aa.com\",\"type\":null,\"firstName\":\"firstName2\",\"lastName\":null,\"fullName\":null,\"phone\":\"1380,000, 0001\",\"devices\":[{\"type\":50701,\"os\":51202,\"language\":null,\"securityInfo\":\",security,Info\",\"tmpUuid\":null,\"username\":\"Jacky, 成\"}]}]";
+
+    private static final String SINGLE_USER_QUOTES = "[{\"username\":\"\\\"\",\"password\":\"\\\"\\\"\",\"email\":\"\\\"\\\"\\\"\",\"type\":null,\"firstName\":null,\"lastName\":null,\"fullName\":null,\"phone\":null,\"devices\":null},{\"username\":\"\\\"test\\\"\",\"password\":\"\\\"test\",\"email\":\"test me\\\"\",\"type\":null,\"firstName\":null,\"lastName\":null,\"fullName\":null,\"phone\":null,\"devices\":null},{\"username\":\"\\\"test, test\\\"\",\"password\":\"\\\",test\\\"\",\"email\":\"\\\"test,\\\"\",\"type\":null,\"firstName\":null,\"lastName\":null,\"fullName\":null,\"phone\":null,\"devices\":null}]";
 }

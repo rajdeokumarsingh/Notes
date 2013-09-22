@@ -61,7 +61,7 @@ public class CsvFileTest extends TestCase {
     }
 
     public void testConverter() {
-        Debug.setVerboseDebugLog(true);
+        // Debug.setVerboseDebugLog(true);
         Debug.logVerbose(Converter.csv2Json(CSV_PATH));
     }
 
