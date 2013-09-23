@@ -2,7 +2,6 @@ package com.pekall.plist;
 
 import com.dd.plist.NSDictionary;
 import com.google.gson.Gson;
-import com.google.gson.JsonObject;
 import com.pekall.plist.beans.*;
 import com.pekall.plist.json.PayloadJsonWrapper;
 import com.pekall.plist.su.policy.*;
@@ -135,55 +134,88 @@ public class WjlBuildDefaultPolicy extends TestCase {
 
     public static final String JSON_CONTENT = "{\n" +
             "    \"PayloadContent\": {\n" +
-            "        \"payloadWifiConfigs\": [\n" +
-            "            {\n" +
-            "                \"SSID_STR\": \"test ssid\",\n" +
-            "                \"HIDDEN_NETWORK\": true,\n" +
-            "                \"AutoJoin\": true,\n" +
-            "                \"EncryptionType\": \"WEP\",\n" +
-            "                \"Password\": \"123456\",\n" +
-            "                \"ProxyType\": \"Manual\",\n" +
-            "                \"ProxyServer\": \"192.168.10.210\",\n" +
-            "                \"ProxyServerPort\": 80,\n" +
-            "                \"ProxyUsername\": \"jiangrui\",\n" +
-            "                \"ProxyPassword\": \"123456\",\n" +
-            "                \"ProxyPACURL\": \"1.2.3.4\",\n" +
-            "                \"PayloadType\": \"com.apple.wifi.managed\",\n" +
-            "                \"PayloadVersion\": 1,\n" +
-            "                \"PayloadIdentifier\": \"com.pekall.config.wifi.managed\",\n" +
-            "                \"PayloadUUID\": \"3808D742-5D21-401E-B83C-AED1E990332D\",\n" +
-            "                \"PayloadDisplayName\": \"WIFI配置\",\n" +
-            "                \"PayloadDescription\": \"WIFI相关配置\",\n" +
-            "                \"PayloadOrganization\": \"Pekall Capital\"\n" +
-            "            },\n" +
-            "            {\n" +
-            "                \"SSID_STR\": \"test ssid\",\n" +
-            "                \"HIDDEN_NETWORK\": true,\n" +
-            "                \"AutoJoin\": true,\n" +
-            "                \"EncryptionType\": \"WEP\",\n" +
-            "                \"Password\": \"123456\",\n" +
-            "                \"ProxyType\": \"Manual\",\n" +
-            "                \"ProxyServer\": \"192.168.10.210\",\n" +
-            "                \"ProxyServerPort\": 80,\n" +
-            "                \"ProxyUsername\": \"jiangrui\",\n" +
-            "                \"ProxyPassword\": \"123456\",\n" +
-            "                \"ProxyPACURL\": \"1.2.3.4\",\n" +
-            "                \"PayloadType\": \"com.apple.wifi.managed\",\n" +
-            "                \"PayloadVersion\": 1,\n" +
-            "                \"PayloadIdentifier\": \"com.pekall.config.wifi.managed\",\n" +
-            "                \"PayloadUUID\": \"3808D742-5D21-401E-B83C-AED1E990332D\",\n" +
-            "                \"PayloadDisplayName\": \"WIFI配置\",\n" +
-            "                \"PayloadDescription\": \"WIFI相关配置\",\n" +
-            "                \"PayloadOrganization\": \"Pekall Capital\"\n" +
-            "            }\n" +
-            "        ]\n" +
+            "        \"payloadWifiConfig\": {\n" +
+            "            \"SSID_STR\": \"pekall_work\",\n" +
+            "            \"HIDDEN_NETWORK\": false,\n" +
+            "            \"AutoJoin\": true,\n" +
+            "            \"EncryptionType\": \"WPA\",\n" +
+            "            \"Password\": \"pekallcloud\",\n" +
+            "            \"PayloadType\": \"com.apple.wifi.managed\",\n" +
+            "            \"PayloadVersion\": 1,\n" +
+            "            \"PayloadIdentifier\": \"com.pekall.config.wifi.managed\",\n" +
+            "            \"PayloadUUID\": \"518d778c-ebd4-4796-b864-1db162bfbb83\",\n" +
+            "            \"PayloadDisplayName\": \"WIFI配置\",\n" +
+            "            \"PayloadDescription\": \"WIFI相关配置\",\n" +
+            "            \"PayloadOrganization\": \"Pekall Capital\"\n" +
+            "        },\n" +
+            "        \"payloadEmail\": {\n" +
+            "            \"EmailAccountDescription\": \"test email account\",\n" +
+            "            \"EmailAccountType\": \"EmailTypeIMAP\",\n" +
+            "            \"EmailAddress\": \"test_mdm@pekall.com\",\n" +
+            "            \"IncomingMailServerAuthentication\": \"EmailAuthPassword\",\n" +
+            "            \"IncomingMailServerHostName\": \"mail.pekall.com\",\n" +
+            "            \"IncomingMailServerPortNumber\": 993,\n" +
+            "            \"IncomingMailServerUseSSL\": true,\n" +
+            "            \"IncomingMailServerUsername\": \"test_mdm\",\n" +
+            "            \"IncomingPassword\": \"123456\",\n" +
+            "            \"OutgoingPasswordSameAsIncomingPassword\": true,\n" +
+            "            \"OutgoingMailServerAuthentication\": \"EmailAuthPassword\",\n" +
+            "            \"OutgoingMailServerHostName\": \"mail.pekall.com\",\n" +
+            "            \"OutgoingMailServerPortNumber\": 587,\n" +
+            "            \"OutgoingMailServerUseSSL\": true,\n" +
+            "            \"OutgoingMailServerUsername\": \"test_mdm\",\n" +
+            "            \"PreventMove\": false,\n" +
+            "            \"PreventAppSheet\": true,\n" +
+            "            \"SMIMEEnabled\": false,\n" +
+            "            \"disableMailRecentsSyncing\": true,\n" +
+            "            \"PayloadType\": \"com.apple.mail.managed\",\n" +
+            "            \"PayloadVersion\": 1,\n" +
+            "            \"PayloadIdentifier\": \"com.pekall.profile.email\",\n" +
+            "            \"PayloadUUID\": \"85b64c9d-29a7-4782-85e6-9783f2ed7d88\",\n" +
+            "            \"PayloadDisplayName\": \"Email配置\",\n" +
+            "            \"PayloadDescription\": \"Email相关配置\",\n" +
+            "            \"PayloadOrganization\": \"Pekall Captital\"\n" +
+            "        },\n" +
+            "        \"payloadVPN\": {\n" +
+            "            \"UserDefinedName\": \"test vpn\",\n" +
+            "            \"VPNType\": \"PPTP\",\n" +
+            "            \"serverHostName\": \"192.168.10.220\",\n" +
+            "            \"account\": \"ray\",\n" +
+            "            \"userAuth\": \"password\",\n" +
+            "            \"password\": \"123456\",\n" +
+            "            \"sharedPassword\": \"qwert\",\n" +
+            "            \"vpnForAllTraffic\": true,\n" +
+            "            \"proxyHost\": \"192.168.0.1\",\n" +
+            "            \"proxyPort\": 889,\n" +
+            "            \"proxyUserName\": \"Ray\",\n" +
+            "            \"proxyPassword\": \"qwert\",\n" +
+            "            \"PayloadType\": \"com.apple.vpn.managed\",\n" +
+            "            \"PayloadVersion\": 1,\n" +
+            "            \"PayloadIdentifier\": \"com.pekall.profile.VPN\",\n" +
+            "            \"PayloadUUID\": \"a7e55234-1961-4964-82b7-80733c20be4b\",\n" +
+            "            \"PayloadDisplayName\": \"VPN配置\",\n" +
+            "            \"PayloadDescription\": \"VPN相关配置\",\n" +
+            "            \"PayloadOrganization\": \"Pekall Captital\"\n" +
+            "        },\n" +
+            "        \"payloadWallpaper\": {\n" +
+            "            \"configWallpaper\": true,\n" +
+            "            \"lowResolution\": \"320x240\",\n" +
+            "            \"allowUsrChangeWallpaper\": false,\n" +
+            "            \"PayloadType\": \"com.pekall.wallpaper.settings\",\n" +
+            "            \"PayloadVersion\": 1,\n" +
+            "            \"PayloadIdentifier\": \"com.pekall.settings.wallpaper\",\n" +
+            "            \"PayloadUUID\": \"3fc2b26b-6e49-401c-8bb6-6cefe3815292\",\n" +
+            "            \"PayloadDisplayName\": \"Wallpaper配置\",\n" +
+            "            \"PayloadDescription\": \"Wallpaper相关配置\",\n" +
+            "            \"PayloadOrganization\": \"Pekall Captital\"\n" +
+            "        }\n" +
             "    },\n" +
             "    \"PayloadType\": \"Configuration\",\n" +
             "    \"PayloadVersion\": 1,\n" +
-            "    \"PayloadIdentifier\": \"com.pekall.profile\",\n" +
-            "    \"PayloadUUID\": \"2ED160FF-4B6C-47DD-8105-769231367D2A\",\n" +
-            "    \"PayloadDisplayName\": \"Pekall MDM Profile\",\n" +
-            "    \"PayloadDescription\": \"描述文件描述。wjl 测试\",\n" +
+            "    \"PayloadIdentifier\": \"com.pekall.profile.setting\",\n" +
+            "    \"PayloadUUID\": \"4ec834c6-f02e-4625-9ab5-844d8b99a7bd\",\n" +
+            "    \"PayloadDisplayName\": \"Pekall Default Setting\",\n" +
+            "    \"PayloadDescription\": \"配置文件\",\n" +
             "    \"PayloadOrganization\": \"Pekall Capital\"\n" +
             "}";
 
@@ -372,7 +404,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
         PayloadArrayWrapper wrapper = createSettingWrapper();
         PayloadEmail payloadEmail = createEmail();
 
-//        PayloadVPN payloadVPN = createVPN();
+        PayloadVPN payloadVPN = createAndroidVPN();
 
         PayloadWallpaper payloadWallpaper = createPayloadWallpaper();
         AdvertiseDownloadSettings advertiseDownloadSettings = getAdvertiseDownloadSettings();
@@ -383,12 +415,12 @@ public class WjlBuildDefaultPolicy extends TestCase {
 
         wrapper.addPayLoadContent(wifiConfig);
         wrapper.addPayLoadContent(payloadEmail);
-//        wrapper.addPayLoadContent(payloadVPN);
+        wrapper.addPayLoadContent(payloadVPN);
         wrapper.addPayLoadContent(payloadWallpaper);
-        wrapper.addPayLoadContent(advertiseDownloadSettings);
-        wrapper.addPayLoadContent(browserSettings);
-        wrapper.addPayLoadContent(launcherSettings);
-        wrapper.addPayLoadContent(systemSettings);
+//        wrapper.addPayLoadContent(advertiseDownloadSettings);
+//        wrapper.addPayLoadContent(browserSettings);
+//        wrapper.addPayLoadContent(launcherSettings);
+//        wrapper.addPayLoadContent(systemSettings);
 
 
 
@@ -400,12 +432,12 @@ public class WjlBuildDefaultPolicy extends TestCase {
     private PayloadArrayWrapper createIosSettingProfile() {
         PayloadWifiConfig wifiConfig = createWifiConfig();
         PayloadEmail payloadEmail = createEmail();
-//        PayloadVPN payloadVPN = createVPN();
+        PayloadVPN payloadVPN = createIosVPN();
 //        PayloadPasswordPolicy passwordPolicy = createPasswordPolicy();
         PayloadArrayWrapper wrapper = createSettingWrapper();
         wrapper.addPayLoadContent(wifiConfig);
         wrapper.addPayLoadContent(payloadEmail);
-//        wrapper.addPayLoadContent(payloadVPN);
+        wrapper.addPayLoadContent(payloadVPN);
 //        wrapper.addPayLoadContent(wifiConfig);
         return wrapper;
     }
@@ -593,14 +625,14 @@ public class WjlBuildDefaultPolicy extends TestCase {
     private PayloadArrayWrapper createAndroidPolicyProfile() {
 //        PayloadWifiConfig wifiConfig = createWifiConfig();
         PayloadPasswordPolicy passwordPolicy = createPasswordPolicy();
-//        PayloadSecurityPolicy payloadSecurityPolicy =  createAndroidSecurityPolicy();
-//        PayloadRestrictionsAndroidPolicy payloadRestrictionsAndroidPolicy = createAndroidRestrictionsPolicy();
-//        AppControlList appControlList = getAppControlList();
-//        PayloadActiveSyncPolicy payloadActiveSyncPolicy =   createAndroidActiveSyncPolicy();
-//        PayloadNativeAppCtrlPolicy payloadNativeAppCtrlPolicy = createAndroidNativeAppCtrlPolicy();
-//
-//        PayloadNetRestrictPolicy payloadNetRestrictPolicy = createAndroidNetRestrictPolicy();
-//        PayloadBluetoothPolicy payloadBluetoothPolicy = createAndroidBluetoothPolicy();
+        PayloadSecurityPolicy payloadSecurityPolicy =  createAndroidSecurityPolicy();
+        PayloadRestrictionsAndroidPolicy payloadRestrictionsAndroidPolicy = createAndroidRestrictionsPolicy();
+        AppControlList appControlList = getAppControlList();
+        PayloadActiveSyncPolicy payloadActiveSyncPolicy =   createAndroidActiveSyncPolicy();
+        PayloadNativeAppCtrlPolicy payloadNativeAppCtrlPolicy = createAndroidNativeAppCtrlPolicy();
+
+        PayloadNetRestrictPolicy payloadNetRestrictPolicy = createAndroidNetRestrictPolicy();
+        PayloadBluetoothPolicy payloadBluetoothPolicy = createAndroidBluetoothPolicy();
 
 //        MemorySizePolicy memorySizePolicy = getMemorySizePolicy();
 //        AppControlList appControlList = getAppControlList();
@@ -608,14 +640,14 @@ public class WjlBuildDefaultPolicy extends TestCase {
 
         PayloadArrayWrapper wrapper = createWrapper();
         wrapper.addPayLoadContent(passwordPolicy);
-//        wrapper.addPayLoadContent(payloadActiveSyncPolicy);
-//        wrapper.addPayLoadContent(payloadRestrictionsAndroidPolicy);
-//        wrapper.addPayLoadContent(payloadSecurityPolicy);
-//        wrapper.addPayLoadContent(payloadBluetoothPolicy);
-//        wrapper.addPayLoadContent(payloadNativeAppCtrlPolicy);
-//        wrapper.addPayLoadContent(payloadNetRestrictPolicy);
-////        wrapper.addPayLoadContent(memorySizePolicy);
-//        wrapper.addPayLoadContent(appControlList);
+        wrapper.addPayLoadContent(payloadActiveSyncPolicy);
+        wrapper.addPayLoadContent(payloadRestrictionsAndroidPolicy);
+        wrapper.addPayLoadContent(payloadSecurityPolicy);
+        wrapper.addPayLoadContent(payloadBluetoothPolicy);
+        wrapper.addPayLoadContent(payloadNativeAppCtrlPolicy);
+        wrapper.addPayLoadContent(payloadNetRestrictPolicy);
+//        wrapper.addPayLoadContent(memorySizePolicy);
+        wrapper.addPayLoadContent(appControlList);
 //        wrapper.addPayLoadContent(systemExceptionPolicy);
 //        wrapper.addPayLoadContent(removalPassword);
 //        wrapper.addPayLoadContent(wifiConfig);
@@ -674,13 +706,27 @@ public class WjlBuildDefaultPolicy extends TestCase {
         policy.setPayloadUUID(getUUID());
         policy.setPayloadVersion(VERSION);
 
-        policy.setAllowDataNetwork(PayloadNetRestrictPolicy.CTRL_USR_CONTROLLED);
         policy.setAllowEmgCallOnly(true);
-        policy.setAllowMessage(PayloadNetRestrictPolicy.CTRL_ENABLED);
-        policy.addBlacklistedSSIDs("xxxx-xx-xx-xx");
-        policy.addWhitelistedSSID("xx-xxxx-xx-xx-xx");
         policy.setAllowWifi(true);
-        policy.setMobileAP(PayloadNetRestrictPolicy.CTRL_DISABLE);
+        policy.setWhitelistedSSIDs(new ArrayList<String>());
+        policy.setBlacklistedSSIDs(new ArrayList<String>());
+        policy.setAllowUsrAddWifi(true);
+        policy.setMinSecurityLevel(PayloadNetRestrictPolicy.SEC_LEVEL_EAP_FAST);
+        policy.setAllowDataNetwork(PayloadNetRestrictPolicy.CTRL_USR_CONTROLLED);
+        policy.setMobileAP(PayloadNetRestrictPolicy.CTRL_USR_CONTROLLED);
+        policy.setAllowMessage(PayloadNetRestrictPolicy.ALLOW_MSG_ALL);
+        policy.setAllowDataRoaming(PayloadNetRestrictPolicy.CTRL_USR_CONTROLLED);
+        policy.setAllowSyncRoaming(true);
+        policy.setAllowVoiceRoaming(true);
+        policy.setUsbTethering(PayloadNetRestrictPolicy.CTRL_USR_CONTROLLED);
+
+//        policy.setAllowDataNetwork(PayloadNetRestrictPolicy.CTRL_USR_CONTROLLED);
+//        policy.setAllowEmgCallOnly(true);
+//        policy.setAllowMessage(PayloadNetRestrictPolicy.CTRL_ENABLED);
+//        policy.addBlacklistedSSIDs("xxxx-xx-xx-xx");
+//        policy.addWhitelistedSSID("xx-xxxx-xx-xx-xx");
+//        policy.setAllowWifi(true);
+//        policy.setMobileAP(PayloadNetRestrictPolicy.CTRL_DISABLE);
         return policy;
     }
 
@@ -782,6 +828,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
 
         return policy;
     }
+
     private AppControlList getAppControlList() {
         AppInfoWrapper must = new AppInfoWrapper("1");
         AppInfoWrapper white = new AppInfoWrapper("2");
@@ -831,16 +878,32 @@ public class WjlBuildDefaultPolicy extends TestCase {
         PayloadRestrictionsPolicy restrictionsPolicy = createIosRestrictionsPolicy();
         PayloadExchange payloadExchange = createExchange();
 
-//        PayloadRoamingPolicy payloadRomingPolicy =
+        PayloadRoamingPolicy payloadRomingPolicy = createPayloadRomingPolicy();
         PayloadRemovalPassword removalPassword = createRemovalPassword();
 
         PayloadArrayWrapper wrapper = createWrapper();
         wrapper.addPayLoadContent(passwordPolicy);
         wrapper.addPayLoadContent(restrictionsPolicy);
         wrapper.addPayLoadContent(payloadExchange);
+        wrapper.addPayLoadContent(payloadRomingPolicy);
 //        wrapper.addPayLoadContent(removalPassword);
 //        wrapper.addPayLoadContent(wifiConfig);
         return wrapper;
+    }
+
+    private PayloadRoamingPolicy createPayloadRomingPolicy() {
+
+        PayloadRoamingPolicy policy = new PayloadRoamingPolicy();
+        policy.setPayloadDescription("Roming相关配置");
+        policy.setPayloadDisplayName("Roming配置");
+        policy.setPayloadIdentifier("com.pekall.policy.roming");
+        policy.setPayloadOrganization("Pekall Capital");
+        policy.setPayloadUUID("3808D742-5D21-401E-B83C-AED1E990332D");
+        policy.setPayloadVersion(1);
+
+        policy.setDataRoaming(false);
+        policy.setVoiceRoaming(false);
+        return policy;
     }
 
     private PayloadArrayWrapper createWrapper() {
@@ -916,7 +979,47 @@ public class WjlBuildDefaultPolicy extends TestCase {
         return policy;
     }
 
-    private PayloadVPN createVPN() {
+
+
+    private PayloadVPN createAndroidVPN() {
+        PayloadVPN vpn = new PayloadVPN();
+        vpn.setPayloadDescription("VPN相关配置");
+        vpn.setPayloadDisplayName("VPN配置");
+        vpn.setPayloadIdentifier("com.pekall.profile.VPN");
+        vpn.setPayloadOrganization(ORGANIZATION);
+        vpn.setPayloadUUID(getUUID());
+        vpn.setPayloadVersion(VERSION);
+
+        vpn.setUserDefinedName("test vpn");
+        vpn.setVPNType(PayloadVPN.TYPE_PPTP);
+
+        vpn.setServerHostName("192.168.10.220");
+        vpn.setAccount("ray");
+        vpn.setPassword("123456");
+        vpn.setSharedPassword("qwert");
+        vpn.setUserAuth(PayloadVPN.USR_AUTH_PASSWORD);
+        vpn.setVpnForAllTraffic(true);
+        vpn.setProxyHost("192.168.0.1");
+        vpn.setProxyPort(889);
+        vpn.setProxyUserName("Ray");
+        vpn.setProxyPassword("qwert");
+
+//        IPSecInfo ipSecInfo = new IPSecInfo();
+//        ipSecInfo.setAuthenticationMethod("test method");
+//        ipSecInfo.setLocalIdentifier("my ipsec id");
+//        ipSecInfo.setLocalIdentifierType("key id 1003");
+//        ipSecInfo.setPromptForVPNPIN(true);
+//        ipSecInfo.setXAuthEnabled(1);
+//        byte[] data = new byte[10];
+//        for (int i = 0; i < data.length; i++) {
+//            data[i] = (byte) i;
+//        }
+//        ipSecInfo.setSharedSecret(data);
+//        vpn.setIPSec(ipSecInfo);
+
+        return vpn;
+    }
+    private PayloadVPN createIosVPN() {
         PayloadVPN vpn = new PayloadVPN();
         vpn.setPayloadDescription("VPN相关配置");
         vpn.setPayloadDisplayName("VPN配置");
@@ -970,16 +1073,38 @@ public class WjlBuildDefaultPolicy extends TestCase {
     }
 
 
+    class TestVo{
+        private  Integer test;
+
+        Integer getTest() {
+            return test;
+        }
+
+        void setTest(Integer test) {
+            this.test = test;
+        }
+    }
     public void testJson(){
-        String respond = "{\n" +
-                "    \"result\": \"123\"\n" +
-                "}";
+
+
+        System.out.println( String.format("%1$.3f", 12312323123.00000));
+
+        TestVo testVo = new TestVo();
+        testVo.setTest(null);
+
+        String respond = "{\"test\":null}\n";
 
 
         Gson gson = new Gson();
 
-        JsonObject jsonObject =  gson.fromJson(respond,JsonObject.class);
-        System.out.println(jsonObject);
-        // System.out.println(jsonObject.get("result").getAsInt());
+
+        System.out.println(gson.toJson(testVo));
+
+        TestVo testVo1 = gson.fromJson(respond, TestVo.class);
+        System.out.println(testVo1.getTest());
+
+//        JsonObject jsonObject =  gson.fromJson(respond,JsonObject.class);
+//        System.out.println(jsonObject);
+//        System.out.println(jsonObject.get("result").getAsInt());
     }
 }

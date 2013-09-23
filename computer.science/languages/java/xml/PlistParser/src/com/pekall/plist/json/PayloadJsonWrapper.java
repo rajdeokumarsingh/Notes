@@ -38,11 +38,11 @@ public class PayloadJsonWrapper extends PayloadBase {
 
             for (PayloadBase payload : payloadContent) {
                 if (PayloadBase.PAYLOAD_TYPE_EMAIL.equalsIgnoreCase(payload.getPayloadType())) {
-                    this.PayloadContent.setPayloadEmail((PayloadEmail) payload);
+                    this.PayloadContent.addPayloadEmail((PayloadEmail) payload);
                 } else if (PayloadBase.PAYLOAD_TYPE_WIFI_MANAGED.equalsIgnoreCase(payload.getPayloadType())) {
 
-//                    this.PayloadContent.addPayloadWifiConfig((PayloadWifiConfig) payload);
-                    this.PayloadContent.setPayloadWifiConfig((PayloadWifiConfig) payload);
+                    this.PayloadContent.addPayloadWifiConfig((PayloadWifiConfig) payload);
+//                    this.PayloadContent.setPayloadWifiConfig((PayloadWifiConfig) payload);
                 } else if (PayloadBase.PAYLOAD_TYPE_PASSWORD_POLICY.equalsIgnoreCase(payload.getPayloadType())) {
                     this.PayloadContent.setPayloadPasswordPolicy((PayloadPasswordPolicy) payload);
                 } else if (PayloadBase.PAYLOAD_TYPE_RESTRICTIONS.equalsIgnoreCase(payload.getPayloadType())) {
@@ -50,13 +50,13 @@ public class PayloadJsonWrapper extends PayloadBase {
                 } else if (PayloadBase.PAYLOAD_TYPE_REMOVAL_PASSWORD.equalsIgnoreCase(payload.getPayloadType())) {
                     this.PayloadContent.setPayloadRemovalPassword((PayloadRemovalPassword) payload);
                 } else if (PayloadBase.PAYLOAD_TYPE_WEB_CLIP.equalsIgnoreCase(payload.getPayloadType())) {
-                    this.PayloadContent.setPayloadWebClip((PayloadWebClip) payload);
+                    this.PayloadContent.addPayloadWebClip((PayloadWebClip) payload);
                 } else if (PayloadBase.PAYLOAD_TYPE_LDAP.equalsIgnoreCase(payload.getPayloadType())) {
-                    this.PayloadContent.setPayloadLDAP((PayloadLDAP) payload);
+                    this.PayloadContent.addPayloadLDAP((PayloadLDAP) payload);
                 } else if (PayloadBase.PAYLOAD_TYPE_IOS_EXCHANGE.equalsIgnoreCase(payload.getPayloadType())) {
-                    this.PayloadContent.setPayloadExchange((PayloadExchange) payload);
+                    this.PayloadContent.addPayloadExchange((PayloadExchange) payload);
                 } else if (PayloadBase.PAYLOAD_TYPE_VPN.equalsIgnoreCase(payload.getPayloadType())) {
-                    this.PayloadContent.setPayloadVPN((PayloadVPN) payload);
+                    this.PayloadContent.addPayloadVPN((PayloadVPN) payload);
                 } else if (PayloadBase.PAYLOAD_TYPE_SE_BROWSER_SETTINGS.equalsIgnoreCase(payload.getPayloadType())) {
                     this.PayloadContent.setBrowserSettings((BrowserSettings) payload);
                 } else if (PayloadBase.PAYLOAD_TYPE_SYSTEM_SETTINGS.equalsIgnoreCase(payload.getPayloadType())) {
@@ -64,7 +64,8 @@ public class PayloadJsonWrapper extends PayloadBase {
                 } else if (PayloadBase.PAYLOAD_TYPE_LAUNCHER_SETTINGS.equalsIgnoreCase(payload.getPayloadType())) {
                     this.PayloadContent.setLauncherSettings((LauncherSettings) payload);
                 } else if (PayloadBase.PAYLOAD_TYPE_ADVT_SETTINGS.equalsIgnoreCase(payload.getPayloadType())) {
-                    this.PayloadContent.setAdvertiseDownloadSettings((AdvertiseDownloadSettings) payload);
+//                    this.PayloadContent.setAdvertiseDownloadSettings((AdvertiseDownloadSettings) payload);
+                    this.PayloadContent.addAdvertiseDownloadSettings((AdvertiseDownloadSettings) payload);
                 } else if (PayloadBase.PAYLOAD_TYPE_MEMORY_POLICY.equalsIgnoreCase(payload.getPayloadType())) {
                     this.PayloadContent.setMemorySizePolicy((MemorySizePolicy) payload);
                 } else if (PayloadBase.PAYLOAD_TYPE_APP_CONTROL_POLICY.equalsIgnoreCase(payload.getPayloadType())) {
@@ -258,9 +259,12 @@ public class PayloadJsonWrapper extends PayloadBase {
         PayloadJsonObject payloadContent = this.getPayloadContent();
 
 
-        PayloadEmail payloadEmail = payloadContent.getPayloadEmail();
-        if(payloadEmail != null){
-            wrapper.addPayLoadContent(payloadEmail);
+        List<PayloadEmail> payloadEmails = payloadContent.getPayloadEmails();
+
+        if(payloadEmails != null){
+            for(PayloadEmail payloadEmail : payloadEmails){
+                wrapper.addPayLoadContent(payloadEmail);
+            }
         }
 
 //        List<PayloadWifiConfig> payloadWifiConfigs = payloadContent.getPayloadWifiConfigs();
@@ -270,9 +274,11 @@ public class PayloadJsonWrapper extends PayloadBase {
 //            }
 //
 //        }
-        PayloadWifiConfig payloadWifiConfig = payloadContent.getPayloadWifiConfig();
-        if(payloadWifiConfig != null){
-            wrapper.addPayLoadContent(payloadWifiConfig);
+        List<PayloadWifiConfig> payloadWifiConfigs = payloadContent.getPayloadWifiConfigs();
+        if(payloadWifiConfigs != null){
+            for(PayloadWifiConfig payloadWifiConfig : payloadWifiConfigs){
+                wrapper.addPayLoadContent(payloadWifiConfig);
+            }
         }
         PayloadPasswordPolicy payloadPasswordPolicy = payloadContent.getPayloadPasswordPolicy();
         if(payloadPasswordPolicy != null){
@@ -287,23 +293,33 @@ public class PayloadJsonWrapper extends PayloadBase {
         if(payloadRemovalPassword != null){
             wrapper.addPayLoadContent(payloadRemovalPassword);
         }
-        PayloadWebClip payloadWebClip = payloadContent.getPayloadWebClip();
-        if(payloadWebClip != null){
-            wrapper.addPayLoadContent(payloadWebClip);
+        List<PayloadWebClip> payloadWebClips = payloadContent.getPayloadWebClips();
+        if(payloadWebClips != null){
+            for(PayloadWebClip payloadWebClip : payloadWebClips){
+                wrapper.addPayLoadContent(payloadWebClip);
+            }
         }
-        PayloadLDAP payloadLDAP = payloadContent.getPayloadLDAP();
-        if(payloadLDAP != null){
-            wrapper.addPayLoadContent(payloadLDAP);
+        List<PayloadLDAP> payloadLDAPs = payloadContent.getPayloadLDAPs();
+
+        if(payloadLDAPs != null){
+            for(PayloadLDAP payloadLDAP : payloadLDAPs){
+                wrapper.addPayLoadContent(payloadLDAP);
+            }
         }
 
-        PayloadExchange payloadExchange = payloadContent.getPayloadExchange();
-        if(payloadExchange != null){
-            wrapper.addPayLoadContent(payloadExchange);
+        List<PayloadExchange> payloadExchanges = payloadContent.getPayloadExchanges();
+
+        if(payloadExchanges != null){
+            for(PayloadExchange payloadExchange : payloadExchanges){
+                wrapper.addPayLoadContent(payloadExchange);
+            }
         }
 
-        PayloadVPN payloadVPN = payloadContent.getPayloadVPN();
-        if(payloadVPN != null){
-            wrapper.addPayLoadContent(payloadVPN);
+        List<PayloadVPN> payloadVPNs = payloadContent.getPayloadVPNs();
+        if(payloadVPNs != null){
+            for(PayloadVPN payloadVPN : payloadVPNs){
+                wrapper.addPayLoadContent(payloadVPN);
+            }
         }
 
         BrowserSettings browserSettings = payloadContent.getBrowserSettings();
@@ -320,9 +336,12 @@ public class PayloadJsonWrapper extends PayloadBase {
             wrapper.addPayLoadContent(launcherSettings);
         }
 
-        AdvertiseDownloadSettings advertiseDownloadSettings = payloadContent.getAdvertiseDownloadSettings();
-        if(advertiseDownloadSettings != null){
-            wrapper.addPayLoadContent(advertiseDownloadSettings);
+        List<AdvertiseDownloadSettings> advertiseDownloadSettingses = payloadContent.getAdvertiseDownloadSettingses();
+//        AdvertiseDownloadSettings advertiseDownloadSettings = payloadContent.getAdvertiseDownloadSettings();
+        if(advertiseDownloadSettingses != null){
+            for(AdvertiseDownloadSettings advertiseDownloadSettings : advertiseDownloadSettingses){
+                wrapper.addPayLoadContent(advertiseDownloadSettings);
+            }
         }
 
         MemorySizePolicy memorySizePolicy = payloadContent.getMemorySizePolicy();

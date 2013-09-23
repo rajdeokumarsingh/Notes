@@ -48,7 +48,7 @@ public class CommandDeviceInfoStatusSUTest extends TestCase {
 
         DeviceInfoResp resp = msg.getQueryResponses();
         resp.setAvailableDeviceCapacity(5.5006752014160156);
-        resp.setBatteryLevel(1);
+        resp.setBatteryLevel(1.0);
         resp.setBluetoothMAC("c0:63:94:c0:58:6a");
         resp.setBuildVersion("10B329");
         resp.setCarrierSettingsVersion("14.0");
@@ -258,20 +258,14 @@ public class CommandDeviceInfoStatusSUTest extends TestCase {
             "\t\t<string>test ios</string>\n" +
             "\t\t<key>BuildVersion</key>\n" +
             "\t\t<string>ios 12345</string>\n" +
-            "\t\t<key>DeviceCapacity</key>\n" +
-            "\t\t<real>0.0</real>\n" +
             "\t\t<key>AvailableDeviceCapacity</key>\n" +
             "\t\t<real>12345.5</real>\n" +
-            "\t\t<key>BatteryLevel</key>\n" +
-            "\t\t<real>0.0</real>\n" +
             "\t\t<key>CellularTechnology</key>\n" +
             "\t\t<integer>0</integer>\n" +
             "\t\t<key>WiFiMAC</key>\n" +
             "\t\t<string>xxxx-xxxxx-xxxx-xxxx</string>\n" +
             "\t\t<key>CarrierSettingsVersion</key>\n" +
             "\t\t<string>CMCC</string>\n" +
-            "\t\t<key>VoiceRoamingEnabled</key>\n" +
-            "\t\t<false/>\n" +
             "\t\t<key>DataRoamingEnabled</key>\n" +
             "\t\t<true/>\n" +
             "\t\t<key>IsRoaming</key>\n" +

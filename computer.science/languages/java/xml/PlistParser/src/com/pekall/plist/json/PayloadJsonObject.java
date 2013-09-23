@@ -9,6 +9,7 @@ import com.pekall.plist.su.settings.advertise.AdvertiseDownloadSettings;
 import com.pekall.plist.su.settings.browser.BrowserSettings;
 import com.pekall.plist.su.settings.launcher.LauncherSettings;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,36 +23,18 @@ public class PayloadJsonObject {
     private PayloadPasswordPolicy payloadPasswordPolicy;
     private List<PayloadWifiConfig> payloadWifiConfigs;
 
-//    public List<PayloadWifiConfig> getPayloadWifiConfigs() {
-//        return payloadWifiConfigs;
-//    }
-//
-//    public void setPayloadWifiConfigs(List<PayloadWifiConfig> payloadWifiConfigs) {
-//        this.payloadWifiConfigs = payloadWifiConfigs;
-//    }
-//
-//    public void addPayloadWifiConfig(PayloadWifiConfig payloadWifiConfig) {
-//        if(this.payloadWifiConfigs == null){
-//            this.payloadWifiConfigs = new ArrayList<PayloadWifiConfig>();
-//        }
-//        this.payloadWifiConfigs.add(payloadWifiConfig);
-//    }
-
-
-    private PayloadWifiConfig payloadWifiConfig;
     private PayloadRestrictionsPolicy payloadRestrictionsPolicy;
-    private PayloadEmail payloadEmail;
-    private AdvertiseDownloadSettings advertiseDownloadSettings;
+    private List<PayloadEmail> payloadEmails;
 
-    private PayloadWebClip payloadWebClip;
+    private List<AdvertiseDownloadSettings> advertiseDownloadSettingses;
+    private List<PayloadWebClip> payloadWebClips;
 
     private PayloadRemovalPassword payloadRemovalPassword;
 
-    private PayloadLDAP payloadLDAP;
+    private List<PayloadLDAP> payloadLDAPs;
+    private List<PayloadExchange> payloadExchanges;
 
-    private PayloadExchange payloadExchange;
-
-    private PayloadVPN payloadVPN;
+    private List<PayloadVPN> payloadVPNs;
 
     private BrowserSettings browserSettings;
 
@@ -65,7 +48,9 @@ public class PayloadJsonObject {
 
     private SystemExceptionPolicy systemExceptionPolicy;
 
-    /**Android begin*/
+    /**
+     * Android begin
+     */
     private PayloadWallpaper payloadWallpaper;//壁纸
     private PayloadSecurityPolicy payloadSecurityPolicy;
     private PayloadRestrictionsAndroidPolicy payloadRestrictionsAndroidPolicy;
@@ -76,6 +61,111 @@ public class PayloadJsonObject {
     private PayloadActiveSyncPolicy payloadActiveSyncPolicy;
 
     private PayloadRoamingPolicy payloadRoamingPolicy;
+
+    public List<AdvertiseDownloadSettings> getAdvertiseDownloadSettingses() {
+        return advertiseDownloadSettingses;
+    }
+
+    public void setAdvertiseDownloadSettingses(List<AdvertiseDownloadSettings> advertiseDownloadSettingses) {
+        this.advertiseDownloadSettingses = advertiseDownloadSettingses;
+    }
+
+    public void addAdvertiseDownloadSettings(AdvertiseDownloadSettings payloadVPN) {
+        if (this.advertiseDownloadSettingses == null) {
+            this.advertiseDownloadSettingses = new ArrayList<AdvertiseDownloadSettings>();
+        }
+        this.advertiseDownloadSettingses.add(payloadVPN);
+    }
+
+    public List<PayloadVPN> getPayloadVPNs() {
+        return payloadVPNs;
+    }
+
+    public void setPayloadVPNs(List<PayloadVPN> payloadVPNs) {
+        this.payloadVPNs = payloadVPNs;
+    }
+
+    public void addPayloadVPN(PayloadVPN payloadVPN) {
+        if (this.payloadVPNs == null) {
+            this.payloadVPNs = new ArrayList<PayloadVPN>();
+        }
+        this.payloadVPNs.add(payloadVPN);
+    }
+
+    public List<PayloadExchange> getPayloadExchanges() {
+        return payloadExchanges;
+    }
+
+    public void setPayloadExchanges(List<PayloadExchange> payloadExchanges) {
+        this.payloadExchanges = payloadExchanges;
+    }
+
+    public void addPayloadExchange(PayloadExchange payloadExchange) {
+        if (this.payloadExchanges == null) {
+            this.payloadExchanges = new ArrayList<PayloadExchange>();
+        }
+        this.payloadExchanges.add(payloadExchange);
+    }
+
+    public List<PayloadLDAP> getPayloadLDAPs() {
+        return payloadLDAPs;
+    }
+
+    public void setPayloadLDAPs(List<PayloadLDAP> payloadLDAPs) {
+        this.payloadLDAPs = payloadLDAPs;
+    }
+
+    public void addPayloadLDAP(PayloadLDAP payloadLDAP) {
+        if (this.payloadLDAPs == null) {
+            this.payloadLDAPs = new ArrayList<PayloadLDAP>();
+        }
+        this.payloadLDAPs.add(payloadLDAP);
+    }
+
+    public List<PayloadWebClip> getPayloadWebClips() {
+        return payloadWebClips;
+    }
+
+    public void setPayloadWebClips(List<PayloadWebClip> payloadWebClips) {
+        this.payloadWebClips = payloadWebClips;
+    }
+
+    public void addPayloadWebClip(PayloadWebClip payloadWebClip) {
+        if (this.payloadWebClips == null) {
+            this.payloadWebClips = new ArrayList<PayloadWebClip>();
+        }
+        this.payloadWebClips.add(payloadWebClip);
+    }
+
+    public List<PayloadEmail> getPayloadEmails() {
+        return payloadEmails;
+    }
+
+    public void setPayloadEmails(List<PayloadEmail> payloadEmails) {
+        this.payloadEmails = payloadEmails;
+    }
+
+    public void addPayloadEmail(PayloadEmail payloadEmail) {
+        if (this.payloadEmails == null) {
+            this.payloadEmails = new ArrayList<PayloadEmail>();
+        }
+        this.payloadEmails.add(payloadEmail);
+    }
+
+    public List<PayloadWifiConfig> getPayloadWifiConfigs() {
+        return payloadWifiConfigs;
+    }
+
+    public void setPayloadWifiConfigs(List<PayloadWifiConfig> payloadWifiConfigs) {
+        this.payloadWifiConfigs = payloadWifiConfigs;
+    }
+
+    public void addPayloadWifiConfig(PayloadWifiConfig payloadWifiConfig) {
+        if (this.payloadWifiConfigs == null) {
+            this.payloadWifiConfigs = new ArrayList<PayloadWifiConfig>();
+        }
+        this.payloadWifiConfigs.add(payloadWifiConfig);
+    }
 
     public PayloadRoamingPolicy getPayloadRoamingPolicy() {
         return payloadRoamingPolicy;
@@ -93,7 +183,9 @@ public class PayloadJsonObject {
         this.payloadActiveSyncPolicy = payloadActiveSyncPolicy;
     }
 
-    /**Android end*/
+    /**
+     * Android end
+     */
 
 
     public PayloadBluetoothPolicy getPayloadBluetoothPolicy() {
@@ -192,37 +284,6 @@ public class PayloadJsonObject {
         this.browserSettings = browserSettings;
     }
 
-    public PayloadVPN getPayloadVPN() {
-        return payloadVPN;
-    }
-
-    public void setPayloadVPN(PayloadVPN payloadVPN) {
-        this.payloadVPN = payloadVPN;
-    }
-
-    public PayloadExchange getPayloadExchange() {
-        return payloadExchange;
-    }
-
-    public void setPayloadExchange(PayloadExchange payloadExchange) {
-        this.payloadExchange = payloadExchange;
-    }
-
-    public PayloadLDAP getPayloadLDAP() {
-        return payloadLDAP;
-    }
-
-    public void setPayloadLDAP(PayloadLDAP payloadLDAP) {
-        this.payloadLDAP = payloadLDAP;
-    }
-
-    public PayloadWebClip getPayloadWebClip() {
-        return payloadWebClip;
-    }
-
-    public void setPayloadWebClip(PayloadWebClip payloadWebClip) {
-        this.payloadWebClip = payloadWebClip;
-    }
 
     public PayloadRemovalPassword getPayloadRemovalPassword() {
         return payloadRemovalPassword;
@@ -230,22 +291,6 @@ public class PayloadJsonObject {
 
     public void setPayloadRemovalPassword(PayloadRemovalPassword payloadRemovalPassword) {
         this.payloadRemovalPassword = payloadRemovalPassword;
-    }
-
-    public AdvertiseDownloadSettings getAdvertiseDownloadSettings() {
-        return advertiseDownloadSettings;
-    }
-
-    public void setAdvertiseDownloadSettings(AdvertiseDownloadSettings advertiseDownloadSettings) {
-        this.advertiseDownloadSettings = advertiseDownloadSettings;
-    }
-
-    public PayloadEmail getPayloadEmail() {
-        return payloadEmail;
-    }
-
-    public void setPayloadEmail(PayloadEmail payloadEmail) {
-        this.payloadEmail = payloadEmail;
     }
 
     public PayloadPasswordPolicy getPayloadPasswordPolicy() {
@@ -264,22 +309,15 @@ public class PayloadJsonObject {
         this.payloadRestrictionsPolicy = payloadRestrictionsPolicy;
     }
 
-    public PayloadWifiConfig getPayloadWifiConfig() {
-        return payloadWifiConfig;
-    }
-
-    public void setPayloadWifiConfig(PayloadWifiConfig payloadWifiConfig) {
-        this.payloadWifiConfig = payloadWifiConfig;
-    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof PayloadJsonObject)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
 
         PayloadJsonObject that = (PayloadJsonObject) o;
 
-        if (advertiseDownloadSettings != null ? !advertiseDownloadSettings.equals(that.advertiseDownloadSettings) : that.advertiseDownloadSettings != null)
+        if (advertiseDownloadSettingses != null ? !advertiseDownloadSettingses.equals(that.advertiseDownloadSettingses) : that.advertiseDownloadSettingses != null)
             return false;
         if (appControlList != null ? !appControlList.equals(that.appControlList) : that.appControlList != null)
             return false;
@@ -289,20 +327,37 @@ public class PayloadJsonObject {
             return false;
         if (memorySizePolicy != null ? !memorySizePolicy.equals(that.memorySizePolicy) : that.memorySizePolicy != null)
             return false;
-        if (payloadEmail != null ? !payloadEmail.equals(that.payloadEmail) : that.payloadEmail != null) return false;
-        if (payloadExchange != null ? !payloadExchange.equals(that.payloadExchange) : that.payloadExchange != null)
+        if (payloadActiveSyncPolicy != null ? !payloadActiveSyncPolicy.equals(that.payloadActiveSyncPolicy) : that.payloadActiveSyncPolicy != null)
             return false;
-        if (payloadLDAP != null ? !payloadLDAP.equals(that.payloadLDAP) : that.payloadLDAP != null) return false;
+        if (payloadBluetoothPolicy != null ? !payloadBluetoothPolicy.equals(that.payloadBluetoothPolicy) : that.payloadBluetoothPolicy != null)
+            return false;
+        if (payloadEmails != null ? !payloadEmails.equals(that.payloadEmails) : that.payloadEmails != null)
+            return false;
+        if (payloadExchanges != null ? !payloadExchanges.equals(that.payloadExchanges) : that.payloadExchanges != null)
+            return false;
+        if (payloadLDAPs != null ? !payloadLDAPs.equals(that.payloadLDAPs) : that.payloadLDAPs != null) return false;
+        if (payloadNativeAppCtrlPolicy != null ? !payloadNativeAppCtrlPolicy.equals(that.payloadNativeAppCtrlPolicy) : that.payloadNativeAppCtrlPolicy != null)
+            return false;
+        if (payloadNetRestrictPolicy != null ? !payloadNetRestrictPolicy.equals(that.payloadNetRestrictPolicy) : that.payloadNetRestrictPolicy != null)
+            return false;
         if (payloadPasswordPolicy != null ? !payloadPasswordPolicy.equals(that.payloadPasswordPolicy) : that.payloadPasswordPolicy != null)
             return false;
         if (payloadRemovalPassword != null ? !payloadRemovalPassword.equals(that.payloadRemovalPassword) : that.payloadRemovalPassword != null)
             return false;
+        if (payloadRestrictionsAndroidPolicy != null ? !payloadRestrictionsAndroidPolicy.equals(that.payloadRestrictionsAndroidPolicy) : that.payloadRestrictionsAndroidPolicy != null)
+            return false;
         if (payloadRestrictionsPolicy != null ? !payloadRestrictionsPolicy.equals(that.payloadRestrictionsPolicy) : that.payloadRestrictionsPolicy != null)
             return false;
-        if (payloadVPN != null ? !payloadVPN.equals(that.payloadVPN) : that.payloadVPN != null) return false;
-        if (payloadWebClip != null ? !payloadWebClip.equals(that.payloadWebClip) : that.payloadWebClip != null)
+        if (payloadRoamingPolicy != null ? !payloadRoamingPolicy.equals(that.payloadRoamingPolicy) : that.payloadRoamingPolicy != null)
             return false;
-        if (payloadWifiConfig != null ? !payloadWifiConfig.equals(that.payloadWifiConfig) : that.payloadWifiConfig != null)
+        if (payloadSecurityPolicy != null ? !payloadSecurityPolicy.equals(that.payloadSecurityPolicy) : that.payloadSecurityPolicy != null)
+            return false;
+        if (payloadVPNs != null ? !payloadVPNs.equals(that.payloadVPNs) : that.payloadVPNs != null) return false;
+        if (payloadWallpaper != null ? !payloadWallpaper.equals(that.payloadWallpaper) : that.payloadWallpaper != null)
+            return false;
+        if (payloadWebClips != null ? !payloadWebClips.equals(that.payloadWebClips) : that.payloadWebClips != null)
+            return false;
+        if (payloadWifiConfigs != null ? !payloadWifiConfigs.equals(that.payloadWifiConfigs) : that.payloadWifiConfigs != null)
             return false;
         if (systemExceptionPolicy != null ? !systemExceptionPolicy.equals(that.systemExceptionPolicy) : that.systemExceptionPolicy != null)
             return false;
@@ -315,21 +370,29 @@ public class PayloadJsonObject {
     @Override
     public int hashCode() {
         int result = payloadPasswordPolicy != null ? payloadPasswordPolicy.hashCode() : 0;
-        result = 31 * result + (payloadWifiConfig != null ? payloadWifiConfig.hashCode() : 0);
+        result = 31 * result + (payloadWifiConfigs != null ? payloadWifiConfigs.hashCode() : 0);
         result = 31 * result + (payloadRestrictionsPolicy != null ? payloadRestrictionsPolicy.hashCode() : 0);
-        result = 31 * result + (payloadEmail != null ? payloadEmail.hashCode() : 0);
-        result = 31 * result + (advertiseDownloadSettings != null ? advertiseDownloadSettings.hashCode() : 0);
-        result = 31 * result + (payloadWebClip != null ? payloadWebClip.hashCode() : 0);
+        result = 31 * result + (payloadEmails != null ? payloadEmails.hashCode() : 0);
+        result = 31 * result + (advertiseDownloadSettingses != null ? advertiseDownloadSettingses.hashCode() : 0);
+        result = 31 * result + (payloadWebClips != null ? payloadWebClips.hashCode() : 0);
         result = 31 * result + (payloadRemovalPassword != null ? payloadRemovalPassword.hashCode() : 0);
-        result = 31 * result + (payloadLDAP != null ? payloadLDAP.hashCode() : 0);
-        result = 31 * result + (payloadExchange != null ? payloadExchange.hashCode() : 0);
-        result = 31 * result + (payloadVPN != null ? payloadVPN.hashCode() : 0);
+        result = 31 * result + (payloadLDAPs != null ? payloadLDAPs.hashCode() : 0);
+        result = 31 * result + (payloadExchanges != null ? payloadExchanges.hashCode() : 0);
+        result = 31 * result + (payloadVPNs != null ? payloadVPNs.hashCode() : 0);
         result = 31 * result + (browserSettings != null ? browserSettings.hashCode() : 0);
         result = 31 * result + (systemSettings != null ? systemSettings.hashCode() : 0);
         result = 31 * result + (launcherSettings != null ? launcherSettings.hashCode() : 0);
         result = 31 * result + (memorySizePolicy != null ? memorySizePolicy.hashCode() : 0);
         result = 31 * result + (appControlList != null ? appControlList.hashCode() : 0);
         result = 31 * result + (systemExceptionPolicy != null ? systemExceptionPolicy.hashCode() : 0);
+        result = 31 * result + (payloadWallpaper != null ? payloadWallpaper.hashCode() : 0);
+        result = 31 * result + (payloadSecurityPolicy != null ? payloadSecurityPolicy.hashCode() : 0);
+        result = 31 * result + (payloadRestrictionsAndroidPolicy != null ? payloadRestrictionsAndroidPolicy.hashCode() : 0);
+        result = 31 * result + (payloadNativeAppCtrlPolicy != null ? payloadNativeAppCtrlPolicy.hashCode() : 0);
+        result = 31 * result + (payloadNetRestrictPolicy != null ? payloadNetRestrictPolicy.hashCode() : 0);
+        result = 31 * result + (payloadBluetoothPolicy != null ? payloadBluetoothPolicy.hashCode() : 0);
+        result = 31 * result + (payloadActiveSyncPolicy != null ? payloadActiveSyncPolicy.hashCode() : 0);
+        result = 31 * result + (payloadRoamingPolicy != null ? payloadRoamingPolicy.hashCode() : 0);
         return result;
     }
 }

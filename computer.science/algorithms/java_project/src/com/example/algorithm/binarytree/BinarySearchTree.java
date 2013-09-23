@@ -133,11 +133,32 @@ public class BinarySearchTree {
         currentLevel = -1;
         System.out.println("tree dump:");
 
-        // todo: just hard code 10 here, need a function to detect the high or a node
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i <= getHeight(); i++) {
             printTreeLevel(root, i);
             System.out.println();
         }
     }
 
+    public int getHeight() {
+        if (root == null) return 0;
+        return height(root);
+    }
+
+    private int height(BinaryNode node) {
+        return heightInternal(node) - 1;
+    }
+
+    private int heightInternal(BinaryNode node) {
+        if (node == null)  return 0;
+        return 1 + Math.max(heightInternal(node.getLeft()), heightInternal(node.getRight()));
+    }
+
+    public int getSize() {
+        return size(root);
+    }
+
+    private int size(BinaryNode node) {
+        if(node == null) return 0;
+        return 1 + size(node.getLeft()) + size(node.getRight());
+    }
 }

@@ -197,6 +197,8 @@ public class PayloadEmail extends PayloadBase {
      */
     private Boolean vibrateOnNewEmailIfSilent;
 
+    private String IncomingMailServerIMAPPathPrefix;
+
     public PayloadEmail() {
         setPayloadType(PayloadBase.PAYLOAD_TYPE_EMAIL);
     }
@@ -445,68 +447,78 @@ public class PayloadEmail extends PayloadBase {
         this.vibrateOnNewEmailIfSilent = vibrateOnNewEmailIfSilent;
     }
 
+    public String getIncomingMailServerIMAPPathPrefix() {
+        return IncomingMailServerIMAPPathPrefix;
+    }
+
+    public void setIncomingMailServerIMAPPathPrefix(String incomingMailServerIMAPPathPrefix) {
+        IncomingMailServerIMAPPathPrefix = incomingMailServerIMAPPathPrefix;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof PayloadEmail)) return false;
         if (!super.equals(o)) return false;
 
-        PayloadEmail that = (PayloadEmail) o;
+        PayloadEmail email = (PayloadEmail) o;
 
-        if (EmailAccountDescription != null ? !EmailAccountDescription.equals(that.EmailAccountDescription) : that.EmailAccountDescription != null)
+        if (EmailAccountDescription != null ? !EmailAccountDescription.equals(email.EmailAccountDescription) : email.EmailAccountDescription != null)
             return false;
-        if (EmailAccountName != null ? !EmailAccountName.equals(that.EmailAccountName) : that.EmailAccountName != null)
+        if (EmailAccountName != null ? !EmailAccountName.equals(email.EmailAccountName) : email.EmailAccountName != null)
             return false;
-        if (EmailAccountType != null ? !EmailAccountType.equals(that.EmailAccountType) : that.EmailAccountType != null)
+        if (EmailAccountType != null ? !EmailAccountType.equals(email.EmailAccountType) : email.EmailAccountType != null)
             return false;
-        if (EmailAddress != null ? !EmailAddress.equals(that.EmailAddress) : that.EmailAddress != null) return false;
-        if (IncomingMailServerAuthentication != null ? !IncomingMailServerAuthentication.equals(that.IncomingMailServerAuthentication) : that.IncomingMailServerAuthentication != null)
+        if (EmailAddress != null ? !EmailAddress.equals(email.EmailAddress) : email.EmailAddress != null) return false;
+        if (IncomingMailServerAuthentication != null ? !IncomingMailServerAuthentication.equals(email.IncomingMailServerAuthentication) : email.IncomingMailServerAuthentication != null)
             return false;
-        if (IncomingMailServerHostName != null ? !IncomingMailServerHostName.equals(that.IncomingMailServerHostName) : that.IncomingMailServerHostName != null)
+        if (IncomingMailServerHostName != null ? !IncomingMailServerHostName.equals(email.IncomingMailServerHostName) : email.IncomingMailServerHostName != null)
             return false;
-        if (IncomingMailServerPortNumber != null ? !IncomingMailServerPortNumber.equals(that.IncomingMailServerPortNumber) : that.IncomingMailServerPortNumber != null)
+        if (IncomingMailServerIMAPPathPrefix != null ? !IncomingMailServerIMAPPathPrefix.equals(email.IncomingMailServerIMAPPathPrefix) : email.IncomingMailServerIMAPPathPrefix != null)
             return false;
-        if (IncomingMailServerUseSSL != null ? !IncomingMailServerUseSSL.equals(that.IncomingMailServerUseSSL) : that.IncomingMailServerUseSSL != null)
+        if (IncomingMailServerPortNumber != null ? !IncomingMailServerPortNumber.equals(email.IncomingMailServerPortNumber) : email.IncomingMailServerPortNumber != null)
             return false;
-        if (IncomingMailServerUsername != null ? !IncomingMailServerUsername.equals(that.IncomingMailServerUsername) : that.IncomingMailServerUsername != null)
+        if (IncomingMailServerUseSSL != null ? !IncomingMailServerUseSSL.equals(email.IncomingMailServerUseSSL) : email.IncomingMailServerUseSSL != null)
             return false;
-        if (IncomingPassword != null ? !IncomingPassword.equals(that.IncomingPassword) : that.IncomingPassword != null)
+        if (IncomingMailServerUsername != null ? !IncomingMailServerUsername.equals(email.IncomingMailServerUsername) : email.IncomingMailServerUsername != null)
             return false;
-        if (OutgoingMailServerAuthentication != null ? !OutgoingMailServerAuthentication.equals(that.OutgoingMailServerAuthentication) : that.OutgoingMailServerAuthentication != null)
+        if (IncomingPassword != null ? !IncomingPassword.equals(email.IncomingPassword) : email.IncomingPassword != null)
             return false;
-        if (OutgoingMailServerHostName != null ? !OutgoingMailServerHostName.equals(that.OutgoingMailServerHostName) : that.OutgoingMailServerHostName != null)
+        if (OutgoingMailServerAuthentication != null ? !OutgoingMailServerAuthentication.equals(email.OutgoingMailServerAuthentication) : email.OutgoingMailServerAuthentication != null)
             return false;
-        if (OutgoingMailServerPortNumber != null ? !OutgoingMailServerPortNumber.equals(that.OutgoingMailServerPortNumber) : that.OutgoingMailServerPortNumber != null)
+        if (OutgoingMailServerHostName != null ? !OutgoingMailServerHostName.equals(email.OutgoingMailServerHostName) : email.OutgoingMailServerHostName != null)
             return false;
-        if (OutgoingMailServerUseSSL != null ? !OutgoingMailServerUseSSL.equals(that.OutgoingMailServerUseSSL) : that.OutgoingMailServerUseSSL != null)
+        if (OutgoingMailServerPortNumber != null ? !OutgoingMailServerPortNumber.equals(email.OutgoingMailServerPortNumber) : email.OutgoingMailServerPortNumber != null)
             return false;
-        if (OutgoingMailServerUsername != null ? !OutgoingMailServerUsername.equals(that.OutgoingMailServerUsername) : that.OutgoingMailServerUsername != null)
+        if (OutgoingMailServerUseSSL != null ? !OutgoingMailServerUseSSL.equals(email.OutgoingMailServerUseSSL) : email.OutgoingMailServerUseSSL != null)
             return false;
-        if (OutgoingPassword != null ? !OutgoingPassword.equals(that.OutgoingPassword) : that.OutgoingPassword != null)
+        if (OutgoingMailServerUsername != null ? !OutgoingMailServerUsername.equals(email.OutgoingMailServerUsername) : email.OutgoingMailServerUsername != null)
             return false;
-        if (OutgoingPasswordSameAsIncomingPassword != null ? !OutgoingPasswordSameAsIncomingPassword.equals(that.OutgoingPasswordSameAsIncomingPassword) : that.OutgoingPasswordSameAsIncomingPassword != null)
+        if (OutgoingPassword != null ? !OutgoingPassword.equals(email.OutgoingPassword) : email.OutgoingPassword != null)
             return false;
-        if (PreventAppSheet != null ? !PreventAppSheet.equals(that.PreventAppSheet) : that.PreventAppSheet != null)
+        if (OutgoingPasswordSameAsIncomingPassword != null ? !OutgoingPasswordSameAsIncomingPassword.equals(email.OutgoingPasswordSameAsIncomingPassword) : email.OutgoingPasswordSameAsIncomingPassword != null)
             return false;
-        if (PreventMove != null ? !PreventMove.equals(that.PreventMove) : that.PreventMove != null) return false;
-        if (SMIMEEnabled != null ? !SMIMEEnabled.equals(that.SMIMEEnabled) : that.SMIMEEnabled != null) return false;
-        if (SMIMEEncryptionCertificateUUID != null ? !SMIMEEncryptionCertificateUUID.equals(that.SMIMEEncryptionCertificateUUID) : that.SMIMEEncryptionCertificateUUID != null)
+        if (PreventAppSheet != null ? !PreventAppSheet.equals(email.PreventAppSheet) : email.PreventAppSheet != null)
             return false;
-        if (SMIMESigningCertificateUUID != null ? !SMIMESigningCertificateUUID.equals(that.SMIMESigningCertificateUUID) : that.SMIMESigningCertificateUUID != null)
+        if (PreventMove != null ? !PreventMove.equals(email.PreventMove) : email.PreventMove != null) return false;
+        if (SMIMEEnabled != null ? !SMIMEEnabled.equals(email.SMIMEEnabled) : email.SMIMEEnabled != null) return false;
+        if (SMIMEEncryptionCertificateUUID != null ? !SMIMEEncryptionCertificateUUID.equals(email.SMIMEEncryptionCertificateUUID) : email.SMIMEEncryptionCertificateUUID != null)
             return false;
-        if (acceptAllCertForIncomingMail != null ? !acceptAllCertForIncomingMail.equals(that.acceptAllCertForIncomingMail) : that.acceptAllCertForIncomingMail != null)
+        if (SMIMESigningCertificateUUID != null ? !SMIMESigningCertificateUUID.equals(email.SMIMESigningCertificateUUID) : email.SMIMESigningCertificateUUID != null)
             return false;
-        if (acceptAllCertForOutgoingMail != null ? !acceptAllCertForOutgoingMail.equals(that.acceptAllCertForOutgoingMail) : that.acceptAllCertForOutgoingMail != null)
+        if (acceptAllCertForIncomingMail != null ? !acceptAllCertForIncomingMail.equals(email.acceptAllCertForIncomingMail) : email.acceptAllCertForIncomingMail != null)
             return false;
-        if (defaultAccount != null ? !defaultAccount.equals(that.defaultAccount) : that.defaultAccount != null)
+        if (acceptAllCertForOutgoingMail != null ? !acceptAllCertForOutgoingMail.equals(email.acceptAllCertForOutgoingMail) : email.acceptAllCertForOutgoingMail != null)
             return false;
-        if (disableMailRecentsSyncing != null ? !disableMailRecentsSyncing.equals(that.disableMailRecentsSyncing) : that.disableMailRecentsSyncing != null)
+        if (defaultAccount != null ? !defaultAccount.equals(email.defaultAccount) : email.defaultAccount != null)
             return false;
-        if (senderName != null ? !senderName.equals(that.senderName) : that.senderName != null) return false;
-        if (signature != null ? !signature.equals(that.signature) : that.signature != null) return false;
-        if (vibrateOnNewEmail != null ? !vibrateOnNewEmail.equals(that.vibrateOnNewEmail) : that.vibrateOnNewEmail != null)
+        if (disableMailRecentsSyncing != null ? !disableMailRecentsSyncing.equals(email.disableMailRecentsSyncing) : email.disableMailRecentsSyncing != null)
             return false;
-        if (vibrateOnNewEmailIfSilent != null ? !vibrateOnNewEmailIfSilent.equals(that.vibrateOnNewEmailIfSilent) : that.vibrateOnNewEmailIfSilent != null)
+        if (senderName != null ? !senderName.equals(email.senderName) : email.senderName != null) return false;
+        if (signature != null ? !signature.equals(email.signature) : email.signature != null) return false;
+        if (vibrateOnNewEmail != null ? !vibrateOnNewEmail.equals(email.vibrateOnNewEmail) : email.vibrateOnNewEmail != null)
+            return false;
+        if (vibrateOnNewEmailIfSilent != null ? !vibrateOnNewEmailIfSilent.equals(email.vibrateOnNewEmailIfSilent) : email.vibrateOnNewEmailIfSilent != null)
             return false;
 
         return true;
@@ -545,6 +557,7 @@ public class PayloadEmail extends PayloadBase {
         result = 31 * result + (signature != null ? signature.hashCode() : 0);
         result = 31 * result + (vibrateOnNewEmail != null ? vibrateOnNewEmail.hashCode() : 0);
         result = 31 * result + (vibrateOnNewEmailIfSilent != null ? vibrateOnNewEmailIfSilent.hashCode() : 0);
+        result = 31 * result + (IncomingMailServerIMAPPathPrefix != null ? IncomingMailServerIMAPPathPrefix.hashCode() : 0);
         return result;
     }
 
@@ -581,6 +594,7 @@ public class PayloadEmail extends PayloadBase {
                 ", signature='" + signature + '\'' +
                 ", vibrateOnNewEmail=" + vibrateOnNewEmail +
                 ", vibrateOnNewEmailIfSilent=" + vibrateOnNewEmailIfSilent +
+                ", IncomingMailServerIMAPPathPrefix='" + IncomingMailServerIMAPPathPrefix + '\'' +
                 '}';
     }
 }

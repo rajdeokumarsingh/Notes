@@ -6,31 +6,28 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 public class PostfixExpression {
-    private String[] tokens;
-
-    public String[] getTokens() {
-        return tokens;
-    }
+    private String[] infixExprTokens;
 
     /**
-     * Create a postfix expression
-     * @param expression
+     * Create a postfix expression from an infix expression
+     * @param infixExpr infix expression
      */
-    public PostfixExpression(String expression) {
-        // todo, need a tokenizer to parse the expression
+    public PostfixExpression(String infixExpr) {
+        // TODO: need a tokenizer to parse the expression
+        throw new UnsupportedOperationException();
     }
 
     /**
-     * Create a postfix expression
-     * @param expression tokens
+     * Create a postfix expression from an infix expression
+     * @param infixExpr infixExprTokens of a infix expression
      */
-    public PostfixExpression(String[] expression) {
-        // todo, need a lexer to check the grammar
-        tokens = expression;
+    public PostfixExpression(String[] infixExpr) {
+        // TODO: check the grammar
+        infixExprTokens = infixExpr;
     }
 
     /**
-     * Evaluate the expression
+     * Evaluate the postfix expression
      * @return value of the expression
      */
     public double evaluate() {
@@ -50,32 +47,32 @@ public class PostfixExpression {
         return values.pop();
     }
 
-    private double evaluate(double v1, double v2, String postfix) {
-        assert ("+".equals(postfix) || "-".equals(postfix)
-                || "*".equals(postfix) || "/".equals(postfix));
+    private double evaluate(double v1, double v2, String op) {
+        assert ("+".equals(op) || "-".equals(op)
+                || "*".equals(op) || "/".equals(op));
 
-        if("+".equals(postfix)) return v1 + v2;
-        if("-".equals(postfix)) return v1 - v2;
-        if("*".equals(postfix)) return v1 * v2;
-        if("/".equals(postfix)) return v1 / v2;
+        if("+".equals(op)) return v1 + v2;
+        if("-".equals(op)) return v1 - v2;
+        if("*".equals(op)) return v1 * v2;
+        if("/".equals(op)) return v1 / v2;
 
         throw new IllegalStateException();
     }
 
     /**
-     * Generate postfix expression
+     * Generate postfix expression from infix expression
      * @return postfix expression
      */
     public String[] generate() {
         ArrayList<String> postfix = new ArrayList<String>();
         Stack<String> operators = new Stack<String>();
-        for (String token : tokens) {
-            if(isOpenParen(token)) {
+        for (String token : infixExprTokens) {
+            if(isOpenParenthesis(token)) {
                 Debug.logVerbose("push: " + token);
                 operators.push(token);
                 continue;
             }
-            if (isCloseParen(token)) {
+            if (isCloseParenthesis(token)) {
                 String op = null;
                 while ((op = operators.pop()) != "(") {
                     Debug.logVerbose("add: " + op);
@@ -89,12 +86,12 @@ public class PostfixExpression {
                 continue;
             }
             if (isOperator(token)) {
-                if (operators.empty() || "(".equals(operators.peek())) {
+                if (operators.empty() || isOpenParenthesis(operators.peek())) {
                     Debug.logVerbose("push 1: " + token);
                     operators.push(token);
                     continue;
                 }
-                // operator not empty
+                // operator not empty and not "("
                 while (!operators.empty()) {
                     if (operatorPriority(token) > operatorPriority(operators.peek())) break;
 
@@ -117,11 +114,11 @@ public class PostfixExpression {
         return ret;
     }
 
-    private boolean isOpenParen(String token) {
+    private boolean isOpenParenthesis(String token) {
         return "(".equals(token);
     }
 
-    private boolean isCloseParen(String token) {
+    private boolean isCloseParenthesis(String token) {
         return ")".equals(token);
     }
 
@@ -145,13 +142,15 @@ public class PostfixExpression {
 
     private int operatorPriority(String op) {
         assert ("+".equals(op) || "-".equals(op)
-                || "*".equals(op) || "/".equals(op)
-                || "(".equals(op));
+                || "*".equals(op) || "/".equals(op));
 
         if ("+".equals(op) || "-".equals(op)) return 0;
         if ("*".equals(op) || "/".equals(op)) return 1;
-        if ("(".equals(op)) return -1;
 
         throw new IllegalStateException();
+    }
+
+    public String[] getInfixExprTokens() {
+        return infixExprTokens;
     }
 }

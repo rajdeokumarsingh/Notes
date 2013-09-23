@@ -19,12 +19,8 @@ public class CommandDeviceInfoStatusTest extends TestCase {
             "\t\t<string>test ios</string>\n" +
             "\t\t<key>BuildVersion</key>\n" +
             "\t\t<string>ios 12345</string>\n" +
-            "\t\t<key>DeviceCapacity</key>\n" +
-            "\t\t<real>0.0</real>\n" +
             "\t\t<key>AvailableDeviceCapacity</key>\n" +
             "\t\t<real>12345.5</real>\n" +
-            "\t\t<key>BatteryLevel</key>\n" +
-            "\t\t<real>0.0</real>\n" +
             "\t\t<key>CellularTechnology</key>\n" +
             "\t\t<integer>0</integer>\n" +
             "\t\t<key>BluetoothMAC</key>\n" +
@@ -33,14 +29,16 @@ public class CommandDeviceInfoStatusTest extends TestCase {
             "\t\t<string>xxxx-xxxxx-xxxx-xxxx</string>\n" +
             "\t\t<key>CarrierSettingsVersion</key>\n" +
             "\t\t<string>CMCC</string>\n" +
-            "\t\t<key>VoiceRoamingEnabled</key>\n" +
-            "\t\t<false/>\n" +
             "\t\t<key>DataRoamingEnabled</key>\n" +
             "\t\t<true/>\n" +
             "\t\t<key>IsRoaming</key>\n" +
             "\t\t<false/>\n" +
             "\t\t<key>CurrentMCC</key>\n" +
             "\t\t<string>CMCC</string>\n" +
+            "\t\t<key>HasSamsungSafeAPI</key>\n" +
+            "\t\t<true/>\n" +
+            "\t\t<key>CanDisableSystemFunction</key>\n" +
+            "\t\t<false/>\n" +
             "\t</dict>\n" +
             "\t<key>Status</key>\n" +
             "\t<string>Acknowledged</string>\n" +
@@ -67,6 +65,8 @@ public class CommandDeviceInfoStatusTest extends TestCase {
         status.getQueryResponses().setIsRoaming(false);
         status.getQueryResponses().setDeviceName("test ios");
         status.getQueryResponses().setWiFiMAC("xxxx-xxxxx-xxxx-xxxx");
+        status.getQueryResponses().setHasSamsungSafeAPI(true);
+        status.getQueryResponses().setCanDisableSystemFunction(false);
 
         NSDictionary root = PlistBeanConverter.createNdictFromBean(status);
         String xml = PlistXmlParser.toXml(root);
@@ -92,6 +92,8 @@ public class CommandDeviceInfoStatusTest extends TestCase {
         status.getQueryResponses().setIsRoaming(false);
         status.getQueryResponses().setDeviceName("test ios");
         status.getQueryResponses().setWiFiMAC("xxxx-xxxxx-xxxx-xxxx");
+        status.getQueryResponses().setHasSamsungSafeAPI(true);
+        status.getQueryResponses().setCanDisableSystemFunction(false);
 
         CommandStatusMsgParser parser = new CommandStatusMsgParser(TEST_XML);
         CommandDeviceInfoStatus status1 = (CommandDeviceInfoStatus) parser.getMessage();
@@ -118,7 +120,7 @@ public class CommandDeviceInfoStatusTest extends TestCase {
 
         DeviceInfoResp resp = msg.getQueryResponses();
         resp.setAvailableDeviceCapacity(5.5006752014160156);
-        resp.setBatteryLevel(1);
+        resp.setBatteryLevel(1.0);
         resp.setBluetoothMAC("c0:63:94:c0:58:6a");
         resp.setBuildVersion("10B329");
         resp.setCarrierSettingsVersion("14.0");
