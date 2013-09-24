@@ -34,6 +34,9 @@ public class PayloadXmlMsgParser {
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_VPN, PayloadVPN.class);
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_CERTIFICATE, PayloadCertificate.class);
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_ROAMING_POLICY, PayloadRoamingPolicy.class);
+        payloadTypes.put(PayloadBase.PAYLOAD_TYPE_CARD_DAV, PayloadCardDAVPolicy.class);
+        payloadTypes.put(PayloadBase.PAYLOAD_TYPE_CAL_DAV, PayloadCalDAVPolicy.class);
+        payloadTypes.put(PayloadBase.PAYLOAD_TYPE_CAL_SUB, PayloadCalSubscriptionPolicy.class);
 
         // Just for SU MDM
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_SE_BROWSER_SETTINGS, BrowserSettings.class);
