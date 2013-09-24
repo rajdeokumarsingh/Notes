@@ -66,7 +66,7 @@ public class CountingSortTest extends TestCase {
 
     public void testRandomTest() throws Exception {
         long begin = System.currentTimeMillis();
-        for (int i = 0; i < 500; i++) {
+        for (int i = 0; i < 5000; i++) {
             int[] array = RandomUtility.randomIntegerArray();
             int[] array1 = Arrays.copyOf(array, array.length);
             // CountingSort.sort2(array);
@@ -78,7 +78,7 @@ public class CountingSortTest extends TestCase {
 
     public void testPerformance() throws Exception {
         long begin = System.currentTimeMillis();
-        for (int i = 0; i < 500; i++) {
+        for (int i = 0; i < 5000; i++) {
             int[] array = RandomUtility.randomIntegerArray();
             CountingSort.sort2(array);
         }

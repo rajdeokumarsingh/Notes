@@ -1,19 +1,21 @@
 package com.pekall.plist.beans;
 
+import com.pekall.plist.su.device.DeviceInfoRespSU;
+
 /**
  * Status response for DeviceInformation
  */
 public class CommandDeviceInfoStatus extends CommandStatusMsg {
-    private DeviceInfoResp QueryResponses = new DeviceInfoResp();
+    private DeviceInfoRespSU QueryResponses = new DeviceInfoRespSU();
 
     public CommandDeviceInfoStatus() {
     }
 
-    public DeviceInfoResp getQueryResponses() {
+    public DeviceInfoRespSU getQueryResponses() {
         return QueryResponses;
     }
 
-    public void setQueryResponses(DeviceInfoResp queryResponses) {
+    public void setQueryResponses(DeviceInfoRespSU queryResponses) {
         QueryResponses = queryResponses;
     }
 

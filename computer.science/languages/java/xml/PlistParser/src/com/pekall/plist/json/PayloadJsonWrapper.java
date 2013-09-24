@@ -26,12 +26,12 @@ public class PayloadJsonWrapper extends PayloadBase {
         this.setPayloadDescription(arrayWrapper.getPayloadDescription());
         this.setPayloadOrganization(arrayWrapper.getPayloadOrganization());
 
-        this.setHasRemovalPasscode(this.getHasRemovalPasscode());
-        this.setIsEncrypted(this.getIsEncrypted());
-        this.setPayloadRemovalDisallowed(this.getPayloadRemovalDisallowed());
-        this.setPayloadScope(this.getPayloadScope());
-        this.setRemovalDate(this.getRemovalDate());
-        this.setDurationUntilRemoval(this.getDurationUntilRemoval());
+        this.setHasRemovalPasscode(arrayWrapper.getHasRemovalPasscode());
+        this.setIsEncrypted(arrayWrapper.getIsEncrypted());
+        this.setPayloadRemovalDisallowed(arrayWrapper.getPayloadRemovalDisallowed());
+        this.setPayloadScope(arrayWrapper.getPayloadScope());
+        this.setRemovalDate(arrayWrapper.getRemovalDate());
+        this.setDurationUntilRemoval(arrayWrapper.getDurationUntilRemoval());
         List<PayloadBase> payloadContent = arrayWrapper.getPayloadContent();
         if (payloadContent != null) {
             this.PayloadContent = new PayloadJsonObject();

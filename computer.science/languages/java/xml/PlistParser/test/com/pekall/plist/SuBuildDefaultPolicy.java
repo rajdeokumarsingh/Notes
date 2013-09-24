@@ -267,7 +267,7 @@ public class SuBuildDefaultPolicy extends TestCase {
         NSDictionary root = PlistBeanConverter.createNdictFromBean(profile);
         String xml = PlistXmlParser.toXml(root);
 
-        //PlistDebug.logTest(xml);
+        PlistDebug.logTest(xml);
 //        assertEquals(xml, TEST_XML);
     }
 
@@ -279,10 +279,10 @@ public class SuBuildDefaultPolicy extends TestCase {
         System.out.println(xml2Json(profile.toXml()));
 
         System.out.println("----------------------");
-        /*NSDictionary root = PlistBeanConverter.createNdictFromBean(profile);
-        String xml = PlistXmlParser.toXml(root);*/
+        NSDictionary root = PlistBeanConverter.createNdictFromBean(profile);
+        String xml = PlistXmlParser.toXml(root);
 
-        //PlistDebug.logTest(xml);
+        PlistDebug.logTest(xml);
 //        assertEquals(xml, TEST_XML);
     }
 

@@ -11,7 +11,7 @@ import junit.framework.TestCase;
 public class CommandDeviceInfoStatusSUTest extends TestCase {
 
     public void testGenXmlMsg() throws Exception {
-        CommandDeviceInfoStatusSU status = getStatusMsg();
+        CommandDeviceInfoStatus status = getStatusMsg();
         String xml = status.toXml();
         PlistDebug.logTest(xml);
 
@@ -20,14 +20,14 @@ public class CommandDeviceInfoStatusSUTest extends TestCase {
 
     public void testFromXml() throws Exception {
         CommandStatusMsgParser parser = new CommandStatusMsgParser(TEST_XML);
-        CommandDeviceInfoStatusSU status = (CommandDeviceInfoStatusSU) parser.getMessage();
+        CommandDeviceInfoStatus status = (CommandDeviceInfoStatus) parser.getMessage();
 
         assertEquals(status, getStatusMsg());
     }
 
     public void testTwoWay() throws Exception {
         CommandStatusMsgParser parser = new CommandStatusMsgParser(TEST_XML);
-        CommandDeviceInfoStatusSU status = (CommandDeviceInfoStatusSU) parser.getMessage();
+        CommandDeviceInfoStatus status = (CommandDeviceInfoStatus) parser.getMessage();
 
         assertEquals(status.toXml(), TEST_XML);
     }
@@ -75,8 +75,8 @@ public class CommandDeviceInfoStatusSUTest extends TestCase {
         return msg;
     }
 
-    private CommandDeviceInfoStatusSU getStatusMsg() {
-        CommandDeviceInfoStatusSU status = new CommandDeviceInfoStatusSU();
+    private CommandDeviceInfoStatus getStatusMsg() {
+        CommandDeviceInfoStatus status = new CommandDeviceInfoStatus();
         status.setStatus(CommandStatusMsg.CMD_STAT_ACKNOWLEDGED);
         status.setCommandUUID("aa483d15-168d-4022-b69f-dac292096176");
         status.setUDID("ce39b59afb1d7c4d3a6b7eb9f60608712cbbf2bd");
@@ -180,7 +180,7 @@ public class CommandDeviceInfoStatusSUTest extends TestCase {
             "<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n" +
             "<plist version=\"1.0\">\n" +
             "<dict>\n" +
-            "\t<key>QueryResponsesSU</key>\n" +
+            "\t<key>QueryResponses</key>\n" +
             "\t<dict>\n" +
             "\t\t<key>mobileVendor</key>\n" +
             "\t\t<string>CMCC</string>\n" +

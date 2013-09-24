@@ -4,6 +4,7 @@ import com.dd.plist.NSDictionary;
 import com.pekall.plist.beans.CommandDeviceInfoStatus;
 import com.pekall.plist.beans.CommandStatusMsg;
 import com.pekall.plist.beans.DeviceInfoResp;
+import com.pekall.plist.su.device.DeviceInfoRespSU;
 import junit.framework.TestCase;
 
 public class CommandDeviceInfoStatusTest extends TestCase {
@@ -118,7 +119,7 @@ public class CommandDeviceInfoStatusTest extends TestCase {
         msg.setStatus("Acknowledged");
         msg.setUDID("34ce984eb2c6d94f152144590492bf6dcce804d1");
 
-        DeviceInfoResp resp = msg.getQueryResponses();
+        DeviceInfoRespSU resp = msg.getQueryResponses();
         resp.setAvailableDeviceCapacity(5.5006752014160156);
         resp.setBatteryLevel(1.0);
         resp.setBluetoothMAC("c0:63:94:c0:58:6a");

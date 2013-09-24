@@ -47,24 +47,26 @@ public class CountingSort {
             return array;
         }
 
-        int max = internalMax(array);
-        int[] c = new int[max + 1];
+        final int MAX = internalMax(array);
+        int[] c = new int[MAX + 1];
         int[] b = new int[array.length];
 
-        for (int i = 0; i <= max; i++) {
+        for (int i = 0; i <= MAX; i++) {
             c[i] = 0;
         }
         for (int i = 0; i < array.length; i++) {
             // c[i] = |{key = i}|
             c[array[i]] = c[array[i]] + 1;
         }
-        for (int i = 1; i <= max; i++) {
+        for (int i = 1; i <= MAX; i++) {
             // c[i] = |{key <= i}|
             c[i] += c[i-1];
         }
         // System.out.println("a : " + Arrays.toString(array));
         // System.out.println("c : " + Arrays.toString(c));
-        for (int i = array.length - 1; i >= 0; i--) {
+        // good: for (int i = 0; i < array.length; i++) {
+        // good: for (int i = array.length - 1; i >= 0; i--) {
+        for (int i = 0; i < array.length; i++) {
             b[c[array[i]] - 1] = array[i];
             c[array[i]]--;
         }
