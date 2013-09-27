@@ -59,8 +59,8 @@ public class PayloadVPNTest extends TestCase {
         pppInfo.enableAuthProtocol();
         pppInfo.setAuthName("my vpn");
         pppInfo.setAuthPassword("123456");
-        pppInfo.setCCPEnabled(true);
-        pppInfo.setCCPMPPE128Enabled(true);
+        pppInfo.setCCPEnabled(0);
+        pppInfo.setCCPMPPE128Enabled(1);
         pppInfo.setCommRemoteAddress("test address");
         vpn.setPPP(pppInfo);
 
@@ -134,9 +134,9 @@ public class PayloadVPNTest extends TestCase {
             "\t\t\t\t\t<string>EAP</string>\n" +
             "\t\t\t\t</array>\n" +
             "\t\t\t\t<key>CCPMPPE128Enabled</key>\n" +
-            "\t\t\t\t<true/>\n" +
+            "\t\t\t\t<integer>1</integer>\n" +
             "\t\t\t\t<key>CCPEnabled</key>\n" +
-            "\t\t\t\t<true/>\n" +
+            "\t\t\t\t<integer>0</integer>\n" +
             "\t\t\t</dict>\n" +
             "\t\t\t<key>IPSec</key>\n" +
             "\t\t\t<dict>\n" +

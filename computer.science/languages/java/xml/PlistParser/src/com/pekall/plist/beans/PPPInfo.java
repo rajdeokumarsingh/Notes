@@ -49,12 +49,12 @@ public class PPPInfo {
     /**
      * See discussion under CCPEnabled. Used for PPTP.
      */
-    private Boolean CCPMPPE40Enabled;
+    private Integer CCPMPPE40Enabled;
 
     /**
      * See discussion under CCPEnabled. Used for PPTP.
      */
-    private Boolean CCPMPPE128Enabled;
+    private Integer CCPMPPE128Enabled;
 
     /**
      * Enables encryption on the connection. If this key and CCPMPPE40Enabled are true,
@@ -62,7 +62,7 @@ public class PPPInfo {
      * represents maximum encryption level. If no encryption is used,
      * then none of the CCP keys are true. Used for PPTP.
      */
-    private Boolean CCPEnabled;
+    private Integer CCPEnabled;
 
     public String getAuthName() {
         return AuthName;
@@ -110,27 +110,27 @@ public class PPPInfo {
         AuthProtocol.add(AUTH_PROT_ENTRY);
     }
 
-    public Boolean getCCPMPPE40Enabled() {
+    public Integer getCCPMPPE40Enabled() {
         return CCPMPPE40Enabled;
     }
 
-    public void setCCPMPPE40Enabled(Boolean CCPMPPE40Enabled) {
+    public void setCCPMPPE40Enabled(Integer CCPMPPE40Enabled) {
         this.CCPMPPE40Enabled = CCPMPPE40Enabled;
     }
 
-    public Boolean getCCPMPPE128Enabled() {
+    public Integer getCCPMPPE128Enabled() {
         return CCPMPPE128Enabled;
     }
 
-    public void setCCPMPPE128Enabled(Boolean CCPMPPE128Enabled) {
+    public void setCCPMPPE128Enabled(Integer CCPMPPE128Enabled) {
         this.CCPMPPE128Enabled = CCPMPPE128Enabled;
     }
 
-    public Boolean getCCPEnabled() {
+    public Integer getCCPEnabled() {
         return CCPEnabled;
     }
 
-    public void setCCPEnabled(Boolean CCPEnabled) {
+    public void setCCPEnabled(Integer CCPEnabled) {
         this.CCPEnabled = CCPEnabled;
     }
 
