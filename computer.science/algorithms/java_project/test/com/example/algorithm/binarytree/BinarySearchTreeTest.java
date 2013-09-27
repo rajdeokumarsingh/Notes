@@ -221,4 +221,25 @@ public class BinarySearchTreeTest extends TestCase {
         assertEquals(node.getValue(), 20);
         tree.dump();
     }
+
+    public void testTraversal() {
+
+        BinarySearchTree tree = new BinarySearchTree();
+
+        tree.insert(20);
+        tree.insert(10);
+        tree.insert(11);
+        tree.insert(15);
+        tree.insert(13);
+        tree.insert(30);
+        tree.insert(23);
+        tree.insert(28);
+        tree.insert(25);
+        tree.insert(21);
+        tree.dump();
+
+        tree.preorderTraversal();
+        tree.inorderTraversal();
+        tree.postorderTraversal();
+    }
 }

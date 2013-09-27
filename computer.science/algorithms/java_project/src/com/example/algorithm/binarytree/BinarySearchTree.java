@@ -144,6 +144,48 @@ public class BinarySearchTree {
         return height(root);
     }
 
+    public void preorderTraversal() {
+        System.out.println("tree preorder traversal: ");
+        preorderTraversalInternal(root);
+        System.out.println();
+    }
+
+    public void inorderTraversal() {
+        System.out.println("tree inorder traversal: ");
+        inorderTraversalInternal(root);
+        System.out.println();
+    }
+
+    public void postorderTraversal() {
+        System.out.println("tree postorder traversal: ");
+        postorderTraversalInternal(root);
+        System.out.println();
+    }
+
+    private void postorderTraversalInternal(BinaryNode node) {
+        if (node == null) return;
+
+        postorderTraversalInternal(node.getLeft());
+        postorderTraversalInternal(node.getRight());
+        System.out.print(node.getValue() + ", ");
+    }
+
+    private void inorderTraversalInternal(BinaryNode node) {
+        if (node == null) return;
+
+        inorderTraversalInternal(node.getLeft());
+        System.out.print(node.getValue() + ", ");
+        inorderTraversalInternal(node.getRight());
+    }
+
+    private void preorderTraversalInternal(BinaryNode node) {
+        if (node == null) return;
+
+        System.out.print(node.getValue() + ", ");
+        preorderTraversalInternal(node.getLeft());
+        preorderTraversalInternal(node.getRight());
+    }
+
     private int height(BinaryNode node) {
         return heightInternal(node) - 1;
     }

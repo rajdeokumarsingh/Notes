@@ -56,6 +56,9 @@ public class CommandMsgParser {
             } else if (CommandObject.REQ_TYPE_RM_DOC.equals(msg.getRequestType())) {
                 command = (CommandObject) PlistBeanConverter
                         .createBeanFromNdict(pc, CommandRemoveDocument.class);
+            } else if (CommandObject.REQ_TYPE_SEND_RES.equals(msg.getRequestType())) {
+                command = (CommandObject) PlistBeanConverter
+                        .createBeanFromNdict(pc, CommandSendResource.class);
             }
             if (command != null)  mMessage.setCommand(command);
         } catch (Exception e) {

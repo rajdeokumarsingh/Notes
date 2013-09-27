@@ -94,6 +94,17 @@ public class PayloadJsonWrapper extends PayloadBase {
                 }
                 else if (PayloadBase.PAYLOAD_TYPE_ROAMING_POLICY.equalsIgnoreCase(payload.getPayloadType())) {
                     this.PayloadContent.setPayloadRoamingPolicy((PayloadRoamingPolicy) payload);
+                } else if (PayloadBase.PAYLOAD_TYPE_CARD_DAV.equalsIgnoreCase(payload.getPayloadType())) {
+                    this.PayloadContent.addPayloadCardDAVPolicy((PayloadCardDAVPolicy) payload);
+                }else if (PayloadBase.PAYLOAD_TYPE_CAL_DAV.equalsIgnoreCase(payload.getPayloadType())) {
+                    this.PayloadContent.addPayloadCalDAVPolicy((PayloadCalDAVPolicy) payload);
+                }
+                else if (PayloadBase.PAYLOAD_TYPE_CAL_SUB.equalsIgnoreCase(payload.getPayloadType())) {
+                    this.PayloadContent.addPayloadCalSubscriptionPolicy((PayloadCalSubscriptionPolicy) payload);
+                }
+                else if (PayloadBase.PAYLOAD_TYPE_APN.equalsIgnoreCase(payload.getPayloadType())) {
+//                    this.PayloadContent.addPayloadCalSubscriptionPolicy((PayloadCalSubscriptionPolicy) payload);
+                    this.PayloadContent.setPayloadAPN((PayloadAPN) payload);
                 }
             }
         }
@@ -397,7 +408,31 @@ public class PayloadJsonWrapper extends PayloadBase {
             wrapper.addPayLoadContent(payloadRoamingPolicy);
         }
 
+        List<PayloadCardDAVPolicy> payloadCardDAVPolicies = payloadContent.getPayloadCardDAVPolicies();
+        if(payloadCardDAVPolicies != null){
+            for(PayloadCardDAVPolicy payloadCardDAVPolicy : payloadCardDAVPolicies){
+                wrapper.addPayLoadContent(payloadCardDAVPolicy);
+            }
+        }
 
+        List<PayloadCalDAVPolicy> payloadCalDAVPolicies = payloadContent.getPayloadCalDAVPolicies();
+        if(payloadCalDAVPolicies != null){
+            for(PayloadCalDAVPolicy payloadCalDAVPolicy : payloadCalDAVPolicies){
+                wrapper.addPayLoadContent(payloadCalDAVPolicy);
+            }
+        }
+
+        List<PayloadCalSubscriptionPolicy> payloadCalSubscriptionPolicies = payloadContent.getPayloadCalSubscriptionPolicies();
+        if(payloadCalSubscriptionPolicies != null){
+            for(PayloadCalSubscriptionPolicy payloadCalSubscriptionPolicy : payloadCalSubscriptionPolicies){
+                wrapper.addPayLoadContent(payloadCalSubscriptionPolicy);
+            }
+        }
+
+        PayloadAPN payloadAPN =  payloadContent.getPayloadAPN();
+        if(payloadAPN != null){
+            wrapper.addPayLoadContent(payloadAPN);
+        }
         return wrapper;
     }
 }

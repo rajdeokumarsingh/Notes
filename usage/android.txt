@@ -348,3 +348,5 @@ Hi Zhidong：
 我就是从网上下载的Android 4.0.3 R2 Compatibility Test Suite (CTS)，链接如下：
 http://source.android.com/compatibility/downloads.html
 附件是我写的CTS测试说明文档，可以参考一下！
+
+

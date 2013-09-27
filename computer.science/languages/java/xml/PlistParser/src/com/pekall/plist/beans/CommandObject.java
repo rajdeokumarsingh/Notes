@@ -135,6 +135,8 @@ public class CommandObject {
      */
     public static final String REQ_TYPE_SELECT_ERASE = "SelectErase";
 
+    public static final String REQ_TYPE_SEND_RES = "SendRes";
+
     // Request type, see REQ_TYPE_DEVICE_LOCK, ....
     private String RequestType;
 

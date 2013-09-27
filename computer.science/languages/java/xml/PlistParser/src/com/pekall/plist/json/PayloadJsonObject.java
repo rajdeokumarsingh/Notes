@@ -48,6 +48,14 @@ public class PayloadJsonObject {
 
     private SystemExceptionPolicy systemExceptionPolicy;
 
+    private List<PayloadCardDAVPolicy> payloadCardDAVPolicies;
+
+    private List<PayloadCalDAVPolicy> payloadCalDAVPolicies;
+
+    private List<PayloadCalSubscriptionPolicy> payloadCalSubscriptionPolicies;
+
+    private PayloadAPN payloadAPN;
+
     /**
      * Android begin
      */
@@ -61,6 +69,60 @@ public class PayloadJsonObject {
     private PayloadActiveSyncPolicy payloadActiveSyncPolicy;
 
     private PayloadRoamingPolicy payloadRoamingPolicy;
+
+
+    public PayloadAPN getPayloadAPN() {
+        return payloadAPN;
+    }
+
+    public void setPayloadAPN(PayloadAPN payloadAPN) {
+        this.payloadAPN = payloadAPN;
+    }
+
+    public List<PayloadCalDAVPolicy> getPayloadCalDAVPolicies() {
+        return payloadCalDAVPolicies;
+    }
+
+    public void setPayloadCalDAVPolicies(List<PayloadCalDAVPolicy> payloadCalDAVPolicies) {
+        this.payloadCalDAVPolicies = payloadCalDAVPolicies;
+    }
+
+    public void addPayloadCalDAVPolicy(PayloadCalDAVPolicy payloadVPN) {
+        if (this.payloadCalDAVPolicies == null) {
+            this.payloadCalDAVPolicies = new ArrayList<PayloadCalDAVPolicy>();
+        }
+        this.payloadCalDAVPolicies.add(payloadVPN);
+    }
+
+    public List<PayloadCalSubscriptionPolicy> getPayloadCalSubscriptionPolicies() {
+        return payloadCalSubscriptionPolicies;
+    }
+
+    public void setPayloadCalSubscriptionPolicies(List<PayloadCalSubscriptionPolicy> payloadCalSubscriptionPolicies) {
+        this.payloadCalSubscriptionPolicies = payloadCalSubscriptionPolicies;
+    }
+
+    public void addPayloadCalSubscriptionPolicy(PayloadCalSubscriptionPolicy payloadVPN) {
+        if (this.payloadCalSubscriptionPolicies == null) {
+            this.payloadCalSubscriptionPolicies = new ArrayList<PayloadCalSubscriptionPolicy>();
+        }
+        this.payloadCalSubscriptionPolicies.add(payloadVPN);
+    }
+
+    public List<PayloadCardDAVPolicy> getPayloadCardDAVPolicies() {
+        return payloadCardDAVPolicies;
+    }
+
+    public void setPayloadCardDAVPolicies(List<PayloadCardDAVPolicy> payloadCardDAVPolicies) {
+        this.payloadCardDAVPolicies = payloadCardDAVPolicies;
+    }
+
+    public void addPayloadCardDAVPolicy(PayloadCardDAVPolicy payloadVPN) {
+        if (this.payloadCardDAVPolicies == null) {
+            this.payloadCardDAVPolicies = new ArrayList<PayloadCardDAVPolicy>();
+        }
+        this.payloadCardDAVPolicies.add(payloadVPN);
+    }
 
     public List<AdvertiseDownloadSettings> getAdvertiseDownloadSettingses() {
         return advertiseDownloadSettingses;
@@ -313,7 +375,7 @@ public class PayloadJsonObject {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof PayloadJsonObject)) return false;
 
         PayloadJsonObject that = (PayloadJsonObject) o;
 
@@ -330,6 +392,12 @@ public class PayloadJsonObject {
         if (payloadActiveSyncPolicy != null ? !payloadActiveSyncPolicy.equals(that.payloadActiveSyncPolicy) : that.payloadActiveSyncPolicy != null)
             return false;
         if (payloadBluetoothPolicy != null ? !payloadBluetoothPolicy.equals(that.payloadBluetoothPolicy) : that.payloadBluetoothPolicy != null)
+            return false;
+        if (payloadCalDAVPolicies != null ? !payloadCalDAVPolicies.equals(that.payloadCalDAVPolicies) : that.payloadCalDAVPolicies != null)
+            return false;
+        if (payloadCalSubscriptionPolicies != null ? !payloadCalSubscriptionPolicies.equals(that.payloadCalSubscriptionPolicies) : that.payloadCalSubscriptionPolicies != null)
+            return false;
+        if (payloadCardDAVPolicies != null ? !payloadCardDAVPolicies.equals(that.payloadCardDAVPolicies) : that.payloadCardDAVPolicies != null)
             return false;
         if (payloadEmails != null ? !payloadEmails.equals(that.payloadEmails) : that.payloadEmails != null)
             return false;
@@ -385,6 +453,9 @@ public class PayloadJsonObject {
         result = 31 * result + (memorySizePolicy != null ? memorySizePolicy.hashCode() : 0);
         result = 31 * result + (appControlList != null ? appControlList.hashCode() : 0);
         result = 31 * result + (systemExceptionPolicy != null ? systemExceptionPolicy.hashCode() : 0);
+        result = 31 * result + (payloadCardDAVPolicies != null ? payloadCardDAVPolicies.hashCode() : 0);
+        result = 31 * result + (payloadCalDAVPolicies != null ? payloadCalDAVPolicies.hashCode() : 0);
+        result = 31 * result + (payloadCalSubscriptionPolicies != null ? payloadCalSubscriptionPolicies.hashCode() : 0);
         result = 31 * result + (payloadWallpaper != null ? payloadWallpaper.hashCode() : 0);
         result = 31 * result + (payloadSecurityPolicy != null ? payloadSecurityPolicy.hashCode() : 0);
         result = 31 * result + (payloadRestrictionsAndroidPolicy != null ? payloadRestrictionsAndroidPolicy.hashCode() : 0);
