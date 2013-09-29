@@ -1,9 +1,6 @@
 package com.pekall.plist;
 
-import com.pekall.plist.beans.IPSecInfo;
-import com.pekall.plist.beans.PPPInfo;
-import com.pekall.plist.beans.PayloadArrayWrapper;
-import com.pekall.plist.beans.PayloadVPN;
+import com.pekall.plist.beans.*;
 import junit.framework.TestCase;
 
 public class PayloadVPNTest extends TestCase {
@@ -61,6 +58,7 @@ public class PayloadVPNTest extends TestCase {
         pppInfo.setAuthPassword("123456");
         pppInfo.setCCPEnabled(0);
         pppInfo.setCCPMPPE128Enabled(1);
+        pppInfo.setCCPMPPE40Enabled(1);
         pppInfo.setCommRemoteAddress("test address");
         vpn.setPPP(pppInfo);
 
@@ -76,6 +74,14 @@ public class PayloadVPNTest extends TestCase {
         }
         ipSecInfo.setSharedSecret(data);
         vpn.setIPSec(ipSecInfo);
+
+        VpnProxies proxies = new VpnProxies();
+        proxies.setHTTPEnable(1);
+        proxies.setHTTPProxy("192.168.10.230");
+        proxies.setHTTPPort(80);
+        proxies.setHTTPProxyPassword("123");
+        proxies.setHTTPProxyUsername("wjl");
+        vpn.setProxies(proxies);
 
         vpn.setServerHostName("192.168.10.220");
         vpn.setAccount("ray");
@@ -133,6 +139,8 @@ public class PayloadVPNTest extends TestCase {
             "\t\t\t\t<array>\n" +
             "\t\t\t\t\t<string>EAP</string>\n" +
             "\t\t\t\t</array>\n" +
+            "\t\t\t\t<key>CCPMPPE40Enabled</key>\n" +
+            "\t\t\t\t<integer>1</integer>\n" +
             "\t\t\t\t<key>CCPMPPE128Enabled</key>\n" +
             "\t\t\t\t<integer>1</integer>\n" +
             "\t\t\t\t<key>CCPEnabled</key>\n" +
@@ -154,6 +162,19 @@ public class PayloadVPNTest extends TestCase {
             "\t\t\t\t</data>\n" +
             "\t\t\t\t<key>PromptForVPNPIN</key>\n" +
             "\t\t\t\t<true/>\n" +
+            "\t\t\t</dict>\n" +
+            "\t\t\t<key>Proxies</key>\n" +
+            "\t\t\t<dict>\n" +
+            "\t\t\t\t<key>HTTPEnable</key>\n" +
+            "\t\t\t\t<integer>1</integer>\n" +
+            "\t\t\t\t<key>HTTPPort</key>\n" +
+            "\t\t\t\t<integer>80</integer>\n" +
+            "\t\t\t\t<key>HTTPProxy</key>\n" +
+            "\t\t\t\t<string>192.168.10.230</string>\n" +
+            "\t\t\t\t<key>HTTPProxyPassword</key>\n" +
+            "\t\t\t\t<string>123</string>\n" +
+            "\t\t\t\t<key>HTTPProxyUsername</key>\n" +
+            "\t\t\t\t<string>wjl</string>\n" +
             "\t\t\t</dict>\n" +
             "\t\t\t<key>serverHostName</key>\n" +
             "\t\t\t<string>192.168.10.220</string>\n" +
@@ -209,5 +230,4 @@ public class PayloadVPNTest extends TestCase {
             "\t<string>Pekall Capital</string>\n" +
             "</dict>\n" +
             "</plist>";
-
 }
