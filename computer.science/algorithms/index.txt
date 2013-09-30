@@ -3,6 +3,12 @@ Solving recurrences
     2. Verify   by induction
     3. Solve    for constants.
 
+    when use recurrences
+        from top to bottom
+
+    when not use recurrences
+        from bottom to top
+
 Recursion Tree
     Draw Recursion tree
 
@@ -27,3 +33,4 @@ Reference:
         http://math.nist.gov/javanumerics/jama/
 
 error.txt
+

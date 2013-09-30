@@ -39,6 +39,8 @@ public class PayloadVPN extends PayloadBase {
     private PPPInfo PPP;
     private IPSecInfo IPSec;
 
+    private VpnProxies Proxies;
+
     /**
      * Host name or ip address of the VPN server
      * Just for android.
@@ -219,10 +221,18 @@ public class PayloadVPN extends PayloadBase {
         this.proxyPassword = proxyPassword;
     }
 
+    public VpnProxies getProxies() {
+        return Proxies;
+    }
+
+    public void setProxies(VpnProxies proxies) {
+        Proxies = proxies;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof PayloadVPN)) return false;
         if (!super.equals(o)) return false;
 
         PayloadVPN that = (PayloadVPN) o;
@@ -231,6 +241,7 @@ public class PayloadVPN extends PayloadBase {
         if (OverridePrimary != null ? !OverridePrimary.equals(that.OverridePrimary) : that.OverridePrimary != null)
             return false;
         if (PPP != null ? !PPP.equals(that.PPP) : that.PPP != null) return false;
+        if (Proxies != null ? !Proxies.equals(that.Proxies) : that.Proxies != null) return false;
         if (UserDefinedName != null ? !UserDefinedName.equals(that.UserDefinedName) : that.UserDefinedName != null)
             return false;
         if (VPNType != null ? !VPNType.equals(that.VPNType) : that.VPNType != null) return false;
@@ -261,6 +272,7 @@ public class PayloadVPN extends PayloadBase {
         result = 31 * result + (VPNType != null ? VPNType.hashCode() : 0);
         result = 31 * result + (PPP != null ? PPP.hashCode() : 0);
         result = 31 * result + (IPSec != null ? IPSec.hashCode() : 0);
+        result = 31 * result + (Proxies != null ? Proxies.hashCode() : 0);
         result = 31 * result + (serverHostName != null ? serverHostName.hashCode() : 0);
         result = 31 * result + (account != null ? account.hashCode() : 0);
         result = 31 * result + (userAuth != null ? userAuth.hashCode() : 0);
@@ -277,13 +289,14 @@ public class PayloadVPN extends PayloadBase {
     @Override
     public String toString() {
         return "PayloadVPN{" +
-                "UserDefinedName='" + UserDefinedName + '\'' +
+                "account='" + account + '\'' +
+                ", UserDefinedName='" + UserDefinedName + '\'' +
                 ", OverridePrimary=" + OverridePrimary +
                 ", VPNType='" + VPNType + '\'' +
                 ", PPP=" + PPP +
                 ", IPSec=" + IPSec +
+                ", Proxies=" + Proxies +
                 ", serverHostName='" + serverHostName + '\'' +
-                ", account='" + account + '\'' +
                 ", userAuth='" + userAuth + '\'' +
                 ", password='" + password + '\'' +
                 ", sharedPassword='" + sharedPassword + '\'' +
@@ -292,6 +305,6 @@ public class PayloadVPN extends PayloadBase {
                 ", proxyPort=" + proxyPort +
                 ", proxyUserName='" + proxyUserName + '\'' +
                 ", proxyPassword='" + proxyPassword + '\'' +
-                '}';
+                "} " + super.toString();
     }
 }

@@ -2,20 +2,13 @@ package com.example.algorithm.binarytree;
 
 import java.util.*;
 
-public class BinarySearchTree {
+public class BinarySearchTree extends BinaryTree {
     private BinaryNode root;
 
     // for layer traversal
     private HashMap<Integer, List<BinaryNode>> layerMap;
 
-    // for dump debug information
-    private int currentLevel = -1;
-
-    public BinaryNode getRoot() {
-        return root;
-    }
-
-    void insert(int value) {
+    public void insert(int value) {
         if (root == null) {
             root = new BinaryNode(value);
             return;
@@ -105,92 +98,6 @@ public class BinarySearchTree {
         return new BinaryNode(ret);
     }
 
-    private void printTreeLevel(BinaryNode node, int level) {
-        currentLevel++;
-        try {
-            if(node == null) return;
-            if(currentLevel == level) {
-                StringBuilder sb = new StringBuilder(node.getValue() + "(");
-                if (node.getLeft() != null) {
-                    sb.append(node.getLeft().getValue() + ",");
-                } else {
-                    sb.append("null,");
-                }
-                if (node.getRight() != null) {
-                    sb.append(node.getRight().getValue() + ")  ");
-                } else {
-                    sb.append("null)  ");
-                }
-                System.out.print(sb.toString());
-                return;
-            }
-            if (currentLevel > level) {
-                return;
-            }
-            printTreeLevel(node.getLeft(), level);
-            printTreeLevel(node.getRight(), level);
-        } finally {
-            currentLevel--;
-        }
-    }
-
-    public void dump() {
-        currentLevel = -1;
-        System.out.println("tree dump:");
-
-        for (int i = 0; i <= getHeight(); i++) {
-            printTreeLevel(root, i);
-            System.out.println();
-        }
-    }
-
-    public int getHeight() {
-        if (root == null) return 0;
-        return height(root);
-    }
-
-    public void preorderTraversal() {
-        System.out.println("tree preorder traversal: ");
-        preorderTraversalInternal(root);
-        System.out.println();
-    }
-
-    public void inorderTraversal() {
-        System.out.println("tree inorder traversal: ");
-        inorderTraversalInternal(root);
-        System.out.println();
-    }
-
-    public void postorderTraversal() {
-        System.out.println("tree postorder traversal: ");
-        postorderTraversalInternal(root);
-        System.out.println();
-    }
-
-    private void postorderTraversalInternal(BinaryNode node) {
-        if (node == null) return;
-
-        postorderTraversalInternal(node.getLeft());
-        postorderTraversalInternal(node.getRight());
-        System.out.print(node.getValue() + ", ");
-    }
-
-    private void inorderTraversalInternal(BinaryNode node) {
-        if (node == null) return;
-
-        inorderTraversalInternal(node.getLeft());
-        System.out.print(node.getValue() + ", ");
-        inorderTraversalInternal(node.getRight());
-    }
-
-    private void preorderTraversalInternal(BinaryNode node) {
-        if (node == null) return;
-
-        System.out.print(node.getValue() + ", ");
-        preorderTraversalInternal(node.getLeft());
-        preorderTraversalInternal(node.getRight());
-    }
-
     public void layerOrderTraversal() {
         layerMap = new HashMap<Integer, List<BinaryNode>>();
         currentLevel = -1;
@@ -239,23 +146,5 @@ public class BinarySearchTree {
         layerOrderTraversalInternal(node.getRight());
 
         currentLevel--;
-    }
-
-    private int height(BinaryNode node) {
-        return heightInternal(node) - 1;
-    }
-
-    private int heightInternal(BinaryNode node) {
-        if (node == null)  return 0;
-        return 1 + Math.max(heightInternal(node.getLeft()), heightInternal(node.getRight()));
-    }
-
-    public int getSize() {
-        return size(root);
-    }
-
-    private int size(BinaryNode node) {
-        if(node == null) return 0;
-        return 1 + size(node.getLeft()) + size(node.getRight());
     }
 }

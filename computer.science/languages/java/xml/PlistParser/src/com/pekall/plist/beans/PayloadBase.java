@@ -30,6 +30,7 @@ public class PayloadBase extends BeanBase {
     public static final String PAYLOAD_TYPE_CAL_DAV = "com.apple.caldav.account";
     public static final String PAYLOAD_TYPE_CAL_SUB = "com.apple.subscribedcalendar.account";
     public static final String PAYLOAD_TYPE_APN = "com.apple.apn.managed";
+    public static final String PAYLOAD_TYPE_APP_LOCK = "com.apple.app.lock";
 
     // Just for SU MDM project
     public static final String PAYLOAD_TYPE_SE_BROWSER_SETTINGS = "com.pekall.sebrowser.settings";

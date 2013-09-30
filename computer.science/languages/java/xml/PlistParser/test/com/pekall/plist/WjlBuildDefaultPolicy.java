@@ -89,164 +89,117 @@ public class WjlBuildDefaultPolicy extends TestCase {
 
 
     public static final String JSON_CONTENT = "{\n" +
-            "    \"PayloadContent\": {\n" +
-            "        \"payloadWifiConfigs\": [\n" +
-            "            {\n" +
-            "                \"SSID_STR\": \"pekall_work\",\n" +
-            "                \"HIDDEN_NETWORK\": false,\n" +
-            "                \"AutoJoin\": true,\n" +
-            "                \"EncryptionType\": \"WPA\",\n" +
-            "                \"Password\": \"pekallcloud\",\n" +
-            "                \"PayloadType\": \"com.apple.wifi.managed\",\n" +
-            "                \"PayloadVersion\": 1,\n" +
-            "                \"PayloadIdentifier\": \"com.pekall.config.wifi.managed\",\n" +
-            "                \"PayloadUUID\": \"a0b6b2fd-4a4b-4160-8a24-36f96e978a51\",\n" +
-            "                \"PayloadDisplayName\": \"WIFI配置\",\n" +
-            "                \"PayloadDescription\": \"WIFI相关配置\",\n" +
-            "                \"PayloadOrganization\": \"Pekall Capital\"\n" +
-            "            }\n" +
-            "        ],\n" +
-            "        \"payloadEmails\": [\n" +
-            "            {\n" +
-            "                \"EmailAccountDescription\": \"test email account\",\n" +
-            "                \"EmailAccountType\": \"EmailTypeIMAP\",\n" +
-            "                \"EmailAddress\": \"test_mdm@pekall.com\",\n" +
-            "                \"IncomingMailServerAuthentication\": \"EmailAuthPassword\",\n" +
-            "                \"IncomingMailServerHostName\": \"mail.pekall.com\",\n" +
-            "                \"IncomingMailServerPortNumber\": 993,\n" +
-            "                \"IncomingMailServerUseSSL\": true,\n" +
-            "                \"IncomingMailServerUsername\": \"test_mdm\",\n" +
-            "                \"IncomingPassword\": \"123456\",\n" +
-            "                \"OutgoingPasswordSameAsIncomingPassword\": true,\n" +
-            "                \"OutgoingMailServerAuthentication\": \"EmailAuthPassword\",\n" +
-            "                \"OutgoingMailServerHostName\": \"mail.pekall.com\",\n" +
-            "                \"OutgoingMailServerPortNumber\": 587,\n" +
-            "                \"OutgoingMailServerUseSSL\": true,\n" +
-            "                \"OutgoingMailServerUsername\": \"test_mdm\",\n" +
-            "                \"PreventMove\": false,\n" +
-            "                \"PreventAppSheet\": true,\n" +
-            "                \"SMIMEEnabled\": false,\n" +
-            "                \"disableMailRecentsSyncing\": true,\n" +
-            "                \"PayloadType\": \"com.apple.mail.managed\",\n" +
-            "                \"PayloadVersion\": 1,\n" +
-            "                \"PayloadIdentifier\": \"com.pekall.profile.email\",\n" +
-            "                \"PayloadUUID\": \"4168853b-0a0a-4daa-bc7f-5de9c00e3f8f\",\n" +
-            "                \"PayloadDisplayName\": \"Email配置\",\n" +
-            "                \"PayloadDescription\": \"Email相关配置\",\n" +
-            "                \"PayloadOrganization\": \"Pekall Captital\"\n" +
-            "            }\n" +
-            "        ],\n" +
-            "        \"payloadVPNs\": [\n" +
-            "            {\n" +
-            "                \"UserDefinedName\": \"test vpn\",\n" +
-            "                \"OverridePrimary\": true,\n" +
-            "                \"VPNType\": \"PPTP\",\n" +
-            "                \"PPP\": {\n" +
-            "                    \"AuthName\": \"ooo4561213\",\n" +
-            "                    \"AuthPassword\": \"xxxxxxxx\",\n" +
-            "                    \"CommRemoteAddress\": \"mail.pekall.com\",\n" +
-            "                    \"CCPMPPE128Enabled\": false,\n" +
-            "                    \"CCPEnabled\": false\n" +
-            "                },\n" +
-            "                \"PayloadType\": \"com.apple.vpn.managed\",\n" +
-            "                \"PayloadVersion\": 1,\n" +
-            "                \"PayloadIdentifier\": \"com.pekall.profile.VPN\",\n" +
-            "                \"PayloadUUID\": \"0f6d5598-4f47-45c0-8b3e-c1c21a43fdab\",\n" +
-            "                \"PayloadDisplayName\": \"VPN配置\",\n" +
-            "                \"PayloadDescription\": \"VPN相关配置\",\n" +
-            "                \"PayloadOrganization\": \"Pekall Captital\"\n" +
-            "            }\n" +
-            "        ],\n" +
-            "        \"payloadCardDAVPolicies\": [\n" +
-            "            {\n" +
-            "                \"CardDAVAccountDescription\": \"My CardDAV 账户\",\n" +
-            "                \"CardDAVHostName\": \"google.com\",\n" +
-            "                \"CardDAVUsername\": \"pekallqq\",\n" +
-            "                \"CardDAVPassword\": \"pekallqqq\",\n" +
-            "                \"CardDAVUseSSL\": true,\n" +
-            "                \"CardDAVPort\": 8443,\n" +
-            "                \"PayloadType\": \"com.apple.carddav.account\",\n" +
-            "                \"PayloadVersion\": 1,\n" +
-            "                \"PayloadIdentifier\": \"com.apple.profile.carddav.account\",\n" +
-            "                \"PayloadUUID\": \"c1120b66-660a-4888-9b26-f77983dfc56f\",\n" +
-            "                \"PayloadDisplayName\": \"card dav配置\",\n" +
-            "                \"PayloadDescription\": \"card dav相关配置\",\n" +
-            "                \"PayloadOrganization\": \"Pekall Captital\"\n" +
-            "            }\n" +
-            "        ],\n" +
-            "        \"payloadCalDAVPolicies\": [\n" +
-            "            {\n" +
-            "                \"CalDAVAccountDescription\": \"My CarlDAV 账户\",\n" +
-            "                \"CalDAVHostName\": \"google.com\",\n" +
-            "                \"CalDAVUsername\": \"pekalqq\",\n" +
-            "                \"CalDAVPassword\": \"pekallqqq\",\n" +
-            "                \"CalDAVUseSSL\": true,\n" +
-            "                \"CalDAVPort\": 8443,\n" +
-            "                \"PayloadType\": \"com.apple.caldav.account\",\n" +
-            "                \"PayloadVersion\": 1,\n" +
-            "                \"PayloadIdentifier\": \"com.apple.profile.caldav.account\",\n" +
-            "                \"PayloadUUID\": \"93f1ff8e-cd19-4e9a-86ea-8b9507be4c9e\",\n" +
-            "                \"PayloadDisplayName\": \"cal dav配置\",\n" +
-            "                \"PayloadDescription\": \"cal dav相关配置\",\n" +
-            "                \"PayloadOrganization\": \"Pekall Captital\"\n" +
-            "            }\n" +
-            "        ],\n" +
-            "        \"payloadCalSubscriptionPolicies\": [\n" +
-            "            {\n" +
-            "                \"SubCalAccountDescription\": \"test account\",\n" +
-            "                \"SubCalAccountHostName\": \"www.pekall.com\",\n" +
-            "                \"SubCalAccountUsername\": \"wjl\",\n" +
-            "                \"SubCalAccountPassword\": \"123456\",\n" +
-            "                \"SubCalAccountUseSSL\": true,\n" +
-            "                \"PayloadType\": \"com.apple.subscribedcalendar.account\",\n" +
-            "                \"PayloadVersion\": 1,\n" +
-            "                \"PayloadIdentifier\": \"com.apple.profile.subscribedcalendar.account\",\n" +
-            "                \"PayloadUUID\": \"527eb811-efa2-4e1b-bdf8-528c57f465c0\",\n" +
-            "                \"PayloadDisplayName\": \"cal subscription配置\",\n" +
-            "                \"PayloadDescription\": \"cal subscription相关配置\",\n" +
-            "                \"PayloadOrganization\": \"Pekall Captital\"\n" +
-            "            }\n" +
-            "        ],\n" +
-            "        \"payloadAPN\": {\n" +
-            "            \"PayloadContent\": [\n" +
-            "                {\n" +
-            "                    \"DefaultsDomainName\": \"com.apple.managedCarrier\",\n" +
-            "                    \"DefaultsData\": {\n" +
-            "                        \"apns\": [\n" +
-            "                            {\n" +
-            "                                \"apn\": \"cmwap\",\n" +
-            "                                \"username\": \"Ray\",\n" +
-            "                                \"password\": [\n" +
-            "                                    0,\n" +
-            "                                    1,\n" +
-            "                                    2,\n" +
-            "                                    3,\n" +
-            "                                    4\n" +
-            "                                ],\n" +
-            "                                \"proxy\": \"10.0.0.72\",\n" +
-            "                                \"proxyPort\": 80\n" +
-            "                            }\n" +
-            "                        ]\n" +
-            "                    }\n" +
-            "                }\n" +
-            "            ],\n" +
-            "            \"PayloadType\": \"com.apple.apn.managed\",\n" +
-            "            \"PayloadVersion\": 1,\n" +
-            "            \"PayloadIdentifier\": \"com.apple.profile.apn.managed\",\n" +
-            "            \"PayloadUUID\": \"c9738ccb-bf88-44c0-8b7a-e4708d9f5593\",\n" +
-            "            \"PayloadDisplayName\": \"APN配置\",\n" +
-            "            \"PayloadDescription\": \"APN相关配置\",\n" +
-            "            \"PayloadOrganization\": \"Pekall Captital\"\n" +
-            "        }\n" +
-            "    },\n" +
-            "    \"PayloadRemovalDisallowed\": true,\n" +
-            "    \"PayloadType\": \"Configuration\",\n" +
-            "    \"PayloadVersion\": 1,\n" +
-            "    \"PayloadIdentifier\": \"com.pekall.profile.setting\",\n" +
-            "    \"PayloadUUID\": \"2a26df98-b88e-4106-838a-65678b5cb690\",\n" +
-            "    \"PayloadDisplayName\": \"Pekall Default Setting\",\n" +
-            "    \"PayloadDescription\": \"配置文件\",\n" +
-            "    \"PayloadOrganization\": \"Pekall Capital\"\n" +
+            "  \"PayloadType\": \"Configuration\",\n" +
+            "  \"PayloadVersion\": 1,\n" +
+            "  \"PayloadIdentifier\": \"com.pekall.profile.setting\",\n" +
+            "  \"PayloadUUID\": \"oney9912-783m-821m-a3xa-9ra78624jck8\",\n" +
+            "  \"PayloadDisplayName\": \"\",\n" +
+            "  \"PayloadOrganization\": \"Pekall Capital\",\n" +
+            "  \"PayloadContent\": {\n" +
+            "    \"payloadEmails\": [\n" +
+            "      {\n" +
+            "        \"PayloadType\": \"com.apple.mail.managed\",\n" +
+            "        \"PayloadVersion\": 1,\n" +
+            "        \"PayloadIdentifier\": \"com.pekall.profile.email\",\n" +
+            "        \"PayloadUUID\": \"51r46431-kwpa-2yy6-998a-dd67e6bg7a21\",\n" +
+            "        \"PayloadDisplayName\": \"Email配置\",\n" +
+            "        \"PayloadDescription\": \"Email相关配置\",\n" +
+            "        \"PayloadOrganization\": \"pekall Capital\",\n" +
+            "        \"EmailAccountDescription\": \"test email account\",\n" +
+            "        \"EmailAccountType\": \"EmailTypeIMAP\",\n" +
+            "        \"EmailAddress\": \"test_mdm@pekall.com\",\n" +
+            "        \"IncomingMailServerHostName\": \"mail.pekall.com\",\n" +
+            "        \"IncomingMailServerUsername\": \"test_mdm\",\n" +
+            "        \"IncomingMailServerPortNumber\": \"993\",\n" +
+            "        \"IncomingMailServerAuthentication\": \"EmailAuthPassword\",\n" +
+            "        \"IncomingPassword\": \"123456\",\n" +
+            "        \"IncomingMailServerUseSSL\": true,\n" +
+            "        \"OutgoingMailServerHostName\": \"mail.pekall.com\",\n" +
+            "        \"OutgoingMailServerUsername\": \"test_mdm\",\n" +
+            "        \"OutgoingMailServerPortNumber\": 587,\n" +
+            "        \"OutgoingMailServerAuthentication\": \"EmailAuthPassword\",\n" +
+            "        \"OutgoingMailServerUseSSL\": true\n" +
+            "      }\n" +
+            "    ],\n" +
+            "    \"payloadVPNs\": [\n" +
+            "      {\n" +
+            "        \"PayloadType\": \"com.apple.vpn.managed\",\n" +
+            "        \"PayloadVersion\": 1,\n" +
+            "        \"PayloadIdentifier\": \"com.pekall.profile.VPN\",\n" +
+            "        \"PayloadUUID\": \"8jphv58r-ro32-p818-61ie-n2onne39kfh6\",\n" +
+            "        \"PayloadDisplayName\": \"VPN配置\",\n" +
+            "        \"PayloadDescription\": \"VPN相关配置\",\n" +
+            "        \"PayloadOrganization\": \"pekall Capital\",\n" +
+            "        \"UserDefinedName\": \"test vpn\",\n" +
+            "        \"Proxies\": {\n" +
+            "          \"HTTPEnable\": 1,\n" +
+            "          \"HTTPProxy\": \"192.168.10.230\",\n" +
+            "          \"HTTPPort\": \"80\",\n" +
+            "          \"HTTPProxyUsername\": \"wjl\",\n" +
+            "          \"HTTPProxyPassword\": \"123\"\n" +
+            "        },\n" +
+            "        \"VPNType\": \"PPTP\",\n" +
+            "        \"PPP\": {\n" +
+            "          \"CommRemoteAddress\": \"test address\",\n" +
+            "          \"AuthPassword\": \"123456\",\n" +
+            "          \"AuthName\": \"my vpn\",\n" +
+            "          \"CCPEnabled\": 1,\n" +
+            "          \"CCPMPPE40Enabled\": 1,\n" +
+            "          \"CCPMPPE128Enabled\": 1\n" +
+            "        },\n" +
+            "        \"OverridePrimary\": true\n" +
+            "      }\n" +
+            "    ],\n" +
+            "    \"payloadWifiConfigs\": [\n" +
+            "      {\n" +
+            "        \"PayloadType\": \"com.apple.wifi.managed\",\n" +
+            "        \"PayloadVersion\": 1,\n" +
+            "        \"PayloadIdentifier\": \"com.pekall.config.wifi.managed\",\n" +
+            "        \"PayloadUUID\": \"1vph23t8-njhw-4qq4-y6z9-b3rzw3t8r2xs\",\n" +
+            "        \"PayloadDisplayName\": \"WIFI配置\",\n" +
+            "        \"PayloadDescription\": \"WIFI相关配置\",\n" +
+            "        \"PayloadOrganization\": \"pekall Capital\",\n" +
+            "        \"SSID_STR\": \"pekall_work\",\n" +
+            "        \"AutoJoin\": true,\n" +
+            "        \"EncryptionType\": \"WPA\",\n" +
+            "        \"Password\": \"pekallcloud\",\n" +
+            "        \"ProxyType\": \"None\"\n" +
+            "      }\n" +
+            "    ],\n" +
+            "    \"payloadCalDAVPolicies\": [\n" +
+            "      {\n" +
+            "        \"PayloadType\": \"com.apple.wifi.managed\",\n" +
+            "        \"PayloadVersion\": 1,\n" +
+            "        \"PayloadIdentifier\": \"com.pekall.config.wifi.managed\",\n" +
+            "        \"PayloadUUID\": \"79ki3916-7z8e-7d6h-i6e1-3wn24h892e88\",\n" +
+            "        \"PayloadDisplayName\": \"WIFI配置\",\n" +
+            "        \"PayloadDescription\": \"WIFI相关配置\",\n" +
+            "        \"PayloadOrganization\": \"pekall Capital\",\n" +
+            "        \"CalDAVAccountDescription\": \"My CarlDAV 账户\",\n" +
+            "        \"CalDAVHostName\": \"google.com\",\n" +
+            "        \"CalDAVPort\": \"8443\",\n" +
+            "        \"CalDAVUsername\": \"pekalqq\",\n" +
+            "        \"CalDAVPassword\": \"pekallqqq\",\n" +
+            "        \"CalDAVUseSSL\": true\n" +
+            "      }\n" +
+            "    ],\n" +
+            "    \"payloadCalSubscriptionPolicies\": [\n" +
+            "      {\n" +
+            "        \"PayloadType\": \"com.apple.wifi.managed\",\n" +
+            "        \"PayloadVersion\": 1,\n" +
+            "        \"PayloadIdentifier\": \"com.pekall.config.wifi.managed\",\n" +
+            "        \"PayloadUUID\": \"x3439bzg-6shh-3zd8-pb6e-316dk9f831z2\",\n" +
+            "        \"PayloadDisplayName\": \"WIFI配置\",\n" +
+            "        \"PayloadDescription\": \"WIFI相关配置\",\n" +
+            "        \"PayloadOrganization\": \"pekall Capital\",\n" +
+            "        \"SubCalAccountDescription\": \"test account\",\n" +
+            "        \"SubCalAccountHostName\": \"www.pekall.com\",\n" +
+            "        \"SubCalAccountUsername\": \"wjl\",\n" +
+            "        \"SubCalAccountPassword\": \"123456\",\n" +
+            "        \"SubCalAccountUseSSL\": true\n" +
+            "      }\n" +
+            "    ]\n" +
+            "  }\n" +
             "}";
 
     public void testXMl2Json(){
@@ -434,7 +387,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
         PayloadArrayWrapper wrapper = createSettingWrapper();
         PayloadEmail payloadEmail = createEmail();
 
-        PayloadVPN payloadVPN = createAndroidVPN();
+        PayloadVPN payloadVPN = createIosVPN();
 
         PayloadWallpaper payloadWallpaper = createPayloadWallpaper();
         AdvertiseDownloadSettings advertiseDownloadSettings = getAdvertiseDownloadSettings();
@@ -1201,12 +1154,14 @@ public class WjlBuildDefaultPolicy extends TestCase {
 
         PPPInfo pppInfo = new PPPInfo();
 //        pppInfo.enableAuthEAPPlugins();
+//        pppInfo.setTokenCard(true);
 //        pppInfo.enableAuthProtocol();
-        pppInfo.setAuthName("ooo4561213");
-        pppInfo.setAuthPassword("xxxxxxxx");
-        pppInfo.setCCPEnabled(0);
+        pppInfo.setAuthName("my vpn");
+        pppInfo.setAuthPassword("123456");
+        pppInfo.setCCPEnabled(1);
         pppInfo.setCCPMPPE128Enabled(1);
-        pppInfo.setCommRemoteAddress("mail.pekall.com");
+        pppInfo.setCCPMPPE40Enabled(1);
+        pppInfo.setCommRemoteAddress("test address");
         vpn.setPPP(pppInfo);
 
 //        IPSecInfo ipSecInfo = new IPSecInfo();
@@ -1221,6 +1176,25 @@ public class WjlBuildDefaultPolicy extends TestCase {
 //        }
 //        ipSecInfo.setSharedSecret(data);
 //        vpn.setIPSec(ipSecInfo);
+
+        VpnProxies proxies = new VpnProxies();
+        proxies.setHTTPEnable(1);
+        proxies.setHTTPProxy("192.168.10.230");
+        proxies.setHTTPPort(80);
+        proxies.setHTTPProxyPassword("123");
+        proxies.setHTTPProxyUsername("wjl");
+        vpn.setProxies(proxies);
+
+//        vpn.setServerHostName("192.168.10.220");
+//        vpn.setAccount("ray");
+//        vpn.setPassword("123456");
+//        vpn.setSharedPassword("qwert");
+//        vpn.setUserAuth(PayloadVPN.USR_AUTH_PASSWORD);
+//        vpn.setVpnForAllTraffic(true);
+//        vpn.setProxyHost("192.168.0.1");
+//        vpn.setProxyPort(889);
+//        vpn.setProxyUserName("Ray");
+//        vpn.setProxyPassword("qwert");
 
         return vpn;
     }

@@ -34,6 +34,7 @@ _ui
     继承LinearLayout, 但是却按照倒序layout children
     custom_screen.xml使用了这个类
 
+_security
 52 ./src/com/android/browser/KeyChainLookup.java
     Inherit AsyncTask
     Handle cretificate request
@@ -46,57 +47,224 @@ _ui _bookmark
     R.layout.add_new_bookmark
     没有人用
 
+_widget
 53 ./src/com/android/browser/widget/BookmarkWidgetProxy.java
-59 ./src/com/android/browser/LogTag.java
+    extends BroadcastReceiver
+    处理bookmark widget的广播, 调用startActivity启动BrowserActivity
+
+_ui
 59 ./src/com/android/browser/view/SnapshotGridView.java
+    extends GridView 
+
+    仅仅重载了onMeasure方法, 使其layout的宽度为columNumber * columnWidth
+        且最大不超过5行
+
+    refer to: snapshots.xml
+    todo: example
+
+_preference
 60 ./src/com/android/browser/BrowserYesNoPreference.java
+    extends YesNoPreference
+
+    preference对话框，提供确定/取消按钮
+        用户调用确定时，调用BrowserSetting设置对应项目
+
+_preference
 61 ./src/com/android/browser/preferences/PrivacySecurityPreferencesFragment.java
+    “隐私设置”
+
+_ui
 61 ./src/com/android/browser/UrlSelectionActionMode.java
+    implements ActionMode.Callback
+
+    长按住url input框时，弹出的action bar。
+    可以share url
+
+_preference
 62 ./src/com/android/browser/search/SearchEnginePreference.java
+    extends ListPreference
+
+    "搜索引擎设置"
+
+_preference
 63 ./src/com/android/browser/preferences/BandwidthPreferencesFragment.java
+    extends PreferenceFragment
+
+    "带宽设置"
+
+_preference
 64 ./src/com/android/browser/search/SearchEngine.java
+    Interface for search engines
+
+_preference
 69 ./src/com/android/browser/search/SearchEngines.java
+    提供获取SearchEngineInfo的接口
+
+_preference
+176 ./src/com/android/browser/search/SearchEngineInfo.java
+    一个SearchEngineInfo代表了values/all_search_engines.xml中一项
+        包括了Human readable label, Favicon URL, Search URL, Encoding, Suggest URL
+
+_bookmark
 70 ./src/com/android/browser/BookmarksLoader.java
+    todo loader
+
+_controller
 70 ./src/com/android/browser/BrowserWebViewFactory.java
+    webview factory
+
 72 ./src/com/android/browser/ShortcutActivity.java
+    no reference
+
 73 ./src/com/android/browser/preferences/FontSizePreview.java
+    设置->辅助功能->字体缩放后的 “预览”页面
+
+_controller
 74 ./src/com/android/browser/ActivityController.java
+    Controll实现的接口
+
+_util
 74 ./src/com/android/browser/DataUri.java
+    解析data url, 从中提取出mimetype, data
+
+_ui
 74 ./src/com/android/browser/view/EventRedirectingFrameLayout.java
+    将touch event, key event直接传递到frame layout的特定children中去
+    被bookmark_sync_wizard.xml用到
+    目前没有人使用
+
+_ui
 83 ./src/com/android/browser/view/PieListView.java
+    快速控制菜单
+
+_controller
 84 ./src/com/android/browser/PreloadedTabControl.java
+    preload网页的工具类，基本上就是为tab加载一个url
+
+_preference
 89 ./src/com/android/browser/preferences/SeekBarSummaryPreference.java
+    设置->辅助->调节字体大小
+    extend SeekBarPreference
+
+_account
 90 ./src/com/android/browser/AccountsChangedReceiver.java
+    当帐号发生变化时，删除其他帐号浏览器相关信息
+
+_ui
 90 ./src/com/android/browser/HistoryItem.java
+    extends BookmarkItem
+    HistoryItem ui类, 比bookmark多了一个start
+
+_preference
 91 ./src/com/android/browser/preferences/InvertedContrastPreview.java
+    设置->辅助->反色 preview
+
+_controller
 91 ./src/com/android/browser/WebViewTimersControl.java
+    控制webview time的resume和pause
+
 92 ./src/com/android/browser/addbookmark/FolderSpinner.java
+    添加bookmark时的folder spinner
+
 94 ./src/com/android/browser/OpenDownloadReceiver.java
-98 ./src/com/android/browser/view/StopProgressView.java
+     This {@link BroadcastReceiver} handles clicks to notifications that
+     downloads from the browser are in progress/complete.  Clicking on an
+     in-progress or failed download will open the download manager.  Clicking on
+     a complete, successful download will open the file.
+ 
+_bookmark
 101 ./src/com/android/browser/BrowserPreferencesPage.java
+    设置的首页
+
+_preference
 101 ./src/com/android/browser/preferences/WebViewPreview.java
+    WebView Preview基类, 子类有：
+        设置->辅助->字体 preview
+        设置->辅助->反色 preview
+
+_ui
 104 ./src/com/android/browser/view/BookmarkContainer.java
+    book mark item的ui container
+
+_ui pie
 104 ./src/com/android/browser/view/PieStackView.java
+    快速控制菜单
+
+_controller
 109 ./src/com/android/browser/NfcHandler.java
+    This class implements sharing the URL of the currently shown browser page over NFC.
+
+_controller
 116 ./src/com/android/browser/UiController.java
+    controller接口
+
+_ui
 117 ./src/com/android/browser/PageProgressView.java
+    title bar中的progress bar
+
+_widget
 118 ./src/com/android/browser/widget/BookmarkThumbnailWidgetProvider.java
+    widget
+
+_ui
 120 ./src/com/android/browser/GeolocationPermissionsPrompt.java
+    google获取位置信息提示
+
+_controller
 121 ./src/com/android/browser/NetworkStateHandler.java
+    Handle network state changes
+
+_util
 122 ./src/com/android/browser/PreferenceKeys.java
+    keys for preference
+
+_controller
 123 ./src/com/android/browser/WebViewController.java
+    controller接口
+
+_controller
 124 ./src/com/android/browser/homepages/HomeProvider.java
+    提供打开content:// url的接口
+
+_preference
 125 ./src/com/android/browser/preferences/AccessibilityPreferencesFragment.java
+        设置->辅助
+
+_bookmark
 130 ./src/com/android/browser/BrowserBookmarksAdapter.java
+    Bookmark adapter
+
 131 ./src/com/android/browser/search/DefaultSearchEngine.java
+    Search
+
 132 ./src/com/android/browser/NavTabView.java
+    一个Nav Tab的UI
+    nav_tab_view.xml
+
 133 ./src/com/android/browser/Performance.java
+     统计加载网页的性能
+
+_preload
 134 ./src/com/android/browser/PreloadRequestReceiver.java
+
+_widget
 138 ./src/com/android/browser/widget/BookmarkWidgetConfigure.java
+
+_UI
 139 ./src/com/android/browser/BrowserWebView.java
+    扩展的WebView
+
+_util
 139 ./src/com/android/browser/FetchUrlMimeType.java
+    This class is used to pull down the http headers of a given URL so that
+    we can analyse the mimetype and make any correction needed before we give
+    the URL to the download manager.
+ 
+_account
 143 ./src/com/android/browser/DeviceAccountLogin.java
+
 144 ./src/com/android/browser/UrlBarAutoShowManager.java
+
 145 ./src/com/android/browser/AutologinBar.java
 152 ./src/com/android/browser/stub/NullController.java
 152 ./src/com/android/browser/UI.java
@@ -107,7 +275,6 @@ _ui _bookmark
 163 ./src/com/android/browser/addbookmark/FolderSpinnerAdapter.java
 166 ./src/com/android/browser/HttpAuthenticationDialog.java
 175 ./src/com/android/browser/UrlUtils.java
-176 ./src/com/android/browser/search/SearchEngineInfo.java
 178 ./src/com/android/browser/Preloader.java
 195 ./src/com/android/browser/BookmarkItem.java
 198 ./src/com/android/browser/DownloadTouchIcon.java

@@ -38,6 +38,7 @@ public class PayloadXmlMsgParser {
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_CAL_DAV, PayloadCalDAVPolicy.class);
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_CAL_SUB, PayloadCalSubscriptionPolicy.class);
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_APN, PayloadAPN.class);
+        payloadTypes.put(PayloadBase.PAYLOAD_TYPE_APP_LOCK, PayloadAppLock.class);
 
         // Just for SU MDM
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_SE_BROWSER_SETTINGS, BrowserSettings.class);
