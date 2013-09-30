@@ -1,0 +1,43 @@
+repo commands: 
+  a. repo init -u ssh://imcgit-gerrit/manifest -b xout/xmm6321/pekall/release
+  b. change .repo/manifests/default.xml to only include FM related gits
+  c. Run "repo sync" to get code
+    in folder /home/jiangrui/perforce/xmm6321.dmz
+  Note: above command only needs to done once
+
+Git command: 
+  a. Intel created two branches (xin and xout) to get/deliver code with Pekall
+     a. run "git branch -r" to show REMOTE branch.
+        NOTE: must in the relative git dir, etc, android/device/imc, see .repo/manifests/default.xml
+
+     b. Intel's code is deliveryed to pekall in xout branch
+     c. Pekall's code is sent to Intel in xin branch
+
+  b. If we need to change code and send the change to Intel. 
+  Need to 
+     1) create local branch with remote xin branch
+       git branch pekall_delivery_back imc-gerrit/xin/xmm6321/pekall/release
+     2) checkout local branch
+       git checkout pekall_delivery_back
+
+        git log
+            remove local change
+            git reset --hard 424b7289a9c256cd9478548b9f54cd4ef47bde33
+        git show xxx
+        gitk
+        git status
+            show current status
+        git diff
+            show changes
+
+     3) make local change
+     4) submit local change
+        git add .
+        git commit -m "pekall: fix FM issue" -e 
+     5) Add tag (optional)
+        git tag -a pekall_4.2.2_v01.00_20130906_p882 -m "Release pekall_4.2.2_v01.00_20130906_p882 from Pekall"
+
+     6) Send change to remote XIN branch
+     git push --tags imc-gerrit HEAD:refs/heads/xin/xmm6321/pekall/release
+
+
