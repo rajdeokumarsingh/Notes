@@ -1,5 +1,6 @@
 package com.example.algorithm.binarytree;
 
+import com.example.algorithm.Debug;
 import com.example.algorithm.RandomUtility;
 import junit.framework.TestCase;
 
@@ -79,7 +80,7 @@ public class BinaryTreeTest extends TestCase {
         assertEquals(tree.inorderTraversal(), aTree.inorderTraversal());
     }
 
-    public void testTraversal1() {
+    public void testTraversalInorder() {
         BinarySearchTree tree = new BinarySearchTree();
         BinaryTree tree1 = BinaryTree.buildTreeInorder(tree.inorderTraversal());
         assertEquals(tree.inorderTraversal(), tree1.inorderTraversal());
@@ -100,5 +101,35 @@ public class BinaryTreeTest extends TestCase {
         tree.insert(30);
         tree1 = BinaryTree.buildTreeInorder(tree.inorderTraversal());
         assertEquals(tree.inorderTraversal(), tree1.inorderTraversal());
+    }
+
+    public void testTraversalPostOrder() {
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.insert(20);
+        tree.insert(10);
+        tree.insert(30);
+        tree.insert(40);
+        Debug.log(tree.postorderTraversal());
+        /*
+        BinaryTree tree1 = BinaryTree.buildTreeInorder(tree.inorderTraversal());
+        assertEquals(tree.inorderTraversal(), tree1.inorderTraversal());
+
+        tree.insert(20);
+        tree1 = BinaryTree.buildTreeInorder(tree.inorderTraversal());
+        assertEquals(tree.inorderTraversal(), tree1.inorderTraversal());
+
+        tree.insert(10);
+        tree1 = BinaryTree.buildTreeInorder(tree.inorderTraversal());
+        assertEquals(tree.inorderTraversal(), tree1.inorderTraversal());
+
+        tree.insert(9);
+        tree1 = BinaryTree.buildTreeInorder(tree.inorderTraversal());
+        assertEquals(tree.inorderTraversal(), tree1.inorderTraversal());
+
+        tree.insert(11);
+        tree.insert(30);
+        tree1 = BinaryTree.buildTreeInorder(tree.inorderTraversal());
+        assertEquals(tree.inorderTraversal(), tree1.inorderTraversal());
+        */
     }
 }

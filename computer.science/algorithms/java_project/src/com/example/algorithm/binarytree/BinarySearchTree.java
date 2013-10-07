@@ -3,10 +3,6 @@ package com.example.algorithm.binarytree;
 import java.util.*;
 
 public class BinarySearchTree extends BinaryTree {
-    private BinaryNode root;
-
-    // for layer traversal
-    private HashMap<Integer, List<BinaryNode>> layerMap;
 
     public void insert(int value) {
         if (root == null) {
@@ -96,55 +92,5 @@ public class BinarySearchTree extends BinaryTree {
             p.setRight(q.getRight());
         }
         return new BinaryNode(ret);
-    }
-
-    public void layerOrderTraversal() {
-        layerMap = new HashMap<Integer, List<BinaryNode>>();
-        currentLevel = -1;
-
-        layerOrderTraversalInternal(root);
-
-        System.out.println("layer order: ");
-
-        // sort hash map by its keys
-        Set<Integer> key = layerMap.keySet();
-        ArrayList<Integer> list = new ArrayList<Integer>(key);
-        Collections.sort(list);
-
-        for (Integer layer : list) {
-            for (BinaryNode node : layerMap.get(layer)) {
-                StringBuilder sb = new StringBuilder(node.getValue() + "(");
-                if (node.getLeft() != null) {
-                    sb.append(node.getLeft().getValue() + ",");
-                } else {
-                    sb.append("null,");
-                }
-                if (node.getRight() != null) {
-                    sb.append(node.getRight().getValue() + ");  ");
-                } else {
-                    sb.append("null);  ");
-                }
-                System.out.print(sb.toString());
-            }
-            System.out.println();
-        }
-    }
-
-    private void layerOrderTraversalInternal(BinaryNode node) {
-        if (node == null) return;
-
-        currentLevel++;
-
-        List<BinaryNode> list = layerMap.get(Integer.valueOf(currentLevel));
-        if (list == null) {
-            list = new ArrayList<BinaryNode>();
-            layerMap.put(currentLevel, list);
-        }
-        list.add(node);
-
-        layerOrderTraversalInternal(node.getLeft());
-        layerOrderTraversalInternal(node.getRight());
-
-        currentLevel--;
     }
 }
