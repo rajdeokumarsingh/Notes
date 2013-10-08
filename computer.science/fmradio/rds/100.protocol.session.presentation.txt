@@ -104,12 +104,12 @@ Synchronization of blocks and groups
 消息结构
     1) The first block in every group always contains a Program Identification (PI) code.
     2) 4-bit group type code
-        B0
+        Not found in protocol
+    3) B0
         a) B0 = 0: the PI code is inserted in block 1 only. This will be called version A, e.g. 0A, 1A, etc.
         b) B0 = 1: the PI code is inserted in block 1 and block 3 of all group types. This will be called version B, e.g. 0B, 1B, etc.
 
-    3) The Program Type code (PTY) and Traffic Program identification (TP) occupy fixed locations in block 2 of every group.
-
+    4) The Program Type code (PTY) and Traffic Program identification (TP) occupy fixed locations in block 2 of every group.
 
 
 A total of four type 0A groups are required to transmit the entire PS name

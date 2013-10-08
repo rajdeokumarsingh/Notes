@@ -72,13 +72,22 @@ Content and implementation
         TA flag
             stop the tape or raise the volume during a traffic bulletin
 
-
     TMC (Traffic Message Channel)
         Digitally encoded traffic information
         Not all RDS equipment supports this
             Often available for Automotive navigation systems
             In many countries only encrypted data is broadcast
                 and so a subscription and appropriate decoder is required to use
+
+    Open Data Applications
+        可以认为是RDS的子协议， 其数据传输的格式RDS规范没有定义。
+
+    TDC - Transparent Data Channels
+        The transparent data channels consist of 32 channels which may be used to send any type of data.
+        该通道可用于发送任何数据
+
+    EWS
+        Public Early Warning System
 
 RDS support
     As far as implementation is concerned, most car stereos will support at least AF, EON, REG, PS and TA/TP.
@@ -91,12 +100,3 @@ Example RDS usage
         - Duran Duran's Save a Prayer - the bottom line scrolls to reveal the rest of the text.
         Scrolling Program Service messages are illegal in the U.K
 
-RDS chipsets
-    ST Microelectronics
-    Silicon Labs
-        part supports PS, RT, PTY, TMC, and all other RDS types 
-    NXP Semiconductors 
-
-
-reference:
-    http://en.wikipedia.org/wiki/Radio_Data_System

@@ -1,0 +1,24 @@
+Introduction:
+    http://en.wikipedia.org/wiki/Radio_Data_System
+
+    http://linuxtv.org/wiki/index.php/Radio_Data_System_%28RDS%29
+        Linux RDS
+
+Development:
+
+    https://github.com/koradlow/v4l2-rds-ctl
+        contains a library for decoding raw RDS data from V4L2 Radio devices 
+
+
+    http://rdsd.berlios.de/
+        RDS for linux
+        The Radio Data System Daemon is a daemon:
+            1. reads raw RDS data from one or more input sources
+            2. decodes it
+            3. serves the results to clients that can connect via TCP/IP or a unix domain socket. 
+
+        XXX: Only in alpha phrase
+
+
+
+
