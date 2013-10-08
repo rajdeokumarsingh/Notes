@@ -43,7 +43,7 @@ public class RadixSortTest extends TestCase {
         assertEquals(0, RadixSort.getNthByte(1, 4));
     }
 
-        public void testBoundary() throws Exception {
+    public void testBoundary() throws Exception {
         RadixSort.sort(null);
 
         int[] array1 = {};
@@ -101,6 +101,18 @@ public class RadixSortTest extends TestCase {
 
     }
 
+    public void testNegativeNumber() throws Exception {
+        int[] array1 = {8, 2, -1, 4, -200, 2, -100, 3, 6};
+        int[] array2 = {8, 2, -1, 4, -200, 2, -100, 3, 6};
+
+        Debug.logTest(Arrays.toString(RadixSort.sort(array1)));
+
+        Arrays.sort(array2);
+        Debug.logTest(Arrays.toString(array2));
+
+        // todo: support negative integer
+        assertTrue(Arrays.equals(RadixSort.sort(array1), array2));
+    }
 
     public void testRandomTest() throws Exception {
         long begin = System.currentTimeMillis();

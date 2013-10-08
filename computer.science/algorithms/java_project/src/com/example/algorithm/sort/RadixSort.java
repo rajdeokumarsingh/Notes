@@ -58,9 +58,9 @@ public class RadixSort {
         if (n <= 0) {
             throw new IllegalArgumentException("n must be greater than 0");
         }
-        int n1 = number >> ((n - 1) << 3) << ((n - 1) << 3);
-        int n0 = number >> (n << 3) << (n << 3);
+        int n1 = number >>> ((n - 1) << 3) << ((n - 1) << 3);
+        int n0 = number >>> (n << 3) << (n << 3);
         if(n == 4) n0 = 0;
-        return (n1 - n0) >> (n - 1) * 8;
+        return (n1 - n0) >>> (n - 1) * 8;
     }
 }

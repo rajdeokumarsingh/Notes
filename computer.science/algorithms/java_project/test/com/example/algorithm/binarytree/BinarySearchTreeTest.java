@@ -223,7 +223,6 @@ public class BinarySearchTreeTest extends TestCase {
     }
 
     public void testTraversal() {
-
         BinarySearchTree tree = new BinarySearchTree();
 
         tree.insert(20);
@@ -241,5 +240,31 @@ public class BinarySearchTreeTest extends TestCase {
         tree.preorderTraversal();
         tree.inorderTraversal();
         tree.postorderTraversal();
+
+    }
+
+    public void testLayerTraversal() {
+        BinarySearchTree tree = new BinarySearchTree();
+
+        tree.insert(20);
+        tree.insert(10);
+        tree.insert(11);
+        tree.insert(15);
+        tree.insert(13);
+        tree.insert(23);
+        tree.insert(30);
+        tree.insert(28);
+        tree.insert(25);
+        tree.insert(21);
+        tree.dump();
+        tree.layerOrderTraversal();
+
+        int[] array = new int[]{3, 1, 8, 2, 6, 7, 5};
+        tree = new BinarySearchTree();
+        for (int i = 0; i < array.length; i++) {
+            tree.insert(array[i]);
+        }
+        tree.dump();
+        tree.layerOrderTraversal();
     }
 }

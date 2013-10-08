@@ -1,5 +1,7 @@
 package com.example.algorithm.binarytree;
 
+import java.util.*;
+
 public class BinarySearchTree extends BinaryTree {
 
     public void insert(int value) {
