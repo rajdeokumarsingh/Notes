@@ -40,10 +40,13 @@ public class DownloadHandler {
     }
 
     synchronized void enqueueDownload(DownloadInfo info) {
-        if (!mDownloadsQueue.containsKey(info.mId)) {
-            if (Constants.LOGV) {
-                Log.i(TAG, "enqueued download. id: " + info.mId + ", uri: " + info.mUri);
-            }
+        if (Constants.LOGV) {
+            Log.i(TAG, "enqueued download. id: " + info.mId + ", uri: " + info.mUri);
+        }
+        if (hasDownloadInQueue(info.mId)) {
+            Log.i(TAG, "hasDownloadInQueue, ignore");
+            return;
+        } else {
             mDownloadsQueue.put(info.mId, info);
             startDownloadThread();
         }
