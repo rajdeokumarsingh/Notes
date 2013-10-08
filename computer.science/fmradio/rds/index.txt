@@ -2,7 +2,11 @@
 
 100.protocol.session.presentation.txt
 
-300.impl.rds.surveyor.txt
+
+
+code reading:
+    code.reading/300.impl.rds.surveyor.java
+    code.reading/400.libv4l2rds.cpp
 
 900.reference.txt
 

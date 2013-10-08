@@ -1,0 +1,54 @@
+目标：
+    搞清函数级别的流程
+        函数的功能要总结的出来
+    绘制UML流程
+    文档化
+    
+研究内容：
+    HTTP GET流程
+        加载main resource的流程
+            加载一个html页面，页面不包括任何其他资源
+
+        加载sub resource的流程
+             加载一个html页面，页面仅仅包括一个javascript文件
+             加载一个html页面，页面仅仅包括一张图片
+             加载一个html页面，页面仅仅包括一个css文件
+
+            加载cache的流程
+
+        History
+            go back/forward
+
+        Stop loading
+
+        Reload
+
+    HTTP POST流程
+
+    HTTP解析流程
+
+    绘制流程
+
+
+具体工作: 
+    1. 搭建web端工作环境
+        done! 2013-10-08
+
+    2. 搭建客户端编译环境
+
+    3. Log环境
+
+    4. 调试环境
+
+
+    看代码
+    作笔记
+    在每条线上打印log
+        是否能够动态添加log
+        开启/关闭log
+
+
+
+
+
+
