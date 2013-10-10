@@ -1,0 +1,67 @@
+================================================================================
+load main resource
+================================================================================
+
+
+836   857      : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoader.cpp, start, 55
+836   857      : WebUrlLoader::start(), load url: http://192.168.10.82/
+
+// create WebUrlLoaderClient
+836   857      : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, WebUrlLoaderClient, 126
+
+// create WebRequest
+836   857      : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, WebRequest, 100
+
+// start loading
+836   857      : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, start, 188
+
+// begin loading in io thread
+836   866      : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, start, 252
+836   866      : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, OnResponseStarted, 485
+836   866      : external/webkit/Source/WebKit/android/WebCoreSupport/WebResponse.cpp, WebResponse, 47
+
+// reading data in io thread
+836   866      : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, startReading, 548
+
+// callback in main thread
+836   857      : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, didReceiveResponse, 399
+
+// reading data in io thread
+836   866      : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, OnReadCompleted, 603
+836   866      : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, startReading, 548
+
+// data send to main thread
+836   857      : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, didReceiveData, 423
+
+// reading data done in io thread
+836   866      : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, finish, 169
+
+// callback in main thread
+836   857      : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, didFinishLoading, 499
+836   857      : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, finish, 357
+836   857      : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, ~WebRequest, 138
+836   857      : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, ~WebUrlLoaderClient, 97
+
+================================================================================
+load favicon
+================================================================================
+
+836   857      : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoader.cpp, start, 55
+836   857      : WebUrlLoader::start(), load url: http://192.168.10.82/favicon.ico
+
+836   857      : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, WebUrlLoaderClient, 126
+836   857      : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, WebRequest, 100
+836   857      : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, start, 188
+836   866      : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, start, 252
+836   866      : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, OnResponseStarted, 485
+836   866      : external/webkit/Source/WebKit/android/WebCoreSupport/WebResponse.cpp, WebResponse, 47
+836   866      : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, startReading, 548
+836   866      : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, OnReadCompleted, 603
+836   866      : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, startReading, 548
+836   866      : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, finish, 169
+836   857      : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, didReceiveResponse, 399
+836   857      : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, didReceiveData, 423
+836   857      : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, didFinishLoading, 499
+836   857      : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, finish, 357
+836   857      : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, ~WebRequest, 138
+836   857      : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, ~WebUrlLoaderClient, 97

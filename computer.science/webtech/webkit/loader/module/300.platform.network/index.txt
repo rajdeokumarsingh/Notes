@@ -1,0 +1,38 @@
+ResourceRequest.h
+    extends ResourceRequestBase
+
+./ResourceRequestBase.h
+    encapsulate a http request
+    wrapper of: 
+        url, http method, http header fields, http body,
+        load type, cache policy
+ 
+ResourceResponse.h
+    extends ResourceResponseBase
+
+./ResourceResponseBase.h
+    encapsulate a http response (not include data)
+
+ResourceHandleAndroid.cpp
+    extends ResourceHandle
+    just a wrapper of ResourceLoaderAndroid
+    send start, cancel, pause to ResourceLoaderAndroid
+
+ResourceHandle.cpp
+    combine 
+        1. a platform handler, like ResourceHandleAndroid
+            to send start, cancel, pause request
+
+        2. a callback client, ResourceHandleClient
+            receive callback from android network layer
+
+ResourceHandleInternal
+
+// todo:
+ResourceErrorBase.cpp
+ResourceErrorBase.h
+
+ResourceHandleClient.h
+ResourceLoadInfo.h
+
+ResourceLoadScheduler
