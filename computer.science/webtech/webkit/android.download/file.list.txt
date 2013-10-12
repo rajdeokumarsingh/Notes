@@ -100,9 +100,18 @@
 1024 ./src/com/android/providers/downloads/DownloadThread.java
 1264 ./src/com/android/providers/downloads/DownloadProvider.java
 
+UI:
 60 ./ui/src/com/android/providers/downloads/ui/DateSortedDownloadAdapter.java
+
 149 ./ui/src/com/android/providers/downloads/ui/DownloadItem.java
+    一个下载项的UI, 包括了checkbox, 下载的文件名，下载状态， 下载进度条，下载进度文字等等
+    layout : download_list_item.xml
+    ./code/DownloadItem.java
+
 215 ./ui/src/com/android/providers/downloads/ui/DownloadAdapter.java
+    根据数据库中数据更新DownloadItem
+    ./code/DownloadAdapter.cpp
+
 354 ./ui/src/com/android/providers/downloads/ui/DateSortedExpandableListAdapter.java
 789 ./ui/src/com/android/providers/downloads/ui/DownloadList.java
 
