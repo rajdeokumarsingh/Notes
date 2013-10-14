@@ -1,7 +1,38 @@
+
+--------------------------------------------------------------------------------
+资源加载层
+--------------------------------------------------------------------------------
+{
+    /** 负责main resource, sub resource的加载，管理 */
+    FrameLoader.cpp
+    SubframeLoader.cpp
+    DocumentLoader.cpp
+
+    ResourceLoader.cpp
+    MainResourceLoader.cpp
+    SubresourceLoader.cpp
+    icon/IconLoader.cpp
+
+    ImageLoader.cpp
+    PingLoader.cpp
+
+    FrameLoaderStateMachine.cpp
+    cache/CachedResourceLoader.cpp
+    WorkerThreadableLoader.cpp
+    DocumentThreadableLoader.cpp
+    ThreadableLoader.cpp
+    NetscapePlugInStreamLoader.cpp
+}
+--------------------------------------------------------------------------------
+            |                          ^
+            | 资源加载请求             |  网络响应，数据，进度，状态汇报
+            V                          |
+--------------------------------------------------------------------------------
+
 --------------------------------------------------------------------------------
 接口类
 --------------------------------------------------------------------------------
-// { 
+{ 
     /* HTTP 抽象层 
         1. 提供加载http资源的接口
         2. 提供资源加载进度，状态（完成，失败）等等的回调接口
@@ -20,15 +51,14 @@
     ./WebCore/platform/network/android/ResourceRequestAndroid.cpp
 
     ./WebCore/platform/network/NetworkStateNotifier.cpp
-// }
-
+}
 
 --------------------------------------------------------------------------------
             |                          ^
             | 资源加载请求             |  网络响应，数据，进度，状态汇报
             V                          |
 --------------------------------------------------------------------------------
-// {
+{
     /* 网络抽象层, android network layer
         1. 封装了chrome_net
         2. 提供加载资源的接口
@@ -42,7 +72,7 @@
     ./WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp
     ./WebKit/android/WebCoreSupport/WebCache.cpp
     ./WebKit/android/WebCoreSupport/WebViewClientError.cpp
-// }
+}
 
 WebCore/loader/PolicyCallback.cpp
 WebCore/loader/ResourceLoadNotifier.cpp

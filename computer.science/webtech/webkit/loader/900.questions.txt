@@ -1,0 +1,33 @@
+
+1. ResourceLoadScheduler的作用好像没有体现出来
+   开始加载main resource的时候没有使用到scheduler
+   加载sub resource的时候使用到了
+
+
+.下面类之间的关系：
+    WebCoreFrameBridge
+        WebFrame
+
+    WebCoreViewBridge
+        WebFrameView
+
+    Frame
+    FrameView
+
+. what is 
+    DocumentLoader::transferLoadingResourcesFromPage(
+
+. when to load sub resources
+
+. what is following state
+enum FrameState {
+    FrameStateProvisional,
+    // This state indicates we are ready to commit to a page,
+    // which means the view will transition to use the new data source.
+    FrameStateCommittedPage,
+    FrameStateComplete
+};
+
+
+. load Icon
+    ./misc/load_icon.cpp

@@ -1,9 +1,10 @@
 benchmark
+
     搞清楚基本的组成部件
 
-    模块之间的依赖关系
+        初始化过程
 
-    对象的创建
+    模块之间的依赖关系
 
     benchmark/index.txt
 

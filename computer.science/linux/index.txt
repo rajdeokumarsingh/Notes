@@ -3,3 +3,5 @@
 ./sticky.bit.cpp
 
 ./calc.time.txt
+
+./strace.txt

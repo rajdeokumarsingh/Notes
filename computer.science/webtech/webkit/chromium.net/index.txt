@@ -1,5 +1,0 @@
-./proxy.cpp
-
-WebKit和Chromium之间的接口:
-    ./code/WebCache.cpp
-        向下调用HttpCache

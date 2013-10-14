@@ -1,11 +1,8 @@
 ./w3c.api.js
 ./android.app.geo.java
 
-
 ./log.google.geo.txt
 ./flow.show.geo.perm.cpp
-
-
 
 base/core/java/android/webkit/GeolocationService.java
 

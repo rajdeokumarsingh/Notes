@@ -1,6 +1,23 @@
 *#*#4636#*#* 手机信息
 
 ######################################################################
+debug webkit native lib
+
+1. build/envsetup.sh
+2. lunch
+3. 启动模拟器，运行浏览器
+4. gdbclient app_ process :5039 browser
+此时就能看到gdb顺利启动起来了（尽管有warning），此时就可以使用你熟悉的gdb命令了看到
+15   ldmdf sp!   {r4,r7}
+Currentlanguage: auto;current asm
+5  设置断点
+bFrameLoaderClientAndroid.cpp:868
+6  执行
+c
+7 访问一个网址，就可以看到gdb断点了，enjoy it!
+######################################################################
+
+######################################################################
 ndk-stack -sym out/target/product/maguro/symbols/system/lib/ -dump /tmp/gg.txt
 ######################################################################
 

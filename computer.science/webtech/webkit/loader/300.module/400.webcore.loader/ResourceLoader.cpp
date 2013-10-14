@@ -1,7 +1,26 @@
-/** 1. has an buffer to store resource data
-    2. invoke ResourceHandle interface to request network
-    3. receive callback from ResourceHandle and send to ResourceLoadNotifier
+/** 
+   1. lower layer : WebCore.platform.network
+        send command : start, cancel, pause to lower layer
+            by ResourceHandle
 
+        invoke ResourceHandle interface to request network
+        receive data and status callback from ResourceHandle
+        send callback to FrameLoader's notifier(ResourceLoadNotifier)
+
+    2. has a SharedBuffer for network data
+
+    3. reference to Frame, DocumentLoader
+
+    4. could be added into ResourceLoadScheduler
+
+    5. has an identifier
+
+    6. handle first party for cookie
+    7. handle defer loading
+    8. clear auth and pending substitute load when didCancel
+    9.handle auth challenge
+    10.set content sniff
+ 
     two loading type:
         1. now
         2. defer

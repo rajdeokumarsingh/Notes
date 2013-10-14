@@ -12,27 +12,8 @@
                 加载的向下调用过程
                     基本完毕
                     
-                Adding log
-                    android network layer
-                        external/webkit/Source/WebKit/android/WebCoreSupport
-
-                    http abstract layer
-                    ...
-
-                note
-                    android network layer
-                    http abstract layer
-                    ...
-
-                UML
-                    android network layer
-                    http abstract layer
-                    ...
             }
-            question:
-            {
-                ResourceLoadScheduler的作用好像没有体现出来
-            }
+            SubstituteResource
 
         加载sub resource的流程
              加载一个html页面，页面仅仅包括一个javascript文件
@@ -55,6 +36,8 @@
         Download File
     HTTP POST流程
 
+    Page Navigation
+
     HTTP解析流程
 
     绘制流程
@@ -65,11 +48,17 @@
         done! 2013-10-08
 
     2. 搭建客户端编译环境
+        done! 2013-10-09
 
     3. Log环境
+        // TODO:
 
     4. 调试环境
+        // TODO:
 
+    Adding log
+    note
+    UML
 
     看代码
     作笔记
@@ -77,31 +66,4 @@
         是否能够动态添加log
         开启/关闭log
 
-Questions:
-    下面类之间的关系：
-        WebCoreFrameBridge
-            WebFrame
 
-        WebCoreViewBridge
-            WebFrameView
-
-        Frame
-        FrameView
-
-        FrameLoader
-        FrameLoaderClient
-        FrameLoaderClientAndroid
-
-        ResourceHandle
-        ResourceHandleAndroid
-
-        ResourceHandleCleint
-        ResourceLoader
-        MainResourceLoader
-        SubResourceLoader
-
-        ResourceScheduler
-
-        ChromeClient
-
-        Page

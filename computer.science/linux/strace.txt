@@ -1,0 +1,22 @@
+
+1) 找出程序在startup的时候读取的哪个config文件？
+$ strace php 2>&1 | grep php.ini
+
+
+只关心特定的系统调用
+$ strace -e open php 2>&1 | grep php.ini  
+
+
+2) 为什么这个程序没有打开我的文件？
+strace -e open,access 2>&1 | grep your-filename  
+
+3) 某个进程现在在做什么?
+root@dev:~# strace -p 15427  
+
+4) 是谁偷走了时间？
+root@dev:~# strace -c -p 11084  
+root@dev:~# strace -c >/dev/null ls 
+
+5) 为什么 无法连接到服务器?
+
+$ strace -e poll,select,connect,recvfrom,sendto nc www.news.com 80  
