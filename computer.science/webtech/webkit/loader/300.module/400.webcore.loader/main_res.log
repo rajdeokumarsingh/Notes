@@ -1,0 +1,229 @@
+771   793 E         : external/webkit/Source/WebKit/android/jni/WebCoreFrameBridge.cpp, LoadUrl, 1263
+771   793 E         : LoadUrl: http://192.168.10.82/
+771   793 E         : external/webkit/Source/WebCore/loader/FrameLoader.cpp, load, 1422
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/FrameLoaderClientAndroid.cpp, createDocumentLoader, 1027
+771   793 E         : external/webkit/Source/WebCore/loader/DocumentLoader.cpp, DocumentLoader, 111
+771   793 E         : external/webkit/Source/WebCore/loader/FrameLoader.cpp, load, 1468
+771   793 E         : external/webkit/Source/WebCore/loader/FrameLoader.cpp, loadWithDocumentLoader, 1507
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/FrameLoaderClientAndroid.cpp, dispatchDecidePolicyForNavigationAction, 645
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/FrameLoaderClientAndroid.cpp, canHandleRequest, 884
+771   793 E         : external/webkit/Source/WebCore/loader/FrameLoader.cpp, continueLoadAfterNavigationPolicy, 3026
+771   793 E         : external/webkit/Source/WebCore/loader/DocumentLoader.cpp, stopLoading, 242
+771   793 E         : external/webkit/Source/WebCore/loader/DocumentLoader.cpp, cancelAll, 69
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/FrameLoaderClientAndroid.cpp, provisionalLoadStarted, 999
+771   793 E         : 1. call to WebFrame.loadStarted
+771   793 E         : external/webkit/Source/WebCore/loader/FrameLoader.cpp, continueLoadAfterWillSubmitForm, 2528
+771   793 E         : external/webkit/Source/WebCore/loader/DocumentLoader.cpp, prepareForLoadStart, 446
+771   793 E         : external/webkit/Source/WebCore/loader/DocumentLoader.cpp, setPrimaryLoadComplete, 461
+771   793 E         : external/webkit/Source/WebCore/loader/DocumentLoader.cpp, startLoadingMainResource, 852
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoader.cpp, ResourceLoader, 78
+
+
+771   793 E         : external/webkit/Source/WebCore/loader/MainResourceLoader.cpp, MainResourceLoader, 71, create with a Frame
+771   793 E         : external/webkit/Source/WebCore/loader/MainResourceLoader.cpp, load, 686
+771   793 E         : external/webkit/Source/WebCore/loader/MainResourceLoader.cpp, loadNow, 647
+771   793 E         : 1. willSendRequest
+771   793 E         : 2. add this to ResourceLoadScheduler by addMainResourceLoad()
+771   793 E         : 3. handle data or empty load
+771   793 E         : 4. create ResourceHandle to load data
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoader.cpp, willSendRequest, 284
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadNotifier.cpp, willSendRequest, 71
+771   793 E         : 1. apply user agent by FrameLoader
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadNotifier.cpp, dispatchWillSendRequest, 151
+771   793 E         : 1. call back to FrameLoaderClientAndroid
+771   793 E         : 2. didTellClientAboutLoad by DocumentLoader
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/FrameLoaderClientAndroid.cpp, dispatchWillSendRequest, 182, notImplemented
+771   793 E         : external/webkit/Source/WebCore/loader/MainResourceLoader.cpp, willSendRequest, 260
+771   793 E         : 1. set request to documentLoader
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadScheduler.cpp, addMainResourceLoad, 117
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadScheduler.cpp, HostInformation, 267
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadScheduler.cpp, addLoadInProgress, 289
+771   793 E         : HostInformation '192.168.10.82' loading 'http://192.168.10.82/'. Current count 0
+771   793 E         : external/webkit/Source/WebCore/platform/network/ResourceHandle.cpp, create, 70
+771   793 E         : external/webkit/Source/WebCore/platform/network/android/ResourceHandleAndroid.cpp, start, 66
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/ResourceLoaderAndroid.cpp, start, 46
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoader.cpp, start, 58
+771   793 E         : WebUrlLoader::start(), load url: http://192.168.10.82/
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, WebUrlLoaderClient, 126
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, WebRequest, 100
+
+771   793 E         : 1. create a net::URLRequest, which is used to start(), cancel(), pause() network request
+771   793 E         : 2. set http headers like referer, method etc, and load floag to the request
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, start, 188
+771   803 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, start, 254
+771   803 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, OnResponseStarted, 487
+771   803 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebResponse.cpp, WebResponse, 47
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, didReceiveResponse, 399
+771   793 E         : external/webkit/Source/WebCore/loader/MainResourceLoader.cpp, didReceiveResponse, 445
+771   793 E         : 1. handle multipart
+771   793 E         : 2. set response to documentLoader
+771   793 E         : 3. do content policy check, by checkContentPolicy()
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/FrameLoaderClientAndroid.cpp, dispatchDecidePolicyForResponse, 555
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/FrameLoaderClientAndroid.cpp, canShowMIMEType, 910
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/FrameLoaderClientAndroid.cpp, canShowMIMEType, 910
+771   793 E         : external/webkit/Source/WebCore/loader/MainResourceLoader.cpp, continueAfterContentPolicy, 343
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoader.cpp, didReceiveResponse, 315
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadNotifier.cpp, didReceiveResponse, 84
+771   793 E         : 1. add ResourceResponse to documentLoader
+771   793 E         : 2. increate page progress
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadNotifier.cpp, dispatchDidReceiveResponse, 176
+771   793 E         : 1. callback to FrameLoaderClientAndroid
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/FrameLoaderClientAndroid.cpp, dispatchDidReceiveResponse, 213, notImplemented
+771   803 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, startReading, 550
+771   803 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, OnReadCompleted, 605
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, didReceiveData, 423
+771   793 E         : external/webkit/Source/WebCore/loader/MainResourceLoader.cpp, didReceiveData, 523
+771   793 E         : 1. update timeOfLastDataReceived
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoader.cpp, didReceiveData, 337
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoader.cpp, addData, 245
+771   793 E         : 1. append data to buffer
+771   793 E         : external/webkit/Source/WebCore/loader/MainResourceLoader.cpp, addData, 209
+771   793 E         : 1. send data to DocumentLoader by its receivedData()
+
+??? why destructor
+771   793 E         : external/webkit/Source/WebCore/loader/DocumentLoader.cpp, stopLoadingSubresources, 789
+771   793 E         : external/webkit/Source/WebCore/loader/DocumentLoader.cpp, cancelAll, 69
+771   793 E         : external/webkit/Source/WebCore/loader/DocumentLoader.cpp, cancelAll, 69
+771   793 E         : external/webkit/Source/WebCore/loader/DocumentLoader.cpp, ~DocumentLoader, 126
+???
+
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/FrameLoaderClientAndroid.cpp, transitionToCommittedForNewPage, 1069
+771   803 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, startReading, 550
+771   803 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, finish, 171
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/FrameLoaderClientAndroid.cpp, committedLoad, 832
+771   793 E         : external/webkit/Source/WebCore/loader/DocumentLoader.cpp, commitData, 344
+
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadNotifier.cpp, didReceiveData, 101
+771   793 E         : 1. increase page progress
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadNotifier.cpp, dispatchDidReceiveContentLength, 189
+771   793 E         : 1. callback to FrameLoaderClientAndroid
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/FrameLoaderClientAndroid.cpp, dispatchDidReceiveContentLength, 223, notImplemented
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, didFinishLoading, 499
+771   793 E         : external/webkit/Source/WebCore/loader/MainResourceLoader.cpp, didFinishLoading, 550
+771   793 E         : external/webkit/Source/WebCore/loader/DocumentLoader.cpp, finishedLoading, 312
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/FrameLoaderClientAndroid.cpp, committedLoad, 832
+771   793 E         : external/webkit/Source/WebCore/loader/DocumentLoader.cpp, commitData, 344
+
+
+771   793 E         : external/webkit/Source/WebCore/loader/FrameLoader.cpp, continueIconLoadWithDecision, 756
+771   793 E         : external/webkit/Source/WebCore/loader/icon/IconLoader.cpp, create, 61
+771   793 E         : external/webkit/Source/WebCore/loader/icon/IconLoader.cpp, startLoading, 78
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadScheduler.cpp, scheduleSubresourceLoad, 96
+771   793 E         : priority: 1, send callback: 1, buffer data: 1
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoader.cpp, ResourceLoader, 78
+771   793 E         : external/webkit/Source/WebCore/loader/DocumentLoader.cpp, addSubresourceLoader, 798
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoader.cpp, init, 137
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoader.cpp, willSendRequest, 284
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadNotifier.cpp, willSendRequest, 71
+771   793 E         : 1. apply user agent by FrameLoader
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadNotifier.cpp, dispatchWillSendRequest, 151
+771   793 E         : 1. call back to FrameLoaderClientAndroid
+771   793 E         : 2. didTellClientAboutLoad by DocumentLoader
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/FrameLoaderClientAndroid.cpp, dispatchWillSendRequest, 182, notImplemented
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadScheduler.cpp, scheduleLoad, 131
+771   793 E         : ResourceLoadScheduler::load resource 0x2a249cc0 'http://192.168.10.82/favicon.ico'
+771   793 E         : external/webkit/Source/WebCore/loader/DocumentLoader.cpp, setPrimaryLoadComplete, 461
+
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/FrameLoaderClientAndroid.cpp, dispatchDidLoadMainResource, 684, notImplemented
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoader.cpp, didFinishLoading, 371
+771   793 E         : 1. notify and release resource
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadNotifier.cpp, didFinishLoad, 115
+771   793 E         : 1. complete page progress
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadNotifier.cpp, dispatchDidFinishLoading, 202
+771   793 E         : 1. callback to FrameLoaderClientAndroid
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/FrameLoaderClientAndroid.cpp, dispatchDidFinishLoading, 233, notImplemented
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoader.cpp, releaseResources, 96
+771   793 E         : 1. clear Frame, DocumentLoader, identifier, ResourceHandle, resource data
+771   793 E         : 2. remove this in ResourceLoadScheduler
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadScheduler.cpp, remove, 154
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadScheduler.cpp, remove, 299
+771   793 E         : external/webkit/Source/WebCore/platform/network/ResourceHandle.cpp, setClient, 119
+771   793 E         : external/webkit/Source/WebCore/loader/MainResourceLoader.cpp, ~MainResourceLoader, 80
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoader.cpp, ~ResourceLoader, 86
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, finish, 357
+771   793 E         : external/webkit/Source/WebCore/platform/network/android/ResourceHandleAndroid.cpp, ~ResourceHandle, 56
+771   793 E         : external/webkit/Source/WebCore/platform/network/android/ResourceHandleAndroid.cpp, ~ResourceHandleInternal, 49
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoader.cpp, ~WebUrlLoader, 50
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, ~WebRequest, 140
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, ~WebUrlLoaderClient, 97
+
+
+
+
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadScheduler.cpp, servePendingRequests, 181
+771   771 W IInputConnectionWrapper: endBatchEdit on inactive InputConnection
+771   793 E         : ResourceLoadScheduler::servePendingRequests. m_isSuspendingPendingRequests=0
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadScheduler.cpp, servePendingRequests, 210
+771   793 E         : ResourceLoadScheduler::servePendingRequests HostInformation.m_name=''
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadScheduler.cpp, servePendingRequests, 210
+771   793 E         : ResourceLoadScheduler::servePendingRequests HostInformation.m_name='192.168.10.82'
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadScheduler.cpp, addLoadInProgress, 289
+771   793 E         : HostInformation '192.168.10.82' loading 'http://192.168.10.82/favicon.ico'. Current count 0
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoader.cpp, start, 171
+771   793 E         : 1. create ResourceHandle
+771   793 E         : external/webkit/Source/WebCore/platform/network/ResourceHandle.cpp, create, 70
+771   793 E         : external/webkit/Source/WebCore/platform/network/android/ResourceHandleAndroid.cpp, start, 66
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/ResourceLoaderAndroid.cpp, start, 46
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoader.cpp, start, 58
+771   793 E         : WebUrlLoader::start(), load url: http://192.168.10.82/favicon.ico
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, WebUrlLoaderClient, 126
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, WebRequest, 100
+771   793 E         : 1. create a net::URLRequest, which is used to start(), cancel(), pause() network request
+771   793 E         : 2. set http headers like referer, method etc, and load floag to the request
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, start, 188
+771   803 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, start, 254
+771   803 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, OnResponseStarted, 487
+771   803 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebResponse.cpp, WebResponse, 47
+771   803 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, startReading, 550
+771   803 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, OnReadCompleted, 605
+771   803 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, startReading, 550
+771   803 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, finish, 171
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, didReceiveResponse, 399
+771   793 E         : external/webkit/Source/WebCore/loader/icon/IconLoader.cpp, didReceiveResponse, 113
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/FrameLoaderClientAndroid.cpp, dispatchDidReceiveIcon, 298
+771   793 E         : 1. send icon to webframe
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoader.cpp, didReceiveResponse, 315
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadNotifier.cpp, didReceiveResponse, 84
+771   793 E         : 1. add ResourceResponse to documentLoader
+771   793 E         : 2. increate page progress
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadNotifier.cpp, dispatchDidReceiveResponse, 176
+771   793 E         : 1. callback to FrameLoaderClientAndroid
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/FrameLoaderClientAndroid.cpp, dispatchDidReceiveResponse, 213, notImplemented
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, didReceiveData, 423
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoader.cpp, didReceiveData, 337
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoader.cpp, addData, 245
+771   793 E         : 1. append data to buffer
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadNotifier.cpp, didReceiveData, 101
+771   793 E         : 1. increase page progress
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadNotifier.cpp, dispatchDidReceiveContentLength, 189
+771   793 E         : 1. callback to FrameLoaderClientAndroid
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/FrameLoaderClientAndroid.cpp, dispatchDidReceiveContentLength, 223, notImplemented
+771   793 E         : external/webkit/Source/WebCore/loader/icon/IconLoader.cpp, didReceiveData, 130
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, didFinishLoading, 499
+771   793 E         : external/webkit/Source/WebCore/loader/DocumentLoader.cpp, removeSubresourceLoader, 808
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/FrameLoaderClientAndroid.cpp, didFinishLoad, 1010
+771   793 E         : 1. call to WebFrame.didFinishLoad
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoader.cpp, didFinishLoading, 371
+771   793 E         : 1. notify and release resource
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadNotifier.cpp, didFinishLoad, 115
+771   793 E         : 1. complete page progress
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadNotifier.cpp, dispatchDidFinishLoading, 202
+771   793 E         : 1. callback to FrameLoaderClientAndroid
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/FrameLoaderClientAndroid.cpp, dispatchDidFinishLoading, 233, notImplemented
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoader.cpp, releaseResources, 96
+771   793 E         : 1. clear Frame, DocumentLoader, identifier, ResourceHandle, resource data
+771   793 E         : 2. remove this in ResourceLoadScheduler
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadScheduler.cpp, remove, 154
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadScheduler.cpp, remove, 299
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoader.cpp, ~ResourceLoader, 86
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, finish, 357
+771   793 E         : external/webkit/Source/WebCore/platform/network/android/ResourceHandleAndroid.cpp, ~ResourceHandle, 56
+771   793 E         : external/webkit/Source/WebCore/platform/network/android/ResourceHandleAndroid.cpp, ~ResourceHandleInternal, 49
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoader.cpp, ~WebUrlLoader, 50
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebRequest.cpp, ~WebRequest, 140
+771   793 E         : external/webkit/Source/WebKit/android/WebCoreSupport/WebUrlLoaderClient.cpp, ~WebUrlLoaderClient, 97
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadScheduler.cpp, servePendingRequests, 181
+771   793 E         : ResourceLoadScheduler::servePendingRequests. m_isSuspendingPendingRequests=0
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadScheduler.cpp, servePendingRequests, 210
+771   793 E         : ResourceLoadScheduler::servePendingRequests HostInformation.m_name=''
+771   793 E         : external/webkit/Source/WebCore/loader/ResourceLoadScheduler.cpp, ~HostInformation, 274

@@ -1,7 +1,40 @@
-
 1. ResourceLoadScheduler的作用好像没有体现出来
    开始加载main resource的时候没有使用到scheduler
    加载sub resource的时候使用到了
+
+2. FrameLoader中3个document loader之间的关系
+    
+    provisional load(data source) 
+        在frame loader发送了网络请求 到 收到第一个数据字节(非response)之前， 都是provisional 阶段 
+        当DocumentLoader从网络收到了第一个byte后，就认为provisional load完成
+
+        for handling the state of objects during the time a request is initiated and content arrives
+        it isn’t known yet whether the page will load successfully
+        The first time a WebFrame object is loaded there’s no existing data source and a blank page is displayed
+
+    committed load(data source)
+        A data source becomes committed as soon as the first byte of data arrives
+
+        If the provisional data source becomes invalid due to some error, it never transitions to a committed data source
+        When a data source is committed
+            an appropriated document representation and document view is created for the WebFrame object.
+
+    primary load 
+        ? 当MainResource加载完毕后，发送了load icon的请求后，DocumentLoader就认为primary load完毕
+        setPrimaryLoadComplete
+
+    FrameLoader维护了三个DocumentLoader对象，分别对应于不同的阶段，
+        m_policyDocumentLoader对应于收到用户load调用，进行policy check阶段，
+        m_provisionalDocumentLoader对应于policy check通过以后，Frame数据还没有到来之前，它会负责startLoadingMainResource的调用。
+        m_documentLoader则是Frame第一个数据到来以后使用的DocumentLoader，
+            这个时候，前一个主Frame的DocumentLoader已经不能再用(user agent开始白屏，刷掉前一个页面的显示)。
+
+        目前发现仅仅至创建了一个DocumentLoader
+
+. 一个页面如何知道所有的sub resource加载完成？
+
+. what is Cache Validate
+
 
 
 .下面类之间的关系：
@@ -31,3 +64,4 @@ enum FrameState {
 
 . load Icon
     ./misc/load_icon.cpp
+

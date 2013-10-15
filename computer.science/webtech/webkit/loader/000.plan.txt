@@ -1,3 +1,8 @@
+http 权威指南
+hardcore
+    FrameLoader 3K
+    Document 5K
+
 目标：
     搞清函数级别的流程
         函数的功能要总结的出来
@@ -5,19 +10,21 @@
     文档化
     
 研究内容：
+    protocal
+
+    benchmark
+
     HTTP GET流程
         加载main resource的流程
             加载一个html页面，页面不包括任何其他资源
-            {
-                加载的向下调用过程
-                    基本完毕
-                    
-            }
             SubstituteResource
+            done! 2013-10-15
 
         加载sub resource的流程
-             加载一个html页面，页面仅仅包括一个javascript文件
              加载一个html页面，页面仅仅包括一张图片
+                done! 2013-10-15
+
+             加载一个html页面，页面仅仅包括一个javascript文件
              加载一个html页面，页面仅仅包括一个css文件
 
             加载cache的流程
@@ -56,9 +63,12 @@
     4. 调试环境
         // TODO:
 
+
     Adding log
     note
     UML
+
+    read blog/papers
 
     看代码
     作笔记

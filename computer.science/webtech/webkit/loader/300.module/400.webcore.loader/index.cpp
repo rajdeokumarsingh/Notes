@@ -1,3 +1,5 @@
+main_res.log
+
 ./ResourceLoader.cpp
 
 ./ResourceLoadNotifier.cpp
@@ -7,8 +9,38 @@
 ./ResourceLoadScheduler.cpp
 
 SubresourceLoaderClient.h
+    just interface for loading callbacks
+        willSendRequest didSendData didReceiveResponse didReceiveData didReceiveCachedMetadata didFinishLoading didFail
+        getShouldUseCredentialStorage didReceiveAuthenticationChallenge receivedCancellation
+
 SubresourceLoader.cpp
-SubresourceLoader.h
+    delegate callback to SubresourceLoaderClient
+    after create, SubResourceLoader will be added to DocumentLoader
+    some multipart logic
+
+./CachedResourceLoader.cpp
+
+CachedResourceRequest
+    implements SubresourceLoaderClient
+    update cache relative field to ResourceRequest
+    schedule load of subresource
+    handle http 304
+    send data to CachedResource
+
+CachedImage.cpp
+
+CachedResource.cpp
+    implement RFC2616 13.2.3, 13.2.4, in currentAge(), freshnessLifetime()
+    store decode/encode size
+
+
+CachedCSSStyleSheet.cpp
+CachedFont.cpp
+CachedResourceClientWalker.cpp
+CachedScript.cpp
+CachedXSLStyleSheet.cpp
+MemoryCache.cpp
+
 
 ./DocumentLoader.cpp
     ArchiveResource : public SubstituteResource 
