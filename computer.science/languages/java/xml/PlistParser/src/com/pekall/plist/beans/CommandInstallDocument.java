@@ -13,6 +13,10 @@ public class CommandInstallDocument extends CommandObject {
     public static final String KEY_DOCUMENT_UUID = "DocumentUUID";
     public static final String KEY_DOCUMENT_DESCRIPTION = "DocumentDescription";
 
+    public static final int DOC_AUTH_ENCRYPTION = 51801;
+
+    public static final int DOC_AUTH_SANDBOX = 51802;
+
     /**
      * Name of the document
      */
@@ -36,7 +40,7 @@ public class CommandInstallDocument extends CommandObject {
     /**
      * Need encryption
      */
-    private Boolean NeedEncryption;
+    private String Auth;
 
     /**
      * UUID of the document
@@ -81,12 +85,12 @@ public class CommandInstallDocument extends CommandObject {
         DownloadURL = downloadURL;
     }
 
-    public Boolean getNeedEncryption() {
-        return NeedEncryption;
+    public String getAuth() {
+        return Auth;
     }
 
-    public void setNeedEncryption(Boolean needEncryption) {
-        NeedEncryption = needEncryption;
+    public void setAuth(String auth) {
+        Auth = auth;
     }
 
     public String getDocumentUUID() {
@@ -129,6 +133,7 @@ public class CommandInstallDocument extends CommandObject {
 
         CommandInstallDocument that = (CommandInstallDocument) o;
 
+        if (Auth != null ? !Auth.equals(that.Auth) : that.Auth != null) return false;
         if (DocumentDescription != null ? !DocumentDescription.equals(that.DocumentDescription) : that.DocumentDescription != null)
             return false;
         if (DocumentFormat != null ? !DocumentFormat.equals(that.DocumentFormat) : that.DocumentFormat != null)
@@ -137,8 +142,6 @@ public class CommandInstallDocument extends CommandObject {
         if (DocumentSize != null ? !DocumentSize.equals(that.DocumentSize) : that.DocumentSize != null) return false;
         if (DocumentUUID != null ? !DocumentUUID.equals(that.DocumentUUID) : that.DocumentUUID != null) return false;
         if (DownloadURL != null ? !DownloadURL.equals(that.DownloadURL) : that.DownloadURL != null) return false;
-        if (NeedEncryption != null ? !NeedEncryption.equals(that.NeedEncryption) : that.NeedEncryption != null)
-            return false;
         if (Version != null ? !Version.equals(that.Version) : that.Version != null) return false;
 
         return true;
@@ -151,7 +154,7 @@ public class CommandInstallDocument extends CommandObject {
         result = 31 * result + (DocumentSize != null ? DocumentSize.hashCode() : 0);
         result = 31 * result + (DocumentFormat != null ? DocumentFormat.hashCode() : 0);
         result = 31 * result + (DownloadURL != null ? DownloadURL.hashCode() : 0);
-        result = 31 * result + (NeedEncryption != null ? NeedEncryption.hashCode() : 0);
+        result = 31 * result + (Auth != null ? Auth.hashCode() : 0);
         result = 31 * result + (DocumentUUID != null ? DocumentUUID.hashCode() : 0);
         result = 31 * result + (Version != null ? Version.hashCode() : 0);
         result = 31 * result + (DocumentDescription != null ? DocumentDescription.hashCode() : 0);
@@ -161,15 +164,14 @@ public class CommandInstallDocument extends CommandObject {
     @Override
     public String toString() {
         return "CommandInstallDocument{" +
-                "super='" + super.toString() + '\'' +
-                "DocumentName='" + DocumentName + '\'' +
+                "Auth='" + Auth + '\'' +
+                ", DocumentName='" + DocumentName + '\'' +
                 ", DocumentSize=" + DocumentSize +
                 ", DocumentFormat='" + DocumentFormat + '\'' +
                 ", DownloadURL='" + DownloadURL + '\'' +
-                ", NeedEncryption=" + NeedEncryption +
                 ", DocumentUUID='" + DocumentUUID + '\'' +
                 ", Version='" + Version + '\'' +
                 ", DocumentDescription='" + DocumentDescription + '\'' +
-                '}';
+                "} " + super.toString();
     }
 }

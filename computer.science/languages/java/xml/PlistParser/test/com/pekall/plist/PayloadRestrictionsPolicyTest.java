@@ -22,7 +22,7 @@ public class PayloadRestrictionsPolicyTest extends TestCase {
             "\t\t\t<key>maxFailedAttempts</key>\n" +
             "\t\t\t<integer>7</integer>\n" +
             "\t\t\t<key>maxInactivity</key>\n" +
-            "\t\t\t<integer>2</integer>\n" +
+            "\t\t\t<real>2.0</real>\n" +
             "\t\t\t<key>maxPINAgeInDays</key>\n" +
             "\t\t\t<integer>2</integer>\n" +
             "\t\t\t<key>minComplexChars</key>\n" +
@@ -218,7 +218,7 @@ public class PayloadRestrictionsPolicyTest extends TestCase {
         policy.setForcePIN(true);
         policy.setMaxFailedAttempts(7);
         policy.setMaxGracePeriod(1);
-        policy.setMaxInactivity(2);
+        policy.setMaxInactivity(2f);
         policy.setMaxPINAgeInDays(2);
         policy.setMinComplexChars(2);
         policy.setMinLength(4);

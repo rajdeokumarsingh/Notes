@@ -47,9 +47,12 @@ public class PayloadVPNTest extends TestCase {
         vpn.setPayloadUUID("3808D742-5D21-401E-B83C-AED1E990332D");
         vpn.setPayloadVersion(1);
 
-        vpn.setOverridePrimary(true);
         vpn.setUserDefinedName("test vpn");
         vpn.setVPNType(PayloadVPN.TYPE_L2TP);
+
+        IPv4Info iPv4Info = new IPv4Info();
+        iPv4Info.setOverridePrimary(1);
+        vpn.setIPv4(iPv4Info);
 
         PPPInfo pppInfo = new PPPInfo();
         pppInfo.enableAuthEAPPlugins();
@@ -119,10 +122,13 @@ public class PayloadVPNTest extends TestCase {
             "\t\t<dict>\n" +
             "\t\t\t<key>UserDefinedName</key>\n" +
             "\t\t\t<string>test vpn</string>\n" +
-            "\t\t\t<key>OverridePrimary</key>\n" +
-            "\t\t\t<true/>\n" +
             "\t\t\t<key>VPNType</key>\n" +
             "\t\t\t<string>L2TP</string>\n" +
+            "\t\t\t<key>IPv4</key>\n" +
+            "\t\t\t<dict>\n" +
+            "\t\t\t\t<key>OverridePrimary</key>\n" +
+            "\t\t\t\t<integer>1</integer>\n" +
+            "\t\t\t</dict>\n" +
             "\t\t\t<key>PPP</key>\n" +
             "\t\t\t<dict>\n" +
             "\t\t\t\t<key>AuthName</key>\n" +

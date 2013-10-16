@@ -3,10 +3,10 @@ package com.pekall.plist;
 
 import com.pekall.plist.beans.PayloadArrayWrapper;
 import com.pekall.plist.beans.PayloadBase;
-import com.pekall.plist.beans.PayloadCertificate;
+import com.pekall.plist.beans.PayloadCertRoot;
 import junit.framework.TestCase;
 
-public class PayloadCertificateTest extends TestCase {
+public class PayloadCertRootTest extends TestCase {
 
     public void testGenAppXml() throws Exception {
         PayloadBase settings = getPolicy();
@@ -16,8 +16,8 @@ public class PayloadCertificateTest extends TestCase {
     }
 
     public void testParseAppXml() throws Exception {
-        PayloadCertificate policy = PayloadCertificate.fromXmlT(
-                TEST_APP_XML, PayloadCertificate.class);
+        PayloadCertRoot policy = PayloadCertRoot.fromXmlT(
+                TEST_APP_XML, PayloadCertRoot.class);
 
         assertEquals(policy, getPolicy());
         assertTrue(ObjectComparator.equals(policy, getPolicy()));
@@ -37,10 +37,10 @@ public class PayloadCertificateTest extends TestCase {
         PlistDebug.logTest(profile.toString());
 
         assertEquals(profile, createProfile());
-        assertEquals(parser.getPayload(PayloadBase.PAYLOAD_TYPE_CERTIFICATE),
+        assertEquals(parser.getPayload(PayloadBase.PAYLOAD_TYPE_CERT_ROOT),
                 getPolicy());
         assertTrue(ObjectComparator.equals(
-                parser.getPayload(PayloadBase.PAYLOAD_TYPE_CERTIFICATE), getPolicy()));
+                parser.getPayload(PayloadBase.PAYLOAD_TYPE_CERT_ROOT), getPolicy()));
     }
 
     public void testTwoWay() throws Exception {
@@ -52,7 +52,7 @@ public class PayloadCertificateTest extends TestCase {
 
     private PayloadBase getPolicy() {
 
-        PayloadCertificate policy = new PayloadCertificate();
+        PayloadCertRoot policy = new PayloadCertRoot();
         policy.setPayloadDescription("提供设备鉴定（证书或身份）。");
         policy.setPayloadDisplayName("Pekall MDM Test CA");
         policy.setPayloadIdentifier("com.pekall.profile.ide.凭证");

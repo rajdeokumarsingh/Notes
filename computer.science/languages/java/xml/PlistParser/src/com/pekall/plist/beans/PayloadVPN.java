@@ -22,11 +22,6 @@ public class PayloadVPN extends PayloadBase {
      */
     private String UserDefinedName;
 
-    /**
-     * Specifies whether to send all traffic through the VPN interface.
-     * If true, all network traffic is sent over VPN.
-     */
-    private Boolean OverridePrimary;
 
     /**
      * Determines the settings available in the payload for this type of VPN connection.
@@ -36,6 +31,7 @@ public class PayloadVPN extends PayloadBase {
      */
     private String VPNType;
 
+    private IPv4Info IPv4;
     private PPPInfo PPP;
     private IPSecInfo IPSec;
 
@@ -109,20 +105,21 @@ public class PayloadVPN extends PayloadBase {
         UserDefinedName = userDefinedName;
     }
 
-    public Boolean getOverridePrimary() {
-        return OverridePrimary;
-    }
-
-    public void setOverridePrimary(Boolean overridePrimary) {
-        OverridePrimary = overridePrimary;
-    }
-
     public String getVPNType() {
         return VPNType;
     }
 
     public void setVPNType(String VPNType) {
         this.VPNType = VPNType;
+    }
+
+
+    public IPv4Info getIPv4() {
+        return IPv4;
+    }
+
+    public void setIPv4(IPv4Info IPv4) {
+        this.IPv4 = IPv4;
     }
 
     public PPPInfo getPPP() {
@@ -238,8 +235,7 @@ public class PayloadVPN extends PayloadBase {
         PayloadVPN that = (PayloadVPN) o;
 
         if (IPSec != null ? !IPSec.equals(that.IPSec) : that.IPSec != null) return false;
-        if (OverridePrimary != null ? !OverridePrimary.equals(that.OverridePrimary) : that.OverridePrimary != null)
-            return false;
+        if (IPv4 != null ? !IPv4.equals(that.IPv4) : that.IPv4 != null) return false;
         if (PPP != null ? !PPP.equals(that.PPP) : that.PPP != null) return false;
         if (Proxies != null ? !Proxies.equals(that.Proxies) : that.Proxies != null) return false;
         if (UserDefinedName != null ? !UserDefinedName.equals(that.UserDefinedName) : that.UserDefinedName != null)
@@ -268,7 +264,7 @@ public class PayloadVPN extends PayloadBase {
     public int hashCode() {
         int result = super.hashCode();
         result = 31 * result + (UserDefinedName != null ? UserDefinedName.hashCode() : 0);
-        result = 31 * result + (OverridePrimary != null ? OverridePrimary.hashCode() : 0);
+        result = 31 * result + (IPv4 != null ? IPv4.hashCode() : 0);
         result = 31 * result + (VPNType != null ? VPNType.hashCode() : 0);
         result = 31 * result + (PPP != null ? PPP.hashCode() : 0);
         result = 31 * result + (IPSec != null ? IPSec.hashCode() : 0);
@@ -291,7 +287,7 @@ public class PayloadVPN extends PayloadBase {
         return "PayloadVPN{" +
                 "account='" + account + '\'' +
                 ", UserDefinedName='" + UserDefinedName + '\'' +
-                ", OverridePrimary=" + OverridePrimary +
+                ", IPv4=" + IPv4 +
                 ", VPNType='" + VPNType + '\'' +
                 ", PPP=" + PPP +
                 ", IPSec=" + IPSec +

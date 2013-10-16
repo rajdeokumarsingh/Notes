@@ -28,7 +28,7 @@ public class PayloadPasswordPolicyTest extends TestCase {
         assertEquals(policy.getForcePIN(), Boolean.valueOf(true));
         assertEquals(policy.getMaxFailedAttempts(), Integer.valueOf(7));
         assertEquals(policy.getMaxGracePeriod(), Integer.valueOf(1));
-        assertEquals(policy.getMaxInactivity(), Integer.valueOf(2));
+        assertEquals(policy.getMaxInactivity(), Float.valueOf(2));
         assertEquals(policy.getMaxPINAgeInDays(), Integer.valueOf(2));
         assertEquals(policy.getMinComplexChars(), Integer.valueOf(2));
         assertEquals(policy.getMinLength(), Integer.valueOf(4));
@@ -71,7 +71,7 @@ public class PayloadPasswordPolicyTest extends TestCase {
         policy.setForcePIN(true);
         policy.setMaxFailedAttempts(7);
         policy.setMaxGracePeriod(1);
-        policy.setMaxInactivity(2);
+        policy.setMaxInactivity(2f);
         policy.setMaxPINAgeInDays(2);
         policy.setMinComplexChars(2);
         policy.setMinLength(4);

@@ -185,7 +185,7 @@ public class EnrollProfileData {
             "\t\t\t<key>maxGracePeriod</key>\n" +
             "\t\t\t<integer>1</integer>\n" +
             "\t\t\t<key>maxInactivity</key>\n" +
-            "\t\t\t<integer>2</integer>\n" +
+            "\t\t\t<real>2.0</real>\n" +
             "\t\t\t<key>maxPINAgeInDays</key>\n" +
             "\t\t\t<integer>2</integer>\n" +
             "\t\t\t<key>minComplexChars</key>\n" +

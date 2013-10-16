@@ -2,17 +2,17 @@ package com.pekall.plist.beans;
 
 import java.util.Arrays;
 
-public class PayloadCertificate extends PayloadBase {
+public class PayloadCertRoot extends PayloadBase {
     private String PayloadCertificateFileName;
     private byte[] PayloadContent;
 
-    public PayloadCertificate() {
-        setPayloadType(PAYLOAD_TYPE_CERTIFICATE);
+    public PayloadCertRoot() {
+        setPayloadType(PAYLOAD_TYPE_CERT_ROOT);
     }
 
-    public PayloadCertificate(String payloadIdentifier, String payloadType, String payloadUUID, int payloadVersion, String payloadDescription, String payloadDisplayName, String payloadOrganization) {
+    public PayloadCertRoot(String payloadIdentifier, String payloadType, String payloadUUID, int payloadVersion, String payloadDescription, String payloadDisplayName, String payloadOrganization) {
         super(payloadIdentifier, payloadType, payloadUUID, payloadVersion, payloadDescription, payloadDisplayName, payloadOrganization);
-        setPayloadType(PAYLOAD_TYPE_CERTIFICATE);
+        setPayloadType(PAYLOAD_TYPE_CERT_ROOT);
     }
 
     public String getPayloadCertificateFileName() {
@@ -34,10 +34,10 @@ public class PayloadCertificate extends PayloadBase {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof PayloadCertificate)) return false;
+        if (!(o instanceof PayloadCertRoot)) return false;
         if (!super.equals(o)) return false;
 
-        PayloadCertificate that = (PayloadCertificate) o;
+        PayloadCertRoot that = (PayloadCertRoot) o;
 
         if (PayloadCertificateFileName != null ? !PayloadCertificateFileName.equals(that.PayloadCertificateFileName) : that.PayloadCertificateFileName != null)
             return false;
@@ -56,7 +56,7 @@ public class PayloadCertificate extends PayloadBase {
 
     @Override
     public String toString() {
-        return "PayloadCertificate{" +
+        return "PayloadCertRoot{" +
                 "super='" + super.toString() + '\'' +
                 "PayloadCertificateFileName='" + PayloadCertificateFileName + '\'' +
                 ", PayloadContent=" + Arrays.toString(PayloadContent) +

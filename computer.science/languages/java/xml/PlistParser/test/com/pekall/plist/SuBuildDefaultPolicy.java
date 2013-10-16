@@ -358,9 +358,9 @@ public class SuBuildDefaultPolicy extends TestCase {
         BrowserSettings browserSettings = getBrowserSettings();
 
 
-        wrapper.addPayLoadContent(wifiConfig);
-        wrapper.addPayLoadContent(advertiseDownloadSettingsAuto);
-        wrapper.addPayLoadContent(advertiseDownloadSettingsManual);
+        //wrapper.addPayLoadContent(wifiConfig);
+        //wrapper.addPayLoadContent(advertiseDownloadSettingsAuto);
+        //wrapper.addPayLoadContent(advertiseDownloadSettingsManual);
         wrapper.addPayLoadContent(browserSettings);
         wrapper.addPayLoadContent(launcherSettings);
         wrapper.addPayLoadContent(systemSettings);
@@ -427,23 +427,23 @@ public class SuBuildDefaultPolicy extends TestCase {
         ApkItem item31 = new ApkItem("历史消息", "com.pekall.launcher",
                 "com.pekall.launcher2.ui.HistoryMessageActivity",
                 "http://www.pekall.com/icon/12345", 1, 5, 1);
-        WebItem item4 = new WebItem("建行主页", "http://www.ccb.com",
-                "http://119.161.242.248:3342/resources/api/v1/download/guest?uuid=de6e5f8b63bc46ea32d7f46c0c33",
+        WebItem item4 = new WebItem("主页", "http://www.ccb.com",
+                "http://119.161.242.248:3342/resources/api/v1/download/guest?uuid=08a0cea017e9476ecb1c493b49c7",
                 0, 1, 1);
         WebItem item5 = new WebItem("个人网银", "https://ibsbjstar.ccb.com.cn/app/V5/CN/STY1/login.jsp",
-                "http://119.161.242.248:3342/resources/api/v1/download/guest?uuid=8a81ac2ae7534d64b2c7e166e69c",
+                "http://119.161.242.248:3342/resources/api/v1/download/guest?uuid=39fdfcfb56884f99ddbffdc2bd12",
                 0, 2, 1);
         WebItem item6 = new WebItem("私人网银", "https://ibsbjstar.ccb.com.cn/app/V5/CN/STY6/login_pbc.jsp",
-                "http://119.161.242.248:3342/resources/api/v1/download/guest?uuid=e431cf4fb8334374eb1919fd51f9",
+                "http://119.161.242.248:3342/resources/api/v1/download/guest?uuid=4c1516ca28744a7a08cf22de7647",
                 0, 3, 1);
         WebItem item7 = new WebItem("企业网银", "http://ebank.ccb.com/cn/ebank/homepage_corporate.html",
-                "http://119.161.242.248:3342/resources/api/v1/download/guest?uuid=ab8d412191d64c1d891e7f55676f",
+                "http://119.161.242.248:3342/resources/api/v1/download/guest?uuid=cc22a39b9c214a739c3569920133",
                 0, 4, 1);
-        WebItem item8 = new WebItem("小微网银", "http://ccb.com/cn/home/s_company_index.html",
-                "http://119.161.242.248:3342/resources/api/v1/download/guest?uuid=293e4ac13cc74a08b13304ed06f1",
+        WebItem item8 = new WebItem("小微企业", "http://ccb.com/cn/home/s_company_index.html",
+                "http://119.161.242.248:3342/resources/api/v1/download/guest?uuid=8bc727eb65664841940978d19f67",
                 0, 5, 1);
         WebItem item9 = new WebItem("善融商城", "http://e.ccb.com/cn/home/ecp_index.html",
-                "http://119.161.242.248:3342/resources/api/v1/download/guest?uuid=5c318e33a3e340b40bcbfe20816f",
+                "http://119.161.242.248:3342/resources/api/v1/download/guest?uuid=676e7050018f4adb8cae42e24426",
                 0, 6, 1);
 
         settings.addApkItem(item1);
@@ -495,8 +495,8 @@ public class SuBuildDefaultPolicy extends TestCase {
         quickLaunches.add(new QuickLaunchItem("6", "善融商城", "http://e.ccb.com/cn/home/ecp_index.html"));
 
         whiteList.add(new UrlMatchRule("sina.com"));
-        whiteList.add(new UrlMatchRule("baidu.com", UrlMatchRule.MATCH_TYPE_EQUAL));
-        whiteList.add(new UrlMatchRule("24", "ccb.com", UrlMatchRule.MATCH_TYPE_EQUAL));
+        whiteList.add(new UrlMatchRule("baidu.com", UrlMatchRule.MATCH_TYPE_CONTAIN));
+        whiteList.add(new UrlMatchRule("24", "ccb.com", UrlMatchRule.MATCH_TYPE_CONTAIN));
 
         historyWatches.add(new HistoryWatchItem("baidu.com"));
         historyWatches.add(new HistoryWatchItem("ccb.com", UrlMatchRule.MATCH_TYPE_PREFIX));

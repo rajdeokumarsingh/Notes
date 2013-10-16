@@ -39,7 +39,7 @@ public class PayloadXmlMsgParserTest extends TestCase {
         passwordPolicy1.setForcePIN(true);
         passwordPolicy1.setMaxFailedAttempts(7);
         passwordPolicy1.setMaxGracePeriod(1);
-        passwordPolicy1.setMaxInactivity(2);
+        passwordPolicy1.setMaxInactivity(2f);
         passwordPolicy1.setMaxPINAgeInDays(2);
         passwordPolicy1.setMinComplexChars(2);
         passwordPolicy1.setMinLength(4);

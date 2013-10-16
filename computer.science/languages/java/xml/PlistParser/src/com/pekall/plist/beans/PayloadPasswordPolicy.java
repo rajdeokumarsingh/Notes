@@ -40,7 +40,7 @@ public class PayloadPasswordPolicy extends PayloadBase {
      * be idle (without being unlocked by the user) before it gets locked by the system.
      * Once this limit is reached, the device is locked and the passcode must be entered.
      */
-    private Integer maxInactivity;
+    private Float maxInactivity;
 
     /**
      * Optional. Default Infinity. Specifies the number of days for which the passcode can
@@ -115,11 +115,11 @@ public class PayloadPasswordPolicy extends PayloadBase {
         this.maxFailedAttempts = maxFailedAttempts;
     }
 
-    public Integer getMaxInactivity() {
+    public Float getMaxInactivity() {
         return maxInactivity;
     }
 
-    public void setMaxInactivity(Integer maxInactivity) {
+    public void setMaxInactivity(Float maxInactivity) {
         this.maxInactivity = maxInactivity;
     }
 

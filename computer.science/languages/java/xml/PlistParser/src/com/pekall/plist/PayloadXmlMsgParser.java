@@ -32,13 +32,16 @@ public class PayloadXmlMsgParser {
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_LDAP, PayloadLDAP.class);
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_IOS_EXCHANGE, PayloadExchange.class);
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_VPN, PayloadVPN.class);
-        payloadTypes.put(PayloadBase.PAYLOAD_TYPE_CERTIFICATE, PayloadCertificate.class);
+        payloadTypes.put(PayloadBase.PAYLOAD_TYPE_CERT_ROOT, PayloadCertRoot.class);
+        payloadTypes.put(PayloadBase.PAYLOAD_TYPE_CERT_PKCS12, PayloadCertPkcs12.class);
+        payloadTypes.put(PayloadBase.PAYLOAD_TYPE_SCEP, PayloadScep.class);
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_ROAMING_POLICY, PayloadRoamingPolicy.class);
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_CARD_DAV, PayloadCardDAVPolicy.class);
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_CAL_DAV, PayloadCalDAVPolicy.class);
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_CAL_SUB, PayloadCalSubscriptionPolicy.class);
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_APN, PayloadAPN.class);
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_APP_LOCK, PayloadAppLock.class);
+        payloadTypes.put(PayloadBase.PAYLOAD_TYPE_MDM, PayloadMdm.class);
 
         // Just for SU MDM
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_SE_BROWSER_SETTINGS, BrowserSettings.class);

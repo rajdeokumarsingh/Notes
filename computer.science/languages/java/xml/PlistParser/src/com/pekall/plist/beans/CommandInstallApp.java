@@ -34,6 +34,11 @@ public class CommandInstallApp extends CommandObject {
      */
     private String PackageName;
 
+    /**
+     * Version code,  just for Android
+     */
+    private String versionCode;
+
     public CommandInstallApp() {
         super(CommandObject.REQ_TYPE_INST_APP);
     }
@@ -70,6 +75,14 @@ public class CommandInstallApp extends CommandObject {
         PackageName = packageName;
     }
 
+    public String getVersionCode() {
+        return versionCode;
+    }
+
+    public void setVersionCode(String versionCode) {
+        this.versionCode = versionCode;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -84,6 +97,7 @@ public class CommandInstallApp extends CommandObject {
         if (PackageName != null ? !PackageName.equals(that.PackageName) : that.PackageName != null) return false;
         if (iTunesStoreID != null ? !iTunesStoreID.equals(that.iTunesStoreID) : that.iTunesStoreID != null)
             return false;
+        if (versionCode != null ? !versionCode.equals(that.versionCode) : that.versionCode != null) return false;
 
         return true;
     }
@@ -95,17 +109,18 @@ public class CommandInstallApp extends CommandObject {
         result = 31 * result + (ManifestURL != null ? ManifestURL.hashCode() : 0);
         result = 31 * result + (ManagementFlags != null ? ManagementFlags.hashCode() : 0);
         result = 31 * result + (PackageName != null ? PackageName.hashCode() : 0);
+        result = 31 * result + (versionCode != null ? versionCode.hashCode() : 0);
         return result;
     }
 
     @Override
     public String toString() {
         return "CommandInstallApp{" +
-                "super=" + super.toString() +
-                ", iTunesStoreID=" + iTunesStoreID +
+                "iTunesStoreID=" + iTunesStoreID +
                 ", ManifestURL='" + ManifestURL + '\'' +
                 ", ManagementFlags=" + ManagementFlags +
                 ", PackageName='" + PackageName + '\'' +
-                '}';
+                ", versionCode='" + versionCode + '\'' +
+                "} " + super.toString();
     }
 }

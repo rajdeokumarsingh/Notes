@@ -4,6 +4,8 @@ import com.dd.plist.NSDictionary;
 import com.google.gson.Gson;
 import com.pekall.plist.beans.*;
 import com.pekall.plist.json.PayloadJsonWrapper;
+import com.pekall.plist.su.device.DeviceInfoRespSU;
+import com.pekall.plist.su.device.NetSpeed;
 import com.pekall.plist.su.policy.*;
 import com.pekall.plist.su.settings.SystemSettings;
 import com.pekall.plist.su.settings.advertise.AdvertiseDownloadSettings;
@@ -17,6 +19,7 @@ import com.pekall.plist.su.settings.launcher.WebItem;
 import junit.framework.TestCase;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -92,8 +95,9 @@ public class WjlBuildDefaultPolicy extends TestCase {
             "  \"PayloadType\": \"Configuration\",\n" +
             "  \"PayloadVersion\": 1,\n" +
             "  \"PayloadIdentifier\": \"com.pekall.profile.setting\",\n" +
-            "  \"PayloadUUID\": \"oney9912-783m-821m-a3xa-9ra78624jck8\",\n" +
-            "  \"PayloadDisplayName\": \"\",\n" +
+            "  \"PayloadUUID\": \"1tam7zn8-5fax-16zd-izw6-78g1ai5dt333\",\n" +
+            "  \"PayloadDisplayName\": \"ccc\",\n" +
+            "  \"PayloadDescription\": \"cccc\",\n" +
             "  \"PayloadOrganization\": \"Pekall Capital\",\n" +
             "  \"PayloadContent\": {\n" +
             "    \"payloadEmails\": [\n" +
@@ -101,7 +105,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
             "        \"PayloadType\": \"com.apple.mail.managed\",\n" +
             "        \"PayloadVersion\": 1,\n" +
             "        \"PayloadIdentifier\": \"com.pekall.profile.email\",\n" +
-            "        \"PayloadUUID\": \"51r46431-kwpa-2yy6-998a-dd67e6bg7a21\",\n" +
+            "        \"PayloadUUID\": \"9vf9w195-497x-1q2t-849e-7qd491s69b61\",\n" +
             "        \"PayloadDisplayName\": \"Email配置\",\n" +
             "        \"PayloadDescription\": \"Email相关配置\",\n" +
             "        \"PayloadOrganization\": \"pekall Capital\",\n" +
@@ -126,7 +130,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
             "        \"PayloadType\": \"com.apple.vpn.managed\",\n" +
             "        \"PayloadVersion\": 1,\n" +
             "        \"PayloadIdentifier\": \"com.pekall.profile.VPN\",\n" +
-            "        \"PayloadUUID\": \"8jphv58r-ro32-p818-61ie-n2onne39kfh6\",\n" +
+            "        \"PayloadUUID\": \"5mp21i5l-8c68-m46w-f3fs-7jd6bt1i4dt2\",\n" +
             "        \"PayloadDisplayName\": \"VPN配置\",\n" +
             "        \"PayloadDescription\": \"VPN相关配置\",\n" +
             "        \"PayloadOrganization\": \"pekall Capital\",\n" +
@@ -155,7 +159,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
             "        \"PayloadType\": \"com.apple.wifi.managed\",\n" +
             "        \"PayloadVersion\": 1,\n" +
             "        \"PayloadIdentifier\": \"com.pekall.config.wifi.managed\",\n" +
-            "        \"PayloadUUID\": \"1vph23t8-njhw-4qq4-y6z9-b3rzw3t8r2xs\",\n" +
+            "        \"PayloadUUID\": \"842fzzs4-tfmf-5q93-177d-ds5y57qvx5p4\",\n" +
             "        \"PayloadDisplayName\": \"WIFI配置\",\n" +
             "        \"PayloadDescription\": \"WIFI相关配置\",\n" +
             "        \"PayloadOrganization\": \"pekall Capital\",\n" +
@@ -168,12 +172,12 @@ public class WjlBuildDefaultPolicy extends TestCase {
             "    ],\n" +
             "    \"payloadCalDAVPolicies\": [\n" +
             "      {\n" +
-            "        \"PayloadType\": \"com.apple.wifi.managed\",\n" +
+            "        \"PayloadType\": \"com.apple.caldav.account\",\n" +
             "        \"PayloadVersion\": 1,\n" +
-            "        \"PayloadIdentifier\": \"com.pekall.config.wifi.managed\",\n" +
-            "        \"PayloadUUID\": \"79ki3916-7z8e-7d6h-i6e1-3wn24h892e88\",\n" +
-            "        \"PayloadDisplayName\": \"WIFI配置\",\n" +
-            "        \"PayloadDescription\": \"WIFI相关配置\",\n" +
+            "        \"PayloadIdentifier\": \"com.apple.profile.caldav.account\",\n" +
+            "        \"PayloadUUID\": \"4m5lgnjg-v55r-xa19-r745-1ryte17q7t62\",\n" +
+            "        \"PayloadDisplayName\": \"cal dav配置\",\n" +
+            "        \"PayloadDescription\": \"cal dav相关配置\",\n" +
             "        \"PayloadOrganization\": \"pekall Capital\",\n" +
             "        \"CalDAVAccountDescription\": \"My CarlDAV 账户\",\n" +
             "        \"CalDAVHostName\": \"google.com\",\n" +
@@ -185,20 +189,58 @@ public class WjlBuildDefaultPolicy extends TestCase {
             "    ],\n" +
             "    \"payloadCalSubscriptionPolicies\": [\n" +
             "      {\n" +
-            "        \"PayloadType\": \"com.apple.wifi.managed\",\n" +
+            "        \"PayloadType\": \"com.apple.subscribedcalendar.account\",\n" +
             "        \"PayloadVersion\": 1,\n" +
-            "        \"PayloadIdentifier\": \"com.pekall.config.wifi.managed\",\n" +
-            "        \"PayloadUUID\": \"x3439bzg-6shh-3zd8-pb6e-316dk9f831z2\",\n" +
-            "        \"PayloadDisplayName\": \"WIFI配置\",\n" +
-            "        \"PayloadDescription\": \"WIFI相关配置\",\n" +
-            "        \"PayloadOrganization\": \"pekall Capital\",\n" +
-            "        \"SubCalAccountDescription\": \"test account\",\n" +
-            "        \"SubCalAccountHostName\": \"www.pekall.com\",\n" +
-            "        \"SubCalAccountUsername\": \"wjl\",\n" +
-            "        \"SubCalAccountPassword\": \"123456\",\n" +
-            "        \"SubCalAccountUseSSL\": true\n" +
+            "        \"PayloadIdentifier\": \"com.apple.profile.subscribedcalendar.account\",\n" +
+            "        \"PayloadUUID\": \"csp72gfq-j995-zqiv-9ep9-34n22323heqs\",\n" +
+            "        \"PayloadDisplayName\": \"cal subscription配置\",\n" +
+            "        \"PayloadDescription\": \"cal subscription相关配置\",\n" +
+            "        \"PayloadOrganization\": \"pekall Capital\"\n" +
             "      }\n" +
-            "    ]\n" +
+            "    ],\n" +
+            "    \"payloadCardDAVPolicies\": [\n" +
+            "      {\n" +
+            "        \"PayloadType\": \"com.apple.carddav.account\",\n" +
+            "        \"PayloadVersion\": 1,\n" +
+            "        \"PayloadIdentifier\": \"com.apple.profile.carddav.account\",\n" +
+            "        \"PayloadUUID\": \"11xi675a-3a51-v6u1-dg47-b36i57q18a75\",\n" +
+            "        \"PayloadDisplayName\": \"card dav配置\",\n" +
+            "        \"PayloadDescription\": \"card dav相关配置\",\n" +
+            "        \"PayloadOrganization\": \"pekall Capital\",\n" +
+            "        \"CardDAVUseSSL\": true\n" +
+            "      }\n" +
+            "    ],\n" +
+            "    \"payloadAPN\": {\n" +
+            "      \"PayloadType\": \"com.apple.apn.managed\",\n" +
+            "      \"PayloadVersion\": 1,\n" +
+            "      \"PayloadIdentifier\": \"com.apple.profile.apn.managed\",\n" +
+            "      \"PayloadUUID\": \"8v394u34-clda-pf7l-2g38-8gnbd41938aa\",\n" +
+            "      \"PayloadDisplayName\": \"APN配置\",\n" +
+            "      \"PayloadDescription\": \"APN相关配置\",\n" +
+            "      \"PayloadOrganization\": \"pekall Capital\",\n" +
+            "      \"PayloadContent\": [\n" +
+            "        {\n" +
+            "          \"DefaultsDomainName\": \"com.apple.managedCarrier\",\n" +
+            "          \"DefaultsData\": {\n" +
+            "            \"apns\": [\n" +
+            "              {\n" +
+            "                \"apn\": \"cmwap\",\n" +
+            "                \"username\": \"Ray\",\n" +
+            "                \"password\": [\n" +
+            "                  \"a\",\n" +
+            "                  \"b\",\n" +
+            "                  \"c\",\n" +
+            "                  \"d\",\n" +
+            "                  \"e\"\n" +
+            "                ],\n" +
+            "                \"proxy\": \"10.0.0.72\",\n" +
+            "                \"proxyPort\": \"80\"\n" +
+            "              }\n" +
+            "            ]\n" +
+            "          }\n" +
+            "        }\n" +
+            "      ]\n" +
+            "    }\n" +
             "  }\n" +
             "}";
 
@@ -270,6 +312,21 @@ public class WjlBuildDefaultPolicy extends TestCase {
 //        assertEquals(xml, TEST_XML);
     }
 
+    public void testGenIosAppLockProfile() throws Exception {
+        PayloadArrayWrapper profile = createIosApplockProfile();
+
+        System.out.println(xml2Json(profile.toXml()));
+
+
+        System.out.println("----------------------");
+
+        NSDictionary root = PlistBeanConverter.createNdictFromBean(profile);
+        String xml = PlistXmlParser.toXml(root);
+
+        PlistDebug.logTest(xml);
+//        assertEquals(xml, TEST_XML);
+    }
+
     public void testGenIosSettingXml() throws Exception {
         PayloadArrayWrapper profile = createIosSettingProfile();
 
@@ -331,6 +388,22 @@ public class WjlBuildDefaultPolicy extends TestCase {
         email.setSMIMEEnabled(false);
         email.setPreventMove(false);
         return email;
+    }
+
+    private PayloadAppLock createAppLock(){
+        PayloadAppLock appLock = new PayloadAppLock();
+        appLock.setPayloadDescription("APP Lock 配置");
+        appLock.setPayloadDisplayName("AppLock配置");
+        appLock.setPayloadIdentifier("com.pekall.profile.app.lock");
+        appLock.setPayloadOrganization(ORGANIZATION);
+        appLock.setPayloadUUID(getUUID());
+        appLock.setPayloadVersion(1);
+
+        AppDict appDict = new AppDict();
+        appDict.setIdentifier("com.pekall.ios.mdm");
+        appLock.setApp(appDict);
+
+        return appLock;
     }
 
     private PayloadExchange createExchange() {
@@ -411,6 +484,17 @@ public class WjlBuildDefaultPolicy extends TestCase {
         return wrapper;
     }
 
+    private PayloadArrayWrapper createIosApplockProfile() {
+        PayloadAppLock appLock = createAppLock();
+
+//        PayloadPasswordPolicy passwordPolicy = createPasswordPolicy();
+        PayloadArrayWrapper wrapper = createAppLockWrapper();
+        wrapper.addPayLoadContent(appLock);
+
+//        wrapper.addPayLoadContent(wifiConfig);
+        return wrapper;
+    }
+
 
     private PayloadArrayWrapper createIosSettingProfile() {
         PayloadWifiConfig wifiConfig = createWifiConfig();
@@ -442,26 +526,26 @@ public class WjlBuildDefaultPolicy extends TestCase {
         ldap.setPayloadDisplayName("LDAP配置");
         ldap.setPayloadIdentifier("com.pekall.profile.LDAP");
         ldap.setPayloadOrganization("Pekall Capital");
-        ldap.setPayloadUUID("3808D742-5D21-401E-B83C-AED1E990332D");
+        ldap.setPayloadUUID(getUUID());
         ldap.setPayloadVersion(1);
 
         ldap.setLDAPAccountDescription("test ldap account");
-        ldap.setLDAPAccountHostName("ldap.pekall.com");
-        ldap.setLDAPAccountUserName("admin");
-        ldap.setLDAPAccountPassword("123456");
-        ldap.setLDAPAccountUseSSL(true);
+        ldap.setLDAPAccountHostName("192.168.10.239");
+        ldap.setLDAPAccountUserName("cn=cc,cn=users,dn=mdm,dn=com");
+        ldap.setLDAPAccountPassword("Lccly123456");
+        ldap.setLDAPAccountUseSSL(false);
 
         LDAPSearchSetting setting = new LDAPSearchSetting();
         setting.setLDAPSearchSettingDescription("我的搜索");
         setting.setLDAPSearchSettingScope(LDAPSearchSetting.SCOPE_SUBTREE);
-        setting.setLDAPSearchSettingSearchBase("o=My Company ou=MyDepartment");
+        setting.setLDAPSearchSettingSearchBase("cn=users,dn=mdm,dn=com");
         ldap.addLDAPSearchSetting(setting);
 
-        setting = new LDAPSearchSetting();
-        setting.setLDAPSearchSettingDescription("dsfdsf");
-        setting.setLDAPSearchSettingScope(LDAPSearchSetting.SCOPE_BASE);
-        setting.setLDAPSearchSettingSearchBase("o=mu");
-        ldap.addLDAPSearchSetting(setting);
+//        setting = new LDAPSearchSetting();
+//        setting.setLDAPSearchSettingDescription("dsfdsf");
+//        setting.setLDAPSearchSettingScope(LDAPSearchSetting.SCOPE_BASE);
+//        setting.setLDAPSearchSettingSearchBase("o=mu");
+//        ldap.addLDAPSearchSetting(setting);
 
         return ldap;
     }
@@ -496,17 +580,13 @@ public class WjlBuildDefaultPolicy extends TestCase {
 
         APNSDict apnData = new APNSDict();
 
-        byte[] bytes = new byte[5];
-        for (int i = 0; i < bytes.length; i++) {
-            bytes[i] = (byte) i;
-        }
+//        byte[] bytes = new byte[5];
+//        for (int i = 0; i < bytes.length; i++) {
+//            bytes[i] = (byte) i;
+//        }
 
         APNConfig config1 = new APNConfig();
-        config1.setApn("cmwap");
-        config1.setUsername("Ray");
-        config1.setPassword(bytes);
-        config1.setProxy("10.0.0.72");
-        config1.setProxyPort(80);
+        config1.setApn("cmnet");
         apnData.addApn(config1);
 
 //        APNConfig config2 = new APNConfig();
@@ -531,11 +611,11 @@ public class WjlBuildDefaultPolicy extends TestCase {
         policy.setPayloadUUID(getUUID());
         policy.setPayloadVersion(VERSION);
 
-        policy.setSubCalAccountDescription("test account");
-        policy.setSubCalAccountHostName("www.pekall.com");
+        policy.setSubCalAccountDescription("test sub cal");
+        policy.setSubCalAccountHostName("google.com");
         policy.setSubCalAccountUseSSL(true);
-        policy.setSubCalAccountUsername("wjl");
-        policy.setSubCalAccountPassword("123456");
+        policy.setSubCalAccountUsername("pekallqq");
+        policy.setSubCalAccountPassword("pekallqqq");
         return policy;
     }
 
@@ -553,7 +633,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
         policy.setCalDAVHostName("google.com");
         policy.setCalDAVPort(8443);
         policy.setCalDAVUseSSL(true);
-        policy.setCalDAVUsername("pekalqq");
+        policy.setCalDAVUsername("pekallqq");
         policy.setCalDAVPassword("pekallqqq");
         return policy;
     }
@@ -569,7 +649,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
 
         policy.setCardDAVAccountDescription("My CardDAV 账户");
         policy.setCardDAVHostName("google.com");
-        policy.setCardDAVPort(8443);
+        policy.setCardDAVPort(8843);
         policy.setCardDAVUseSSL(true);
         policy.setCardDAVUsername("pekallqq");
         policy.setCardDAVPassword("pekallqqq");
@@ -726,6 +806,20 @@ public class WjlBuildDefaultPolicy extends TestCase {
 
         return settings;
     }
+
+    private PayloadArrayWrapper createAppLockWrapper() {
+        PayloadArrayWrapper wrapper = new PayloadArrayWrapper();
+        wrapper.setPayloadDescription("配置文件");
+        wrapper.setPayloadDisplayName("Pekall Applock Setting");
+        wrapper.setPayloadIdentifier("com.pekall.profile.setting.applock");
+        wrapper.setPayloadOrganization("Pekall Capital");
+        wrapper.setPayloadType("Configuration");
+        wrapper.setPayloadUUID(UUID.randomUUID().toString());
+        wrapper.setPayloadVersion(1);
+        wrapper.setPayloadRemovalDisallowed(true);
+        return wrapper;
+    }
+
     private PayloadArrayWrapper createSettingWrapper() {
         PayloadArrayWrapper wrapper = new PayloadArrayWrapper();
         wrapper.setPayloadDescription("配置文件");
@@ -1018,7 +1112,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
         policy.setPayloadDisplayName("Roming配置");
         policy.setPayloadIdentifier("com.pekall.policy.roming");
         policy.setPayloadOrganization("Pekall Capital");
-        policy.setPayloadUUID("3808D742-5D21-401E-B83C-AED1E990332D");
+        policy.setPayloadUUID(getUUID());
         policy.setPayloadVersion(1);
 
         policy.setDataRoaming(false);
@@ -1054,7 +1148,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
         policy.setPinHistory(50);
         policy.setMaxPINAgeInDays(730);
         policy.setMinLength(4);
-        policy.setMaxInactivity(1);//自动锁定
+        policy.setMaxInactivity(1f);//自动锁定
         policy.setRequireAlphanumeric(false);
 //        policy.setMinComplexChars(-1);
 
@@ -1078,6 +1172,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
         policy.setAllowAssistant(true);
         policy.setAllowAssistantWhileLocked(true);
         policy.setAllowCamera(true);
+        policy.setAllowVideoConferencing(true);
         policy.setAllowDiagnosticSubmission(true);
         policy.setAllowExplicitContent(true);
         policy.setAllowGameCenter(true);
@@ -1147,10 +1242,13 @@ public class WjlBuildDefaultPolicy extends TestCase {
         vpn.setPayloadOrganization(ORGANIZATION);
         vpn.setPayloadUUID(getUUID());
         vpn.setPayloadVersion(VERSION);
-
-        vpn.setOverridePrimary(true);
+ 
         vpn.setUserDefinedName("test vpn");
         vpn.setVPNType(PayloadVPN.TYPE_PPTP);
+
+        IPv4Info iPv4Info = new IPv4Info();
+        iPv4Info.setOverridePrimary(1);
+        vpn.setIPv4(iPv4Info);
 
         PPPInfo pppInfo = new PPPInfo();
 //        pppInfo.enableAuthEAPPlugins();

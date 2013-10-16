@@ -33,6 +33,29 @@
 
 . 一个页面如何知道所有的sub resource加载完成？
 
+    将FrameLoader的状态封装到FrameLoaderStateMachine中，这个状态同FrameState不同，
+        FrameState倾向于判断Frame涉及的Document的下载状态，
+            是出于发起状态（Provisional），
+            还是出于已经收到响应但不全（CommittedPage）,
+            还是响应收全的状态，倾向于同http相关。
+
+        而FramLoaderStateMachine倾向于同DocumentLoader相关，
+            用来描述FrameLoader处理DocumentLoader的节点，是处于已经创建，还是显示的状态。
+
+            // Once a load has been committed, the state may
+            // alternate between CommittedFirstRealLoad and FirstLayoutDone.
+            // Otherwise, the states only go down the list.
+            enum State {
+                Uninitialized,
+                CreatingInitialEmptyDocument,
+                DisplayingInitialEmptyDocument,
+                DisplayingInitialEmptyDocumentPostCommit,
+                CommittedFirstRealLoad,
+                FirstLayoutDone
+            };
+
+
+
 . what is Cache Validate
 
 

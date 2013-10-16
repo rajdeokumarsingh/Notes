@@ -19,6 +19,11 @@ public class IPSecInfo {
     private String XAuthName;
 
     /**
+     * password for VPN account. Used for Cisco IPSec.
+     */
+    private String XAuthPassword;
+
+    /**
      * 1 if Xauth is on, 0 if it is off. Used for Cisco IPSec.
      */
     private Integer XAuthEnabled;
@@ -125,6 +130,14 @@ public class IPSecInfo {
         PromptForVPNPIN = promptForVPNPIN;
     }
 
+    public String getXAuthPassword() {
+        return XAuthPassword;
+    }
+
+    public void setXAuthPassword(String XAuthPassword) {
+        this.XAuthPassword = XAuthPassword;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -148,6 +161,8 @@ public class IPSecInfo {
         if (XAuthEnabled != null ? !XAuthEnabled.equals(ipSecInfo.XAuthEnabled) : ipSecInfo.XAuthEnabled != null)
             return false;
         if (XAuthName != null ? !XAuthName.equals(ipSecInfo.XAuthName) : ipSecInfo.XAuthName != null) return false;
+        if (XAuthPassword != null ? !XAuthPassword.equals(ipSecInfo.XAuthPassword) : ipSecInfo.XAuthPassword != null)
+            return false;
 
         return true;
     }
@@ -157,6 +172,7 @@ public class IPSecInfo {
         int result = RemoteAddress != null ? RemoteAddress.hashCode() : 0;
         result = 31 * result + (AuthenticationMethod != null ? AuthenticationMethod.hashCode() : 0);
         result = 31 * result + (XAuthName != null ? XAuthName.hashCode() : 0);
+        result = 31 * result + (XAuthPassword != null ? XAuthPassword.hashCode() : 0);
         result = 31 * result + (XAuthEnabled != null ? XAuthEnabled.hashCode() : 0);
         result = 31 * result + (LocalIdentifier != null ? LocalIdentifier.hashCode() : 0);
         result = 31 * result + (LocalIdentifierType != null ? LocalIdentifierType.hashCode() : 0);
@@ -169,15 +185,16 @@ public class IPSecInfo {
     @Override
     public String toString() {
         return "IPSecInfo{" +
-                "RemoteAddress='" + RemoteAddress + '\'' +
-                ", AuthenticationMethod='" + AuthenticationMethod + '\'' +
+                "AuthenticationMethod='" + AuthenticationMethod + '\'' +
+                ", RemoteAddress='" + RemoteAddress + '\'' +
                 ", XAuthName='" + XAuthName + '\'' +
+                ", XAuthPassword='" + XAuthPassword + '\'' +
                 ", XAuthEnabled=" + XAuthEnabled +
                 ", LocalIdentifier='" + LocalIdentifier + '\'' +
                 ", LocalIdentifierType='" + LocalIdentifierType + '\'' +
                 ", SharedSecret=" + Arrays.toString(SharedSecret) +
                 ", PayloadCertificateUUID='" + PayloadCertificateUUID + '\'' +
                 ", PromptForVPNPIN=" + PromptForVPNPIN +
-                '}';
+                "} " + super.toString();
     }
 }

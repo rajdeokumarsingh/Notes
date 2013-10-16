@@ -30,6 +30,11 @@ public class PayloadRestrictionsPolicy extends PayloadBase {
     private Boolean allowCamera;
 
     /**
+     * Optional. Allowing users to receive or make Face Time video calls.
+     */
+    private Boolean allowVideoConferencing;
+
+    /**
      * Optional. When false, this prevents the device from automatically submitting
      * diagnostic reports to Apple. Defaults to true.
      */
@@ -137,12 +142,20 @@ public class PayloadRestrictionsPolicy extends PayloadBase {
     private Boolean safariAllowJavaScript;
     private Boolean safariAllowPopups;
     private Boolean safariForceFraudWarning;
-    private Boolean safariAcceptCookies;
+    private Integer safariAcceptCookies;
     private Boolean forceEncryptedBackUp;
     private Boolean allowGlobalBackgroundFetchWhenRoaming;
 
     public PayloadRestrictionsPolicy() {
         setPayloadType(PayloadBase.PAYLOAD_TYPE_RESTRICTIONS);
+    }
+
+    public Boolean getAllowVideoConferencing() {
+        return allowVideoConferencing;
+    }
+
+    public void setAllowVideoConferencing(Boolean allowVideoConferencing) {
+        this.allowVideoConferencing = allowVideoConferencing;
     }
 
     public Boolean getAllowAppInstallation() {
@@ -377,11 +390,11 @@ public class PayloadRestrictionsPolicy extends PayloadBase {
         this.safariForceFraudWarning = safariForceFraudWarning;
     }
 
-    public Boolean getSafariAcceptCookies() {
+    public Integer getSafariAcceptCookies() {
         return safariAcceptCookies;
     }
 
-    public void setSafariAcceptCookies(Boolean safariAcceptCookies) {
+    public void setSafariAcceptCookies(Integer safariAcceptCookies) {
         this.safariAcceptCookies = safariAcceptCookies;
     }
 
@@ -451,6 +464,8 @@ public class PayloadRestrictionsPolicy extends PayloadBase {
             return false;
         if (allowUntrustedTLSPrompt != null ? !allowUntrustedTLSPrompt.equals(that.allowUntrustedTLSPrompt) : that.allowUntrustedTLSPrompt != null)
             return false;
+        if (allowVideoConferencing != null ? !allowVideoConferencing.equals(that.allowVideoConferencing) : that.allowVideoConferencing != null)
+            return false;
         if (allowVoiceDialing != null ? !allowVoiceDialing.equals(that.allowVoiceDialing) : that.allowVoiceDialing != null)
             return false;
         if (allowYouTube != null ? !allowYouTube.equals(that.allowYouTube) : that.allowYouTube != null) return false;
@@ -480,6 +495,7 @@ public class PayloadRestrictionsPolicy extends PayloadBase {
         result = 31 * result + (allowAssistant != null ? allowAssistant.hashCode() : 0);
         result = 31 * result + (allowAssistantWhileLocked != null ? allowAssistantWhileLocked.hashCode() : 0);
         result = 31 * result + (allowCamera != null ? allowCamera.hashCode() : 0);
+        result = 31 * result + (allowVideoConferencing != null ? allowVideoConferencing.hashCode() : 0);
         result = 31 * result + (allowDiagnosticSubmission != null ? allowDiagnosticSubmission.hashCode() : 0);
         result = 31 * result + (allowExplicitContent != null ? allowExplicitContent.hashCode() : 0);
         result = 31 * result + (allowGameCenter != null ? allowGameCenter.hashCode() : 0);
@@ -514,10 +530,12 @@ public class PayloadRestrictionsPolicy extends PayloadBase {
     @Override
     public String toString() {
         return "PayloadRestrictionsPolicy{" +
-                "allowAppInstallation=" + allowAppInstallation +
+                "allowAddingGameCenterFriends=" + allowAddingGameCenterFriends +
+                ", allowAppInstallation=" + allowAppInstallation +
                 ", allowAssistant=" + allowAssistant +
                 ", allowAssistantWhileLocked=" + allowAssistantWhileLocked +
                 ", allowCamera=" + allowCamera +
+                ", allowVideoConferencing=" + allowVideoConferencing +
                 ", allowDiagnosticSubmission=" + allowDiagnosticSubmission +
                 ", allowExplicitContent=" + allowExplicitContent +
                 ", allowGameCenter=" + allowGameCenter +
@@ -538,7 +556,6 @@ public class PayloadRestrictionsPolicy extends PayloadBase {
                 ", allowVoiceDialing=" + allowVoiceDialing +
                 ", allowInAppPurchases=" + allowInAppPurchases +
                 ", allowMultiplayerGaming=" + allowMultiplayerGaming +
-                ", allowAddingGameCenterFriends=" + allowAddingGameCenterFriends +
                 ", safariAllowAutoFill=" + safariAllowAutoFill +
                 ", safariAllowJavaScript=" + safariAllowJavaScript +
                 ", safariAllowPopups=" + safariAllowPopups +
@@ -546,6 +563,6 @@ public class PayloadRestrictionsPolicy extends PayloadBase {
                 ", safariAcceptCookies=" + safariAcceptCookies +
                 ", forceEncryptedBackUp=" + forceEncryptedBackUp +
                 ", allowGlobalBackgroundFetchWhenRoaming=" + allowGlobalBackgroundFetchWhenRoaming +
-                '}';
+                "} " + super.toString();
     }
 }
