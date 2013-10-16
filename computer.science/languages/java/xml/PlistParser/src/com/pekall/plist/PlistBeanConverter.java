@@ -13,7 +13,6 @@ import java.util.List;
  * Converter for PLIST objects and bean objects
  */
 public class PlistBeanConverter {
-    // TODO: handle key like "Key Usage"
     /* TODO: handle nested array like:
         <array>
             <array>
@@ -84,15 +83,20 @@ public class PlistBeanConverter {
 
                 field.setAccessible(true);
 
-                String keyName = KeyFieldTranslation.translateJavaField(field.getName());
+                // Convert two under lines in java field to space
+                String fieldName = field.getName();
+                if (fieldName.contains("__")) {
+                    fieldName = fieldName.replace("__", " ");
+                }
+                String keyName = KeyFieldTranslation.translateJavaField(fieldName);
                 if (keyName == null) {
-                    keyName = field.getName();
+                    keyName = fieldName;
                 }
                 NSObject nsObject = root.objectForKey(keyName);
                 if (nsObject == null) continue;
 
                 PlistDebug.logVerbose("----------------------------------------");
-                PlistDebug.logVerbose("field name: " + field.getName());
+                PlistDebug.logVerbose("field name: " + fieldName);
                 PlistDebug.logVerbose("field class: " + field.getType());
 
                 if (nsObject.getClass().equals(NSNumber.class)) {
@@ -143,7 +147,8 @@ public class PlistBeanConverter {
                 // TODO:
                 list.add(((NSData) nsObject).bytes());
             } else if (List.class.equals(elementClass)) {
-                // TODO: nest list
+                // TODO: List<List<E>>
+                PlistDebug.log("TODO: support nest list");
             } else {
                 if (NSDictionary.class.equals(nsObject.getClass())) {
                     try {
@@ -185,8 +190,14 @@ public class PlistBeanConverter {
                 field.setAccessible(true);
                 Class type = field.getType();
 
+                // Convert two under lines in java field to space
+                String fieldName = field.getName();
+                if (fieldName.contains("__")) {
+                    fieldName = fieldName.replace("__", " ");
+                }
+
                 PlistDebug.logVerbose("========================================");
-                PlistDebug.logVerbose(field.getName());
+                PlistDebug.logVerbose(fieldName);
                 PlistDebug.logVerbose(type.getName());
 
                 // Ignore final fields
@@ -197,41 +208,41 @@ public class PlistBeanConverter {
 
                 try {
                     if (boolean.class.equals(type)) {
-                        root.put(field.getName(), field.getBoolean(data));
+                        root.put(fieldName, field.getBoolean(data));
                     } else if (byte.class.equals(type)) {
-                        root.put(field.getName(), field.getByte(data));
+                        root.put(fieldName, field.getByte(data));
                     } else if (int.class.equals(type)) {
-                        root.put(field.getName(), field.getInt(data));
+                        root.put(fieldName, field.getInt(data));
                     } else if (long.class.equals(type)) {
-                        root.put(field.getName(), field.getLong(data));
+                        root.put(fieldName, field.getLong(data));
                     } else if (float.class.equals(type)) {
-                        root.put(field.getName(), field.getFloat(data));
+                        root.put(fieldName, field.getFloat(data));
                     } else if (double.class.equals(type)) {
-                        root.put(field.getName(), field.getDouble(data));
+                        root.put(fieldName, field.getDouble(data));
                     } else if (Boolean.class.equals(type)) {
                         if (field.get(data) == null) continue;
 
-                        root.put(field.getName(), field.get(data));
+                        root.put(fieldName, field.get(data));
                     } else if (Integer.class.equals(type)) {
                         if (field.get(data) == null) continue;
 
-                        root.put(field.getName(), field.get(data));
+                        root.put(fieldName, field.get(data));
                     } else if (Long.class.equals(type)) {
                         if (field.get(data) == null) continue;
 
-                        root.put(field.getName(), field.get(data));
+                        root.put(fieldName, field.get(data));
                     } else if (Float.class.equals(type)) {
                         if (field.get(data) == null) continue;
 
-                        root.put(field.getName(), field.get(data));
+                        root.put(fieldName, field.get(data));
                     } else if (Double.class.equals(type)) {
                         if (field.get(data) == null) continue;
 
-                        root.put(field.getName(), field.get(data));
+                        root.put(fieldName, field.get(data));
                     } else if (String.class.equals(type)) {
                         if (field.get(data) == null) continue;
 
-                        root.put(field.getName(), (String) field.get(data));
+                        root.put(fieldName, (String) field.get(data));
                     } else if (List.class.equals(type)) {
                         if (field.get(data) == null) continue;
 
@@ -270,22 +281,22 @@ public class PlistBeanConverter {
                                 array.setValue(i, createNdictFromBean(list.get(i)));
                             }
                         }
-                        root.put(field.getName(), array);
+                        root.put(fieldName, array);
                     } else if (byte[].class.equals(type)) {
                         if (field.get(data) == null) continue;
 
-                        root.put(field.getName(), new NSData((byte[]) field.get(data)));
+                        root.put(fieldName, new NSData((byte[]) field.get(data)));
                     } else if (Date.class.equals(type)) {
                         if (field.get(data) == null) continue;
 
-                        root.put(field.getName(), new NSDate((Date) field.get(data)));
+                        root.put(fieldName, new NSDate((Date) field.get(data)));
                     } else {
                         if (field.get(data) == null) continue;
                         // Since some key names are illegal for a java field name,
                         // we need to do a translation.
-                        String keyName = KeyFieldTranslation.translateJavaField(field.getName());
+                        String keyName = KeyFieldTranslation.translateJavaField(fieldName);
                         if (keyName == null) {
-                            keyName = field.getName();
+                            keyName = fieldName;
                         }
                         NSDictionary dictionary = createNdictFromBean(field.get(data));
                         root.put(keyName, dictionary);
