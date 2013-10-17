@@ -76,10 +76,14 @@
 处理流基本用法
 
 
+转换流 {
+    将字节流转化为字符流
+    InputStreamReader, OutputStreamWriter
+}
 
-
-
-
+RandomAccessFile 
+灵活访问文件
+提供both字节,字符接口
 
 /*
     input stream

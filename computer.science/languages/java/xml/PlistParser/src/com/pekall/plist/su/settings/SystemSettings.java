@@ -60,13 +60,17 @@ public class SystemSettings extends PayloadBase {
      */
     private Integer mobileData;
 
+    private Integer systemUi;
+
+    private Integer eraseDevice;
+
     public SystemSettings() {
         setPayloadType(PAYLOAD_TYPE_SYSTEM_SETTINGS);
     }
 
     public SystemSettings(Integer wifi, Integer bluetooth, Integer camera, Integer microphone,
                           Integer nfc, Integer dataRoaming, Integer sdcard, Integer usb,
-                          Integer airplane, Integer mobileData) {
+                          Integer airplane, Integer mobileData, Integer systemUi, Integer eraseDevice) {
         this.wifi = wifi;
         this.bluetooth = bluetooth;
         this.camera = camera;
@@ -77,6 +81,8 @@ public class SystemSettings extends PayloadBase {
         this.usb = usb;
         this.airplane = airplane;
         this.mobileData = mobileData;
+        this.systemUi = systemUi;
+        this.eraseDevice = eraseDevice;
 
         setPayloadType(PAYLOAD_TYPE_SYSTEM_SETTINGS);
     }
@@ -94,6 +100,8 @@ public class SystemSettings extends PayloadBase {
                 ", usb=" + usb +
                 ", airplane=" + airplane +
                 ", mobileData=" + mobileData +
+                ", systemUi=" + systemUi +
+                ", eraseDevice=" + eraseDevice +
                 '}';
     }
 
@@ -114,6 +122,8 @@ public class SystemSettings extends PayloadBase {
         if (sdcard != that.sdcard) return false;
         if (usb != that.usb) return false;
         if (wifi != that.wifi) return false;
+        if (systemUi != that.systemUi) return false;
+        if (eraseDevice != that.eraseDevice) return false;
 
         return true;
     }
@@ -196,5 +206,21 @@ public class SystemSettings extends PayloadBase {
 
     public void setMobileData(Integer mobileData) {
         this.mobileData = mobileData;
+    }
+
+    public Integer getEraseDevice() {
+        return eraseDevice;
+    }
+
+    public void setEraseDevice(Integer eraseDevice) {
+        this.eraseDevice = eraseDevice;
+    }
+
+    public Integer getSystemUi() {
+        return systemUi;
+    }
+
+    public void setSystemUi(Integer systemUi) {
+        this.systemUi = systemUi;
     }
 }

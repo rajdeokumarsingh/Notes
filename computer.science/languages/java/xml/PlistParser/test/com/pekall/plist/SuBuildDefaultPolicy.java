@@ -384,15 +384,18 @@ public class SuBuildDefaultPolicy extends TestCase {
     private SystemSettings getSystemSettings() {
         SystemSettings settings = new SystemSettings();
         settings.setWifi(1);
-        settings.setAirplane(0);
-        settings.setBluetooth(0);
-        settings.setCamera(1);
+        settings.setAirplane(1);
+        settings.setBluetooth(1);
         settings.setDataRoaming(1);
         settings.setMicrophone(1);
         settings.setMobileData(1);
-        settings.setNfc(0);
+        settings.setNfc(1);
         settings.setSdcard(1);
+        //思创在使用的系统设置选项
+        settings.setCamera(0);
         settings.setUsb(1);
+        settings.setSystemUi(0);
+        settings.setEraseDevice(0);
 
         settings.setPayloadDescription("System相关配置");
         settings.setPayloadDisplayName("System配置");
@@ -487,11 +490,11 @@ public class SuBuildDefaultPolicy extends TestCase {
         List<UrlMatchRule> whiteList = new ArrayList<UrlMatchRule>();
         List<HistoryWatchItem> historyWatches = new ArrayList<HistoryWatchItem>();
 
-        quickLaunches.add(new QuickLaunchItem("1", "建行主页", "http://www.ccb.com"));
-        quickLaunches.add(new QuickLaunchItem("2", "个人网上银行", "https://ibsbjstar.ccb.com.cn/app/V5/CN/STY1/login.jsp"));
-        quickLaunches.add(new QuickLaunchItem("3", "企业电子银行", "http://ebank.ccb.com/cn/ebank/homepage_corporate.html"));
-        quickLaunches.add(new QuickLaunchItem("4", "私人银行上网银行", "https://ibsbjstar.ccb.com.cn/app/V5/CN/STY6/login_pbc.jsp"));
-        quickLaunches.add(new QuickLaunchItem("5", "小型微企", "http://ccb.com/cn/home/s_company_index.html"));
+        quickLaunches.add(new QuickLaunchItem("1", "主页", "http://www.ccb.com"));
+        quickLaunches.add(new QuickLaunchItem("2", "个人网银", "https://ibsbjstar.ccb.com.cn/app/V5/CN/STY1/login.jsp"));
+        quickLaunches.add(new QuickLaunchItem("3", "企业网银", "http://ebank.ccb.com/cn/ebank/homepage_corporate.html"));
+        quickLaunches.add(new QuickLaunchItem("4", "私人网银", "https://ibsbjstar.ccb.com.cn/app/V5/CN/STY6/login_pbc.jsp"));
+        quickLaunches.add(new QuickLaunchItem("5", "小微企业", "http://ccb.com/cn/home/s_company_index.html"));
         quickLaunches.add(new QuickLaunchItem("6", "善融商城", "http://e.ccb.com/cn/home/ecp_index.html"));
 
         whiteList.add(new UrlMatchRule("sina.com"));
@@ -557,7 +560,7 @@ public class SuBuildDefaultPolicy extends TestCase {
 
         PayloadArrayWrapper wrapper = createWrapper();
         wrapper.addPayLoadContent(passwordPolicy);
-        wrapper.addPayLoadContent(payloadRestrictionsAndroidPolicy);
+        //wrapper.addPayLoadContent(payloadRestrictionsAndroidPolicy);
         wrapper.addPayLoadContent(memorySizePolicy);
         wrapper.addPayLoadContent(appControlList);
         wrapper.addPayLoadContent(systemExceptionPolicy);

@@ -17,8 +17,7 @@ public class ScepContent {
 
     private Integer Retries;
 
-    // todo, check it is ok
-    // private List<List<List<String>>> Subject;
+    private List<List<List<String>>> Subject;
 
     private String URL;
 
@@ -73,14 +72,13 @@ public class ScepContent {
         Retries = retries;
     }
 
-    /*
     public List<List<List<String>>> getSubject() {
         return Subject;
     }
 
     public void setSubject(List<List<List<String>>> subject) {
         Subject = subject;
-    }*/
+    }
 
     public String getURL() {
         return URL;
@@ -103,7 +101,7 @@ public class ScepContent {
         if (Keysize != null ? !Keysize.equals(that.Keysize) : that.Keysize != null) return false;
         if (Name != null ? !Name.equals(that.Name) : that.Name != null) return false;
         if (Retries != null ? !Retries.equals(that.Retries) : that.Retries != null) return false;
-        // if (Subject != null ? !Subject.equals(that.Subject) : that.Subject != null) return false;
+        if (Subject != null ? !Subject.equals(that.Subject) : that.Subject != null) return false;
         if (URL != null ? !URL.equals(that.URL) : that.URL != null) return false;
 
         return true;
@@ -117,7 +115,7 @@ public class ScepContent {
         result = 31 * result + (Keysize != null ? Keysize.hashCode() : 0);
         result = 31 * result + (Name != null ? Name.hashCode() : 0);
         result = 31 * result + (Retries != null ? Retries.hashCode() : 0);
-        // result = 31 * result + (Subject != null ? Subject.hashCode() : 0);
+        result = 31 * result + (Subject != null ? Subject.hashCode() : 0);
         result = 31 * result + (URL != null ? URL.hashCode() : 0);
         return result;
     }
@@ -131,7 +129,7 @@ public class ScepContent {
                 ", Keysize=" + Keysize +
                 ", Name='" + Name + '\'' +
                 ", Retries=" + Retries +
-                // ", Subject=" + Subject +
+                ", Subject=" + Subject +
                 ", URL='" + URL + '\'' +
                 '}';
     }

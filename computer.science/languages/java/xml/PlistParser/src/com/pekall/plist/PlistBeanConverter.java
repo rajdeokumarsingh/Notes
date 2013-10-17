@@ -2,6 +2,7 @@ package com.pekall.plist;
 
 import com.dd.plist.*;
 import com.pekall.plist.beans.KeyFieldTranslation;
+import com.pekall.plist.beans.PlistControl;
 
 import java.io.IOException;
 import java.lang.reflect.*;
@@ -72,6 +73,9 @@ public class PlistBeanConverter {
             InvocationTargetException, InstantiationException {
         // TODO: remove unused exception
 
+        PlistDebug.logVerbose("--------------------------------------------------");
+        PlistDebug.logVerbose("class name: " + clz.toString());
+
         Constructor ctor = clz.getDeclaredConstructor();
         ctor.setAccessible(true);
         Object data = ctor.newInstance();
@@ -111,7 +115,14 @@ public class PlistBeanConverter {
                     NSDictionary dict = (NSDictionary) nsObject;
                     field.set(data, createBeanFromNdict(dict, field.getType()));
                 } else if (nsObject.getClass().equals(NSArray.class)) {
+                    // FIXME: I can't get reflection structure of nested list, just handle such case manually.
+                    if (fieldName.equals("Subject") && clz.toString().contains("ScepContent")
+                            && List.class.isAssignableFrom(field.getType())) {
+                        field.set(data, createNested3List((NSArray) nsObject, String.class));
+                        continue;
+                    }
                     Class fieldArgClass = getGenericType(field);
+                    PlistDebug.logVerbose("List generic class: " + fieldArgClass.toString());
                     if (fieldArgClass != null && List.class.isAssignableFrom(field.getType())) {
                         NSArray array = (NSArray) nsObject;
                         field.set(data, createListFromNSArray(array, fieldArgClass));
@@ -168,6 +179,34 @@ public class PlistBeanConverter {
         return list;
     }
 
+    // create a nested list, List<List<List>>
+    private static List createNested3List(NSArray arrayL1, Class elementClass) {
+        List<List<List>> listL1 = new ArrayList<List<List>>();
+
+        for (NSObject nsObjectL1 : arrayL1.getArray()) {
+            if (nsObjectL1 == null) continue;
+
+            PlistDebug.logVerbose(nsObjectL1.getClass().toString());
+            if (!NSArray.class.equals(nsObjectL1.getClass())) {
+                PlistDebug.logError("Type error!");
+                continue;
+            }
+            NSArray arrayL2 = (NSArray) nsObjectL1;
+            List<List> listL2 = new ArrayList<List>();
+            for (NSObject nsObjectL2 : arrayL2.getArray()) {
+                if(nsObjectL2 == null) continue;
+
+                if (!NSArray.class.equals(nsObjectL2.getClass())) {
+                    PlistDebug.logError("Type error!");
+                    continue;
+                }
+                listL2.add(createListFromNSArray((NSArray) nsObjectL2, elementClass));
+            }
+            listL1.add(listL2);
+        }
+        return listL1;
+    }
+
     private static void appendData2Ndict(Object data, NSDictionary root) {
         if(data == null){
             return;
@@ -204,6 +243,14 @@ public class PlistBeanConverter {
                 if ((field.getModifiers() & Modifier.FINAL) != 0) {
                     PlistDebug.logVerbose("final field, continue!");
                     continue;
+                }
+                // Ignore fields with special annotation
+                if(field.isAnnotationPresent(PlistControl.class)) {
+                    PlistControl annotation = field.getAnnotation(PlistControl.class);
+                    if (annotation != null && !annotation.toPlistXml()) {
+                        PlistDebug.logVerbose("ignore field for annotation!");
+                        continue;
+                    }
                 }
 
                 try {
@@ -246,42 +293,7 @@ public class PlistBeanConverter {
                     } else if (List.class.equals(type)) {
                         if (field.get(data) == null) continue;
 
-                        List list = (List) field.get(data);
-                        NSArray array = new NSArray(list.size());
-                        for (int i = 0; i < list.size(); i++) {
-                            Object object = list.get(i);
-                            if(object == null) continue;
-
-                            if (object.getClass().equals(Boolean.class)) {
-                                array.setValue(i, NSObject.wrap(
-                                        new NSNumber(((Boolean) object)).boolValue()));
-                            } else if (object.getClass().equals(Integer.class)) {
-                                array.setValue(i, NSObject.wrap(
-                                        new NSNumber(((Integer) object)).intValue()));
-                            } else if (object.getClass().equals(Long.class)) {
-                                array.setValue(i, NSObject.wrap(
-                                        new NSNumber(((Long) object)).longValue()));
-                            } else if (object.getClass().equals(Double.class)) {
-                                array.setValue(i, NSObject.wrap(
-                                        new NSNumber(((Double) object)).doubleValue()));
-                            } else if (object.getClass().equals(String.class)) {
-                                array.setValue(i, NSObject.wrap(
-                                        new NSString((String)object)));
-                            } else if (object.getClass().equals(Date.class)) {
-                                array.setValue(i, NSObject.wrap(
-                                        new NSDate((Date)object)));
-                            } else if (object.getClass().equals(byte[].class)) {
-                                // TODO:
-                                array.setValue(i, NSObject.wrap(
-                                        new NSData((byte[])object)));
-                            } else if (List.class.isAssignableFrom(object.getClass())) {
-                                // TODO: List<List<E>>
-                                PlistDebug.log("TODO: support nest list");
-                            } else {
-                                array.setValue(i, createNdictFromBean(list.get(i)));
-                            }
-                        }
-                        root.put(fieldName, array);
+                        root.put(fieldName, createNsArrayFromList((List) field.get(data)));
                     } else if (byte[].class.equals(type)) {
                         if (field.get(data) == null) continue;
 
@@ -309,6 +321,46 @@ public class PlistBeanConverter {
             // Append fields of ancestors
             clz = clz.getSuperclass();
         }
+    }
+
+    private static NSArray createNsArrayFromList(List list) {
+        NSArray array = new NSArray(list.size());
+        for (int i = 0; i < list.size(); i++) {
+            Object object = list.get(i);
+            if(object == null) continue;
+
+            if (object.getClass().equals(Boolean.class)) {
+                array.setValue(i, NSObject.wrap(
+                        new NSNumber(((Boolean) object)).boolValue()));
+            } else if (object.getClass().equals(Integer.class)) {
+                array.setValue(i, NSObject.wrap(
+                        new NSNumber(((Integer) object)).intValue()));
+            } else if (object.getClass().equals(Long.class)) {
+                array.setValue(i, NSObject.wrap(
+                        new NSNumber(((Long) object)).longValue()));
+            } else if (object.getClass().equals(Double.class)) {
+                array.setValue(i, NSObject.wrap(
+                        new NSNumber(((Double) object)).doubleValue()));
+            } else if (object.getClass().equals(String.class)) {
+                array.setValue(i, NSObject.wrap(
+                        new NSString((String)object)));
+            } else if (object.getClass().equals(Date.class)) {
+                array.setValue(i, NSObject.wrap(
+                        new NSDate((Date)object)));
+            } else if (object.getClass().equals(byte[].class)) {
+                // TODO:
+                array.setValue(i, NSObject.wrap(
+                        new NSData((byte[])object)));
+            } else if (List.class.isAssignableFrom(object.getClass())) {
+                // Handle nested list, like List<List<E>>
+                PlistDebug.logVerbose("create nest list");
+                array.setValue(i, NSObject.wrap(
+                        createNsArrayFromList((List)object)));
+            } else {
+                array.setValue(i, createNdictFromBean(list.get(i)));
+            }
+        }
+        return array;
     }
 
     private static Class getGenericType(Field field) {

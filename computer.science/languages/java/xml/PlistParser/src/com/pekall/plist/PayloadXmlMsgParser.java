@@ -256,4 +256,8 @@ public class PayloadXmlMsgParser {
         }
         return payloads;
     }
+
+    public static HashMap<String, Class> getPayloadTypeMap() {
+        return payloadTypes;
+    }
 }
