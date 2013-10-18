@@ -1,6 +1,9 @@
 package com.java.examples.annotation;
 
-public class TestAnnotation {
+/**
+ * Class with annotations
+ */
+public class A0011AnnotationClass {
     @PlistControl(toPlistXml = false)
     private int a;
 

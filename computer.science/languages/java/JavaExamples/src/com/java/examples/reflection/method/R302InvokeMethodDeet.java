@@ -8,7 +8,7 @@ import java.util.Locale;
 import static java.lang.System.out;
 import static java.lang.System.err;
 
-public class Deet<T> {
+public class R302InvokeMethodDeet<T> {
 	private boolean testDeet(Locale l) {
 		// getISO3Language() may throw a MissingResourceException
 		out.format("Locale = %s, ISO Language Code = %s%n", l.getDisplayName(),
@@ -30,15 +30,15 @@ public class Deet<T> {
 	
 	public static void main(String... args) {
 		// if (args.length != 4) {
-		// err.format("Usage: java Deet <classname> <langauge> <country> <variant>%n");
+		// err.format("Usage: java R302InvokeMethodDeet <classname> <langauge> <country> <variant>%n");
 		// return;
 		// }
 //		args = new String[] { "com.java.examples.reflection.method", "ja", "JP", "JP" };
-		args = new String[] { "Deet", "ja", "JP", "JP" };
-//		args = new String[] { "Deet", "xx", "XX", "XX" };
+		args = new String[] { "R302InvokeMethodDeet", "ja", "JP", "JP" };
+//		args = new String[] { "R302InvokeMethodDeet", "xx", "XX", "XX" };
 		try {
 //			Class<?> c = Class.forName(args[0]);
-			Class<?> c = Deet.class;
+			Class<?> c = R302InvokeMethodDeet.class;
 			Object t = c.newInstance();
 
 			Method methodTest = c.getDeclaredMethod("testBar", int.class);

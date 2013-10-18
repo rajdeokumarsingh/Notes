@@ -30,9 +30,10 @@ class AnnotationsSupper {
     String[] reviewers();
 }
 
-@ClassPreamble(author = "Jiang Rui", date = "1/7/2012", currentRevision = 2, lastModified = "1/7/2013", lastModifiedBy = "Weixing Zhao", reviewers = {
-        "Zhidong Hou", "Chao Liu" })
-public class Annotations extends AnnotationsSupper {
+@ClassPreamble(author = "Jiang Rui", date = "1/7/2012", currentRevision = 2,
+        lastModified = "1/7/2013", lastModifiedBy = "Weixing Zhao",
+        reviewers = {"Zhidong Hou", "Chao Liu"})
+public class AnnotationGrammar extends AnnotationsSupper {
     @Override
     void superMethod() {
         System.out.println(this.getClass() + ": superMethod()");
@@ -58,7 +59,7 @@ public class Annotations extends AnnotationsSupper {
      * @param args
      */
     public static void main(String[] args) {
-        Annotations ann = new Annotations();
+        AnnotationGrammar ann = new AnnotationGrammar();
         ann.superMethod();
     }
 

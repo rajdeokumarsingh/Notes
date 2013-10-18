@@ -5,7 +5,6 @@ import java.lang.reflect.Type;
 public class InterfaceTest {
     
     class NewString implements java.lang.CharSequence {
-
         @Override
         public int length() {
             // TODO Auto-generated method stub

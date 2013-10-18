@@ -14,22 +14,6 @@ import java.util.List;
  * Converter for PLIST objects and bean objects
  */
 public class PlistBeanConverter {
-    /* TODO: handle nested array like:
-        <array>
-            <array>
-                <array>
-                    <string>O</string>
-                    <string>Pekall</string>
-                </array>
-            </array>
-            <array>
-                <array>
-                    <string>CN</string>
-                    <string>PEKALL MDM</string>
-                </array>
-            </array>
-        </array>
-     */
 
     /**
      * 通过传入的对象，直接转换为对应的plist，如果出入的对象为空，返回一个空的plist。
@@ -42,7 +26,7 @@ public class PlistBeanConverter {
         try {
             result =  PlistXmlParser.toXml(root);
         } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         }
         return result;
     }
@@ -115,17 +99,11 @@ public class PlistBeanConverter {
                     NSDictionary dict = (NSDictionary) nsObject;
                     field.set(data, createBeanFromNdict(dict, field.getType()));
                 } else if (nsObject.getClass().equals(NSArray.class)) {
-                    // FIXME: I can't get reflection structure of nested list, just handle such case manually.
-                    if (fieldName.equals("Subject") && clz.toString().contains("ScepContent")
-                            && List.class.isAssignableFrom(field.getType())) {
-                        field.set(data, createNested3List((NSArray) nsObject, String.class));
-                        continue;
-                    }
-                    Class fieldArgClass = getGenericType(field);
-                    PlistDebug.logVerbose("List generic class: " + fieldArgClass.toString());
-                    if (fieldArgClass != null && List.class.isAssignableFrom(field.getType())) {
+                    Type fieldArgType = getTypeArgument(field.getGenericType());
+                    if (fieldArgType != null && List.class.isAssignableFrom(field.getType())) {
+                        PlistDebug.logVerbose("List generic class: " + fieldArgType.toString());
                         NSArray array = (NSArray) nsObject;
-                        field.set(data, createListFromNSArray(array, fieldArgClass));
+                        field.set(data, createListFromNSArray(array, fieldArgType));
                     } else {
                         PlistDebug.logError("error type!");
                     }
@@ -139,10 +117,43 @@ public class PlistBeanConverter {
         return data;
     }
 
-    public static List createListFromNSArray(NSArray array, Class elementClass) {
+    /**
+     * Create a JAVA list from the input NSArray
+     * Support normal list and nested list, like List<String>, List<List<String>>, ...
+     *
+     * @param array input NSArray
+     * @param elementType element type of the list
+     * @return the Java list
+     */
+    public static List createListFromNSArray(NSArray array, Type elementType) {
+        Class elementClass = null;
+        if(elementType instanceof ParameterizedType) {
+            // Nested List, like List<List<List<String>>>
+            PlistDebug.logVerbose("createListFromNSArray, need to create nest list");
+        } else {
+            // Normal list, list List<String>
+            elementClass = (Class) elementType;
+        }
+
         ArrayList list = new ArrayList();
         for (NSObject nsObject : array.getArray()) {
-            if (Boolean.class.equals(elementClass)) {
+            if(elementClass == null) {
+                if(elementType instanceof ParameterizedType) {
+                    // Handle nested list
+                    if (!NSArray.class.equals(nsObject.getClass())) {
+                        PlistDebug.logError("Type error!");
+                        continue;
+                    }
+                    Type typeArgument = getTypeArgument(elementType);
+                    if (typeArgument != null) {
+                        PlistDebug.logVerbose("List generic class: " + typeArgument.toString());
+                        list.add(createListFromNSArray((NSArray) nsObject, typeArgument));
+                    } else {
+                        PlistDebug.logError("error type!");
+                    }
+                }
+                // TODO: support List<byte[]>, elementType should be instanceof GenericArrayType
+            } else if (Boolean.class.equals(elementClass)) {
                 list.add(((NSNumber) nsObject).boolValue());
             } else if (Integer.class.equals(elementClass)) {
                 list.add(((NSNumber) nsObject).intValue());
@@ -155,11 +166,12 @@ public class PlistBeanConverter {
             } else if (Date.class.equals(elementClass)) {
                 list.add(((NSDate) nsObject).getDate());
             } else if (byte[].class.equals(elementClass)) {
-                // TODO:
+                // TODO: support List<byte[]>
+                // elementType should be instanceof GenericArrayType
+                // java.lang.ClassCastException: sun.reflect.generics.reflectiveObjects.GenericArrayTypeImpl
+                // cannot be cast to java.lang.Class
+                // Class typeArgumentClass = (Class) typeArgument;
                 list.add(((NSData) nsObject).bytes());
-            } else if (List.class.equals(elementClass)) {
-                // TODO: List<List<E>>
-                PlistDebug.log("TODO: support nest list");
             } else {
                 if (NSDictionary.class.equals(nsObject.getClass())) {
                     try {
@@ -177,34 +189,6 @@ public class PlistBeanConverter {
             }
         }
         return list;
-    }
-
-    // create a nested list, List<List<List>>
-    private static List createNested3List(NSArray arrayL1, Class elementClass) {
-        List<List<List>> listL1 = new ArrayList<List<List>>();
-
-        for (NSObject nsObjectL1 : arrayL1.getArray()) {
-            if (nsObjectL1 == null) continue;
-
-            PlistDebug.logVerbose(nsObjectL1.getClass().toString());
-            if (!NSArray.class.equals(nsObjectL1.getClass())) {
-                PlistDebug.logError("Type error!");
-                continue;
-            }
-            NSArray arrayL2 = (NSArray) nsObjectL1;
-            List<List> listL2 = new ArrayList<List>();
-            for (NSObject nsObjectL2 : arrayL2.getArray()) {
-                if(nsObjectL2 == null) continue;
-
-                if (!NSArray.class.equals(nsObjectL2.getClass())) {
-                    PlistDebug.logError("Type error!");
-                    continue;
-                }
-                listL2.add(createListFromNSArray((NSArray) nsObjectL2, elementClass));
-            }
-            listL1.add(listL2);
-        }
-        return listL1;
     }
 
     private static void appendData2Ndict(Object data, NSDictionary root) {
@@ -348,11 +332,14 @@ public class PlistBeanConverter {
                 array.setValue(i, NSObject.wrap(
                         new NSDate((Date)object)));
             } else if (object.getClass().equals(byte[].class)) {
-                // TODO:
+                // TODO: support List<byte[]>
+                // java.lang.ClassCastException: sun.reflect.generics.reflectiveObjects.GenericArrayTypeImpl
+                // cannot be cast to java.lang.Class
+                // Class typeArgumentClass = (Class) typeArgument;
                 array.setValue(i, NSObject.wrap(
                         new NSData((byte[])object)));
             } else if (List.class.isAssignableFrom(object.getClass())) {
-                // Handle nested list, like List<List<E>>
+                // Handle nested list, like List<List<...>>
                 PlistDebug.logVerbose("create nest list");
                 array.setValue(i, NSObject.wrap(
                         createNsArrayFromList((List)object)));
@@ -363,22 +350,24 @@ public class PlistBeanConverter {
         return array;
     }
 
-    private static Class getGenericType(Field field) {
-        Class fieldArgClass = null;
-        Type genericFieldType = field.getGenericType();
-        if (genericFieldType instanceof ParameterizedType) {
-            ParameterizedType aType = (ParameterizedType) genericFieldType;
-            Type[] fieldArgTypes = aType.getActualTypeArguments();
-            for (Type fieldArgType : fieldArgTypes) {
-                // TODO: support List<byte[]>
-                // java.lang.ClassCastException: sun.reflect.generics.reflectiveObjects.GenericArrayTypeImpl
-                // cannot be cast to java.lang.Class
-                fieldArgClass = (Class) fieldArgType;
-                PlistDebug.logVerbose("fieldArgClass = " + fieldArgClass);
-                break;
-            }
+    /**
+     * Get parameterized class of a generic type, like String for a List<String>.
+     * Note, generic types with two or more parameterized classes,
+     * like HashMap<Integer, String>, are NOT supported
+     *
+     * @param genericType, like List<String>
+     * @return parameterized class, like String for List<String>
+     */
+    private static Type getTypeArgument(Type genericType) {
+        if (!(genericType instanceof ParameterizedType)) return null;
+
+        ParameterizedType aType = (ParameterizedType) genericType;
+        Type[] typeArguments = aType.getActualTypeArguments();
+        for (Type typeArgument : typeArguments) {
+            PlistDebug.logVerbose("typeArgument: " + typeArgument);
+            return typeArgument;
         }
-        return fieldArgClass;
+        return null;
     }
 
     private static void assignByteArrayField(Object data, Field field, NSData nsObject) throws IllegalAccessException {

@@ -4,10 +4,10 @@ enum Day {
     SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY
 }
 
-public class EnumTest {
+public class EnumGrammarBasic {
     Day day;
 
-    public EnumTest(Day day) {
+    public EnumGrammarBasic(Day day) {
         this.day = day;
     }
 
@@ -43,17 +43,17 @@ public class EnumTest {
     }
 
     public static void main(String[] args) {
-        EnumTest.dumpAllDay();
+        EnumGrammarBasic.dumpAllDay();
         
-        EnumTest firstDay = new EnumTest(Day.MONDAY);
+        EnumGrammarBasic firstDay = new EnumGrammarBasic(Day.MONDAY);
         firstDay.tellItLikeItIs();
-        EnumTest thirdDay = new EnumTest(Day.WEDNESDAY);
+        EnumGrammarBasic thirdDay = new EnumGrammarBasic(Day.WEDNESDAY);
         thirdDay.tellItLikeItIs();
-        EnumTest fifthDay = new EnumTest(Day.FRIDAY);
+        EnumGrammarBasic fifthDay = new EnumGrammarBasic(Day.FRIDAY);
         fifthDay.tellItLikeItIs();
-        EnumTest sixthDay = new EnumTest(Day.SATURDAY);
+        EnumGrammarBasic sixthDay = new EnumGrammarBasic(Day.SATURDAY);
         sixthDay.tellItLikeItIs();
-        EnumTest seventhDay = new EnumTest(Day.SUNDAY);
+        EnumGrammarBasic seventhDay = new EnumGrammarBasic(Day.SUNDAY);
         seventhDay.tellItLikeItIs();
     }
 }

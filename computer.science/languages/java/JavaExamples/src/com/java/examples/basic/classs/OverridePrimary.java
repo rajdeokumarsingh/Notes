@@ -1,29 +1,29 @@
 package com.java.examples.basic.classs;
 
 
-class FinalSuper {
-    public FinalSuper() {
+class MyBase {
+    public MyBase() {
         test(); // will invoke test() of subclass
     }
     
     void test() {
-        System.out.println("FinalSuper test");
+        System.out.println("MyBase test");
     }
 }
 
-public class FinalTest extends FinalSuper {
-    public FinalTest() {
+public class OverridePrimary extends MyBase {
+    public OverridePrimary() {
     }
     
     @Override
     void test() {
-        System.out.println("FinalTest test");
+        System.out.println("OverridePrimary test");
     }
     
     /**
      * @param args
      */
     public static void main(String[] args) {
-        new FinalTest();
+        new OverridePrimary();
     }
 }

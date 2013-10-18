@@ -1142,7 +1142,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
         policy.setPayloadUUID(UUID.randomUUID().toString());
         policy.setPayloadVersion(1);
         policy.setAllowSimple(true);
-        policy.setForcePIN(true);
+        policy.setForcePIN(false);
         policy.setMaxFailedAttempts(10);
 //        policy.setMaxGracePeriod(-1);
         policy.setPinHistory(50);

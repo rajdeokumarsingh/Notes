@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.lang.reflect.Type;
 
-public class MethodSpy {
+public class R300MethodSpy {
 	private static final String fmt = "%24s: %s%n";
 
 	// for the morbidly curious

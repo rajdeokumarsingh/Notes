@@ -3,7 +3,7 @@ package com.java.examples.reflection.filed;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
-public class FieldModifiers {
+public class R201FieldModifiers {
 	volatile int share;
 	private int instance;
 
@@ -16,7 +16,7 @@ public class FieldModifiers {
 	 */
 	public static void main(String[] args) throws ClassNotFoundException {
 		Class<?> c = Class
-				.forName("com.java.examples.reflection.filed.FieldModifiers");
+				.forName("com.java.examples.reflection.filed.R201FieldModifiers");
 		Field[] fields = c.getDeclaredFields();
 		for (Field f : fields) {
 			System.out.println(f.toGenericString());

@@ -7,7 +7,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Member;
 import java.lang.reflect.Method;
 
-public class AccessClassMembers {
+public class R102AccessClassMembers {
 
 	enum ClassMember { CONSTRUCTOR, FIELD, METHOD, CLASS, ALL };
 
@@ -16,7 +16,7 @@ public class AccessClassMembers {
 	 */
 	public static void main(String[] args) {
 		getClassMembers("java.lang.String");
-//		getClassMembers("com.java.examples.reflection.classes.AccessClassMembers");
+//		getClassMembers("com.java.examples.reflection.classes.R102AccessClassMembers");
 	}
 
 	static void getClassMembers(String className) {

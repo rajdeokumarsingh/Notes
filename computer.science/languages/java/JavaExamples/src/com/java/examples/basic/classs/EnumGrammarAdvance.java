@@ -1,6 +1,6 @@
 package com.java.examples.basic.classs;
 
-public enum EnumPlanet {
+public enum EnumGrammarAdvance {
     MERCURY (3.303e+23, 2.4397e6),
     VENUS   (4.869e+24, 6.0518e6),
     EARTH   (5.976e+24, 6.37814e6),
@@ -12,7 +12,7 @@ public enum EnumPlanet {
 
     private final double mass;   // in kilograms
     private final double radius; // in meters
-    EnumPlanet(double mass, double radius) {
+    EnumGrammarAdvance(double mass, double radius) {
         this.mass = mass;
         this.radius = radius;
     }
@@ -36,7 +36,7 @@ public enum EnumPlanet {
 //        double earthWeight = Double.parseDouble(args[0]);
         double earthWeight = 75.0d;
         double mass = earthWeight/EARTH.surfaceGravity();
-        for (EnumPlanet p : EnumPlanet.values())
+        for (EnumGrammarAdvance p : EnumGrammarAdvance.values())
            System.out.printf("Your weight on %s is %f%n",
                              p, p.surfaceWeight(mass));
     }
