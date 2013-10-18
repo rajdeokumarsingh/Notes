@@ -16,26 +16,21 @@ package com.java.examples.generic;
  */
 public class C002GenericBox<T, S> {
     private T t;
+    private S s;
 
     public C002GenericBox(T t, S s) {
         this.t = t;
         this.s = s;
     }
-
     public S getS() {
         return s;
     }
-
     public void setS(S s) {
         this.s = s;
     }
-
-    private S s;
-
     public T getT() {
         return t;
     }
-
     public void setT(T t) {
         this.t = t;
     }
