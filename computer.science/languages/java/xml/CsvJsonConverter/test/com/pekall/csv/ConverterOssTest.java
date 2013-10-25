@@ -2,9 +2,7 @@ package com.pekall.csv;
 
 import junit.framework.TestCase;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class ConverterOssTest extends TestCase {
 
@@ -107,7 +105,7 @@ public class ConverterOssTest extends TestCase {
 
     public void testSingleUserNoDevice() throws Exception {
         saveStrings(new String[]{
-                "user1,password1,user1@aa.com,51302,李成成,成成,李,13800000000"
+                "user1,password1,user1@aa.com,51302,lichengcheng,chengcheng,li,13800000000"
         });
         String json = Converter.csv2JsonOSS(new File(TMP_PATH));
         Debug.logVerbose(json);
@@ -117,7 +115,7 @@ public class ConverterOssTest extends TestCase {
     }
 
     public void testSingleUserNoDevice2() throws Exception {
-        saveStrings(new String[]{"user1,password1,user1@aa.com,51302,李成成,成成,李,13800000000,,,,"});
+        saveStrings(new String[]{"user1,password1,user1@aa.com,51302,lichengcheng,chengcheng,li,13800000000,,,,"});
         String json = Converter.csv2JsonOSS(new File(TMP_PATH));
         Debug.logVerbose(json);
 
@@ -138,7 +136,7 @@ public class ConverterOssTest extends TestCase {
 
     public void testEscapeCommas() throws Exception {
         saveStrings(new String[]{
-                "\"Jacky, 成\",\"123,456,,\",user2@aa.com,,,firstName2,,\"1380,000, 0001\"," +
+                "\"Jacky, chen\",\"123,456,,\",user2@aa.com,,,firstName2,,\"1380,000, 0001\"," +
                         "50701,51202,,\",security,Info\","
         });
         String json = Converter.csv2JsonOSS(new File(TMP_PATH));
@@ -159,6 +157,16 @@ public class ConverterOssTest extends TestCase {
         assertEquals(json, SINGLE_USER_QUOTES);
     }
 
+    public void testReadGbkFile() throws Exception {
+        saveGbkStrings(new String[]{
+                "\"Jacky, 成\",\"123,456,,\",王@aa.com,,,李成,,\"1380,000, 0001\"," +
+                        "50701,51202,,\",security,Info\","
+        });
+        String json = Converter.csv2JsonOSS(new File(TMP_PATH));
+        Debug.logVerbose(json);
+        assertEquals(json, SINGLE_USER_CHN);
+     }
+
     private File saveStrings(String[] lines) throws IOException {
         File file = new File(TMP_PATH);
         if (!file.exists()) {
@@ -169,6 +177,24 @@ public class ConverterOssTest extends TestCase {
             fileWriter.write(line + "\n");
         }
         fileWriter.close();
+
+        return new File(TMP_PATH);
+    }
+
+    private File saveGbkStrings(String[] lines) throws IOException {
+        File file = new File(TMP_PATH);
+        if (!file.exists()) {
+            file.createNewFile();
+        }
+
+        FileOutputStream fos = new FileOutputStream(file);
+        DataOutputStream dos = new DataOutputStream(fos);
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(dos, "GBK"));
+
+        for (String line : lines) {
+            bw.write(line + "\n");
+        }
+        bw.close();
 
         return new File(TMP_PATH);
     }
@@ -191,13 +217,15 @@ public class ConverterOssTest extends TestCase {
             "\"lastName\":\"lastName1\",\"fullName\":\"fullName1\",\"phone\":null," +
             "\"devices\":null}]";
 
-    private static final String SINGLE_USER_NO_DEVICE = "[{\"username\":\"user1\",\"password\":\"password1\",\"email\":\"user1@aa.com\",\"type\":51302,\"firstName\":\"成成\",\"lastName\":\"李\",\"fullName\":\"李成成\",\"phone\":\"13800000000\",\"devices\":null}]";
+    private static final String SINGLE_USER_NO_DEVICE = "[{\"username\":\"user1\",\"password\":\"password1\",\"email\":\"user1@aa.com\",\"type\":51302,\"firstName\":\"chengcheng\",\"lastName\":\"li\",\"fullName\":\"lichengcheng\",\"phone\":\"13800000000\",\"devices\":null}]";
 
     private static final String SINGLE_USER_DEVICE_PARTIAL = "[{\"username\":\"user2\",\"password\":\"password2\",\"email\":\"user2@aa.com\",\"type\":null,\"firstName\":\"firstName2\",\"lastName\":null,\"fullName\":null,\"phone\":\"13800000001\",\"devices\":[{\"type\":50701,\"os\":51202,\"language\":null,\"securityInfo\":\"securityInfo\",\"tmpUuid\":null,\"username\":\"user2\"}]}]";
 
     private static final String SINGLE_USER_PART1 = "[{\"username\":\"username1\",\"password\":null,\"email\":null,\"type\":null,\"firstName\":null,\"lastName\":null,\"fullName\":null,\"phone\":null,\"devices\":null},{\"username\":\"username2\",\"password\":null,\"email\":null,\"type\":null,\"firstName\":null,\"lastName\":null,\"fullName\":null,\"phone\":null,\"devices\":null}]";
 
-    private static final String SINGLE_USER_COMMA = "[{\"username\":\"Jacky, 成\",\"password\":\"123,456,,\",\"email\":\"user2@aa.com\",\"type\":null,\"firstName\":\"firstName2\",\"lastName\":null,\"fullName\":null,\"phone\":\"1380,000, 0001\",\"devices\":[{\"type\":50701,\"os\":51202,\"language\":null,\"securityInfo\":\",security,Info\",\"tmpUuid\":null,\"username\":\"Jacky, 成\"}]}]";
+    private static final String SINGLE_USER_COMMA = "[{\"username\":\"Jacky, chen\",\"password\":\"123,456,,\",\"email\":\"user2@aa.com\",\"type\":null,\"firstName\":\"firstName2\",\"lastName\":null,\"fullName\":null,\"phone\":\"1380,000, 0001\",\"devices\":[{\"type\":50701,\"os\":51202,\"language\":null,\"securityInfo\":\",security,Info\",\"tmpUuid\":null,\"username\":\"Jacky, chen\"}]}]";
 
     private static final String SINGLE_USER_QUOTES = "[{\"username\":\"\\\"\",\"password\":\"\\\"\\\"\",\"email\":\"\\\"\\\"\\\"\",\"type\":null,\"firstName\":null,\"lastName\":null,\"fullName\":null,\"phone\":null,\"devices\":null},{\"username\":\"\\\"test\\\"\",\"password\":\"\\\"test\",\"email\":\"test me\\\"\",\"type\":null,\"firstName\":null,\"lastName\":null,\"fullName\":null,\"phone\":null,\"devices\":null},{\"username\":\"\\\"test, test\\\"\",\"password\":\"\\\",test\\\"\",\"email\":\"\\\"test,\\\"\",\"type\":null,\"firstName\":null,\"lastName\":null,\"fullName\":null,\"phone\":null,\"devices\":null}]";
+
+    private static final String SINGLE_USER_CHN = "[{\"username\":\"Jacky, 成\",\"password\":\"123,456,,\",\"email\":\"王@aa.com\",\"type\":null,\"firstName\":\"李成\",\"lastName\":null,\"fullName\":null,\"phone\":\"1380,000, 0001\",\"devices\":[{\"type\":50701,\"os\":51202,\"language\":null,\"securityInfo\":\",security,Info\",\"tmpUuid\":null,\"username\":\"Jacky, 成\"}]}]";
 }

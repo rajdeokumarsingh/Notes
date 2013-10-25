@@ -1,28 +1,16 @@
 package com.pekall.csv;
 
-import com.google.gson.*;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonSyntaxException;
 import com.pekall.csv.bean.CsvFile;
 import com.pekall.csv.bean.CsvLine;
 import junit.framework.TestCase;
 
-class TestGsonStrategy implements ExclusionStrategy {
-
-    public boolean shouldSkipClass(Class<?> arg0) {
-        return false;
-    }
-
-    public boolean shouldSkipField(FieldAttributes f) {
-        return (f.getDeclaringClass() == CsvLine.class && f.getName().equals("username"))||
-                (f.getDeclaringClass() == CsvLine.class && f.getName().equals("password"));
-    }
-
-}
-
 public class GsonTest extends TestCase{
 
     public void testFromGson() throws Exception {
-        Gson gson = new GsonBuilder().serializeNulls().
-                setExclusionStrategies(new TestGsonStrategy()).create();
+        Gson gson = new GsonBuilder().serializeNulls().create();
         CsvFile info = null;
         try {
             info = gson.fromJson(TEST_JSON, CsvFile.class);

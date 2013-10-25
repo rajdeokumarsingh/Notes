@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 public class CsvVoDemoTest extends TestCase {
     public void testGenCsv() throws Exception {
+        /*
         ArrayList<String[]> csvCols = new ArrayList<String[]>();
         CsvVoDemo demo = new CsvVoDemo();
         demo.setType(25);
@@ -45,5 +46,6 @@ public class CsvVoDemoTest extends TestCase {
         CSVWriter writer = new CSVWriter(new PrintWriter(System.out), ',', CSVWriter.NO_QUOTE_CHARACTER);
         writer.writeAll(csvCols);
         writer.close();
+        */
     }
 }

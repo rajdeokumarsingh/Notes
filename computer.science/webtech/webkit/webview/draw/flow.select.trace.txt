@@ -1,0 +1,296 @@
+Scenario:
+    When user long click a text field in the webview, like <p>, <textarea>, etc.
+
+// WebViewClassic.java
+// get long click event from view hierarchy
+@Override
+public boolean performLongClick() {
+
+    // Jiang Rui: if the selection is in progress,  just ignore the long click
+    if (mSelectingText) return false; // long click does nothing on selection
+
+    /* In the case where the application hasn't already handled the long
+     * click action, look for a word under the  click. If one is found,
+     * animate the text selection into view.
+     * FIXME: no animation code yet */
+    final boolean isSelecting = selectText();
+    ...
+}
+        |
+        V
+boolean selectText(int x, int y) {
+    mWebViewCore.sendMessage(EventHub.SELECT_WORD_AT, x, y);
+    return true;
+}
+        |
+        V
+// WebViewCore.java
+handleMessage() :
+case SELECT_WORD_AT: {
+     mTextSelectionChangeReason = TextSelectionData.REASON_SELECT_WORD;
+     int x = msg.arg1;
+     int y = msg.arg2;
+     nativeSelectWordAt(mNativeClass, x, y);
+}
+--------------------------------------------------------------------------------
+                                    |
+                                    | JNI to natvie
+                                    V
+--------------------------------------------------------------------------------
+
+// WebViewCore.cpp
+static bool SelectWordAt(JNIEnv* env, jobject obj, jint nativeClass, jint x, jint y)
+    return viewImpl->selectWordAt(x, y);
+        |
+        V
+bool WebViewCore::selectWordAt(int x, int y)
+{
+    HitTestResult hoverResult;
+    moveMouse(x, y, &hoverResult);
+
+    // Jiang Rui: set page focus to the frame which contains the point (x, y)
+    if (hoverResult.innerNode()) {
+        Node* node = hoverResult.innerNode();
+        Frame* frame = node->document()->frame();
+        Page* page = m_mainFrame->document()->page();
+        page->focusController()->setFocusedFrame(frame);
+    }
+
+    // Jiang Rui: convert coordinate of point(x,y) to frame coordinate
+    IntPoint point = convertGlobalContentToFrameContent(IntPoint(x, y));
+
+    // Hit test of this kind required for this to work inside input fields
+    HitTestRequest request(HitTestRequest::Active);
+    HitTestResult result(point);
+
+    focusedFrame()->document()->renderView()->layer()->hitTest(request, result);
+
+    // Jiang Rui: get node at (x,y)
+    // Matching the logic in MouseEventWithHitTestResults::targetNode()
+    Node* node = result.innerNode();
+    Element* element = node->parentElement();
+    if (!node->inDocument() && element && element->inDocument())
+        node = element;
+
+    // Jiang Rui: check wether 
+    // 1. SelectionController already contains the converted point, 
+                do not select it again
+    // 2. and node isContentEditable() or node isTextNode()
+    // 3. and node is not live link, like <a> tag which can not be edit
+    // 4. can dispatch selectstartEvent to the node
+    SelectionController* sc = focusedFrame()->selection();
+    bool wordSelected = false;
+    if (!sc->contains(point) && (node->isContentEditable() || node->isTextNode()) && !result.isLiveLink()
+            && node->dispatchEvent(Event::create(eventNames().selectstartEvent, true, true))) {
+
+        // Jiang Rui: 
+        // 1. get visible postion
+        // 2. do select word at the visible postion
+        VisiblePosition pos(node->renderer()->positionForPoint(result.localPoint()));
+        wordSelected = selectWordAroundPosition(node->document()->frame(), pos);
+    }
+    return wordSelected;
+}
+                |
+                |
+                V   
+bool WebViewCore::selectWordAroundPosition(Frame* frame, VisiblePosition pos)
+    // ...
+    if (selectionController->shouldChangeSelection(selection)) {
+        // Jiang Rui:
+        selectionController->setSelection(selection); -----------> go down
+        wordSelected = true;
+    }
+    return wordSelected;
+}
+        |
+        V
+void SelectionController::setSelection(const VisibleSelection& s, SetSelectionOptions options, CursorAlignOnScroll align, TextGranularity granularity, DirectionalityPolicy directionalityPolicy)
+{
+    // ...
+    m_frame->editor()->respondToChangedSelection(oldSelection, options);
+    // ...
+}
+        |
+        V
+// We need to pass the selection up to the WebTextView
+void EditorClientAndroid::respondToChangedSelection() {
+    Frame* frame = m_page->focusController()->focusedOrMainFrame();
+    WebViewCore* webViewCore = WebViewCore::getWebViewCore(frame->view());
+    webViewCore->updateTextSelection();
+}
+    |
+    V
+void WebViewCore::updateTextSelection()
+{
+    VisibleSelection selection = focusedFrame()->selection()->selection();
+    int start = 0;
+    int end = 0;
+    if (selection.isCaretOrRange())
+        getSelectionOffsets(selection.start().anchorNode(), start, end);
+    SelectText* selectText = createSelectText(selection);
+    env->CallVoidMethod(javaObject.get(),
+            m_javaGlue->m_updateTextSelection, reinterpret_cast<int>(currentFocus()),
+            start, end, m_textGeneration, reinterpret_cast<int>(selectText));
+    checkException(env);
+}
+--------------------------------------------------------------------------------
+                                    |
+                                    | JNI
+                                    V
+--------------------------------------------------------------------------------
+private void updateTextSelection(int pointer, int start, int end,
+        int textGeneration, int selectionPtr) {
+    Message.obtain(mWebViewClassic.mPrivateHandler,
+            WebViewClassic.UPDATE_TEXT_SELECTION_MSG_ID, pointer, textGeneration,
+            createTextSelection(start, end, selectionPtr)).sendToTarget();
+}
+                |
+                V
+private void updateTextSelectionFromMessage(int nodePointer,
+        int textGeneration, WebViewCore.TextSelectionData data) {
+
+    // Jiang Rui: let libwebcore draw ...
+    nativeSetTextSelection(mNativeClass, data.mSelectTextPtr);
+
+    if (data.mSelectTextPtr != 0 &&
+            (data.mStart != data.mEnd ||
+             (mFieldPointer == nodePointer && mFieldPointer != 0) ||
+             (nodePointer == 0 && data.mStart == 0 && data.mEnd == 0))) {
+        mIsEditingText = (mFieldPointer == nodePointer) && nodePointer != 0;
+        mIsCaretSelection = (data.mStart == data.mEnd && nodePointer != 0);
+        if (mIsCaretSelection &&
+                (mInputConnection == null ||
+                 mInputConnection.getEditable().length() == 0)) {
+            // There's no text, don't show caret handle.
+            selectionDone();
+        } else {
+            if (!mSelectingText) {
+                setupWebkitSelect(); -----------go down----------------->
+                                        1. set selection flag and alpha of the selection handle
+            } else {
+                syncSelectionCursors();
+            }
+            animateHandles();
+            if (mIsCaretSelection) {
+                resetCaretTimer();
+            }
+        }
+    } else {
+        selectionDone();
+    }
+    invalidate(); ---------- go down ---------->
+                    2. draw the handle
+}
+                    |
+                    V
+// WebViewClassic.java
+private boolean setupWebkitSelect() {
+    syncSelectionCursors();
+
+    // Jiang Rui: start select action mode
+    if (!mIsCaretSelection && !startSelectActionMode()) {
+        selectionDone();
+        return false;
+    }
+    startSelectingText();
+    mTouchMode = TOUCH_DRAG_MODE;
+    return true;
+}
+            | 
+            V
+private void startSelectingText() {
+    // set the flag
+    mSelectingText = true;
+    mShowTextSelectionExtra = true;
+    animateHandles();               // Jiang Rui: set alpha of the handle to visible
+}
+
+invalidate()
+      |
+      V
+private void drawContent(Canvas canvas) {
+    // ...
+    if (!mFindIsUp && mShowTextSelectionExtra) {
+        extras = DRAW_EXTRAS_SELECTION;
+    }
+    drawTextSelectionHandles(canvas);
+}
+    |
+    V
+private void drawTextSelectionHandles(Canvas canvas) {
+    if (mBaseAlpha.getAlpha() == 0 && mExtentAlpha.getAlpha() == 0) {
+        return;
+    }
+    // create drawable from image
+    ensureSelectionHandles();
+
+    if (mIsCaretSelection) {
+        // ...
+    } else {
+        drawHandle(mSelectCursorBase, HANDLE_ID_BASE,
+                mSelectHandleBaseBounds, mBaseAlpha.getAlpha(), canvas);
+        drawHandle(mSelectCursorExtent, HANDLE_ID_EXTENT,
+                mSelectHandleExtentBounds, mExtentAlpha.getAlpha(), canvas);
+    }
+}
+                |
+                V draw the handles
+private void drawHandle(Point point, int handleId, Rect bounds,
+        int alpha, Canvas canvas) {
+    int offset;
+    int width;
+    int height;
+    Drawable drawable;
+    boolean isLeft = nativeIsHandleLeft(mNativeClass, handleId);
+    if (isLeft) {
+        drawable = mSelectHandleLeft;
+        width = mSelectHandleLeft.getIntrinsicWidth();
+        height = mSelectHandleLeft.getIntrinsicHeight();
+        // Magic formula copied from TextView
+        offset = (width * 3) / 4;
+    } else {
+        drawable = mSelectHandleRight;
+        width = mSelectHandleRight.getIntrinsicWidth();
+        height = mSelectHandleRight.getIntrinsicHeight();
+        // Magic formula copied from TextView
+        offset = width / 4;
+    }
+
+    int x = contentToViewDimension(point.x);
+    int y = contentToViewDimension(point.y);
+    bounds.set(x - offset, y, x - offset + width, y + height);
+    drawable.setBounds(bounds);
+    drawable.setAlpha(alpha);
+    drawable.draw(canvas);
+}
+
+Scenario 2:
+
+/**
+ * Called when the selection has been removed.
+ */
+void selectionDone() {
+    Log.i(LOGTAG, "selectionDone()");
+
+    if (mSelectingText) {
+        hidePasteButton();
+        endSelectingText();
+        // finish is idempotent, so this is fine even if selectionDone was
+        // called by mSelectCallback.onDestroyActionMode
+        if (mSelectCallback != null) {
+            mSelectCallback.finish();
+            mSelectCallback = null;
+        }
+        invalidate(); // redraw without selection
+        mAutoScrollX = 0;
+        mAutoScrollY = 0;
+        mSentAutoScrollMessage = false;
+    }
+}
+
+
+
+
+
+

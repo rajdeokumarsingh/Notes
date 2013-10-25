@@ -104,16 +104,19 @@ public class Converter {
         if (file == null || !file.exists() || !file.isFile()) {
             throw new IllegalArgumentException("file should not be null");
         }
+
         CsvFile info = new CsvFile();
         try {
-            FileReader fileReader = new FileReader(file);
-            CSVReader csvReader = new CSVReader(fileReader);
-            String[] tokens = null;
+            DataInputStream din = new DataInputStream(new FileInputStream(file));
+            BufferedReader br = new BufferedReader(new InputStreamReader(din, "GBK"));
+            CSVReader csvReader = new CSVReader(br);
+            String[] tokens;
             while ((tokens = csvReader.readNext())!= null) {
                 CsvLine csvLine = CsvLine.fromCsv(tokens);
                 Debug.logVerbose(csvLine.toString());
                 info.addLine(csvLine);
             }
+            br.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
