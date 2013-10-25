@@ -3,6 +3,10 @@ hardcore
     FrameLoader 3K
     Document 5K
 
+    draw flow:
+        selection handle, thread
+
+
 目标：
     搞清函数级别的流程
         函数的功能要总结的出来
