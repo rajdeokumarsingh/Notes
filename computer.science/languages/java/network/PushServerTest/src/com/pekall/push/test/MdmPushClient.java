@@ -19,7 +19,8 @@ public class MdmPushClient extends WebSocketClientTest {
 
     @Override
     public void onOpen(ServerHandshake handshakedata) {
-        // System.out.println("websocket open");
+        System.out.println("websocket open");
+        send(PushMessageManager.genShakeHandMessage().toJson());
         Statistics.getInstance().success();
     }
 

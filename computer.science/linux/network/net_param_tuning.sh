@@ -1,5 +1,6 @@
 # local socket port range
 cat /proc/sys/net/ipv4/ip_local_port_range
+cat /proc/sys/net/ipv4
 
 net.ipv4.tcp_timestamps=1 开启对于TCP时间戳的支持,若该项设置为0，则下面一项设置不起作用
 sudo sysctl -w net.ipv4.tcp_timestamps=1
@@ -9,8 +10,6 @@ sudo sysctl -w net.ipv4.tcp_tw_recycle=1
 
 net.ipv4.ip_local_port_range 表示本地socket端口的返回，5000表示从5000开始
 sudo sysctl -w net.ipv4.ip_local_port_range=5000
-
-
 
 
 
@@ -48,6 +47,10 @@ http://bbs.chinaunix.net/forum.php?mod=viewthread&tid=2036606
 http://blog.csdn.net/wenchao126/article/details/7528543
 http://blog.csdn.net/panda_bear/article/details/6552480
 
+
+百万连接测试：
+http://qa.blog.163.com/blog/static/19014700220134132571261/
+http://qa.blog.163.com/blog/static/190147002201342115957410/
 
 
 

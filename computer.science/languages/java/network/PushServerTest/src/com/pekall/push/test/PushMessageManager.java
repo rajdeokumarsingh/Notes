@@ -32,7 +32,8 @@ public class PushMessageManager {
 //        params.setDevice(Configuration.getDeviceUuid());
 //        params.setToken(Configuration.getPushToken());
         Random random = new Random(100);
-        params.setDevice("" + System.currentTimeMillis() + random.nextLong());
+        // params.setDevice("" + System.currentTimeMillis() + random.nextLong());
+        params.setDevice("device_uuid_00001");
         params.setToken("");
         pushMessage.setParams(params);
         return pushMessage;

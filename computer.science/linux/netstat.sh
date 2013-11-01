@@ -25,9 +25,8 @@ netstat -an|grep mysql
 
 netstat -ae|grep “TIME_WAIT” |wc –l
 
-
 TCP连接状态:
+netstat -n | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}' 
 
-TIME_WAIT
 
 
