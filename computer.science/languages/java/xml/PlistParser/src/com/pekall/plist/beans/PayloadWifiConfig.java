@@ -87,6 +87,20 @@ public class PayloadWifiConfig extends PayloadBase {
      */
     private String PayloadCertificateUUID;
 
+    public static final int SECURITY_TYPE_NO = 0;
+    public static final int SECURITY_TYPE_WEP_PERSON = 1;
+    public static final int SECURITY_TYPE_WPA_PERSON = 2;
+    public static final int SECURITY_TYPE_ANY_PERSON = 3;
+    public static final int SECURITY_TYPE_WEP_ENTERPRISE = 4;
+    public static final int SECURITY_TYPE_WPA_ENTERPRISE = 5;
+    public static final int SECURITY_TYPE_ANY_ENTERPRISE = 6;
+
+    /**
+     * 安全类型，see SECURITY_TYPE_NO
+     */
+    @PlistControl(toPlistXml = false)
+    private Integer SecurityType;
+
     public PayloadWifiConfig() {
         setPayloadType(PayloadBase.PAYLOAD_TYPE_WIFI_MANAGED);
     }
@@ -193,6 +207,14 @@ public class PayloadWifiConfig extends PayloadBase {
 
     public void setPayloadCertificateUUID(String payloadCertificateUUID) {
         PayloadCertificateUUID = payloadCertificateUUID;
+    }
+
+    public Integer getSecurityType() {
+        return SecurityType;
+    }
+
+    public void setSecurityType(Integer securityType) {
+        SecurityType = securityType;
     }
 
     @Override

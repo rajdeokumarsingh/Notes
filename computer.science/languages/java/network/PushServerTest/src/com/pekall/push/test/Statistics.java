@@ -4,9 +4,12 @@ public class Statistics {
 
     private static Statistics statistics;
 
-    private int creCount = 0;
-    private int sucCount = 0;
-    private static int failCount = 0;
+    private long creCount = 0;
+    private long sucCount = 0;
+    private static long failCount = 0;
+    private static long pingCnt = 0;
+    private static long pongCnt = 0;
+    private static long errorCnt = 0;
 
     private Statistics() {
 
@@ -37,7 +40,22 @@ public class Statistics {
     }
 
     public synchronized String getStatistics() {
-        return "Connection : " + creCount + " , success : " + sucCount + " , fail : " + failCount;
+        return "Thread total: " + creCount
+                + " , connect OK: " + sucCount
+                + ", ping: " + pingCnt + ", pong: " + pongCnt
+                + " , connect fail : " + failCount
+                + ", network error: " + errorCnt;
     }
 
+    public synchronized void ping() {
+        pingCnt++;
+    }
+
+    public synchronized void pong() {
+        pongCnt++;
+    }
+
+    public synchronized void error() {
+        errorCnt++;
+    }
 }

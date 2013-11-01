@@ -9,6 +9,7 @@ import com.pekall.plist.su.settings.advertise.AdvertiseDownloadSettings;
 import com.pekall.plist.su.settings.browser.BrowserSettings;
 import com.pekall.plist.su.settings.launcher.LauncherSettings;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -288,6 +289,72 @@ public class PayloadJsonWrapper extends PayloadBase {
         List<PayloadWifiConfig> payloadWifiConfigs = payloadContent.getPayloadWifiConfigs();
         if(payloadWifiConfigs != null){
             for(PayloadWifiConfig payloadWifiConfig : payloadWifiConfigs){
+
+                Integer securityType = payloadWifiConfig.getSecurityType();
+                if(securityType != null){
+                    switch (securityType){
+                        case PayloadWifiConfig.SECURITY_TYPE_NO:
+                            payloadWifiConfig.setEncryptionType(PayloadWifiConfig.ENCRYPTION_TYPE_NONE);
+                            break;
+                        case PayloadWifiConfig.SECURITY_TYPE_WEP_PERSON:
+                            payloadWifiConfig.setEncryptionType(PayloadWifiConfig.ENCRYPTION_TYPE_WEP);
+                            break;
+                        case PayloadWifiConfig.SECURITY_TYPE_WPA_PERSON:
+                            payloadWifiConfig.setEncryptionType(PayloadWifiConfig.ENCRYPTION_TYPE_WPA);
+                            break;
+                        case PayloadWifiConfig.SECURITY_TYPE_ANY_PERSON:
+                            payloadWifiConfig.setEncryptionType(PayloadWifiConfig.ENCRYPTION_TYPE_ANY);
+                            break;
+                        case PayloadWifiConfig.SECURITY_TYPE_WEP_ENTERPRISE:
+                            payloadWifiConfig.setEncryptionType(PayloadWifiConfig.ENCRYPTION_TYPE_WEP);
+                            break;
+                        case PayloadWifiConfig.SECURITY_TYPE_WPA_ENTERPRISE:
+                            payloadWifiConfig.setEncryptionType(PayloadWifiConfig.ENCRYPTION_TYPE_WPA);
+                            break;
+                        case PayloadWifiConfig.SECURITY_TYPE_ANY_ENTERPRISE:
+                            payloadWifiConfig.setEncryptionType(PayloadWifiConfig.ENCRYPTION_TYPE_ANY);
+                            break;
+                    }
+                }
+
+                EAPClientConfigurationClass eapClientConfiguration = payloadWifiConfig.getEAPClientConfiguration();
+                if(eapClientConfiguration != null){
+
+                    List<Integer> acceptEAPTypes = new ArrayList<Integer>();
+
+                    Boolean acceptEAPTypeTLS = eapClientConfiguration.getAcceptEAPTypeTLS();
+                    if(acceptEAPTypeTLS != null && acceptEAPTypeTLS){
+                        acceptEAPTypes.add(13);
+                    }
+
+                    Boolean acceptEAPTypeLEAP = eapClientConfiguration.getAcceptEAPTypeLEAP();
+                    if(acceptEAPTypeLEAP != null && acceptEAPTypeLEAP){
+                        acceptEAPTypes.add(17);
+                    }
+
+                    Boolean acceptEAPTypeEAP_fast = eapClientConfiguration.getAcceptEAPTypeEAP_FAST();
+                    if(acceptEAPTypeEAP_fast != null && acceptEAPTypeEAP_fast){
+                        acceptEAPTypes.add(43);
+                    }
+
+                    Boolean acceptEAPTypeTTLS = eapClientConfiguration.getAcceptEAPTypeTTLS();
+                    if(acceptEAPTypeTTLS != null && acceptEAPTypeTTLS){
+                        acceptEAPTypes.add(21);
+                    }
+
+                    Boolean acceptEAPTypePEAP = eapClientConfiguration.getAcceptEAPTypePEAP();
+                    if(acceptEAPTypePEAP != null && acceptEAPTypePEAP){
+                        acceptEAPTypes.add(25);
+                    }
+
+                    Boolean acceptEAPTypeEAP_sim = eapClientConfiguration.getAcceptEAPTypeEAP_SIM();
+                    if(acceptEAPTypeEAP_sim != null && acceptEAPTypeEAP_sim){
+                        acceptEAPTypes.add(18);
+                    }
+
+                    eapClientConfiguration.setAcceptEAPTypes(acceptEAPTypes);
+                }
+
                 wrapper.addPayLoadContent(payloadWifiConfig);
             }
         }
@@ -322,6 +389,10 @@ public class PayloadJsonWrapper extends PayloadBase {
 
         if(payloadExchanges != null){
             for(PayloadExchange payloadExchange : payloadExchanges){
+                String domainName = payloadExchange.getDomainName();
+                if(domainName != null && domainName.length() > 0){
+                    payloadExchange.setUserName(domainName+"\\"+payloadExchange.getUserName());
+                }
                 wrapper.addPayLoadContent(payloadExchange);
             }
         }
@@ -329,6 +400,7 @@ public class PayloadJsonWrapper extends PayloadBase {
         List<PayloadVPN> payloadVPNs = payloadContent.getPayloadVPNs();
         if(payloadVPNs != null){
             for(PayloadVPN payloadVPN : payloadVPNs){
+                parseVpnJson2PlistBean(payloadVPN);
                 wrapper.addPayLoadContent(payloadVPN);
             }
         }
@@ -431,8 +503,207 @@ public class PayloadJsonWrapper extends PayloadBase {
 
         PayloadAPN payloadAPN =  payloadContent.getPayloadAPN();
         if(payloadAPN != null){
+            APNDataArray apnDataArray = new APNDataArray();
+
+            APNSDict apnsDict = new APNSDict();
+
+            List<APNConfig> apnConfigs = new ArrayList<APNConfig>();
+            APNConfig apnConfig= new APNConfig();
+            apnConfig.setApn(payloadAPN.getApn());
+            apnConfig.setUsername(payloadAPN.getUsername());
+            String password = payloadAPN.getPassword();
+            if(password != null && password.length() > 0){
+                apnConfig.setPassword(payloadAPN.getPassword().getBytes());
+            }
+            apnConfig.setProxy(payloadAPN.getProxy());
+            apnConfig.setProxyPort(payloadAPN.getProxyPort());
+            apnConfigs.add(apnConfig);
+
+            apnsDict.setApns(apnConfigs);
+
+            apnDataArray.setDefaultsData(apnsDict);
+            payloadAPN.addPayloadContent(apnDataArray);
+
             wrapper.addPayLoadContent(payloadAPN);
         }
         return wrapper;
+    }
+
+//    private void parseVpnPlist2Json(PayloadVPN payloadVPN){
+//
+//        IPv4Info iPv4Info = payloadVPN.getIPv4();
+//        if(iPv4Info != null){
+//            payloadVPN.setOverridePrimary(iPv4Info.getOverridePrimary() == 1? true : false);
+//        }
+//
+//        String vpnType = payloadVPN.getVPNType();
+//        if(vpnType!=null){
+//            if(PayloadVPN.TYPE_L2TP.equalsIgnoreCase(vpnType)){
+//
+//                PPPInfo pppInfo = payloadVPN.getPPP();
+//                if(pppInfo != null){
+//
+//                    payloadVPN.setAuthName(pppInfo.getAuthName());
+//                    payloadVPN.setCommRemoteAddress(pppInfo.getCommRemoteAddress());
+//
+//                    Boolean tokenCard = pppInfo.getTokenCard();
+//                    if(tokenCard != null){
+//                        payloadVPN.setAuthType(PayloadVPN.AUTH_TYPE_RSA_SEC_ID);
+//                    }else{
+//                        payloadVPN.setAuthType(PayloadVPN.AUTH_TYPE_PASS);
+//                        payloadVPN.setAuthPassword(pppInfo.getAuthPassword());
+//                    }
+//                    payloadVPN.setPPP(null);
+//                }
+//                IPSecInfo ipSec = payloadVPN.getIPSec();
+//                if(ipSec != null){
+//                    payloadVPN.setSharedSecret(new String(ipSec.getSharedSecret()));
+//                    payloadVPN.setIPSec(null);
+//                }
+//            }else if(PayloadVPN.TYPE_PPTP.equalsIgnoreCase(vpnType)){
+//
+//                PPPInfo pppInfo = payloadVPN.getPPP();
+//                if(pppInfo != null){
+//                    payloadVPN.setPPP(null);
+//                    payloadVPN.setAuthName(pppInfo.getAuthName());
+//                    payloadVPN.setAuthPassword(new String(pppInfo.getAuthPassword()));
+//                    payloadVPN.setCommRemoteAddress(pppInfo.getCommRemoteAddress());
+//                    Boolean tokenCard = pppInfo.getTokenCard();
+//                    if(tokenCard != null){
+//                        payloadVPN.setAuthType(PayloadVPN.AUTH_TYPE_RSA_SEC_ID);
+//                    }else{
+//                        payloadVPN.setAuthType(PayloadVPN.AUTH_TYPE_PASS);
+//                        payloadVPN.setAuthPassword(pppInfo.getAuthPassword());
+//                    }
+//                    payloadVPN.setEncryptionLevel();
+//                }
+//            }
+//        }
+//    }
+    private void parseVpnJson2PlistBean(PayloadVPN payloadVPN) {
+        IPv4Info iPv4Info = new IPv4Info();
+        iPv4Info.setOverridePrimary(payloadVPN.isOverridePrimary()? 1: 0);
+
+
+        Integer vpnProxiesType = payloadVPN.getVpnProxiesType();
+        if(vpnProxiesType != null){
+            VpnProxies vpnProxies = new VpnProxies();
+            switch (vpnProxiesType){
+                case PayloadVPN.PROXY_TYPE_NO:
+
+                    break;
+                case PayloadVPN.PROXY_TYPE_AUTO:
+                    vpnProxies.setProxyAutoConfigEnable(1);
+                    vpnProxies.setProxyAutoConfigURLString(payloadVPN.getHTTPProxy());
+                    break;
+                case PayloadVPN.PROXY_TYPE_HAND:
+                    vpnProxies.setHTTPEnable(1);
+                    vpnProxies.setHTTPProxy(payloadVPN.getHTTPProxy());
+                    vpnProxies.setHTTPPort(payloadVPN.getHTTPPort());
+                    vpnProxies.setHTTPProxyUsername(payloadVPN.getHTTPProxyUsername());
+                    vpnProxies.setHTTPProxyPassword(payloadVPN.getHTTPProxyPassword());
+                    vpnProxies.setHTTPSEnable(1);
+                    vpnProxies.setHTTPSProxy(payloadVPN.getHTTPProxy());
+                    vpnProxies.setHTTPSPort(payloadVPN.getHTTPPort());
+                    break;
+            }
+            payloadVPN.setProxies(vpnProxies);
+        }
+
+        String vpnType = payloadVPN.getVPNType();
+        if(PayloadVPN.TYPE_L2TP.equalsIgnoreCase(vpnType)){
+
+            PPPInfo pppInfo =new PPPInfo();
+            pppInfo.setAuthName(payloadVPN.getAuthName());
+            pppInfo.setCommRemoteAddress(payloadVPN.getCommRemoteAddress());
+            Integer authType = payloadVPN.getAuthType();
+            if(authType != null){
+                if(authType==PayloadVPN.AUTH_TYPE_PASS){
+                    pppInfo.setAuthPassword(payloadVPN.getAuthPassword());
+                }else{
+                    pppInfo.setTokenCard(true);
+                    pppInfo.enableAuthEAPPlugins();
+                    pppInfo.enableAuthProtocol();
+                }
+            }
+            payloadVPN.setPPP(pppInfo);
+
+            IPSecInfo ipSecInfo = new IPSecInfo();
+            ipSecInfo.setAuthenticationMethod("SharedSecret");
+            if(payloadVPN.getSharedSecret() != null){
+                ipSecInfo.setSharedSecret(payloadVPN.getSharedSecret().getBytes());
+            }
+            payloadVPN.setIPSec(ipSecInfo);
+
+        }else if(PayloadVPN.TYPE_PPTP.equalsIgnoreCase(vpnType)){
+            PPPInfo pppInfo =new PPPInfo();
+            pppInfo.setAuthName(payloadVPN.getAuthName());
+            pppInfo.setAuthPassword(payloadVPN.getAuthPassword());
+            pppInfo.setCommRemoteAddress(payloadVPN.getCommRemoteAddress());
+            Integer authType = payloadVPN.getAuthType();
+            if(authType != null){
+                if(authType==PayloadVPN.AUTH_TYPE_PASS){
+
+                }else{
+                    pppInfo.setTokenCard(true);
+                    pppInfo.enableAuthEAPPlugins();
+                    pppInfo.enableAuthProtocol();
+                }
+            }
+            Integer encryptionLevel = payloadVPN.getEncryptionLevel();
+            if(encryptionLevel != null){
+                switch (encryptionLevel){
+                    case PayloadVPN.ENCRYPTION_LEVEL_NO:
+                        pppInfo.setCCPEnabled(0);
+                        pppInfo.setCCPMPPE40Enabled(0);
+                        pppInfo.setCCPMPPE128Enabled(0);
+                        break;
+                    case PayloadVPN.ENCRYPTION_LEVEL_AUTO:
+                        pppInfo.setCCPEnabled(1);
+                        pppInfo.setCCPMPPE40Enabled(1);
+                        pppInfo.setCCPMPPE128Enabled(1);
+                        break;
+                    case PayloadVPN.ENCRYPTION_LEVEL_MAX:
+                        pppInfo.setCCPEnabled(1);
+                        pppInfo.setCCPMPPE40Enabled(0);
+                        pppInfo.setCCPMPPE128Enabled(1);
+                        break;
+                }
+            }
+            payloadVPN.setPPP(pppInfo);
+            payloadVPN.setIPSec(null);
+        }else if(PayloadVPN.TYPE_IPSEC.equalsIgnoreCase(vpnType)){
+
+            iPv4Info.setOverridePrimary(1);
+
+            IPSecInfo ipSecInfo = new IPSecInfo();
+            ipSecInfo.setRemoteAddress(payloadVPN.getCommRemoteAddress());
+
+            Integer machineAuth = payloadVPN.getMachineAuth();
+            if(machineAuth != null){
+                switch (machineAuth){
+                    case PayloadVPN.MACHINE_AUTH_SHAREDPASS:
+                        ipSecInfo.setAuthenticationMethod("SharedSecret");
+                        break;
+                }
+            }
+
+            ipSecInfo.setPromptForVPNPIN(payloadVPN.getPromptForVPNPIN());
+            ipSecInfo.setXAuthName(payloadVPN.getAuthName());
+            ipSecInfo.setXAuthPassword(payloadVPN.getAuthPassword());
+            ipSecInfo.setXAuthEnabled(1);
+            if(payloadVPN.getSharedSecret() != null){
+                ipSecInfo.setAuthenticationMethod("SharedSecret");
+                ipSecInfo.setSharedSecret(payloadVPN.getSharedSecret().getBytes());
+            }
+            if(payloadVPN.getLocalIdentifier() != null)
+                ipSecInfo.setLocalIdentifier(payloadVPN.getLocalIdentifier());
+            if(payloadVPN.getUseMixedIdentifi()){
+                ipSecInfo.setLocalIdentifierType("KeyID");
+            }
+            payloadVPN.setPPP(null);
+            payloadVPN.setIPSec(ipSecInfo);
+        }
+        payloadVPN.setIPv4(iPv4Info);
     }
 }

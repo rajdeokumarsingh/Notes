@@ -1,0 +1,30491 @@
+cscope 15 $HOME/git/note/computer.science/languages/java/network/JavaWebSocket -q 0000000913 0000160617
+	@pom.xml
+
+1 <?
+xml
+ 
+	gv”siÚ
+="1.0" 
+’codšg
+="UTF-8"?>
+
+2 <
+´ojeù
+ 
+xmÊs
+="http://maven.apache.org/POM/4.0.0"
+
+3 
+xmÊs
+:
+xsi
+="http://www.w3.org/2001/XMLSchema-instance"
+
+4 
+xsi
+:
+schemaLoÿtiÚ
+="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+5 <
+mod–V”siÚ
+>4.0.0</modelVersion>
+
+7 <
+groupId
+>
+JavaWebSock‘
+</groupId>
+
+8 <
+¬tiçùId
+>
+JavaWebSock‘
+</artifactId>
+
+9 <
+v”siÚ
+>1.0-
+SNAPSHOT
+</version>
+
+12 </
+´ojeù
+>
+
+	@src/main/java/org/java_websocket/AbstractWrappedByteChannel.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gIOExû±iÚ
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gBy‹Bufãr
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gBy‹ChªÃl
+;
+
+6 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gSock‘ChªÃl
+;
+
+8 
+impÜt
+ 
+	gjavax
+.
+	gÃt
+.
+	gs¦
+.
+	gSSLExû±iÚ
+;
+
+11 
+public
+ cÏs 
+	cAb¡¿ùW¿µedBy‹ChªÃl
+ 
+im¶em’ts
+ 
+	mW¿µedBy‹ChªÃl
+ {
+
+13 
+´iv©e
+ 
+fš®
+ 
+By‹ChªÃl
+ 
+	mchªÃl
+;
+
+15 
+public
+ 
+	$Ab¡¿ùW¿µedBy‹ChªÃl
+Ğ
+By‹ChªÃl
+ 
+tow¿p
+ ) {
+
+16 
+this
+.
+chªÃl
+ = 
+tow¿p
+;
+
+19 
+public
+ 
+	$Ab¡¿ùW¿µedBy‹ChªÃl
+Ğ
+W¿µedBy‹ChªÃl
+ 
+tow¿p
+ ) {
+
+20 
+this
+.
+chªÃl
+ = 
+tow¿p
+;
+
+21 
+	}
+}
+
+23 @
+Ov”ride
+
+
+24 
+public
+ 
+	$»ad
+Ğ
+By‹Bufãr
+ 
+d¡
+ ) 
+throws
+ 
+IOExû±iÚ
+ {
+
+25  
+chªÃl
+.
+	`»ad
+Ğ
+d¡
+ );
+
+26 
+	}
+}
+
+28 @
+Ov”ride
+
+
+29 
+public
+ 
+boŞ—n
+ 
+	$isO³n
+() {
+
+30  
+chªÃl
+.
+	`isO³n
+();
+
+31 
+	}
+}
+
+33 @
+Ov”ride
+
+
+34 
+public
+ 
+	$şo£
+(è
+throws
+ 
+IOExû±iÚ
+ {
+
+35 
+chªÃl
+.
+	`şo£
+();
+
+36 
+	}
+}
+
+38 @
+Ov”ride
+
+
+39 
+public
+ 
+	$wr™e
+Ğ
+By‹Bufãr
+ 
+¤c
+ ) 
+throws
+ 
+IOExû±iÚ
+ {
+
+40  
+chªÃl
+.
+	`wr™e
+Ğ
+¤c
+ );
+
+41 
+	}
+}
+
+43 @
+Ov”ride
+
+
+44 
+public
+ 
+boŞ—n
+ 
+	$isN“dWr™e
+() {
+
+45  
+chªÃl
+ 
+š¡ªûof
+ 
+W¿µedBy‹ChªÃl
+ ? ( (W¿µedBy‹ChªÃlèchªÃÈ).
+	`isN“dWr™e
+(è: 
+çl£
+;
+
+46 
+	}
+}
+
+48 @
+Ov”ride
+
+
+49 
+public
+ 
+	$wr™eMÜe
+(è
+throws
+ 
+IOExû±iÚ
+ {
+
+50 ifĞ
+chªÃl
+ 
+š¡ªûof
+ 
+W¿µedBy‹ChªÃl
+ )
+
+51 Ğ(
+W¿µedBy‹ChªÃl
+è
+chªÃl
+ ).
+	`wr™eMÜe
+();
+
+53 
+	}
+}
+
+55 @
+Ov”ride
+
+
+56 
+public
+ 
+boŞ—n
+ 
+	$isN“dR—d
+() {
+
+57  
+chªÃl
+ 
+š¡ªûof
+ 
+W¿µedBy‹ChªÃl
+ ? ( (W¿µedBy‹ChªÃlèchªÃÈ).
+	`isN“dR—d
+(è: 
+çl£
+;
+
+59 
+	}
+}
+
+61 @
+Ov”ride
+
+
+62 
+public
+ 
+	$»adMÜe
+Ğ
+By‹Bufãr
+ 
+d¡
+ ) 
+throws
+ 
+SSLExû±iÚ
+ {
+
+63  
+chªÃl
+ 
+š¡ªûof
+ 
+W¿µedBy‹ChªÃl
+ ? ( (W¿µedBy‹ChªÃlèchªÃÈ).
+	`»adMÜe
+Ğ
+d¡
+ ) : 0;
+
+64 
+	}
+}
+
+66 @
+Ov”ride
+
+
+67 
+public
+ 
+boŞ—n
+ 
+	$isBlockšg
+() {
+
+68 ifĞ
+chªÃl
+ 
+š¡ªûof
+ 
+Sock‘ChªÃl
+ )
+
+69  ( (
+Sock‘ChªÃl
+è
+chªÃl
+ ).
+	`isBlockšg
+();
+
+70 ifĞ
+chªÃl
+ 
+š¡ªûof
+ 
+W¿µedBy‹ChªÃl
+ )
+
+71  ( (
+W¿µedBy‹ChªÃl
+è
+chªÃl
+ ).
+	`isBlockšg
+();
+
+72  
+çl£
+;
+
+73 
+	}
+}
+
+	@src/main/java/org/java_websocket/SSLSocketChannel2.java
+
+6 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+;
+
+8 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gIOExû±iÚ
+;
+
+9 
+impÜt
+ 
+	gjava
+.
+	gÃt
+.
+	gSock‘
+;
+
+10 
+impÜt
+ 
+	gjava
+.
+	gÃt
+.
+	gSock‘Add»ss
+;
+
+11 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gBy‹Bufãr
+;
+
+12 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gBy‹ChªÃl
+;
+
+13 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gS–eùabËChªÃl
+;
+
+14 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gS–eùiÚKey
+;
+
+15 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gSock‘ChªÃl
+;
+
+16 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gA¼ayLi¡
+;
+
+17 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gI‹¿tÜ
+;
+
+18 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+19 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gcÚcu¼’t
+.
+	gExecutiÚExû±iÚ
+;
+
+20 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gcÚcu¼’t
+.
+	gExecutÜS”viû
+;
+
+21 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gcÚcu¼’t
+.
+	gFutu»
+;
+
+23 
+impÜt
+ 
+	gjavax
+.
+	gÃt
+.
+	gs¦
+.
+	gSSLEngše
+;
+
+24 
+impÜt
+ 
+	gjavax
+.
+	gÃt
+.
+	gs¦
+.
+	gSSLEngšeResuÉ
+;
+
+25 
+impÜt
+ 
+	gjavax
+.
+	gÃt
+.
+	gs¦
+.
+	gSSLEngšeResuÉ
+.
+	gHªdshakeStus
+;
+
+26 
+impÜt
+ 
+	gjavax
+.
+	gÃt
+.
+	gs¦
+.
+	gSSLEngšeResuÉ
+.
+	gStus
+;
+
+27 
+impÜt
+ 
+	gjavax
+.
+	gÃt
+.
+	gs¦
+.
+	gSSLExû±iÚ
+;
+
+28 
+impÜt
+ 
+	gjavax
+.
+	gÃt
+.
+	gs¦
+.
+	gSSLSessiÚ
+;
+
+33 
+public
+ 
+şass
+ 
+SSLSock‘ChªÃl2
+ 
+im¶em’ts
+ 
+	gBy‹ChªÃl
+, 
+	gW¿µedBy‹ChªÃl
+ {
+
+37 
+´Ùeùed
+ 
+By‹Bufãr
+ 
+	gem±ybufãr
+ = By‹Bufãr.
+®loÿ‹
+( 0 );
+
+39 
+´Ùeùed
+ 
+ExecutÜS”viû
+ 
+	gexec
+;
+
+41 
+´Ùeùed
+ 
+	gLi¡
+<
+	gFutu»
+<?>> 
+	gsks
+;
+
+44 
+´Ùeùed
+ 
+By‹Bufãr
+ 
+	gšD©a
+;
+
+46 
+´Ùeùed
+ 
+By‹Bufãr
+ 
+	goutCry±
+;
+
+48 
+´Ùeùed
+ 
+By‹Bufãr
+ 
+	gšCry±
+;
+
+51 
+´Ùeùed
+ 
+Sock‘ChªÃl
+ 
+	gsock‘ChªÃl
+;
+
+53 
+´Ùeùed
+ 
+S–eùiÚKey
+ 
+	g£ËùiÚKey
+;
+
+55 
+´Ùeùed
+ 
+SSLEngše
+ 
+	gs¦Engše
+;
+
+56 
+´Ùeùed
+ 
+SSLEngšeResuÉ
+ 
+	g»adEngšeResuÉ
+;
+
+57 
+´Ùeùed
+ 
+SSLEngšeResuÉ
+ 
+	gwr™eEngšeResuÉ
+;
+
+63 
+´Ùeùed
+ 
+	gbufã¿ÎoÿtiÚs
+ = 0;
+
+65 
+public
+ 
+SSLSock‘ChªÃl2
+Ğ
+Sock‘ChªÃl
+ 
+chªÃl
+ , 
+SSLEngše
+ 
+s¦Engše
+ , 
+ExecutÜS”viû
+ 
+exec
+ , 
+S–eùiÚKey
+ 
+key
+ ) 
+throws
+ 
+	gIOExû±iÚ
+ {
+
+66 ifĞ
+	gchªÃl
+ =ğ
+nuÎ
+ || 
+s¦Engše
+ =ğnuÎ || 
+exec
+ ==‚ull )
+
+67 
+throw
+ 
+Ãw
+ 
+IÎeg®Argum’tExû±iÚ
+( "parameter must‚ot be‚ull" );
+
+69 
+	gthis
+.
+	gsock‘ChªÃl
+ = 
+chªÃl
+;
+
+70 
+	gthis
+.
+	gs¦Engše
+ = 
+s¦Engše
+;
+
+71 
+	gthis
+.
+	gexec
+ = 
+exec
+;
+
+73 
+	g»adEngšeResuÉ
+ = 
+wr™eEngšeResuÉ
+ = 
+Ãw
+ 
+SSLEngšeResuÉ
+Ğ
+Stus
+.
+BUFFER_UNDERFLOW
+, 
+s¦Engše
+.
+g‘HªdshakeStus
+(), 0, 0 );
+
+75 
+	gsks
+ = 
+Ãw
+ 
+A¼ayLi¡
+<
+Futu»
+<?>>( 3 );
+
+76 ifĞ
+	gkey
+ !ğ
+nuÎ
+ ) {
+
+77 
+key
+.
+š‹»¡Ops
+Ğkey.š‹»¡Ops(è| 
+S–eùiÚKey
+.
+OP_WRITE
+ );
+
+78 
+	gthis
+.
+	g£ËùiÚKey
+ = 
+key
+;
+
+80 
+ü—‹Bufãrs
+Ğ
+s¦Engše
+.
+g‘SessiÚ
+() );
+
+82 
+	gsock‘ChªÃl
+.
+wr™e
+Ğ
+w¿p
+Ğ
+em±ybufãr
+ ) );
+
+83 
+´oûssHªdshake
+();
+
+86 
+´iv©e
+ 
+cÚsumeFutu»Unš‹¼u±ibË
+Ğ
+Futu»
+<?> 
+f
+ ) {
+
+87 
+	gŒy
+ {
+
+88 
+boŞ—n
+ 
+	gš‹¼u±ed
+ = 
+çl£
+;
+
+89  
+	gŒue
+ ) {
+
+90 
+	gŒy
+ {
+
+91 
+	gf
+.
+g‘
+();
+
+93 } 
+ÿtch
+ ( 
+IÁ”ru±edExû±iÚ
+ 
+e
+ ) {
+
+94 
+	gš‹¼u±ed
+ = 
+Œue
+;
+
+97 ifĞ
+	gš‹¼u±ed
+ )
+
+98 
+	gTh»ad
+.
+cu¼’tTh»ad
+().
+š‹¼u±
+();
+
+99 } 
+ÿtch
+ ( 
+ExecutiÚExû±iÚ
+ 
+e
+ ) {
+
+100 
+throw
+ 
+Ãw
+ 
+RuÁimeExû±iÚ
+Ğ
+e
+ );
+
+108 
+´iv©e
+ 
+synchrÚized
+ 
+´oûssHªdshake
+(è
+throws
+ 
+	gIOExû±iÚ
+ {
+
+109 ifĞ
+	gs¦Engše
+.
+g‘HªdshakeStus
+(è=ğ
+HªdshakeStus
+.
+NOT_HANDSHAKING
+ )
+
+111 ifĞ!
+	gsks
+.
+isEm±y
+() ) {
+
+112 
+	gI‹¿tÜ
+<
+	gFutu»
+<?>> 
+	g™
+ = 
+sks
+.
+™”©Ü
+();
+
+113  
+	g™
+.
+hasNext
+() ) {
+
+114 
+	gFutu»
+<?> 
+	gf
+ = 
+™
+.
+Ãxt
+();
+
+115 ifĞ
+	gf
+.
+isDÚe
+() ) {
+
+116 
+	g™
+.
+»move
+();
+
+118 ifĞ
+isBlockšg
+() )
+
+119 
+cÚsumeFutu»Unš‹¼u±ibË
+Ğ
+f
+ );
+
+125 ifĞ
+	gs¦Engše
+.
+g‘HªdshakeStus
+(è=ğ
+HªdshakeStus
+.
+NEED_UNWRAP
+ ) {
+
+126 ifĞ!
+isBlockšg
+(è|| 
+»adEngšeResuÉ
+.
+g‘Stus
+(è=ğ
+Stus
+.
+BUFFER_UNDERFLOW
+ ) {
+
+127 
+šCry±
+.
+com·ù
+();
+
+128 
+	g»ad
+ = 
+sock‘ChªÃl
+.
+»ad
+Ğ
+šCry±
+ );
+
+129 ifĞ
+	g»ad
+ == -1 ) {
+
+130 
+throw
+ 
+Ãw
+ 
+IOExû±iÚ
+( "connection closed unexpectedly by…eer" );
+
+132 
+	gšCry±
+.
+æ
+();
+
+134 
+	gšD©a
+.
+com·ù
+();
+
+135 
+unw¿p
+();
+
+136 ifĞ
+	g»adEngšeResuÉ
+.
+g‘HªdshakeStus
+(è=ğ
+HªdshakeStus
+.
+FINISHED
+ ) {
+
+137 
+ü—‹Bufãrs
+Ğ
+s¦Engše
+.
+g‘SessiÚ
+() );
+
+141 
+cÚsumeD–eg©edTasks
+();
+
+142 ifĞ
+	gsks
+.
+isEm±y
+(è|| 
+	gs¦Engše
+.
+g‘HªdshakeStus
+(è=ğ
+HªdshakeStus
+.
+NEED_WRAP
+ ) {
+
+143 
+sock‘ChªÃl
+.
+wr™e
+Ğ
+w¿p
+Ğ
+em±ybufãr
+ ) );
+
+144 ifĞ
+	gwr™eEngšeResuÉ
+.
+g‘HªdshakeStus
+(è=ğ
+HªdshakeStus
+.
+FINISHED
+ ) {
+
+145 
+ü—‹Bufãrs
+Ğ
+s¦Engše
+.
+g‘SessiÚ
+() );
+
+149 
+as£¹
+ ( 
+s¦Engše
+.
+g‘HªdshakeStus
+(è!ğ
+HªdshakeStus
+.
+NOT_HANDSHAKING
+ );
+
+151 
+	gbufã¿ÎoÿtiÚs
+ = 1;
+
+153 
+´iv©e
+ 
+synchrÚized
+ 
+By‹Bufãr
+ 
+w¿p
+ĞBy‹Bufã¸
+b
+ ) 
+throws
+ 
+	gSSLExû±iÚ
+ {
+
+154 
+	goutCry±
+.
+com·ù
+();
+
+155 
+	gwr™eEngšeResuÉ
+ = 
+s¦Engše
+.
+w¿p
+Ğ
+b
+, 
+outCry±
+ );
+
+156 
+	goutCry±
+.
+æ
+();
+
+157  
+	goutCry±
+;
+
+163 
+´iv©e
+ 
+synchrÚized
+ 
+By‹Bufãr
+ 
+unw¿p
+(è
+throws
+ 
+	gSSLExû±iÚ
+ {
+
+164 
+	g»m
+;
+
+166 
+	g»m
+ = 
+šD©a
+.
+»maššg
+();
+
+167 
+	g»adEngšeResuÉ
+ = 
+s¦Engše
+.
+unw¿p
+Ğ
+šCry±
+, 
+šD©a
+ );
+
+168 }  
+	g»adEngšeResuÉ
+.
+g‘Stus
+(è=ğ
+Stus
+.
+OK
+ && ( 
+»m
+ !ğ
+šD©a
+.
+»maššg
+(è|| 
+s¦Engše
+.
+g‘HªdshakeStus
+(è=ğ
+HªdshakeStus
+.
+NEED_UNWRAP
+ ) );
+
+169 
+	gšD©a
+.
+æ
+();
+
+170  
+	gšD©a
+;
+
+173 
+´Ùeùed
+ 
+cÚsumeD–eg©edTasks
+() {
+
+174 
+RuÂabË
+ 
+	gsk
+;
+
+175  ( 
+	gsk
+ = 
+s¦Engše
+.
+g‘D–eg©edTask
+(èè!ğ
+nuÎ
+ ) {
+
+176 
+sks
+.
+add
+Ğ
+exec
+.
+subm™
+Ğ
+sk
+ ) );
+
+181 
+´Ùeùed
+ 
+ü—‹Bufãrs
+Ğ
+SSLSessiÚ
+ 
+£ssiÚ
+ ) {
+
+182 
+	g­pBufãrMax
+ = 
+£ssiÚ
+.
+g‘AµliÿtiÚBufãrSize
+();
+
+183 
+	gÃtBufãrMax
+ = 
+£ssiÚ
+.
+g‘Pack‘BufãrSize
+();
+
+185 ifĞ
+	gšD©a
+ =ğ
+nuÎ
+ ) {
+
+186 
+šD©a
+ = 
+By‹Bufãr
+.
+®loÿ‹
+Ğ
+­pBufãrMax
+ );
+
+187 
+	goutCry±
+ = 
+By‹Bufãr
+.
+®loÿ‹
+Ğ
+ÃtBufãrMax
+ );
+
+188 
+	gšCry±
+ = 
+By‹Bufãr
+.
+®loÿ‹
+Ğ
+ÃtBufãrMax
+ );
+
+190 ifĞ
+	gšD©a
+.
+ÿ·c™y
+(è!ğ
+­pBufãrMax
+ )
+
+191 
+šD©a
+ = 
+By‹Bufãr
+.
+®loÿ‹
+Ğ
+­pBufãrMax
+ );
+
+192 ifĞ
+	goutCry±
+.
+ÿ·c™y
+(è!ğ
+ÃtBufãrMax
+ )
+
+193 
+outCry±
+ = 
+By‹Bufãr
+.
+®loÿ‹
+Ğ
+ÃtBufãrMax
+ );
+
+194 ifĞ
+	gšCry±
+.
+ÿ·c™y
+(è!ğ
+ÃtBufãrMax
+ )
+
+195 
+šCry±
+ = 
+By‹Bufãr
+.
+®loÿ‹
+Ğ
+ÃtBufãrMax
+ );
+
+197 
+	gšD©a
+.
+»wšd
+();
+
+198 
+	gšD©a
+.
+æ
+();
+
+199 
+	gšCry±
+.
+»wšd
+();
+
+200 
+	gšCry±
+.
+æ
+();
+
+201 
+	goutCry±
+.
+»wšd
+();
+
+202 
+	goutCry±
+.
+æ
+();
+
+203 
+	gbufã¿ÎoÿtiÚs
+++;
+
+206 
+public
+ 
+wr™e
+Ğ
+By‹Bufãr
+ 
+¤c
+ ) 
+throws
+ 
+	gIOExû±iÚ
+ {
+
+207 ifĞ!
+isHªdShakeCom¶‘e
+() ) {
+
+208 
+´oûssHªdshake
+();
+
+212 ifĞ
+	gbufã¿ÎoÿtiÚs
+ <= 1 ) {
+
+213 
+ü—‹Bufãrs
+Ğ
+s¦Engše
+.
+g‘SessiÚ
+() );
+
+215 
+	gnum
+ = 
+sock‘ChªÃl
+.
+wr™e
+Ğ
+w¿p
+Ğ
+¤c
+ ) );
+
+216  
+	gnum
+;
+
+226 
+public
+ 
+»ad
+Ğ
+By‹Bufãr
+ 
+d¡
+ ) 
+throws
+ 
+	gIOExû±iÚ
+ {
+
+227 ifĞ!
+	gd¡
+.
+hasRemaššg
+() )
+
+229 ifĞ!
+isHªdShakeCom¶‘e
+() ) {
+
+230 ifĞ
+isBlockšg
+() ) {
+
+231  !
+isHªdShakeCom¶‘e
+() ) {
+
+232 
+´oûssHªdshake
+();
+
+235 
+´oûssHªdshake
+();
+
+236 ifĞ!
+isHªdShakeCom¶‘e
+() ) {
+
+242 ifĞ
+	gbufã¿ÎoÿtiÚs
+ <= 1 ) {
+
+243 
+ü—‹Bufãrs
+Ğ
+s¦Engše
+.
+g‘SessiÚ
+() );
+
+248 
+	gpurged
+ = 
+»adRemaššg
+Ğ
+d¡
+ );
+
+249 ifĞ
+	gpurged
+ != 0 )
+
+250  
+purged
+;
+
+255 
+as£¹
+ ( 
+šD©a
+.
+pos™iÚ
+() == 0 );
+
+256 
+	gšD©a
+.
+ş—r
+();
+
+258 ifĞ!
+	gšCry±
+.
+hasRemaššg
+() )
+
+259 
+	gšCry±
+.
+ş—r
+();
+
+261 
+	gšCry±
+.
+com·ù
+();
+
+263 ifĞ
+isBlockšg
+(è|| 
+	g»adEngšeResuÉ
+.
+g‘Stus
+(è=ğ
+Stus
+.
+BUFFER_UNDERFLOW
+ )
+
+264 ifĞ
+sock‘ChªÃl
+.
+»ad
+Ğ
+šCry±
+ ) == -1 ) {
+
+267 
+	gšCry±
+.
+æ
+();
+
+268 
+unw¿p
+();
+
+270 
+	gŒªsã»d
+ = 
+Œªsã»To
+Ğ
+šD©a
+, 
+d¡
+ );
+
+271 ifĞ
+	gŒªsã»d
+ =ğ0 && 
+isBlockšg
+() ) {
+
+272  
+»ad
+Ğ
+d¡
+ );
+
+274  
+	gŒªsã»d
+;
+
+279 
+´iv©e
+ 
+»adRemaššg
+Ğ
+By‹Bufãr
+ 
+d¡
+ ) 
+throws
+ 
+	gSSLExû±iÚ
+ {
+
+280 ifĞ
+	gšD©a
+.
+hasRemaššg
+() ) {
+
+281  
+Œªsã»To
+Ğ
+šD©a
+, 
+d¡
+ );
+
+283 ifĞ!
+	gšD©a
+.
+hasRemaššg
+() )
+
+284 
+	gšD©a
+.
+ş—r
+();
+
+286 ifĞ
+	gšCry±
+.
+hasRemaššg
+() ) {
+
+287 
+unw¿p
+();
+
+288 
+	gamouÁ
+ = 
+Œªsã»To
+Ğ
+šD©a
+, 
+d¡
+ );
+
+289 ifĞ
+	gamouÁ
+ > 0 )
+
+290  
+	gamouÁ
+;
+
+295 
+public
+ 
+boŞ—n
+ 
+isCÚÃùed
+() {
+
+296  
+	gsock‘ChªÃl
+.
+isCÚÃùed
+();
+
+299 
+public
+ 
+şo£
+(è
+throws
+ 
+	gIOExû±iÚ
+ {
+
+300 
+	gs¦Engše
+.
+şo£Outbound
+();
+
+301 
+	gs¦Engše
+.
+g‘SessiÚ
+().
+šv®id©e
+();
+
+302 ifĞ
+	gsock‘ChªÃl
+.
+isO³n
+() )
+
+303 
+	gsock‘ChªÃl
+.
+wr™e
+Ğ
+w¿p
+Ğ
+em±ybufãr
+ ) );
+
+304 
+	gsock‘ChªÃl
+.
+şo£
+();
+
+305 
+	gexec
+.
+shutdownNow
+();
+
+308 
+´iv©e
+ 
+boŞ—n
+ 
+isHªdShakeCom¶‘e
+() {
+
+309 
+HªdshakeStus
+ 
+	g¡©us
+ = 
+s¦Engše
+.
+g‘HªdshakeStus
+();
+
+310  
+	g¡©us
+ =ğ
+HªdshakeStus
+.
+FINISHED
+ || 
+¡©us
+ =ğHªdshakeStus.
+NOT_HANDSHAKING
+;
+
+313 
+public
+ 
+S–eùabËChªÃl
+ 
+cÚfigu»Blockšg
+Ğ
+boŞ—n
+ 
+b
+ ) 
+throws
+ 
+	gIOExû±iÚ
+ {
+
+314  
+	gsock‘ChªÃl
+.
+cÚfigu»Blockšg
+Ğ
+b
+ );
+
+317 
+public
+ 
+boŞ—n
+ 
+cÚÃù
+Ğ
+Sock‘Add»ss
+ 
+»mÙe
+ ) 
+throws
+ 
+	gIOExû±iÚ
+ {
+
+318  
+	gsock‘ChªÃl
+.
+cÚÃù
+Ğ
+»mÙe
+ );
+
+321 
+public
+ 
+boŞ—n
+ 
+fšishCÚÃù
+(è
+throws
+ 
+	gIOExû±iÚ
+ {
+
+322  
+	gsock‘ChªÃl
+.
+fšishCÚÃù
+();
+
+325 
+public
+ 
+Sock‘
+ 
+sock‘
+() {
+
+326  
+	gsock‘ChªÃl
+.
+sock‘
+();
+
+329 
+public
+ 
+boŞ—n
+ 
+isInboundDÚe
+() {
+
+330  
+	gs¦Engše
+.
+isInboundDÚe
+();
+
+333 @
+Ov”ride
+
+
+334 
+public
+ 
+boŞ—n
+ 
+isO³n
+() {
+
+335  
+	gsock‘ChªÃl
+.
+isO³n
+();
+
+338 @
+Ov”ride
+
+
+339 
+public
+ 
+boŞ—n
+ 
+isN“dWr™e
+() {
+
+340  
+	goutCry±
+.
+hasRemaššg
+(è|| !
+isHªdShakeCom¶‘e
+();
+
+343 @
+Ov”ride
+
+
+344 
+public
+ 
+wr™eMÜe
+(è
+throws
+ 
+	gIOExû±iÚ
+ {
+
+345 
+wr™e
+Ğ
+outCry±
+ );
+
+348 @
+Ov”ride
+
+
+349 
+public
+ 
+boŞ—n
+ 
+isN“dR—d
+() {
+
+350  
+	gšD©a
+.
+hasRemaššg
+(è|| ( 
+	gšCry±
+.hasRemaššg(è&& 
+	g»adEngšeResuÉ
+.
+g‘Stus
+(è!ğ
+Stus
+.
+BUFFER_UNDERFLOW
+ && 
+»adEngšeResuÉ
+.g‘Stus(è!ğStus.
+CLOSED
+ );
+
+353 @
+Ov”ride
+
+
+354 
+public
+ 
+»adMÜe
+Ğ
+By‹Bufãr
+ 
+d¡
+ ) 
+throws
+ 
+	gSSLExû±iÚ
+ {
+
+355  
+»adRemaššg
+Ğ
+d¡
+ );
+
+358 
+´iv©e
+ 
+Œªsã»To
+Ğ
+By‹Bufãr
+ 
+äom
+, By‹Bufã¸
+to
+ ) {
+
+359 
+	gäemaš
+ = 
+äom
+.
+»maššg
+();
+
+360 
+	gtÜemaš
+ = 
+to
+.
+»maššg
+();
+
+361 ifĞ
+	gäemaš
+ > 
+	gtÜemaš
+ ) {
+
+363 
+	glim™
+ = 
+M©h
+.
+mš
+Ğ
+äemaš
+, 
+tÜemaš
+ );
+
+364  
+	gi
+ = 0 ; i < 
+	glim™
+ ; i++ ) {
+
+365 
+	gto
+.
+put
+Ğ
+äom
+.
+g‘
+() );
+
+367  
+	glim™
+;
+
+369 
+	gto
+.
+put
+Ğ
+äom
+ );
+
+370  
+	gäemaš
+;
+
+375 @
+Ov”ride
+
+
+376 
+public
+ 
+boŞ—n
+ 
+isBlockšg
+() {
+
+377  
+	gsock‘ChªÃl
+.
+isBlockšg
+();
+
+	@src/main/java/org/java_websocket/SocketChannelIOHelper.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gIOExû±iÚ
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gBy‹Bufãr
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gBy‹ChªÃl
+;
+
+6 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	g¥i
+.
+	gAb¡¿ùS–eùabËChªÃl
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gWebSock‘
+.
+	gRŞe
+;
+
+10 
+public
+ cÏs 
+	cSock‘ChªÃlIOH–³r
+ {
+
+12 
+public
+ 
+boŞ—n
+ 
+	$»ad
+Ğ
+fš®
+ 
+By‹Bufãr
+ 
+buf
+, 
+WebSock‘Im¶
+ 
+ws
+, 
+By‹ChªÃl
+ 
+chªÃl
+ ) 
+throws
+ 
+IOExû±iÚ
+ {
+
+13 
+buf
+.
+	`ş—r
+();
+
+14 
+»ad
+ = 
+chªÃl
+.
+	`»ad
+Ğ
+buf
+ );
+
+15 
+buf
+.
+	`æ
+();
+
+17 ifĞ
+»ad
+ == -1 ) {
+
+18 
+ws
+.
+	`eÙ
+();
+
+19  
+çl£
+;
+
+21  
+»ad
+ != 0;
+
+28 
+public
+ 
+boŞ—n
+ 
+	$»adMÜe
+Ğ
+fš®
+ 
+By‹Bufãr
+ 
+buf
+, 
+WebSock‘Im¶
+ 
+ws
+, 
+W¿µedBy‹ChªÃl
+ 
+chªÃl
+ ) 
+throws
+ 
+IOExû±iÚ
+ {
+
+29 
+buf
+.
+	`ş—r
+();
+
+30 
+»ad
+ = 
+chªÃl
+.
+	`»adMÜe
+Ğ
+buf
+ );
+
+31 
+buf
+.
+	`æ
+();
+
+33 ifĞ
+»ad
+ == -1 ) {
+
+34 
+ws
+.
+	`eÙ
+();
+
+35  
+çl£
+;
+
+37  
+chªÃl
+.
+	`isN“dR—d
+();
+
+38 
+	}
+}
+
+41 
+public
+ 
+boŞ—n
+ 
+	$b©ch
+Ğ
+WebSock‘Im¶
+ 
+ws
+, 
+By‹ChªÃl
+ 
+sockchªÃl
+ ) 
+throws
+ 
+IOExû±iÚ
+ {
+
+42 
+By‹Bufãr
+ 
+bufãr
+ = 
+ws
+.
+outQueue
+.
+	`³ek
+();
+
+43 
+W¿µedBy‹ChªÃl
+ 
+c
+ = 
+nuÎ
+;
+
+45 ifĞ
+bufãr
+ =ğ
+nuÎ
+ ) {
+
+46 ifĞ
+sockchªÃl
+ 
+š¡ªûof
+ 
+W¿µedBy‹ChªÃl
+ ) {
+
+47 
+c
+ = (
+W¿µedBy‹ChªÃl
+è
+sockchªÃl
+;
+
+48 ifĞ
+c
+.
+	`isN“dWr™e
+() ) {
+
+49 
+c
+.
+	`wr™eMÜe
+();
+
+54  
+sockchªÃl
+.
+	`wr™e
+Ğ
+bufãr
+ );
+
+55 ifĞ
+bufãr
+.
+	`»maššg
+() > 0 ) {
+
+56  
+çl£
+;
+
+58 
+ws
+.
+outQueue
+.
+	`pŞl
+();
+
+59 
+bufãr
+ = 
+ws
+.
+outQueue
+.
+	`³ek
+();
+
+61 }  
+bufãr
+ !ğ
+nuÎ
+ );
+
+64 ifĞ
+ws
+.
+outQueue
+.
+	`isEm±y
+(è&& ws.
+	`isFlushAndClo£
+(è&& ws.
+	`g‘D¿á
+().
+	`g‘RŞe
+(è=ğ
+RŞe
+.
+SERVER
+ ) {
+
+65 
+	`synchrÚized
+ ( 
+ws
+ ) {
+
+66 
+ws
+.
+	`şo£CÚÃùiÚ
+();
+
+69  
+c
+ !ğ
+nuÎ
+ ? !Ğ(
+W¿µedBy‹ChªÃl
+è
+sockchªÃl
+ ).
+	`isN“dWr™e
+(è: 
+Œue
+;
+
+70 
+	}
+}
+
+	@src/main/java/org/java_websocket/WebSocket.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gÃt
+.
+	gIÃtSock‘Add»ss
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gBy‹Bufãr
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gNÙY‘CÚÃùedExû±iÚ
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gd¿ás
+.
+	gD¿á
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿med©a
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿med©a
+.
+	gOpcode
+;
+
+11 
+public
+ 
+š‹rçû
+ 
+	gWebSock‘
+ {
+
+12 
+public
+ 
+	eRŞe
+ {
+
+13 
+	gCLIENT
+, 
+	gSERVER
+
+
+16 
+public
+ 
+	eREADYSTATE
+ {
+
+17 
+	gNOT_YET_CONNECTED
+, 
+	gCONNECTING
+, 
+	gOPEN
+, 
+	gCLOSING
+, 
+	gCLOSED
+;
+
+25 
+public
+ 
+fš®
+ 
+	gDEFAULT_PORT
+ = 80;
+
+27 
+public
+ 
+fš®
+ 
+	gDEFAULT_WSS_PORT
+ = 443;
+
+33 
+public
+ 
+şo£
+(
+code
+, 
+SŒšg
+ 
+mes§ge
+);
+
+35 
+public
+ 
+şo£
+(
+code
+);
+
+38 
+public
+ 
+şo£
+();
+
+44 
+public
+ 
+ab¡¿ù
+ 
+şo£CÚÃùiÚ
+(
+code
+, 
+SŒšg
+ 
+mes§ge
+);
+
+52 
+public
+ 
+ab¡¿ù
+ 
+£nd
+(
+SŒšg
+ 
+‹xt
+è
+throws
+ 
+	gNÙY‘CÚÃùedExû±iÚ
+;
+
+60 
+public
+ 
+ab¡¿ù
+ 
+£nd
+(
+By‹Bufãr
+ 
+by‹s
+è
+throws
+ 
+	gIÎeg®Argum’tExû±iÚ
+ , 
+	gNÙY‘CÚÃùedExû±iÚ
+;
+
+62 
+public
+ 
+ab¡¿ù
+ 
+£nd
+(
+by‹
+[] 
+by‹s
+è
+throws
+ 
+	gIÎeg®Argum’tExû±iÚ
+ , 
+	gNÙY‘CÚÃùedExû±iÚ
+;
+
+64 
+public
+ 
+ab¡¿ù
+ 
+£ndF¿me
+(
+F¿med©a
+ 
+äamed©a
+);
+
+79 
+public
+ 
+ab¡¿ù
+ 
+£ndF¿gm’‹dF¿me
+(
+Opcode
+ 
+İ
+, 
+By‹Bufãr
+ 
+bufãr
+, 
+boŞ—n
+ 
+fš
+);
+
+81 
+public
+ 
+ab¡¿ù
+ 
+boŞ—n
+ 
+hasBufã»dD©a
+();
+
+86 
+public
+ 
+ab¡¿ù
+ 
+IÃtSock‘Add»ss
+ 
+g‘RemÙeSock‘Add»ss
+();
+
+91 
+public
+ 
+ab¡¿ù
+ 
+IÃtSock‘Add»ss
+ 
+g‘LoÿlSock‘Add»ss
+();
+
+93 
+public
+ 
+ab¡¿ù
+ 
+boŞ—n
+ 
+isCÚÃùšg
+();
+
+95 
+public
+ 
+ab¡¿ù
+ 
+boŞ—n
+ 
+isO³n
+();
+
+97 
+public
+ 
+ab¡¿ù
+ 
+boŞ—n
+ 
+isClosšg
+();
+
+103 
+public
+ 
+ab¡¿ù
+ 
+boŞ—n
+ 
+isFlushAndClo£
+();
+
+106 
+public
+ 
+ab¡¿ù
+ 
+boŞ—n
+ 
+isClo£d
+();
+
+108 
+public
+ 
+ab¡¿ù
+ 
+D¿á
+ 
+g‘D¿á
+();
+
+117 
+public
+ 
+ab¡¿ù
+ 
+READYSTATE
+ 
+g‘R—dyS‹
+();
+
+123 
+public
+ 
+ab¡¿ù
+ 
+SŒšg
+ 
+g‘ResourûDesütÜ
+();
+
+128 
+public
+ 
+ab¡¿ù
+ 
+pšg
+(
+SŒšg
+ 
+‹xt
+);
+
+	@src/main/java/org/java_websocket/WebSocketAdapter.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gÃt
+.
+	gIÃtSock‘Add»ss
+;
+
+5 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gd¿ás
+.
+	gD¿á
+;
+
+6 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idD©aExû±iÚ
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idHªdshakeExû±iÚ
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿med©a
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿med©a
+.
+	gOpcode
+;
+
+10 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿med©aIm¶1
+;
+
+11 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gCl›ÁHªdshake
+;
+
+12 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gHªdshakeIm¶1S”v”
+;
+
+13 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gS”v”Hªdshake
+;
+
+14 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gS”v”HªdshakeBud”
+;
+
+19 
+public
+ 
+ab¡¿ù
+ cÏs 
+	cWebSock‘Ad­‹r
+ 
+im¶em’ts
+ 
+	mWebSock‘Li¡’”
+ {
+
+26 @
+Ov”ride
+
+
+27 
+public
+ 
+S”v”HªdshakeBud”
+ 
+	$ÚWebsock‘HªdshakeReûivedAsS”v”
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+D¿á
+ 
+d¿á
+, 
+Cl›ÁHªdshake
+ 
+»que¡
+ ) 
+throws
+ 
+Inv®idD©aExû±iÚ
+ {
+
+28  
+Ãw
+ 
+	`HªdshakeIm¶1S”v”
+();
+
+31 @
+Ov”ride
+
+
+32 
+public
+ 
+	$ÚWebsock‘HªdshakeReûivedAsCl›Á
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+Cl›ÁHªdshake
+ 
+»que¡
+, 
+S”v”Hªdshake
+ 
+»¥Ú£
+ ) 
+throws
+ 
+Inv®idD©aExû±iÚ
+ {
+
+33 
+	}
+}
+
+40 @
+Ov”ride
+
+
+41 
+public
+ 
+	$ÚWebsock‘HªdshakeS’tAsCl›Á
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+Cl›ÁHªdshake
+ 
+»que¡
+ ) 
+throws
+ 
+Inv®idD©aExû±iÚ
+ {
+
+42 
+	}
+}
+
+49 @
+Ov”ride
+
+
+50 
+public
+ 
+	$ÚWebsock‘Mes§geF¿gm’t
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+F¿med©a
+ 
+äame
+ ) {
+
+51 
+	}
+}
+
+59 @
+Ov”ride
+
+
+60 
+public
+ 
+	$ÚWebsock‘Pšg
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+F¿med©a
+ 
+f
+ ) {
+
+61 
+F¿med©aIm¶1
+ 
+»¥
+ = 
+Ãw
+ 
+	`F¿med©aIm¶1
+Ğ
+f
+ );
+
+62 
+»¥
+.
+	`£tO±code
+Ğ
+Opcode
+.
+PONG
+ );
+
+63 
+cÚn
+.
+	`£ndF¿me
+Ğ
+»¥
+ );
+
+64 
+	}
+}
+
+71 @
+Ov”ride
+
+
+72 
+public
+ 
+	$ÚWebsock‘PÚg
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+F¿med©a
+ 
+f
+ ) {
+
+73 
+	}
+}
+
+89 @
+Ov”ride
+
+
+90 
+public
+ 
+SŒšg
+ 
+	$g‘FÏshPŞicy
+Ğ
+WebSock‘
+ 
+cÚn
+ ) 
+throws
+ 
+Inv®idD©aExû±iÚ
+ {
+
+91 
+IÃtSock‘Add»ss
+ 
+adr
+ = 
+cÚn
+.
+	`g‘LoÿlSock‘Add»ss
+();
+
+92 if(
+nuÎ
+ =ğ
+adr
+){
+
+93 
+throw
+ 
+Ãw
+ 
+	`Inv®idHªdshakeExû±iÚ
+( "socket‚ot bound" );
+
+96 
+SŒšgBufãr
+ 
+sb
+ = 
+Ãw
+ 
+	`SŒšgBufãr
+( 90 );
+
+97 
+sb
+.
+	`­³nd
+( "<cross-domain-policy><allow-access-from domain=\"*\"o-ports=\"" );
+
+98 
+sb
+.
+	`­³nd
+(
+adr
+.
+	`g‘PÜt
+());
+
+99 
+sb
+.
+	`­³nd
+( "\" /></cross-domain-policy>\0" );
+
+101  
+sb
+.
+	`toSŒšg
+();
+
+102 
+	}
+}
+
+	@src/main/java/org/java_websocket/WebSocketFactory.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gÃt
+.
+	gSock‘
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+6 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gd¿ás
+.
+	gD¿á
+;
+
+8 
+public
+ 
+š‹rçû
+ 
+	gWebSock‘FaùÜy
+ {
+
+9 
+public
+ 
+WebSock‘
+ 
+ü—‹WebSock‘
+(
+WebSock‘Ad­‹r
+ 
+a
+, 
+D¿á
+ 
+d
+, 
+Sock‘
+ 
+s
+);
+
+10 
+public
+ 
+WebSock‘
+ 
+ü—‹WebSock‘
+(
+WebSock‘Ad­‹r
+ 
+a
+, 
+Li¡
+<
+D¿á
+> 
+d¿ás
+, 
+Sock‘
+ 
+s
+);
+
+	@src/main/java/org/java_websocket/WebSocketImpl.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gIOExû±iÚ
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	gÃt
+.
+	gIÃtSock‘Add»ss
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gÃt
+.
+	gSock‘
+;
+
+6 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gBy‹Bufãr
+;
+
+7 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gBy‹ChªÃl
+;
+
+8 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gNÙY‘CÚÃùedExû±iÚ
+;
+
+9 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gS–eùiÚKey
+;
+
+10 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gA¼ayLi¡
+;
+
+11 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gCŞËùiÚ
+;
+
+12 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+13 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gcÚcu¼’t
+.
+	gBlockšgQueue
+;
+
+14 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gcÚcu¼’t
+.
+	gLškedBlockšgQueue
+;
+
+16 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gd¿ás
+.
+	gD¿á
+;
+
+17 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gd¿ás
+.
+	gD¿á
+.
+	gClo£HªdshakeTy³
+;
+
+18 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gd¿ás
+.
+	gD¿á
+.
+	gHªdshakeS‹
+;
+
+19 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gd¿ás
+.
+	gD¿á_10
+;
+
+20 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gd¿ás
+.
+	gD¿á_17
+;
+
+21 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gd¿ás
+.
+	gD¿á_75
+;
+
+22 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gd¿ás
+.
+	gD¿á_76
+;
+
+23 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gIncom¶‘eHªdshakeExû±iÚ
+;
+
+24 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idD©aExû±iÚ
+;
+
+25 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idHªdshakeExû±iÚ
+;
+
+26 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gWebsock‘NÙCÚÃùedExû±iÚ
+;
+
+27 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gClo£F¿me
+;
+
+28 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gClo£F¿meBud”
+;
+
+29 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿med©a
+;
+
+30 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿med©a
+.
+	gOpcode
+;
+
+31 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gCl›ÁHªdshake
+;
+
+32 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gCl›ÁHªdshakeBud”
+;
+
+33 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gHªdshaked©a
+;
+
+34 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gS”v”Hªdshake
+;
+
+35 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gS”v”HªdshakeBud”
+;
+
+36 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	g£rv”
+.
+	gWebSock‘S”v”
+.
+	gWebSock‘WÜk”
+;
+
+37 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gut
+.
+	gCh¬£tfunùiÚs
+;
+
+45 
+public
+ cÏs 
+	cWebSock‘Im¶
+ 
+im¶em’ts
+ 
+	mWebSock‘
+ {
+
+47 
+public
+ 
+	mRCVBUF
+ = 16384;
+
+49 
+public
+ 
+boŞ—n
+ 
+	mDEBUG
+ = 
+çl£
+;
+
+51 
+public
+ 
+fš®
+ 
+	mLi¡
+<
+	mD¿á
+> 
+	mdeçuÉd¿áli¡
+ = 
+Ãw
+ 
+A¼ayLi¡
+<
+D¿á
+>( 4 );
+
+53 
+	mdeçuÉd¿áli¡
+.
+add
+Ğ
+Ãw
+ 
+D¿á_17
+() );
+
+54 
+	mdeçuÉd¿áli¡
+.
+add
+Ğ
+Ãw
+ 
+D¿á_10
+() );
+
+55 
+	mdeçuÉd¿áli¡
+.
+add
+Ğ
+Ãw
+ 
+D¿á_76
+() );
+
+56 
+	mdeçuÉd¿áli¡
+.
+add
+Ğ
+Ãw
+ 
+D¿á_75
+() );
+
+59 
+public
+ 
+S–eùiÚKey
+ 
+	gkey
+;
+
+62 
+public
+ 
+By‹ChªÃl
+ 
+	gchªÃl
+;
+
+66 
+public
+ 
+fš®
+ 
+	gBlockšgQueue
+<
+	gBy‹Bufãr
+> 
+	goutQueue
+;
+
+70 
+public
+ 
+fš®
+ 
+	gBlockšgQueue
+<
+	gBy‹Bufãr
+> 
+	gšQueue
+;
+
+75 
+public
+ vŞ©
+WebSock‘WÜk”
+ 
+	gwÜk”Th»ad
+;
+
+78 
+´iv©e
+ vŞ©
+boŞ—n
+ 
+	gæushªdşo£¡©e
+ = 
+çl£
+;
+
+80 
+´iv©e
+ 
+READYSTATE
+ 
+	g»ady¡©e
+ = READYSTATE.
+NOT_YET_CONNECTED
+;
+
+85 
+´iv©e
+ 
+fš®
+ 
+WebSock‘Li¡’”
+ 
+	gw¦
+;
+
+87 
+´iv©e
+ 
+	gLi¡
+<
+	gD¿á
+> 
+	gknownD¿ás
+;
+
+89 
+´iv©e
+ 
+D¿á
+ 
+	gd¿á
+ = 
+nuÎ
+;
+
+91 
+´iv©e
+ 
+RŞe
+ 
+	grŞe
+;
+
+93 
+´iv©e
+ 
+Opcode
+ 
+	gcu¼’t_cÚtšuous_äame_İcode
+ = 
+nuÎ
+;
+
+96 
+´iv©e
+ 
+By‹Bufãr
+ 
+	gtmpHªdshakeBy‹s
+ = By‹Bufãr.
+®loÿ‹
+( 0 );
+
+99 
+´iv©e
+ 
+Cl›ÁHªdshake
+ 
+	ghªdshak”eque¡
+ = 
+nuÎ
+;
+
+101 
+´iv©e
+ 
+SŒšg
+ 
+	gşo£mes§ge
+ = 
+nuÎ
+;
+
+102 
+´iv©e
+ 
+IÁeg”
+ 
+	gşo£code
+ = 
+nuÎ
+;
+
+103 
+´iv©e
+ 
+BoŞ—n
+ 
+	gşo£d»mÙ–y
+ = 
+nuÎ
+;
+
+105 
+´iv©e
+ 
+SŒšg
+ 
+	g»sourûDesütÜ
+ = 
+nuÎ
+;
+
+110 
+public
+ 
+WebSock‘Im¶
+Ğ
+WebSock‘Li¡’”
+ 
+li¡’”
+ , 
+Li¡
+<
+D¿á
+> 
+d¿ás
+ ) {
+
+111 
+this
+Ğ
+li¡’”
+, (
+D¿á
+è
+nuÎ
+ );
+
+112 
+	gthis
+.
+	grŞe
+ = 
+RŞe
+.
+SERVER
+;
+
+114 ifĞ
+	gd¿ás
+ =ğ
+nuÎ
+ || 
+d¿ás
+.
+isEm±y
+() ) {
+
+115 
+knownD¿ás
+ = 
+deçuÉd¿áli¡
+;
+
+117 
+	gknownD¿ás
+ = 
+d¿ás
+;
+
+127 
+public
+ 
+	$WebSock‘Im¶
+Ğ
+WebSock‘Li¡’”
+ 
+li¡’”
+ , 
+D¿á
+ 
+d¿á
+ ) {
+
+128 ifĞ
+li¡’”
+ =ğ
+nuÎ
+ || ( 
+d¿á
+ =ğnuÎ && 
+rŞe
+ =ğ
+RŞe
+.
+SERVER
+ ) )
+
+129 
+throw
+ 
+Ãw
+ 
+	`IÎeg®Argum’tExû±iÚ
+( "parameters must‚ot be‚ull" );
+
+130 
+this
+.
+outQueue
+ = 
+Ãw
+ 
+LškedBlockšgQueue
+<
+By‹Bufãr
+>();
+
+131 
+šQueue
+ = 
+Ãw
+ 
+LškedBlockšgQueue
+<
+By‹Bufãr
+>();
+
+132 
+this
+.
+w¦
+ = 
+li¡’”
+;
+
+133 
+this
+.
+rŞe
+ = 
+RŞe
+.
+CLIENT
+;
+
+134 ifĞ
+d¿á
+ !ğ
+nuÎ
+ )
+
+135 
+this
+.
+d¿á
+ = d¿á.
+	`cİyIn¡ªû
+();
+
+136 
+	}
+}
+
+138 @
+D•»ÿ‹d
+
+
+139 
+public
+ 
+	$WebSock‘Im¶
+Ğ
+WebSock‘Li¡’”
+ 
+li¡’”
+ , 
+D¿á
+ 
+d¿á
+ , 
+Sock‘
+ 
+sock‘
+ ) {
+
+140 
+	`this
+Ğ
+li¡’”
+, 
+d¿á
+ );
+
+141 
+	}
+}
+
+143 @
+D•»ÿ‹d
+
+
+144 
+public
+ 
+WebSock‘Im¶
+Ğ
+WebSock‘Li¡’”
+ 
+li¡’”
+ , 
+Li¡
+<
+D¿á
+> 
+d¿ás
+ , 
+Sock‘
+ 
+sock‘
+ ) {
+
+145 
+this
+Ğ
+li¡’”
+, 
+d¿ás
+ );
+
+151 
+public
+ 
+	$decode
+Ğ
+By‹Bufãr
+ 
+sock‘Bufãr
+ ) {
+
+152 
+	`as£¹
+ ( 
+sock‘Bufãr
+.
+	`hasRemaššg
+() );
+
+154 ifĞ
+DEBUG
+ )
+
+155 
+Sy¡em
+.
+out
+.
+	`´šn
+Ğ"´oûss(" + 
+sock‘Bufãr
+.
+	`»maššg
+(è+ "): {" + ( sock‘Bufãr.»maššg(è> 1000 ? "toØbigØdi¥Ïy" : 
+Ãw
+ 
+	`SŒšg
+Ğsock‘Bufãr.
+	`¬¿y
+(), sock‘Bufãr.
+	`pos™iÚ
+(), socketBuffer.remaining() ) ) + "}" );
+
+157 ifĞ
+»ady¡©e
+ !ğ
+READYSTATE
+.
+NOT_YET_CONNECTED
+ ) {
+
+158 
+	`decodeF¿mes
+Ğ
+sock‘Bufãr
+ );;
+
+160 ifĞ
+	`decodeHªdshake
+Ğ
+sock‘Bufãr
+ ) ) {
+
+161 
+	`as£¹
+ ( 
+tmpHªdshakeBy‹s
+.
+	`hasRemaššg
+(è!ğ
+sock‘Bufãr
+.hasRemaining() || !socketBuffer.hasRemaining() );
+
+163 ifĞ
+sock‘Bufãr
+.
+	`hasRemaššg
+() ) {
+
+164 
+	`decodeF¿mes
+Ğ
+sock‘Bufãr
+ );
+
+165 } ifĞ
+tmpHªdshakeBy‹s
+.
+	`hasRemaššg
+() ) {
+
+166 
+	`decodeF¿mes
+Ğ
+tmpHªdshakeBy‹s
+ );
+
+170 
+	`as£¹
+ ( 
+	`isClosšg
+(è|| 
+	`isFlushAndClo£
+(è|| !
+sock‘Bufãr
+.
+	`hasRemaššg
+() );
+
+171 
+	}
+}
+
+176 
+´iv©e
+ 
+boŞ—n
+ 
+	$decodeHªdshake
+Ğ
+By‹Bufãr
+ 
+sock‘BufãrNew
+ ) {
+
+177 
+By‹Bufãr
+ 
+sock‘Bufãr
+;
+
+178 ifĞ
+tmpHªdshakeBy‹s
+.
+	`ÿ·c™y
+() == 0 ) {
+
+179 
+sock‘Bufãr
+ = 
+sock‘BufãrNew
+;
+
+181 ifĞ
+tmpHªdshakeBy‹s
+.
+	`»maššg
+(è< 
+sock‘BufãrNew
+.remaining() ) {
+
+182 
+By‹Bufãr
+ 
+buf
+ = By‹Bufãr.
+	`®loÿ‹
+Ğ
+tmpHªdshakeBy‹s
+.
+	`ÿ·c™y
+(è+ 
+sock‘BufãrNew
+.
+	`»maššg
+() );
+
+183 
+tmpHªdshakeBy‹s
+.
+	`æ
+();
+
+184 
+buf
+.
+	`put
+Ğ
+tmpHªdshakeBy‹s
+ );
+
+185 
+tmpHªdshakeBy‹s
+ = 
+buf
+;
+
+188 
+tmpHªdshakeBy‹s
+.
+	`put
+Ğ
+sock‘BufãrNew
+ );
+
+189 
+tmpHªdshakeBy‹s
+.
+	`æ
+();
+
+190 
+sock‘Bufãr
+ = 
+tmpHªdshakeBy‹s
+;
+
+192 
+sock‘Bufãr
+.
+	`m¬k
+();
+
+193 
+Œy
+ {
+
+194 ifĞ
+d¿á
+ =ğ
+nuÎ
+ ) {
+
+195 
+HªdshakeS‹
+ 
+isæashedgeÿ£
+ = 
+	`isFÏshEdgeCa£
+Ğ
+sock‘Bufãr
+ );
+
+196 ifĞ
+isæashedgeÿ£
+ =ğ
+HªdshakeS‹
+.
+MATCHED
+ ) {
+
+197 
+Œy
+ {
+
+198 
+	`wr™e
+Ğ
+By‹Bufãr
+.
+	`w¿p
+Ğ
+Ch¬£tfunùiÚs
+.
+	`utf8By‹s
+Ğ
+w¦
+.
+	`g‘FÏshPŞicy
+Ğ
+this
+ ) ) ) );
+
+199 
+	`şo£
+Ğ
+Clo£F¿me
+.
+FLASHPOLICY
+, "" );
+
+200 } 
+	`ÿtch
+ ( 
+Inv®idD©aExû±iÚ
+ 
+e
+ ) {
+
+201 
+	`şo£
+Ğ
+Clo£F¿me
+.
+ABNORMAL_CLOSE
+, "»mÙ³” clo£d cÚÃùiÚ befÜæashpŞicy could bŒªsm™‹d", 
+Œue
+ );
+
+203  
+çl£
+;
+
+206 
+HªdshakeS‹
+ 
+hªdshake¡©e
+ = 
+nuÎ
+;
+
+208 
+Œy
+ {
+
+209 ifĞ
+rŞe
+ =ğ
+RŞe
+.
+SERVER
+ ) {
+
+210 ifĞ
+d¿á
+ =ğ
+nuÎ
+ ) {
+
+211  
+D¿á
+ 
+d
+ : 
+knownD¿ás
+ ) {
+
+212 
+d
+ = d.
+	`cİyIn¡ªû
+();
+
+213 
+Œy
+ {
+
+214 
+d
+.
+	`£tP¬£Mode
+Ğ
+rŞe
+ );
+
+215 
+sock‘Bufãr
+.
+	`»£t
+();
+
+216 
+Hªdshaked©a
+ 
+tmphªdshake
+ = 
+d
+.
+	`Œª¦©eHªdshake
+Ğ
+sock‘Bufãr
+ );
+
+217 ifĞ
+tmphªdshake
+ 
+š¡ªûof
+ 
+Cl›ÁHªdshake
+ =ğ
+çl£
+ ) {
+
+218 
+	`æushAndClo£
+Ğ
+Clo£F¿me
+.
+PROTOCOL_ERROR
+, "wrÚg h‰°funùiÚ", 
+çl£
+ );
+
+219  
+çl£
+;
+
+221 
+Cl›ÁHªdshake
+ 
+hªdshake
+ = (Cl›ÁHªdshakeè
+tmphªdshake
+;
+
+222 
+hªdshake¡©e
+ = 
+d
+.
+	`acû±HªdshakeAsS”v”
+Ğ
+hªdshake
+ );
+
+223 ifĞ
+hªdshake¡©e
+ =ğ
+HªdshakeS‹
+.
+MATCHED
+ ) {
+
+224 
+»sourûDesütÜ
+ = 
+hªdshake
+.
+	`g‘ResourûDesütÜ
+();
+
+225 
+S”v”HªdshakeBud”
+ 
+»¥Ú£
+;
+
+226 
+Œy
+ {
+
+227 
+»¥Ú£
+ = 
+w¦
+.
+	`ÚWebsock‘HªdshakeReûivedAsS”v”
+Ğ
+this
+, 
+d
+, 
+hªdshake
+ );
+
+228 } 
+	`ÿtch
+ ( 
+Inv®idD©aExû±iÚ
+ 
+e
+ ) {
+
+229 
+	`æushAndClo£
+Ğ
+e
+.
+	`g‘Clo£Code
+(),ƒ.
+	`g‘Mes§ge
+(), 
+çl£
+ );
+
+230  
+çl£
+;
+
+231 } 
+	`ÿtch
+ ( 
+RuÁimeExû±iÚ
+ 
+e
+ ) {
+
+232 
+w¦
+.
+	`ÚWebsock‘E¼Ü
+Ğ
+this
+, 
+e
+ );
+
+233 
+	`æushAndClo£
+Ğ
+Clo£F¿me
+.
+NEVER_CONNECTED
+, 
+e
+.
+	`g‘Mes§ge
+(), 
+çl£
+ );
+
+234  
+çl£
+;
+
+236 
+	`wr™e
+Ğ
+d
+.
+	`ü—‹Hªdshake
+Ğd.
+	`po¡ProûssHªdshakeRe¥Ú£AsS”v”
+Ğ
+hªdshake
+, 
+»¥Ú£
+ ), 
+rŞe
+ ) );
+
+237 
+d¿á
+ = 
+d
+;
+
+238 
+	`İ’
+Ğ
+hªdshake
+ );
+
+239  
+Œue
+;
+
+241 } 
+	`ÿtch
+ ( 
+Inv®idHªdshakeExû±iÚ
+ 
+e
+ ) {
+
+245 ifĞ
+d¿á
+ =ğ
+nuÎ
+ ) {
+
+246 
+	`şo£
+Ğ
+Clo£F¿me
+.
+PROTOCOL_ERROR
+, "no draft matches" );
+
+248  
+çl£
+;
+
+251 
+Hªdshaked©a
+ 
+tmphªdshake
+ = 
+d¿á
+.
+	`Œª¦©eHªdshake
+Ğ
+sock‘Bufãr
+ );
+
+252 ifĞ
+tmphªdshake
+ 
+š¡ªûof
+ 
+Cl›ÁHªdshake
+ =ğ
+çl£
+ ) {
+
+253 
+	`æushAndClo£
+Ğ
+Clo£F¿me
+.
+PROTOCOL_ERROR
+, "wrÚg h‰°funùiÚ", 
+çl£
+ );
+
+254  
+çl£
+;
+
+256 
+Cl›ÁHªdshake
+ 
+hªdshake
+ = (Cl›ÁHªdshakeè
+tmphªdshake
+;
+
+257 
+hªdshake¡©e
+ = 
+d¿á
+.
+	`acû±HªdshakeAsS”v”
+Ğ
+hªdshake
+ );
+
+259 ifĞ
+hªdshake¡©e
+ =ğ
+HªdshakeS‹
+.
+MATCHED
+ ) {
+
+260 
+	`İ’
+Ğ
+hªdshake
+ );
+
+261  
+Œue
+;
+
+263 
+	`şo£
+Ğ
+Clo£F¿me
+.
+PROTOCOL_ERROR
+, "the handshake did finaly‚ot match" );
+
+265  
+çl£
+;
+
+267 } ifĞ
+rŞe
+ =ğ
+RŞe
+.
+CLIENT
+ ) {
+
+268 
+d¿á
+.
+	`£tP¬£Mode
+Ğ
+rŞe
+ );
+
+269 
+Hªdshaked©a
+ 
+tmphªdshake
+ = 
+d¿á
+.
+	`Œª¦©eHªdshake
+Ğ
+sock‘Bufãr
+ );
+
+270 ifĞ
+tmphªdshake
+ 
+š¡ªûof
+ 
+S”v”Hªdshake
+ =ğ
+çl£
+ ) {
+
+271 
+	`æushAndClo£
+Ğ
+Clo£F¿me
+.
+PROTOCOL_ERROR
+, "wrÚg h‰°funùiÚ", 
+çl£
+ );
+
+272  
+çl£
+;
+
+274 
+S”v”Hªdshake
+ 
+hªdshake
+ = (S”v”Hªdshakeè
+tmphªdshake
+;
+
+275 
+hªdshake¡©e
+ = 
+d¿á
+.
+	`acû±HªdshakeAsCl›Á
+Ğ
+hªdshak”eque¡
+, 
+hªdshake
+ );
+
+276 ifĞ
+hªdshake¡©e
+ =ğ
+HªdshakeS‹
+.
+MATCHED
+ ) {
+
+277 
+Œy
+ {
+
+278 
+w¦
+.
+	`ÚWebsock‘HªdshakeReûivedAsCl›Á
+Ğ
+this
+, 
+hªdshak”eque¡
+, 
+hªdshake
+ );
+
+279 } 
+	`ÿtch
+ ( 
+Inv®idD©aExû±iÚ
+ 
+e
+ ) {
+
+280 
+	`æushAndClo£
+Ğ
+e
+.
+	`g‘Clo£Code
+(),ƒ.
+	`g‘Mes§ge
+(), 
+çl£
+ );
+
+281  
+çl£
+;
+
+282 } 
+	`ÿtch
+ ( 
+RuÁimeExû±iÚ
+ 
+e
+ ) {
+
+283 
+w¦
+.
+	`ÚWebsock‘E¼Ü
+Ğ
+this
+, 
+e
+ );
+
+284 
+	`æushAndClo£
+Ğ
+Clo£F¿me
+.
+NEVER_CONNECTED
+, 
+e
+.
+	`g‘Mes§ge
+(), 
+çl£
+ );
+
+285  
+çl£
+;
+
+287 
+	`İ’
+Ğ
+hªdshake
+ );
+
+288  
+Œue
+;
+
+290 
+	`şo£
+Ğ
+Clo£F¿me
+.
+PROTOCOL_ERROR
+, "d¿á " + 
+d¿á
+ + "„efuses handshake" );
+
+293 } 
+	`ÿtch
+ ( 
+Inv®idHªdshakeExû±iÚ
+ 
+e
+ ) {
+
+294 
+	`şo£
+Ğ
+e
+ );
+
+296 } 
+	`ÿtch
+ ( 
+Incom¶‘eHªdshakeExû±iÚ
+ 
+e
+ ) {
+
+297 ifĞ
+tmpHªdshakeBy‹s
+.
+	`ÿ·c™y
+() == 0 ) {
+
+298 
+sock‘Bufãr
+.
+	`»£t
+();
+
+299 
+Ãwsize
+ = 
+e
+.
+	`g‘P»ã»dSize
+();
+
+300 ifĞ
+Ãwsize
+ == 0 ) {
+
+301 
+Ãwsize
+ = 
+sock‘Bufãr
+.
+	`ÿ·c™y
+() + 16;
+
+303 
+	`as£¹
+ ( 
+e
+.
+	`g‘P»ã»dSize
+(è>ğ
+sock‘Bufãr
+.
+	`»maššg
+() );
+
+305 
+tmpHªdshakeBy‹s
+ = 
+By‹Bufãr
+.
+	`®loÿ‹
+Ğ
+Ãwsize
+ );
+
+307 
+tmpHªdshakeBy‹s
+.
+	`put
+Ğ
+sock‘BufãrNew
+ );
+
+310 
+tmpHªdshakeBy‹s
+.
+	`pos™iÚ
+ĞtmpHªdshakeBy‹s.
+	`lim™
+() );
+
+311 
+tmpHªdshakeBy‹s
+.
+	`lim™
+ĞtmpHªdshakeBy‹s.
+	`ÿ·c™y
+() );
+
+314  
+çl£
+;
+
+315 
+	}
+}
+
+317 
+´iv©e
+ 
+	$decodeF¿mes
+Ğ
+By‹Bufãr
+ 
+sock‘Bufãr
+ ) {
+
+319 
+Li¡
+<
+F¿med©a
+> 
+äames
+;
+
+320 
+Œy
+ {
+
+321 
+äames
+ = 
+d¿á
+.
+	`Œª¦©eF¿me
+Ğ
+sock‘Bufãr
+ );
+
+322  
+F¿med©a
+ 
+f
+ : 
+äames
+ ) {
+
+323 ifĞ
+DEBUG
+ )
+
+324 
+Sy¡em
+.
+out
+.
+	`´šn
+Ğ"m©ched f¿me: " + 
+f
+ );
+
+325 
+Opcode
+ 
+curİ
+ = 
+f
+.
+	`g‘Opcode
+();
+
+326 
+boŞ—n
+ 
+fš
+ = 
+f
+.
+	`isFš
+();
+
+328 ifĞ
+curİ
+ =ğ
+Opcode
+.
+CLOSING
+ ) {
+
+329 
+code
+ = 
+Clo£F¿me
+.
+NOCODE
+;
+
+330 
+SŒšg
+ 
+»asÚ
+ = "";
+
+331 ifĞ
+f
+ 
+š¡ªûof
+ 
+Clo£F¿me
+ ) {
+
+332 
+Clo£F¿me
+ 
+cf
+ = (Clo£F¿meè
+f
+;
+
+333 
+code
+ = 
+cf
+.
+	`g‘Clo£Code
+();
+
+334 
+»asÚ
+ = 
+cf
+.
+	`g‘Mes§ge
+();
+
+336 ifĞ
+»ady¡©e
+ =ğ
+READYSTATE
+.
+CLOSING
+ ) {
+
+338 
+	`şo£CÚÃùiÚ
+Ğ
+code
+, 
+»asÚ
+, 
+Œue
+ );
+
+341 ifĞ
+d¿á
+.
+	`g‘Clo£HªdshakeTy³
+(è=ğ
+Clo£HªdshakeTy³
+.
+TWOWAY
+ )
+
+342 
+	`şo£
+Ğ
+code
+, 
+»asÚ
+, 
+Œue
+ );
+
+344 
+	`æushAndClo£
+Ğ
+code
+, 
+»asÚ
+, 
+çl£
+ );
+
+347 } ifĞ
+curİ
+ =ğ
+Opcode
+.
+PING
+ ) {
+
+348 
+w¦
+.
+	`ÚWebsock‘Pšg
+Ğ
+this
+, 
+f
+ );
+
+350 } ifĞ
+curİ
+ =ğ
+Opcode
+.
+PONG
+ ) {
+
+351 
+w¦
+.
+	`ÚWebsock‘PÚg
+Ğ
+this
+, 
+f
+ );
+
+353 } ifĞ!
+fš
+ || 
+curİ
+ =ğ
+Opcode
+.
+CONTINUOUS
+ ) {
+
+354 ifĞ
+curİ
+ !ğ
+Opcode
+.
+CONTINUOUS
+ ) {
+
+355 ifĞ
+cu¼’t_cÚtšuous_äame_İcode
+ !ğ
+nuÎ
+ )
+
+356 
+throw
+ 
+Ãw
+ 
+	`Inv®idD©aExû±iÚ
+Ğ
+Clo£F¿me
+.
+PROTOCOL_ERROR
+, "Previous continuous frame sequence‚ot completed." );
+
+357 
+cu¼’t_cÚtšuous_äame_İcode
+ = 
+curİ
+;
+
+358 } ifĞ
+fš
+ ) {
+
+359 ifĞ
+cu¼’t_cÚtšuous_äame_İcode
+ =ğ
+nuÎ
+ )
+
+360 
+throw
+ 
+Ãw
+ 
+	`Inv®idD©aExû±iÚ
+Ğ
+Clo£F¿me
+.
+PROTOCOL_ERROR
+, "Continuous frame sequence was‚ot started." );
+
+361 
+cu¼’t_cÚtšuous_äame_İcode
+ = 
+nuÎ
+;
+
+362 } ifĞ
+cu¼’t_cÚtšuous_äame_İcode
+ =ğ
+nuÎ
+ ) {
+
+363 
+throw
+ 
+Ãw
+ 
+	`Inv®idD©aExû±iÚ
+Ğ
+Clo£F¿me
+.
+PROTOCOL_ERROR
+, "Continuous frame sequence was‚ot started." );
+
+365 
+Œy
+ {
+
+366 
+w¦
+.
+	`ÚWebsock‘Mes§geF¿gm’t
+Ğ
+this
+, 
+f
+ );
+
+367 } 
+	`ÿtch
+ ( 
+RuÁimeExû±iÚ
+ 
+e
+ ) {
+
+368 
+w¦
+.
+	`ÚWebsock‘E¼Ü
+Ğ
+this
+, 
+e
+ );
+
+371 } ifĞ
+cu¼’t_cÚtšuous_äame_İcode
+ !ğ
+nuÎ
+ ) {
+
+372 
+throw
+ 
+Ãw
+ 
+	`Inv®idD©aExû±iÚ
+Ğ
+Clo£F¿me
+.
+PROTOCOL_ERROR
+, "Continuous frame sequence‚ot completed." );
+
+373 } ifĞ
+curİ
+ =ğ
+Opcode
+.
+TEXT
+ ) {
+
+374 
+Œy
+ {
+
+375 
+w¦
+.
+	`ÚWebsock‘Mes§ge
+Ğ
+this
+, 
+Ch¬£tfunùiÚs
+.
+	`¡ršgUtf8
+Ğ
+f
+.
+	`g‘PaylßdD©a
+() ) );
+
+376 } 
+	`ÿtch
+ ( 
+RuÁimeExû±iÚ
+ 
+e
+ ) {
+
+377 
+w¦
+.
+	`ÚWebsock‘E¼Ü
+Ğ
+this
+, 
+e
+ );
+
+379 } ifĞ
+curİ
+ =ğ
+Opcode
+.
+BINARY
+ ) {
+
+380 
+Œy
+ {
+
+381 
+w¦
+.
+	`ÚWebsock‘Mes§ge
+Ğ
+this
+, 
+f
+.
+	`g‘PaylßdD©a
+() );
+
+382 } 
+	`ÿtch
+ ( 
+RuÁimeExû±iÚ
+ 
+e
+ ) {
+
+383 
+w¦
+.
+	`ÚWebsock‘E¼Ü
+Ğ
+this
+, 
+e
+ );
+
+386 
+throw
+ 
+Ãw
+ 
+	`Inv®idD©aExû±iÚ
+Ğ
+Clo£F¿me
+.
+PROTOCOL_ERROR
+, "non control or continious frameƒxpected" );
+
+389 } 
+	`ÿtch
+ ( 
+Inv®idD©aExû±iÚ
+ 
+e1
+ ) {
+
+390 
+w¦
+.
+	`ÚWebsock‘E¼Ü
+Ğ
+this
+, 
+e1
+ );
+
+391 
+	`şo£
+Ğ
+e1
+ );
+
+394 
+	}
+}
+
+396 
+´iv©e
+ 
+	$şo£
+Ğ
+code
+, 
+SŒšg
+ 
+mes§ge
+, 
+boŞ—n
+ 
+»mÙe
+ ) {
+
+397 ifĞ
+»ady¡©e
+ !ğ
+READYSTATE
+.
+CLOSING
+ &&„—dy¡©!ğREADYSTATE.
+CLOSED
+ ) {
+
+398 ifĞ
+»ady¡©e
+ =ğ
+READYSTATE
+.
+OPEN
+ ) {
+
+399 ifĞ
+code
+ =ğ
+Clo£F¿me
+.
+ABNORMAL_CLOSE
+ ) {
+
+400 
+	`as£¹
+ ( 
+»mÙe
+ =ğ
+çl£
+ );
+
+401 
+»ady¡©e
+ = 
+READYSTATE
+.
+CLOSING
+;
+
+402 
+	`æushAndClo£
+Ğ
+code
+, 
+mes§ge
+, 
+çl£
+ );
+
+405 ifĞ
+d¿á
+.
+	`g‘Clo£HªdshakeTy³
+(è!ğ
+Clo£HªdshakeTy³
+.
+NONE
+ ) {
+
+406 
+Œy
+ {
+
+407 ifĞ!
+»mÙe
+ ) {
+
+408 
+Œy
+ {
+
+409 
+w¦
+.
+	`ÚWebsock‘Clo£In™Ÿ‹d
+Ğ
+this
+, 
+code
+, 
+mes§ge
+ );
+
+410 } 
+	`ÿtch
+ ( 
+RuÁimeExû±iÚ
+ 
+e
+ ) {
+
+411 
+w¦
+.
+	`ÚWebsock‘E¼Ü
+Ğ
+this
+, 
+e
+ );
+
+414 
+	`£ndF¿me
+Ğ
+Ãw
+ 
+	`Clo£F¿meBud”
+Ğ
+code
+, 
+mes§ge
+ ) );
+
+415 } 
+	`ÿtch
+ ( 
+Inv®idD©aExû±iÚ
+ 
+e
+ ) {
+
+416 
+w¦
+.
+	`ÚWebsock‘E¼Ü
+Ğ
+this
+, 
+e
+ );
+
+417 
+	`æushAndClo£
+Ğ
+Clo£F¿me
+.
+ABNORMAL_CLOSE
+, "g’”©ed f¿mi šv®id", 
+çl£
+ );
+
+420 
+	`æushAndClo£
+Ğ
+code
+, 
+mes§ge
+, 
+»mÙe
+ );
+
+421 } ifĞ
+code
+ =ğ
+Clo£F¿me
+.
+FLASHPOLICY
+ ) {
+
+422 
+	`as£¹
+ ( 
+»mÙe
+ );
+
+423 
+	`æushAndClo£
+Ğ
+Clo£F¿me
+.
+FLASHPOLICY
+, 
+mes§ge
+, 
+Œue
+ );
+
+425 
+	`æushAndClo£
+Ğ
+Clo£F¿me
+.
+NEVER_CONNECTED
+, 
+mes§ge
+, 
+çl£
+ );
+
+427 ifĞ
+code
+ =ğ
+Clo£F¿me
+.
+PROTOCOL_ERROR
+ )
+
+428 
+	`æushAndClo£
+Ğ
+code
+, 
+mes§ge
+, 
+»mÙe
+ );
+
+429 
+»ady¡©e
+ = 
+READYSTATE
+.
+CLOSING
+;
+
+430 
+tmpHªdshakeBy‹s
+ = 
+nuÎ
+;
+
+433 
+	}
+}
+
+435 @
+Ov”ride
+
+
+436 
+public
+ 
+	$şo£
+Ğ
+code
+, 
+SŒšg
+ 
+mes§ge
+ ) {
+
+437 
+	`şo£
+Ğ
+code
+, 
+mes§ge
+, 
+çl£
+ );
+
+438 
+	}
+}
+
+449 
+´Ùeùed
+ 
+synchrÚized
+ 
+	$şo£CÚÃùiÚ
+Ğ
+code
+, 
+SŒšg
+ 
+mes§ge
+, 
+boŞ—n
+ 
+»mÙe
+ ) {
+
+450 ifĞ
+»ady¡©e
+ =ğ
+READYSTATE
+.
+CLOSED
+ ) {
+
+454 ifĞ
+key
+ !ğ
+nuÎ
+ ) {
+
+456 
+key
+.
+	`ÿnûl
+();
+
+458 ifĞ
+chªÃl
+ !ğ
+nuÎ
+ ) {
+
+459 
+Œy
+ {
+
+460 
+chªÃl
+.
+	`şo£
+();
+
+461 } 
+	`ÿtch
+ ( 
+IOExû±iÚ
+ 
+e
+ ) {
+
+462 
+w¦
+.
+	`ÚWebsock‘E¼Ü
+Ğ
+this
+, 
+e
+ );
+
+465 
+Œy
+ {
+
+466 
+this
+.
+w¦
+.
+	`ÚWebsock‘Clo£
+Ğthis, 
+code
+, 
+mes§ge
+, 
+»mÙe
+ );
+
+467 } 
+	`ÿtch
+ ( 
+RuÁimeExû±iÚ
+ 
+e
+ ) {
+
+468 
+w¦
+.
+	`ÚWebsock‘E¼Ü
+Ğ
+this
+, 
+e
+ );
+
+470 ifĞ
+d¿á
+ !ğ
+nuÎ
+ )
+
+471 
+d¿á
+.
+	`»£t
+();
+
+472 
+hªdshak”eque¡
+ = 
+nuÎ
+;
+
+474 
+»ady¡©e
+ = 
+READYSTATE
+.
+CLOSED
+;
+
+475 
+this
+.
+outQueue
+.
+	`ş—r
+();
+
+476 
+	}
+}
+
+478 
+´Ùeùed
+ 
+	$şo£CÚÃùiÚ
+Ğ
+code
+, 
+boŞ—n
+ 
+»mÙe
+ ) {
+
+479 
+	`şo£CÚÃùiÚ
+Ğ
+code
+, "", 
+»mÙe
+ );
+
+480 
+	}
+}
+
+482 
+public
+ 
+	$şo£CÚÃùiÚ
+() {
+
+483 ifĞ
+şo£d»mÙ–y
+ =ğ
+nuÎ
+ ) {
+
+484 
+throw
+ 
+Ãw
+ 
+	`IÎeg®S‹Exû±iÚ
+( "this method must be used in conjuction with flushAndClose" );
+
+486 
+	`şo£CÚÃùiÚ
+Ğ
+şo£code
+, 
+şo£mes§ge
+, 
+şo£d»mÙ–y
+ );
+
+487 
+	}
+}
+
+489 
+public
+ 
+	$şo£CÚÃùiÚ
+Ğ
+code
+, 
+SŒšg
+ 
+mes§ge
+ ) {
+
+490 
+	`şo£CÚÃùiÚ
+Ğ
+code
+, 
+mes§ge
+, 
+çl£
+ );
+
+491 
+	}
+}
+
+493 
+´Ùeùed
+ 
+synchrÚized
+ 
+	$æushAndClo£
+Ğ
+code
+, 
+SŒšg
+ 
+mes§ge
+, 
+boŞ—n
+ 
+»mÙe
+ ) {
+
+494 ifĞ
+æushªdşo£¡©e
+ ) {
+
+497 
+şo£code
+ = 
+code
+;
+
+498 
+şo£mes§ge
+ = 
+mes§ge
+;
+
+499 
+şo£d»mÙ–y
+ = 
+»mÙe
+;
+
+501 
+æushªdşo£¡©e
+ = 
+Œue
+;
+
+503 
+w¦
+.
+	`ÚWr™eDemªd
+Ğ
+this
+ );
+
+504 
+Œy
+ {
+
+505 
+w¦
+.
+	`ÚWebsock‘Closšg
+Ğ
+this
+, 
+code
+, 
+mes§ge
+, 
+»mÙe
+ );
+
+506 } 
+	`ÿtch
+ ( 
+RuÁimeExû±iÚ
+ 
+e
+ ) {
+
+507 
+w¦
+.
+	`ÚWebsock‘E¼Ü
+Ğ
+this
+, 
+e
+ );
+
+509 ifĞ
+d¿á
+ !ğ
+nuÎ
+ )
+
+510 
+d¿á
+.
+	`»£t
+();
+
+511 
+hªdshak”eque¡
+ = 
+nuÎ
+;
+
+512 
+	}
+}
+
+514 
+public
+ 
+	$eÙ
+() {
+
+515 ifĞ
+	`g‘R—dyS‹
+(è=ğ
+READYSTATE
+.
+NOT_YET_CONNECTED
+ ) {
+
+516 
+	`şo£CÚÃùiÚ
+Ğ
+Clo£F¿me
+.
+NEVER_CONNECTED
+, 
+Œue
+ );
+
+517 } ifĞ
+æushªdşo£¡©e
+ ) {
+
+518 
+	`şo£CÚÃùiÚ
+Ğ
+şo£code
+, 
+şo£mes§ge
+, 
+şo£d»mÙ–y
+ );
+
+519 } ifĞ
+d¿á
+.
+	`g‘Clo£HªdshakeTy³
+(è=ğ
+Clo£HªdshakeTy³
+.
+NONE
+ ) {
+
+520 
+	`şo£CÚÃùiÚ
+Ğ
+Clo£F¿me
+.
+NORMAL
+, 
+Œue
+ );
+
+521 } ifĞ
+d¿á
+.
+	`g‘Clo£HªdshakeTy³
+(è=ğ
+Clo£HªdshakeTy³
+.
+ONEWAY
+ ) {
+
+522 ifĞ
+rŞe
+ =ğ
+RŞe
+.
+SERVER
+ )
+
+523 
+	`şo£CÚÃùiÚ
+Ğ
+Clo£F¿me
+.
+ABNORMAL_CLOSE
+, 
+Œue
+ );
+
+525 
+	`şo£CÚÃùiÚ
+Ğ
+Clo£F¿me
+.
+NORMAL
+, 
+Œue
+ );
+
+527 
+	`şo£CÚÃùiÚ
+Ğ
+Clo£F¿me
+.
+ABNORMAL_CLOSE
+, 
+Œue
+ );
+
+529 
+	}
+}
+
+531 @
+Ov”ride
+
+
+532 
+public
+ 
+	$şo£
+Ğ
+code
+ ) {
+
+533 
+	`şo£
+Ğ
+code
+, "", 
+çl£
+ );
+
+534 
+	}
+}
+
+536 
+public
+ 
+	$şo£
+Ğ
+Inv®idD©aExû±iÚ
+ 
+e
+ ) {
+
+537 
+	`şo£
+Ğ
+e
+.
+	`g‘Clo£Code
+(),ƒ.
+	`g‘Mes§ge
+(), 
+çl£
+ );
+
+538 
+	}
+}
+
+546 @
+Ov”ride
+
+
+547 
+public
+ 
+	$£nd
+Ğ
+SŒšg
+ 
+‹xt
+ ) 
+throws
+ 
+Websock‘NÙCÚÃùedExû±iÚ
+ {
+
+548 ifĞ
+‹xt
+ =ğ
+nuÎ
+ )
+
+549 
+throw
+ 
+Ãw
+ 
+	`IÎeg®Argum’tExû±iÚ
+( "Cannot send 'null' datao‡ WebSocketImpl." );
+
+550 
+	`£nd
+Ğ
+d¿á
+.
+	`ü—‹F¿mes
+Ğ
+‹xt
+, 
+rŞe
+ =ğ
+RŞe
+.
+CLIENT
+ ) );
+
+551 
+	}
+}
+
+559 @
+Ov”ride
+
+
+560 
+public
+ 
+	$£nd
+Ğ
+By‹Bufãr
+ 
+by‹s
+ ) 
+throws
+ 
+IÎeg®Argum’tExû±iÚ
+ , 
+Websock‘NÙCÚÃùedExû±iÚ
+ {
+
+561 ifĞ
+by‹s
+ =ğ
+nuÎ
+ )
+
+562 
+throw
+ 
+Ãw
+ 
+	`IÎeg®Argum’tExû±iÚ
+( "Cannot send 'null' datao‡ WebSocketImpl." );
+
+563 
+	`£nd
+Ğ
+d¿á
+.
+	`ü—‹F¿mes
+Ğ
+by‹s
+, 
+rŞe
+ =ğ
+RŞe
+.
+CLIENT
+ ) );
+
+564 
+	}
+}
+
+566 @
+Ov”ride
+
+
+567 
+public
+ 
+	$£nd
+Ğ
+by‹
+[] 
+by‹s
+ ) 
+throws
+ 
+IÎeg®Argum’tExû±iÚ
+ , 
+Websock‘NÙCÚÃùedExû±iÚ
+ {
+
+568 
+	`£nd
+Ğ
+By‹Bufãr
+.
+	`w¿p
+Ğ
+by‹s
+ ) );
+
+569 
+	}
+}
+
+571 
+´iv©e
+ 
+£nd
+Ğ
+CŞËùiÚ
+<
+F¿med©a
+> 
+äames
+ ) {
+
+572 ifĞ!
+isO³n
+() )
+
+573 
+throw
+ 
+Ãw
+ 
+Websock‘NÙCÚÃùedExû±iÚ
+();
+
+574  
+F¿med©a
+ 
+	gf
+ : 
+äames
+ ) {
+
+575 
+£ndF¿me
+Ğ
+f
+ );
+
+579 @
+Ov”ride
+
+
+580 
+public
+ 
+	$£ndF¿gm’‹dF¿me
+Ğ
+Opcode
+ 
+İ
+, 
+By‹Bufãr
+ 
+bufãr
+, 
+boŞ—n
+ 
+fš
+ ) {
+
+581 
+	`£nd
+Ğ
+d¿á
+.
+	`cÚtšuousF¿me
+Ğ
+İ
+, 
+bufãr
+, 
+fš
+ ) );
+
+582 
+	}
+}
+
+584 @
+Ov”ride
+
+
+585 
+public
+ 
+	$£ndF¿me
+Ğ
+F¿med©a
+ 
+äamed©a
+ ) {
+
+586 ifĞ
+DEBUG
+ )
+
+587 
+Sy¡em
+.
+out
+.
+	`´šn
+Ğ"£nd f¿me: " + 
+äamed©a
+ );
+
+588 
+	`wr™e
+Ğ
+d¿á
+.
+	`ü—‹Bš¬yF¿me
+Ğ
+äamed©a
+ ) );
+
+589 
+	}
+}
+
+591 @
+Ov”ride
+
+
+592 
+public
+ 
+boŞ—n
+ 
+	$hasBufã»dD©a
+() {
+
+593  !
+this
+.
+outQueue
+.
+	`isEm±y
+();
+
+594 
+	}
+}
+
+596 
+´iv©e
+ 
+HªdshakeS‹
+ 
+	$isFÏshEdgeCa£
+Ğ
+By‹Bufãr
+ 
+»que¡
+ ) 
+throws
+ 
+Incom¶‘eHªdshakeExû±iÚ
+ {
+
+597 
+»que¡
+.
+	`m¬k
+();
+
+598 ifĞ
+»que¡
+.
+	`lim™
+(è> 
+D¿á
+.
+FLASH_POLICY_REQUEST
+.
+Ëngth
+ ) {
+
+599  
+HªdshakeS‹
+.
+NOT_MATCHED
+;
+
+600 } ifĞ
+»que¡
+.
+	`lim™
+(è< 
+D¿á
+.
+FLASH_POLICY_REQUEST
+.
+Ëngth
+ ) {
+
+601 
+throw
+ 
+Ãw
+ 
+	`Incom¶‘eHªdshakeExû±iÚ
+Ğ
+D¿á
+.
+FLASH_POLICY_REQUEST
+.
+Ëngth
+ );
+
+604  
+æash_pŞicy_šdex
+ = 0 ; 
+»que¡
+.
+	`hasRemaššg
+() ; flash_policy_index++ ) {
+
+605 ifĞ
+D¿á
+.
+FLASH_POLICY_REQUEST
+[ 
+æash_pŞicy_šdex
+ ] !ğ
+»que¡
+.
+	`g‘
+() ) {
+
+606 
+»que¡
+.
+	`»£t
+();
+
+607  
+HªdshakeS‹
+.
+NOT_MATCHED
+;
+
+610  
+HªdshakeS‹
+.
+MATCHED
+;
+
+612 
+	}
+}
+
+614 
+public
+ 
+	$¡¬tHªdshake
+Ğ
+Cl›ÁHªdshakeBud”
+ 
+hªdshaked©a
+ ) 
+throws
+ 
+Inv®idHªdshakeExû±iÚ
+ {
+
+615 
+	`as£¹
+ ( 
+»ady¡©e
+ !ğ
+READYSTATE
+.
+CONNECTING
+ ) : "shall only be called once";
+
+618 
+this
+.
+hªdshak”eque¡
+ = 
+d¿á
+.
+	`po¡ProûssHªdshakeReque¡AsCl›Á
+Ğ
+hªdshaked©a
+ );
+
+620 
+»sourûDesütÜ
+ = 
+hªdshaked©a
+.
+	`g‘ResourûDesütÜ
+();
+
+621 
+	`as£¹
+Ğ
+»sourûDesütÜ
+ !ğ
+nuÎ
+ );
+
+624 
+Œy
+ {
+
+625 
+w¦
+.
+	`ÚWebsock‘HªdshakeS’tAsCl›Á
+Ğ
+this
+,his.
+hªdshak”eque¡
+ );
+
+626 } 
+	`ÿtch
+ ( 
+Inv®idD©aExû±iÚ
+ 
+e
+ ) {
+
+628 
+throw
+ 
+Ãw
+ 
+	`Inv®idHªdshakeExû±iÚ
+( "Handshake data„ejected by client." );
+
+629 } 
+	`ÿtch
+ ( 
+RuÁimeExû±iÚ
+ 
+e
+ ) {
+
+630 
+w¦
+.
+	`ÚWebsock‘E¼Ü
+Ğ
+this
+, 
+e
+ );
+
+631 
+throw
+ 
+Ãw
+ 
+	`Inv®idHªdshakeExû±iÚ
+Ğ"»jeùed beÿu£ of" + 
+e
+ );
+
+635 
+	`wr™e
+Ğ
+d¿á
+.
+	`ü—‹Hªdshake
+Ğ
+this
+.
+hªdshak”eque¡
+, 
+rŞe
+ ) );
+
+636 
+	}
+}
+
+638 
+´iv©e
+ 
+	$wr™e
+Ğ
+By‹Bufãr
+ 
+buf
+ ) {
+
+639 ifĞ
+DEBUG
+ )
+
+640 
+Sy¡em
+.
+out
+.
+	`´šn
+Ğ"wr™e(" + 
+buf
+.
+	`»maššg
+(è+ "): {" + ( buf.»maššg(è> 1000 ? "toØbigØdi¥Ïy" : 
+Ãw
+ 
+	`SŒšg
+Ğbuf.
+	`¬¿y
+() ) ) + "}" );
+
+642 
+outQueue
+.
+	`add
+Ğ
+buf
+ );
+
+650 
+w¦
+.
+	`ÚWr™eDemªd
+Ğ
+this
+ );
+
+651 
+	}
+}
+
+653 
+´iv©e
+ 
+wr™e
+Ğ
+Li¡
+<
+By‹Bufãr
+> 
+bufs
+ ) {
+
+654  
+By‹Bufãr
+ 
+	gb
+ : 
+bufs
+ ) {
+
+655 
+wr™e
+Ğ
+b
+ );
+
+659 
+´iv©e
+ 
+	$İ’
+Ğ
+Hªdshaked©a
+ 
+d
+ ) {
+
+660 ifĞ
+DEBUG
+ )
+
+661 
+Sy¡em
+.
+out
+.
+	`´šn
+Ğ"İ’ usšg d¿á: " + 
+d¿á
+.
+	`g‘CÏss
+().
+	`g‘Sim¶eName
+() );
+
+662 
+»ady¡©e
+ = 
+READYSTATE
+.
+OPEN
+;
+
+663 
+Œy
+ {
+
+664 
+w¦
+.
+	`ÚWebsock‘O³n
+Ğ
+this
+, 
+d
+ );
+
+665 } 
+	`ÿtch
+ ( 
+RuÁimeExû±iÚ
+ 
+e
+ ) {
+
+666 
+w¦
+.
+	`ÚWebsock‘E¼Ü
+Ğ
+this
+, 
+e
+ );
+
+668 
+	}
+}
+
+670 @
+Ov”ride
+
+
+671 
+public
+ 
+boŞ—n
+ 
+	$isCÚÃùšg
+() {
+
+672 
+	`as£¹
+ ( 
+æushªdşo£¡©e
+ ? 
+»ady¡©e
+ =ğ
+READYSTATE
+.
+CONNECTING
+ : 
+Œue
+ );
+
+673  
+»ady¡©e
+ =ğ
+READYSTATE
+.
+CONNECTING
+;
+
+674 
+	}
+}
+
+676 @
+Ov”ride
+
+
+677 
+public
+ 
+boŞ—n
+ 
+	$isO³n
+() {
+
+678 
+	`as£¹
+ ( 
+»ady¡©e
+ =ğ
+READYSTATE
+.
+OPEN
+ ? !
+æushªdşo£¡©e
+ : 
+Œue
+ );
+
+679  
+»ady¡©e
+ =ğ
+READYSTATE
+.
+OPEN
+;
+
+680 
+	}
+}
+
+682 @
+Ov”ride
+
+
+683 
+public
+ 
+boŞ—n
+ 
+	$isClosšg
+() {
+
+684  
+»ady¡©e
+ =ğ
+READYSTATE
+.
+CLOSING
+;
+
+685 
+	}
+}
+
+687 @
+Ov”ride
+
+
+688 
+public
+ 
+boŞ—n
+ 
+	$isFlushAndClo£
+() {
+
+689  
+æushªdşo£¡©e
+;
+
+690 
+	}
+}
+
+692 @
+Ov”ride
+
+
+693 
+public
+ 
+boŞ—n
+ 
+	$isClo£d
+() {
+
+694  
+»ady¡©e
+ =ğ
+READYSTATE
+.
+CLOSED
+;
+
+695 
+	}
+}
+
+697 @
+Ov”ride
+
+
+698 
+public
+ 
+READYSTATE
+ 
+	$g‘R—dyS‹
+() {
+
+699  
+»ady¡©e
+;
+
+700 
+	}
+}
+
+702 @
+Ov”ride
+
+
+703 
+public
+ 
+	$hashCode
+() {
+
+704  
+su³r
+.
+	`hashCode
+();
+
+705 
+	}
+}
+
+707 @
+Ov”ride
+
+
+708 
+public
+ 
+SŒšg
+ 
+	$toSŒšg
+() {
+
+709  
+su³r
+.
+	`toSŒšg
+();
+
+710 
+	}
+}
+
+712 @
+Ov”ride
+
+
+713 
+public
+ 
+IÃtSock‘Add»ss
+ 
+	$g‘RemÙeSock‘Add»ss
+() {
+
+714  
+w¦
+.
+	`g‘RemÙeSock‘Add»ss
+Ğ
+this
+ );
+
+715 
+	}
+}
+
+717 @
+Ov”ride
+
+
+718 
+public
+ 
+IÃtSock‘Add»ss
+ 
+	$g‘LoÿlSock‘Add»ss
+() {
+
+719  
+w¦
+.
+	`g‘LoÿlSock‘Add»ss
+Ğ
+this
+ );
+
+720 
+	}
+}
+
+722 @
+Ov”ride
+
+
+723 
+public
+ 
+D¿á
+ 
+	$g‘D¿á
+() {
+
+724  
+d¿á
+;
+
+725 
+	}
+}
+
+727 @
+Ov”ride
+
+
+728 
+public
+ 
+	$şo£
+() {
+
+729 
+	`şo£
+Ğ
+Clo£F¿me
+.
+NORMAL
+ );
+
+730 
+	}
+}
+
+732 @
+Ov”ride
+
+
+733 
+public
+ 
+SŒšg
+ 
+	$g‘ResourûDesütÜ
+() {
+
+734  
+»sourûDesütÜ
+;
+
+735 
+	}
+}
+
+737 @
+Ov”ride
+
+
+738 
+public
+ 
+	$pšg
+(
+SŒšg
+ 
+‹xt
+) {
+
+739 
+	`£nd
+Ğ
+d¿á
+.
+	`ü—‹PšgF¿mes
+Ğ
+‹xt
+, 
+rŞe
+ =ğ
+RŞe
+.
+CLIENT
+ ) );
+
+740 
+	}
+}
+
+	@src/main/java/org/java_websocket/WebSocketListener.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gÃt
+.
+	gIÃtSock‘Add»ss
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gBy‹Bufãr
+;
+
+6 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gd¿ás
+.
+	gD¿á
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idD©aExû±iÚ
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿med©a
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gCl›ÁHªdshake
+;
+
+10 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gHªdshaked©a
+;
+
+11 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gS”v”Hªdshake
+;
+
+12 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gS”v”HªdshakeBud”
+;
+
+19 
+public
+ 
+š‹rçû
+ 
+	gWebSock‘Li¡’”
+ {
+
+36 
+public
+ 
+S”v”HªdshakeBud”
+ 
+ÚWebsock‘HªdshakeReûivedAsS”v”
+(
+WebSock‘
+ 
+cÚn
+, 
+D¿á
+ 
+d¿á
+, 
+Cl›ÁHªdshake
+ 
+»que¡
+è
+throws
+ 
+	gInv®idD©aExû±iÚ
+;
+
+51 
+public
+ 
+ÚWebsock‘HªdshakeReûivedAsCl›Á
+(
+WebSock‘
+ 
+cÚn
+, 
+Cl›ÁHªdshake
+ 
+»que¡
+, 
+S”v”Hªdshake
+ 
+»¥Ú£
+è
+throws
+ 
+	gInv®idD©aExû±iÚ
+;
+
+64 
+public
+ 
+ÚWebsock‘HªdshakeS’tAsCl›Á
+(
+WebSock‘
+ 
+cÚn
+, 
+Cl›ÁHªdshake
+ 
+»que¡
+è
+throws
+ 
+	gInv®idD©aExû±iÚ
+;
+
+75 
+public
+ 
+ÚWebsock‘Mes§ge
+(
+WebSock‘
+ 
+cÚn
+, 
+SŒšg
+ 
+mes§ge
+);
+
+86 
+public
+ 
+ÚWebsock‘Mes§ge
+(
+WebSock‘
+ 
+cÚn
+, 
+By‹Bufãr
+ 
+blob
+);
+
+88 
+public
+ 
+ÚWebsock‘Mes§geF¿gm’t
+(
+WebSock‘
+ 
+cÚn
+, 
+F¿med©a
+ 
+äame
+);
+
+98 
+public
+ 
+ÚWebsock‘O³n
+(
+WebSock‘
+ 
+cÚn
+, 
+Hªdshaked©a
+ 
+d
+);
+
+107 
+public
+ 
+ÚWebsock‘Clo£
+(
+WebSock‘
+ 
+ws
+, 
+code
+, 
+SŒšg
+ 
+»asÚ
+, 
+boŞ—n
+ 
+»mÙe
+);
+
+110 
+public
+ 
+ÚWebsock‘Closšg
+(
+WebSock‘
+ 
+ws
+, 
+code
+, 
+SŒšg
+ 
+»asÚ
+, 
+boŞ—n
+ 
+»mÙe
+);
+
+113 
+public
+ 
+ÚWebsock‘Clo£In™Ÿ‹d
+(
+WebSock‘
+ 
+ws
+, 
+code
+, 
+SŒšg
+ 
+»asÚ
+);
+
+123 
+public
+ 
+ÚWebsock‘E¼Ü
+(
+WebSock‘
+ 
+cÚn
+, 
+Exû±iÚ
+ 
+ex
+);
+
+132 
+public
+ 
+ÚWebsock‘Pšg
+(
+WebSock‘
+ 
+cÚn
+, 
+F¿med©a
+ 
+f
+);
+
+137 
+public
+ 
+ÚWebsock‘PÚg
+(
+WebSock‘
+ 
+cÚn
+, 
+F¿med©a
+ 
+f
+);
+
+144 
+public
+ 
+SŒšg
+ 
+g‘FÏshPŞicy
+(
+WebSock‘
+ 
+cÚn
+è
+throws
+ 
+	gInv®idD©aExû±iÚ
+;
+
+147 
+public
+ 
+ÚWr™eDemªd
+(
+WebSock‘
+ 
+cÚn
+);
+
+149 
+public
+ 
+IÃtSock‘Add»ss
+ 
+g‘LoÿlSock‘Add»ss
+(
+WebSock‘
+ 
+cÚn
+);
+
+150 
+public
+ 
+IÃtSock‘Add»ss
+ 
+g‘RemÙeSock‘Add»ss
+(
+WebSock‘
+ 
+cÚn
+);
+
+	@src/main/java/org/java_websocket/WrappedByteChannel.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gIOExû±iÚ
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gBy‹Bufãr
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gBy‹ChªÃl
+;
+
+7 
+impÜt
+ 
+	gjavax
+.
+	gÃt
+.
+	gs¦
+.
+	gSSLExû±iÚ
+;
+
+9 
+public
+ 
+š‹rçû
+ 
+W¿µedBy‹ChªÃl
+ 
+ex‹nds
+ 
+	gBy‹ChªÃl
+ {
+
+10 
+public
+ 
+boŞ—n
+ 
+isN“dWr™e
+();
+
+11 
+public
+ 
+wr™eMÜe
+(è
+throws
+ 
+	gIOExû±iÚ
+;
+
+19 
+public
+ 
+boŞ—n
+ 
+isN“dR—d
+();
+
+24 
+public
+ 
+»adMÜe
+(
+By‹Bufãr
+ 
+d¡
+è
+throws
+ 
+	gSSLExû±iÚ
+;
+
+25 
+public
+ 
+boŞ—n
+ 
+isBlockšg
+();
+
+	@src/main/java/org/java_websocket/client/AbstractClientProxyChannel.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gş›Á
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gIOExû±iÚ
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gUnsuµÜ‹dEncodšgExû±iÚ
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gBy‹Bufãr
+;
+
+6 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gBy‹ChªÃl
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gAb¡¿ùW¿µedBy‹ChªÃl
+;
+
+10 
+public
+ 
+ab¡¿ù
+ cÏs 
+	cAb¡¿ùCl›ÁProxyChªÃl
+ 
+ex‹nds
+ 
+	mAb¡¿ùW¿µedBy‹ChªÃl
+ {
+
+11 
+´Ùeùed
+ 
+fš®
+ 
+By‹Bufãr
+ 
+	m´oxyHªdshake
+;
+
+18 
+public
+ 
+	$Ab¡¿ùCl›ÁProxyChªÃl
+Ğ
+By‹ChªÃl
+ 
+tow¿p
+ ) {
+
+19 
+	`su³r
+Ğ
+tow¿p
+ );
+
+20 
+Œy
+ {
+
+21 
+´oxyHªdshake
+ = 
+By‹Bufãr
+.
+	`w¿p
+Ğ
+	`budHªdShake
+().
+	`g‘By‹s
+( "ASCII" ) );
+
+22 } 
+	`ÿtch
+ ( 
+UnsuµÜ‹dEncodšgExû±iÚ
+ 
+e
+ ) {
+
+23 
+throw
+ 
+Ãw
+ 
+	`RuÁimeExû±iÚ
+Ğ
+e
+ );
+
+27 @
+Ov”ride
+
+
+28 
+public
+ 
+	$wr™e
+Ğ
+By‹Bufãr
+ 
+¤c
+ ) 
+throws
+ 
+IOExû±iÚ
+ {
+
+29 ifĞ!
+´oxyHªdshake
+.
+	`hasRemaššg
+() ) {
+
+30  
+su³r
+.
+	`wr™e
+Ğ
+¤c
+ );
+
+32  
+su³r
+.
+	`wr™e
+Ğ
+´oxyHªdshake
+ );
+
+34 
+	}
+}
+
+36 
+public
+ 
+ab¡¿ù
+ 
+SŒšg
+ 
+budHªdShake
+();
+
+	@src/main/java/org/java_websocket/client/WebSocketClient.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gş›Á
+;
+
+3 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gWebSock‘
+;
+
+4 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gWebSock‘Ad­‹r
+;
+
+5 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gWebSock‘Im¶
+;
+
+6 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gd¿ás
+.
+	gD¿á
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gd¿ás
+.
+	gD¿á_17
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idHªdshakeExû±iÚ
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gClo£F¿me
+;
+
+10 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿med©a
+;
+
+11 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿med©a
+.
+	gOpcode
+;
+
+12 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gHªdshakeIm¶1Cl›Á
+;
+
+13 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gHªdshaked©a
+;
+
+14 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gS”v”Hªdshake
+;
+
+16 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gIOExû±iÚ
+;
+
+17 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gIÅutSŒ—m
+;
+
+18 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gOuutSŒ—m
+;
+
+19 
+impÜt
+ 
+	gjava
+.
+	gÃt
+.
+	gIÃtSock‘Add»ss
+;
+
+20 
+impÜt
+ 
+	gjava
+.
+	gÃt
+.
+	gProxy
+;
+
+21 
+impÜt
+ 
+	gjava
+.
+	gÃt
+.
+	gSock‘
+;
+
+22 
+impÜt
+ 
+	gjava
+.
+	gÃt
+.
+	gURI
+;
+
+23 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gBy‹Bufãr
+;
+
+24 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gNÙY‘CÚÃùedExû±iÚ
+;
+
+25 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gM­
+;
+
+26 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gcÚcu¼’t
+.
+	gCouÁDownL©ch
+;
+
+32 
+public
+ 
+ab¡¿ù
+ 
+şass
+ 
+WebSock‘Cl›Á
+ 
+ex‹nds
+ 
+WebSock‘Ad­‹r
+ 
+im¶em’ts
+ 
+	gRuÂabË
+, 
+	gWebSock‘
+ {
+
+37 
+´Ùeùed
+ 
+URI
+ 
+	guri
+ = 
+nuÎ
+;
+
+39 
+´iv©e
+ 
+WebSock‘Im¶
+ 
+	g’gše
+ = 
+nuÎ
+;
+
+41 
+´iv©e
+ 
+Sock‘
+ 
+	gsock‘
+ = 
+nuÎ
+;
+
+43 
+´iv©e
+ 
+IÅutSŒ—m
+ 
+	gi¡»am
+;
+
+45 
+´iv©e
+ 
+OuutSŒ—m
+ 
+	go¡»am
+;
+
+47 
+´iv©e
+ 
+Proxy
+ 
+	g´oxy
+ = Proxy.
+NO_PROXY
+;
+
+49 
+´iv©e
+ 
+Th»ad
+ 
+	gwr™eTh»ad
+;
+
+51 
+´iv©e
+ 
+D¿á
+ 
+	gd¿á
+;
+
+53 
+´iv©e
+ 
+	gM­
+<
+	gSŒšg
+,SŒšg> 
+	gh—d”s
+;
+
+55 
+´iv©e
+ 
+CouÁDownL©ch
+ 
+	gcÚÃùL©ch
+ = 
+Ãw
+ CountDownLatch( 1 );
+
+57 
+´iv©e
+ 
+CouÁDownL©ch
+ 
+	gşo£L©ch
+ = 
+Ãw
+ CountDownLatch( 1 );
+
+59 
+´iv©e
+ 
+	gcÚÃùTimeout
+ = 0;
+
+62 
+public
+ 
+WebSock‘Cl›Á
+Ğ
+URI
+ 
+£rv”URI
+ ) {
+
+63 
+this
+Ğ
+£rv”URI
+, 
+Ãw
+ 
+D¿á_17
+() );
+
+71 
+public
+ 
+WebSock‘Cl›Á
+Ğ
+URI
+ 
+£rv”Uri
+ , 
+D¿á
+ 
+d¿á
+ ) {
+
+72 
+this
+Ğ
+£rv”Uri
+, 
+d¿á
+, 
+nuÎ
+, 0 );
+
+75 
+public
+ 
+WebSock‘Cl›Á
+Ğ
+URI
+ 
+£rv”Uri
+ , 
+D¿á
+ 
+´ÙocŞD¿á
+ , 
+M­
+<
+SŒšg
+,SŒšg> 
+h‰pH—d”s
+ , 
+cÚÃùTimeout
+ ) {
+
+76 ifĞ
+	g£rv”Uri
+ =ğ
+nuÎ
+ ) {
+
+77 
+throw
+ 
+Ãw
+ 
+IÎeg®Argum’tExû±iÚ
+();
+
+78 } ifĞ
+	g´ÙocŞD¿á
+ =ğ
+nuÎ
+ ) {
+
+79 
+throw
+ 
+Ãw
+ 
+IÎeg®Argum’tExû±iÚ
+( "null‡s draft is…ermitted for `WebSocketServer` only!" );
+
+81 
+	gthis
+.
+	guri
+ = 
+£rv”Uri
+;
+
+82 
+	gthis
+.
+	gd¿á
+ = 
+´ÙocŞD¿á
+;
+
+83 
+	gthis
+.
+	gh—d”s
+ = 
+h‰pH—d”s
+;
+
+84 
+	gthis
+.
+	gcÚÃùTimeout
+ = 
+cÚÃùTimeout
+;
+
+85 
+	gthis
+.
+	g’gše
+ = 
+Ãw
+ 
+WebSock‘Im¶
+Ğ
+this
+, 
+´ÙocŞD¿á
+ );
+
+91 
+public
+ 
+URI
+ 
+g‘URI
+() {
+
+92  
+	guri
+;
+
+99 
+public
+ 
+D¿á
+ 
+g‘D¿á
+() {
+
+100  
+	gd¿á
+;
+
+106 
+public
+ 
+cÚÃù
+() {
+
+107 ifĞ
+	gwr™eTh»ad
+ !ğ
+nuÎ
+ )
+
+108 
+throw
+ 
+Ãw
+ 
+IÎeg®S‹Exû±iÚ
+( "WebSocketClient objects‡re‚ot„euseable" );
+
+109 
+	gwr™eTh»ad
+ = 
+Ãw
+ 
+Th»ad
+Ğ
+this
+ );
+
+110 
+	gwr™eTh»ad
+.
+¡¬t
+();
+
+117 
+public
+ 
+boŞ—n
+ 
+cÚÃùBlockšg
+(è
+throws
+ 
+	gIÁ”ru±edExû±iÚ
+ {
+
+118 
+cÚÃù
+();
+
+119 
+	gcÚÃùL©ch
+.
+awa™
+();
+
+120  
+	g’gše
+.
+isO³n
+();
+
+127 
+public
+ 
+şo£
+() {
+
+128 ifĞ
+	gwr™eTh»ad
+ !ğ
+nuÎ
+ ) {
+
+129 
+’gše
+.
+şo£
+Ğ
+Clo£F¿me
+.
+NORMAL
+ );
+
+133 
+public
+ 
+şo£Blockšg
+(è
+throws
+ 
+	gIÁ”ru±edExû±iÚ
+ {
+
+134 
+şo£
+();
+
+135 
+	gşo£L©ch
+.
+awa™
+();
+
+144 
+public
+ 
+£nd
+Ğ
+SŒšg
+ 
+‹xt
+ ) 
+throws
+ 
+	gNÙY‘CÚÃùedExû±iÚ
+ {
+
+145 
+	g’gše
+.
+£nd
+Ğ
+‹xt
+ );
+
+154 
+public
+ 
+£nd
+Ğ
+by‹
+[] 
+d©a
+ ) 
+throws
+ 
+	gNÙY‘CÚÃùedExû±iÚ
+ {
+
+155 
+	g’gše
+.
+£nd
+Ğ
+d©a
+ );
+
+164 
+public
+ 
+pšg
+Ğ
+SŒšg
+ 
+‹xt
+ ) 
+throws
+ 
+	gNÙY‘CÚÃùedExû±iÚ
+ {
+
+165 
+	g’gše
+.
+pšg
+Ğ
+‹xt
+ );
+
+168 
+public
+ 
+run
+() {
+
+169 
+	gŒy
+ {
+
+170 ifĞ
+	gsock‘
+ =ğ
+nuÎ
+ ) {
+
+171 
+sock‘
+ = 
+Ãw
+ 
+Sock‘
+Ğ
+´oxy
+ );
+
+172 } ifĞ
+	gsock‘
+.
+isClo£d
+() ) {
+
+173 
+throw
+ 
+Ãw
+ 
+IOExû±iÚ
+();
+
+175 ifĞ!
+	gsock‘
+.
+isBound
+() )
+
+176 
+	gsock‘
+.
+cÚÃù
+Ğ
+Ãw
+ 
+IÃtSock‘Add»ss
+Ğ
+uri
+.
+g‘Ho¡
+(), 
+g‘PÜt
+(è), 
+cÚÃùTimeout
+ );
+
+177 
+	gi¡»am
+ = 
+sock‘
+.
+g‘IÅutSŒ—m
+();
+
+178 
+	go¡»am
+ = 
+sock‘
+.
+g‘OuutSŒ—m
+();
+
+180 
+£ndHªdshake
+();
+
+181 } 
+ÿtch
+ ( 
+Exû±iÚ
+ 
+e
+ ) {
+
+182 
+ÚWebsock‘E¼Ü
+Ğ
+’gše
+, 
+e
+ );
+
+183 
+	g’gše
+.
+şo£CÚÃùiÚ
+Ğ
+Clo£F¿me
+.
+NEVER_CONNECTED
+, 
+e
+.
+g‘Mes§ge
+() );
+
+187 
+	gwr™eTh»ad
+ = 
+Ãw
+ 
+Th»ad
+ĞÃw 
+Websock‘Wr™eTh»ad
+() );
+
+188 
+	gwr™eTh»ad
+.
+¡¬t
+();
+
+190 
+	gby‹
+[] 
+	g¿wbufãr
+ = 
+Ãw
+ 
+by‹
+[ 
+WebSock‘Im¶
+.
+RCVBUF
+ ];
+
+191 
+	g»adBy‹s
+;
+
+193 
+	gŒy
+ {
+
+194  !
+isClo£d
+(è&& ( 
+	g»adBy‹s
+ = 
+i¡»am
+.
+»ad
+Ğ
+¿wbufãr
+ ) ) != -1 ) {
+
+195 
+’gše
+.
+decode
+Ğ
+By‹Bufãr
+.
+w¿p
+Ğ
+¿wbufãr
+, 0, 
+»adBy‹s
+ ) );
+
+197 
+	g’gše
+.
+eÙ
+();
+
+198 } 
+ÿtch
+ ( 
+IOExû±iÚ
+ 
+e
+ ) {
+
+199 
+	g’gše
+.
+eÙ
+();
+
+200 } 
+ÿtch
+ ( 
+RuÁimeExû±iÚ
+ 
+e
+ ) {
+
+202 
+ÚE¼Ü
+Ğ
+e
+ );
+
+203 
+	g’gše
+.
+şo£CÚÃùiÚ
+Ğ
+Clo£F¿me
+.
+ABNORMAL_CLOSE
+, 
+e
+.
+g‘Mes§ge
+() );
+
+205 
+as£¹
+ ( 
+sock‘
+.
+isClo£d
+() );
+
+207 
+´iv©e
+ 
+g‘PÜt
+() {
+
+208 
+	gpÜt
+ = 
+uri
+.
+g‘PÜt
+();
+
+209 ifĞ
+	gpÜt
+ == -1 ) {
+
+210 
+SŒšg
+ 
+scheme
+ = 
+uri
+.
+g‘Scheme
+();
+
+211 ifĞ
+	gscheme
+.
+equ®s
+( "wss" ) ) {
+
+212  
+	gWebSock‘
+.
+	gDEFAULT_WSS_PORT
+;
+
+213 } ifĞ
+	gscheme
+.
+equ®s
+( "ws" ) ) {
+
+214  
+	gWebSock‘
+.
+	gDEFAULT_PORT
+;
+
+216 
+throw
+ 
+Ãw
+ 
+RuÁimeExû±iÚ
+Ğ"unkÚow scheme" + 
+scheme
+ );
+
+219  
+	gpÜt
+;
+
+222 
+´iv©e
+ 
+£ndHªdshake
+(è
+throws
+ 
+	gInv®idHªdshakeExû±iÚ
+ {
+
+223 
+SŒšg
+ 
+	g·th
+;
+
+224 
+SŒšg
+ 
+	g·¹1
+ = 
+uri
+.
+g‘P©h
+();
+
+225 
+SŒšg
+ 
+	g·¹2
+ = 
+uri
+.
+g‘Qu”y
+();
+
+226 ifĞ
+	g·¹1
+ =ğ
+nuÎ
+ || 
+·¹1
+.
+Ëngth
+() == 0 )
+
+227 
+·th
+ = "/";
+
+229 
+	g·th
+ = 
+·¹1
+;
+
+230 ifĞ
+	g·¹2
+ !ğ
+nuÎ
+ )
+
+231 
+·th
+ +ğ"?" + 
+·¹2
+;
+
+232 
+	gpÜt
+ = 
+g‘PÜt
+();
+
+233 
+SŒšg
+ 
+	gho¡
+ = 
+uri
+.
+g‘Ho¡
+(è+ ( 
+pÜt
+ !ğ
+WebSock‘
+.
+DEFAULT_PORT
+ ? ":" +…ort : "" );
+
+235 
+HªdshakeIm¶1Cl›Á
+ 
+	ghªdshake
+ = 
+Ãw
+ HandshakeImpl1Client();
+
+236 
+	ghªdshake
+.
+£tResourûDesütÜ
+Ğ
+·th
+ );
+
+237 
+	ghªdshake
+.
+put
+Ğ"Ho¡", 
+ho¡
+ );
+
+238 ifĞ
+	gh—d”s
+ !ğ
+nuÎ
+ ) {
+
+239  
+M­
+.
+EÁry
+<
+SŒšg
+,SŒšg> 
+kv
+ : 
+h—d”s
+.
+’ŒyS‘
+() ) {
+
+240 
+hªdshake
+.
+put
+Ğ
+kv
+.
+g‘Key
+(), kv.
+g‘V®ue
+() );
+
+243 
+	g’gše
+.
+¡¬tHªdshake
+Ğ
+hªdshake
+ );
+
+249 
+public
+ 
+READYSTATE
+ 
+g‘R—dyS‹
+() {
+
+250  
+	g’gše
+.
+g‘R—dyS‹
+();
+
+256 @
+Ov”ride
+
+
+257 
+public
+ 
+fš®
+ 
+ÚWebsock‘Mes§ge
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+SŒšg
+ 
+mes§ge
+ ) {
+
+258 
+ÚMes§ge
+Ğ
+mes§ge
+ );
+
+261 @
+Ov”ride
+
+
+262 
+public
+ 
+fš®
+ 
+ÚWebsock‘Mes§ge
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+By‹Bufãr
+ 
+blob
+ ) {
+
+263 
+ÚMes§ge
+Ğ
+blob
+ );
+
+266 @
+Ov”ride
+
+
+267 
+public
+ 
+ÚWebsock‘Mes§geF¿gm’t
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+F¿med©a
+ 
+äame
+ ) {
+
+268 
+ÚF¿gm’t
+Ğ
+äame
+ );
+
+274 @
+Ov”ride
+
+
+275 
+public
+ 
+fš®
+ 
+ÚWebsock‘O³n
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+Hªdshaked©a
+ 
+hªdshake
+ ) {
+
+276 
+	gcÚÃùL©ch
+.
+couÁDown
+();
+
+277 
+ÚO³n
+Ğ(
+S”v”Hªdshake
+è
+hªdshake
+ );
+
+283 @
+Ov”ride
+
+
+284 
+public
+ 
+fš®
+ 
+ÚWebsock‘Clo£
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+code
+, 
+SŒšg
+ 
+»asÚ
+, 
+boŞ—n
+ 
+»mÙe
+ ) {
+
+285 
+	gcÚÃùL©ch
+.
+couÁDown
+();
+
+286 
+	gşo£L©ch
+.
+couÁDown
+();
+
+287 ifĞ
+	gwr™eTh»ad
+ !ğ
+nuÎ
+ )
+
+288 
+wr™eTh»ad
+.
+š‹¼u±
+();
+
+289 
+	gŒy
+ {
+
+290 ifĞ
+	gsock‘
+ !ğ
+nuÎ
+ )
+
+291 
+sock‘
+.
+şo£
+();
+
+292 } 
+ÿtch
+ ( 
+IOExû±iÚ
+ 
+e
+ ) {
+
+293 
+ÚWebsock‘E¼Ü
+Ğ
+this
+, 
+e
+ );
+
+295 
+ÚClo£
+Ğ
+code
+, 
+»asÚ
+, 
+»mÙe
+ );
+
+301 @
+Ov”ride
+
+
+302 
+public
+ 
+fš®
+ 
+ÚWebsock‘E¼Ü
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+Exû±iÚ
+ 
+ex
+ ) {
+
+303 
+ÚE¼Ü
+Ğ
+ex
+ );
+
+306 @
+Ov”ride
+
+
+307 
+public
+ 
+fš®
+ 
+ÚWr™eDemªd
+Ğ
+WebSock‘
+ 
+cÚn
+ ) {
+
+311 @
+Ov”ride
+
+
+312 
+public
+ 
+ÚWebsock‘Clo£In™Ÿ‹d
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+code
+, 
+SŒšg
+ 
+»asÚ
+ ) {
+
+313 
+ÚClo£In™Ÿ‹d
+Ğ
+code
+, 
+»asÚ
+ );
+
+316 @
+Ov”ride
+
+
+317 
+public
+ 
+ÚWebsock‘Closšg
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+code
+, 
+SŒšg
+ 
+»asÚ
+, 
+boŞ—n
+ 
+»mÙe
+ ) {
+
+318 
+ÚClosšg
+Ğ
+code
+, 
+»asÚ
+, 
+»mÙe
+ );
+
+321 
+public
+ 
+ÚClo£In™Ÿ‹d
+Ğ
+code
+, 
+SŒšg
+ 
+»asÚ
+ ) {
+
+324 
+public
+ 
+ÚClosšg
+Ğ
+code
+, 
+SŒšg
+ 
+»asÚ
+, 
+boŞ—n
+ 
+»mÙe
+ ) {
+
+327 
+public
+ 
+WebSock‘
+ 
+g‘CÚÃùiÚ
+() {
+
+328  
+	g’gše
+;
+
+331 @
+Ov”ride
+
+
+332 
+public
+ 
+IÃtSock‘Add»ss
+ 
+g‘LoÿlSock‘Add»ss
+Ğ
+WebSock‘
+ 
+cÚn
+ ) {
+
+333 ifĞ
+	gsock‘
+ !ğ
+nuÎ
+ )
+
+334  (
+IÃtSock‘Add»ss
+è
+sock‘
+.
+g‘LoÿlSock‘Add»ss
+();
+
+335  
+	gnuÎ
+;
+
+338 @
+Ov”ride
+
+
+339 
+public
+ 
+IÃtSock‘Add»ss
+ 
+g‘RemÙeSock‘Add»ss
+Ğ
+WebSock‘
+ 
+cÚn
+ ) {
+
+340 ifĞ
+	gsock‘
+ !ğ
+nuÎ
+ )
+
+341  (
+IÃtSock‘Add»ss
+è
+sock‘
+.
+g‘LoÿlSock‘Add»ss
+();
+
+342  
+	gnuÎ
+;
+
+346 
+public
+ 
+ab¡¿ù
+ 
+ÚO³n
+Ğ
+S”v”Hªdshake
+ 
+hªdshaked©a
+ );
+
+347 
+public
+ 
+ab¡¿ù
+ 
+ÚMes§ge
+Ğ
+SŒšg
+ 
+mes§ge
+ );
+
+348 
+public
+ 
+ab¡¿ù
+ 
+ÚClo£
+Ğ
+code
+, 
+SŒšg
+ 
+»asÚ
+, 
+boŞ—n
+ 
+»mÙe
+ );
+
+349 
+public
+ 
+ab¡¿ù
+ 
+ÚE¼Ü
+Ğ
+Exû±iÚ
+ 
+ex
+ );
+
+350 
+public
+ 
+ÚMes§ge
+Ğ
+By‹Bufãr
+ 
+by‹s
+ ) {
+
+352 
+public
+ 
+ÚF¿gm’t
+Ğ
+F¿med©a
+ 
+äame
+ ) {
+
+355 
+´iv©e
+ cÏs 
+	cWebsock‘Wr™eTh»ad
+ 
+im¶em’ts
+ 
+	gRuÂabË
+ {
+
+356 @
+Ov”ride
+
+
+357 
+public
+ 
+run
+() {
+
+358 
+	gTh»ad
+.
+cu¼’tTh»ad
+().
+£tName
+( "WebsocketWriteThread" );
+
+359 
+	gŒy
+ {
+
+360  !
+	gTh»ad
+.
+š‹¼u±ed
+() ) {
+
+361 
+By‹Bufãr
+ 
+	gbufãr
+ = 
+’gše
+.
+outQueue
+.
+ke
+();
+
+362 
+	go¡»am
+.
+wr™e
+Ğ
+bufãr
+.
+¬¿y
+(), 0, bufãr.
+lim™
+() );
+
+363 
+	go¡»am
+.
+æush
+();
+
+365 } 
+ÿtch
+ ( 
+IOExû±iÚ
+ 
+e
+ ) {
+
+366 
+	g’gše
+.
+eÙ
+();
+
+367 } 
+ÿtch
+ ( 
+IÁ”ru±edExû±iÚ
+ 
+e
+ ) {
+
+373 
+public
+ 
+	$£tProxy
+Ğ
+Proxy
+ 
+´oxy
+ ) {
+
+374 ifĞ
+´oxy
+ =ğ
+nuÎ
+ )
+
+375 
+throw
+ 
+Ãw
+ 
+	`IÎeg®Argum’tExû±iÚ
+();
+
+376 
+this
+.
+´oxy
+ =…roxy;
+
+377 
+	}
+}
+
+384 
+public
+ 
+	$£tSock‘
+Ğ
+Sock‘
+ 
+sock‘
+ ) {
+
+385 ifĞ
+this
+.
+sock‘
+ !ğ
+nuÎ
+ ) {
+
+386 
+throw
+ 
+Ãw
+ 
+	`IÎeg®S‹Exû±iÚ
+( "socket has‡lready been set" );
+
+388 
+this
+.
+sock‘
+ = socket;
+
+389 
+	}
+}
+
+391 @
+Ov”ride
+
+
+392 
+public
+ 
+	$£ndF¿gm’‹dF¿me
+Ğ
+Opcode
+ 
+İ
+, 
+By‹Bufãr
+ 
+bufãr
+, 
+boŞ—n
+ 
+fš
+ ) {
+
+393 
+’gše
+.
+	`£ndF¿gm’‹dF¿me
+Ğ
+İ
+, 
+bufãr
+, 
+fš
+ );
+
+394 
+	}
+}
+
+396 @
+Ov”ride
+
+
+397 
+public
+ 
+boŞ—n
+ 
+	$isO³n
+() {
+
+398  
+’gše
+.
+	`isO³n
+();
+
+399 
+	}
+}
+
+401 @
+Ov”ride
+
+
+402 
+public
+ 
+boŞ—n
+ 
+	$isFlushAndClo£
+() {
+
+403  
+’gše
+.
+	`isFlushAndClo£
+();
+
+404 
+	}
+}
+
+406 @
+Ov”ride
+
+
+407 
+public
+ 
+boŞ—n
+ 
+	$isClo£d
+() {
+
+408  
+’gše
+.
+	`isClo£d
+();
+
+409 
+	}
+}
+
+411 @
+Ov”ride
+
+
+412 
+public
+ 
+boŞ—n
+ 
+	$isClosšg
+() {
+
+413  
+’gše
+.
+	`isClosšg
+();
+
+414 
+	}
+}
+
+416 @
+Ov”ride
+
+
+417 
+public
+ 
+boŞ—n
+ 
+	$isCÚÃùšg
+() {
+
+418  
+’gše
+.
+	`isCÚÃùšg
+();
+
+419 
+	}
+}
+
+421 @
+Ov”ride
+
+
+422 
+public
+ 
+boŞ—n
+ 
+	$hasBufã»dD©a
+() {
+
+423  
+’gše
+.
+	`hasBufã»dD©a
+();
+
+424 
+	}
+}
+
+426 @
+Ov”ride
+
+
+427 
+public
+ 
+	$şo£
+Ğ
+code
+ ) {
+
+428 
+’gše
+.
+	`şo£
+();
+
+429 
+	}
+}
+
+431 @
+Ov”ride
+
+
+432 
+public
+ 
+	$şo£
+Ğ
+code
+, 
+SŒšg
+ 
+mes§ge
+ ) {
+
+433 
+’gše
+.
+	`şo£
+Ğ
+code
+, 
+mes§ge
+ );
+
+434 
+	}
+}
+
+436 @
+Ov”ride
+
+
+437 
+public
+ 
+	$şo£CÚÃùiÚ
+Ğ
+code
+, 
+SŒšg
+ 
+mes§ge
+ ) {
+
+438 
+’gše
+.
+	`şo£CÚÃùiÚ
+Ğ
+code
+, 
+mes§ge
+ );
+
+439 
+	}
+}
+
+441 @
+Ov”ride
+
+
+442 
+public
+ 
+	$£nd
+Ğ
+By‹Bufãr
+ 
+by‹s
+ ) 
+throws
+ 
+IÎeg®Argum’tExû±iÚ
+ , 
+NÙY‘CÚÃùedExû±iÚ
+ {
+
+443 
+’gše
+.
+	`£nd
+Ğ
+by‹s
+ );
+
+444 
+	}
+}
+
+446 @
+Ov”ride
+
+
+447 
+public
+ 
+	$£ndF¿me
+Ğ
+F¿med©a
+ 
+äamed©a
+ ) {
+
+448 
+’gše
+.
+	`£ndF¿me
+Ğ
+äamed©a
+ );
+
+449 
+	}
+}
+
+451 @
+Ov”ride
+
+
+452 
+public
+ 
+IÃtSock‘Add»ss
+ 
+	$g‘LoÿlSock‘Add»ss
+() {
+
+453  
+’gše
+.
+	`g‘LoÿlSock‘Add»ss
+();
+
+454 
+	}
+}
+
+455 @
+Ov”ride
+
+
+456 
+public
+ 
+IÃtSock‘Add»ss
+ 
+	$g‘RemÙeSock‘Add»ss
+() {
+
+457  
+’gše
+.
+	`g‘RemÙeSock‘Add»ss
+();
+
+458 
+	}
+}
+
+460 @
+Ov”ride
+
+
+461 
+public
+ 
+SŒšg
+ 
+	$g‘ResourûDesütÜ
+() {
+
+462  
+uri
+.
+	`g‘P©h
+();
+
+463 
+	}
+}
+
+	@src/main/java/org/java_websocket/drafts/Draft.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gd¿ás
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gBy‹Bufãr
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gCŞËùiÚs
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gI‹¿tÜ
+;
+
+6 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+7 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLoÿË
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gWebSock‘
+.
+	gRŞe
+;
+
+10 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gIncom¶‘eHªdshakeExû±iÚ
+;
+
+11 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idD©aExû±iÚ
+;
+
+12 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idHªdshakeExû±iÚ
+;
+
+13 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gLim™Exed“dExû±iÚ
+;
+
+14 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gClo£F¿me
+;
+
+15 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿meBud”
+;
+
+16 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿med©a
+;
+
+17 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿med©a
+.
+	gOpcode
+;
+
+18 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿med©aIm¶1
+;
+
+19 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gCl›ÁHªdshake
+;
+
+20 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gCl›ÁHªdshakeBud”
+;
+
+21 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gHªdshakeBud”
+;
+
+22 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gHªdshakeIm¶1Cl›Á
+;
+
+23 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gHªdshakeIm¶1S”v”
+;
+
+24 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gHªdshaked©a
+;
+
+25 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gS”v”Hªdshake
+;
+
+26 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gS”v”HªdshakeBud”
+;
+
+27 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gut
+.
+	gCh¬£tfunùiÚs
+;
+
+32 
+public
+ 
+ab¡¿ù
+ cÏs 
+	cD¿á
+ {
+
+34 
+public
+ 
+	eHªdshakeS‹
+ {
+
+36 
+	mMATCHED
+,
+
+38 
+	mNOT_MATCHED
+
+
+40 
+public
+ 
+	eClo£HªdshakeTy³
+ {
+
+41 
+	gNONE
+, 
+	gONEWAY
+, 
+	gTWOWAY
+
+
+44 
+public
+ 
+	gMAX_FAME_SIZE
+ = 1000 * 1;
+
+45 
+public
+ 
+	gINITIAL_FAMESIZE
+ = 64;
+
+47 
+public
+ 
+fš®
+ 
+	gby‹
+[] 
+	gFLASH_POLICY_REQUEST
+ = 
+Ch¬£tfunùiÚs
+.
+utf8By‹s
+( "<policy-file-request/>\0" );
+
+50 
+´Ùeùed
+ 
+RŞe
+ 
+	grŞe
+ = 
+nuÎ
+;
+
+52 
+´Ùeùed
+ 
+Opcode
+ 
+	gcÚtšuousF¿meTy³
+ = 
+nuÎ
+;
+
+54 
+public
+ 
+By‹Bufãr
+ 
+	$»adLše
+Ğ
+By‹Bufãr
+ 
+buf
+ ) {
+
+55 
+By‹Bufãr
+ 
+sbuf
+ = By‹Bufãr.
+	`®loÿ‹
+Ğ
+buf
+.
+	`»maššg
+() );
+
+56 
+by‹
+ 
+´ev
+ = '0';
+
+57 
+by‹
+ 
+cur
+ = '0';
+
+58  
+buf
+.
+	`hasRemaššg
+() ) {
+
+59 
+´ev
+ = 
+cur
+;
+
+60 
+cur
+ = 
+buf
+.
+	`g‘
+();
+
+61 
+sbuf
+.
+	`put
+Ğ
+cur
+ );
+
+62 ifĞ
+´ev
+ =ğ(
+by‹
+è'\r' && 
+cur
+ == (byte) '\n' ) {
+
+63 
+sbuf
+.
+	`lim™
+Ğsbuf.
+	`pos™iÚ
+() - 2 );
+
+64 
+sbuf
+.
+	`pos™iÚ
+( 0 );
+
+65  
+sbuf
+;
+
+70 
+buf
+.
+	`pos™iÚ
+Ğbuf.pos™iÚ(è- 
+sbuf
+.position() );
+
+71  
+nuÎ
+;
+
+72 
+	}
+}
+
+74 
+public
+ 
+SŒšg
+ 
+	$»adSŒšgLše
+Ğ
+By‹Bufãr
+ 
+buf
+ ) {
+
+75 
+By‹Bufãr
+ 
+b
+ = 
+	`»adLše
+Ğ
+buf
+ );
+
+76  
+b
+ =ğ
+nuÎ
+ ?‚uÎ : 
+Ch¬£tfunùiÚs
+.
+	`¡ršgAscii
+Ğb.
+	`¬¿y
+(), 0, b.
+	`lim™
+() );
+
+77 
+	}
+}
+
+79 
+public
+ 
+HªdshakeBud”
+ 
+	$Œª¦©eHªdshakeH‰p
+Ğ
+By‹Bufãr
+ 
+buf
+, 
+RŞe
+ 
+rŞe
+ ) 
+throws
+ 
+Inv®idHªdshakeExû±iÚ
+ , 
+Incom¶‘eHªdshakeExû±iÚ
+ {
+
+80 
+HªdshakeBud”
+ 
+hªdshake
+;
+
+82 
+SŒšg
+ 
+lše
+ = 
+	`»adSŒšgLše
+Ğ
+buf
+ );
+
+83 ifĞ
+lše
+ =ğ
+nuÎ
+ )
+
+84 
+throw
+ 
+Ãw
+ 
+	`Incom¶‘eHªdshakeExû±iÚ
+Ğ
+buf
+.
+	`ÿ·c™y
+() + 128 );
+
+86 
+SŒšg
+[] 
+fœ¡LšeTok’s
+ = 
+lše
+.
+	`¥l™
+( " ", 3 );
+
+87 ifĞ
+fœ¡LšeTok’s
+.
+Ëngth
+ != 3 ) {
+
+88 
+throw
+ 
+Ãw
+ 
+	`Inv®idHªdshakeExû±iÚ
+();
+
+91 ifĞ
+rŞe
+ =ğ
+RŞe
+.
+CLIENT
+ ) {
+
+93 
+hªdshake
+ = 
+Ãw
+ 
+	`HªdshakeIm¶1S”v”
+();
+
+94 
+S”v”HªdshakeBud”
+ 
+£rv”hªdshake
+ = (S”v”HªdshakeBud”è
+hªdshake
+;
+
+95 
+£rv”hªdshake
+.
+	`£tH‰pStus
+Ğ
+ShÜt
+.
+	`·r£ShÜt
+Ğ
+fœ¡LšeTok’s
+[ 1 ] ) );
+
+96 
+£rv”hªdshake
+.
+	`£tH‰pStusMes§ge
+Ğ
+fœ¡LšeTok’s
+[ 2 ] );
+
+99 
+Cl›ÁHªdshakeBud”
+ 
+ş›Áhªdshake
+ = 
+Ãw
+ 
+	`HªdshakeIm¶1Cl›Á
+();
+
+100 
+ş›Áhªdshake
+.
+	`£tResourûDesütÜ
+Ğ
+fœ¡LšeTok’s
+[ 1 ] );
+
+101 
+hªdshake
+ = 
+ş›Áhªdshake
+;
+
+104 
+lše
+ = 
+	`»adSŒšgLše
+Ğ
+buf
+ );
+
+105  
+lše
+ !ğ
+nuÎ
+ &&†še.
+	`Ëngth
+() > 0 ) {
+
+106 
+SŒšg
+[] 
+·œ
+ = 
+lše
+.
+	`¥l™
+( ":", 2 );
+
+107 ifĞ
+·œ
+.
+Ëngth
+ != 2 )
+
+108 
+throw
+ 
+Ãw
+ 
+	`Inv®idHªdshakeExû±iÚ
+( "not‡n http header" );
+
+109 
+hªdshake
+.
+	`put
+Ğ
+·œ
+[ 0 ],…aœ[ 1 ].
+	`»¶aûFœ¡
+( "^ +", "" ) );
+
+110 
+lše
+ = 
+	`»adSŒšgLše
+Ğ
+buf
+ );
+
+112 ifĞ
+lše
+ =ğ
+nuÎ
+ )
+
+113 
+throw
+ 
+Ãw
+ 
+	`Incom¶‘eHªdshakeExû±iÚ
+();
+
+114  
+hªdshake
+;
+
+115 
+	}
+}
+
+117 
+public
+ 
+ab¡¿ù
+ 
+HªdshakeS‹
+ 
+	$acû±HªdshakeAsCl›Á
+Ğ
+Cl›ÁHªdshake
+ 
+»que¡
+, 
+S”v”Hªdshake
+ 
+»¥Ú£
+ ) 
+throws
+ 
+Inv®idHªdshakeExû±iÚ
+;
+
+119 
+public
+ 
+ab¡¿ù
+ 
+HªdshakeS‹
+ 
+	$acû±HªdshakeAsS”v”
+Ğ
+Cl›ÁHªdshake
+ 
+hªdshaked©a
+ ) 
+throws
+ 
+Inv®idHªdshakeExû±iÚ
+;
+
+121 
+´Ùeùed
+ 
+boŞ—n
+ 
+	$basicAcû±
+Ğ
+Hªdshaked©a
+ 
+hªdshaked©a
+ ) {
+
+122  
+hªdshaked©a
+.
+	`g‘F›ldV®ue
+Ğ"Upg¿de" ).
+	`equ®sIgnÜeCa£
+Ğ"websock‘" ) && hªdshaked©a.g‘F›ldV®ueĞ"CÚÃùiÚ" ).
+	`toLow”Ca£
+Ğ
+LoÿË
+.
+ENGLISH
+ ).
+	`cÚšs
+( "upgrade" );
+
+123 
+	}
+}
+
+125 
+public
+ 
+ab¡¿ù
+ 
+By‹Bufãr
+ 
+ü—‹Bš¬yF¿me
+Ğ
+F¿med©a
+ 
+äamed©a
+ );
+
+127 
+public
+ 
+ab¡¿ù
+ 
+	gLi¡
+<
+	gF¿med©a
+> 
+ü—‹F¿mes
+Ğ
+By‹Bufãr
+ 
+bš¬y
+, 
+boŞ—n
+ 
+mask
+ );
+
+129 
+public
+ 
+ab¡¿ù
+ 
+	gLi¡
+<
+	gF¿med©a
+> 
+ü—‹F¿mes
+Ğ
+SŒšg
+ 
+‹xt
+, 
+boŞ—n
+ 
+mask
+ );
+
+131 
+public
+ 
+ab¡¿ù
+ 
+	gLi¡
+<
+	gF¿med©a
+> 
+ü—‹PšgF¿mes
+Ğ
+SŒšg
+ 
+‹xt
+, 
+boŞ—n
+ 
+mask
+ );
+
+133 
+public
+ 
+	gLi¡
+<
+	gF¿med©a
+> 
+	$cÚtšuousF¿me
+Ğ
+Opcode
+ 
+İ
+, 
+By‹Bufãr
+ 
+bufãr
+, 
+boŞ—n
+ 
+fš
+ ) {
+
+134 ifĞ
+İ
+ !ğ
+Opcode
+.
+BINARY
+ && o°!ğOpcode.
+TEXT
+ && op != Opcode.TEXT ) {
+
+135 
+throw
+ 
+Ãw
+ 
+	`IÎeg®Argum’tExû±iÚ
+( "Only Opcode.BINARY or Opcode.TEXT‡re‡llowed" );
+
+138 ifĞ
+cÚtšuousF¿meTy³
+ !ğ
+nuÎ
+ ) {
+
+139 
+cÚtšuousF¿meTy³
+ = 
+Opcode
+.
+CONTINUOUS
+;
+
+141 
+cÚtšuousF¿meTy³
+ = 
+İ
+;
+
+144 
+F¿meBud”
+ 
+bui
+ = 
+Ãw
+ 
+	`F¿med©aIm¶1
+Ğ
+cÚtšuousF¿meTy³
+ );
+
+145 
+Œy
+ {
+
+146 
+bui
+.
+	`£tPaylßd
+Ğ
+bufãr
+ );
+
+147 } 
+	`ÿtch
+ ( 
+Inv®idD©aExû±iÚ
+ 
+e
+ ) {
+
+148 
+throw
+ 
+Ãw
+ 
+	`RuÁimeExû±iÚ
+Ğ
+e
+ );
+
+150 
+bui
+.
+	`£tFš
+Ğ
+fš
+ );
+
+151 ifĞ
+fš
+ ) {
+
+152 
+cÚtšuousF¿meTy³
+ = 
+nuÎ
+;
+
+154 
+cÚtšuousF¿meTy³
+ = 
+İ
+;
+
+156  
+CŞËùiÚs
+.
+	`sšgËtÚLi¡
+Ğ(
+F¿med©a
+è
+bui
+ );
+
+157 
+	}
+}
+
+159 
+public
+ 
+ab¡¿ù
+ 
+»£t
+();
+
+161 
+public
+ 
+	gLi¡
+<
+	gBy‹Bufãr
+> 
+	$ü—‹Hªdshake
+Ğ
+Hªdshaked©a
+ 
+hªdshaked©a
+, 
+RŞe
+ 
+owÄŞe
+ ) {
+
+162  
+	`ü—‹Hªdshake
+Ğ
+hªdshaked©a
+, 
+owÄŞe
+, 
+Œue
+ );
+
+163 
+	}
+}
+
+165 
+public
+ 
+	gLi¡
+<
+	gBy‹Bufãr
+> 
+	$ü—‹Hªdshake
+Ğ
+Hªdshaked©a
+ 
+hªdshaked©a
+, 
+RŞe
+ 
+owÄŞe
+, 
+boŞ—n
+ 
+w™hcÚ‹Á
+ ) {
+
+166 
+SŒšgBud”
+ 
+bui
+ = 
+Ãw
+ 
+	`SŒšgBud”
+( 100 );
+
+167 ifĞ
+hªdshaked©a
+ 
+š¡ªûof
+ 
+Cl›ÁHªdshake
+ ) {
+
+168 
+bui
+.
+	`­³nd
+( "GET " );
+
+169 
+bui
+.
+	`­³nd
+ĞĞ(
+Cl›ÁHªdshake
+è
+hªdshaked©a
+ ).
+	`g‘ResourûDesütÜ
+() );
+
+170 
+bui
+.
+	`­³nd
+( " HTTP/1.1" );
+
+171 } ifĞ
+hªdshaked©a
+ 
+š¡ªûof
+ 
+S”v”Hªdshake
+ ) {
+
+172 
+bui
+.
+	`­³nd
+Ğ"HTTP/1.1 101 " + ( (
+S”v”Hªdshake
+è
+hªdshaked©a
+ ).
+	`g‘H‰pStusMes§ge
+() );
+
+174 
+throw
+ 
+Ãw
+ 
+	`RuÁimeExû±iÚ
+( "unknow„ole" );
+
+176 
+bui
+.
+	`­³nd
+( "\r\n" );
+
+177 
+I‹¿tÜ
+<
+SŒšg
+> 
+™
+ = 
+hªdshaked©a
+.
+	`™”©eH‰pF›lds
+();
+
+178  
+™
+.
+	`hasNext
+() ) {
+
+179 
+SŒšg
+ 
+f›ldÇme
+ = 
+™
+.
+	`Ãxt
+();
+
+180 
+SŒšg
+ 
+f›ldv®ue
+ = 
+hªdshaked©a
+.
+	`g‘F›ldV®ue
+Ğ
+f›ldÇme
+ );
+
+181 
+bui
+.
+	`­³nd
+Ğ
+f›ldÇme
+ );
+
+182 
+bui
+.
+	`­³nd
+( ": " );
+
+183 
+bui
+.
+	`­³nd
+Ğ
+f›ldv®ue
+ );
+
+184 
+bui
+.
+	`­³nd
+( "\r\n" );
+
+186 
+bui
+.
+	`­³nd
+( "\r\n" );
+
+187 
+by‹
+[] 
+h‰ph—d”
+ = 
+Ch¬£tfunùiÚs
+.
+	`asciiBy‹s
+Ğ
+bui
+.
+	`toSŒšg
+() );
+
+189 
+by‹
+[] 
+cÚ‹Á
+ = 
+w™hcÚ‹Á
+ ? 
+hªdshaked©a
+.
+	`g‘CÚ‹Á
+(è: 
+nuÎ
+;
+
+190 
+By‹Bufãr
+ 
+by‹bufãr
+ = By‹Bufãr.
+	`®loÿ‹
+ĞĞ
+cÚ‹Á
+ =ğ
+nuÎ
+ ? 0 : cÚ‹Á.
+Ëngth
+ ) + 
+h‰ph—d”
+.length );
+
+191 
+by‹bufãr
+.
+	`put
+Ğ
+h‰ph—d”
+ );
+
+192 ifĞ
+cÚ‹Á
+ !ğ
+nuÎ
+ )
+
+193 
+by‹bufãr
+.
+	`put
+Ğ
+cÚ‹Á
+ );
+
+194 
+by‹bufãr
+.
+	`æ
+();
+
+195  
+CŞËùiÚs
+.
+	`sšgËtÚLi¡
+Ğ
+by‹bufãr
+ );
+
+196 
+	}
+}
+
+198 
+public
+ 
+ab¡¿ù
+ 
+Cl›ÁHªdshakeBud”
+ 
+	$po¡ProûssHªdshakeReque¡AsCl›Á
+Ğ
+Cl›ÁHªdshakeBud”
+ 
+»que¡
+ ) 
+throws
+ 
+Inv®idHªdshakeExû±iÚ
+;
+
+200 
+public
+ 
+ab¡¿ù
+ 
+HªdshakeBud”
+ 
+	$po¡ProûssHªdshakeRe¥Ú£AsS”v”
+Ğ
+Cl›ÁHªdshake
+ 
+»que¡
+, 
+S”v”HªdshakeBud”
+ 
+»¥Ú£
+ ) 
+throws
+ 
+Inv®idHªdshakeExû±iÚ
+;
+
+202 
+public
+ 
+ab¡¿ù
+ 
+Li¡
+<
+F¿med©a
+> 
+	$Œª¦©eF¿me
+Ğ
+By‹Bufãr
+ 
+bufãr
+ ) 
+throws
+ 
+Inv®idD©aExû±iÚ
+;
+
+204 
+public
+ 
+ab¡¿ù
+ 
+Clo£HªdshakeTy³
+ 
+	`g‘Clo£HªdshakeTy³
+();
+
+210 
+public
+ 
+ab¡¿ù
+ 
+D¿á
+ 
+	`cİyIn¡ªû
+();
+
+212 
+public
+ 
+Hªdshaked©a
+ 
+	$Œª¦©eHªdshake
+Ğ
+By‹Bufãr
+ 
+buf
+ ) 
+throws
+ 
+Inv®idHªdshakeExû±iÚ
+ {
+
+213  
+	`Œª¦©eHªdshakeH‰p
+Ğ
+buf
+, 
+rŞe
+ );
+
+214 
+	}
+}
+
+216 
+public
+ 
+	$checkAÎoc
+Ğ
+by‹couÁ
+ ) 
+throws
+ 
+Lim™Exed“dExû±iÚ
+ , 
+Inv®idD©aExû±iÚ
+ {
+
+217 ifĞ
+by‹couÁ
+ < 0 )
+
+218 
+throw
+ 
+Ãw
+ 
+	`Inv®idD©aExû±iÚ
+Ğ
+Clo£F¿me
+.
+PROTOCOL_ERROR
+, "Negative count" );
+
+219  
+by‹couÁ
+;
+
+220 
+	}
+}
+
+222 
+public
+ 
+	$£tP¬£Mode
+Ğ
+RŞe
+ 
+rŞe
+ ) {
+
+223 
+this
+.
+rŞe
+ =„ole;
+
+224 
+	}
+}
+
+226 
+public
+ 
+RŞe
+ 
+	$g‘RŞe
+() {
+
+227  
+rŞe
+;
+
+228 
+	}
+}
+
+	@src/main/java/org/java_websocket/drafts/Draft_10.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gd¿ás
+;
+
+2 
+impÜt
+ 
+	gjava
+.
+	gm©h
+.
+	gBigIÁeg”
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gBy‹Bufãr
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	g£cur™y
+.
+	gMes§geDige¡
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	g£cur™y
+.
+	gNoSuchAlgÜ™hmExû±iÚ
+;
+
+6 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gCŞËùiÚs
+;
+
+7 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLškedLi¡
+;
+
+8 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+9 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gRªdom
+;
+
+11 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gWebSock‘
+.
+	gRŞe
+;
+
+12 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idD©aExû±iÚ
+;
+
+13 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idF¿meExû±iÚ
+;
+
+14 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idHªdshakeExû±iÚ
+;
+
+15 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gLim™Exed“dExû±iÚ
+;
+
+16 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gNÙS’dabËExû±iÚ
+;
+
+17 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gClo£F¿meBud”
+;
+
+18 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿meBud”
+;
+
+19 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿med©a
+;
+
+20 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿med©a
+.
+	gOpcode
+;
+
+21 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿med©aIm¶1
+;
+
+22 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gCl›ÁHªdshake
+;
+
+23 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gCl›ÁHªdshakeBud”
+;
+
+24 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gHªdshakeBud”
+;
+
+25 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gHªdshaked©a
+;
+
+26 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gS”v”Hªdshake
+;
+
+27 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gS”v”HªdshakeBud”
+;
+
+28 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gut
+.
+	gBa£64
+;
+
+29 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gut
+.
+	gCh¬£tfunùiÚs
+;
+
+31 
+public
+ cÏs 
+	cD¿á_10
+ 
+ex‹nds
+ 
+	mD¿á
+ {
+
+33 
+´iv©e
+ cÏs 
+	cIncom¶‘eExû±iÚ
+ 
+ex‹nds
+ 
+	mThrowabË
+ {
+
+38 
+´iv©e
+ 
+fš®
+ 
+	m£rŸlV”siÚUID
+ = 7330519489840500997L;
+
+40 
+´iv©e
+ 
+	m´eã»dsize
+;
+
+41 
+public
+ 
+Incom¶‘eExû±iÚ
+Ğ
+´eã»dsize
+ ) {
+
+42 
+	mthis
+.
+	m´eã»dsize
+ = 
+´eã»dsize
+;
+
+44 
+public
+ 
+g‘P»ã»dSize
+() {
+
+45  
+	m´eã»dsize
+;
+
+49 
+public
+ 
+	$»adV”siÚ
+Ğ
+Hªdshaked©a
+ 
+hªdshaked©a
+ ) {
+
+50 
+SŒšg
+ 
+v”s
+ = 
+hªdshaked©a
+.
+	`g‘F›ldV®ue
+( "Sec-WebSocket-Version" );
+
+51 ifĞ
+v”s
+.
+	`Ëngth
+() > 0 ) {
+
+52 
+v
+;
+
+53 
+Œy
+ {
+
+54 
+v
+ = 
+Ãw
+ 
+	`IÁeg”
+Ğ
+v”s
+.
+	`Œim
+() );
+
+55  
+v
+;
+
+56 } 
+	`ÿtch
+ ( 
+Numb”FÜm©Exû±iÚ
+ 
+e
+ ) {
+
+61 
+	}
+}
+
+63 
+´iv©e
+ 
+By‹Bufãr
+ 
+	gšcom¶‘eäame
+;
+
+64 
+´iv©e
+ 
+F¿med©a
+ 
+	gäagm’‹däame
+ = 
+nuÎ
+;
+
+66 
+´iv©e
+ 
+fš®
+ 
+Rªdom
+ 
+	g»u£abËRªdom
+ = 
+Ãw
+ Random();
+
+68 @
+Ov”ride
+
+
+69 
+public
+ 
+HªdshakeS‹
+ 
+	$acû±HªdshakeAsCl›Á
+Ğ
+Cl›ÁHªdshake
+ 
+»que¡
+, 
+S”v”Hªdshake
+ 
+»¥Ú£
+ ) 
+throws
+ 
+Inv®idHªdshakeExû±iÚ
+ {
+
+70 ifĞ!
+»que¡
+.
+	`hasF›ldV®ue
+Ğ"Sec-WebSock‘-Key" ) || !
+»¥Ú£
+.hasFieldValue( "Sec-WebSocket-Accept" ) )
+
+71  
+HªdshakeS‹
+.
+NOT_MATCHED
+;
+
+73 
+SŒšg
+ 
+£ckey_ªsw”e
+ = 
+»¥Ú£
+.
+	`g‘F›ldV®ue
+( "Sec-WebSocket-Accept" );
+
+74 
+SŒšg
+ 
+£ckey_ch®Ënge
+ = 
+»que¡
+.
+	`g‘F›ldV®ue
+( "Sec-WebSocket-Key" );
+
+75 
+£ckey_ch®Ënge
+ = 
+	`g’”©eFš®Key
+( seckey_challenge );
+
+77 ifĞ
+£ckey_ch®Ënge
+.
+	`equ®s
+Ğ
+£ckey_ªsw”e
+ ) )
+
+78  
+HªdshakeS‹
+.
+MATCHED
+;
+
+79  
+HªdshakeS‹
+.
+NOT_MATCHED
+;
+
+80 
+	}
+}
+
+82 @
+Ov”ride
+
+
+83 
+public
+ 
+HªdshakeS‹
+ 
+	$acû±HªdshakeAsS”v”
+Ğ
+Cl›ÁHªdshake
+ 
+hªdshaked©a
+ ) 
+throws
+ 
+Inv®idHªdshakeExû±iÚ
+ {
+
+85 
+v
+ = 
+	`»adV”siÚ
+Ğ
+hªdshaked©a
+ );
+
+86 ifĞ
+v
+ == 7 || v == 8 )
+
+87  
+	`basicAcû±
+Ğ
+hªdshaked©a
+ ) ? 
+HªdshakeS‹
+.
+MATCHED
+ : HªdshakeS‹.
+NOT_MATCHED
+;
+
+88  
+HªdshakeS‹
+.
+NOT_MATCHED
+;
+
+89 
+	}
+}
+
+91 @
+Ov”ride
+
+
+92 
+public
+ 
+By‹Bufãr
+ 
+	$ü—‹Bš¬yF¿me
+Ğ
+F¿med©a
+ 
+äamed©a
+ ) {
+
+93 
+By‹Bufãr
+ 
+mes
+ = 
+äamed©a
+.
+	`g‘PaylßdD©a
+();
+
+94 
+boŞ—n
+ 
+mask
+ = 
+rŞe
+ =ğ
+RŞe
+.
+CLIENT
+;
+
+95 
+sizeby‹s
+ = 
+mes
+.
+	`»maššg
+() <= 125 ? 1 : mes.remaining() <= 65535 ? 2 : 8;
+
+96 
+By‹Bufãr
+ 
+buf
+ = By‹Bufãr.
+	`®loÿ‹
+Ğ1 + ( 
+sizeby‹s
+ > 1 ? sizeby‹ + 1 : sizeby‹ è+ ( 
+mask
+ ? 4 : 0 ) + 
+mes
+.
+	`»maššg
+() );
+
+97 
+by‹
+ 
+İtcode
+ = 
+	`äomOpcode
+Ğ
+äamed©a
+.
+	`g‘Opcode
+() );
+
+98 
+by‹
+ 
+Úe
+ = (by‹èĞ
+äamed©a
+.
+	`isFš
+() ? -128 : 0 );
+
+99 
+Úe
+ |ğ
+İtcode
+;
+
+100 
+buf
+.
+	`put
+Ğ
+Úe
+ );
+
+101 
+by‹
+[] 
+·ylßdËngthby‹s
+ = 
+	`toBy‹A¼ay
+Ğ
+mes
+.
+	`»maššg
+(), 
+sizeby‹s
+ );
+
+102 
+	`as£¹
+ ( 
+·ylßdËngthby‹s
+.
+Ëngth
+ =ğ
+sizeby‹s
+ );
+
+104 ifĞ
+sizeby‹s
+ == 1 ) {
+
+105 
+buf
+.
+	`put
+Ğ(
+by‹
+èĞ(by‹è
+·ylßdËngthby‹s
+[ 0 ] | ( 
+mask
+ ? (byte) -128 : 0 ) ) );
+
+106 } ifĞ
+sizeby‹s
+ == 2 ) {
+
+107 
+buf
+.
+	`put
+Ğ(
+by‹
+èĞ(by‹è126 | ( 
+mask
+ ? (byte) -128 : 0 ) ) );
+
+108 
+buf
+.
+	`put
+Ğ
+·ylßdËngthby‹s
+ );
+
+109 } ifĞ
+sizeby‹s
+ == 8 ) {
+
+110 
+buf
+.
+	`put
+Ğ(
+by‹
+èĞ(by‹è127 | ( 
+mask
+ ? (byte) -128 : 0 ) ) );
+
+111 
+buf
+.
+	`put
+Ğ
+·ylßdËngthby‹s
+ );
+
+113 
+throw
+ 
+Ãw
+ 
+	`RuÁimeExû±iÚ
+( "Size„epresentation‚ot supported/specified" );
+
+115 ifĞ
+mask
+ ) {
+
+116 
+By‹Bufãr
+ 
+maskkey
+ = By‹Bufãr.
+	`®loÿ‹
+( 4 );
+
+117 
+maskkey
+.
+	`putIÁ
+Ğ
+»u£abËRªdom
+.
+	`ÃxtIÁ
+() );
+
+118 
+buf
+.
+	`put
+Ğ
+maskkey
+.
+	`¬¿y
+() );
+
+119  
+i
+ = 0 ; 
+mes
+.
+	`hasRemaššg
+() ; i++ ) {
+
+120 
+buf
+.
+	`put
+Ğ(
+by‹
+èĞ
+mes
+.
+	`g‘
+(è^ 
+maskkey
+.g‘Ğ
+i
+ % 4 ) ) );
+
+123 
+buf
+.
+	`put
+Ğ
+mes
+ );
+
+125 
+	`as£¹
+ ( 
+buf
+.
+	`»maššg
+() == 0 ) : buf.remaining();
+
+126 
+buf
+.
+	`æ
+();
+
+128  
+buf
+;
+
+129 
+	}
+}
+
+131 @
+Ov”ride
+
+
+132 
+public
+ 
+	gLi¡
+<
+	gF¿med©a
+> 
+	$ü—‹F¿mes
+Ğ
+By‹Bufãr
+ 
+bš¬y
+, 
+boŞ—n
+ 
+mask
+ ) {
+
+133 
+F¿meBud”
+ 
+curäame
+ = 
+Ãw
+ 
+	`F¿med©aIm¶1
+();
+
+134 
+Œy
+ {
+
+135 
+curäame
+.
+	`£tPaylßd
+Ğ
+bš¬y
+ );
+
+136 } 
+	`ÿtch
+ ( 
+Inv®idD©aExû±iÚ
+ 
+e
+ ) {
+
+137 
+throw
+ 
+Ãw
+ 
+	`NÙS’dabËExû±iÚ
+Ğ
+e
+ );
+
+139 
+curäame
+.
+	`£tFš
+Ğ
+Œue
+ );
+
+140 
+curäame
+.
+	`£tO±code
+Ğ
+Opcode
+.
+BINARY
+ );
+
+141 
+curäame
+.
+	`£tT¿nsã»masked
+Ğ
+mask
+ );
+
+142  
+CŞËùiÚs
+.
+	`sšgËtÚLi¡
+Ğ(
+F¿med©a
+è
+curäame
+ );
+
+143 
+	}
+}
+
+145 @
+Ov”ride
+
+
+146 
+public
+ 
+	gLi¡
+<
+	gF¿med©a
+> 
+	$ü—‹F¿mes
+Ğ
+SŒšg
+ 
+‹xt
+, 
+boŞ—n
+ 
+mask
+ ) {
+
+147 
+F¿meBud”
+ 
+curäame
+ = 
+Ãw
+ 
+	`F¿med©aIm¶1
+();
+
+148 
+Œy
+ {
+
+149 
+curäame
+.
+	`£tPaylßd
+Ğ
+By‹Bufãr
+.
+	`w¿p
+Ğ
+Ch¬£tfunùiÚs
+.
+	`utf8By‹s
+Ğ
+‹xt
+ ) ) );
+
+150 } 
+	`ÿtch
+ ( 
+Inv®idD©aExû±iÚ
+ 
+e
+ ) {
+
+151 
+throw
+ 
+Ãw
+ 
+	`NÙS’dabËExû±iÚ
+Ğ
+e
+ );
+
+153 
+curäame
+.
+	`£tFš
+Ğ
+Œue
+ );
+
+154 
+curäame
+.
+	`£tO±code
+Ğ
+Opcode
+.
+TEXT
+ );
+
+155 
+curäame
+.
+	`£tT¿nsã»masked
+Ğ
+mask
+ );
+
+156  
+CŞËùiÚs
+.
+	`sšgËtÚLi¡
+Ğ(
+F¿med©a
+è
+curäame
+ );
+
+157 
+	}
+}
+
+159 @
+Ov”ride
+
+
+160 
+public
+ 
+	gLi¡
+<
+	gF¿med©a
+> 
+	$ü—‹PšgF¿mes
+Ğ
+SŒšg
+ 
+‹xt
+, 
+boŞ—n
+ 
+mask
+ ) {
+
+161 
+F¿meBud”
+ 
+curäame
+ = 
+Ãw
+ 
+	`F¿med©aIm¶1
+();
+
+162 
+Œy
+ {
+
+163 
+curäame
+.
+	`£tPaylßd
+Ğ
+By‹Bufãr
+.
+	`w¿p
+Ğ
+Ch¬£tfunùiÚs
+.
+	`utf8By‹s
+Ğ
+‹xt
+ ) ) );
+
+164 } 
+	`ÿtch
+ ( 
+Inv®idD©aExû±iÚ
+ 
+e
+ ) {
+
+165 
+throw
+ 
+Ãw
+ 
+	`NÙS’dabËExû±iÚ
+Ğ
+e
+ );
+
+167 
+curäame
+.
+	`£tFš
+Ğ
+Œue
+ );
+
+168 
+curäame
+.
+	`£tO±code
+Ğ
+Opcode
+.
+PING
+ );
+
+169 
+curäame
+.
+	`£tT¿nsã»masked
+Ğ
+mask
+ );
+
+170  
+CŞËùiÚs
+.
+	`sšgËtÚLi¡
+Ğ(
+F¿med©a
+è
+curäame
+ );
+
+171 
+	}
+}
+
+173 
+´iv©e
+ 
+by‹
+ 
+	$äomOpcode
+Ğ
+Opcode
+ 
+İcode
+ ) {
+
+174 ifĞ
+İcode
+ =ğ
+Opcode
+.
+CONTINUOUS
+ )
+
+176 ifĞ
+İcode
+ =ğ
+Opcode
+.
+TEXT
+ )
+
+178 ifĞ
+İcode
+ =ğ
+Opcode
+.
+BINARY
+ )
+
+180 ifĞ
+İcode
+ =ğ
+Opcode
+.
+CLOSING
+ )
+
+182 ifĞ
+İcode
+ =ğ
+Opcode
+.
+PING
+ )
+
+184 ifĞ
+İcode
+ =ğ
+Opcode
+.
+PONG
+ )
+
+186 
+throw
+ 
+Ãw
+ 
+	`RuÁimeExû±iÚ
+Ğ"DÚ'ˆknow howØhªdË " + 
+İcode
+.
+	`toSŒšg
+() );
+
+187 
+	}
+}
+
+189 
+´iv©e
+ 
+SŒšg
+ 
+	$g’”©eFš®Key
+Ğ
+SŒšg
+ 
+š
+ ) {
+
+190 
+SŒšg
+ 
+£ckey
+ = 
+š
+.
+	`Œim
+();
+
+191 
+SŒšg
+ 
+acc
+ = 
+£ckey
+ + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
+
+192 
+Mes§geDige¡
+ 
+sh1
+;
+
+193 
+Œy
+ {
+
+194 
+sh1
+ = 
+Mes§geDige¡
+.
+	`g‘In¡ªû
+( "SHA1" );
+
+195 } 
+	`ÿtch
+ ( 
+NoSuchAlgÜ™hmExû±iÚ
+ 
+e
+ ) {
+
+196 
+throw
+ 
+Ãw
+ 
+	`RuÁimeExû±iÚ
+Ğ
+e
+ );
+
+198  
+Ba£64
+.
+	`’codeBy‹s
+Ğ
+sh1
+.
+	`dige¡
+Ğ
+acc
+.
+	`g‘By‹s
+() ) );
+
+199 
+	}
+}
+
+201 @
+Ov”ride
+
+
+202 
+public
+ 
+Cl›ÁHªdshakeBud”
+ 
+	$po¡ProûssHªdshakeReque¡AsCl›Á
+Ğ
+Cl›ÁHªdshakeBud”
+ 
+»que¡
+ ) {
+
+203 
+»que¡
+.
+	`put
+( "Upgrade", "websocket" );
+
+204 
+»que¡
+.
+	`put
+( "Connection", "Upgrade" );
+
+205 
+»que¡
+.
+	`put
+( "Sec-WebSocket-Version", "8" );
+
+207 
+by‹
+[] 
+¿ndom
+ = 
+Ãw
+ byte[ 16 ];
+
+208 
+»u£abËRªdom
+.
+	`ÃxtBy‹s
+Ğ
+¿ndom
+ );
+
+209 
+»que¡
+.
+	`put
+Ğ"Sec-WebSock‘-Key", 
+Ba£64
+.
+	`’codeBy‹s
+Ğ
+¿ndom
+ ) );
+
+211  
+»que¡
+;
+
+212 
+	}
+}
+
+214 @
+Ov”ride
+
+
+215 
+public
+ 
+HªdshakeBud”
+ 
+	$po¡ProûssHªdshakeRe¥Ú£AsS”v”
+Ğ
+Cl›ÁHªdshake
+ 
+»que¡
+, 
+S”v”HªdshakeBud”
+ 
+»¥Ú£
+ ) 
+throws
+ 
+Inv®idHªdshakeExû±iÚ
+ {
+
+216 
+»¥Ú£
+.
+	`put
+( "Upgrade", "websocket" );
+
+217 
+»¥Ú£
+.
+	`put
+Ğ"CÚÃùiÚ", 
+»que¡
+.
+	`g‘F›ldV®ue
+( "Connection" ) );
+
+218 
+»¥Ú£
+.
+	`£tH‰pStusMes§ge
+( "Switching Protocols" );
+
+219 
+SŒšg
+ 
+£ckey
+ = 
+»que¡
+.
+	`g‘F›ldV®ue
+( "Sec-WebSocket-Key" );
+
+220 ifĞ
+£ckey
+ =ğ
+nuÎ
+ )
+
+221 
+throw
+ 
+Ãw
+ 
+	`Inv®idHªdshakeExû±iÚ
+( "missing Sec-WebSocket-Key" );
+
+222 
+»¥Ú£
+.
+	`put
+Ğ"Sec-WebSock‘-Acû±", 
+	`g’”©eFš®Key
+Ğ
+£ckey
+ ) );
+
+223  
+»¥Ú£
+;
+
+224 
+	}
+}
+
+226 
+´iv©e
+ 
+	gby‹
+[] 
+	$toBy‹A¼ay
+Ğ
+v®
+, 
+by‹couÁ
+ ) {
+
+227 
+by‹
+[] 
+bufãr
+ = 
+Ãw
+ by‹[ 
+by‹couÁ
+ ];
+
+228 
+highe¡
+ = 8 * 
+by‹couÁ
+ - 8;
+
+229  
+i
+ = 0 ; i < 
+by‹couÁ
+ ; i++ ) {
+
+230 
+bufãr
+[ 
+i
+ ] = (
+by‹
+èĞ
+v®
+ >>> ( 
+highe¡
+ - 8 * i ) );
+
+232  
+bufãr
+;
+
+233 
+	}
+}
+
+235 
+´iv©e
+ 
+Opcode
+ 
+	$toOpcode
+Ğ
+by‹
+ 
+İcode
+ ) 
+throws
+ 
+Inv®idF¿meExû±iÚ
+ {
+
+236  
+İcode
+ ) {
+
+238  
+Opcode
+.
+CONTINUOUS
+;
+
+240  
+Opcode
+.
+TEXT
+;
+
+242  
+Opcode
+.
+BINARY
+;
+
+245  
+Opcode
+.
+CLOSING
+;
+
+247  
+Opcode
+.
+PING
+;
+
+249  
+Opcode
+.
+PONG
+;
+
+252 
+throw
+ 
+Ãw
+ 
+	`Inv®idF¿meExû±iÚ
+Ğ"unknow o±cod" + (è
+İcode
+ );
+
+254 
+	}
+}
+
+256 @
+Ov”ride
+
+
+257 
+public
+ 
+	gLi¡
+<
+	gF¿med©a
+> 
+	$Œª¦©eF¿me
+Ğ
+By‹Bufãr
+ 
+bufãr
+ ) 
+throws
+ 
+Lim™Exed“dExû±iÚ
+ , 
+Inv®idD©aExû±iÚ
+ {
+
+258 
+Li¡
+<
+F¿med©a
+> 
+äames
+ = 
+Ãw
+ 
+LškedLi¡
+<Framedata>();
+
+259 
+F¿med©a
+ 
+cur
+;
+
+261 ifĞ
+šcom¶‘eäame
+ !ğ
+nuÎ
+ ) {
+
+263  
+Œue
+ ) {
+
+264 
+Œy
+ {
+
+265 
+bufãr
+.
+	`m¬k
+();
+
+266 
+avaabË_Ãxt_by‹_couÁ
+ = 
+bufãr
+.
+	`»maššg
+();
+
+267 
+ex³ùed_Ãxt_by‹_couÁ
+ = 
+šcom¶‘eäame
+.
+	`»maššg
+();
+
+269 ifĞ
+ex³ùed_Ãxt_by‹_couÁ
+ > 
+avaabË_Ãxt_by‹_couÁ
+ ) {
+
+271 
+šcom¶‘eäame
+.
+	`put
+Ğ
+bufãr
+.
+	`¬¿y
+(), bufãr.
+	`pos™iÚ
+(), 
+avaabË_Ãxt_by‹_couÁ
+ );
+
+272 
+bufãr
+.
+	`pos™iÚ
+Ğbufãr.pos™iÚ(è+ 
+avaabË_Ãxt_by‹_couÁ
+ );
+
+273  
+CŞËùiÚs
+.
+	`em±yLi¡
+();
+
+275 
+šcom¶‘eäame
+.
+	`put
+Ğ
+bufãr
+.
+	`¬¿y
+(), bufãr.
+	`pos™iÚ
+(), 
+ex³ùed_Ãxt_by‹_couÁ
+ );
+
+276 
+bufãr
+.
+	`pos™iÚ
+Ğbufãr.pos™iÚ(è+ 
+ex³ùed_Ãxt_by‹_couÁ
+ );
+
+278 
+cur
+ = 
+	`Œª¦©eSšgËF¿me
+Ğ(
+By‹Bufãr
+è
+šcom¶‘eäame
+.
+	`du¶iÿ‹
+().
+	`pos™iÚ
+( 0 ) );
+
+279 
+äames
+.
+	`add
+Ğ
+cur
+ );
+
+280 
+šcom¶‘eäame
+ = 
+nuÎ
+;
+
+282 } 
+	`ÿtch
+ ( 
+Incom¶‘eExû±iÚ
+ 
+e
+ ) {
+
+284 
+Şdsize
+ = 
+šcom¶‘eäame
+.
+	`lim™
+();
+
+285 
+By‹Bufãr
+ 
+ex‹ndedäame
+ = By‹Bufãr.
+	`®loÿ‹
+Ğ
+	`checkAÎoc
+Ğ
+e
+.
+	`g‘P»ã»dSize
+() ) );
+
+286 
+	`as£¹
+ ( 
+ex‹ndedäame
+.
+	`lim™
+(è> 
+šcom¶‘eäame
+.limit() );
+
+287 
+šcom¶‘eäame
+.
+	`»wšd
+();
+
+288 
+ex‹ndedäame
+.
+	`put
+Ğ
+šcom¶‘eäame
+ );
+
+289 
+šcom¶‘eäame
+ = 
+ex‹ndedäame
+;
+
+291  
+	`Œª¦©eF¿me
+Ğ
+bufãr
+ );
+
+296  
+bufãr
+.
+	`hasRemaššg
+() ) {
+
+297 
+bufãr
+.
+	`m¬k
+();
+
+298 
+Œy
+ {
+
+299 
+cur
+ = 
+	`Œª¦©eSšgËF¿me
+Ğ
+bufãr
+ );
+
+300 
+äames
+.
+	`add
+Ğ
+cur
+ );
+
+301 } 
+	`ÿtch
+ ( 
+Incom¶‘eExû±iÚ
+ 
+e
+ ) {
+
+303 
+bufãr
+.
+	`»£t
+();
+
+304 
+´ef
+ = 
+e
+.
+	`g‘P»ã»dSize
+();
+
+305 
+šcom¶‘eäame
+ = 
+By‹Bufãr
+.
+	`®loÿ‹
+Ğ
+	`checkAÎoc
+Ğ
+´ef
+ ) );
+
+306 
+šcom¶‘eäame
+.
+	`put
+Ğ
+bufãr
+ );
+
+310  
+äames
+;
+
+311 
+	}
+}
+
+313 
+public
+ 
+F¿med©a
+ 
+	$Œª¦©eSšgËF¿me
+Ğ
+By‹Bufãr
+ 
+bufãr
+ ) 
+throws
+ 
+Incom¶‘eExû±iÚ
+ , 
+Inv®idD©aExû±iÚ
+ {
+
+314 
+max·ck‘size
+ = 
+bufãr
+.
+	`»maššg
+();
+
+315 
+»®·ck‘size
+ = 2;
+
+316 ifĞ
+max·ck‘size
+ < 
+»®·ck‘size
+ )
+
+317 
+throw
+ 
+Ãw
+ 
+	`Incom¶‘eExû±iÚ
+Ğ
+»®·ck‘size
+ );
+
+318 
+by‹
+ 
+b1
+ = 
+bufãr
+.
+	`g‘
+( );
+
+319 
+boŞ—n
+ 
+FIN
+ = 
+b1
+ >> 8 != 0;
+
+320 
+by‹
+ 
+rsv
+ = (by‹èĞĞ
+b1
+ & ~(byte) 128 ) >> 4 );
+
+321 ifĞ
+rsv
+ != 0 )
+
+322 
+throw
+ 
+Ãw
+ 
+	`Inv®idF¿meExû±iÚ
+Ğ"bad„sv " + 
+rsv
+ );
+
+323 
+by‹
+ 
+b2
+ = 
+bufãr
+.
+	`g‘
+( );
+
+324 
+boŞ—n
+ 
+MASK
+ = ( 
+b2
+ & -128 ) != 0;
+
+325 
+·ylßdËngth
+ = (
+by‹
+èĞ
+b2
+ & ~(byte) 128 );
+
+326 
+Opcode
+ 
+İtcode
+ = 
+	`toOpcode
+Ğ(
+by‹
+èĞ
+b1
+ & 15 ) );
+
+328 ifĞ!
+FIN
+ ) {
+
+329 ifĞ
+İtcode
+ =ğ
+Opcode
+.
+PING
+ || o±cod=ğOpcode.
+PONG
+ || o±cod=ğOpcode.
+CLOSING
+ ) {
+
+330 
+throw
+ 
+Ãw
+ 
+	`Inv®idF¿meExû±iÚ
+( "control frames may‚o be fragmented" );
+
+334 ifĞ
+·ylßdËngth
+ >= 0 &&…ayloadlength <= 125 ) {
+
+336 ifĞ
+İtcode
+ =ğ
+Opcode
+.
+PING
+ || o±cod=ğOpcode.
+PONG
+ || o±cod=ğOpcode.
+CLOSING
+ ) {
+
+337 
+throw
+ 
+Ãw
+ 
+	`Inv®idF¿meExû±iÚ
+( "morehan 125 octets" );
+
+339 ifĞ
+·ylßdËngth
+ == 126 ) {
+
+340 
+»®·ck‘size
+ += 2;
+
+341 ifĞ
+max·ck‘size
+ < 
+»®·ck‘size
+ )
+
+342 
+throw
+ 
+Ãw
+ 
+	`Incom¶‘eExû±iÚ
+Ğ
+»®·ck‘size
+ );
+
+343 
+by‹
+[] 
+sizeby‹s
+ = 
+Ãw
+ byte[ 3 ];
+
+344 
+sizeby‹s
+[ 1 ] = 
+bufãr
+.
+	`g‘
+( );
+
+345 
+sizeby‹s
+[ 2 ] = 
+bufãr
+.
+	`g‘
+( );
+
+346 
+·ylßdËngth
+ = 
+Ãw
+ 
+	`BigIÁeg”
+Ğ
+sizeby‹s
+ ).
+	`štV®ue
+();
+
+348 
+»®·ck‘size
+ += 8;
+
+349 ifĞ
+max·ck‘size
+ < 
+»®·ck‘size
+ )
+
+350 
+throw
+ 
+Ãw
+ 
+	`Incom¶‘eExû±iÚ
+Ğ
+»®·ck‘size
+ );
+
+351 
+by‹
+[] 
+by‹s
+ = 
+Ãw
+ byte[ 8 ];
+
+352  
+i
+ = 0 ; i < 8 ; i++ ) {
+
+353 
+by‹s
+[ 
+i
+ ] = 
+bufãr
+.
+	`g‘
+( );
+
+355 
+Ëngth
+ = 
+Ãw
+ 
+	`BigIÁeg”
+Ğ
+by‹s
+ ).
+	`lÚgV®ue
+();
+
+356 ifĞ
+Ëngth
+ > 
+IÁeg”
+.
+MAX_VALUE
+ ) {
+
+357 
+throw
+ 
+Ãw
+ 
+	`Lim™Exed“dExû±iÚ
+( "Payloadsize iso big..." );
+
+359 
+·ylßdËngth
+ = (è
+Ëngth
+;
+
+365 
+»®·ck‘size
+ +ğĞ
+MASK
+ ? 4 : 0 );
+
+367 
+»®·ck‘size
+ +ğ
+·ylßdËngth
+;
+
+369 ifĞ
+max·ck‘size
+ < 
+»®·ck‘size
+ )
+
+370 
+throw
+ 
+Ãw
+ 
+	`Incom¶‘eExû±iÚ
+Ğ
+»®·ck‘size
+ );
+
+372 
+By‹Bufãr
+ 
+·ylßd
+ = By‹Bufãr.
+	`®loÿ‹
+Ğ
+	`checkAÎoc
+Ğ
+·ylßdËngth
+ ) );
+
+373 ifĞ
+MASK
+ ) {
+
+374 
+by‹
+[] 
+maskskey
+ = 
+Ãw
+ byte[ 4 ];
+
+375 
+bufãr
+.
+	`g‘
+Ğ
+maskskey
+ );
+
+376  
+i
+ = 0 ; i < 
+·ylßdËngth
+ ; i++ ) {
+
+377 
+·ylßd
+.
+	`put
+Ğ(
+by‹
+èĞ(by‹è
+bufãr
+.
+	`g‘
+Ğ ) ^ (by‹è
+maskskey
+[ 
+i
+ % 4 ] ) );
+
+380 
+·ylßd
+.
+	`put
+Ğ
+bufãr
+.
+	`¬¿y
+(), bufãr.
+	`pos™iÚ
+(),…aylßd.
+	`lim™
+() );
+
+381 
+bufãr
+.
+	`pos™iÚ
+Ğbufãr.pos™iÚ(è+ 
+·ylßd
+.
+	`lim™
+() );
+
+384 
+F¿meBud”
+ 
+äame
+;
+
+385 ifĞ
+İtcode
+ =ğ
+Opcode
+.
+CLOSING
+ ) {
+
+386 
+äame
+ = 
+Ãw
+ 
+	`Clo£F¿meBud”
+();
+
+388 
+äame
+ = 
+Ãw
+ 
+	`F¿med©aIm¶1
+();
+
+389 
+äame
+.
+	`£tFš
+Ğ
+FIN
+ );
+
+390 
+äame
+.
+	`£tO±code
+Ğ
+İtcode
+ );
+
+392 
+·ylßd
+.
+	`æ
+();
+
+393 
+äame
+.
+	`£tPaylßd
+Ğ
+·ylßd
+ );
+
+394  
+äame
+;
+
+395 
+	}
+}
+
+397 @
+Ov”ride
+
+
+398 
+public
+ 
+	$»£t
+() {
+
+399 
+šcom¶‘eäame
+ = 
+nuÎ
+;
+
+400 
+	}
+}
+
+402 @
+Ov”ride
+
+
+403 
+public
+ 
+D¿á
+ 
+	$cİyIn¡ªû
+() {
+
+404  
+Ãw
+ 
+	`D¿á_10
+();
+
+405 
+	}
+}
+
+407 @
+Ov”ride
+
+
+408 
+public
+ 
+Clo£HªdshakeTy³
+ 
+	$g‘Clo£HªdshakeTy³
+() {
+
+409  
+Clo£HªdshakeTy³
+.
+TWOWAY
+;
+
+410 
+	}
+}
+
+	@src/main/java/org/java_websocket/drafts/Draft_17.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gd¿ás
+;
+
+3 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idHªdshakeExû±iÚ
+;
+
+4 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gCl›ÁHªdshake
+;
+
+5 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gCl›ÁHªdshakeBud”
+;
+
+7 
+public
+ cÏs 
+	cD¿á_17
+ 
+ex‹nds
+ 
+	mD¿á_10
+ {
+
+8 @
+Ov”ride
+
+
+9 
+public
+ 
+HªdshakeS‹
+ 
+	$acû±HªdshakeAsS”v”
+Ğ
+Cl›ÁHªdshake
+ 
+hªdshaked©a
+ ) 
+throws
+ 
+Inv®idHªdshakeExû±iÚ
+ {
+
+10 
+v
+ = 
+	`»adV”siÚ
+Ğ
+hªdshaked©a
+ );
+
+11 ifĞ
+v
+ == 13 )
+
+12  
+HªdshakeS‹
+.
+MATCHED
+;
+
+13  
+HªdshakeS‹
+.
+NOT_MATCHED
+;
+
+16 @
+Ov”ride
+
+
+17 
+public
+ 
+Cl›ÁHªdshakeBud”
+ 
+	$po¡ProûssHªdshakeReque¡AsCl›Á
+Ğ
+Cl›ÁHªdshakeBud”
+ 
+»que¡
+ ) {
+
+18 
+su³r
+.
+	`po¡ProûssHªdshakeReque¡AsCl›Á
+Ğ
+»que¡
+ );
+
+19 
+»que¡
+.
+	`put
+( "Sec-WebSocket-Version", "13" );
+
+20  
+»que¡
+;
+
+21 
+	}
+}
+
+23 @
+Ov”ride
+
+
+24 
+public
+ 
+D¿á
+ 
+	$cİyIn¡ªû
+() {
+
+25  
+Ãw
+ 
+	`D¿á_17
+();
+
+26 
+	}
+}
+
+	@src/main/java/org/java_websocket/drafts/Draft_75.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gd¿ás
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gBy‹Bufãr
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gCŞËùiÚs
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLškedLi¡
+;
+
+6 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+7 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gRªdom
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idD©aExû±iÚ
+;
+
+10 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idF¿meExû±iÚ
+;
+
+11 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idHªdshakeExû±iÚ
+;
+
+12 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gLim™Exed“dExû±iÚ
+;
+
+13 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gNÙS’dabËExû±iÚ
+;
+
+14 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gClo£F¿me
+;
+
+15 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿meBud”
+;
+
+16 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿med©a
+;
+
+17 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿med©a
+.
+	gOpcode
+;
+
+18 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿med©aIm¶1
+;
+
+19 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gCl›ÁHªdshake
+;
+
+20 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gCl›ÁHªdshakeBud”
+;
+
+21 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gHªdshakeBud”
+;
+
+22 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gS”v”Hªdshake
+;
+
+23 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gS”v”HªdshakeBud”
+;
+
+24 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gut
+.
+	gCh¬£tfunùiÚs
+;
+
+26 
+public
+ cÏs 
+	cD¿á_75
+ 
+ex‹nds
+ 
+	mD¿á
+ {
+
+31 
+public
+ 
+fš®
+ 
+by‹
+ 
+	mCR
+ = (byte) 0x0D;
+
+35 
+public
+ 
+fš®
+ 
+by‹
+ 
+	mLF
+ = (byte) 0x0A;
+
+39 
+public
+ 
+fš®
+ 
+by‹
+ 
+	mSTART_OF_FRAME
+ = (byte) 0x00;
+
+43 
+public
+ 
+fš®
+ 
+by‹
+ 
+	mEND_OF_FRAME
+ = (byte) 0xFF;
+
+46 
+´Ùeùed
+ 
+boŞ—n
+ 
+	m»adšgS‹
+ = 
+çl£
+;
+
+48 
+´Ùeùed
+ 
+	mLi¡
+<
+	mF¿med©a
+> 
+	m»adyäames
+ = 
+Ãw
+ 
+LškedLi¡
+<
+F¿med©a
+>();
+
+49 
+´Ùeùed
+ 
+By‹Bufãr
+ 
+	mcu¼’tF¿me
+;
+
+51 
+´iv©e
+ 
+fš®
+ 
+Rªdom
+ 
+	m»u£abËRªdom
+ = 
+Ãw
+ Random();
+
+53 @
+Ov”ride
+
+
+54 
+public
+ 
+HªdshakeS‹
+ 
+	$acû±HªdshakeAsCl›Á
+Ğ
+Cl›ÁHªdshake
+ 
+»que¡
+, 
+S”v”Hªdshake
+ 
+»¥Ú£
+ ) {
+
+55  
+»que¡
+.
+	`g‘F›ldV®ue
+Ğ"WebSock‘-Origš" ).
+	`equ®s
+Ğ
+»¥Ú£
+.g‘F›ldV®ueĞ"Origš" ) ) && 
+	`basicAcû±
+Ğ»¥Ú£ ) ? 
+HªdshakeS‹
+.
+MATCHED
+ : HªdshakeS‹.
+NOT_MATCHED
+;
+
+58 @
+Ov”ride
+
+
+59 
+public
+ 
+HªdshakeS‹
+ 
+	$acû±HªdshakeAsS”v”
+Ğ
+Cl›ÁHªdshake
+ 
+hªdshaked©a
+ ) {
+
+60 ifĞ
+hªdshaked©a
+.
+	`hasF›ldV®ue
+Ğ"Origš" ) && 
+	`basicAcû±
+( handshakedata ) ) {
+
+61  
+HªdshakeS‹
+.
+MATCHED
+;
+
+63  
+HªdshakeS‹
+.
+NOT_MATCHED
+;
+
+64 
+	}
+}
+
+66 @
+Ov”ride
+
+
+67 
+public
+ 
+By‹Bufãr
+ 
+	$ü—‹Bš¬yF¿me
+Ğ
+F¿med©a
+ 
+äamed©a
+ ) {
+
+68 ifĞ
+äamed©a
+.
+	`g‘Opcode
+(è!ğ
+Opcode
+.
+TEXT
+ ) {
+
+69 
+throw
+ 
+Ãw
+ 
+	`RuÁimeExû±iÚ
+( "onlyext frames supported" );
+
+72 
+By‹Bufãr
+ 
+·y
+ = 
+äamed©a
+.
+	`g‘PaylßdD©a
+();
+
+73 
+By‹Bufãr
+ 
+b
+ = By‹Bufãr.
+	`®loÿ‹
+Ğ
+·y
+.
+	`»maššg
+() + 2 );
+
+74 
+b
+.
+	`put
+Ğ
+START_OF_FRAME
+ );
+
+75 
+·y
+.
+	`m¬k
+();
+
+76 
+b
+.
+	`put
+Ğ
+·y
+ );
+
+77 
+·y
+.
+	`»£t
+();
+
+78 
+b
+.
+	`put
+Ğ
+END_OF_FRAME
+ );
+
+79 
+b
+.
+	`æ
+();
+
+80  
+b
+;
+
+81 
+	}
+}
+
+83 @
+Ov”ride
+
+
+84 
+public
+ 
+	gLi¡
+<
+	gF¿med©a
+> 
+	$ü—‹F¿mes
+Ğ
+By‹Bufãr
+ 
+bš¬y
+, 
+boŞ—n
+ 
+mask
+ ) {
+
+85 
+throw
+ 
+Ãw
+ 
+	`RuÁimeExû±iÚ
+( "not yet implemented" );
+
+86 
+	}
+}
+
+88 @
+Ov”ride
+
+
+89 
+public
+ 
+	gLi¡
+<
+	gF¿med©a
+> 
+	$ü—‹F¿mes
+Ğ
+SŒšg
+ 
+‹xt
+, 
+boŞ—n
+ 
+mask
+ ) {
+
+90 
+F¿meBud”
+ 
+äame
+ = 
+Ãw
+ 
+	`F¿med©aIm¶1
+();
+
+91 
+Œy
+ {
+
+92 
+äame
+.
+	`£tPaylßd
+Ğ
+By‹Bufãr
+.
+	`w¿p
+Ğ
+Ch¬£tfunùiÚs
+.
+	`utf8By‹s
+Ğ
+‹xt
+ ) ) );
+
+93 } 
+	`ÿtch
+ ( 
+Inv®idD©aExû±iÚ
+ 
+e
+ ) {
+
+94 
+throw
+ 
+Ãw
+ 
+	`NÙS’dabËExû±iÚ
+Ğ
+e
+ );
+
+96 
+äame
+.
+	`£tFš
+Ğ
+Œue
+ );
+
+97 
+äame
+.
+	`£tO±code
+Ğ
+Opcode
+.
+TEXT
+ );
+
+98 
+äame
+.
+	`£tT¿nsã»masked
+Ğ
+mask
+ );
+
+99  
+CŞËùiÚs
+.
+	`sšgËtÚLi¡
+Ğ(
+F¿med©a
+è
+äame
+ );
+
+100 
+	}
+}
+
+102 @
+Ov”ride
+
+
+103 
+public
+ 
+	gLi¡
+<
+	gF¿med©a
+> 
+	$ü—‹PšgF¿mes
+(
+SŒšg
+ 
+‹xt
+, 
+boŞ—n
+ 
+mask
+) {
+
+105  
+	`ü—‹F¿mes
+(
+‹xt
+,
+mask
+);
+
+106 
+	}
+}
+
+108 @
+Ov”ride
+
+
+109 
+public
+ 
+Cl›ÁHªdshakeBud”
+ 
+	$po¡ProûssHªdshakeReque¡AsCl›Á
+Ğ
+Cl›ÁHªdshakeBud”
+ 
+»que¡
+ ) 
+throws
+ 
+Inv®idHªdshakeExû±iÚ
+ {
+
+110 
+»que¡
+.
+	`put
+( "Upgrade", "WebSocket" );
+
+111 
+»que¡
+.
+	`put
+( "Connection", "Upgrade" );
+
+112 ifĞ!
+»que¡
+.
+	`hasF›ldV®ue
+( "Origin" ) ) {
+
+113 
+»que¡
+.
+	`put
+Ğ"Origš", "¿ndom" + 
+»u£abËRªdom
+.
+	`ÃxtIÁ
+() );
+
+116  
+»que¡
+;
+
+117 
+	}
+}
+
+119 @
+Ov”ride
+
+
+120 
+public
+ 
+HªdshakeBud”
+ 
+	$po¡ProûssHªdshakeRe¥Ú£AsS”v”
+Ğ
+Cl›ÁHªdshake
+ 
+»que¡
+, 
+S”v”HªdshakeBud”
+ 
+»¥Ú£
+ ) 
+throws
+ 
+Inv®idHªdshakeExû±iÚ
+ {
+
+121 
+»¥Ú£
+.
+	`£tH‰pStusMes§ge
+( "Web Socket Protocol Handshake" );
+
+122 
+»¥Ú£
+.
+	`put
+( "Upgrade", "WebSocket" );
+
+123 
+»¥Ú£
+.
+	`put
+Ğ"CÚÃùiÚ", 
+»que¡
+.
+	`g‘F›ldV®ue
+( "Connection" ) );
+
+124 
+»¥Ú£
+.
+	`put
+Ğ"WebSock‘-Origš", 
+»que¡
+.
+	`g‘F›ldV®ue
+( "Origin" ) );
+
+125 
+SŒšg
+ 
+loÿtiÚ
+ = "ws://" + 
+»que¡
+.
+	`g‘F›ldV®ue
+Ğ"Ho¡" ) +„eque¡.
+	`g‘ResourûDesütÜ
+();
+
+126 
+»¥Ú£
+.
+	`put
+Ğ"WebSock‘-LoÿtiÚ", 
+loÿtiÚ
+ );
+
+128  
+»¥Ú£
+;
+
+129 
+	}
+}
+
+131 
+´Ùeùed
+ 
+	gLi¡
+<
+	gF¿med©a
+> 
+	$Œª¦©eReguÏrF¿me
+Ğ
+By‹Bufãr
+ 
+bufãr
+ ) 
+throws
+ 
+Inv®idD©aExû±iÚ
+ {
+
+133  
+bufãr
+.
+	`hasRemaššg
+() ) {
+
+134 
+by‹
+ 
+Ãwe¡By‹
+ = 
+bufãr
+.
+	`g‘
+();
+
+135 ifĞ
+Ãwe¡By‹
+ =ğ
+START_OF_FRAME
+ ) {
+
+136 ifĞ
+»adšgS‹
+ )
+
+137 
+throw
+ 
+Ãw
+ 
+	`Inv®idF¿meExû±iÚ
+( "unexpected START_OF_FRAME" );
+
+138 
+»adšgS‹
+ = 
+Œue
+;
+
+139 } ifĞ
+Ãwe¡By‹
+ =ğ
+END_OF_FRAME
+ ) {
+
+140 ifĞ!
+»adšgS‹
+ )
+
+141 
+throw
+ 
+Ãw
+ 
+	`Inv®idF¿meExû±iÚ
+( "unexpected END_OF_FRAME" );
+
+144 ifĞ
+this
+.
+cu¼’tF¿me
+ !ğ
+nuÎ
+ ) {
+
+145 
+cu¼’tF¿me
+.
+	`æ
+();
+
+146 
+F¿med©aIm¶1
+ 
+curäame
+ = 
+Ãw
+ 
+	`F¿med©aIm¶1
+();
+
+147 
+curäame
+.
+	`£tPaylßd
+Ğ
+cu¼’tF¿me
+ );
+
+148 
+curäame
+.
+	`£tFš
+Ğ
+Œue
+ );
+
+149 
+curäame
+.
+	`£tO±code
+Ğ
+Opcode
+.
+TEXT
+ );
+
+150 
+»adyäames
+.
+	`add
+Ğ
+curäame
+ );
+
+151 
+this
+.
+cu¼’tF¿me
+ = 
+nuÎ
+;
+
+152 
+bufãr
+.
+	`m¬k
+();
+
+154 
+»adšgS‹
+ = 
+çl£
+;
+
+155 } ifĞ
+»adšgS‹
+ ) {
+
+156 ifĞ
+cu¼’tF¿me
+ =ğ
+nuÎ
+ ) {
+
+157 
+cu¼’tF¿me
+ = 
+	`ü—‹Bufãr
+();
+
+158 } ifĞ!
+cu¼’tF¿me
+.
+	`hasRemaššg
+() ) {
+
+159 
+cu¼’tF¿me
+ = 
+	`šü—£Bufãr
+( currentFrame );
+
+161 
+cu¼’tF¿me
+.
+	`put
+Ğ
+Ãwe¡By‹
+ );
+
+163  
+nuÎ
+;
+
+172 
+Li¡
+<
+F¿med©a
+> 
+äames
+ = 
+»adyäames
+;
+
+173 
+»adyäames
+ = 
+Ãw
+ 
+LškedLi¡
+<
+F¿med©a
+>();
+
+174  
+äames
+;
+
+175 
+	}
+}
+
+177 @
+Ov”ride
+
+
+178 
+public
+ 
+	gLi¡
+<
+	gF¿med©a
+> 
+	$Œª¦©eF¿me
+Ğ
+By‹Bufãr
+ 
+bufãr
+ ) 
+throws
+ 
+Inv®idD©aExû±iÚ
+ {
+
+179 
+Li¡
+<
+F¿med©a
+> 
+äames
+ = 
+	`Œª¦©eReguÏrF¿me
+Ğ
+bufãr
+ );
+
+180 ifĞ
+äames
+ =ğ
+nuÎ
+ ) {
+
+181 
+throw
+ 
+Ãw
+ 
+	`Inv®idD©aExû±iÚ
+Ğ
+Clo£F¿me
+.
+PROTOCOL_ERROR
+ );
+
+183  
+äames
+;
+
+184 
+	}
+}
+
+186 @
+Ov”ride
+
+
+187 
+public
+ 
+	$»£t
+() {
+
+188 
+»adšgS‹
+ = 
+çl£
+;
+
+189 
+this
+.
+cu¼’tF¿me
+ = 
+nuÎ
+;
+
+190 
+	}
+}
+
+192 @
+Ov”ride
+
+
+193 
+public
+ 
+Clo£HªdshakeTy³
+ 
+	$g‘Clo£HªdshakeTy³
+() {
+
+194  
+Clo£HªdshakeTy³
+.
+NONE
+;
+
+195 
+	}
+}
+
+197 
+public
+ 
+By‹Bufãr
+ 
+	$ü—‹Bufãr
+() {
+
+198  
+By‹Bufãr
+.
+	`®loÿ‹
+Ğ
+INITIAL_FAMESIZE
+ );
+
+199 
+	}
+}
+
+201 
+public
+ 
+By‹Bufãr
+ 
+	$šü—£Bufãr
+Ğ
+By‹Bufãr
+ 
+fuÎ
+ ) 
+throws
+ 
+Lim™Exed“dExû±iÚ
+ , 
+Inv®idD©aExû±iÚ
+ {
+
+202 
+fuÎ
+.
+	`æ
+();
+
+203 
+By‹Bufãr
+ 
+Ãwbufãr
+ = By‹Bufãr.
+	`®loÿ‹
+Ğ
+	`checkAÎoc
+Ğ
+fuÎ
+.
+	`ÿ·c™y
+() * 2 ) );
+
+204 
+Ãwbufãr
+.
+	`put
+Ğ
+fuÎ
+ );
+
+205  
+Ãwbufãr
+;
+
+206 
+	}
+}
+
+208 @
+Ov”ride
+
+
+209 
+public
+ 
+D¿á
+ 
+	$cİyIn¡ªû
+() {
+
+210  
+Ãw
+ 
+	`D¿á_75
+();
+
+211 
+	}
+}
+
+	@src/main/java/org/java_websocket/drafts/Draft_76.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gd¿ás
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gBufãrUnd”æowExû±iÚ
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gBy‹Bufãr
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	g£cur™y
+.
+	gMes§geDige¡
+;
+
+6 
+impÜt
+ 
+	gjava
+.
+	g£cur™y
+.
+	gNoSuchAlgÜ™hmExû±iÚ
+;
+
+7 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gA¼ays
+;
+
+8 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLškedLi¡
+;
+
+9 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+10 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gRªdom
+;
+
+12 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gWebSock‘
+.
+	gRŞe
+;
+
+13 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gIncom¶‘eHªdshakeExû±iÚ
+;
+
+14 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idD©aExû±iÚ
+;
+
+15 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idF¿meExû±iÚ
+;
+
+16 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idHªdshakeExû±iÚ
+;
+
+17 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gClo£F¿me
+;
+
+18 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gClo£F¿meBud”
+;
+
+19 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿med©a
+;
+
+20 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿med©a
+.
+	gOpcode
+;
+
+21 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gCl›ÁHªdshake
+;
+
+22 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gCl›ÁHªdshakeBud”
+;
+
+23 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gHªdshakeBud”
+;
+
+24 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gHªdshaked©a
+;
+
+25 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gS”v”Hªdshake
+;
+
+26 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gS”v”HªdshakeBud”
+;
+
+28 
+public
+ cÏs 
+	cD¿á_76
+ 
+ex‹nds
+ 
+	mD¿á_75
+ {
+
+29 
+´iv©e
+ 
+boŞ—n
+ 
+	mçed
+ = 
+çl£
+;
+
+30 
+´iv©e
+ 
+fš®
+ 
+	mby‹
+[] 
+	mşo£hªdshake
+ = { -1, 0 };
+
+32 
+´iv©e
+ 
+fš®
+ 
+Rªdom
+ 
+	g»u£abËRªdom
+ = 
+Ãw
+ Random();
+
+35 
+public
+ 
+	gby‹
+[] 
+	$ü—‹Ch®Ënge
+Ğ
+SŒšg
+ 
+key1
+, SŒšg 
+key2
+, 
+by‹
+[] 
+key3
+ ) 
+throws
+ 
+Inv®idHªdshakeExû±iÚ
+ {
+
+36 
+by‹
+[] 
+·¹1
+ = 
+	`g‘P¬t
+Ğ
+key1
+ );
+
+37 
+by‹
+[] 
+·¹2
+ = 
+	`g‘P¬t
+Ğ
+key2
+ );
+
+38 
+by‹
+[] 
+ch®Ënge
+ = 
+Ãw
+ byte[ 16 ];
+
+39 
+ch®Ënge
+[ 0 ] = 
+·¹1
+[ 0 ];
+
+40 
+ch®Ënge
+[ 1 ] = 
+·¹1
+[ 1 ];
+
+41 
+ch®Ënge
+[ 2 ] = 
+·¹1
+[ 2 ];
+
+42 
+ch®Ënge
+[ 3 ] = 
+·¹1
+[ 3 ];
+
+43 
+ch®Ënge
+[ 4 ] = 
+·¹2
+[ 0 ];
+
+44 
+ch®Ënge
+[ 5 ] = 
+·¹2
+[ 1 ];
+
+45 
+ch®Ënge
+[ 6 ] = 
+·¹2
+[ 2 ];
+
+46 
+ch®Ënge
+[ 7 ] = 
+·¹2
+[ 3 ];
+
+47 
+ch®Ënge
+[ 8 ] = 
+key3
+[ 0 ];
+
+48 
+ch®Ënge
+[ 9 ] = 
+key3
+[ 1 ];
+
+49 
+ch®Ënge
+[ 10 ] = 
+key3
+[ 2 ];
+
+50 
+ch®Ënge
+[ 11 ] = 
+key3
+[ 3 ];
+
+51 
+ch®Ënge
+[ 12 ] = 
+key3
+[ 4 ];
+
+52 
+ch®Ënge
+[ 13 ] = 
+key3
+[ 5 ];
+
+53 
+ch®Ënge
+[ 14 ] = 
+key3
+[ 6 ];
+
+54 
+ch®Ënge
+[ 15 ] = 
+key3
+[ 7 ];
+
+55 
+Mes§geDige¡
+ 
+md5
+;
+
+56 
+Œy
+ {
+
+57 
+md5
+ = 
+Mes§geDige¡
+.
+	`g‘In¡ªû
+( "MD5" );
+
+58 } 
+	`ÿtch
+ ( 
+NoSuchAlgÜ™hmExû±iÚ
+ 
+e
+ ) {
+
+59 
+throw
+ 
+Ãw
+ 
+	`RuÁimeExû±iÚ
+Ğ
+e
+ );
+
+61  
+md5
+.
+	`dige¡
+Ğ
+ch®Ënge
+ );
+
+62 
+	}
+}
+
+64 
+´iv©e
+ 
+SŒšg
+ 
+	$g’”©eKey
+() {
+
+65 
+Rªdom
+ 
+r
+ = 
+Ãw
+ 
+	`Rªdom
+();
+
+66 
+maxNumb”
+ = 4294967295L;
+
+67 
+¥aûs
+ = 
+r
+.
+	`ÃxtIÁ
+( 12 ) + 1;
+
+68 
+max
+ = 
+Ãw
+ 
+	`LÚg
+Ğ
+maxNumb”
+ / 
+¥aûs
+ ).
+	`štV®ue
+();
+
+69 
+max
+ = 
+M©h
+.
+	`abs
+( max );
+
+70 
+numb”
+ = 
+r
+.
+	`ÃxtIÁ
+Ğ
+max
+ ) + 1;
+
+71 
+´oduù
+ = 
+numb”
+ * 
+¥aûs
+;
+
+72 
+SŒšg
+ 
+key
+ = 
+LÚg
+.
+	`toSŒšg
+Ğ
+´oduù
+ );
+
+74 
+numCh¬s
+ = 
+r
+.
+	`ÃxtIÁ
+( 12 ) + 1;
+
+75  
+i
+ = 0 ; i < 
+numCh¬s
+ ; i++ ) {
+
+76 
+pos™iÚ
+ = 
+r
+.
+	`ÃxtIÁ
+Ğ
+key
+.
+	`Ëngth
+() );
+
+77 
+pos™iÚ
+ = 
+M©h
+.
+	`abs
+(…osition );
+
+78 
+¿ndCh¬
+ = (èĞ
+r
+.
+	`ÃxtIÁ
+( 95 ) + 33 );
+
+80 ifĞ
+¿ndCh¬
+ >= 48 &&„andChar <= 57 ) {
+
+81 
+¿ndCh¬
+ -= 15;
+
+83 
+key
+ = 
+Ãw
+ 
+	`SŒšgBud”
+Ğkey ).
+	`š£¹
+Ğ
+pos™iÚ
+, 
+¿ndCh¬
+ ).
+	`toSŒšg
+();
+
+85  
+i
+ = 0 ; i < 
+¥aûs
+ ; i++ ) {
+
+86 
+pos™iÚ
+ = 
+r
+.
+	`ÃxtIÁ
+Ğ
+key
+.
+	`Ëngth
+() - 1 ) + 1;
+
+87 
+pos™iÚ
+ = 
+M©h
+.
+	`abs
+(…osition );
+
+88 
+key
+ = 
+Ãw
+ 
+	`SŒšgBud”
+Ğkey ).
+	`š£¹
+Ğ
+pos™iÚ
+, "\u0020" ).
+	`toSŒšg
+();
+
+90  
+key
+;
+
+91 
+	}
+}
+
+93 
+´iv©e
+ 
+	gby‹
+[] 
+	$g‘P¬t
+Ğ
+SŒšg
+ 
+key
+ ) 
+throws
+ 
+Inv®idHªdshakeExû±iÚ
+ {
+
+94 
+Œy
+ {
+
+95 
+keyNumb”
+ = 
+LÚg
+.
+	`·r£LÚg
+Ğ
+key
+.
+	`»¶aûAÎ
+( "[^0-9]", "" ) );
+
+96 
+keyS·û
+ = 
+key
+.
+	`¥l™
+Ğ"\u0020" ).
+Ëngth
+ - 1;
+
+97 ifĞ
+keyS·û
+ == 0 ) {
+
+98 
+throw
+ 
+Ãw
+ 
+	`Inv®idHªdshakeExû±iÚ
+( "invalid Sec-WebSocket-Key (/key2/)" );
+
+100 
+·¹
+ = 
+Ãw
+ 
+	`LÚg
+Ğ
+keyNumb”
+ / 
+keyS·û
+ );
+
+101  
+Ãw
+ 
+by‹
+[]{ (by‹èĞ
+·¹
+ >> 24 ), (byte) ( (…art << 8 ) >> 24 ), (byte) ( (…art << 16 ) >> 24 ), (byte) ( (…art << 24 ) >> 24 ) };
+
+102 } 
+	`ÿtch
+ ( 
+Numb”FÜm©Exû±iÚ
+ 
+e
+ ) {
+
+103 
+throw
+ 
+Ãw
+ 
+	`Inv®idHªdshakeExû±iÚ
+( "invalid Sec-WebSocket-Key (/key1/ or /key2/)" );
+
+105 
+	}
+}
+
+107 @
+Ov”ride
+
+
+108 
+public
+ 
+HªdshakeS‹
+ 
+	$acû±HªdshakeAsCl›Á
+Ğ
+Cl›ÁHªdshake
+ 
+»que¡
+, 
+S”v”Hªdshake
+ 
+»¥Ú£
+ ) {
+
+109 ifĞ
+çed
+ ) {
+
+110  
+HªdshakeS‹
+.
+NOT_MATCHED
+;
+
+113 
+Œy
+ {
+
+114 ifĞ!
+»¥Ú£
+.
+	`g‘F›ldV®ue
+Ğ"Sec-WebSock‘-Origš" ).
+	`equ®s
+Ğ
+»que¡
+.g‘F›ldV®ueĞ"Origš" ) ) || !
+	`basicAcû±
+(„esponse ) ) {
+
+115  
+HªdshakeS‹
+.
+NOT_MATCHED
+;
+
+117 
+by‹
+[] 
+cÚ‹Á
+ = 
+»¥Ú£
+.
+	`g‘CÚ‹Á
+();
+
+118 ifĞ
+cÚ‹Á
+ =ğ
+nuÎ
+ || cÚ‹Á.
+Ëngth
+ == 0 ) {
+
+119 
+throw
+ 
+Ãw
+ 
+	`Incom¶‘eHªdshakeExû±iÚ
+();
+
+121 ifĞ
+A¼ays
+.
+	`equ®s
+Ğ
+cÚ‹Á
+, 
+	`ü—‹Ch®Ënge
+Ğ
+»que¡
+.
+	`g‘F›ldV®ue
+Ğ"Sec-WebSock‘-Key1" ),„eque¡.g‘F›ldV®ueĞ"Sec-WebSock‘-Key2" ),„eque¡.
+	`g‘CÚ‹Á
+() ) ) ) {
+
+122  
+HªdshakeS‹
+.
+MATCHED
+;
+
+124  
+HªdshakeS‹
+.
+NOT_MATCHED
+;
+
+126 } 
+	`ÿtch
+ ( 
+Inv®idHªdshakeExû±iÚ
+ 
+e
+ ) {
+
+127 
+throw
+ 
+Ãw
+ 
+	`RuÁimeExû±iÚ
+Ğ"bad hªdshak”eque¡", 
+e
+ );
+
+129 
+	}
+}
+
+131 @
+Ov”ride
+
+
+132 
+public
+ 
+HªdshakeS‹
+ 
+	$acû±HªdshakeAsS”v”
+Ğ
+Cl›ÁHªdshake
+ 
+hªdshaked©a
+ ) {
+
+133 ifĞ
+hªdshaked©a
+.
+	`g‘F›ldV®ue
+Ğ"Upg¿de" ).
+	`equ®s
+Ğ"WebSock‘" ) && hªdshaked©a.g‘F›ldV®ueĞ"CÚÃùiÚ" ).
+	`cÚšs
+Ğ"Upg¿de" ) && hªdshaked©a.g‘F›ldV®ueĞ"Sec-WebSock‘-Key1" ).
+	`Ëngth
+(è> 0 && !hªdshaked©a.g‘F›ldV®ueĞ"Sec-WebSock‘-Key2" ).
+	`isEm±y
+(è&& hªdshaked©a.
+	`hasF›ldV®ue
+( "Origin" ) )
+
+134  
+HªdshakeS‹
+.
+MATCHED
+;
+
+135  
+HªdshakeS‹
+.
+NOT_MATCHED
+;
+
+136 
+	}
+}
+
+138 @
+Ov”ride
+
+
+139 
+public
+ 
+Cl›ÁHªdshakeBud”
+ 
+	$po¡ProûssHªdshakeReque¡AsCl›Á
+Ğ
+Cl›ÁHªdshakeBud”
+ 
+»que¡
+ ) {
+
+140 
+»que¡
+.
+	`put
+( "Upgrade", "WebSocket" );
+
+141 
+»que¡
+.
+	`put
+( "Connection", "Upgrade" );
+
+142 
+»que¡
+.
+	`put
+Ğ"Sec-WebSock‘-Key1", 
+	`g’”©eKey
+() );
+
+143 
+»que¡
+.
+	`put
+Ğ"Sec-WebSock‘-Key2", 
+	`g’”©eKey
+() );
+
+145 ifĞ!
+»que¡
+.
+	`hasF›ldV®ue
+( "Origin" ) ) {
+
+146 
+»que¡
+.
+	`put
+Ğ"Origš", "¿ndom" + 
+»u£abËRªdom
+.
+	`ÃxtIÁ
+() );
+
+149 
+by‹
+[] 
+key3
+ = 
+Ãw
+ byte[ 8 ];
+
+150 
+»u£abËRªdom
+.
+	`ÃxtBy‹s
+Ğ
+key3
+ );
+
+151 
+»que¡
+.
+	`£tCÚ‹Á
+Ğ
+key3
+ );
+
+152  
+»que¡
+;
+
+154 
+	}
+}
+
+156 @
+Ov”ride
+
+
+157 
+public
+ 
+HªdshakeBud”
+ 
+	$po¡ProûssHªdshakeRe¥Ú£AsS”v”
+Ğ
+Cl›ÁHªdshake
+ 
+»que¡
+, 
+S”v”HªdshakeBud”
+ 
+»¥Ú£
+ ) 
+throws
+ 
+Inv®idHªdshakeExû±iÚ
+ {
+
+158 
+»¥Ú£
+.
+	`£tH‰pStusMes§ge
+( "WebSocket Protocol Handshake" );
+
+159 
+»¥Ú£
+.
+	`put
+( "Upgrade", "WebSocket" );
+
+160 
+»¥Ú£
+.
+	`put
+Ğ"CÚÃùiÚ", 
+»que¡
+.
+	`g‘F›ldV®ue
+( "Connection" ) );
+
+161 
+»¥Ú£
+.
+	`put
+Ğ"Sec-WebSock‘-Origš", 
+»que¡
+.
+	`g‘F›ldV®ue
+( "Origin" ) );
+
+162 
+SŒšg
+ 
+loÿtiÚ
+ = "ws://" + 
+»que¡
+.
+	`g‘F›ldV®ue
+Ğ"Ho¡" ) +„eque¡.
+	`g‘ResourûDesütÜ
+();
+
+163 
+»¥Ú£
+.
+	`put
+Ğ"Sec-WebSock‘-LoÿtiÚ", 
+loÿtiÚ
+ );
+
+164 
+SŒšg
+ 
+key1
+ = 
+»que¡
+.
+	`g‘F›ldV®ue
+( "Sec-WebSocket-Key1" );
+
+165 
+SŒšg
+ 
+key2
+ = 
+»que¡
+.
+	`g‘F›ldV®ue
+( "Sec-WebSocket-Key2" );
+
+166 
+by‹
+[] 
+key3
+ = 
+»que¡
+.
+	`g‘CÚ‹Á
+();
+
+167 ifĞ
+key1
+ =ğ
+nuÎ
+ || 
+key2
+ =ğnuÎ || 
+key3
+ =ğnuÎ || key3.
+Ëngth
+ != 8 ) {
+
+168 
+throw
+ 
+Ãw
+ 
+	`Inv®idHªdshakeExû±iÚ
+( "Bad keys" );
+
+170 
+»¥Ú£
+.
+	`£tCÚ‹Á
+Ğ
+	`ü—‹Ch®Ënge
+Ğ
+key1
+, 
+key2
+, 
+key3
+ ) );
+
+171  
+»¥Ú£
+;
+
+172 
+	}
+}
+
+174 @
+Ov”ride
+
+
+175 
+public
+ 
+Hªdshaked©a
+ 
+	$Œª¦©eHªdshake
+Ğ
+By‹Bufãr
+ 
+buf
+ ) 
+throws
+ 
+Inv®idHªdshakeExû±iÚ
+ {
+
+177 
+HªdshakeBud”
+ 
+bui
+ = 
+	`Œª¦©eHªdshakeH‰p
+Ğ
+buf
+, 
+rŞe
+ );
+
+179 ifĞĞ
+bui
+.
+	`hasF›ldV®ue
+Ğ"Sec-WebSock‘-Key1" ) || 
+rŞe
+ =ğ
+RŞe
+.
+CLIENT
+ ) && !bui.hasFieldValue( "Sec-WebSocket-Version" ) ) {
+
+180 
+by‹
+[] 
+key3
+ = 
+Ãw
+ by‹[ 
+rŞe
+ =ğ
+RŞe
+.
+SERVER
+ ? 8 : 16 ];
+
+181 
+Œy
+ {
+
+182 
+buf
+.
+	`g‘
+Ğ
+key3
+ );
+
+183 } 
+	`ÿtch
+ ( 
+BufãrUnd”æowExû±iÚ
+ 
+e
+ ) {
+
+184 
+throw
+ 
+Ãw
+ 
+	`Incom¶‘eHªdshakeExû±iÚ
+Ğ
+buf
+.
+	`ÿ·c™y
+() + 16 );
+
+186 
+bui
+.
+	`£tCÚ‹Á
+Ğ
+key3
+ );
+
+189  
+bui
+;
+
+190 
+	}
+}
+
+192 @
+Ov”ride
+
+
+193 
+public
+ 
+	gLi¡
+<
+	gF¿med©a
+> 
+	$Œª¦©eF¿me
+Ğ
+By‹Bufãr
+ 
+bufãr
+ ) 
+throws
+ 
+Inv®idD©aExû±iÚ
+ {
+
+194 
+bufãr
+.
+	`m¬k
+();
+
+195 
+Li¡
+<
+F¿med©a
+> 
+äames
+ = 
+su³r
+.
+	`Œª¦©eReguÏrF¿me
+Ğ
+bufãr
+ );
+
+196 ifĞ
+äames
+ =ğ
+nuÎ
+ ) {
+
+197 
+bufãr
+.
+	`»£t
+();
+
+198 
+äames
+ = 
+»adyäames
+;
+
+199 
+»adšgS‹
+ = 
+Œue
+;
+
+200 ifĞ
+cu¼’tF¿me
+ =ğ
+nuÎ
+ )
+
+201 
+cu¼’tF¿me
+ = 
+By‹Bufãr
+.
+	`®loÿ‹
+( 2 );
+
+203 
+throw
+ 
+Ãw
+ 
+	`Inv®idF¿meExû±iÚ
+();
+
+205 ifĞ
+bufãr
+.
+	`»maššg
+(è> 
+cu¼’tF¿me
+.remaining() ) {
+
+206 
+throw
+ 
+Ãw
+ 
+	`Inv®idF¿meExû±iÚ
+();
+
+208 
+cu¼’tF¿me
+.
+	`put
+Ğ
+bufãr
+ );
+
+210 ifĞ!
+cu¼’tF¿me
+.
+	`hasRemaššg
+() ) {
+
+211 ifĞ
+A¼ays
+.
+	`equ®s
+Ğ
+cu¼’tF¿me
+.
+	`¬¿y
+(), 
+şo£hªdshake
+ ) ) {
+
+212 
+äames
+.
+	`add
+Ğ
+Ãw
+ 
+	`Clo£F¿meBud”
+Ğ
+Clo£F¿me
+.
+NORMAL
+ ) );
+
+213  
+äames
+;
+
+216 
+throw
+ 
+Ãw
+ 
+	`Inv®idF¿meExû±iÚ
+();
+
+219 
+»adyäames
+ = 
+Ãw
+ 
+LškedLi¡
+<
+F¿med©a
+>();
+
+220  
+äames
+;
+
+223  
+äames
+;
+
+225 
+	}
+}
+
+226 @
+Ov”ride
+
+
+227 
+public
+ 
+By‹Bufãr
+ 
+	$ü—‹Bš¬yF¿me
+Ğ
+F¿med©a
+ 
+äamed©a
+ ) {
+
+228 ifĞ
+äamed©a
+.
+	`g‘Opcode
+(è=ğ
+Opcode
+.
+CLOSING
+ )
+
+229  
+By‹Bufãr
+.
+	`w¿p
+Ğ
+şo£hªdshake
+ );
+
+230  
+su³r
+.
+	`ü—‹Bš¬yF¿me
+Ğ
+äamed©a
+ );
+
+231 
+	}
+}
+
+233 @
+Ov”ride
+
+
+234 
+public
+ 
+Clo£HªdshakeTy³
+ 
+	$g‘Clo£HªdshakeTy³
+() {
+
+235  
+Clo£HªdshakeTy³
+.
+ONEWAY
+;
+
+236 
+	}
+}
+
+238 @
+Ov”ride
+
+
+239 
+public
+ 
+D¿á
+ 
+	$cİyIn¡ªû
+() {
+
+240  
+Ãw
+ 
+	`D¿á_76
+();
+
+241 
+	}
+}
+
+	@src/main/java/org/java_websocket/exceptions/IncompleteHandshakeException.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+;
+
+3 
+public
+ cÏs 
+	cIncom¶‘eHªdshakeExû±iÚ
+ 
+ex‹nds
+ 
+	mRuÁimeExû±iÚ
+ {
+
+5 
+´iv©e
+ 
+fš®
+ 
+	m£rŸlV”siÚUID
+ = 7906596804233893092L;
+
+6 
+´iv©e
+ 
+	mÃwsize
+;
+
+8 
+public
+ 
+	$Incom¶‘eHªdshakeExû±iÚ
+Ğ
+Ãwsize
+ ) {
+
+9 
+this
+.
+Ãwsize
+ =‚ewsize;
+
+12 
+public
+ 
+	$Incom¶‘eHªdshakeExû±iÚ
+() {
+
+13 
+this
+.
+Ãwsize
+ = 0;
+
+14 
+	}
+}
+
+16 
+public
+ 
+	$g‘P»ã»dSize
+() {
+
+17  
+Ãwsize
+;
+
+18 
+	}
+}
+
+	@src/main/java/org/java_websocket/exceptions/InvalidDataException.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+;
+
+3 
+public
+ cÏs 
+	cInv®idD©aExû±iÚ
+ 
+ex‹nds
+ 
+	mExû±iÚ
+ {
+
+7 
+´iv©e
+ 
+fš®
+ 
+	m£rŸlV”siÚUID
+ = 3731842424390998726L;
+
+9 
+´iv©e
+ 
+	mşo£code
+;
+
+11 
+public
+ 
+	$Inv®idD©aExû±iÚ
+Ğ
+şo£code
+ ) {
+
+12 
+this
+.
+şo£code
+ = closecode;
+
+15 
+public
+ 
+	$Inv®idD©aExû±iÚ
+Ğ
+şo£code
+ , 
+SŒšg
+ 
+s
+ ) {
+
+16 
+	`su³r
+Ğ
+s
+ );
+
+17 
+this
+.
+şo£code
+ = closecode;
+
+18 
+	}
+}
+
+20 
+public
+ 
+	$Inv®idD©aExû±iÚ
+Ğ
+şo£code
+ , 
+ThrowabË
+ 
+t
+ ) {
+
+21 
+	`su³r
+Ğ
+t
+ );
+
+22 
+this
+.
+şo£code
+ = closecode;
+
+23 
+	}
+}
+
+25 
+public
+ 
+	$Inv®idD©aExû±iÚ
+Ğ
+şo£code
+ , 
+SŒšg
+ 
+s
+ , 
+ThrowabË
+ 
+t
+ ) {
+
+26 
+	`su³r
+Ğ
+s
+, 
+t
+ );
+
+27 
+this
+.
+şo£code
+ = closecode;
+
+28 
+	}
+}
+
+30 
+public
+ 
+	$g‘Clo£Code
+() {
+
+31  
+şo£code
+;
+
+32 
+	}
+}
+
+	@src/main/java/org/java_websocket/exceptions/InvalidFrameException.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+;
+
+3 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gClo£F¿me
+;
+
+5 
+public
+ cÏs 
+	cInv®idF¿meExû±iÚ
+ 
+ex‹nds
+ 
+	mInv®idD©aExû±iÚ
+ {
+
+10 
+´iv©e
+ 
+fš®
+ 
+	m£rŸlV”siÚUID
+ = -9016496369828887591L;
+
+12 
+public
+ 
+	$Inv®idF¿meExû±iÚ
+() {
+
+13 
+	`su³r
+Ğ
+Clo£F¿me
+.
+PROTOCOL_ERROR
+ );
+
+16 
+public
+ 
+	$Inv®idF¿meExû±iÚ
+Ğ
+SŒšg
+ 
+¬g0
+ ) {
+
+17 
+	`su³r
+Ğ
+Clo£F¿me
+.
+PROTOCOL_ERROR
+, 
+¬g0
+ );
+
+18 
+	}
+}
+
+20 
+public
+ 
+	$Inv®idF¿meExû±iÚ
+Ğ
+ThrowabË
+ 
+¬g0
+ ) {
+
+21 
+	`su³r
+Ğ
+Clo£F¿me
+.
+PROTOCOL_ERROR
+, 
+¬g0
+ );
+
+22 
+	}
+}
+
+24 
+public
+ 
+	$Inv®idF¿meExû±iÚ
+Ğ
+SŒšg
+ 
+¬g0
+ , 
+ThrowabË
+ 
+¬g1
+ ) {
+
+25 
+	`su³r
+Ğ
+Clo£F¿me
+.
+PROTOCOL_ERROR
+, 
+¬g0
+, 
+¬g1
+ );
+
+26 
+	}
+}
+
+	@src/main/java/org/java_websocket/exceptions/InvalidHandshakeException.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+;
+
+3 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gClo£F¿me
+;
+
+5 
+public
+ cÏs 
+	cInv®idHªdshakeExû±iÚ
+ 
+ex‹nds
+ 
+	mInv®idD©aExû±iÚ
+ {
+
+10 
+´iv©e
+ 
+fš®
+ 
+	m£rŸlV”siÚUID
+ = -1426533877490484964L;
+
+12 
+public
+ 
+	$Inv®idHªdshakeExû±iÚ
+() {
+
+13 
+	`su³r
+Ğ
+Clo£F¿me
+.
+PROTOCOL_ERROR
+ );
+
+16 
+public
+ 
+	$Inv®idHªdshakeExû±iÚ
+Ğ
+SŒšg
+ 
+¬g0
+ , 
+ThrowabË
+ 
+¬g1
+ ) {
+
+17 
+	`su³r
+Ğ
+Clo£F¿me
+.
+PROTOCOL_ERROR
+, 
+¬g0
+, 
+¬g1
+ );
+
+18 
+	}
+}
+
+20 
+public
+ 
+	$Inv®idHªdshakeExû±iÚ
+Ğ
+SŒšg
+ 
+¬g0
+ ) {
+
+21 
+	`su³r
+Ğ
+Clo£F¿me
+.
+PROTOCOL_ERROR
+, 
+¬g0
+ );
+
+22 
+	}
+}
+
+24 
+public
+ 
+	$Inv®idHªdshakeExû±iÚ
+Ğ
+ThrowabË
+ 
+¬g0
+ ) {
+
+25 
+	`su³r
+Ğ
+Clo£F¿me
+.
+PROTOCOL_ERROR
+, 
+¬g0
+ );
+
+26 
+	}
+}
+
+	@src/main/java/org/java_websocket/exceptions/LimitExedeedException.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+;
+
+3 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gClo£F¿me
+;
+
+5 
+public
+ cÏs 
+	cLim™Exed“dExû±iÚ
+ 
+ex‹nds
+ 
+	mInv®idD©aExû±iÚ
+ {
+
+10 
+´iv©e
+ 
+fš®
+ 
+	m£rŸlV”siÚUID
+ = 6908339749836826785L;
+
+12 
+public
+ 
+	$Lim™Exed“dExû±iÚ
+() {
+
+13 
+	`su³r
+Ğ
+Clo£F¿me
+.
+TOOBIG
+ );
+
+16 
+public
+ 
+	$Lim™Exed“dExû±iÚ
+Ğ
+SŒšg
+ 
+s
+ ) {
+
+17 
+	`su³r
+Ğ
+Clo£F¿me
+.
+TOOBIG
+, 
+s
+ );
+
+18 
+	}
+}
+
+	@src/main/java/org/java_websocket/exceptions/NotSendableException.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+;
+
+3 
+public
+ cÏs 
+	cNÙS’dabËExû±iÚ
+ 
+ex‹nds
+ 
+	mRuÁimeExû±iÚ
+ {
+
+8 
+´iv©e
+ 
+fš®
+ 
+	m£rŸlV”siÚUID
+ = -6468967874576651628L;
+
+10 
+public
+ 
+	$NÙS’dabËExû±iÚ
+() {
+
+13 
+public
+ 
+	$NÙS’dabËExû±iÚ
+Ğ
+SŒšg
+ 
+mes§ge
+ ) {
+
+14 
+	`su³r
+Ğ
+mes§ge
+ );
+
+15 
+	}
+}
+
+17 
+public
+ 
+	$NÙS’dabËExû±iÚ
+Ğ
+ThrowabË
+ 
+ÿu£
+ ) {
+
+18 
+	`su³r
+Ğ
+ÿu£
+ );
+
+19 
+	}
+}
+
+21 
+public
+ 
+	$NÙS’dabËExû±iÚ
+Ğ
+SŒšg
+ 
+mes§ge
+ , 
+ThrowabË
+ 
+ÿu£
+ ) {
+
+22 
+	`su³r
+Ğ
+mes§ge
+, 
+ÿu£
+ );
+
+23 
+	}
+}
+
+	@src/main/java/org/java_websocket/exceptions/WebsocketNotConnectedException.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+;
+
+3 
+public
+ cÏs 
+	cWebsock‘NÙCÚÃùedExû±iÚ
+ 
+ex‹nds
+ 
+	mRuÁimeExû±iÚ
+ {
+
+	@src/main/java/org/java_websocket/framing/CloseFrame.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+;
+
+3 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idD©aExû±iÚ
+;
+
+4 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idF¿meExû±iÚ
+;
+
+6 
+public
+ 
+š‹rçû
+ 
+Clo£F¿me
+ 
+ex‹nds
+ 
+	gF¿med©a
+ {
+
+11 
+public
+ 
+fš®
+ 
+	gNORMAL
+ = 1000;
+
+16 
+public
+ 
+fš®
+ 
+	gGOING_AWAY
+ = 1001;
+
+21 
+public
+ 
+fš®
+ 
+	gPROTOCOL_ERROR
+ = 1002;
+
+28 
+public
+ 
+fš®
+ 
+	gREFUSE
+ = 1003;
+
+36 
+public
+ 
+fš®
+ 
+	gNOCODE
+ = 1005;
+
+44 
+public
+ 
+fš®
+ 
+	gABNORMAL_CLOSE
+ = 1006;
+
+51 
+public
+ 
+fš®
+ 
+	gNO_UTF8
+ = 1007;
+
+59 
+public
+ 
+fš®
+ 
+	gPOLICY_VALIDATION
+ = 1008;
+
+65 
+public
+ 
+fš®
+ 
+	gTOOBIG
+ = 1009;
+
+75 
+public
+ 
+fš®
+ 
+	gEXTENSION
+ = 1010;
+
+81 
+public
+ 
+fš®
+ 
+	gUNEXPECTED_CONDITION
+ = 1011;
+
+89 
+public
+ 
+fš®
+ 
+	gTLS_ERROR
+ = 1015;
+
+92 
+public
+ 
+fš®
+ 
+	gNEVER_CONNECTED
+ = -1;
+
+93 
+public
+ 
+fš®
+ 
+	gBUGGYCLOSE
+ = -2;
+
+94 
+public
+ 
+fš®
+ 
+	gFLASHPOLICY
+ = -3;
+
+96 
+public
+ 
+g‘Clo£Code
+(è
+throws
+ 
+	gInv®idF¿meExû±iÚ
+;
+
+97 
+public
+ 
+SŒšg
+ 
+g‘Mes§ge
+(è
+throws
+ 
+	gInv®idD©aExû±iÚ
+;
+
+	@src/main/java/org/java_websocket/framing/CloseFrameBuilder.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gBy‹Bufãr
+;
+
+5 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idD©aExû±iÚ
+;
+
+6 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idF¿meExû±iÚ
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gut
+.
+	gCh¬£tfunùiÚs
+;
+
+9 
+public
+ cÏs 
+	cClo£F¿meBud”
+ 
+ex‹nds
+ 
+F¿med©aIm¶1
+ 
+im¶em’ts
+ 
+	mClo£F¿me
+ {
+
+11 
+fš®
+ 
+By‹Bufãr
+ 
+	mem±yby‹bufãr
+ = By‹Bufãr.
+®loÿ‹
+( 0 );
+
+13 
+´iv©e
+ 
+	mcode
+;
+
+14 
+´iv©e
+ 
+SŒšg
+ 
+	m»asÚ
+;
+
+16 
+public
+ 
+	$Clo£F¿meBud”
+() {
+
+17 
+	`su³r
+Ğ
+Opcode
+.
+CLOSING
+ );
+
+18 
+	`£tFš
+Ğ
+Œue
+ );
+
+21 
+public
+ 
+	$Clo£F¿meBud”
+Ğ
+code
+ ) 
+throws
+ 
+Inv®idD©aExû±iÚ
+ {
+
+22 
+	`su³r
+Ğ
+Opcode
+.
+CLOSING
+ );
+
+23 
+	`£tFš
+Ğ
+Œue
+ );
+
+24 
+	`£tCodeAndMes§ge
+Ğ
+code
+, "" );
+
+25 
+	}
+}
+
+27 
+public
+ 
+	$Clo£F¿meBud”
+Ğ
+code
+ , 
+SŒšg
+ 
+m
+ ) 
+throws
+ 
+Inv®idD©aExû±iÚ
+ {
+
+28 
+	`su³r
+Ğ
+Opcode
+.
+CLOSING
+ );
+
+29 
+	`£tFš
+Ğ
+Œue
+ );
+
+30 
+	`£tCodeAndMes§ge
+Ğ
+code
+, 
+m
+ );
+
+31 
+	}
+}
+
+33 
+´iv©e
+ 
+	$£tCodeAndMes§ge
+Ğ
+code
+, 
+SŒšg
+ 
+m
+ ) 
+throws
+ 
+Inv®idD©aExû±iÚ
+ {
+
+34 ifĞ
+m
+ =ğ
+nuÎ
+ ) {
+
+35 
+m
+ = "";
+
+38 ifĞ
+code
+ =ğ
+Clo£F¿me
+.
+TLS_ERROR
+ ) {
+
+39 
+code
+ = 
+Clo£F¿me
+.
+NOCODE
+;
+
+40 
+m
+ = "";
+
+42 ifĞ
+code
+ =ğ
+Clo£F¿me
+.
+NOCODE
+ ) {
+
+43 ifĞ0 < 
+m
+.
+	`Ëngth
+() ) {
+
+44 
+throw
+ 
+Ãw
+ 
+	`Inv®idD©aExû±iÚ
+Ğ
+PROTOCOL_ERROR
+, "A close frame must have‡ closecode if it has‡„eason" );
+
+49 
+by‹
+[] 
+by
+ = 
+Ch¬£tfunùiÚs
+.
+	`utf8By‹s
+Ğ
+m
+ );
+
+50 
+By‹Bufãr
+ 
+buf
+ = By‹Bufãr.
+	`®loÿ‹
+( 4 );
+
+51 
+buf
+.
+	`putIÁ
+Ğ
+code
+ );
+
+52 
+buf
+.
+	`pos™iÚ
+( 2 );
+
+53 
+By‹Bufãr
+ 
+·y
+ = By‹Bufãr.
+	`®loÿ‹
+Ğ2 + 
+by
+.
+Ëngth
+ );
+
+54 
+·y
+.
+	`put
+Ğ
+buf
+ );
+
+55 
+·y
+.
+	`put
+Ğ
+by
+ );
+
+56 
+·y
+.
+	`»wšd
+();
+
+57 
+	`£tPaylßd
+Ğ
+·y
+ );
+
+58 
+	}
+}
+
+60 
+´iv©e
+ 
+	$š™Clo£Code
+(è
+throws
+ 
+Inv®idF¿meExû±iÚ
+ {
+
+61 
+code
+ = 
+Clo£F¿me
+.
+NOCODE
+;
+
+62 
+By‹Bufãr
+ 
+·ylßd
+ = 
+su³r
+.
+	`g‘PaylßdD©a
+();
+
+63 
+·ylßd
+.
+	`m¬k
+();
+
+64 ifĞ
+·ylßd
+.
+	`»maššg
+() >= 2 ) {
+
+65 
+By‹Bufãr
+ 
+bb
+ = By‹Bufãr.
+	`®loÿ‹
+( 4 );
+
+66 
+bb
+.
+	`pos™iÚ
+( 2 );
+
+67 
+bb
+.
+	`putShÜt
+Ğ
+·ylßd
+.
+	`g‘ShÜt
+() );
+
+68 
+bb
+.
+	`pos™iÚ
+( 0 );
+
+69 
+code
+ = 
+bb
+.
+	`g‘IÁ
+();
+
+71 ifĞ
+code
+ =ğ
+Clo£F¿me
+.
+ABNORMAL_CLOSE
+ || cod=ğClo£F¿me.
+TLS_ERROR
+ || cod=ğClo£F¿me.
+NOCODE
+ || code > 4999 || code < 1000 || code == 1004 ) {
+
+72 
+throw
+ 
+Ãw
+ 
+	`Inv®idF¿meExû±iÚ
+Ğ"şo£codmu¡‚Ù b£Á ov”hwœe: " + 
+code
+ );
+
+75 
+·ylßd
+.
+	`»£t
+();
+
+76 
+	}
+}
+
+78 @
+Ov”ride
+
+
+79 
+public
+ 
+	$g‘Clo£Code
+() {
+
+80  
+code
+;
+
+81 
+	}
+}
+
+83 
+´iv©e
+ 
+	$š™Mes§ge
+(è
+throws
+ 
+Inv®idD©aExû±iÚ
+ {
+
+84 ifĞ
+code
+ =ğ
+Clo£F¿me
+.
+NOCODE
+ ) {
+
+85 
+»asÚ
+ = 
+Ch¬£tfunùiÚs
+.
+	`¡ršgUtf8
+Ğ
+su³r
+.
+	`g‘PaylßdD©a
+() );
+
+87 
+By‹Bufãr
+ 
+b
+ = 
+su³r
+.
+	`g‘PaylßdD©a
+();
+
+88 
+m¬k
+ = 
+b
+.
+	`pos™iÚ
+();
+
+89 
+Œy
+ {
+
+90 
+b
+.
+	`pos™iÚ
+( b.position() + 2 );
+
+91 
+»asÚ
+ = 
+Ch¬£tfunùiÚs
+.
+	`¡ršgUtf8
+Ğ
+b
+ );
+
+92 } 
+	`ÿtch
+ ( 
+IÎeg®Argum’tExû±iÚ
+ 
+e
+ ) {
+
+93 
+throw
+ 
+Ãw
+ 
+	`Inv®idF¿meExû±iÚ
+Ğ
+e
+ );
+
+94 } 
+fš®ly
+ {
+
+95 
+b
+.
+	`pos™iÚ
+Ğ
+m¬k
+ );
+
+98 
+	}
+}
+
+100 @
+Ov”ride
+
+
+101 
+public
+ 
+SŒšg
+ 
+	$g‘Mes§ge
+() {
+
+102  
+»asÚ
+;
+
+103 
+	}
+}
+
+105 @
+Ov”ride
+
+
+106 
+public
+ 
+SŒšg
+ 
+	$toSŒšg
+() {
+
+107  
+su³r
+.
+	`toSŒšg
+(è+ "code: " + 
+code
+;
+
+108 
+	}
+}
+
+110 @
+Ov”ride
+
+
+111 
+public
+ 
+	$£tPaylßd
+Ğ
+By‹Bufãr
+ 
+·ylßd
+ ) 
+throws
+ 
+Inv®idD©aExû±iÚ
+ {
+
+112 
+su³r
+.
+	`£tPaylßd
+Ğ
+·ylßd
+ );
+
+113 
+	`š™Clo£Code
+();
+
+114 
+	`š™Mes§ge
+();
+
+115 
+	}
+}
+
+116 @
+Ov”ride
+
+
+117 
+public
+ 
+By‹Bufãr
+ 
+	$g‘PaylßdD©a
+() {
+
+118 ifĞ
+code
+ =ğ
+NOCODE
+ )
+
+119  
+em±yby‹bufãr
+;
+
+120  
+su³r
+.
+	`g‘PaylßdD©a
+();
+
+121 
+	}
+}
+
+	@src/main/java/org/java_websocket/framing/FrameBuilder.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gBy‹Bufãr
+;
+
+5 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idD©aExû±iÚ
+;
+
+7 
+public
+ 
+š‹rçû
+ 
+F¿meBud”
+ 
+ex‹nds
+ 
+	gF¿med©a
+ {
+
+9 
+public
+ 
+ab¡¿ù
+ 
+£tFš
+(
+boŞ—n
+ 
+fš
+);
+
+11 
+public
+ 
+ab¡¿ù
+ 
+£tO±code
+(
+Opcode
+ 
+İtcode
+);
+
+13 
+public
+ 
+ab¡¿ù
+ 
+£tPaylßd
+(
+By‹Bufãr
+ 
+·ylßd
+è
+throws
+ 
+	gInv®idD©aExû±iÚ
+;
+
+15 
+public
+ 
+ab¡¿ù
+ 
+£tT¿nsã»masked
+(
+boŞ—n
+ 
+Œªsã»masked
+);
+
+	@src/main/java/org/java_websocket/framing/Framedata.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gBy‹Bufãr
+;
+
+5 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idF¿meExû±iÚ
+;
+
+7 
+public
+ 
+š‹rçû
+ 
+	gF¿med©a
+ {
+
+8 
+public
+ 
+	eOpcode
+ {
+
+9 
+	gCONTINUOUS
+, 
+	gTEXT
+, 
+	gBINARY
+, 
+	gPING
+, 
+	gPONG
+, 
+	gCLOSING
+
+
+12 
+public
+ 
+boŞ—n
+ 
+isFš
+();
+
+13 
+public
+ 
+boŞ—n
+ 
+g‘T¿nsã»Masked
+();
+
+14 
+public
+ 
+Opcode
+ 
+g‘Opcode
+();
+
+15 
+public
+ 
+By‹Bufãr
+ 
+g‘PaylßdD©a
+();
+
+16 
+public
+ 
+ab¡¿ù
+ 
+­³nd
+(
+F¿med©a
+ 
+Ãxtäame
+è
+throws
+ 
+	gInv®idF¿meExû±iÚ
+;
+
+	@src/main/java/org/java_websocket/framing/FramedataImpl1.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gBy‹Bufãr
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gA¼ays
+;
+
+6 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idD©aExû±iÚ
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idF¿meExû±iÚ
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gut
+.
+	gCh¬£tfunùiÚs
+;
+
+10 
+public
+ cÏs 
+	cF¿med©aIm¶1
+ 
+im¶em’ts
+ 
+	mF¿meBud”
+ {
+
+11 
+´Ùeùed
+ 
+	mby‹
+[] 
+	mem±y¬¿y
+ = {};
+
+12 
+´Ùeùed
+ 
+boŞ—n
+ 
+	gfš
+;
+
+13 
+´Ùeùed
+ 
+Opcode
+ 
+	gİtcode
+;
+
+14 
+´iv©e
+ 
+By‹Bufãr
+ 
+	gunmasked·ylßd
+;
+
+15 
+´Ùeùed
+ 
+boŞ—n
+ 
+	gŒªsã»masked
+;
+
+17 
+public
+ 
+	$F¿med©aIm¶1
+() {
+
+18 
+	}
+}
+
+20 
+public
+ 
+	$F¿med©aIm¶1
+Ğ
+Opcode
+ 
+İ
+ ) {
+
+21 
+this
+.
+İtcode
+ = 
+İ
+;
+
+22 
+unmasked·ylßd
+ = 
+By‹Bufãr
+.
+	`w¿p
+Ğ
+em±y¬¿y
+ );
+
+23 
+	}
+}
+
+29 
+public
+ 
+	$F¿med©aIm¶1
+Ğ
+F¿med©a
+ 
+f
+ ) {
+
+30 
+fš
+ = 
+f
+.
+	`isFš
+();
+
+31 
+İtcode
+ = 
+f
+.
+	`g‘Opcode
+();
+
+32 
+unmasked·ylßd
+ = 
+f
+.
+	`g‘PaylßdD©a
+();
+
+33 
+Œªsã»masked
+ = 
+f
+.
+	`g‘T¿nsã»Masked
+();
+
+34 
+	}
+}
+
+36 @
+Ov”ride
+
+
+37 
+public
+ 
+boŞ—n
+ 
+	$isFš
+() {
+
+38  
+fš
+;
+
+39 
+	}
+}
+
+41 @
+Ov”ride
+
+
+42 
+public
+ 
+Opcode
+ 
+	$g‘Opcode
+() {
+
+43  
+İtcode
+;
+
+44 
+	}
+}
+
+46 @
+Ov”ride
+
+
+47 
+public
+ 
+boŞ—n
+ 
+	$g‘T¿nsã»Masked
+() {
+
+48  
+Œªsã»masked
+;
+
+49 
+	}
+}
+
+51 @
+Ov”ride
+
+
+52 
+public
+ 
+By‹Bufãr
+ 
+	$g‘PaylßdD©a
+() {
+
+53  
+unmasked·ylßd
+;
+
+54 
+	}
+}
+
+56 @
+Ov”ride
+
+
+57 
+public
+ 
+	$£tFš
+Ğ
+boŞ—n
+ 
+fš
+ ) {
+
+58 
+this
+.
+fš
+ = fin;
+
+59 
+	}
+}
+
+61 @
+Ov”ride
+
+
+62 
+public
+ 
+	$£tO±code
+Ğ
+Opcode
+ 
+İtcode
+ ) {
+
+63 
+this
+.
+İtcode
+ = optcode;
+
+64 
+	}
+}
+
+66 @
+Ov”ride
+
+
+67 
+public
+ 
+	$£tPaylßd
+Ğ
+By‹Bufãr
+ 
+·ylßd
+ ) 
+throws
+ 
+Inv®idD©aExû±iÚ
+ {
+
+68 
+unmasked·ylßd
+ = 
+·ylßd
+;
+
+69 
+	}
+}
+
+71 @
+Ov”ride
+
+
+72 
+public
+ 
+	$£tT¿nsã»masked
+Ğ
+boŞ—n
+ 
+Œªsã»masked
+ ) {
+
+73 
+this
+.
+Œªsã»masked
+ =ransferemasked;
+
+74 
+	}
+}
+
+76 @
+Ov”ride
+
+
+77 
+public
+ 
+	$­³nd
+Ğ
+F¿med©a
+ 
+Ãxtäame
+ ) 
+throws
+ 
+Inv®idF¿meExû±iÚ
+ {
+
+78 
+By‹Bufãr
+ 
+b
+ = 
+Ãxtäame
+.
+	`g‘PaylßdD©a
+();
+
+79 ifĞ
+unmasked·ylßd
+ =ğ
+nuÎ
+ ) {
+
+80 
+unmasked·ylßd
+ = 
+By‹Bufãr
+.
+	`®loÿ‹
+Ğ
+b
+.
+	`»maššg
+() );
+
+81 
+b
+.
+	`m¬k
+();
+
+82 
+unmasked·ylßd
+.
+	`put
+Ğ
+b
+ );
+
+83 
+b
+.
+	`»£t
+();
+
+85 
+b
+.
+	`m¬k
+();
+
+86 
+unmasked·ylßd
+.
+	`pos™iÚ
+Ğunmasked·ylßd.
+	`lim™
+() );
+
+87 
+unmasked·ylßd
+.
+	`lim™
+Ğunmasked·ylßd.
+	`ÿ·c™y
+() );
+
+89 ifĞ
+b
+.
+	`»maššg
+(è> 
+unmasked·ylßd
+.remaining() ) {
+
+90 
+By‹Bufãr
+ 
+tmp
+ = By‹Bufãr.
+	`®loÿ‹
+Ğ
+b
+.
+	`»maššg
+(è+ 
+unmasked·ylßd
+.
+	`ÿ·c™y
+() );
+
+91 
+unmasked·ylßd
+.
+	`æ
+();
+
+92 
+tmp
+.
+	`put
+Ğ
+unmasked·ylßd
+ );
+
+93 
+tmp
+.
+	`put
+Ğ
+b
+ );
+
+94 
+unmasked·ylßd
+ = 
+tmp
+;
+
+97 
+unmasked·ylßd
+.
+	`put
+Ğ
+b
+ );
+
+99 
+unmasked·ylßd
+.
+	`»wšd
+();
+
+100 
+b
+.
+	`»£t
+();
+
+102 
+fš
+ = 
+Ãxtäame
+.
+	`isFš
+();
+
+103 
+	}
+}
+
+105 @
+Ov”ride
+
+
+106 
+public
+ 
+SŒšg
+ 
+	$toSŒšg
+() {
+
+107  "F¿med©a{ o±code:" + 
+	`g‘Opcode
+(è+ ", fš:" + 
+	`isFš
+(è+ ",…aylßdËngth:[pos:" + 
+unmasked·ylßd
+.
+	`pos™iÚ
+(è+ ",†’:" + unmasked·ylßd.
+	`»maššg
+(è+ "],…aylßd:" + 
+A¼ays
+.
+	`toSŒšg
+Ğ
+Ch¬£tfunùiÚs
+.
+	`utf8By‹s
+Ğ
+Ãw
+ 
+	`SŒšg
+Ğunmasked·ylßd.
+	`¬¿y
+() ) ) ) + "}";
+
+108 
+	}
+}
+
+	@src/main/java/org/java_websocket/handshake/ClientHandshake.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+;
+
+3 
+public
+ 
+š‹rçû
+ 
+Cl›ÁHªdshake
+ 
+ex‹nds
+ 
+	gHªdshaked©a
+ {
+
+5 
+public
+ 
+SŒšg
+ 
+g‘ResourûDesütÜ
+();
+
+	@src/main/java/org/java_websocket/handshake/ClientHandshakeBuilder.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+;
+
+3 
+public
+ 
+š‹rçû
+ 
+Cl›ÁHªdshakeBud”
+ 
+ex‹nds
+ 
+	gHªdshakeBud”
+, 
+	gCl›ÁHªdshake
+ {
+
+4 
+public
+ 
+£tResourûDesütÜ
+(
+SŒšg
+ 
+»sourûDesütÜ
+);
+
+	@src/main/java/org/java_websocket/handshake/HandshakeBuilder.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+;
+
+3 
+public
+ 
+š‹rçû
+ 
+HªdshakeBud”
+ 
+ex‹nds
+ 
+	gHªdshaked©a
+ {
+
+4 
+public
+ 
+ab¡¿ù
+ 
+£tCÚ‹Á
+(
+by‹
+[] 
+cÚ‹Á
+);
+
+5 
+public
+ 
+ab¡¿ù
+ 
+put
+(
+SŒšg
+ 
+Çme
+, SŒšg 
+v®ue
+);
+
+	@src/main/java/org/java_websocket/handshake/HandshakeImpl1Client.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+;
+
+3 
+public
+ cÏs 
+	cHªdshakeIm¶1Cl›Á
+ 
+ex‹nds
+ 
+Hªdshaked©aIm¶1
+ 
+im¶em’ts
+ 
+	mCl›ÁHªdshakeBud”
+ {
+
+4 
+´iv©e
+ 
+SŒšg
+ 
+	m»sourûDesütÜ
+ = "*";
+
+6 
+public
+ 
+	$HªdshakeIm¶1Cl›Á
+() {
+
+9 
+public
+ 
+	$£tResourûDesütÜ
+Ğ
+SŒšg
+ 
+»sourûDesütÜ
+ ) 
+throws
+ 
+IÎeg®Argum’tExû±iÚ
+ {
+
+10 if(
+»sourûDesütÜ
+==
+nuÎ
+)
+
+11 
+throw
+ 
+Ãw
+ 
+	`IÎeg®Argum’tExû±iÚ
+( "http„esource descriptor must‚ot be‚ull" );
+
+12 
+this
+.
+»sourûDesütÜ
+ =„esourceDescriptor;
+
+13 
+	}
+}
+
+15 
+public
+ 
+SŒšg
+ 
+	$g‘ResourûDesütÜ
+() {
+
+16  
+»sourûDesütÜ
+;
+
+17 
+	}
+}
+
+	@src/main/java/org/java_websocket/handshake/HandshakeImpl1Server.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+;
+
+3 
+public
+ cÏs 
+	cHªdshakeIm¶1S”v”
+ 
+ex‹nds
+ 
+Hªdshaked©aIm¶1
+ 
+im¶em’ts
+ 
+	mS”v”HªdshakeBud”
+ {
+
+4 
+´iv©e
+ 
+	mh‰p¡©us
+;
+
+5 
+´iv©e
+ 
+SŒšg
+ 
+	mh‰p¡©usmes§ge
+;
+
+7 
+public
+ 
+	$HªdshakeIm¶1S”v”
+() {
+
+10 @
+Ov”ride
+
+
+11 
+public
+ 
+SŒšg
+ 
+	$g‘H‰pStusMes§ge
+() {
+
+12  
+h‰p¡©usmes§ge
+;
+
+13 
+	}
+}
+
+15 @
+Ov”ride
+
+
+16 
+public
+ 
+	$g‘H‰pStus
+() {
+
+17  
+h‰p¡©us
+;
+
+18 
+	}
+}
+
+20 
+public
+ 
+	$£tH‰pStusMes§ge
+Ğ
+SŒšg
+ 
+mes§ge
+ ) {
+
+21 
+this
+.
+h‰p¡©usmes§ge
+ = 
+mes§ge
+;
+
+22 
+	}
+}
+
+24 
+public
+ 
+	$£tH‰pStus
+Ğ
+¡©us
+ ) {
+
+25 
+h‰p¡©us
+ = 
+¡©us
+;
+
+26 
+	}
+}
+
+	@src/main/java/org/java_websocket/handshake/Handshakedata.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gI‹¿tÜ
+;
+
+5 
+public
+ 
+š‹rçû
+ 
+	gHªdshaked©a
+ {
+
+6 
+public
+ 
+	gI‹¿tÜ
+<
+	gSŒšg
+> 
+™”©eH‰pF›lds
+();
+
+7 
+public
+ 
+SŒšg
+ 
+g‘F›ldV®ue
+(SŒšg 
+Çme
+);
+
+8 
+public
+ 
+boŞ—n
+ 
+hasF›ldV®ue
+(
+SŒšg
+ 
+Çme
+);
+
+9 
+public
+ 
+	gby‹
+[] 
+g‘CÚ‹Á
+();
+
+	@src/main/java/org/java_websocket/handshake/HandshakedataImpl1.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gCŞËùiÚs
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gI‹¿tÜ
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gT»eM­
+;
+
+7 
+public
+ cÏs 
+	cHªdshaked©aIm¶1
+ 
+im¶em’ts
+ 
+	mHªdshakeBud”
+ {
+
+8 
+´iv©e
+ 
+	mby‹
+[] 
+	mcÚ‹Á
+;
+
+9 
+´iv©e
+ 
+	mT»eM­
+<
+	mSŒšg
+,SŒšg> 
+	mm­
+;
+
+11 
+public
+ 
+	$Hªdshaked©aIm¶1
+() {
+
+12 
+m­
+ = 
+Ãw
+ 
+T»eM­
+<
+SŒšg
+,SŒšg>ĞSŒšg.
+CASE_INSENSITIVE_ORDER
+ );
+
+27 @
+Ov”ride
+
+
+28 
+public
+ 
+I‹¿tÜ
+<
+SŒšg
+> 
+	$™”©eH‰pF›lds
+() {
+
+29  
+CŞËùiÚs
+.
+	`unmodifŸbËS‘
+Ğ
+m­
+.
+	`keyS‘
+(è).
+	`™”©Ü
+();
+
+30 
+	}
+}
+
+32 @
+Ov”ride
+
+
+33 
+public
+ 
+SŒšg
+ 
+	$g‘F›ldV®ue
+Ğ
+SŒšg
+ 
+Çme
+ ) {
+
+34 
+SŒšg
+ 
+s
+ = 
+m­
+.
+	`g‘
+Ğ
+Çme
+ );
+
+35 iàĞ
+s
+ =ğ
+nuÎ
+ ) {
+
+38  
+s
+;
+
+39 
+	}
+}
+
+41 @
+Ov”ride
+
+
+42 
+public
+ 
+	gby‹
+[] 
+	$g‘CÚ‹Á
+() {
+
+43  
+cÚ‹Á
+;
+
+44 
+	}
+}
+
+46 @
+Ov”ride
+
+
+47 
+public
+ 
+	$£tCÚ‹Á
+Ğ
+by‹
+[] 
+cÚ‹Á
+ ) {
+
+48 
+this
+.
+cÚ‹Á
+ = content;
+
+49 
+	}
+}
+
+51 @
+Ov”ride
+
+
+52 
+public
+ 
+	$put
+Ğ
+SŒšg
+ 
+Çme
+, SŒšg 
+v®ue
+ ) {
+
+53 
+m­
+.
+	`put
+Ğ
+Çme
+, 
+v®ue
+ );
+
+54 
+	}
+}
+
+56 @
+Ov”ride
+
+
+57 
+public
+ 
+boŞ—n
+ 
+	$hasF›ldV®ue
+Ğ
+SŒšg
+ 
+Çme
+ ) {
+
+58  
+m­
+.
+	`cÚšsKey
+Ğ
+Çme
+ );
+
+59 
+	}
+}
+
+	@src/main/java/org/java_websocket/handshake/ServerHandshake.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+;
+
+3 
+public
+ 
+š‹rçû
+ 
+S”v”Hªdshake
+ 
+ex‹nds
+ 
+	gHªdshaked©a
+ {
+
+4 
+public
+ 
+g‘H‰pStus
+();
+
+5 
+public
+ 
+SŒšg
+ 
+g‘H‰pStusMes§ge
+();
+
+	@src/main/java/org/java_websocket/handshake/ServerHandshakeBuilder.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+;
+
+3 
+public
+ 
+š‹rçû
+ 
+S”v”HªdshakeBud”
+ 
+ex‹nds
+ 
+	gHªdshakeBud”
+, 
+	gS”v”Hªdshake
+ {
+
+4 
+public
+ 
+£tH‰pStus
+(
+¡©us
+);
+
+5 
+public
+ 
+£tH‰pStusMes§ge
+(
+SŒšg
+ 
+mes§ge
+);
+
+	@src/main/java/org/java_websocket/server/DefaultSSLWebSocketServerFactory.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	g£rv”
+;
+
+2 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gIOExû±iÚ
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gÃt
+.
+	gSock‘
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gBy‹ChªÃl
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gS–eùiÚKey
+;
+
+6 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gSock‘ChªÃl
+;
+
+7 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+8 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gcÚcu¼’t
+.
+	gExecutÜS”viû
+;
+
+9 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gcÚcu¼’t
+.
+	gExecutÜs
+;
+
+11 
+impÜt
+ 
+	gjavax
+.
+	gÃt
+.
+	gs¦
+.
+	gSSLCÚ‹xt
+;
+
+12 
+impÜt
+ 
+	gjavax
+.
+	gÃt
+.
+	gs¦
+.
+	gSSLEngše
+;
+
+14 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gSSLSock‘ChªÃl2
+;
+
+15 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gWebSock‘Ad­‹r
+;
+
+16 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gWebSock‘Im¶
+;
+
+17 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gd¿ás
+.
+	gD¿á
+;
+
+20 
+public
+ 
+şass
+ 
+DeçuÉSSLWebSock‘S”v”FaùÜy
+ 
+im¶em’ts
+ 
+	gWebSock‘S”v”
+.
+	gWebSock‘S”v”FaùÜy
+ {
+
+21 
+´Ùeùed
+ 
+SSLCÚ‹xt
+ 
+	gs¦cÚ‹xt
+;
+
+22 
+´Ùeùed
+ 
+ExecutÜS”viû
+ 
+	gexec
+;
+
+24 
+public
+ 
+DeçuÉSSLWebSock‘S”v”FaùÜy
+Ğ
+SSLCÚ‹xt
+ 
+s¦CÚ‹xt
+ ) {
+
+25 
+this
+Ğ
+s¦CÚ‹xt
+, 
+ExecutÜs
+.
+ÃwSšgËTh»adScheduËdExecutÜ
+() );
+
+28 
+public
+ 
+DeçuÉSSLWebSock‘S”v”FaùÜy
+Ğ
+SSLCÚ‹xt
+ 
+s¦CÚ‹xt
+ , 
+ExecutÜS”viû
+ 
+exec
+ ) {
+
+29 ifĞ
+	gs¦CÚ‹xt
+ =ğ
+nuÎ
+ || 
+exec
+ ==‚ull )
+
+30 
+throw
+ 
+Ãw
+ 
+IÎeg®Argum’tExû±iÚ
+();
+
+31 
+	gthis
+.
+	gs¦cÚ‹xt
+ = 
+s¦CÚ‹xt
+;
+
+32 
+	gthis
+.
+	gexec
+ = 
+exec
+;
+
+35 @
+Ov”ride
+
+
+36 
+public
+ 
+By‹ChªÃl
+ 
+w¿pChªÃl
+Ğ
+Sock‘ChªÃl
+ 
+chªÃl
+, 
+S–eùiÚKey
+ 
+key
+ ) 
+throws
+ 
+	gIOExû±iÚ
+ {
+
+37 
+SSLEngše
+ 
+	ge
+ = 
+s¦cÚ‹xt
+.
+ü—‹SSLEngše
+();
+
+38 
+	ge
+.
+£tU£Cl›ÁMode
+Ğ
+çl£
+ );
+
+39  
+Ãw
+ 
+SSLSock‘ChªÃl2
+Ğ
+chªÃl
+, 
+e
+, 
+exec
+, 
+key
+ );
+
+42 @
+Ov”ride
+
+
+43 
+public
+ 
+WebSock‘Im¶
+ 
+ü—‹WebSock‘
+Ğ
+WebSock‘Ad­‹r
+ 
+a
+, 
+D¿á
+ 
+d
+, 
+Sock‘
+ 
+c
+ ) {
+
+44  
+Ãw
+ 
+WebSock‘Im¶
+Ğ
+a
+, 
+d
+ );
+
+47 @
+Ov”ride
+
+
+48 
+public
+ 
+WebSock‘Im¶
+ 
+ü—‹WebSock‘
+Ğ
+WebSock‘Ad­‹r
+ 
+a
+, 
+Li¡
+<
+D¿á
+> 
+d
+, 
+Sock‘
+ 
+s
+ ) {
+
+49  
+Ãw
+ 
+WebSock‘Im¶
+Ğ
+a
+, 
+d
+ );
+
+	@src/main/java/org/java_websocket/server/DefaultWebSocketServerFactory.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	g£rv”
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gÃt
+.
+	gSock‘
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gS–eùiÚKey
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gSock‘ChªÃl
+;
+
+6 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gWebSock‘Ad­‹r
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gWebSock‘Im¶
+;
+
+10 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gd¿ás
+.
+	gD¿á
+;
+
+11 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	g£rv”
+.
+	gWebSock‘S”v”
+.
+	gWebSock‘S”v”FaùÜy
+;
+
+13 
+public
+ cÏs 
+	cDeçuÉWebSock‘S”v”FaùÜy
+ 
+im¶em’ts
+ 
+	mWebSock‘S”v”FaùÜy
+ {
+
+14 @
+Ov”ride
+
+
+15 
+public
+ 
+WebSock‘Im¶
+ 
+	$ü—‹WebSock‘
+Ğ
+WebSock‘Ad­‹r
+ 
+a
+, 
+D¿á
+ 
+d
+, 
+Sock‘
+ 
+s
+ ) {
+
+16  
+Ãw
+ 
+	`WebSock‘Im¶
+Ğ
+a
+, 
+d
+ );
+
+18 @
+Ov”ride
+
+
+19 
+public
+ 
+WebSock‘Im¶
+ 
+	`ü—‹WebSock‘
+Ğ
+WebSock‘Ad­‹r
+ 
+a
+, 
+Li¡
+<
+D¿á
+> 
+d
+, 
+Sock‘
+ 
+s
+ ) {
+
+20  
+Ãw
+ 
+	`WebSock‘Im¶
+Ğ
+a
+, 
+d
+ );
+
+21 
+	}
+}
+
+22 @
+Ov”ride
+
+
+23 
+public
+ 
+Sock‘ChªÃl
+ 
+	$w¿pChªÃl
+Ğ
+Sock‘ChªÃl
+ 
+chªÃl
+, 
+S–eùiÚKey
+ 
+key
+ ) {
+
+24  (
+Sock‘ChªÃl
+è
+chªÃl
+;
+
+25 
+	}
+}
+
+	@src/main/java/org/java_websocket/server/WebSocketServer.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	g£rv”
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gIOExû±iÚ
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	gÃt
+.
+	gIÃtSock‘Add»ss
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gÃt
+.
+	gS”v”Sock‘
+;
+
+6 
+impÜt
+ 
+	gjava
+.
+	gÃt
+.
+	gSock‘
+;
+
+7 
+impÜt
+ 
+	gjava
+.
+	gÃt
+.
+	gUnknownHo¡Exû±iÚ
+;
+
+8 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gBy‹Bufãr
+;
+
+9 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gBy‹ChªÃl
+;
+
+10 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gCªûÎedKeyExû±iÚ
+;
+
+11 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gClo£dByIÁ”ru±Exû±iÚ
+;
+
+12 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gS–eùabËChªÃl
+;
+
+13 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gS–eùiÚKey
+;
+
+14 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gS–eùÜ
+;
+
+15 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gS”v”Sock‘ChªÃl
+;
+
+16 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gchªÃls
+.
+	gSock‘ChªÃl
+;
+
+17 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gA¼ayLi¡
+;
+
+18 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gCŞËùiÚ
+;
+
+19 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gCŞËùiÚs
+;
+
+20 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gHashS‘
+;
+
+21 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gI‹¿tÜ
+;
+
+22 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLškedLi¡
+;
+
+23 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+24 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gS‘
+;
+
+25 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gcÚcu¼’t
+.
+	gBlockšgQueue
+;
+
+26 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gcÚcu¼’t
+.
+	gCİyOnWr™eA¼ayS‘
+;
+
+27 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gcÚcu¼’t
+.
+	gLškedBlockšgQueue
+;
+
+28 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gcÚcu¼’t
+.
+	g©omic
+.
+	gAtomicBoŞ—n
+;
+
+29 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gcÚcu¼’t
+.
+	g©omic
+.
+	gAtomicIÁeg”
+;
+
+31 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gSock‘ChªÃlIOH–³r
+;
+
+32 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gWebSock‘
+;
+
+33 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gWebSock‘Ad­‹r
+;
+
+34 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gWebSock‘FaùÜy
+;
+
+35 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gWebSock‘Im¶
+;
+
+36 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gW¿µedBy‹ChªÃl
+;
+
+37 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gd¿ás
+.
+	gD¿á
+;
+
+38 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idD©aExû±iÚ
+;
+
+39 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gClo£F¿me
+;
+
+40 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gF¿med©a
+;
+
+41 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gCl›ÁHªdshake
+;
+
+42 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gHªdshaked©a
+;
+
+43 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	ghªdshake
+.
+	gS”v”HªdshakeBud”
+;
+
+51 
+public
+ 
+ab¡¿ù
+ cÏs 
+	cWebSock‘S”v”
+ 
+ex‹nds
+ 
+WebSock‘Ad­‹r
+ 
+im¶em’ts
+ 
+	mRuÂabË
+ {
+
+53 
+public
+ 
+	mDECODERS
+ = 
+RuÁime
+.
+g‘RuÁime
+().
+avaabËProûssÜs
+();
+
+59 
+´iv©e
+ 
+fš®
+ 
+	mCŞËùiÚ
+<
+	mWebSock‘
+> 
+	mcÚÃùiÚs
+;
+
+64 
+´iv©e
+ 
+fš®
+ 
+IÃtSock‘Add»ss
+ 
+	madd»ss
+;
+
+68 
+´iv©e
+ 
+S”v”Sock‘ChªÃl
+ 
+	m£rv”
+;
+
+72 
+´iv©e
+ 
+S–eùÜ
+ 
+	m£ËùÜ
+;
+
+76 
+´iv©e
+ 
+	mLi¡
+<
+	mD¿á
+> 
+	md¿ás
+;
+
+78 
+´iv©e
+ 
+Th»ad
+ 
+	m£ËùÜth»ad
+;
+
+80 
+´iv©e
+ vŞ©
+AtomicBoŞ—n
+ 
+	misşo£d
+ = 
+Ãw
+ AtomicBoŞ—nĞ
+çl£
+ );
+
+82 
+´iv©e
+ 
+	mLi¡
+<
+	mWebSock‘WÜk”
+> 
+	mdecod”s
+;
+
+84 
+´iv©e
+ 
+	mLi¡
+<
+	mWebSock‘Im¶
+> 
+	miqueue
+;
+
+85 
+´iv©e
+ 
+	mBlockšgQueue
+<
+	mBy‹Bufãr
+> 
+	mbufãrs
+;
+
+86 
+´iv©e
+ 
+	mqueuešvokes
+ = 0;
+
+87 
+´iv©e
+ 
+AtomicIÁeg”
+ 
+	mqueuesize
+ = 
+Ãw
+ AtomicInteger( 0 );
+
+89 
+´iv©e
+ 
+WebSock‘S”v”FaùÜy
+ 
+	mwsf
+ = 
+Ãw
+ 
+DeçuÉWebSock‘S”v”FaùÜy
+();
+
+97 
+public
+ 
+	$WebSock‘S”v”
+(è
+throws
+ 
+UnknownHo¡Exû±iÚ
+ {
+
+98 
+	`this
+Ğ
+Ãw
+ 
+	`IÃtSock‘Add»ss
+Ğ
+WebSock‘
+.
+DEFAULT_PORT
+ ), 
+DECODERS
+, 
+nuÎ
+ );
+
+106 
+public
+ 
+	$WebSock‘S”v”
+Ğ
+IÃtSock‘Add»ss
+ 
+add»ss
+ ) {
+
+107 
+	`this
+Ğ
+add»ss
+, 
+DECODERS
+, 
+nuÎ
+ );
+
+108 
+	}
+}
+
+113 
+public
+ 
+	$WebSock‘S”v”
+Ğ
+IÃtSock‘Add»ss
+ 
+add»ss
+ , 
+decod”s
+ ) {
+
+114 
+	`this
+Ğ
+add»ss
+, 
+decod”s
+, 
+nuÎ
+ );
+
+115 
+	}
+}
+
+120 
+public
+ 
+WebSock‘S”v”
+Ğ
+IÃtSock‘Add»ss
+ 
+add»ss
+ , 
+Li¡
+<
+D¿á
+> 
+d¿ás
+ ) {
+
+121 
+this
+Ğ
+add»ss
+, 
+DECODERS
+, 
+d¿ás
+ );
+
+127 
+public
+ 
+WebSock‘S”v”
+Ğ
+IÃtSock‘Add»ss
+ 
+add»ss
+ , 
+decod”couÁ
+ , 
+Li¡
+<
+D¿á
+> 
+d¿ás
+ ) {
+
+128 
+this
+Ğ
+add»ss
+, 
+decod”couÁ
+, 
+d¿ás
+, 
+Ãw
+ 
+HashS‘
+<
+WebSock‘
+>() );
+
+151 
+public
+ 
+WebSock‘S”v”
+Ğ
+IÃtSock‘Add»ss
+ 
+add»ss
+ , 
+decod”couÁ
+ , 
+Li¡
+<
+D¿á
+> 
+d¿ás
+ , 
+CŞËùiÚ
+<
+WebSock‘
+> 
+cÚÃùiÚscÚš”
+ ) {
+
+152 ifĞ
+	gadd»ss
+ =ğ
+nuÎ
+ || 
+decod”couÁ
+ < 1 || 
+cÚÃùiÚscÚš”
+ ==‚ull ) {
+
+153 
+throw
+ 
+Ãw
+ 
+IÎeg®Argum’tExû±iÚ
+( "address‡nd connectionscontainer must‚ot be‚ull‡nd you‚eed‡t†east 1 decoder" );
+
+156 ifĞ
+	gd¿ás
+ =ğ
+nuÎ
+ )
+
+157 
+this
+.
+d¿ás
+ = 
+CŞËùiÚs
+.
+em±yLi¡
+();
+
+159 
+	gthis
+.
+	gd¿ás
+ = 
+d¿ás
+;
+
+161 
+	gthis
+.
+	gadd»ss
+ = 
+add»ss
+;
+
+162 
+	gthis
+.
+	gcÚÃùiÚs
+ = 
+cÚÃùiÚscÚš”
+;
+
+164 
+	giqueue
+ = 
+Ãw
+ 
+LškedLi¡
+<
+WebSock‘Im¶
+>();
+
+166 
+	gdecod”s
+ = 
+Ãw
+ 
+A¼ayLi¡
+<
+WebSock‘WÜk”
+>Ğ
+decod”couÁ
+ );
+
+167 
+	gbufãrs
+ = 
+Ãw
+ 
+LškedBlockšgQueue
+<
+By‹Bufãr
+>();
+
+168  
+	gi
+ = 0 ; i < 
+	gdecod”couÁ
+ ; i++ ) {
+
+169 
+WebSock‘WÜk”
+ 
+	gex
+ = 
+Ãw
+ WebSocketWorker();
+
+170 
+	gdecod”s
+.
+add
+Ğ
+ex
+ );
+
+171 
+	gex
+.
+¡¬t
+();
+
+184 
+public
+ 
+	$¡¬t
+() {
+
+185 ifĞ
+£ËùÜth»ad
+ !ğ
+nuÎ
+ )
+
+186 
+throw
+ 
+Ãw
+ 
+	`IÎeg®S‹Exû±iÚ
+Ğ
+	`g‘CÏss
+().
+	`g‘Name
+() + " can only be started once." );
+
+187 
+Ãw
+ 
+	`Th»ad
+Ğ
+this
+ ).
+	`¡¬t
+();;
+
+188 
+	}
+}
+
+204 
+public
+ 
+	$¡İ
+Ğ
+timeout
+ ) 
+throws
+ 
+IÁ”ru±edExû±iÚ
+ {
+
+205 ifĞ!
+isşo£d
+.
+	`com·»AndS‘
+Ğ
+çl£
+, 
+Œue
+ ) ) {
+
+209 
+Li¡
+<
+WebSock‘
+> 
+sock‘sToClo£
+ = 
+nuÎ
+;
+
+212 
+	`synchrÚized
+ ( 
+cÚÃùiÚs
+ ) {
+
+213 
+sock‘sToClo£
+ = 
+Ãw
+ 
+A¼ayLi¡
+<
+WebSock‘
+>Ğ
+cÚÃùiÚs
+ );
+
+216  
+WebSock‘
+ 
+ws
+ : 
+sock‘sToClo£
+ ) {
+
+217 
+ws
+.
+	`şo£
+Ğ
+Clo£F¿me
+.
+GOING_AWAY
+ );
+
+220 
+	`synchrÚized
+ ( 
+this
+ ) {
+
+221 ifĞ
+£ËùÜth»ad
+ !ğ
+nuÎ
+ ) {
+
+222 ifĞ
+Th»ad
+.
+	`cu¼’tTh»ad
+(è!ğ
+£ËùÜth»ad
+ ) {
+
+225 ifĞ
+£ËùÜth»ad
+ !ğ
+Th»ad
+.
+	`cu¼’tTh»ad
+() ) {
+
+226 ifĞ
+sock‘sToClo£
+.
+	`size
+() > 0 )
+
+227 
+£ËùÜth»ad
+.
+	`još
+Ğ
+timeout
+ );
+
+228 
+£ËùÜth»ad
+.
+	`š‹¼u±
+();
+
+229 
+£ËùÜth»ad
+.
+	`još
+();
+
+233 
+	}
+}
+
+234 
+public
+ 
+	$¡İ
+(è
+throws
+ 
+IOExû±iÚ
+ , 
+IÁ”ru±edExû±iÚ
+ {
+
+235 
+	`¡İ
+( 0 );
+
+236 
+	}
+}
+
+245 
+public
+ 
+	gCŞËùiÚ
+<
+	gWebSock‘
+> 
+	$cÚÃùiÚs
+() {
+
+246  
+this
+.
+cÚÃùiÚs
+;
+
+247 
+	}
+}
+
+249 
+public
+ 
+IÃtSock‘Add»ss
+ 
+	$g‘Add»ss
+() {
+
+250  
+this
+.
+add»ss
+;
+
+251 
+	}
+}
+
+258 
+public
+ 
+	$g‘PÜt
+() {
+
+259 
+pÜt
+ = 
+	`g‘Add»ss
+().
+	`g‘PÜt
+();
+
+260 ifĞ
+pÜt
+ =ğ0 && 
+£rv”
+ !ğ
+nuÎ
+ ) {
+
+261 
+pÜt
+ = 
+£rv”
+.
+	`sock‘
+().
+	`g‘LoÿlPÜt
+();
+
+263  
+pÜt
+;
+
+264 
+	}
+}
+
+266 
+public
+ 
+	gLi¡
+<
+	gD¿á
+> 
+	$g‘D¿á
+() {
+
+267  
+CŞËùiÚs
+.
+	`unmodifŸbËLi¡
+Ğ
+d¿ás
+ );
+
+268 
+	}
+}
+
+271 
+public
+ 
+	$run
+() {
+
+272 
+	`synchrÚized
+ ( 
+this
+ ) {
+
+273 ifĞ
+£ËùÜth»ad
+ !ğ
+nuÎ
+ )
+
+274 
+throw
+ 
+Ãw
+ 
+	`IÎeg®S‹Exû±iÚ
+Ğ
+	`g‘CÏss
+().
+	`g‘Name
+() + " can only be started once." );
+
+275 
+£ËùÜth»ad
+ = 
+Th»ad
+.
+	`cu¼’tTh»ad
+();
+
+276 ifĞ
+isşo£d
+.
+	`g‘
+() ) {
+
+280 
+£ËùÜth»ad
+.
+	`£tName
+Ğ"Websock‘S–eùÜ" + s–eùÜth»ad.
+	`g‘Id
+() );
+
+281 
+Œy
+ {
+
+282 
+£rv”
+ = 
+S”v”Sock‘ChªÃl
+.
+	`İ’
+();
+
+283 
+£rv”
+.
+	`cÚfigu»Blockšg
+Ğ
+çl£
+ );
+
+284 
+S”v”Sock‘
+ 
+sock‘
+ = 
+£rv”
+.
+	`sock‘
+();
+
+285 
+sock‘
+.
+	`£tReûiveBufãrSize
+Ğ
+WebSock‘Im¶
+.
+RCVBUF
+ );
+
+286 
+sock‘
+.
+	`bšd
+Ğ
+add»ss
+ );
+
+287 
+£ËùÜ
+ = 
+S–eùÜ
+.
+	`İ’
+();
+
+288 
+£rv”
+.Ğ
+£ËùÜ
+, s”v”.
+	`v®idOps
+() );
+
+289 } 
+	`ÿtch
+ ( 
+IOExû±iÚ
+ 
+ex
+ ) {
+
+290 
+	`hªdËF©®
+Ğ
+nuÎ
+, 
+ex
+ );
+
+293 
+Œy
+ {
+
+294  !
+£ËùÜth»ad
+.
+	`isIÁ”ru±ed
+() ) {
+
+295 
+S–eùiÚKey
+ 
+key
+ = 
+nuÎ
+;
+
+296 
+WebSock‘Im¶
+ 
+cÚn
+ = 
+nuÎ
+;
+
+297 
+Œy
+ {
+
+298 
+£ËùÜ
+.
+	`£Ëù
+();
+
+299 
+S‘
+<
+S–eùiÚKey
+> 
+keys
+ = 
+£ËùÜ
+.
+	`£ËùedKeys
+();
+
+300 
+I‹¿tÜ
+<
+S–eùiÚKey
+> 
+i
+ = 
+keys
+.
+	`™”©Ü
+();
+
+302  
+i
+.
+	`hasNext
+() ) {
+
+303 
+key
+ = 
+i
+.
+	`Ãxt
+();
+
+305 ifĞ!
+key
+.
+	`isV®id
+() ) {
+
+310 ifĞ
+key
+.
+	`isAcû±abË
+() ) {
+
+311 ifĞ!
+	`ÚCÚÃù
+Ğ
+key
+ ) ) {
+
+312 
+key
+.
+	`ÿnûl
+();
+
+316 
+Sock‘ChªÃl
+ 
+chªÃl
+ = 
+£rv”
+.
+	`acû±
+();
+
+317 
+chªÃl
+.
+	`cÚfigu»Blockšg
+Ğ
+çl£
+ );
+
+318 
+WebSock‘Im¶
+ 
+w
+ = 
+wsf
+.
+	`ü—‹WebSock‘
+Ğ
+this
+, 
+d¿ás
+, 
+chªÃl
+.
+	`sock‘
+() );
+
+319 
+w
+.
+key
+ = 
+chªÃl
+.Ğ
+£ËùÜ
+, 
+S–eùiÚKey
+.
+OP_READ
+, w );
+
+320 
+w
+.
+chªÃl
+ = 
+wsf
+.
+	`w¿pChªÃl
+ĞchªÃl, w.
+key
+ );
+
+321 
+i
+.
+	`»move
+();
+
+322 
+	`®loÿ‹Bufãrs
+Ğ
+w
+ );
+
+326 ifĞ
+key
+.
+	`isR—dabË
+() ) {
+
+327 
+cÚn
+ = (
+WebSock‘Im¶
+è
+key
+.
+	`©chm’t
+();
+
+328 
+By‹Bufãr
+ 
+buf
+ = 
+	`keBufãr
+();
+
+329 
+Œy
+ {
+
+330 ifĞ
+Sock‘ChªÃlIOH–³r
+.
+	`»ad
+Ğ
+buf
+, 
+cÚn
+, cÚn.
+chªÃl
+ ) ) {
+
+331 ifĞ
+buf
+.
+	`hasRemaššg
+() ) {
+
+332 
+cÚn
+.
+šQueue
+.
+	`put
+Ğ
+buf
+ );
+
+333 
+	`queue
+Ğ
+cÚn
+ );
+
+334 
+i
+.
+	`»move
+();
+
+335 ifĞ
+cÚn
+.
+chªÃl
+ 
+š¡ªûof
+ 
+W¿µedBy‹ChªÃl
+ ) {
+
+336 ifĞĞ(
+W¿µedBy‹ChªÃl
+è
+cÚn
+.
+chªÃl
+ ).
+	`isN“dR—d
+() ) {
+
+337 
+iqueue
+.
+	`add
+Ğ
+cÚn
+ );
+
+341 
+	`pushBufãr
+Ğ
+buf
+ );
+
+343 
+	`pushBufãr
+Ğ
+buf
+ );
+
+345 } 
+	`ÿtch
+ ( 
+IOExû±iÚ
+ 
+e
+ ) {
+
+346 
+	`pushBufãr
+Ğ
+buf
+ );
+
+347 
+throw
+ 
+e
+;
+
+350 ifĞ
+key
+.
+	`isWr™abË
+() ) {
+
+351 
+cÚn
+ = (
+WebSock‘Im¶
+è
+key
+.
+	`©chm’t
+();
+
+352 ifĞ
+Sock‘ChªÃlIOH–³r
+.
+	`b©ch
+Ğ
+cÚn
+, cÚn.
+chªÃl
+ ) ) {
+
+353 ifĞ
+key
+.
+	`isV®id
+() )
+
+354 
+key
+.
+	`š‹»¡Ops
+Ğ
+S–eùiÚKey
+.
+OP_READ
+ );
+
+358  !
+iqueue
+.
+	`isEm±y
+() ) {
+
+359 
+cÚn
+ = 
+iqueue
+.
+	`»move
+( 0 );
+
+360 
+W¿µedBy‹ChªÃl
+ 
+c
+ = ( (W¿µedBy‹ChªÃlè
+cÚn
+.
+chªÃl
+ );
+
+361 
+By‹Bufãr
+ 
+buf
+ = 
+	`keBufãr
+();
+
+362 
+Œy
+ {
+
+363 ifĞ
+Sock‘ChªÃlIOH–³r
+.
+	`»adMÜe
+Ğ
+buf
+, 
+cÚn
+, 
+c
+ ) )
+
+364 
+iqueue
+.
+	`add
+Ğ
+cÚn
+ );
+
+365 ifĞ
+buf
+.
+	`hasRemaššg
+() ) {
+
+366 
+cÚn
+.
+šQueue
+.
+	`put
+Ğ
+buf
+ );
+
+367 
+	`queue
+Ğ
+cÚn
+ );
+
+369 
+	`pushBufãr
+Ğ
+buf
+ );
+
+371 } 
+	`ÿtch
+ ( 
+IOExû±iÚ
+ 
+e
+ ) {
+
+372 
+	`pushBufãr
+Ğ
+buf
+ );
+
+373 
+throw
+ 
+e
+;
+
+377 } 
+	`ÿtch
+ ( 
+CªûÎedKeyExû±iÚ
+ 
+e
+ ) {
+
+379 } 
+	`ÿtch
+ ( 
+Clo£dByIÁ”ru±Exû±iÚ
+ 
+e
+ ) {
+
+381 } 
+	`ÿtch
+ ( 
+IOExû±iÚ
+ 
+ex
+ ) {
+
+382 ifĞ
+key
+ !ğ
+nuÎ
+ )
+
+383 
+key
+.
+	`ÿnûl
+();
+
+384 
+	`hªdËIOExû±iÚ
+Ğ
+key
+, 
+cÚn
+, 
+ex
+ );
+
+385 } 
+	`ÿtch
+ ( 
+IÁ”ru±edExû±iÚ
+ 
+e
+ ) {
+
+390 } 
+	`ÿtch
+ ( 
+RuÁimeExû±iÚ
+ 
+e
+ ) {
+
+392 
+	`hªdËF©®
+Ğ
+nuÎ
+, 
+e
+ );
+
+393 } 
+fš®ly
+ {
+
+394 ifĞ
+decod”s
+ !ğ
+nuÎ
+ ) {
+
+395  
+WebSock‘WÜk”
+ 
+w
+ : 
+decod”s
+ ) {
+
+396 
+w
+.
+	`š‹¼u±
+();
+
+399 ifĞ
+£rv”
+ !ğ
+nuÎ
+ ) {
+
+400 
+Œy
+ {
+
+401 
+£rv”
+.
+	`şo£
+();
+
+402 } 
+	`ÿtch
+ ( 
+IOExû±iÚ
+ 
+e
+ ) {
+
+403 
+	`ÚE¼Ü
+Ğ
+nuÎ
+, 
+e
+ );
+
+407 
+	}
+}
+
+408 
+´Ùeùed
+ 
+	$®loÿ‹Bufãrs
+Ğ
+WebSock‘
+ 
+c
+ ) 
+throws
+ 
+IÁ”ru±edExû±iÚ
+ {
+
+409 ifĞ
+queuesize
+.
+	`g‘
+(è>ğ2 * 
+decod”s
+.
+	`size
+() + 1 ) {
+
+412 
+queuesize
+.
+	`šüem’tAndG‘
+();
+
+413 
+bufãrs
+.
+	`put
+Ğ
+	`ü—‹Bufãr
+() );
+
+414 
+	}
+}
+
+416 
+´Ùeùed
+ 
+	$»Ëa£Bufãrs
+Ğ
+WebSock‘
+ 
+c
+ ) 
+throws
+ 
+IÁ”ru±edExû±iÚ
+ {
+
+419 
+	}
+}
+
+421 
+public
+ 
+By‹Bufãr
+ 
+	$ü—‹Bufãr
+() {
+
+422  
+By‹Bufãr
+.
+	`®loÿ‹
+Ğ
+WebSock‘Im¶
+.
+RCVBUF
+ );
+
+423 
+	}
+}
+
+425 
+´iv©e
+ 
+	$queue
+Ğ
+WebSock‘Im¶
+ 
+ws
+ ) 
+throws
+ 
+IÁ”ru±edExû±iÚ
+ {
+
+426 ifĞ
+ws
+.
+wÜk”Th»ad
+ =ğ
+nuÎ
+ ) {
+
+427 
+ws
+.
+wÜk”Th»ad
+ = 
+decod”s
+.
+	`g‘
+Ğ
+queuešvokes
+ % decod”s.
+	`size
+() );
+
+428 
+queuešvokes
+++;
+
+430 
+ws
+.
+wÜk”Th»ad
+.
+	`put
+( ws );
+
+431 
+	}
+}
+
+433 
+´iv©e
+ 
+By‹Bufãr
+ 
+	$keBufãr
+(è
+throws
+ 
+IÁ”ru±edExû±iÚ
+ {
+
+434  
+bufãrs
+.
+	`ke
+();
+
+435 
+	}
+}
+
+437 
+´iv©e
+ 
+	$pushBufãr
+Ğ
+By‹Bufãr
+ 
+buf
+ ) 
+throws
+ 
+IÁ”ru±edExû±iÚ
+ {
+
+438 ifĞ
+bufãrs
+.
+	`size
+(è> 
+queuesize
+.
+	`štV®ue
+() )
+
+440 
+bufãrs
+.
+	`put
+Ğ
+buf
+ );
+
+441 
+	}
+}
+
+443 
+´iv©e
+ 
+	$hªdËIOExû±iÚ
+Ğ
+S–eùiÚKey
+ 
+key
+, 
+WebSock‘
+ 
+cÚn
+, 
+IOExû±iÚ
+ 
+ex
+ ) {
+
+445 ifĞ
+cÚn
+ !ğ
+nuÎ
+ ) {
+
+446 
+cÚn
+.
+	`şo£CÚÃùiÚ
+Ğ
+Clo£F¿me
+.
+ABNORMAL_CLOSE
+, 
+ex
+.
+	`g‘Mes§ge
+() );
+
+447 } ifĞ
+key
+ !ğ
+nuÎ
+ ) {
+
+448 
+S–eùabËChªÃl
+ 
+chªÃl
+ = 
+key
+.
+	`chªÃl
+();
+
+449 ifĞ
+chªÃl
+ !ğ
+nuÎ
+ && chªÃl.
+	`isO³n
+() ) {
+
+450 
+Œy
+ {
+
+451 
+chªÃl
+.
+	`şo£
+();
+
+452 } 
+	`ÿtch
+ ( 
+IOExû±iÚ
+ 
+e
+ ) {
+
+455 ifĞ
+WebSock‘Im¶
+.
+DEBUG
+ )
+
+456 
+Sy¡em
+.
+out
+.
+	`´šn
+Ğ"CÚÃùiÚ clo£d beÿu£ of" + 
+ex
+ );
+
+459 
+	}
+}
+
+461 
+´iv©e
+ 
+	$hªdËF©®
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+Exû±iÚ
+ 
+e
+ ) {
+
+462 
+	`ÚE¼Ü
+Ğ
+cÚn
+, 
+e
+ );
+
+463 
+Œy
+ {
+
+464 
+	`¡İ
+();
+
+465 } 
+	`ÿtch
+ ( 
+IOExû±iÚ
+ 
+e1
+ ) {
+
+466 
+	`ÚE¼Ü
+Ğ
+nuÎ
+, 
+e1
+ );
+
+467 } 
+	`ÿtch
+ ( 
+IÁ”ru±edExû±iÚ
+ 
+e1
+ ) {
+
+468 
+Th»ad
+.
+	`cu¼’tTh»ad
+().
+	`š‹¼u±
+();
+
+469 
+	`ÚE¼Ü
+Ğ
+nuÎ
+, 
+e1
+ );
+
+471 
+	}
+}
+
+486 
+´Ùeùed
+ 
+SŒšg
+ 
+	$g‘FÏshSecur™yPŞicy
+() {
+
+487  "<üoss-domaš-pŞicy><®low-acûss-äom domaš=\"*\"o-pÜts=\"" + 
+	`g‘PÜt
+() + "\" /></cross-domain-policy>";
+
+488 
+	}
+}
+
+490 @
+Ov”ride
+
+
+491 
+public
+ 
+fš®
+ 
+	$ÚWebsock‘Mes§ge
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+SŒšg
+ 
+mes§ge
+ ) {
+
+492 
+	`ÚMes§ge
+Ğ
+cÚn
+, 
+mes§ge
+ );
+
+493 
+	}
+}
+
+495 @
+	gOv”ride
+
+
+496 @
+D•»ÿ‹d
+
+
+497 
+public
+ 
+	$ÚWebsock‘Mes§geF¿gm’t
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+F¿med©a
+ 
+äame
+ ) {
+
+498 
+	`ÚF¿gm’t
+Ğ
+cÚn
+, 
+äame
+ );
+
+499 
+	}
+}
+
+501 @
+Ov”ride
+
+
+502 
+public
+ 
+fš®
+ 
+	$ÚWebsock‘Mes§ge
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+By‹Bufãr
+ 
+blob
+ ) {
+
+503 
+	`ÚMes§ge
+Ğ
+cÚn
+, 
+blob
+ );
+
+504 
+	}
+}
+
+506 @
+Ov”ride
+
+
+507 
+public
+ 
+fš®
+ 
+	$ÚWebsock‘O³n
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+Hªdshaked©a
+ 
+hªdshake
+ ) {
+
+508 ifĞ
+	`addCÚÃùiÚ
+Ğ
+cÚn
+ ) ) {
+
+509 
+	`ÚO³n
+Ğ
+cÚn
+, (
+Cl›ÁHªdshake
+è
+hªdshake
+ );
+
+511 
+	}
+}
+
+513 @
+Ov”ride
+
+
+514 
+public
+ 
+fš®
+ 
+	$ÚWebsock‘Clo£
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+code
+, 
+SŒšg
+ 
+»asÚ
+, 
+boŞ—n
+ 
+»mÙe
+ ) {
+
+515 
+£ËùÜ
+.
+	`wakeup
+();
+
+516 
+Œy
+ {
+
+517 ifĞ
+	`»moveCÚÃùiÚ
+Ğ
+cÚn
+ ) ) {
+
+518 
+	`ÚClo£
+Ğ
+cÚn
+, 
+code
+, 
+»asÚ
+, 
+»mÙe
+ );
+
+520 } 
+fš®ly
+ {
+
+521 
+Œy
+ {
+
+522 
+	`»Ëa£Bufãrs
+Ğ
+cÚn
+ );
+
+523 } 
+	`ÿtch
+ ( 
+IÁ”ru±edExû±iÚ
+ 
+e
+ ) {
+
+524 
+Th»ad
+.
+	`cu¼’tTh»ad
+().
+	`š‹¼u±
+();
+
+528 
+	}
+}
+
+536 
+´Ùeùed
+ 
+boŞ—n
+ 
+	$»moveCÚÃùiÚ
+Ğ
+WebSock‘
+ 
+ws
+ ) {
+
+537 
+boŞ—n
+ 
+»moved
+;
+
+538 
+	`synchrÚized
+ ( 
+cÚÃùiÚs
+ ) {
+
+539 
+»moved
+ = 
+this
+.
+cÚÃùiÚs
+.
+	`»move
+Ğ
+ws
+ );
+
+540 
+	`as£¹
+ ( 
+»moved
+ );
+
+542 ifĞ
+isşo£d
+.
+	`g‘
+(è&& 
+cÚÃùiÚs
+.
+	`size
+() == 0 ) {
+
+543 
+£ËùÜth»ad
+.
+	`š‹¼u±
+();
+
+545  
+»moved
+;
+
+546 
+	}
+}
+
+547 @
+Ov”ride
+
+
+548 
+public
+ 
+S”v”HªdshakeBud”
+ 
+	$ÚWebsock‘HªdshakeReûivedAsS”v”
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+D¿á
+ 
+d¿á
+, 
+Cl›ÁHªdshake
+ 
+»que¡
+ ) 
+throws
+ 
+Inv®idD©aExû±iÚ
+ {
+
+549  
+su³r
+.
+	`ÚWebsock‘HªdshakeReûivedAsS”v”
+Ğ
+cÚn
+, 
+d¿á
+, 
+»que¡
+ );
+
+550 
+	}
+}
+
+553 
+´Ùeùed
+ 
+boŞ—n
+ 
+	$addCÚÃùiÚ
+Ğ
+WebSock‘
+ 
+ws
+ ) {
+
+554 ifĞ!
+isşo£d
+.
+	`g‘
+() ) {
+
+555 
+	`synchrÚized
+ ( 
+cÚÃùiÚs
+ ) {
+
+556 
+boŞ—n
+ 
+succ
+ = 
+this
+.
+cÚÃùiÚs
+.
+	`add
+Ğ
+ws
+ );
+
+557 
+	`as£¹
+ ( 
+succ
+ );
+
+558  
+succ
+;
+
+562 
+ws
+.
+	`şo£
+Ğ
+Clo£F¿me
+.
+GOING_AWAY
+ );
+
+563  
+Œue
+;
+
+565 
+	}
+}
+
+570 @
+Ov”ride
+
+
+571 
+public
+ 
+fš®
+ 
+	$ÚWebsock‘E¼Ü
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+Exû±iÚ
+ 
+ex
+ ) {
+
+572 
+	`ÚE¼Ü
+Ğ
+cÚn
+, 
+ex
+ );
+
+573 
+	}
+}
+
+575 @
+Ov”ride
+
+
+576 
+public
+ 
+fš®
+ 
+	$ÚWr™eDemªd
+Ğ
+WebSock‘
+ 
+w
+ ) {
+
+577 
+WebSock‘Im¶
+ 
+cÚn
+ = (WebSock‘Im¶è
+w
+;
+
+578 
+Œy
+ {
+
+579 
+cÚn
+.
+key
+.
+	`š‹»¡Ops
+Ğ
+S–eùiÚKey
+.
+OP_READ
+ | S–eùiÚKey.
+OP_WRITE
+ );
+
+580 } 
+	`ÿtch
+ ( 
+CªûÎedKeyExû±iÚ
+ 
+e
+ ) {
+
+582 
+cÚn
+.
+outQueue
+.
+	`ş—r
+();
+
+584 
+£ËùÜ
+.
+	`wakeup
+();
+
+585 
+	}
+}
+
+587 @
+Ov”ride
+
+
+588 
+public
+ 
+	$ÚWebsock‘Clo£In™Ÿ‹d
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+code
+, 
+SŒšg
+ 
+»asÚ
+ ) {
+
+589 
+	`ÚClo£In™Ÿ‹d
+Ğ
+cÚn
+, 
+code
+, 
+»asÚ
+ );
+
+590 
+	}
+}
+
+592 @
+Ov”ride
+
+
+593 
+public
+ 
+	$ÚWebsock‘Closšg
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+code
+, 
+SŒšg
+ 
+»asÚ
+, 
+boŞ—n
+ 
+»mÙe
+ ) {
+
+594 
+	`ÚClosšg
+Ğ
+cÚn
+, 
+code
+, 
+»asÚ
+, 
+»mÙe
+ );
+
+596 
+	}
+}
+
+598 
+public
+ 
+	$ÚClo£In™Ÿ‹d
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+code
+, 
+SŒšg
+ 
+»asÚ
+ ) {
+
+599 
+	}
+}
+
+601 
+public
+ 
+	$ÚClosšg
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+code
+, 
+SŒšg
+ 
+»asÚ
+, 
+boŞ—n
+ 
+»mÙe
+ ) {
+
+603 
+	}
+}
+
+605 
+public
+ 
+fš®
+ 
+	$£tWebSock‘FaùÜy
+Ğ
+WebSock‘S”v”FaùÜy
+ 
+wsf
+ ) {
+
+606 
+this
+.
+wsf
+ = wsf;
+
+607 
+	}
+}
+
+609 
+public
+ 
+fš®
+ 
+WebSock‘FaùÜy
+ 
+	$g‘WebSock‘FaùÜy
+() {
+
+610  
+wsf
+;
+
+611 
+	}
+}
+
+619 
+´Ùeùed
+ 
+boŞ—n
+ 
+	$ÚCÚÃù
+Ğ
+S–eùiÚKey
+ 
+key
+ ) {
+
+620  
+Œue
+;
+
+621 
+	}
+}
+
+623 
+´iv©e
+ 
+Sock‘
+ 
+	$g‘Sock‘
+Ğ
+WebSock‘
+ 
+cÚn
+ ) {
+
+624 
+WebSock‘Im¶
+ 
+im¶
+ = (WebSock‘Im¶è
+cÚn
+;
+
+625  ( (
+Sock‘ChªÃl
+è
+im¶
+.
+key
+.
+	`chªÃl
+(è).
+	`sock‘
+();
+
+626 
+	}
+}
+
+628 @
+Ov”ride
+
+
+629 
+public
+ 
+IÃtSock‘Add»ss
+ 
+	$g‘LoÿlSock‘Add»ss
+Ğ
+WebSock‘
+ 
+cÚn
+ ) {
+
+630  (
+IÃtSock‘Add»ss
+è
+	`g‘Sock‘
+Ğ
+cÚn
+ ).
+	`g‘LoÿlSock‘Add»ss
+();
+
+631 
+	}
+}
+
+633 @
+Ov”ride
+
+
+634 
+public
+ 
+IÃtSock‘Add»ss
+ 
+	$g‘RemÙeSock‘Add»ss
+Ğ
+WebSock‘
+ 
+cÚn
+ ) {
+
+635  (
+IÃtSock‘Add»ss
+è
+	`g‘Sock‘
+Ğ
+cÚn
+ ).
+	`g‘RemÙeSock‘Add»ss
+();
+
+636 
+	}
+}
+
+639 
+public
+ 
+ab¡¿ù
+ 
+ÚO³n
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+Cl›ÁHªdshake
+ 
+hªdshake
+ );
+
+650 
+public
+ 
+ab¡¿ù
+ 
+ÚClo£
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+code
+, 
+SŒšg
+ 
+»asÚ
+, 
+boŞ—n
+ 
+»mÙe
+ );
+
+656 
+public
+ 
+ab¡¿ù
+ 
+ÚMes§ge
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+SŒšg
+ 
+mes§ge
+ );
+
+665 
+public
+ 
+ab¡¿ù
+ 
+ÚE¼Ü
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+Exû±iÚ
+ 
+ex
+ );
+
+671 
+public
+ 
+	$ÚMes§ge
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+By‹Bufãr
+ 
+mes§ge
+ ) {
+
+672 
+	}
+}
+
+677 
+public
+ 
+	$ÚF¿gm’t
+Ğ
+WebSock‘
+ 
+cÚn
+, 
+F¿med©a
+ 
+äagm’t
+ ) {
+
+678 
+	}
+}
+
+680 
+public
+ cÏs 
+	cWebSock‘WÜk”
+ 
+ex‹nds
+ 
+	gTh»ad
+ {
+
+682 
+´iv©e
+ 
+	gBlockšgQueue
+<
+	gWebSock‘Im¶
+> 
+	giqueue
+;
+
+684 
+public
+ 
+WebSock‘WÜk”
+() {
+
+685 
+	giqueue
+ = 
+Ãw
+ 
+LškedBlockšgQueue
+<
+WebSock‘Im¶
+>();
+
+686 
+£tName
+Ğ"WebSock‘WÜk”-" + 
+g‘Id
+() );
+
+687 
+£tUnÿughtExû±iÚHªdËr
+Ğ
+Ãw
+ 
+UnÿughtExû±iÚHªdËr
+() {
+
+688 @
+Ov”ride
+
+
+689 
+public
+ 
+unÿughtExû±iÚ
+Ğ
+Th»ad
+ 
+t
+, 
+ThrowabË
+ 
+e
+ ) {
+
+690 
+g‘DeçuÉUnÿughtExû±iÚHªdËr
+().
+unÿughtExû±iÚ
+Ğ
+t
+, 
+e
+ );
+
+695 
+public
+ 
+put
+Ğ
+WebSock‘Im¶
+ 
+ws
+ ) 
+throws
+ 
+	gIÁ”ru±edExû±iÚ
+ {
+
+696 
+	giqueue
+.
+put
+Ğ
+ws
+ );
+
+699 @
+Ov”ride
+
+
+700 
+public
+ 
+run
+() {
+
+701 
+WebSock‘Im¶
+ 
+	gws
+ = 
+nuÎ
+;
+
+702 
+	gŒy
+ {
+
+703  
+	gŒue
+ ) {
+
+704 
+By‹Bufãr
+ 
+	gbuf
+ = 
+nuÎ
+;
+
+705 
+	gws
+ = 
+iqueue
+.
+ke
+();
+
+706 
+	gbuf
+ = 
+ws
+.
+šQueue
+.
+pŞl
+();
+
+707 
+as£¹
+ ( 
+buf
+ !ğ
+nuÎ
+ );
+
+708 
+	gŒy
+ {
+
+709 
+	gws
+.
+decode
+Ğ
+buf
+ );
+
+710 } 
+	gfš®ly
+ {
+
+711 
+pushBufãr
+Ğ
+buf
+ );
+
+714 } 
+ÿtch
+ ( 
+IÁ”ru±edExû±iÚ
+ 
+e
+ ) {
+
+715 } 
+ÿtch
+ ( 
+RuÁimeExû±iÚ
+ 
+e
+ ) {
+
+716 
+hªdËF©®
+Ğ
+ws
+, 
+e
+ );
+
+721 
+public
+ 
+š‹rçû
+ 
+WebSock‘S”v”FaùÜy
+ 
+ex‹nds
+ 
+	gWebSock‘FaùÜy
+ {
+
+722 @
+Ov”ride
+
+
+723 
+public
+ 
+WebSock‘Im¶
+ 
+ü—‹WebSock‘
+(
+WebSock‘Ad­‹r
+ 
+a
+, 
+D¿á
+ 
+d
+, 
+Sock‘
+ 
+s
+);
+
+725 
+public
+ 
+WebSock‘Im¶
+ 
+ü—‹WebSock‘
+(
+WebSock‘Ad­‹r
+ 
+a
+, 
+Li¡
+<
+D¿á
+> 
+d¿ás
+, 
+Sock‘
+ 
+s
+);
+
+734 
+public
+ 
+By‹ChªÃl
+ 
+w¿pChªÃl
+(
+Sock‘ChªÃl
+ 
+chªÃl
+, 
+S–eùiÚKey
+ 
+key
+è
+throws
+ 
+	gIOExû±iÚ
+;
+
+	@src/main/java/org/java_websocket/util/Base64.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gut
+;
+
+150 
+public
+ cÏs 
+	cBa£64
+
+
+157 
+public
+ 
+fš®
+ 
+	mNO_OPTIONS
+ = 0;
+
+160 
+public
+ 
+fš®
+ 
+	mENCODE
+ = 1;
+
+164 
+public
+ 
+fš®
+ 
+	mDECODE
+ = 0;
+
+168 
+public
+ 
+fš®
+ 
+	mGZIP
+ = 2;
+
+171 
+public
+ 
+fš®
+ 
+	mDONT_GUNZIP
+ = 4;
+
+175 
+public
+ 
+fš®
+ 
+	mDO_BREAK_LINES
+ = 8;
+
+185 
+public
+ 
+fš®
+ 
+	mURL_SAFE
+ = 16;
+
+192 
+public
+ 
+fš®
+ 
+	mORDERED
+ = 32;
+
+199 
+´iv©e
+ 
+fš®
+ 
+	mMAX_LINE_LENGTH
+ = 76;
+
+203 
+´iv©e
+ 
+fš®
+ 
+by‹
+ 
+	mEQUALS_SIGN
+ = (byte)'=';
+
+207 
+´iv©e
+ 
+fš®
+ 
+by‹
+ 
+	mNEW_LINE
+ = (byte)'\n';
+
+211 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	mPREFERRED_ENCODING
+ = "US-ASCII";
+
+214 
+´iv©e
+ 
+fš®
+ 
+by‹
+ 
+	mWHITE_SPACE_ENC
+ = -5;
+
+215 
+´iv©e
+ 
+fš®
+ 
+by‹
+ 
+	mEQUALS_SIGN_ENC
+ = -1;
+
+222 
+´iv©e
+ 
+fš®
+ 
+	mby‹
+[] 
+	m_STANDARD_ALPHABET
+ = {
+
+223 (
+by‹
+)'A', (byte)'B', (byte)'C', (byte)'D', (byte)'E', (byte)'F', (byte)'G',
+
+224 (
+by‹
+)'H', (byte)'I', (byte)'J', (byte)'K', (byte)'L', (byte)'M', (byte)'N',
+
+225 (
+by‹
+)'O', (byte)'P', (byte)'Q', (byte)'R', (byte)'S', (byte)'T', (byte)'U',
+
+226 (
+by‹
+)'V', (byte)'W', (byte)'X', (byte)'Y', (byte)'Z',
+
+227 (
+by‹
+)'a', (byte)'b', (byte)'c', (byte)'d', (byte)'e', (byte)'f', (byte)'g',
+
+228 (
+by‹
+)'h', (byte)'i', (byte)'j', (byte)'k', (byte)'l', (byte)'m', (byte)'n',
+
+229 (
+by‹
+)'o', (byte)'p', (byte)'q', (byte)'r', (byte)'s', (byte)'t', (byte)'u',
+
+230 (
+by‹
+)'v', (byte)'w', (byte)'x', (byte)'y', (byte)'z',
+
+231 (
+by‹
+)'0', (byte)'1', (byte)'2', (byte)'3', (byte)'4', (byte)'5',
+
+232 (
+by‹
+)'6', (byte)'7', (byte)'8', (byte)'9', (byte)'+', (byte)'/'
+
+240 
+´iv©e
+ 
+fš®
+ 
+	gby‹
+[] 
+	g_STANDARD_DECODABET
+ = {
+
+282 
+´iv©e
+ 
+fš®
+ 
+	gby‹
+[] 
+	g_URL_SAFE_ALPHABET
+ = {
+
+283 (
+by‹
+)'A', (byte)'B', (byte)'C', (byte)'D', (byte)'E', (byte)'F', (byte)'G',
+
+284 (
+by‹
+)'H', (byte)'I', (byte)'J', (byte)'K', (byte)'L', (byte)'M', (byte)'N',
+
+285 (
+by‹
+)'O', (byte)'P', (byte)'Q', (byte)'R', (byte)'S', (byte)'T', (byte)'U',
+
+286 (
+by‹
+)'V', (byte)'W', (byte)'X', (byte)'Y', (byte)'Z',
+
+287 (
+by‹
+)'a', (byte)'b', (byte)'c', (byte)'d', (byte)'e', (byte)'f', (byte)'g',
+
+288 (
+by‹
+)'h', (byte)'i', (byte)'j', (byte)'k', (byte)'l', (byte)'m', (byte)'n',
+
+289 (
+by‹
+)'o', (byte)'p', (byte)'q', (byte)'r', (byte)'s', (byte)'t', (byte)'u',
+
+290 (
+by‹
+)'v', (byte)'w', (byte)'x', (byte)'y', (byte)'z',
+
+291 (
+by‹
+)'0', (byte)'1', (byte)'2', (byte)'3', (byte)'4', (byte)'5',
+
+292 (
+by‹
+)'6', (byte)'7', (byte)'8', (byte)'9', (byte)'-', (byte)'_'
+
+298 
+´iv©e
+ 
+fš®
+ 
+	gby‹
+[] 
+	g_URL_SAFE_DECODABET
+ = {
+
+345 
+´iv©e
+ 
+fš®
+ 
+	gby‹
+[] 
+	g_ORDERED_ALPHABET
+ = {
+
+346 (
+by‹
+)'-',
+
+347 (
+by‹
+)'0', (byte)'1', (byte)'2', (byte)'3', (byte)'4',
+
+348 (
+by‹
+)'5', (byte)'6', (byte)'7', (byte)'8', (byte)'9',
+
+349 (
+by‹
+)'A', (byte)'B', (byte)'C', (byte)'D', (byte)'E', (byte)'F', (byte)'G',
+
+350 (
+by‹
+)'H', (byte)'I', (byte)'J', (byte)'K', (byte)'L', (byte)'M', (byte)'N',
+
+351 (
+by‹
+)'O', (byte)'P', (byte)'Q', (byte)'R', (byte)'S', (byte)'T', (byte)'U',
+
+352 (
+by‹
+)'V', (byte)'W', (byte)'X', (byte)'Y', (byte)'Z',
+
+353 (
+by‹
+)'_',
+
+354 (
+by‹
+)'a', (byte)'b', (byte)'c', (byte)'d', (byte)'e', (byte)'f', (byte)'g',
+
+355 (
+by‹
+)'h', (byte)'i', (byte)'j', (byte)'k', (byte)'l', (byte)'m', (byte)'n',
+
+356 (
+by‹
+)'o', (byte)'p', (byte)'q', (byte)'r', (byte)'s', (byte)'t', (byte)'u',
+
+357 (
+by‹
+)'v', (byte)'w', (byte)'x', (byte)'y', (byte)'z'
+
+363 
+´iv©e
+ 
+fš®
+ 
+	gby‹
+[] 
+	g_ORDERED_DECODABET
+ = {
+
+412 
+´iv©e
+ 
+fš®
+ 
+	gby‹
+[] 
+	$g‘AÍhab‘
+Ğ
+İtiÚs
+ ) {
+
+413 ià((
+İtiÚs
+ & 
+URL_SAFE
+) == URL_SAFE) {
+
+414  
+_URL_SAFE_ALPHABET
+;
+
+415 } ià((
+İtiÚs
+ & 
+ORDERED
+) == ORDERED) {
+
+416  
+_ORDERED_ALPHABET
+;
+
+418  
+_STANDARD_ALPHABET
+;
+
+420 
+	}
+}
+
+430 
+´iv©e
+ 
+fš®
+ 
+	gby‹
+[] 
+	$g‘Decodab‘
+Ğ
+İtiÚs
+ ) {
+
+431 ifĞ(
+İtiÚs
+ & 
+URL_SAFE
+) == URL_SAFE) {
+
+432  
+_URL_SAFE_DECODABET
+;
+
+433 } ià((
+İtiÚs
+ & 
+ORDERED
+) == ORDERED) {
+
+434  
+_ORDERED_DECODABET
+;
+
+436  
+_STANDARD_DECODABET
+;
+
+438 
+	}
+}
+
+443 
+´iv©e
+ 
+	$Ba£64
+(){
+	}
+}
+
+466 
+´iv©e
+ 
+	gby‹
+[] 
+	$’code3to4
+Ğ
+by‹
+[] 
+b4
+, by‹[] 
+th»eBy‹s
+, 
+numSigBy‹s
+, 
+İtiÚs
+ ) {
+
+467 
+	`’code3to4
+Ğ
+th»eBy‹s
+, 0, 
+numSigBy‹s
+, 
+b4
+, 0, 
+İtiÚs
+ );
+
+468  
+b4
+;
+
+469 
+	}
+}
+
+495 
+´iv©e
+ 
+	gby‹
+[] 
+	$’code3to4
+(
+
+496 
+by‹
+[] 
+sourû
+, 
+¤cOff£t
+, 
+numSigBy‹s
+,
+
+497 
+by‹
+[] 
+de¡š©iÚ
+, 
+de¡Off£t
+, 
+İtiÚs
+ ) {
+
+499 
+by‹
+[] 
+ALPHABET
+ = 
+	`g‘AÍhab‘
+Ğ
+İtiÚs
+ );
+
+512 
+šBuff
+ = ( 
+numSigBy‹s
+ > 0 ? ((
+sourû
+[ 
+¤cOff£t
+ ] << 24) >>> 8) : 0 )
+
+513 | ( 
+numSigBy‹s
+ > 1 ? ((
+sourû
+[ 
+¤cOff£t
+ + 1 ] << 24) >>> 16) : 0 )
+
+514 | ( 
+numSigBy‹s
+ > 2 ? ((
+sourû
+[ 
+¤cOff£t
+ + 2 ] << 24) >>> 24) : 0 );
+
+516  
+numSigBy‹s
+ )
+
+519 
+de¡š©iÚ
+[ 
+de¡Off£t
+ ] = 
+ALPHABET
+[ (
+šBuff
+ >>> 18) ];
+
+520 
+de¡š©iÚ
+[ 
+de¡Off£t
+ + 1 ] = 
+ALPHABET
+[ (
+šBuff
+ >>> 12) & 0x3f ];
+
+521 
+de¡š©iÚ
+[ 
+de¡Off£t
+ + 2 ] = 
+ALPHABET
+[ (
+šBuff
+ >>> 6) & 0x3f ];
+
+522 
+de¡š©iÚ
+[ 
+de¡Off£t
+ + 3 ] = 
+ALPHABET
+[ (
+šBuff
+ ) & 0x3f ];
+
+523  
+de¡š©iÚ
+;
+
+526 
+de¡š©iÚ
+[ 
+de¡Off£t
+ ] = 
+ALPHABET
+[ (
+šBuff
+ >>> 18) ];
+
+527 
+de¡š©iÚ
+[ 
+de¡Off£t
+ + 1 ] = 
+ALPHABET
+[ (
+šBuff
+ >>> 12) & 0x3f ];
+
+528 
+de¡š©iÚ
+[ 
+de¡Off£t
+ + 2 ] = 
+ALPHABET
+[ (
+šBuff
+ >>> 6) & 0x3f ];
+
+529 
+de¡š©iÚ
+[ 
+de¡Off£t
+ + 3 ] = 
+EQUALS_SIGN
+;
+
+530  
+de¡š©iÚ
+;
+
+533 
+de¡š©iÚ
+[ 
+de¡Off£t
+ ] = 
+ALPHABET
+[ (
+šBuff
+ >>> 18) ];
+
+534 
+de¡š©iÚ
+[ 
+de¡Off£t
+ + 1 ] = 
+ALPHABET
+[ (
+šBuff
+ >>> 12) & 0x3f ];
+
+535 
+de¡š©iÚ
+[ 
+de¡Off£t
+ + 2 ] = 
+EQUALS_SIGN
+;
+
+536 
+de¡š©iÚ
+[ 
+de¡Off£t
+ + 3 ] = 
+EQUALS_SIGN
+;
+
+537  
+de¡š©iÚ
+;
+
+540  
+de¡š©iÚ
+;
+
+542 
+	}
+}
+
+557 
+public
+ 
+	$’code
+Ğ
+java
+.
+nio
+.
+By‹Bufãr
+ 
+¿w
+, java.nio.By‹Bufã¸
+’coded
+ ){
+
+558 
+by‹
+[] 
+¿w3
+ = 
+Ãw
+ byte[3];
+
+559 
+by‹
+[] 
+’c4
+ = 
+Ãw
+ byte[4];
+
+561  
+¿w
+.
+	`hasRemaššg
+() ){
+
+562 
+»m
+ = 
+M©h
+.
+	`mš
+(3,
+¿w
+.
+	`»maššg
+());
+
+563 
+¿w
+.
+	`g‘
+(
+¿w3
+,0,
+»m
+);
+
+564 
+Ba£64
+.
+	`’code3to4
+(
+’c4
+, 
+¿w3
+, 
+»m
+, Ba£64.
+NO_OPTIONS
+ );
+
+565 
+’coded
+.
+	`put
+(
+’c4
+);
+
+567 
+	}
+}
+
+581 
+public
+ 
+	$’code
+Ğ
+java
+.
+nio
+.
+By‹Bufãr
+ 
+¿w
+, java.nio.
+Ch¬Bufãr
+ 
+’coded
+ ){
+
+582 
+by‹
+[] 
+¿w3
+ = 
+Ãw
+ byte[3];
+
+583 
+by‹
+[] 
+’c4
+ = 
+Ãw
+ byte[4];
+
+585  
+¿w
+.
+	`hasRemaššg
+() ){
+
+586 
+»m
+ = 
+M©h
+.
+	`mš
+(3,
+¿w
+.
+	`»maššg
+());
+
+587 
+¿w
+.
+	`g‘
+(
+¿w3
+,0,
+»m
+);
+
+588 
+Ba£64
+.
+	`’code3to4
+(
+’c4
+, 
+¿w3
+, 
+»m
+, Ba£64.
+NO_OPTIONS
+ );
+
+589  
+i
+ = 0; i < 4; i++ ){
+
+590 
+’coded
+.
+	`put
+Ğ()(
+’c4
+[
+i
+] & 0xFF) );
+
+593 
+	}
+}
+
+616 
+public
+ 
+SŒšg
+ 
+	$’codeObjeù
+Ğ
+java
+.
+io
+.
+S”ŸlizabË
+ 
+£rŸlizabËObjeù
+ )
+
+617 
+throws
+ 
+java
+.
+io
+.
+IOExû±iÚ
+ {
+
+618  
+	`’codeObjeù
+Ğ
+£rŸlizabËObjeù
+, 
+NO_OPTIONS
+ );
+
+619 
+	}
+}
+
+652 
+public
+ 
+SŒšg
+ 
+	$’codeObjeù
+Ğ
+java
+.
+io
+.
+S”ŸlizabË
+ 
+£rŸlizabËObjeù
+, 
+İtiÚs
+ )
+
+653 
+throws
+ 
+java
+.
+io
+.
+IOExû±iÚ
+ {
+
+655 ifĞ
+£rŸlizabËObjeù
+ =ğ
+nuÎ
+ ){
+
+656 
+throw
+ 
+Ãw
+ 
+	`NuÎPoš‹rExû±iÚ
+( "Cannot serialize‡‚ull object." );
+
+660 
+java
+.
+io
+.
+By‹A¼ayOuutSŒ—m
+ 
+baos
+ = 
+nuÎ
+;
+
+661 
+java
+.
+io
+.
+OuutSŒ—m
+ 
+b64os
+ = 
+nuÎ
+;
+
+662 
+java
+.
+ut
+.
+z
+.
+GZIPOuutSŒ—m
+ 
+gzos
+ = 
+nuÎ
+;
+
+663 
+java
+.
+io
+.
+ObjeùOuutSŒ—m
+ 
+oos
+ = 
+nuÎ
+;
+
+666 
+Œy
+ {
+
+668 
+baos
+ = 
+Ãw
+ 
+java
+.
+io
+.
+	`By‹A¼ayOuutSŒ—m
+();
+
+669 
+b64os
+ = 
+Ãw
+ 
+	`OuutSŒ—m
+Ğ
+baos
+, 
+ENCODE
+ | 
+İtiÚs
+ );
+
+670 ifĞ(
+İtiÚs
+ & 
+GZIP
+) != 0 ){
+
+672 
+gzos
+ = 
+Ãw
+ 
+java
+.
+ut
+.
+z
+.
+	`GZIPOuutSŒ—m
+(
+b64os
+);
+
+673 
+oos
+ = 
+Ãw
+ 
+java
+.
+io
+.
+	`ObjeùOuutSŒ—m
+Ğ
+gzos
+ );
+
+676 
+oos
+ = 
+Ãw
+ 
+java
+.
+io
+.
+	`ObjeùOuutSŒ—m
+Ğ
+b64os
+ );
+
+678 
+oos
+.
+	`wr™eObjeù
+Ğ
+£rŸlizabËObjeù
+ );
+
+680 
+	`ÿtch
+Ğ
+java
+.
+io
+.
+IOExû±iÚ
+ 
+e
+ ) {
+
+683 
+throw
+ 
+e
+;
+
+685 
+fš®ly
+ {
+
+686 
+Œy
+{ 
+oos
+.
+	`şo£
+(); } 
+	`ÿtch
+Ğ
+Exû±iÚ
+ 
+e
+ ){}
+
+687 
+Œy
+{ 
+gzos
+.
+	`şo£
+(); } 
+	`ÿtch
+Ğ
+Exû±iÚ
+ 
+e
+ ){}
+
+688 
+Œy
+{ 
+b64os
+.
+	`şo£
+(); } 
+	`ÿtch
+Ğ
+Exû±iÚ
+ 
+e
+ ){}
+
+689 
+Œy
+{ 
+baos
+.
+	`şo£
+(); } 
+	`ÿtch
+Ğ
+Exû±iÚ
+ 
+e
+ ){}
+
+693 
+Œy
+ {
+
+694  
+Ãw
+ 
+	`SŒšg
+Ğ
+baos
+.
+	`toBy‹A¼ay
+(), 
+PREFERRED_ENCODING
+ );
+
+696 
+	`ÿtch
+ (
+java
+.
+io
+.
+UnsuµÜ‹dEncodšgExû±iÚ
+ 
+uue
+){
+
+698  
+Ãw
+ 
+	`SŒšg
+Ğ
+baos
+.
+	`toBy‹A¼ay
+() );
+
+701 
+	}
+}
+
+714 
+public
+ 
+SŒšg
+ 
+	$’codeBy‹s
+Ğ
+by‹
+[] 
+sourû
+ ) {
+
+718 
+SŒšg
+ 
+’coded
+ = 
+nuÎ
+;
+
+719 
+Œy
+ {
+
+720 
+’coded
+ = 
+	`’codeBy‹s
+(
+sourû
+, 0, sourû.
+Ëngth
+, 
+NO_OPTIONS
+);
+
+721 } 
+	`ÿtch
+ (
+java
+.
+io
+.
+IOExû±iÚ
+ 
+ex
+) {
+
+722 
+as£¹
+ 
+çl£
+ : 
+ex
+.
+	`g‘Mes§ge
+();
+
+724 
+as£¹
+ 
+’coded
+ !ğ
+nuÎ
+;
+
+725  
+’coded
+;
+
+726 
+	}
+}
+
+759 
+public
+ 
+SŒšg
+ 
+	$’codeBy‹s
+Ğ
+by‹
+[] 
+sourû
+, 
+İtiÚs
+ ) 
+throws
+ 
+java
+.
+io
+.
+IOExû±iÚ
+ {
+
+760  
+	`’codeBy‹s
+Ğ
+sourû
+, 0, sourû.
+Ëngth
+, 
+İtiÚs
+ );
+
+761 
+	}
+}
+
+782 
+public
+ 
+SŒšg
+ 
+	$’codeBy‹s
+Ğ
+by‹
+[] 
+sourû
+, 
+off
+, 
+Ën
+ ) {
+
+786 
+SŒšg
+ 
+’coded
+ = 
+nuÎ
+;
+
+787 
+Œy
+ {
+
+788 
+’coded
+ = 
+	`’codeBy‹s
+Ğ
+sourû
+, 
+off
+, 
+Ën
+, 
+NO_OPTIONS
+ );
+
+789 } 
+	`ÿtch
+ (
+java
+.
+io
+.
+IOExû±iÚ
+ 
+ex
+) {
+
+790 
+as£¹
+ 
+çl£
+ : 
+ex
+.
+	`g‘Mes§ge
+();
+
+792 
+as£¹
+ 
+’coded
+ !ğ
+nuÎ
+;
+
+793  
+’coded
+;
+
+794 
+	}
+}
+
+830 
+public
+ 
+SŒšg
+ 
+	$’codeBy‹s
+Ğ
+by‹
+[] 
+sourû
+, 
+off
+, 
+Ën
+, 
+İtiÚs
+ ) 
+throws
+ 
+java
+.
+io
+.
+IOExû±iÚ
+ {
+
+831 
+by‹
+[] 
+’coded
+ = 
+	`’codeBy‹sToBy‹s
+Ğ
+sourû
+, 
+off
+, 
+Ën
+, 
+İtiÚs
+ );
+
+834 
+Œy
+ {
+
+835  
+Ãw
+ 
+	`SŒšg
+Ğ
+’coded
+, 
+PREFERRED_ENCODING
+ );
+
+837 
+	`ÿtch
+ (
+java
+.
+io
+.
+UnsuµÜ‹dEncodšgExû±iÚ
+ 
+uue
+) {
+
+838  
+Ãw
+ 
+	`SŒšg
+Ğ
+’coded
+ );
+
+841 
+	}
+}
+
+857 
+public
+ 
+	gby‹
+[] 
+	$’codeBy‹sToBy‹s
+Ğ
+by‹
+[] 
+sourû
+ ) {
+
+858 
+by‹
+[] 
+’coded
+ = 
+nuÎ
+;
+
+859 
+Œy
+ {
+
+860 
+’coded
+ = 
+	`’codeBy‹sToBy‹s
+Ğ
+sourû
+, 0, sourû.
+Ëngth
+, 
+Ba£64
+.
+NO_OPTIONS
+ );
+
+861 } 
+	`ÿtch
+Ğ
+java
+.
+io
+.
+IOExû±iÚ
+ 
+ex
+ ) {
+
+862 
+as£¹
+ 
+çl£
+ : "IOExû±iÚ Úly comäom GZpšg, which i tuºed off: " + 
+ex
+.
+	`g‘Mes§ge
+();
+
+864  
+’coded
+;
+
+865 
+	}
+}
+
+886 
+public
+ 
+	gby‹
+[] 
+	$’codeBy‹sToBy‹s
+Ğ
+by‹
+[] 
+sourû
+, 
+off
+, 
+Ën
+, 
+İtiÚs
+ ) 
+throws
+ 
+java
+.
+io
+.
+IOExû±iÚ
+ {
+
+888 ifĞ
+sourû
+ =ğ
+nuÎ
+ ){
+
+889 
+throw
+ 
+Ãw
+ 
+	`NuÎPoš‹rExû±iÚ
+( "Cannot serialize‡‚ull‡rray." );
+
+892 ifĞ
+off
+ < 0 ){
+
+893 
+throw
+ 
+Ãw
+ 
+	`IÎeg®Argum’tExû±iÚ
+Ğ"CªnÙ havÃg©ivoff£t: " + 
+off
+ );
+
+896 ifĞ
+Ën
+ < 0 ){
+
+897 
+throw
+ 
+Ãw
+ 
+	`IÎeg®Argum’tExû±iÚ
+Ğ"CªnÙ havËngth off£t: " + 
+Ën
+ );
+
+900 ifĞ
+off
+ + 
+Ën
+ > 
+sourû
+.
+Ëngth
+ ){
+
+901 
+throw
+ 
+Ãw
+ 
+	`IÎeg®Argum’tExû±iÚ
+(
+
+902 
+SŒšg
+.
+	`fÜm©
+Ğ"CªnÙ havoff£ˆoà%d‡nd†’gth oà%d w™h‡¼ay oàËngth %d", 
+off
+,
+Ën
+,
+sourû
+.
+Ëngth
+));
+
+908 ifĞ(
+İtiÚs
+ & 
+GZIP
+) != 0 ) {
+
+909 
+java
+.
+io
+.
+By‹A¼ayOuutSŒ—m
+ 
+baos
+ = 
+nuÎ
+;
+
+910 
+java
+.
+ut
+.
+z
+.
+GZIPOuutSŒ—m
+ 
+gzos
+ = 
+nuÎ
+;
+
+911 
+OuutSŒ—m
+ 
+b64os
+ = 
+nuÎ
+;
+
+913 
+Œy
+ {
+
+915 
+baos
+ = 
+Ãw
+ 
+java
+.
+io
+.
+	`By‹A¼ayOuutSŒ—m
+();
+
+916 
+b64os
+ = 
+Ãw
+ 
+	`OuutSŒ—m
+Ğ
+baos
+, 
+ENCODE
+ | 
+İtiÚs
+ );
+
+917 
+gzos
+ = 
+Ãw
+ 
+java
+.
+ut
+.
+z
+.
+	`GZIPOuutSŒ—m
+Ğ
+b64os
+ );
+
+919 
+gzos
+.
+	`wr™e
+Ğ
+sourû
+, 
+off
+, 
+Ën
+ );
+
+920 
+gzos
+.
+	`şo£
+();
+
+922 
+	`ÿtch
+Ğ
+java
+.
+io
+.
+IOExû±iÚ
+ 
+e
+ ) {
+
+925 
+throw
+ 
+e
+;
+
+927 
+fš®ly
+ {
+
+928 
+Œy
+{ 
+gzos
+.
+	`şo£
+(); } 
+	`ÿtch
+Ğ
+Exû±iÚ
+ 
+e
+ ){}
+
+929 
+Œy
+{ 
+b64os
+.
+	`şo£
+(); } 
+	`ÿtch
+Ğ
+Exû±iÚ
+ 
+e
+ ){}
+
+930 
+Œy
+{ 
+baos
+.
+	`şo£
+(); } 
+	`ÿtch
+Ğ
+Exû±iÚ
+ 
+e
+ ){}
+
+933  
+baos
+.
+	`toBy‹A¼ay
+();
+
+938 
+boŞ—n
+ 
+b»akLšes
+ = (
+İtiÚs
+ & 
+DO_BREAK_LINES
+) != 0;
+
+947 
+’cL’
+ = ( 
+Ën
+ / 3 ) * 4 + (†en % 3 > 0 ? 4 : 0 );
+
+948 ifĞ
+b»akLšes
+ ){
+
+949 
+’cL’
+ +ğ’cL’ / 
+MAX_LINE_LENGTH
+;
+
+951 
+by‹
+[] 
+outBuff
+ = 
+Ãw
+ by‹[ 
+’cL’
+ ];
+
+954 
+d
+ = 0;
+
+955 
+e
+ = 0;
+
+956 
+Ën2
+ = 
+Ën
+ - 2;
+
+957 
+lšeL’gth
+ = 0;
+
+958  ; 
+d
+ < 
+Ën2
+; d+=3, 
+e
++=4 ) {
+
+959 
+	`’code3to4
+Ğ
+sourû
+, 
+d
++
+off
+, 3, 
+outBuff
+, 
+e
+, 
+İtiÚs
+ );
+
+961 
+lšeL’gth
+ += 4;
+
+962 ifĞ
+b»akLšes
+ && 
+lšeL’gth
+ >ğ
+MAX_LINE_LENGTH
+ )
+
+964 
+outBuff
+[
+e
++4] = 
+NEW_LINE
+;
+
+965 
+e
+++;
+
+966 
+lšeL’gth
+ = 0;
+
+970 ifĞ
+d
+ < 
+Ën
+ ) {
+
+971 
+	`’code3to4
+Ğ
+sourû
+, 
+d
++
+off
+, 
+Ën
+ - d, 
+outBuff
+, 
+e
+, 
+İtiÚs
+ );
+
+972 
+e
+ += 4;
+
+977 ifĞ
+e
+ <ğ
+outBuff
+.
+Ëngth
+ - 1 ){
+
+982 
+by‹
+[] 
+fš®Out
+ = 
+Ãw
+ by‹[
+e
+];
+
+983 
+Sy¡em
+.
+	`¬¿ycİy
+(
+outBuff
+,0, 
+fš®Out
+,0,
+e
+);
+
+985  
+fš®Out
+;
+
+988  
+outBuff
+;
+
+993 
+	}
+}
+
+1030 
+´iv©e
+ 
+	$decode4to3
+(
+
+1031 
+by‹
+[] 
+sourû
+, 
+¤cOff£t
+,
+
+1032 
+by‹
+[] 
+de¡š©iÚ
+, 
+de¡Off£t
+, 
+İtiÚs
+ ) {
+
+1035 ifĞ
+sourû
+ =ğ
+nuÎ
+ ){
+
+1036 
+throw
+ 
+Ãw
+ 
+	`NuÎPoš‹rExû±iÚ
+( "Source‡rray was‚ull." );
+
+1038 ifĞ
+de¡š©iÚ
+ =ğ
+nuÎ
+ ){
+
+1039 
+throw
+ 
+Ãw
+ 
+	`NuÎPoš‹rExû±iÚ
+( "Destination‡rray was‚ull." );
+
+1041 ifĞ
+¤cOff£t
+ < 0 || srcOff£ˆ+ 3 >ğ
+sourû
+.
+Ëngth
+ ){
+
+1042 
+throw
+ 
+Ãw
+ 
+	`IÎeg®Argum’tExû±iÚ
+Ğ
+SŒšg
+.
+	`fÜm©
+(
+
+1043 "Sourû‡¼ay w™h†’gth %d cªnÙ havoff£ˆoà%d‡nd stÈ´oûs fou¸by‹s.", 
+sourû
+.
+Ëngth
+, 
+¤cOff£t
+ ) );
+
+1045 ifĞ
+de¡Off£t
+ < 0 || de¡Off£ˆ+2 >ğ
+de¡š©iÚ
+.
+Ëngth
+ ){
+
+1046 
+throw
+ 
+Ãw
+ 
+	`IÎeg®Argum’tExû±iÚ
+Ğ
+SŒšg
+.
+	`fÜm©
+(
+
+1047 "De¡š©iÚ‡¼ay w™h†’gth %d cªnÙ havoff£ˆoà%d‡nd stÈ¡Üth»by‹s.", 
+de¡š©iÚ
+.
+Ëngth
+, 
+de¡Off£t
+ ) );
+
+1051 
+by‹
+[] 
+DECODABET
+ = 
+	`g‘Decodab‘
+Ğ
+İtiÚs
+ );
+
+1054 ifĞ
+sourû
+[ 
+¤cOff£t
+ + 2] =ğ
+EQUALS_SIGN
+ ) {
+
+1058 
+outBuff
+ = ( ( 
+DECODABET
+[ 
+sourû
+[ 
+¤cOff£t
+ ] ] & 0xFF ) << 18 )
+
+1059 | ( ( 
+DECODABET
+[ 
+sourû
+[ 
+¤cOff£t
+ + 1] ] & 0xFF ) << 12 );
+
+1061 
+de¡š©iÚ
+[ 
+de¡Off£t
+ ] = (
+by‹
+)Ğ
+outBuff
+ >>> 16 );
+
+1066 ifĞ
+sourû
+[ 
+¤cOff£t
+ + 3 ] =ğ
+EQUALS_SIGN
+ ) {
+
+1071 
+outBuff
+ = ( ( 
+DECODABET
+[ 
+sourû
+[ 
+¤cOff£t
+ ] ] & 0xFF ) << 18 )
+
+1072 | ( ( 
+DECODABET
+[ 
+sourû
+[ 
+¤cOff£t
+ + 1 ] ] & 0xFF ) << 12 )
+
+1073 | ( ( 
+DECODABET
+[ 
+sourû
+[ 
+¤cOff£t
+ + 2 ] ] & 0xFF ) << 6 );
+
+1075 
+de¡š©iÚ
+[ 
+de¡Off£t
+ ] = (
+by‹
+)Ğ
+outBuff
+ >>> 16 );
+
+1076 
+de¡š©iÚ
+[ 
+de¡Off£t
+ + 1 ] = (
+by‹
+)Ğ
+outBuff
+ >>> 8 );
+
+1087 
+outBuff
+ = ( ( 
+DECODABET
+[ 
+sourû
+[ 
+¤cOff£t
+ ] ] & 0xFF ) << 18 )
+
+1088 | ( ( 
+DECODABET
+[ 
+sourû
+[ 
+¤cOff£t
+ + 1 ] ] & 0xFF ) << 12 )
+
+1089 | ( ( 
+DECODABET
+[ 
+sourû
+[ 
+¤cOff£t
+ + 2 ] ] & 0xFF ) << 6)
+
+1090 | ( ( 
+DECODABET
+[ 
+sourû
+[ 
+¤cOff£t
+ + 3 ] ] & 0xFF ) );
+
+1093 
+de¡š©iÚ
+[ 
+de¡Off£t
+ ] = (
+by‹
+)Ğ
+outBuff
+ >> 16 );
+
+1094 
+de¡š©iÚ
+[ 
+de¡Off£t
+ + 1 ] = (
+by‹
+)Ğ
+outBuff
+ >> 8 );
+
+1095 
+de¡š©iÚ
+[ 
+de¡Off£t
+ + 2 ] = (
+by‹
+)Ğ
+outBuff
+ );
+
+1099 
+	}
+}
+
+1118 
+public
+ 
+	gby‹
+[] 
+	$decode
+Ğ
+by‹
+[] 
+sourû
+ )
+
+1119 
+throws
+ 
+java
+.
+io
+.
+IOExû±iÚ
+ {
+
+1120 
+by‹
+[] 
+decoded
+ = 
+nuÎ
+;
+
+1122 
+decoded
+ = 
+	`decode
+Ğ
+sourû
+, 0, sourû.
+Ëngth
+, 
+Ba£64
+.
+NO_OPTIONS
+ );
+
+1126  
+decoded
+;
+
+1127 
+	}
+}
+
+1148 
+public
+ 
+	gby‹
+[] 
+	$decode
+Ğ
+by‹
+[] 
+sourû
+, 
+off
+, 
+Ën
+, 
+İtiÚs
+ )
+
+1149 
+throws
+ 
+java
+.
+io
+.
+IOExû±iÚ
+ {
+
+1152 ifĞ
+sourû
+ =ğ
+nuÎ
+ ){
+
+1153 
+throw
+ 
+Ãw
+ 
+	`NuÎPoš‹rExû±iÚ
+( "Cannot decode‚ull source‡rray." );
+
+1155 ifĞ
+off
+ < 0 || ofà+ 
+Ën
+ > 
+sourû
+.
+Ëngth
+ ){
+
+1156 
+throw
+ 
+Ãw
+ 
+	`IÎeg®Argum’tExû±iÚ
+Ğ
+SŒšg
+.
+	`fÜm©
+(
+
+1157 "Sourû‡¼ay w™h†’gth %d cªnÙ havoff£ˆoà%d‡nd…roûs %d by‹s.", 
+sourû
+.
+Ëngth
+, 
+off
+, 
+Ën
+ ) );
+
+1160 ifĞ
+Ën
+ == 0 ){
+
+1161  
+Ãw
+ 
+by‹
+[0];
+
+1162 }ifĞ
+Ën
+ < 4 ){
+
+1163 
+throw
+ 
+Ãw
+ 
+	`IÎeg®Argum’tExû±iÚ
+(
+
+1164 "Ba£64-’coded sŒšg mu¡ hav©†—¡ fou¸ch¬aù”s, buˆËngth s³cif›d wa " + 
+Ën
+ );
+
+1167 
+by‹
+[] 
+DECODABET
+ = 
+	`g‘Decodab‘
+Ğ
+İtiÚs
+ );
+
+1169 
+Ën34
+ = 
+Ën
+ * 3 / 4;
+
+1170 
+by‹
+[] 
+outBuff
+ = 
+Ãw
+ by‹[ 
+Ën34
+ ];
+
+1171 
+outBuffPo¢
+ = 0;
+
+1173 
+by‹
+[] 
+b4
+ = 
+Ãw
+ byte[4];
+
+1174 
+b4Po¢
+ = 0;
+
+1175 
+i
+ = 0;
+
+1176 
+by‹
+ 
+sbiDecode
+ = 0;
+
+1178  
+i
+ = 
+off
+; i < off+
+Ën
+; i++ ) {
+
+1180 
+sbiDecode
+ = 
+DECODABET
+[ 
+sourû
+[
+i
+]&0xFF ];
+
+1185 ifĞ
+sbiDecode
+ >ğ
+WHITE_SPACE_ENC
+ ) {
+
+1186 ifĞ
+sbiDecode
+ >ğ
+EQUALS_SIGN_ENC
+ ) {
+
+1187 
+b4
+[ 
+b4Po¢
+++ ] = 
+sourû
+[
+i
+];
+
+1188 ifĞ
+b4Po¢
+ > 3 ) {
+
+1189 
+outBuffPo¢
+ +ğ
+	`decode4to3
+Ğ
+b4
+, 0, 
+outBuff
+, outBuffPo¢, 
+İtiÚs
+ );
+
+1190 
+b4Po¢
+ = 0;
+
+1193 ifĞ
+sourû
+[
+i
+] =ğ
+EQUALS_SIGN
+ ) {
+
+1201 
+throw
+ 
+Ãw
+ 
+java
+.
+io
+.
+	`IOExû±iÚ
+Ğ
+SŒšg
+.
+	`fÜm©
+(
+
+1202 "Bad Ba£64 iÅuˆch¬aù” decim® %d iÀ¬¿y…os™iÚ %d", (()
+sourû
+[
+i
+])&0xFF, i ) );
+
+1206 
+by‹
+[] 
+out
+ = 
+Ãw
+ by‹[ 
+outBuffPo¢
+ ];
+
+1207 
+Sy¡em
+.
+	`¬¿ycİy
+Ğ
+outBuff
+, 0, 
+out
+, 0, 
+outBuffPo¢
+ );
+
+1208  
+out
+;
+
+1209 
+	}
+}
+
+1223 
+public
+ 
+	gby‹
+[] 
+	$decode
+Ğ
+SŒšg
+ 
+s
+ ) 
+throws
+ 
+java
+.
+io
+.
+IOExû±iÚ
+ {
+
+1224  
+	`decode
+Ğ
+s
+, 
+NO_OPTIONS
+ );
+
+1225 
+	}
+}
+
+1240 
+public
+ 
+	gby‹
+[] 
+	$decode
+Ğ
+SŒšg
+ 
+s
+, 
+İtiÚs
+ ) 
+throws
+ 
+java
+.
+io
+.
+IOExû±iÚ
+ {
+
+1242 ifĞ
+s
+ =ğ
+nuÎ
+ ){
+
+1243 
+throw
+ 
+Ãw
+ 
+	`NuÎPoš‹rExû±iÚ
+( "Input string was‚ull." );
+
+1246 
+by‹
+[] 
+by‹s
+;
+
+1247 
+Œy
+ {
+
+1248 
+by‹s
+ = 
+s
+.
+	`g‘By‹s
+Ğ
+PREFERRED_ENCODING
+ );
+
+1250 
+	`ÿtch
+Ğ
+java
+.
+io
+.
+UnsuµÜ‹dEncodšgExû±iÚ
+ 
+u“
+ ) {
+
+1251 
+by‹s
+ = 
+s
+.
+	`g‘By‹s
+();
+
+1256 
+by‹s
+ = 
+	`decode
+Ğby‹s, 0, by‹s.
+Ëngth
+, 
+İtiÚs
+ );
+
+1260 
+boŞ—n
+ 
+dÚtGunz
+ = (
+İtiÚs
+ & 
+DONT_GUNZIP
+) != 0;
+
+1261 ifĞ(
+by‹s
+ !ğ
+nuÎ
+è&& (by‹s.
+Ëngth
+ >ğ4è&& (!
+dÚtGunz
+) ) {
+
+1263 
+h—d
+ = (()
+by‹s
+[0] & 0xff) | ((bytes[1] << 8) & 0xff00);
+
+1264 ifĞ
+java
+.
+ut
+.
+z
+.
+GZIPIÅutSŒ—m
+.
+GZIP_MAGIC
+ =ğ
+h—d
+ ) {
+
+1265 
+java
+.
+io
+.
+By‹A¼ayIÅutSŒ—m
+ 
+bais
+ = 
+nuÎ
+;
+
+1266 
+java
+.
+ut
+.
+z
+.
+GZIPIÅutSŒ—m
+ 
+gzis
+ = 
+nuÎ
+;
+
+1267 
+java
+.
+io
+.
+By‹A¼ayOuutSŒ—m
+ 
+baos
+ = 
+nuÎ
+;
+
+1268 
+by‹
+[] 
+bufãr
+ = 
+Ãw
+ byte[2048];
+
+1269 
+Ëngth
+ = 0;
+
+1271 
+Œy
+ {
+
+1272 
+baos
+ = 
+Ãw
+ 
+java
+.
+io
+.
+	`By‹A¼ayOuutSŒ—m
+();
+
+1273 
+bais
+ = 
+Ãw
+ 
+java
+.
+io
+.
+	`By‹A¼ayIÅutSŒ—m
+Ğ
+by‹s
+ );
+
+1274 
+gzis
+ = 
+Ãw
+ 
+java
+.
+ut
+.
+z
+.
+	`GZIPIÅutSŒ—m
+Ğ
+bais
+ );
+
+1276  ( 
+Ëngth
+ = 
+gzis
+.
+	`»ad
+Ğ
+bufãr
+ ) ) >= 0 ) {
+
+1277 
+baos
+.
+	`wr™e
+(
+bufãr
+,0,
+Ëngth
+);
+
+1281 
+by‹s
+ = 
+baos
+.
+	`toBy‹A¼ay
+();
+
+1284 
+	`ÿtch
+Ğ
+java
+.
+io
+.
+IOExû±iÚ
+ 
+e
+ ) {
+
+1285 
+e
+.
+	`´štSckT¿û
+();
+
+1288 
+fš®ly
+ {
+
+1289 
+Œy
+{ 
+baos
+.
+	`şo£
+(); } 
+	`ÿtch
+Ğ
+Exû±iÚ
+ 
+e
+ ){}
+
+1290 
+Œy
+{ 
+gzis
+.
+	`şo£
+(); } 
+	`ÿtch
+Ğ
+Exû±iÚ
+ 
+e
+ ){}
+
+1291 
+Œy
+{ 
+bais
+.
+	`şo£
+(); } 
+	`ÿtch
+Ğ
+Exû±iÚ
+ 
+e
+ ){}
+
+1297  
+by‹s
+;
+
+1298 
+	}
+}
+
+1314 
+public
+ 
+Objeù
+ 
+	$decodeToObjeù
+Ğ
+SŒšg
+ 
+’codedObjeù
+ )
+
+1315 
+throws
+ 
+java
+.
+io
+.
+IOExû±iÚ
+, 
+CÏssNÙFoundExû±iÚ
+ {
+
+1316  
+	`decodeToObjeù
+(
+’codedObjeù
+,
+NO_OPTIONS
+,
+nuÎ
+);
+
+1317 
+	}
+}
+
+1336 
+public
+ 
+Objeù
+ 
+	$decodeToObjeù
+(
+
+1337 
+SŒšg
+ 
+’codedObjeù
+, 
+İtiÚs
+, 
+fš®
+ 
+CÏssLßd”
+ 
+lßd”
+ )
+
+1338 
+throws
+ 
+java
+.
+io
+.
+IOExû±iÚ
+, 
+CÏssNÙFoundExû±iÚ
+ {
+
+1341 
+by‹
+[] 
+objBy‹s
+ = 
+	`decode
+Ğ
+’codedObjeù
+, 
+İtiÚs
+ );
+
+1343 
+java
+.
+io
+.
+By‹A¼ayIÅutSŒ—m
+ 
+bais
+ = 
+nuÎ
+;
+
+1344 
+java
+.
+io
+.
+ObjeùIÅutSŒ—m
+ 
+ois
+ = 
+nuÎ
+;
+
+1345 
+Objeù
+ 
+obj
+ = 
+nuÎ
+;
+
+1347 
+Œy
+ {
+
+1348 
+bais
+ = 
+Ãw
+ 
+java
+.
+io
+.
+	`By‹A¼ayIÅutSŒ—m
+Ğ
+objBy‹s
+ );
+
+1351 ifĞ
+lßd”
+ =ğ
+nuÎ
+ ){
+
+1352 
+ois
+ = 
+Ãw
+ 
+java
+.
+io
+.
+	`ObjeùIÅutSŒ—m
+Ğ
+bais
+ );
+
+1358 
+ois
+ = 
+Ãw
+ 
+java
+.
+io
+.
+	`ObjeùIÅutSŒ—m
+(
+bais
+){
+
+1359 @
+Ov”ride
+
+
+1360 
+public
+ 
+CÏss
+<?> 
+	`»sŞveCÏss
+(
+java
+.
+io
+.
+ObjeùSŒ—mCÏss
+ 
+¡»amCÏss
+)
+
+1361 
+throws
+ 
+java
+.
+io
+.
+IOExû±iÚ
+, 
+CÏssNÙFoundExû±iÚ
+ {
+
+1362 
+CÏss
+<?> 
+c
+ = CÏss.
+	`fÜName
+(
+¡»amCÏss
+.
+	`g‘Name
+(), 
+çl£
+, 
+lßd”
+);
+
+1363 ifĞ
+c
+ =ğ
+nuÎ
+ ){
+
+1364  
+su³r
+.
+	`»sŞveCÏss
+(
+¡»amCÏss
+);
+
+1366  
+c
+;
+
+1372 
+obj
+ = 
+ois
+.
+	`»adObjeù
+();
+
+1374 
+	`ÿtch
+Ğ
+java
+.
+io
+.
+IOExû±iÚ
+ 
+e
+ ) {
+
+1375 
+throw
+ 
+e
+;
+
+1377 
+	`ÿtch
+Ğ
+CÏssNÙFoundExû±iÚ
+ 
+e
+ ) {
+
+1378 
+throw
+ 
+e
+;
+
+1380 
+fš®ly
+ {
+
+1381 
+Œy
+{ 
+bais
+.
+	`şo£
+(); } 
+	`ÿtch
+Ğ
+Exû±iÚ
+ 
+e
+ ){}
+
+1382 
+Œy
+{ 
+ois
+.
+	`şo£
+(); } 
+	`ÿtch
+Ğ
+Exû±iÚ
+ 
+e
+ ){}
+
+1385  
+obj
+;
+
+1386 
+	}
+}
+
+1404 
+public
+ 
+	$’codeToFe
+Ğ
+by‹
+[] 
+d©aToEncode
+, 
+SŒšg
+ 
+f’ame
+ )
+
+1405 
+throws
+ 
+java
+.
+io
+.
+IOExû±iÚ
+ {
+
+1407 ifĞ
+d©aToEncode
+ =ğ
+nuÎ
+ ){
+
+1408 
+throw
+ 
+Ãw
+ 
+	`NuÎPoš‹rExû±iÚ
+( "Dataoƒncode was‚ull." );
+
+1411 
+OuutSŒ—m
+ 
+bos
+ = 
+nuÎ
+;
+
+1412 
+Œy
+ {
+
+1413 
+bos
+ = 
+Ãw
+ 
+	`OuutSŒ—m
+(
+
+1414 
+Ãw
+ 
+java
+.
+io
+.
+	`FeOuutSŒ—m
+Ğ
+f’ame
+ ), 
+Ba£64
+.
+ENCODE
+ );
+
+1415 
+bos
+.
+	`wr™e
+Ğ
+d©aToEncode
+ );
+
+1417 
+	`ÿtch
+Ğ
+java
+.
+io
+.
+IOExû±iÚ
+ 
+e
+ ) {
+
+1418 
+throw
+ 
+e
+;
+
+1420 
+fš®ly
+ {
+
+1421 
+Œy
+{ 
+bos
+.
+	`şo£
+(); } 
+	`ÿtch
+Ğ
+Exû±iÚ
+ 
+e
+ ){}
+
+1424 
+	}
+}
+
+1440 
+public
+ 
+	$decodeToFe
+Ğ
+SŒšg
+ 
+d©aToDecode
+, SŒšg 
+f’ame
+ )
+
+1441 
+throws
+ 
+java
+.
+io
+.
+IOExû±iÚ
+ {
+
+1443 
+OuutSŒ—m
+ 
+bos
+ = 
+nuÎ
+;
+
+1444 
+Œy
+{
+
+1445 
+bos
+ = 
+Ãw
+ 
+	`OuutSŒ—m
+(
+
+1446 
+Ãw
+ 
+java
+.
+io
+.
+	`FeOuutSŒ—m
+Ğ
+f’ame
+ ), 
+Ba£64
+.
+DECODE
+ );
+
+1447 
+bos
+.
+	`wr™e
+Ğ
+d©aToDecode
+.
+	`g‘By‹s
+Ğ
+PREFERRED_ENCODING
+ ) );
+
+1449 
+	`ÿtch
+Ğ
+java
+.
+io
+.
+IOExû±iÚ
+ 
+e
+ ) {
+
+1450 
+throw
+ 
+e
+;
+
+1452 
+fš®ly
+ {
+
+1453 
+Œy
+{ 
+bos
+.
+	`şo£
+(); } 
+	`ÿtch
+Ğ
+Exû±iÚ
+ 
+e
+ ){}
+
+1456 
+	}
+}
+
+1475 
+public
+ 
+	gby‹
+[] 
+	$decodeFromFe
+Ğ
+SŒšg
+ 
+f’ame
+ )
+
+1476 
+throws
+ 
+java
+.
+io
+.
+IOExû±iÚ
+ {
+
+1478 
+by‹
+[] 
+decodedD©a
+ = 
+nuÎ
+;
+
+1479 
+IÅutSŒ—m
+ 
+bis
+ = 
+nuÎ
+;
+
+1480 
+Œy
+
+
+1483 
+java
+.
+io
+.
+Fe
+ 
+fe
+ = 
+Ãw
+ java.io.
+	`Fe
+Ğ
+f’ame
+ );
+
+1484 
+by‹
+[] 
+bufãr
+ = 
+nuÎ
+;
+
+1485 
+Ëngth
+ = 0;
+
+1486 
+numBy‹s
+ = 0;
+
+1489 ifĞ
+fe
+.
+	`Ëngth
+(è> 
+IÁeg”
+.
+MAX_VALUE
+ )
+
+1491 
+throw
+ 
+Ãw
+ 
+java
+.
+io
+.
+	`IOExû±iÚ
+Ğ"Fi toØbig fÜhi cÚv’›nû m‘hod (" + 
+fe
+.
+	`Ëngth
+() + " bytes)." );
+
+1493 
+bufãr
+ = 
+Ãw
+ 
+by‹
+[ ()
+fe
+.
+	`Ëngth
+() ];
+
+1496 
+bis
+ = 
+Ãw
+ 
+	`IÅutSŒ—m
+(
+
+1497 
+Ãw
+ 
+java
+.
+io
+.
+	`Bufã»dIÅutSŒ—m
+(
+
+1498 
+Ãw
+ 
+java
+.
+io
+.
+	`FeIÅutSŒ—m
+Ğ
+fe
+ ) ), 
+Ba£64
+.
+DECODE
+ );
+
+1501  ( 
+numBy‹s
+ = 
+bis
+.
+	`»ad
+Ğ
+bufãr
+, 
+Ëngth
+, 4096 ) ) >= 0 ) {
+
+1502 
+Ëngth
+ +ğ
+numBy‹s
+;
+
+1506 
+decodedD©a
+ = 
+Ãw
+ 
+by‹
+[ 
+Ëngth
+ ];
+
+1507 
+Sy¡em
+.
+	`¬¿ycİy
+Ğ
+bufãr
+, 0, 
+decodedD©a
+, 0, 
+Ëngth
+ );
+
+1510 
+	`ÿtch
+Ğ
+java
+.
+io
+.
+IOExû±iÚ
+ 
+e
+ ) {
+
+1511 
+throw
+ 
+e
+;
+
+1513 
+fš®ly
+ {
+
+1514 
+Œy
+{ 
+bis
+.
+	`şo£
+(); } 
+	`ÿtch
+Ğ
+Exû±iÚ
+ 
+e
+) {}
+
+1517  
+decodedD©a
+;
+
+1518 
+	}
+}
+
+1536 
+public
+ 
+SŒšg
+ 
+	$’codeFromFe
+Ğ
+SŒšg
+ 
+f’ame
+ )
+
+1537 
+throws
+ 
+java
+.
+io
+.
+IOExû±iÚ
+ {
+
+1539 
+SŒšg
+ 
+’codedD©a
+ = 
+nuÎ
+;
+
+1540 
+IÅutSŒ—m
+ 
+bis
+ = 
+nuÎ
+;
+
+1541 
+Œy
+
+
+1544 
+java
+.
+io
+.
+Fe
+ 
+fe
+ = 
+Ãw
+ java.io.
+	`Fe
+Ğ
+f’ame
+ );
+
+1545 
+by‹
+[] 
+bufãr
+ = 
+Ãw
+ by‹[ 
+M©h
+.
+	`max
+(()(
+fe
+.
+	`Ëngth
+() * 1.4+1),40) ];
+
+1546 
+Ëngth
+ = 0;
+
+1547 
+numBy‹s
+ = 0;
+
+1550 
+bis
+ = 
+Ãw
+ 
+	`IÅutSŒ—m
+(
+
+1551 
+Ãw
+ 
+java
+.
+io
+.
+	`Bufã»dIÅutSŒ—m
+(
+
+1552 
+Ãw
+ 
+java
+.
+io
+.
+	`FeIÅutSŒ—m
+Ğ
+fe
+ ) ), 
+Ba£64
+.
+ENCODE
+ );
+
+1555  ( 
+numBy‹s
+ = 
+bis
+.
+	`»ad
+Ğ
+bufãr
+, 
+Ëngth
+, 4096 ) ) >= 0 ) {
+
+1556 
+Ëngth
+ +ğ
+numBy‹s
+;
+
+1560 
+’codedD©a
+ = 
+Ãw
+ 
+	`SŒšg
+Ğ
+bufãr
+, 0, 
+Ëngth
+, 
+Ba£64
+.
+PREFERRED_ENCODING
+ );
+
+1563 
+	`ÿtch
+Ğ
+java
+.
+io
+.
+IOExû±iÚ
+ 
+e
+ ) {
+
+1564 
+throw
+ 
+e
+;
+
+1566 
+fš®ly
+ {
+
+1567 
+Œy
+{ 
+bis
+.
+	`şo£
+(); } 
+	`ÿtch
+Ğ
+Exû±iÚ
+ 
+e
+) {}
+
+1570  
+’codedD©a
+;
+
+1571 
+	}
+}
+
+1581 
+public
+ 
+	$’codeFeToFe
+Ğ
+SŒšg
+ 
+šfe
+, SŒšg 
+outfe
+ )
+
+1582 
+throws
+ 
+java
+.
+io
+.
+IOExû±iÚ
+ {
+
+1584 
+SŒšg
+ 
+’coded
+ = 
+Ba£64
+.
+	`’codeFromFe
+Ğ
+šfe
+ );
+
+1585 
+java
+.
+io
+.
+OuutSŒ—m
+ 
+out
+ = 
+nuÎ
+;
+
+1586 
+Œy
+{
+
+1587 
+out
+ = 
+Ãw
+ 
+java
+.
+io
+.
+	`Bufã»dOuutSŒ—m
+(
+
+1588 
+Ãw
+ 
+java
+.
+io
+.
+	`FeOuutSŒ—m
+Ğ
+outfe
+ ) );
+
+1589 
+out
+.
+	`wr™e
+Ğ
+’coded
+.
+	`g‘By‹s
+("US-ASCII") );
+
+1591 
+	`ÿtch
+Ğ
+java
+.
+io
+.
+IOExû±iÚ
+ 
+e
+ ) {
+
+1592 
+throw
+ 
+e
+;
+
+1594 
+fš®ly
+ {
+
+1595 
+Œy
+ { 
+out
+.
+	`şo£
+(); }
+
+1596 
+	`ÿtch
+Ğ
+Exû±iÚ
+ 
+ex
+ ){}
+
+1598 
+	}
+}
+
+1609 
+public
+ 
+	$decodeFeToFe
+Ğ
+SŒšg
+ 
+šfe
+, SŒšg 
+outfe
+ )
+
+1610 
+throws
+ 
+java
+.
+io
+.
+IOExû±iÚ
+ {
+
+1612 
+by‹
+[] 
+decoded
+ = 
+Ba£64
+.
+	`decodeFromFe
+Ğ
+šfe
+ );
+
+1613 
+java
+.
+io
+.
+OuutSŒ—m
+ 
+out
+ = 
+nuÎ
+;
+
+1614 
+Œy
+{
+
+1615 
+out
+ = 
+Ãw
+ 
+java
+.
+io
+.
+	`Bufã»dOuutSŒ—m
+(
+
+1616 
+Ãw
+ 
+java
+.
+io
+.
+	`FeOuutSŒ—m
+Ğ
+outfe
+ ) );
+
+1617 
+out
+.
+	`wr™e
+Ğ
+decoded
+ );
+
+1619 
+	`ÿtch
+Ğ
+java
+.
+io
+.
+IOExû±iÚ
+ 
+e
+ ) {
+
+1620 
+throw
+ 
+e
+;
+
+1622 
+fš®ly
+ {
+
+1623 
+Œy
+ { 
+out
+.
+	`şo£
+(); }
+
+1624 
+	`ÿtch
+Ğ
+Exû±iÚ
+ 
+ex
+ ){}
+
+1626 
+	}
+}
+
+1641 
+public
+ 
+şass
+ 
+IÅutSŒ—m
+ 
+ex‹nds
+ 
+	gjava
+.
+	gio
+.
+	gF‹rIÅutSŒ—m
+ {
+
+1643 
+´iv©e
+ 
+boŞ—n
+ 
+	g’code
+;
+
+1644 
+´iv©e
+ 
+	gpos™iÚ
+;
+
+1645 
+´iv©e
+ 
+	gby‹
+[] 
+	gbufãr
+;
+
+1646 
+´iv©e
+ 
+	gbufãrL’gth
+;
+
+1647 
+´iv©e
+ 
+	gnumSigBy‹s
+;
+
+1648 
+´iv©e
+ 
+	glšeL’gth
+;
+
+1649 
+´iv©e
+ 
+boŞ—n
+ 
+	gb»akLšes
+;
+
+1650 
+´iv©e
+ 
+	gİtiÚs
+;
+
+1651 
+´iv©e
+ 
+	gby‹
+[] 
+	gdecodab‘
+;
+
+1660 
+public
+ 
+IÅutSŒ—m
+Ğ
+java
+.
+io
+.IÅutSŒ—m 
+š
+ ) {
+
+1661 
+this
+Ğ
+š
+, 
+DECODE
+ );
+
+1685 
+public
+ 
+IÅutSŒ—m
+Ğ
+java
+.
+io
+.IÅutSŒ—m 
+š
+, 
+İtiÚs
+ ) {
+
+1687 
+su³r
+Ğ
+š
+ );
+
+1688 
+	gthis
+.
+	gİtiÚs
+ = 
+İtiÚs
+;
+
+1689 
+	gthis
+.
+	gb»akLšes
+ = (
+İtiÚs
+ & 
+DO_BREAK_LINES
+) > 0;
+
+1690 
+	gthis
+.
+	g’code
+ = (
+İtiÚs
+ & 
+ENCODE
+) > 0;
+
+1691 
+	gthis
+.
+	gbufãrL’gth
+ = 
+’code
+ ? 4 : 3;
+
+1692 
+	gthis
+.
+	gbufãr
+ = 
+Ãw
+ 
+by‹
+[ 
+bufãrL’gth
+ ];
+
+1693 
+	gthis
+.
+	gpos™iÚ
+ = -1;
+
+1694 
+	gthis
+.
+	glšeL’gth
+ = 0;
+
+1695 
+	gthis
+.
+	gdecodab‘
+ = 
+g‘Decodab‘
+(
+İtiÚs
+);
+
+1705 @
+Ov”ride
+
+
+1706 
+public
+ 
+»ad
+(è
+throws
+ 
+	gjava
+.
+	gio
+.
+	gIOExû±iÚ
+ {
+
+1709 ifĞ
+	gpos™iÚ
+ < 0 ) {
+
+1710 ifĞ
+	g’code
+ ) {
+
+1711 
+	gby‹
+[] 
+	gb3
+ = 
+Ãw
+ 
+by‹
+[3];
+
+1712 
+	gnumBš¬yBy‹s
+ = 0;
+
+1713  
+	gi
+ = 0; i < 3; i++ ) {
+
+1714 
+	gb
+ = 
+š
+.
+»ad
+();
+
+1717 ifĞ
+	gb
+ >= 0 ) {
+
+1718 
+b3
+[
+i
+] = (
+by‹
+)
+b
+;
+
+1719 
+	gnumBš¬yBy‹s
+++;
+
+1726 ifĞ
+	gnumBš¬yBy‹s
+ > 0 ) {
+
+1727 
+’code3to4
+Ğ
+b3
+, 0, 
+numBš¬yBy‹s
+, 
+bufãr
+, 0, 
+İtiÚs
+ );
+
+1728 
+	gpos™iÚ
+ = 0;
+
+1729 
+	gnumSigBy‹s
+ = 4;
+
+1738 
+	gby‹
+[] 
+	gb4
+ = 
+Ãw
+ 
+by‹
+[4];
+
+1739 
+	gi
+ = 0;
+
+1740  
+	gi
+ = 0; i < 4; i++ ) {
+
+1742 
+	gb
+ = 0;
+
+1743 do{ 
+	gb
+ = 
+š
+.
+»ad
+(); }
+
+1744  
+	gb
+ >ğ0 && 
+decodab‘
+[ 
+b
+ & 0x7à] <ğ
+WHITE_SPACE_ENC
+ );
+
+1746 ifĞ
+	gb
+ < 0 ) {
+
+1750 
+	gb4
+[
+i
+] = (
+by‹
+)
+b
+;
+
+1753 ifĞ
+	gi
+ == 4 ) {
+
+1754 
+numSigBy‹s
+ = 
+decode4to3
+Ğ
+b4
+, 0, 
+bufãr
+, 0, 
+İtiÚs
+ );
+
+1755 
+	gpos™iÚ
+ = 0;
+
+1757 ifĞ
+	gi
+ == 0 ){
+
+1762 
+throw
+ 
+Ãw
+ 
+	gjava
+.
+	gio
+.
+IOExû±iÚ
+( "Improperly…added Base64 input." );
+
+1769 ifĞ
+	gpos™iÚ
+ >= 0 ) {
+
+1771 ifĞ 
+pos™iÚ
+ >ğ
+numSigBy‹s
+ ){
+
+1775 ifĞ
+	g’code
+ && 
+	gb»akLšes
+ && 
+	glšeL’gth
+ >ğ
+MAX_LINE_LENGTH
+ ) {
+
+1776 
+lšeL’gth
+ = 0;
+
+1780 
+	glšeL’gth
+++;
+
+1784 
+	gb
+ = 
+bufãr
+[ 
+pos™iÚ
+++ ];
+
+1786 ifĞ
+	gpos™iÚ
+ >ğ
+bufãrL’gth
+ ) {
+
+1787 
+pos™iÚ
+ = -1;
+
+1790  
+	gb
+ & 0xFF;
+
+1797 
+throw
+ 
+Ãw
+ 
+	gjava
+.
+	gio
+.
+IOExû±iÚ
+( "Error in Base64 code„eading stream." );
+
+1814 @
+Ov”ride
+
+
+1815 
+public
+ 
+»ad
+Ğ
+by‹
+[] 
+de¡
+, 
+off
+, 
+Ën
+ )
+
+1816 
+throws
+ 
+	gjava
+.
+	gio
+.
+	gIOExû±iÚ
+ {
+
+1817 
+	gi
+;
+
+1818 
+	gb
+;
+
+1819  
+	gi
+ = 0; i < 
+	gËn
+; i++ ) {
+
+1820 
+	gb
+ = 
+»ad
+();
+
+1822 ifĞ
+	gb
+ >= 0 ) {
+
+1823 
+de¡
+[
+off
+ + 
+i
+] = (
+by‹
+è
+b
+;
+
+1825 ifĞ
+	gi
+ == 0 ) {
+
+1832  
+	gi
+;
+
+1854 
+public
+ 
+şass
+ 
+OuutSŒ—m
+ 
+ex‹nds
+ 
+	gjava
+.
+	gio
+.
+	gF‹rOuutSŒ—m
+ {
+
+1856 
+´iv©e
+ 
+boŞ—n
+ 
+	g’code
+;
+
+1857 
+´iv©e
+ 
+	gpos™iÚ
+;
+
+1858 
+´iv©e
+ 
+	gby‹
+[] 
+	gbufãr
+;
+
+1859 
+´iv©e
+ 
+	gbufãrL’gth
+;
+
+1860 
+´iv©e
+ 
+	glšeL’gth
+;
+
+1861 
+´iv©e
+ 
+boŞ—n
+ 
+	gb»akLšes
+;
+
+1862 
+´iv©e
+ 
+	gby‹
+[] 
+	gb4
+;
+
+1863 
+´iv©e
+ 
+boŞ—n
+ 
+	gsu¥’dEncodšg
+;
+
+1864 
+´iv©e
+ 
+	gİtiÚs
+;
+
+1865 
+´iv©e
+ 
+	gby‹
+[] 
+	gdecodab‘
+;
+
+1873 
+public
+ 
+OuutSŒ—m
+Ğ
+java
+.
+io
+.OuutSŒ—m 
+out
+ ) {
+
+1874 
+this
+Ğ
+out
+, 
+ENCODE
+ );
+
+1897 
+public
+ 
+OuutSŒ—m
+Ğ
+java
+.
+io
+.OuutSŒ—m 
+out
+, 
+İtiÚs
+ ) {
+
+1898 
+su³r
+Ğ
+out
+ );
+
+1899 
+	gthis
+.
+	gb»akLšes
+ = (
+İtiÚs
+ & 
+DO_BREAK_LINES
+) != 0;
+
+1900 
+	gthis
+.
+	g’code
+ = (
+İtiÚs
+ & 
+ENCODE
+) != 0;
+
+1901 
+	gthis
+.
+	gbufãrL’gth
+ = 
+’code
+ ? 3 : 4;
+
+1902 
+	gthis
+.
+	gbufãr
+ = 
+Ãw
+ 
+by‹
+[ 
+bufãrL’gth
+ ];
+
+1903 
+	gthis
+.
+	gpos™iÚ
+ = 0;
+
+1904 
+	gthis
+.
+	glšeL’gth
+ = 0;
+
+1905 
+	gthis
+.
+	gsu¥’dEncodšg
+ = 
+çl£
+;
+
+1906 
+	gthis
+.
+	gb4
+ = 
+Ãw
+ 
+by‹
+[4];
+
+1907 
+	gthis
+.
+	gİtiÚs
+ = 
+İtiÚs
+;
+
+1908 
+	gthis
+.
+	gdecodab‘
+ = 
+g‘Decodab‘
+(
+İtiÚs
+);
+
+1924 @
+Ov”ride
+
+
+1925 
+public
+ 
+wr™e
+(
+theBy‹
+)
+
+1926 
+throws
+ 
+	gjava
+.
+	gio
+.
+	gIOExû±iÚ
+ {
+
+1928 ifĞ
+	gsu¥’dEncodšg
+ ) {
+
+1929 
+	gthis
+.
+	gout
+.
+wr™e
+Ğ
+theBy‹
+ );
+
+1934 ifĞ
+	g’code
+ ) {
+
+1935 
+	gbufãr
+[ 
+pos™iÚ
+++ ] = (
+by‹
+)
+theBy‹
+;
+
+1936 ifĞ
+	gpos™iÚ
+ >ğ
+bufãrL’gth
+ ) {
+
+1938 
+this
+.
+out
+.
+wr™e
+Ğ
+’code3to4
+Ğ
+b4
+, 
+bufãr
+, 
+bufãrL’gth
+, 
+İtiÚs
+ ) );
+
+1940 
+	glšeL’gth
+ += 4;
+
+1941 ifĞ
+	gb»akLšes
+ && 
+	glšeL’gth
+ >ğ
+MAX_LINE_LENGTH
+ ) {
+
+1942 
+this
+.
+out
+.
+wr™e
+Ğ
+NEW_LINE
+ );
+
+1943 
+	glšeL’gth
+ = 0;
+
+1946 
+	gpos™iÚ
+ = 0;
+
+1953 ifĞ
+	gdecodab‘
+[ 
+theBy‹
+ & 0x7à] > 
+	gWHITE_SPACE_ENC
+ ) {
+
+1954 
+	gbufãr
+[ 
+pos™iÚ
+++ ] = (
+by‹
+)
+theBy‹
+;
+
+1955 ifĞ
+	gpos™iÚ
+ >ğ
+bufãrL’gth
+ ) {
+
+1957 
+Ën
+ = 
+Ba£64
+.
+decode4to3
+Ğ
+bufãr
+, 0, 
+b4
+, 0, 
+İtiÚs
+ );
+
+1958 
+	gout
+.
+wr™e
+Ğ
+b4
+, 0, 
+Ën
+ );
+
+1959 
+	gpos™iÚ
+ = 0;
+
+1962 ifĞ
+	gdecodab‘
+[ 
+theBy‹
+ & 0x7à] !ğ
+WHITE_SPACE_ENC
+ ) {
+
+1963 
+throw
+ 
+Ãw
+ 
+java
+.
+io
+.
+IOExû±iÚ
+( "Invalid character in Base64 data." );
+
+1979 @
+Ov”ride
+
+
+1980 
+public
+ 
+wr™e
+Ğ
+by‹
+[] 
+theBy‹s
+, 
+off
+, 
+Ën
+ )
+
+1981 
+throws
+ 
+	gjava
+.
+	gio
+.
+	gIOExû±iÚ
+ {
+
+1983 ifĞ
+	gsu¥’dEncodšg
+ ) {
+
+1984 
+	gthis
+.
+	gout
+.
+wr™e
+Ğ
+theBy‹s
+, 
+off
+, 
+Ën
+ );
+
+1988  
+	gi
+ = 0; i < 
+	gËn
+; i++ ) {
+
+1989 
+wr™e
+Ğ
+theBy‹s
+[ 
+off
+ + 
+i
+ ] );
+
+2001 
+public
+ 
+æushBa£64
+(è
+throws
+ 
+	gjava
+.
+	gio
+.
+	gIOExû±iÚ
+ {
+
+2002 ifĞ
+	gpos™iÚ
+ > 0 ) {
+
+2003 ifĞ
+	g’code
+ ) {
+
+2004 
+	gout
+.
+wr™e
+Ğ
+’code3to4
+Ğ
+b4
+, 
+bufãr
+, 
+pos™iÚ
+, 
+İtiÚs
+ ) );
+
+2005 
+	gpos™iÚ
+ = 0;
+
+2008 
+throw
+ 
+Ãw
+ 
+	gjava
+.
+	gio
+.
+IOExû±iÚ
+( "Base64 input‚ot…roperly…added." );
+
+2020 @
+Ov”ride
+
+
+2021 
+public
+ 
+şo£
+(è
+throws
+ 
+	gjava
+.
+	gio
+.
+	gIOExû±iÚ
+ {
+
+2023 
+æushBa£64
+();
+
+2027 
+	gsu³r
+.
+şo£
+();
+
+2029 
+	gbufãr
+ = 
+nuÎ
+;
+
+2030 
+	gout
+ = 
+nuÎ
+;
+
+2043 
+public
+ 
+su¥’dEncodšg
+(è
+throws
+ 
+	gjava
+.
+	gio
+.
+	gIOExû±iÚ
+ {
+
+2044 
+æushBa£64
+();
+
+2045 
+	gthis
+.
+	gsu¥’dEncodšg
+ = 
+Œue
+;
+
+2056 
+public
+ 
+»sumeEncodšg
+() {
+
+2057 
+	gthis
+.
+	gsu¥’dEncodšg
+ = 
+çl£
+;
+
+	@src/main/java/org/java_websocket/util/Charsetfunctions.java
+
+1 
+·ckage
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gut
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gUnsuµÜ‹dEncodšgExû±iÚ
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gBy‹Bufãr
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gch¬£t
+.
+	gCh¬aù”CodšgExû±iÚ
+;
+
+6 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gch¬£t
+.
+	gCh¬£t
+;
+
+7 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gch¬£t
+.
+	gCh¬£tDecod”
+;
+
+8 
+impÜt
+ 
+	gjava
+.
+	gnio
+.
+	gch¬£t
+.
+	gCodšgE¼ÜAùiÚ
+;
+
+10 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gexû±iÚs
+.
+	gInv®idD©aExû±iÚ
+;
+
+11 
+impÜt
+ 
+	gÜg
+.
+	gjava_websock‘
+.
+	gäamšg
+.
+	gClo£F¿me
+;
+
+13 
+public
+ cÏs 
+	cCh¬£tfunùiÚs
+ {
+
+15 
+public
+ 
+CodšgE¼ÜAùiÚ
+ 
+	mcodšgE¼ÜAùiÚ
+ = CodšgE¼ÜAùiÚ.
+REPORT
+;
+
+20 
+public
+ 
+	mby‹
+[] 
+	$utf8By‹s
+Ğ
+SŒšg
+ 
+s
+ ) {
+
+21 
+Œy
+ {
+
+22  
+s
+.
+	`g‘By‹s
+( "UTF8" );
+
+23 } 
+	`ÿtch
+ ( 
+UnsuµÜ‹dEncodšgExû±iÚ
+ 
+e
+ ) {
+
+24 
+throw
+ 
+Ãw
+ 
+	`RuÁimeExû±iÚ
+Ğ
+e
+ );
+
+31 
+public
+ 
+by‹
+[] 
+	$asciiBy‹s
+Ğ
+SŒšg
+ 
+s
+ ) {
+
+32 
+Œy
+ {
+
+33  
+s
+.
+	`g‘By‹s
+( "ASCII" );
+
+34 } 
+	`ÿtch
+ ( 
+UnsuµÜ‹dEncodšgExû±iÚ
+ 
+e
+ ) {
+
+35 
+throw
+ 
+Ãw
+ 
+	`RuÁimeExû±iÚ
+Ğ
+e
+ );
+
+37 
+	}
+}
+
+39 
+public
+ 
+SŒšg
+ 
+	$¡ršgAscii
+Ğ
+by‹
+[] 
+by‹s
+ ) {
+
+40  
+	`¡ršgAscii
+Ğ
+by‹s
+, 0, by‹s.
+Ëngth
+ );
+
+41 
+	}
+}
+
+43 
+public
+ 
+SŒšg
+ 
+	$¡ršgAscii
+Ğ
+by‹
+[] 
+by‹s
+, 
+off£t
+, 
+Ëngth
+ ){
+
+44 
+Œy
+ {
+
+45  
+Ãw
+ 
+	`SŒšg
+Ğ
+by‹s
+, 
+off£t
+, 
+Ëngth
+, "ASCII" );
+
+46 } 
+	`ÿtch
+ ( 
+UnsuµÜ‹dEncodšgExû±iÚ
+ 
+e
+ ) {
+
+47 
+throw
+ 
+Ãw
+ 
+	`RuÁimeExû±iÚ
+Ğ
+e
+ );
+
+49 
+	}
+}
+
+51 
+public
+ 
+SŒšg
+ 
+	$¡ršgUtf8
+Ğ
+by‹
+[] 
+by‹s
+ ) 
+throws
+ 
+Inv®idD©aExû±iÚ
+ {
+
+52  
+	`¡ršgUtf8
+Ğ
+By‹Bufãr
+.
+	`w¿p
+Ğ
+by‹s
+ ) );
+
+53 
+	}
+}
+
+69 
+public
+ 
+SŒšg
+ 
+	$¡ršgUtf8
+Ğ
+By‹Bufãr
+ 
+by‹s
+ ) 
+throws
+ 
+Inv®idD©aExû±iÚ
+ {
+
+70 
+Ch¬£tDecod”
+ 
+decode
+ = 
+Ch¬£t
+.
+	`fÜName
+Ğ"UTF8" ).
+	`ÃwDecod”
+();
+
+71 
+decode
+.
+	`ÚM®fÜmedIÅut
+Ğ
+codšgE¼ÜAùiÚ
+ );
+
+72 
+decode
+.
+	`ÚUnm­·bËCh¬aù”
+Ğ
+codšgE¼ÜAùiÚ
+ );
+
+74 
+SŒšg
+ 
+s
+;
+
+75 
+Œy
+ {
+
+76 
+by‹s
+.
+	`m¬k
+();
+
+77 
+s
+ = 
+decode
+.
+	`decode
+Ğ
+by‹s
+ ).
+	`toSŒšg
+();
+
+78 
+by‹s
+.
+	`»£t
+();
+
+79 } 
+	`ÿtch
+ ( 
+Ch¬aù”CodšgExû±iÚ
+ 
+e
+ ) {
+
+80 
+throw
+ 
+Ãw
+ 
+	`Inv®idD©aExû±iÚ
+Ğ
+Clo£F¿me
+.
+NO_UTF8
+, 
+e
+ );
+
+82  
+s
+;
+
+83 
+	}
+}
+
+85 
+public
+ 
+	$maš
+Ğ
+SŒšg
+[] 
+¬gs
+ ) 
+throws
+ 
+Inv®idD©aExû±iÚ
+ {
+
+86 
+	`¡ršgUtf8
+Ğ
+	`utf8By‹s
+( "\0" ) );
+
+87 
+	`¡ršgAscii
+Ğ
+	`asciiBy‹s
+( "\0" ) );
+
+88 
+	}
+}
+
+	@
+1
+.
+1
+/usr/include
+43
+2650
+pom.xml
+src/main/java/org/java_websocket/AbstractWrappedByteChannel.java
+src/main/java/org/java_websocket/SSLSocketChannel2.java
+src/main/java/org/java_websocket/SocketChannelIOHelper.java
+src/main/java/org/java_websocket/WebSocket.java
+src/main/java/org/java_websocket/WebSocketAdapter.java
+src/main/java/org/java_websocket/WebSocketFactory.java
+src/main/java/org/java_websocket/WebSocketImpl.java
+src/main/java/org/java_websocket/WebSocketListener.java
+src/main/java/org/java_websocket/WrappedByteChannel.java
+src/main/java/org/java_websocket/client/AbstractClientProxyChannel.java
+src/main/java/org/java_websocket/client/WebSocketClient.java
+src/main/java/org/java_websocket/drafts/Draft.java
+src/main/java/org/java_websocket/drafts/Draft_10.java
+src/main/java/org/java_websocket/drafts/Draft_17.java
+src/main/java/org/java_websocket/drafts/Draft_75.java
+src/main/java/org/java_websocket/drafts/Draft_76.java
+src/main/java/org/java_websocket/exceptions/IncompleteHandshakeException.java
+src/main/java/org/java_websocket/exceptions/InvalidDataException.java
+src/main/java/org/java_websocket/exceptions/InvalidFrameException.java
+src/main/java/org/java_websocket/exceptions/InvalidHandshakeException.java
+src/main/java/org/java_websocket/exceptions/LimitExedeedException.java
+src/main/java/org/java_websocket/exceptions/NotSendableException.java
+src/main/java/org/java_websocket/exceptions/WebsocketNotConnectedException.java
+src/main/java/org/java_websocket/framing/CloseFrame.java
+src/main/java/org/java_websocket/framing/CloseFrameBuilder.java
+src/main/java/org/java_websocket/framing/FrameBuilder.java
+src/main/java/org/java_websocket/framing/Framedata.java
+src/main/java/org/java_websocket/framing/FramedataImpl1.java
+src/main/java/org/java_websocket/handshake/ClientHandshake.java
+src/main/java/org/java_websocket/handshake/ClientHandshakeBuilder.java
+src/main/java/org/java_websocket/handshake/HandshakeBuilder.java
+src/main/java/org/java_websocket/handshake/HandshakeImpl1Client.java
+src/main/java/org/java_websocket/handshake/HandshakeImpl1Server.java
+src/main/java/org/java_websocket/handshake/Handshakedata.java
+src/main/java/org/java_websocket/handshake/HandshakedataImpl1.java
+src/main/java/org/java_websocket/handshake/ServerHandshake.java
+src/main/java/org/java_websocket/handshake/ServerHandshakeBuilder.java
+src/main/java/org/java_websocket/server/DefaultSSLWebSocketServerFactory.java
+src/main/java/org/java_websocket/server/DefaultWebSocketServerFactory.java
+src/main/java/org/java_websocket/server/WebSocketServer.java
+src/main/java/org/java_websocket/util/Base64.java
+src/main/java/org/java_websocket/util/Charsetfunctions.java

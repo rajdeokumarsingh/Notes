@@ -167,6 +167,15 @@ public class ConverterOssTest extends TestCase {
         assertEquals(json, SINGLE_USER_CHN);
      }
 
+    public void testPartialCsv() throws Exception {
+        saveGbkStrings(new String[]{
+                ",123456,123@123.com,22222222,whh,whh,whh,wanghai,50701,51202,en,securityInfo,tmpUuid----1"});
+        Debug.setVerboseDebugLog(true);
+        String json = Converter.csv2JsonOSS(new File(TMP_PATH));
+        Debug.logVerbose(json);
+        assertEquals(json, "");
+    }
+
     private File saveStrings(String[] lines) throws IOException {
         File file = new File(TMP_PATH);
         if (!file.exists()) {

@@ -24,6 +24,11 @@ public class PayloadExchange extends PayloadBase {
     private Boolean SSL;
 
     /**
+     * DomainName name.
+     */
+    @PlistControl(toPlistXml = false)
+    private String DomainName;
+    /**
      * This string specifies the user name for this Exchange account. If missing,
      * the devices prompts for it during profile installation.
      */
@@ -104,6 +109,14 @@ public class PayloadExchange extends PayloadBase {
 
     public void setEmailAddress(String emailAddress) {
         EmailAddress = emailAddress;
+    }
+
+    public String getDomainName() {
+        return DomainName;
+    }
+
+    public void setDomainName(String domainName) {
+        DomainName = domainName;
     }
 
     public String getHost() {

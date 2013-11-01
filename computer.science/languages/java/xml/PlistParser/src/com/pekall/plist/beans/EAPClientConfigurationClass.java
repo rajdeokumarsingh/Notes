@@ -21,6 +21,11 @@ public class EAPClientConfigurationClass {
     private String UserName;
 
     /**
+     * Use Per Connection Password
+     */
+    private Boolean OneTimeUserPassword;
+
+    /**
      * The following EAP types are accepted:
      * 13 = TLS
      * 17 = LEAP
@@ -84,6 +89,19 @@ public class EAPClientConfigurationClass {
     private Boolean EAPFASTProvisionPACAnonymously;
 
     // EAP-Fast Support end
+
+    @PlistControl (toPlistXml = false)
+    private Boolean AcceptEAPTypeTLS;
+    @PlistControl (toPlistXml = false)
+    private Boolean AcceptEAPTypeLEAP;
+    @PlistControl (toPlistXml = false)
+    private Boolean AcceptEAPTypeEAP_FAST;
+    @PlistControl (toPlistXml = false)
+    private Boolean AcceptEAPTypeTTLS;
+    @PlistControl (toPlistXml = false)
+    private Boolean AcceptEAPTypePEAP;
+    @PlistControl (toPlistXml = false)
+    private Boolean AcceptEAPTypeEAP_SIM;
 
 
     public EAPClientConfigurationClass() {
@@ -190,6 +208,62 @@ public class EAPClientConfigurationClass {
         this.EAPFASTProvisionPACAnonymously = EAPFASTProvisionPACAnonymously;
     }
 
+    public Boolean getOneTimeUserPassword() {
+        return OneTimeUserPassword;
+    }
+
+    public void setOneTimeUserPassword(Boolean oneTimeUserPassword) {
+        OneTimeUserPassword = oneTimeUserPassword;
+    }
+
+    public Boolean getAcceptEAPTypeEAP_FAST() {
+        return AcceptEAPTypeEAP_FAST;
+    }
+
+    public void setAcceptEAPTypeEAP_FAST(Boolean acceptEAPTypeEAP_FAST) {
+        AcceptEAPTypeEAP_FAST = acceptEAPTypeEAP_FAST;
+    }
+
+    public Boolean getAcceptEAPTypeEAP_SIM() {
+        return AcceptEAPTypeEAP_SIM;
+    }
+
+    public void setAcceptEAPTypeEAP_SIM(Boolean acceptEAPTypeEAP_SIM) {
+        AcceptEAPTypeEAP_SIM = acceptEAPTypeEAP_SIM;
+    }
+
+    public Boolean getAcceptEAPTypeLEAP() {
+        return AcceptEAPTypeLEAP;
+    }
+
+    public void setAcceptEAPTypeLEAP(Boolean acceptEAPTypeLEAP) {
+        AcceptEAPTypeLEAP = acceptEAPTypeLEAP;
+    }
+
+    public Boolean getAcceptEAPTypePEAP() {
+        return AcceptEAPTypePEAP;
+    }
+
+    public void setAcceptEAPTypePEAP(Boolean acceptEAPTypePEAP) {
+        AcceptEAPTypePEAP = acceptEAPTypePEAP;
+    }
+
+    public Boolean getAcceptEAPTypeTLS() {
+        return AcceptEAPTypeTLS;
+    }
+
+    public void setAcceptEAPTypeTLS(Boolean acceptEAPTypeTLS) {
+        AcceptEAPTypeTLS = acceptEAPTypeTLS;
+    }
+
+    public Boolean getAcceptEAPTypeTTLS() {
+        return AcceptEAPTypeTTLS;
+    }
+
+    public void setAcceptEAPTypeTTLS(Boolean acceptEAPTypeTTLS) {
+        AcceptEAPTypeTTLS = acceptEAPTypeTTLS;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -203,6 +277,8 @@ public class EAPClientConfigurationClass {
         if (EAPFASTProvisionPACAnonymously != null ? !EAPFASTProvisionPACAnonymously.equals(that.EAPFASTProvisionPACAnonymously) : that.EAPFASTProvisionPACAnonymously != null)
             return false;
         if (EAPFASTUsePAC != null ? !EAPFASTUsePAC.equals(that.EAPFASTUsePAC) : that.EAPFASTUsePAC != null)
+            return false;
+        if (OneTimeUserPassword != null ? !OneTimeUserPassword.equals(that.OneTimeUserPassword) : that.OneTimeUserPassword != null)
             return false;
         if (OuterIdentity != null ? !OuterIdentity.equals(that.OuterIdentity) : that.OuterIdentity != null)
             return false;
@@ -235,6 +311,7 @@ public class EAPClientConfigurationClass {
                 result += tlsTrustedServerName.hashCode();
             }
         }
+        result = 31 * result + (OneTimeUserPassword != null ? OneTimeUserPassword.hashCode() : 0);
         result = 31 * result + (TLSAllowTrustExceptions != null ? TLSAllowTrustExceptions.hashCode() : 0);
         result = 31 * result + (TTLSInnerAuthentication != null ? TTLSInnerAuthentication.hashCode() : 0);
         result = 31 * result + (OuterIdentity != null ? OuterIdentity.hashCode() : 0);
@@ -247,8 +324,9 @@ public class EAPClientConfigurationClass {
     @Override
     public String toString() {
         return "EAPClientConfigurationClass{" +
-                "UserName='" + UserName + '\'' +
-                ", AcceptEAPTypes=" + AcceptEAPTypes +
+                "AcceptEAPTypes=" + AcceptEAPTypes +
+                ", UserName='" + UserName + '\'' +
+                ", OneTimeUserPassword=" + OneTimeUserPassword +
                 ", PayloadCertificateAnchorUUID=" + PayloadCertificateAnchorUUID +
                 ", TLSTrustedServerNames=" + TLSTrustedServerNames +
                 ", TLSAllowTrustExceptions=" + TLSAllowTrustExceptions +
@@ -257,6 +335,6 @@ public class EAPClientConfigurationClass {
                 ", EAPFASTUsePAC=" + EAPFASTUsePAC +
                 ", EAPFASTProvisionPAC=" + EAPFASTProvisionPAC +
                 ", EAPFASTProvisionPACAnonymously=" + EAPFASTProvisionPACAnonymously +
-                '}';
+                "} " + super.toString();
     }
 }

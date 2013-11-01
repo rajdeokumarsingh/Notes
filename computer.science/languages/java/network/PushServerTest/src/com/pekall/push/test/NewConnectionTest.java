@@ -3,7 +3,7 @@ package com.pekall.push.test;
 import java.net.URI;
 
 public class NewConnectionTest {
-
+    /*
     public static void main(String[] args) throws Exception {
         URI uri;
         if (args.length > 0) {
@@ -13,5 +13,5 @@ public class NewConnectionTest {
         }
         new NWebSocketClient(uri).run();
     }
-
+    */
 }
