@@ -1,6 +1,7 @@
 package org.java_websocket.client;
 
-import com.pekall.push.test.Statistics;
+import com.google.gson.Gson;
+import com.pekall.push.test.*;
 import org.java_websocket.WebSocket;
 import org.java_websocket.WebSocketAdapter;
 import org.java_websocket.WebSocketImpl;
@@ -114,13 +115,13 @@ public abstract class WebSocketClientTest
 	 * Initiates the websocket connection. This method does not block.
 	 */
 	public synchronized void connect() {
-        System.out.println("create receive thread");
+        Debug.log("create receive thread");
         handshakeDone = false;
 
         recvThread = new Thread(this);
         recvThread.start();
 
-        System.out.println("wait for handshake ...");
+        Debug.log("wait for handshake ...");
         synchronized (initLock) {
             while (!handshakeDone) {
                 try {
@@ -130,7 +131,7 @@ public abstract class WebSocketClientTest
                 }
             }
         }
-        System.out.println("handshake done!");
+        Debug.log("handshake done!");
     }
 
     /**
@@ -163,6 +164,17 @@ public abstract class WebSocketClientTest
         }
 	}
 
+    public void register(int id) {
+        send(PushMessageManager.genShakeHandMessage(
+                PushConstant.DEVICE_BEGIN_ID + id).toJson(), id);
+    }
+
+    void send(String text, int id) throws NotYetConnectedException {
+        if (engines[id] == null || !engines[id].isOpen()) return;
+        Debug.logVerbose("register msg, id: " + id + ", msg: " + text);
+        engines[id].send(text);
+    }
+
 	/**
 	 * Sends binary <var> data</var> to the connected webSocket server.
 	 * 
@@ -192,7 +204,7 @@ public abstract class WebSocketClientTest
     }
 
 	public void run() {
-        System.out.println("receive thread created!");
+        Debug.log("receive thread created!");
         initSockets();
         doHandshakes();
         createSendThread();
@@ -215,9 +227,12 @@ public abstract class WebSocketClientTest
                 }
             }
 
+            // accelerate receiving speed
+            if(readCnt > 0) continue;
+
             // todo: make schedule plan
             try {
-                Thread.sleep(5 * 1000L);
+                Thread.sleep(2 * 1000L);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -252,7 +267,7 @@ public abstract class WebSocketClientTest
             }
         }
         if(readCnt > 0)
-            System.out.println("read count: " + readCnt);
+            Debug.log("read count: " + readCnt);
 
         return readCnt;
     }
@@ -265,28 +280,20 @@ public abstract class WebSocketClientTest
     }
 
     private void createSendThread() {
-        System.out.println("create send thread");
+        Debug.log("create send thread");
         sendThread = new Thread(new WebsocketWriteThread());
         sendThread.start();
     }
 
     private void initSockets() {
-        System.out.println("init sockets begin");
+        Debug.log("init sockets begin");
+
         for (int i = 0; i < sockCount; i++) {
             assert (engines[i] != null);
 
             try {
-                System.out.println("init socket: " + i);
-                /*
-                if (sockets[i] == null) {
-                    sockets[i] = new Socket(proxy);
-                } else if (sockets[i].isClosed()) {
-                    throw new IOException();
-                }
-                if (!sockets[i].isBound()) {
-                    sockets[i].connect(new InetSocketAddress(uri.getHost(), getPort()), connectTimeout);
-                }
-                */
+                Debug.log("init socket: " + i);
+
                 sockets[i] = new Socket(proxy);
                 sockets[i].connect(new InetSocketAddress(uri.getHost(), getPort()), connectTimeout);
                 sockInStreams[i] = sockets[i].getInputStream();
@@ -297,11 +304,11 @@ public abstract class WebSocketClientTest
                 sockets[i] = null;
             }
         }
-        System.out.println("init sockets done!");
+        Debug.log("init sockets done!");
     }
 
     private void doHandshakes() {
-        System.out.println("handshake begin");
+        Debug.log("handshake begin");
         for (int i = 0; i < sockCount; i++) {
             // ignore close socket
             if(engines[i] == null) continue;
@@ -313,7 +320,7 @@ public abstract class WebSocketClientTest
                 engines[i].closeConnection(CloseFrame.NEVER_CONNECTED, e.getMessage());
             }
         }
-        System.out.println("handshake in queue");
+        Debug.log("handshake in queue");
     }
 
     private void clearSockResource(int i) {
@@ -391,13 +398,25 @@ public abstract class WebSocketClientTest
         return  READYSTATE.CLOSED;
 	}
 
-	/**
-	 * Calls subclass' implementation of <var>onMessage</var>.
-	 */
-	@Override
-	public final void onWebsocketMessage( WebSocket conn, String message ) {
-		onMessage( message );
-	}
+    /**
+     * Calls subclass' implementation of <var>onMessage</var>.
+     */
+    @Override
+    public final void onWebsocketMessage(WebSocket conn, String message) {
+        onMessage(message);
+
+        PushMessage pushMessage = PushMessage.fromJson(message);
+        if (pushMessage == null) {
+            Debug.log("push message is null");
+            return;
+        }
+        if(pushMessage.getType() == PushMessage.MsgType.TYPE_SEND) {
+            PushMessage respMsg = PushMessageManager.createResponseMessage(pushMessage.getId());
+            Debug.logVerbose("push message:" + pushMessage.toString());
+            Debug.logVerbose("send resp msg:" + respMsg.toString());
+            conn.send(respMsg.toJson());
+        }
+    }
 
 	@Override
 	public final void onWebsocketMessage( WebSocket conn, ByteBuffer blob ) {
@@ -416,6 +435,17 @@ public abstract class WebSocketClientTest
 	public final void onWebsocketOpen( WebSocket conn, Handshakedata handshake ) {
         connectLatch.countDown();
         onOpen((ServerHandshake) handshake);
+
+        // todo: performance optimize
+        int i = 0;
+        for (; i < sockCount; i++) {
+            if (conn == engines[i]) break;
+        }
+        if(i >= sockCount) {
+            Debug.logError("can not find socket");
+            return;
+        }
+        register(i);
     }
 
 	/**
@@ -506,22 +536,23 @@ public abstract class WebSocketClientTest
 	private class WebsocketWriteThread implements Runnable {
 		@Override
 		public void run() {
-            System.out.println("send thread created");
+            Debug.log("send thread created");
             Thread.currentThread().setName("WebsocketWriteThread");
 
             while (!Thread.interrupted()) {
-                sendData();
+                // accelerate sending speed
+                if (sendData() > 0) continue;
 
                 // todo: make schedule plan
                 try {
-                    Thread.sleep(5 * 1000L);
+                    Thread.sleep(2 * 1000L);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
         }
 
-        private void sendData() {
+        private int sendData() {
             int sendCnt = 0;
             for (int i = 0; i < sockCount; i++) {
                 if (engines[i] == null) continue;
@@ -540,8 +571,8 @@ public abstract class WebSocketClientTest
                 }
             }
 
-            if(sendCnt > 0)
-                System.out.println("send count: " + sendCnt);
+            if(sendCnt > 0) Debug.log("send count: " + sendCnt);
+            return sendCnt;
         }
     }
 

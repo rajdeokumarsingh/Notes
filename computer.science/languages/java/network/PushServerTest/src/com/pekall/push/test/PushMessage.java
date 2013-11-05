@@ -190,5 +190,18 @@ public class PushMessage implements Serializable {
         }
         return false;
     }
+
+    @Override
+    public String toString() {
+        return "PushMessage{" +
+                "id=" + id +
+                ", type=" + type +
+                ", command=" + command +
+                ", result=" + result +
+                ", comment='" + comment + '\'' +
+                ", reason=" + reason +
+                ", params=" + params +
+                '}';
+    }
 }
 

@@ -15,34 +15,33 @@ public class MdmPushClient extends WebSocketClientTest {
 
     public MdmPushClient(URI serverURI, int sockCnt) {
         super(serverURI, sockCnt);
+        Debug.logVerbose("MdmPushClient, created");
     }
 
     @Override
-    public void onOpen(ServerHandshake handshakedata) {
-        System.out.println("websocket open");
-        send(PushMessageManager.genShakeHandMessage().toJson());
+    public void onOpen(ServerHandshake handshake) {
+        Debug.logVerbose("MdmPushClient, onOpen");
         Statistics.getInstance().success();
     }
 
     @Override
     public void onMessage(String message) {
-        System.out.println(message);
-        send(PushMessageManager.genShakeHandMessage().toJson());
+        Debug.logVerbose("MdmPushClient, got message: " + message);
+        Statistics.getInstance().message();
     }
 
     @Override
     public void onClose(int code, String reason, boolean remote) {
-        System.out.println("websocket close: " + code + ", reason: " + reason + ", remote: " + remote);
+        Debug.log("MdmPushClient, websocket close: " + code + ", reason: " + reason + ", remote: " + remote);
         Statistics.getInstance().fail();
     }
 
     @Override
     public void onError(Exception ex) {
-
-        if(ex != null){
-            System.out.println("Error: "+ex.getMessage());
-            // ex.printStackTrace();
-            Statistics.getInstance().error();
+        Statistics.getInstance().error();
+        if(ex != null) {
+            Debug.log("Error: " + ex.getMessage());
+            ex.printStackTrace();
         }
     }
 

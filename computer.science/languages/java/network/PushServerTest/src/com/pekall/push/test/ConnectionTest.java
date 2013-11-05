@@ -5,19 +5,15 @@ import java.net.URI;
 public class ConnectionTest {
 
     public static void main(String args[]) {
-        // int clientCnt = Integer.valueOf(args[0]);
+        Debug.setVerboseDebugLog(true);
 
         // begin monitor thread
         new Thread(new Runnable() {
             @Override
             public void run() {
                 while (true) {
-                    System.out.println(Statistics.getInstance().getStatistics());
-                    try {
-                        Thread.sleep(20 * 1000L);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+                    Debug.log(Statistics.getInstance().getStatistics());
+                    Util.sleepSeconds(20);
                 }
             }
         }).start();
@@ -27,38 +23,41 @@ public class ConnectionTest {
 
         Statistics statistics = Statistics.getInstance();
         MdmPushClient[] mdmPushClients = new MdmPushClient[clientCnt];
-        URI uri = URI.create(PushConstant.PUSH_URL);
+        URI uri;
+        if(args.length > 1 && "inet".equals(args[1])) {
+            Debug.log("using internet url: " + PushConstant.PUSH_INET_URL);
+            uri = URI.create(PushConstant.PUSH_INET_URL);
+        } else {
+            Debug.log("using LAN url: " + PushConstant.PUSH_LAN_URL);
+            uri = URI.create(PushConstant.PUSH_LAN_URL);
+        }
+
+        if(args.length > 2) {
+            PushConstant.DEVICE_BEGIN_ID = Integer.valueOf(args[2]);
+            Debug.log("device begin id: " + PushConstant.DEVICE_BEGIN_ID);
+        }
+
+        Util.sleepSeconds(2);
+
         for (int i = 0; i < clientCnt; i++) {
             MdmPushClient mdmPushClient = new MdmPushClient(uri, sockCnt);
             mdmPushClients[i] = mdmPushClient;
-        }
-
-        for (MdmPushClient mdmPushClient : mdmPushClients) {
-            mdmPushClient.connect();
+            mdmPushClients[i].connect();
             statistics.create();
         }
 
-        System.out.println("main thread continue ...");
-
-        try {
-            Thread.sleep(30 * 1000L);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Debug.log("main thread continue ...");
+        Util.sleepSeconds(40);
 
         while (true) {
-            System.out.println("begin ping ...");
+            Debug.log("begin ping ...");
             for (MdmPushClient mdmPushClient : mdmPushClients) {
                 if (mdmPushClient.isOpen()) {
                     mdmPushClient.ping("ping");
                 }
             }
-            System.out.println("end ping ...");
-            try {
-                Thread.sleep(60 * 1000L);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            Debug.log("end ping ...");
+            Util.sleepSeconds(60);
         }
     }
 }
