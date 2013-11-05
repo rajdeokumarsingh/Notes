@@ -2,8 +2,10 @@ package com.pekall.plist;
 
 import com.dd.plist.NSDictionary;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.pekall.plist.beans.*;
 import com.pekall.plist.json.PayloadJsonWrapper;
+import com.pekall.plist.json.SkipFieldExclusionStrategy;
 import com.pekall.plist.su.device.DeviceInfoRespSU;
 import com.pekall.plist.su.device.NetSpeed;
 import com.pekall.plist.su.policy.*;
@@ -92,165 +94,72 @@ public class WjlBuildDefaultPolicy extends TestCase {
 
 
     public static final String JSON_CONTENT = "{\n" +
-            "  \"PayloadType\": \"Configuration\",\n" +
-            "  \"PayloadVersion\": 1,\n" +
-            "  \"PayloadIdentifier\": \"com.pekall.profile.setting\",\n" +
-            "  \"PayloadUUID\": \"1tam7zn8-5fax-16zd-izw6-78g1ai5dt333\",\n" +
-            "  \"PayloadDisplayName\": \"ccc\",\n" +
-            "  \"PayloadDescription\": \"cccc\",\n" +
-            "  \"PayloadOrganization\": \"Pekall Capital\",\n" +
-            "  \"PayloadContent\": {\n" +
-            "    \"payloadEmails\": [\n" +
-            "      {\n" +
-            "        \"PayloadType\": \"com.apple.mail.managed\",\n" +
-            "        \"PayloadVersion\": 1,\n" +
-            "        \"PayloadIdentifier\": \"com.pekall.profile.email\",\n" +
-            "        \"PayloadUUID\": \"9vf9w195-497x-1q2t-849e-7qd491s69b61\",\n" +
-            "        \"PayloadDisplayName\": \"Email配置\",\n" +
-            "        \"PayloadDescription\": \"Email相关配置\",\n" +
-            "        \"PayloadOrganization\": \"pekall Capital\",\n" +
-            "        \"EmailAccountDescription\": \"test email account\",\n" +
-            "        \"EmailAccountType\": \"EmailTypeIMAP\",\n" +
-            "        \"EmailAddress\": \"test_mdm@pekall.com\",\n" +
-            "        \"IncomingMailServerHostName\": \"mail.pekall.com\",\n" +
-            "        \"IncomingMailServerUsername\": \"test_mdm\",\n" +
-            "        \"IncomingMailServerPortNumber\": \"993\",\n" +
-            "        \"IncomingMailServerAuthentication\": \"EmailAuthPassword\",\n" +
-            "        \"IncomingPassword\": \"123456\",\n" +
-            "        \"IncomingMailServerUseSSL\": true,\n" +
-            "        \"OutgoingMailServerHostName\": \"mail.pekall.com\",\n" +
-            "        \"OutgoingMailServerUsername\": \"test_mdm\",\n" +
-            "        \"OutgoingMailServerPortNumber\": 587,\n" +
-            "        \"OutgoingMailServerAuthentication\": \"EmailAuthPassword\",\n" +
-            "        \"OutgoingMailServerUseSSL\": true\n" +
-            "      }\n" +
-            "    ],\n" +
-            "    \"payloadVPNs\": [\n" +
-            "      {\n" +
-            "        \"PayloadType\": \"com.apple.vpn.managed\",\n" +
-            "        \"PayloadVersion\": 1,\n" +
-            "        \"PayloadIdentifier\": \"com.pekall.profile.VPN\",\n" +
-            "        \"PayloadUUID\": \"5mp21i5l-8c68-m46w-f3fs-7jd6bt1i4dt2\",\n" +
-            "        \"PayloadDisplayName\": \"VPN配置\",\n" +
-            "        \"PayloadDescription\": \"VPN相关配置\",\n" +
-            "        \"PayloadOrganization\": \"pekall Capital\",\n" +
-            "        \"UserDefinedName\": \"test vpn\",\n" +
-            "        \"Proxies\": {\n" +
-            "          \"HTTPEnable\": 1,\n" +
-            "          \"HTTPProxy\": \"192.168.10.230\",\n" +
-            "          \"HTTPPort\": \"80\",\n" +
-            "          \"HTTPProxyUsername\": \"wjl\",\n" +
-            "          \"HTTPProxyPassword\": \"123\"\n" +
-            "        },\n" +
-            "        \"VPNType\": \"PPTP\",\n" +
-            "        \"PPP\": {\n" +
-            "          \"CommRemoteAddress\": \"test address\",\n" +
-            "          \"AuthPassword\": \"123456\",\n" +
-            "          \"AuthName\": \"my vpn\",\n" +
-            "          \"CCPEnabled\": 1,\n" +
-            "          \"CCPMPPE40Enabled\": 1,\n" +
-            "          \"CCPMPPE128Enabled\": 1\n" +
-            "        },\n" +
-            "        \"OverridePrimary\": true\n" +
-            "      }\n" +
-            "    ],\n" +
-            "    \"payloadWifiConfigs\": [\n" +
-            "      {\n" +
-            "        \"PayloadType\": \"com.apple.wifi.managed\",\n" +
-            "        \"PayloadVersion\": 1,\n" +
-            "        \"PayloadIdentifier\": \"com.pekall.config.wifi.managed\",\n" +
-            "        \"PayloadUUID\": \"842fzzs4-tfmf-5q93-177d-ds5y57qvx5p4\",\n" +
-            "        \"PayloadDisplayName\": \"WIFI配置\",\n" +
-            "        \"PayloadDescription\": \"WIFI相关配置\",\n" +
-            "        \"PayloadOrganization\": \"pekall Capital\",\n" +
-            "        \"SSID_STR\": \"pekall_work\",\n" +
-            "        \"AutoJoin\": true,\n" +
-            "        \"EncryptionType\": \"WPA\",\n" +
-            "        \"Password\": \"pekallcloud\",\n" +
-            "        \"ProxyType\": \"None\"\n" +
-            "      }\n" +
-            "    ],\n" +
-            "    \"payloadCalDAVPolicies\": [\n" +
-            "      {\n" +
-            "        \"PayloadType\": \"com.apple.caldav.account\",\n" +
-            "        \"PayloadVersion\": 1,\n" +
-            "        \"PayloadIdentifier\": \"com.apple.profile.caldav.account\",\n" +
-            "        \"PayloadUUID\": \"4m5lgnjg-v55r-xa19-r745-1ryte17q7t62\",\n" +
-            "        \"PayloadDisplayName\": \"cal dav配置\",\n" +
-            "        \"PayloadDescription\": \"cal dav相关配置\",\n" +
-            "        \"PayloadOrganization\": \"pekall Capital\",\n" +
-            "        \"CalDAVAccountDescription\": \"My CarlDAV 账户\",\n" +
-            "        \"CalDAVHostName\": \"google.com\",\n" +
-            "        \"CalDAVPort\": \"8443\",\n" +
-            "        \"CalDAVUsername\": \"pekalqq\",\n" +
-            "        \"CalDAVPassword\": \"pekallqqq\",\n" +
-            "        \"CalDAVUseSSL\": true\n" +
-            "      }\n" +
-            "    ],\n" +
-            "    \"payloadCalSubscriptionPolicies\": [\n" +
-            "      {\n" +
-            "        \"PayloadType\": \"com.apple.subscribedcalendar.account\",\n" +
-            "        \"PayloadVersion\": 1,\n" +
-            "        \"PayloadIdentifier\": \"com.apple.profile.subscribedcalendar.account\",\n" +
-            "        \"PayloadUUID\": \"csp72gfq-j995-zqiv-9ep9-34n22323heqs\",\n" +
-            "        \"PayloadDisplayName\": \"cal subscription配置\",\n" +
-            "        \"PayloadDescription\": \"cal subscription相关配置\",\n" +
-            "        \"PayloadOrganization\": \"pekall Capital\"\n" +
-            "      }\n" +
-            "    ],\n" +
-            "    \"payloadCardDAVPolicies\": [\n" +
-            "      {\n" +
-            "        \"PayloadType\": \"com.apple.carddav.account\",\n" +
-            "        \"PayloadVersion\": 1,\n" +
-            "        \"PayloadIdentifier\": \"com.apple.profile.carddav.account\",\n" +
-            "        \"PayloadUUID\": \"11xi675a-3a51-v6u1-dg47-b36i57q18a75\",\n" +
-            "        \"PayloadDisplayName\": \"card dav配置\",\n" +
-            "        \"PayloadDescription\": \"card dav相关配置\",\n" +
-            "        \"PayloadOrganization\": \"pekall Capital\",\n" +
-            "        \"CardDAVUseSSL\": true\n" +
-            "      }\n" +
-            "    ],\n" +
-            "    \"payloadAPN\": {\n" +
-            "      \"PayloadType\": \"com.apple.apn.managed\",\n" +
-            "      \"PayloadVersion\": 1,\n" +
-            "      \"PayloadIdentifier\": \"com.apple.profile.apn.managed\",\n" +
-            "      \"PayloadUUID\": \"8v394u34-clda-pf7l-2g38-8gnbd41938aa\",\n" +
-            "      \"PayloadDisplayName\": \"APN配置\",\n" +
-            "      \"PayloadDescription\": \"APN相关配置\",\n" +
-            "      \"PayloadOrganization\": \"pekall Capital\",\n" +
-            "      \"PayloadContent\": [\n" +
-            "        {\n" +
-            "          \"DefaultsDomainName\": \"com.apple.managedCarrier\",\n" +
-            "          \"DefaultsData\": {\n" +
-            "            \"apns\": [\n" +
-            "              {\n" +
-            "                \"apn\": \"cmwap\",\n" +
-            "                \"username\": \"Ray\",\n" +
-            "                \"password\": [\n" +
-            "                  \"a\",\n" +
-            "                  \"b\",\n" +
-            "                  \"c\",\n" +
-            "                  \"d\",\n" +
-            "                  \"e\"\n" +
-            "                ],\n" +
-            "                \"proxy\": \"10.0.0.72\",\n" +
-            "                \"proxyPort\": \"80\"\n" +
-            "              }\n" +
-            "            ]\n" +
-            "          }\n" +
-            "        }\n" +
-            "      ]\n" +
-            "    }\n" +
-            "  }\n" +
+            "    \"PayloadContent\": {\n" +
+            "        \"payloadVPNs\": [\n" +
+            "            {\n" +
+            "                \"UserDefinedName\": \"test vpn\",\n" +
+            "                \"VPNType\": \"L2TP\",\n" +
+            "                \"Proxies\": {\n" +
+            "                    \"HTTPEnable\": 1,\n" +
+            "                    \"HTTPPort\": 80,\n" +
+            "                    \"HTTPProxy\": \"192.168.10.230\",\n" +
+            "                    \"HTTPProxyPassword\": \"123\",\n" +
+            "                    \"HTTPProxyUsername\": \"wjl\"\n" +
+            "                },\n" +
+            "                \"CommRemoteAddress\": \"remote ip\",\n" +
+            "                \"AuthName\": \"authname\",\n" +
+            "                \"AuthPassword\": \"auth pass\",\n" +
+            "                \"AuthType\": 0,\n" +
+            "                \"SharedSecret\": \"shared pass\",\n" +
+            "                \"OverridePrimary\": true,\n" +
+            "                \"PayloadType\": \"com.apple.vpn.managed\",\n" +
+            "                \"PayloadVersion\": 1,\n" +
+            "                \"PayloadIdentifier\": \"com.pekall.profile.VPN\",\n" +
+            "                \"PayloadUUID\": \"3808D742-5D21-401E-B83C-AED1E990332D\",\n" +
+            "                \"PayloadDisplayName\": \"VPN配置\",\n" +
+            "                \"PayloadDescription\": \"VPN相关配置\",\n" +
+            "                \"PayloadOrganization\": \"Pekall Capital\"\n" +
+            "            }\n" +
+            "        ]\n" +
+            "    },\n" +
+            "    \"PayloadRemovalDisallowed\": true,\n" +
+            "    \"PayloadType\": \"Configuration\",\n" +
+            "    \"PayloadVersion\": 1,\n" +
+            "    \"PayloadIdentifier\": \"com.pekall.profile.setting\",\n" +
+            "    \"PayloadUUID\": \"2b636654-db90-4a4c-85e6-4f6fdaf6abaa\",\n" +
+            "    \"PayloadDisplayName\": \"Pekall Default Setting\",\n" +
+            "    \"PayloadDescription\": \"配置文件\",\n" +
+            "    \"PayloadOrganization\": \"Pekall Capital\"\n" +
             "}";
 
     public void testXMl2Json(){
         System.out.println(xml2Json(CONTENT));
     }
 
+    public void testDeviceInfoResSu(){
+        DeviceInfoRespSU deviceInfoRespSU = new DeviceInfoRespSU();
+        deviceInfoRespSU.setLanguage("CN");
+        deviceInfoRespSU.setClientVersion("1.0.0");
+        deviceInfoRespSU.setDeviceSecurityStatus(DeviceInfoRespSU.SECURITY_STAT_JAILBREAK);
+        deviceInfoRespSU.setTrafficBytes(100l);
+
+        deviceInfoRespSU.setRamTotal("1232132");
+        deviceInfoRespSU.setRamUsed("123213");
+
+        deviceInfoRespSU.setCpuRatio(0.123);
+        NetSpeed netSpeed = new NetSpeed();
+        netSpeed.setDownlink(10.02222);
+        netSpeed.setUplink(10.2323);
+        deviceInfoRespSU.setNetSpeed(netSpeed);
+
+
+        Gson gson = new Gson();
+        System.out.println( gson.toJson(deviceInfoRespSU));
+    }
     public void testJson2Xml(){
         System.out.println(json2Xml(JSON_CONTENT));
     }
+
 
     public String json2Xml(String json) {
         Gson gson = new Gson();
@@ -283,17 +192,48 @@ public class WjlBuildDefaultPolicy extends TestCase {
         return gson.toJson(jsonWrapper);
     }
 
+    public void testP12File(){
+
+        System.out.println(new Date(System.currentTimeMillis()));
+
+//        File file= new File("/home/wjl/tem/Identity.p12");
+//        try {
+//            InputStream fis = new FileInputStream(file);
+//            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+//            byte[] b = new byte[1024];
+//            int bytesRead = -1;
+//            while (( bytesRead = fis.read(b)) != -1) {
+//                bos.write(b, 0, bytesRead);
+//            }
+//            byte[] bytes = bos.toByteArray();
+//
+//            System.out.println( Base64.encodeBytes(bytes,Base64.DO_BREAK_LINES));
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+//        } catch (IOException e) {
+//            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+//        }
+    }
 
     public void testGenIosPolicyXml() throws Exception {
         PayloadArrayWrapper profile = createIosPolicyProfile();
 
-        System.out.println(xml2Json(profile.toXml()));
+//        System.out.println(xml2Json(profile.toXml()));
 
         System.out.println("----------------------");
-        NSDictionary root = PlistBeanConverter.createNdictFromBean(profile);
-        String xml = PlistXmlParser.toXml(root);
+//        NSDictionary root = PlistBeanConverter.createNdictFromBean(profile);
+//        String xml = PlistXmlParser.toXml(root);
+//
+//        PlistDebug.logTest(xml);
 
-        PlistDebug.logTest(xml);
+        PayloadJsonWrapper jsonWrapper = new PayloadJsonWrapper(profile);
+
+        Gson gson = new GsonBuilder().setExclusionStrategies(new SkipFieldExclusionStrategy()).create();
+        String content =  gson.toJson(jsonWrapper);
+        System.out.println(content);
+
+        System.out.println("----------------");
+        System.out.println(json2Xml(content));
 //        assertEquals(xml, TEST_XML);
     }
 
@@ -302,14 +242,22 @@ public class WjlBuildDefaultPolicy extends TestCase {
 
 
 //        BeanBase.fromXmlT()
-        System.out.println(xml2Json(profile.toXml()));
+//        System.out.println(xml2Json(profile.toXml()));
 
         System.out.println("----------------------");
-        NSDictionary root = PlistBeanConverter.createNdictFromBean(profile);
-        String xml = PlistXmlParser.toXml(root);
-
-        PlistDebug.logTest(xml);
+//        NSDictionary root = PlistBeanConverter.createNdictFromBean(profile);
+//        String xml = PlistXmlParser.toXml(root);
+//
+//        PlistDebug.logTest(xml);
 //        assertEquals(xml, TEST_XML);
+        PayloadJsonWrapper jsonWrapper = new PayloadJsonWrapper(profile);
+
+        Gson gson = new GsonBuilder().setExclusionStrategies(new SkipFieldExclusionStrategy()).create();
+        String content =  gson.toJson(jsonWrapper);
+        System.out.println(content);
+
+        System.out.println("----------------");
+        System.out.println(json2Xml(content));
     }
 
     public void testGenIosAppLockProfile() throws Exception {
@@ -330,29 +278,48 @@ public class WjlBuildDefaultPolicy extends TestCase {
     public void testGenIosSettingXml() throws Exception {
         PayloadArrayWrapper profile = createIosSettingProfile();
 
-        System.out.println(xml2Json(profile.toXml()));
+//        System.out.println(xml2Json(profile.toXml()));
 
 
-        System.out.println("----------------------");
 
-        NSDictionary root = PlistBeanConverter.createNdictFromBean(profile);
-        String xml = PlistXmlParser.toXml(root);
+//        System.out.println("----------------------");
 
-        PlistDebug.logTest(xml);
+//        NSDictionary root = PlistBeanConverter.createNdictFromBean(profile);
+//        String xml = PlistXmlParser.toXml(root);
+//
+//        PlistDebug.logTest(xml);
+
+        System.out.println("----------------------------");
+        PayloadJsonWrapper jsonWrapper = new PayloadJsonWrapper(profile);
+//        Gson gson = new Gson();
+        Gson gson = new GsonBuilder().setExclusionStrategies(new SkipFieldExclusionStrategy()).create();
+        String content =  gson.toJson(jsonWrapper);
+        System.out.println(content);
+
+        System.out.println("----------------");
+        System.out.println(json2Xml(content));
 //        assertEquals(xml, TEST_XML);
     }
 
     public void testGenAndroidSettingXml() throws Exception {
         PayloadArrayWrapper profile = createAndroidSettingProfile();
 
-        System.out.println(xml2Json(profile.toXml()));
+//        System.out.println(xml2Json(profile.toXml()));
 
         System.out.println("----------------------");
 
-        NSDictionary root = PlistBeanConverter.createNdictFromBean(profile);
-        String xml = PlistXmlParser.toXml(root);
+//        NSDictionary root = PlistBeanConverter.createNdictFromBean(profile);
+//        String xml = PlistXmlParser.toXml(root);
+//
+//        PlistDebug.logTest(xml);
 
-        PlistDebug.logTest(xml);
+        System.out.println("----------------------------");
+        PayloadJsonWrapper jsonWrapper = new PayloadJsonWrapper(profile);
+        Gson gson = new GsonBuilder().setExclusionStrategies(new SkipFieldExclusionStrategy()).create();
+        System.out.println( gson.toJson(jsonWrapper));
+
+        System.out.println("----------------");
+        System.out.println(json2Xml(gson.toJson(jsonWrapper)));
 //        assertEquals(xml, TEST_XML);
     }
 
@@ -419,7 +386,8 @@ public class WjlBuildDefaultPolicy extends TestCase {
         exchange.setDisableMailRecentsSyncing(false);
         exchange.setEmailAddress("xiaoliang.li@mdm.com");
         exchange.setHost("192.168.10.239");
-        exchange.setUserName("mdm\\xiaoliang.li");
+        exchange.setDomainName("mdm");
+        exchange.setUserName("xiaoliang.li");
         exchange.setPassword("Pekall123");
         exchange.setSSL(false);
         exchange.setSMIMEEnabled(false);
@@ -441,7 +409,8 @@ public class WjlBuildDefaultPolicy extends TestCase {
         wifiConfig.setSSID_STR("pekall_work");
         wifiConfig.setHIDDEN_NETWORK(false);
         wifiConfig.setAutoJoin(true);
-        wifiConfig.setEncryptionType(PayloadWifiConfig.ENCRYPTION_TYPE_WPA);
+//        wifiConfig.setEncryptionType(PayloadWifiConfig.ENCRYPTION_TYPE_WPA);
+        wifiConfig.setSecurityType(PayloadWifiConfig.SECURITY_TYPE_WPA_PERSON);
         wifiConfig.setPassword("pekallcloud");
 //        wifiConfig.setProxyType(PayloadWifiConfig.PROXY_TYPE_MANUAL);
 //        wifiConfig.setProxyServer("192.168.10.210");
@@ -450,13 +419,15 @@ public class WjlBuildDefaultPolicy extends TestCase {
 //        wifiConfig.setProxyPassword("123456");
 //        wifiConfig.setProxyPACURL("1.2.3.4");
         // TODO: add EAP
-        // wifiConfig.setEAPClientConfiguration(new EAPClientConfigurationClass());
+//        EAPClientConfigurationClass eapClientConfigurationClass = new EAPClientConfigurationClass();
+//        eapClientConfigurationClass.setAcceptEAPTypeTLS(true);
+//        wifiConfig.setEAPClientConfiguration(eapClientConfigurationClass);
         return wifiConfig;
     }
 
     private PayloadArrayWrapper createAndroidSettingProfile() {
         PayloadWifiConfig wifiConfig = createWifiConfig();
-//        PayloadPasswordPolicy passwordPolicy = createPasswordPolicy();
+//        PayloadPasswordPolicy passwordPolicy = createIosPasswordPolicy();
         PayloadArrayWrapper wrapper = createSettingWrapper();
         PayloadEmail payloadEmail = createEmail();
 
@@ -487,7 +458,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
     private PayloadArrayWrapper createIosApplockProfile() {
         PayloadAppLock appLock = createAppLock();
 
-//        PayloadPasswordPolicy passwordPolicy = createPasswordPolicy();
+//        PayloadPasswordPolicy passwordPolicy = createIosPasswordPolicy();
         PayloadArrayWrapper wrapper = createAppLockWrapper();
         wrapper.addPayLoadContent(appLock);
 
@@ -506,7 +477,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
 
         PayloadAPN payloadAPN = createPayloadAPN();
 
-//        PayloadPasswordPolicy passwordPolicy = createPasswordPolicy();
+//        PayloadPasswordPolicy passwordPolicy = createIosPasswordPolicy();
         PayloadArrayWrapper wrapper = createSettingWrapper();
         wrapper.addPayLoadContent(wifiConfig);
         wrapper.addPayLoadContent(payloadEmail);
@@ -576,18 +547,20 @@ public class WjlBuildDefaultPolicy extends TestCase {
         policy.setPayloadVersion(VERSION);
 
 
-        APNDataArray apnDataArray = new APNDataArray();
+        policy.setApn("cmnet");
 
-        APNSDict apnData = new APNSDict();
+//        APNDataArray apnDataArray = new APNDataArray();
+//
+//        APNSDict apnData = new APNSDict();
 
 //        byte[] bytes = new byte[5];
 //        for (int i = 0; i < bytes.length; i++) {
 //            bytes[i] = (byte) i;
 //        }
 
-        APNConfig config1 = new APNConfig();
-        config1.setApn("cmnet");
-        apnData.addApn(config1);
+//        APNConfig config1 = new APNConfig();
+//        config1.setApn("cmnet");
+//        apnData.addApn(config1);
 
 //        APNConfig config2 = new APNConfig();
 //        config2.setApn("cmnet");
@@ -597,8 +570,8 @@ public class WjlBuildDefaultPolicy extends TestCase {
 //        config2.setProxyPort(81);
 //        apnData.addApn(config2);
 
-        apnDataArray.setDefaultsData(apnData);
-        policy.addPayloadContent(apnDataArray);
+//        apnDataArray.setDefaultsData(apnData);
+//        policy.addPayloadContent(apnDataArray);
         return policy;
     }
 
@@ -836,7 +809,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
 
     private PayloadArrayWrapper createAndroidPolicyProfile() {
 //        PayloadWifiConfig wifiConfig = createWifiConfig();
-        PayloadPasswordPolicy passwordPolicy = createPasswordPolicy();
+        PayloadPasswordPolicy passwordPolicy = createAndroidPasswordPolicy();
         PayloadSecurityPolicy payloadSecurityPolicy =  createAndroidSecurityPolicy();
         PayloadRestrictionsAndroidPolicy payloadRestrictionsAndroidPolicy = createAndroidRestrictionsPolicy();
         AppControlList appControlList = getAppControlList();
@@ -1050,8 +1023,8 @@ public class WjlBuildDefaultPolicy extends TestCase {
         must.addInfo(new AppInfo("test11", 0, "com.test.11", "1.13", "http://1.2.3/"));*/
         white.addInfo(new AppInfo("QQ通讯录", 1, "com.tencent.qqphonebook", "920", "http://192.168.10.223/resources/download?uuid=d30b22ea659342a3be70631d7821aaee"));
         white.addInfo(new AppInfo("Gmail", 1, "com.google.android.gm", "176", "http://192.168.10.223/resources/download?uuid=f8619d930b464d958f9f9ccf5afbe3d6"));
-        black.addInfo(new AppInfo("UC浏览器", 2, "com.UCMobile", "30", "http://192.168.10.223/resources/download?uuid=81f95afadc154c64801b23b7b4889189"));
-        black.addInfo(new AppInfo("支付宝", 2, "com.eg.android.AlipayGphone", "29", "http://192.168.10.223/resources/download?uuid=bbbbd5ad28df4a39b414edf5fe680a72"));
+        black.addInfo(new AppInfo("变幻天气风车背景动态壁纸", 2, "com.sec.ccl.csp.app.secretwallpaper.themetwo", "1", ""));
+        black.addInfo(new AppInfo("热带水族馆动态壁纸", 2, "fishnoodle.aquarium", "47", ""));
         grey.addInfo(new AppInfo("QQ阅读 ", 3, "com.qq.reader", "24", "http://192.168.10.223/resources/download?uuid=50b1296b415a4be6af4707c88bbb68c1"));
 
         AppControlList policy = new AppControlList("App Control", 1,
@@ -1086,7 +1059,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
 
     private PayloadArrayWrapper createIosPolicyProfile() {
 //        PayloadWifiConfig wifiConfig = createWifiConfig();
-        PayloadPasswordPolicy passwordPolicy = createPasswordPolicy();
+        PayloadPasswordPolicy passwordPolicy = createIosPasswordPolicy();
         PayloadRestrictionsPolicy restrictionsPolicy = createIosRestrictionsPolicy();
         PayloadExchange payloadExchange = createExchange();
 
@@ -1133,7 +1106,7 @@ public class WjlBuildDefaultPolicy extends TestCase {
         return wrapper;
     }
 
-    private PayloadPasswordPolicy createPasswordPolicy() {
+    private PayloadPasswordPolicy createAndroidPasswordPolicy() {
         PayloadPasswordPolicy policy = new PayloadPasswordPolicy();
         policy.setPayloadDescription("配置与安全相关的项目。");
         policy.setPayloadDisplayName("密码");
@@ -1153,6 +1126,27 @@ public class WjlBuildDefaultPolicy extends TestCase {
 //        policy.setMinComplexChars(-1);
 
         policy.setQuality(PayloadPasswordPolicy.QUALITY_NUMERIC);
+        return policy;
+    }
+    private PayloadPasswordPolicy createIosPasswordPolicy() {
+        PayloadPasswordPolicy policy = new PayloadPasswordPolicy();
+        policy.setPayloadDescription("配置与安全相关的项目。");
+        policy.setPayloadDisplayName("密码");
+        policy.setPayloadIdentifier("com.pekall.profile.passcodepolicy");
+        policy.setPayloadOrganization("Pekall Capital");
+        policy.setPayloadUUID(UUID.randomUUID().toString());
+        policy.setPayloadVersion(1);
+        policy.setAllowSimple(true);
+        policy.setForcePIN(false);
+        policy.setMaxFailedAttempts(10);
+//        policy.setMaxGracePeriod(-1);
+        policy.setPinHistory(50);
+        policy.setMaxPINAgeInDays(730);
+        policy.setMinLength(0);
+        policy.setMaxInactivity(1f);//自动锁定
+        policy.setRequireAlphanumeric(false);
+//        policy.setMinComplexChars(-1);
+
         return policy;
     }
 
@@ -1208,16 +1202,16 @@ public class WjlBuildDefaultPolicy extends TestCase {
         vpn.setUserDefinedName("test vpn");
         vpn.setVPNType(PayloadVPN.TYPE_PPTP);
 
-        vpn.setServerHostName("192.168.10.220");
-        vpn.setAccount("ray");
-        vpn.setPassword("123456");
-        vpn.setSharedPassword("qwert");
-        vpn.setUserAuth(PayloadVPN.USR_AUTH_PASSWORD);
-        vpn.setVpnForAllTraffic(true);
-        vpn.setProxyHost("192.168.0.1");
-        vpn.setProxyPort(889);
-        vpn.setProxyUserName("Ray");
-        vpn.setProxyPassword("qwert");
+//        vpn.setServerHostName("192.168.10.220");
+//        vpn.setAccount("ray");
+//        vpn.setPassword("123456");
+//        vpn.setSharedPassword("qwert");
+//        vpn.setUserAuth(PayloadVPN.USR_AUTH_PASSWORD);
+//        vpn.setVpnForAllTraffic(true);
+//        vpn.setProxyHost("192.168.0.1");
+//        vpn.setProxyPort(889);
+//        vpn.setProxyUserName("Ray");
+//        vpn.setProxyPassword("qwert");
 
 //        IPSecInfo ipSecInfo = new IPSecInfo();
 //        ipSecInfo.setAuthenticationMethod("test method");
@@ -1293,7 +1287,14 @@ public class WjlBuildDefaultPolicy extends TestCase {
 //        vpn.setProxyPort(889);
 //        vpn.setProxyUserName("Ray");
 //        vpn.setProxyPassword("qwert");
-
+        vpn.setOverridePrimary(true);
+        vpn.setAuthType(PayloadVPN.AUTH_TYPE_PASS);
+        vpn.setSharedSecret("share sec");
+        vpn.setAuthPassword("123456");
+        vpn.setVpnProxiesType(PayloadVPN.PROXY_TYPE_NO);
+        vpn.setVPNType(PayloadVPN.TYPE_L2TP);
+        vpn.setAuthName("my vpn");
+        vpn.setCommRemoteAddress("192.168.10.230");
         return vpn;
     }
 

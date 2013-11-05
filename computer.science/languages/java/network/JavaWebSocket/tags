@@ -1,0 +1,782 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ABNORMAL_CLOSE	src/main/java/org/java_websocket/framing/CloseFrame.java	/^	public static final int ABNORMAL_CLOSE = 1006;$/;"	f	interface:CloseFrame
+AbstractClientProxyChannel	src/main/java/org/java_websocket/client/AbstractClientProxyChannel.java	/^	public AbstractClientProxyChannel( ByteChannel towrap ) {$/;"	m	class:AbstractClientProxyChannel
+AbstractClientProxyChannel	src/main/java/org/java_websocket/client/AbstractClientProxyChannel.java	/^public abstract class AbstractClientProxyChannel extends AbstractWrappedByteChannel {$/;"	c
+AbstractClientProxyChannel.java	src/main/java/org/java_websocket/client/AbstractClientProxyChannel.java	1;"	F
+AbstractWrappedByteChannel	src/main/java/org/java_websocket/AbstractWrappedByteChannel.java	/^	public AbstractWrappedByteChannel( ByteChannel towrap ) {$/;"	m	class:AbstractWrappedByteChannel
+AbstractWrappedByteChannel	src/main/java/org/java_websocket/AbstractWrappedByteChannel.java	/^	public AbstractWrappedByteChannel( WrappedByteChannel towrap ) {$/;"	m	class:AbstractWrappedByteChannel
+AbstractWrappedByteChannel	src/main/java/org/java_websocket/AbstractWrappedByteChannel.java	/^public class AbstractWrappedByteChannel implements WrappedByteChannel {$/;"	c
+AbstractWrappedByteChannel.java	src/main/java/org/java_websocket/AbstractWrappedByteChannel.java	1;"	F
+BINARY	src/main/java/org/java_websocket/framing/Framedata.java	/^		CONTINUOUS, TEXT, BINARY, PING, PONG, CLOSING$/;"	e	enum:Framedata.Opcode	file:
+BUGGYCLOSE	src/main/java/org/java_websocket/framing/CloseFrame.java	/^	public static final int BUGGYCLOSE = -2;$/;"	f	interface:CloseFrame
+Base64	src/main/java/org/java_websocket/util/Base64.java	/^    private Base64(){}$/;"	m	class:Base64	file:
+Base64	src/main/java/org/java_websocket/util/Base64.java	/^public class Base64$/;"	c
+Base64.java	src/main/java/org/java_websocket/util/Base64.java	1;"	F
+CLIENT	src/main/java/org/java_websocket/WebSocket.java	/^		CLIENT, SERVER$/;"	e	enum:WebSocket.Role	file:
+CLOSED	src/main/java/org/java_websocket/WebSocket.java	/^		NOT_YET_CONNECTED, CONNECTING, OPEN, CLOSING, CLOSED;$/;"	e	enum:WebSocket.READYSTATE	file:
+CLOSING	src/main/java/org/java_websocket/WebSocket.java	/^		NOT_YET_CONNECTED, CONNECTING, OPEN, CLOSING, CLOSED;$/;"	e	enum:WebSocket.READYSTATE	file:
+CLOSING	src/main/java/org/java_websocket/framing/Framedata.java	/^		CONTINUOUS, TEXT, BINARY, PING, PONG, CLOSING$/;"	e	enum:Framedata.Opcode	file:
+CONNECTING	src/main/java/org/java_websocket/WebSocket.java	/^		NOT_YET_CONNECTED, CONNECTING, OPEN, CLOSING, CLOSED;$/;"	e	enum:WebSocket.READYSTATE	file:
+CONTINUOUS	src/main/java/org/java_websocket/framing/Framedata.java	/^		CONTINUOUS, TEXT, BINARY, PING, PONG, CLOSING$/;"	e	enum:Framedata.Opcode	file:
+CR	src/main/java/org/java_websocket/drafts/Draft_75.java	/^	public static final byte CR = (byte) 0x0D;$/;"	f	class:Draft_75
+Charsetfunctions	src/main/java/org/java_websocket/util/Charsetfunctions.java	/^public class Charsetfunctions {$/;"	c
+Charsetfunctions.java	src/main/java/org/java_websocket/util/Charsetfunctions.java	1;"	F
+ClientHandshake	src/main/java/org/java_websocket/handshake/ClientHandshake.java	/^public interface ClientHandshake extends Handshakedata {$/;"	i
+ClientHandshake.java	src/main/java/org/java_websocket/handshake/ClientHandshake.java	1;"	F
+ClientHandshakeBuilder	src/main/java/org/java_websocket/handshake/ClientHandshakeBuilder.java	/^public interface ClientHandshakeBuilder extends HandshakeBuilder, ClientHandshake {$/;"	i
+ClientHandshakeBuilder.java	src/main/java/org/java_websocket/handshake/ClientHandshakeBuilder.java	1;"	F
+CloseFrame	src/main/java/org/java_websocket/framing/CloseFrame.java	/^public interface CloseFrame extends Framedata {$/;"	i
+CloseFrame.java	src/main/java/org/java_websocket/framing/CloseFrame.java	1;"	F
+CloseFrameBuilder	src/main/java/org/java_websocket/framing/CloseFrameBuilder.java	/^	public CloseFrameBuilder( int code ) throws InvalidDataException {$/;"	m	class:CloseFrameBuilder
+CloseFrameBuilder	src/main/java/org/java_websocket/framing/CloseFrameBuilder.java	/^	public CloseFrameBuilder( int code , String m ) throws InvalidDataException {$/;"	m	class:CloseFrameBuilder
+CloseFrameBuilder	src/main/java/org/java_websocket/framing/CloseFrameBuilder.java	/^	public CloseFrameBuilder() {$/;"	m	class:CloseFrameBuilder
+CloseFrameBuilder	src/main/java/org/java_websocket/framing/CloseFrameBuilder.java	/^public class CloseFrameBuilder extends FramedataImpl1 implements CloseFrame {$/;"	c
+CloseFrameBuilder.java	src/main/java/org/java_websocket/framing/CloseFrameBuilder.java	1;"	F
+CloseHandshakeType	src/main/java/org/java_websocket/drafts/Draft.java	/^	public enum CloseHandshakeType {$/;"	g	class:Draft
+DEBUG	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public static\/*final*\/boolean DEBUG = false; \/\/ must be final in the future in order to take advantage of VM optimization$/;"	f	class:WebSocketImpl
+DECODE	src/main/java/org/java_websocket/util/Base64.java	/^    public final static int DECODE = 0;$/;"	f	class:Base64
+DECODERS	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public static int DECODERS = Runtime.getRuntime().availableProcessors();$/;"	f	class:WebSocketServer
+DEFAULT_PORT	src/main/java/org/java_websocket/WebSocket.java	/^	public static final int DEFAULT_PORT = 80;$/;"	f	interface:WebSocket
+DEFAULT_WSS_PORT	src/main/java/org/java_websocket/WebSocket.java	/^	public static final int DEFAULT_WSS_PORT = 443;$/;"	f	interface:WebSocket
+DONT_GUNZIP	src/main/java/org/java_websocket/util/Base64.java	/^    public final static int DONT_GUNZIP = 4;$/;"	f	class:Base64
+DO_BREAK_LINES	src/main/java/org/java_websocket/util/Base64.java	/^    public final static int DO_BREAK_LINES = 8;$/;"	f	class:Base64
+DefaultSSLWebSocketServerFactory	src/main/java/org/java_websocket/server/DefaultSSLWebSocketServerFactory.java	/^	public DefaultSSLWebSocketServerFactory( SSLContext sslContext ) {$/;"	m	class:DefaultSSLWebSocketServerFactory
+DefaultSSLWebSocketServerFactory	src/main/java/org/java_websocket/server/DefaultSSLWebSocketServerFactory.java	/^	public DefaultSSLWebSocketServerFactory( SSLContext sslContext , ExecutorService exec ) {$/;"	m	class:DefaultSSLWebSocketServerFactory
+DefaultSSLWebSocketServerFactory	src/main/java/org/java_websocket/server/DefaultSSLWebSocketServerFactory.java	/^public class DefaultSSLWebSocketServerFactory implements WebSocketServer.WebSocketServerFactory {$/;"	c
+DefaultSSLWebSocketServerFactory.java	src/main/java/org/java_websocket/server/DefaultSSLWebSocketServerFactory.java	1;"	F
+DefaultWebSocketServerFactory	src/main/java/org/java_websocket/server/DefaultWebSocketServerFactory.java	/^public class DefaultWebSocketServerFactory implements WebSocketServerFactory {$/;"	c
+DefaultWebSocketServerFactory.java	src/main/java/org/java_websocket/server/DefaultWebSocketServerFactory.java	1;"	F
+Draft	src/main/java/org/java_websocket/drafts/Draft.java	/^public abstract class Draft {$/;"	c
+Draft.java	src/main/java/org/java_websocket/drafts/Draft.java	1;"	F
+Draft_10	src/main/java/org/java_websocket/drafts/Draft_10.java	/^public class Draft_10 extends Draft {$/;"	c
+Draft_10.java	src/main/java/org/java_websocket/drafts/Draft_10.java	1;"	F
+Draft_17	src/main/java/org/java_websocket/drafts/Draft_17.java	/^public class Draft_17 extends Draft_10 {$/;"	c
+Draft_17.java	src/main/java/org/java_websocket/drafts/Draft_17.java	1;"	F
+Draft_75	src/main/java/org/java_websocket/drafts/Draft_75.java	/^public class Draft_75 extends Draft {$/;"	c
+Draft_75.java	src/main/java/org/java_websocket/drafts/Draft_75.java	1;"	F
+Draft_76	src/main/java/org/java_websocket/drafts/Draft_76.java	/^public class Draft_76 extends Draft_75 {$/;"	c
+Draft_76.java	src/main/java/org/java_websocket/drafts/Draft_76.java	1;"	F
+ENCODE	src/main/java/org/java_websocket/util/Base64.java	/^    public final static int ENCODE = 1;$/;"	f	class:Base64
+END_OF_FRAME	src/main/java/org/java_websocket/drafts/Draft_75.java	/^	public static final byte END_OF_FRAME = (byte) 0xFF;$/;"	f	class:Draft_75
+EQUALS_SIGN	src/main/java/org/java_websocket/util/Base64.java	/^    private final static byte EQUALS_SIGN = (byte)'=';$/;"	f	class:Base64	file:
+EQUALS_SIGN_ENC	src/main/java/org/java_websocket/util/Base64.java	/^    private final static byte EQUALS_SIGN_ENC = -1; \/\/ Indicates equals sign in encoding$/;"	f	class:Base64	file:
+EXTENSION	src/main/java/org/java_websocket/framing/CloseFrame.java	/^	public static final int EXTENSION = 1010;$/;"	f	interface:CloseFrame
+FLASHPOLICY	src/main/java/org/java_websocket/framing/CloseFrame.java	/^	public static final int FLASHPOLICY = -3;$/;"	f	interface:CloseFrame
+FLASH_POLICY_REQUEST	src/main/java/org/java_websocket/drafts/Draft.java	/^	public static final byte[] FLASH_POLICY_REQUEST = Charsetfunctions.utf8Bytes( "<policy-file-request\/>\\0" );$/;"	f	class:Draft
+FrameBuilder	src/main/java/org/java_websocket/framing/FrameBuilder.java	/^public interface FrameBuilder extends Framedata {$/;"	i
+FrameBuilder.java	src/main/java/org/java_websocket/framing/FrameBuilder.java	1;"	F
+Framedata	src/main/java/org/java_websocket/framing/Framedata.java	/^public interface Framedata {$/;"	i
+Framedata.java	src/main/java/org/java_websocket/framing/Framedata.java	1;"	F
+FramedataImpl1	src/main/java/org/java_websocket/framing/FramedataImpl1.java	/^	public FramedataImpl1( Framedata f ) {$/;"	m	class:FramedataImpl1
+FramedataImpl1	src/main/java/org/java_websocket/framing/FramedataImpl1.java	/^	public FramedataImpl1( Opcode op ) {$/;"	m	class:FramedataImpl1
+FramedataImpl1	src/main/java/org/java_websocket/framing/FramedataImpl1.java	/^	public FramedataImpl1() {$/;"	m	class:FramedataImpl1
+FramedataImpl1	src/main/java/org/java_websocket/framing/FramedataImpl1.java	/^public class FramedataImpl1 implements FrameBuilder {$/;"	c
+FramedataImpl1.java	src/main/java/org/java_websocket/framing/FramedataImpl1.java	1;"	F
+GOING_AWAY	src/main/java/org/java_websocket/framing/CloseFrame.java	/^	public static final int GOING_AWAY = 1001;$/;"	f	interface:CloseFrame
+GZIP	src/main/java/org/java_websocket/util/Base64.java	/^    public final static int GZIP = 2;$/;"	f	class:Base64
+HandshakeBuilder	src/main/java/org/java_websocket/handshake/HandshakeBuilder.java	/^public interface HandshakeBuilder extends Handshakedata {$/;"	i
+HandshakeBuilder.java	src/main/java/org/java_websocket/handshake/HandshakeBuilder.java	1;"	F
+HandshakeImpl1Client	src/main/java/org/java_websocket/handshake/HandshakeImpl1Client.java	/^	public HandshakeImpl1Client() {$/;"	m	class:HandshakeImpl1Client
+HandshakeImpl1Client	src/main/java/org/java_websocket/handshake/HandshakeImpl1Client.java	/^public class HandshakeImpl1Client extends HandshakedataImpl1 implements ClientHandshakeBuilder {$/;"	c
+HandshakeImpl1Client.java	src/main/java/org/java_websocket/handshake/HandshakeImpl1Client.java	1;"	F
+HandshakeImpl1Server	src/main/java/org/java_websocket/handshake/HandshakeImpl1Server.java	/^	public HandshakeImpl1Server() {$/;"	m	class:HandshakeImpl1Server
+HandshakeImpl1Server	src/main/java/org/java_websocket/handshake/HandshakeImpl1Server.java	/^public class HandshakeImpl1Server extends HandshakedataImpl1 implements ServerHandshakeBuilder {$/;"	c
+HandshakeImpl1Server.java	src/main/java/org/java_websocket/handshake/HandshakeImpl1Server.java	1;"	F
+HandshakeState	src/main/java/org/java_websocket/drafts/Draft.java	/^	public enum HandshakeState {$/;"	g	class:Draft
+Handshakedata	src/main/java/org/java_websocket/handshake/Handshakedata.java	/^public interface Handshakedata {$/;"	i
+Handshakedata.java	src/main/java/org/java_websocket/handshake/Handshakedata.java	1;"	F
+HandshakedataImpl1	src/main/java/org/java_websocket/handshake/HandshakedataImpl1.java	/^	public HandshakedataImpl1() {$/;"	m	class:HandshakedataImpl1
+HandshakedataImpl1	src/main/java/org/java_websocket/handshake/HandshakedataImpl1.java	/^public class HandshakedataImpl1 implements HandshakeBuilder {$/;"	c
+HandshakedataImpl1.java	src/main/java/org/java_websocket/handshake/HandshakedataImpl1.java	1;"	F
+INITIAL_FAMESIZE	src/main/java/org/java_websocket/drafts/Draft.java	/^	public static int INITIAL_FAMESIZE = 64;$/;"	f	class:Draft
+IncompleteException	src/main/java/org/java_websocket/drafts/Draft_10.java	/^		public IncompleteException( int preferedsize ) {$/;"	m	class:Draft_10.IncompleteException
+IncompleteException	src/main/java/org/java_websocket/drafts/Draft_10.java	/^	private class IncompleteException extends Throwable {$/;"	c	class:Draft_10
+IncompleteHandshakeException	src/main/java/org/java_websocket/exceptions/IncompleteHandshakeException.java	/^	public IncompleteHandshakeException( int newsize ) {$/;"	m	class:IncompleteHandshakeException
+IncompleteHandshakeException	src/main/java/org/java_websocket/exceptions/IncompleteHandshakeException.java	/^	public IncompleteHandshakeException() {$/;"	m	class:IncompleteHandshakeException
+IncompleteHandshakeException	src/main/java/org/java_websocket/exceptions/IncompleteHandshakeException.java	/^public class IncompleteHandshakeException extends RuntimeException {$/;"	c
+IncompleteHandshakeException.java	src/main/java/org/java_websocket/exceptions/IncompleteHandshakeException.java	1;"	F
+InputStream	src/main/java/org/java_websocket/util/Base64.java	/^        public InputStream( java.io.InputStream in ) {$/;"	m	class:Base64.InputStream
+InputStream	src/main/java/org/java_websocket/util/Base64.java	/^        public InputStream( java.io.InputStream in, int options ) {$/;"	m	class:Base64.InputStream
+InputStream	src/main/java/org/java_websocket/util/Base64.java	/^    public static class InputStream extends java.io.FilterInputStream {$/;"	c	class:Base64
+InvalidDataException	src/main/java/org/java_websocket/exceptions/InvalidDataException.java	/^	public InvalidDataException( int closecode ) {$/;"	m	class:InvalidDataException
+InvalidDataException	src/main/java/org/java_websocket/exceptions/InvalidDataException.java	/^	public InvalidDataException( int closecode , String s ) {$/;"	m	class:InvalidDataException
+InvalidDataException	src/main/java/org/java_websocket/exceptions/InvalidDataException.java	/^	public InvalidDataException( int closecode , String s , Throwable t ) {$/;"	m	class:InvalidDataException
+InvalidDataException	src/main/java/org/java_websocket/exceptions/InvalidDataException.java	/^	public InvalidDataException( int closecode , Throwable t ) {$/;"	m	class:InvalidDataException
+InvalidDataException	src/main/java/org/java_websocket/exceptions/InvalidDataException.java	/^public class InvalidDataException extends Exception {$/;"	c
+InvalidDataException.java	src/main/java/org/java_websocket/exceptions/InvalidDataException.java	1;"	F
+InvalidFrameException	src/main/java/org/java_websocket/exceptions/InvalidFrameException.java	/^	public InvalidFrameException( String arg0 ) {$/;"	m	class:InvalidFrameException
+InvalidFrameException	src/main/java/org/java_websocket/exceptions/InvalidFrameException.java	/^	public InvalidFrameException( String arg0 , Throwable arg1 ) {$/;"	m	class:InvalidFrameException
+InvalidFrameException	src/main/java/org/java_websocket/exceptions/InvalidFrameException.java	/^	public InvalidFrameException( Throwable arg0 ) {$/;"	m	class:InvalidFrameException
+InvalidFrameException	src/main/java/org/java_websocket/exceptions/InvalidFrameException.java	/^	public InvalidFrameException() {$/;"	m	class:InvalidFrameException
+InvalidFrameException	src/main/java/org/java_websocket/exceptions/InvalidFrameException.java	/^public class InvalidFrameException extends InvalidDataException {$/;"	c
+InvalidFrameException.java	src/main/java/org/java_websocket/exceptions/InvalidFrameException.java	1;"	F
+InvalidHandshakeException	src/main/java/org/java_websocket/exceptions/InvalidHandshakeException.java	/^	public InvalidHandshakeException( String arg0 ) {$/;"	m	class:InvalidHandshakeException
+InvalidHandshakeException	src/main/java/org/java_websocket/exceptions/InvalidHandshakeException.java	/^	public InvalidHandshakeException( String arg0 , Throwable arg1 ) {$/;"	m	class:InvalidHandshakeException
+InvalidHandshakeException	src/main/java/org/java_websocket/exceptions/InvalidHandshakeException.java	/^	public InvalidHandshakeException( Throwable arg0 ) {$/;"	m	class:InvalidHandshakeException
+InvalidHandshakeException	src/main/java/org/java_websocket/exceptions/InvalidHandshakeException.java	/^	public InvalidHandshakeException() {$/;"	m	class:InvalidHandshakeException
+InvalidHandshakeException	src/main/java/org/java_websocket/exceptions/InvalidHandshakeException.java	/^public class InvalidHandshakeException extends InvalidDataException {$/;"	c
+InvalidHandshakeException.java	src/main/java/org/java_websocket/exceptions/InvalidHandshakeException.java	1;"	F
+LF	src/main/java/org/java_websocket/drafts/Draft_75.java	/^	public static final byte LF = (byte) 0x0A;$/;"	f	class:Draft_75
+LimitExedeedException	src/main/java/org/java_websocket/exceptions/LimitExedeedException.java	/^	public LimitExedeedException( String s ) {$/;"	m	class:LimitExedeedException
+LimitExedeedException	src/main/java/org/java_websocket/exceptions/LimitExedeedException.java	/^	public LimitExedeedException() {$/;"	m	class:LimitExedeedException
+LimitExedeedException	src/main/java/org/java_websocket/exceptions/LimitExedeedException.java	/^public class LimitExedeedException extends InvalidDataException {$/;"	c
+LimitExedeedException.java	src/main/java/org/java_websocket/exceptions/LimitExedeedException.java	1;"	F
+MATCHED	src/main/java/org/java_websocket/drafts/Draft.java	/^		MATCHED,$/;"	e	enum:Draft.HandshakeState	file:
+MAX_FAME_SIZE	src/main/java/org/java_websocket/drafts/Draft.java	/^	public static int MAX_FAME_SIZE = 1000 * 1;$/;"	f	class:Draft
+MAX_LINE_LENGTH	src/main/java/org/java_websocket/util/Base64.java	/^    private final static int MAX_LINE_LENGTH = 76;$/;"	f	class:Base64	file:
+NEVER_CONNECTED	src/main/java/org/java_websocket/framing/CloseFrame.java	/^	public static final int NEVER_CONNECTED = -1;$/;"	f	interface:CloseFrame
+NEW_LINE	src/main/java/org/java_websocket/util/Base64.java	/^    private final static byte NEW_LINE = (byte)'\\n';$/;"	f	class:Base64	file:
+NOCODE	src/main/java/org/java_websocket/framing/CloseFrame.java	/^	public static final int NOCODE = 1005;$/;"	f	interface:CloseFrame
+NONE	src/main/java/org/java_websocket/drafts/Draft.java	/^		NONE, ONEWAY, TWOWAY$/;"	e	enum:Draft.CloseHandshakeType	file:
+NORMAL	src/main/java/org/java_websocket/framing/CloseFrame.java	/^	public static final int NORMAL = 1000;$/;"	f	interface:CloseFrame
+NOT_MATCHED	src/main/java/org/java_websocket/drafts/Draft.java	/^		NOT_MATCHED$/;"	e	enum:Draft.HandshakeState	file:
+NOT_YET_CONNECTED	src/main/java/org/java_websocket/WebSocket.java	/^		NOT_YET_CONNECTED, CONNECTING, OPEN, CLOSING, CLOSED;$/;"	e	enum:WebSocket.READYSTATE	file:
+NO_OPTIONS	src/main/java/org/java_websocket/util/Base64.java	/^    public final static int NO_OPTIONS = 0;$/;"	f	class:Base64
+NO_UTF8	src/main/java/org/java_websocket/framing/CloseFrame.java	/^	public static final int NO_UTF8 = 1007;$/;"	f	interface:CloseFrame
+NotSendableException	src/main/java/org/java_websocket/exceptions/NotSendableException.java	/^	public NotSendableException( String message ) {$/;"	m	class:NotSendableException
+NotSendableException	src/main/java/org/java_websocket/exceptions/NotSendableException.java	/^	public NotSendableException( String message , Throwable cause ) {$/;"	m	class:NotSendableException
+NotSendableException	src/main/java/org/java_websocket/exceptions/NotSendableException.java	/^	public NotSendableException( Throwable cause ) {$/;"	m	class:NotSendableException
+NotSendableException	src/main/java/org/java_websocket/exceptions/NotSendableException.java	/^	public NotSendableException() {$/;"	m	class:NotSendableException
+NotSendableException	src/main/java/org/java_websocket/exceptions/NotSendableException.java	/^public class NotSendableException extends RuntimeException {$/;"	c
+NotSendableException.java	src/main/java/org/java_websocket/exceptions/NotSendableException.java	1;"	F
+ONEWAY	src/main/java/org/java_websocket/drafts/Draft.java	/^		NONE, ONEWAY, TWOWAY$/;"	e	enum:Draft.CloseHandshakeType	file:
+OPEN	src/main/java/org/java_websocket/WebSocket.java	/^		NOT_YET_CONNECTED, CONNECTING, OPEN, CLOSING, CLOSED;$/;"	e	enum:WebSocket.READYSTATE	file:
+ORDERED	src/main/java/org/java_websocket/util/Base64.java	/^     public final static int ORDERED = 32;$/;"	f	class:Base64
+Opcode	src/main/java/org/java_websocket/framing/Framedata.java	/^	public enum Opcode {$/;"	g	interface:Framedata
+OutputStream	src/main/java/org/java_websocket/util/Base64.java	/^        public OutputStream( java.io.OutputStream out ) {$/;"	m	class:Base64.OutputStream
+OutputStream	src/main/java/org/java_websocket/util/Base64.java	/^        public OutputStream( java.io.OutputStream out, int options ) {$/;"	m	class:Base64.OutputStream
+OutputStream	src/main/java/org/java_websocket/util/Base64.java	/^    public static class OutputStream extends java.io.FilterOutputStream {$/;"	c	class:Base64
+PING	src/main/java/org/java_websocket/framing/Framedata.java	/^		CONTINUOUS, TEXT, BINARY, PING, PONG, CLOSING$/;"	e	enum:Framedata.Opcode	file:
+POLICY_VALIDATION	src/main/java/org/java_websocket/framing/CloseFrame.java	/^	public static final int POLICY_VALIDATION = 1008;$/;"	f	interface:CloseFrame
+PONG	src/main/java/org/java_websocket/framing/Framedata.java	/^		CONTINUOUS, TEXT, BINARY, PING, PONG, CLOSING$/;"	e	enum:Framedata.Opcode	file:
+PREFERRED_ENCODING	src/main/java/org/java_websocket/util/Base64.java	/^    private final static String PREFERRED_ENCODING = "US-ASCII";$/;"	f	class:Base64	file:
+PROTOCOL_ERROR	src/main/java/org/java_websocket/framing/CloseFrame.java	/^	public static final int PROTOCOL_ERROR = 1002;$/;"	f	interface:CloseFrame
+RCVBUF	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public static int RCVBUF = 16384;$/;"	f	class:WebSocketImpl
+READYSTATE	src/main/java/org/java_websocket/WebSocket.java	/^	public enum READYSTATE {$/;"	g	interface:WebSocket
+REFUSE	src/main/java/org/java_websocket/framing/CloseFrame.java	/^	public static final int REFUSE = 1003;$/;"	f	interface:CloseFrame
+Role	src/main/java/org/java_websocket/WebSocket.java	/^	public enum Role {$/;"	g	interface:WebSocket
+SERVER	src/main/java/org/java_websocket/WebSocket.java	/^		CLIENT, SERVER$/;"	e	enum:WebSocket.Role	file:
+SSLSocketChannel2	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	public SSLSocketChannel2( SocketChannel channel , SSLEngine sslEngine , ExecutorService exec , SelectionKey key ) throws IOException {$/;"	m	class:SSLSocketChannel2
+SSLSocketChannel2	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^public class SSLSocketChannel2 implements ByteChannel, WrappedByteChannel {$/;"	c
+SSLSocketChannel2.java	src/main/java/org/java_websocket/SSLSocketChannel2.java	1;"	F
+START_OF_FRAME	src/main/java/org/java_websocket/drafts/Draft_75.java	/^	public static final byte START_OF_FRAME = (byte) 0x00;$/;"	f	class:Draft_75
+ServerHandshake	src/main/java/org/java_websocket/handshake/ServerHandshake.java	/^public interface ServerHandshake extends Handshakedata {$/;"	i
+ServerHandshake.java	src/main/java/org/java_websocket/handshake/ServerHandshake.java	1;"	F
+ServerHandshakeBuilder	src/main/java/org/java_websocket/handshake/ServerHandshakeBuilder.java	/^public interface ServerHandshakeBuilder extends HandshakeBuilder, ServerHandshake {$/;"	i
+ServerHandshakeBuilder.java	src/main/java/org/java_websocket/handshake/ServerHandshakeBuilder.java	1;"	F
+SocketChannelIOHelper	src/main/java/org/java_websocket/SocketChannelIOHelper.java	/^public class SocketChannelIOHelper {$/;"	c
+SocketChannelIOHelper.java	src/main/java/org/java_websocket/SocketChannelIOHelper.java	1;"	F
+TEXT	src/main/java/org/java_websocket/framing/Framedata.java	/^		CONTINUOUS, TEXT, BINARY, PING, PONG, CLOSING$/;"	e	enum:Framedata.Opcode	file:
+TLS_ERROR	src/main/java/org/java_websocket/framing/CloseFrame.java	/^	public static final int TLS_ERROR = 1015;$/;"	f	interface:CloseFrame
+TOOBIG	src/main/java/org/java_websocket/framing/CloseFrame.java	/^	public static final int TOOBIG = 1009;$/;"	f	interface:CloseFrame
+TWOWAY	src/main/java/org/java_websocket/drafts/Draft.java	/^		NONE, ONEWAY, TWOWAY$/;"	e	enum:Draft.CloseHandshakeType	file:
+UNEXPECTED_CONDITION	src/main/java/org/java_websocket/framing/CloseFrame.java	/^	public static final int UNEXPECTED_CONDITION = 1011;$/;"	f	interface:CloseFrame
+URL_SAFE	src/main/java/org/java_websocket/util/Base64.java	/^     public final static int URL_SAFE = 16;$/;"	f	class:Base64
+WHITE_SPACE_ENC	src/main/java/org/java_websocket/util/Base64.java	/^    private final static byte WHITE_SPACE_ENC = -5; \/\/ Indicates white space in encoding$/;"	f	class:Base64	file:
+WebSocket	src/main/java/org/java_websocket/WebSocket.java	/^public interface WebSocket {$/;"	i
+WebSocket.java	src/main/java/org/java_websocket/WebSocket.java	1;"	F
+WebSocketAdapter	src/main/java/org/java_websocket/WebSocketAdapter.java	/^public abstract class WebSocketAdapter implements WebSocketListener {$/;"	c
+WebSocketAdapter.java	src/main/java/org/java_websocket/WebSocketAdapter.java	1;"	F
+WebSocketClient	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public WebSocketClient( URI serverURI ) {$/;"	m	class:WebSocketClient
+WebSocketClient	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public WebSocketClient( URI serverUri , Draft draft ) {$/;"	m	class:WebSocketClient
+WebSocketClient	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public WebSocketClient( URI serverUri , Draft protocolDraft , Map<String,String> httpHeaders , int connectTimeout ) {$/;"	m	class:WebSocketClient
+WebSocketClient	src/main/java/org/java_websocket/client/WebSocketClient.java	/^public abstract class WebSocketClient extends WebSocketAdapter implements Runnable, WebSocket {$/;"	c
+WebSocketClient.java	src/main/java/org/java_websocket/client/WebSocketClient.java	1;"	F
+WebSocketFactory	src/main/java/org/java_websocket/WebSocketFactory.java	/^public interface WebSocketFactory {$/;"	i
+WebSocketFactory.java	src/main/java/org/java_websocket/WebSocketFactory.java	1;"	F
+WebSocketImpl	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public WebSocketImpl( WebSocketListener listener , Draft draft ) {$/;"	m	class:WebSocketImpl
+WebSocketImpl	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public WebSocketImpl( WebSocketListener listener , Draft draft , Socket socket ) {$/;"	m	class:WebSocketImpl
+WebSocketImpl	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public WebSocketImpl( WebSocketListener listener , List<Draft> drafts ) {$/;"	m	class:WebSocketImpl
+WebSocketImpl	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public WebSocketImpl( WebSocketListener listener , List<Draft> drafts , Socket socket ) {$/;"	m	class:WebSocketImpl
+WebSocketImpl	src/main/java/org/java_websocket/WebSocketImpl.java	/^public class WebSocketImpl implements WebSocket {$/;"	c
+WebSocketImpl.java	src/main/java/org/java_websocket/WebSocketImpl.java	1;"	F
+WebSocketListener	src/main/java/org/java_websocket/WebSocketListener.java	/^public interface WebSocketListener {$/;"	i
+WebSocketListener.java	src/main/java/org/java_websocket/WebSocketListener.java	1;"	F
+WebSocketServer	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public WebSocketServer( InetSocketAddress address ) {$/;"	m	class:WebSocketServer
+WebSocketServer	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public WebSocketServer( InetSocketAddress address , List<Draft> drafts ) {$/;"	m	class:WebSocketServer
+WebSocketServer	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public WebSocketServer( InetSocketAddress address , int decodercount , List<Draft> drafts ) {$/;"	m	class:WebSocketServer
+WebSocketServer	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public WebSocketServer( InetSocketAddress address , int decodercount , List<Draft> drafts , Collection<WebSocket> connectionscontainer ) {$/;"	m	class:WebSocketServer
+WebSocketServer	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public WebSocketServer( InetSocketAddress address , int decoders ) {$/;"	m	class:WebSocketServer
+WebSocketServer	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public WebSocketServer() throws UnknownHostException {$/;"	m	class:WebSocketServer
+WebSocketServer	src/main/java/org/java_websocket/server/WebSocketServer.java	/^public abstract class WebSocketServer extends WebSocketAdapter implements Runnable {$/;"	c
+WebSocketServer.java	src/main/java/org/java_websocket/server/WebSocketServer.java	1;"	F
+WebSocketServerFactory	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public interface WebSocketServerFactory extends WebSocketFactory {$/;"	i	class:WebSocketServer
+WebSocketWorker	src/main/java/org/java_websocket/server/WebSocketServer.java	/^		public WebSocketWorker() {$/;"	m	class:WebSocketServer.WebSocketWorker
+WebSocketWorker	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public class WebSocketWorker extends Thread {$/;"	c	class:WebSocketServer
+WebsocketNotConnectedException	src/main/java/org/java_websocket/exceptions/WebsocketNotConnectedException.java	/^public class WebsocketNotConnectedException extends RuntimeException {$/;"	c
+WebsocketNotConnectedException.java	src/main/java/org/java_websocket/exceptions/WebsocketNotConnectedException.java	1;"	F
+WebsocketWriteThread	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	private class WebsocketWriteThread implements Runnable {$/;"	c	class:WebSocketClient
+WrappedByteChannel	src/main/java/org/java_websocket/WrappedByteChannel.java	/^public interface WrappedByteChannel extends ByteChannel {$/;"	i
+WrappedByteChannel.java	src/main/java/org/java_websocket/WrappedByteChannel.java	1;"	F
+_ORDERED_ALPHABET	src/main/java/org/java_websocket/util/Base64.java	/^    private final static byte[] _ORDERED_ALPHABET = {$/;"	f	class:Base64	file:
+_ORDERED_DECODABET	src/main/java/org/java_websocket/util/Base64.java	/^    private final static byte[] _ORDERED_DECODABET = {$/;"	f	class:Base64	file:
+_STANDARD_ALPHABET	src/main/java/org/java_websocket/util/Base64.java	/^    private final static byte[] _STANDARD_ALPHABET = {$/;"	f	class:Base64	file:
+_STANDARD_DECODABET	src/main/java/org/java_websocket/util/Base64.java	/^    private final static byte[] _STANDARD_DECODABET = {$/;"	f	class:Base64	file:
+_URL_SAFE_ALPHABET	src/main/java/org/java_websocket/util/Base64.java	/^    private final static byte[] _URL_SAFE_ALPHABET = {$/;"	f	class:Base64	file:
+_URL_SAFE_DECODABET	src/main/java/org/java_websocket/util/Base64.java	/^    private final static byte[] _URL_SAFE_DECODABET = {$/;"	f	class:Base64	file:
+acceptHandshakeAsClient	src/main/java/org/java_websocket/drafts/Draft.java	/^	public abstract HandshakeState acceptHandshakeAsClient( ClientHandshake request, ServerHandshake response ) throws InvalidHandshakeException;$/;"	m	class:Draft
+acceptHandshakeAsClient	src/main/java/org/java_websocket/drafts/Draft_10.java	/^	public HandshakeState acceptHandshakeAsClient( ClientHandshake request, ServerHandshake response ) throws InvalidHandshakeException {$/;"	m	class:Draft_10
+acceptHandshakeAsClient	src/main/java/org/java_websocket/drafts/Draft_75.java	/^	public HandshakeState acceptHandshakeAsClient( ClientHandshake request, ServerHandshake response ) {$/;"	m	class:Draft_75
+acceptHandshakeAsClient	src/main/java/org/java_websocket/drafts/Draft_76.java	/^	public HandshakeState acceptHandshakeAsClient( ClientHandshake request, ServerHandshake response ) {$/;"	m	class:Draft_76
+acceptHandshakeAsServer	src/main/java/org/java_websocket/drafts/Draft.java	/^	public abstract HandshakeState acceptHandshakeAsServer( ClientHandshake handshakedata ) throws InvalidHandshakeException;$/;"	m	class:Draft
+acceptHandshakeAsServer	src/main/java/org/java_websocket/drafts/Draft_10.java	/^	public HandshakeState acceptHandshakeAsServer( ClientHandshake handshakedata ) throws InvalidHandshakeException {$/;"	m	class:Draft_10
+acceptHandshakeAsServer	src/main/java/org/java_websocket/drafts/Draft_17.java	/^	public HandshakeState acceptHandshakeAsServer( ClientHandshake handshakedata ) throws InvalidHandshakeException {$/;"	m	class:Draft_17
+acceptHandshakeAsServer	src/main/java/org/java_websocket/drafts/Draft_75.java	/^	public HandshakeState acceptHandshakeAsServer( ClientHandshake handshakedata ) {$/;"	m	class:Draft_75
+acceptHandshakeAsServer	src/main/java/org/java_websocket/drafts/Draft_76.java	/^	public HandshakeState acceptHandshakeAsServer( ClientHandshake handshakedata ) {$/;"	m	class:Draft_76
+addConnection	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	protected boolean addConnection( WebSocket ws ) {$/;"	m	class:WebSocketServer
+address	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	private final InetSocketAddress address;$/;"	f	class:WebSocketServer	file:
+allocateBuffers	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	protected void allocateBuffers( WebSocket c ) throws InterruptedException {$/;"	m	class:WebSocketServer
+append	src/main/java/org/java_websocket/framing/Framedata.java	/^	public abstract void append(Framedata nextframe) throws InvalidFrameException;$/;"	m	interface:Framedata
+append	src/main/java/org/java_websocket/framing/FramedataImpl1.java	/^	public void append( Framedata nextframe ) throws InvalidFrameException {$/;"	m	class:FramedataImpl1
+asciiBytes	src/main/java/org/java_websocket/util/Charsetfunctions.java	/^	public static byte[] asciiBytes( String s ) {$/;"	m	class:Charsetfunctions
+b4	src/main/java/org/java_websocket/util/Base64.java	/^        private byte[]  b4;         \/\/ Scratch used in a few places$/;"	f	class:Base64.OutputStream	file:
+basicAccept	src/main/java/org/java_websocket/drafts/Draft.java	/^	protected boolean basicAccept( Handshakedata handshakedata ) {$/;"	m	class:Draft
+batch	src/main/java/org/java_websocket/SocketChannelIOHelper.java	/^	public static boolean batch( WebSocketImpl ws, ByteChannel sockchannel ) throws IOException {$/;"	m	class:SocketChannelIOHelper
+breakLines	src/main/java/org/java_websocket/util/Base64.java	/^        private boolean breakLines;     \/\/ Break lines at less than 80 characters$/;"	f	class:Base64.InputStream	file:
+breakLines	src/main/java/org/java_websocket/util/Base64.java	/^        private boolean breakLines;$/;"	f	class:Base64.OutputStream	file:
+buffer	src/main/java/org/java_websocket/util/Base64.java	/^        private byte[]  buffer;         \/\/ Small buffer holding converted data$/;"	f	class:Base64.InputStream	file:
+buffer	src/main/java/org/java_websocket/util/Base64.java	/^        private byte[]  buffer;$/;"	f	class:Base64.OutputStream	file:
+bufferLength	src/main/java/org/java_websocket/util/Base64.java	/^        private int     bufferLength;   \/\/ Length of buffer (3 or 4)$/;"	f	class:Base64.InputStream	file:
+bufferLength	src/main/java/org/java_websocket/util/Base64.java	/^        private int     bufferLength;$/;"	f	class:Base64.OutputStream	file:
+bufferallocations	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	protected int bufferallocations = 0;$/;"	f	class:SSLSocketChannel2
+buffers	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	private BlockingQueue<ByteBuffer> buffers;$/;"	f	class:WebSocketServer	file:
+buildHandShake	src/main/java/org/java_websocket/client/AbstractClientProxyChannel.java	/^	public abstract String buildHandShake();$/;"	m	class:AbstractClientProxyChannel
+channel	src/main/java/org/java_websocket/AbstractWrappedByteChannel.java	/^	private final ByteChannel channel;$/;"	f	class:AbstractWrappedByteChannel	file:
+channel	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public ByteChannel channel;$/;"	f	class:WebSocketImpl
+checkAlloc	src/main/java/org/java_websocket/drafts/Draft.java	/^	public int checkAlloc( int bytecount ) throws LimitExedeedException , InvalidDataException {$/;"	m	class:Draft
+close	src/main/java/org/java_websocket/AbstractWrappedByteChannel.java	/^	public void close() throws IOException {$/;"	m	class:AbstractWrappedByteChannel
+close	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	public void close() throws IOException {$/;"	m	class:SSLSocketChannel2
+close	src/main/java/org/java_websocket/WebSocket.java	/^	public void close();$/;"	m	interface:WebSocket
+close	src/main/java/org/java_websocket/WebSocket.java	/^	public void close(int code);$/;"	m	interface:WebSocket
+close	src/main/java/org/java_websocket/WebSocket.java	/^	public void close(int code, String message);$/;"	m	interface:WebSocket
+close	src/main/java/org/java_websocket/WebSocketImpl.java	/^	private void close( int code, String message, boolean remote ) {$/;"	m	class:WebSocketImpl	file:
+close	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public void close( InvalidDataException e ) {$/;"	m	class:WebSocketImpl
+close	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public void close( int code ) {$/;"	m	class:WebSocketImpl
+close	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public void close( int code, String message ) {$/;"	m	class:WebSocketImpl
+close	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public void close() {$/;"	m	class:WebSocketImpl
+close	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public void close( int code ) {$/;"	m	class:WebSocketClient
+close	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public void close( int code, String message ) {$/;"	m	class:WebSocketClient
+close	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public void close() {$/;"	m	class:WebSocketClient
+close	src/main/java/org/java_websocket/util/Base64.java	/^        public void close() throws java.io.IOException {$/;"	m	class:Base64.OutputStream
+closeBlocking	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public void closeBlocking() throws InterruptedException {$/;"	m	class:WebSocketClient
+closeConnection	src/main/java/org/java_websocket/WebSocket.java	/^	public abstract void closeConnection(int code, String message);$/;"	m	interface:WebSocket
+closeConnection	src/main/java/org/java_websocket/WebSocketImpl.java	/^	protected synchronized void closeConnection( int code, String message, boolean remote ) {$/;"	m	class:WebSocketImpl
+closeConnection	src/main/java/org/java_websocket/WebSocketImpl.java	/^	protected void closeConnection( int code, boolean remote ) {$/;"	m	class:WebSocketImpl
+closeConnection	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public void closeConnection( int code, String message ) {$/;"	m	class:WebSocketImpl
+closeConnection	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public void closeConnection() {$/;"	m	class:WebSocketImpl
+closeConnection	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public void closeConnection( int code, String message ) {$/;"	m	class:WebSocketClient
+closeLatch	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	private CountDownLatch closeLatch = new CountDownLatch( 1 );$/;"	f	class:WebSocketClient	file:
+closecode	src/main/java/org/java_websocket/WebSocketImpl.java	/^	private Integer closecode = null;$/;"	f	class:WebSocketImpl	file:
+closecode	src/main/java/org/java_websocket/exceptions/InvalidDataException.java	/^	private int closecode;$/;"	f	class:InvalidDataException	file:
+closedremotely	src/main/java/org/java_websocket/WebSocketImpl.java	/^	private Boolean closedremotely = null;$/;"	f	class:WebSocketImpl	file:
+closehandshake	src/main/java/org/java_websocket/drafts/Draft_76.java	/^	private static final byte[] closehandshake = { -1, 0 };$/;"	f	class:Draft_76	file:
+closemessage	src/main/java/org/java_websocket/WebSocketImpl.java	/^	private String closemessage = null;$/;"	f	class:WebSocketImpl	file:
+code	src/main/java/org/java_websocket/framing/CloseFrameBuilder.java	/^	private int code;$/;"	f	class:CloseFrameBuilder	file:
+codingErrorAction	src/main/java/org/java_websocket/util/Charsetfunctions.java	/^	public static CodingErrorAction codingErrorAction = CodingErrorAction.REPORT;$/;"	f	class:Charsetfunctions
+configureBlocking	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	public SelectableChannel configureBlocking( boolean b ) throws IOException {$/;"	m	class:SSLSocketChannel2
+connect	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	public boolean connect( SocketAddress remote ) throws IOException {$/;"	m	class:SSLSocketChannel2
+connect	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public void connect() {$/;"	m	class:WebSocketClient
+connectBlocking	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public boolean connectBlocking() throws InterruptedException {$/;"	m	class:WebSocketClient
+connectLatch	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	private CountDownLatch connectLatch = new CountDownLatch( 1 );$/;"	f	class:WebSocketClient	file:
+connectTimeout	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	private int connectTimeout = 0;$/;"	f	class:WebSocketClient	file:
+connections	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	private final Collection<WebSocket> connections;$/;"	f	class:WebSocketServer	file:
+connections	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public Collection<WebSocket> connections() {$/;"	m	class:WebSocketServer
+consumeDelegatedTasks	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	protected void consumeDelegatedTasks() {$/;"	m	class:SSLSocketChannel2
+consumeFutureUninterruptible	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	private void consumeFutureUninterruptible( Future<?> f ) {$/;"	m	class:SSLSocketChannel2	file:
+content	src/main/java/org/java_websocket/handshake/HandshakedataImpl1.java	/^	private byte[] content;$/;"	f	class:HandshakedataImpl1	file:
+continuousFrame	src/main/java/org/java_websocket/drafts/Draft.java	/^	public List<Framedata> continuousFrame( Opcode op, ByteBuffer buffer, boolean fin ) {$/;"	m	class:Draft
+continuousFrameType	src/main/java/org/java_websocket/drafts/Draft.java	/^	protected Opcode continuousFrameType = null;$/;"	f	class:Draft
+copyInstance	src/main/java/org/java_websocket/drafts/Draft.java	/^	public abstract Draft copyInstance();$/;"	m	class:Draft
+copyInstance	src/main/java/org/java_websocket/drafts/Draft_10.java	/^	public Draft copyInstance() {$/;"	m	class:Draft_10
+copyInstance	src/main/java/org/java_websocket/drafts/Draft_17.java	/^	public Draft copyInstance() {$/;"	m	class:Draft_17
+copyInstance	src/main/java/org/java_websocket/drafts/Draft_75.java	/^	public Draft copyInstance() {$/;"	m	class:Draft_75
+copyInstance	src/main/java/org/java_websocket/drafts/Draft_76.java	/^	public Draft copyInstance() {$/;"	m	class:Draft_76
+createBinaryFrame	src/main/java/org/java_websocket/drafts/Draft.java	/^	public abstract ByteBuffer createBinaryFrame( Framedata framedata ); \/\/ TODO Allow to send data on the base of an Iterator or InputStream$/;"	m	class:Draft
+createBinaryFrame	src/main/java/org/java_websocket/drafts/Draft_10.java	/^	public ByteBuffer createBinaryFrame( Framedata framedata ) {$/;"	m	class:Draft_10
+createBinaryFrame	src/main/java/org/java_websocket/drafts/Draft_75.java	/^	public ByteBuffer createBinaryFrame( Framedata framedata ) {$/;"	m	class:Draft_75
+createBinaryFrame	src/main/java/org/java_websocket/drafts/Draft_76.java	/^	public ByteBuffer createBinaryFrame( Framedata framedata ) {$/;"	m	class:Draft_76
+createBuffer	src/main/java/org/java_websocket/drafts/Draft_75.java	/^	public ByteBuffer createBuffer() {$/;"	m	class:Draft_75
+createBuffer	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public ByteBuffer createBuffer() {$/;"	m	class:WebSocketServer
+createBuffers	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	protected void createBuffers( SSLSession session ) {$/;"	m	class:SSLSocketChannel2
+createChallenge	src/main/java/org/java_websocket/drafts/Draft_76.java	/^	public static byte[] createChallenge( String key1, String key2, byte[] key3 ) throws InvalidHandshakeException {$/;"	m	class:Draft_76
+createFrames	src/main/java/org/java_websocket/drafts/Draft.java	/^	public abstract List<Framedata> createFrames( ByteBuffer binary, boolean mask );$/;"	m	class:Draft
+createFrames	src/main/java/org/java_websocket/drafts/Draft.java	/^	public abstract List<Framedata> createFrames( String text, boolean mask );$/;"	m	class:Draft
+createFrames	src/main/java/org/java_websocket/drafts/Draft_10.java	/^	public List<Framedata> createFrames( ByteBuffer binary, boolean mask ) {$/;"	m	class:Draft_10
+createFrames	src/main/java/org/java_websocket/drafts/Draft_10.java	/^	public List<Framedata> createFrames( String text, boolean mask ) {$/;"	m	class:Draft_10
+createFrames	src/main/java/org/java_websocket/drafts/Draft_75.java	/^	public List<Framedata> createFrames( ByteBuffer binary, boolean mask ) {$/;"	m	class:Draft_75
+createFrames	src/main/java/org/java_websocket/drafts/Draft_75.java	/^	public List<Framedata> createFrames( String text, boolean mask ) {$/;"	m	class:Draft_75
+createHandshake	src/main/java/org/java_websocket/drafts/Draft.java	/^	public List<ByteBuffer> createHandshake( Handshakedata handshakedata, Role ownrole ) {$/;"	m	class:Draft
+createHandshake	src/main/java/org/java_websocket/drafts/Draft.java	/^	public List<ByteBuffer> createHandshake( Handshakedata handshakedata, Role ownrole, boolean withcontent ) {$/;"	m	class:Draft
+createPingFrames	src/main/java/org/java_websocket/drafts/Draft.java	/^   public abstract List<Framedata> createPingFrames( String text, boolean mask );$/;"	m	class:Draft
+createPingFrames	src/main/java/org/java_websocket/drafts/Draft_10.java	/^	public List<Framedata> createPingFrames( String text, boolean mask ) {$/;"	m	class:Draft_10
+createPingFrames	src/main/java/org/java_websocket/drafts/Draft_75.java	/^    public List<Framedata> createPingFrames(String text, boolean mask) {$/;"	m	class:Draft_75
+createWebSocket	src/main/java/org/java_websocket/WebSocketFactory.java	/^	public WebSocket createWebSocket(WebSocketAdapter a, Draft d, Socket s);$/;"	m	interface:WebSocketFactory
+createWebSocket	src/main/java/org/java_websocket/WebSocketFactory.java	/^	public WebSocket createWebSocket(WebSocketAdapter a, List<Draft> drafts, Socket s);$/;"	m	interface:WebSocketFactory
+createWebSocket	src/main/java/org/java_websocket/server/DefaultSSLWebSocketServerFactory.java	/^	public WebSocketImpl createWebSocket( WebSocketAdapter a, Draft d, Socket c ) {$/;"	m	class:DefaultSSLWebSocketServerFactory
+createWebSocket	src/main/java/org/java_websocket/server/DefaultSSLWebSocketServerFactory.java	/^	public WebSocketImpl createWebSocket( WebSocketAdapter a, List<Draft> d, Socket s ) {$/;"	m	class:DefaultSSLWebSocketServerFactory
+createWebSocket	src/main/java/org/java_websocket/server/DefaultWebSocketServerFactory.java	/^	public WebSocketImpl createWebSocket( WebSocketAdapter a, Draft d, Socket s ) {$/;"	m	class:DefaultWebSocketServerFactory
+createWebSocket	src/main/java/org/java_websocket/server/DefaultWebSocketServerFactory.java	/^	public WebSocketImpl createWebSocket( WebSocketAdapter a, List<Draft> d, Socket s ) {$/;"	m	class:DefaultWebSocketServerFactory
+createWebSocket	src/main/java/org/java_websocket/server/WebSocketServer.java	/^		public WebSocketImpl createWebSocket(WebSocketAdapter a, Draft d, Socket s);$/;"	m	interface:WebSocketServer.WebSocketServerFactory
+createWebSocket	src/main/java/org/java_websocket/server/WebSocketServer.java	/^		public WebSocketImpl createWebSocket(WebSocketAdapter a, List<Draft> drafts, Socket s);$/;"	m	interface:WebSocketServer.WebSocketServerFactory
+currentFrame	src/main/java/org/java_websocket/drafts/Draft_75.java	/^	protected ByteBuffer currentFrame;$/;"	f	class:Draft_75
+current_continuous_frame_opcode	src/main/java/org/java_websocket/WebSocketImpl.java	/^	private Opcode current_continuous_frame_opcode = null;$/;"	f	class:WebSocketImpl	file:
+decodabet	src/main/java/org/java_websocket/util/Base64.java	/^        private byte[]  decodabet;      \/\/ Local copies to avoid extra method calls$/;"	f	class:Base64.InputStream	file:
+decodabet	src/main/java/org/java_websocket/util/Base64.java	/^        private byte[]  decodabet;  \/\/ Local copies to avoid extra method calls$/;"	f	class:Base64.OutputStream	file:
+decode	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public void decode( ByteBuffer socketBuffer ) {$/;"	m	class:WebSocketImpl
+decode	src/main/java/org/java_websocket/util/Base64.java	/^    public static byte[] decode( String s ) throws java.io.IOException {$/;"	m	class:Base64
+decode	src/main/java/org/java_websocket/util/Base64.java	/^    public static byte[] decode( String s, int options ) throws java.io.IOException {$/;"	m	class:Base64
+decode	src/main/java/org/java_websocket/util/Base64.java	/^    public static byte[] decode( byte[] source )$/;"	m	class:Base64
+decode	src/main/java/org/java_websocket/util/Base64.java	/^    public static byte[] decode( byte[] source, int off, int len, int options )$/;"	m	class:Base64
+decode4to3	src/main/java/org/java_websocket/util/Base64.java	/^    private static int decode4to3( $/;"	m	class:Base64	file:
+decodeFileToFile	src/main/java/org/java_websocket/util/Base64.java	/^    public static void decodeFileToFile( String infile, String outfile )$/;"	m	class:Base64
+decodeFrames	src/main/java/org/java_websocket/WebSocketImpl.java	/^	private void decodeFrames( ByteBuffer socketBuffer ) {$/;"	m	class:WebSocketImpl	file:
+decodeFromFile	src/main/java/org/java_websocket/util/Base64.java	/^    public static byte[] decodeFromFile( String filename )$/;"	m	class:Base64
+decodeHandshake	src/main/java/org/java_websocket/WebSocketImpl.java	/^	private boolean decodeHandshake( ByteBuffer socketBufferNew ) {$/;"	m	class:WebSocketImpl	file:
+decodeToFile	src/main/java/org/java_websocket/util/Base64.java	/^    public static void decodeToFile( String dataToDecode, String filename )$/;"	m	class:Base64
+decodeToObject	src/main/java/org/java_websocket/util/Base64.java	/^    public static Object decodeToObject( $/;"	m	class:Base64
+decodeToObject	src/main/java/org/java_websocket/util/Base64.java	/^    public static Object decodeToObject( String encodedObject )$/;"	m	class:Base64
+decoders	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	private List<WebSocketWorker> decoders;$/;"	f	class:WebSocketServer	file:
+defaultdraftlist	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public static final List<Draft> defaultdraftlist = new ArrayList<Draft>( 4 );$/;"	f	class:WebSocketImpl
+draft	src/main/java/org/java_websocket/WebSocketImpl.java	/^	private Draft draft = null;$/;"	f	class:WebSocketImpl	file:
+draft	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	private Draft draft;$/;"	f	class:WebSocketClient	file:
+drafts	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	private List<Draft> drafts;$/;"	f	class:WebSocketServer	file:
+emptyarray	src/main/java/org/java_websocket/framing/FramedataImpl1.java	/^	protected static byte[] emptyarray = {};$/;"	f	class:FramedataImpl1
+emptybuffer	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	protected static ByteBuffer emptybuffer = ByteBuffer.allocate( 0 );$/;"	f	class:SSLSocketChannel2
+emptybytebuffer	src/main/java/org/java_websocket/framing/CloseFrameBuilder.java	/^	static final ByteBuffer emptybytebuffer = ByteBuffer.allocate( 0 );$/;"	f	class:CloseFrameBuilder
+encode	src/main/java/org/java_websocket/util/Base64.java	/^        private boolean encode;         \/\/ Encoding or decoding$/;"	f	class:Base64.InputStream	file:
+encode	src/main/java/org/java_websocket/util/Base64.java	/^        private boolean encode;$/;"	f	class:Base64.OutputStream	file:
+encode	src/main/java/org/java_websocket/util/Base64.java	/^    public static void encode( java.nio.ByteBuffer raw, java.nio.ByteBuffer encoded ){$/;"	m	class:Base64
+encode	src/main/java/org/java_websocket/util/Base64.java	/^    public static void encode( java.nio.ByteBuffer raw, java.nio.CharBuffer encoded ){$/;"	m	class:Base64
+encode3to4	src/main/java/org/java_websocket/util/Base64.java	/^    private static byte[] encode3to4( $/;"	m	class:Base64	file:
+encode3to4	src/main/java/org/java_websocket/util/Base64.java	/^    private static byte[] encode3to4( byte[] b4, byte[] threeBytes, int numSigBytes, int options ) {$/;"	m	class:Base64	file:
+encodeBytes	src/main/java/org/java_websocket/util/Base64.java	/^    public static String encodeBytes( byte[] source ) {$/;"	m	class:Base64
+encodeBytes	src/main/java/org/java_websocket/util/Base64.java	/^    public static String encodeBytes( byte[] source, int off, int len ) {$/;"	m	class:Base64
+encodeBytes	src/main/java/org/java_websocket/util/Base64.java	/^    public static String encodeBytes( byte[] source, int off, int len, int options ) throws java.io.IOException {$/;"	m	class:Base64
+encodeBytes	src/main/java/org/java_websocket/util/Base64.java	/^    public static String encodeBytes( byte[] source, int options ) throws java.io.IOException {$/;"	m	class:Base64
+encodeBytesToBytes	src/main/java/org/java_websocket/util/Base64.java	/^    public static byte[] encodeBytesToBytes( byte[] source ) {$/;"	m	class:Base64
+encodeBytesToBytes	src/main/java/org/java_websocket/util/Base64.java	/^    public static byte[] encodeBytesToBytes( byte[] source, int off, int len, int options ) throws java.io.IOException {$/;"	m	class:Base64
+encodeFileToFile	src/main/java/org/java_websocket/util/Base64.java	/^    public static void encodeFileToFile( String infile, String outfile )$/;"	m	class:Base64
+encodeFromFile	src/main/java/org/java_websocket/util/Base64.java	/^    public static String encodeFromFile( String filename )$/;"	m	class:Base64
+encodeObject	src/main/java/org/java_websocket/util/Base64.java	/^    public static String encodeObject( java.io.Serializable serializableObject )$/;"	m	class:Base64
+encodeObject	src/main/java/org/java_websocket/util/Base64.java	/^    public static String encodeObject( java.io.Serializable serializableObject, int options )$/;"	m	class:Base64
+encodeToFile	src/main/java/org/java_websocket/util/Base64.java	/^    public static void encodeToFile( byte[] dataToEncode, String filename )$/;"	m	class:Base64
+engine	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	private WebSocketImpl engine = null;$/;"	f	class:WebSocketClient	file:
+eot	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public void eot() {$/;"	m	class:WebSocketImpl
+exec	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	protected ExecutorService exec;$/;"	f	class:SSLSocketChannel2
+exec	src/main/java/org/java_websocket/server/DefaultSSLWebSocketServerFactory.java	/^	protected ExecutorService exec;$/;"	f	class:DefaultSSLWebSocketServerFactory
+failed	src/main/java/org/java_websocket/drafts/Draft_76.java	/^	private boolean failed = false;$/;"	f	class:Draft_76	file:
+fin	src/main/java/org/java_websocket/framing/FramedataImpl1.java	/^	protected boolean fin;$/;"	f	class:FramedataImpl1
+finishConnect	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	public boolean finishConnect() throws IOException {$/;"	m	class:SSLSocketChannel2
+flushAndClose	src/main/java/org/java_websocket/WebSocketImpl.java	/^	protected synchronized void flushAndClose( int code, String message, boolean remote ) {$/;"	m	class:WebSocketImpl
+flushBase64	src/main/java/org/java_websocket/util/Base64.java	/^        public void flushBase64() throws java.io.IOException  {$/;"	m	class:Base64.OutputStream
+flushandclosestate	src/main/java/org/java_websocket/WebSocketImpl.java	/^	private volatile boolean flushandclosestate = false;$/;"	f	class:WebSocketImpl	file:
+fragmentedframe	src/main/java/org/java_websocket/drafts/Draft_10.java	/^	private Framedata fragmentedframe = null;$/;"	f	class:Draft_10	file:
+fromOpcode	src/main/java/org/java_websocket/drafts/Draft_10.java	/^	private byte fromOpcode( Opcode opcode ) {$/;"	m	class:Draft_10	file:
+generateFinalKey	src/main/java/org/java_websocket/drafts/Draft_10.java	/^	private String generateFinalKey( String in ) {$/;"	m	class:Draft_10	file:
+generateKey	src/main/java/org/java_websocket/drafts/Draft_76.java	/^	private static String generateKey() {$/;"	m	class:Draft_76	file:
+getAddress	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public InetSocketAddress getAddress() {$/;"	m	class:WebSocketServer
+getAlphabet	src/main/java/org/java_websocket/util/Base64.java	/^    private final static byte[] getAlphabet( int options ) {$/;"	m	class:Base64	file:
+getCloseCode	src/main/java/org/java_websocket/exceptions/InvalidDataException.java	/^	public int getCloseCode() {$/;"	m	class:InvalidDataException
+getCloseCode	src/main/java/org/java_websocket/framing/CloseFrame.java	/^	public int getCloseCode() throws InvalidFrameException;$/;"	m	interface:CloseFrame
+getCloseCode	src/main/java/org/java_websocket/framing/CloseFrameBuilder.java	/^	public int getCloseCode() {$/;"	m	class:CloseFrameBuilder
+getCloseHandshakeType	src/main/java/org/java_websocket/drafts/Draft.java	/^	public abstract CloseHandshakeType getCloseHandshakeType();$/;"	m	class:Draft
+getCloseHandshakeType	src/main/java/org/java_websocket/drafts/Draft_10.java	/^	public CloseHandshakeType getCloseHandshakeType() {$/;"	m	class:Draft_10
+getCloseHandshakeType	src/main/java/org/java_websocket/drafts/Draft_75.java	/^	public CloseHandshakeType getCloseHandshakeType() {$/;"	m	class:Draft_75
+getCloseHandshakeType	src/main/java/org/java_websocket/drafts/Draft_76.java	/^	public CloseHandshakeType getCloseHandshakeType() {$/;"	m	class:Draft_76
+getConnection	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public WebSocket getConnection() {$/;"	m	class:WebSocketClient
+getContent	src/main/java/org/java_websocket/handshake/Handshakedata.java	/^	public byte[] getContent();$/;"	m	interface:Handshakedata
+getContent	src/main/java/org/java_websocket/handshake/HandshakedataImpl1.java	/^	public byte[] getContent() {$/;"	m	class:HandshakedataImpl1
+getDecodabet	src/main/java/org/java_websocket/util/Base64.java	/^    private final static byte[] getDecodabet( int options ) {$/;"	m	class:Base64	file:
+getDraft	src/main/java/org/java_websocket/WebSocket.java	/^	public abstract Draft getDraft();$/;"	m	interface:WebSocket
+getDraft	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public Draft getDraft() {$/;"	m	class:WebSocketImpl
+getDraft	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public Draft getDraft() {$/;"	m	class:WebSocketClient
+getDraft	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public List<Draft> getDraft() {$/;"	m	class:WebSocketServer
+getFieldValue	src/main/java/org/java_websocket/handshake/Handshakedata.java	/^	public String getFieldValue(String name);$/;"	m	interface:Handshakedata
+getFieldValue	src/main/java/org/java_websocket/handshake/HandshakedataImpl1.java	/^	public String getFieldValue( String name ) {$/;"	m	class:HandshakedataImpl1
+getFlashPolicy	src/main/java/org/java_websocket/WebSocketAdapter.java	/^	public String getFlashPolicy( WebSocket conn ) throws InvalidDataException {$/;"	m	class:WebSocketAdapter
+getFlashPolicy	src/main/java/org/java_websocket/WebSocketListener.java	/^	public String getFlashPolicy(WebSocket conn) throws InvalidDataException;$/;"	m	interface:WebSocketListener
+getFlashSecurityPolicy	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	protected String getFlashSecurityPolicy() {$/;"	m	class:WebSocketServer
+getHttpStatus	src/main/java/org/java_websocket/handshake/HandshakeImpl1Server.java	/^	public short getHttpStatus() {$/;"	m	class:HandshakeImpl1Server
+getHttpStatus	src/main/java/org/java_websocket/handshake/ServerHandshake.java	/^	public short getHttpStatus();$/;"	m	interface:ServerHandshake
+getHttpStatusMessage	src/main/java/org/java_websocket/handshake/HandshakeImpl1Server.java	/^	public String getHttpStatusMessage() {$/;"	m	class:HandshakeImpl1Server
+getHttpStatusMessage	src/main/java/org/java_websocket/handshake/ServerHandshake.java	/^	public String getHttpStatusMessage();$/;"	m	interface:ServerHandshake
+getLocalSocketAddress	src/main/java/org/java_websocket/WebSocket.java	/^	public abstract InetSocketAddress getLocalSocketAddress();$/;"	m	interface:WebSocket
+getLocalSocketAddress	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public InetSocketAddress getLocalSocketAddress() {$/;"	m	class:WebSocketImpl
+getLocalSocketAddress	src/main/java/org/java_websocket/WebSocketListener.java	/^	public InetSocketAddress getLocalSocketAddress(WebSocket conn);$/;"	m	interface:WebSocketListener
+getLocalSocketAddress	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public InetSocketAddress getLocalSocketAddress( WebSocket conn ) {$/;"	m	class:WebSocketClient
+getLocalSocketAddress	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public InetSocketAddress getLocalSocketAddress() {$/;"	m	class:WebSocketClient
+getLocalSocketAddress	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public InetSocketAddress getLocalSocketAddress( WebSocket conn ) {$/;"	m	class:WebSocketServer
+getMessage	src/main/java/org/java_websocket/framing/CloseFrame.java	/^	public String getMessage() throws InvalidDataException;$/;"	m	interface:CloseFrame
+getMessage	src/main/java/org/java_websocket/framing/CloseFrameBuilder.java	/^	public String getMessage() {$/;"	m	class:CloseFrameBuilder
+getOpcode	src/main/java/org/java_websocket/framing/Framedata.java	/^	public Opcode getOpcode();$/;"	m	interface:Framedata
+getOpcode	src/main/java/org/java_websocket/framing/FramedataImpl1.java	/^	public Opcode getOpcode() {$/;"	m	class:FramedataImpl1
+getPart	src/main/java/org/java_websocket/drafts/Draft_76.java	/^	private static byte[] getPart( String key ) throws InvalidHandshakeException {$/;"	m	class:Draft_76	file:
+getPayloadData	src/main/java/org/java_websocket/framing/CloseFrameBuilder.java	/^	public ByteBuffer getPayloadData() {$/;"	m	class:CloseFrameBuilder
+getPayloadData	src/main/java/org/java_websocket/framing/Framedata.java	/^	public ByteBuffer getPayloadData();\/\/ TODO the separation of the application data and the extension data is yet to be done$/;"	m	interface:Framedata
+getPayloadData	src/main/java/org/java_websocket/framing/FramedataImpl1.java	/^	public ByteBuffer getPayloadData() {$/;"	m	class:FramedataImpl1
+getPort	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	private int getPort() {$/;"	m	class:WebSocketClient	file:
+getPort	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public int getPort() {$/;"	m	class:WebSocketServer
+getPreferedSize	src/main/java/org/java_websocket/drafts/Draft_10.java	/^		public int getPreferedSize() {$/;"	m	class:Draft_10.IncompleteException
+getPreferedSize	src/main/java/org/java_websocket/exceptions/IncompleteHandshakeException.java	/^	public int getPreferedSize() {$/;"	m	class:IncompleteHandshakeException
+getReadyState	src/main/java/org/java_websocket/WebSocket.java	/^	public abstract READYSTATE getReadyState();$/;"	m	interface:WebSocket
+getReadyState	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public READYSTATE getReadyState() {$/;"	m	class:WebSocketImpl
+getReadyState	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public READYSTATE getReadyState() {$/;"	m	class:WebSocketClient
+getRemoteSocketAddress	src/main/java/org/java_websocket/WebSocket.java	/^	public abstract InetSocketAddress getRemoteSocketAddress();$/;"	m	interface:WebSocket
+getRemoteSocketAddress	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public InetSocketAddress getRemoteSocketAddress() {$/;"	m	class:WebSocketImpl
+getRemoteSocketAddress	src/main/java/org/java_websocket/WebSocketListener.java	/^	public InetSocketAddress getRemoteSocketAddress(WebSocket conn);$/;"	m	interface:WebSocketListener
+getRemoteSocketAddress	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public InetSocketAddress getRemoteSocketAddress( WebSocket conn ) {$/;"	m	class:WebSocketClient
+getRemoteSocketAddress	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public InetSocketAddress getRemoteSocketAddress() {$/;"	m	class:WebSocketClient
+getRemoteSocketAddress	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public InetSocketAddress getRemoteSocketAddress( WebSocket conn ) {$/;"	m	class:WebSocketServer
+getResourceDescriptor	src/main/java/org/java_websocket/WebSocket.java	/^	public abstract String getResourceDescriptor();$/;"	m	interface:WebSocket
+getResourceDescriptor	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public String getResourceDescriptor() {$/;"	m	class:WebSocketImpl
+getResourceDescriptor	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public String getResourceDescriptor() {$/;"	m	class:WebSocketClient
+getResourceDescriptor	src/main/java/org/java_websocket/handshake/ClientHandshake.java	/^	public String getResourceDescriptor();$/;"	m	interface:ClientHandshake
+getResourceDescriptor	src/main/java/org/java_websocket/handshake/HandshakeImpl1Client.java	/^	public String getResourceDescriptor() {$/;"	m	class:HandshakeImpl1Client
+getRole	src/main/java/org/java_websocket/drafts/Draft.java	/^	public Role getRole() {$/;"	m	class:Draft
+getSocket	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	private Socket getSocket( WebSocket conn ) {$/;"	m	class:WebSocketServer	file:
+getTransfereMasked	src/main/java/org/java_websocket/framing/Framedata.java	/^	public boolean getTransfereMasked();$/;"	m	interface:Framedata
+getTransfereMasked	src/main/java/org/java_websocket/framing/FramedataImpl1.java	/^	public boolean getTransfereMasked() {$/;"	m	class:FramedataImpl1
+getURI	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public URI getURI() {$/;"	m	class:WebSocketClient
+getWebSocketFactory	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public final WebSocketFactory getWebSocketFactory() {$/;"	m	class:WebSocketServer
+handleFatal	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	private void handleFatal( WebSocket conn, Exception e ) {$/;"	m	class:WebSocketServer	file:
+handleIOException	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	private void handleIOException( SelectionKey key, WebSocket conn, IOException ex ) {$/;"	m	class:WebSocketServer	file:
+handshakerequest	src/main/java/org/java_websocket/WebSocketImpl.java	/^	private ClientHandshake handshakerequest = null;$/;"	f	class:WebSocketImpl	file:
+hasBufferedData	src/main/java/org/java_websocket/WebSocket.java	/^	public abstract boolean hasBufferedData();$/;"	m	interface:WebSocket
+hasBufferedData	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public boolean hasBufferedData() {$/;"	m	class:WebSocketImpl
+hasBufferedData	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public boolean hasBufferedData() {$/;"	m	class:WebSocketClient
+hasFieldValue	src/main/java/org/java_websocket/handshake/Handshakedata.java	/^	public boolean hasFieldValue(String name);$/;"	m	interface:Handshakedata
+hasFieldValue	src/main/java/org/java_websocket/handshake/HandshakedataImpl1.java	/^	public boolean hasFieldValue( String name ) {$/;"	m	class:HandshakedataImpl1
+hashCode	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public int hashCode() {$/;"	m	class:WebSocketImpl
+headers	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	private Map<String,String> headers;$/;"	f	class:WebSocketClient	file:
+httpstatus	src/main/java/org/java_websocket/handshake/HandshakeImpl1Server.java	/^	private short httpstatus;$/;"	f	class:HandshakeImpl1Server	file:
+httpstatusmessage	src/main/java/org/java_websocket/handshake/HandshakeImpl1Server.java	/^	private String httpstatusmessage;$/;"	f	class:HandshakeImpl1Server	file:
+inCrypt	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	protected ByteBuffer inCrypt;$/;"	f	class:SSLSocketChannel2
+inData	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	protected ByteBuffer inData;$/;"	f	class:SSLSocketChannel2
+inQueue	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public final BlockingQueue<ByteBuffer> inQueue;$/;"	f	class:WebSocketImpl
+incompleteframe	src/main/java/org/java_websocket/drafts/Draft_10.java	/^	private ByteBuffer incompleteframe;$/;"	f	class:Draft_10	file:
+increaseBuffer	src/main/java/org/java_websocket/drafts/Draft_75.java	/^	public ByteBuffer increaseBuffer( ByteBuffer full ) throws LimitExedeedException , InvalidDataException {$/;"	m	class:Draft_75
+initCloseCode	src/main/java/org/java_websocket/framing/CloseFrameBuilder.java	/^	private void initCloseCode() throws InvalidFrameException {$/;"	m	class:CloseFrameBuilder	file:
+initMessage	src/main/java/org/java_websocket/framing/CloseFrameBuilder.java	/^	private void initMessage() throws InvalidDataException {$/;"	m	class:CloseFrameBuilder	file:
+iqueue	src/main/java/org/java_websocket/server/WebSocketServer.java	/^		private BlockingQueue<WebSocketImpl> iqueue;$/;"	f	class:WebSocketServer.WebSocketWorker	file:
+iqueue	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	private List<WebSocketImpl> iqueue;$/;"	f	class:WebSocketServer	file:
+isBlocking	src/main/java/org/java_websocket/AbstractWrappedByteChannel.java	/^	public boolean isBlocking() {$/;"	m	class:AbstractWrappedByteChannel
+isBlocking	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	public boolean isBlocking() {$/;"	m	class:SSLSocketChannel2
+isBlocking	src/main/java/org/java_websocket/WrappedByteChannel.java	/^	public boolean isBlocking();$/;"	m	interface:WrappedByteChannel
+isClosed	src/main/java/org/java_websocket/WebSocket.java	/^	public abstract boolean isClosed();$/;"	m	interface:WebSocket
+isClosed	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public boolean isClosed() {$/;"	m	class:WebSocketImpl
+isClosed	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public boolean isClosed() {$/;"	m	class:WebSocketClient
+isClosing	src/main/java/org/java_websocket/WebSocket.java	/^	public abstract boolean isClosing();$/;"	m	interface:WebSocket
+isClosing	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public boolean isClosing() {$/;"	m	class:WebSocketImpl
+isClosing	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public boolean isClosing() {$/;"	m	class:WebSocketClient
+isConnected	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	public boolean isConnected() {$/;"	m	class:SSLSocketChannel2
+isConnecting	src/main/java/org/java_websocket/WebSocket.java	/^	public abstract boolean isConnecting();$/;"	m	interface:WebSocket
+isConnecting	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public boolean isConnecting() {$/;"	m	class:WebSocketImpl
+isConnecting	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public boolean isConnecting() {$/;"	m	class:WebSocketClient
+isFin	src/main/java/org/java_websocket/framing/Framedata.java	/^	public boolean isFin();$/;"	m	interface:Framedata
+isFin	src/main/java/org/java_websocket/framing/FramedataImpl1.java	/^	public boolean isFin() {$/;"	m	class:FramedataImpl1
+isFlashEdgeCase	src/main/java/org/java_websocket/WebSocketImpl.java	/^	private HandshakeState isFlashEdgeCase( ByteBuffer request ) throws IncompleteHandshakeException {$/;"	m	class:WebSocketImpl	file:
+isFlushAndClose	src/main/java/org/java_websocket/WebSocket.java	/^	public abstract boolean isFlushAndClose();$/;"	m	interface:WebSocket
+isFlushAndClose	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public boolean isFlushAndClose() {$/;"	m	class:WebSocketImpl
+isFlushAndClose	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public boolean isFlushAndClose() {$/;"	m	class:WebSocketClient
+isHandShakeComplete	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	private boolean isHandShakeComplete() {$/;"	m	class:SSLSocketChannel2	file:
+isInboundDone	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	public boolean isInboundDone() {$/;"	m	class:SSLSocketChannel2
+isNeedRead	src/main/java/org/java_websocket/AbstractWrappedByteChannel.java	/^	public boolean isNeedRead() {$/;"	m	class:AbstractWrappedByteChannel
+isNeedRead	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	public boolean isNeedRead() {$/;"	m	class:SSLSocketChannel2
+isNeedRead	src/main/java/org/java_websocket/WrappedByteChannel.java	/^	public boolean isNeedRead();$/;"	m	interface:WrappedByteChannel
+isNeedWrite	src/main/java/org/java_websocket/AbstractWrappedByteChannel.java	/^	public boolean isNeedWrite() {$/;"	m	class:AbstractWrappedByteChannel
+isNeedWrite	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	public boolean isNeedWrite() {$/;"	m	class:SSLSocketChannel2
+isNeedWrite	src/main/java/org/java_websocket/WrappedByteChannel.java	/^	public boolean isNeedWrite();$/;"	m	interface:WrappedByteChannel
+isOpen	src/main/java/org/java_websocket/AbstractWrappedByteChannel.java	/^	public boolean isOpen() {$/;"	m	class:AbstractWrappedByteChannel
+isOpen	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	public boolean isOpen() {$/;"	m	class:SSLSocketChannel2
+isOpen	src/main/java/org/java_websocket/WebSocket.java	/^	public abstract boolean isOpen();$/;"	m	interface:WebSocket
+isOpen	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public boolean isOpen() {$/;"	m	class:WebSocketImpl
+isOpen	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public boolean isOpen() {$/;"	m	class:WebSocketClient
+isclosed	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	private volatile AtomicBoolean isclosed = new AtomicBoolean( false );$/;"	f	class:WebSocketServer	file:
+istream	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	private InputStream istream;$/;"	f	class:WebSocketClient	file:
+iterateHttpFields	src/main/java/org/java_websocket/handshake/Handshakedata.java	/^	public Iterator<String> iterateHttpFields();$/;"	m	interface:Handshakedata
+iterateHttpFields	src/main/java/org/java_websocket/handshake/HandshakedataImpl1.java	/^	public Iterator<String> iterateHttpFields() {$/;"	m	class:HandshakedataImpl1
+key	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public SelectionKey key;$/;"	f	class:WebSocketImpl
+knownDrafts	src/main/java/org/java_websocket/WebSocketImpl.java	/^	private List<Draft> knownDrafts;$/;"	f	class:WebSocketImpl	file:
+lineLength	src/main/java/org/java_websocket/util/Base64.java	/^        private int     lineLength;$/;"	f	class:Base64.InputStream	file:
+lineLength	src/main/java/org/java_websocket/util/Base64.java	/^        private int     lineLength;$/;"	f	class:Base64.OutputStream	file:
+main	src/main/java/org/java_websocket/util/Charsetfunctions.java	/^	public static void main( String[] args ) throws InvalidDataException {$/;"	m	class:Charsetfunctions
+map	src/main/java/org/java_websocket/handshake/HandshakedataImpl1.java	/^	private TreeMap<String,String> map;$/;"	f	class:HandshakedataImpl1	file:
+newsize	src/main/java/org/java_websocket/exceptions/IncompleteHandshakeException.java	/^	private int newsize;$/;"	f	class:IncompleteHandshakeException	file:
+numSigBytes	src/main/java/org/java_websocket/util/Base64.java	/^        private int     numSigBytes;    \/\/ Number of meaningful bytes in the buffer$/;"	f	class:Base64.InputStream	file:
+onClose	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public abstract void onClose( int code, String reason, boolean remote );$/;"	m	class:WebSocketClient
+onClose	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public abstract void onClose( WebSocket conn, int code, String reason, boolean remote );$/;"	m	class:WebSocketServer
+onCloseInitiated	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public void onCloseInitiated( int code, String reason ) {$/;"	m	class:WebSocketClient
+onCloseInitiated	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public void onCloseInitiated( WebSocket conn, int code, String reason ) {$/;"	m	class:WebSocketServer
+onClosing	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public void onClosing( int code, String reason, boolean remote ) {$/;"	m	class:WebSocketClient
+onClosing	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public void onClosing( WebSocket conn, int code, String reason, boolean remote ) {$/;"	m	class:WebSocketServer
+onConnect	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	protected boolean onConnect( SelectionKey key ) {$/;"	m	class:WebSocketServer
+onError	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public abstract void onError( Exception ex );$/;"	m	class:WebSocketClient
+onError	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public abstract void onError( WebSocket conn, Exception ex );$/;"	m	class:WebSocketServer
+onFragment	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public void onFragment( Framedata frame ) {$/;"	m	class:WebSocketClient
+onFragment	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public void onFragment( WebSocket conn, Framedata fragment ) {$/;"	m	class:WebSocketServer
+onMessage	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public abstract void onMessage( String message );$/;"	m	class:WebSocketClient
+onMessage	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public void onMessage( ByteBuffer bytes ) {$/;"	m	class:WebSocketClient
+onMessage	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public abstract void onMessage( WebSocket conn, String message );$/;"	m	class:WebSocketServer
+onMessage	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public void onMessage( WebSocket conn, ByteBuffer message ) {$/;"	m	class:WebSocketServer
+onOpen	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public abstract void onOpen( ServerHandshake handshakedata );$/;"	m	class:WebSocketClient
+onOpen	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public abstract void onOpen( WebSocket conn, ClientHandshake handshake );$/;"	m	class:WebSocketServer
+onWebsocketClose	src/main/java/org/java_websocket/WebSocketListener.java	/^	public void onWebsocketClose(WebSocket ws, int code, String reason, boolean remote);$/;"	m	interface:WebSocketListener
+onWebsocketClose	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public final void onWebsocketClose( WebSocket conn, int code, String reason, boolean remote ) {$/;"	m	class:WebSocketClient
+onWebsocketClose	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public final void onWebsocketClose( WebSocket conn, int code, String reason, boolean remote ) {$/;"	m	class:WebSocketServer
+onWebsocketCloseInitiated	src/main/java/org/java_websocket/WebSocketListener.java	/^	public void onWebsocketCloseInitiated(WebSocket ws, int code, String reason);$/;"	m	interface:WebSocketListener
+onWebsocketCloseInitiated	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public void onWebsocketCloseInitiated( WebSocket conn, int code, String reason ) {$/;"	m	class:WebSocketClient
+onWebsocketCloseInitiated	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public void onWebsocketCloseInitiated( WebSocket conn, int code, String reason ) {$/;"	m	class:WebSocketServer
+onWebsocketClosing	src/main/java/org/java_websocket/WebSocketListener.java	/^	public void onWebsocketClosing(WebSocket ws, int code, String reason, boolean remote);$/;"	m	interface:WebSocketListener
+onWebsocketClosing	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public void onWebsocketClosing( WebSocket conn, int code, String reason, boolean remote ) {$/;"	m	class:WebSocketClient
+onWebsocketClosing	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public void onWebsocketClosing( WebSocket conn, int code, String reason, boolean remote ) {$/;"	m	class:WebSocketServer
+onWebsocketError	src/main/java/org/java_websocket/WebSocketListener.java	/^	public void onWebsocketError(WebSocket conn, Exception ex);$/;"	m	interface:WebSocketListener
+onWebsocketError	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public final void onWebsocketError( WebSocket conn, Exception ex ) {$/;"	m	class:WebSocketClient
+onWebsocketError	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public final void onWebsocketError( WebSocket conn, Exception ex ) {$/;"	m	class:WebSocketServer
+onWebsocketHandshakeReceivedAsClient	src/main/java/org/java_websocket/WebSocketAdapter.java	/^	public void onWebsocketHandshakeReceivedAsClient( WebSocket conn, ClientHandshake request, ServerHandshake response ) throws InvalidDataException {$/;"	m	class:WebSocketAdapter
+onWebsocketHandshakeReceivedAsClient	src/main/java/org/java_websocket/WebSocketListener.java	/^	public void onWebsocketHandshakeReceivedAsClient(WebSocket conn, ClientHandshake request, ServerHandshake response) throws InvalidDataException;$/;"	m	interface:WebSocketListener
+onWebsocketHandshakeReceivedAsServer	src/main/java/org/java_websocket/WebSocketAdapter.java	/^	public ServerHandshakeBuilder onWebsocketHandshakeReceivedAsServer( WebSocket conn, Draft draft, ClientHandshake request ) throws InvalidDataException {$/;"	m	class:WebSocketAdapter
+onWebsocketHandshakeReceivedAsServer	src/main/java/org/java_websocket/WebSocketListener.java	/^	public ServerHandshakeBuilder onWebsocketHandshakeReceivedAsServer(WebSocket conn, Draft draft, ClientHandshake request) throws InvalidDataException;$/;"	m	interface:WebSocketListener
+onWebsocketHandshakeReceivedAsServer	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public ServerHandshakeBuilder onWebsocketHandshakeReceivedAsServer( WebSocket conn, Draft draft, ClientHandshake request ) throws InvalidDataException {$/;"	m	class:WebSocketServer
+onWebsocketHandshakeSentAsClient	src/main/java/org/java_websocket/WebSocketAdapter.java	/^	public void onWebsocketHandshakeSentAsClient( WebSocket conn, ClientHandshake request ) throws InvalidDataException {$/;"	m	class:WebSocketAdapter
+onWebsocketHandshakeSentAsClient	src/main/java/org/java_websocket/WebSocketListener.java	/^	public void onWebsocketHandshakeSentAsClient(WebSocket conn, ClientHandshake request) throws InvalidDataException;$/;"	m	interface:WebSocketListener
+onWebsocketMessage	src/main/java/org/java_websocket/WebSocketListener.java	/^	public void onWebsocketMessage(WebSocket conn, ByteBuffer blob);$/;"	m	interface:WebSocketListener
+onWebsocketMessage	src/main/java/org/java_websocket/WebSocketListener.java	/^	public void onWebsocketMessage(WebSocket conn, String message);$/;"	m	interface:WebSocketListener
+onWebsocketMessage	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public final void onWebsocketMessage( WebSocket conn, ByteBuffer blob ) {$/;"	m	class:WebSocketClient
+onWebsocketMessage	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public final void onWebsocketMessage( WebSocket conn, String message ) {$/;"	m	class:WebSocketClient
+onWebsocketMessage	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public final void onWebsocketMessage( WebSocket conn, ByteBuffer blob ) {$/;"	m	class:WebSocketServer
+onWebsocketMessage	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public final void onWebsocketMessage( WebSocket conn, String message ) {$/;"	m	class:WebSocketServer
+onWebsocketMessageFragment	src/main/java/org/java_websocket/WebSocketAdapter.java	/^	public void onWebsocketMessageFragment( WebSocket conn, Framedata frame ) {$/;"	m	class:WebSocketAdapter
+onWebsocketMessageFragment	src/main/java/org/java_websocket/WebSocketListener.java	/^	public void onWebsocketMessageFragment(WebSocket conn, Framedata frame);$/;"	m	interface:WebSocketListener
+onWebsocketMessageFragment	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public void onWebsocketMessageFragment( WebSocket conn, Framedata frame ) {$/;"	m	class:WebSocketClient
+onWebsocketMessageFragment	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public\/*final*\/void onWebsocketMessageFragment( WebSocket conn, Framedata frame ) {\/\/ onFragment should be overloaded instead$/;"	m	class:WebSocketServer
+onWebsocketOpen	src/main/java/org/java_websocket/WebSocketListener.java	/^	public void onWebsocketOpen(WebSocket conn, Handshakedata d);$/;"	m	interface:WebSocketListener
+onWebsocketOpen	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public final void onWebsocketOpen( WebSocket conn, Handshakedata handshake ) {$/;"	m	class:WebSocketClient
+onWebsocketOpen	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public final void onWebsocketOpen( WebSocket conn, Handshakedata handshake ) {$/;"	m	class:WebSocketServer
+onWebsocketPing	src/main/java/org/java_websocket/WebSocketAdapter.java	/^	public void onWebsocketPing( WebSocket conn, Framedata f ) {$/;"	m	class:WebSocketAdapter
+onWebsocketPing	src/main/java/org/java_websocket/WebSocketListener.java	/^	public void onWebsocketPing(WebSocket conn, Framedata f);$/;"	m	interface:WebSocketListener
+onWebsocketPong	src/main/java/org/java_websocket/WebSocketAdapter.java	/^	public void onWebsocketPong( WebSocket conn, Framedata f ) {$/;"	m	class:WebSocketAdapter
+onWebsocketPong	src/main/java/org/java_websocket/WebSocketListener.java	/^	public void onWebsocketPong(WebSocket conn, Framedata f);$/;"	m	interface:WebSocketListener
+onWriteDemand	src/main/java/org/java_websocket/WebSocketListener.java	/^	public void onWriteDemand(WebSocket conn);$/;"	m	interface:WebSocketListener
+onWriteDemand	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public final void onWriteDemand( WebSocket conn ) {$/;"	m	class:WebSocketClient
+onWriteDemand	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public final void onWriteDemand( WebSocket w ) {$/;"	m	class:WebSocketServer
+open	src/main/java/org/java_websocket/WebSocketImpl.java	/^	private void open( Handshakedata d ) {$/;"	m	class:WebSocketImpl	file:
+optcode	src/main/java/org/java_websocket/framing/FramedataImpl1.java	/^	protected Opcode optcode;$/;"	f	class:FramedataImpl1
+options	src/main/java/org/java_websocket/util/Base64.java	/^        private int     options;        \/\/ Record options used to create the stream.$/;"	f	class:Base64.InputStream	file:
+options	src/main/java/org/java_websocket/util/Base64.java	/^        private int     options;    \/\/ Record for later$/;"	f	class:Base64.OutputStream	file:
+org.java_websocket	src/main/java/org/java_websocket/AbstractWrappedByteChannel.java	/^package org.java_websocket;$/;"	p
+org.java_websocket	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^package org.java_websocket;$/;"	p
+org.java_websocket	src/main/java/org/java_websocket/SocketChannelIOHelper.java	/^package org.java_websocket;$/;"	p
+org.java_websocket	src/main/java/org/java_websocket/WebSocket.java	/^package org.java_websocket;$/;"	p
+org.java_websocket	src/main/java/org/java_websocket/WebSocketAdapter.java	/^package org.java_websocket;$/;"	p
+org.java_websocket	src/main/java/org/java_websocket/WebSocketFactory.java	/^package org.java_websocket;$/;"	p
+org.java_websocket	src/main/java/org/java_websocket/WebSocketImpl.java	/^package org.java_websocket;$/;"	p
+org.java_websocket	src/main/java/org/java_websocket/WebSocketListener.java	/^package org.java_websocket;$/;"	p
+org.java_websocket	src/main/java/org/java_websocket/WrappedByteChannel.java	/^package org.java_websocket;$/;"	p
+org.java_websocket.client	src/main/java/org/java_websocket/client/AbstractClientProxyChannel.java	/^package org.java_websocket.client;$/;"	p
+org.java_websocket.client	src/main/java/org/java_websocket/client/WebSocketClient.java	/^package org.java_websocket.client;$/;"	p
+org.java_websocket.drafts	src/main/java/org/java_websocket/drafts/Draft.java	/^package org.java_websocket.drafts;$/;"	p
+org.java_websocket.drafts	src/main/java/org/java_websocket/drafts/Draft_10.java	/^package org.java_websocket.drafts;$/;"	p
+org.java_websocket.drafts	src/main/java/org/java_websocket/drafts/Draft_17.java	/^package org.java_websocket.drafts;$/;"	p
+org.java_websocket.drafts	src/main/java/org/java_websocket/drafts/Draft_75.java	/^package org.java_websocket.drafts;$/;"	p
+org.java_websocket.drafts	src/main/java/org/java_websocket/drafts/Draft_76.java	/^package org.java_websocket.drafts;$/;"	p
+org.java_websocket.exceptions	src/main/java/org/java_websocket/exceptions/IncompleteHandshakeException.java	/^package org.java_websocket.exceptions;$/;"	p
+org.java_websocket.exceptions	src/main/java/org/java_websocket/exceptions/InvalidDataException.java	/^package org.java_websocket.exceptions;$/;"	p
+org.java_websocket.exceptions	src/main/java/org/java_websocket/exceptions/InvalidFrameException.java	/^package org.java_websocket.exceptions;$/;"	p
+org.java_websocket.exceptions	src/main/java/org/java_websocket/exceptions/InvalidHandshakeException.java	/^package org.java_websocket.exceptions;$/;"	p
+org.java_websocket.exceptions	src/main/java/org/java_websocket/exceptions/LimitExedeedException.java	/^package org.java_websocket.exceptions;$/;"	p
+org.java_websocket.exceptions	src/main/java/org/java_websocket/exceptions/NotSendableException.java	/^package org.java_websocket.exceptions;$/;"	p
+org.java_websocket.exceptions	src/main/java/org/java_websocket/exceptions/WebsocketNotConnectedException.java	/^package org.java_websocket.exceptions;$/;"	p
+org.java_websocket.framing	src/main/java/org/java_websocket/framing/CloseFrame.java	/^package org.java_websocket.framing;$/;"	p
+org.java_websocket.framing	src/main/java/org/java_websocket/framing/CloseFrameBuilder.java	/^package org.java_websocket.framing;$/;"	p
+org.java_websocket.framing	src/main/java/org/java_websocket/framing/FrameBuilder.java	/^package org.java_websocket.framing;$/;"	p
+org.java_websocket.framing	src/main/java/org/java_websocket/framing/Framedata.java	/^package org.java_websocket.framing;$/;"	p
+org.java_websocket.framing	src/main/java/org/java_websocket/framing/FramedataImpl1.java	/^package org.java_websocket.framing;$/;"	p
+org.java_websocket.handshake	src/main/java/org/java_websocket/handshake/ClientHandshake.java	/^package org.java_websocket.handshake;$/;"	p
+org.java_websocket.handshake	src/main/java/org/java_websocket/handshake/ClientHandshakeBuilder.java	/^package org.java_websocket.handshake;$/;"	p
+org.java_websocket.handshake	src/main/java/org/java_websocket/handshake/HandshakeBuilder.java	/^package org.java_websocket.handshake;$/;"	p
+org.java_websocket.handshake	src/main/java/org/java_websocket/handshake/HandshakeImpl1Client.java	/^package org.java_websocket.handshake;$/;"	p
+org.java_websocket.handshake	src/main/java/org/java_websocket/handshake/HandshakeImpl1Server.java	/^package org.java_websocket.handshake;$/;"	p
+org.java_websocket.handshake	src/main/java/org/java_websocket/handshake/Handshakedata.java	/^package org.java_websocket.handshake;$/;"	p
+org.java_websocket.handshake	src/main/java/org/java_websocket/handshake/HandshakedataImpl1.java	/^package org.java_websocket.handshake;$/;"	p
+org.java_websocket.handshake	src/main/java/org/java_websocket/handshake/ServerHandshake.java	/^package org.java_websocket.handshake;$/;"	p
+org.java_websocket.handshake	src/main/java/org/java_websocket/handshake/ServerHandshakeBuilder.java	/^package org.java_websocket.handshake;$/;"	p
+org.java_websocket.server	src/main/java/org/java_websocket/server/DefaultSSLWebSocketServerFactory.java	/^package org.java_websocket.server;$/;"	p
+org.java_websocket.server	src/main/java/org/java_websocket/server/DefaultWebSocketServerFactory.java	/^package org.java_websocket.server;$/;"	p
+org.java_websocket.server	src/main/java/org/java_websocket/server/WebSocketServer.java	/^package org.java_websocket.server;$/;"	p
+org.java_websocket.util	src/main/java/org/java_websocket/util/Base64.java	/^package org.java_websocket.util;$/;"	p
+org.java_websocket.util	src/main/java/org/java_websocket/util/Charsetfunctions.java	/^package org.java_websocket.util;$/;"	p
+ostream	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	private OutputStream ostream;$/;"	f	class:WebSocketClient	file:
+outCrypt	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	protected ByteBuffer outCrypt;$/;"	f	class:SSLSocketChannel2
+outQueue	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public final BlockingQueue<ByteBuffer> outQueue;$/;"	f	class:WebSocketImpl
+ping	src/main/java/org/java_websocket/WebSocket.java	/^   public abstract void ping(String text);$/;"	m	interface:WebSocket
+ping	src/main/java/org/java_websocket/WebSocketImpl.java	/^   public void ping(String text) {$/;"	m	class:WebSocketImpl
+ping	src/main/java/org/java_websocket/client/WebSocketClient.java	/^    public void ping( String text ) throws NotYetConnectedException {$/;"	m	class:WebSocketClient
+position	src/main/java/org/java_websocket/util/Base64.java	/^        private int     position;       \/\/ Current position in the buffer$/;"	f	class:Base64.InputStream	file:
+position	src/main/java/org/java_websocket/util/Base64.java	/^        private int     position;$/;"	f	class:Base64.OutputStream	file:
+postProcessHandshakeRequestAsClient	src/main/java/org/java_websocket/drafts/Draft.java	/^	public abstract ClientHandshakeBuilder postProcessHandshakeRequestAsClient( ClientHandshakeBuilder request ) throws InvalidHandshakeException;$/;"	m	class:Draft
+postProcessHandshakeRequestAsClient	src/main/java/org/java_websocket/drafts/Draft_10.java	/^	public ClientHandshakeBuilder postProcessHandshakeRequestAsClient( ClientHandshakeBuilder request ) {$/;"	m	class:Draft_10
+postProcessHandshakeRequestAsClient	src/main/java/org/java_websocket/drafts/Draft_17.java	/^	public ClientHandshakeBuilder postProcessHandshakeRequestAsClient( ClientHandshakeBuilder request ) {$/;"	m	class:Draft_17
+postProcessHandshakeRequestAsClient	src/main/java/org/java_websocket/drafts/Draft_75.java	/^	public ClientHandshakeBuilder postProcessHandshakeRequestAsClient( ClientHandshakeBuilder request ) throws InvalidHandshakeException {$/;"	m	class:Draft_75
+postProcessHandshakeRequestAsClient	src/main/java/org/java_websocket/drafts/Draft_76.java	/^	public ClientHandshakeBuilder postProcessHandshakeRequestAsClient( ClientHandshakeBuilder request ) {$/;"	m	class:Draft_76
+postProcessHandshakeResponseAsServer	src/main/java/org/java_websocket/drafts/Draft.java	/^	public abstract HandshakeBuilder postProcessHandshakeResponseAsServer( ClientHandshake request, ServerHandshakeBuilder response ) throws InvalidHandshakeException;$/;"	m	class:Draft
+postProcessHandshakeResponseAsServer	src/main/java/org/java_websocket/drafts/Draft_10.java	/^	public HandshakeBuilder postProcessHandshakeResponseAsServer( ClientHandshake request, ServerHandshakeBuilder response ) throws InvalidHandshakeException {$/;"	m	class:Draft_10
+postProcessHandshakeResponseAsServer	src/main/java/org/java_websocket/drafts/Draft_75.java	/^	public HandshakeBuilder postProcessHandshakeResponseAsServer( ClientHandshake request, ServerHandshakeBuilder response ) throws InvalidHandshakeException {$/;"	m	class:Draft_75
+postProcessHandshakeResponseAsServer	src/main/java/org/java_websocket/drafts/Draft_76.java	/^	public HandshakeBuilder postProcessHandshakeResponseAsServer( ClientHandshake request, ServerHandshakeBuilder response ) throws InvalidHandshakeException {$/;"	m	class:Draft_76
+preferedsize	src/main/java/org/java_websocket/drafts/Draft_10.java	/^		private int preferedsize;$/;"	f	class:Draft_10.IncompleteException	file:
+processHandshake	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	private synchronized void processHandshake() throws IOException {$/;"	m	class:SSLSocketChannel2	file:
+proxy	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	private Proxy proxy = Proxy.NO_PROXY;$/;"	f	class:WebSocketClient	file:
+proxyHandshake	src/main/java/org/java_websocket/client/AbstractClientProxyChannel.java	/^	protected final ByteBuffer proxyHandshake;$/;"	f	class:AbstractClientProxyChannel
+pushBuffer	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	private void pushBuffer( ByteBuffer buf ) throws InterruptedException {$/;"	m	class:WebSocketServer	file:
+put	src/main/java/org/java_websocket/handshake/HandshakeBuilder.java	/^	public abstract void put(String name, String value);$/;"	m	interface:HandshakeBuilder
+put	src/main/java/org/java_websocket/handshake/HandshakedataImpl1.java	/^	public void put( String name, String value ) {$/;"	m	class:HandshakedataImpl1
+put	src/main/java/org/java_websocket/server/WebSocketServer.java	/^		public void put( WebSocketImpl ws ) throws InterruptedException {$/;"	m	class:WebSocketServer.WebSocketWorker
+queue	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	private void queue( WebSocketImpl ws ) throws InterruptedException {$/;"	m	class:WebSocketServer	file:
+queueinvokes	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	private int queueinvokes = 0;$/;"	f	class:WebSocketServer	file:
+queuesize	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	private AtomicInteger queuesize = new AtomicInteger( 0 );$/;"	f	class:WebSocketServer	file:
+read	src/main/java/org/java_websocket/AbstractWrappedByteChannel.java	/^	public int read( ByteBuffer dst ) throws IOException {$/;"	m	class:AbstractWrappedByteChannel
+read	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	public int read( ByteBuffer dst ) throws IOException {$/;"	m	class:SSLSocketChannel2
+read	src/main/java/org/java_websocket/SocketChannelIOHelper.java	/^	public static boolean read( final ByteBuffer buf, WebSocketImpl ws, ByteChannel channel ) throws IOException {$/;"	m	class:SocketChannelIOHelper
+read	src/main/java/org/java_websocket/util/Base64.java	/^        public int read( byte[] dest, int off, int len ) $/;"	m	class:Base64.InputStream
+read	src/main/java/org/java_websocket/util/Base64.java	/^        public int read() throws java.io.IOException  {$/;"	m	class:Base64.InputStream
+readEngineResult	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	protected SSLEngineResult readEngineResult;$/;"	f	class:SSLSocketChannel2
+readLine	src/main/java/org/java_websocket/drafts/Draft.java	/^	public static ByteBuffer readLine( ByteBuffer buf ) {$/;"	m	class:Draft
+readMore	src/main/java/org/java_websocket/AbstractWrappedByteChannel.java	/^	public int readMore( ByteBuffer dst ) throws SSLException {$/;"	m	class:AbstractWrappedByteChannel
+readMore	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	public int readMore( ByteBuffer dst ) throws SSLException {$/;"	m	class:SSLSocketChannel2
+readMore	src/main/java/org/java_websocket/SocketChannelIOHelper.java	/^	public static boolean readMore( final ByteBuffer buf, WebSocketImpl ws, WrappedByteChannel channel ) throws IOException {$/;"	m	class:SocketChannelIOHelper
+readMore	src/main/java/org/java_websocket/WrappedByteChannel.java	/^	public int readMore(ByteBuffer dst) throws SSLException;$/;"	m	interface:WrappedByteChannel
+readRemaining	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	private int readRemaining( ByteBuffer dst ) throws SSLException {$/;"	m	class:SSLSocketChannel2	file:
+readStringLine	src/main/java/org/java_websocket/drafts/Draft.java	/^	public static String readStringLine( ByteBuffer buf ) {$/;"	m	class:Draft
+readVersion	src/main/java/org/java_websocket/drafts/Draft_10.java	/^	public static int readVersion( Handshakedata handshakedata ) {$/;"	m	class:Draft_10
+readingState	src/main/java/org/java_websocket/drafts/Draft_75.java	/^	protected boolean readingState = false;$/;"	f	class:Draft_75
+readyframes	src/main/java/org/java_websocket/drafts/Draft_75.java	/^	protected List<Framedata> readyframes = new LinkedList<Framedata>();$/;"	f	class:Draft_75
+readystate	src/main/java/org/java_websocket/WebSocketImpl.java	/^	private READYSTATE readystate = READYSTATE.NOT_YET_CONNECTED;$/;"	f	class:WebSocketImpl	file:
+reason	src/main/java/org/java_websocket/framing/CloseFrameBuilder.java	/^	private String reason;$/;"	f	class:CloseFrameBuilder	file:
+releaseBuffers	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	protected void releaseBuffers( WebSocket c ) throws InterruptedException {$/;"	m	class:WebSocketServer
+removeConnection	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	protected boolean removeConnection( WebSocket ws ) {$/;"	m	class:WebSocketServer
+reset	src/main/java/org/java_websocket/drafts/Draft.java	/^	public abstract void reset();$/;"	m	class:Draft
+reset	src/main/java/org/java_websocket/drafts/Draft_10.java	/^	public void reset() {$/;"	m	class:Draft_10
+reset	src/main/java/org/java_websocket/drafts/Draft_75.java	/^	public void reset() {$/;"	m	class:Draft_75
+resourceDescriptor	src/main/java/org/java_websocket/WebSocketImpl.java	/^	private String resourceDescriptor = null;$/;"	f	class:WebSocketImpl	file:
+resourceDescriptor	src/main/java/org/java_websocket/handshake/HandshakeImpl1Client.java	/^	private String resourceDescriptor = "*";$/;"	f	class:HandshakeImpl1Client	file:
+resumeEncoding	src/main/java/org/java_websocket/util/Base64.java	/^        public void resumeEncoding() {$/;"	m	class:Base64.OutputStream
+reuseableRandom	src/main/java/org/java_websocket/drafts/Draft_10.java	/^	private final Random reuseableRandom = new Random();$/;"	f	class:Draft_10	file:
+reuseableRandom	src/main/java/org/java_websocket/drafts/Draft_75.java	/^	private final Random reuseableRandom = new Random();$/;"	f	class:Draft_75	file:
+reuseableRandom	src/main/java/org/java_websocket/drafts/Draft_76.java	/^	private final Random reuseableRandom = new Random();$/;"	f	class:Draft_76	file:
+role	src/main/java/org/java_websocket/WebSocketImpl.java	/^	private Role role;$/;"	f	class:WebSocketImpl	file:
+role	src/main/java/org/java_websocket/drafts/Draft.java	/^	protected Role role = null;$/;"	f	class:Draft
+run	src/main/java/org/java_websocket/client/WebSocketClient.java	/^		public void run() {$/;"	m	class:WebSocketClient.WebsocketWriteThread
+run	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public void run() {$/;"	m	class:WebSocketClient
+run	src/main/java/org/java_websocket/server/WebSocketServer.java	/^		public void run() {$/;"	m	class:WebSocketServer.WebSocketWorker
+run	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public void run() {$/;"	m	class:WebSocketServer
+selectionKey	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	protected SelectionKey selectionKey;$/;"	f	class:SSLSocketChannel2
+selector	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	private Selector selector;$/;"	f	class:WebSocketServer	file:
+selectorthread	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	private Thread selectorthread;$/;"	f	class:WebSocketServer	file:
+send	src/main/java/org/java_websocket/WebSocket.java	/^	public abstract void send(ByteBuffer bytes) throws IllegalArgumentException , NotYetConnectedException;$/;"	m	interface:WebSocket
+send	src/main/java/org/java_websocket/WebSocket.java	/^	public abstract void send(String text) throws NotYetConnectedException;$/;"	m	interface:WebSocket
+send	src/main/java/org/java_websocket/WebSocket.java	/^	public abstract void send(byte[] bytes) throws IllegalArgumentException , NotYetConnectedException;$/;"	m	interface:WebSocket
+send	src/main/java/org/java_websocket/WebSocketImpl.java	/^	private void send( Collection<Framedata> frames ) {$/;"	m	class:WebSocketImpl	file:
+send	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public void send( ByteBuffer bytes ) throws IllegalArgumentException , WebsocketNotConnectedException {$/;"	m	class:WebSocketImpl
+send	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public void send( String text ) throws WebsocketNotConnectedException {$/;"	m	class:WebSocketImpl
+send	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public void send( byte[] bytes ) throws IllegalArgumentException , WebsocketNotConnectedException {$/;"	m	class:WebSocketImpl
+send	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public void send( ByteBuffer bytes ) throws IllegalArgumentException , NotYetConnectedException {$/;"	m	class:WebSocketClient
+send	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public void send( String text ) throws NotYetConnectedException {$/;"	m	class:WebSocketClient
+send	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public void send( byte[] data ) throws NotYetConnectedException {$/;"	m	class:WebSocketClient
+sendFragmentedFrame	src/main/java/org/java_websocket/WebSocket.java	/^	public abstract void sendFragmentedFrame(Opcode op, ByteBuffer buffer, boolean fin);$/;"	m	interface:WebSocket
+sendFragmentedFrame	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public void sendFragmentedFrame( Opcode op, ByteBuffer buffer, boolean fin ) {$/;"	m	class:WebSocketImpl
+sendFragmentedFrame	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public void sendFragmentedFrame( Opcode op, ByteBuffer buffer, boolean fin ) {$/;"	m	class:WebSocketClient
+sendFrame	src/main/java/org/java_websocket/WebSocket.java	/^	public abstract void sendFrame(Framedata framedata);$/;"	m	interface:WebSocket
+sendFrame	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public void sendFrame( Framedata framedata ) {$/;"	m	class:WebSocketImpl
+sendFrame	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public void sendFrame( Framedata framedata ) {$/;"	m	class:WebSocketClient
+sendHandshake	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	private void sendHandshake() throws InvalidHandshakeException {$/;"	m	class:WebSocketClient	file:
+serialVersionUID	src/main/java/org/java_websocket/drafts/Draft_10.java	/^		private static final long serialVersionUID = 7330519489840500997L;$/;"	f	class:Draft_10.IncompleteException	file:
+serialVersionUID	src/main/java/org/java_websocket/exceptions/IncompleteHandshakeException.java	/^	private static final long serialVersionUID = 7906596804233893092L;$/;"	f	class:IncompleteHandshakeException	file:
+serialVersionUID	src/main/java/org/java_websocket/exceptions/InvalidDataException.java	/^	private static final long serialVersionUID = 3731842424390998726L;$/;"	f	class:InvalidDataException	file:
+serialVersionUID	src/main/java/org/java_websocket/exceptions/InvalidFrameException.java	/^	private static final long serialVersionUID = -9016496369828887591L;$/;"	f	class:InvalidFrameException	file:
+serialVersionUID	src/main/java/org/java_websocket/exceptions/InvalidHandshakeException.java	/^	private static final long serialVersionUID = -1426533877490484964L;$/;"	f	class:InvalidHandshakeException	file:
+serialVersionUID	src/main/java/org/java_websocket/exceptions/LimitExedeedException.java	/^	private static final long serialVersionUID = 6908339749836826785L;$/;"	f	class:LimitExedeedException	file:
+serialVersionUID	src/main/java/org/java_websocket/exceptions/NotSendableException.java	/^	private static final long serialVersionUID = -6468967874576651628L;$/;"	f	class:NotSendableException	file:
+server	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	private ServerSocketChannel server;$/;"	f	class:WebSocketServer	file:
+setCodeAndMessage	src/main/java/org/java_websocket/framing/CloseFrameBuilder.java	/^	private void setCodeAndMessage( int code, String m ) throws InvalidDataException {$/;"	m	class:CloseFrameBuilder	file:
+setContent	src/main/java/org/java_websocket/handshake/HandshakeBuilder.java	/^	public abstract void setContent(byte[] content);$/;"	m	interface:HandshakeBuilder
+setContent	src/main/java/org/java_websocket/handshake/HandshakedataImpl1.java	/^	public void setContent( byte[] content ) {$/;"	m	class:HandshakedataImpl1
+setFin	src/main/java/org/java_websocket/framing/FrameBuilder.java	/^	public abstract void setFin(boolean fin);$/;"	m	interface:FrameBuilder
+setFin	src/main/java/org/java_websocket/framing/FramedataImpl1.java	/^	public void setFin( boolean fin ) {$/;"	m	class:FramedataImpl1
+setHttpStatus	src/main/java/org/java_websocket/handshake/HandshakeImpl1Server.java	/^	public void setHttpStatus( short status ) {$/;"	m	class:HandshakeImpl1Server
+setHttpStatus	src/main/java/org/java_websocket/handshake/ServerHandshakeBuilder.java	/^	public void setHttpStatus(short status);$/;"	m	interface:ServerHandshakeBuilder
+setHttpStatusMessage	src/main/java/org/java_websocket/handshake/HandshakeImpl1Server.java	/^	public void setHttpStatusMessage( String message ) {$/;"	m	class:HandshakeImpl1Server
+setHttpStatusMessage	src/main/java/org/java_websocket/handshake/ServerHandshakeBuilder.java	/^	public void setHttpStatusMessage(String message);$/;"	m	interface:ServerHandshakeBuilder
+setOptcode	src/main/java/org/java_websocket/framing/FrameBuilder.java	/^	public abstract void setOptcode(Opcode optcode);$/;"	m	interface:FrameBuilder
+setOptcode	src/main/java/org/java_websocket/framing/FramedataImpl1.java	/^	public void setOptcode( Opcode optcode ) {$/;"	m	class:FramedataImpl1
+setParseMode	src/main/java/org/java_websocket/drafts/Draft.java	/^	public void setParseMode( Role role ) {$/;"	m	class:Draft
+setPayload	src/main/java/org/java_websocket/framing/CloseFrameBuilder.java	/^	public void setPayload( ByteBuffer payload ) throws InvalidDataException {$/;"	m	class:CloseFrameBuilder
+setPayload	src/main/java/org/java_websocket/framing/FrameBuilder.java	/^	public abstract void setPayload(ByteBuffer payload) throws InvalidDataException;$/;"	m	interface:FrameBuilder
+setPayload	src/main/java/org/java_websocket/framing/FramedataImpl1.java	/^	public void setPayload( ByteBuffer payload ) throws InvalidDataException {$/;"	m	class:FramedataImpl1
+setProxy	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public void setProxy( Proxy proxy ) {$/;"	m	class:WebSocketClient
+setResourceDescriptor	src/main/java/org/java_websocket/handshake/ClientHandshakeBuilder.java	/^	public void setResourceDescriptor(String resourceDescriptor);$/;"	m	interface:ClientHandshakeBuilder
+setResourceDescriptor	src/main/java/org/java_websocket/handshake/HandshakeImpl1Client.java	/^	public void setResourceDescriptor( String resourceDescriptor ) throws IllegalArgumentException {$/;"	m	class:HandshakeImpl1Client
+setSocket	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	public void setSocket( Socket socket ) {$/;"	m	class:WebSocketClient
+setTransferemasked	src/main/java/org/java_websocket/framing/FrameBuilder.java	/^	public abstract void setTransferemasked(boolean transferemasked);$/;"	m	interface:FrameBuilder
+setTransferemasked	src/main/java/org/java_websocket/framing/FramedataImpl1.java	/^	public void setTransferemasked( boolean transferemasked ) {$/;"	m	class:FramedataImpl1
+setWebSocketFactory	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public final void setWebSocketFactory( WebSocketServerFactory wsf ) {$/;"	m	class:WebSocketServer
+socket	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	public Socket socket() {$/;"	m	class:SSLSocketChannel2
+socket	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	private Socket socket = null;$/;"	f	class:WebSocketClient	file:
+socketChannel	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	protected SocketChannel socketChannel;$/;"	f	class:SSLSocketChannel2
+sslEngine	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	protected SSLEngine sslEngine;$/;"	f	class:SSLSocketChannel2
+sslcontext	src/main/java/org/java_websocket/server/DefaultSSLWebSocketServerFactory.java	/^	protected SSLContext sslcontext;$/;"	f	class:DefaultSSLWebSocketServerFactory
+start	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public void start() {$/;"	m	class:WebSocketServer
+startHandshake	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public void startHandshake( ClientHandshakeBuilder handshakedata ) throws InvalidHandshakeException {$/;"	m	class:WebSocketImpl
+stop	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public void stop( int timeout ) throws InterruptedException {$/;"	m	class:WebSocketServer
+stop	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	public void stop() throws IOException , InterruptedException {$/;"	m	class:WebSocketServer
+stringAscii	src/main/java/org/java_websocket/util/Charsetfunctions.java	/^	public static String stringAscii( byte[] bytes ) {$/;"	m	class:Charsetfunctions
+stringAscii	src/main/java/org/java_websocket/util/Charsetfunctions.java	/^	public static String stringAscii( byte[] bytes, int offset, int length ){$/;"	m	class:Charsetfunctions
+stringUtf8	src/main/java/org/java_websocket/util/Charsetfunctions.java	/^	public static String stringUtf8( ByteBuffer bytes ) throws InvalidDataException {$/;"	m	class:Charsetfunctions
+stringUtf8	src/main/java/org/java_websocket/util/Charsetfunctions.java	/^	public static String stringUtf8( byte[] bytes ) throws InvalidDataException {$/;"	m	class:Charsetfunctions
+suspendEncoding	src/main/java/org/java_websocket/util/Base64.java	/^        private boolean suspendEncoding;$/;"	f	class:Base64.OutputStream	file:
+suspendEncoding	src/main/java/org/java_websocket/util/Base64.java	/^        public void suspendEncoding() throws java.io.IOException  {$/;"	m	class:Base64.OutputStream
+takeBuffer	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	private ByteBuffer takeBuffer() throws InterruptedException {$/;"	m	class:WebSocketServer	file:
+tasks	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	protected List<Future<?>> tasks;$/;"	f	class:SSLSocketChannel2
+tmpHandshakeBytes	src/main/java/org/java_websocket/WebSocketImpl.java	/^	private ByteBuffer tmpHandshakeBytes = ByteBuffer.allocate( 0 );$/;"	f	class:WebSocketImpl	file:
+toByteArray	src/main/java/org/java_websocket/drafts/Draft_10.java	/^	private byte[] toByteArray( long val, int bytecount ) {$/;"	m	class:Draft_10	file:
+toOpcode	src/main/java/org/java_websocket/drafts/Draft_10.java	/^	private Opcode toOpcode( byte opcode ) throws InvalidFrameException {$/;"	m	class:Draft_10	file:
+toString	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public String toString() {$/;"	m	class:WebSocketImpl
+toString	src/main/java/org/java_websocket/framing/CloseFrameBuilder.java	/^	public String toString() {$/;"	m	class:CloseFrameBuilder
+toString	src/main/java/org/java_websocket/framing/FramedataImpl1.java	/^	public String toString() {$/;"	m	class:FramedataImpl1
+transfereTo	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	private int transfereTo( ByteBuffer from, ByteBuffer to ) {$/;"	m	class:SSLSocketChannel2	file:
+transferemasked	src/main/java/org/java_websocket/framing/FramedataImpl1.java	/^	protected boolean transferemasked;$/;"	f	class:FramedataImpl1
+translateFrame	src/main/java/org/java_websocket/drafts/Draft.java	/^	public abstract List<Framedata> translateFrame( ByteBuffer buffer ) throws InvalidDataException;$/;"	m	class:Draft
+translateFrame	src/main/java/org/java_websocket/drafts/Draft_10.java	/^	public List<Framedata> translateFrame( ByteBuffer buffer ) throws LimitExedeedException , InvalidDataException {$/;"	m	class:Draft_10
+translateFrame	src/main/java/org/java_websocket/drafts/Draft_75.java	/^	public List<Framedata> translateFrame( ByteBuffer buffer ) throws InvalidDataException {$/;"	m	class:Draft_75
+translateFrame	src/main/java/org/java_websocket/drafts/Draft_76.java	/^	public List<Framedata> translateFrame( ByteBuffer buffer ) throws InvalidDataException {$/;"	m	class:Draft_76
+translateHandshake	src/main/java/org/java_websocket/drafts/Draft.java	/^	public Handshakedata translateHandshake( ByteBuffer buf ) throws InvalidHandshakeException {$/;"	m	class:Draft
+translateHandshake	src/main/java/org/java_websocket/drafts/Draft_76.java	/^	public Handshakedata translateHandshake( ByteBuffer buf ) throws InvalidHandshakeException {$/;"	m	class:Draft_76
+translateHandshakeHttp	src/main/java/org/java_websocket/drafts/Draft.java	/^	public static HandshakeBuilder translateHandshakeHttp( ByteBuffer buf, Role role ) throws InvalidHandshakeException , IncompleteHandshakeException {$/;"	m	class:Draft
+translateRegularFrame	src/main/java/org/java_websocket/drafts/Draft_75.java	/^	protected List<Framedata> translateRegularFrame( ByteBuffer buffer ) throws InvalidDataException {$/;"	m	class:Draft_75
+translateSingleFrame	src/main/java/org/java_websocket/drafts/Draft_10.java	/^	public Framedata translateSingleFrame( ByteBuffer buffer ) throws IncompleteException , InvalidDataException {$/;"	m	class:Draft_10
+unmaskedpayload	src/main/java/org/java_websocket/framing/FramedataImpl1.java	/^	private ByteBuffer unmaskedpayload;$/;"	f	class:FramedataImpl1	file:
+unwrap	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	private synchronized ByteBuffer unwrap() throws SSLException {$/;"	m	class:SSLSocketChannel2	file:
+uri	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	protected URI uri = null;$/;"	f	class:WebSocketClient
+utf8Bytes	src/main/java/org/java_websocket/util/Charsetfunctions.java	/^	public static byte[] utf8Bytes( String s ) {$/;"	m	class:Charsetfunctions
+workerThread	src/main/java/org/java_websocket/WebSocketImpl.java	/^	public volatile WebSocketWorker workerThread; \/\/ TODO reset worker?$/;"	f	class:WebSocketImpl
+wrap	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	private synchronized ByteBuffer wrap( ByteBuffer b ) throws SSLException {$/;"	m	class:SSLSocketChannel2	file:
+wrapChannel	src/main/java/org/java_websocket/server/DefaultSSLWebSocketServerFactory.java	/^	public ByteChannel wrapChannel( SocketChannel channel, SelectionKey key ) throws IOException {$/;"	m	class:DefaultSSLWebSocketServerFactory
+wrapChannel	src/main/java/org/java_websocket/server/DefaultWebSocketServerFactory.java	/^	public SocketChannel wrapChannel( SocketChannel channel, SelectionKey key ) {$/;"	m	class:DefaultWebSocketServerFactory
+wrapChannel	src/main/java/org/java_websocket/server/WebSocketServer.java	/^		public ByteChannel wrapChannel(SocketChannel channel, SelectionKey key) throws IOException;$/;"	m	interface:WebSocketServer.WebSocketServerFactory
+write	src/main/java/org/java_websocket/AbstractWrappedByteChannel.java	/^	public int write( ByteBuffer src ) throws IOException {$/;"	m	class:AbstractWrappedByteChannel
+write	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	public int write( ByteBuffer src ) throws IOException {$/;"	m	class:SSLSocketChannel2
+write	src/main/java/org/java_websocket/WebSocketImpl.java	/^	private void write( ByteBuffer buf ) {$/;"	m	class:WebSocketImpl	file:
+write	src/main/java/org/java_websocket/WebSocketImpl.java	/^	private void write( List<ByteBuffer> bufs ) {$/;"	m	class:WebSocketImpl	file:
+write	src/main/java/org/java_websocket/client/AbstractClientProxyChannel.java	/^	public int write( ByteBuffer src ) throws IOException {$/;"	m	class:AbstractClientProxyChannel
+write	src/main/java/org/java_websocket/util/Base64.java	/^        public void write( byte[] theBytes, int off, int len ) $/;"	m	class:Base64.OutputStream
+write	src/main/java/org/java_websocket/util/Base64.java	/^        public void write(int theByte) $/;"	m	class:Base64.OutputStream
+writeEngineResult	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	protected SSLEngineResult writeEngineResult;$/;"	f	class:SSLSocketChannel2
+writeMore	src/main/java/org/java_websocket/AbstractWrappedByteChannel.java	/^	public void writeMore() throws IOException {$/;"	m	class:AbstractWrappedByteChannel
+writeMore	src/main/java/org/java_websocket/SSLSocketChannel2.java	/^	public void writeMore() throws IOException {$/;"	m	class:SSLSocketChannel2
+writeMore	src/main/java/org/java_websocket/WrappedByteChannel.java	/^	public void writeMore() throws IOException;$/;"	m	interface:WrappedByteChannel
+writeThread	src/main/java/org/java_websocket/client/WebSocketClient.java	/^	private Thread writeThread;$/;"	f	class:WebSocketClient	file:
+wsf	src/main/java/org/java_websocket/server/WebSocketServer.java	/^	private WebSocketServerFactory wsf = new DefaultWebSocketServerFactory();$/;"	f	class:WebSocketServer	file:
+wsl	src/main/java/org/java_websocket/WebSocketImpl.java	/^	private final WebSocketListener wsl;$/;"	f	class:WebSocketImpl	file:

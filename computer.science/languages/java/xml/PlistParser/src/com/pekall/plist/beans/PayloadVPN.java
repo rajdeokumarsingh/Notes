@@ -1,5 +1,7 @@
 package com.pekall.plist.beans;
 
+import com.pekall.plist.json.SkipFiled;
+
 /**
  * VPN profile
  */
@@ -13,10 +15,38 @@ public class PayloadVPN extends PayloadBase {
     public static final String TYPE_IPSEC = "IPSec";
 
     /**
+     * See AuthType
+     */
+    public static final int AUTH_TYPE_PASS = 0;
+    public static final int AUTH_TYPE_RSA_SEC_ID = 1;
+
+
+    /**
+     *see  EncryptionLevel
+     */
+    public static final int ENCRYPTION_LEVEL_NO = 0;
+    public static final int ENCRYPTION_LEVEL_AUTO = 1;
+    public static final int ENCRYPTION_LEVEL_MAX = 2;
+
+    /**
      * See userAuth
      */
     public static final String USR_AUTH_PASSWORD = "password";
     public static final String USR_AUTH_RSA_SEC_ID = "RSA SecurId";
+
+    /**
+     * see VpnProxiesType
+     */
+    public static final int PROXY_TYPE_NO = 0;
+    public static final int PROXY_TYPE_HAND = 1;
+    public static final int PROXY_TYPE_AUTO = 2;
+
+    /**
+     * see MachineAuth
+     */
+    public static final int MACHINE_AUTH_SHAREDPASS = 0;
+    public static final int MACHINE_AUTH_CERT = 1;
+
     /**
      * Description of the VPN connection displayed on the device.
      */
@@ -31,61 +61,204 @@ public class PayloadVPN extends PayloadBase {
      */
     private String VPNType;
 
-    private IPv4Info IPv4;
-    private PPPInfo PPP;
-    private IPSecInfo IPSec;
+    @SkipFiled(skip = true)
+    private  IPv4Info IPv4;
+    @SkipFiled(skip = true)
+    private  PPPInfo PPP;
+    @SkipFiled(skip = true)
+    private  IPSecInfo IPSec;
 
+    /**
+     * proxies type,see PROXY_TYPE...
+     */
+    @PlistControl(toPlistXml = false)
+    private Integer VpnProxiesType;
+
+    @SkipFiled(skip = true)
     private VpnProxies Proxies;
 
     /**
-     * Host name or ip address of the VPN server
-     * Just for android.
+     * IP Host name or dns
      */
-    private String serverHostName;
+    @PlistControl(toPlistXml = false)
+    private String CommRemoteAddress;
+    @PlistControl(toPlistXml = false)
+    private String AuthName;
+    @PlistControl(toPlistXml = false)
+    private String AuthPassword;
 
     /**
-     * Just for android.
+     *SEE AUTH_TYPE
      */
-    private String account;
+    @PlistControl(toPlistXml = false)
+    private Integer AuthType;
+    @PlistControl(toPlistXml = false)
+    private String SharedSecret;
 
-
-    /**
-     * See USR_AUTH_...
-     * Just for android
-     */
-    private String userAuth;
-
-    /**
-     * Just for android.
-     */
-    private String password;
+    @PlistControl(toPlistXml = false)
+    private boolean OverridePrimary;
 
     /**
-     * Just for android.
+     *SEE ENCRYPTION_LEVEL_NO
      */
-    private String sharedPassword;
+    @PlistControl(toPlistXml = false)
+    private Integer EncryptionLevel;
+
+    public Integer getEncryptionLevel() {
+        return EncryptionLevel;
+    }
+
+
+    public void setEncryptionLevel(Integer encryptionLevel) {
+        EncryptionLevel = encryptionLevel;
+    }
 
     /**
-     * Just for android.
+     *机器鉴定，SEE MACHINE_AUTH_SHAREDPASS
      */
-    private Boolean vpnForAllTraffic;
+    @PlistControl(toPlistXml = false)
+    private Integer MachineAuth;
+
+    public Integer getMachineAuth() {
+        return MachineAuth;
+    }
+
+    public void setMachineAuth(Integer machineAuth) {
+        MachineAuth = machineAuth;
+    }
 
     /**
-     * Just for android.
+     *提示输入密码，
      */
-    private String proxyHost;
+    @PlistControl(toPlistXml = false)
+    private Boolean PromptForVPNPIN;
+
+    public Boolean getPromptForVPNPIN() {
+        return PromptForVPNPIN;
+    }
+
+    public void setPromptForVPNPIN(Boolean promptForVPNPIN) {
+        PromptForVPNPIN = promptForVPNPIN;
+    }
+
     /**
-     * Just for android.
+     * 组别名称
      */
-    private Integer proxyPort;
+    @PlistControl(toPlistXml = false)
+    private String LocalIdentifier;
+
+    public String getLocalIdentifier() {
+        return LocalIdentifier;
+    }
+
+    public void setLocalIdentifier(String localIdentifier) {
+        LocalIdentifier = localIdentifier;
+    }
+
     /**
-     * Just for android.
+     * 是否使用混合鉴定
      */
-    private String proxyUserName;
-    /**
-     * Just for android.
-     */
-    private String proxyPassword;
+    @PlistControl(toPlistXml = false)
+    private Boolean isUseMixedIdentifi;
+
+    public Boolean getUseMixedIdentifi() {
+        return isUseMixedIdentifi;
+    }
+
+    public void setUseMixedIdentifi(Boolean useMixedIdentifi) {
+        isUseMixedIdentifi = useMixedIdentifi;
+    }
+
+    @PlistControl(toPlistXml = false)
+    private String HTTPProxy;
+    @PlistControl(toPlistXml = false)
+    private Integer HTTPPort;
+    @PlistControl(toPlistXml = false)
+    private String HTTPProxyUsername;
+    @PlistControl(toPlistXml = false)
+    private String HTTPProxyPassword;
+
+    public Integer getHTTPPort() {
+        return HTTPPort;
+    }
+
+    public void setHTTPPort(Integer HTTPPort) {
+        this.HTTPPort = HTTPPort;
+    }
+
+    public String getHTTPProxy() {
+        return HTTPProxy;
+    }
+
+    public void setHTTPProxy(String HTTPProxy) {
+        this.HTTPProxy = HTTPProxy;
+    }
+
+    public String getHTTPProxyPassword() {
+        return HTTPProxyPassword;
+    }
+
+    public void setHTTPProxyPassword(String HTTPProxyPassword) {
+        this.HTTPProxyPassword = HTTPProxyPassword;
+    }
+
+    public String getHTTPProxyUsername() {
+        return HTTPProxyUsername;
+    }
+
+    public void setHTTPProxyUsername(String HTTPProxyUsername) {
+        this.HTTPProxyUsername = HTTPProxyUsername;
+    }
+
+    //    /**
+//     * Host name or ip address of the VPN server
+//     * Just for android.
+//     */
+//    private String serverHostName;
+//
+//    /**
+//     * Just for android.
+//     */
+//    private String account;
+//
+//
+//    /**
+//     * See USR_AUTH_...
+//     * Just for android
+//     */
+//    private String userAuth;
+//
+//    /**
+//     * Just for android.
+//     */
+//    private String password;
+//
+//    /**
+//     * Just for android.
+//     */
+//    private String sharedPassword;
+//
+//    /**
+//     * Just for android.
+//     */
+//    private Boolean vpnForAllTraffic;
+//
+//    /**
+//     * Just for android.
+//     */
+//    private String proxyHost;
+//    /**
+//     * Just for android.
+//     */
+//    private Integer proxyPort;
+//    /**
+//     * Just for android.
+//     */
+//    private String proxyUserName;
+//    /**
+//     * Just for android.
+//     */
+//    private String proxyPassword;
 
     /* todo, maas360
     private Boolean enableL2TPSecret;
@@ -138,85 +311,85 @@ public class PayloadVPN extends PayloadBase {
         this.IPSec = IPSec;
     }
 
-    public String getServerHostName() {
-        return serverHostName;
-    }
-
-    public void setServerHostName(String serverHostName) {
-        this.serverHostName = serverHostName;
-    }
-
-    public String getAccount() {
-        return account;
-    }
-
-    public void setAccount(String account) {
-        this.account = account;
-    }
-
-    public String getUserAuth() {
-        return userAuth;
-    }
-
-    public void setUserAuth(String userAuth) {
-        this.userAuth = userAuth;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getSharedPassword() {
-        return sharedPassword;
-    }
-
-    public void setSharedPassword(String sharedPassword) {
-        this.sharedPassword = sharedPassword;
-    }
-
-    public Boolean getVpnForAllTraffic() {
-        return vpnForAllTraffic;
-    }
-
-    public void setVpnForAllTraffic(Boolean vpnForAllTraffic) {
-        this.vpnForAllTraffic = vpnForAllTraffic;
-    }
-
-    public String getProxyHost() {
-        return proxyHost;
-    }
-
-    public void setProxyHost(String proxyHost) {
-        this.proxyHost = proxyHost;
-    }
-
-    public Integer getProxyPort() {
-        return proxyPort;
-    }
-
-    public void setProxyPort(Integer proxyPort) {
-        this.proxyPort = proxyPort;
-    }
-
-    public String getProxyUserName() {
-        return proxyUserName;
-    }
-
-    public void setProxyUserName(String proxyUserName) {
-        this.proxyUserName = proxyUserName;
-    }
-
-    public String getProxyPassword() {
-        return proxyPassword;
-    }
-
-    public void setProxyPassword(String proxyPassword) {
-        this.proxyPassword = proxyPassword;
-    }
+//    public String getServerHostName() {
+//        return serverHostName;
+//    }
+//
+//    public void setServerHostName(String serverHostName) {
+//        this.serverHostName = serverHostName;
+//    }
+//
+//    public String getAccount() {
+//        return account;
+//    }
+//
+//    public void setAccount(String account) {
+//        this.account = account;
+//    }
+//
+//    public String getUserAuth() {
+//        return userAuth;
+//    }
+//
+//    public void setUserAuth(String userAuth) {
+//        this.userAuth = userAuth;
+//    }
+//
+//    public String getPassword() {
+//        return password;
+//    }
+//
+//    public void setPassword(String password) {
+//        this.password = password;
+//    }
+//
+//    public String getSharedPassword() {
+//        return sharedPassword;
+//    }
+//
+//    public void setSharedPassword(String sharedPassword) {
+//        this.sharedPassword = sharedPassword;
+//    }
+//
+//    public Boolean getVpnForAllTraffic() {
+//        return vpnForAllTraffic;
+//    }
+//
+//    public void setVpnForAllTraffic(Boolean vpnForAllTraffic) {
+//        this.vpnForAllTraffic = vpnForAllTraffic;
+//    }
+//
+//    public String getProxyHost() {
+//        return proxyHost;
+//    }
+//
+//    public void setProxyHost(String proxyHost) {
+//        this.proxyHost = proxyHost;
+//    }
+//
+//    public Integer getProxyPort() {
+//        return proxyPort;
+//    }
+//
+//    public void setProxyPort(Integer proxyPort) {
+//        this.proxyPort = proxyPort;
+//    }
+//
+//    public String getProxyUserName() {
+//        return proxyUserName;
+//    }
+//
+//    public void setProxyUserName(String proxyUserName) {
+//        this.proxyUserName = proxyUserName;
+//    }
+//
+//    public String getProxyPassword() {
+//        return proxyPassword;
+//    }
+//
+//    public void setProxyPassword(String proxyPassword) {
+//        this.proxyPassword = proxyPassword;
+//    }
 
     public VpnProxies getProxies() {
         return Proxies;
@@ -226,81 +399,59 @@ public class PayloadVPN extends PayloadBase {
         Proxies = proxies;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof PayloadVPN)) return false;
-        if (!super.equals(o)) return false;
-
-        PayloadVPN that = (PayloadVPN) o;
-
-        if (IPSec != null ? !IPSec.equals(that.IPSec) : that.IPSec != null) return false;
-        if (IPv4 != null ? !IPv4.equals(that.IPv4) : that.IPv4 != null) return false;
-        if (PPP != null ? !PPP.equals(that.PPP) : that.PPP != null) return false;
-        if (Proxies != null ? !Proxies.equals(that.Proxies) : that.Proxies != null) return false;
-        if (UserDefinedName != null ? !UserDefinedName.equals(that.UserDefinedName) : that.UserDefinedName != null)
-            return false;
-        if (VPNType != null ? !VPNType.equals(that.VPNType) : that.VPNType != null) return false;
-        if (account != null ? !account.equals(that.account) : that.account != null) return false;
-        if (password != null ? !password.equals(that.password) : that.password != null) return false;
-        if (proxyHost != null ? !proxyHost.equals(that.proxyHost) : that.proxyHost != null) return false;
-        if (proxyPassword != null ? !proxyPassword.equals(that.proxyPassword) : that.proxyPassword != null)
-            return false;
-        if (proxyPort != null ? !proxyPort.equals(that.proxyPort) : that.proxyPort != null) return false;
-        if (proxyUserName != null ? !proxyUserName.equals(that.proxyUserName) : that.proxyUserName != null)
-            return false;
-        if (serverHostName != null ? !serverHostName.equals(that.serverHostName) : that.serverHostName != null)
-            return false;
-        if (sharedPassword != null ? !sharedPassword.equals(that.sharedPassword) : that.sharedPassword != null)
-            return false;
-        if (userAuth != null ? !userAuth.equals(that.userAuth) : that.userAuth != null) return false;
-        if (vpnForAllTraffic != null ? !vpnForAllTraffic.equals(that.vpnForAllTraffic) : that.vpnForAllTraffic != null)
-            return false;
-
-        return true;
+    public Integer getVpnProxiesType() {
+        return VpnProxiesType;
     }
 
-    @Override
-    public int hashCode() {
-        int result = super.hashCode();
-        result = 31 * result + (UserDefinedName != null ? UserDefinedName.hashCode() : 0);
-        result = 31 * result + (IPv4 != null ? IPv4.hashCode() : 0);
-        result = 31 * result + (VPNType != null ? VPNType.hashCode() : 0);
-        result = 31 * result + (PPP != null ? PPP.hashCode() : 0);
-        result = 31 * result + (IPSec != null ? IPSec.hashCode() : 0);
-        result = 31 * result + (Proxies != null ? Proxies.hashCode() : 0);
-        result = 31 * result + (serverHostName != null ? serverHostName.hashCode() : 0);
-        result = 31 * result + (account != null ? account.hashCode() : 0);
-        result = 31 * result + (userAuth != null ? userAuth.hashCode() : 0);
-        result = 31 * result + (password != null ? password.hashCode() : 0);
-        result = 31 * result + (sharedPassword != null ? sharedPassword.hashCode() : 0);
-        result = 31 * result + (vpnForAllTraffic != null ? vpnForAllTraffic.hashCode() : 0);
-        result = 31 * result + (proxyHost != null ? proxyHost.hashCode() : 0);
-        result = 31 * result + (proxyPort != null ? proxyPort.hashCode() : 0);
-        result = 31 * result + (proxyUserName != null ? proxyUserName.hashCode() : 0);
-        result = 31 * result + (proxyPassword != null ? proxyPassword.hashCode() : 0);
-        return result;
+    public void setVpnProxiesType(Integer vpnProxiesType) {
+        VpnProxiesType = vpnProxiesType;
     }
 
-    @Override
-    public String toString() {
-        return "PayloadVPN{" +
-                "account='" + account + '\'' +
-                ", UserDefinedName='" + UserDefinedName + '\'' +
-                ", IPv4=" + IPv4 +
-                ", VPNType='" + VPNType + '\'' +
-                ", PPP=" + PPP +
-                ", IPSec=" + IPSec +
-                ", Proxies=" + Proxies +
-                ", serverHostName='" + serverHostName + '\'' +
-                ", userAuth='" + userAuth + '\'' +
-                ", password='" + password + '\'' +
-                ", sharedPassword='" + sharedPassword + '\'' +
-                ", vpnForAllTraffic=" + vpnForAllTraffic +
-                ", proxyHost='" + proxyHost + '\'' +
-                ", proxyPort=" + proxyPort +
-                ", proxyUserName='" + proxyUserName + '\'' +
-                ", proxyPassword='" + proxyPassword + '\'' +
-                "} " + super.toString();
+    public String getAuthName() {
+        return AuthName;
+    }
+
+    public void setAuthName(String authName) {
+        AuthName = authName;
+    }
+
+    public String getAuthPassword() {
+        return AuthPassword;
+    }
+
+    public void setAuthPassword(String authPassword) {
+        AuthPassword = authPassword;
+    }
+
+    public Integer getAuthType() {
+        return AuthType;
+    }
+
+    public void setAuthType(Integer authType) {
+        AuthType = authType;
+    }
+
+    public String getCommRemoteAddress() {
+        return CommRemoteAddress;
+    }
+
+    public void setCommRemoteAddress(String commRemoteAddress) {
+        CommRemoteAddress = commRemoteAddress;
+    }
+
+    public boolean isOverridePrimary() {
+        return OverridePrimary;
+    }
+
+    public void setOverridePrimary(boolean overridePrimary) {
+        OverridePrimary = overridePrimary;
+    }
+
+    public String getSharedSecret() {
+        return SharedSecret;
+    }
+
+    public void setSharedSecret(String sharedSecret) {
+        SharedSecret = sharedSecret;
     }
 }

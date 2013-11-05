@@ -28,11 +28,21 @@ public class PushMessageManager {
         PushMessage pushMessage = new PushMessage();
         pushMessage.setId(PushConstant.MESSAGE_ID_CONNECT);
         pushMessage.setCommand(PushMessage.Command.CONNECT);
+
         PushMessage.Params params = new PushMessage.Params();
-//        params.setDevice(Configuration.getDeviceUuid());
-//        params.setToken(Configuration.getPushToken());
-        Random random = new Random(100);
-        params.setDevice("" + System.currentTimeMillis() + random.nextLong());
+        params.setDevice("device_uuid_00001");
+        params.setToken("");
+        pushMessage.setParams(params);
+        return pushMessage;
+    }
+
+    public static PushMessage genShakeHandMessage(long id) {
+        PushMessage pushMessage = new PushMessage();
+        pushMessage.setId(PushConstant.MESSAGE_ID_CONNECT);
+        pushMessage.setCommand(PushMessage.Command.CONNECT);
+
+        PushMessage.Params params = new PushMessage.Params();
+        params.setDevice("device_uuid_" + id);
         params.setToken("");
         pushMessage.setParams(params);
         return pushMessage;

@@ -1,0 +1,4 @@
+check vm upper limit:
+java -Xmx2048M -version
+    [ Unable to allocate an initial java heap of 2147483648 bytes. ] 
+    [ **Out of memory, aborting** ]
