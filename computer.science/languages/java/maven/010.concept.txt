@@ -1,0 +1,9 @@
+
+war包
+    WEB应用程序进行打包，用于应用容器的部署。
+
+默认源代码目录
+    src/main/java
+
+默认测试代码目录
+    src/test/java

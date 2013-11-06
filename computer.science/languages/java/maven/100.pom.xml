@@ -1,0 +1,43 @@
+
+groupId, artifactId, version
+
+    定义了一个项目的基本坐标
+    Maven中， 任何jar, pom, war都是基于这个坐标的。
+
+    groupId
+        定义了项目属于哪个组, 和组织, 公司项目关联
+        类似与包名
+        example:
+            <groupId>com.juvenxu.mvnbook</groupId>
+            <groupId>com.pekall.mdv</groupId>
+            <groupId>com.pekall.lotto</groupId>
+
+    artifactId
+        在group中的唯一id
+        example:
+            <artifactId>plist</artifactId>
+            <artifactId>hello-world</artifactId>
+
+    version
+        升级后版本会上升
+        <version>1.0-SNAPSHOT</version>
+name 
+    可选的用户有好的名字
+    推荐
+
+
+定义依赖:
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.7</version>
+            <!-- 如果本地没有junit, maven会自动下载junit 4.7 (from http://repol.maven.org/maven2/) -->
+
+            <scope>test</scope>
+            <!-- 仅仅对测试代码有效 
+                在测试代码中import JUnit有效， 在源代码中import JUnit没有效果
+            -->
+        </dependency>
+    </dependencies>
+
