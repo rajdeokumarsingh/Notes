@@ -436,6 +436,9 @@ public abstract class WebSocketClientTest
         connectLatch.countDown();
         onOpen((ServerHandshake) handshake);
 
+        if(PushConstant.DEVICE_BEGIN_ID == -1)
+            return;
+
         // todo: performance optimize
         int i = 0;
         for (; i < sockCount; i++) {

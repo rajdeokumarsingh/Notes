@@ -47,6 +47,7 @@ public class MdmPushClient extends WebSocketClientTest {
 
     @Override
     public void onWebsocketPong(WebSocket conn, Framedata f) {
+        Debug.logVerbose("MdmPushClient, on pong");
         Statistics.getInstance().pong();
     }
 

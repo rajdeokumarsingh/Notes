@@ -7,3 +7,37 @@ war包
 
 默认测试代码目录
     src/test/java
+
+maven 坐标
+    groupId, artifactId, version, 
+
+        定义了一个项目的基本坐标
+        Maven中， 任何jar, pom, war都是基于这个坐标的。
+
+        groupId
+            定义了主项目名字, 类似与包名
+            example:
+                <groupId>com.juvenxu.mvnbook</groupId>
+                <groupId>com.pekall.mdv</groupId>
+                <groupId>com.pekall.lotto</groupId>
+
+        artifactId
+            定义了主项目中子项目名称
+            在group中的唯一id
+            example:
+                <artifactId>plist</artifactId>
+                <artifactId>hello-world</artifactId>
+
+        version
+            升级后版本会上升
+            <version>1.0-SNAPSHOT</version>
+
+    packaging: 定义了打包方式 (optional)
+        jar, war, ...
+        缺省是 jar
+
+    classifier: 描述项目的附件, javadoc.jar, sources.jar (不能直接定义)
+
+
+maven 默认仓库
+    http://repol.maven.org/maven2

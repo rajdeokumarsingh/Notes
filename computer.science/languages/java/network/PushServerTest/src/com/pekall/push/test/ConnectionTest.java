@@ -5,7 +5,7 @@ import java.net.URI;
 public class ConnectionTest {
 
     public static void main(String args[]) {
-        Debug.setVerboseDebugLog(true);
+        // Debug.setVerboseDebugLog(true);
 
         // begin monitor thread
         new Thread(new Runnable() {
@@ -47,7 +47,7 @@ public class ConnectionTest {
         }
 
         Debug.log("main thread continue ...");
-        Util.sleepSeconds(40);
+        Util.sleepSeconds(120);
 
         while (true) {
             Debug.log("begin ping ...");

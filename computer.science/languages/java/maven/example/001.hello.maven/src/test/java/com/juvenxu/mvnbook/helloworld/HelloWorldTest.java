@@ -1,13 +1,16 @@
 package com.juvenxu.mvnbook.helloworld;
 
-import static org.junit.Assert.assertEquals;
-import org.junit.Test;
+// import static org.junit.Assert.assertEquals;
+// import org.junit.Test;
+import junit.framework.TestCase;
+import static junit.framework.Assert.assertEquals;
+
 
 import com.juvenxu.mvnbook.helloworld.HelloWorld;
 
-public class HelloWorldTest
+public class HelloWorldTest extends TestCase
 {
-    @Test
+    // @Test
     public void testSayHello()
     {
         HelloWorld helloWorld = new HelloWorld();

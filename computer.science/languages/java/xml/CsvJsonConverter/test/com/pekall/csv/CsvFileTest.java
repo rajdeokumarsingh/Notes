@@ -1,7 +1,6 @@
 package com.pekall.csv;
 
 import com.pekall.csv.bean.CsvFile;
-import com.pekall.csv.bean.CsvLine;
 import junit.framework.TestCase;
 
 import java.io.*;
@@ -50,17 +49,17 @@ public class CsvFileTest extends TestCase {
     }
     */
 
-    public void testParseCsv() {
+    public void testParseCsv() throws IOException {
         CsvFile info = (CsvFile) Converter.csv2Bean(CSV_PATH);
         Debug.logVerbose(info.toString());
     }
 
-    public void testParseCsvTwoWay() {
+    public void testParseCsvTwoWay() throws IOException {
         CsvFile info = (CsvFile) Converter.csv2Bean(CSV_PATH);
         assertEquals(TEST_CSV, info.toCvs());
     }
 
-    public void testConverter() {
+    public void testConverter() throws IOException {
         // Debug.setVerboseDebugLog(true);
         Debug.logVerbose(Converter.csv2Json(CSV_PATH));
     }

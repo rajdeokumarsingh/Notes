@@ -67,13 +67,13 @@ public class ConverterTest extends TestCase {
         }
     }
 
-    public void testConverter() {
+    public void testConverter() throws IOException {
         String json = Converter.csv2Json(CSV_PATH);
         Debug.logVerbose(json);
         assertEquals(json, TEMPLATE_JSON);
     }
 
-    public void testConverterFile() {
+    public void testConverterFile() throws IOException {
         String json = Converter.csv2Json(new File(CSV_PATH));
         Debug.logVerbose(json);
         assertEquals(json, TEMPLATE_JSON);

@@ -7,7 +7,6 @@ import com.pekall.csv.bean.CsvFile;
 import com.pekall.csv.bean.CsvLine;
 import com.pekall.csv.bean.ImportDeviceInfoVo;
 import com.pekall.csv.bean.ImportUserVo;
-import com.sun.org.apache.xpath.internal.functions.FuncUnparsedEntityURI;
 
 import java.io.*;
 import java.lang.reflect.Type;
@@ -64,7 +63,7 @@ public class Converter {
      * @param fullPath of the CSV file
      * @return json string
      */
-    public static String csv2Json(String fullPath) {
+    public static String csv2Json(String fullPath) throws IOException {
         if (fullPath == null) {
             throw new IllegalArgumentException("file path should not be null");
         }
@@ -79,8 +78,10 @@ public class Converter {
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            throw e;
         } catch (IOException e) {
             e.printStackTrace();
+            throw e;
         }
 
         String[] tmp = new String[lines.size()];
@@ -88,7 +89,7 @@ public class Converter {
         return csv2Json(tmp);
     }
 
-    public static String csv2Json(File file) {
+    public static String csv2Json(File file) throws IOException {
         if (file == null || !file.exists() || !file.isFile()) {
             throw new IllegalArgumentException("file should not be null");
         }
@@ -97,10 +98,11 @@ public class Converter {
 
     /**
      * Convert a CSV file to json string by OSS openCSV
+     *
      * @param file CSV
      * @return json string
      */
-    public static String csv2JsonOSS(File file) {
+    public static String csv2JsonOSS(File file) throws IOException {
         if (file == null || !file.exists() || !file.isFile()) {
             throw new IllegalArgumentException("file should not be null");
         }
@@ -111,7 +113,7 @@ public class Converter {
             BufferedReader br = new BufferedReader(new InputStreamReader(din, "GBK"));
             CSVReader csvReader = new CSVReader(br);
             String[] tokens;
-            while ((tokens = csvReader.readNext())!= null) {
+            while ((tokens = csvReader.readNext()) != null) {
                 CsvLine csvLine = CsvLine.fromCsv(tokens);
                 Debug.logVerbose(csvLine.toString());
                 info.addLine(csvLine);
@@ -119,11 +121,14 @@ public class Converter {
             br.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            throw e;
         } catch (IOException e) {
             e.printStackTrace();
+            throw e;
         }
 
-        Type listType = new TypeToken<List<ImportUserVo>>() {}.getType();
+        Type listType = new TypeToken<List<ImportUserVo>>() {
+        }.getType();
         List<ImportUserVo> users = convertCsvInfo2Vo(info);
         Gson gson = new GsonBuilder().serializeNulls().create();
         return gson.toJson(users, listType);
@@ -165,7 +170,7 @@ public class Converter {
     /**
      * @deprecated
      */
-    public static Object csv2Bean(String fullPath) {
+    public static Object csv2Bean(String fullPath) throws IOException {
         CsvFile info = null;
         try {
             FileReader fileReader = new FileReader(fullPath);
@@ -180,8 +185,10 @@ public class Converter {
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            throw e;
         } catch (IOException e) {
             e.printStackTrace();
+            throw e;
         }
 
         // TODO: convert CSV file to new json format
