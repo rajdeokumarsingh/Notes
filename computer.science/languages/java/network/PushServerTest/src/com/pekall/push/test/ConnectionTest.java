@@ -47,7 +47,7 @@ public class ConnectionTest {
         }
 
         Debug.log("main thread continue ...");
-        Util.sleepSeconds(40);
+        Util.sleepSeconds(120);
 
         while (true) {
             Debug.log("begin ping ...");

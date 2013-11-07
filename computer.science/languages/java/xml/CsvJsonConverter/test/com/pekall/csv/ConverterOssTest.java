@@ -59,13 +59,13 @@ public class ConverterOssTest extends TestCase {
         }
     }
 
-    public void testConverter() {
+    public void testConverter() throws IOException {
         String json = Converter.csv2JsonOSS(new File(CSV_PATH));
         Debug.logVerbose(json);
         assertEquals(json, TEMPLATE_JSON);
     }
 
-    public void testConverterFile() {
+    public void testConverterFile() throws IOException {
         String json = Converter.csv2JsonOSS(new File(CSV_PATH));
         Debug.logVerbose(json);
         assertEquals(json, TEMPLATE_JSON);
@@ -173,7 +173,7 @@ public class ConverterOssTest extends TestCase {
         Debug.setVerboseDebugLog(true);
         String json = Converter.csv2JsonOSS(new File(TMP_PATH));
         Debug.logVerbose(json);
-        assertEquals(json, "");
+        assertEquals(json, "[]");
     }
 
     private File saveStrings(String[] lines) throws IOException {

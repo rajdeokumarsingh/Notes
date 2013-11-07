@@ -20,6 +20,10 @@ netstat -an --protocol=inet -t
     -e, --extend
         Display additional information.  Use this option twice for maximum detail.
 
+    --route , -r
+        Display the kernel routing tables. See the description in route(8) for details.  netstat -r and route -e produce the same output.
+
+
 
 netstat -an|grep mysql
 
@@ -28,5 +32,6 @@ netstat -ae|grep “TIME_WAIT” |wc –l
 TCP连接状态:
 netstat -n | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}' 
 
+netstat -r
 
 
