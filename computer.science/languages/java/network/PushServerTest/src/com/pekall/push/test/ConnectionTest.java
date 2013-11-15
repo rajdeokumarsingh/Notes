@@ -5,7 +5,7 @@ import java.net.URI;
 public class ConnectionTest {
 
     public static void main(String args[]) {
-        // Debug.setVerboseDebugLog(true);
+        Debug.setVerboseDebugLog(true);
 
         // begin monitor thread
         new Thread(new Runnable() {
@@ -24,6 +24,10 @@ public class ConnectionTest {
         Statistics statistics = Statistics.getInstance();
         MdmPushClient[] mdmPushClients = new MdmPushClient[clientCnt];
         URI uri;
+        if(args.length > 3) {
+            PushConstant.PUSH_LAN_URL = args[3];
+            Debug.log("using push url: " + PushConstant.PUSH_LAN_URL);
+        }
         if(args.length > 1 && "inet".equals(args[1])) {
             Debug.log("using internet url: " + PushConstant.PUSH_INET_URL);
             uri = URI.create(PushConstant.PUSH_INET_URL);
@@ -36,6 +40,7 @@ public class ConnectionTest {
             PushConstant.DEVICE_BEGIN_ID = Integer.valueOf(args[2]);
             Debug.log("device begin id: " + PushConstant.DEVICE_BEGIN_ID);
         }
+
 
         Util.sleepSeconds(2);
 

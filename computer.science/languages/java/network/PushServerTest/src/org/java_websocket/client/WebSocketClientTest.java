@@ -403,18 +403,21 @@ public abstract class WebSocketClientTest
      */
     @Override
     public final void onWebsocketMessage(WebSocket conn, String message) {
-        onMessage(message);
-
         PushMessage pushMessage = PushMessage.fromJson(message);
         if (pushMessage == null) {
             Debug.log("push message is null");
             return;
         }
+
+        Debug.logVerbose("onWebsocketMessage: " + message);
+
         if(pushMessage.getType() == PushMessage.MsgType.TYPE_SEND) {
             PushMessage respMsg = PushMessageManager.createResponseMessage(pushMessage.getId());
             Debug.logVerbose("push message:" + pushMessage.toString());
             Debug.logVerbose("send resp msg:" + respMsg.toString());
             conn.send(respMsg.toJson());
+
+            onMessage(message);
         }
     }
 

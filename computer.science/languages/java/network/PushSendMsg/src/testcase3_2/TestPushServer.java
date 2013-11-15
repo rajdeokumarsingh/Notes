@@ -20,19 +20,18 @@ import org.apache.commons.httpclient.methods.PostMethod;
 import util.Util;
 
 public class TestPushServer {
-	private String device_id;
+    private String device_id;
 	private String devUUID;
 	public static String METHOD_TYPE_GET = "GET";
 	public static String METHOD_TYPE_POST = "POST";
 
 	public TestPushServer(String device_id ,String devUUID) {
-
 		this.device_id = device_id;
 		this.devUUID  = devUUID;
 	}
 
 	public void test() {
-		String pushCmdUrl = "http://192.168.10.234:8080/PushServer/rest/push/sendMessage";
+		String pushCmdUrl = "http://192.168.10.233:8080/PushServer/rest/push/sendMessage";
 		String methodType = METHOD_TYPE_POST;
 		Map<String, String> headerMap = null;
 		String token = "YzAyMTBkYWNiNmE4ZDlhZjc5MjA3ZGY2MTMwY2EzNjA=";

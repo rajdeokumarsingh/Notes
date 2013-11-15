@@ -1,0 +1,4 @@
+
+message=test push&device_id=device_uuid_100000&admin_token=123456
+[TestPushServer.java:49]->客户端----httpclient使用方法：POST,并收到响应信息：{"result":0}
+
