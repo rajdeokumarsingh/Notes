@@ -1,4 +1,3 @@
-
 war包
     WEB应用程序进行打包，用于应用容器的部署。
 
@@ -39,5 +38,34 @@ maven 坐标
     classifier: 描述项目的附件, javadoc.jar, sources.jar (不能直接定义)
 
 
-maven 默认仓库
-    http://repol.maven.org/maven2
+仓库
+    分类： 本地仓库， 远程仓库
+
+    本地仓库
+        maven在本地机器上的共享的构建库
+        ~/.m2/repository
+
+    远程仓库
+        中央仓库
+            maven 默认远程仓库
+                http://repol.maven.org/maven2/
+
+        私服
+            本地局域网中的服务器作为仓库
+
+        其他公共服务器
+            http://download.java.net/maven2/
+            http://repository.jboss.com/maven2/
+
+    搜索顺序
+        本地仓库， 远程仓库
+
+版本
+    snapshot版, 类似于debug版
+    release版
+
+
+
+
+
+

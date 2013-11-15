@@ -44,6 +44,7 @@ public class PushMessageManager {
         PushMessage.Params params = new PushMessage.Params();
         params.setDevice("device_uuid_" + id);
         params.setToken("123456");
+        // params.setDevice("" + id);
         pushMessage.setParams(params);
         return pushMessage;
     }

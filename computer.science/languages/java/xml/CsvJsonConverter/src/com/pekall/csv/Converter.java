@@ -134,6 +134,40 @@ public class Converter {
         return gson.toJson(users, listType);
     }
 
+    /**
+     * Convert a CSV file to VO by OSS openCSV
+     *
+     * @param file CSV
+     * @return list of VO
+     */
+    public static List<ImportUserVo> csv2VoOss(File file) throws IOException {
+        if (file == null || !file.exists() || !file.isFile()) {
+            throw new IllegalArgumentException("file should not be null");
+        }
+
+        CsvFile info = new CsvFile();
+        try {
+            DataInputStream din = new DataInputStream(new FileInputStream(file));
+            BufferedReader br = new BufferedReader(new InputStreamReader(din, "GBK"));
+            CSVReader csvReader = new CSVReader(br);
+            String[] tokens;
+            while ((tokens = csvReader.readNext()) != null) {
+                CsvLine csvLine = CsvLine.fromCsv(tokens);
+                Debug.logVerbose(csvLine.toString());
+                info.addLine(csvLine);
+            }
+            br.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            throw e;
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw e;
+        }
+
+        return convertCsvInfo2Vo(info);
+    }
+
     private static List<ImportUserVo> convertCsvInfo2Vo(CsvFile csvFile) {
         HashMap<String, ImportUserVo> userMap = new HashMap<String, ImportUserVo>();
         List<ImportUserVo> users = new ArrayList<ImportUserVo>();

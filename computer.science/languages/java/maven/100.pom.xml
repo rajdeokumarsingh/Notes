@@ -22,7 +22,7 @@ groupId, artifactId, version
         升级后版本会上升
         <version>1.0-SNAPSHOT</version>
 name 
-    可选的用户有好的名字
+    可选的用户友好的名字
     推荐
 
 
@@ -41,8 +41,38 @@ name
         </dependency>
     </dependencies>
 
+    依赖范围:
+        compile:
+            编译依赖范围, 缺省值
+            对于编译，测试和运行三种classpath都有效
+            编译，测试和运行都需要使用到该依赖
 
-声明main方法：
+        test:
+            仅仅测试时使用到该依赖
+            编译项目源代码和运行项目时都无法使用该依赖
+
+        provided:
+            编译和测试有效, 运行时无效
+
+        runtime:
+            测试和运行时有效，编译主代码时无效
+
+        system:
+            和provided一致。但是必须通过systemPath显示指定依赖文件路径
+            谨慎使用
+
+        import:
+            不会对三种classpath产生影响
+
+    可选依赖:
+        <optional>true<optional>
+        比如一个项目的数据库可能是mysql或postgresql, 那么可定义这两个模块为可选依赖
+
+        :w
+
+
+声明jar文件main方法：
+
   	  <plugin>
   	    <groupId>org.apache.maven.plugins</groupId>
   	    <artifactId>maven-shade-plugin</artifactId>
@@ -64,3 +94,4 @@ name
   	    </executions>
   	  </plugin>
  
+
