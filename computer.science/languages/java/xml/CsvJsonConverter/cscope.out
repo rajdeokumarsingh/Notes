@@ -1,0 +1,22201 @@
+cscope 15 $HOME/git/note/computer.science/languages/java/xml/CsvJsonConverter -q 0000000662 0000138540
+	@.idea/artifacts/CsvJsonConverter_jar.xml
+
+1 <
+compÚ’t
+ 
+	gÇme
+="ArtifactManager">
+
+2 <
+¬tiçù
+ 
+ty³
+="j¬" 
+Çme
+="CsvJsonConverter:jar">
+
+3 <
+ouut
+-
+·th
+>
+$PROJECT_DIR$
+/
+out
+/
+¬tiçùs
+/
+CsvJsÚCÚv”‹r_j¬
+</output-path>
+
+4 <
+roÙ
+ 
+id
+="¬chive" 
+Çme
+="CsvJsonConverter.jar">
+
+5 <
+–em’t
+ 
+id
+="moduË-ouut" 
+Çme
+="CsvJsonConverter" />
+
+6 <
+–em’t
+ 
+id
+="exŒaùed-dœ" 
+·th
+="$APPLICATION_HOME_DIR$/lib/jun™.j¬"…©h-
+š
+-
+j¬
+="/" />
+
+7 <
+–em’t
+ 
+id
+="exŒaùed-dœ" 
+·th
+="$PROJECT_DIR$/libs/gsÚ-2.1.j¬"…©h-
+š
+-
+j¬
+="/" />
+
+8 </
+roÙ
+>
+
+9 </
+¬tiçù
+>
+
+10 </
+compÚ’t
+>
+
+	@.idea/compiler.xml
+
+1 <?
+xml
+ 
+	gv”siÚ
+="1.0" 
+’codšg
+="UTF-8"?>
+
+2 <
+´ojeù
+ 
+v”siÚ
+="4">
+
+3 <
+compÚ’t
+ 
+Çme
+="CompilerConfiguration">
+
+4 <
+İtiÚ
+ 
+Çme
+="DEFAULT_COMPILER" 
+v®ue
+="Javac" />
+
+5 <
+»sourûEx‹nsiÚs
+ />
+
+6 <
+wdÿrdResourûP©‹ºs
+>
+
+7 <
+’Œy
+ 
+Çme
+="!?*.java" />
+
+8 <
+’Œy
+ 
+Çme
+="!?*.form" />
+
+9 <
+’Œy
+ 
+Çme
+="!?*.class" />
+
+10 <
+’Œy
+ 
+Çme
+="!?*.groovy" />
+
+11 <
+’Œy
+ 
+Çme
+="!?*.scala" />
+
+12 <
+’Œy
+ 
+Çme
+="!?*.flex" />
+
+13 <
+’Œy
+ 
+Çme
+="!?*.kt" />
+
+14 <
+’Œy
+ 
+Çme
+="!?*.clj" />
+
+15 </
+wdÿrdResourûP©‹ºs
+>
+
+16 <
+ªnÙ©iÚProûssšg
+>
+
+17 <
+´ofe
+ ="Œue" 
+Çme
+="DeçuÉ" 
+’abËd
+="false">
+
+18 <
+´oûssÜP©h
+ 
+u£CÏs¥©h
+="true" />
+
+19 </
+´ofe
+>
+
+20 </
+ªnÙ©iÚProûssšg
+>
+
+21 </
+compÚ’t
+>
+
+22 </
+´ojeù
+>
+
+	@.idea/copyright/profiles_settings.xml
+
+1 <
+compÚ’t
+ 
+	gÇme
+="CopyrightManager">
+
+2 <
+£‰šgs
+ ="">
+
+3 <
+moduË2cİyright
+ />
+
+4 </
+£‰šgs
+>
+
+5 </
+compÚ’t
+>
+
+	@.idea/dictionaries/jiangrui.xml
+
+1 <
+compÚ’t
+ 
+	gÇme
+="ProjectDictionaryState">
+
+2 <
+diùiÚ¬y
+ 
+Çme
+="jiangrui">
+
+3 <
+wÜds
+>
+
+4 <
+w
+>
+gsÚ
+</w>
+
+5 </
+wÜds
+>
+
+6 </
+diùiÚ¬y
+>
+
+7 </
+compÚ’t
+>
+
+	@.idea/encodings.xml
+
+1 <?
+xml
+ 
+	gv”siÚ
+="1.0" 
+’codšg
+="UTF-8"?>
+
+2 <
+´ojeù
+ 
+v”siÚ
+="4">
+
+3 <
+compÚ’t
+ 
+Çme
+="Encodšg" 
+u£UTFGuessšg
+="Œue" 
+Çtive2AsciiFÜPrİ”t›sFes
+="false" />
+
+4 </
+´ojeù
+>
+
+	@.idea/libraries/gson_2_1.xml
+
+1 <
+compÚ’t
+ 
+	gÇme
+="libraryTable">
+
+2 <
+lib¿ry
+ 
+Çme
+="gson-2.1">
+
+3 <
+CLASSES
+>
+
+4 <
+roÙ
+ 
+u¾
+="jar://$PROJECT_DIR$/libs/gson-2.1.jar!/" />
+
+5 </
+CLASSES
+>
+
+6 <
+JAVADOC
+ />
+
+7 <
+SOURCES
+ />
+
+8 </
+lib¿ry
+>
+
+9 </
+compÚ’t
+>
+
+	@.idea/misc.xml
+
+1 <?
+xml
+ 
+	gv”siÚ
+="1.0" 
+’codšg
+="UTF-8"?>
+
+2 <
+´ojeù
+ 
+v”siÚ
+="4">
+
+3 <
+compÚ’t
+ 
+Çme
+="CµToŞs.Lßd”" 
+»pÜtIm¶ic™Ca¡ToBoŞ
+="çl£" 
+»pÜtNameReã»nûdOnû
+="çl£" 
+v”siÚ
+="3" 
+comp”S–eù
+="AUTO" />
+
+4 <
+compÚ’t
+ 
+Çme
+="EntryPointsManager">
+
+5 <
+’Œy_pošts
+ 
+v”siÚ
+="2.0" />
+
+6 </
+compÚ’t
+>
+
+7 <
+compÚ’t
+ 
+Çme
+="IdProvid”" 
+IDElkID
+="A47047CAFD874DEFBD130E8E7C0E76CF" />
+
+8 <
+compÚ’t
+ 
+Çme
+="ProjeùRoÙMªag”" 
+v”siÚ
+="2" 
+ÏnguageLev–
+="JDK_1_6" 
+as£¹
+-
+keywÜd
+="Œue" 
+jdk
+-15="Œue" 
+´ojeù
+-jdk-Çme="1.6"…rojeù-jdk-
+ty³
+="JavaSDK">
+
+9 <
+ouut
+ 
+u¾
+="file://$PROJECT_DIR$/out" />
+
+10 </
+compÚ’t
+>
+
+11 </
+´ojeù
+>
+
+	@.idea/modules.xml
+
+1 <?
+xml
+ 
+	gv”siÚ
+="1.0" 
+’codšg
+="UTF-8"?>
+
+2 <
+´ojeù
+ 
+v”siÚ
+="4">
+
+3 <
+compÚ’t
+ 
+Çme
+="ProjectModuleManager">
+
+4 <
+moduËs
+>
+
+5 <
+moduË
+ 
+feu¾
+="fe://$PROJECT_DIR$/CsvJsÚCÚv”‹r.iml" 
+f•©h
+="$PROJECT_DIR$/CsvJsonConverter.iml" />
+
+6 </
+moduËs
+>
+
+7 </
+compÚ’t
+>
+
+8 </
+´ojeù
+>
+
+	@.idea/scopes/scope_settings.xml
+
+1 <
+compÚ’t
+ 
+	gÇme
+="DependencyValidationManager">
+
+2 <
+¡©e
+>
+
+3 <
+İtiÚ
+ 
+Çme
+="SKIP_IMPORT_STATEMENTS" 
+v®ue
+="false" />
+
+4 </
+¡©e
+>
+
+5 </
+compÚ’t
+>
+
+	@.idea/uiDesigner.xml
+
+1 <?
+xml
+ 
+	gv”siÚ
+="1.0" 
+’codšg
+="UTF-8"?>
+
+2 <
+´ojeù
+ 
+v”siÚ
+="4">
+
+3 <
+compÚ’t
+ 
+Çme
+="Palette2">
+
+4 <
+group
+ 
+Çme
+="Swing">
+
+5 <
+™em
+ 
+şass
+="com.š‹Îij.uiDesigÃr.HS·ûr" 
+toŞt
+-
+‹xt
+="HÜizÚÈS·ûr" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/h¥aûr.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="çl£" 
+ÿn
+-
+©ch
+-
+Ïb–
+="false">
+
+6 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="1" 
+hsize
+-pŞicy="6" 
+ªchÜ
+="0" 
+fl
+="1" />
+
+7 </
+™em
+>
+
+8 <
+™em
+ 
+şass
+="com.š‹Îij.uiDesigÃr.VS·ûr" 
+toŞt
+-
+‹xt
+="V”tiÿÈS·ûr" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/v¥aûr.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="çl£" 
+ÿn
+-
+©ch
+-
+Ïb–
+="false">
+
+9 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="6" 
+hsize
+-pŞicy="1" 
+ªchÜ
+="0" 
+fl
+="2" />
+
+10 </
+™em
+>
+
+11 <
+™em
+ 
+şass
+="javax.swšg.JPª–" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/·Ãl.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="çl£" 
+ÿn
+-
+©ch
+-
+Ïb–
+="false">
+
+12 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="3" 
+hsize
+-pŞicy="3" 
+ªchÜ
+="0" 
+fl
+="3" />
+
+13 </
+™em
+>
+
+14 <
+™em
+ 
+şass
+="javax.swšg.JSüŞlPªe" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/süŞlPªe.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="çl£" 
+ÿn
+-
+©ch
+-
+Ïb–
+="true">
+
+15 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="7" 
+hsize
+-pŞicy="7" 
+ªchÜ
+="0" 
+fl
+="3" />
+
+16 </
+™em
+>
+
+17 <
+™em
+ 
+şass
+="javax.swšg.JBu‰Ú" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/bu‰Ú.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="Œue" 
+ÿn
+-
+©ch
+-
+Ïb–
+="false">
+
+18 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="0" 
+hsize
+-pŞicy="3" 
+ªchÜ
+="0" 
+fl
+="1" />
+
+19 <
+š™Ÿl
+-
+v®ues
+>
+
+20 <
+´İ”ty
+ 
+Çme
+="‹xt" 
+v®ue
+="Button" />
+
+21 </
+š™Ÿl
+-
+v®ues
+>
+
+22 </
+™em
+>
+
+23 <
+™em
+ 
+şass
+="javax.swšg.JRadioBu‰Ú" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/¿dioBu‰Ú.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="Œue" 
+ÿn
+-
+©ch
+-
+Ïb–
+="false">
+
+24 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="0" 
+hsize
+-pŞicy="3" 
+ªchÜ
+="8" 
+fl
+="0" />
+
+25 <
+š™Ÿl
+-
+v®ues
+>
+
+26 <
+´İ”ty
+ 
+Çme
+="‹xt" 
+v®ue
+="RadioButton" />
+
+27 </
+š™Ÿl
+-
+v®ues
+>
+
+28 </
+™em
+>
+
+29 <
+™em
+ 
+şass
+="javax.swšg.JCheckBox" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/checkBox.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="Œue" 
+ÿn
+-
+©ch
+-
+Ïb–
+="false">
+
+30 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="0" 
+hsize
+-pŞicy="3" 
+ªchÜ
+="8" 
+fl
+="0" />
+
+31 <
+š™Ÿl
+-
+v®ues
+>
+
+32 <
+´İ”ty
+ 
+Çme
+="‹xt" 
+v®ue
+="CheckBox" />
+
+33 </
+š™Ÿl
+-
+v®ues
+>
+
+34 </
+™em
+>
+
+35 <
+™em
+ 
+şass
+="javax.swšg.JLab–" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/Ïb–.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="çl£" 
+ÿn
+-
+©ch
+-
+Ïb–
+="false">
+
+36 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="0" 
+hsize
+-pŞicy="0" 
+ªchÜ
+="8" 
+fl
+="0" />
+
+37 <
+š™Ÿl
+-
+v®ues
+>
+
+38 <
+´İ”ty
+ 
+Çme
+="‹xt" 
+v®ue
+="Label" />
+
+39 </
+š™Ÿl
+-
+v®ues
+>
+
+40 </
+™em
+>
+
+41 <
+™em
+ 
+şass
+="javax.swšg.JTextF›ld" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/‹xtF›ld.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="Œue" 
+ÿn
+-
+©ch
+-
+Ïb–
+="true">
+
+42 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="0" 
+hsize
+-pŞicy="6" 
+ªchÜ
+="8" 
+fl
+="1">
+
+43 <
+´eã¼ed
+-
+size
+ 
+width
+="150" 
+height
+="-1" />
+
+44 </-
+cÚ¡¿šts
+>
+
+45 </
+™em
+>
+
+46 <
+™em
+ 
+şass
+="javax.swšg.JPasswÜdF›ld" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/·sswÜdF›ld.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="Œue" 
+ÿn
+-
+©ch
+-
+Ïb–
+="true">
+
+47 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="0" 
+hsize
+-pŞicy="6" 
+ªchÜ
+="8" 
+fl
+="1">
+
+48 <
+´eã¼ed
+-
+size
+ 
+width
+="150" 
+height
+="-1" />
+
+49 </-
+cÚ¡¿šts
+>
+
+50 </
+™em
+>
+
+51 <
+™em
+ 
+şass
+="javax.swšg.JFÜm©‹dTextF›ld" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/fÜm©‹dTextF›ld.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="Œue" 
+ÿn
+-
+©ch
+-
+Ïb–
+="true">
+
+52 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="0" 
+hsize
+-pŞicy="6" 
+ªchÜ
+="8" 
+fl
+="1">
+
+53 <
+´eã¼ed
+-
+size
+ 
+width
+="150" 
+height
+="-1" />
+
+54 </-
+cÚ¡¿šts
+>
+
+55 </
+™em
+>
+
+56 <
+™em
+ 
+şass
+="javax.swšg.JTextA»a" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/‹xtA»a.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="Œue" 
+ÿn
+-
+©ch
+-
+Ïb–
+="true">
+
+57 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="6" 
+hsize
+-pŞicy="6" 
+ªchÜ
+="0" 
+fl
+="3">
+
+58 <
+´eã¼ed
+-
+size
+ 
+width
+="150" 
+height
+="50" />
+
+59 </-
+cÚ¡¿šts
+>
+
+60 </
+™em
+>
+
+61 <
+™em
+ 
+şass
+="javax.swšg.JTextPªe" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/‹xtPªe.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="Œue" 
+ÿn
+-
+©ch
+-
+Ïb–
+="true">
+
+62 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="6" 
+hsize
+-pŞicy="6" 
+ªchÜ
+="0" 
+fl
+="3">
+
+63 <
+´eã¼ed
+-
+size
+ 
+width
+="150" 
+height
+="50" />
+
+64 </-
+cÚ¡¿šts
+>
+
+65 </
+™em
+>
+
+66 <
+™em
+ 
+şass
+="javax.swšg.JEd™ÜPªe" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/ed™ÜPªe.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="Œue" 
+ÿn
+-
+©ch
+-
+Ïb–
+="true">
+
+67 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="6" 
+hsize
+-pŞicy="6" 
+ªchÜ
+="0" 
+fl
+="3">
+
+68 <
+´eã¼ed
+-
+size
+ 
+width
+="150" 
+height
+="50" />
+
+69 </-
+cÚ¡¿šts
+>
+
+70 </
+™em
+>
+
+71 <
+™em
+ 
+şass
+="javax.swšg.JComboBox" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/comboBox.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="Œue" 
+ÿn
+-
+©ch
+-
+Ïb–
+="true">
+
+72 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="0" 
+hsize
+-pŞicy="2" 
+ªchÜ
+="8" 
+fl
+="1" />
+
+73 </
+™em
+>
+
+74 <
+™em
+ 
+şass
+="javax.swšg.JTabË" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/bË.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="Œue" 
+ÿn
+-
+©ch
+-
+Ïb–
+="false">
+
+75 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="6" 
+hsize
+-pŞicy="6" 
+ªchÜ
+="0" 
+fl
+="3">
+
+76 <
+´eã¼ed
+-
+size
+ 
+width
+="150" 
+height
+="50" />
+
+77 </-
+cÚ¡¿šts
+>
+
+78 </
+™em
+>
+
+79 <
+™em
+ 
+şass
+="javax.swšg.JLi¡" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/li¡.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="Œue" 
+ÿn
+-
+©ch
+-
+Ïb–
+="false">
+
+80 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="6" 
+hsize
+-pŞicy="2" 
+ªchÜ
+="0" 
+fl
+="3">
+
+81 <
+´eã¼ed
+-
+size
+ 
+width
+="150" 
+height
+="50" />
+
+82 </-
+cÚ¡¿šts
+>
+
+83 </
+™em
+>
+
+84 <
+™em
+ 
+şass
+="javax.swšg.JT»e" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/Œ“.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="Œue" 
+ÿn
+-
+©ch
+-
+Ïb–
+="false">
+
+85 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="6" 
+hsize
+-pŞicy="6" 
+ªchÜ
+="0" 
+fl
+="3">
+
+86 <
+´eã¼ed
+-
+size
+ 
+width
+="150" 
+height
+="50" />
+
+87 </-
+cÚ¡¿šts
+>
+
+88 </
+™em
+>
+
+89 <
+™em
+ 
+şass
+="javax.swšg.JTabbedPªe" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/bbedPªe.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="Œue" 
+ÿn
+-
+©ch
+-
+Ïb–
+="false">
+
+90 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="3" 
+hsize
+-pŞicy="3" 
+ªchÜ
+="0" 
+fl
+="3">
+
+91 <
+´eã¼ed
+-
+size
+ 
+width
+="200" 
+height
+="200" />
+
+92 </-
+cÚ¡¿šts
+>
+
+93 </
+™em
+>
+
+94 <
+™em
+ 
+şass
+="javax.swšg.JS¶™Pªe" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/¥l™Pªe.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="çl£" 
+ÿn
+-
+©ch
+-
+Ïb–
+="false">
+
+95 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="3" 
+hsize
+-pŞicy="3" 
+ªchÜ
+="0" 
+fl
+="3">
+
+96 <
+´eã¼ed
+-
+size
+ 
+width
+="200" 
+height
+="200" />
+
+97 </-
+cÚ¡¿šts
+>
+
+98 </
+™em
+>
+
+99 <
+™em
+ 
+şass
+="javax.swšg.JSpšÃr" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/¥šÃr.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="Œue" 
+ÿn
+-
+©ch
+-
+Ïb–
+="true">
+
+100 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="0" 
+hsize
+-pŞicy="6" 
+ªchÜ
+="8" 
+fl
+="1" />
+
+101 </
+™em
+>
+
+102 <
+™em
+ 
+şass
+="javax.swšg.JSlid”" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/¦id”.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="Œue" 
+ÿn
+-
+©ch
+-
+Ïb–
+="false">
+
+103 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="0" 
+hsize
+-pŞicy="6" 
+ªchÜ
+="8" 
+fl
+="1" />
+
+104 </
+™em
+>
+
+105 <
+™em
+ 
+şass
+="javax.swšg.JS•¬©Ü" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/£·¿tÜ.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="çl£" 
+ÿn
+-
+©ch
+-
+Ïb–
+="false">
+
+106 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="6" 
+hsize
+-pŞicy="6" 
+ªchÜ
+="0" 
+fl
+="3" />
+
+107 </
+™em
+>
+
+108 <
+™em
+ 
+şass
+="javax.swšg.JProg»ssB¬" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/´og»ssb¬.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="Œue" 
+ÿn
+-
+©ch
+-
+Ïb–
+="false">
+
+109 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="0" 
+hsize
+-pŞicy="6" 
+ªchÜ
+="0" 
+fl
+="1" />
+
+110 </
+™em
+>
+
+111 <
+™em
+ 
+şass
+="javax.swšg.JToŞB¬" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/toŞb¬.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="çl£" 
+ÿn
+-
+©ch
+-
+Ïb–
+="false">
+
+112 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="0" 
+hsize
+-pŞicy="6" 
+ªchÜ
+="0" 
+fl
+="1">
+
+113 <
+´eã¼ed
+-
+size
+ 
+width
+="-1" 
+height
+="20" />
+
+114 </-
+cÚ¡¿šts
+>
+
+115 </
+™em
+>
+
+116 <
+™em
+ 
+şass
+="javax.swšg.JToŞB¬$S•¬©Ü" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/toŞb¬S•¬©Ü.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="çl£" 
+ÿn
+-
+©ch
+-
+Ïb–
+="false">
+
+117 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="0" 
+hsize
+-pŞicy="0" 
+ªchÜ
+="0" 
+fl
+="1" />
+
+118 </
+™em
+>
+
+119 <
+™em
+ 
+şass
+="javax.swšg.JSüŞlB¬" 
+icÚ
+="/com/š‹Îij/uiDesigÃr/icÚs/süŞlb¬.²g" 
+»movabË
+="çl£"‡uto-
+ü—‹
+-
+bšdšg
+="Œue" 
+ÿn
+-
+©ch
+-
+Ïb–
+="false">
+
+120 <-
+cÚ¡¿šts
+ 
+vsize
+-
+pŞicy
+="6" 
+hsize
+-pŞicy="0" 
+ªchÜ
+="0" 
+fl
+="2" />
+
+121 </
+™em
+>
+
+122 </
+group
+>
+
+123 </
+compÚ’t
+>
+
+124 </
+´ojeù
+>
+
+	@.idea/vcs.xml
+
+1 <?
+xml
+ 
+	gv”siÚ
+="1.0" 
+’codšg
+="UTF-8"?>
+
+2 <
+´ojeù
+ 
+v”siÚ
+="4">
+
+3 <
+compÚ’t
+ 
+Çme
+="VcsDirectoryMappings">
+
+4 <
+m­pšg
+ 
+dœeùÜy
+="" 
+vcs
+="" />
+
+5 <
+m­pšg
+ 
+dœeùÜy
+="$PROJECT_DIR$/../../../../.." 
+vcs
+="Git" />
+
+6 </
+compÚ’t
+>
+
+7 </
+´ojeù
+>
+
+	@.idea/workspace.xml
+
+1 <?
+xml
+ 
+	gv”siÚ
+="1.0" 
+’codšg
+="UTF-8"?>
+
+2 <
+´ojeù
+ 
+v”siÚ
+="4">
+
+3 <
+compÚ’t
+ 
+Çme
+="ArtifactsWorkspaceSettings">
+
+4 <
+¬tiçùs
+-
+to
+-
+bud
+>
+
+5 <
+¬tiçù
+ 
+Çme
+="CsvJsonConverter:jar" />
+
+6 </
+¬tiçùs
+-
+to
+-
+bud
+>
+
+7 </
+compÚ’t
+>
+
+8 <
+compÚ’t
+ 
+Çme
+="ChangeListManager">
+
+9 <
+li¡
+ ="Œue" 
+id
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+Çme
+="DeçuÉ" 
+comm’t
+="">
+
+10 <
+chªge
+ 
+ty³
+="DELETED" 
+befÜeP©h
+="$PROJECT_DIR$/../../mav’/000.šdex.txt" 
+aá”P©h
+="" />
+
+11 <
+chªge
+ 
+ty³
+="DELETED" 
+befÜeP©h
+="$PROJECT_DIR$/../../mav’/010.cÚû±.txt" 
+aá”P©h
+="" />
+
+12 <
+chªge
+ 
+ty³
+="MODIFICATION" 
+befÜeP©h
+="$PROJECT_DIR$/../../mav’/100.pom.xml" 
+aá”P©h
+="$PROJECT_DIR$/../../maven/100.pom.xml" />
+
+13 <
+chªge
+ 
+ty³
+="MODIFICATION" 
+befÜeP©h
+="$PROJECT_DIR$/../../mav’/200.cÚsŞe.sh" 
+aá”P©h
+="$PROJECT_DIR$/../../maven/200.console.sh" />
+
+14 <
+chªge
+ 
+ty³
+="MODIFICATION" 
+befÜeP©h
+="$PROJECT_DIR$/¤c/com/³k®l/csv/CÚv”‹r.java" 
+aá”P©h
+="$PROJECT_DIR$/src/com/pekall/csv/Converter.java" />
+
+15 <
+chªge
+ 
+ty³
+="MODIFICATION" 
+befÜeP©h
+="$PROJECT_DIR$/../../ÃtwÜk/PushS”v”Te¡/¤c/com/³k®l/push/‹¡/PushMes§geMªag”.java" 
+aá”P©h
+="$PROJECT_DIR$/../../network/PushServerTest/src/com/pekall/push/test/PushMessageManager.java" />
+
+16 </
+li¡
+>
+
+17 <
+ignÜed
+ 
+·th
+="CsvJsonConverter.iws" />
+
+18 <
+ignÜed
+ 
+·th
+=".idea/workspace.xml" />
+
+19 <
+fe
+ 
+·th
+="/Dummy.txt" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1384159915545" 
+ignÜed
+="false" />
+
+20 <
+fe
+ 
+·th
+="/äagm’t.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1380250330091" 
+ignÜed
+="false" />
+
+21 <
+fe
+ 
+·th
+="/CÚv”‹rTe¡.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379821881509" 
+ignÜed
+="false" />
+
+22 <
+fe
+ 
+·th
+="/GsÚTe¡.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1382337786585" 
+ignÜed
+="false" />
+
+23 <
+fe
+ 
+·th
+="/CÚùInfo.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379476003426" 
+ignÜed
+="false" />
+
+24 <
+fe
+ 
+·th
+="/U£rInfo.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379473527354" 
+ignÜed
+="false" />
+
+25 <
+fe
+ 
+·th
+="/CsvG’”©Ü.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379473496732" 
+ignÜed
+="false" />
+
+26 <
+fe
+ 
+·th
+="/Ty³CÚv”t.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1376638085895" 
+ignÜed
+="false" />
+
+27 <
+fe
+ 
+·th
+="/CÚv”‹r.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1384160196424" 
+ignÜed
+="false" />
+
+28 <
+fe
+ 
+·th
+="/ObjeùCom·¿tÜ.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1376896055159" 
+ignÜed
+="false" />
+
+29 <
+fe
+ 
+·th
+="/PaylßdBa£.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1380190713798" 
+ignÜed
+="false" />
+
+30 <
+fe
+ 
+·th
+="/PaylßdEma.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1376877318024" 
+ignÜed
+="false" />
+
+31 <
+fe
+ 
+·th
+="/PaylßdXmlMsgP¬£r.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1380190758866" 
+ignÜed
+="false" />
+
+32 <
+fe
+ 
+·th
+="/PaylßdEmaTe¡.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1376878134116" 
+ignÜed
+="false" />
+
+33 <
+fe
+ 
+·th
+="/CommªdProfeLi¡Stus.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1376878490007" 
+ignÜed
+="false" />
+
+34 <
+fe
+ 
+·th
+="/BasicObjeùA¼ayTy³.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1376896747386" 
+ignÜed
+="false" />
+
+35 <
+fe
+ 
+·th
+="/ObjeùCom·¿tÜTe¡.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1376898270704" 
+ignÜed
+="false" />
+
+36 <
+fe
+ 
+·th
+="/B—nW™hLi¡.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1376891788398" 
+ignÜed
+="false" />
+
+37 <
+fe
+ 
+·th
+="/B—nComboTy³.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1376893237782" 
+ignÜed
+="false" />
+
+38 <
+fe
+ 
+·th
+="/CommªdIn¡®lAµ.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1376893463084" 
+ignÜed
+="false" />
+
+39 <
+fe
+ 
+·th
+="/CommªdIn¡®lAµTe¡.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1376893754170" 
+ignÜed
+="false" />
+
+40 <
+fe
+ 
+·th
+="/B—nW™hBa£CÏss.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1376895670786" 
+ignÜed
+="false" />
+
+41 <
+fe
+ 
+·th
+="/BasicObjeùTy³.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1376896515690" 
+ignÜed
+="false" />
+
+42 <
+fe
+ 
+·th
+="/B—nBa£.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1376967481570" 
+ignÜed
+="false" />
+
+43 <
+fe
+ 
+·th
+="/PaylßdRomšgPŞicy.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379469611396" 
+ignÜed
+="false" />
+
+44 <
+fe
+ 
+·th
+="$PROJECT_DIR$/../Pli¡P¬£r/¤c/com/³k®l/¶i¡/b—ns/PaylßdRßmšgPŞicy.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379469647692" 
+ignÜed
+="false" />
+
+45 <
+fe
+ 
+·th
+="/PaylßdRomšgPŞicyTe¡.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379469867840" 
+ignÜed
+="false" />
+
+46 <
+fe
+ 
+·th
+="/CsvP¬£r.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379472650483" 
+ignÜed
+="false" />
+
+47 <
+fe
+ 
+·th
+="/CsvU£rInfo.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379491448871" 
+ignÜed
+="false" />
+
+48 <
+fe
+ 
+·th
+="/ImpÜtDeviûInfoVo.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379495867936" 
+ignÜed
+="false" />
+
+49 <
+fe
+ 
+·th
+="/ImpÜtU£rVo.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379487130798" 
+ignÜed
+="false" />
+
+50 <
+fe
+ 
+·th
+="/CsvFeTe¡.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379493565317" 
+ignÜed
+="false" />
+
+51 <
+fe
+ 
+·th
+="/ImpÜtDeviûInfoVoTe¡.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379495770532" 
+ignÜed
+="false" />
+
+52 <
+fe
+ 
+·th
+="/CsvLše.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379828735446" 
+ignÜed
+="false" />
+
+53 <
+fe
+ 
+·th
+="/CsvLšeTe¡.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379820964356" 
+ignÜed
+="false" />
+
+54 <
+fe
+ 
+·th
+="/CÚv”‹rOssTe¡.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1383096131655" 
+ignÜed
+="false" />
+
+55 <
+fe
+ 
+·th
+="/In£¹SÜ‹r.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379833272799" 
+ignÜed
+="false" />
+
+56 <
+fe
+ 
+·th
+="/Ut™y.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379833707317" 
+ignÜed
+="false" />
+
+57 <
+fe
+ 
+·th
+="/Po¡fixEx´essiÚ.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379917078914" 
+ignÜed
+="false" />
+
+58 <
+fe
+ 
+·th
+="/Po¡fixEx´essiÚTe¡.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379914646101" 
+ignÜed
+="false" />
+
+59 <
+fe
+ 
+·th
+="/a.dummy" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379844911625" 
+ignÜed
+="false" />
+
+60 <
+fe
+ 
+·th
+="/DeviûInfoRe¥.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379903289462" 
+ignÜed
+="false" />
+
+61 <
+fe
+ 
+·th
+="/CommªdDeviûInfoStusTe¡.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1380000022287" 
+ignÜed
+="false" />
+
+62 <
+fe
+ 
+·th
+="/InfixEx´essiÚ.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379916495403" 
+ignÜed
+="false" />
+
+63 <
+fe
+ 
+·th
+="/Bš¬yS—rchT»eTe¡2.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379923483430" 
+ignÜed
+="false" />
+
+64 <
+fe
+ 
+·th
+="/Bš¬yS—rchT»e.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379923871637" 
+ignÜed
+="false" />
+
+65 <
+fe
+ 
+·th
+="/CsvVoDemo.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379927964275" 
+ignÜed
+="false" />
+
+66 <
+fe
+ 
+·th
+="/CsvVoBa£.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379928952685" 
+ignÜed
+="false" />
+
+67 <
+fe
+ 
+·th
+="/CsvVoDemoTe¡.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1382583035746" 
+ignÜed
+="false" />
+
+68 <
+fe
+ 
+·th
+="/CouÁšgSÜt.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379986204718" 
+ignÜed
+="false" />
+
+69 <
+fe
+ 
+·th
+="/CommªdDeviûInfoStus.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1379999757150" 
+ignÜed
+="false" />
+
+70 <
+fe
+ 
+·th
+="/CommªdObjeù.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1380178502496" 
+ignÜed
+="false" />
+
+71 <
+fe
+ 
+·th
+="$PROJECT_DIR$/../Pli¡P¬£r/¤c/com/³k®l/¶i¡/b—ns/CommªdS’dAdv”ti£.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1380179610281" 
+ignÜed
+="false" />
+
+72 <
+fe
+ 
+·th
+="/CommªdS’dAdv”ti£.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1380178667105" 
+ignÜed
+="false" />
+
+73 <
+fe
+ 
+·th
+="$PROJECT_DIR$/../Pli¡P¬£r/‹¡/com/³k®l/¶i¡/CommªdS’dAdv”ti£Te¡.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1380182340525" 
+ignÜed
+="false" />
+
+74 <
+fe
+ 
+·th
+="/CommªdS’dAdv”ti£Te¡.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1380182339943" 
+ignÜed
+="false" />
+
+75 <
+fe
+ 
+·th
+="/CommªdMsgP¬£r.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1380181636850" 
+ignÜed
+="false" />
+
+76 <
+fe
+ 
+·th
+="$PROJECT_DIR$/../Pli¡P¬£r/‹¡/com/³k®l/¶i¡/CommªdS’dResourûTe¡.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1380190480470" 
+ignÜed
+="false" />
+
+77 <
+fe
+ 
+·th
+="/PaylßdAPN.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1380245180558" 
+ignÜed
+="false" />
+
+78 <
+fe
+ 
+·th
+="/APND©a.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1380191773904" 
+ignÜed
+="false" />
+
+79 <
+fe
+ 
+·th
+="/APNCÚfig.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1380191625469" 
+ignÜed
+="false" />
+
+80 <
+fe
+ 
+·th
+="/PaylßdAPNTe¡.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1380192412652" 
+ignÜed
+="false" />
+
+81 <
+fe
+ 
+·th
+="$PROJECT_DIR$/../Pli¡P¬£r/¤c/com/³k®l/¶i¡/b—ns/APND©aA¼ay.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1380247813819" 
+ignÜed
+="false" />
+
+82 <
+fe
+ 
+·th
+="$PROJECT_DIR$/../Pli¡P¬£r/¤c/com/³k®l/¶i¡/b—ns/APNSDiù.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1380247852597" 
+ignÜed
+="false" />
+
+83 <
+fe
+ 
+·th
+="/PaylßdLDAP.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1380249285574" 
+ignÜed
+="false" />
+
+84 <
+fe
+ 
+·th
+="/PaylßdLDAPTe¡.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1380249573850" 
+ignÜed
+="false" />
+
+85 <
+fe
+ 
+·th
+="$PROJECT_DIR$/../Pli¡P¬£r/‹¡/com/³k®l/¶i¡/PaylßdS‘tšgsTe¡.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1380250298556" 
+ignÜed
+="false" />
+
+86 <
+fe
+ 
+·th
+="$PROJECT_DIR$/../Pli¡P¬£r/‹¡/com/³k®l/¶i¡/PaylßdS‘tšgsCombšeTe¡.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1380251445290" 
+ignÜed
+="false" />
+
+87 <
+fe
+ 
+·th
+="/PaylßdS‘tšgsCombšeTe¡.java" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1380251029081" 
+ignÜed
+="false" />
+
+88 <
+fe
+ 
+·th
+="$PROJECT_DIR$/../../JavaExam¶es/.id—/wÜk¥aû.xml" 
+chªg–i¡
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+time
+="1383096325520" 
+ignÜed
+="false" />
+
+89 <
+İtiÚ
+ 
+Çme
+="TRACKING_ENABLED" 
+v®ue
+="true" />
+
+90 <
+İtiÚ
+ 
+Çme
+="SHOW_DIALOG" 
+v®ue
+="false" />
+
+91 <
+İtiÚ
+ 
+Çme
+="HIGHLIGHT_CONFLICTS" 
+v®ue
+="true" />
+
+92 <
+İtiÚ
+ 
+Çme
+="HIGHLIGHT_NON_ACTIVE_CHANGELIST" 
+v®ue
+="false" />
+
+93 <
+İtiÚ
+ 
+Çme
+="LAST_RESOLUTION" 
+v®ue
+="IGNORE" />
+
+94 </
+compÚ’t
+>
+
+95 <
+compÚ’t
+ 
+Çme
+="ChªgesV›wMªag”" 
+æ©‹Ãd_v›w
+="Œue" 
+show_ignÜed
+="false" />
+
+96 <
+compÚ’t
+ 
+Çme
+="CreatePatchCommitExecutor">
+
+97 <
+İtiÚ
+ 
+Çme
+="PATCH_PATH" 
+v®ue
+="" />
+
+98 </
+compÚ’t
+>
+
+99 <
+compÚ’t
+ 
+Çme
+="DaemonCodeAnalyzer">
+
+100 <
+di§bË_hšts
+ />
+
+101 </
+compÚ’t
+>
+
+102 <
+compÚ’t
+ 
+Çme
+="DebuggerManager">
+
+103 <
+ui_´İ”t›s
+ 
+deçuÉ_su¥’d_pŞicy
+="Su¥’dAÎ" 
+deçuÉ_cÚd™iÚ_’abËd
+="true" />
+
+104 <
+b»akpošt_ªy
+ 
+deçuÉ_su¥’d_pŞicy
+="Su¥’dAÎ" 
+deçuÉ_cÚd™iÚ_’abËd
+="true">
+
+105 <
+b»akpošt
+>
+
+106 <
+İtiÚ
+ 
+Çme
+="NOTIFY_CAUGHT" 
+v®ue
+="true" />
+
+107 <
+İtiÚ
+ 
+Çme
+="NOTIFY_UNCAUGHT" 
+v®ue
+="true" />
+
+108 <
+İtiÚ
+ 
+Çme
+="ENABLED" 
+v®ue
+="false" />
+
+109 <
+İtiÚ
+ 
+Çme
+="LOG_ENABLED" 
+v®ue
+="false" />
+
+110 <
+İtiÚ
+ 
+Çme
+="LOG_EXPRESSION_ENABLED" 
+v®ue
+="false" />
+
+111 <
+İtiÚ
+ 
+Çme
+="REMOVE_AFTER_HIT" 
+v®ue
+="false" />
+
+112 <
+İtiÚ
+ 
+Çme
+="SUSPEND_POLICY" 
+v®ue
+="SuspendAll" />
+
+113 <
+İtiÚ
+ 
+Çme
+="SUSPEND" 
+v®ue
+="true" />
+
+114 <
+İtiÚ
+ 
+Çme
+="COUNT_FILTER_ENABLED" 
+v®ue
+="false" />
+
+115 <
+İtiÚ
+ 
+Çme
+="COUNT_FILTER" 
+v®ue
+="0" />
+
+116 <
+İtiÚ
+ 
+Çme
+="CONDITION_ENABLED" 
+v®ue
+="true" />
+
+117 <
+İtiÚ
+ 
+Çme
+="CLASS_FILTERS_ENABLED" 
+v®ue
+="false" />
+
+118 <
+İtiÚ
+ 
+Çme
+="INSTANCE_FILTERS_ENABLED" 
+v®ue
+="false" />
+
+119 <
+İtiÚ
+ 
+Çme
+="CONDITION" 
+v®ue
+="" />
+
+120 <
+İtiÚ
+ 
+Çme
+="LOG_MESSAGE" 
+v®ue
+="" />
+
+121 </
+b»akpošt
+>
+
+122 <
+b»akpošt
+>
+
+123 <
+İtiÚ
+ 
+Çme
+="NOTIFY_CAUGHT" 
+v®ue
+="true" />
+
+124 <
+İtiÚ
+ 
+Çme
+="NOTIFY_UNCAUGHT" 
+v®ue
+="true" />
+
+125 <
+İtiÚ
+ 
+Çme
+="ENABLED" 
+v®ue
+="false" />
+
+126 <
+İtiÚ
+ 
+Çme
+="LOG_ENABLED" 
+v®ue
+="false" />
+
+127 <
+İtiÚ
+ 
+Çme
+="LOG_EXPRESSION_ENABLED" 
+v®ue
+="false" />
+
+128 <
+İtiÚ
+ 
+Çme
+="REMOVE_AFTER_HIT" 
+v®ue
+="false" />
+
+129 <
+İtiÚ
+ 
+Çme
+="SUSPEND_POLICY" 
+v®ue
+="SuspendAll" />
+
+130 <
+İtiÚ
+ 
+Çme
+="SUSPEND" 
+v®ue
+="true" />
+
+131 <
+İtiÚ
+ 
+Çme
+="COUNT_FILTER_ENABLED" 
+v®ue
+="false" />
+
+132 <
+İtiÚ
+ 
+Çme
+="COUNT_FILTER" 
+v®ue
+="0" />
+
+133 <
+İtiÚ
+ 
+Çme
+="CONDITION_ENABLED" 
+v®ue
+="true" />
+
+134 <
+İtiÚ
+ 
+Çme
+="CLASS_FILTERS_ENABLED" 
+v®ue
+="false" />
+
+135 <
+İtiÚ
+ 
+Çme
+="INSTANCE_FILTERS_ENABLED" 
+v®ue
+="false" />
+
+136 <
+İtiÚ
+ 
+Çme
+="CONDITION" 
+v®ue
+="" />
+
+137 <
+İtiÚ
+ 
+Çme
+="LOG_MESSAGE" 
+v®ue
+="" />
+
+138 </
+b»akpošt
+>
+
+139 </
+b»akpošt_ªy
+>
+
+140 <
+b»akpošt_ruËs
+ />
+
+141 <
+ui_´İ”t›s
+ />
+
+142 </
+compÚ’t
+>
+
+143 <
+compÚ’t
+ 
+Çme
+="ExecutiÚT¬g‘Mªag”" 
+SELECTED_TARGET
+="default_target" />
+
+144 <
+compÚ’t
+ 
+Çme
+="FavoritesManager">
+
+145 <
+çvÜ™es_li¡
+ 
+Çme
+="CsvJsonConverter" />
+
+146 </
+compÚ’t
+>
+
+147 <
+compÚ’t
+ 
+Çme
+="FileEditorManager">
+
+148 <
+Ëaf
+>
+
+149 <
+fe
+ 
+Ëaf
+-fe-
+Çme
+="CsvFe.java" 
+pšÃd
+="çl£" 
+cu¼’t
+="çl£" cu¼’t-
+š
+-
+b
+="false">
+
+150 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/src/com/pekall/csv/bean/CsvFile.java">
+
+151 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+152 <
+¡©e
+ 
+lše
+="14" 
+cŞumn
+="4" 
+£ËùiÚ
+-
+¡¬t
+="286" s–eùiÚ-
+’d
+="286" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.0">
+
+153 <
+fŞdšg
+ />
+
+154 </
+¡©e
+>
+
+155 </
+´ovid”
+>
+
+156 </
+’Œy
+>
+
+157 </
+fe
+>
+
+158 <
+fe
+ 
+Ëaf
+-fe-
+Çme
+="CsvLše.java" 
+pšÃd
+="çl£" 
+cu¼’t
+="çl£" cu¼’t-
+š
+-
+b
+="false">
+
+159 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/src/com/pekall/csv/bean/CsvLine.java">
+
+160 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+161 <
+¡©e
+ 
+lše
+="14" 
+cŞumn
+="13" 
+£ËùiÚ
+-
+¡¬t
+="333" s–eùiÚ-
+’d
+="333" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.0">
+
+162 <
+fŞdšg
+ />
+
+163 </
+¡©e
+>
+
+164 </
+´ovid”
+>
+
+165 </
+’Œy
+>
+
+166 </
+fe
+>
+
+167 <
+fe
+ 
+Ëaf
+-fe-
+Çme
+="CSVR—d”.java" 
+pšÃd
+="çl£" 
+cu¼’t
+="çl£" cu¼’t-
+š
+-
+b
+="false">
+
+168 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/src/com/pekall/csv/CSVReader.java">
+
+169 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+170 <
+¡©e
+ 
+lše
+="22" 
+cŞumn
+="26" 
+£ËùiÚ
+-
+¡¬t
+="419" s–eùiÚ-
+’d
+="419" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.0">
+
+171 <
+fŞdšg
+ />
+
+172 </
+¡©e
+>
+
+173 </
+´ovid”
+>
+
+174 </
+’Œy
+>
+
+175 </
+fe
+>
+
+176 <
+fe
+ 
+Ëaf
+-fe-
+Çme
+="CsvVoDemoTe¡.java" 
+pšÃd
+="çl£" 
+cu¼’t
+="çl£" cu¼’t-
+š
+-
+b
+="false">
+
+177 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/test/com/pekall/csv/bean/CsvVoDemoTest.java">
+
+178 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+179 <
+¡©e
+ 
+lše
+="46" 
+cŞumn
+="32" 
+£ËùiÚ
+-
+¡¬t
+="1490" s–eùiÚ-
+’d
+="1490" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.0">
+
+180 <
+fŞdšg
+ />
+
+181 </
+¡©e
+>
+
+182 </
+´ovid”
+>
+
+183 </
+’Œy
+>
+
+184 </
+fe
+>
+
+185 <
+fe
+ 
+Ëaf
+-fe-
+Çme
+="CÚv”‹r.java" 
+pšÃd
+="çl£" 
+cu¼’t
+="Œue" cu¼’t-
+š
+-
+b
+="true">
+
+186 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/src/com/pekall/csv/Converter.java">
+
+187 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+188 <
+¡©e
+ 
+lše
+="143" 
+cŞumn
+="0" 
+£ËùiÚ
+-
+¡¬t
+="4461" s–eùiÚ-
+’d
+="4541" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.73170733">
+
+189 <
+fŞdšg
+ />
+
+190 </
+¡©e
+>
+
+191 </
+´ovid”
+>
+
+192 </
+’Œy
+>
+
+193 </
+fe
+>
+
+194 <
+fe
+ 
+Ëaf
+-fe-
+Çme
+="CÚv”‹rTe¡.java" 
+pšÃd
+="çl£" 
+cu¼’t
+="çl£" cu¼’t-
+š
+-
+b
+="false">
+
+195 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/test/com/pekall/csv/ConverterTest.java">
+
+196 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+197 <
+¡©e
+ 
+lše
+="157" 
+cŞumn
+="17" 
+£ËùiÚ
+-
+¡¬t
+="4725" s–eùiÚ-
+’d
+="4725" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.0">
+
+198 <
+fŞdšg
+ />
+
+199 </
+¡©e
+>
+
+200 </
+´ovid”
+>
+
+201 </
+’Œy
+>
+
+202 </
+fe
+>
+
+203 <
+fe
+ 
+Ëaf
+-fe-
+Çme
+="CÚv”‹rOssTe¡.java" 
+pšÃd
+="çl£" 
+cu¼’t
+="çl£" cu¼’t-
+š
+-
+b
+="false">
+
+204 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/test/com/pekall/csv/ConverterOssTest.java">
+
+205 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+206 <
+¡©e
+ 
+lše
+="50" 
+cŞumn
+="4" 
+£ËùiÚ
+-
+¡¬t
+="1426" s–eùiÚ-
+’d
+="1426" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.0">
+
+207 <
+fŞdšg
+ />
+
+208 </
+¡©e
+>
+
+209 </
+´ovid”
+>
+
+210 </
+’Œy
+>
+
+211 </
+fe
+>
+
+212 <
+fe
+ 
+Ëaf
+-fe-
+Çme
+="CsvFeTe¡.java" 
+pšÃd
+="çl£" 
+cu¼’t
+="çl£" cu¼’t-
+š
+-
+b
+="false">
+
+213 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/test/com/pekall/csv/CsvFileTest.java">
+
+214 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+215 <
+¡©e
+ 
+lše
+="12" 
+cŞumn
+="0" 
+£ËùiÚ
+-
+¡¬t
+="363" s–eùiÚ-
+’d
+="363" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.0">
+
+216 <
+fŞdšg
+ />
+
+217 </
+¡©e
+>
+
+218 </
+´ovid”
+>
+
+219 </
+’Œy
+>
+
+220 </
+fe
+>
+
+221 <
+fe
+ 
+Ëaf
+-fe-
+Çme
+="ImpÜtDeviûInfoVoTe¡.java" 
+pšÃd
+="çl£" 
+cu¼’t
+="çl£" cu¼’t-
+š
+-
+b
+="false">
+
+222 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/test/com/pekall/csv/bean/ImportDeviceInfoVoTest.java">
+
+223 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+224 <
+¡©e
+ 
+lše
+="13" 
+cŞumn
+="31" 
+£ËùiÚ
+-
+¡¬t
+="404" s–eùiÚ-
+’d
+="404" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.0">
+
+225 <
+fŞdšg
+ />
+
+226 </
+¡©e
+>
+
+227 </
+´ovid”
+>
+
+228 </
+’Œy
+>
+
+229 </
+fe
+>
+
+230 <
+fe
+ 
+Ëaf
+-fe-
+Çme
+="GsÚTe¡.java" 
+pšÃd
+="çl£" 
+cu¼’t
+="çl£" cu¼’t-
+š
+-
+b
+="false">
+
+231 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/test/com/pekall/csv/GsonTest.java">
+
+232 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+233 <
+¡©e
+ 
+lše
+="11" 
+cŞumn
+="39" 
+£ËùiÚ
+-
+¡¬t
+="320" s–eùiÚ-
+’d
+="320" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.0">
+
+234 <
+fŞdšg
+ />
+
+235 </
+¡©e
+>
+
+236 </
+´ovid”
+>
+
+237 </
+’Œy
+>
+
+238 </
+fe
+>
+
+239 </
+Ëaf
+>
+
+240 </
+compÚ’t
+>
+
+241 <
+compÚ’t
+ 
+Çme
+="FindManager">
+
+242 <
+FšdU§gesMªag”
+>
+
+243 <
+£‰šg
+ 
+Çme
+="OPEN_NEW_TAB" 
+v®ue
+="false" />
+
+244 </
+FšdU§gesMªag”
+>
+
+245 </
+compÚ’t
+>
+
+246 <
+compÚ’t
+ 
+Çme
+="Git.Settings">
+
+247 <
+İtiÚ
+ 
+Çme
+="RECENT_GIT_ROOT_PATH" 
+v®ue
+="$PROJECT_DIR$/../../../../.." />
+
+248 </
+compÚ’t
+>
+
+249 <
+compÚ’t
+ 
+Çme
+="GitLogSettings">
+
+250 <
+İtiÚ
+ 
+Çme
+="myDateState">
+
+251 <
+MyD©eS‹
+ />
+
+252 </
+İtiÚ
+>
+
+253 </
+compÚ’t
+>
+
+254 <
+compÚ’t
+ 
+Çme
+="IdeDocumentHistory">
+
+255 <
+İtiÚ
+ 
+Çme
+="changedFiles">
+
+256 <
+li¡
+>
+
+257 <
+İtiÚ
+ 
+v®ue
+="$PROJECT_DIR$/src/com/pekall/csv/bean/CsvUserInfo.java" />
+
+258 <
+İtiÚ
+ 
+v®ue
+="$PROJECT_DIR$/src/com/pekall/csv/Debug.java" />
+
+259 <
+İtiÚ
+ 
+v®ue
+="$PROJECT_DIR$/test/com/pekall/csv/bean/ImportDeviceInfoVoTest.java" />
+
+260 <
+İtiÚ
+ 
+v®ue
+="$PROJECT_DIR$/test/com/pekall/csv/bean/CsvLineTest.java" />
+
+261 <
+İtiÚ
+ 
+v®ue
+="$PROJECT_DIR$/src/com/pekall/csv/bean/CsvLine.java" />
+
+262 <
+İtiÚ
+ 
+v®ue
+="$PROJECT_DIR$/src/com/pekall/csv/bean/ImportDeviceInfoVo.java" />
+
+263 <
+İtiÚ
+ 
+v®ue
+="$PROJECT_DIR$/src/com/pekall/csv/CSVWriter.java" />
+
+264 <
+İtiÚ
+ 
+v®ue
+="$PROJECT_DIR$/src/com/pekall/csv/bean/CsvVoDemo.java" />
+
+265 <
+İtiÚ
+ 
+v®ue
+="$PROJECT_DIR$/src/com/pekall/csv/bean/CsvVoBase.java" />
+
+266 <
+İtiÚ
+ 
+v®ue
+="$PROJECT_DIR$/test/com/pekall/csv/GsonTest.java" />
+
+267 <
+İtiÚ
+ 
+v®ue
+="$PROJECT_DIR$/src/com/pekall/csv/CSVReader.java" />
+
+268 <
+İtiÚ
+ 
+v®ue
+="$PROJECT_DIR$/test/com/pekall/csv/bean/CsvVoDemoTest.java" />
+
+269 <
+İtiÚ
+ 
+v®ue
+="$PROJECT_DIR$/test/com/pekall/csv/ConverterTest.java" />
+
+270 <
+İtiÚ
+ 
+v®ue
+="$PROJECT_DIR$/test/com/pekall/csv/CsvFileTest.java" />
+
+271 <
+İtiÚ
+ 
+v®ue
+="$PROJECT_DIR$/test/com/pekall/csv/ConverterOssTest.java" />
+
+272 <
+İtiÚ
+ 
+v®ue
+="$PROJECT_DIR$/src/com/pekall/csv/Converter.java" />
+
+273 </
+li¡
+>
+
+274 </
+İtiÚ
+>
+
+275 </
+compÚ’t
+>
+
+276 <
+compÚ’t
+ 
+Çme
+="ProjectFrameBounds">
+
+277 <
+İtiÚ
+ 
+Çme
+="x" 
+v®ue
+="64" />
+
+278 <
+İtiÚ
+ 
+Çme
+="y" 
+v®ue
+="-7" />
+
+279 <
+İtiÚ
+ 
+Çme
+="width" 
+v®ue
+="1303" />
+
+280 <
+İtiÚ
+ 
+Çme
+="height" 
+v®ue
+="776" />
+
+281 </
+compÚ’t
+>
+
+282 <
+compÚ’t
+ 
+Çme
+="ProjeùLev–VcsMªag”" 
+£‰šgsEd™edMªu®ly
+="true">
+
+283 <
+O±iÚsS‘tšg
+ 
+v®ue
+="Œue" 
+id
+="Add" />
+
+284 <
+O±iÚsS‘tšg
+ 
+v®ue
+="Œue" 
+id
+="Remove" />
+
+285 <
+O±iÚsS‘tšg
+ 
+v®ue
+="Œue" 
+id
+="Checkout" />
+
+286 <
+O±iÚsS‘tšg
+ 
+v®ue
+="Œue" 
+id
+="Update" />
+
+287 <
+O±iÚsS‘tšg
+ 
+v®ue
+="Œue" 
+id
+="Status" />
+
+288 <
+O±iÚsS‘tšg
+ 
+v®ue
+="Œue" 
+id
+="Edit" />
+
+289 <
+O±iÚsS‘tšg
+ 
+v®ue
+="Œue" 
+id
+="Undo Check Out" />
+
+290 <
+O±iÚsS‘tšg
+ 
+v®ue
+="Œue" 
+id
+="Get Latest Version" />
+
+291 <
+CÚfœm©iÚsS‘tšg
+ 
+v®ue
+="2" 
+id
+="Add" />
+
+292 <
+CÚfœm©iÚsS‘tšg
+ 
+v®ue
+="0" 
+id
+="Remove" />
+
+293 </
+compÚ’t
+>
+
+294 <
+compÚ’t
+ 
+Çme
+="ProjectReloadState">
+
+295 <
+İtiÚ
+ 
+Çme
+="STATE" 
+v®ue
+="0" />
+
+296 </
+compÚ’t
+>
+
+297 <
+compÚ’t
+ 
+Çme
+="ProjectView">
+
+298 <
+Çvig©Ü
+ 
+cu¼’tV›w
+="ProjeùPªe" 
+´İÜtiÚs
+="" 
+v”siÚ
+="1" 
+¥l™‹rPrİÜtiÚ
+="0.5">
+
+299 <
+æ©‹nPackages
+ />
+
+300 <
+showMemb”s
+ />
+
+301 <
+showModuËs
+ />
+
+302 <
+showLib¿ryCÚ‹Ás
+ />
+
+303 <
+hideEm±yPackages
+ />
+
+304 <
+abb»vŸ‹PackageNames
+ />
+
+305 <
+autosüŞlToSourû
+ />
+
+306 <
+autosüŞlFromSourû
+ />
+
+307 <
+sÜtByTy³
+ />
+
+308 </
+Çvig©Ü
+>
+
+309 <
+·Ãs
+>
+
+310 <
+·Ã
+ 
+id
+="Scope" />
+
+311 <
+·Ã
+ 
+id
+="ProjectPane">
+
+312 <
+subPªe
+>
+
+313 <
+PATH
+>
+
+314 <
+PATH_ELEMENT
+>
+
+315 <
+İtiÚ
+ 
+Çme
+="myI‹mId" 
+v®ue
+="CsvJsonConverter" />
+
+316 <
+İtiÚ
+ 
+Çme
+="myI‹mTy³" 
+v®ue
+="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+
+317 </
+PATH_ELEMENT
+>
+
+318 </
+PATH
+>
+
+319 <
+PATH
+>
+
+320 <
+PATH_ELEMENT
+>
+
+321 <
+İtiÚ
+ 
+Çme
+="myI‹mId" 
+v®ue
+="CsvJsonConverter" />
+
+322 <
+İtiÚ
+ 
+Çme
+="myI‹mTy³" 
+v®ue
+="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+
+323 </
+PATH_ELEMENT
+>
+
+324 <
+PATH_ELEMENT
+>
+
+325 <
+İtiÚ
+ 
+Çme
+="myI‹mId" 
+v®ue
+="CsvJsonConverter" />
+
+326 <
+İtiÚ
+ 
+Çme
+="myI‹mTy³" 
+v®ue
+="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+
+327 </
+PATH_ELEMENT
+>
+
+328 </
+PATH
+>
+
+329 <
+PATH
+>
+
+330 <
+PATH_ELEMENT
+>
+
+331 <
+İtiÚ
+ 
+Çme
+="myI‹mId" 
+v®ue
+="CsvJsonConverter" />
+
+332 <
+İtiÚ
+ 
+Çme
+="myI‹mTy³" 
+v®ue
+="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+
+333 </
+PATH_ELEMENT
+>
+
+334 <
+PATH_ELEMENT
+>
+
+335 <
+İtiÚ
+ 
+Çme
+="myI‹mId" 
+v®ue
+="CsvJsonConverter" />
+
+336 <
+İtiÚ
+ 
+Çme
+="myI‹mTy³" 
+v®ue
+="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+
+337 </
+PATH_ELEMENT
+>
+
+338 <
+PATH_ELEMENT
+>
+
+339 <
+İtiÚ
+ 
+Çme
+="myI‹mId" 
+v®ue
+="test" />
+
+340 <
+İtiÚ
+ 
+Çme
+="myI‹mTy³" 
+v®ue
+="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+
+341 </
+PATH_ELEMENT
+>
+
+342 <
+PATH_ELEMENT
+>
+
+343 <
+İtiÚ
+ 
+Çme
+="myI‹mId" 
+v®ue
+="csv" />
+
+344 <
+İtiÚ
+ 
+Çme
+="myI‹mTy³" 
+v®ue
+="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+
+345 </
+PATH_ELEMENT
+>
+
+346 </
+PATH
+>
+
+347 <
+PATH
+>
+
+348 <
+PATH_ELEMENT
+>
+
+349 <
+İtiÚ
+ 
+Çme
+="myI‹mId" 
+v®ue
+="CsvJsonConverter" />
+
+350 <
+İtiÚ
+ 
+Çme
+="myI‹mTy³" 
+v®ue
+="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+
+351 </
+PATH_ELEMENT
+>
+
+352 <
+PATH_ELEMENT
+>
+
+353 <
+İtiÚ
+ 
+Çme
+="myI‹mId" 
+v®ue
+="CsvJsonConverter" />
+
+354 <
+İtiÚ
+ 
+Çme
+="myI‹mTy³" 
+v®ue
+="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+
+355 </
+PATH_ELEMENT
+>
+
+356 <
+PATH_ELEMENT
+>
+
+357 <
+İtiÚ
+ 
+Çme
+="myI‹mId" 
+v®ue
+="src" />
+
+358 <
+İtiÚ
+ 
+Çme
+="myI‹mTy³" 
+v®ue
+="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+
+359 </
+PATH_ELEMENT
+>
+
+360 </
+PATH
+>
+
+361 <
+PATH
+>
+
+362 <
+PATH_ELEMENT
+>
+
+363 <
+İtiÚ
+ 
+Çme
+="myI‹mId" 
+v®ue
+="CsvJsonConverter" />
+
+364 <
+İtiÚ
+ 
+Çme
+="myI‹mTy³" 
+v®ue
+="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+
+365 </
+PATH_ELEMENT
+>
+
+366 <
+PATH_ELEMENT
+>
+
+367 <
+İtiÚ
+ 
+Çme
+="myI‹mId" 
+v®ue
+="CsvJsonConverter" />
+
+368 <
+İtiÚ
+ 
+Çme
+="myI‹mTy³" 
+v®ue
+="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+
+369 </
+PATH_ELEMENT
+>
+
+370 <
+PATH_ELEMENT
+>
+
+371 <
+İtiÚ
+ 
+Çme
+="myI‹mId" 
+v®ue
+="src" />
+
+372 <
+İtiÚ
+ 
+Çme
+="myI‹mTy³" 
+v®ue
+="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+
+373 </
+PATH_ELEMENT
+>
+
+374 <
+PATH_ELEMENT
+>
+
+375 <
+İtiÚ
+ 
+Çme
+="myI‹mId" 
+v®ue
+="csv" />
+
+376 <
+İtiÚ
+ 
+Çme
+="myI‹mTy³" 
+v®ue
+="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+
+377 </
+PATH_ELEMENT
+>
+
+378 </
+PATH
+>
+
+379 </
+subPªe
+>
+
+380 </
+·Ã
+>
+
+381 <
+·Ã
+ 
+id
+="PackagesPane" />
+
+382 </
+·Ãs
+>
+
+383 </
+compÚ’t
+>
+
+384 <
+compÚ’t
+ 
+Çme
+="PropertiesComponent">
+
+385 <
+´İ”ty
+ 
+Çme
+="G’”©eAÁBudDŸlog.g’”©eId—HomePrİ”ty" 
+v®ue
+="false" />
+
+386 <
+´İ”ty
+ 
+Çme
+="´ojeù.¡ruùu».Ï¡.ed™ed" 
+v®ue
+="Artifacts" />
+
+387 <
+´İ”ty
+ 
+Çme
+="com.š‹Îij.‹¡IÁeg¿tiÚ.ü—‹Te¡.C»©eTe¡DŸlog.deçuÉLib¿ry" 
+v®ue
+="JUnit3" />
+
+388 <
+´İ”ty
+ 
+Çme
+="Ov”rideIm¶em’t.combšed" 
+v®ue
+="true" />
+
+389 <
+´İ”ty
+ 
+Çme
+="´ojeù.¡ruùu».´İÜtiÚ" 
+v®ue
+="0.15" />
+
+390 <
+´İ”ty
+ 
+Çme
+="İtiÚs.¥l™‹r.maš.´İÜtiÚs" 
+v®ue
+="0.3" />
+
+391 <
+´İ”ty
+ 
+Çme
+="G’”©eAÁBudDŸlog.g’”©eSšgËFe" 
+v®ue
+="false" />
+
+392 <
+´İ”ty
+ 
+Çme
+="»ûÁsLim™" 
+v®ue
+="5" />
+
+393 <
+´İ”ty
+ 
+Çme
+="Memb”Choo£r.sÜ‹d" 
+v®ue
+="false" />
+
+394 <
+´İ”ty
+ 
+Çme
+="G’”©eAÁBudDŸlog.šşšeRuÁ›mCÏs¥©h" 
+v®ue
+="false" />
+
+395 <
+´İ”ty
+ 
+Çme
+="Ï¡_İ’ed_fe_·th" 
+v®ue
+="$PROJECT_DIR$/libs/gson-2.1.jar!/" />
+
+396 <
+´İ”ty
+ 
+Çme
+="G’”©eAÁBudDŸlog.ouutFeNamePrİ”ty" 
+v®ue
+="csvjsonconverter" />
+
+397 <
+´İ”ty
+ 
+Çme
+="G’”©eAÁBudDŸlog.’abËUiFÜmCompe" 
+v®ue
+="true" />
+
+398 <
+´İ”ty
+ 
+Çme
+="GoToCÏss.toSaveInşudeLib¿r›s" 
+v®ue
+="false" />
+
+399 <
+´İ”ty
+ 
+Çme
+="WebS”v”ToŞWšdowFaùÜyS‹" 
+v®ue
+="false" />
+
+400 <
+´İ”ty
+ 
+Çme
+="Memb”Choo£r.showCÏs£s" 
+v®ue
+="true" />
+
+401 <
+´İ”ty
+ 
+Çme
+="GoToCÏss.šşudeLib¿r›s" 
+v®ue
+="false" />
+
+402 <
+´İ”ty
+ 
+Çme
+="İtiÚs.¥l™‹r.d‘as.´İÜtiÚs" 
+v®ue
+="0.2" />
+
+403 <
+´İ”ty
+ 
+Çme
+="GoToFe.šşudeJavaFes" 
+v®ue
+="false" />
+
+404 <
+´İ”ty
+ 
+Çme
+="İtiÚs.Ï¡S–eùed" 
+v®ue
+="preferences.pluginManager" />
+
+405 <
+´İ”ty
+ 
+Çme
+="´ojeù.¡ruùu».side.´İÜtiÚ" 
+v®ue
+="0.2" />
+
+406 <
+´İ”ty
+ 
+Çme
+="G’”©eAÁBudDŸlog.fÜûT¬g‘Jdk" 
+v®ue
+="true" />
+
+407 <
+´İ”ty
+ 
+Çme
+="Memb”Choo£r.cİyJavadoc" 
+v®ue
+="false" />
+
+408 <
+´İ”ty
+ 
+Çme
+="com.š‹Îij.‹¡IÁeg¿tiÚ.ü—‹Te¡.C»©eTe¡DŸlog.šşudeInh”™edMemb”s" 
+v®ue
+="false" />
+
+409 <
+´İ”ty
+ 
+Çme
+="G’”©eAÁBudDŸlog.backupFes" 
+v®ue
+="true" />
+
+410 <
+´İ”ty
+ 
+Çme
+="dyÇmic.şas¥©h" 
+v®ue
+="false" />
+
+411 <
+´İ”ty
+ 
+Çme
+="İtiÚs.£¬chVisibË" 
+v®ue
+="true" />
+
+412 </
+compÚ’t
+>
+
+413 <
+compÚ’t
+ 
+Çme
+="RecentsManager">
+
+414 <
+key
+ 
+Çme
+="CreateTestDialog.Recents.Supers">
+
+415 <
+»ûÁ
+ 
+Çme
+="junit.framework.TestCase" />
+
+416 </
+key
+>
+
+417 <
+key
+ 
+Çme
+="CreateTestDialog.RecentsKey">
+
+418 <
+»ûÁ
+ 
+Çme
+="com.pekall.csv.bean" />
+
+419 <
+»ûÁ
+ 
+Çme
+="com.pekall.csv" />
+
+420 </
+key
+>
+
+421 <
+key
+ 
+Çme
+="CopyClassDialog.RECENTS_KEY">
+
+422 <
+»ûÁ
+ 
+Çme
+="" />
+
+423 </
+key
+>
+
+424 <
+key
+ 
+Çme
+="CreateClassDialog.RecentsKey">
+
+425 <
+»ûÁ
+ 
+Çme
+="com.pekall.csv.bean" />
+
+426 </
+key
+>
+
+427 </
+compÚ’t
+>
+
+428 <
+compÚ’t
+ 
+Çme
+="RunMªag”" 
+£Ëùed
+="JUnit.All in CsvJsonConverter">
+
+429 <
+cÚfigu¿tiÚ
+ ="çl£" 
+Çme
+="AÎ iÀCsvJsÚCÚv”‹r" 
+ty³
+="JUn™" 
+çùÜyName
+="JUn™" 
+‹mpÜ¬y
+="true">
+
+430 <
+ex‹nsiÚ
+ 
+Çme
+="cov”age" 
+’abËd
+="çl£" 
+m”ge
+="çl£" 
+§m¶e_cov”age
+="Œue" 
+ruÂ”
+="idea" />
+
+431 <
+moduË
+ 
+Çme
+="CsvJsonConverter" />
+
+432 <
+İtiÚ
+ 
+Çme
+="ALTERNATIVE_JRE_PATH_ENABLED" 
+v®ue
+="false" />
+
+433 <
+İtiÚ
+ 
+Çme
+="ALTERNATIVE_JRE_PATH" />
+
+434 <
+İtiÚ
+ 
+Çme
+="PACKAGE_NAME" 
+v®ue
+="" />
+
+435 <
+İtiÚ
+ 
+Çme
+="MAIN_CLASS_NAME" />
+
+436 <
+İtiÚ
+ 
+Çme
+="METHOD_NAME" />
+
+437 <
+İtiÚ
+ 
+Çme
+="TEST_OBJECT" 
+v®ue
+="package" />
+
+438 <
+İtiÚ
+ 
+Çme
+="VM_PARAMETERS" 
+v®ue
+="-ea" />
+
+439 <
+İtiÚ
+ 
+Çme
+="PARAMETERS" />
+
+440 <
+İtiÚ
+ 
+Çme
+="WORKING_DIRECTORY" 
+v®ue
+="$PROJECT_DIR$" />
+
+441 <
+İtiÚ
+ 
+Çme
+="ENV_VARIABLES" />
+
+442 <
+İtiÚ
+ 
+Çme
+="PASS_PARENT_ENVS" 
+v®ue
+="true" />
+
+443 <
+İtiÚ
+ 
+Çme
+="TEST_SEARCH_SCOPE">
+
+444 <
+v®ue
+ 
+deçuÉName
+="moduleWithDependencies" />
+
+445 </
+İtiÚ
+>
+
+446 <
+’vs
+ />
+
+447 <
+·‰”ns
+ />
+
+448 <
+RuÂ”S‘tšgs
+ 
+RuÂ”Id
+="Run" />
+
+449 <
+CÚfigu¿tiÚW¿µ”
+ 
+RuÂ”Id
+="Run" />
+
+450 <
+m‘hod
+ />
+
+451 </
+cÚfigu¿tiÚ
+>
+
+452 <
+cÚfigu¿tiÚ
+ ="çl£" 
+Çme
+="CÚv”‹rOssTe¡" 
+ty³
+="JUn™" 
+çùÜyName
+="JUn™" 
+‹mpÜ¬y
+="true">
+
+453 <
+ex‹nsiÚ
+ 
+Çme
+="cov”age" 
+’abËd
+="çl£" 
+m”ge
+="çl£" 
+§m¶e_cov”age
+="Œue" 
+ruÂ”
+="idea">
+
+454 <
+·‰”n
+>
+
+455 <
+İtiÚ
+ 
+Çme
+="PATTERN" 
+v®ue
+="com.pekall.csv.*" />
+
+456 <
+İtiÚ
+ 
+Çme
+="ENABLED" 
+v®ue
+="true" />
+
+457 </
+·‰”n
+>
+
+458 </
+ex‹nsiÚ
+>
+
+459 <
+moduË
+ 
+Çme
+="CsvJsonConverter" />
+
+460 <
+İtiÚ
+ 
+Çme
+="ALTERNATIVE_JRE_PATH_ENABLED" 
+v®ue
+="false" />
+
+461 <
+İtiÚ
+ 
+Çme
+="ALTERNATIVE_JRE_PATH" />
+
+462 <
+İtiÚ
+ 
+Çme
+="PACKAGE_NAME" 
+v®ue
+="com.pekall.csv" />
+
+463 <
+İtiÚ
+ 
+Çme
+="MAIN_CLASS_NAME" 
+v®ue
+="com.pekall.csv.ConverterOssTest" />
+
+464 <
+İtiÚ
+ 
+Çme
+="METHOD_NAME" />
+
+465 <
+İtiÚ
+ 
+Çme
+="TEST_OBJECT" 
+v®ue
+="class" />
+
+466 <
+İtiÚ
+ 
+Çme
+="VM_PARAMETERS" 
+v®ue
+="-ea" />
+
+467 <
+İtiÚ
+ 
+Çme
+="PARAMETERS" />
+
+468 <
+İtiÚ
+ 
+Çme
+="WORKING_DIRECTORY" 
+v®ue
+="$PROJECT_DIR$" />
+
+469 <
+İtiÚ
+ 
+Çme
+="ENV_VARIABLES" />
+
+470 <
+İtiÚ
+ 
+Çme
+="PASS_PARENT_ENVS" 
+v®ue
+="true" />
+
+471 <
+İtiÚ
+ 
+Çme
+="TEST_SEARCH_SCOPE">
+
+472 <
+v®ue
+ 
+deçuÉName
+="moduleWithDependencies" />
+
+473 </
+İtiÚ
+>
+
+474 <
+’vs
+ />
+
+475 <
+·‰”ns
+ />
+
+476 <
+RuÂ”S‘tšgs
+ 
+RuÂ”Id
+="Run" />
+
+477 <
+CÚfigu¿tiÚW¿µ”
+ 
+RuÂ”Id
+="Run" />
+
+478 <
+m‘hod
+ />
+
+479 </
+cÚfigu¿tiÚ
+>
+
+480 <
+cÚfigu¿tiÚ
+ ="çl£" 
+Çme
+="CÚv”‹rOssTe¡.‹¡Esÿ³Commas" 
+ty³
+="JUn™" 
+çùÜyName
+="JUn™" 
+‹mpÜ¬y
+="true">
+
+481 <
+ex‹nsiÚ
+ 
+Çme
+="cov”age" 
+’abËd
+="çl£" 
+m”ge
+="çl£" 
+§m¶e_cov”age
+="Œue" 
+ruÂ”
+="idea">
+
+482 <
+·‰”n
+>
+
+483 <
+İtiÚ
+ 
+Çme
+="PATTERN" 
+v®ue
+="com.pekall.csv.*" />
+
+484 <
+İtiÚ
+ 
+Çme
+="ENABLED" 
+v®ue
+="true" />
+
+485 </
+·‰”n
+>
+
+486 </
+ex‹nsiÚ
+>
+
+487 <
+moduË
+ 
+Çme
+="CsvJsonConverter" />
+
+488 <
+İtiÚ
+ 
+Çme
+="ALTERNATIVE_JRE_PATH_ENABLED" 
+v®ue
+="false" />
+
+489 <
+İtiÚ
+ 
+Çme
+="ALTERNATIVE_JRE_PATH" />
+
+490 <
+İtiÚ
+ 
+Çme
+="PACKAGE_NAME" 
+v®ue
+="com.pekall.csv" />
+
+491 <
+İtiÚ
+ 
+Çme
+="MAIN_CLASS_NAME" 
+v®ue
+="com.pekall.csv.ConverterOssTest" />
+
+492 <
+İtiÚ
+ 
+Çme
+="METHOD_NAME" 
+v®ue
+="testEscapeCommas" />
+
+493 <
+İtiÚ
+ 
+Çme
+="TEST_OBJECT" 
+v®ue
+="method" />
+
+494 <
+İtiÚ
+ 
+Çme
+="VM_PARAMETERS" 
+v®ue
+="-ea" />
+
+495 <
+İtiÚ
+ 
+Çme
+="PARAMETERS" />
+
+496 <
+İtiÚ
+ 
+Çme
+="WORKING_DIRECTORY" 
+v®ue
+="$PROJECT_DIR$" />
+
+497 <
+İtiÚ
+ 
+Çme
+="ENV_VARIABLES" />
+
+498 <
+İtiÚ
+ 
+Çme
+="PASS_PARENT_ENVS" 
+v®ue
+="true" />
+
+499 <
+İtiÚ
+ 
+Çme
+="TEST_SEARCH_SCOPE">
+
+500 <
+v®ue
+ 
+deçuÉName
+="moduleWithDependencies" />
+
+501 </
+İtiÚ
+>
+
+502 <
+’vs
+ />
+
+503 <
+·‰”ns
+ />
+
+504 <
+RuÂ”S‘tšgs
+ 
+RuÂ”Id
+="Run" />
+
+505 <
+CÚfigu¿tiÚW¿µ”
+ 
+RuÂ”Id
+="Run" />
+
+506 <
+m‘hod
+ />
+
+507 </
+cÚfigu¿tiÚ
+>
+
+508 <
+cÚfigu¿tiÚ
+ ="çl£" 
+Çme
+="CÚv”‹rOssTe¡.‹¡R—dGbkFe" 
+ty³
+="JUn™" 
+çùÜyName
+="JUn™" 
+‹mpÜ¬y
+="true">
+
+509 <
+ex‹nsiÚ
+ 
+Çme
+="cov”age" 
+’abËd
+="çl£" 
+m”ge
+="çl£" 
+§m¶e_cov”age
+="Œue" 
+ruÂ”
+="idea">
+
+510 <
+·‰”n
+>
+
+511 <
+İtiÚ
+ 
+Çme
+="PATTERN" 
+v®ue
+="com.pekall.csv.*" />
+
+512 <
+İtiÚ
+ 
+Çme
+="ENABLED" 
+v®ue
+="true" />
+
+513 </
+·‰”n
+>
+
+514 </
+ex‹nsiÚ
+>
+
+515 <
+moduË
+ 
+Çme
+="CsvJsonConverter" />
+
+516 <
+İtiÚ
+ 
+Çme
+="ALTERNATIVE_JRE_PATH_ENABLED" 
+v®ue
+="false" />
+
+517 <
+İtiÚ
+ 
+Çme
+="ALTERNATIVE_JRE_PATH" />
+
+518 <
+İtiÚ
+ 
+Çme
+="PACKAGE_NAME" 
+v®ue
+="com.pekall.csv" />
+
+519 <
+İtiÚ
+ 
+Çme
+="MAIN_CLASS_NAME" 
+v®ue
+="com.pekall.csv.ConverterOssTest" />
+
+520 <
+İtiÚ
+ 
+Çme
+="METHOD_NAME" 
+v®ue
+="testReadGbkFile" />
+
+521 <
+İtiÚ
+ 
+Çme
+="TEST_OBJECT" 
+v®ue
+="method" />
+
+522 <
+İtiÚ
+ 
+Çme
+="VM_PARAMETERS" 
+v®ue
+="-ea" />
+
+523 <
+İtiÚ
+ 
+Çme
+="PARAMETERS" />
+
+524 <
+İtiÚ
+ 
+Çme
+="WORKING_DIRECTORY" 
+v®ue
+="$PROJECT_DIR$" />
+
+525 <
+İtiÚ
+ 
+Çme
+="ENV_VARIABLES" />
+
+526 <
+İtiÚ
+ 
+Çme
+="PASS_PARENT_ENVS" 
+v®ue
+="true" />
+
+527 <
+İtiÚ
+ 
+Çme
+="TEST_SEARCH_SCOPE">
+
+528 <
+v®ue
+ 
+deçuÉName
+="moduleWithDependencies" />
+
+529 </
+İtiÚ
+>
+
+530 <
+’vs
+ />
+
+531 <
+·‰”ns
+ />
+
+532 <
+RuÂ”S‘tšgs
+ 
+RuÂ”Id
+="Run" />
+
+533 <
+CÚfigu¿tiÚW¿µ”
+ 
+RuÂ”Id
+="Run" />
+
+534 <
+m‘hod
+ />
+
+535 </
+cÚfigu¿tiÚ
+>
+
+536 <
+cÚfigu¿tiÚ
+ ="çl£" 
+Çme
+="CÚv”‹rOssTe¡.‹¡P¬tŸlCsv" 
+ty³
+="JUn™" 
+çùÜyName
+="JUn™" 
+‹mpÜ¬y
+="true">
+
+537 <
+ex‹nsiÚ
+ 
+Çme
+="cov”age" 
+’abËd
+="çl£" 
+m”ge
+="çl£" 
+§m¶e_cov”age
+="Œue" 
+ruÂ”
+="idea">
+
+538 <
+·‰”n
+>
+
+539 <
+İtiÚ
+ 
+Çme
+="PATTERN" 
+v®ue
+="com.pekall.csv.*" />
+
+540 <
+İtiÚ
+ 
+Çme
+="ENABLED" 
+v®ue
+="true" />
+
+541 </
+·‰”n
+>
+
+542 </
+ex‹nsiÚ
+>
+
+543 <
+moduË
+ 
+Çme
+="CsvJsonConverter" />
+
+544 <
+İtiÚ
+ 
+Çme
+="ALTERNATIVE_JRE_PATH_ENABLED" 
+v®ue
+="false" />
+
+545 <
+İtiÚ
+ 
+Çme
+="ALTERNATIVE_JRE_PATH" />
+
+546 <
+İtiÚ
+ 
+Çme
+="PACKAGE_NAME" 
+v®ue
+="com.pekall.csv" />
+
+547 <
+İtiÚ
+ 
+Çme
+="MAIN_CLASS_NAME" 
+v®ue
+="com.pekall.csv.ConverterOssTest" />
+
+548 <
+İtiÚ
+ 
+Çme
+="METHOD_NAME" 
+v®ue
+="testPartialCsv" />
+
+549 <
+İtiÚ
+ 
+Çme
+="TEST_OBJECT" 
+v®ue
+="method" />
+
+550 <
+İtiÚ
+ 
+Çme
+="VM_PARAMETERS" 
+v®ue
+="-ea" />
+
+551 <
+İtiÚ
+ 
+Çme
+="PARAMETERS" />
+
+552 <
+İtiÚ
+ 
+Çme
+="WORKING_DIRECTORY" 
+v®ue
+="$PROJECT_DIR$" />
+
+553 <
+İtiÚ
+ 
+Çme
+="ENV_VARIABLES" />
+
+554 <
+İtiÚ
+ 
+Çme
+="PASS_PARENT_ENVS" 
+v®ue
+="true" />
+
+555 <
+İtiÚ
+ 
+Çme
+="TEST_SEARCH_SCOPE">
+
+556 <
+v®ue
+ 
+deçuÉName
+="moduleWithDependencies" />
+
+557 </
+İtiÚ
+>
+
+558 <
+’vs
+ />
+
+559 <
+·‰”ns
+ />
+
+560 <
+RuÂ”S‘tšgs
+ 
+RuÂ”Id
+="Run" />
+
+561 <
+CÚfigu¿tiÚW¿µ”
+ 
+RuÂ”Id
+="Run" />
+
+562 <
+m‘hod
+ />
+
+563 </
+cÚfigu¿tiÚ
+>
+
+564 <
+cÚfigu¿tiÚ
+ ="Œue" 
+ty³
+="#Üg.j‘b¿šs.id—.devk™.run.PlugšCÚfigu¿tiÚTy³" 
+çùÜyName
+="Plugin">
+
+565 <
+moduË
+ 
+Çme
+="" />
+
+566 <
+İtiÚ
+ 
+Çme
+="VM_PARAMETERS" 
+v®ue
+="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+
+567 <
+İtiÚ
+ 
+Çme
+="PROGRAM_PARAMETERS" />
+
+568 <
+m‘hod
+ />
+
+569 </
+cÚfigu¿tiÚ
+>
+
+570 <
+cÚfigu¿tiÚ
+ ="Œue" 
+ty³
+="RemÙe" 
+çùÜyName
+="Remote">
+
+571 <
+İtiÚ
+ 
+Çme
+="USE_SOCKET_TRANSPORT" 
+v®ue
+="true" />
+
+572 <
+İtiÚ
+ 
+Çme
+="SERVER_MODE" 
+v®ue
+="false" />
+
+573 <
+İtiÚ
+ 
+Çme
+="SHMEM_ADDRESS" 
+v®ue
+="javadebug" />
+
+574 <
+İtiÚ
+ 
+Çme
+="HOST" 
+v®ue
+="localhost" />
+
+575 <
+İtiÚ
+ 
+Çme
+="PORT" 
+v®ue
+="5005" />
+
+576 <
+m‘hod
+ />
+
+577 </
+cÚfigu¿tiÚ
+>
+
+578 <
+cÚfigu¿tiÚ
+ ="Œue" 
+ty³
+="AµËt" 
+çùÜyName
+="Applet">
+
+579 <
+moduË
+ 
+Çme
+="" />
+
+580 <
+İtiÚ
+ 
+Çme
+="MAIN_CLASS_NAME" />
+
+581 <
+İtiÚ
+ 
+Çme
+="HTML_FILE_NAME" />
+
+582 <
+İtiÚ
+ 
+Çme
+="HTML_USED" 
+v®ue
+="false" />
+
+583 <
+İtiÚ
+ 
+Çme
+="WIDTH" 
+v®ue
+="400" />
+
+584 <
+İtiÚ
+ 
+Çme
+="HEIGHT" 
+v®ue
+="300" />
+
+585 <
+İtiÚ
+ 
+Çme
+="POLICY_FILE" 
+v®ue
+="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+
+586 <
+İtiÚ
+ 
+Çme
+="VM_PARAMETERS" />
+
+587 <
+İtiÚ
+ 
+Çme
+="ALTERNATIVE_JRE_PATH_ENABLED" 
+v®ue
+="false" />
+
+588 <
+İtiÚ
+ 
+Çme
+="ALTERNATIVE_JRE_PATH" />
+
+589 <
+m‘hod
+ />
+
+590 </
+cÚfigu¿tiÚ
+>
+
+591 <
+cÚfigu¿tiÚ
+ ="Œue" 
+ty³
+="Te¡NG" 
+çùÜyName
+="TestNG">
+
+592 <
+ex‹nsiÚ
+ 
+Çme
+="cov”age" 
+’abËd
+="çl£" 
+m”ge
+="çl£" 
+§m¶e_cov”age
+="Œue" 
+ruÂ”
+="idea" />
+
+593 <
+moduË
+ 
+Çme
+="" />
+
+594 <
+İtiÚ
+ 
+Çme
+="ALTERNATIVE_JRE_PATH_ENABLED" 
+v®ue
+="false" />
+
+595 <
+İtiÚ
+ 
+Çme
+="ALTERNATIVE_JRE_PATH" />
+
+596 <
+İtiÚ
+ 
+Çme
+="SUITE_NAME" />
+
+597 <
+İtiÚ
+ 
+Çme
+="PACKAGE_NAME" />
+
+598 <
+İtiÚ
+ 
+Çme
+="MAIN_CLASS_NAME" />
+
+599 <
+İtiÚ
+ 
+Çme
+="METHOD_NAME" />
+
+600 <
+İtiÚ
+ 
+Çme
+="GROUP_NAME" />
+
+601 <
+İtiÚ
+ 
+Çme
+="TEST_OBJECT" 
+v®ue
+="CLASS" />
+
+602 <
+İtiÚ
+ 
+Çme
+="VM_PARAMETERS" 
+v®ue
+="-ea" />
+
+603 <
+İtiÚ
+ 
+Çme
+="PARAMETERS" />
+
+604 <
+İtiÚ
+ 
+Çme
+="WORKING_DIRECTORY" 
+v®ue
+="$PROJECT_DIR$" />
+
+605 <
+İtiÚ
+ 
+Çme
+="OUTPUT_DIRECTORY" />
+
+606 <
+İtiÚ
+ 
+Çme
+="ANNOTATION_TYPE" />
+
+607 <
+İtiÚ
+ 
+Çme
+="ENV_VARIABLES" />
+
+608 <
+İtiÚ
+ 
+Çme
+="PASS_PARENT_ENVS" 
+v®ue
+="true" />
+
+609 <
+İtiÚ
+ 
+Çme
+="TEST_SEARCH_SCOPE">
+
+610 <
+v®ue
+ 
+deçuÉName
+="moduleWithDependencies" />
+
+611 </
+İtiÚ
+>
+
+612 <
+İtiÚ
+ 
+Çme
+="USE_DEFAULT_REPORTERS" 
+v®ue
+="false" />
+
+613 <
+İtiÚ
+ 
+Çme
+="PROPERTIES_FILE" />
+
+614 <
+’vs
+ />
+
+615 <
+´İ”t›s
+ />
+
+616 <
+li¡’”s
+ />
+
+617 <
+m‘hod
+ />
+
+618 </
+cÚfigu¿tiÚ
+>
+
+619 <
+cÚfigu¿tiÚ
+ ="Œue" 
+ty³
+="AµliÿtiÚ" 
+çùÜyName
+="Application">
+
+620 <
+ex‹nsiÚ
+ 
+Çme
+="cov”age" 
+’abËd
+="çl£" 
+m”ge
+="çl£" 
+§m¶e_cov”age
+="Œue" 
+ruÂ”
+="idea" />
+
+621 <
+İtiÚ
+ 
+Çme
+="MAIN_CLASS_NAME" />
+
+622 <
+İtiÚ
+ 
+Çme
+="VM_PARAMETERS" />
+
+623 <
+İtiÚ
+ 
+Çme
+="PROGRAM_PARAMETERS" />
+
+624 <
+İtiÚ
+ 
+Çme
+="WORKING_DIRECTORY" 
+v®ue
+="$PROJECT_DIR$" />
+
+625 <
+İtiÚ
+ 
+Çme
+="ALTERNATIVE_JRE_PATH_ENABLED" 
+v®ue
+="false" />
+
+626 <
+İtiÚ
+ 
+Çme
+="ALTERNATIVE_JRE_PATH" />
+
+627 <
+İtiÚ
+ 
+Çme
+="ENABLE_SWING_INSPECTOR" 
+v®ue
+="false" />
+
+628 <
+İtiÚ
+ 
+Çme
+="ENV_VARIABLES" />
+
+629 <
+İtiÚ
+ 
+Çme
+="PASS_PARENT_ENVS" 
+v®ue
+="true" />
+
+630 <
+moduË
+ 
+Çme
+="" />
+
+631 <
+’vs
+ />
+
+632 <
+m‘hod
+ />
+
+633 </
+cÚfigu¿tiÚ
+>
+
+634 <
+cÚfigu¿tiÚ
+ ="Œue" 
+ty³
+="JUn™" 
+çùÜyName
+="JUnit">
+
+635 <
+ex‹nsiÚ
+ 
+Çme
+="cov”age" 
+’abËd
+="çl£" 
+m”ge
+="çl£" 
+§m¶e_cov”age
+="Œue" 
+ruÂ”
+="idea" />
+
+636 <
+moduË
+ 
+Çme
+="" />
+
+637 <
+İtiÚ
+ 
+Çme
+="ALTERNATIVE_JRE_PATH_ENABLED" 
+v®ue
+="false" />
+
+638 <
+İtiÚ
+ 
+Çme
+="ALTERNATIVE_JRE_PATH" />
+
+639 <
+İtiÚ
+ 
+Çme
+="PACKAGE_NAME" />
+
+640 <
+İtiÚ
+ 
+Çme
+="MAIN_CLASS_NAME" />
+
+641 <
+İtiÚ
+ 
+Çme
+="METHOD_NAME" />
+
+642 <
+İtiÚ
+ 
+Çme
+="TEST_OBJECT" 
+v®ue
+="class" />
+
+643 <
+İtiÚ
+ 
+Çme
+="VM_PARAMETERS" 
+v®ue
+="-ea" />
+
+644 <
+İtiÚ
+ 
+Çme
+="PARAMETERS" />
+
+645 <
+İtiÚ
+ 
+Çme
+="WORKING_DIRECTORY" 
+v®ue
+="$PROJECT_DIR$" />
+
+646 <
+İtiÚ
+ 
+Çme
+="ENV_VARIABLES" />
+
+647 <
+İtiÚ
+ 
+Çme
+="PASS_PARENT_ENVS" 
+v®ue
+="true" />
+
+648 <
+İtiÚ
+ 
+Çme
+="TEST_SEARCH_SCOPE">
+
+649 <
+v®ue
+ 
+deçuÉName
+="moduleWithDependencies" />
+
+650 </
+İtiÚ
+>
+
+651 <
+’vs
+ />
+
+652 <
+·‰”ns
+ />
+
+653 <
+m‘hod
+ />
+
+654 </
+cÚfigu¿tiÚ
+>
+
+655 <
+li¡
+ 
+size
+="5">
+
+656 <
+™em
+ 
+šdex
+="0" 
+şass
+="java.Ïng.SŒšg" 
+™emv®ue
+="JUnit.All in CsvJsonConverter" />
+
+657 <
+™em
+ 
+šdex
+="1" 
+şass
+="java.Ïng.SŒšg" 
+™emv®ue
+="JUnit.ConverterOssTest" />
+
+658 <
+™em
+ 
+šdex
+="2" 
+şass
+="java.Ïng.SŒšg" 
+™emv®ue
+="JUnit.ConverterOssTest.testEscapeCommas" />
+
+659 <
+™em
+ 
+šdex
+="3" 
+şass
+="java.Ïng.SŒšg" 
+™emv®ue
+="JUnit.ConverterOssTest.testReadGbkFile" />
+
+660 <
+™em
+ 
+šdex
+="4" 
+şass
+="java.Ïng.SŒšg" 
+™emv®ue
+="JUnit.ConverterOssTest.testPartialCsv" />
+
+661 </
+li¡
+>
+
+662 <
+»ûÁ_‹mpÜ¬y
+>
+
+663 <
+li¡
+ 
+size
+="5">
+
+664 <
+™em
+ 
+šdex
+="0" 
+şass
+="java.Ïng.SŒšg" 
+™emv®ue
+="JUnit.All in CsvJsonConverter" />
+
+665 <
+™em
+ 
+šdex
+="1" 
+şass
+="java.Ïng.SŒšg" 
+™emv®ue
+="JUnit.ConverterOssTest" />
+
+666 <
+™em
+ 
+šdex
+="2" 
+şass
+="java.Ïng.SŒšg" 
+™emv®ue
+="JUnit.ConverterOssTest.testPartialCsv" />
+
+667 <
+™em
+ 
+šdex
+="3" 
+şass
+="java.Ïng.SŒšg" 
+™emv®ue
+="JUnit.ConverterOssTest.testReadGbkFile" />
+
+668 <
+™em
+ 
+šdex
+="4" 
+şass
+="java.Ïng.SŒšg" 
+™emv®ue
+="JUnit.ConverterOssTest.testEscapeCommas" />
+
+669 </
+li¡
+>
+
+670 </
+»ûÁ_‹mpÜ¬y
+>
+
+671 <
+cÚfigu¿tiÚ
+ 
+Çme
+="&É;‹m¶©e&gt;" 
+ty³
+="WebAµ" ="Œue" 
+£Ëùed
+="false">
+
+672 <
+Ho¡
+>
+loÿlho¡
+</Host>
+
+673 <
+PÜt
+>5050</Port>
+
+674 </
+cÚfigu¿tiÚ
+>
+
+675 </
+compÚ’t
+>
+
+676 <
+compÚ’t
+ 
+Çme
+="Sh–veChªgesMªag”" 
+show_»cyşed
+="false" />
+
+677 <
+compÚ’t
+ 
+Çme
+="SvnCÚfigu¿tiÚ" 
+maxAÂÙ©eRevisiÚs
+="500" 
+myU£AcûË¿tiÚ
+="nÙhšg" 
+myAutoUpd©eAá”Comm™
+="çl£" 
+ş—nupOnS¹Run
+="çl£" 
+SSL_PROTOCOLS
+="sslv3">
+
+678 <
+İtiÚ
+ 
+Çme
+="USER" 
+v®ue
+="" />
+
+679 <
+İtiÚ
+ 
+Çme
+="PASSWORD" 
+v®ue
+="" />
+
+680 <
+İtiÚ
+ 
+Çme
+="mySSHCÚÃùiÚTimeout" 
+v®ue
+="30000" />
+
+681 <
+İtiÚ
+ 
+Çme
+="mySSHR—dTimeout" 
+v®ue
+="30000" />
+
+682 <
+İtiÚ
+ 
+Çme
+="LAST_MERGED_REVISION" />
+
+683 <
+İtiÚ
+ 
+Çme
+="MERGE_DRY_RUN" 
+v®ue
+="false" />
+
+684 <
+İtiÚ
+ 
+Çme
+="MERGE_DIFF_USE_ANCESTRY" 
+v®ue
+="true" />
+
+685 <
+İtiÚ
+ 
+Çme
+="UPDATE_LOCK_ON_DEMAND" 
+v®ue
+="false" />
+
+686 <
+İtiÚ
+ 
+Çme
+="IGNORE_SPACES_IN_MERGE" 
+v®ue
+="false" />
+
+687 <
+İtiÚ
+ 
+Çme
+="CHECK_NESTED_FOR_QUICK_MERGE" 
+v®ue
+="false" />
+
+688 <
+İtiÚ
+ 
+Çme
+="IGNORE_SPACES_IN_ANNOTATE" 
+v®ue
+="true" />
+
+689 <
+İtiÚ
+ 
+Çme
+="SHOW_MERGE_SOURCES_IN_ANNOTATE" 
+v®ue
+="true" />
+
+690 <
+İtiÚ
+ 
+Çme
+="FORCE_UPDATE" 
+v®ue
+="false" />
+
+691 <
+İtiÚ
+ 
+Çme
+="IGNORE_EXTERNALS" 
+v®ue
+="false" />
+
+692 <
+myIsU£DeçuÉProxy
+>
+çl£
+</myIsUseDefaultProxy>
+
+693 </
+compÚ’t
+>
+
+694 <
+compÚ’t
+ 
+Çme
+="TaskManager">
+
+695 <
+sk
+ 
+aùive
+="Œue" 
+id
+="DeçuÉ" 
+summ¬y
+="Defaultask">
+
+696 <
+chªg–i¡
+ 
+id
+="f99c2d3e-0263-49a5-90e5-fãã43b527c" 
+Çme
+="DeçuÉ" 
+comm’t
+="" />
+
+697 <
+ü—‹d
+>1376623244674</created>
+
+698 <
+upd©ed
+>1376623244674</updated>
+
+699 </
+sk
+>
+
+700 <
+£rv”s
+ />
+
+701 </
+compÚ’t
+>
+
+702 <
+compÚ’t
+ 
+Çme
+="ToolWindowManager">
+
+703 <
+äame
+ 
+x
+="64" 
+y
+="-7" 
+width
+="1303" 
+height
+="776" 
+ex‹nded
+-
+¡©e
+="6" />
+
+704 <
+ed™Ü
+ 
+aùive
+="true" />
+
+705 <
+Ïyout
+>
+
+706 <
+wšdow_šfo
+ 
+id
+="Chªges" 
+aùive
+="çl£" 
+ªchÜ
+="bÙtom" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="DOCKED" 
+ty³
+="DOCKED" 
+visibË
+="çl£" 
+weight
+="0.33" 
+sideWeight
+="0.5" 
+Üd”
+="7" 
+side_toŞ
+="çl£" 
+cÚ‹Á_ui
+="tabs" />
+
+707 <
+wšdow_šfo
+ 
+id
+="J‘G¿dË" 
+aùive
+="çl£" 
+ªchÜ
+="right" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="DOCKED" 
+ty³
+="DOCKED" 
+visibË
+="çl£" 
+weight
+="0.33" 
+sideWeight
+="0.5" 
+Üd”
+="3" 
+side_toŞ
+="çl£" 
+cÚ‹Á_ui
+="tabs" />
+
+708 <
+wšdow_šfo
+ 
+id
+="P®‘‹" 
+aùive
+="çl£" 
+ªchÜ
+="right" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="DOCKED" 
+ty³
+="DOCKED" 
+visibË
+="çl£" 
+weight
+="0.33" 
+sideWeight
+="0.5" 
+Üd”
+="3" 
+side_toŞ
+="çl£" 
+cÚ‹Á_ui
+="tabs" />
+
+709 <
+wšdow_šfo
+ 
+id
+="AÁ Bud" 
+aùive
+="çl£" 
+ªchÜ
+="right" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="DOCKED" 
+ty³
+="DOCKED" 
+visibË
+="çl£" 
+weight
+="0.25" 
+sideWeight
+="0.5" 
+Üd”
+="1" 
+side_toŞ
+="çl£" 
+cÚ‹Á_ui
+="tabs" />
+
+710 <
+wšdow_šfo
+ 
+id
+="D©aba£" 
+aùive
+="çl£" 
+ªchÜ
+="right" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="DOCKED" 
+ty³
+="DOCKED" 
+visibË
+="çl£" 
+weight
+="0.33" 
+sideWeight
+="0.5" 
+Üd”
+="3" 
+side_toŞ
+="çl£" 
+cÚ‹Á_ui
+="tabs" />
+
+711 <
+wšdow_šfo
+ 
+id
+="Debug" 
+aùive
+="çl£" 
+ªchÜ
+="bÙtom" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="DOCKED" 
+ty³
+="DOCKED" 
+visibË
+="çl£" 
+weight
+="0.4" 
+sideWeight
+="0.5" 
+Üd”
+="3" 
+side_toŞ
+="çl£" 
+cÚ‹Á_ui
+="tabs" />
+
+712 <
+wšdow_šfo
+ 
+id
+="IDElk Mes§ges" 
+aùive
+="çl£" 
+ªchÜ
+="bÙtom" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="DOCKED" 
+ty³
+="DOCKED" 
+visibË
+="çl£" 
+weight
+="0.33" 
+sideWeight
+="0.5" 
+Üd”
+="7" 
+side_toŞ
+="çl£" 
+cÚ‹Á_ui
+="tabs" />
+
+713 <
+wšdow_šfo
+ 
+id
+="Ev’ˆLog" 
+aùive
+="çl£" 
+ªchÜ
+="bÙtom" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="DOCKED" 
+ty³
+="DOCKED" 
+visibË
+="çl£" 
+weight
+="0.33" 
+sideWeight
+="0.5" 
+Üd”
+="7" 
+side_toŞ
+="Œue" 
+cÚ‹Á_ui
+="tabs" />
+
+714 <
+wšdow_šfo
+ 
+id
+="FavÜ™es" 
+aùive
+="çl£" 
+ªchÜ
+="Ëá" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="DOCKED" 
+ty³
+="DOCKED" 
+visibË
+="çl£" 
+weight
+="0.33" 
+sideWeight
+="0.5" 
+Üd”
+="2" 
+side_toŞ
+="Œue" 
+cÚ‹Á_ui
+="tabs" />
+
+715 <
+wšdow_šfo
+ 
+id
+="IDElk" 
+aùive
+="çl£" 
+ªchÜ
+="right" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="DOCKED" 
+ty³
+="DOCKED" 
+visibË
+="çl£" 
+weight
+="0.33" 
+sideWeight
+="0.5" 
+Üd”
+="3" 
+side_toŞ
+="çl£" 
+cÚ‹Á_ui
+="tabs" />
+
+716 <
+wšdow_šfo
+ 
+id
+="V”siÚ CÚŒŞ" 
+aùive
+="çl£" 
+ªchÜ
+="bÙtom" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="DOCKED" 
+ty³
+="DOCKED" 
+visibË
+="çl£" 
+weight
+="0.33" 
+sideWeight
+="0.5" 
+Üd”
+="7" 
+side_toŞ
+="çl£" 
+cÚ‹Á_ui
+="tabs" />
+
+717 <
+wšdow_šfo
+ 
+id
+="Mes§ges" 
+aùive
+="çl£" 
+ªchÜ
+="bÙtom" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="DOCKED" 
+ty³
+="DOCKED" 
+visibË
+="çl£" 
+weight
+="0.32899022" 
+sideWeight
+="0.5" 
+Üd”
+="7" 
+side_toŞ
+="çl£" 
+cÚ‹Á_ui
+="tabs" />
+
+718 <
+wšdow_šfo
+ 
+id
+="CDI" 
+aùive
+="çl£" 
+ªchÜ
+="right" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="DOCKED" 
+ty³
+="DOCKED" 
+visibË
+="çl£" 
+weight
+="0.33" 
+sideWeight
+="0.5" 
+Üd”
+="3" 
+side_toŞ
+="çl£" 
+cÚ‹Á_ui
+="tabs" />
+
+719 <
+wšdow_šfo
+ 
+id
+="TODO" 
+aùive
+="çl£" 
+ªchÜ
+="bÙtom" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="DOCKED" 
+ty³
+="DOCKED" 
+visibË
+="çl£" 
+weight
+="0.33" 
+sideWeight
+="0.5" 
+Üd”
+="6" 
+side_toŞ
+="çl£" 
+cÚ‹Á_ui
+="tabs" />
+
+720 <
+wšdow_šfo
+ 
+id
+="SŒuùu»" 
+aùive
+="çl£" 
+ªchÜ
+="Ëá" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="DOCKED" 
+ty³
+="DOCKED" 
+visibË
+="çl£" 
+weight
+="0.25" 
+sideWeight
+="0.5" 
+Üd”
+="1" 
+side_toŞ
+="çl£" 
+cÚ‹Á_ui
+="tabs" />
+
+721 <
+wšdow_šfo
+ 
+id
+="Mav’ Projeùs" 
+aùive
+="çl£" 
+ªchÜ
+="right" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="DOCKED" 
+ty³
+="DOCKED" 
+visibË
+="çl£" 
+weight
+="0.33" 
+sideWeight
+="0.5" 
+Üd”
+="3" 
+side_toŞ
+="çl£" 
+cÚ‹Á_ui
+="tabs" />
+
+722 <
+wšdow_šfo
+ 
+id
+="Commªd”" 
+aùive
+="çl£" 
+ªchÜ
+="right" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="SLIDING" 
+ty³
+="SLIDING" 
+visibË
+="çl£" 
+weight
+="0.4" 
+sideWeight
+="0.5" 
+Üd”
+="0" 
+side_toŞ
+="çl£" 
+cÚ‹Á_ui
+="tabs" />
+
+723 <
+wšdow_šfo
+ 
+id
+="AµliÿtiÚ S”v”s" 
+aùive
+="çl£" 
+ªchÜ
+="bÙtom" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="DOCKED" 
+ty³
+="DOCKED" 
+visibË
+="çl£" 
+weight
+="0.33" 
+sideWeight
+="0.5" 
+Üd”
+="7" 
+side_toŞ
+="çl£" 
+cÚ‹Á_ui
+="tabs" />
+
+724 <
+wšdow_šfo
+ 
+id
+="Projeù" 
+aùive
+="çl£" 
+ªchÜ
+="Ëá" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="DOCKED" 
+ty³
+="DOCKED" 
+visibË
+="Œue" 
+weight
+="0.2489992" 
+sideWeight
+="0.6742671" 
+Üd”
+="0" 
+side_toŞ
+="çl£" 
+cÚ‹Á_ui
+="combo" />
+
+725 <
+wšdow_šfo
+ 
+id
+="Run" 
+aùive
+="çl£" 
+ªchÜ
+="bÙtom" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="DOCKED" 
+ty³
+="DOCKED" 
+visibË
+="çl£" 
+weight
+="0.3257329" 
+sideWeight
+="0.5" 
+Üd”
+="2" 
+side_toŞ
+="çl£" 
+cÚ‹Á_ui
+="tabs" />
+
+726 <
+wšdow_šfo
+ 
+id
+="H›¿rchy" 
+aùive
+="çl£" 
+ªchÜ
+="right" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="DOCKED" 
+ty³
+="DOCKED" 
+visibË
+="çl£" 
+weight
+="0.25" 
+sideWeight
+="0.5" 
+Üd”
+="2" 
+side_toŞ
+="çl£" 
+cÚ‹Á_ui
+="combo" />
+
+727 <
+wšdow_šfo
+ 
+id
+="Cvs" 
+aùive
+="çl£" 
+ªchÜ
+="bÙtom" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="DOCKED" 
+ty³
+="DOCKED" 
+visibË
+="çl£" 
+weight
+="0.25" 
+sideWeight
+="0.5" 
+Üd”
+="4" 
+side_toŞ
+="çl£" 
+cÚ‹Á_ui
+="tabs" />
+
+728 <
+wšdow_šfo
+ 
+id
+="Mes§ge" 
+aùive
+="çl£" 
+ªchÜ
+="bÙtom" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="DOCKED" 
+ty³
+="DOCKED" 
+visibË
+="çl£" 
+weight
+="0.33" 
+sideWeight
+="0.5" 
+Üd”
+="0" 
+side_toŞ
+="çl£" 
+cÚ‹Á_ui
+="tabs" />
+
+729 <
+wšdow_šfo
+ 
+id
+="Fšd" 
+aùive
+="çl£" 
+ªchÜ
+="bÙtom" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="DOCKED" 
+ty³
+="DOCKED" 
+visibË
+="çl£" 
+weight
+="0.32956383" 
+sideWeight
+="0.5" 
+Üd”
+="1" 
+side_toŞ
+="çl£" 
+cÚ‹Á_ui
+="tabs" />
+
+730 <
+wšdow_šfo
+ 
+id
+="In¥eùiÚ" 
+aùive
+="çl£" 
+ªchÜ
+="bÙtom" 
+auto_hide
+="çl£" 
+š‹º®_ty³
+="DOCKED" 
+ty³
+="DOCKED" 
+visibË
+="çl£" 
+weight
+="0.4" 
+sideWeight
+="0.5" 
+Üd”
+="5" 
+side_toŞ
+="çl£" 
+cÚ‹Á_ui
+="tabs" />
+
+731 </
+Ïyout
+>
+
+732 </
+compÚ’t
+>
+
+733 <
+compÚ’t
+ 
+Çme
+="VcsContentAnnotationSettings">
+
+734 <
+İtiÚ
+ 
+Çme
+="myLim™" 
+v®ue
+="2678400000" />
+
+735 </
+compÚ’t
+>
+
+736 <
+compÚ’t
+ 
+Çme
+="VcsManagerConfiguration">
+
+737 <
+İtiÚ
+ 
+Çme
+="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" 
+v®ue
+="true" />
+
+738 <
+İtiÚ
+ 
+Çme
+="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" 
+v®ue
+="true" />
+
+739 <
+İtiÚ
+ 
+Çme
+="CHECK_NEW_TODO" 
+v®ue
+="true" />
+
+740 <
+İtiÚ
+ 
+Çme
+="myTodoPanelSettings">
+
+741 <
+v®ue
+>
+
+742 <
+¬e
+-
+·ckages
+-
+shown
+ 
+v®ue
+="false" />
+
+743 <
+¬e
+-
+moduËs
+-
+shown
+ 
+v®ue
+="false" />
+
+744 <
+æ©‹n
+-
+·ckages
+ 
+v®ue
+="false" />
+
+745 <
+is
+-
+autosüŞl
+-
+to
+-
+sourû
+ 
+v®ue
+="false" />
+
+746 </
+v®ue
+>
+
+747 </
+İtiÚ
+>
+
+748 <
+İtiÚ
+ 
+Çme
+="PERFORM_UPDATE_IN_BACKGROUND" 
+v®ue
+="true" />
+
+749 <
+İtiÚ
+ 
+Çme
+="PERFORM_COMMIT_IN_BACKGROUND" 
+v®ue
+="true" />
+
+750 <
+İtiÚ
+ 
+Çme
+="PERFORM_EDIT_IN_BACKGROUND" 
+v®ue
+="true" />
+
+751 <
+İtiÚ
+ 
+Çme
+="PERFORM_CHECKOUT_IN_BACKGROUND" 
+v®ue
+="true" />
+
+752 <
+İtiÚ
+ 
+Çme
+="PERFORM_ADD_REMOVE_IN_BACKGROUND" 
+v®ue
+="true" />
+
+753 <
+İtiÚ
+ 
+Çme
+="PERFORM_ROLLBACK_IN_BACKGROUND" 
+v®ue
+="false" />
+
+754 <
+İtiÚ
+ 
+Çme
+="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" 
+v®ue
+="false" />
+
+755 <
+İtiÚ
+ 
+Çme
+="CHANGED_ON_SERVER_INTERVAL" 
+v®ue
+="60" />
+
+756 <
+İtiÚ
+ 
+Çme
+="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" 
+v®ue
+="true" />
+
+757 <
+İtiÚ
+ 
+Çme
+="CHECK_COMMIT_MESSAGE_SPELLING" 
+v®ue
+="true" />
+
+758 <
+İtiÚ
+ 
+Çme
+="DEFAULT_PATCH_EXTENSION" 
+v®ue
+="patch" />
+
+759 <
+İtiÚ
+ 
+Çme
+="SHORT_DIFF_HORIZONTALLY" 
+v®ue
+="true" />
+
+760 <
+İtiÚ
+ 
+Çme
+="SHORT_DIFF_EXTRA_LINES" 
+v®ue
+="2" />
+
+761 <
+İtiÚ
+ 
+Çme
+="SOFT_WRAPS_IN_SHORT_DIFF" 
+v®ue
+="true" />
+
+762 <
+İtiÚ
+ 
+Çme
+="INCLUDE_TEXT_INTO_PATCH" 
+v®ue
+="false" />
+
+763 <
+İtiÚ
+ 
+Çme
+="INCLUDE_TEXT_INTO_SHELF" 
+v®ue
+="false" />
+
+764 <
+İtiÚ
+ 
+Çme
+="SHOW_FILE_HISTORY_DETAILS" 
+v®ue
+="true" />
+
+765 <
+İtiÚ
+ 
+Çme
+="SHOW_VCS_ERROR_NOTIFICATIONS" 
+v®ue
+="true" />
+
+766 <
+İtiÚ
+ 
+Çme
+="SHOW_DIRTY_RECURSIVELY" 
+v®ue
+="false" />
+
+767 <
+İtiÚ
+ 
+Çme
+="LIMIT_HISTORY" 
+v®ue
+="true" />
+
+768 <
+İtiÚ
+ 
+Çme
+="MAXIMUM_HISTORY_ROWS" 
+v®ue
+="1000" />
+
+769 <
+İtiÚ
+ 
+Çme
+="UPDATE_FILTER_SCOPE_NAME" />
+
+770 <
+İtiÚ
+ 
+Çme
+="USE_COMMIT_MESSAGE_MARGIN" 
+v®ue
+="false" />
+
+771 <
+İtiÚ
+ 
+Çme
+="COMMIT_MESSAGE_MARGIN_SIZE" 
+v®ue
+="72" />
+
+772 <
+İtiÚ
+ 
+Çme
+="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" 
+v®ue
+="false" />
+
+773 <
+İtiÚ
+ 
+Çme
+="FORCE_NON_EMPTY_COMMENT" 
+v®ue
+="false" />
+
+774 <
+İtiÚ
+ 
+Çme
+="CLEAR_INITIAL_COMMIT_MESSAGE" 
+v®ue
+="false" />
+
+775 <
+İtiÚ
+ 
+Çme
+="LAST_COMMIT_MESSAGE" />
+
+776 <
+İtiÚ
+ 
+Çme
+="MAKE_NEW_CHANGELIST_ACTIVE" 
+v®ue
+="false" />
+
+777 <
+İtiÚ
+ 
+Çme
+="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" 
+v®ue
+="false" />
+
+778 <
+İtiÚ
+ 
+Çme
+="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" 
+v®ue
+="false" />
+
+779 <
+İtiÚ
+ 
+Çme
+="REFORMAT_BEFORE_PROJECT_COMMIT" 
+v®ue
+="false" />
+
+780 <
+İtiÚ
+ 
+Çme
+="REFORMAT_BEFORE_FILE_COMMIT" 
+v®ue
+="false" />
+
+781 <
+İtiÚ
+ 
+Çme
+="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" 
+v®ue
+="0.8" />
+
+782 <
+İtiÚ
+ 
+Çme
+="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" 
+v®ue
+="0.5" />
+
+783 <
+İtiÚ
+ 
+Çme
+="ACTIVE_VCS_NAME" />
+
+784 <
+İtiÚ
+ 
+Çme
+="UPDATE_GROUP_BY_PACKAGES" 
+v®ue
+="false" />
+
+785 <
+İtiÚ
+ 
+Çme
+="UPDATE_GROUP_BY_CHANGELIST" 
+v®ue
+="false" />
+
+786 <
+İtiÚ
+ 
+Çme
+="UPDATE_FILTER_BY_SCOPE" 
+v®ue
+="false" />
+
+787 <
+İtiÚ
+ 
+Çme
+="SHOW_FILE_HISTORY_AS_TREE" 
+v®ue
+="false" />
+
+788 <
+İtiÚ
+ 
+Çme
+="FILE_HISTORY_SPLITTER_PROPORTION" 
+v®ue
+="0.6" />
+
+789 </
+compÚ’t
+>
+
+790 <
+compÚ’t
+ 
+Çme
+="XDebuggerManager">
+
+791 <
+b»akpošt
+-
+mªag”
+ />
+
+792 </
+compÚ’t
+>
+
+793 <
+compÚ’t
+ 
+Çme
+="antWorkspaceConfiguration">
+
+794 <
+İtiÚ
+ 
+Çme
+="IS_AUTOSCROLL_TO_SOURCE" 
+v®ue
+="false" />
+
+795 <
+İtiÚ
+ 
+Çme
+="FILTER_TARGETS" 
+v®ue
+="false" />
+
+796 </
+compÚ’t
+>
+
+797 <
+compÚ’t
+ 
+Çme
+="editorHistoryManager">
+
+798 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/src/com/pekall/csv/bean/ImportDeviceInfoVo.java">
+
+799 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+800 <
+¡©e
+ 
+lše
+="5" 
+cŞumn
+="21" 
+£ËùiÚ
+-
+¡¬t
+="85" s–eùiÚ-
+’d
+="85" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.0" />
+
+801 </
+´ovid”
+>
+
+802 </
+’Œy
+>
+
+803 <
+’Œy
+ 
+fe
+="jar://$USER_HOME$/bin/jdk64/jdk1.6.0_37/src.zip!/java/io/PrintWriter.java">
+
+804 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+805 <
+¡©e
+ 
+lše
+="91" 
+cŞumn
+="11" 
+£ËùiÚ
+-
+¡¬t
+="2953" s–eùiÚ-
+’d
+="2953" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.033955857" />
+
+806 </
+´ovid”
+>
+
+807 </
+’Œy
+>
+
+808 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/src/com/pekall/csv/Debug.java">
+
+809 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+810 <
+¡©e
+ 
+lše
+="5" 
+cŞumn
+="13" 
+£ËùiÚ
+-
+¡¬t
+="69" s–eùiÚ-
+’d
+="69" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.0" />
+
+811 </
+´ovid”
+>
+
+812 </
+’Œy
+>
+
+813 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/src/com/pekall/csv/CSVWriter.java">
+
+814 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+815 <
+¡©e
+ 
+lše
+="63" 
+cŞumn
+="29" 
+£ËùiÚ
+-
+¡¬t
+="1731" s–eùiÚ-
+’d
+="1731" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.0" />
+
+816 </
+´ovid”
+>
+
+817 </
+’Œy
+>
+
+818 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/src/com/pekall/csv/bean/CsvVoBase.java">
+
+819 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+820 <
+¡©e
+ 
+lše
+="4" 
+cŞumn
+="24" 
+£ËùiÚ
+-
+¡¬t
+="87" s–eùiÚ-
+’d
+="87" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.0" />
+
+821 </
+´ovid”
+>
+
+822 </
+’Œy
+>
+
+823 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/src/com/pekall/csv/bean/CsvVoDemo.java">
+
+824 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+825 <
+¡©e
+ 
+lše
+="2" 
+cŞumn
+="31" 
+£ËùiÚ
+-
+¡¬t
+="61" s–eùiÚ-
+’d
+="61" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.0" />
+
+826 </
+´ovid”
+>
+
+827 </
+’Œy
+>
+
+828 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/test/com/pekall/csv/GsonTest.java">
+
+829 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+830 <
+¡©e
+ 
+lše
+="11" 
+cŞumn
+="39" 
+£ËùiÚ
+-
+¡¬t
+="320" s–eùiÚ-
+’d
+="320" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.0">
+
+831 <
+fŞdšg
+ />
+
+832 </
+¡©e
+>
+
+833 </
+´ovid”
+>
+
+834 </
+’Œy
+>
+
+835 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/test/com/pekall/csv/bean/ImportDeviceInfoVoTest.java">
+
+836 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+837 <
+¡©e
+ 
+lše
+="13" 
+cŞumn
+="31" 
+£ËùiÚ
+-
+¡¬t
+="404" s–eùiÚ-
+’d
+="404" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.0">
+
+838 <
+fŞdšg
+ />
+
+839 </
+¡©e
+>
+
+840 </
+´ovid”
+>
+
+841 </
+’Œy
+>
+
+842 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/src/com/pekall/csv/CSVReader.java">
+
+843 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+844 <
+¡©e
+ 
+lše
+="22" 
+cŞumn
+="26" 
+£ËùiÚ
+-
+¡¬t
+="419" s–eùiÚ-
+’d
+="419" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.0">
+
+845 <
+fŞdšg
+ />
+
+846 </
+¡©e
+>
+
+847 </
+´ovid”
+>
+
+848 </
+’Œy
+>
+
+849 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/test/com/pekall/csv/bean/CsvVoDemoTest.java">
+
+850 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+851 <
+¡©e
+ 
+lše
+="46" 
+cŞumn
+="32" 
+£ËùiÚ
+-
+¡¬t
+="1490" s–eùiÚ-
+’d
+="1490" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.0">
+
+852 <
+fŞdšg
+ />
+
+853 </
+¡©e
+>
+
+854 </
+´ovid”
+>
+
+855 </
+’Œy
+>
+
+856 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/src/com/pekall/csv/bean/CsvFile.java">
+
+857 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+858 <
+¡©e
+ 
+lše
+="14" 
+cŞumn
+="4" 
+£ËùiÚ
+-
+¡¬t
+="286" s–eùiÚ-
+’d
+="286" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.0">
+
+859 <
+fŞdšg
+ />
+
+860 </
+¡©e
+>
+
+861 </
+´ovid”
+>
+
+862 </
+’Œy
+>
+
+863 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/src/com/pekall/csv/bean/CsvLine.java">
+
+864 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+865 <
+¡©e
+ 
+lše
+="14" 
+cŞumn
+="13" 
+£ËùiÚ
+-
+¡¬t
+="333" s–eùiÚ-
+’d
+="333" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.0">
+
+866 <
+fŞdšg
+ />
+
+867 </
+¡©e
+>
+
+868 </
+´ovid”
+>
+
+869 </
+’Œy
+>
+
+870 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/test/com/pekall/csv/ConverterTest.java">
+
+871 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+872 <
+¡©e
+ 
+lše
+="157" 
+cŞumn
+="17" 
+£ËùiÚ
+-
+¡¬t
+="4725" s–eùiÚ-
+’d
+="4725" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.0">
+
+873 <
+fŞdšg
+ />
+
+874 </
+¡©e
+>
+
+875 </
+´ovid”
+>
+
+876 </
+’Œy
+>
+
+877 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/test/com/pekall/csv/CsvFileTest.java">
+
+878 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+879 <
+¡©e
+ 
+lše
+="12" 
+cŞumn
+="0" 
+£ËùiÚ
+-
+¡¬t
+="363" s–eùiÚ-
+’d
+="363" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.0">
+
+880 <
+fŞdšg
+ />
+
+881 </
+¡©e
+>
+
+882 </
+´ovid”
+>
+
+883 </
+’Œy
+>
+
+884 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/test/com/pekall/csv/ConverterOssTest.java">
+
+885 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+886 <
+¡©e
+ 
+lše
+="50" 
+cŞumn
+="4" 
+£ËùiÚ
+-
+¡¬t
+="1426" s–eùiÚ-
+’d
+="1426" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.0">
+
+887 <
+fŞdšg
+ />
+
+888 </
+¡©e
+>
+
+889 </
+´ovid”
+>
+
+890 </
+’Œy
+>
+
+891 <
+’Œy
+ 
+fe
+="file://$PROJECT_DIR$/src/com/pekall/csv/Converter.java">
+
+892 <
+´ovid”
+ 
+£Ëùed
+="Œue" 
+ed™Ü
+-
+ty³
+-
+id
+="text-editor">
+
+893 <
+¡©e
+ 
+lše
+="143" 
+cŞumn
+="0" 
+£ËùiÚ
+-
+¡¬t
+="4461" s–eùiÚ-
+’d
+="4541" 
+v”tiÿl
+-
+süŞl
+-
+´İÜtiÚ
+="0.73170733">
+
+894 <
+fŞdšg
+ />
+
+895 </
+¡©e
+>
+
+896 </
+´ovid”
+>
+
+897 </
+’Œy
+>
+
+898 </
+compÚ’t
+>
+
+899 <
+compÚ’t
+ 
+Çme
+="masterDetails">
+
+900 <
+¡©es
+>
+
+901 <
+¡©e
+ 
+key
+="ArtifactsStructureConfigurable.UI">
+
+902 <
+£‰šgs
+>
+
+903 <
+¬tiçù
+-
+ed™Ü
+ />
+
+904 <
+Ï¡
+-
+ed™ed
+>
+CsvJsÚCÚv”‹r
+:
+j¬
+</last-edited>
+
+905 <
+¥l™‹r
+-
+´İÜtiÚs
+>
+
+906 <
+İtiÚ
+ 
+Çme
+="proportions">
+
+907 <
+li¡
+>
+
+908 <
+İtiÚ
+ 
+v®ue
+="0.2" />
+
+909 <
+İtiÚ
+ 
+v®ue
+="0.5" />
+
+910 </
+li¡
+>
+
+911 </
+İtiÚ
+>
+
+912 </
+¥l™‹r
+-
+´İÜtiÚs
+>
+
+913 </
+£‰šgs
+>
+
+914 </
+¡©e
+>
+
+915 <
+¡©e
+ 
+key
+="FacetStructureConfigurable.UI">
+
+916 <
+£‰šgs
+>
+
+917 <
+Ï¡
+-
+ed™ed
+>
+No
+ 
+çûts
+ 
+¬e
+ 
+cÚfigu»d
+</last-edited>
+
+918 <
+¥l™‹r
+-
+´İÜtiÚs
+>
+
+919 <
+İtiÚ
+ 
+Çme
+="proportions">
+
+920 <
+li¡
+>
+
+921 <
+İtiÚ
+ 
+v®ue
+="0.2" />
+
+922 </
+li¡
+>
+
+923 </
+İtiÚ
+>
+
+924 </
+¥l™‹r
+-
+´İÜtiÚs
+>
+
+925 </
+£‰šgs
+>
+
+926 </
+¡©e
+>
+
+927 <
+¡©e
+ 
+key
+="GlobalLibrariesConfigurable.UI">
+
+928 <
+£‰šgs
+>
+
+929 <
+¥l™‹r
+-
+´İÜtiÚs
+>
+
+930 <
+İtiÚ
+ 
+Çme
+="proportions">
+
+931 <
+li¡
+>
+
+932 <
+İtiÚ
+ 
+v®ue
+="0.2" />
+
+933 </
+li¡
+>
+
+934 </
+İtiÚ
+>
+
+935 </
+¥l™‹r
+-
+´İÜtiÚs
+>
+
+936 </
+£‰šgs
+>
+
+937 </
+¡©e
+>
+
+938 <
+¡©e
+ 
+key
+="JdkListConfigurable.UI">
+
+939 <
+£‰šgs
+>
+
+940 <
+Ï¡
+-
+ed™ed
+>1.6</last-edited>
+
+941 <
+¥l™‹r
+-
+´İÜtiÚs
+>
+
+942 <
+İtiÚ
+ 
+Çme
+="proportions">
+
+943 <
+li¡
+>
+
+944 <
+İtiÚ
+ 
+v®ue
+="0.2" />
+
+945 </
+li¡
+>
+
+946 </
+İtiÚ
+>
+
+947 </
+¥l™‹r
+-
+´İÜtiÚs
+>
+
+948 </
+£‰šgs
+>
+
+949 </
+¡©e
+>
+
+950 <
+¡©e
+ 
+key
+="ModuleStructureConfigurable.UI">
+
+951 <
+£‰šgs
+>
+
+952 <
+Ï¡
+-
+ed™ed
+>
+CsvJsÚCÚv”‹r
+</last-edited>
+
+953 <
+¥l™‹r
+-
+´İÜtiÚs
+>
+
+954 <
+İtiÚ
+ 
+Çme
+="proportions">
+
+955 <
+li¡
+>
+
+956 <
+İtiÚ
+ 
+v®ue
+="0.2" />
+
+957 </
+li¡
+>
+
+958 </
+İtiÚ
+>
+
+959 </
+¥l™‹r
+-
+´İÜtiÚs
+>
+
+960 </
+£‰šgs
+>
+
+961 </
+¡©e
+>
+
+962 <
+¡©e
+ 
+key
+="ProjectJDKs.UI">
+
+963 <
+£‰šgs
+>
+
+964 <
+Ï¡
+-
+ed™ed
+>1.6</last-edited>
+
+965 <
+¥l™‹r
+-
+´İÜtiÚs
+>
+
+966 <
+İtiÚ
+ 
+Çme
+="proportions">
+
+967 <
+li¡
+>
+
+968 <
+İtiÚ
+ 
+v®ue
+="0.2" />
+
+969 </
+li¡
+>
+
+970 </
+İtiÚ
+>
+
+971 </
+¥l™‹r
+-
+´İÜtiÚs
+>
+
+972 </
+£‰šgs
+>
+
+973 </
+¡©e
+>
+
+974 <
+¡©e
+ 
+key
+="ProjectLibrariesConfigurable.UI">
+
+975 <
+£‰šgs
+>
+
+976 <
+Ï¡
+-
+ed™ed
+>
+gsÚ
+-2.1</last-edited>
+
+977 <
+¥l™‹r
+-
+´İÜtiÚs
+>
+
+978 <
+İtiÚ
+ 
+Çme
+="proportions">
+
+979 <
+li¡
+>
+
+980 <
+İtiÚ
+ 
+v®ue
+="0.2" />
+
+981 </
+li¡
+>
+
+982 </
+İtiÚ
+>
+
+983 </
+¥l™‹r
+-
+´İÜtiÚs
+>
+
+984 </
+£‰šgs
+>
+
+985 </
+¡©e
+>
+
+986 </
+¡©es
+>
+
+987 </
+compÚ’t
+>
+
+988 </
+´ojeù
+>
+
+	@csvjsonconverter.xml
+
+1 <?
+xml
+ 
+	gv”siÚ
+="1.0" 
+’codšg
+="UTF-8"?>
+
+2 <
+´ojeù
+ 
+Çme
+="csvjsonconverter" ="all">
+
+5 <
+´İ”ty
+ 
+fe
+="csvjsonconverter.properties"/>
+
+6 <!-- 
+Uncomm’t
+ 
+the
+ 
+fŞlowšg
+ 
+´İ”ty
+ 
+no
+ 
+‹¡s
+ 
+comp©iÚ
+ 
+is
+ 
+Ãeded
+ -->
+
+8 <
+´İ”ty
+ 
+Çme
+="sk.‹¡s" 
+v®ue
+="true"/>
+
+11 <!-- 
+Comp”
+ 
+İtiÚs
+ -->
+
+13 <
+´İ”ty
+ 
+Çme
+="comp”.debug" 
+v®ue
+="on"/>
+
+14 <
+´İ”ty
+ 
+Çme
+="comp”.g’”©e.no.w¬nšgs" 
+v®ue
+="off"/>
+
+15 <
+´İ”ty
+ 
+Çme
+="comp”.¬gs" 
+v®ue
+=""/>
+
+16 <
+´İ”ty
+ 
+Çme
+="comp”.max.memÜy" 
+v®ue
+="128m"/>
+
+17 <
+·‰”n£t
+ 
+id
+="ignored.files">
+
+18 <
+exşude
+ 
+Çme
+="**/CVS/**"/>
+
+19 <
+exşude
+ 
+Çme
+="**/SCCS/**"/>
+
+20 <
+exşude
+ 
+Çme
+="**/RCS/**"/>
+
+21 <
+exşude
+ 
+Çme
+="**/rcs/**"/>
+
+22 <
+exşude
+ 
+Çme
+="**/.DS_Store/**"/>
+
+23 <
+exşude
+ 
+Çme
+="**/.svn/**"/>
+
+24 <
+exşude
+ 
+Çme
+="**/.pyc/**"/>
+
+25 <
+exşude
+ 
+Çme
+="**/.pyo/**"/>
+
+26 <
+exşude
+ 
+Çme
+="**/*.pyc/**"/>
+
+27 <
+exşude
+ 
+Çme
+="**/*.pyo/**"/>
+
+28 <
+exşude
+ 
+Çme
+="**/.git/**"/>
+
+29 <
+exşude
+ 
+Çme
+="**/*.hprof/**"/>
+
+30 <
+exşude
+ 
+Çme
+="**/_svn/**"/>
+
+31 <
+exşude
+ 
+Çme
+="**/.hg/**"/>
+
+32 <
+exşude
+ 
+Çme
+="**/*.lib/**"/>
+
+33 <
+exşude
+ 
+Çme
+="**/*~/**"/>
+
+34 <
+exşude
+ 
+Çme
+="**/__pycache__/**"/>
+
+35 <
+exşude
+ 
+Çme
+="**/.bundle/**"/>
+
+36 <
+exşude
+ 
+Çme
+="**/*.rbc/**"/>
+
+37 <
+exşude
+ 
+Çme
+="**/vssver.scc/**"/>
+
+38 <
+exşude
+ 
+Çme
+="**/vssver2.scc/**"/>
+
+39 <
+exşude
+ 
+Çme
+="**/*.o/**"/>
+
+40 <
+exşude
+ 
+Çme
+="**/*.obj/**"/>
+
+41 </
+·‰”n£t
+>
+
+42 <
+·‰”n£t
+ 
+id
+="library.patterns">
+
+43 <
+šşude
+ 
+Çme
+="*.jar"/>
+
+44 <
+šşude
+ 
+Çme
+="*.war"/>
+
+45 <
+šşude
+ 
+Çme
+="*.ear"/>
+
+46 <
+šşude
+ 
+Çme
+="*.apk"/>
+
+47 <
+šşude
+ 
+Çme
+="*.zip"/>
+
+48 <
+šşude
+ 
+Çme
+="*.swc"/>
+
+49 <
+šşude
+ 
+Çme
+="*.ane"/>
+
+50 <
+šşude
+ 
+Çme
+="*.egg"/>
+
+51 </
+·‰”n£t
+>
+
+52 <
+·‰”n£t
+ 
+id
+="compiler.resources">
+
+53 <
+exşude
+ 
+Çme
+="**/?*.java"/>
+
+54 <
+exşude
+ 
+Çme
+="**/?*.form"/>
+
+55 <
+exşude
+ 
+Çme
+="**/?*.class"/>
+
+56 <
+exşude
+ 
+Çme
+="**/?*.groovy"/>
+
+57 <
+exşude
+ 
+Çme
+="**/?*.scala"/>
+
+58 <
+exşude
+ 
+Çme
+="**/?*.flex"/>
+
+59 <
+exşude
+ 
+Çme
+="**/?*.kt"/>
+
+60 <
+exşude
+ 
+Çme
+="**/?*.clj"/>
+
+61 </
+·‰”n£t
+>
+
+63 <!-- 
+JDK
+ 
+defš™iÚs
+ -->
+
+65 <
+´İ”ty
+ 
+Çme
+="jdk.bš.1.6" 
+v®ue
+="${jdk.home.1.6}/bin"/>
+
+66 <
+·th
+ 
+id
+="jdk.classpath.1.6">
+
+67 <
+fe£t
+ 
+dœ
+="${jdk.home.1.6}">
+
+68 <
+šşude
+ 
+Çme
+="jre/lib/rt.jar"/>
+
+69 <
+šşude
+ 
+Çme
+="jre/lib/jce.jar"/>
+
+70 <
+šşude
+ 
+Çme
+="jre/lib/deploy.jar"/>
+
+71 <
+šşude
+ 
+Çme
+="jre/lib/jsse.jar"/>
+
+72 <
+šşude
+ 
+Çme
+="jre/lib/javaws.jar"/>
+
+73 <
+šşude
+ 
+Çme
+="jre/lib/resources.jar"/>
+
+74 <
+šşude
+ 
+Çme
+="jre/lib/charsets.jar"/>
+
+75 <
+šşude
+ 
+Çme
+="jre/lib/plugin.jar"/>
+
+76 <
+šşude
+ 
+Çme
+="jre/lib/management-agent.jar"/>
+
+77 <
+šşude
+ 
+Çme
+="jre/lib/ext/sunjce_provider.jar"/>
+
+78 <
+šşude
+ 
+Çme
+="jre/lib/ext/sunpkcs11.jar"/>
+
+79 <
+šşude
+ 
+Çme
+="jre/lib/ext/localedata.jar"/>
+
+80 <
+šşude
+ 
+Çme
+="jre/lib/ext/dnsns.jar"/>
+
+81 </
+fe£t
+>
+
+82 </
+·th
+>
+
+84 <
+´İ”ty
+ 
+Çme
+="´ojeù.jdk.home" 
+v®ue
+="${jdk.home.1.6}"/>
+
+85 <
+´İ”ty
+ 
+Çme
+="´ojeù.jdk.bš" 
+v®ue
+="${jdk.bin.1.6}"/>
+
+86 <
+´İ”ty
+ 
+Çme
+="´ojeù.jdk.şas¥©h" 
+v®ue
+="jdk.classpath.1.6"/>
+
+89 <!-- 
+Projeù
+ 
+Lib¿r›s
+ -->
+
+91 <
+·th
+ 
+id
+="library.gson-2.1.classpath">
+
+92 <
+·th–em’t
+ 
+loÿtiÚ
+="${basedir}/libs/gson-2.1.jar"/>
+
+93 </
+·th
+>
+
+94 <!-- 
+Regi¡”
+ 
+Cu¡om
+ 
+Comp”
+ 
+Taskdefs
+ -->
+
+95 <
+´İ”ty
+ 
+Çme
+="javac2.home" 
+v®ue
+="${idea.home}/lib"/>
+
+96 <
+·th
+ 
+id
+="javac2.classpath">
+
+97 <
+·th–em’t
+ 
+loÿtiÚ
+="${javac2.home}/javac2.jar"/>
+
+98 <
+·th–em’t
+ 
+loÿtiÚ
+="${javac2.home}/jdom.jar"/>
+
+99 <
+·th–em’t
+ 
+loÿtiÚ
+="${javac2.home}/asm4-all.jar"/>
+
+100 <
+·th–em’t
+ 
+loÿtiÚ
+="${javac2.home}/jgoodies-forms.jar"/>
+
+101 </
+·th
+>
+
+102 <
+rg‘
+ 
+Çme
+="register.custom.compilers">
+
+103 <
+skdef
+ 
+Çme
+="javac2" 
+şas¢ame
+="com.š‹Îij.ªt.Javac2" 
+şas¥©h»f
+="javac2.classpath"/>
+
+104 <
+skdef
+ 
+Çme
+="š¡rum’tId—Ex‹nsiÚs" 
+şas¢ame
+="com.š‹Îij.ªt.In¡rum’tId—Ex‹nsiÚs" 
+şas¥©h»f
+="javac2.classpath"/>
+
+105 </
+rg‘
+>
+
+107 <!-- 
+ModuËs
+ -->
+
+109 <
+impÜt
+ 
+fe
+="${basedir}/module_csvjsonconverter.xml"/>
+
+111 <
+rg‘
+ 
+Çme
+="š™" 
+desütiÚ
+="Build initialization">
+
+112 <!-- 
+P”fÜm
+ 
+ªy
+ 
+bud
+ 
+š™Ÿliz©iÚ
+ 
+š
+ 
+this
+ 
+rg‘
+ -->
+
+113 </
+rg‘
+>
+
+115 <
+rg‘
+ 
+Çme
+="ş—n" 
+d•’ds
+="ş—n.moduË.csvjsÚcÚv”‹r" 
+desütiÚ
+="cleanup‡ll"/>
+
+117 <
+rg‘
+ 
+Çme
+="bud.moduËs" 
+d•’ds
+="š™, cËª, compe.moduË.csvjsÚcÚv”‹r" 
+desütiÚ
+="build‡ll modules"/>
+
+119 <
+rg‘
+ 
+Çme
+="®l" 
+d•’ds
+="bud.moduËs" 
+desütiÚ
+="build‡ll"/>
+
+120 </
+´ojeù
+>
+
+	@module_csvjsonconverter.xml
+
+1 <?
+xml
+ 
+	gv”siÚ
+="1.0" 
+’codšg
+="UTF-8"?>
+
+2 <
+´ojeù
+ 
+Çme
+="module_csvjsonconverter" ="compile.module.csvjsonconverter">
+
+3 <
+dœÇme
+ 
+´İ”ty
+="moduË.csvjsÚcÚv”‹r.ba£dœ" 
+fe
+="${ant.file.module_csvjsonconverter}"/>
+
+5 <
+´İ”ty
+ 
+Çme
+="moduË.jdk.home.csvjsÚcÚv”‹r" 
+v®ue
+="${project.jdk.home}"/>
+
+6 <
+´İ”ty
+ 
+Çme
+="moduË.jdk.bš.csvjsÚcÚv”‹r" 
+v®ue
+="${project.jdk.bin}"/>
+
+7 <
+´İ”ty
+ 
+Çme
+="moduË.jdk.şas¥©h.csvjsÚcÚv”‹r" 
+v®ue
+="${project.jdk.classpath}"/>
+
+9 <
+´İ”ty
+ 
+Çme
+="comp”.¬gs.csvjsÚcÚv”‹r" 
+v®ue
+="${compiler.args}"/>
+
+11 <
+´İ”ty
+ 
+Çme
+="csvjsÚcÚv”‹r.ouut.dœ" 
+v®ue
+="${module.csvjsonconverter.basedir}/out/production/CsvJsonConverter"/>
+
+12 <
+´İ”ty
+ 
+Çme
+="csvjsÚcÚv”‹r.‹¡ouut.dœ" 
+v®ue
+="${module.csvjsonconverter.basedir}/out/test/CsvJsonConverter"/>
+
+14 <
+·th
+ 
+id
+="csvjsonconverter.module.bootclasspath">
+
+15 <!-- 
+P©hs
+ 
+to
+ 
+be
+ 
+šşuded
+ 
+š
+ 
+comp©iÚ
+ 
+boÙşas¥©h
+ -->
+
+16 </
+·th
+>
+
+18 <
+·th
+ 
+id
+="csvjsonconverter.module.production.classpath">
+
+19 <
+·th
+ 
+»fid
+="${module.jdk.classpath.csvjsonconverter}"/>
+
+20 <
+·th–em’t
+ 
+loÿtiÚ
+="${idea.home}/lib/junit.jar"/>
+
+21 <
+·th
+ 
+»fid
+="library.gson-2.1.classpath"/>
+
+22 </
+·th
+>
+
+24 <
+·th
+ 
+id
+="csvjsonconverter.runtime.production.module.classpath">
+
+25 <
+·th–em’t
+ 
+loÿtiÚ
+="${csvjsonconverter.output.dir}"/>
+
+26 <
+·th–em’t
+ 
+loÿtiÚ
+="${idea.home}/lib/junit.jar"/>
+
+27 <
+·th
+ 
+»fid
+="library.gson-2.1.classpath"/>
+
+28 </
+·th
+>
+
+30 <
+·th
+ 
+id
+="csvjsonconverter.module.classpath">
+
+31 <
+·th
+ 
+»fid
+="${module.jdk.classpath.csvjsonconverter}"/>
+
+32 <
+·th–em’t
+ 
+loÿtiÚ
+="${csvjsonconverter.output.dir}"/>
+
+33 <
+·th–em’t
+ 
+loÿtiÚ
+="${idea.home}/lib/junit.jar"/>
+
+34 <
+·th
+ 
+»fid
+="library.gson-2.1.classpath"/>
+
+35 </
+·th
+>
+
+37 <
+·th
+ 
+id
+="csvjsonconverter.runtime.module.classpath">
+
+38 <
+·th–em’t
+ 
+loÿtiÚ
+="${csvjsonconverter.testoutput.dir}"/>
+
+39 <
+·th–em’t
+ 
+loÿtiÚ
+="${csvjsonconverter.output.dir}"/>
+
+40 <
+·th–em’t
+ 
+loÿtiÚ
+="${idea.home}/lib/junit.jar"/>
+
+41 <
+·th
+ 
+»fid
+="library.gson-2.1.classpath"/>
+
+42 </
+·th
+>
+
+45 <
+·‰”n£t
+ 
+id
+="excluded.from.module.csvjsonconverter">
+
+46 <
+·‰”n£t
+ 
+»fid
+="ignored.files"/>
+
+47 </
+·‰”n£t
+>
+
+49 <
+·‰”n£t
+ 
+id
+="excluded.from.compilation.csvjsonconverter">
+
+50 <
+·‰”n£t
+ 
+»fid
+="excluded.from.module.csvjsonconverter"/>
+
+51 </
+·‰”n£t
+>
+
+53 <
+·th
+ 
+id
+="csvjsonconverter.module.sourcepath">
+
+54 <
+dœ£t
+ 
+dœ
+="${module.csvjsonconverter.basedir}">
+
+55 <
+šşude
+ 
+Çme
+="src"/>
+
+56 </
+dœ£t
+>
+
+57 </
+·th
+>
+
+59 <
+·th
+ 
+id
+="csvjsonconverter.module.test.sourcepath">
+
+60 <
+dœ£t
+ 
+dœ
+="${module.csvjsonconverter.basedir}">
+
+61 <
+šşude
+ 
+Çme
+="test"/>
+
+62 </
+dœ£t
+>
+
+63 </
+·th
+>
+
+66 <
+rg‘
+ 
+Çme
+="compe.moduË.csvjsÚcÚv”‹r" 
+d•’ds
+="compe.moduË.csvjsÚcÚv”‹r.´oduùiÚ,compe.moduË.csvjsÚcÚv”‹r.‹¡s" 
+desütiÚ
+="Compile module CsvJsonConverter"/>
+
+68 <
+rg‘
+ 
+Çme
+="compe.moduË.csvjsÚcÚv”‹r.´oduùiÚ" 
+d•’ds
+="»gi¡”.cu¡om.comp”s" 
+desütiÚ
+="Compile module CsvJsonConverter;…roduction classes">
+
+69 <
+mkdœ
+ 
+dœ
+="${csvjsonconverter.output.dir}"/>
+
+70 <
+javac2
+ 
+de¡dœ
+="${csvjsÚcÚv”‹r.ouut.dœ}" 
+debug
+="${comp”.debug}" 
+now¬n
+="${comp”.g’”©e.no.w¬nšgs}" 
+memÜymaximumsize
+="${comp”.max.memÜy}" 
+fÜk
+="Œue" 
+execubË
+="${module.jdk.bin.csvjsonconverter}/javac">
+
+71 <
+comp”¬g
+ 
+lše
+="${compiler.args.csvjsonconverter}"/>
+
+72 <
+boÙşas¥©h
+ 
+»fid
+="csvjsonconverter.module.bootclasspath"/>
+
+73 <
+şas¥©h
+ 
+»fid
+="csvjsonconverter.module.production.classpath"/>
+
+74 <
+¤c
+ 
+»fid
+="csvjsonconverter.module.sourcepath"/>
+
+75 <
+·‰”n£t
+ 
+»fid
+="excluded.from.compilation.csvjsonconverter"/>
+
+76 </
+javac2
+>
+
+78 <
+cİy
+ 
+todœ
+="${csvjsonconverter.output.dir}">
+
+79 <
+fe£t
+ 
+dœ
+="${module.csvjsonconverter.basedir}/src">
+
+80 <
+·‰”n£t
+ 
+»fid
+="compiler.resources"/>
+
+81 <
+ty³
+ype="file"/>
+
+82 </
+fe£t
+>
+
+83 </
+cİy
+>
+
+84 </
+rg‘
+>
+
+86 <
+rg‘
+ 
+Çme
+="compe.moduË.csvjsÚcÚv”‹r.‹¡s" 
+d•’ds
+="»gi¡”.cu¡om.comp”s,compe.moduË.csvjsÚcÚv”‹r.´oduùiÚ" 
+desütiÚ
+="compmoduË CsvJsÚCÚv”‹r;e¡ cÏs£s" 
+uÆess
+="skip.tests">
+
+87 <
+mkdœ
+ 
+dœ
+="${csvjsonconverter.testoutput.dir}"/>
+
+88 <
+javac2
+ 
+de¡dœ
+="${csvjsÚcÚv”‹r.‹¡ouut.dœ}" 
+debug
+="${comp”.debug}" 
+now¬n
+="${comp”.g’”©e.no.w¬nšgs}" 
+memÜymaximumsize
+="${comp”.max.memÜy}" 
+fÜk
+="Œue" 
+execubË
+="${module.jdk.bin.csvjsonconverter}/javac">
+
+89 <
+comp”¬g
+ 
+lše
+="${compiler.args.csvjsonconverter}"/>
+
+90 <
+boÙşas¥©h
+ 
+»fid
+="csvjsonconverter.module.bootclasspath"/>
+
+91 <
+şas¥©h
+ 
+»fid
+="csvjsonconverter.module.classpath"/>
+
+92 <
+¤c
+ 
+»fid
+="csvjsonconverter.module.test.sourcepath"/>
+
+93 <
+·‰”n£t
+ 
+»fid
+="excluded.from.compilation.csvjsonconverter"/>
+
+94 </
+javac2
+>
+
+96 <
+cİy
+ 
+todœ
+="${csvjsonconverter.testoutput.dir}">
+
+97 <
+fe£t
+ 
+dœ
+="${module.csvjsonconverter.basedir}/test">
+
+98 <
+·‰”n£t
+ 
+»fid
+="compiler.resources"/>
+
+99 <
+ty³
+ype="file"/>
+
+100 </
+fe£t
+>
+
+101 </
+cİy
+>
+
+102 </
+rg‘
+>
+
+104 <
+rg‘
+ 
+Çme
+="ş—n.moduË.csvjsÚcÚv”‹r" 
+desütiÚ
+="cleanup module">
+
+105 <
+d–‘e
+ 
+dœ
+="${csvjsonconverter.output.dir}"/>
+
+106 <
+d–‘e
+ 
+dœ
+="${csvjsonconverter.testoutput.dir}"/>
+
+107 </
+rg‘
+>
+
+108 </
+´ojeù
+>
+
+	@src/com/pekall/csv/CSVReader.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gBufã»dR—d”
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gIOExû±iÚ
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gR—d”
+;
+
+6 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gA¼ayLi¡
+;
+
+7 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+15 
+public
+ cÏs 
+	cCSVR—d”
+ {
+
+17 
+´iv©e
+ 
+Bufã»dR—d”
+ 
+	mbr
+;
+
+19 
+´iv©e
+ 
+boŞ—n
+ 
+	mhasNext
+ = 
+Œue
+;
+
+21 
+´iv©e
+ 
+	m£·¿tÜ
+;
+
+23 
+´iv©e
+ 
+	mquÙech¬
+;
+
+25 
+´iv©e
+ 
+	mskLšes
+;
+
+27 
+´iv©e
+ 
+boŞ—n
+ 
+	mlšesSked
+;
+
+30 
+public
+ 
+fš®
+ 
+	mDEFAULT_SEPARATOR
+ = ',';
+
+36 
+public
+ 
+fš®
+ 
+	mDEFAULT_QUOTE_CHARACTER
+ = '"';
+
+41 
+public
+ 
+fš®
+ 
+	mDEFAULT_SKIP_LINES
+ = 0;
+
+49 
+public
+ 
+	$CSVR—d”
+(
+R—d”
+ 
+»ad”
+) {
+
+50 
+	`this
+(
+»ad”
+, 
+DEFAULT_SEPARATOR
+);
+
+61 
+public
+ 
+	$CSVR—d”
+(
+R—d”
+ 
+»ad”
+, 
+£·¿tÜ
+) {
+
+62 
+	`this
+(
+»ad”
+, 
+£·¿tÜ
+, 
+DEFAULT_QUOTE_CHARACTER
+);
+
+63 
+	}
+}
+
+77 
+public
+ 
+	$CSVR—d”
+(
+R—d”
+ 
+»ad”
+, 
+£·¿tÜ
+, 
+quÙech¬
+) {
+
+78 
+	`this
+(
+»ad”
+, 
+£·¿tÜ
+, 
+quÙech¬
+, 
+DEFAULT_SKIP_LINES
+);
+
+79 
+	}
+}
+
+93 
+public
+ 
+	$CSVR—d”
+(
+R—d”
+ 
+»ad”
+, 
+£·¿tÜ
+, 
+quÙech¬
+, 
+lše
+) {
+
+94 
+this
+.
+br
+ = 
+Ãw
+ 
+	`Bufã»dR—d”
+(
+»ad”
+);
+
+95 
+this
+.
+£·¿tÜ
+ = separator;
+
+96 
+this
+.
+quÙech¬
+ = quotechar;
+
+97 
+this
+.
+skLšes
+ = 
+lše
+;
+
+98 
+	}
+}
+
+110 
+public
+ 
+Li¡
+ 
+	$»adAÎ
+(è
+throws
+ 
+IOExû±iÚ
+ {
+
+112 
+Li¡
+ 
+®lEËm’ts
+ = 
+Ãw
+ 
+	`A¼ayLi¡
+();
+
+113 
+hasNext
+) {
+
+114 
+SŒšg
+[] 
+ÃxtLšeAsTok’s
+ = 
+	`»adNext
+();
+
+115 ià(
+ÃxtLšeAsTok’s
+ !ğ
+nuÎ
+)
+
+116 
+®lEËm’ts
+.
+	`add
+(
+ÃxtLšeAsTok’s
+);
+
+118  
+®lEËm’ts
+;
+
+120 
+	}
+}
+
+131 
+public
+ 
+	gSŒšg
+[] 
+	$»adNext
+(è
+throws
+ 
+IOExû±iÚ
+ {
+
+133 
+SŒšg
+ 
+ÃxtLše
+ = 
+	`g‘NextLše
+();
+
+134  
+hasNext
+ ? 
+	`·r£Lše
+(
+ÃxtLše
+è: 
+nuÎ
+;
+
+135 
+	}
+}
+
+144 
+´iv©e
+ 
+SŒšg
+ 
+	$g‘NextLše
+(è
+throws
+ 
+IOExû±iÚ
+ {
+
+145 ià(!
+this
+.
+lšesSked
+) {
+
+146 
+i
+ = 0; i < 
+skLšes
+; i++) {
+
+147 
+br
+.
+	`»adLše
+();
+
+149 
+this
+.
+lšesSked
+ = 
+Œue
+;
+
+151 
+SŒšg
+ 
+ÃxtLše
+ = 
+br
+.
+	`»adLše
+();
+
+152 ià(
+ÃxtLše
+ =ğ
+nuÎ
+) {
+
+153 
+hasNext
+ = 
+çl£
+;
+
+155  
+hasNext
+ ? 
+ÃxtLše
+ : 
+nuÎ
+;
+
+156 
+	}
+}
+
+166 
+´iv©e
+ 
+	gSŒšg
+[] 
+	$·r£Lše
+(
+SŒšg
+ 
+ÃxtLše
+è
+throws
+ 
+IOExû±iÚ
+ {
+
+168 ià(
+ÃxtLše
+ =ğ
+nuÎ
+) {
+
+169  
+nuÎ
+;
+
+172 
+Li¡
+ 
+tok’sOnThisLše
+ = 
+Ãw
+ 
+	`A¼ayLi¡
+();
+
+173 
+SŒšgBufãr
+ 
+sb
+ = 
+Ãw
+ 
+	`SŒšgBufãr
+();
+
+174 
+boŞ—n
+ 
+šQuÙes
+ = 
+çl£
+;
+
+176 ià(
+šQuÙes
+) {
+
+178 
+sb
+.
+	`­³nd
+("\n");
+
+179 
+ÃxtLše
+ = 
+	`g‘NextLše
+();
+
+180 ià(
+ÃxtLše
+ =ğ
+nuÎ
+)
+
+183 
+i
+ = 0; i < 
+ÃxtLše
+.
+	`Ëngth
+(); i++) {
+
+185 
+c
+ = 
+ÃxtLše
+.
+	`ch¬At
+(
+i
+);
+
+186 ià(
+c
+ =ğ
+quÙech¬
+) {
+
+189 ifĞ
+šQuÙes
+
+
+190 && 
+ÃxtLše
+.
+	`Ëngth
+(è> (
+i
++1)
+
+191 && 
+ÃxtLše
+.
+	`ch¬At
+(
+i
++1è=ğ
+quÙech¬
+ ){
+
+194 
+sb
+.
+	`­³nd
+(
+ÃxtLše
+.
+	`ch¬At
+(
+i
++1));
+
+195 
+i
+++;
+
+197 
+šQuÙes
+ = !inQuotes;
+
+199 if(
+i
+>2
+
+200 && 
+ÃxtLše
+.
+	`ch¬At
+(
+i
+-1è!ğ
+this
+.
+£·¿tÜ
+
+
+201 && 
+ÃxtLše
+.
+	`Ëngth
+()>(
+i
++1) &&
+
+202 
+ÃxtLše
+.
+	`ch¬At
+(
+i
++1è!ğ
+this
+.
+£·¿tÜ
+
+
+204 
+sb
+.
+	`­³nd
+(
+c
+);
+
+207 } ià(
+c
+ =ğ
+£·¿tÜ
+ && !
+šQuÙes
+) {
+
+208 
+tok’sOnThisLše
+.
+	`add
+(
+sb
+.
+	`toSŒšg
+());
+
+209 
+sb
+ = 
+Ãw
+ 
+	`SŒšgBufãr
+();
+
+211 
+sb
+.
+	`­³nd
+(
+c
+);
+
+214 } 
+šQuÙes
+);
+
+215 
+tok’sOnThisLše
+.
+	`add
+(
+sb
+.
+	`toSŒšg
+());
+
+216  (
+SŒšg
+[]è
+tok’sOnThisLše
+.
+	`toA¼ay
+(
+Ãw
+ String[0]);
+
+218 
+	}
+}
+
+225 
+public
+ 
+	$şo£
+(è
+throws
+ 
+IOExû±iÚ
+{
+
+226 
+br
+.
+	`şo£
+();
+
+227 
+	}
+}
+
+	@src/com/pekall/csv/CSVWriter.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+;
+
+19 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gIOExû±iÚ
+;
+
+20 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gPrštWr™”
+;
+
+21 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gR—d”
+;
+
+22 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gWr™”
+;
+
+23 
+impÜt
+ 
+	gjava
+.
+	gsql
+.
+	gClob
+;
+
+24 
+impÜt
+ 
+	gjava
+.
+	gsql
+.
+	gResuÉS‘
+;
+
+25 
+impÜt
+ 
+	gjava
+.
+	gsql
+.
+	gResuÉS‘M‘aD©a
+;
+
+26 
+impÜt
+ 
+	gjava
+.
+	gsql
+.
+	gSQLExû±iÚ
+;
+
+27 
+impÜt
+ 
+	gjava
+.
+	gsql
+.
+	gTime
+;
+
+28 
+impÜt
+ 
+	gjava
+.
+	gsql
+.
+	gTime¡amp
+;
+
+29 
+impÜt
+ 
+	gjava
+.
+	gsql
+.
+	gTy³s
+;
+
+30 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gI‹¿tÜ
+;
+
+31 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+39 
+public
+ cÏs 
+	cCSVWr™”
+ {
+
+41 
+´iv©e
+ 
+Wr™”
+ 
+	m¿wWr™”
+;
+
+43 
+´iv©e
+ 
+PrštWr™”
+ 
+	mpw
+;
+
+45 
+´iv©e
+ 
+	m£·¿tÜ
+;
+
+47 
+´iv©e
+ 
+	mquÙech¬
+;
+
+49 
+´iv©e
+ 
+SŒšg
+ 
+	mlšeEnd
+;
+
+52 
+public
+ 
+fš®
+ 
+	mESCAPE_CHARACTER
+ = '"';
+
+55 
+public
+ 
+fš®
+ 
+	mDEFAULT_SEPARATOR
+ = ',';
+
+61 
+public
+ 
+fš®
+ 
+	mDEFAULT_QUOTE_CHARACTER
+ = '"';
+
+64 
+public
+ 
+fš®
+ 
+	mNO_QUOTE_CHARACTER
+ = '\u0000';
+
+67 
+public
+ 
+fš®
+ 
+SŒšg
+ 
+	mDEFAULT_LINE_END
+ = "\n";
+
+75 
+public
+ 
+	$CSVWr™”
+(
+Wr™”
+ 
+wr™”
+) {
+
+76 
+	`this
+(
+wr™”
+, 
+DEFAULT_SEPARATOR
+);
+
+87 
+public
+ 
+	$CSVWr™”
+(
+Wr™”
+ 
+wr™”
+, 
+£·¿tÜ
+) {
+
+88 
+	`this
+(
+wr™”
+, 
+£·¿tÜ
+, 
+DEFAULT_QUOTE_CHARACTER
+);
+
+89 
+	}
+}
+
+101 
+public
+ 
+	$CSVWr™”
+(
+Wr™”
+ 
+wr™”
+, 
+£·¿tÜ
+, 
+quÙech¬
+) {
+
+102 
+	`this
+(
+wr™”
+, 
+£·¿tÜ
+, 
+quÙech¬
+, "\n");
+
+103 
+	}
+}
+
+117 
+public
+ 
+	$CSVWr™”
+(
+Wr™”
+ 
+wr™”
+, 
+£·¿tÜ
+, 
+quÙech¬
+, 
+SŒšg
+ 
+lšeEnd
+) {
+
+118 
+this
+.
+¿wWr™”
+ = 
+wr™”
+;
+
+119 
+this
+.
+pw
+ = 
+Ãw
+ 
+	`PrštWr™”
+(
+wr™”
+);
+
+120 
+this
+.
+£·¿tÜ
+ = separator;
+
+121 
+this
+.
+quÙech¬
+ = quotechar;
+
+122 
+this
+.
+lšeEnd
+ =†ineEnd;
+
+123 
+	}
+}
+
+133 
+public
+ 
+	$wr™eAÎ
+(
+Li¡
+ 
+®lLšes
+) {
+
+135 
+I‹¿tÜ
+ 
+™”
+ = 
+®lLšes
+.
+	`™”©Ü
+(); i‹r.
+	`hasNext
+();) {
+
+136 
+SŒšg
+[] 
+ÃxtLše
+ = (SŒšg[]è
+™”
+.
+	`Ãxt
+();
+
+137 
+	`wr™eNext
+(
+ÃxtLše
+);
+
+140 
+	}
+}
+
+142 
+´Ùeùed
+ 
+	$wr™eCŞumnNames
+(
+ResuÉS‘M‘aD©a
+ 
+m‘ad©a
+)
+
+143 
+throws
+ 
+SQLExû±iÚ
+ {
+
+145 
+cŞumnCouÁ
+ = 
+m‘ad©a
+.
+	`g‘CŞumnCouÁ
+();
+
+147 
+SŒšg
+[] 
+ÃxtLše
+ = 
+Ãw
+ SŒšg[
+cŞumnCouÁ
+];
+
+148 
+i
+ = 0; i < 
+cŞumnCouÁ
+; i++) {
+
+149 
+ÃxtLše
+[
+i
+] = 
+m‘ad©a
+.
+	`g‘CŞumnName
+(i + 1);
+
+151 
+	`wr™eNext
+(
+ÃxtLše
+);
+
+152 
+	}
+}
+
+163 
+public
+ 
+	$wr™eAÎ
+(
+java
+.
+sql
+.
+ResuÉS‘
+ 
+rs
+, 
+boŞ—n
+ 
+šşudeCŞumnNames
+è
+throws
+ 
+SQLExû±iÚ
+, 
+IOExû±iÚ
+ {
+
+165 
+ResuÉS‘M‘aD©a
+ 
+m‘ad©a
+ = 
+rs
+.
+	`g‘M‘aD©a
+();
+
+168 ià(
+šşudeCŞumnNames
+) {
+
+169 
+	`wr™eCŞumnNames
+(
+m‘ad©a
+);
+
+172 
+cŞumnCouÁ
+ = 
+m‘ad©a
+.
+	`g‘CŞumnCouÁ
+();
+
+174 
+rs
+.
+	`Ãxt
+())
+
+176 
+SŒšg
+[] 
+ÃxtLše
+ = 
+Ãw
+ SŒšg[
+cŞumnCouÁ
+];
+
+178 
+i
+ = 0; i < 
+cŞumnCouÁ
+; i++) {
+
+179 
+ÃxtLše
+[
+i
+] = 
+	`g‘CŞumnV®ue
+(
+rs
+, 
+m‘ad©a
+.
+	`g‘CŞumnTy³
+(i + 1), i + 1);
+
+182 
+	`wr™eNext
+(
+ÃxtLše
+);
+
+184 
+	}
+}
+
+186 
+´iv©e
+ 
+SŒšg
+ 
+	$g‘CŞumnV®ue
+(
+ResuÉS‘
+ 
+rs
+, 
+cŞTy³
+, 
+cŞIndex
+)
+
+187 
+throws
+ 
+SQLExû±iÚ
+, 
+IOExû±iÚ
+ {
+
+189 
+SŒšg
+ 
+v®ue
+ = "";
+
+191 
+cŞTy³
+)
+
+193 
+Ty³s
+.
+BIT
+:
+
+194 
+Objeù
+ 
+b™
+ = 
+rs
+.
+	`g‘Objeù
+(
+cŞIndex
+);
+
+195 
+v®ue
+ = 
+SŒšg
+.
+	`v®ueOf
+(
+b™
+);
+
+197 
+Ty³s
+.
+BOOLEAN
+:
+
+198 
+boŞ—n
+ 
+b
+ = 
+rs
+.
+	`g‘BoŞ—n
+(
+cŞIndex
+);
+
+199 ià(!
+rs
+.
+	`wasNuÎ
+()) {
+
+200 
+v®ue
+ = 
+BoŞ—n
+.
+	`v®ueOf
+(
+b
+).
+	`toSŒšg
+();
+
+203 
+Ty³s
+.
+CLOB
+:
+
+204 
+v®ue
+ = 
+	`»ad
+(
+rs
+.
+	`g‘Clob
+(
+cŞIndex
+));
+
+206 
+Ty³s
+.
+BIGINT
+:
+
+207 
+Ty³s
+.
+DECIMAL
+:
+
+208 
+Ty³s
+.
+DOUBLE
+:
+
+209 
+Ty³s
+.
+FLOAT
+:
+
+210 
+Ty³s
+.
+REAL
+:
+
+211 
+Ty³s
+.
+NUMERIC
+:
+
+212 
+v®ue
+ = "" + 
+rs
+.
+	`g‘BigDecim®
+(
+cŞIndex
+).
+	`doubËV®ue
+();
+
+214 
+Ty³s
+.
+INTEGER
+:
+
+215 
+Ty³s
+.
+TINYINT
+:
+
+216 
+Ty³s
+.
+SMALLINT
+:
+
+217 
+štV®ue
+ = 
+rs
+.
+	`g‘IÁ
+(
+cŞIndex
+);
+
+218 ià(!
+rs
+.
+	`wasNuÎ
+()) {
+
+219 
+v®ue
+ = "" + 
+štV®ue
+;
+
+222 
+Ty³s
+.
+JAVA_OBJECT
+:
+
+223 
+Objeù
+ 
+obj
+ = 
+rs
+.
+	`g‘Objeù
+(
+cŞIndex
+);
+
+224 ià(
+obj
+ !ğ
+nuÎ
+) {
+
+225 
+v®ue
+ = 
+SŒšg
+.
+	`v®ueOf
+(
+obj
+);
+
+228 
+Ty³s
+.
+DATE
+:
+
+229 
+v®ue
+ = 
+rs
+.
+	`g‘D©e
+(
+cŞIndex
+).
+	`toSŒšg
+();
+
+231 
+Ty³s
+.
+TIME
+:
+
+232 
+Time
+ 
+t
+ = 
+rs
+.
+	`g‘Time
+(
+cŞIndex
+);
+
+233 
+v®ue
+ = 
+t
+.
+	`toSŒšg
+();
+
+235 
+Ty³s
+.
+TIMESTAMP
+:
+
+236 
+Time¡amp
+ 
+t¡amp
+ = 
+rs
+.
+	`g‘Time¡amp
+(
+cŞIndex
+);
+
+237 
+v®ue
+ = 
+t¡amp
+.
+	`toSŒšg
+();
+
+239 
+Ty³s
+.
+LONGVARCHAR
+:
+
+240 
+Ty³s
+.
+VARCHAR
+:
+
+241 
+Ty³s
+.
+CHAR
+:
+
+242 
+v®ue
+ = 
+rs
+.
+	`g‘SŒšg
+(
+cŞIndex
+);
+
+245 
+v®ue
+ = "";
+
+248  
+v®ue
+;
+
+250 
+	}
+}
+
+252 
+´iv©e
+ 
+SŒšg
+ 
+	$»ad
+(
+Clob
+ 
+c
+è
+throws
+ 
+SQLExû±iÚ
+, 
+IOExû±iÚ
+
+
+254 
+SŒšgBufãr
+ 
+sb
+ = 
+Ãw
+ 
+	`SŒšgBufãr
+Ğ(è
+c
+.
+	`Ëngth
+());
+
+255 
+R—d”
+ 
+r
+ = 
+c
+.
+	`g‘Ch¬aù”SŒ—m
+();
+
+256 [] 
+cbuf
+ = 
+Ãw
+ [2048];
+
+257 
+n
+ = 0;
+
+258 (
+n
+ = 
+r
+.
+	`»ad
+(
+cbuf
+, 0, cbuf.
+Ëngth
+)) != -1) {
+
+259 ià(
+n
+ > 0) {
+
+260 
+sb
+.
+	`­³nd
+(
+cbuf
+, 0, 
+n
+);
+
+263  
+sb
+.
+	`toSŒšg
+();
+
+264 
+	}
+}
+
+273 
+public
+ 
+	$wr™eNext
+(
+SŒšg
+[] 
+ÃxtLše
+) {
+
+274 
+SŒšgBufãr
+ 
+sb
+ = 
+Ãw
+ 
+	`SŒšgBufãr
+();
+
+275 
+i
+ = 0; i < 
+ÃxtLše
+.
+Ëngth
+; i++) {
+
+277 ià(
+i
+ != 0) {
+
+278 
+sb
+.
+	`­³nd
+(
+£·¿tÜ
+);
+
+281 
+SŒšg
+ 
+ÃxtEËm’t
+ = 
+ÃxtLše
+[
+i
+];
+
+282 ià(
+ÃxtEËm’t
+ =ğ
+nuÎ
+)
+
+284 ià(
+quÙech¬
+ !ğ
+NO_QUOTE_CHARACTER
+)
+
+285 
+sb
+.
+	`­³nd
+(
+quÙech¬
+);
+
+286 
+j
+ = 0; j < 
+ÃxtEËm’t
+.
+	`Ëngth
+(); j++) {
+
+287 
+ÃxtCh¬
+ = 
+ÃxtEËm’t
+.
+	`ch¬At
+(
+j
+);
+
+288 ià(
+ÃxtCh¬
+ =ğ
+quÙech¬
+) {
+
+289 
+sb
+.
+	`­³nd
+(
+ESCAPE_CHARACTER
+).­³nd(
+ÃxtCh¬
+);
+
+290 } ià(
+ÃxtCh¬
+ =ğ
+ESCAPE_CHARACTER
+) {
+
+291 
+sb
+.
+	`­³nd
+(
+ESCAPE_CHARACTER
+).­³nd(
+ÃxtCh¬
+);
+
+293 
+sb
+.
+	`­³nd
+(
+ÃxtCh¬
+);
+
+296 ià(
+quÙech¬
+ !ğ
+NO_QUOTE_CHARACTER
+)
+
+297 
+sb
+.
+	`­³nd
+(
+quÙech¬
+);
+
+300 
+sb
+.
+	`­³nd
+(
+lšeEnd
+);
+
+301 
+pw
+.
+	`wr™e
+(
+sb
+.
+	`toSŒšg
+());
+
+303 
+	}
+}
+
+311 
+public
+ 
+	$şo£
+(è
+throws
+ 
+IOExû±iÚ
+ {
+
+312 
+pw
+.
+	`æush
+();
+
+313 
+pw
+.
+	`şo£
+();
+
+314 
+¿wWr™”
+.
+	`şo£
+();
+
+315 
+	}
+}
+
+	@src/com/pekall/csv/Converter.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	ggoogË
+.
+	ggsÚ
+.
+	gGsÚ
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	ggoogË
+.
+	ggsÚ
+.
+	gGsÚBud”
+;
+
+5 
+impÜt
+ 
+	gcom
+.
+	ggoogË
+.
+	ggsÚ
+.
+	g»æeù
+.
+	gTy³Tok’
+;
+
+6 
+impÜt
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+.
+	gb—n
+.
+	gCsvFe
+;
+
+7 
+impÜt
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+.
+	gb—n
+.
+	gCsvLše
+;
+
+8 
+impÜt
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+.
+	gb—n
+.
+	gImpÜtDeviûInfoVo
+;
+
+9 
+impÜt
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+.
+	gb—n
+.
+	gImpÜtU£rVo
+;
+
+11 
+impÜt
+ 
+	gjava
+.
+	gio
+.*;
+
+12 
+impÜt
+ 
+	gjava
+.
+	gÏng
+.
+	g»æeù
+.
+	gTy³
+;
+
+13 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gA¼ayLi¡
+;
+
+14 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gHashM­
+;
+
+15 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+32 
+public
+ cÏs 
+	cCÚv”‹r
+ {
+
+39 
+public
+ 
+SŒšg
+ 
+	$csv2JsÚ
+(
+SŒšg
+[] 
+lšes
+) {
+
+40 ià(
+lšes
+ =ğ
+nuÎ
+) {
+
+41 
+throw
+ 
+Ãw
+ 
+	`IÎeg®Argum’tExû±iÚ
+("lines should‚ot be‚ull!");
+
+44 
+CsvFe
+ 
+šfo
+ = 
+Ãw
+ 
+	`CsvFe
+();
+
+45 
+SŒšg
+ 
+lše
+ : 
+lšes
+) {
+
+47 ià(
+lše
+.
+	`¡¬tsW™h
+("#") ||†ine.startsWith("\n")) ;
+
+49 
+CsvLše
+ 
+csvLše
+ = CsvLše.
+	`äomCsv
+(
+lše
+);
+
+50 
+Debug
+.
+	`logV”bo£
+(
+csvLše
+.
+	`toSŒšg
+());
+
+51 
+šfo
+.
+	`addLše
+(
+csvLše
+);
+
+54 
+Ty³
+ 
+li¡Ty³
+ = 
+Ãw
+ 
+Ty³Tok’
+<
+Li¡
+<
+ImpÜtU£rVo
+>>() {
+
+55 }.
+	`g‘Ty³
+();
+
+56 
+Li¡
+<
+ImpÜtU£rVo
+> 
+u£rs
+ = 
+	`cÚv”tCsvInfo2Vo
+(
+šfo
+);
+
+57 
+GsÚ
+ 
+gsÚ
+ = 
+Ãw
+ 
+	`GsÚBud”
+().
+	`£rŸlizeNuÎs
+().
+	`ü—‹
+();
+
+58  
+gsÚ
+.
+	`toJsÚ
+(
+u£rs
+, 
+li¡Ty³
+);
+
+66 
+public
+ 
+SŒšg
+ 
+	$csv2JsÚ
+(
+SŒšg
+ 
+fuÎP©h
+è
+throws
+ 
+IOExû±iÚ
+ {
+
+67 ià(
+fuÎP©h
+ =ğ
+nuÎ
+) {
+
+68 
+throw
+ 
+Ãw
+ 
+	`IÎeg®Argum’tExû±iÚ
+("file…ath should‚ot be‚ull");
+
+71 
+A¼ayLi¡
+<
+SŒšg
+> 
+lšes
+ = 
+Ãw
+ ArrayList<String>();
+
+72 
+Œy
+ {
+
+73 
+FeR—d”
+ 
+feR—d”
+ = 
+Ãw
+ 
+	`FeR—d”
+(
+fuÎP©h
+);
+
+74 
+Bufã»dR—d”
+ 
+bufã»dR—d”
+ = 
+Ãw
+ 
+	`Bufã»dR—d”
+(
+feR—d”
+, 1024);
+
+75 
+SŒšg
+ 
+lše
+;
+
+76 (
+lše
+ = 
+bufã»dR—d”
+.
+	`»adLše
+()è!ğ
+nuÎ
+) {
+
+77 
+lšes
+.
+	`add
+(
+lše
+);
+
+79 } 
+	`ÿtch
+ (
+FeNÙFoundExû±iÚ
+ 
+e
+) {
+
+80 
+e
+.
+	`´štSckT¿û
+();
+
+81 
+throw
+ 
+e
+;
+
+82 } 
+	`ÿtch
+ (
+IOExû±iÚ
+ 
+e
+) {
+
+83 
+e
+.
+	`´štSckT¿û
+();
+
+84 
+throw
+ 
+e
+;
+
+87 
+SŒšg
+[] 
+tmp
+ = 
+Ãw
+ SŒšg[
+lšes
+.
+	`size
+()];
+
+88 
+lšes
+.
+	`toA¼ay
+(
+tmp
+);
+
+89  
+	`csv2JsÚ
+(
+tmp
+);
+
+90 
+	}
+}
+
+92 
+public
+ 
+SŒšg
+ 
+	$csv2JsÚ
+(
+Fe
+ 
+fe
+è
+throws
+ 
+IOExû±iÚ
+ {
+
+93 ià(
+fe
+ =ğ
+nuÎ
+ || !fe.
+	`exi¡s
+(è|| !fe.
+	`isFe
+()) {
+
+94 
+throw
+ 
+Ãw
+ 
+	`IÎeg®Argum’tExû±iÚ
+("file should‚ot be‚ull");
+
+96  
+	`csv2JsÚ
+(
+fe
+.
+	`g‘AbsŞu‹P©h
+());
+
+97 
+	}
+}
+
+105 
+public
+ 
+SŒšg
+ 
+	$csv2JsÚOSS
+(
+Fe
+ 
+fe
+è
+throws
+ 
+IOExû±iÚ
+ {
+
+106 ià(
+fe
+ =ğ
+nuÎ
+ || !fe.
+	`exi¡s
+(è|| !fe.
+	`isFe
+()) {
+
+107 
+throw
+ 
+Ãw
+ 
+	`IÎeg®Argum’tExû±iÚ
+("file should‚ot be‚ull");
+
+110 
+CsvFe
+ 
+šfo
+ = 
+Ãw
+ 
+	`CsvFe
+();
+
+111 
+Œy
+ {
+
+112 
+D©aIÅutSŒ—m
+ 
+dš
+ = 
+Ãw
+ 
+	`D©aIÅutSŒ—m
+Òew 
+	`FeIÅutSŒ—m
+(
+fe
+));
+
+113 
+Bufã»dR—d”
+ 
+br
+ = 
+Ãw
+ 
+	`Bufã»dR—d”
+Òew 
+	`IÅutSŒ—mR—d”
+(
+dš
+, "GBK"));
+
+114 
+CSVR—d”
+ 
+csvR—d”
+ = 
+Ãw
+ 
+	`CSVR—d”
+(
+br
+);
+
+115 
+SŒšg
+[] 
+tok’s
+;
+
+116 (
+tok’s
+ = 
+csvR—d”
+.
+	`»adNext
+()è!ğ
+nuÎ
+) {
+
+117 
+CsvLše
+ 
+csvLše
+ = CsvLše.
+	`äomCsv
+(
+tok’s
+);
+
+118 
+Debug
+.
+	`logV”bo£
+(
+csvLše
+.
+	`toSŒšg
+());
+
+119 
+šfo
+.
+	`addLše
+(
+csvLše
+);
+
+121 
+br
+.
+	`şo£
+();
+
+122 } 
+	`ÿtch
+ (
+FeNÙFoundExû±iÚ
+ 
+e
+) {
+
+123 
+e
+.
+	`´štSckT¿û
+();
+
+124 
+throw
+ 
+e
+;
+
+125 } 
+	`ÿtch
+ (
+IOExû±iÚ
+ 
+e
+) {
+
+126 
+e
+.
+	`´štSckT¿û
+();
+
+127 
+throw
+ 
+e
+;
+
+130 
+Ty³
+ 
+li¡Ty³
+ = 
+Ãw
+ 
+Ty³Tok’
+<
+Li¡
+<
+ImpÜtU£rVo
+>>() {
+
+131 }.
+	`g‘Ty³
+();
+
+132 
+Li¡
+<
+ImpÜtU£rVo
+> 
+u£rs
+ = 
+	`cÚv”tCsvInfo2Vo
+(
+šfo
+);
+
+133 
+GsÚ
+ 
+gsÚ
+ = 
+Ãw
+ 
+	`GsÚBud”
+().
+	`£rŸlizeNuÎs
+().
+	`ü—‹
+();
+
+134  
+gsÚ
+.
+	`toJsÚ
+(
+u£rs
+, 
+li¡Ty³
+);
+
+135 
+	}
+}
+
+143 
+public
+ 
+	gLi¡
+<
+	gImpÜtU£rVo
+> 
+	$csv2VoOss
+(
+Fe
+ 
+fe
+è
+throws
+ 
+IOExû±iÚ
+ {
+
+144 ià(
+fe
+ =ğ
+nuÎ
+ || !fe.
+	`exi¡s
+(è|| !fe.
+	`isFe
+()) {
+
+145 
+throw
+ 
+Ãw
+ 
+	`IÎeg®Argum’tExû±iÚ
+("file should‚ot be‚ull");
+
+148 
+CsvFe
+ 
+šfo
+ = 
+Ãw
+ 
+	`CsvFe
+();
+
+149 
+Œy
+ {
+
+150 
+D©aIÅutSŒ—m
+ 
+dš
+ = 
+Ãw
+ 
+	`D©aIÅutSŒ—m
+Òew 
+	`FeIÅutSŒ—m
+(
+fe
+));
+
+151 
+Bufã»dR—d”
+ 
+br
+ = 
+Ãw
+ 
+	`Bufã»dR—d”
+Òew 
+	`IÅutSŒ—mR—d”
+(
+dš
+, "GBK"));
+
+152 
+CSVR—d”
+ 
+csvR—d”
+ = 
+Ãw
+ 
+	`CSVR—d”
+(
+br
+);
+
+153 
+SŒšg
+[] 
+tok’s
+;
+
+154 (
+tok’s
+ = 
+csvR—d”
+.
+	`»adNext
+()è!ğ
+nuÎ
+) {
+
+155 
+CsvLše
+ 
+csvLše
+ = CsvLše.
+	`äomCsv
+(
+tok’s
+);
+
+156 
+Debug
+.
+	`logV”bo£
+(
+csvLše
+.
+	`toSŒšg
+());
+
+157 
+šfo
+.
+	`addLše
+(
+csvLše
+);
+
+159 
+br
+.
+	`şo£
+();
+
+160 } 
+	`ÿtch
+ (
+FeNÙFoundExû±iÚ
+ 
+e
+) {
+
+161 
+e
+.
+	`´štSckT¿û
+();
+
+162 
+throw
+ 
+e
+;
+
+163 } 
+	`ÿtch
+ (
+IOExû±iÚ
+ 
+e
+) {
+
+164 
+e
+.
+	`´štSckT¿û
+();
+
+165 
+throw
+ 
+e
+;
+
+168  
+	`cÚv”tCsvInfo2Vo
+(
+šfo
+);
+
+169 
+	}
+}
+
+171 
+´iv©e
+ 
+	gLi¡
+<
+	gImpÜtU£rVo
+> 
+	$cÚv”tCsvInfo2Vo
+(
+CsvFe
+ 
+csvFe
+) {
+
+172 
+HashM­
+<
+SŒšg
+, 
+ImpÜtU£rVo
+> 
+u£rM­
+ = 
+Ãw
+ HashMap<String, ImportUserVo>();
+
+173 
+Li¡
+<
+ImpÜtU£rVo
+> 
+u£rs
+ = 
+Ãw
+ 
+A¼ayLi¡
+<ImportUserVo>();
+
+175 if(
+csvFe
+ =ğ
+nuÎ
+ || csvFe.
+	`g‘Lšes
+() ==‚ull)
+
+176  
+u£rs
+;
+
+179 
+CsvLše
+ 
+u£rInfo
+: 
+csvFe
+.
+	`g‘Lšes
+()) {
+
+180 ià(
+u£rInfo
+ =ğ
+nuÎ
+ || u£rInfo.
+	`g‘U£ºame
+() ==‚ull) ;
+
+183 if(
+u£rM­
+.
+	`g‘
+(
+u£rInfo
+.
+	`g‘U£ºame
+()è!ğ
+nuÎ
+) ;
+
+185 
+ImpÜtU£rVo
+ 
+u£rVo
+ = ImpÜtU£rVo.
+	`äomCsvU£rInfo
+(
+u£rInfo
+);
+
+186 
+u£rs
+.
+	`add
+(
+u£rVo
+);
+
+187 
+u£rM­
+.
+	`put
+(
+u£rInfo
+.
+	`g‘U£ºame
+(), 
+u£rVo
+);
+
+191 
+CsvLše
+ 
+u£rInfo
+: 
+csvFe
+.
+	`g‘Lšes
+()) {
+
+192 ià(
+u£rInfo
+ =ğ
+nuÎ
+ || u£rInfo.
+	`g‘U£ºame
+() ==‚ull) ;
+
+194 
+ImpÜtDeviûInfoVo
+ 
+deviûInfoVo
+ = ImpÜtDeviûInfoVo.
+	`äomCsvInfo
+(
+u£rInfo
+);
+
+195 
+ImpÜtU£rVo
+ 
+u£rVo
+ = 
+u£rM­
+.
+	`g‘
+(
+u£rInfo
+.
+	`g‘U£ºame
+());
+
+196 ià(
+u£rVo
+ !ğ
+nuÎ
+ && 
+deviûInfoVo
+ !=‚ull) {
+
+197 
+u£rVo
+.
+	`addDeviû
+(
+deviûInfoVo
+);
+
+200  
+u£rs
+;
+
+201 
+	}
+}
+
+207 
+public
+ 
+Objeù
+ 
+	$csv2B—n
+(
+SŒšg
+ 
+fuÎP©h
+è
+throws
+ 
+IOExû±iÚ
+ {
+
+208 
+CsvFe
+ 
+šfo
+ = 
+nuÎ
+;
+
+209 
+Œy
+ {
+
+210 
+FeR—d”
+ 
+feR—d”
+ = 
+Ãw
+ 
+	`FeR—d”
+(
+fuÎP©h
+);
+
+211 
+Bufã»dR—d”
+ 
+bufã»dR—d”
+ = 
+Ãw
+ 
+	`Bufã»dR—d”
+(
+feR—d”
+, 1024);
+
+212 
+šfo
+ = 
+Ãw
+ 
+	`CsvFe
+();
+
+213 
+SŒšg
+ 
+lše
+;
+
+214 (
+lše
+ = 
+bufã»dR—d”
+.
+	`»adLše
+()è!ğ
+nuÎ
+) {
+
+216 if(
+lše
+.
+	`¡¬tsW™h
+("#")) ;
+
+218 
+šfo
+.
+	`addLše
+(
+CsvLše
+.
+	`äomCsv
+(
+lše
+));
+
+220 } 
+	`ÿtch
+ (
+FeNÙFoundExû±iÚ
+ 
+e
+) {
+
+221 
+e
+.
+	`´štSckT¿û
+();
+
+222 
+throw
+ 
+e
+;
+
+223 } 
+	`ÿtch
+ (
+IOExû±iÚ
+ 
+e
+) {
+
+224 
+e
+.
+	`´štSckT¿û
+();
+
+225 
+throw
+ 
+e
+;
+
+229 
+GsÚ
+ 
+gsÚ
+ = 
+Ãw
+ 
+	`GsÚBud”
+().
+	`£rŸlizeNuÎs
+().
+	`ü—‹
+();
+
+230 
+Sy¡em
+.
+out
+.
+	`´šn
+(
+gsÚ
+.
+	`toJsÚ
+(
+šfo
+, info.
+	`g‘CÏss
+()));
+
+232  
+šfo
+;
+
+233 
+	}
+}
+
+	@src/com/pekall/csv/Debug.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+;
+
+6 
+public
+ cÏs 
+	cDebug
+ {
+
+7 
+´iv©e
+ 
+boŞ—n
+ 
+	mv”bo£DebugLog
+ = 
+çl£
+;
+
+13 
+public
+ 
+	$£tV”bo£DebugLog
+(
+boŞ—n
+ 
+v”bo£DebugLog
+) {
+
+14 
+Debug
+.
+v”bo£DebugLog
+ = verboseDebugLog;
+
+21 
+public
+ 
+	$logV”bo£
+(
+SŒšg
+ 
+s
+) {
+
+22 if(
+v”bo£DebugLog
+) {
+
+23 
+Sy¡em
+.
+out
+.
+	`´šn
+(
+s
+);
+
+25 
+	}
+}
+
+31 
+public
+ 
+	$log
+(
+SŒšg
+ 
+s
+) {
+
+32 
+Sy¡em
+.
+out
+.
+	`´šn
+(
+s
+);
+
+33 
+	}
+}
+
+35 
+public
+ 
+	$logE¼Ü
+(
+SŒšg
+ 
+s
+) {
+
+36 
+Œy
+ {
+
+37 
+throw
+ 
+Ãw
+ 
+	`Exû±iÚ
+(
+s
+);
+
+38 } 
+	`ÿtch
+ (
+Exû±iÚ
+ 
+e
+) {
+
+39 
+e
+.
+	`´štSckT¿û
+();
+
+41 
+	}
+}
+
+43 
+public
+ 
+	$logTe¡
+(
+SŒšg
+ 
+s
+) {
+
+44 
+Sy¡em
+.
+out
+.
+	`´šn
+(
+s
+);
+
+45 
+	}
+}
+
+	@src/com/pekall/csv/bean/CsvFile.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+.
+	gb—n
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gA¼ayLi¡
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+6 
+public
+ cÏs 
+	cCsvFe
+ {
+
+7 
+´iv©e
+ 
+	mLi¡
+<
+	mCsvLše
+> 
+	mlšes
+;
+
+9 
+public
+ 
+	mLi¡
+<
+	mCsvLše
+> 
+	$g‘Lšes
+() {
+
+10  
+lšes
+;
+
+13 
+public
+ 
+	`£tLšes
+(
+Li¡
+<
+CsvLše
+> 
+lšes
+) {
+
+14 
+this
+.
+lšes
+ =†ines;
+
+15 
+	}
+}
+
+17 
+public
+ 
+	$addLše
+(
+CsvLše
+ 
+lše
+) {
+
+18 ià(
+lšes
+ =ğ
+nuÎ
+) {
+
+19 
+lšes
+ = 
+Ãw
+ 
+A¼ayLi¡
+<
+CsvLše
+>();
+
+21 
+lšes
+.
+	`add
+(
+lše
+);
+
+22 
+	}
+}
+
+24 @
+Ov”ride
+
+
+25 
+public
+ 
+SŒšg
+ 
+	$toSŒšg
+() {
+
+26 
+SŒšgBud”
+ 
+sb
+ = 
+Ãw
+ 
+	`SŒšgBud”
+();
+
+27 ià(
+lšes
+ !ğ
+nuÎ
+) {
+
+28 
+sb
+.
+	`­³nd
+("{");
+
+29 
+CsvLše
+ 
+lše
+ : 
+lšes
+) {
+
+30 
+sb
+.
+	`­³nd
+(
+lše
+.
+	`toSŒšg
+() + "\n");
+
+32 
+sb
+.
+	`­³nd
+("}");
+
+35 ",†šes=" + 
+sb
+.
+	`toSŒšg
+() +
+
+37 
+	}
+}
+
+39 
+public
+ 
+SŒšg
+ 
+	$toCvs
+() {
+
+40 
+SŒšgBud”
+ 
+sb
+ = 
+Ãw
+ 
+	`SŒšgBud”
+();
+
+41 ià(
+lšes
+ =ğ
+nuÎ
+) {
+
+42  
+sb
+.
+	`toSŒšg
+();
+
+44 
+CsvLše
+ 
+lše
+ : 
+lšes
+) {
+
+45 
+sb
+.
+	`­³nd
+(
+lše
+.
+	`toCvs
+() + "\n");
+
+47 ià(
+sb
+.
+	`Ëngth
+() > 0) {
+
+49 
+sb
+.
+	`d–‘eCh¬At
+(sb.
+	`Ëngth
+() - 1);
+
+51  
+sb
+.
+	`toSŒšg
+();
+
+52 
+	}
+}
+
+54 @
+Ov”ride
+
+
+55 
+public
+ 
+boŞ—n
+ 
+	$equ®s
+(
+Objeù
+ 
+o
+) {
+
+56 ià(
+this
+ =ğ
+o
+è 
+Œue
+;
+
+57 ià(!(
+o
+ 
+š¡ªûof
+ 
+CsvFe
+)è 
+çl£
+;
+
+59 
+CsvFe
+ 
+šfo
+ = (CsvFeè
+o
+;
+
+61 ià(
+this
+.
+	`hashCode
+(è!ğ
+šfo
+.hashCode()è 
+çl£
+;
+
+63  
+Œue
+;
+
+64 
+	}
+}
+
+66 @
+Ov”ride
+
+
+67 
+public
+ 
+	$hashCode
+() {
+
+68 
+»suÉ
+ = 0;
+
+69 ià(
+lšes
+ !ğ
+nuÎ
+) {
+
+70 
+CsvLše
+ 
+lše
+ : 
+lšes
+) {
+
+71 
+»suÉ
+ +ğ
+lše
+.
+	`hashCode
+();
+
+74  
+»suÉ
+;
+
+75 
+	}
+}
+
+	@src/com/pekall/csv/bean/CsvLine.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+.
+	gb—n
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gÏng
+.
+	g»æeù
+.
+	gF›ld
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gA¼ayLi¡
+;
+
+9 
+public
+ cÏs 
+	cCsvLše
+ {
+
+14 
+´iv©e
+ 
+	mSŒšg
+[] 
+	mCSV_FIELDS
+ = 
+Ãw
+ 
+SŒšg
+[]{
+
+19 
+´iv©e
+ 
+SŒšg
+ 
+	gu£ºame
+;
+
+20 
+´iv©e
+ 
+SŒšg
+ 
+	g·sswÜd
+;
+
+21 
+´iv©e
+ 
+SŒšg
+ 
+	gema
+;
+
+22 
+´iv©e
+ 
+IÁeg”
+ 
+	gu£rTy³
+;
+
+23 
+´iv©e
+ 
+SŒšg
+ 
+	gfuÎName
+;
+
+24 
+´iv©e
+ 
+SŒšg
+ 
+	gfœ¡Name
+;
+
+25 
+´iv©e
+ 
+SŒšg
+ 
+	gÏ¡Name
+;
+
+26 
+´iv©e
+ 
+SŒšg
+ 
+	gphÚe
+;
+
+29 
+´iv©e
+ 
+IÁeg”
+ 
+	gdeviûTy³
+;
+
+30 
+´iv©e
+ 
+IÁeg”
+ 
+	gos
+;
+
+31 
+´iv©e
+ 
+SŒšg
+ 
+	gÏnguage
+;
+
+32 
+´iv©e
+ 
+SŒšg
+ 
+	g£cur™yInfo
+;
+
+33 
+´iv©e
+ 
+SŒšg
+ 
+	gtmpUuid
+;
+
+40 
+public
+ 
+CsvLše
+ 
+	$äomCsv
+(
+SŒšg
+[] 
+tok’s
+) {
+
+41  
+	`ü—‹CsvLše
+(
+tok’s
+);
+
+42 
+	}
+}
+
+49 
+public
+ 
+CsvLše
+ 
+	$äomCsv
+(
+SŒšg
+ 
+lše
+) {
+
+50 
+SŒšg
+[] 
+tok’s
+ = 
+	`combšeTok’s
+(
+lše
+.
+	`¥l™
+(","));
+
+51  
+	`ü—‹CsvLše
+(
+tok’s
+);
+
+52 
+	}
+}
+
+54 
+´iv©e
+ 
+CsvLše
+ 
+	$ü—‹CsvLše
+(
+SŒšg
+[] 
+tok’s
+) {
+
+55 
+CsvLše
+ 
+u£rInfo
+ = 
+Ãw
+ 
+	`CsvLše
+();
+
+56 
+i
+ = 0; i < 
+tok’s
+.
+Ëngth
+; i++) {
+
+57 
+Œy
+ {
+
+58 ià(
+tok’s
+[
+i
+] =ğ
+nuÎ
+ || "".
+	`equ®s
+(tokens[i])) ;
+
+60 
+F›ld
+ 
+f›ld
+ = 
+u£rInfo
+.
+	`g‘CÏss
+().
+	`g‘Deş¬edF›ld
+(
+CSV_FIELDS
+[
+i
+]);
+
+61 
+f›ld
+.
+	`£tAcûssibË
+(
+Œue
+);
+
+62 ià(
+f›ld
+.
+	`g‘Ty³
+().
+	`equ®s
+(
+BoŞ—n
+.
+şass
+)) {
+
+63 
+f›ld
+.
+	`£t
+(
+u£rInfo
+, 
+BoŞ—n
+.
+	`v®ueOf
+(
+tok’s
+[
+i
+]));
+
+64 } ià(
+f›ld
+.
+	`g‘Ty³
+().
+	`equ®s
+(
+By‹
+.
+şass
+)) {
+
+65 
+f›ld
+.
+	`£t
+(
+u£rInfo
+, 
+By‹
+.
+	`v®ueOf
+(
+tok’s
+[
+i
+]));
+
+66 } ià(
+f›ld
+.
+	`g‘Ty³
+().
+	`equ®s
+(
+IÁeg”
+.
+şass
+)) {
+
+67 
+f›ld
+.
+	`£t
+(
+u£rInfo
+, 
+IÁeg”
+.
+	`v®ueOf
+(
+tok’s
+[
+i
+]));
+
+68 } ià(
+f›ld
+.
+	`g‘Ty³
+().
+	`equ®s
+(
+LÚg
+.
+şass
+)) {
+
+69 
+f›ld
+.
+	`£t
+(
+u£rInfo
+, 
+LÚg
+.
+	`v®ueOf
+(
+tok’s
+[
+i
+]));
+
+70 } ià(
+f›ld
+.
+	`g‘Ty³
+().
+	`equ®s
+(
+Flßt
+.
+şass
+)) {
+
+71 
+f›ld
+.
+	`£t
+(
+u£rInfo
+, 
+Flßt
+.
+	`v®ueOf
+(
+tok’s
+[
+i
+]));
+
+72 } ià(
+f›ld
+.
+	`g‘Ty³
+().
+	`equ®s
+(
+DoubË
+.
+şass
+)) {
+
+73 
+f›ld
+.
+	`£t
+(
+u£rInfo
+, 
+DoubË
+.
+	`v®ueOf
+(
+tok’s
+[
+i
+]));
+
+74 } ià(
+f›ld
+.
+	`g‘Ty³
+().
+	`equ®s
+(
+SŒšg
+.
+şass
+)) {
+
+80 
+f›ld
+.
+	`£t
+(
+u£rInfo
+, 
+SŒšg
+.
+	`v®ueOf
+(
+tok’s
+[
+i
+]));
+
+82 } 
+	`ÿtch
+ (
+NoSuchF›ldExû±iÚ
+ 
+e
+) {
+
+83 
+e
+.
+	`´štSckT¿û
+();
+
+84 } 
+	`ÿtch
+ (
+IÎeg®AcûssExû±iÚ
+ 
+e
+) {
+
+85 
+e
+.
+	`´štSckT¿û
+();
+
+88  
+u£rInfo
+;
+
+89 
+	}
+}
+
+94 
+	gSŒšg
+[] 
+	$combšeTok’s
+(
+SŒšg
+[] 
+tok’s
+) {
+
+95 
+A¼ayLi¡
+<
+SŒšg
+> 
+combšedTok’s
+ = 
+Ãw
+ ArrayList<String>();
+
+96 
+SŒšg
+ 
+combše
+ = 
+nuÎ
+;
+
+97 
+SŒšg
+ 
+tok’
+ : 
+tok’s
+) {
+
+98 ià(
+combše
+ =ğ
+nuÎ
+ && 
+tok’
+.
+	`¡¬tsW™h
+("\"")) {
+
+100 
+combše
+ = 
+tok’
+;
+
+103 ià(
+combše
+ !ğ
+nuÎ
+) {
+
+104 
+combše
+ +ğ"," + 
+tok’
+;
+
+105 if(
+tok’
+.
+	`’dsW™h
+("\"")) {
+
+107 
+combšedTok’s
+.
+	`add
+(
+combše
+.
+	`»¶aû
+("\"", ""));
+
+108 
+combše
+ = 
+nuÎ
+;
+
+113 
+combšedTok’s
+.
+	`add
+(
+tok’
+);
+
+116 
+SŒšg
+[] 
+tmp
+ = 
+Ãw
+ SŒšg[
+combšedTok’s
+.
+	`size
+()];
+
+117 
+combšedTok’s
+.
+	`toA¼ay
+(
+tmp
+);
+
+118  
+tmp
+;
+
+119 
+	}
+}
+
+125 
+public
+ 
+SŒšg
+ 
+	$toCvs
+() {
+
+126 
+SŒšgBud”
+ 
+sb
+ = 
+Ãw
+ 
+	`SŒšgBud”
+();
+
+127 
+SŒšg
+ 
+f›ldName
+ : 
+CSV_FIELDS
+) {
+
+128 
+Œy
+ {
+
+129 
+F›ld
+ 
+f›ld
+ = 
+this
+.
+	`g‘CÏss
+().
+	`g‘Deş¬edF›ld
+(
+f›ldName
+);
+
+130 
+f›ld
+.
+	`£tAcûssibË
+(
+Œue
+);
+
+131 
+Objeù
+ 
+f›ldObj
+ = 
+f›ld
+.
+	`g‘
+(
+this
+);
+
+132 ià(
+f›ldObj
+ !ğ
+nuÎ
+) {
+
+134 ià(
+f›ldObj
+.
+	`g‘CÏss
+().
+	`equ®s
+(
+SŒšg
+.
+şass
+) &&
+
+135 "".
+	`equ®s
+((
+SŒšg
+è
+f›ldObj
+)) {
+
+136 
+sb
+.
+	`­³nd
+("\"\"");
+
+138 
+sb
+.
+	`­³nd
+(
+f›ldObj
+.
+	`toSŒšg
+());
+
+142 
+sb
+.
+	`­³nd
+(",");
+
+143 } 
+	`ÿtch
+ (
+NoSuchF›ldExû±iÚ
+ 
+e
+) {
+
+144 
+e
+.
+	`´štSckT¿û
+();
+
+145 } 
+	`ÿtch
+ (
+IÎeg®AcûssExû±iÚ
+ 
+e
+) {
+
+146 
+e
+.
+	`´štSckT¿û
+();
+
+149 ià(
+sb
+.
+	`Ëngth
+() > 0) {
+
+151 
+sb
+.
+	`d–‘eCh¬At
+(sb.
+	`Ëngth
+() - 1);
+
+153  
+sb
+.
+	`toSŒšg
+();
+
+154 
+	}
+}
+
+156 
+public
+ 
+SŒšg
+ 
+	$g‘U£ºame
+() {
+
+157  
+u£ºame
+;
+
+158 
+	}
+}
+
+160 
+public
+ 
+	$£tU£ºame
+(
+SŒšg
+ 
+u£ºame
+) {
+
+161 
+this
+.
+u£ºame
+ = username;
+
+162 
+	}
+}
+
+164 
+public
+ 
+SŒšg
+ 
+	$g‘PasswÜd
+() {
+
+165  
+·sswÜd
+;
+
+166 
+	}
+}
+
+168 
+public
+ 
+	$£tPasswÜd
+(
+SŒšg
+ 
+·sswÜd
+) {
+
+169 
+this
+.
+·sswÜd
+ =…assword;
+
+170 
+	}
+}
+
+172 
+public
+ 
+SŒšg
+ 
+	$g‘Ema
+() {
+
+173  
+ema
+;
+
+174 
+	}
+}
+
+176 
+public
+ 
+	$£tEma
+(
+SŒšg
+ 
+ema
+) {
+
+177 
+this
+.
+ema
+ =ƒmail;
+
+178 
+	}
+}
+
+180 
+public
+ 
+IÁeg”
+ 
+	$g‘U£rTy³
+() {
+
+181  
+u£rTy³
+;
+
+182 
+	}
+}
+
+184 
+public
+ 
+	$£tU£rTy³
+(
+IÁeg”
+ 
+u£rTy³
+) {
+
+185 
+this
+.
+u£rTy³
+ = userType;
+
+186 
+	}
+}
+
+188 
+public
+ 
+SŒšg
+ 
+	$g‘FuÎName
+() {
+
+189  
+fuÎName
+;
+
+190 
+	}
+}
+
+192 
+public
+ 
+	$£tFuÎName
+(
+SŒšg
+ 
+fuÎName
+) {
+
+193 
+this
+.
+fuÎName
+ = fullName;
+
+194 
+	}
+}
+
+196 
+public
+ 
+SŒšg
+ 
+	$g‘Fœ¡Name
+() {
+
+197  
+fœ¡Name
+;
+
+198 
+	}
+}
+
+200 
+public
+ 
+	$£tFœ¡Name
+(
+SŒšg
+ 
+fœ¡Name
+) {
+
+201 
+this
+.
+fœ¡Name
+ = firstName;
+
+202 
+	}
+}
+
+204 
+public
+ 
+SŒšg
+ 
+	$g‘La¡Name
+() {
+
+205  
+Ï¡Name
+;
+
+206 
+	}
+}
+
+208 
+public
+ 
+	$£tLa¡Name
+(
+SŒšg
+ 
+Ï¡Name
+) {
+
+209 
+this
+.
+Ï¡Name
+ =†astName;
+
+210 
+	}
+}
+
+212 
+public
+ 
+SŒšg
+ 
+	$g‘PhÚe
+() {
+
+213  
+phÚe
+;
+
+214 
+	}
+}
+
+216 
+public
+ 
+	$£tPhÚe
+(
+SŒšg
+ 
+phÚe
+) {
+
+217 
+this
+.
+phÚe
+ =…hone;
+
+218 
+	}
+}
+
+220 
+public
+ 
+IÁeg”
+ 
+	$g‘DeviûTy³
+() {
+
+221  
+deviûTy³
+;
+
+222 
+	}
+}
+
+224 
+public
+ 
+	$£tDeviûTy³
+(
+IÁeg”
+ 
+deviûTy³
+) {
+
+225 
+this
+.
+deviûTy³
+ = deviceType;
+
+226 
+	}
+}
+
+228 
+public
+ 
+IÁeg”
+ 
+	$g‘Os
+() {
+
+229  
+os
+;
+
+230 
+	}
+}
+
+232 
+public
+ 
+	$£tOs
+(
+IÁeg”
+ 
+os
+) {
+
+233 
+this
+.
+os
+ = os;
+
+234 
+	}
+}
+
+236 
+public
+ 
+SŒšg
+ 
+	$g‘Lªguage
+() {
+
+237  
+Ïnguage
+;
+
+238 
+	}
+}
+
+240 
+public
+ 
+	$£tLªguage
+(
+SŒšg
+ 
+Ïnguage
+) {
+
+241 
+this
+.
+Ïnguage
+ =†anguage;
+
+242 
+	}
+}
+
+244 
+public
+ 
+SŒšg
+ 
+	$g‘Secur™yInfo
+() {
+
+245  
+£cur™yInfo
+;
+
+246 
+	}
+}
+
+248 
+public
+ 
+	$£tSecur™yInfo
+(
+SŒšg
+ 
+£cur™yInfo
+) {
+
+249 
+this
+.
+£cur™yInfo
+ = securityInfo;
+
+250 
+	}
+}
+
+252 
+public
+ 
+SŒšg
+ 
+	$g‘TmpUuid
+() {
+
+253  
+tmpUuid
+;
+
+254 
+	}
+}
+
+256 
+public
+ 
+	$£tTmpUuid
+(
+SŒšg
+ 
+tmpUuid
+) {
+
+257 
+this
+.
+tmpUuid
+ =mpUuid;
+
+258 
+	}
+}
+
+260 @
+Ov”ride
+
+
+261 
+public
+ 
+boŞ—n
+ 
+	$equ®s
+(
+Objeù
+ 
+o
+) {
+
+262 ià(
+this
+ =ğ
+o
+è 
+Œue
+;
+
+263 ià(!(
+o
+ 
+š¡ªûof
+ 
+CsvLše
+)è 
+çl£
+;
+
+265 
+CsvLše
+ 
+th©
+ = (CsvLšeè
+o
+;
+
+267 ià(
+deviûTy³
+ !ğ
+nuÎ
+ ? !deviûTy³.
+	`equ®s
+(
+th©
+.deviûTy³è:h©.deviûTy³ !ğnuÎè 
+çl£
+;
+
+268 ià(
+ema
+ !ğ
+nuÎ
+ ? !ema.
+	`equ®s
+(
+th©
+.emaè:h©.ema !ğnuÎè 
+çl£
+;
+
+269 ià(
+fœ¡Name
+ !ğ
+nuÎ
+ ? !fœ¡Name.
+	`equ®s
+(
+th©
+.fœ¡Nameè:h©.fœ¡Nam!ğnuÎè 
+çl£
+;
+
+270 ià(
+fuÎName
+ !ğ
+nuÎ
+ ? !fuÎName.
+	`equ®s
+(
+th©
+.fuÎNameè:h©.fuÎNam!ğnuÎè 
+çl£
+;
+
+271 ià(
+Ïnguage
+ !ğ
+nuÎ
+ ? !Ïnguage.
+	`equ®s
+(
+th©
+.Ïnguageè:h©.Ïnguag!ğnuÎè 
+çl£
+;
+
+272 ià(
+Ï¡Name
+ !ğ
+nuÎ
+ ? !Ï¡Name.
+	`equ®s
+(
+th©
+.Ï¡Nameè:h©.Ï¡Nam!ğnuÎè 
+çl£
+;
+
+273 ià(
+os
+ !ğ
+nuÎ
+ ? !os.
+	`equ®s
+(
+th©
+.osè:h©.o !ğnuÎè 
+çl£
+;
+
+274 ià(
+·sswÜd
+ !ğ
+nuÎ
+ ? !·sswÜd.
+	`equ®s
+(
+th©
+.·sswÜdè:h©.·sswÜd !ğnuÎè 
+çl£
+;
+
+275 ià(
+phÚe
+ !ğ
+nuÎ
+ ? !phÚe.
+	`equ®s
+(
+th©
+.phÚeè:h©.phÚ!ğnuÎè 
+çl£
+;
+
+276 ià(
+£cur™yInfo
+ !ğ
+nuÎ
+ ? !£cur™yInfo.
+	`equ®s
+(
+th©
+.£cur™yInfoè:h©.£cur™yInfØ!ğnuÎè 
+çl£
+;
+
+277 ià(
+tmpUuid
+ !ğ
+nuÎ
+ ? !tmpUuid.
+	`equ®s
+(
+th©
+.tmpUuidè:h©.tmpUuid !ğnuÎè 
+çl£
+;
+
+278 ià(
+u£rTy³
+ !ğ
+nuÎ
+ ? !u£rTy³.
+	`equ®s
+(
+th©
+.u£rTy³è:h©.u£rTy³ !ğnuÎè 
+çl£
+;
+
+279 ià(
+u£ºame
+ !ğ
+nuÎ
+ ? !u£ºame.
+	`equ®s
+(
+th©
+.u£ºameè:h©.u£ºam!ğnuÎè 
+çl£
+;
+
+281  
+Œue
+;
+
+282 
+	}
+}
+
+284 @
+Ov”ride
+
+
+285 
+public
+ 
+	$hashCode
+() {
+
+286 
+»suÉ
+ = 
+u£ºame
+ !ğ
+nuÎ
+ ? u£ºame.
+	`hashCode
+() : 0;
+
+287 
+»suÉ
+ = 31 *„esuÉ + (
+·sswÜd
+ !ğ
+nuÎ
+ ?…asswÜd.
+	`hashCode
+() : 0);
+
+288 
+»suÉ
+ = 31 *„esuÉ + (
+ema
+ !ğ
+nuÎ
+ ?ƒma.
+	`hashCode
+() : 0);
+
+289 
+»suÉ
+ = 31 *„esuÉ + (
+u£rTy³
+ !ğ
+nuÎ
+ ? u£rTy³.
+	`hashCode
+() : 0);
+
+290 
+»suÉ
+ = 31 *„esuÉ + (
+fuÎName
+ !ğ
+nuÎ
+ ? fuÎName.
+	`hashCode
+() : 0);
+
+291 
+»suÉ
+ = 31 *„esuÉ + (
+fœ¡Name
+ !ğ
+nuÎ
+ ? fœ¡Name.
+	`hashCode
+() : 0);
+
+292 
+»suÉ
+ = 31 *„esuÉ + (
+Ï¡Name
+ !ğ
+nuÎ
+ ?†a¡Name.
+	`hashCode
+() : 0);
+
+293 
+»suÉ
+ = 31 *„esuÉ + (
+phÚe
+ !ğ
+nuÎ
+ ?…hÚe.
+	`hashCode
+() : 0);
+
+294 
+»suÉ
+ = 31 *„esuÉ + (
+deviûTy³
+ !ğ
+nuÎ
+ ? deviûTy³.
+	`hashCode
+() : 0);
+
+295 
+»suÉ
+ = 31 *„esuÉ + (
+os
+ !ğ
+nuÎ
+ ? os.
+	`hashCode
+() : 0);
+
+296 
+»suÉ
+ = 31 *„esuÉ + (
+Ïnguage
+ !ğ
+nuÎ
+ ?†ªguage.
+	`hashCode
+() : 0);
+
+297 
+»suÉ
+ = 31 *„esuÉ + (
+£cur™yInfo
+ !ğ
+nuÎ
+ ? secur™yInfo.
+	`hashCode
+() : 0);
+
+298 
+»suÉ
+ = 31 *„esuÉ + (
+tmpUuid
+ !ğ
+nuÎ
+ ?mpUuid.
+	`hashCode
+() : 0);
+
+299  
+»suÉ
+;
+
+300 
+	}
+}
+
+302 @
+Ov”ride
+
+
+303 
+public
+ 
+SŒšg
+ 
+	$toSŒšg
+() {
+
+305 "u£ºame='" + 
+u£ºame
+ + '\'' +
+
+306 ",…asswÜd='" + 
+·sswÜd
+ + '\'' +
+
+307 ",ƒma='" + 
+ema
+ + '\'' +
+
+308 ", u£rTy³=" + 
+u£rTy³
+ +
+
+309 ", fuÎName='" + 
+fuÎName
+ + '\'' +
+
+310 ", fœ¡Name='" + 
+fœ¡Name
+ + '\'' +
+
+311 ",†a¡Name='" + 
+Ï¡Name
+ + '\'' +
+
+312 ",…hÚe='" + 
+phÚe
+ + '\'' +
+
+313 ", deviûTy³=" + 
+deviûTy³
+ +
+
+314 ", os=" + 
+os
+ +
+
+315 ",†ªguage='" + 
+Ïnguage
+ + '\'' +
+
+316 ", secur™yInfo='" + 
+£cur™yInfo
+ + '\'' +
+
+317 ",mpUuid='" + 
+tmpUuid
+ + '\'' +
+
+319 
+	}
+}
+
+	@src/com/pekall/csv/bean/CsvVoBase.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+.
+	gb—n
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gÏng
+.
+	g»æeù
+.
+	gF›ld
+;
+
+5 
+public
+ 
+ab¡¿ù
+ cÏs 
+	cCsvVoBa£
+ {
+
+7 
+´Ùeùed
+ 
+fš®
+ 
+	mSŒšg
+[] 
+	mcsvF›lds
+;
+
+9 
+´Ùeùed
+ 
+	$CsvVoBa£
+(
+SŒšg
+[] 
+csvF›lds
+) {
+
+10 
+this
+.
+csvF›lds
+ = csvFields;
+
+17 
+public
+ 
+SŒšg
+[] 
+	$toCvs
+() {
+
+18 if(
+csvF›lds
+ =ğ
+nuÎ
+è
+throw
+ 
+Ãw
+ 
+	`IÎeg®S‹Exû±iÚ
+();
+
+20 
+SŒšg
+[] 
+cŞ
+ = 
+Ãw
+ SŒšg[
+csvF›lds
+.
+Ëngth
+];
+
+21 
+i
+ = 0; i < 
+csvF›lds
+.
+Ëngth
+; i++) {
+
+22 
+SŒšg
+ 
+f›ldName
+ = 
+csvF›lds
+[
+i
+];
+
+23 
+Œy
+ {
+
+24 
+F›ld
+ 
+f›ld
+ = 
+this
+.
+	`g‘CÏss
+().
+	`g‘Deş¬edF›ld
+(
+f›ldName
+);
+
+25 
+f›ld
+.
+	`£tAcûssibË
+(
+Œue
+);
+
+26 
+Objeù
+ 
+f›ldObj
+ = 
+f›ld
+.
+	`g‘
+(
+this
+);
+
+27 ià(
+f›ldObj
+ !ğ
+nuÎ
+) {
+
+28 
+cŞ
+[
+i
+] = 
+f›ldObj
+.
+	`toSŒšg
+();
+
+30 
+cŞ
+[
+i
+] = 
+nuÎ
+;
+
+32 } 
+	`ÿtch
+ (
+NoSuchF›ldExû±iÚ
+ 
+e
+) {
+
+33 
+e
+.
+	`´štSckT¿û
+();
+
+34 } 
+	`ÿtch
+ (
+IÎeg®AcûssExû±iÚ
+ 
+e
+) {
+
+35 
+e
+.
+	`´štSckT¿û
+();
+
+38  
+cŞ
+;
+
+39 
+	}
+}
+
+	@src/com/pekall/csv/bean/CsvVoDemo.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+.
+	gb—n
+;
+
+3 
+public
+ cÏs 
+	cCsvVoDemo
+ 
+ex‹nds
+ 
+	mCsvVoBa£
+ {
+
+5 
+´iv©e
+ 
+IÁeg”
+ 
+	mty³
+;
+
+6 
+´iv©e
+ 
+IÁeg”
+ 
+	mos
+;
+
+7 
+´iv©e
+ 
+SŒšg
+ 
+	mÏnguage
+;
+
+8 
+´iv©e
+ 
+SŒšg
+ 
+	m£cur™yInfo
+;
+
+9 
+´iv©e
+ 
+SŒšg
+ 
+	mtmpUuid
+;
+
+10 
+´iv©e
+ 
+SŒšg
+ 
+	mu£ºame
+;
+
+12 
+public
+ 
+	$CsvVoDemo
+() {
+
+13 
+	`su³r
+(
+Ãw
+ 
+SŒšg
+[]{"type", "os", "language", "securityInfo", "tmpUuid", "username"});
+
+16 
+public
+ 
+IÁeg”
+ 
+	$g‘Ty³
+() {
+
+17  
+ty³
+;
+
+18 
+	}
+}
+
+20 
+public
+ 
+	$£tTy³
+(
+IÁeg”
+ 
+ty³
+) {
+
+21 
+this
+.
+ty³
+ =ype;
+
+22 
+	}
+}
+
+24 
+public
+ 
+IÁeg”
+ 
+	$g‘Os
+() {
+
+25  
+os
+;
+
+26 
+	}
+}
+
+28 
+public
+ 
+	$£tOs
+(
+IÁeg”
+ 
+os
+) {
+
+29 
+this
+.
+os
+ = os;
+
+30 
+	}
+}
+
+32 
+public
+ 
+SŒšg
+ 
+	$g‘Lªguage
+() {
+
+33  
+Ïnguage
+;
+
+34 
+	}
+}
+
+36 
+public
+ 
+	$£tLªguage
+(
+SŒšg
+ 
+Ïnguage
+) {
+
+37 
+this
+.
+Ïnguage
+ =†anguage;
+
+38 
+	}
+}
+
+40 
+public
+ 
+SŒšg
+ 
+	$g‘Secur™yInfo
+() {
+
+41  
+£cur™yInfo
+;
+
+42 
+	}
+}
+
+44 
+public
+ 
+	$£tSecur™yInfo
+(
+SŒšg
+ 
+£cur™yInfo
+) {
+
+45 
+this
+.
+£cur™yInfo
+ = securityInfo;
+
+46 
+	}
+}
+
+48 
+public
+ 
+SŒšg
+ 
+	$g‘TmpUuid
+() {
+
+49  
+tmpUuid
+;
+
+50 
+	}
+}
+
+52 
+public
+ 
+	$£tTmpUuid
+(
+SŒšg
+ 
+tmpUuid
+) {
+
+53 
+this
+.
+tmpUuid
+ =mpUuid;
+
+54 
+	}
+}
+
+56 
+public
+ 
+SŒšg
+ 
+	$g‘U£ºame
+() {
+
+57  
+u£ºame
+;
+
+58 
+	}
+}
+
+60 
+public
+ 
+	$£tU£ºame
+(
+SŒšg
+ 
+u£ºame
+) {
+
+61 
+this
+.
+u£ºame
+ = username;
+
+62 
+	}
+}
+
+	@src/com/pekall/csv/bean/ImportDeviceInfoVo.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+.
+	gb—n
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	gÏng
+.
+	g»æeù
+.
+	gF›ld
+;
+
+6 
+public
+ cÏs 
+	cImpÜtDeviûInfoVo
+ {
+
+7 
+´iv©e
+ 
+IÁeg”
+ 
+	mty³
+;
+
+8 
+´iv©e
+ 
+IÁeg”
+ 
+	mos
+;
+
+9 
+´iv©e
+ 
+SŒšg
+ 
+	mÏnguage
+;
+
+10 
+´iv©e
+ 
+SŒšg
+ 
+	m£cur™yInfo
+;
+
+11 
+´iv©e
+ 
+SŒšg
+ 
+	mtmpUuid
+;
+
+12 
+´iv©e
+ 
+SŒšg
+ 
+	mu£ºame
+;
+
+18 
+public
+ 
+boŞ—n
+ 
+	$isEm±yDeviû
+() {
+
+19 
+F›ld
+[] 
+f›lds
+ = 
+this
+.
+	`g‘CÏss
+().
+	`g‘Deş¬edF›lds
+();
+
+20 
+F›ld
+ 
+f›ld
+ : 
+f›lds
+) {
+
+21 
+f›ld
+.
+	`£tAcûssibË
+(
+Œue
+);
+
+22 
+Œy
+ {
+
+23 
+Objeù
+ 
+obj
+ = 
+f›ld
+.
+	`g‘
+(
+this
+);
+
+24 if(
+obj
+ !ğ
+nuÎ
+è 
+çl£
+;
+
+25 } 
+	`ÿtch
+ (
+IÎeg®AcûssExû±iÚ
+ 
+e
+) {
+
+26 
+e
+.
+	`´štSckT¿û
+();
+
+29  
+Œue
+;
+
+32 
+public
+ 
+ImpÜtDeviûInfoVo
+ 
+	$äomCsvInfo
+(
+CsvLše
+ 
+csvU£rInfo
+) {
+
+33 
+ImpÜtDeviûInfoVo
+ 
+impÜtInfo
+ = 
+Ãw
+ 
+	`ImpÜtDeviûInfoVo
+();
+
+34 
+impÜtInfo
+.
+	`£tTy³
+(
+csvU£rInfo
+.
+	`g‘DeviûTy³
+());
+
+35 
+impÜtInfo
+.
+	`£tOs
+(
+csvU£rInfo
+.
+	`g‘Os
+());
+
+36 
+impÜtInfo
+.
+	`£tLªguage
+(
+csvU£rInfo
+.
+	`g‘Lªguage
+());
+
+37 
+impÜtInfo
+.
+	`£tSecur™yInfo
+(
+csvU£rInfo
+.
+	`g‘Secur™yInfo
+());
+
+38 
+impÜtInfo
+.
+	`£tTmpUuid
+(
+csvU£rInfo
+.
+	`g‘TmpUuid
+());
+
+39 ià(
+impÜtInfo
+.
+	`isEm±yDeviû
+()) {
+
+40  
+nuÎ
+;
+
+43 
+impÜtInfo
+.
+	`£tU£ºame
+(
+csvU£rInfo
+.
+	`g‘U£ºame
+());
+
+44  
+impÜtInfo
+;
+
+45 
+	}
+}
+
+47 
+public
+ 
+IÁeg”
+ 
+	$g‘Ty³
+() {
+
+48  
+ty³
+;
+
+49 
+	}
+}
+
+51 
+public
+ 
+	$£tTy³
+(
+IÁeg”
+ 
+ty³
+) {
+
+52 
+this
+.
+ty³
+ =ype;
+
+53 
+	}
+}
+
+55 
+public
+ 
+IÁeg”
+ 
+	$g‘Os
+() {
+
+56  
+os
+;
+
+57 
+	}
+}
+
+59 
+public
+ 
+	$£tOs
+(
+IÁeg”
+ 
+os
+) {
+
+60 
+this
+.
+os
+ = os;
+
+61 
+	}
+}
+
+63 
+public
+ 
+SŒšg
+ 
+	$g‘Lªguage
+() {
+
+64  
+Ïnguage
+;
+
+65 
+	}
+}
+
+67 
+public
+ 
+	$£tLªguage
+(
+SŒšg
+ 
+Ïnguage
+) {
+
+68 
+this
+.
+Ïnguage
+ =†anguage;
+
+69 
+	}
+}
+
+71 
+public
+ 
+SŒšg
+ 
+	$g‘Secur™yInfo
+() {
+
+72  
+£cur™yInfo
+;
+
+73 
+	}
+}
+
+75 
+public
+ 
+	$£tSecur™yInfo
+(
+SŒšg
+ 
+£cur™yInfo
+) {
+
+76 
+this
+.
+£cur™yInfo
+ = securityInfo;
+
+77 
+	}
+}
+
+79 
+public
+ 
+SŒšg
+ 
+	$g‘TmpUuid
+() {
+
+80  
+tmpUuid
+;
+
+81 
+	}
+}
+
+83 
+public
+ 
+	$£tTmpUuid
+(
+SŒšg
+ 
+tmpUuid
+) {
+
+84 
+this
+.
+tmpUuid
+ =mpUuid;
+
+85 
+	}
+}
+
+87 
+public
+ 
+SŒšg
+ 
+	$g‘U£ºame
+() {
+
+88  
+u£ºame
+;
+
+89 
+	}
+}
+
+91 
+public
+ 
+	$£tU£ºame
+(
+SŒšg
+ 
+u£ºame
+) {
+
+92 
+this
+.
+u£ºame
+ = username;
+
+93 
+	}
+}
+
+95 @
+Ov”ride
+
+
+96 
+public
+ 
+boŞ—n
+ 
+	$equ®s
+(
+Objeù
+ 
+o
+) {
+
+97 ià(
+this
+ =ğ
+o
+è 
+Œue
+;
+
+98 ià(!(
+o
+ 
+š¡ªûof
+ 
+ImpÜtDeviûInfoVo
+)è 
+çl£
+;
+
+100 
+ImpÜtDeviûInfoVo
+ 
+th©
+ = (ImpÜtDeviûInfoVoè
+o
+;
+
+102 ià(
+Ïnguage
+ !ğ
+nuÎ
+ ? !Ïnguage.
+	`equ®s
+(
+th©
+.Ïnguageè:h©.Ïnguag!ğnuÎè 
+çl£
+;
+
+103 ià(
+os
+ !ğ
+nuÎ
+ ? !os.
+	`equ®s
+(
+th©
+.osè:h©.o !ğnuÎè 
+çl£
+;
+
+104 ià(
+£cur™yInfo
+ !ğ
+nuÎ
+ ? !£cur™yInfo.
+	`equ®s
+(
+th©
+.£cur™yInfoè:h©.£cur™yInfØ!ğnuÎè 
+çl£
+;
+
+105 ià(
+tmpUuid
+ !ğ
+nuÎ
+ ? !tmpUuid.
+	`equ®s
+(
+th©
+.tmpUuidè:h©.tmpUuid !ğnuÎè 
+çl£
+;
+
+106 ià(
+ty³
+ !ğ
+nuÎ
+ ? !ty³.
+	`equ®s
+(
+th©
+.ty³è:h©.ty³ !ğnuÎè 
+çl£
+;
+
+107 ià(
+u£ºame
+ !ğ
+nuÎ
+ ? !u£ºame.
+	`equ®s
+(
+th©
+.u£ºameè:h©.u£ºam!ğnuÎè 
+çl£
+;
+
+109  
+Œue
+;
+
+110 
+	}
+}
+
+112 @
+Ov”ride
+
+
+113 
+public
+ 
+	$hashCode
+() {
+
+114 
+»suÉ
+ = 
+ty³
+ !ğ
+nuÎ
+ ?y³.
+	`hashCode
+() : 0;
+
+115 
+»suÉ
+ = 31 *„esuÉ + (
+os
+ !ğ
+nuÎ
+ ? os.
+	`hashCode
+() : 0);
+
+116 
+»suÉ
+ = 31 *„esuÉ + (
+Ïnguage
+ !ğ
+nuÎ
+ ?†ªguage.
+	`hashCode
+() : 0);
+
+117 
+»suÉ
+ = 31 *„esuÉ + (
+£cur™yInfo
+ !ğ
+nuÎ
+ ? secur™yInfo.
+	`hashCode
+() : 0);
+
+118 
+»suÉ
+ = 31 *„esuÉ + (
+tmpUuid
+ !ğ
+nuÎ
+ ?mpUuid.
+	`hashCode
+() : 0);
+
+119 
+»suÉ
+ = 31 *„esuÉ + (
+u£ºame
+ !ğ
+nuÎ
+ ? u£ºame.
+	`hashCode
+() : 0);
+
+120  
+»suÉ
+;
+
+121 
+	}
+}
+
+123 @
+Ov”ride
+
+
+124 
+public
+ 
+SŒšg
+ 
+	$toSŒšg
+() {
+
+126 "ty³=" + 
+ty³
+ +
+
+127 ", os=" + 
+os
+ +
+
+128 ",†ªguage='" + 
+Ïnguage
+ + '\'' +
+
+129 ", secur™yInfo='" + 
+£cur™yInfo
+ + '\'' +
+
+130 ",mpUuid='" + 
+tmpUuid
+ + '\'' +
+
+131 ", u£ºame='" + 
+u£ºame
+ + '\'' +
+
+133 
+	}
+}
+
+	@src/com/pekall/csv/bean/ImportUserVo.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+.
+	gb—n
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gA¼ayLi¡
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+6 
+public
+ cÏs 
+	cImpÜtU£rVo
+ {
+
+7 
+´iv©e
+ 
+SŒšg
+ 
+	mu£ºame
+;
+
+8 
+´iv©e
+ 
+SŒšg
+ 
+	m·sswÜd
+;
+
+9 
+´iv©e
+ 
+SŒšg
+ 
+	mema
+;
+
+10 
+´iv©e
+ 
+IÁeg”
+ 
+	mty³
+;
+
+11 
+´iv©e
+ 
+SŒšg
+ 
+	mfœ¡Name
+;
+
+12 
+´iv©e
+ 
+SŒšg
+ 
+	mÏ¡Name
+;
+
+13 
+´iv©e
+ 
+SŒšg
+ 
+	mfuÎName
+;
+
+14 
+´iv©e
+ 
+SŒšg
+ 
+	mphÚe
+;
+
+16 
+	mLi¡
+<
+	mImpÜtDeviûInfoVo
+> 
+	mdeviûs
+;
+
+18 
+public
+ 
+ImpÜtU£rVo
+ 
+	$äomCsvU£rInfo
+(
+CsvLše
+ 
+csvInfo
+) {
+
+19 
+ImpÜtU£rVo
+ 
+impÜtInfo
+ = 
+Ãw
+ 
+	`ImpÜtU£rVo
+();
+
+20 
+impÜtInfo
+.
+	`£tU£ºame
+(
+csvInfo
+.
+	`g‘U£ºame
+());
+
+21 
+impÜtInfo
+.
+	`£tPasswÜd
+(
+csvInfo
+.
+	`g‘PasswÜd
+());
+
+22 
+impÜtInfo
+.
+	`£tEma
+(
+csvInfo
+.
+	`g‘Ema
+());
+
+23 
+impÜtInfo
+.
+	`£tTy³
+(
+csvInfo
+.
+	`g‘U£rTy³
+());
+
+24 
+impÜtInfo
+.
+	`£tFœ¡Name
+(
+csvInfo
+.
+	`g‘Fœ¡Name
+());
+
+25 
+impÜtInfo
+.
+	`£tLa¡Name
+(
+csvInfo
+.
+	`g‘La¡Name
+());
+
+26 
+impÜtInfo
+.
+	`£tFuÎName
+(
+csvInfo
+.
+	`g‘FuÎName
+());
+
+27 
+impÜtInfo
+.
+	`£tPhÚe
+(
+csvInfo
+.
+	`g‘PhÚe
+());
+
+29  
+impÜtInfo
+;
+
+32 
+public
+ 
+SŒšg
+ 
+	$g‘U£ºame
+() {
+
+33  
+u£ºame
+;
+
+34 
+	}
+}
+
+36 
+public
+ 
+	$£tU£ºame
+(
+SŒšg
+ 
+u£ºame
+) {
+
+37 
+this
+.
+u£ºame
+ = username;
+
+38 
+	}
+}
+
+40 
+public
+ 
+SŒšg
+ 
+	$g‘PasswÜd
+() {
+
+41  
+·sswÜd
+;
+
+42 
+	}
+}
+
+44 
+public
+ 
+	$£tPasswÜd
+(
+SŒšg
+ 
+·sswÜd
+) {
+
+45 
+this
+.
+·sswÜd
+ =…assword;
+
+46 
+	}
+}
+
+48 
+public
+ 
+SŒšg
+ 
+	$g‘Ema
+() {
+
+49  
+ema
+;
+
+50 
+	}
+}
+
+52 
+public
+ 
+	$£tEma
+(
+SŒšg
+ 
+ema
+) {
+
+53 
+this
+.
+ema
+ =ƒmail;
+
+54 
+	}
+}
+
+56 
+public
+ 
+IÁeg”
+ 
+	$g‘Ty³
+() {
+
+57  
+ty³
+;
+
+58 
+	}
+}
+
+60 
+public
+ 
+	$£tTy³
+(
+IÁeg”
+ 
+ty³
+) {
+
+61 
+this
+.
+ty³
+ =ype;
+
+62 
+	}
+}
+
+64 
+public
+ 
+SŒšg
+ 
+	$g‘Fœ¡Name
+() {
+
+65  
+fœ¡Name
+;
+
+66 
+	}
+}
+
+68 
+public
+ 
+	$£tFœ¡Name
+(
+SŒšg
+ 
+fœ¡Name
+) {
+
+69 
+this
+.
+fœ¡Name
+ = firstName;
+
+70 
+	}
+}
+
+72 
+public
+ 
+SŒšg
+ 
+	$g‘La¡Name
+() {
+
+73  
+Ï¡Name
+;
+
+74 
+	}
+}
+
+76 
+public
+ 
+	$£tLa¡Name
+(
+SŒšg
+ 
+Ï¡Name
+) {
+
+77 
+this
+.
+Ï¡Name
+ =†astName;
+
+78 
+	}
+}
+
+80 
+public
+ 
+SŒšg
+ 
+	$g‘FuÎName
+() {
+
+81  
+fuÎName
+;
+
+82 
+	}
+}
+
+84 
+public
+ 
+	$£tFuÎName
+(
+SŒšg
+ 
+fuÎName
+) {
+
+85 
+this
+.
+fuÎName
+ = fullName;
+
+86 
+	}
+}
+
+88 
+public
+ 
+SŒšg
+ 
+	$g‘PhÚe
+() {
+
+89  
+phÚe
+;
+
+90 
+	}
+}
+
+92 
+public
+ 
+	$£tPhÚe
+(
+SŒšg
+ 
+phÚe
+) {
+
+93 
+this
+.
+phÚe
+ =…hone;
+
+94 
+	}
+}
+
+96 
+public
+ 
+	gLi¡
+<
+	gImpÜtDeviûInfoVo
+> 
+	$g‘Deviûs
+() {
+
+97  
+deviûs
+;
+
+98 
+	}
+}
+
+100 
+public
+ 
+£tDeviûs
+(
+Li¡
+<
+ImpÜtDeviûInfoVo
+> 
+deviûs
+) {
+
+101 
+	gthis
+.
+	gdeviûs
+ = 
+deviûs
+;
+
+104 
+public
+ 
+	$addDeviû
+(
+ImpÜtDeviûInfoVo
+ 
+deviû
+) {
+
+105 ià(
+this
+.
+deviûs
+ =ğ
+nuÎ
+) {
+
+106 
+this
+.
+deviûs
+ = 
+Ãw
+ 
+A¼ayLi¡
+<
+ImpÜtDeviûInfoVo
+>();
+
+108 
+this
+.
+deviûs
+.
+	`add
+(
+deviû
+);
+
+109 
+	}
+}
+
+111 @
+Ov”ride
+
+
+112 
+public
+ 
+boŞ—n
+ 
+	$equ®s
+(
+Objeù
+ 
+o
+) {
+
+113 ià(
+this
+ =ğ
+o
+è 
+Œue
+;
+
+114 ià(!(
+o
+ 
+š¡ªûof
+ 
+ImpÜtU£rVo
+)è 
+çl£
+;
+
+116 
+ImpÜtU£rVo
+ 
+th©
+ = (ImpÜtU£rVoè
+o
+;
+
+118 ià(
+deviûs
+ !ğ
+nuÎ
+ ? !deviûs.
+	`equ®s
+(
+th©
+.deviûsè:h©.deviû !ğnuÎè 
+çl£
+;
+
+119 ià(
+ema
+ !ğ
+nuÎ
+ ? !ema.
+	`equ®s
+(
+th©
+.emaè:h©.ema !ğnuÎè 
+çl£
+;
+
+120 ià(
+fœ¡Name
+ !ğ
+nuÎ
+ ? !fœ¡Name.
+	`equ®s
+(
+th©
+.fœ¡Nameè:h©.fœ¡Nam!ğnuÎè 
+çl£
+;
+
+121 ià(
+fuÎName
+ !ğ
+nuÎ
+ ? !fuÎName.
+	`equ®s
+(
+th©
+.fuÎNameè:h©.fuÎNam!ğnuÎè 
+çl£
+;
+
+122 ià(
+Ï¡Name
+ !ğ
+nuÎ
+ ? !Ï¡Name.
+	`equ®s
+(
+th©
+.Ï¡Nameè:h©.Ï¡Nam!ğnuÎè 
+çl£
+;
+
+123 ià(
+·sswÜd
+ !ğ
+nuÎ
+ ? !·sswÜd.
+	`equ®s
+(
+th©
+.·sswÜdè:h©.·sswÜd !ğnuÎè 
+çl£
+;
+
+124 ià(
+phÚe
+ !ğ
+nuÎ
+ ? !phÚe.
+	`equ®s
+(
+th©
+.phÚeè:h©.phÚ!ğnuÎè 
+çl£
+;
+
+125 ià(
+ty³
+ !ğ
+nuÎ
+ ? !ty³.
+	`equ®s
+(
+th©
+.ty³è:h©.ty³ !ğnuÎè 
+çl£
+;
+
+126 ià(
+u£ºame
+ !ğ
+nuÎ
+ ? !u£ºame.
+	`equ®s
+(
+th©
+.u£ºameè:h©.u£ºam!ğnuÎè 
+çl£
+;
+
+128  
+Œue
+;
+
+129 
+	}
+}
+
+131 @
+Ov”ride
+
+
+132 
+public
+ 
+	$hashCode
+() {
+
+133 
+»suÉ
+ = 
+u£ºame
+ !ğ
+nuÎ
+ ? u£ºame.
+	`hashCode
+() : 0;
+
+134 
+»suÉ
+ = 31 *„esuÉ + (
+·sswÜd
+ !ğ
+nuÎ
+ ?…asswÜd.
+	`hashCode
+() : 0);
+
+135 
+»suÉ
+ = 31 *„esuÉ + (
+ema
+ !ğ
+nuÎ
+ ?ƒma.
+	`hashCode
+() : 0);
+
+136 
+»suÉ
+ = 31 *„esuÉ + (
+ty³
+ !ğ
+nuÎ
+ ?y³.
+	`hashCode
+() : 0);
+
+137 
+»suÉ
+ = 31 *„esuÉ + (
+fœ¡Name
+ !ğ
+nuÎ
+ ? fœ¡Name.
+	`hashCode
+() : 0);
+
+138 
+»suÉ
+ = 31 *„esuÉ + (
+Ï¡Name
+ !ğ
+nuÎ
+ ?†a¡Name.
+	`hashCode
+() : 0);
+
+139 
+»suÉ
+ = 31 *„esuÉ + (
+fuÎName
+ !ğ
+nuÎ
+ ? fuÎName.
+	`hashCode
+() : 0);
+
+140 
+»suÉ
+ = 31 *„esuÉ + (
+phÚe
+ !ğ
+nuÎ
+ ?…hÚe.
+	`hashCode
+() : 0);
+
+141 
+»suÉ
+ = 31 *„esuÉ + (
+deviûs
+ !ğ
+nuÎ
+ ? deviûs.
+	`hashCode
+() : 0);
+
+142  
+»suÉ
+;
+
+143 
+	}
+}
+
+145 @
+Ov”ride
+
+
+146 
+public
+ 
+SŒšg
+ 
+	$toSŒšg
+() {
+
+148 "u£ºame='" + 
+u£ºame
+ + '\'' +
+
+149 ",…asswÜd='" + 
+·sswÜd
+ + '\'' +
+
+150 ",ƒma='" + 
+ema
+ + '\'' +
+
+151 ",y³=" + 
+ty³
+ +
+
+152 ", fœ¡Name='" + 
+fœ¡Name
+ + '\'' +
+
+153 ",†a¡Name='" + 
+Ï¡Name
+ + '\'' +
+
+154 ", fuÎName='" + 
+fuÎName
+ + '\'' +
+
+155 ",…hÚe='" + 
+phÚe
+ + '\'' +
+
+156 ", deviûs=" + 
+deviûs
+ +
+
+158 
+	}
+}
+
+	@test/com/pekall/csv/ConverterOssTest.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+;
+
+3 
+impÜt
+ 
+	gjun™
+.
+	gäamewÜk
+.
+	gTe¡Ca£
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gio
+.*;
+
+7 
+public
+ cÏs 
+	cCÚv”‹rOssTe¡
+ 
+ex‹nds
+ 
+	mTe¡Ca£
+ {
+
+9 @
+Ov”ride
+
+
+10 
+public
+ 
+	$£tUp
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+11 
+su³r
+.
+	`£tUp
+();
+
+12 
+FeWr™”
+ 
+wr™”
+ = 
+Ãw
+ 
+	`FeWr™”
+(
+CSV_PATH
+);
+
+13 
+wr™”
+.
+	`wr™e
+(
+TEST_CSV
+);
+
+14 
+wr™”
+.
+	`şo£
+();
+
+17 
+FeWr™”
+ 
+wr™”1
+ = 
+Ãw
+ 
+	`FeWr™”
+(
+EMPTY_CSV_PATH
+);
+
+18 
+wr™”1
+.
+	`şo£
+();
+
+21 
+FeWr™”
+ 
+wr™”2
+ = 
+Ãw
+ 
+	`FeWr™”
+(
+EMPTY_LINE_CSV_PATH
+);
+
+22 
+wr™”2
+.
+	`wr™e
+("\n");
+
+23 
+wr™”2
+.
+	`wr™e
+("\n");
+
+24 
+wr™”2
+.
+	`şo£
+();
+
+29 
+public
+ 
+	$‹¡P¬£Em±yCsvFe
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+30 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚOSS
+(
+Ãw
+ 
+	`Fe
+(
+EMPTY_CSV_PATH
+));
+
+31 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+34 
+	`as£¹Equ®s
+("[]", 
+jsÚ
+);
+
+35 
+	}
+}
+
+37 
+public
+ 
+	$‹¡P¬£Em±yLšeCsv
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+38 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚ
+(
+Ãw
+ 
+	`Fe
+(
+EMPTY_LINE_CSV_PATH
+));
+
+39 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+42 
+	`as£¹Equ®s
+("[]", 
+jsÚ
+);
+
+43 
+	}
+}
+
+45 
+public
+ 
+	$‹¡P¬£Em±yLšeCsv1
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+46 
+	`§veSŒšgs
+(
+Ãw
+ 
+SŒšg
+[]{"", "\n", ""});
+
+47 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚOSS
+(
+Ãw
+ 
+	`Fe
+(
+TMP_PATH
+));
+
+48 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+50 
+	`as£¹Equ®s
+("[]", 
+jsÚ
+);
+
+51 
+	}
+}
+
+53 
+public
+ 
+	$‹¡E¼Ü
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+54 
+Œy
+ {
+
+55 
+	`§veSŒšgs
+(
+Ãw
+ 
+SŒšg
+[]{"!&^,@*^&,@<@,Y@&^,3478478,3,@&*@&@*"});
+
+56 
+CÚv”‹r
+.
+	`csv2JsÚOSS
+(
+Ãw
+ 
+	`Fe
+(
+TMP_PATH
+));
+
+57 
+	`ç
+();
+
+58 } 
+	`ÿtch
+ (
+Numb”FÜm©Exû±iÚ
+ 
+e
+) {
+
+60 
+	}
+}
+
+62 
+public
+ 
+	$‹¡CÚv”‹r
+(è
+throws
+ 
+IOExû±iÚ
+ {
+
+63 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚOSS
+(
+Ãw
+ 
+	`Fe
+(
+CSV_PATH
+));
+
+64 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+65 
+	`as£¹Equ®s
+(
+jsÚ
+, 
+TEMPLATE_JSON
+);
+
+66 
+	}
+}
+
+68 
+public
+ 
+	$‹¡CÚv”‹rFe
+(è
+throws
+ 
+IOExû±iÚ
+ {
+
+69 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚOSS
+(
+Ãw
+ 
+	`Fe
+(
+CSV_PATH
+));
+
+70 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+71 
+	`as£¹Equ®s
+(
+jsÚ
+, 
+TEMPLATE_JSON
+);
+
+73 
+Œy
+ {
+
+74 
+CÚv”‹r
+.
+	`csv2JsÚOSS
+(
+Ãw
+ 
+	`Fe
+("/tmp"));
+
+75 
+	`ç
+();
+
+76 } 
+	`ÿtch
+ (
+IÎeg®Argum’tExû±iÚ
+ 
+e
+) {
+
+79 
+Œy
+ {
+
+80 
+CÚv”‹r
+.
+	`csv2JsÚOSS
+(
+Ãw
+ 
+	`Fe
+("/tmp/41234738074891820934"));
+
+81 
+	`ç
+();
+
+82 } 
+	`ÿtch
+ (
+IÎeg®Argum’tExû±iÚ
+ 
+e
+) {
+
+84 
+	}
+}
+
+86 
+public
+ 
+	$‹¡P¬tŸlInfo1
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+88 
+	`§veSŒšgs
+(
+Ãw
+ 
+SŒšg
+[]{"username1", "", "username2,"});
+
+89 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚOSS
+(
+Ãw
+ 
+	`Fe
+(
+TMP_PATH
+));
+
+90 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+93 
+	`as£¹Equ®s
+(
+jsÚ
+, 
+SINGLE_USER_PART1
+);
+
+94 
+	}
+}
+
+96 
+public
+ 
+	$‹¡SšgËU£rP¬tŸlInfo
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+98 
+	`§veSŒšgs
+(
+Ãw
+ 
+SŒšg
+[]{"username1,,user1@aa.com,,fullName1,firstName1,lastName1,"});
+
+99 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚOSS
+(
+Ãw
+ 
+	`Fe
+(
+TMP_PATH
+));
+
+100 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+103 
+	`as£¹Equ®s
+(
+jsÚ
+, 
+SINGLE_USER_PART
+);
+
+104 
+	}
+}
+
+106 
+public
+ 
+	$‹¡SšgËU£rNoDeviû
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+107 
+	`§veSŒšgs
+(
+Ãw
+ 
+SŒšg
+[]{
+
+110 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚOSS
+(
+Ãw
+ 
+	`Fe
+(
+TMP_PATH
+));
+
+111 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+114 
+	`as£¹Equ®s
+(
+jsÚ
+, 
+SINGLE_USER_NO_DEVICE
+);
+
+115 
+	}
+}
+
+117 
+public
+ 
+	$‹¡SšgËU£rNoDeviû2
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+118 
+	`§veSŒšgs
+(
+Ãw
+ 
+SŒšg
+[]{"user1,password1,user1@aa.com,51302,lichengcheng,chengcheng,li,13800000000,,,,"});
+
+119 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚOSS
+(
+Ãw
+ 
+	`Fe
+(
+TMP_PATH
+));
+
+120 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+123 
+	`as£¹Equ®s
+(
+jsÚ
+, 
+SINGLE_USER_NO_DEVICE
+);
+
+124 
+	}
+}
+
+126 
+public
+ 
+	$‹¡SšgËU£rDeviûP¬tŸl
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+127 
+	`§veSŒšgs
+(
+Ãw
+ 
+SŒšg
+[]{
+
+131 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚOSS
+(
+Ãw
+ 
+	`Fe
+(
+TMP_PATH
+));
+
+132 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+134 
+	`as£¹Equ®s
+(
+jsÚ
+, 
+SINGLE_USER_DEVICE_PARTIAL
+);
+
+135 
+	}
+}
+
+137 
+public
+ 
+	$‹¡Esÿ³Commas
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+138 
+	`§veSŒšgs
+(
+Ãw
+ 
+SŒšg
+[]{
+
+142 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚOSS
+(
+Ãw
+ 
+	`Fe
+(
+TMP_PATH
+));
+
+143 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+145 
+	`as£¹Equ®s
+(
+jsÚ
+, 
+SINGLE_USER_COMMA
+);
+
+146 
+	}
+}
+
+148 
+public
+ 
+	$‹¡Esÿ³QuÙes
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+149 
+	`§veSŒšgs
+(
+Ãw
+ 
+SŒšg
+[]{
+
+154 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚOSS
+(
+Ãw
+ 
+	`Fe
+(
+TMP_PATH
+));
+
+155 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+157 
+	`as£¹Equ®s
+(
+jsÚ
+, 
+SINGLE_USER_QUOTES
+);
+
+158 
+	}
+}
+
+160 
+public
+ 
+	$‹¡R—dGbkFe
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+161 
+	`§veGbkSŒšgs
+(
+Ãw
+ 
+SŒšg
+[]{
+
+165 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚOSS
+(
+Ãw
+ 
+	`Fe
+(
+TMP_PATH
+));
+
+166 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+167 
+	`as£¹Equ®s
+(
+jsÚ
+, 
+SINGLE_USER_CHN
+);
+
+168 
+	}
+}
+
+170 
+public
+ 
+	$‹¡P¬tŸlCsv
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+171 
+	`§veGbkSŒšgs
+(
+Ãw
+ 
+SŒšg
+[]{
+
+173 
+Debug
+.
+	`£tV”bo£DebugLog
+(
+Œue
+);
+
+174 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚOSS
+(
+Ãw
+ 
+	`Fe
+(
+TMP_PATH
+));
+
+175 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+176 
+	`as£¹Equ®s
+(
+jsÚ
+, "[]");
+
+177 
+	}
+}
+
+179 
+´iv©e
+ 
+Fe
+ 
+	$§veSŒšgs
+(
+SŒšg
+[] 
+lšes
+è
+throws
+ 
+IOExû±iÚ
+ {
+
+180 
+Fe
+ 
+fe
+ = 
+Ãw
+ 
+	`Fe
+(
+TMP_PATH
+);
+
+181 ià(!
+fe
+.
+	`exi¡s
+()) {
+
+182 
+fe
+.
+	`ü—‹NewFe
+();
+
+184 
+FeWr™”
+ 
+feWr™”
+ = 
+Ãw
+ 
+	`FeWr™”
+(
+fe
+);
+
+185 
+SŒšg
+ 
+lše
+ : 
+lšes
+) {
+
+186 
+feWr™”
+.
+	`wr™e
+(
+lše
+ + "\n");
+
+188 
+feWr™”
+.
+	`şo£
+();
+
+190  
+Ãw
+ 
+	`Fe
+(
+TMP_PATH
+);
+
+191 
+	}
+}
+
+193 
+´iv©e
+ 
+Fe
+ 
+	$§veGbkSŒšgs
+(
+SŒšg
+[] 
+lšes
+è
+throws
+ 
+IOExû±iÚ
+ {
+
+194 
+Fe
+ 
+fe
+ = 
+Ãw
+ 
+	`Fe
+(
+TMP_PATH
+);
+
+195 ià(!
+fe
+.
+	`exi¡s
+()) {
+
+196 
+fe
+.
+	`ü—‹NewFe
+();
+
+199 
+FeOuutSŒ—m
+ 
+fos
+ = 
+Ãw
+ 
+	`FeOuutSŒ—m
+(
+fe
+);
+
+200 
+D©aOuutSŒ—m
+ 
+dos
+ = 
+Ãw
+ 
+	`D©aOuutSŒ—m
+(
+fos
+);
+
+201 
+Bufã»dWr™”
+ 
+bw
+ = 
+Ãw
+ 
+	`Bufã»dWr™”
+Òew 
+	`OuutSŒ—mWr™”
+(
+dos
+, "GBK"));
+
+203 
+SŒšg
+ 
+lše
+ : 
+lšes
+) {
+
+204 
+bw
+.
+	`wr™e
+(
+lše
+ + "\n");
+
+206 
+bw
+.
+	`şo£
+();
+
+208  
+Ãw
+ 
+	`Fe
+(
+TMP_PATH
+);
+
+209 
+	}
+}
+
+211 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gTMP_PATH
+ = "/tmp/cs_test.csv";
+
+212 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gCSV_PATH
+ = "/tmp/test.csv";
+
+213 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gEMPTY_CSV_PATH
+ = "/tmp/empty.csv";
+
+214 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gEMPTY_LINE_CSV_PATH
+ = "/tmp/empty_line.csv";
+
+216 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gTEMPLATE_JSON
+ = "[{\"username\":\"user1\",\"password\":\"password1\",\"email\":\"user1@aa.com\",\"type\":51302,\"firstName\":\"firstName1\",\"lastName\":\"lastName1\",\"fullName\":\"fullName1\",\"phone\":\"13800000000\",\"devices\":[{\"type\":50701,\"os\":51202,\"language\":\"en\",\"securityInfo\":\"securityInfo\",\"tmpUuid\":\"tmpUuid----1\",\"username\":\"user1\"},{\"type\":50701,\"os\":51202,\"language\":\"en\",\"securityInfo\":\"securityInfo\",\"tmpUuid\":\"tmpUuid----2\",\"username\":\"user1\"},{\"type\":50701,\"os\":51202,\"language\":\"en\",\"securityInfo\":\"securityInfo\",\"tmpUuid\":\"tmpUuid----3\",\"username\":\"user1\"}]},{\"username\":\"user2\",\"password\":\"password2\",\"email\":\"user2@aa.com\",\"type\":51302,\"firstName\":\"firstName2\",\"lastName\":\"lastName2\",\"fullName\":\"fullName2\",\"phone\":\"13800000001\",\"devices\":[{\"type\":50701,\"os\":51202,\"language\":\"en\",\"securityInfo\":\"securityInfo\",\"tmpUuid\":\"tmpUuid----4\",\"username\":\"user2\"}]},{\"username\":\"user3\",\"password\":\"password3\",\"email\":\"user3@aa.com\",\"type\":51302,\"firstName\":\"firstName3\",\"lastName\":\"lastName3\",\"fullName\":\"fullName3\",\"phone\":\"13800000002\",\"devices\":[{\"type\":50701,\"os\":51202,\"language\":\"cn\",\"securityInfo\":\"securityInfo\",\"tmpUuid\":\"tmpUuid----5\",\"username\":\"user3\"}]}]";
+
+217 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gTEST_CSV
+ =
+
+224 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gSINGLE_USER_PART
+ = "[{\"username\":\"username1\",\"password\":null," +
+
+229 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gSINGLE_USER_NO_DEVICE
+ = "[{\"username\":\"user1\",\"password\":\"password1\",\"email\":\"user1@aa.com\",\"type\":51302,\"firstName\":\"chengcheng\",\"lastName\":\"li\",\"fullName\":\"lichengcheng\",\"phone\":\"13800000000\",\"devices\":null}]";
+
+231 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gSINGLE_USER_DEVICE_PARTIAL
+ = "[{\"username\":\"user2\",\"password\":\"password2\",\"email\":\"user2@aa.com\",\"type\":null,\"firstName\":\"firstName2\",\"lastName\":null,\"fullName\":null,\"phone\":\"13800000001\",\"devices\":[{\"type\":50701,\"os\":51202,\"language\":null,\"securityInfo\":\"securityInfo\",\"tmpUuid\":null,\"username\":\"user2\"}]}]";
+
+233 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gSINGLE_USER_PART1
+ = "[{\"username\":\"username1\",\"password\":null,\"email\":null,\"type\":null,\"firstName\":null,\"lastName\":null,\"fullName\":null,\"phone\":null,\"devices\":null},{\"username\":\"username2\",\"password\":null,\"email\":null,\"type\":null,\"firstName\":null,\"lastName\":null,\"fullName\":null,\"phone\":null,\"devices\":null}]";
+
+235 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gSINGLE_USER_COMMA
+ = "[{\"username\":\"Jacky, chen\",\"password\":\"123,456,,\",\"email\":\"user2@aa.com\",\"type\":null,\"firstName\":\"firstName2\",\"lastName\":null,\"fullName\":null,\"phone\":\"1380,000, 0001\",\"devices\":[{\"type\":50701,\"os\":51202,\"language\":null,\"securityInfo\":\",security,Info\",\"tmpUuid\":null,\"username\":\"Jacky, chen\"}]}]";
+
+237 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gSINGLE_USER_QUOTES
+ = "[{\"username\":\"\\\"\",\"password\":\"\\\"\\\"\",\"email\":\"\\\"\\\"\\\"\",\"type\":null,\"firstName\":null,\"lastName\":null,\"fullName\":null,\"phone\":null,\"devices\":null},{\"username\":\"\\\"test\\\"\",\"password\":\"\\\"test\",\"email\":\"test me\\\"\",\"type\":null,\"firstName\":null,\"lastName\":null,\"fullName\":null,\"phone\":null,\"devices\":null},{\"username\":\"\\\"test,est\\\"\",\"password\":\"\\\",test\\\"\",\"email\":\"\\\"test,\\\"\",\"type\":null,\"firstName\":null,\"lastName\":null,\"fullName\":null,\"phone\":null,\"devices\":null}]";
+
+239 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gSINGLE_USER_CHN
+ = "[{\"username\":\"Jacky, æˆ\",\"password\":\"123,456,,\",\"email\":\"ç‹@aa.com\",\"type\":null,\"firstName\":\"ææˆ\",\"lastName\":null,\"fullName\":null,\"phone\":\"1380,000, 0001\",\"devices\":[{\"type\":50701,\"os\":51202,\"language\":null,\"securityInfo\":\",security,Info\",\"tmpUuid\":null,\"username\":\"Jacky, æˆ\"}]}]";
+
+	@test/com/pekall/csv/ConverterTest.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+.
+	gb—n
+.
+	gCsvFe
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+.
+	gb—n
+.
+	gCsvLše
+;
+
+5 
+impÜt
+ 
+	gjun™
+.
+	gäamewÜk
+.
+	gTe¡Ca£
+;
+
+7 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gFe
+;
+
+8 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gFeWr™”
+;
+
+9 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gIOExû±iÚ
+;
+
+11 
+public
+ cÏs 
+	cCÚv”‹rTe¡
+ 
+ex‹nds
+ 
+	mTe¡Ca£
+ {
+
+12 @
+Ov”ride
+
+
+13 
+public
+ 
+	$£tUp
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+14 
+su³r
+.
+	`£tUp
+();
+
+15 
+FeWr™”
+ 
+wr™”
+ = 
+Ãw
+ 
+	`FeWr™”
+(
+CSV_PATH
+);
+
+16 
+wr™”
+.
+	`wr™e
+(
+TEST_CSV
+);
+
+17 
+wr™”
+.
+	`şo£
+();
+
+20 
+FeWr™”
+ 
+wr™”1
+ = 
+Ãw
+ 
+	`FeWr™”
+(
+EMPTY_CSV_PATH
+);
+
+21 
+wr™”1
+.
+	`şo£
+();
+
+24 
+FeWr™”
+ 
+wr™”2
+ = 
+Ãw
+ 
+	`FeWr™”
+(
+EMPTY_LINE_CSV_PATH
+);
+
+25 
+wr™”2
+.
+	`wr™e
+("\n");
+
+26 
+wr™”2
+.
+	`wr™e
+("\n");
+
+27 
+wr™”2
+.
+	`şo£
+();
+
+32 
+public
+ 
+	$‹¡P¬£Em±yCsvFe
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+33 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚ
+(
+EMPTY_CSV_PATH
+);
+
+34 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+37 
+	`as£¹Equ®s
+("[]", 
+jsÚ
+);
+
+38 
+	}
+}
+
+40 
+public
+ 
+	$‹¡P¬£Em±yCsvSŒšg
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+41 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚ
+(
+Ãw
+ String[]{});
+
+42 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+44 
+	`as£¹Equ®s
+("[]", 
+jsÚ
+);
+
+45 
+	}
+}
+
+47 
+public
+ 
+	$‹¡P¬£Em±yLšeCsv
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+48 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚ
+(
+EMPTY_LINE_CSV_PATH
+);
+
+49 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+52 
+	`as£¹Equ®s
+("[]", 
+jsÚ
+);
+
+53 
+	}
+}
+
+55 
+public
+ 
+	$‹¡P¬£Em±yLšeCsv1
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+56 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚ
+(
+Ãw
+ String[]{"", "\n", ""});
+
+57 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+59 
+	`as£¹Equ®s
+("[]", 
+jsÚ
+);
+
+60 
+	}
+}
+
+62 
+public
+ 
+	$‹¡E¼Ü
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+63 
+Œy
+ {
+
+64 
+CÚv”‹r
+.
+	`csv2JsÚ
+(
+Ãw
+ 
+SŒšg
+[]{"!&^,@*^&,@<@,Y@&^,3478478,3,@&*@&@*"});
+
+65 
+	`ç
+();
+
+66 } 
+	`ÿtch
+ (
+Numb”FÜm©Exû±iÚ
+ 
+e
+) {
+
+68 
+	}
+}
+
+70 
+public
+ 
+	$‹¡CÚv”‹r
+(è
+throws
+ 
+IOExû±iÚ
+ {
+
+71 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚ
+(
+CSV_PATH
+);
+
+72 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+73 
+	`as£¹Equ®s
+(
+jsÚ
+, 
+TEMPLATE_JSON
+);
+
+74 
+	}
+}
+
+76 
+public
+ 
+	$‹¡CÚv”‹rFe
+(è
+throws
+ 
+IOExû±iÚ
+ {
+
+77 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚ
+(
+Ãw
+ 
+	`Fe
+(
+CSV_PATH
+));
+
+78 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+79 
+	`as£¹Equ®s
+(
+jsÚ
+, 
+TEMPLATE_JSON
+);
+
+81 
+Œy
+ {
+
+82 
+CÚv”‹r
+.
+	`csv2JsÚ
+(
+Ãw
+ 
+	`Fe
+("/tmp"));
+
+83 
+	`ç
+();
+
+84 } 
+	`ÿtch
+ (
+IÎeg®Argum’tExû±iÚ
+ 
+e
+) {
+
+87 
+Œy
+ {
+
+88 
+CÚv”‹r
+.
+	`csv2JsÚ
+(
+Ãw
+ 
+	`Fe
+("/tmp/41234738074891820934"));
+
+89 
+	`ç
+();
+
+90 } 
+	`ÿtch
+ (
+IÎeg®Argum’tExû±iÚ
+ 
+e
+) {
+
+92 
+	}
+}
+
+94 
+public
+ 
+	$‹¡P¬tŸlInfo1
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+96 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚ
+(
+Ãw
+ String[]{
+
+101 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+104 
+	`as£¹Equ®s
+(
+jsÚ
+, 
+SINGLE_USER_PART1
+);
+
+105 
+	}
+}
+
+107 
+public
+ 
+	$‹¡SšgËU£rP¬tŸlInfo
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+109 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚ
+(
+Ãw
+ String[]{
+
+112 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+115 
+	`as£¹Equ®s
+(
+jsÚ
+, 
+SINGLE_USER_PART
+);
+
+116 
+	}
+}
+
+118 
+public
+ 
+	$‹¡SšgËU£rNoDeviû
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+119 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚ
+(
+Ãw
+ String[]{
+
+122 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+125 
+	`as£¹Equ®s
+(
+jsÚ
+, 
+SINGLE_USER_NO_DEVICE
+);
+
+126 
+	}
+}
+
+128 
+public
+ 
+	$‹¡SšgËU£rNoDeviû2
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+129 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚ
+(
+Ãw
+ String[]{
+
+132 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+135 
+	`as£¹Equ®s
+(
+jsÚ
+, 
+SINGLE_USER_NO_DEVICE
+);
+
+136 
+	}
+}
+
+138 
+public
+ 
+	$‹¡SšgËU£rDeviûP¬tŸl
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+139 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚ
+(
+Ãw
+ String[]{
+
+143 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+145 
+	`as£¹Equ®s
+(
+jsÚ
+, 
+SINGLE_USER_DEVICE_PARTIAL
+);
+
+146 
+	}
+}
+
+148 
+public
+ 
+	$‹¡Esÿ³Commas
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+149 
+SŒšg
+ 
+jsÚ
+ = 
+CÚv”‹r
+.
+	`csv2JsÚ
+(
+Ãw
+ String[]{
+
+153 
+Debug
+.
+	`logV”bo£
+(
+jsÚ
+);
+
+155 
+	`as£¹Equ®s
+(
+jsÚ
+, 
+SINGLE_USER_COMMA
+);
+
+156 
+	}
+}
+
+158 
+´iv©e
+ 
+Fe
+ 
+	$§veSŒšgs
+(
+SŒšg
+[] 
+lšes
+è
+throws
+ 
+IOExû±iÚ
+ {
+
+159 
+Fe
+ 
+fe
+ = 
+Ãw
+ 
+	`Fe
+(
+TMP_PATH
+);
+
+160 ià(!
+fe
+.
+	`exi¡s
+()) {
+
+161 
+fe
+.
+	`ü—‹NewFe
+();
+
+163 
+FeWr™”
+ 
+feWr™”
+ = 
+Ãw
+ 
+	`FeWr™”
+(
+fe
+);
+
+164 
+SŒšg
+ 
+lše
+ : 
+lšes
+) {
+
+165 
+feWr™”
+.
+	`wr™e
+(
+lše
+ + "\n");
+
+167 
+feWr™”
+.
+	`şo£
+();
+
+169  
+Ãw
+ 
+	`Fe
+(
+TMP_PATH
+);
+
+170 
+	}
+}
+
+172 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gTMP_PATH
+ = "/tmp/cs_test.csv";
+
+173 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gCSV_PATH
+ = "/tmp/test.csv";
+
+174 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gEMPTY_CSV_PATH
+ = "/tmp/empty.csv";
+
+175 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gEMPTY_LINE_CSV_PATH
+ = "/tmp/empty_line.csv";
+
+177 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gTEMPLATE_JSON
+ = "[{\"username\":\"user1\",\"password\":\"password1\",\"email\":\"user1@aa.com\",\"type\":51302,\"firstName\":\"firstName1\",\"lastName\":\"lastName1\",\"fullName\":\"fullName1\",\"phone\":\"13800000000\",\"devices\":[{\"type\":50701,\"os\":51202,\"language\":\"en\",\"securityInfo\":\"securityInfo\",\"tmpUuid\":\"tmpUuid----1\",\"username\":\"user1\"},{\"type\":50701,\"os\":51202,\"language\":\"en\",\"securityInfo\":\"securityInfo\",\"tmpUuid\":\"tmpUuid----2\",\"username\":\"user1\"},{\"type\":50701,\"os\":51202,\"language\":\"en\",\"securityInfo\":\"securityInfo\",\"tmpUuid\":\"tmpUuid----3\",\"username\":\"user1\"}]},{\"username\":\"user2\",\"password\":\"password2\",\"email\":\"user2@aa.com\",\"type\":51302,\"firstName\":\"firstName2\",\"lastName\":\"lastName2\",\"fullName\":\"fullName2\",\"phone\":\"13800000001\",\"devices\":[{\"type\":50701,\"os\":51202,\"language\":\"en\",\"securityInfo\":\"securityInfo\",\"tmpUuid\":\"tmpUuid----4\",\"username\":\"user2\"}]},{\"username\":\"user3\",\"password\":\"password3\",\"email\":\"user3@aa.com\",\"type\":51302,\"firstName\":\"firstName3\",\"lastName\":\"lastName3\",\"fullName\":\"fullName3\",\"phone\":\"13800000002\",\"devices\":[{\"type\":50701,\"os\":51202,\"language\":\"cn\",\"securityInfo\":\"securityInfo\",\"tmpUuid\":\"tmpUuid----5\",\"username\":\"user3\"}]}]";
+
+178 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gTEST_CSV
+ =
+
+185 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gSINGLE_USER_PART
+ = "[{\"username\":\"username1\",\"password\":null," +
+
+190 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gSINGLE_USER_NO_DEVICE
+ = "[{\"username\":\"user1\",\"password\":\"password1\",\"email\":\"user1@aa.com\",\"type\":51302,\"firstName\":\"æˆæˆ\",\"lastName\":\"æ\",\"fullName\":\"ææˆæˆ\",\"phone\":\"13800000000\",\"devices\":null}]";
+
+192 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gSINGLE_USER_DEVICE_PARTIAL
+ = "[{\"username\":\"user2\",\"password\":\"password2\",\"email\":\"user2@aa.com\",\"type\":null,\"firstName\":\"firstName2\",\"lastName\":null,\"fullName\":null,\"phone\":\"13800000001\",\"devices\":[{\"type\":50701,\"os\":51202,\"language\":null,\"securityInfo\":\"securityInfo\",\"tmpUuid\":null,\"username\":\"user2\"}]}]";
+
+194 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gSINGLE_USER_PART1
+ = "[{\"username\":\"username1\",\"password\":null,\"email\":null,\"type\":null,\"firstName\":null,\"lastName\":null,\"fullName\":null,\"phone\":null,\"devices\":null},{\"username\":\"username2\",\"password\":null,\"email\":null,\"type\":null,\"firstName\":null,\"lastName\":null,\"fullName\":null,\"phone\":null,\"devices\":null}]";
+
+196 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gSINGLE_USER_COMMA
+ = "[{\"username\":\"Jacky, æˆ\",\"password\":\"123,456,,\",\"email\":\"user2@aa.com\",\"type\":null,\"firstName\":\"firstName2\",\"lastName\":null,\"fullName\":null,\"phone\":\"1380,000, 0001\",\"devices\":[{\"type\":50701,\"os\":51202,\"language\":null,\"securityInfo\":\",security,Info\",\"tmpUuid\":null,\"username\":\"Jacky, æˆ\"}]}]";
+
+	@test/com/pekall/csv/CsvFileTest.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+.
+	gb—n
+.
+	gCsvFe
+;
+
+4 
+impÜt
+ 
+	gjun™
+.
+	gäamewÜk
+.
+	gTe¡Ca£
+;
+
+6 
+impÜt
+ 
+	gjava
+.
+	gio
+.*;
+
+8 
+public
+ cÏs 
+	cCsvFeTe¡
+ 
+ex‹nds
+ 
+	mTe¡Ca£
+ {
+
+10 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	mCSV_PATH
+ = "/tmp/test.csv";
+
+11 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	mEMPTY_CSV_PATH
+ = "/tmp/empty.csv";
+
+12 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	mEMPTY_LINE_CSV_PATH
+ = "/tmp/empty_line.csv";
+
+14 @
+Ov”ride
+
+
+15 
+public
+ 
+	$£tUp
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+16 
+su³r
+.
+	`£tUp
+();
+
+17 
+FeWr™”
+ 
+wr™”
+ = 
+Ãw
+ 
+	`FeWr™”
+(
+CSV_PATH
+);
+
+18 
+wr™”
+.
+	`wr™e
+(
+TEST_CSV
+);
+
+19 
+wr™”
+.
+	`şo£
+();
+
+22 
+FeWr™”
+ 
+wr™”1
+ = 
+Ãw
+ 
+	`FeWr™”
+(
+EMPTY_CSV_PATH
+);
+
+23 
+wr™”1
+.
+	`şo£
+();
+
+26 
+FeWr™”
+ 
+wr™”2
+ = 
+Ãw
+ 
+	`FeWr™”
+(
+EMPTY_LINE_CSV_PATH
+);
+
+27 
+wr™”2
+.
+	`wr™e
+("\n");
+
+28 
+wr™”2
+.
+	`wr™e
+("\n");
+
+29 
+wr™”2
+.
+	`şo£
+();
+
+32 
+public
+ 
+	$‹¡P¬£Em±yCsv
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+33 
+CsvFe
+ 
+šfo
+ = (CsvFeè
+CÚv”‹r
+.
+	`csv2B—n
+(
+EMPTY_CSV_PATH
+);
+
+34 
+Debug
+.
+	`logV”bo£
+(
+šfo
+.
+	`toSŒšg
+());
+
+36 
+	`as£¹Equ®s
+("", 
+šfo
+.
+	`toCvs
+());
+
+37 
+	}
+}
+
+52 
+public
+ 
+	$‹¡P¬£Csv
+(è
+throws
+ 
+IOExû±iÚ
+ {
+
+53 
+CsvFe
+ 
+šfo
+ = (CsvFeè
+CÚv”‹r
+.
+	`csv2B—n
+(
+CSV_PATH
+);
+
+54 
+Debug
+.
+	`logV”bo£
+(
+šfo
+.
+	`toSŒšg
+());
+
+55 
+	}
+}
+
+57 
+public
+ 
+	$‹¡P¬£CsvTwoWay
+(è
+throws
+ 
+IOExû±iÚ
+ {
+
+58 
+CsvFe
+ 
+šfo
+ = (CsvFeè
+CÚv”‹r
+.
+	`csv2B—n
+(
+CSV_PATH
+);
+
+59 
+	`as£¹Equ®s
+(
+TEST_CSV
+, 
+šfo
+.
+	`toCvs
+());
+
+60 
+	}
+}
+
+62 
+public
+ 
+	$‹¡CÚv”‹r
+(è
+throws
+ 
+IOExû±iÚ
+ {
+
+64 
+Debug
+.
+	`logV”bo£
+(
+CÚv”‹r
+.
+	`csv2JsÚ
+(
+CSV_PATH
+));
+
+65 
+	}
+}
+
+67 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gTEST_CSV
+ =
+
+	@test/com/pekall/csv/GsonTest.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	ggoogË
+.
+	ggsÚ
+.
+	gGsÚ
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	ggoogË
+.
+	ggsÚ
+.
+	gGsÚBud”
+;
+
+5 
+impÜt
+ 
+	gcom
+.
+	ggoogË
+.
+	ggsÚ
+.
+	gJsÚSyÁaxExû±iÚ
+;
+
+6 
+impÜt
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+.
+	gb—n
+.
+	gCsvFe
+;
+
+7 
+impÜt
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+.
+	gb—n
+.
+	gCsvLše
+;
+
+8 
+impÜt
+ 
+	gjun™
+.
+	gäamewÜk
+.
+	gTe¡Ca£
+;
+
+10 
+public
+ cÏs 
+	cGsÚTe¡
+ 
+ex‹nds
+ 
+	mTe¡Ca£
+{
+
+12 
+public
+ 
+	$‹¡FromGsÚ
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+13 
+GsÚ
+ 
+gsÚ
+ = 
+Ãw
+ 
+	`GsÚBud”
+().
+	`£rŸlizeNuÎs
+().
+	`ü—‹
+();
+
+14 
+CsvFe
+ 
+šfo
+ = 
+nuÎ
+;
+
+15 
+Œy
+ {
+
+16 
+šfo
+ = 
+gsÚ
+.
+	`äomJsÚ
+(
+TEST_JSON
+, 
+CsvFe
+.
+şass
+);
+
+17 } 
+	`ÿtch
+ (
+JsÚSyÁaxExû±iÚ
+ 
+e
+) {
+
+18 
+e
+.
+	`´štSckT¿û
+();
+
+20 
+Sy¡em
+.
+out
+.
+	`´šn
+(
+šfo
+.
+	`toSŒšg
+());
+
+23 
+public
+ 
+	$‹¡ToGsÚ
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+24 
+CsvLše
+ 
+u£rInfo
+ = 
+Ãw
+ 
+	`CsvLše
+();
+
+25 
+u£rInfo
+.
+	`£tU£ºame
+("Ray");
+
+26 
+u£rInfo
+.
+	`£tPasswÜd
+("12345");
+
+28 
+CsvFe
+ 
+csvFe
+ = 
+Ãw
+ 
+	`CsvFe
+();
+
+29 
+csvFe
+.
+	`addLše
+(
+u£rInfo
+);
+
+30 
+csvFe
+.
+	`addLše
+(
+Ãw
+ 
+	`CsvLše
+());
+
+32 
+GsÚ
+ 
+gsÚ
+ = 
+Ãw
+ 
+	`GsÚBud”
+().
+	`£rŸlizeNuÎs
+().
+	`ü—‹
+();
+
+33 
+Sy¡em
+.
+out
+.
+	`´šn
+(
+gsÚ
+.
+	`toJsÚ
+(
+csvFe
+, csvFe.
+	`g‘CÏss
+()));
+
+34 
+	}
+}
+
+36 
+public
+ 
+	$‹¡TwoWay
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+37 
+GsÚ
+ 
+gsÚ
+ = 
+Ãw
+ 
+	`GsÚBud”
+().
+	`£rŸlizeNuÎs
+().
+	`ü—‹
+();
+
+38 
+CsvFe
+ 
+šfo
+ = 
+nuÎ
+;
+
+39 
+Œy
+ {
+
+40 
+šfo
+ = 
+gsÚ
+.
+	`äomJsÚ
+(
+TEST_JSON
+, 
+CsvFe
+.
+şass
+);
+
+41 } 
+	`ÿtch
+ (
+JsÚSyÁaxExû±iÚ
+ 
+e
+) {
+
+42 
+e
+.
+	`´štSckT¿û
+();
+
+44 
+Sy¡em
+.
+out
+.
+	`´šn
+(
+šfo
+.
+	`toSŒšg
+());
+
+45 
+	`as£¹Equ®s
+(
+TEST_JSON
+.
+	`»¶aû
+("\n", ""), 
+gsÚ
+.
+	`toJsÚ
+(
+šfo
+, info.
+	`g‘CÏss
+()));
+
+46 
+	}
+}
+
+48 
+´iv©e
+ 
+fš®
+ 
+SŒšg
+ 
+	gTEST_JSON
+ = "{\"lines\":[{\"username\":\"Ray\",\"password\":\"12345\",\"email\":null,\"userType\":null,\"fullName\":null,\"firstName\":null,\"lastName\":null,\"phone\":null,\"deviceType\":null,\"os\":null,\"language\":null,\"securityInfo\":null,\"tmpUuid\":null},{\"username\":null,\"password\":null,\"email\":null,\"userType\":null,\"fullName\":null,\"firstName\":null,\"lastName\":null,\"phone\":null,\"deviceType\":null,\"os\":null,\"language\":null,\"securityInfo\":null,\"tmpUuid\":null}]}";
+
+	@test/com/pekall/csv/bean/CsvLineTest.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+.
+	gb—n
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+.
+	gDebug
+;
+
+4 
+impÜt
+ 
+	gjun™
+.
+	gäamewÜk
+.
+	gTe¡Ca£
+;
+
+6 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gA¼ays
+;
+
+8 
+public
+ cÏs 
+	cCsvLšeTe¡
+ 
+ex‹nds
+ 
+	mTe¡Ca£
+ {
+
+10 
+public
+ 
+	$‹¡SšgËTok’
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+11 
+fš®
+ 
+SŒšg
+ 
+CSV_LINE_1
+ = "\",\"";
+
+12 
+SŒšg
+[] 
+tok’s
+ = 
+CsvLše
+.
+	`combšeTok’s
+(
+CSV_LINE_1
+.
+	`¥l™
+(","));
+
+15 
+SŒšg
+ 
+tok’
+ : 
+CSV_LINE_1
+.
+	`¥l™
+(",")) {
+
+16 
+Debug
+.
+	`logV”bo£
+(
+tok’
+);
+
+18 
+Debug
+.
+	`logV”bo£
+(
+A¼ays
+.
+	`toSŒšg
+(
+tok’s
+));
+
+20 
+	`as£¹Equ®s
+(
+tok’s
+.
+Ëngth
+, 1);
+
+21 
+	`as£¹Equ®s
+(
+tok’s
+[0], ",");
+
+24 
+public
+ 
+	$‹¡SšgËTok’1
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+25 
+fš®
+ 
+SŒšg
+ 
+CSV_LINE_1
+ = "\"test,\"";
+
+26 
+SŒšg
+[] 
+tok’s
+ = 
+CsvLše
+.
+	`combšeTok’s
+(
+CSV_LINE_1
+.
+	`¥l™
+(","));
+
+29 
+SŒšg
+ 
+tok’
+ : 
+CSV_LINE_1
+.
+	`¥l™
+(",")) {
+
+30 
+Debug
+.
+	`logV”bo£
+(
+tok’
+);
+
+32 
+Debug
+.
+	`logV”bo£
+(
+A¼ays
+.
+	`toSŒšg
+(
+tok’s
+));
+
+34 
+	`as£¹Equ®s
+(
+tok’s
+.
+Ëngth
+, 1);
+
+35 
+	`as£¹Equ®s
+(
+tok’s
+[0], "test,");
+
+36 
+	}
+}
+
+38 
+public
+ 
+	$‹¡SšgËTok’2
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+39 
+fš®
+ 
+SŒšg
+ 
+CSV_LINE_1
+ = "\",test\"";
+
+40 
+SŒšg
+[] 
+tok’s
+ = 
+CsvLše
+.
+	`combšeTok’s
+(
+CSV_LINE_1
+.
+	`¥l™
+(","));
+
+43 
+SŒšg
+ 
+tok’
+ : 
+CSV_LINE_1
+.
+	`¥l™
+(",")) {
+
+44 
+Debug
+.
+	`logV”bo£
+(
+tok’
+);
+
+46 
+Debug
+.
+	`logV”bo£
+(
+A¼ays
+.
+	`toSŒšg
+(
+tok’s
+));
+
+48 
+	`as£¹Equ®s
+(
+tok’s
+.
+Ëngth
+, 1);
+
+49 
+	`as£¹Equ®s
+(
+tok’s
+[0], ",test");
+
+50 
+	}
+}
+
+52 
+public
+ 
+	$‹¡SšgËTok’3
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+53 
+fš®
+ 
+SŒšg
+ 
+CSV_LINE_1
+ = "\"good,test\"";
+
+54 
+SŒšg
+[] 
+tok’s
+ = 
+CsvLše
+.
+	`combšeTok’s
+(
+CSV_LINE_1
+.
+	`¥l™
+(","));
+
+57 
+SŒšg
+ 
+tok’
+ : 
+CSV_LINE_1
+.
+	`¥l™
+(",")) {
+
+58 
+Debug
+.
+	`logV”bo£
+(
+tok’
+);
+
+60 
+Debug
+.
+	`logV”bo£
+(
+A¼ays
+.
+	`toSŒšg
+(
+tok’s
+));
+
+62 
+	`as£¹Equ®s
+(
+tok’s
+.
+Ëngth
+, 1);
+
+63 
+	`as£¹Equ®s
+(
+tok’s
+[0], "good,test");
+
+64 
+	}
+}
+
+66 
+public
+ 
+	$‹¡SšgËTok’4
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+67 
+fš®
+ 
+SŒšg
+ 
+CSV_LINE_1
+ = "\",more,,,good,more,test,,,,more,,\"";
+
+68 
+SŒšg
+[] 
+tok’s
+ = 
+CsvLše
+.
+	`combšeTok’s
+(
+CSV_LINE_1
+.
+	`¥l™
+(","));
+
+71 
+SŒšg
+ 
+tok’
+ : 
+CSV_LINE_1
+.
+	`¥l™
+(",")) {
+
+72 
+Debug
+.
+	`logV”bo£
+(
+tok’
+);
+
+74 
+Debug
+.
+	`logV”bo£
+(
+A¼ays
+.
+	`toSŒšg
+(
+tok’s
+));
+
+76 
+	`as£¹Equ®s
+(
+tok’s
+.
+Ëngth
+, 1);
+
+77 
+	`as£¹Equ®s
+(
+tok’s
+[0], ",more,,,good,more,test,,,,more,,");
+
+78 
+	}
+}
+
+80 
+public
+ 
+	$‹¡MÜeTok’s1
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+81 
+fš®
+ 
+SŒšg
+ 
+CSV_LINE_1
+ = ",\",more,,,good,more,test,,,,more,,\"";
+
+82 
+SŒšg
+[] 
+tok’s
+ = 
+CsvLše
+.
+	`combšeTok’s
+(
+CSV_LINE_1
+.
+	`¥l™
+(","));
+
+85 
+SŒšg
+ 
+tok’
+ : 
+CSV_LINE_1
+.
+	`¥l™
+(",")) {
+
+86 
+Debug
+.
+	`logV”bo£
+(
+tok’
+);
+
+88 
+Debug
+.
+	`logV”bo£
+(
+A¼ays
+.
+	`toSŒšg
+(
+tok’s
+));
+
+90 
+	`as£¹Equ®s
+(
+tok’s
+.
+Ëngth
+, 2);
+
+91 
+	`as£¹Equ®s
+(
+tok’s
+[0], "");
+
+92 
+	`as£¹Equ®s
+(
+tok’s
+[1], ",more,,,good,more,test,,,,more,,");
+
+93 
+	}
+}
+
+95 
+public
+ 
+	$‹¡MÜeTok’s2
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+96 
+fš®
+ 
+SŒšg
+ 
+CSV_LINE_1
+ = "\"more,,,good,more,test,,,,more,,\",,,,";
+
+97 
+SŒšg
+[] 
+tok’s
+ = 
+CsvLše
+.
+	`combšeTok’s
+(
+CSV_LINE_1
+.
+	`¥l™
+(","));
+
+100 
+SŒšg
+ 
+tok’
+ : 
+CSV_LINE_1
+.
+	`¥l™
+(",")) {
+
+101 
+Debug
+.
+	`logV”bo£
+(
+tok’
+);
+
+103 
+Debug
+.
+	`logV”bo£
+(
+A¼ays
+.
+	`toSŒšg
+(
+tok’s
+));
+
+105 
+	`as£¹Equ®s
+(
+tok’s
+.
+Ëngth
+, 1);
+
+106 
+	`as£¹Equ®s
+(
+tok’s
+[0], "more,,,good,more,test,,,,more,,");
+
+107 
+	}
+}
+
+110 
+public
+ 
+	$‹¡MÜeTok’s3
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+111 
+fš®
+ 
+SŒšg
+ 
+CSV_LINE_1
+ = "\"more,,,good,more,test,,,,more,,\",,test,";
+
+112 
+SŒšg
+[] 
+tok’s
+ = 
+CsvLše
+.
+	`combšeTok’s
+(
+CSV_LINE_1
+.
+	`¥l™
+(","));
+
+115 
+SŒšg
+ 
+tok’
+ : 
+CSV_LINE_1
+.
+	`¥l™
+(",")) {
+
+116 
+Debug
+.
+	`logV”bo£
+(
+tok’
+);
+
+118 
+Debug
+.
+	`logV”bo£
+(
+A¼ays
+.
+	`toSŒšg
+(
+tok’s
+));
+
+120 
+	`as£¹Equ®s
+(
+tok’s
+.
+Ëngth
+, 3);
+
+121 
+	`as£¹Equ®s
+(
+tok’s
+[0], "more,,,good,more,test,,,,more,,");
+
+122 
+	`as£¹Equ®s
+(
+tok’s
+[1], "");
+
+123 
+	`as£¹Equ®s
+(
+tok’s
+[2], "test");
+
+124 
+	}
+}
+
+127 
+public
+ 
+	$‹¡MÜeTok’s4
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+128 
+fš®
+ 
+SŒšg
+ 
+CSV_LINE_1
+ = "to1,\",more,,,good,more,test,,,,more,,\",o3,\"tok4, m\"";
+
+129 
+SŒšg
+[] 
+tok’s
+ = 
+CsvLše
+.
+	`combšeTok’s
+(
+CSV_LINE_1
+.
+	`¥l™
+(","));
+
+132 
+SŒšg
+ 
+tok’
+ : 
+tok’s
+) {
+
+133 
+Debug
+.
+	`logV”bo£
+(
+tok’
+);
+
+135 
+Debug
+.
+	`logV”bo£
+(
+A¼ays
+.
+	`toSŒšg
+(
+tok’s
+));
+
+137 
+	`as£¹Equ®s
+(
+tok’s
+.
+Ëngth
+, 4);
+
+138 
+	`as£¹Equ®s
+(
+tok’s
+[0], "to1");
+
+139 
+	`as£¹Equ®s
+(
+tok’s
+[1], ",more,,,good,more,test,,,,more,,");
+
+140 
+	`as£¹Equ®s
+(
+tok’s
+[2], "o3");
+
+141 
+	`as£¹Equ®s
+(
+tok’s
+[3], "tok4, m");
+
+142 
+	}
+}
+
+	@test/com/pekall/csv/bean/CsvVoDemoTest.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+.
+	gb—n
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+.
+	gCSVWr™”
+;
+
+4 
+impÜt
+ 
+	gjun™
+.
+	gäamewÜk
+.
+	gTe¡Ca£
+;
+
+6 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gPrštWr™”
+;
+
+7 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gA¼ayLi¡
+;
+
+9 
+public
+ cÏs 
+	cCsvVoDemoTe¡
+ 
+ex‹nds
+ 
+	mTe¡Ca£
+ {
+
+10 
+public
+ 
+	$‹¡G’Csv
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+51 
+	}
+}
+
+	@test/com/pekall/csv/bean/ImportDeviceInfoVoTest.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	g³k®l
+.
+	gcsv
+.
+	gb—n
+;
+
+3 
+impÜt
+ 
+	gjun™
+.
+	gäamewÜk
+.
+	gTe¡Ca£
+;
+
+5 
+public
+ cÏs 
+	cImpÜtDeviûInfoVoTe¡
+ 
+ex‹nds
+ 
+	mTe¡Ca£
+ {
+
+6 
+public
+ 
+	$‹¡IsEm±yDeviû
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+7 
+ImpÜtDeviûInfoVo
+ 
+vo
+ = 
+Ãw
+ 
+	`ImpÜtDeviûInfoVo
+();
+
+8 
+	`as£¹True
+(
+vo
+.
+	`isEm±yDeviû
+());
+
+10 
+vo
+.
+	`£tU£ºame
+("");
+
+11 
+	`as£¹F®£
+(
+vo
+.
+	`isEm±yDeviû
+());
+
+13 
+vo
+.
+	`£tU£ºame
+(
+nuÎ
+);
+
+14 
+	`as£¹True
+(
+vo
+.
+	`isEm±yDeviû
+());
+
+16 
+vo
+.
+	`£tOs
+(30);
+
+17 
+	`as£¹F®£
+(
+vo
+.
+	`isEm±yDeviû
+());
+
+19 
+	}
+}
+
+	@
+1
+.
+1
+/usr/include
+31
+1013
+.idea/artifacts/CsvJsonConverter_jar.xml
+.idea/compiler.xml
+.idea/copyright/profiles_settings.xml
+.idea/dictionaries/jiangrui.xml
+.idea/encodings.xml
+.idea/libraries/gson_2_1.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/scopes/scope_settings.xml
+.idea/uiDesigner.xml
+.idea/vcs.xml
+.idea/workspace.xml
+csvjsonconverter.xml
+module_csvjsonconverter.xml
+src/com/pekall/csv/CSVReader.java
+src/com/pekall/csv/CSVWriter.java
+src/com/pekall/csv/Converter.java
+src/com/pekall/csv/Debug.java
+src/com/pekall/csv/bean/CsvFile.java
+src/com/pekall/csv/bean/CsvLine.java
+src/com/pekall/csv/bean/CsvVoBase.java
+src/com/pekall/csv/bean/CsvVoDemo.java
+src/com/pekall/csv/bean/ImportDeviceInfoVo.java
+src/com/pekall/csv/bean/ImportUserVo.java
+test/com/pekall/csv/ConverterOssTest.java
+test/com/pekall/csv/ConverterTest.java
+test/com/pekall/csv/CsvFileTest.java
+test/com/pekall/csv/GsonTest.java
+test/com/pekall/csv/bean/CsvLineTest.java
+test/com/pekall/csv/bean/CsvVoDemoTest.java
+test/com/pekall/csv/bean/ImportDeviceInfoVoTest.java
