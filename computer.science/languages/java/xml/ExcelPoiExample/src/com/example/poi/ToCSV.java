@@ -667,7 +667,7 @@ public class ToCSV {
         // with matching names but different extensions - Test.xls and Test.xlsx
         // for example - then the CSV file generated from one will overwrite
         // that generated from the other.
-        args = new String[]{"/tmp/cloud_contact.xlsx", "/tmp/"};
+        args = new String[]{"./cloud_contact.xlsx", "."};
         ToCSV converter = null;
         try {
             converter = new ToCSV();
