@@ -23,11 +23,12 @@ import java.util.List;
  * 3 一行数据不垮行，无空行。
  * 4 以半角逗号（即,）作分隔符，列为空也要表达其存在。
  * 5 列内容如存在半角逗号（即,）则用半角引号（即""）将该字段值包含起来。
- * TODO: support quote in content
  * 6 列内容如存在半角引号（即"）则应替换成半角双引号（""）转义，并用半角引号（即""）将该字段值包含起来。
  * 7 文件读写时引号，逗号操作规则互逆。
  * 8 内码格式不限，可为 ASCII、Unicode 或者其他。
  * 9 不支持特殊字符
+ *
+ * @deprecated User GeneralCsvConverter instead
  */
 public class Converter {
 
