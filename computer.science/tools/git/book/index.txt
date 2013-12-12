@@ -1,2 +1,13 @@
+tmp.note
 
+./000.concept
+./100.install.conf
+./120.gui
+./200.first.project
+./300.branch
+./400.add.commit
+./500.branch
+./600.log
+
+./manual/index.txt
 

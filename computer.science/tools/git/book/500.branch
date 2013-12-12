@@ -1,0 +1,57 @@
+
+git branch -m master mymaster
+    rename master to mymaster
+
+    git branch -M master mymaster
+        force to override the new branch
+
+when to create a branch
+    1. experimental changes
+    2. add new feature
+    3. bug
+
+git branch new
+git checkout new
+
+
+git checkout -b alt master
+    create a new branch alt from master
+    checkout to it
+
+branch merge
+    1. directly merge
+        git checkout alternative
+        git add about.html
+        git commit -m "add about.html"
+
+        git checkout master
+        git merge alternative
+
+    2. squash merge
+        git merge --squash contacts
+            squash all commits in the branch to one commit 
+            then merge
+
+    3. cherry-pick
+        git checkout contacts
+        edit a file and commit it
+            git commit -m "add more more contacts"
+            [contacts 44f7c5c] add more more contacts
+            1 file changed, 1 insertion(+)
+
+        git checkout master
+        git cherry-pick 44ff7c5c
+
+        # pick several commit
+        git reset --hard HEAD^
+        git cherry-pick -n 44ff7c5c
+            merge to staging area, then
+
+            git cherry-pick -n xxxx
+            git cherry-pick -n xxxx...
+            git cherry-pick -n xxxx...
+
+            git commit ...
+
+    
+git mergetool

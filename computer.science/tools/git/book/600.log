@@ -1,0 +1,122 @@
+git log
+
+git log -1
+    display only one log
+
+git log -p
+    display the diff info
+
+git log a5dacabde5a622ce8ed1d1aa1ef165c46708502d
+    dispay specific commit
+
+git log --since="5 hours" | "1 minute" | "2008.10.01"
+git log --before="5 hours"
+
+git log 18f822eb1044761f59aebaf7739261042ae10392..0bb3dfb752fa3c890ffc781fd6bd5dc5d34cd3be
+    (from..to]
+
+git log 18f822eb1044761f59aebaf7739261042ae10392..HEAD
+    (from..to]
+
+git log 18f822eb1044761f59aebaf7739261042ae10392..
+    (from..HEAD]
+
+git log 1.0..HEAD
+    (from tag..to)
+
+git log --pretty=format:"%h %s" 1.0..HEAD
+    %h hash
+    %s title
+
+git log --pretty=oneline
+
+git log 18f822e^..
+    ^ mean a commit before
+    ^^ mean two commits before
+    ~2 mean ^^
+    ~3 mean ^^^
+
+equals
+    git log HEAD^^^
+    git log HEAD~3
+    git log HEAD~1^^
+    git log HEAD^~2
+
+git log HEAD~10..HEAD
+
+diff:
+    git diff 18f822eb1044761
+        check the change of the commit
+
+    git diff --stat 1.0
+        check the change of tag 1.0
+
+blame:
+    git blame about.html
+        check who change about.html
+
+    git blame -L 12,14 about.html
+    git blame -L 12,+2 about.html
+        +2 means output 2 lines forward
+
+    git blame -L 12,-2 about.html
+        -2 means output 2 lines backward
+
+    git blame -L "/body/",+2 about
+
+
+    git blame -M original.txt
+        check copy content
+
+    git blame -C -C copy.txt
+        check copy of files
+
+revert change:
+    1. ammend changes
+        git commit -a -m "add link to blog"
+            find need to change a little bit, change code then:
+
+            git commit -C HEAD -a --amend
+                "-C commit" means reuse the information of the commit
+
+    2. revert commit
+        git revert HEAD
+            revert and commit
+
+        git revert -n HEAD
+        git revert -n xxxxx
+            git commit -m "revert more than one commits"
+
+reset change:
+    you need "reset" when the change includes a password
+
+    git reset --hard HEAD^
+        just delete it in the local repository, staging area and working tree
+
+
+    git reset --soft HEAD^
+        reset the change in the local repository
+
+        git reset HEAD original.txt
+            reset the change in the staging area
+
+        git checkout -- original.txt
+            reset the change in the working tree
+
+change commit history
+    1. change the priority of several commit
+
+        $ git log --pretty=oneline -4
+        b6d8a72807ad6bedcdfed891530c6faf32daac77 change 3
+        3a3e287d976d70f842cde1b180586c7584e85431 change 2
+        a0a146ae2cb3696b053776a2778ff1eb36e23cc8 change 1
+
+        git rebase -i HEAD^3
+            change the priority of the commit in the editor
+
+
+
+
+
+    
+

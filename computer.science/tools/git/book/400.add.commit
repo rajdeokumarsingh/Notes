@@ -1,0 +1,25 @@
+git add -i
+    interactive
+
+git add -p
+    show the diff in the working space
+
+git commit -a
+    commit all changes in the working tree
+
+git commit -m "commit message"
+
+git diff
+    working tree  <----> staging area
+
+    --cached
+        staging area <---> local repository
+
+    HEAD
+        working tree  <----> local repository
+
+git mv index.html hello.html
+
+ignore file:
+    .gitignore          # for all users
+    .git/info/exclude   # only for current user

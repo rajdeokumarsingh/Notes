@@ -1,0 +1,43 @@
+
+initialize a git working tree
+    way 1: git init
+        init a empty working tree
+
+    way 2: git clone
+        clone a existed working tree
+
+Fetch content from upstream repository
+    1. Fetch revision/branch from upstream repository
+    2. merge local change with remote change in local repository
+
+    "git pull" do above 2 steps
+
+multi-multi relationship between local repository and remote repository
+    a local repository can be push/pull to/from multiple upstream repositories
+
+
+本地仓库
+    默认branch
+        主线分支master
+
+远程仓库
+    默认名字origin
+
+
+git rm filename # remove a file in workspace
+git mv filename path # mv a file
+
+    git checkout -- filename # reverse the rm/mv
+    git commit # continue to rm/mv the file in repository
+        # can not use checkout to reverse the rm/mv after commit
+
+git fetch
+    fetch origin and create a branch
+    not do auto merge like pull
+
+    command:
+        git remote # origin
+        git fetch origin
+
+git format-patch origin/master
+

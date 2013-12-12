@@ -1,0 +1,77 @@
+1. create a empty project
+    git init
+
+2. create a file index.html
+
+3. add the index.html to staging area
+    git add index.html
+
+4. commit index.html to local repository
+    git commit -m "add in hello world html"
+
+5. check the commit
+    git log
+
+6. modify the index.html
+
+7. check status
+    git status
+
+8. add the index.html to staging area
+    git add index.html
+
+9. commit the change
+    git commit -m "add <title> in index.html" -m "allow more log"
+
+10. check the commit
+    git log -1          # only allow one log
+
+11. create new branch
+    git branch RB_1.0 master # create new branch RB_1.0 from branch master
+
+12. check branch
+    git branch
+
+13. edit the file and commit it
+
+14. check out the branch RB_1.0
+    git checkout RB_1.0
+
+15. edit the file and commit it in the new branch RB_1.0
+
+16. add a tag for the branch RB_1.0
+    git tag 1.0 RB_1.0
+
+17. check the tag
+    git tag
+
+18. check out the master branch
+    git checkout master
+
+19. merge the branch RB_1.0 to the master branch
+    git rebase RB_1.0               # now merge done!
+
+20. delete the branch RB_1.0
+    git branch -d RB_1.0        # since the branch RB_1.0 was tagged,
+                                # only the branch name is deleted.
+
+21. create a branch from the tag 1.0
+    git branch RB_1.0.1 1.0
+    git checkout RB_1.0.1
+
+22. release the project
+    git archive --format=tar --prefix=mysite-1.0/ | gzip > mysite-1.0.tar.gz
+        # --prefix=mysite-1.0 means to create a folder named mysite-1.0
+
+    git archive --format=zip --prefix=mysite-1.0/ > mysite-1.0.zip
+
+100. clone a remote project
+    mkdir work
+    cd work
+    git clone git://myproject/mysite.git mysite-remote
+            # argument: git://myproject/mysite.git 
+                remote url
+            # argument: mysite-remote
+                optional, local folder
+
+    
