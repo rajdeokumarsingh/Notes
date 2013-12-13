@@ -1,0 +1,8 @@
+git gc
+    clean and optimize local repo disk space
+
+    --aggressive
+
+git archive
+    git archive --format=zip --prefix=mysite-release-1.0/ HEAD > mysite-release.zip
+    git archive --format=tar --prefix=mysite-release-1.0/ HEAD | gzip > mysite-release.tar.gz

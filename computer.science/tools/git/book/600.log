@@ -104,7 +104,6 @@ reset change:
             reset the change in the working tree
 
 change commit history
-    1. change the priority of several commit
 
         $ git log --pretty=oneline -4
         b6d8a72807ad6bedcdfed891530c6faf32daac77 change 3
@@ -113,9 +112,6 @@ change commit history
 
         git rebase -i HEAD^3
             change the priority of the commit in the editor
-
-
-
 
 
     

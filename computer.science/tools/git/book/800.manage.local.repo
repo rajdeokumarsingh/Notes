@@ -1,0 +1,44 @@
+list tag
+    git tag
+
+create a tag
+    git tag tag_name branch_name
+
+    git tag 1.1
+    git tag contacts/1.1 contacts
+
+checkout a tag
+    git checkout 1.1
+        # better create a new branch then
+        git checkout -b from-1.1
+    
+    git checkout -b from-1.1 1.1
+        # create a new branch and checkout the tag on the branch
+        # do it at once
+
+    git branch RB_1.0.1 1.0 # create branch with tag
+    git checkout RB_1.0.1
+    # edit file and commit
+    git tag 1.0.1
+    git checkout master
+    git branch -D RB_1.0.1
+
+valid tag and branch name
+    can use '/', but it can not be the last character
+    can use '.', but it can not be the first character of each section
+
+use submodule
+    git init
+    git submodule add git://github.com/tswicegood/hocus.git hocus
+    git submodule
+    git submodule init hocus
+
+    git commit -m "init commit with submodule"
+
+clone a local repo with submodule
+    git clone submodule new-submodule
+    git submodule init hocus
+    git submodule update hocus
+        # FIXME: update will override working tree, staging area and local repo
+
+

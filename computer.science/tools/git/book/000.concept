@@ -22,6 +22,7 @@ Log/Commit Message
 
 Tag (标签)
     a alias for the internal revision number
+    tas is readonly
 
 Conflict
     situation when git can not do merge automatically
