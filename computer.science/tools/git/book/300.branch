@@ -31,6 +31,8 @@
 19. merge the branch RB_1.0 to the master branch
     git rebase RB_1.0               # now merge done!
 
+    # master rebase on RB_1.0
+
 20. delete the branch RB_1.0
     git branch -d RB_1.0        # since the branch RB_1.0 was tagged,
                                 # only the branch name is deleted.

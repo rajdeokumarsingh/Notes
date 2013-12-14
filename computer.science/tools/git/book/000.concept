@@ -68,3 +68,5 @@ HEAD
     represent the latest commit in the current branch
 
 
+rebase
+    不要在remote repo进行rebase

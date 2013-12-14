@@ -73,5 +73,20 @@ git push origin my_branch
        git checkout --track origin/my_branch
 
 
+   delete remote branch
+    # git push [远程名] [本地分支]:[远程分支] 
+    git push origin :remote_branch
+
+
+git rebase --onto master server client
+    1. 取出 client 分支，
+    2. 找出 client 分支和 server 分支的共同祖先之后的变化，
+    3. 然后把它们在master上重演一遍
+
+
+git rebase [master_branch] [feature_branch]
+    rebase feature_branch on master_branch
+        master_branch is base
+
 
 
