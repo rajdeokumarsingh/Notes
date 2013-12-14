@@ -55,3 +55,23 @@ branch merge
 
     
 git mergetool
+
+git push origin my_branch
+    push a local branch to remote repo
+
+    # equals to
+    git push origin local_br_name:remote_br_name
+
+
+    # get remote branch
+    1. git fetch origin
+
+    2. git merge origin/my_branch
+        or 
+       git checkout -b local_my_branch origin/my_branch
+        or 
+       git checkout --track origin/my_branch
+
+
+
+

@@ -48,6 +48,9 @@ branch:
 
         origin/contacts
 
+    跟踪远程分支
+        在该分支中push/pull直接会操作对应的远程分支
+        克隆时，默认会创建一个master分支跟踪origin/master
         
 revision (版本)
     record the content of a commit
