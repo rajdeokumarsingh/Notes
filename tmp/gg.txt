@@ -1,3 +1,5 @@
+update from note 1
+
 09-26 14:11:07.374   671   671 V DownloadService: Service onCreate
 09-26 14:11:07.390   671   808 V DownloadConstants: starting query, database is not null; projection[0] is _data; selection is null; selectionArgs is null; sort is null.
 09-26 14:11:07.476   671   808 V DownloadConstants: created cursor android.database.sqlite.SQLiteCursor@414ff978 on behalf of 671
