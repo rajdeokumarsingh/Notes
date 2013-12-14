@@ -4,6 +4,13 @@
 
 12. check branch
     git branch
+    git branch -v
+
+    git branch --merge
+        list merged branch
+
+    git branch --no-merge
+        list unmerge branch
 
 13. edit the file and commit it
 
