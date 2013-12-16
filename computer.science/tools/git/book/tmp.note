@@ -24,7 +24,8 @@ multi-multi relationship between local repository and remote repository
     默认名字origin
 
 
-git rm filename # remove a file in workspace
+git rm filename # remove a file in workspace and staging area
+    
 git mv filename path # mv a file
 
     git checkout -- filename # reverse the rm/mv
@@ -41,3 +42,28 @@ git fetch
 
 git format-patch origin/master
 
+文件 .gitignore 的格式规范如下：
+    所有空行或者以注释符号 ＃ 开头的行都会被 Git 忽略。
+    可以使用标准的 glob 模式匹配。 * 匹配模式最后跟反斜杠（/）说明要忽略的是目录。 * 要忽略指定模式以外的文件或目录，可以在模式前加上惊叹号（!）取反。
+
+    所谓的 glob 模式是指 shell 所使用的简化了的正则表达式。星号（*）匹配零个或多个任意字符；[abc] 匹配任何一个列在方括号中的字符（这个例子要么匹配一个 a，要么匹配一个 b，要么匹配一个 c）；问号（?）只匹配一个任意字符；如果在方括号中使用短划线分隔两个字符，表示所有在这两个字符范围内的都可以匹配（比如[0-9] 表示匹配所有 0 到 9 的数字）。
+
+    我们再看一个 .gitignore 文件的例子：
+
+    # 此为注释 – 将被 Git 忽略
+    *.a       # 忽略所有 .a 结尾的文件
+    !lib.a    # 但 lib.a 除外
+    /TODO     # 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO
+    build/    # 忽略 build/ 目录下的所有文件
+    doc/*.txt # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
+
+
+自动完成
+
+    如果你用的是 Bash shell，可以试试看 Git 提供的自动完成脚本。下载 Git 的源代码，进入 contrib/completion 目录，会看到一个git-completion.bash 文件。将此文件复制到你自己的用户主目录中（译注：按照下面的示例，还应改名加上点：cp git-completion.bash ~/.git-completion.bash），并把下面一行内容添加到你的.bashrc 文件中：
+
+    source ~/.git-completion.bash
+
+    也可以为系统上所有用户都设置默认使用此脚本。Mac 上将此脚本复制到 /opt/local/etc/bash_completion.d 目录中，Linux 上则复制到/etc/bash_completion.d/ 目录中。这两处目录中的脚本，都会在 Bash 启动时自动加载。
+
+    如果在 Windows 上安装了 msysGit，默认使用的 Git Bash 就已经配好了这个自动完成脚本，可以直接使用。

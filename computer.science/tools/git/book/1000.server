@@ -1,0 +1,31 @@
+
+protocol
+    1. local protocol
+        所谓的远程仓库在该协议中的表示，就是硬盘上的另一个目录
+
+        $ git clone /opt/git/project.git
+            # 快，使用硬链接或拷贝文件
+
+        $ git clone file:///opt/git/project.git
+            # 慢，使用网络方式拷贝文件
+
+        git remote add local_proj /opt/git/project.git
+    
+    2. ssh
+        $ git clone ssh://user@server:project.git
+        $ git clone user@server:project.git
+
+    3. git
+    4. http/https
+
+deploy
+    开始架设 Git 服务器前，需要先把现有仓库导出为裸仓库 — 
+    即一个不包含当前工作目录的仓库。做法直截了当，克隆时用 --bare 选项即可。
+    裸仓库的目录名一般以.git 结尾，像这样：
+
+    $ git clone --bare my_project my_project.git
+        整体上的效果大致相当于：
+        $ cp -Rf my_project/.git my_project.git
+
+
+

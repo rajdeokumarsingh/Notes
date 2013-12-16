@@ -32,3 +32,9 @@ git remote
     show remote repo name
 git remote -v
     show detailed repo info
+
+git remote show origin
+
+git remote rename pb paul # change pb to paul
+
+git remote rm pb # remove remote repository
