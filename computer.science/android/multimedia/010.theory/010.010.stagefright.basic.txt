@@ -1,0 +1,49 @@
+stagefright和openmax运行在两个不同的进程上
+
+stagefright的播放器类为AwesomePlayer, 几个主要的成员
+
+. mQueue(event事件队列)
+    驱动播放的框架
+
+    事件类型
+        1． onVideoEvent
+        2． onStreamDone
+        3． onBufferingUpdate
+        4． onCheckAudioStatus
+        5． onPrepareAsyncEvent
+
+. mVideoTrack(从多媒体文件中读取视频数据)
+. mVideoSource(解码视频)
+    class is "OMXCodec"
+    底层由OMXComponent负责解码
+
+. mVideoRenderer(对解码好的视频进行格式转换,android使用的格式为RGB565)
+. mISurface(重绘图层)
+
+    数据流
+        mVideoTrack->mVideoSource->mVideoRenderer->mISurface
+
+    解码流程
+        1. OMXCodec使用OMX_EmptyThisBuffer传递未解码的buffer给component
+        2. component收到该命令后会读取input port buffer中的数据,将其组装成帧进行解码
+        3. 读取buffer中的数据完成后会调用EmptyBufferDone通知OMXCodec
+
+        4. OMXCodec使用OMX_FillThisBuffer传递空的bffer给component用于存储解码后的帧,
+        5. component收到该命令后将解码好的帧数据复制到该buffer上,
+        6. 然后调用FillBufferDone通知OMXCodec
+
+
+    数据流
+          URI,FD
+            |
+        DataSource
+            |
+       MediaExtractor
+        |        |
+    mVideoTrack mAudioTrack       // 音视频数据流
+       ｜           |
+    mVideoSource mAudioSource     // 音视频解码器
+       ｜           |
+    mVideoBuffer mAudioPlayer
+        ， 
+
