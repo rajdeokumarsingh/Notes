@@ -1,0 +1,73 @@
+////////////////////////////////////////////////////////////////////////////////
+// Android HAL interfaces
+
+./Audio.HAL.config.cpp
+
+
+AudioHardwareInterface
+    Audio HAL设备控制的总体接口
+        code.reading/AudioHardwareInterface.cpp
+        AudioHardwareBase : public AudioHardwareInterface
+
+    AudioStreamOut 音频输出设备接口
+        code.reading/AudioStreamOut.h
+    AudioStreamIn  音频输入设备接口
+        code.reading/AudioStreamIn.h
+
+// Android generic audio policy manager
+
+
+AudioPolicyInterface
+    code.reading/AudioPolicyInterface.h
+    
+    通用的policy由基类AudioPolicyManagerBase实现
+        AudioPolicyManagerBase : public AudioPolicyInterface
+        // ----------------------------------------------------------------------------
+        // AudioPolicyManagerBase implements audio policy manager behavior common to all platforms.
+        // Each platform must implement an AudioPolicyManager class derived from AudioPolicyManagerBase
+        // and override methods for which the platform specific behavior differs from the implementation
+        // in AudioPolicyManagerBase. Even if no specific behavior is required, the AudioPolicyManager
+        // class must be implemented as well as the class factory function createAudioPolicyManager()
+        // and provided in a shared library libaudiopolicy.so.
+        // ----------------------------------------------------------------------------
+        code.reading/AudioPolicyManagerBase.cpp
+
+AudioPolicyClientInterface
+    code.reading/AudioPolicyClientInterface.h
+
+////////////////////////////////////////////////////////////////////////////////
+// Hareware specific implementation
+AudioHardware[hardware]: public  AudioHardwareBase[android] : public AudioHardwareInterface[android]
+    AudioStreamInMSM72xx[hardware] : public AudioStreamIn[android]
+    AudioStreamOutMSM72xx[hardware] : public AudioStreamOut[android]
+
+AudioPolicyManager[hardware]: public AudioPolicyManagerBase[android] : public AudioPolicyInterface[android]
+
+
+hardware/libhardware_legacy/include/hardware_legacy/
+    |-- AudioHardwareBase.h
+    |-- AudioHardwareInterface.h
+    |-- AudioPolicyInterface.h
+    |-- AudioPolicyManagerBase.h
+
+hardware/msm7k
+    |-- libaudio
+    |   |-- AudioHardware.cpp
+    |   |-- AudioHardware.h
+    |   |-- AudioPolicyManager.cpp
+    |   |-- AudioPolicyManager.h
+    |-- libaudio-msm7x30
+    |   |-- AudioHardware.cpp
+    |   |-- AudioHardware.h
+    |   |-- AudioPolicyManager.cpp
+    |   |-- AudioPolicyManager.h
+    |   `-- control.h
+    |-- libaudio-qdsp5v2
+    |   |-- AudioHardware.cpp
+    |   |-- AudioHardware.h
+    |   |-- AudioPolicyManager.cpp
+    |   |-- AudioPolicyManager.h
+    |   |-- msm_audio.h
+    ...
+
+

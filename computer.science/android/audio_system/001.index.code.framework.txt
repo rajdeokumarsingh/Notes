@@ -1,0 +1,94 @@
+音频策略管理
+    stream_type，strategy, device三者之间的关系：
+    ./audio.policy/stream.strategy.device.txt
+
+打开设备流程openOutput
+    ./code.reading/flow.open.output.cpp
+
+player
+    ./code.reading/flow.player.cpp
+
+recorder
+    ./code.reading/flow.recorder.cpp
+
+    setAudioSource
+        ./code.reading/flow.setAudioSource.cpp
+
+frameworks/base/media/java/android/media
+    |-- AudioManager.java
+        ./code.reading/AudioManager.java [done]
+    |-- AudioSystem.java
+        ./code.reading/AudioSystem.java [done]
+    |-- AudioService.java
+        ./code.reading/AudioService.java [done]
+
+    |-- AudioRecord.java
+        // seems few use it
+    |-- AudioTrack.java
+        // seem few use it
+        // Applications use MediaRecorder and MediaPlayer
+
+    |-- IAudioService.aidl
+
+    |-- MediaFile.java
+        定义了媒体文件的类型和MIME
+            音频类型
+            视频类型
+            图片类型
+
+            如果需要支持播放，查看新的媒体需要修改这个文件
+
+    |-- MediaPlayer.java
+    |-- MediaRecorder.java
+        对native层的简单的包装
+
+    |-- Metadata.java
+        媒体的信息， 如唱片名字，艺术家
+
+
+frameworks/base/services/audioflinger 
+    |-- AudioSystem.cpp [done]
+        ./code.reading/AudioSystem.cpp
+
+    |-- AudioPolicyService.cpp [done]
+        ./code.reading/AudioPolicyService.cpp
+
+    |-- AudioPolicyManagerBase.cpp [done]
+        ./code.reading/AudioPolicyManagerBase.cpp
+
+    |-- AudioHardwareInterface.cpp [done]
+        ./code.reading/AudioHardwareInterface.h
+        ./code.reading/AudioHardwareInterface.cpp
+
+    |-- AudioFlinger.cpp [pending]
+        ./code.reading/AudioFlinger.concept.cpp
+
+        ./code.reading/AudioFlinger.h
+        ./code.reading/AudioFlinger.cpp
+            ./code.reading/AudioFlinger_Client.cpp
+                // TODO
+
+            ./code.reading/AudioFlinger_TrackBase.cpp
+            ./code.reading/AudioFlinger_ThreadBase_TrackBase.cpp
+            ./code.reading/AudioFlinger_PlaybackThread_Track.cpp
+            ./code.reading/AudioFlinger_RecordHandle.cpp
+                including RecordThread, RecordTrack
+
+            ./code.reading/AudioFlinger_ThreadBase.cpp
+            ./code.reading/AudioFlinger_PlaybackThread.cpp
+            ./code.reading/AudioFlinger_MixerThread.cpp
+
+            ./code.reading/AudioFlinger_DirectOutputThread.cpp
+            ./code.reading/AudioFlinger_DuplicatingThread.cpp
+
+    |-- AudioHardwareGeneric.cpp
+    |-- AudioHardwareGeneric.h
+    |-- AudioHardwareStub.cpp
+    |-- AudioHardwareStub.h
+    |-- AudioDumpInterface.cpp
+    |-- AudioDumpInterface.h
+
+base/media/libmedia/
+    AudioTrack.cpp
+        ./code.reading/AudioTrack.cpp
+

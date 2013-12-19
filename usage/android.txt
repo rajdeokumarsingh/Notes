@@ -114,7 +114,7 @@ checking connectivity:
 
 onReceivedError
 
-    '\<load\( \)*[Uu]rl\( delay\)*\|shouldOverrideUrlLoading\|Controller.*\(onPause\|onResume\|onDestroy\)\|\(start\|stop\)UsingNetworkFeature\|onReceivedError\|updateStatus\|NetworkStateHandler.*NetworkInfo\|BindToDevice\|onPageStarted url\|onPageFinished url\|onLoadResource():\|FlushSocketPools\|updateStatus, setHttpProxy:\|JavaBridge.cpp\|WebUrlLoader\|chromium\|apn is\|[Uu]pdateProxy'
+    '\<load\( \)*[Uu]rl\( delay\)*\|shouldOverrideUrlLoading\|Controller.*\(onPause\|onResume\|onDestroy\)\|\(start\|stop\)UsingNetworkFeature\|onReceivedError\|updateStatus\|NetworkStateHandler.*NetworkInfo\|BindToDevice\|onPageStarted url\|onPageFinished url\|onLoadResource():\|FlushSocketPools\|updateStatus, setHttpProxy:\|JavaBridge.cpp\|WebUrlLoader\|chromium\|apn is\|[Uu]pdateProxy\|enter handleNetworkMessage'
 
 '\<Controller\|onReceivedError\|NetworkStateHandler.*NetworkInfo\|JavaBridge.cpp\|WebUrlLoader\|chromium\|apn is\|[Uu]pdateProxy\|找不到网页'
 

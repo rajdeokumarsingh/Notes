@@ -40,8 +40,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
-                // TODO:
-                // intent.setClass(MainActivity.this, DbActivity.class);
+                intent.setClass(MainActivity.this, DbActivity.class);
                 startActivity(intent);
             }
         });

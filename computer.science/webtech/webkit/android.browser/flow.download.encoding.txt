@@ -1,0 +1,41 @@
+--------------------------------------------------------------------------------
+webkit
+--------------------------------------------------------------------------------
+
+WebUrlLoader.cpp
+    void WebUrlLoader::downloadFile()
+        m_loaderClient->downloadFile();
+            |
+            V
+WebUrlLoaderClient.cpp
+void WebUrlLoaderClient::downloadFile()
+    if (m_response) {
+        std::string contentDisposition;
+        m_response->getHeader("content-disposition", &contentDisposition);
+        m_webFrame->downloadStart(m_response->getUrl(), m_request->getUserAgent(), 
+            contentDisposition, m_response->getMimeType(), m_request->getReferer(), m_response->getExpectedSize());
+
+
+WebCoreFrameBridge.cpp
+
+    void WebFrame::downloadStart(const std::string& url, const std::string& userAgent, 
+                const std::string& contentDisposition, const std::string& mimetype, 
+                const std::string& referer, long long contentLength)
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------
+framework
+--------------------------------------------------------------------------------
+BrowserFrame.java
+    private void downloadStart(String url, String userAgent,
+        String contentDisposition, String mimeType, String referer, long contentLength) 
+        |
+        | to Browser ....
+        V
+

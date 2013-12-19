@@ -3,7 +3,15 @@ package com.pekall.push.test;
 import java.net.URI;
 
 public class ConnectionTest {
+    /*
+        java -jar PushServerTest.jar 50000 lan 1000000 ws://192.168.10.233:9090/websocket
 
+        第一个参数表示 5w个连接
+        第二个参数：lan 表示局域网， inet表示外网。 目前233还没有部署到外网中。
+        第三个参数： 1000000 表示device id的开始范围。 建议测试组使用 1000,000开始的， 每台测试机器都不能够一样。
+        比如一台使用1000000, 一台使用2000000, 一台使用3000000
+        第四个参数： 自定义地址， 注意，第二个参数必须是lan时，本参数才有效。
+    */
     public static void main(String args[]) {
         Debug.setVerboseDebugLog(true);
 
@@ -40,7 +48,6 @@ public class ConnectionTest {
             PushConstant.DEVICE_BEGIN_ID = Integer.valueOf(args[2]);
             Debug.log("device begin id: " + PushConstant.DEVICE_BEGIN_ID);
         }
-
 
         Util.sleepSeconds(2);
 
