@@ -20,7 +20,8 @@ public class Debug {
      */
     public static void logVerbose(String s) {
         if(verboseDebugLog) {
-            System.out.println(s);
+            System.out.println("Thread: "  + " [" + Thread.currentThread().getName() + "] "
+                    + " -------- " + s);
         }
     }
 
@@ -29,7 +30,8 @@ public class Debug {
      * @param s log string
      */
     public static void log(String s) {
-        System.out.println(s);
+        System.out.println("Thread: "  + " [" + Thread.currentThread().getName() + "] "
+                + " -------- " + s);
     }
 
     public static void logError(String s) {

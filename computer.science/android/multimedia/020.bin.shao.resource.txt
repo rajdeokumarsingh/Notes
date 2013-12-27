@@ -19,6 +19,9 @@ http://www.360doc.com/content/11/0808/09/11192_138837697.shtml
 stagefright 框架流程解读
 http://www.360doc.com/content/11/0804/18/11192_138072560.shtml
 
+stagefright与opencore对比
+http://blog.chinaunix.net/uid-11857489-id-2814519.html
+
 Android Stagefright MPEG4Extractor分析
 http://www.cnblogs.com/shaobin0604/archive/2011/08/16/2141388.html
 
@@ -44,17 +47,22 @@ http://www.cnblogs.com/shaobin0604/archive/2011/08/05/2128619.html
 相关的工具
 -------------
 * SourceInsight 查看源代码，ubuntu下可以通过wine安装
+
 * MP4Parser, mp4 文件格式分析http://code.google.com/p/mp4parser/
+
 * MediaInfo, 查看多媒体文件格式 
 http://192.168.10.210/mediawiki/index.php/MediaInfo
 * VLC, 媒体播放器。sudo apt-get install vlc
+
+
+
+
 
 编解码学习笔记（一）：基本概念
 http://blog.csdn.net/flowingflying/article/details/5713346
 
 编解码学习笔记（二）：codec类型
 http://blog.csdn.net/flowingflying/article/details/5714003
-
 
 openmax
 http://www.360doc.com/userhome.aspx?userid=474846&cid=36

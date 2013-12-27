@@ -1,6 +1,0 @@
-
-external/chromium/net/base/net_errors_posix.cc
-    merged, added log
-
-net/socket/tcp_client_socket_libevent.cc
-    merged, added log

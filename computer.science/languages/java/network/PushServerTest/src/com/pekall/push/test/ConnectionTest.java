@@ -3,8 +3,10 @@ package com.pekall.push.test;
 import java.net.URI;
 
 public class ConnectionTest {
+
     /*
         java -jar PushServerTest.jar 50000 lan 1000000 ws://192.168.10.233:9090/websocket
+        java -jar PushServerTest.jar 50 lan 1000000 ws://192.168.8.56:9090/websocket
 
         第一个参数表示 5w个连接
         第二个参数：lan 表示局域网， inet表示外网。 目前233还没有部署到外网中。
@@ -13,10 +15,10 @@ public class ConnectionTest {
         第四个参数： 自定义地址， 注意，第二个参数必须是lan时，本参数才有效。
     */
     public static void main(String args[]) {
-        Debug.setVerboseDebugLog(true);
+        // Debug.setVerboseDebugLog(true);
 
         // begin monitor thread
-        new Thread(new Runnable() {
+        Thread monitor = new Thread(new Runnable() {
             @Override
             public void run() {
                 while (true) {
@@ -24,7 +26,9 @@ public class ConnectionTest {
                     Util.sleepSeconds(20);
                 }
             }
-        }).start();
+        });
+        monitor.setName("Statistics");
+        monitor.start();
 
         int clientCnt = 1;
         int sockCnt = Integer.valueOf(args[0]);

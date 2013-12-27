@@ -1,0 +1,108 @@
+
+MCU subsystem
+
+    Quad-core ARM CortexTM A7MP processor, up to 1.xGHz
+        NEON multimedia processing engine with SIMDv2/VFPv4 ISA support
+
+    Quad-core ARM mali400MP as 3D graphics accelerator
+
+
+Multimedia Features
+    Quad-core ARM mali400MP as 3D graphics accelerator
+
+    3D Graphics
+        OpenGL ES1.1/1.2 3D graphic
+        OpenVG 1.1
+            Flash, SVG
+
+    LCD display
+        Integrated MIPI DSI, support
+            MIPI 
+                Mobile industry processor interface
+            DSI
+                Display Serial Interface
+
+        http://wenku.baidu.com/link?url=liwLNx-z5B991UlT2iBYJJTleMnXkFbv4LYOV9aZPOB4ARaePkwoEmP79FDReSzmIgUCJMU9gpyx50yY2U0Jli6sN-CLZ-0SyZlDNpFdpuK
+
+        WXGA(1280x800)
+        Support 2 layers 
+            one is image 
+            another is OSD
+                OSD是on-screen display的简称，即屏幕菜单式调节方式。
+                一般是按Menu键后屏幕弹出的显示器各项调节项目信息的矩形菜单
+
+            data format in image layer:
+                Support YUV422/YUV420/YUV400/RGB888/RGB565/RGB666/RGB555/PACK
+
+            data format in OSD layer:
+                Support RGB888/RGB565/RGB666/RGB555/PACK 
+
+            Support dithering, RGB888->RGB666, RGB888->RGB565
+                Dithering (抖动显示): 它是一种欺骗你眼睛，使用有限的色彩让你看到比实际图象更多色彩的显示方式
+
+    Image Sensor Interface
+        n Support JPEG image sensor sizes up to 8M pixels
+        n Support YUV image sensor sizes up to 3M pixels
+        n Support raw-RGB image sensor sizes up to 13Mpixels
+
+        Integrated MIPI CSI, support
+        Compliance to MIPI Alliance specification for Camera Serial Interface2 (CSI-2), version 1.00
+        Compliance to MIPI Alliance specification for D-PHY, version 1.00.00
+
+    Image signal processor
+        n Support scaling down/up functions, scaling factors from 1/4 to 2
+        n Support hardware rotation
+        n Support JPEG decoder baseline profile, as defined in ISO/IEC 10918-1, with sizes
+                up to 8M pixels, and color format YUV444, YUV422/YUV422R, YUV420, YUV411/YUV411R or gray scale
+        n Support JPEG encoder baseline profile, as defined in ISO/IEC 10918-1, with sizes
+            up to 8M pixels, and color format YUV422 or YUV420
+        n Support PNG, GIF decoder
+
+    Video codec
+        H.264 encoder for Baseline Profile upto Level 3.1 1080p 30fps
+        MPEG4 encoder for Simple Profile upto 1080p 30fps
+        H.264 decoder for Baseline Profile, Main Profile and High Profile upto Level 4.1
+        1080p 30fps
+        H264 stereo decoding 720p 30fps
+        MPEG4 decoder for Simple Profile, Advanced Simple Profile upto 1080p 30fps
+        H.263 decoder for Baseline profile upto 1080p 30fps
+        Real video decoder for profilr 8/9/10 upto 1080p 30fps
+        VC1 decoder for simple profile, main profile upto high level 1080p 30fps
+        VP8 decoder for upto 1080p 30fps
+
+        Multiple codec: supports up to 1 decoding and 1 encoding processes
+        simultaneously, each process can have a different format
+
+    Graphic Signal Processor
+        n Support 2 mode of 2 layer alpha blending and color key.(layer1 is bottom layer,layer2 is uppermost layer),
+        n Support image and OSDs blending; OSDs blending;
+        n Support clipping;
+        n Support 90,180 and 270 degree rotation, flip horizontal and flip vertical in each layer.
+        n Support layer1 scaling from 1/4~4, and in fetch phase, implement 1/2, 1/4 down sample
+            before scaling. No support scale up and down in different direction synchronously
+        n Support alpha scaling.
+        n Support BitBlt
+        n Support command queue mode for BitBlt (only for layer2 )
+        n Support dithering RGB888 to RGB565;
+        n Support endian configures.
+
+    Audio codec
+        n Support MP3/AAC/AAC+/WMA/DRA/AMR-NB decoding
+        n PCM record and playback
+        n Digital audio playback
+
+        n Wavetable synthesis up to 64 tones
+
+
+Audio Subsystem
+    
+    a mono Analog to Digital Converter (ADC)
+    a stereo Digital to Analog Converter (DAC)
+
+    recording
+        8 KHz to 48 KHz stereo recording
+
+    playback
+        8 KHz mono voice playback to audio stereo 48 KHz DAC playback
+
+

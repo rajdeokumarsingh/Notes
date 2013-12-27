@@ -1,2 +1,0 @@
-
-./browser.wifi.switch.txt

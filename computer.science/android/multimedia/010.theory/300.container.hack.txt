@@ -1,0 +1,39 @@
+formula
+    # bit rate = file size / duration
+    # sample rate * duration * (bit depth/8) * channel number = stream size
+
+cd android/frameworks/base/media/tests/contents/media_api/music
+
+$mediainfo bzk_chic.wav 
+    General
+    Complete name                            : bzk_chic.wav
+    Format                                   : Wave
+    File size                                : 46.0 KiB
+    Duration                                 : 2s 129ms
+    Overall bit rate mode                    : Constant
+    Overall bit rate                         : 177 Kbps
+    Writing application                      : GoldWave v2.11 (C) Chris Craig
+
+    # bit rate = file size / duration
+    # 46.0 * 1024 * 8 / 2.129 = 176999 ~= 177,000
+
+    Audio
+    ID                                       : 0
+    Format                                   : PCM
+    Format settings, Endianness              : Little
+    Codec ID                                 : 1
+    Duration                                 : 2s 129ms
+    Bit rate mode                            : Constant
+    Bit rate                                 : 176.4 Kbps
+    Channel(s)                               : 1 channel
+    Sampling rate                            : 11.025 KHz
+    Bit depth                                : 16 bits
+    Stream size                              : 45.9 KiB (100%)
+
+    # bit rate = file size / duration
+    # 45.9 * 1024 * 8 / 2.129 = 176614 ~= 176,400
+
+    # sample rate * duration * (bit depth/8) * channel number = stream size
+    11025 * 2.129 * (16/2) * 1 /1024 ~= 45.9
+
+

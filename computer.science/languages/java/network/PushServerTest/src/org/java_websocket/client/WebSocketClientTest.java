@@ -119,6 +119,7 @@ public abstract class WebSocketClientTest
         handshakeDone = false;
 
         recvThread = new Thread(this);
+        recvThread.setName("recv thread");
         recvThread.start();
 
         Debug.log("wait for handshake ...");
@@ -165,13 +166,14 @@ public abstract class WebSocketClientTest
 	}
 
     public void register(int id) {
+        Debug.log("register, id: " + PushConstant.DEVICE_ID_PREFIX +
+                PushConstant.DEVICE_BEGIN_ID + id);
         send(PushMessageManager.genShakeHandMessage(
                 PushConstant.DEVICE_BEGIN_ID + id).toJson(), id);
     }
 
     void send(String text, int id) throws NotYetConnectedException {
         if (engines[id] == null || !engines[id].isOpen()) return;
-        Debug.logVerbose("register msg, id: " + id + ", msg: " + text);
         engines[id].send(text);
     }
 
@@ -282,6 +284,7 @@ public abstract class WebSocketClientTest
     private void createSendThread() {
         Debug.log("create send thread");
         sendThread = new Thread(new WebsocketWriteThread());
+        sendThread.setName("send thread");
         sendThread.start();
     }
 
@@ -293,7 +296,7 @@ public abstract class WebSocketClientTest
 
             try {
                 Debug.log("init socket: " + i);
-
+                                             ws://192.168.10.233:9090/websocket
                 sockets[i] = new Socket(proxy);
                 sockets[i].connect(new InetSocketAddress(uri.getHost(), getPort()), connectTimeout);
                 sockInStreams[i] = sockets[i].getInputStream();
@@ -451,6 +454,7 @@ public abstract class WebSocketClientTest
             Debug.logError("can not find socket");
             return;
         }
+
         register(i);
     }
 
@@ -543,7 +547,7 @@ public abstract class WebSocketClientTest
 		@Override
 		public void run() {
             Debug.log("send thread created");
-            Thread.currentThread().setName("WebsocketWriteThread");
+            // Thread.currentThread().setName("WebsocketWriteThread");
 
             while (!Thread.interrupted()) {
                 // accelerate sending speed

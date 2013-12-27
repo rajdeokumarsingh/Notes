@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="zh-cn"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/gpt.js" type="text/javascript" async=""></script><script src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/ga.js" async="" type="text/javascript"></script>
+<meta charset="utf-8">
+<title>stagefright与opencore对比(转) - 刘品 - 博客园</title>
+<link type="text/css" rel="stylesheet" href="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/style.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/huaping-audio/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/huaping-audio/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/huaping-audio/wlwmanifest.xml">
+<script src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/jquery.js" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'huaping-audio';</script>
+<script src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/blog-common.js" type="text/javascript"></script>
+<script src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/pubads_impl_32.js" type="text/javascript" async=""></script><script src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/osd.js" type="text/javascript"></script></head>
+<body>
+<a name="top"></a>
+
+<!--done-->
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+	<td width="184" background="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94(%E8%BD%AC)%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/banner1.gif"></td>
+	<td background="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94(%E8%BD%AC)%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/banner.gif">
+<!--done-->
+<div class="header">
+	<div class="headerText">
+		<a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/huaping-audio/">刘品</a><br>
+		<span style="font-size:12px;color:#4371A6;padding-left:20;">学以致用---博主简
+介：专注语音、视频数字信号处理方面的研究以及算法在手机平台上面的移植和优化。涉及语音/音频编解码，语音增强，语音识别，语音音质客观评估，VOIP
+语音引擎 Qos算法模块和声音变速不变调和变调不变速等功能实现。熟悉ARM 各个系列的CPU，用ARMv4,ARMv5,ARMv6 and 
+Cortex Neon 汇编优化相关算法代码，争取perforamance 最优。目前主要Windows mobile and Android 
+platform上做相关speech/audio算法以及应用开发, HEVC 编解码器PC 
+和手机上的开发与应用。(交流Email:liupin.2008@gmail.com)</span>
+	</div>
+</div>
+</td>
+	<td width="295" background="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94(%E8%BD%AC)%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/banner2.gif"></td>
+</tr>
+</tbody></table>
+<div id="mylinks">
+<!--done-->
+<a id="MyLinks1_HomeLink" class="menu" href="http://www.cnblogs.com/">博客园</a>&nbsp;&nbsp;&nbsp;<a id="MyLinks1_MyHomeLink" class="mainmenu" href="http://www.cnblogs.com/huaping-audio/">首页</a>&nbsp;&nbsp;&nbsp;<a id="MyLinks1_NewPostLink" class="mainmenu" rel="nofollow" href="http://www.cnblogs.com/huaping-audio/admin/EditPosts.aspx?opt=1">新随笔</a>&nbsp;&nbsp;&nbsp;<a id="MyLinks1_NewArticleLink" class="mainmenu" href="http://www.cnblogs.com/EnterMyBlog.aspx?NewArticle=1">新文章</a>&nbsp;&nbsp;&nbsp;<a id="MyLinks1_ContactLink" accesskey="9" class="mainmenu" rel="nofollow" href="http://space.cnblogs.com/msg/send/%e5%88%98%e5%93%81">联系</a>&nbsp;&nbsp;&nbsp;<a id="MyLinks1_Syndication" class="mainmenu" href="http://www.cnblogs.com/huaping-audio/rss">订阅</a><a id="MyLinks1_XMLLink" href="http://www.cnblogs.com/huaping-audio/rss"><img src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/xml.gif" alt="订阅"></a>&nbsp;&nbsp;&nbsp;<a id="MyLinks1_Admin" class="menu" rel="nofollow" href="http://www.cnblogs.com/huaping-audio/admin/EditPosts.aspx">管理</a>
+</div>
+<div id="mytopmenu">
+	
+		<div id="mystats">
+			
+<!--done-->
+<div class="blogStats">
+posts - 358,comments - 418,trackbacks - 1
+
+</div></div>
+	
+</div>
+<div id="leftcontent">
+	
+		<div id="leftcontentcontainer">
+			<div id="blog-calendar-block" style=""><div id="blog-calendar"><table id="blogCalendar" class="Cal" title="日历" cellpadding="0" cellspacing="0">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar('2011/01/01');return false;">&lt;</a></td><td align="center">2011年2月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar('2011/03/01');return false;">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" abbr="日" scope="col" align="center">日</th><th class="CalDayHeader" abbr="一" scope="col" align="center">一</th><th class="CalDayHeader" abbr="二" scope="col" align="center">二</th><th class="CalDayHeader" abbr="三" scope="col" align="center">三</th><th class="CalDayHeader" abbr="四" scope="col" align="center">四</th><th class="CalDayHeader" abbr="五" scope="col" align="center">五</th><th class="CalDayHeader" abbr="六" scope="col" align="center">六</th></tr><tr><td class="CalOtherMonthDay" align="center">30</td><td class="CalOtherMonthDay" align="center">31</td><td align="center">1</td><td align="center">2</td><td align="center">3</td><td align="center">4</td><td class="CalWeekendDay" align="center">5</td></tr><tr><td class="CalWeekendDay" align="center">6</td><td align="center">7</td><td align="center">8</td><td align="center"><a href="http://www.cnblogs.com/huaping-audio/archive/2011/02/09.html"><u>9</u></a></td><td align="center"><a href="http://www.cnblogs.com/huaping-audio/archive/2011/02/10.html"><u>10</u></a></td><td align="center">11</td><td class="CalWeekendDay" align="center">12</td></tr><tr><td class="CalWeekendDay" align="center">13</td><td align="center">14</td><td align="center">15</td><td align="center">16</td><td align="center">17</td><td align="center"><a href="http://www.cnblogs.com/huaping-audio/archive/2011/02/18.html"><u>18</u></a></td><td class="CalWeekendDay" align="center">19</td></tr><tr><td class="CalWeekendDay" align="center">20</td><td align="center"><a href="http://www.cnblogs.com/huaping-audio/archive/2011/02/21.html"><u>21</u></a></td><td align="center">22</td><td align="center">23</td><td align="center">24</td><td align="center">25</td><td class="CalWeekendDay" align="center"><a href="http://www.cnblogs.com/huaping-audio/archive/2011/02/26.html"><u>26</u></a></td></tr><tr><td class="CalWeekendDay" align="center"><a href="http://www.cnblogs.com/huaping-audio/archive/2011/02/27.html"><u>27</u></a></td><td align="center"><a href="http://www.cnblogs.com/huaping-audio/archive/2011/02/28.html"><u>28</u></a></td><td class="CalOtherMonthDay" align="center">1</td><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td><td class="CalOtherMonthDay" align="center">4</td><td class="CalOtherMonthDay" align="center">5</td></tr><tr><td class="CalOtherMonthDay" align="center">6</td><td class="CalOtherMonthDay" align="center">7</td><td class="CalOtherMonthDay" align="center">8</td><td class="CalOtherMonthDay" align="center">9</td><td class="CalOtherMonthDay" align="center">10</td><td class="CalOtherMonthDay" align="center">11</td><td class="CalOtherMonthDay" align="center">12</td></tr>
+</tbody></table></div>
+</div><br>
+			
+<!--done-->
+<div class="newsItem">
+	<div id="blog-news"><embed src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/0009-Green.swf" height="150" width="150">
+<embed src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/a.html" type="audio/mpeg" loop="true" autostart="true" height="45" width="200"><div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/huaping-audio/">刘品</a><br>园龄：<a href="http://home.cnblogs.com/u/huaping-audio/" title="入园时间：2008-03-31">5年8个月</a><br>粉丝：<a href="http://home.cnblogs.com/u/huaping-audio/followers/">170</a><br>关注：<a href="http://home.cnblogs.com/u/huaping-audio/followees/">1</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="cnblogs.UserManager.FollowBlogger('4e33420b-63cf-dd11-9e4d-001cf0cd104b')">+加关注</a></div></div></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="blog-sidecolumn">
+
+<div class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div id="widget_my_zzk" class="div_my_zzk"><input id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk" type="text">&nbsp;<input onclick="zzk_go()" value="找找看" id="btnZzk" class="btn_my_zzk" type="button"></div>
+<div id="widget_my_google" class="div_my_zzk"><input name="google_q" id="google_q" onkeydown="return google_go_enter(event)" class="input_my_zzk" type="text">&nbsp;<input onclick="google_go()" value="谷歌搜索" class="btn_my_zzk" type="button"></div>
+</div>
+
+
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+
+		<li><a id="ctl01_rptMainLinks_lnkLinkItem_0" href="http://www.cnblogs.com/huaping-audio/p/">我的随笔</a></li>
+	
+		<li><a id="ctl01_rptMainLinks_lnkLinkItem_1" href="http://www.cnblogs.com/huaping-audio/MyComments.html">我的评论</a></li>
+	
+		<li><a id="ctl01_rptMainLinks_lnkLinkItem_2" title="我发表过评论的随笔" href="http://www.cnblogs.com/huaping-audio/OtherPosts.html">我的参与</a></li>
+	
+		<li><a id="ctl01_rptMainLinks_lnkLinkItem_3" href="http://www.cnblogs.com/huaping-audio/RecentComments.html">最新评论</a></li>
+	
+		<li><a id="ctl01_rptMainLinks_lnkLinkItem_4" href="http://www.cnblogs.com/huaping-audio/tag/">我的标签</a></li>
+	
+</ul>
+<div id="itemListLin_con" style="display:none;">
+
+</div>
+<!--done-->
+
+		<h1 class="catListTitle">随笔分类<span style="font-size:11px;font-weight:normal">(297)</span></h1>
+		
+				<ul class="catList">
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_0_Link_0" class="listitem" href="http://www.cnblogs.com/huaping-audio/category/154219.html">C/C++学习(11)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_0_Link_1" class="listitem" href="http://www.cnblogs.com/huaping-audio/category/154218.html">directshow filter编程(7)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_0_Link_2" class="listitem" href="http://www.cnblogs.com/huaping-audio/category/154233.html">windows编程基础(10)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_0_Link_3" class="listitem" href="http://www.cnblogs.com/huaping-audio/category/154224.html">爱情、亲情(10)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_0_Link_4" class="listitem" href="http://www.cnblogs.com/huaping-audio/category/225567.html">流媒体(37)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_0_Link_5" class="listitem" href="http://www.cnblogs.com/huaping-audio/category/154230.html">嵌入式CPU学习(27)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_0_Link_6" class="listitem" href="http://www.cnblogs.com/huaping-audio/category/154227.html">生活常识(15)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_0_Link_7" class="listitem" href="http://www.cnblogs.com/huaping-audio/category/164016.html">思维与哲学(9)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_0_Link_8" class="listitem" href="http://www.cnblogs.com/huaping-audio/category/154223.html">算法与数据结构学习(15)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_0_Link_9" class="listitem" href="http://www.cnblogs.com/huaping-audio/category/154222.html">项目小结(11)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_0_Link_10" class="listitem" href="http://www.cnblogs.com/huaping-audio/category/154217.html">音频算法研究与应用(132)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_0_Link_11" class="listitem" href="http://www.cnblogs.com/huaping-audio/category/154235.html">英文提升学习(1)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_0_Link_12" class="listitem" href="http://www.cnblogs.com/huaping-audio/category/154220.html">职业规划(12)</a></li>
+			
+				</ul>
+			
+	
+		<h1 class="catListTitle">随笔档案<span style="font-size:11px;font-weight:normal">(358)</span></h1>
+		
+				<ul class="catList">
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_0" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2013/12.html">2013年12月 (2)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_1" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2013/11.html">2013年11月 (1)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_2" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2013/10.html">2013年10月 (2)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_3" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2013/09.html">2013年9月 (4)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_4" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2013/08.html">2013年8月 (2)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_5" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2013/07.html">2013年7月 (1)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_6" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2013/06.html">2013年6月 (2)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_7" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2013/05.html">2013年5月 (2)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_8" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2013/04.html">2013年4月 (3)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_9" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2013/03.html">2013年3月 (1)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_10" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2013/02.html">2013年2月 (1)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_11" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2013/01.html">2013年1月 (2)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_12" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2012/12.html">2012年12月 (1)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_13" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2012/11.html">2012年11月 (2)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_14" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2012/10.html">2012年10月 (7)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_15" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2012/09.html">2012年9月 (2)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_16" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2012/08.html">2012年8月 (3)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_17" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2012/07.html">2012年7月 (3)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_18" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2012/06.html">2012年6月 (3)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_19" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2012/05.html">2012年5月 (1)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_20" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2012/04.html">2012年4月 (2)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_21" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2012/03.html">2012年3月 (3)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_22" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2012/02.html">2012年2月 (2)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_23" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2012/01.html">2012年1月 (1)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_24" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2011/12.html">2011年12月 (4)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_25" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2011/11.html">2011年11月 (3)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_26" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2011/10.html">2011年10月 (4)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_27" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2011/09.html">2011年9月 (7)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_28" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2011/08.html">2011年8月 (4)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_29" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2011/07.html">2011年7月 (2)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_30" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2011/06.html">2011年6月 (4)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_31" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2011/05.html">2011年5月 (2)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_32" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2011/04.html">2011年4月 (7)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_33" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2011/03.html">2011年3月 (2)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_34" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2011/02.html">2011年2月 (8)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_35" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2011/01.html">2011年1月 (7)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_36" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2010/12.html">2010年12月 (5)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_37" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2010/11.html">2010年11月 (7)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_38" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2010/10.html">2010年10月 (2)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_39" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2010/09.html">2010年9月 (10)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_40" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2010/08.html">2010年8月 (7)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_41" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2010/07.html">2010年7月 (13)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_42" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2010/06.html">2010年6月 (9)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_43" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2010/05.html">2010年5月 (7)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_44" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2010/04.html">2010年4月 (14)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_45" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2010/03.html">2010年3月 (12)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_46" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2010/02.html">2010年2月 (3)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_47" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2010/01.html">2010年1月 (12)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_48" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2009/12.html">2009年12月 (19)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_49" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2009/11.html">2009年11月 (11)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_50" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2009/10.html">2009年10月 (5)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_51" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2009/09.html">2009年9月 (4)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_52" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2009/08.html">2009年8月 (5)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_53" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2009/07.html">2009年7月 (2)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_54" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2009/06.html">2009年6月 (1)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_55" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2009/05.html">2009年5月 (4)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_56" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2009/04.html">2009年4月 (7)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_57" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2009/03.html">2009年3月 (8)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_58" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2009/02.html">2009年2月 (2)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_59" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2008/12.html">2008年12月 (4)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_60" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2008/11.html">2008年11月 (8)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_61" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2008/10.html">2008年10月 (7)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_62" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2008/09.html">2008年9月 (17)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_63" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2008/08.html">2008年8月 (15)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_64" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2008/07.html">2008年7月 (7)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_65" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2008/06.html">2008年6月 (3)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_66" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2008/05.html">2008年5月 (7)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_67" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2008/04.html">2008年4月 (12)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_68" class="listitem" href="http://www.cnblogs.com/huaping-audio/archive/2008/03.html">2008年3月 (2)</a></li>
+			
+				</ul>
+			
+	
+		<h1 class="catListTitle">文章档案<span style="font-size:11px;font-weight:normal">(1)</span></h1>
+		
+				<ul class="catList">
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_2_Link_0" class="listitem" rel="nofollow" href="http://www.cnblogs.com/huaping-audio/archives/2012/01.html">2012年1月 (1)</a></li>
+			
+				</ul>
+			
+	
+		<h1 class="catListTitle">相册</h1>
+		
+				<ul class="catList">
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_3_Link_0" class="listitem" rel="nofollow" href="http://www.cnblogs.com/huaping-audio/gallery/249617.html">Fashion</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_3_Link_1" class="listitem" rel="nofollow" href="http://www.cnblogs.com/huaping-audio/gallery/215219.html">ongoing</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_3_Link_2" class="listitem" rel="nofollow" href="http://www.cnblogs.com/huaping-audio/gallery/241210.html">半岁了！</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_3_Link_3" class="listitem" rel="nofollow" href="http://www.cnblogs.com/huaping-audio/gallery/218181.html">我满月了啦 </a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_3_Link_4" class="listitem" rel="nofollow" href="http://www.cnblogs.com/huaping-audio/gallery/214957.html">我女儿出生第二天的照片</a></li>
+			
+				</ul>
+			
+	
+		<h1 class="catListTitle">directshow</h1>
+		
+				<ul class="catList">
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_4_Link_0" class="listitem" rel="nofollow" href="http://www.vckbase.com/vckbase/columnist/yangfeng">com</a></li>
+			
+				</ul>
+			
+	
+		<h1 class="catListTitle">MMX</h1>
+		
+				<ul class="catList">
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_5_Link_0" class="listitem" rel="nofollow" href="http://dev.gameres.com/articles.asp?style=o&amp;page=1">VC++ optimization</a></li>
+			
+				</ul>
+			
+	
+		<h1 class="catListTitle">不错的blog</h1>
+		
+				<ul class="catList">
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_6_Link_0" class="listitem" rel="nofollow" href="http://www.cnblogs.com/showna/articles/887611.html">OPENH323协议栈结构 </a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_6_Link_1" class="listitem" href="http://blog.csdn.net/li_guotao/archive/2009/09/11/4541161.aspx">Windows mobile</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_6_Link_2" class="listitem" href="http://blog.csdn.net/lius1984/archive/2009/04/28/4131393.aspx">流媒体</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_6_Link_3" class="listitem" rel="nofollow" href="http://blog.youxu.info/">徐宥</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_6_Link_4" class="listitem" href="http://blog.csdn.net/pongba/archive/2008/07/08/2625115.aspx">学习的习惯</a></li>
+			
+				</ul>
+			
+	
+		<h1 class="catListTitle">代码欣赏</h1>
+		
+				<ul class="catList">
+			
+				</ul>
+			
+	
+		<h1 class="catListTitle">优化例子</h1>
+		
+				<ul class="catList">
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_8_Link_0" class="listitem" href="http://www.cnblogs.com/nickelzhang/archive/2008/10/27/1320079.html">http://www.cnblogs.com/nickelzhang/archive/2008/10/27/1320079.html</a></li>
+			
+				</ul>
+			
+	
+
+<h3>积分与排名</h3>
+<ul>
+	<li>
+		积分 -
+		176378
+	</li><li>
+		排名 -
+		602
+	</li>
+</ul>
+
+<h3 class="catListTitle">最新评论</h3>
+<div class="RecentComment" id="RecentComments">
+	<div id="RecentCommentsBlock"><ul>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/huaping-audio/archive/2008/07/04/1235982.html#2828911">1. Re:音频编码汇总</a></li>
+    <li class="recent_comment_body">博主有关于 线性预测编码方面的资料吗  急求 谢谢！！</li>
+    <li class="recent_comment_author">--yjwmml</li>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/huaping-audio/archive/2008/07/13/1241926.html#2808850">2. Re:DTMF软编解码</a></li>
+    <li class="recent_comment_body"><a href="#2802395" title="查看所回复的评论" onclick="commentManager.renderComments(0,50,2802395);">@</a>taopj<br>    这项目08年就完工了。</li>
+    <li class="recent_comment_author">--刘品</li>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/huaping-audio/archive/2008/07/13/1241926.html#2802395">3. Re:DTMF软编解码</a></li>
+    <li class="recent_comment_body">你好<br>我现在有一个项目正好需要这个功能 ，不知现在你写的软件怎么样了，有软件具体怎么实现？</li>
+    <li class="recent_comment_author">--taopj</li>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/huaping-audio/p/3306912.html#2772360">4. Re:Fraunhofer音频技术为MPEG未来高品质3D音频内容传输的标准依据</a></li>
+    <li class="recent_comment_body">唉，还没打完草稿就开始吹牛了啊。。。<br>FhG的公关做的果然不错。。。</li>
+    <li class="recent_comment_author">--诗云^海风</li>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/huaping-audio/p/3301575.html#2770434">5. Re:骨传导技术(转)</a></li>
+    <li class="recent_comment_body">lol, amazing!</li>
+    <li class="recent_comment_author">--DarkHorse</li>
+</ul>
+</div>
+</div>
+
+<h3 class="catListTitle">阅读排行榜</h3>
+<div class="RecentComment" id="TopViewPosts"> 
+	<div id="TopViewPostsBlock"><ul><li><a href="http://www.cnblogs.com/huaping-audio/archive/2009/05/26/1490455.html">1. 如何在Windows下搭建Android开发环境(转)(43799)</a></li><li><a href="http://www.cnblogs.com/huaping-audio/archive/2010/11/03/1868203.html">2. 麦克风里有电流声,杂音怎么办(41513)</a></li><li><a href="http://www.cnblogs.com/huaping-audio/archive/2009/08/27/1555089.html">3. android上进行c/C++开发测试(转)(14196)</a></li><li><a href="http://www.cnblogs.com/huaping-audio/archive/2008/06/19/1224287.html">4. speech codec (G.711, G.723, G.726, G.729, iLBC)(13757)</a></li><li><a href="http://www.cnblogs.com/huaping-audio/archive/2011/02/10/1950871.html">5. win7下DS、KS、ASIO、WASAPI输出比较(转)(13531)</a></li></ul></div>
+</div>
+
+<h3 class="catListTitle">评论排行榜</h3>
+<div class="RecentComment" id="TopCommentsPosts">
+	<div id="TopFeedbackPostsBlock"><ul><li><a href="http://www.cnblogs.com/huaping-audio/archive/2008/04/30/1178241.html">1. 语音信号处理(45)</a></li><li><a href="http://www.cnblogs.com/huaping-audio/archive/2011/06/11/2078129.html">2. 谷歌开放实时通信框架WebRTC源代码(40)</a></li><li><a href="http://www.cnblogs.com/huaping-audio/archive/2008/06/19/1224287.html">3. speech codec (G.711, G.723, G.726, G.729, iLBC)(28)</a></li><li><a href="http://www.cnblogs.com/huaping-audio/archive/2008/08/07/1263308.html">4. 语音音质客观评估(23)</a></li><li><a href="http://www.cnblogs.com/huaping-audio/archive/2011/07/04/2097592.html">5. iOS  NEON 介绍(10)</a></li></ul></div>
+</div>
+<h3 class="catListTitle">推荐排行榜</h3>
+<div class="RecentComment">
+	<div id="TopDiggPostsBlock"><ul><li><a href="http://www.cnblogs.com/huaping-audio/archive/2011/06/11/2078129.html">1. 谷歌开放实时通信框架WebRTC源代码(3)</a></li><li><a href="http://www.cnblogs.com/huaping-audio/archive/2008/07/15/1243699.html">2. 几种快速傅里叶变换(FFT)的C++实现(2)</a></li><li><a href="http://www.cnblogs.com/huaping-audio/archive/2009/11/25/1610280.html">3. FFT 物理意义(转)(2)</a></li><li><a href="http://www.cnblogs.com/huaping-audio/archive/2009/11/25/1610277.html">4. 栅栏效应，频谱泄露，旁瓣效应(转)(2)</a></li><li><a href="http://www.cnblogs.com/huaping-audio/archive/2011/10/26/2225085.html">5. 多媒体云计算(转)(2)</a></li></ul></div>
+</div></div><script type="text/javascript">loadBlogSideColumn();</script></div>
+	
+</div>
+<div id="centercontent">
+	
+
+<!--done-->
+<div class="post">
+	<div class="postTitle">
+		<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/huaping-audio/archive/2011/02/18/1957482.html">stagefright与opencore对比(转)</a>
+	</div>
+	<div id="cnblogs_post_body"><p><strong><span size="3" style="font-size: small;">1引言</span></strong><br>Android froyo版本多媒体引擎做了变动，新添加了stagefright框架，并且默认情况android选择stagefright，弃用之前的opencore，仅仅对opencore中的omx-component部分做了引用。<br>Stagefright
+自android2.0后才添加，其稳定性有待商榷，是否存在bug也未知，opencore自android诞生起便存在，稳定性有保障。不过，从目前
+android代码看，opencore有被stagefright取代的趋势，所以在opencore上所作工作也许会无法沿用。Opencore上的
+开发较stagefright上要复杂耗时些。</p>
+<p><strong><span size="3" style="font-size: small;">2框架变动<br></span></strong>以MediaPlayer为例，我们先看一下多媒体的简单框架。<br>&nbsp;<img src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/100927170944.png"><br>上图可知，stagefright是在MediaPlayerService这一层加入的，和opencore是并列的，在选用opencore还是stagefright的代码切换上也非常容易。<br>&nbsp;
+具体stagefright的内部变动，可见下图概述。Stagefright并没有完全抛弃opencore，主要是做了一个OMX层，用来引用
+opencore的omx-component部分。而stagefright内部而言，与opencore是完全不同的设计。<br>&nbsp;<img src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/100927170954.png"> </p>
+<p><strong><span size="3" style="font-size: small;">3具体差异</span></strong><br><strong>3.1所支持的文件格式</strong><br>Opencore所支持的格式。<br><img src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/100927191834.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>Stagefright所支持的格式。<br><img src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/100927191841.png"></p>
+<p><br><strong>3.2 Parser和codec部分开发有差异</strong><br>&nbsp;Opencore与
+stagefright两套机制，对于我们的开发而言，主要体现在parser和codec部分。Opencore方面，必须按照其规范完成相应的
+parser-node，codec则要按照omx规范实现相应的component。Stagefright方面，则要按照其规范实现相应的
+extractor和decoder。<br>&nbsp;最基本的实现，二者是相同的，可以共用，差别在封装上，opencore难度和工作量要大。</p>
+<p><br><strong>3.3 数据处理机制不同</strong><br>Opencore处理流程如下图示。<br>&nbsp;<img src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/100927170959.png"><br>&nbsp;engine分别创建audio/video datapath，parser/dec/sink作为node节点由各自datapath连接起来，后续node节点由统一调度器调度。<br>Stagefright处理流程如下图示。<br>&nbsp;<img src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/100927171005.png"><br>&nbsp;Audioplayer
+为AwesomePlayer的成员，audioplayer通过callback来驱动数据的获取，awesomeplayer则是通过
+videoevent来驱动。二者有个共性，就是数据的获取都抽象成mSource-&gt;Read()来完成，且read内部把parser和dec
+绑在一起。<br>&nbsp;Opencore和stagefright处理机制对比：<br>&nbsp;（1）Opencore的parser与dec是分离的，各行其职；stagefright则是绑在一起作为一个独立的原子操作。<br>&nbsp;（2）Stagefright通过callback和videoevent来驱动数据输出；opencore是通过sink-node节点控制输出。<br>&nbsp;（3）Opencore中parser/dec/sink是并行处理的；stagefright中为串行处理。</p>
+<p><strong>3.4 AV同步</strong><br>&nbsp;Opencore有一个主clock，audio/video分别与该主clock同步，作为输出的判定依据，且audio会不断校准主clock。<br>&nbsp;Stagefright部分，audio完全是callback驱动数据流，video部分在onVideoEvent里会获取audio的时间戳，是传统的AV时间戳做同步。</p>
+<p><strong>3.5 稳定性<br></strong>&nbsp;客观来讲，opencore存在时间长，相对稳定；stagefright刚推出，肯定会有未预知的bug存在。</p>
+<p><strong><span size="3" style="font-size: small;">4 总结<br></span></strong>1.Opencore相对成熟稳定，作为框架采用，风险小；parser/codec集成相对复杂，如果android后续版本弃用opencore转用stagefright，那多媒体引擎的选择是个问题。<br>2.Stagefright新推出，肯定有未预知的bug，直接采用有潜在风险；parser/codec集成相对容易，架构较opencore做了极大简化，通俗易懂。<br>3.目前来看opencore支持的文件格式多些。<br>4.Opencore与stagefright在数据处理机制及AV同步上有很大差异，需要在实际板子上评估性能差异。<br>5.如果在android froyo版本开发多媒体相关产品，建议采用opencore框架，这样旧版本opencore上的成果可以沿用，且节省项目时间。<br>6.Opencore支持的文件格式较stagefright丰富。<br>7.
+如果项目研发中android出现新版本，或stagefright做了更新，仍然维持opencore不变，多媒体引擎变更问题待ipad后再议。一种
+选择是一直延续采用opencore，或者在适当时候（认为stagefright足够稳定）切换到stagefright。</p>
+<p><br><strong><span size="3" style="font-size: small;">Stagefright阅读笔记附录</span></strong><br>两套方案对比过程中，基本上把stagefright的代码阅读过一遍，摘录如下，以图为主。<br>Stagefright整体框图。<br><img src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/100927170954.png">&nbsp;<br>Stagefrightplayer里awesomeplayer初始化流程<br>&nbsp;<img src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/100927171012.png"><br>Awesomeplayer框图，其中涵盖主要节点元素。<br>&nbsp;<img src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/100927171023.png"><br>Stagefrightrecorder部分<br>&nbsp;<img src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/100927171032.png"><br>MediaPlayer框图。<br>&nbsp;<img src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/100927170944.png"><br>MediaRecorder框图。<br>&nbsp;<img src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/100927171041.png"><br>Libstagefright草图，涵盖了主要节点元素。<br>&nbsp;<img src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/100927171116.png"></p>
+<p>转:<a href="http://blogold.chinaunix.net/u2/61880/showart.php?id=2339481">http://blogold.chinaunix.net/u2/61880/showart.php?id=2339481</a></p>
+</div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="blog_post_info"><div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/huaping-audio/category/225567.html">流媒体</a></div>
+<div id="EntryTag"></div>
+<div id="green_channel">
+绿色通道：
+<a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(cb_entryId,cb_blogId,1);green_channel_success(this,'谢谢推荐！');">好文要顶</a>
+<a id="green_channel_follow" onclick="c_follow();" href="javascript:void(0);">关注我</a>
+<a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a><a id="green_channel_contact" href="http://space.cnblogs.com/msg/send/%e5%88%98%e5%93%81" target="_blank">与我联系</a>
+<a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/icon_weibo_24.png" alt=""></a>
+</div>
+<div id="digg_block">
+<div id="author_profile">
+<div id="author_profile_info" class="author_profile_info">
+<a href="http://home.cnblogs.com/u/huaping-audio/" target="_blank"><img src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/u31718.jpg" class="author_avatar" alt=""></a>
+<div id="author_profile_detail" class="author_profile_info">
+<a href="http://home.cnblogs.com/u/huaping-audio/">刘品</a><br>
+<a href="http://home.cnblogs.com/u/huaping-audio/followees">关注 - 1</a><br>
+<a href="http://home.cnblogs.com/u/huaping-audio/followers">粉丝 - 170</a>
+</div>
+</div>
+<div class="clear"></div>
+<div id="author_profile_honor"></div>
+<div id="author_profile_follow">
+<a href="javascript:void(0);" onclick="c_follow();return false;">+加关注</a>
+</div>
+</div>
+<div id="div_digg">										
+	<div class="diggit" onclick="votePost(cb_entryId,'Digg')"> 
+		<span class="diggnum" id="digg_count">0</span>
+	</div>
+	<div class="buryit" onclick="votePost(cb_entryId,'Bury')"> 
+		<span class="burynum" id="bury_count">0</span>
+	</div>
+	<div class="clear"></div>	
+	<div class="diggword" id="digg_tips">
+    (请您对文章做出评价)
+    </div>	
+</div>
+</div></div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/huaping-audio/archive/2011/02/10/1950871.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/huaping-audio/archive/2011/02/10/1950871.html" title="发布于2011-02-10 17:43">win7下DS、KS、ASIO、WASAPI输出比较(转)</a><br><a href="http://www.cnblogs.com/huaping-audio/archive/2011/02/21/1960071.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/huaping-audio/archive/2011/02/21/1960071.html" title="发布于2011-02-21 20:13">SRS世界移动峰会首发Khronos OpenSL ES 1.1方案(转)</a><br></div>
+</div>
+
+
+	<div class="postDesc">posted on <span id="post-date">2011-02-18 08:57</span> <a href="http://www.cnblogs.com/huaping-audio/">刘品</a> 阅读(<span id="post_view_count">7094</span>) 评论(<span id="post_comment_count">2</span>)  <a href="http://www.cnblogs.com/huaping-audio/admin/EditPosts.aspx?postid=1957482" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(1957482);return false;">收藏</a></div>
+</div>
+<script type="text/javascript">var allowComments=true,isLogined=false,cb_blogId=35276,cb_entryId=1957482,cb_blogApp=currentBlogApp,cb_blogUserGuid='4e33420b-63cf-dd11-9e4d-001cf0cd104b',cb_entryCreatedDate='2011/2/18 8:57:00';loadViewCount(cb_entryId);</script>
+
+<a name="!comments"></a><div id="blog-comments-placeholder"><div id="comments_pager_top"></div>
+<!--done-->
+<br>
+<b>FeedBack:</b>
+<div class="feedbackNoItems"></div>
+	
+
+		<div class="feedbackItem">
+			<div class="feedbackListTitle"><a href="#2204970" class="layer">#1楼</a><a name="2204970" id="comment_anchor_2204970"></a></div>
+			<div class="feedbackListSubtitle">
+				 <span class="comment_date">2011-09-22 10:04</span> | <a id="a_comment_author_2204970" href="http://www.cnblogs.com/javastorm/" target="_blank">JAVAStorm</a> <a href="http://space.cnblogs.com/msg/send/JAVAStorm" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><br>
+				<div align="left"><div id="comment_body_2204970" class="blog_comment_body">好底层啊，可以深入了解下！</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2204970,'Digg',this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2204970,'Bury',this)">反对(0)</a></div>&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+			
+			
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListTitle"><a href="#2427610" class="layer">#2楼</a><a name="2427610" id="comment_anchor_2427610"></a><span id="comment-maxId" style="display:none;">2427610</span><span id="comment-maxDate" style="display:none;">2012/7/16 16:05:31</span></div>
+			<div class="feedbackListSubtitle">
+				 <span class="comment_date">2012-07-16 16:05</span> | <a id="a_comment_author_2427610" href="http://www.cnblogs.com/benxiong/" target="_blank">kanrun</a> <a href="http://space.cnblogs.com/msg/send/kanrun" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><br>
+				<div align="left"><div id="comment_body_2427610" class="blog_comment_body">太感谢楼主了，好好学习</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2427610,'Digg',this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2427610,'Bury',this)">反对(0)</a></div>&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+			
+			
+		</div>
+	
+
+
+
+<div id="comments_pager_bottom"></div></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" id="lnk_RefreshComments" onclick="return RefreshCommentList();">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login('commentform');">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"><a target="_blank" href="http://www.cnblogs.com/cmt/p/3471046.html">游戏开发者的福利：阿里云云服务器免费送</a></div>
+<div id="site_nav_under"><a href="http://www.cnblogs.com/" target="_blank" title="程序员的网上家园">博客园首页</a><a href="http://q.cnblogs.com/" target="_blank" title="程序员问答社区">博问</a><a href="http://news.cnblogs.com/" target="_blank" title="IT新闻">新闻</a><a href="http://home.cnblogs.com/ing/" target="_blank">闪存</a><a href="http://job.cnblogs.com/" target="_blank">程序员招聘</a><a href="http://kb.cnblogs.com/" target="_blank">知识库</a></div>
+<div id="ad_under_post_holder">
+
+<div id="google_ad_c1" class="c_ad_block">
+    <!-- cnblogs_blogpost_C1_sitehome -->
+    <div id="div-gpt-ad-1346480159711-0" style="width: 300px; height: 250px;">
+    
+    <div style="border: 0pt none;" id="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" name="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0" id="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0" frameborder="0" height="250" scrolling="no" width="300"></iframe></div><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom; visibility: hidden; display: none;" marginheight="0" marginwidth="0" name="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0__hidden__" id="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0__hidden__" frameborder="0" height="0" scrolling="no" width="0"></iframe></div>
+</div>
+<div id="blog_news_kb"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/196402/" target="_blank">天猫程序猿高端算法找妹子</a><br> ·  <a href="http://news.cnblogs.com/n/196400/" target="_blank">创业 CEO：做好投资人月报</a><br> ·  <a href="http://news.cnblogs.com/n/196399/" target="_blank">你的程序员是在努力工作还是在偷懒？</a><br> ·  <a href="http://news.cnblogs.com/n/196398/" target="_blank">2017年全球电子垃圾将超6000万吨：中美最多</a><br> ·  <a href="http://news.cnblogs.com/n/196397/" target="_blank">2014年 对三星科技产品的5个期待</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/195372/" target="_blank">思考、学习新技术的原则和方式</a><br> ·  <a href="http://kb.cnblogs.com/page/193371/" target="_blank">云风：一个编程的自由人</a><br> ·  <a href="http://kb.cnblogs.com/page/196146/" target="_blank">多研究些问题，少谈些主义</a><br> ·  <a href="http://kb.cnblogs.com/page/185286/" target="_blank">领域建模中的七种坏味道信息</a><br> ·  <a href="http://kb.cnblogs.com/page/187589/" target="_blank">揭示记忆力的真相</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div></div>
+<script type="text/javascript">
+var enableGoogleAd = true;
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+fixPostBodyFormat();
+loadAdUnderPost();
+</script>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+loadBlogSignature();
+LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+</script>
+<script type="text/javascript">
+    $.ajax({ url: 'http://counter.cnblogs.com/blog/post/' + cb_entryId, type: 'get', dataType: 'script', cache: true });
+</script>
+</div>
+
+</div>
+
+<!--done-->
+<div class="footer">
+	
+	Copyright ©2013 刘品 Powered By<a href="http://www.cnblogs.com/">博客园</a> 模板提供：<a href="http://blog.hjenglish.com/">沪江博客</a>
+</div>
+<!--PageEndHtml Block Begin-->
+<!--<!--<!--<script src="http://s15.cnzz.com/stat.php?id=2297644&web_id=2297644&show=pic" language="JavaScript"></script>-->--&gt;--&gt;
+
+<!--PageEndHtml Block End-->
+<script type="text/javascript" src="stagefright%E4%B8%8Eopencore%E5%AF%B9%E6%AF%94%28%E8%BD%AC%29%20-%20%E5%88%98%E5%93%81%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/google-analytics.js"></script>
+
+
+<iframe style="display: none; width: 0px; height: 0px;" name="google_osd_static_frame" id="google_osd_static_frame_4764615008695"></iframe></body></html>

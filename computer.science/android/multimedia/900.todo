@@ -1,0 +1,55 @@
+todo:
+    code reading:
+        frameworks/base/media/tests/
+
+    模块划分：
+
+        应用
+            Music, Video Player, Voice Recorder, Media Scanner, ...
+            
+        Framework框架
+            MediaPlayer, MediaService, ...
+
+        StageFright
+
+        OMX
+
+        
+    深入研究
+        各种容器格式
+
+            搞清一两个容器的格式
+            MPEG4
+                practice:
+                    dump a media file, tools
+
+            - Video: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...
+            - Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...
+
+        各种编解码格式
+            - Video Codecs: DivX, XviD, MSMPEG4, ASP, H.264, AVC...
+
+
+    OMXCodec, 
+    OMX层仅仅是对 opencore的omx-component部分做了引用?
+
+    what is :
+        OMXMaster
+        OMXNode
+        OMX plugin
+
+        OMX IL:
+            OpenMAX IL (Integration Layer)
+                Blocks of functionality: sources, sinks, filters, etc.
+
+            Consists of two main segments:
+                 Core API (unique component):
+                     Dynamic loading/unloading components management
+                     Facilitating component communication (Tunneling)
+
+                 Component API (several components):
+                     Individual blocks of functionality
+                     Can be source, sink, codecs, filters, splitters, mixers, etc..
+
+
+

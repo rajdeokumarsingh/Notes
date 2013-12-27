@@ -10,4 +10,7 @@ public class PushConstant {
     public static String PUSH_INET_URL = "ws://119.161.242.247:9090/websocket";
 
     public static long DEVICE_BEGIN_ID = -1;
+
+    public final static String DEVICE_ID_PREFIX = "device_uuid_";
+    public final static String DEVICE_TOKEN = "123456";
 }

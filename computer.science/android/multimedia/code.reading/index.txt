@@ -1,0 +1,6 @@
+
+frameworks/base/media/tests
+    MediaDump
+         A media tool to play a video and dump the screen display
+            into raw RGB files. Check VideoDumpView for tech details.
+           
