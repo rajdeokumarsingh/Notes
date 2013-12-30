@@ -88,5 +88,7 @@ git rebase [master_branch] [feature_branch]
     rebase feature_branch on master_branch
         master_branch is base
 
-
+找到dev2在master分支上的commitID
+    git merge-base dev2 master
+    会显示dev2和master两个分支的共同的commitID
 

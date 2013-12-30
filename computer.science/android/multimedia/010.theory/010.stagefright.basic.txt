@@ -36,13 +36,13 @@ stagefright的播放器类为AwesomePlayer, 几个主要的成员
     数据流
           URI,FD
             |
-        DataSource
+        DataSource          封装数据源，为extractor提供原始数据
             |
        MediaExtractor
         |        |
-    mVideoTrack mAudioTrack       // 音视频数据流
+    mVideoTrack mAudioTrack       // MediaSource, 音视频数据流,  track， 为解码器提供数据
        ｜           |
-    mVideoSource mAudioSource     // 音视频解码器
+    mVideoSource mAudioSource     // 音视频解码器, MediaSource, 为播放器提供数据
        ｜           |
     mVideoBuffer mAudioPlayer
         ， 

@@ -1,6 +1,3 @@
-11. create new branch
-    git branch RB_1.0 master # create new branch RB_1.0 from branch master
-
 
 12. check branch
     git branch

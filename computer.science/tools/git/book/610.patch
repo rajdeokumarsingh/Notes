@@ -1,0 +1,83 @@
+git提供了两种简单的patch方案
+    一是用git diff生成的标准patch
+    二是git format-patch生成的Git专用Patch。
+
+
+# generate a patch for one commit
+git format-patch -1 84e92b9a43097a1252d7311204d2c4ce00c5a78a
+
+
+# generate patchs (r1, r2]
+git format-patch <r1>..<r2>
+
+
+http://blog.chinaunix.net/uid-28621021-id-3487102.html
+git format-patch以及git的使用
+
+Example:
+    dev1 is branched from master
+
+    $ git branch
+    * dev1
+    $ git format-patch master               # show commits submitted by only dev1
+
+    $ git branch
+    * dev1
+    $ git format-patch --root dev1          # show commits submitted by dev1
+                                            # and its all ancestors in master
+
+    $ git branch
+    * dev2
+    $ git format-patch --root dev1          # show commits submitted by dev2
+                                            # and its all ancestors in master
+                                            # but exclude all ancestors of dev1
+
+
+    # diff two branch
+    git diff dev1 dev2
+
+    git diff dev1 dev2 main.c               # diff single file
+
+
+apply patch
+    cd opencore 
+    git am --abort                          # abort last am
+    git am ~/patch-set/*.patch
+
+
+    git am –skip                            # skip one patch
+
+
+git format-patch经验:
+A
+git log
+commit c
+commit b
+commit a
+commit init
+
+B 
+git log
+commit init
+
+============= 
+A,B两人代码共有commit init
+现在A改动到a=>b=>c
+
+B想用补丁来升级 
+
+A: 
+git format-patch init..c ==>产生三个补丁
+001-commit-a.patch 对应从commit init出发升到a
+002-commit-b.patch 对应从commit a出发升到b
+003-commit-c.patch 对应从commit b出发升到c
+
+即git format-patch x..y 
+是从共有的x出发一路一个一个升到y
+(x,y]
+
+================= 
+B
+git am *.patch git会自动按文件名一级级升上去的
+
+转：http://blog.csdn.net/fyh2003/article/details/7599264

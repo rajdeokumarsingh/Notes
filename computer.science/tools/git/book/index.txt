@@ -10,6 +10,7 @@ tmp.note
 ./400.add.commit
 ./500.branch
 ./600.log
+./610.patch
 ./700.remote
 ./800.manage.local.repo
 ./900.beyond.basic

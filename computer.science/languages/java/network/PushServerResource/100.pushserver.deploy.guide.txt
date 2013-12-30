@@ -12,6 +12,7 @@ daemonize yes
 3.2.4. 修改内核配置
 打开/etc/sysctl.conf，添加一行
 vm.overcommit_memory = 1
+
 此配置需要重启生效，需要立即生效的话，执行下面命令
 sysctl -w vm.overcommit_memory=1
 
@@ -23,9 +24,7 @@ sysctl -w vm.overcommit_memory=1
 ## obsolete: 3.2.6. 安装activemq，下载activemq包，解压，进入activemy/bin目录，执行下边命令
 # nohup ./activemq-admin start &
 
-
 3.2.7. 安装tomcat，下载tomcat-core7包，解压
-
 
 
 3.2.8. 部署PushServer
@@ -34,6 +33,7 @@ sysctl -w vm.overcommit_memory=1
 #分布式服务的topic
 redis.topic.cluster=user:topic:cluster:192.168.10.31 
 把后面的”192.168.10.31”修改为PushServer服务器的IP地址
+
 3.2.9. 部署PushClientServer
 把PushClientServer.war复制到tomcat/webapps/目录下
 解压后,修改 /WEB-INF/classes/redis.properties 
