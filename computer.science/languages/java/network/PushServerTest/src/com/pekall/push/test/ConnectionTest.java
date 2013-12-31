@@ -5,7 +5,7 @@ import java.net.URI;
 public class ConnectionTest {
 
     /*
-        java -jar PushServerTest.jar 50000 lan 1000000 ws://192.168.10.233:9090/websocket
+        java -jar PushServerTest.jar 50000 lan 1000000 ws://192.168.10.28:9090/websocket
         java -jar PushServerTest.jar 50 lan 1000000 ws://192.168.8.56:9090/websocket
 
         第一个参数表示 5w个连接
