@@ -5,7 +5,9 @@ package com.example.algorithm.sort;
  */
 public class InsertSort {
     public static void sort(double[] array) {
-        if (array == null)  return;
+        if (array == null) {
+            throw new IllegalArgumentException("input is null");
+        }
 
         /* Assumption: elements before i are sorted
            Procedure:
