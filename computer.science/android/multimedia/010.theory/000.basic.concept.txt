@@ -46,10 +46,9 @@ Track and Source
         例如常见的*.mpg, *.avi, *.mov, *.mp4, *.rm, *.ogg or *.tta. 
         这些格式中有些只能使用某些编解码器，而更多可以以容器的方式使用各种编解码器。
 
-    FourCC全称Four-Character Codes，是由4个字符（4 bytes）组成，是一种独立标示视频数据流格式的四字节，在wav、avi档案之中会有一段FourCC来描述这个AVI档案，是利用何种codec来编码的。因此wav、avi大量存在等于“IDP3”的FourCC。
+    FourCC全称Four-Character Codes，是由4个字符（4 bytes）组成，是一种独立标示视频数据流格式的四字节，
+    在wav、avi档案之中会有一段FourCC来描述这个AVI档案，是利用何种codec来编码的。因此wav、avi大量存在等于“IDP3”的FourCC。
 
     无损格式，例如WAV，PCM，TTA，FLAC，AU，APE，TAK，WavPack(WV)
     有损格式，例如MP3，Windows Media Audio（WMA），Ogg Vorbis（OGG），AAC
-
-
 

@@ -5,6 +5,7 @@
 ./code.read/AMRExtractor.cpp
 ./code.read/MediaExtractor.cpp
 ./code.read/flow.stagefright.player.cpp
+./code.read/flow.stagefright.recorder.cpp
 
 
 

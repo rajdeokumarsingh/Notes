@@ -100,7 +100,6 @@ public class PlistBeanConverter {
                     field.set(data, createBeanFromNdict(dict, field.getType()));
                 } else if (nsObject.getClass().equals(NSArray.class)) {
                     Type fieldArgType = getTypeArgument(field.getGenericType());
-                    PlistDebug.logVerbose("List generic type: " + field.getGenericType());
                     if (fieldArgType != null && List.class.isAssignableFrom(field.getType())) {
                         PlistDebug.logVerbose("List generic class: " + fieldArgType.toString());
                         NSArray array = (NSArray) nsObject;

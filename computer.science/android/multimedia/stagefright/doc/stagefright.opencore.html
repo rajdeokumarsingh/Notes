@@ -1,0 +1,1166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>【转载】stagefright与opencore对比 - jsot - 博客园</title>
+<link type="text/css" rel="stylesheet" href="stagefright.opencore_files/common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="stagefright.opencore_files/style.css">
+<link type="text/css" rel="stylesheet" href="stagefright.opencore_files/common2.css">
+<link type="text/css" rel="stylesheet" href="stagefright.opencore_files/shStyle.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/jacktu/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/jacktu/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/jacktu/wlwmanifest.xml"> 
+<script src="stagefright.opencore_files/ga.js" async="" type="text/javascript"></script><script src="stagefright.opencore_files/gpt.js" type="text/javascript" async=""></script><script src="stagefright.opencore_files/jquery_002.js" type="text/javascript"></script>  
+<script src="stagefright.opencore_files/common.js" type="text/javascript"></script>
+<script src="stagefright.opencore_files/jquery.js" type="text/javascript"></script>
+<script type="text/javascript" src="stagefright.opencore_files/syntaxHighlighter.js"></script>
+<script src="stagefright.opencore_files/google_ads_gpt.js" type="text/javascript" async=""></script></head>
+<body>
+<a name="top"></a>
+<form method="post" action="1862292.html" id="Form1">
+<div class="aspNetHidden">
+<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="" type="hidden">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form1'];
+if (!theForm) {
+    theForm = document.Form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+var currentBlogApp='jacktu';
+//]]>
+</script>
+
+    
+<div id="masthead">
+
+<div id="title">
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/jacktu/">一他糊涂</a></h1>
+<div>擅长技术，但不限于技术</div>
+</div>
+</div>
+<div id="nav">
+	<div id="navbar">
+	
+<ul>
+			<li><a id="MyLinks1_HomeLink" href="http://www.cnblogs.com/">博客园</a></li>
+			<li><a id="MyLinks1_MyHomeLink" href="http://www.cnblogs.com/jacktu/">首页</a></li>
+			<li><a id="MyLinks1_NewPostLink" rel="nofollow" href="http://www.cnblogs.com/jacktu/admin/EditPosts.aspx?opt=1">新随笔</a></li>
+			<li><a id="MyLinks1_ContactLink" accesskey="9" rel="nofollow" href="http://space.cnblogs.com/msg/send/jsot">联系</a></li>
+			<li><a id="MyLinks1_Syndication" href="http://www.cnblogs.com/jacktu/rss">订阅</a><!--<a id="MyLinks1_XMLLink" href="http://www.cnblogs.com/jacktu/rss"><img src="http://www.cnblogs.com/images/xml.gif" alt="订阅" /></a>-->
+			</li><li><a id="MyLinks1_Admin" rel="nofollow" href="http://www.cnblogs.com/jacktu/admin/EditPosts.aspx">管理</a></li>
+</ul>
+	</div>
+</div>
+<div id="content">
+    <div id="leftmenu">
+ 
+            
+<h3>公告</h3>
+	欢迎探讨<div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/jacktu/">jsot</a><br>园龄：<a href="http://home.cnblogs.com/u/jacktu/" title="入园时间：2006-04-22">5年7个月</a><br>粉丝：<a href="http://home.cnblogs.com/u/jacktu/followers/">10</a><br>关注：<a href="http://home.cnblogs.com/u/jacktu/followees/">1</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="cnblogs.UserManager.FollowBlogger('2b54360b-63cf-dd11-9e4d-001cf0cd104b')">+加关注</a></div><script type="text/javascript">cnblogs.UserManager.GetFollowStatus('2b54360b-63cf-dd11-9e4d-001cf0cd104b')</script></div>
+
+            <table id="Calendar1_entryCal" class="Cal" title="Calendar" style="border-width: 1px; border-style: solid; border-collapse: collapse;" cellpadding="0" cellspacing="0">
+	<tbody><tr><td colspan="7" style="background-color: Silver;"><table class="CalTitle" style="width: 100%; border-collapse: collapse;" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev" style="width: 15%;"><a href="javascript:__doPostBack('Calendar1$entryCal','V3896')" style="color: Black;" title="Go to the previous month">&lt;</a></td><td style="width: 70%;" align="center">2010年10月</td><td class="CalNextPrev" style="width: 15%;" align="right"><a href="javascript:__doPostBack('Calendar1$entryCal','V3957')" style="color: Black;" title="Go to the next month">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" abbr="日" scope="col" align="center">日</th><th class="CalDayHeader" abbr="一" scope="col" align="center">一</th><th class="CalDayHeader" abbr="二" scope="col" align="center">二</th><th class="CalDayHeader" abbr="三" scope="col" align="center">三</th><th class="CalDayHeader" abbr="四" scope="col" align="center">四</th><th class="CalDayHeader" abbr="五" scope="col" align="center">五</th><th class="CalDayHeader" abbr="六" scope="col" align="center">六</th></tr><tr><td class="CalOtherMonthDay" style="width: 14%;" align="center">26</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">27</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">28</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">29</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">30</td><td style="width: 14%;" align="center">1</td><td class="CalWeekendDay" style="width: 14%;" align="center">2</td></tr><tr><td class="CalWeekendDay" style="width: 14%;" align="center">3</td><td style="width: 14%;" align="center">4</td><td style="width: 14%;" align="center">5</td><td style="width: 14%;" align="center">6</td><td style="width: 14%;" align="center">7</td><td style="width: 14%;" align="center">8</td><td class="CalWeekendDay" style="width: 14%;" align="center">9</td></tr><tr><td class="CalWeekendDay" style="width: 14%;" align="center">10</td><td style="width: 14%;" align="center">11</td><td style="width: 14%;" align="center">12</td><td style="width: 14%;" align="center">13</td><td style="width: 14%;" align="center">14</td><td style="width: 14%;" align="center">15</td><td class="CalWeekendDay" style="width: 14%;" align="center">16</td></tr><tr><td class="CalWeekendDay" style="width: 14%;" align="center">17</td><td style="width: 14%;" align="center">18</td><td style="width: 14%;" align="center">19</td><td style="width: 14%;" align="center">20</td><td style="width: 14%;" align="center">21</td><td style="width: 14%;" align="center">22</td><td class="CalWeekendDay" style="width: 14%;" align="center">23</td></tr><tr><td class="CalWeekendDay" style="width: 14%;" align="center">24</td><td style="width: 14%;" align="center">25</td><td style="width: 14%;" align="center">26</td><td style="width: 14%;" align="center"><a href="http://www.cnblogs.com/jacktu/archive/2010/10/27.html"><u>27</u></a></td><td style="width: 14%;" align="center">28</td><td style="width: 14%;" align="center">29</td><td class="CalWeekendDay" style="width: 14%;" align="center">30</td></tr><tr><td class="CalWeekendDay" style="width: 14%;" align="center">31</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">1</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">2</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">3</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">4</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">5</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">6</td></tr>
+</tbody></table>
+
+            
+<h3>统计</h3>
+	<ul>
+		<li>随笔 - 259
+		</li><li>文章 - 1
+		</li><li>评论 - 173
+		</li><li>引用 - 9
+	</li>
+</ul>
+            
+<script type="text/javascript">
+    var blogapp = 'jacktu';
+</script>
+<div class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div id="widget_my_zzk" class="div_my_zzk"><input id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk" type="text">&nbsp;<input onclick="zzk_go()" value="找找看" id="btnZzk" class="btn_my_zzk" type="button"></div>
+<div id="SingleColumn1_ctl00_widget_my_google" class="div_my_zzk"><input name="google_q" id="google_q" onkeydown="return google_go_enter(event)" class="input_my_zzk" type="text">&nbsp;<input onclick="google_go()" value="谷歌搜索" class="btn_my_zzk" type="button"></div>
+</div>
+
+
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+
+		<li><a id="SingleColumn1_ctl01_rptMainLinks_lnkLinkItem_0" href="http://www.cnblogs.com/jacktu/MyPosts.html">我的随笔</a></li>
+	
+		<li><a id="SingleColumn1_ctl01_rptMainLinks_lnkLinkItem_1" href="http://www.cnblogs.com/jacktu/MyComments.html">我的评论</a></li>
+	
+		<li><a id="SingleColumn1_ctl01_rptMainLinks_lnkLinkItem_2" title="我发表过评论的随笔" href="http://www.cnblogs.com/jacktu/OtherPosts.html">我的参与</a></li>
+	
+		<li><a id="SingleColumn1_ctl01_rptMainLinks_lnkLinkItem_3" href="http://www.cnblogs.com/jacktu/RecentComments.html">最新评论</a></li>
+	
+		<li><a id="SingleColumn1_ctl01_rptMainLinks_lnkLinkItem_4" href="http://www.cnblogs.com/jacktu/tag/">我的标签</a></li>
+	
+</ul>
+<div id="itemListLin_con" style="display:none;">
+
+</div>
+		<h3>随笔分类</h3>
+		
+				<ul>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_0" href="http://www.cnblogs.com/jacktu/category/118645.html">.net(17)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_0" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/118645.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_1" href="http://www.cnblogs.com/jacktu/category/125695.html">adobe RIA/FLEX(9)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_1" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/125695.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_2" href="http://www.cnblogs.com/jacktu/category/115008.html">android(61)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_2" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/115008.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_3" href="http://www.cnblogs.com/jacktu/category/124352.html">C#(2)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_3" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/124352.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_4" href="http://www.cnblogs.com/jacktu/category/126936.html">C/C++/基础(2)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_4" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/126936.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_5" href="http://www.cnblogs.com/jacktu/category/157025.html">eclipse(3)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_5" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/157025.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_6" href="http://www.cnblogs.com/jacktu/category/124351.html">Html/Css</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_6" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/124351.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_7" href="http://www.cnblogs.com/jacktu/category/305541.html">ios/mac(23)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_7" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/305541.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_8" href="http://www.cnblogs.com/jacktu/category/157026.html">java/j2me(26)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_8" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/157026.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_9" href="http://www.cnblogs.com/jacktu/category/124350.html">Javascript/ajax(8)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_9" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/124350.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_10" href="http://www.cnblogs.com/jacktu/category/124353.html">Linux(11)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_10" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/124353.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_11" href="http://www.cnblogs.com/jacktu/category/124354.html">MySql(2)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_11" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/124354.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_12" href="http://www.cnblogs.com/jacktu/category/248910.html">OpenGL(7)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_12" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/248910.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_13" href="http://www.cnblogs.com/jacktu/category/124411.html">Oracle(10)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_13" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/124411.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_14" href="http://www.cnblogs.com/jacktu/category/129277.html">other(11)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_14" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/129277.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_15" href="http://www.cnblogs.com/jacktu/category/124355.html">设计模式(2)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_15" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/124355.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_16" href="http://www.cnblogs.com/jacktu/category/118653.html">网络技术(25)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_16" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/118653.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_17" href="http://www.cnblogs.com/jacktu/category/157027.html">终端开发(34)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_17" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/157027.html/rss');">(rss)</a></li>
+			
+				</ul>
+			
+	
+		<h3>随笔档案</h3>
+		
+				<ul>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_0" href="http://www.cnblogs.com/jacktu/archive/2011/12.html">2011年12月 (3)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_1" href="http://www.cnblogs.com/jacktu/archive/2011/11.html">2011年11月 (6)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_2" href="http://www.cnblogs.com/jacktu/archive/2011/10.html">2011年10月 (10)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_3" href="http://www.cnblogs.com/jacktu/archive/2011/09.html">2011年9月 (6)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_4" href="http://www.cnblogs.com/jacktu/archive/2011/08.html">2011年8月 (1)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_5" href="http://www.cnblogs.com/jacktu/archive/2011/06.html">2011年6月 (2)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_6" href="http://www.cnblogs.com/jacktu/archive/2011/05.html">2011年5月 (4)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_7" href="http://www.cnblogs.com/jacktu/archive/2010/12.html">2010年12月 (5)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_8" href="http://www.cnblogs.com/jacktu/archive/2010/11.html">2010年11月 (2)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_9" href="http://www.cnblogs.com/jacktu/archive/2010/10.html">2010年10月 (1)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_10" href="http://www.cnblogs.com/jacktu/archive/2010/08.html">2010年8月 (1)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_11" href="http://www.cnblogs.com/jacktu/archive/2010/07.html">2010年7月 (7)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_12" href="http://www.cnblogs.com/jacktu/archive/2010/06.html">2010年6月 (9)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_13" href="http://www.cnblogs.com/jacktu/archive/2010/05.html">2010年5月 (2)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_14" href="http://www.cnblogs.com/jacktu/archive/2010/02.html">2010年2月 (5)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_15" href="http://www.cnblogs.com/jacktu/archive/2009/11.html">2009年11月 (6)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_16" href="http://www.cnblogs.com/jacktu/archive/2009/10.html">2009年10月 (1)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_17" href="http://www.cnblogs.com/jacktu/archive/2009/09.html">2009年9月 (4)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_18" href="http://www.cnblogs.com/jacktu/archive/2009/08.html">2009年8月 (5)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_19" href="http://www.cnblogs.com/jacktu/archive/2009/07.html">2009年7月 (1)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_20" href="http://www.cnblogs.com/jacktu/archive/2009/06.html">2009年6月 (3)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_21" href="http://www.cnblogs.com/jacktu/archive/2009/05.html">2009年5月 (4)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_22" href="http://www.cnblogs.com/jacktu/archive/2009/04.html">2009年4月 (6)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_23" href="http://www.cnblogs.com/jacktu/archive/2009/03.html">2009年3月 (1)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_24" href="http://www.cnblogs.com/jacktu/archive/2009/02.html">2009年2月 (3)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_25" href="http://www.cnblogs.com/jacktu/archive/2009/01.html">2009年1月 (1)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_26" href="http://www.cnblogs.com/jacktu/archive/2008/12.html">2008年12月 (6)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_27" href="http://www.cnblogs.com/jacktu/archive/2008/11.html">2008年11月 (11)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_28" href="http://www.cnblogs.com/jacktu/archive/2008/10.html">2008年10月 (4)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_29" href="http://www.cnblogs.com/jacktu/archive/2008/09.html">2008年9月 (1)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_30" href="http://www.cnblogs.com/jacktu/archive/2008/07.html">2008年7月 (4)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_31" href="http://www.cnblogs.com/jacktu/archive/2008/06.html">2008年6月 (2)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_32" href="http://www.cnblogs.com/jacktu/archive/2008/04.html">2008年4月 (3)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_33" href="http://www.cnblogs.com/jacktu/archive/2008/03.html">2008年3月 (12)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_34" href="http://www.cnblogs.com/jacktu/archive/2008/02.html">2008年2月 (19)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_35" href="http://www.cnblogs.com/jacktu/archive/2008/01.html">2008年1月 (20)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_36" href="http://www.cnblogs.com/jacktu/archive/2007/12.html">2007年12月 (12)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_37" href="http://www.cnblogs.com/jacktu/archive/2007/11.html">2007年11月 (5)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_38" href="http://www.cnblogs.com/jacktu/archive/2007/10.html">2007年10月 (5)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_39" href="http://www.cnblogs.com/jacktu/archive/2007/09.html">2007年9月 (4)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_40" href="http://www.cnblogs.com/jacktu/archive/2007/08.html">2007年8月 (1)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_41" href="http://www.cnblogs.com/jacktu/archive/2007/07.html">2007年7月 (7)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_42" href="http://www.cnblogs.com/jacktu/archive/2007/06.html">2007年6月 (1)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_43" href="http://www.cnblogs.com/jacktu/archive/2007/05.html">2007年5月 (1)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_44" href="http://www.cnblogs.com/jacktu/archive/2007/04.html">2007年4月 (2)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_45" href="http://www.cnblogs.com/jacktu/archive/2007/03.html">2007年3月 (4)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_46" href="http://www.cnblogs.com/jacktu/archive/2007/02.html">2007年2月 (10)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_47" href="http://www.cnblogs.com/jacktu/archive/2006/12.html">2006年12月 (3)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_48" href="http://www.cnblogs.com/jacktu/archive/2006/11.html">2006年11月 (6)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_49" href="http://www.cnblogs.com/jacktu/archive/2006/10.html">2006年10月 (6)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_50" href="http://www.cnblogs.com/jacktu/archive/2006/06.html">2006年6月 (1)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_51" href="http://www.cnblogs.com/jacktu/archive/2006/05.html">2006年5月 (10)</a> </li>
+			
+				</ul>
+			
+	
+		<h3>相册</h3>
+		
+				<ul>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_2_Link_0" rel="nofollow" href="http://www.cnblogs.com/jacktu/gallery/169121.html">相册</a> </li>
+			
+				</ul>
+			
+	
+		<h3>blog</h3>
+		
+				<ul>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_3_Link_0" href="http://blog.donews.com/monoer/archive/2006/07/09/951496.aspx">C#+Mysql+Mono</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_3_Link_1" href="http://www.cnblogs.com/wzyexf/category/50910.html">Community Server讨论区</a> <a id="SingleColumn1_Categories_CatList_LinkList_3_RssLink_1" href="#" onclick="return open_link('http://communityserver.cn/');">(rss)</a></li>
+			<li class="c_b_p_link_desc">QA&amp;</li>
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_3_Link_2" rel="nofollow" href="http://www.zhuoqun.net/html/ycategory/tech/adobeflex">Dreamer’s Blog » Flex</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_3_Link_3" rel="nofollow" href="http://www.blogjava.net/emu">stonehuang</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_3_Link_4" href="http://www.cnblogs.com/frogbag/category/79583.html">Svg&amp;Vml</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_3_Link_5" href="http://www.cnblogs.com/Terrylee/archive/2006/11/18/microsoft_code_snippet_designer.html">TerryLee技术专栏</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_3_Link_6" rel="nofollow" href="http://www.pjhome.net/">zishun的blog</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_3_Link_7" rel="nofollow" href="http://www.duduwolf.com/catalog.asp?tags=javascript">嘟嘟老窝</a> </li>
+			<li class="c_b_p_link_desc">N多ajax东东</li>
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_3_Link_8" rel="nofollow" href="http://www.duzengqiang.com/">杜增强.COM =&gt; Flex&amp;as3</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_3_Link_9" href="http://www.cnblogs.com/aspsir/archive/2006/07/27/461229.html">恩电，.net牛人</a> </li>
+			<li class="c_b_p_link_desc">.net牛</li>
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_3_Link_10" rel="nofollow" href="http://singlepine.cnblogs.com/articles/253393.html">小山的blog，ajax高手</a> </li>
+			<li class="c_b_p_link_desc">山</li>
+				</ul>
+			
+	
+		<h3>有用的网址</h3>
+		
+				<ul>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_4_Link_0" rel="nofollow" href="http://www.cs-open.com/">C#开源资源大全</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_4_Link_1" rel="nofollow" href="http://www.51windows.net/pages/jscript5/?url=/pages/jscript5/html/jsmtheval.htm">JSCRIPT使用守则</a> </li>
+			
+				</ul>
+			
+	
+
+<h3 class="catListTitle">最新评论</h3>
+<div class="RecentComment" id="RecentComments">
+	<div id="RecentCommentsBlock"><ul>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/jacktu/archive/2010/12/30/1921475.html#2117946">1. Re:关于Android堆内存的设置</a></li>
+    <li class="recent_comment_body">帮顶，，，谢谢，，非常好。。</li>
+    <li class="recent_comment_author">--小小行者</li>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/jacktu/archive/2007/11/14/959279.html#2000612">2. Re:Keycode对照表 </a></li>
+    <li class="recent_comment_body">收获了</li>
+    <li class="recent_comment_author">--xiaoxiaxiao</li>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/jacktu/archive/2007/12/05/984487.html#1991217">3. Re:解决log4net独占日志文件的问题以及 log4net的各种输出配置(Appender)</a></li>
+    <li class="recent_comment_body">写的太好了</li>
+    <li class="recent_comment_author">--火地晋</li>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/jacktu/archive/2008/04/01/1132444.html#1972641">4. Re:初学eclipse，记录一些有关eclipse IDE使用的东东</a></li>
+    <li class="recent_comment_body">这个总结非常的实用</li>
+    <li class="recent_comment_author">--Android火鸟</li>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/jacktu/archive/2008/12/29/1364487.html#1947044">5. Re:android中实现图片翻转\缩放</a></li>
+    <li class="recent_comment_body">学习了谢谢</li>
+    <li class="recent_comment_author">--mingmingsuper</li>
+</ul>
+</div>
+</div>
+
+<h3 class="catListTitle">阅读排行榜</h3>
+<div class="RecentComment" id="TopViewPosts"> 
+	<div id="TopViewPostsBlock"><ul><li><a href="http://www.cnblogs.com/jacktu/archive/2008/06/12/1218400.html">1. 换行符‘\n’和回车符‘\r’(14067)</a></li><li><a href="http://www.cnblogs.com/jacktu/archive/2008/03/12/1101305.html">2. 用eclipse开发flex程序--- 配置eclipse（flex builder 3.0）(10794)</a></li><li><a href="http://www.cnblogs.com/jacktu/archive/2008/11/24/1339789.html">3. 网络字节序与主机字节序(9067)</a></li><li><a href="http://www.cnblogs.com/jacktu/archive/2008/02/27/1083232.html">4. 【原创】oracle spfile和pfile小结(7059)</a></li><li><a href="http://www.cnblogs.com/jacktu/archive/2007/03/13/672858.html">5. Oracle Profile 使用详解(6911)</a></li></ul></div>
+</div>
+
+<h3 class="catListTitle">评论排行榜</h3>
+<div class="RecentComment" id="TopCommentsPosts">
+	<div id="TopFeedbackPostsBlock"><ul><li><a href="http://www.cnblogs.com/jacktu/archive/2008/03/12/1101305.html">1. 用eclipse开发flex程序--- 配置eclipse（flex builder 3.0）(50)</a></li><li><a href="http://www.cnblogs.com/jacktu/archive/2007/04/03/698696.html">2. 安装vs2003一开始，安装程序检测到另一个程序要求计算机重新启动，重启n次无效 的问题(11)</a></li><li><a href="http://www.cnblogs.com/jacktu/archive/2006/05/12/398620.html">3. IBatisnet中，SQL语句字符与配置文件XML保留字符冲突的区别（比如&gt;,&lt;等）(9)</a></li><li><a href="http://www.cnblogs.com/jacktu/archive/2008/10/19/1314428.html">4. 用Think Pad 系统升级程序ThinkVantage System Update时候提示 无法连接代理服务器 的解决办法(7)</a></li><li><a href="http://www.cnblogs.com/jacktu/archive/2008/06/12/1218400.html">5. 换行符‘\n’和回车符‘\r’(4)</a></li></ul></div>
+</div>
+<h3 class="catListTitle">推荐排行榜</h3>
+<div class="RecentComment">
+	<div id="TopDiggPostsBlock"><ul><li><a href="http://www.cnblogs.com/jacktu/archive/2008/06/12/1218400.html">1. 换行符‘\n’和回车符‘\r’(3)</a></li><li><a href="http://www.cnblogs.com/jacktu/archive/2008/04/06/1139283.html">2. 用WebORB实现flex + .net后台的Remoting(1)</a></li><li><a href="http://www.cnblogs.com/jacktu/archive/2008/03/08/1096885.html">3. 网友整理的Flex开源项目(1)</a></li><li><a href="http://www.cnblogs.com/jacktu/archive/2008/01/16/1041710.html">4. 理解HTTP消息头【很完整，例子也很丰富】(1)</a></li><li><a href="http://www.cnblogs.com/jacktu/archive/2007/12/05/984487.html">5. 解决log4net独占日志文件的问题以及 log4net的各种输出配置(Appender)(1)</a></li></ul></div>
+</div>            
+  
+</div>
+    <div id="main">
+        
+				
+	<div class="post">
+		<h5 class="posthead">
+			<a id="ctl02_TitleUrl" href="http://www.cnblogs.com/jacktu/archive/2010/10/27/1862292.html">【转载】stagefright与opencore对比</a>
+		</h5>
+		<div class="postText"><div id="cnblogs_post_body"><p>原文地址：<a href="http://blog.chinaunix.net/u2/61880/showart_2339481.html">http://blog.chinaunix.net/u2/61880/showart_2339481.html</a></p><span class="Apple-style-span" style="font-family: song, Verdana; line-height: normal; font-size: 12px; border-collapse: collapse; "><p style="font: normal normal normal 12px/normal song, Verdana; "><strong><font size="3">1引言</font></strong><br style="font: normal normal normal 12px/normal song, Verdana; ">Android froyo版本多媒体引擎做了变动，新添加了stagefright框架，并且默认情况android选择stagefright，弃用之前的opencore，仅仅对opencore中的omx-component部分做了引用。<br style="font: normal normal normal 12px/normal song, Verdana; ">Stagefright
+自android2.0后才添加，其稳定性有待商榷，是否存在bug也未知，opencore自android诞生起便存在，稳定性有保障。不过，从目前
+android代码看，opencore有被stagefright取代的趋势，所以在opencore上所作工作也许会无法沿用。Opencore上的
+开发较stagefright上要复杂耗时些。</p><p style="font: normal normal normal 12px/normal song, Verdana; "><strong><font size="3">2框架变动<br style="font: normal normal normal 12px/normal song, Verdana; "></font></strong>以MediaPlayer为例，我们先看一下多媒体的简单框架。<br style="font: normal normal normal 12px/normal song, Verdana; ">&nbsp;<img src="stagefright.opencore_files/100927170944.png" alt=""><br style="font: normal normal normal 12px/normal song, Verdana; ">上图可知，stagefright是在MediaPlayerService这一层加入的，和opencore是并列的，在选用opencore还是stagefright的代码切换上也非常容易。<br style="font: normal normal normal 12px/normal song, Verdana; ">&nbsp;
+具体stagefright的内部变动，可见下图概述。Stagefright并没有完全抛弃opencore，主要是做了一个OMX层，用来引用
+opencore的omx-component部分。而stagefright内部而言，与opencore是完全不同的设计。<br style="font: normal normal normal 12px/normal song, Verdana; ">&nbsp;<img src="stagefright.opencore_files/100927170954.png" alt=""></p><p style="font: normal normal normal 12px/normal song, Verdana; "><strong><font size="3">3具体差异</font></strong><br style="font: normal normal normal 12px/normal song, Verdana; "><strong>3.1所支持的文件格式</strong><br style="font: normal normal normal 12px/normal song, Verdana; ">Opencore所支持的格式。<br style="font: normal normal normal 12px/normal song, Verdana; "><img src="stagefright.opencore_files/100927191834.png" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br style="font: normal normal normal 12px/normal song, Verdana; ">Stagefright所支持的格式。<br style="font: normal normal normal 12px/normal song, Verdana; "><img src="stagefright.opencore_files/100927191841.png" alt=""></p><p style="font: normal normal normal 12px/normal song, Verdana; "><br style="font: normal normal normal 12px/normal song, Verdana; "><strong>3.2 Parser和codec部分开发有差异</strong><br style="font: normal normal normal 12px/normal song, Verdana; ">&nbsp;Opencore
+与stagefright两套机制，对于我们的开发而言，主要体现在parser和codec部分。Opencore方面，必须按照其规范完成相应的
+parser-node，codec则要按照omx规范实现相应的component。Stagefright方面，则要按照其规范实现相应的
+extractor和decoder。<br style="font: normal normal normal 12px/normal song, Verdana; ">&nbsp;最基本的实现，二者是相同的，可以共用，差别在封装上，opencore难度和工作量要大。</p><p style="font: normal normal normal 12px/normal song, Verdana; "><br style="font: normal normal normal 12px/normal song, Verdana; "><strong>3.3 数据处理机制不同</strong><br style="font: normal normal normal 12px/normal song, Verdana; ">Opencore处理流程如下图示。<br style="font: normal normal normal 12px/normal song, Verdana; ">&nbsp;<img src="stagefright.opencore_files/100927170959.png" alt=""><br style="font: normal normal normal 12px/normal song, Verdana; ">&nbsp;engine分别创建audio/video datapath，parser/dec/sink作为node节点由各自datapath连接起来，后续node节点由统一调度器调度。<br style="font: normal normal normal 12px/normal song, Verdana; ">Stagefright处理流程如下图示。<br style="font: normal normal normal 12px/normal song, Verdana; ">&nbsp;<img src="stagefright.opencore_files/100927171005.png" alt=""><br style="font: normal normal normal 12px/normal song, Verdana; ">&nbsp;Audioplayer
+为AwesomePlayer的成员，audioplayer通过callback来驱动数据的获取，awesomeplayer则是通过
+videoevent来驱动。二者有个共性，就是数据的获取都抽象成mSource-&gt;Read()来完成，且read内部把parser和dec
+绑在一起。<br style="font: normal normal normal 12px/normal song, Verdana; ">&nbsp;Opencore和stagefright处理机制对比：<br style="font: normal normal normal 12px/normal song, Verdana; ">&nbsp;（1）Opencore的parser与dec是分离的，各行其职；stagefright则是绑在一起作为一个独立的原子操作。<br style="font: normal normal normal 12px/normal song, Verdana; ">&nbsp;（2）Stagefright通过callback和videoevent来驱动数据输出；opencore是通过sink-node节点控制输出。<br style="font: normal normal normal 12px/normal song, Verdana; ">&nbsp;（3）Opencore中parser/dec/sink是并行处理的；stagefright中为串行处理。</p><p style="font: normal normal normal 12px/normal song, Verdana; "><strong>3.4 AV同步</strong><br style="font: normal normal normal 12px/normal song, Verdana; ">&nbsp;Opencore有一个主clock，audio/video分别与该主clock同步，作为输出的判定依据，且audio会不断校准主clock。<br style="font: normal normal normal 12px/normal song, Verdana; ">&nbsp;Stagefright部分，audio完全是callback驱动数据流，video部分在onVideoEvent里会获取audio的时间戳，是传统的AV时间戳做同步。</p><p style="font: normal normal normal 12px/normal song, Verdana; "><strong>3.5 稳定性<br style="font: normal normal normal 12px/normal song, Verdana; "></strong>&nbsp;客观来讲，opencore存在时间长，相对稳定；stagefright刚推出，肯定会有未预知的bug存在。</p><p style="font: normal normal normal 12px/normal song, Verdana; "><strong><font size="3">4 总结<br style="font: normal normal normal 12px/normal song, Verdana; "></font></strong>1.Opencore相对成熟稳定，作为框架采用，风险小；parser/codec集成相对复杂，如果android后续版本弃用opencore转用stagefright，那多媒体引擎的选择是个问题。<br style="font: normal normal normal 12px/normal song, Verdana; ">2.Stagefright新推出，肯定有未预知的bug，直接采用有潜在风险；parser/codec集成相对容易，架构较opencore做了极大简化，通俗易懂。<br style="font: normal normal normal 12px/normal song, Verdana; ">3.目前来看opencore支持的文件格式多些。<br style="font: normal normal normal 12px/normal song, Verdana; ">4.Opencore与stagefright在数据处理机制及AV同步上有很大差异，需要在实际板子上评估性能差异。<br style="font: normal normal normal 12px/normal song, Verdana; ">5.如果在android froyo版本开发多媒体相关产品，建议采用opencore框架，这样旧版本opencore上的成果可以沿用，且节省项目时间。<br style="font: normal normal normal 12px/normal song, Verdana; ">6.Opencore支持的文件格式较stagefright丰富。<br style="font: normal normal normal 12px/normal song, Verdana; ">7.
+如果项目研发中android出现新版本，或stagefright做了更新，仍然维持opencore不变，多媒体引擎变更问题待ipad后再议。一种
+选择是一直延续采用opencore，或者在适当时候（认为stagefright足够稳定）切换到stagefright。</p><p style="font: normal normal normal 12px/normal song, Verdana; "><br style="font: normal normal normal 12px/normal song, Verdana; "><strong><font size="3">Stagefright阅读笔记附录</font></strong><br style="font: normal normal normal 12px/normal song, Verdana; ">两套方案对比过程中，基本上把stagefright的代码阅读过一遍，摘录如下，以图为主。<br style="font: normal normal normal 12px/normal song, Verdana; ">Stagefright整体框图。<br style="font: normal normal normal 12px/normal song, Verdana; "><img src="stagefright.opencore_files/100927170954.png" alt="">&nbsp;<br style="font: normal normal normal 12px/normal song, Verdana; ">Stagefrightplayer里awesomeplayer初始化流程<br style="font: normal normal normal 12px/normal song, Verdana; ">&nbsp;<img src="stagefright.opencore_files/100927171012.png" alt=""><br style="font: normal normal normal 12px/normal song, Verdana; ">Awesomeplayer框图，其中涵盖主要节点元素。<br style="font: normal normal normal 12px/normal song, Verdana; ">&nbsp;<img src="stagefright.opencore_files/100927171023.png" alt=""><br style="font: normal normal normal 12px/normal song, Verdana; ">Stagefrightrecorder部分<br style="font: normal normal normal 12px/normal song, Verdana; ">&nbsp;<img src="stagefright.opencore_files/100927171032.png" alt=""><br style="font: normal normal normal 12px/normal song, Verdana; ">MediaPlayer框图。<br style="font: normal normal normal 12px/normal song, Verdana; ">&nbsp;<img src="stagefright.opencore_files/100927170944.png" alt=""><br style="font: normal normal normal 12px/normal song, Verdana; ">MediaRecorder框图。<br style="font: normal normal normal 12px/normal song, Verdana; ">&nbsp;<img src="stagefright.opencore_files/100927171041.png" alt=""><br style="font: normal normal normal 12px/normal song, Verdana; ">Libstagefright草图，涵盖了主要节点元素。<br style="font: normal normal normal 12px/normal song, Verdana; "></p></span><p><span class="Apple-style-span" style="font-family: song, Verdana; line-height: normal; font-size: 12px; border-collapse: collapse; ">&nbsp;<img src="stagefright.opencore_files/100927171116.png" alt=""></span>&nbsp;</p></div>
+<script type="text/javascript">
+if ($ != jQuery) {
+	$ = jQuery.noConflict();
+}
+var isLogined = false;
+var cb_blogId = 18372;
+var cb_entryId = 1862292;
+var cb_blogApp = "jacktu";
+var cb_blogUserGuid = "2b54360b-63cf-dd11-9e4d-001cf0cd104b";
+var cb_entryCreatedDate = '2010/10/27 11:13:00';
+</script>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/jacktu/category/115008.html">android</a></div>
+<div id="EntryTag"></div>
+<div id="green_channel" style="">
+绿色通道：<a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(cb_entryId,cb_blogId,1);green_channel_success(this,'谢谢推荐！');">好文要顶</a><a id="green_channel_follow" onclick="c_follow();" href="javascript:void(0);">关注我</a><a id="green_channel_favorite" onclick="AddToWz(1862292);return false;" href="javascript:void(0);">收藏该文</a><a id="green_channel_contact" href="http://space.cnblogs.com/msg/send/jsot" target="_blank">与我联系</a>
+<a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="stagefright.opencore_files/icon_sina.gif" alt=""></a>
+</div>
+<div id="digg_block">
+<div id="author_profile">
+<div id="author_profile_info" class="author_profile_info">
+<div id="author_profile_detail" class="author_profile_info">
+<a href="http://home.cnblogs.com/u/jacktu/">jsot</a><br><a href="http://home.cnblogs.com/u/jacktu/followees">关注 - 1</a><br><a href="http://home.cnblogs.com/u/jacktu/followers">粉丝 - 10</a></div>
+</div>
+<div class="clear"></div>
+<div id="author_profile_honor"></div>
+<div id="author_profile_follow"><a href="javascript:void(0);" onclick="c_follow();return false;">+加关注</a></div>
+</div>
+<div id="div_digg" style="">										
+	<div class="diggit" onclick="DiggIt(cb_entryId,cb_blogId,1)"> 
+		<span class="diggnum" id="digg_count">0</span>
+	</div>
+	<div class="buryit" onclick="DiggIt(cb_entryId,cb_blogId,2)"> 
+		<span class="burynum" id="bury_count">0</span>
+	</div>
+	<div class="clear"></div>	
+	<div class="diggword" id="digg_tips">(请您对文章做出评价)</div>	
+</div>
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/jacktu/archive/2010/08/02/1790209.html" class="p_n_p_prefix">« </a> 博主前一篇：<a href="http://www.cnblogs.com/jacktu/archive/2010/08/02/1790209.html" title="发布于2010-08-02 09:40">Java元数据总结：Java注释的使用和定义</a><br><a href="http://www.cnblogs.com/jacktu/archive/2010/11/01/1866441.html" class="p_n_p_prefix">» </a> 博主后一篇：<a href="http://www.cnblogs.com/jacktu/archive/2010/11/01/1866441.html" title="发布于2010-11-01 17:20">虚拟环境搭建相关</a><br></div>
+</div>
+<script type="text/javascript">
+LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+</script>
+
+
+
+</div>
+		<p class="postfoot">
+			posted on 2010-10-27 11:13 <a href="http://www.cnblogs.com/jacktu/">jsot</a> 阅读(1999) <a href="#commentform">评论(0)</a>  <a href="#" onclick="open_link('http://www.cnblogs.com/jacktu/admin/EditPosts.aspx?postid=1862292')" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(1862292);return false;">收藏</a>
+		</p>
+	</div>
+	<img src="stagefright.opencore_files/1862292.jpeg" alt="" height="1px" width="1px">
+	
+	
+<script type="text/javascript">
+    var commentAuthorHasChecked = false;
+    var commentAuthorIsValid = false;
+    var commentUrlIsValid = true;
+    var commentEmailIsValid = true;
+    var authenCodeHasChecked = false;
+    var authenCodeIsValid = true;
+    var hasLogined = false;
+    
+    function PostComment() {    
+        
+        var isValid = true;
+        
+        if($("#wrapAuthenCode").css("display")=="none"){
+            ShowAuthenCode();
+            $("#tip_AuthenCode").css("color","red");
+            $("#tip_AuthenCode").html("请输入验证码！");
+            isValid = false;
+        }
+        
+        if(!hasLogined && !commentAuthorHasChecked){
+            CheckAuthor();        
+        }                
+        if(!hasLogined && !commentAuthorIsValid){
+            isValid = false;
+        }
+                       
+        if(!authenCodeHasChecked){
+            CheckAuthenCode();            
+        }
+        if(!authenCodeIsValid){
+            isValid = false;
+        }
+        
+        if(!hasLogined && !commentUrlIsValid){            
+            isValid = false;
+        }        
+        if(!commentEmailIsValid){            
+            isValid = false;
+        }        
+        if(!CheckCommentContent()){
+            isValid = false;
+        }    
+        if(!isValid){
+            return;
+        }
+
+        var content = $("#tbCommentBody").val();
+        if(content.length>2000){
+            alert("评论内容过长！不允许发布！");
+            return;
+        }     
+        
+        if(content.indexOf("　Ｅ　　　　　　　　　Ｅ　　　　　　　　　　Ｅ　　　　　　")>=0){
+            alert("该内容不允许布！");
+            return;
+        }   
+        
+       if ($("#span_comment_posted").html()!='' && $("#span_comment_posted").html()==content){
+            alert("该评论已发表过!");
+            return;
+        }
+        
+        $("#tip_comment").html("评论提交中...");
+        $("#span_comment_posted").html(content);
+        //content = content.replace("'", "\\'");
+        var email = $("#tbCommentEmail").val();
+        var authenNum = $("#tbAuthenCode").val();
+        var authenId = $("#span_comment_test").html();
+        var comment = {};
+        comment.authenNum = authenNum;
+        comment.authenId= authenId;
+        comment.parentId = 0;
+        comment.blogId = 0;
+        comment.sourceUrl = '';
+        comment.author = $("#tbCommentAuthor").val();
+        comment.url = $("#tbCommentAuthorUrl").val();
+        comment.authenCode = $("#tbAuthenCode").val();
+        comment.email = email;
+        comment.title = '';
+        comment.content = content;
+        comment.parentCommentId = $("#span_parentcomment_id").html();
+        $.ajax({
+            url: '/ws/CommentService.asmx/AddAnonymousComment',
+            data: $.toJSON(comment),
+            type: "post",
+            dataType: "json",
+            contentType: "application/json; charset=utf8",
+            success: function(data) {
+               if (data.d["IsSuccess"]) {
+                    ShowCommentMsg("感谢您的回复:)");
+                    //RereshComments2(comment.parentId);
+                    $("#tbCommentBody").val('');
+                    //$("#divCommentShow").html(data.d["ReturnData"]+content.replace(/\n/g,"<br/>")+"<br/><br/>");
+                    $("#divCommentShow").html($("#divCommentShow").html()+data.d["ReturnData"]); 
+                    $("#tip_AuthenCode").html('');
+                    RefreshAuthenCode();
+                    $("#tbAuthenCode").val("");                    
+                    CommentNotify(data.d["CommentID"]);
+                }
+                else {
+                    ShowCommentMsg(data.d["ReturnData"]);//"抱歉！评论提交失败！请与管理员联系。");
+                    $("#span_comment_posted").html(''); 
+                }
+            },
+            error: function(xhr) {
+                ShowCommentMsg("抱歉！评论提交失败！请与管理员联系。");
+                $("#span_comment_posted").html('');  
+                //alert(xhr.responseText);
+            }
+        }
+        );
+    }
+    
+    function RefreshAuthenCode(){
+        AjaxPost("/ws/CommentService.asmx/RefreshAuthenCode","{}",RefreshImg); 
+        $("#lnkRereshAuthenCode").html("<span style='color:red'>刷新中...</span>");
+        return false;
+    }
+    
+    function RefreshImg(response){
+       $("#imgAuthenCode").attr("src","/Modules/CaptchaImage/ValidCodeImage.aspx?id="+encodeURIComponent(response));
+       $("#span_comment_test").html(response);
+       $("#lnkRereshAuthenCode").html("看不清，换一个");
+    }
+    
+    function ShowAuthenCode(){
+        //if($("#wrapAuthenCode").css("display")=="none"){    
+        //    AjaxPost("/ws/CommentService.asmx/RefreshAuthenCode","{}",ShowAuthenCodeOk);
+        //}
+        $("#wrapAuthenCode").show();      
+    }
+    
+    function ShowAuthenCodeOk(response){
+         UpdateAuthenCode();
+         $("#tbAuthenCode").val("");
+         $("#wrapAuthenCode").show();
+         $("#tip_AuthenCode").html('');
+    }  
+ 
+    
+    function CheckAuthor(isOnblur){
+        commentAuthorHasChecked = true;
+        var maxLength = 30;
+        if($("#tbCommentAuthor").val().length == 0){
+            $("#tip_author").html("请输入您的昵称！");
+            commentAuthorIsValid = false;
+            return false;
+        }     
+        else if($("#tbCommentAuthor").val().length > maxLength){
+            $("#tip_author").html("昵称不允许超过" + maxLength + "个字符！");
+            commentAuthorIsValid = false;
+            return false;
+        }
+        else{
+            //if(isOnblur){
+                AjaxPost("/ws/CommentService.asmx/IsAuthorExist","{author:'"+$("#tbCommentAuthor").val()+"'}" ,OnCheckAuthorExist);
+            //}
+            //else{
+            //    $("#tip_author").html("");
+            //    commentAuthorIsValid = true;
+            //}
+            return true;
+        }
+   }
+   
+    function OnCheckAuthorExist(response){        
+        if(!response){
+            $("#tip_author").html("");
+            commentAuthorIsValid = true;
+        }
+        else{
+            $("#tip_author").html("该昵称已被使用，请更换昵称");
+            commentAuthorIsValid = false;
+        }
+   }
+   
+    function CheckUrl(){
+        var maxLength = 50;
+        var url = $("#tbCommentAuthorUrl").val();
+        
+        if(url.length == 0){
+            commentUrlIsValid = true;
+            return true;
+        }
+        else if(url.length > maxLength){
+            $("#tip_url").html("主页地址不允许超过" + maxLength + "个字符！");
+            commentUrlIsValid = false;
+            return false;
+        }
+        else if(url.indexOf("http://")!=0 || url.indexOf(".") < 0){
+            $("#tip_url").html("主页地址要以“http://”开头");
+            commentUrlIsValid = false;
+            return false;
+        }
+        else{
+            $("#tip_url").html("");
+            commentUrlIsValid = true;
+            return true;
+        }
+   }
+   
+   function CheckEmail(){
+        var email = $("#tbCommentEmail").val();
+        if(email.length>0){
+            var regExp = new RegExp("\\w+@((\\w|\-)+\\.)+[a-z]{2,3}");
+            if(!regExp.test(email)){
+                $("#tip_email").html("请输入正确的邮件地址!");
+                commentEmailIsValid = false;
+            }
+            else{
+                commentEmailIsValid = true;
+                 $("#tip_email").html("");
+            }
+        }
+        else{
+            commentEmailIsValid = true;
+            $("#tip_email").html("");  
+        }
+   }
+   
+   function CheckAuthenCode(){
+        authenCodeHasChecked = true;
+        var num = $("#tbAuthenCode").val();
+        var id = $("#span_comment_test").html();
+        $("#tip_AuthenCode").css("color","red");
+        if(num.length==0){
+             authenCodeIsValid = false;
+             $("#tip_AuthenCode").html("请输入验证码！");
+             return;
+        }
+        else if(num.length!=4){
+            authenCodeIsValid = false;
+            $("#tip_AuthenCode").html("请输入四位数字！");
+             return;
+        }
+        else if(new RegExp("(\d+)").test(num)){
+            authenCodeIsValid = false;
+            $("#tip_AuthenCode").html("请输入四位数字！");
+             return;
+        }
+        else{
+            AjaxPost("/ws/CommentService.asmx/CheckAuthenCode","{number:"+num+",id:'"+id+"'}", OnCheckAuthenCode);
+        }
+   }
+   
+   function OnCheckAuthenCode(response){
+        if(response){
+            $("#tip_AuthenCode").css("color","green");
+            $("#tip_AuthenCode").html("验证码输入正确！");
+            authenCodeIsValid = true;            
+        }
+        else{
+            $("#tip_AuthenCode").css("color","red");
+            $("#tip_AuthenCode").html("验证码输错啦！");
+            RefreshAuthenCode();
+            authenCodeIsValid = false;           
+        }
+   }
+   
+   function CheckCommentContent(){
+    if($("#tbCommentBody").val().length==0){
+        alert("请输入评论内容！");
+        return false;
+    }
+    return true;
+   }
+    
+</script>
+<div id="ctl03_comment_form" class="commentform">
+
+<script type="text/javascript">
+    try {
+        SyntaxHighlighter.all();
+        isSyntaxHighlighted = true;
+    } catch (e) { }
+</script>
+
+
+<div id="ctl03_divLoginPannel">
+<div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="http://passport.cnblogs.com/login.aspx?ReturnUrl=http%3a%2f%2fwww.cnblogs.com%2fjacktu%2farchive%2f2010%2f10%2f27%2f1862292.html%3flogin%3d1%23commentform" class="underline">登录</a> 或 <a rel="nofollow" href="http://passport.cnblogs.com/register.aspx?ReturnUrl=http%3a%2f%2fwww.cnblogs.com%2fjacktu%2farchive%2f2010%2f10%2f27%2f1862292.html%23Bottom2" class="underline">注册</a>，<a href="http://www.cnblogs.com/" target="_blank">返回博客园首页</a>。</div>
+</div>
+
+<div id="clear_read_link"><a href="http://archive.cnblogs.com/a/1862292/" target="_blank">简洁阅读版式</a></div>
+<script type="text/javascript">
+    $("#clear_read_link").html('<a href="http://archive.cnblogs.com/a/' + cb_entryId + '/" target="_blank">简洁阅读版式</a>')
+</script>
+<div id="site_nav_under">
+<a href="http://www.cnblogs.com/" target="_blank" title="程序员的网上家园">首页</a><a href="http://q.cnblogs.com/" target="_blank">博问</a><a href="http://home.cnblogs.com/ing/" target="_blank">闪存</a><a href="http://news.cnblogs.com/" target="_blank" title="IT新闻">新闻</a><a href="http://home.cnblogs.com/" target="_blank">园子</a><a href="http://job.cnblogs.com/" target="_blank" title="程序员招聘">招聘</a><a href="http://kb.cnblogs.com/" target="_blank">知识库</a> 
+
+</div>
+
+<div class="itnews c_ad_block">
+<b>最新IT新闻</b>:<br>
+
+          ·  <a href="http://news.cnblogs.com/n/125072/" target="_blank">传美国电信运营商Verizon欲收购Netflix</a><br>
+	
+          ·  <a href="http://news.cnblogs.com/n/125071/" target="_blank">“马里奥” 之父要退休了</a><br>
+	
+          ·  <a href="http://news.cnblogs.com/n/125070/" target="_blank">Facebook超越谷歌成Android平台最热门应用</a><br>
+	
+          ·  <a href="http://news.cnblogs.com/n/125069/" target="_blank">YouTube向学校提供40万段教育视频</a><br>
+	
+          ·  <a href="http://news.cnblogs.com/n/125068/" target="_blank">如何改进 N9 的交互设计</a><br>
+	
+» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a>
+</div>
+
+
+<div class="itnews c_ad_block" id="kb_block">
+<b>最新知识库文章</b>:<br>
+<div id="kb_recent">
+
+·  <a href="http://kb.cnblogs.com/page/124879/" target="_blank">HTTP Caching 优化网站</a><br>
+
+·  <a href="http://kb.cnblogs.com/page/124787/" target="_blank">走向DBA[MSSQL篇] - 从SQL语句的角度提高数据库的访问性能</a><br>
+
+·  <a href="http://kb.cnblogs.com/page/124567/" target="_blank">Twitter首席工程师：如何“打败”CAP定理</a><br>
+
+·  <a href="http://kb.cnblogs.com/page/111802/" target="_blank">HTML5标签使用的常见误区</a><br>
+
+·  <a href="http://kb.cnblogs.com/page/114032/" target="_blank">程序员总结：帮助你早些明白一些道理</a><br>
+
+</div>
+» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a>
+</div>
+
+<script type="text/javascript">
+    var enableGoogleAd = true;
+    enableGoogleAd = $("#cnblogs_post_body").text().length > 500;
+</script>
+<script type="text/javascript">
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    (function () {
+        if(enableGoogleAd){
+            var gads = document.createElement('script');
+            gads.async = true;
+            gads.type = 'text/javascript';
+            var useSSL = 'https:' == document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') +
+            '//www.googletagservices.com/tag/js/gpt.js';
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+        }
+    })();
+</script>
+
+<script type="text/javascript">
+    if (enableGoogleAd) {
+        try {
+            googletag.cmd.push(function () {
+                googletag.defineSlot('/1090369/cnblogs_blogpost_C1', [300, 250], 'div-gpt-ad-1320933818841-0').addService(googletag.pubads());
+                googletag.defineSlot('/1090369/cnblogs_blogpost_C2', [468, 60], 'div-gpt-ad-1320933818841-1').addService(googletag.pubads());
+                googletag.pubads().enableSingleRequest();
+                googletag.enableServices();
+            });
+        } catch (e) { }
+    }
+</script>
+<div id="google_ad_c1" class="c_ad_block">
+<!-- cnblogs_blogpost_C1 -->
+<div id="div-gpt-ad-1320933818841-0" style="width: 300px; height: 250px;">
+<script type="text/javascript">
+    if (enableGoogleAd) {
+        try {
+            googletag.cmd.push(function () { googletag.display('div-gpt-ad-1320933818841-0'); });
+        } catch (e) { }       
+    }
+</script>
+<iframe style="border: 0pt none;" marginheight="0" marginwidth="0" name="google_ads_iframe_/1090369/cnblogs_blogpost_C1_0" id="google_ads_iframe_/1090369/cnblogs_blogpost_C1_0" frameborder="0" height="250" scrolling="no" width="300"></iframe><iframe style="border: 0pt none; visibility: hidden; display: none;" marginheight="0" marginwidth="0" name="google_ads_iframe_/1090369/cnblogs_blogpost_C1_0__hidden__" id="google_ads_iframe_/1090369/cnblogs_blogpost_C1_0__hidden__" frameborder="0" height="0" scrolling="no" width="0"></iframe></div>
+</div>
+<div id="google_ad_c2" class="c_ad_block">
+<!-- cnblogs_blogpost_C2 -->
+<div id="div-gpt-ad-1320933818841-1" style="width: 468px; height: 60px;">
+<script type="text/javascript">
+    if (enableGoogleAd) {
+        try {
+            googletag.cmd.push(function () { googletag.display('div-gpt-ad-1320933818841-1'); });
+        } catch (e) { }
+        
+    }
+</script>
+<iframe style="border: 0pt none;" marginheight="0" marginwidth="0" name="google_ads_iframe_/1090369/cnblogs_blogpost_C2_0" id="google_ads_iframe_/1090369/cnblogs_blogpost_C2_0" frameborder="0" height="60" scrolling="no" width="468"></iframe></div>
+</div>
+<div id="ad_under_comment2" class="c_ad_block" style="">
+<a href="http://www.china-pub.com/STATIC07/1107/2011chinapub_6810_110718/2011chinapub_6810_110718.asp" target="_blank" rel="nofollow"><img src="stagefright.opencore_files/china-pub.jpg" alt="" style="border: 0px none;"></a><br>
+<a href="http://www.china-pub.com/STATIC07/1107/zh_autumntb_110725/zh_autumntb_110725.asp" target="_blank" rel="nofollow">China-pub 2011秋季教材巡展</a><br>
+<a href="http://www.china-pub.com/static07/0901/zh_jueba_090121.asp" target="_blank" rel="nofollow">China-Pub 计算机绝版图书按需印刷服务</a><br>
+</div>
+<script type="text/javascript">
+    if (enableGoogleAd) {
+        if (document.getElementById("ad_under_comment2")) {
+            $("#ad_under_comment2").show();
+        }
+    }
+    else {
+        $("#google_ad_c1").hide();
+        $("#google_ad_c2").hide();
+    }
+</script>
+
+<div id="HistoryToday" class="c_ad_block">
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    });
+</script>
+
+
+
+
+</div>
+
+
+			
+    </div>
+    <div id="footer">
+        
+<div id="footer">
+	Powered by: 
+	
+	<a id="Footer1_Hyperlink3" name="Hyperlink1" href="http://www.cnblogs.com/" style="font-family: Verdana; font-size: 12px;">博客园</a>
+	Copyright © jsot
+</div>
+    </div>
+</div>
+<div id="lefttemp" style="display:none">
+ 
+            
+<h3>公告</h3>
+	欢迎探讨<div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/jacktu/">jsot</a><br>园龄：<a href="http://home.cnblogs.com/u/jacktu/" title="入园时间：2006-04-22">5年7个月</a><br>粉丝：<a href="http://home.cnblogs.com/u/jacktu/followers/">10</a><br>关注：<a href="http://home.cnblogs.com/u/jacktu/followees/">1</a><div id="p_b_follow"></div><script type="text/javascript">cnblogs.UserManager.GetFollowStatus('2b54360b-63cf-dd11-9e4d-001cf0cd104b')</script></div>
+
+            <table id="Calendar1_entryCal" class="Cal" title="Calendar" style="border-width: 1px; border-style: solid; border-collapse: collapse;" cellpadding="0" cellspacing="0">
+	<tbody><tr><td colspan="7" style="background-color: Silver;"><table class="CalTitle" style="width: 100%; border-collapse: collapse;" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev" style="width: 15%;"><a href="javascript:__doPostBack('Calendar1$entryCal','V3896')" style="color: Black;" title="Go to the previous month">&lt;</a></td><td style="width: 70%;" align="center">2010年10月</td><td class="CalNextPrev" style="width: 15%;" align="right"><a href="javascript:__doPostBack('Calendar1$entryCal','V3957')" style="color: Black;" title="Go to the next month">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" abbr="日" scope="col" align="center">日</th><th class="CalDayHeader" abbr="一" scope="col" align="center">一</th><th class="CalDayHeader" abbr="二" scope="col" align="center">二</th><th class="CalDayHeader" abbr="三" scope="col" align="center">三</th><th class="CalDayHeader" abbr="四" scope="col" align="center">四</th><th class="CalDayHeader" abbr="五" scope="col" align="center">五</th><th class="CalDayHeader" abbr="六" scope="col" align="center">六</th></tr><tr><td class="CalOtherMonthDay" style="width: 14%;" align="center">26</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">27</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">28</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">29</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">30</td><td style="width: 14%;" align="center">1</td><td class="CalWeekendDay" style="width: 14%;" align="center">2</td></tr><tr><td class="CalWeekendDay" style="width: 14%;" align="center">3</td><td style="width: 14%;" align="center">4</td><td style="width: 14%;" align="center">5</td><td style="width: 14%;" align="center">6</td><td style="width: 14%;" align="center">7</td><td style="width: 14%;" align="center">8</td><td class="CalWeekendDay" style="width: 14%;" align="center">9</td></tr><tr><td class="CalWeekendDay" style="width: 14%;" align="center">10</td><td style="width: 14%;" align="center">11</td><td style="width: 14%;" align="center">12</td><td style="width: 14%;" align="center">13</td><td style="width: 14%;" align="center">14</td><td style="width: 14%;" align="center">15</td><td class="CalWeekendDay" style="width: 14%;" align="center">16</td></tr><tr><td class="CalWeekendDay" style="width: 14%;" align="center">17</td><td style="width: 14%;" align="center">18</td><td style="width: 14%;" align="center">19</td><td style="width: 14%;" align="center">20</td><td style="width: 14%;" align="center">21</td><td style="width: 14%;" align="center">22</td><td class="CalWeekendDay" style="width: 14%;" align="center">23</td></tr><tr><td class="CalWeekendDay" style="width: 14%;" align="center">24</td><td style="width: 14%;" align="center">25</td><td style="width: 14%;" align="center">26</td><td style="width: 14%;" align="center"><a href="http://www.cnblogs.com/jacktu/archive/2010/10/27.html"><u>27</u></a></td><td style="width: 14%;" align="center">28</td><td style="width: 14%;" align="center">29</td><td class="CalWeekendDay" style="width: 14%;" align="center">30</td></tr><tr><td class="CalWeekendDay" style="width: 14%;" align="center">31</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">1</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">2</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">3</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">4</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">5</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">6</td></tr>
+</tbody></table>
+
+            
+<h3>统计</h3>
+	<ul>
+		<li>随笔 - 259
+		</li><li>文章 - 1
+		</li><li>评论 - 173
+		</li><li>引用 - 9
+	</li>
+</ul>
+            
+<script type="text/javascript">
+    var blogapp = 'jacktu';
+</script>
+<div class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div id="widget_my_zzk" class="div_my_zzk"><input id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk" type="text">&nbsp;<input onclick="zzk_go()" value="找找看" id="btnZzk" class="btn_my_zzk" type="button"></div>
+<div id="SingleColumn1_ctl00_widget_my_google" class="div_my_zzk"><input name="google_q" id="google_q" onkeydown="return google_go_enter(event)" class="input_my_zzk" type="text">&nbsp;<input onclick="google_go()" value="谷歌搜索" class="btn_my_zzk" type="button"></div>
+</div>
+
+
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+
+		<li><a id="SingleColumn1_ctl01_rptMainLinks_lnkLinkItem_0" href="http://www.cnblogs.com/jacktu/MyPosts.html">我的随笔</a></li>
+	
+		<li><a id="SingleColumn1_ctl01_rptMainLinks_lnkLinkItem_1" href="http://www.cnblogs.com/jacktu/MyComments.html">我的评论</a></li>
+	
+		<li><a id="SingleColumn1_ctl01_rptMainLinks_lnkLinkItem_2" title="我发表过评论的随笔" href="http://www.cnblogs.com/jacktu/OtherPosts.html">我的参与</a></li>
+	
+		<li><a id="SingleColumn1_ctl01_rptMainLinks_lnkLinkItem_3" href="http://www.cnblogs.com/jacktu/RecentComments.html">最新评论</a></li>
+	
+		<li><a id="SingleColumn1_ctl01_rptMainLinks_lnkLinkItem_4" href="http://www.cnblogs.com/jacktu/tag/">我的标签</a></li>
+	
+</ul>
+<div id="itemListLin_con" style="display:none;">
+
+</div>
+		<h3>随笔分类</h3>
+		
+				<ul>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_0" href="http://www.cnblogs.com/jacktu/category/118645.html">.net(17)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_0" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/118645.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_1" href="http://www.cnblogs.com/jacktu/category/125695.html">adobe RIA/FLEX(9)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_1" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/125695.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_2" href="http://www.cnblogs.com/jacktu/category/115008.html">android(61)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_2" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/115008.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_3" href="http://www.cnblogs.com/jacktu/category/124352.html">C#(2)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_3" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/124352.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_4" href="http://www.cnblogs.com/jacktu/category/126936.html">C/C++/基础(2)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_4" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/126936.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_5" href="http://www.cnblogs.com/jacktu/category/157025.html">eclipse(3)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_5" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/157025.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_6" href="http://www.cnblogs.com/jacktu/category/124351.html">Html/Css</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_6" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/124351.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_7" href="http://www.cnblogs.com/jacktu/category/305541.html">ios/mac(23)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_7" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/305541.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_8" href="http://www.cnblogs.com/jacktu/category/157026.html">java/j2me(26)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_8" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/157026.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_9" href="http://www.cnblogs.com/jacktu/category/124350.html">Javascript/ajax(8)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_9" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/124350.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_10" href="http://www.cnblogs.com/jacktu/category/124353.html">Linux(11)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_10" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/124353.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_11" href="http://www.cnblogs.com/jacktu/category/124354.html">MySql(2)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_11" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/124354.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_12" href="http://www.cnblogs.com/jacktu/category/248910.html">OpenGL(7)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_12" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/248910.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_13" href="http://www.cnblogs.com/jacktu/category/124411.html">Oracle(10)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_13" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/124411.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_14" href="http://www.cnblogs.com/jacktu/category/129277.html">other(11)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_14" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/129277.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_15" href="http://www.cnblogs.com/jacktu/category/124355.html">设计模式(2)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_15" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/124355.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_16" href="http://www.cnblogs.com/jacktu/category/118653.html">网络技术(25)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_16" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/118653.html/rss');">(rss)</a></li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_0_Link_17" href="http://www.cnblogs.com/jacktu/category/157027.html">终端开发(34)</a> <a id="SingleColumn1_Categories_CatList_LinkList_0_RssLink_17" href="#" onclick="return open_link('http://www.cnblogs.com/jacktu/category/157027.html/rss');">(rss)</a></li>
+			
+				</ul>
+			
+	
+		<h3>随笔档案</h3>
+		
+				<ul>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_0" href="http://www.cnblogs.com/jacktu/archive/2011/12.html">2011年12月 (3)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_1" href="http://www.cnblogs.com/jacktu/archive/2011/11.html">2011年11月 (6)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_2" href="http://www.cnblogs.com/jacktu/archive/2011/10.html">2011年10月 (10)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_3" href="http://www.cnblogs.com/jacktu/archive/2011/09.html">2011年9月 (6)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_4" href="http://www.cnblogs.com/jacktu/archive/2011/08.html">2011年8月 (1)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_5" href="http://www.cnblogs.com/jacktu/archive/2011/06.html">2011年6月 (2)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_6" href="http://www.cnblogs.com/jacktu/archive/2011/05.html">2011年5月 (4)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_7" href="http://www.cnblogs.com/jacktu/archive/2010/12.html">2010年12月 (5)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_8" href="http://www.cnblogs.com/jacktu/archive/2010/11.html">2010年11月 (2)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_9" href="http://www.cnblogs.com/jacktu/archive/2010/10.html">2010年10月 (1)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_10" href="http://www.cnblogs.com/jacktu/archive/2010/08.html">2010年8月 (1)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_11" href="http://www.cnblogs.com/jacktu/archive/2010/07.html">2010年7月 (7)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_12" href="http://www.cnblogs.com/jacktu/archive/2010/06.html">2010年6月 (9)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_13" href="http://www.cnblogs.com/jacktu/archive/2010/05.html">2010年5月 (2)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_14" href="http://www.cnblogs.com/jacktu/archive/2010/02.html">2010年2月 (5)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_15" href="http://www.cnblogs.com/jacktu/archive/2009/11.html">2009年11月 (6)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_16" href="http://www.cnblogs.com/jacktu/archive/2009/10.html">2009年10月 (1)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_17" href="http://www.cnblogs.com/jacktu/archive/2009/09.html">2009年9月 (4)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_18" href="http://www.cnblogs.com/jacktu/archive/2009/08.html">2009年8月 (5)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_19" href="http://www.cnblogs.com/jacktu/archive/2009/07.html">2009年7月 (1)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_20" href="http://www.cnblogs.com/jacktu/archive/2009/06.html">2009年6月 (3)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_21" href="http://www.cnblogs.com/jacktu/archive/2009/05.html">2009年5月 (4)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_22" href="http://www.cnblogs.com/jacktu/archive/2009/04.html">2009年4月 (6)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_23" href="http://www.cnblogs.com/jacktu/archive/2009/03.html">2009年3月 (1)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_24" href="http://www.cnblogs.com/jacktu/archive/2009/02.html">2009年2月 (3)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_25" href="http://www.cnblogs.com/jacktu/archive/2009/01.html">2009年1月 (1)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_26" href="http://www.cnblogs.com/jacktu/archive/2008/12.html">2008年12月 (6)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_27" href="http://www.cnblogs.com/jacktu/archive/2008/11.html">2008年11月 (11)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_28" href="http://www.cnblogs.com/jacktu/archive/2008/10.html">2008年10月 (4)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_29" href="http://www.cnblogs.com/jacktu/archive/2008/09.html">2008年9月 (1)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_30" href="http://www.cnblogs.com/jacktu/archive/2008/07.html">2008年7月 (4)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_31" href="http://www.cnblogs.com/jacktu/archive/2008/06.html">2008年6月 (2)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_32" href="http://www.cnblogs.com/jacktu/archive/2008/04.html">2008年4月 (3)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_33" href="http://www.cnblogs.com/jacktu/archive/2008/03.html">2008年3月 (12)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_34" href="http://www.cnblogs.com/jacktu/archive/2008/02.html">2008年2月 (19)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_35" href="http://www.cnblogs.com/jacktu/archive/2008/01.html">2008年1月 (20)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_36" href="http://www.cnblogs.com/jacktu/archive/2007/12.html">2007年12月 (12)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_37" href="http://www.cnblogs.com/jacktu/archive/2007/11.html">2007年11月 (5)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_38" href="http://www.cnblogs.com/jacktu/archive/2007/10.html">2007年10月 (5)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_39" href="http://www.cnblogs.com/jacktu/archive/2007/09.html">2007年9月 (4)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_40" href="http://www.cnblogs.com/jacktu/archive/2007/08.html">2007年8月 (1)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_41" href="http://www.cnblogs.com/jacktu/archive/2007/07.html">2007年7月 (7)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_42" href="http://www.cnblogs.com/jacktu/archive/2007/06.html">2007年6月 (1)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_43" href="http://www.cnblogs.com/jacktu/archive/2007/05.html">2007年5月 (1)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_44" href="http://www.cnblogs.com/jacktu/archive/2007/04.html">2007年4月 (2)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_45" href="http://www.cnblogs.com/jacktu/archive/2007/03.html">2007年3月 (4)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_46" href="http://www.cnblogs.com/jacktu/archive/2007/02.html">2007年2月 (10)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_47" href="http://www.cnblogs.com/jacktu/archive/2006/12.html">2006年12月 (3)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_48" href="http://www.cnblogs.com/jacktu/archive/2006/11.html">2006年11月 (6)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_49" href="http://www.cnblogs.com/jacktu/archive/2006/10.html">2006年10月 (6)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_50" href="http://www.cnblogs.com/jacktu/archive/2006/06.html">2006年6月 (1)</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_1_Link_51" href="http://www.cnblogs.com/jacktu/archive/2006/05.html">2006年5月 (10)</a> </li>
+			
+				</ul>
+			
+	
+		<h3>相册</h3>
+		
+				<ul>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_2_Link_0" rel="nofollow" href="http://www.cnblogs.com/jacktu/gallery/169121.html">相册</a> </li>
+			
+				</ul>
+			
+	
+		<h3>blog</h3>
+		
+				<ul>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_3_Link_0" href="http://blog.donews.com/monoer/archive/2006/07/09/951496.aspx">C#+Mysql+Mono</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_3_Link_1" href="http://www.cnblogs.com/wzyexf/category/50910.html">Community Server讨论区</a> <a id="SingleColumn1_Categories_CatList_LinkList_3_RssLink_1" href="#" onclick="return open_link('http://communityserver.cn/');">(rss)</a></li>
+			<li class="c_b_p_link_desc">QA&amp;</li>
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_3_Link_2" rel="nofollow" href="http://www.zhuoqun.net/html/ycategory/tech/adobeflex">Dreamer’s Blog » Flex</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_3_Link_3" rel="nofollow" href="http://www.blogjava.net/emu">stonehuang</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_3_Link_4" href="http://www.cnblogs.com/frogbag/category/79583.html">Svg&amp;Vml</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_3_Link_5" href="http://www.cnblogs.com/Terrylee/archive/2006/11/18/microsoft_code_snippet_designer.html">TerryLee技术专栏</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_3_Link_6" rel="nofollow" href="http://www.pjhome.net/">zishun的blog</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_3_Link_7" rel="nofollow" href="http://www.duduwolf.com/catalog.asp?tags=javascript">嘟嘟老窝</a> </li>
+			<li class="c_b_p_link_desc">N多ajax东东</li>
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_3_Link_8" rel="nofollow" href="http://www.duzengqiang.com/">杜增强.COM =&gt; Flex&amp;as3</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_3_Link_9" href="http://www.cnblogs.com/aspsir/archive/2006/07/27/461229.html">恩电，.net牛人</a> </li>
+			<li class="c_b_p_link_desc">.net牛</li>
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_3_Link_10" rel="nofollow" href="http://singlepine.cnblogs.com/articles/253393.html">小山的blog，ajax高手</a> </li>
+			<li class="c_b_p_link_desc">山</li>
+				</ul>
+			
+	
+		<h3>有用的网址</h3>
+		
+				<ul>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_4_Link_0" rel="nofollow" href="http://www.cs-open.com/">C#开源资源大全</a> </li>
+			
+				<li><a id="SingleColumn1_Categories_CatList_LinkList_4_Link_1" rel="nofollow" href="http://www.51windows.net/pages/jscript5/?url=/pages/jscript5/html/jsmtheval.htm">JSCRIPT使用守则</a> </li>
+			
+				</ul>
+			
+	
+
+<h3 class="catListTitle">最新评论</h3>
+<div class="RecentComment" id="RecentComments">
+	<div id="RecentCommentsBlock"></div>
+</div>
+
+<h3 class="catListTitle">阅读排行榜</h3>
+<div class="RecentComment" id="TopViewPosts"> 
+	<div id="TopViewPostsBlock"></div>
+</div>
+
+<h3 class="catListTitle">评论排行榜</h3>
+<div class="RecentComment" id="TopCommentsPosts">
+	<div id="TopFeedbackPostsBlock"></div>
+</div>
+<h3 class="catListTitle">推荐排行榜</h3>
+<div class="RecentComment">
+	<div id="TopDiggPostsBlock"></div>
+</div>            
+  
+</div>
+	
+
+</form> 
+<script type="text/javascript">
+    if (!isSyntaxHighlighted) {
+        try {
+            SyntaxHighlighter.all();
+        } catch (e) { }
+    }
+</script>
+<script type="text/javascript" src="stagefright.opencore_files/ShowHidden.js"></script>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-476124-1']);
+    _gaq.push(['_setDomainName', 'cnblogs.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+</body></html>

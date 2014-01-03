@@ -1,11 +1,11 @@
 package com.java.examples.basic;
 
 class NetworkInfo {
-    enum State {
-        CONNECTING, CONNECTED, SUSPENDED, DISCONNECTING, DISCONNECTED, UNKNOWN
-    }
-
     private State mState;
+
+    NetworkInfo() {
+        this.mState = State.DISCONNECTED;
+    }
 
     State getState() {
         return mState;
@@ -15,8 +15,8 @@ class NetworkInfo {
         this.mState = mState;
     }
 
-    NetworkInfo() {
-        this.mState = State.DISCONNECTED;
+    enum State {
+        CONNECTING, CONNECTED, SUSPENDED, DISCONNECTING, DISCONNECTED, UNKNOWN
     }
 }
 
@@ -25,5 +25,14 @@ public class EnumTest {
         NetworkInfo info = new NetworkInfo();
         System.out.println("enum equals: " + (info.getState() == NetworkInfo.State.DISCONNECTED));
         System.out.println("enum equals: " + (info.getState() == NetworkInfo.State.CONNECTED));
+    }
+}
+
+class Circle {
+
+    private double radius;
+
+    public double area() {
+        return MathConstants.PI * radius * radius;
     }
 }

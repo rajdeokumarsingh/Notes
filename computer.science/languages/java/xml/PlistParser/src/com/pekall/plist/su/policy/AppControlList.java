@@ -14,9 +14,6 @@
 package com.pekall.plist.su.policy;
 
 
-/**
- * XML configuration for "app_control_list"
- */
 public class AppControlList extends Policy {
 
     private AppInfoWrapper mustInstall = new AppInfoWrapper();
