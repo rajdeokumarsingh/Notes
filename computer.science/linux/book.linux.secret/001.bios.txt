@@ -22,5 +22,4 @@ Concept
 
     Flash Memory
 
-
 BIOS作用
