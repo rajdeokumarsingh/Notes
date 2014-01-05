@@ -17,18 +17,19 @@ package com.pekall.plist.su.policy;
 /**
  * XML configuration for the security policy
  */
+@SuppressWarnings("UnusedDeclaration")
 public class SecurityPolicy extends Policy {
 
     /**
      * Constraint information for device password
      */
-    Password password;
+    private Password password;
 
     public SecurityPolicy() {
         this("", -1, "", new Password());
     }
 
-    public SecurityPolicy(String name, int status, String description, Password password) {
+    private SecurityPolicy(String name, int status, String description, Password password) {
         super(name, status, description);
         this.password = password;
     }
@@ -49,9 +50,8 @@ public class SecurityPolicy extends Policy {
 
         SecurityPolicy that = (SecurityPolicy) o;
 
-        if (!password.equals(that.password)) return false;
+        return password.equals(that.password) && super.equals(o);
 
-        return super.equals(o);
     }
 
     public Password getPassword() {

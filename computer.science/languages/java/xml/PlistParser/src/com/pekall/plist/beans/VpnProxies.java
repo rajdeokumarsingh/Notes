@@ -3,6 +3,7 @@ package com.pekall.plist.beans;
 /**
  * VPN proxies profile
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class VpnProxies  {
 
     private Integer HTTPEnable;
@@ -114,9 +115,8 @@ public class VpnProxies  {
             return false;
         if (HTTPSEnable != null ? !HTTPSEnable.equals(that.HTTPSEnable) : that.HTTPSEnable != null) return false;
         if (HTTPSPort != null ? !HTTPSPort.equals(that.HTTPSPort) : that.HTTPSPort != null) return false;
-        if (HTTPSProxy != null ? !HTTPSProxy.equals(that.HTTPSProxy) : that.HTTPSProxy != null) return false;
+        return !(HTTPSProxy != null ? !HTTPSProxy.equals(that.HTTPSProxy) : that.HTTPSProxy != null);
 
-        return true;
     }
 
     @Override

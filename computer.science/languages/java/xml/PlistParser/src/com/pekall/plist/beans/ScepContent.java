@@ -2,6 +2,7 @@ package com.pekall.plist.beans;
 
 import java.util.List;
 
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class ScepContent {
     private String Challenge;
 
@@ -102,9 +103,8 @@ public class ScepContent {
         if (Name != null ? !Name.equals(that.Name) : that.Name != null) return false;
         if (Retries != null ? !Retries.equals(that.Retries) : that.Retries != null) return false;
         if (Subject != null ? !Subject.equals(that.Subject) : that.Subject != null) return false;
-        if (URL != null ? !URL.equals(that.URL) : that.URL != null) return false;
+        return !(URL != null ? !URL.equals(that.URL) : that.URL != null);
 
-        return true;
     }
 
     @Override

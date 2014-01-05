@@ -7,6 +7,7 @@ import java.util.Arrays;
 /**
  * Command to clear the passcode for a device
  */
+@SuppressWarnings("UnusedDeclaration")
 public class CommandClearPasscode extends CommandObject {
 
     public static final String KEY_NEW_PASSCODE = "NewPasscode";
@@ -54,10 +55,9 @@ public class CommandClearPasscode extends CommandObject {
 
         CommandClearPasscode that = (CommandClearPasscode) o;
 
-        if (!Arrays.equals(Utils.safeByteArray(UnlockToken),
-                Utils.safeByteArray(that.UnlockToken))) return false;
+        return Arrays.equals(Utils.safeByteArray(UnlockToken),
+                Utils.safeByteArray(that.UnlockToken));
 
-        return true;
     }
 
     @Override

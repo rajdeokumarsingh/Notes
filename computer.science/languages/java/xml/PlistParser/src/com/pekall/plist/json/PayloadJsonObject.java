@@ -18,6 +18,7 @@ import java.util.List;
  * Date: 13-8-30
  * Time: 上午11:00
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PayloadJsonObject {
 
     private PayloadPasswordPolicy payloadPasswordPolicy;
@@ -429,10 +430,8 @@ public class PayloadJsonObject {
             return false;
         if (systemExceptionPolicy != null ? !systemExceptionPolicy.equals(that.systemExceptionPolicy) : that.systemExceptionPolicy != null)
             return false;
-        if (systemSettings != null ? !systemSettings.equals(that.systemSettings) : that.systemSettings != null)
-            return false;
+        return !(systemSettings != null ? !systemSettings.equals(that.systemSettings) : that.systemSettings != null);
 
-        return true;
     }
 
     @Override

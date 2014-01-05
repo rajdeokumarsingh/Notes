@@ -3,6 +3,7 @@ package com.pekall.plist.beans;
 /**
  * InstallApplication command install a third-party application
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class CommandInstallApp extends CommandObject {
 
     public static final String KEY_ITUNESSTOREID = "iTunesStoreID";
@@ -97,9 +98,8 @@ public class CommandInstallApp extends CommandObject {
         if (PackageName != null ? !PackageName.equals(that.PackageName) : that.PackageName != null) return false;
         if (iTunesStoreID != null ? !iTunesStoreID.equals(that.iTunesStoreID) : that.iTunesStoreID != null)
             return false;
-        if (versionCode != null ? !versionCode.equals(that.versionCode) : that.versionCode != null) return false;
+        return !(versionCode != null ? !versionCode.equals(that.versionCode) : that.versionCode != null);
 
-        return true;
     }
 
     @Override

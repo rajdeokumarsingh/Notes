@@ -1,2 +1,18 @@
 
+OMXCodec
+OMXComponent
+
+mVideoSource
+    video decoder
+
+解码流程
+    1. OMXCodec使用OMX_EmptyThisBuffer传递未解码的buffer给component
+    2. component收到该命令后会读取input port buffer中的数据,将其组装成帧进行解码
+    3. 读取buffer中的数据完成后会调用EmptyBufferDone通知OMXCodec
+
+    4. OMXCodec使用OMX_FillThisBuffer传递空的bffer给component用于存储解码后的帧,
+    5. component收到该命令后将解码好的帧数据复制到该buffer上,
+    6. 然后调用FillBufferDone通知OMXCodec
+
+
 

@@ -3,6 +3,7 @@ package com.pekall.plist.beans;
 /**
  * ApplyRedemptionCode Commands Install Paid Applications via Redemption Code
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class CommandApplyRedemptionCode extends CommandObject {
     public static final String KEY_IDENTIFIER = "Identifier";
     public static final String KEY_REDEMPTIONCODE = "RedemptionCode";
@@ -46,10 +47,8 @@ public class CommandApplyRedemptionCode extends CommandObject {
         CommandApplyRedemptionCode that = (CommandApplyRedemptionCode) o;
 
         if (Identifier != null ? !Identifier.equals(that.Identifier) : that.Identifier != null) return false;
-        if (RedemptionCode != null ? !RedemptionCode.equals(that.RedemptionCode) : that.RedemptionCode != null)
-            return false;
+        return !(RedemptionCode != null ? !RedemptionCode.equals(that.RedemptionCode) : that.RedemptionCode != null);
 
-        return true;
     }
 
     @Override

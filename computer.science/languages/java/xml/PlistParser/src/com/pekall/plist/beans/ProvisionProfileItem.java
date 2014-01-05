@@ -5,6 +5,7 @@ import java.util.Date;
 /**
  * Entry in the ProvisioningProfileList array
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class ProvisionProfileItem {
     /** The display name of the profile. */
     private String Name;
@@ -59,9 +60,8 @@ public class ProvisionProfileItem {
                 !ExpiryDate.toString().equals(that.ExpiryDate.toString()) :
                 that.ExpiryDate != null) return false;
         if (Name != null ? !Name.equals(that.Name) : that.Name != null) return false;
-        if (UUID != null ? !UUID.equals(that.UUID) : that.UUID != null) return false;
+        return !(UUID != null ? !UUID.equals(that.UUID) : that.UUID != null);
 
-        return true;
     }
 
     @Override

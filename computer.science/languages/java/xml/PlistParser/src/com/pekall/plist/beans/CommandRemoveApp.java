@@ -4,6 +4,7 @@ package com.pekall.plist.beans;
  * The RemoveApplication command is used to remove managed apps and their data from a device.
  * Applications not installed by the server cannot be removed with this command.
  */
+@SuppressWarnings("UnusedDeclaration")
 public class CommandRemoveApp extends CommandObject {
     /**
      * The application’s identifier.
@@ -35,9 +36,8 @@ public class CommandRemoveApp extends CommandObject {
 
         CommandRemoveApp that = (CommandRemoveApp) o;
 
-        if (Identifier != null ? !Identifier.equals(that.Identifier) : that.Identifier != null) return false;
+        return !(Identifier != null ? !Identifier.equals(that.Identifier) : that.Identifier != null);
 
-        return true;
     }
 
     @Override

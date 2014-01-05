@@ -6,11 +6,12 @@ import java.util.List;
 /**
  * Status response for InstalledApplicationList command
  */
+@SuppressWarnings("UnusedDeclaration")
 public class CommandInstalledAppListStatus extends CommandStatusMsg {
     /**
      * Array of installed applications.
      */
-    List<InstalledAppInfo> InstalledApplicationList;
+    private List<InstalledAppInfo> InstalledApplicationList;
 
     public CommandInstalledAppListStatus() {
     }
@@ -48,9 +49,8 @@ public class CommandInstalledAppListStatus extends CommandStatusMsg {
 
         CommandInstalledAppListStatus that = (CommandInstalledAppListStatus) o;
 
-        if(this.hashCode() != that.hashCode()) return false;
+        return this.hashCode() == that.hashCode();
 
-        return true;
     }
 
     @Override

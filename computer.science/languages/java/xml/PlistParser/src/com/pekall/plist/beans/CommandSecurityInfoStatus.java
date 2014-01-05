@@ -3,6 +3,7 @@ package com.pekall.plist.beans;
 /**
  * Status message from client to server for SecurityInfo command
  */
+@SuppressWarnings("UnusedDeclaration")
 public class CommandSecurityInfoStatus extends CommandStatusMsg {
 
     /** Security information */
@@ -37,9 +38,8 @@ public class CommandSecurityInfoStatus extends CommandStatusMsg {
 
         CommandSecurityInfoStatus that = (CommandSecurityInfoStatus) o;
 
-        if (SecurityInfo != null ? !SecurityInfo.equals(that.SecurityInfo) : that.SecurityInfo != null) return false;
+        return !(SecurityInfo != null ? !SecurityInfo.equals(that.SecurityInfo) : that.SecurityInfo != null);
 
-        return true;
     }
 
     @Override

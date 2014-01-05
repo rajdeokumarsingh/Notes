@@ -3,6 +3,7 @@ package com.pekall.plist.beans;
 /**
  * Install document command for Android platform
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class CommandInstallDocument extends CommandObject {
 
     public static final String KEY_DOCUMENT_NAME = "DocumentName";
@@ -142,9 +143,8 @@ public class CommandInstallDocument extends CommandObject {
         if (DocumentSize != null ? !DocumentSize.equals(that.DocumentSize) : that.DocumentSize != null) return false;
         if (DocumentUUID != null ? !DocumentUUID.equals(that.DocumentUUID) : that.DocumentUUID != null) return false;
         if (DownloadURL != null ? !DownloadURL.equals(that.DownloadURL) : that.DownloadURL != null) return false;
-        if (Version != null ? !Version.equals(that.Version) : that.Version != null) return false;
+        return !(Version != null ? !Version.equals(that.Version) : that.Version != null);
 
-        return true;
     }
 
     @Override

@@ -3,6 +3,7 @@ package com.pekall.plist.beans;
 /**
  * Status message for command InstallApplication
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class CommandInstallAppStatus extends CommandStatusMsg {
 
     /**
@@ -82,9 +83,8 @@ public class CommandInstallAppStatus extends CommandStatusMsg {
         if (Identifier != null ? !Identifier.equals(that.Identifier) : that.Identifier != null) return false;
         if (RejectionReason != null ? !RejectionReason.equals(that.RejectionReason) : that.RejectionReason != null)
             return false;
-        if (State != null ? !State.equals(that.State) : that.State != null) return false;
+        return !(State != null ? !State.equals(that.State) : that.State != null);
 
-        return true;
     }
 
     @Override

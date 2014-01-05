@@ -1,5 +1,6 @@
 package com.pekall.plist.beans;
 
+@SuppressWarnings("UnusedDeclaration")
 public class AppDict {
 
     /**
@@ -29,9 +30,8 @@ public class AppDict {
 
         AppDict appDict = (AppDict) o;
 
-        if (Identifier != null ? !Identifier.equals(appDict.Identifier) : appDict.Identifier != null) return false;
+        return !(Identifier != null ? !Identifier.equals(appDict.Identifier) : appDict.Identifier != null);
 
-        return true;
     }
 
     @Override

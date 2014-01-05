@@ -5,6 +5,7 @@ import com.pekall.plist.Utils;
 /**
  * Representing the errors after the client executing a command.
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class CommandError {
 
     /** Description of the error in the device's localized language */
@@ -74,10 +75,9 @@ public class CommandError {
                 .equals(Utils.safeString(that.ErrorDomain))) return false;
         if (!Utils.safeString(LocalizedDescription)
                 .equals(Utils.safeString(that.LocalizedDescription))) return false;
-        if (!Utils.safeString(USEnglishDescription)
-                .equals(Utils.safeString(that.USEnglishDescription))) return false;
+        return Utils.safeString(USEnglishDescription)
+                .equals(Utils.safeString(that.USEnglishDescription));
 
-        return true;
     }
 
     @Override

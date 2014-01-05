@@ -1,5 +1,6 @@
 package com.pekall.plist.beans;
 
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class LDAPSearchSetting {
     /**
      * see LDAPSearchSettingScope
@@ -66,10 +67,8 @@ public class LDAPSearchSetting {
             return false;
         if (LDAPSearchSettingScope != null ? !LDAPSearchSettingScope.equals(that.LDAPSearchSettingScope) : that.LDAPSearchSettingScope != null)
             return false;
-        if (LDAPSearchSettingSearchBase != null ? !LDAPSearchSettingSearchBase.equals(that.LDAPSearchSettingSearchBase) : that.LDAPSearchSettingSearchBase != null)
-            return false;
+        return !(LDAPSearchSettingSearchBase != null ? !LDAPSearchSettingSearchBase.equals(that.LDAPSearchSettingSearchBase) : that.LDAPSearchSettingSearchBase != null);
 
-        return true;
     }
 
     @Override

@@ -3,6 +3,7 @@ package com.pekall.plist.beans;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class EAPClientConfigurationClass {
 
     /**
@@ -154,7 +155,7 @@ public class EAPClientConfigurationClass {
     }
 
     public void addTLSTrustedServerName(String name) {
-        if (TLSTrustedServerNames != null) {
+        if (TLSTrustedServerNames == null) {
             TLSTrustedServerNames = new ArrayList<String>();
         }
         TLSTrustedServerNames.add(name);
@@ -288,9 +289,8 @@ public class EAPClientConfigurationClass {
             return false;
         if (UserName != null ? !UserName.equals(that.UserName) : that.UserName != null) return false;
 
-        if (this.hashCode() != that.hashCode()) return false;
+        return this.hashCode() == that.hashCode();
 
-        return true;
     }
 
     @Override

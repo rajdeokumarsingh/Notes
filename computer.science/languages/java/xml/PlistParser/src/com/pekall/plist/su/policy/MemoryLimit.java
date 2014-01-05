@@ -16,16 +16,17 @@ package com.pekall.plist.su.policy;
 /**
  * XML element for "memory_size_policy.memory.memoryLimit"
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class MemoryLimit {
     /**
      * Maximum usage ratio of handset memory
      */
-    int maxRatio;
+    private int maxRatio;
 
     /**
      * Event name for punishment
      */
-    String eventId;
+    private String eventId;
 
     public MemoryLimit() {
         this(-1, "");
@@ -60,9 +61,8 @@ public class MemoryLimit {
         MemoryLimit that = (MemoryLimit) o;
 
         if (maxRatio != that.maxRatio) return false;
-        if (eventId != null ? !eventId.equals(that.eventId) : that.eventId != null) return false;
+        return !(eventId != null ? !eventId.equals(that.eventId) : that.eventId != null);
 
-        return true;
     }
 
     @Override

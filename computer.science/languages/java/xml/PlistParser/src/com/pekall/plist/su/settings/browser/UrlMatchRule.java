@@ -3,6 +3,7 @@ package com.pekall.plist.su.settings.browser;
 /**
  * The rule to match given web URLs
  */
+@SuppressWarnings({"UnusedDeclaration", "BooleanMethodIsAlwaysInverted", "SimplifiableIfStatement"})
 public class UrlMatchRule {
 
     private static final int MATCH_TYPE_BEGIN = 0;
@@ -23,7 +24,7 @@ public class UrlMatchRule {
      * If the suffix of web URL equals the rule URL,
      * it will match the white list rule.
      */
-    public static final int MATCH_TYPE_SUFFIX = 2;
+    private static final int MATCH_TYPE_SUFFIX = 2;
 
     /**
      * If the web URL equals the rule URL,
@@ -42,11 +43,8 @@ public class UrlMatchRule {
     /** Match type */
     private int matchType;
 
-    public static boolean isValidType(int type) {
-        if (type < MATCH_TYPE_BEGIN || type > MATCH_TYPE_END) {
-            return false;
-        }
-        return true;
+    private static boolean isValidType(int type) {
+        return !(type < MATCH_TYPE_BEGIN || type > MATCH_TYPE_END);
     }
 
     /**
@@ -93,29 +91,13 @@ public class UrlMatchRule {
 
          switch (matchType) {
             case MATCH_TYPE_CONTAIN:
-                if (url.contains(this.url)) {
-                    return true;
-                } else {
-                    return false;
-                }
+                return url.contains(this.url);
             case MATCH_TYPE_PREFIX:
-                if (url.startsWith(this.url)) {
-                    return true;
-                } else {
-                    return false;
-                }
+                return url.startsWith(this.url);
             case MATCH_TYPE_SUFFIX:
-                if (url.endsWith(this.url)) {
-                    return true;
-                } else {
-                    return false;
-                }
+                return url.endsWith(this.url);
             case MATCH_TYPE_EQUAL:
-                if (url.equals(this.url)) {
-                    return true;
-                } else {
-                    return false;
-                }
+                return url.equals(this.url);
         }
         return false;
     }
@@ -129,8 +111,8 @@ public class UrlMatchRule {
     }
 
     /**
-     * Set the db id
-     * @param id
+     * Set the id in DB
+     * @param id in DB
      */
     public void setId(String id) {
         if (id == null) {
@@ -168,7 +150,7 @@ public class UrlMatchRule {
 
     /**
      * Set the match type of this rule
-     * @param matchType
+     * @param matchType match type of the rule
      */
     public void setMatchType(int matchType) {
         if (!isValidType(matchType)) {
@@ -195,9 +177,8 @@ public class UrlMatchRule {
 
         if (matchType != that.matchType) return false;
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        if (url != null ? !url.equals(that.url) : that.url != null) return false;
+        return !(url != null ? !url.equals(that.url) : that.url != null);
 
-        return true;
     }
 
     @Override

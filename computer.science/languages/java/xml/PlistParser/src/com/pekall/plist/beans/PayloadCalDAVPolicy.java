@@ -1,5 +1,6 @@
 package com.pekall.plist.beans;
 
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PayloadCalDAVPolicy extends PayloadBase {
 
     /**
@@ -115,10 +116,8 @@ public class PayloadCalDAVPolicy extends PayloadBase {
         if (CalDAVPrincipalURL != null ? !CalDAVPrincipalURL.equals(that.CalDAVPrincipalURL) : that.CalDAVPrincipalURL != null)
             return false;
         if (CalDAVUseSSL != null ? !CalDAVUseSSL.equals(that.CalDAVUseSSL) : that.CalDAVUseSSL != null) return false;
-        if (CalDAVUsername != null ? !CalDAVUsername.equals(that.CalDAVUsername) : that.CalDAVUsername != null)
-            return false;
+        return !(CalDAVUsername != null ? !CalDAVUsername.equals(that.CalDAVUsername) : that.CalDAVUsername != null);
 
-        return true;
     }
 
     @Override

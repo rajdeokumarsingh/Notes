@@ -5,6 +5,7 @@ import com.pekall.plist.Utils;
 /**
  * Command message from server to client
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class CommandMsg extends BeanBase {
 
     // UUID of the command
@@ -25,10 +26,7 @@ public class CommandMsg extends BeanBase {
     }
 
     public boolean isEmptyCommand() {
-        if (Command == null && CommandUUID == null) {
-            return true;
-        }
-        return false;
+        return Command == null && CommandUUID == null;
     }
 
     public String getCommandUUID() {
@@ -63,10 +61,9 @@ public class CommandMsg extends BeanBase {
 
         if (!Utils.safeCommandObject(Command)
                 .equals(Utils.safeCommandObject(that.Command))) return false;
-        if (!Utils.safeString(CommandUUID)
-                .equals(Utils.safeString(that.CommandUUID))) return false;
+        return Utils.safeString(CommandUUID)
+                .equals(Utils.safeString(that.CommandUUID));
 
-        return true;
     }
 
     @Override

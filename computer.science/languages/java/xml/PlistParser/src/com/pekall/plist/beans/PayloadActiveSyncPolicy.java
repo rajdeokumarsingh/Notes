@@ -1,5 +1,6 @@
 package com.pekall.plist.beans;
 
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PayloadActiveSyncPolicy extends PayloadBase {
     /**
      * Configure ActiveSync Account
@@ -569,10 +570,8 @@ public class PayloadActiveSyncPolicy extends PayloadBase {
         if (value != null ? !value.equals(that.value) : that.value != null) return false;
         if (vibrateOnEmail != null ? !vibrateOnEmail.equals(that.vibrateOnEmail) : that.vibrateOnEmail != null)
             return false;
-        if (vibrateOnEmailIfSilent != null ? !vibrateOnEmailIfSilent.equals(that.vibrateOnEmailIfSilent) : that.vibrateOnEmailIfSilent != null)
-            return false;
+        return !(vibrateOnEmailIfSilent != null ? !vibrateOnEmailIfSilent.equals(that.vibrateOnEmailIfSilent) : that.vibrateOnEmailIfSilent != null);
 
-        return true;
     }
 
     @Override

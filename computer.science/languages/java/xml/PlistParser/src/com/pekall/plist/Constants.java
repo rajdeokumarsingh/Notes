@@ -1,5 +1,6 @@
 package com.pekall.plist;
 
+@SuppressWarnings("UnusedDeclaration")
 public class Constants {
     /**
      * Keys for plist profiles

@@ -16,6 +16,7 @@ package com.pekall.plist.su.device;
 /**
  * XML element for "device_info.net_speed"
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class NetSpeed {
     /**
      * 上行速度, 单位byte
@@ -51,9 +52,8 @@ public class NetSpeed {
         NetSpeed netSpeed = (NetSpeed) o;
 
         if (Double.compare(netSpeed.downlink, downlink) != 0) return false;
-        if (Double.compare(netSpeed.uplink, uplink) != 0) return false;
+        return Double.compare(netSpeed.uplink, uplink) == 0;
 
-        return true;
     }
 
     @Override

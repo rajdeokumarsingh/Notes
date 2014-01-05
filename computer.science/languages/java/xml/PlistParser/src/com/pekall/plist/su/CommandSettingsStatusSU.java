@@ -7,6 +7,7 @@ import java.util.Arrays;
 /**
  * Status message for command Settings, just for SU
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class CommandSettingsStatusSU extends CommandStatusMsg {
 
     private byte[] settingsSU;
@@ -70,9 +71,8 @@ public class CommandSettingsStatusSU extends CommandStatusMsg {
         if (description != null ? !description.equals(that.description) : that.description != null) return false;
         if (name != null ? !name.equals(that.name) : that.name != null) return false;
         if (osType != null ? !osType.equals(that.osType) : that.osType != null) return false;
-        if (!Arrays.equals(settingsSU, that.settingsSU)) return false;
+        return Arrays.equals(settingsSU, that.settingsSU);
 
-        return true;
     }
 
     @Override

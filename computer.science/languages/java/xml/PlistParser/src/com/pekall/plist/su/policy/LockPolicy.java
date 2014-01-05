@@ -17,18 +17,19 @@ package com.pekall.plist.su.policy;
 /**
  * Xml configuration data for lock policy
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class LockPolicy extends Policy {
 
     /**
      * Controlled devices
      */
-    Devices devices;
+    private Devices devices;
 
     public LockPolicy() {
         this("", -1, "", new Devices());
     }
 
-    public LockPolicy(String name, int status, String description, Devices devices) {
+    private LockPolicy(String name, int status, String description, Devices devices) {
         super(name, status, description);
         /*
         this.name = name;
@@ -58,9 +59,8 @@ public class LockPolicy extends Policy {
         if (status != that.status) return false;
         if (!description.equals(that.description)) return false;
         if (!devices.equals(that.devices)) return false;
-        if (!name.equals(that.name)) return false;
+        return name.equals(that.name);
 
-        return true;
     }
 
     public Devices getDevices() {

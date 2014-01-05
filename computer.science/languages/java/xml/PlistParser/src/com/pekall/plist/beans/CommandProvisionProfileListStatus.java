@@ -6,12 +6,13 @@ import java.util.List;
 /**
  * Status response for ProvisioningProfileList command
  */
+@SuppressWarnings("UnusedDeclaration")
 public class CommandProvisionProfileListStatus extends CommandStatusMsg {
     /**
      * Array of dictionaries. Each entry describes a provisioning profile.
      * If the list is null, there are no profile installed.
      */
-    List<ProvisionProfileItem> ProvisioningProfileList;
+    private List<ProvisionProfileItem> ProvisioningProfileList;
 
     public CommandProvisionProfileListStatus() {
     }
@@ -49,9 +50,8 @@ public class CommandProvisionProfileListStatus extends CommandStatusMsg {
 
         CommandProvisionProfileListStatus that = (CommandProvisionProfileListStatus) o;
 
-        if(this.hashCode() != that.hashCode()) return false;
+        return this.hashCode() == that.hashCode();
 
-        return true;
     }
 
     @Override

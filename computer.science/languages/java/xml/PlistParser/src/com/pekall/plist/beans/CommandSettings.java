@@ -6,11 +6,12 @@ import java.util.List;
 /**
  * Command to managed settings
  */
+@SuppressWarnings("UnusedDeclaration")
 public class CommandSettings extends CommandObject {
     /**
      * Array of dictionaries. see PhoneSetting
      */
-    List<PhoneSetting> Settings;
+    private List<PhoneSetting> Settings;
 
     public CommandSettings() {
         super(CommandObject.REQ_TYPE_SETTINGS);
@@ -39,9 +40,8 @@ public class CommandSettings extends CommandObject {
 
         CommandSettings that = (CommandSettings) o;
 
-        if(this.hashCode() != that.hashCode()) return false;
+        return this.hashCode() == that.hashCode();
 
-        return true;
     }
 
     @Override
@@ -63,7 +63,7 @@ public class CommandSettings extends CommandObject {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         for (PhoneSetting setting : Settings) {
-            sb.append(setting.toString() + ",");
+            sb.append(setting.toString()).append(",");
         }
         sb.append("}");
         return "CommandSettings{" +

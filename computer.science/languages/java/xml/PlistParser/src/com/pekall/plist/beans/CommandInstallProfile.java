@@ -1,6 +1,5 @@
 package com.pekall.plist.beans;
 
-import com.pekall.plist.PlistDebug;
 import com.pekall.plist.Utils;
 
 import java.util.Arrays;
@@ -8,6 +7,7 @@ import java.util.Arrays;
 /**
  * Command to install configuration profiles
  */
+@SuppressWarnings("UnusedDeclaration")
 public class CommandInstallProfile extends CommandObject {
 
     public static final String KEY_PAYLOAD = "Payload";
@@ -42,10 +42,9 @@ public class CommandInstallProfile extends CommandObject {
 
         CommandInstallProfile that = (CommandInstallProfile) o;
 
-        if (!Arrays.equals(Utils.safeByteArray(Payload),
-                Utils.safeByteArray(that.Payload))) return false;
+        return Arrays.equals(Utils.safeByteArray(Payload),
+                Utils.safeByteArray(that.Payload));
 
-        return true;
     }
 
     @Override

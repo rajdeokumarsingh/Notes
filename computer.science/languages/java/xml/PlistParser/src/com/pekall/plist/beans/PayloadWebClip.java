@@ -6,6 +6,7 @@ import java.util.Arrays;
  * A Web Clip payload provides a web clipping on the user’s home screen
  * as though the user had saved a bookmark to the home screen.
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PayloadWebClip extends PayloadBase {
 
     /**
@@ -78,9 +79,8 @@ public class PayloadWebClip extends PayloadBase {
         if (!Arrays.equals(Icon, that.Icon)) return false;
         if (IsRemovable != null ? !IsRemovable.equals(that.IsRemovable) : that.IsRemovable != null) return false;
         if (Label != null ? !Label.equals(that.Label) : that.Label != null) return false;
-        if (URL != null ? !URL.equals(that.URL) : that.URL != null) return false;
+        return !(URL != null ? !URL.equals(that.URL) : that.URL != null);
 
-        return true;
     }
 
     @Override

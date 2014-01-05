@@ -6,6 +6,7 @@ import java.util.List;
 /**
  * Status response for CertificateList command
  */
+@SuppressWarnings("UnusedDeclaration")
 public class CommandCertificateListStatus extends CommandStatusMsg {
     /**
      * Array of certificate dictionaries.
@@ -48,9 +49,8 @@ public class CommandCertificateListStatus extends CommandStatusMsg {
 
         CommandCertificateListStatus that = (CommandCertificateListStatus) o;
 
-        if(this.hashCode() != that.hashCode()) return false;
+        return this.hashCode() == that.hashCode();
 
-        return true;
     }
 
     @Override

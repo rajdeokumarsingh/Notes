@@ -16,64 +16,65 @@ package com.pekall.plist.su.policy;
 /**
  * XML element for security_policy.password
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class Password {
     /**
      * Whether the password is optional, 0 for mandatory, 1 for optional
      */
-    int optional;
+    private int optional;
 
     /**
      * Password type, 0 for numeric, 1 for alphanumeric
      */
-    int type;
+    private int type;
 
     /**
      * Minimum length of password
      */
-    int min_len;
+    private int min_len;
 
     /**
      * Maximum screen lock time, in unit of minute
      */
-    int max_screen_lock_time;
+    private int max_screen_lock_time;
 
     /**
      * Whether password should include special characters
      */
-    boolean include_special_chars = false;
+    private boolean include_special_chars = false;
 
     /**
      * Minimum length of complex characters in password
      */
-    int min_complex_len;
+    private int min_complex_len;
 
     /**
      * Expire age of password, in unit of day
      */
-    int expire_age;
+    private int expire_age;
 
     /**
      * Length of history list
      */
-    int history_len;
+    private int history_len;
 
     /**
      * Information for failed attempt
      */
-    FailedAttempt failed_attempt;
+    private FailedAttempt failed_attempt;
 
     /**
      * Information for grace time
      */
-    GraceTime grace_time;
+    private GraceTime grace_time;
 
     public Password() {
         this(-1, -1, -1, -1, -1, -1, -1, new FailedAttempt(), new GraceTime());
     }
 
-    public Password(int optional, int type, int min_len, int max_screen_lock_time,
-                    int min_complex_len, int expire_age, int history_len,
-                    FailedAttempt failed_attempt, GraceTime time) {
+    private Password(int optional, int type, int min_len, int max_screen_lock_time,
+                     int min_complex_len, int expire_age, int history_len,
+                     FailedAttempt failed_attempt, GraceTime time) {
         this.optional = optional;
         this.type = type;
         this.min_len = min_len;
@@ -117,9 +118,8 @@ public class Password {
         if (optional != password.optional) return false;
         if (type != password.type) return false;
         if (!failed_attempt.equals(password.failed_attempt)) return false;
-        if (!grace_time.equals(password.grace_time)) return false;
+        return grace_time.equals(password.grace_time);
 
-        return true;
     }
 
     public int getOptional() {

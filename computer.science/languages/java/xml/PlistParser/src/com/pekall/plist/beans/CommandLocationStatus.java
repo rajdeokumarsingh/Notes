@@ -3,6 +3,7 @@ package com.pekall.plist.beans;
 /**
  * Status message for command Location
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class CommandLocationStatus extends CommandStatusMsg {
     /**
      * Current longitude of the device
@@ -46,9 +47,8 @@ public class CommandLocationStatus extends CommandStatusMsg {
         CommandLocationStatus that = (CommandLocationStatus) o;
 
         if (Latitude != null ? !Latitude.equals(that.Latitude) : that.Latitude != null) return false;
-        if (Longitude != null ? !Longitude.equals(that.Longitude) : that.Longitude != null) return false;
+        return !(Longitude != null ? !Longitude.equals(that.Longitude) : that.Longitude != null);
 
-        return true;
     }
 
     @Override

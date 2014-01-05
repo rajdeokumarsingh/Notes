@@ -5,6 +5,7 @@ import com.pekall.plist.su.device.DeviceInfoRespSU;
 /**
  * Status response for DeviceInformation
  */
+@SuppressWarnings("UnusedDeclaration")
 public class CommandDeviceInfoStatus extends CommandStatusMsg {
     private DeviceInfoRespSU QueryResponses = new DeviceInfoRespSU();
 
@@ -27,9 +28,8 @@ public class CommandDeviceInfoStatus extends CommandStatusMsg {
 
         CommandDeviceInfoStatus that = (CommandDeviceInfoStatus) o;
 
-        if (!QueryResponses.equals(that.QueryResponses)) return false;
+        return QueryResponses.equals(that.QueryResponses);
 
-        return true;
     }
 
     @Override

@@ -3,6 +3,7 @@ package com.pekall.plist.beans;
 /**
  * Restrictions commands get a list of installed restrictions
  */
+@SuppressWarnings("UnusedDeclaration")
 public class CommandRestrictions extends CommandObject {
 
     /**
@@ -35,9 +36,8 @@ public class CommandRestrictions extends CommandObject {
 
         CommandRestrictions that = (CommandRestrictions) o;
 
-        if (ProfileRestrictions != that.ProfileRestrictions) return false;
+        return ProfileRestrictions == that.ProfileRestrictions;
 
-        return true;
     }
 
     @Override

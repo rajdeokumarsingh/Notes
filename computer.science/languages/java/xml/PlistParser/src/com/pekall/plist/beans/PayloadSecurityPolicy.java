@@ -1,5 +1,6 @@
 package com.pekall.plist.beans;
 
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PayloadSecurityPolicy extends PayloadBase {
     /**
      * See disableKeyguardFeatures
@@ -275,10 +276,8 @@ public class PayloadSecurityPolicy extends PayloadBase {
             return false;
         if (enforceSDCardEncryption != null ? !enforceSDCardEncryption.equals(that.enforceSDCardEncryption) : that.enforceSDCardEncryption != null)
             return false;
-        if (visiblePasswords != null ? !visiblePasswords.equals(that.visiblePasswords) : that.visiblePasswords != null)
-            return false;
+        return !(visiblePasswords != null ? !visiblePasswords.equals(that.visiblePasswords) : that.visiblePasswords != null);
 
-        return true;
     }
 
     @Override

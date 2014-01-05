@@ -1,0 +1,26 @@
+Concept
+    BIOS
+        basic input output system
+
+    北桥
+        控制CPU和内存
+
+    南桥
+        控制外设， PCI， PCI-E， USB， VGA
+
+    CMOS
+        保存BIOS中用户设置的信息
+        位于南桥中
+        主板上的纽扣电池就是为CMOS供电
+
+    SMBIOS
+        System Management BIOS
+        BIOS会将CMOS中资料和检测到的硬件信息，合成一张表格，写入到内存中。
+            也就是SMBIOS
+        
+        Linux中工具dmidecode用来查看SMBIOS。 （DMI: Desktop Management Interface）
+
+    Flash Memory
+
+
+BIOS作用

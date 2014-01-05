@@ -1,8 +1,6 @@
 package com.pekall.plist.beans;
 
-import java.util.ArrayList;
-import java.util.List;
-
+@SuppressWarnings("UnusedDeclaration")
 public class PayloadAppLock extends PayloadBase {
 
     /**
@@ -30,9 +28,8 @@ public class PayloadAppLock extends PayloadBase {
 
         PayloadAppLock that = (PayloadAppLock) o;
 
-        if (App != null ? !App.equals(that.App) : that.App != null) return false;
+        return !(App != null ? !App.equals(that.App) : that.App != null);
 
-        return true;
     }
 
     @Override

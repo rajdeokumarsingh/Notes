@@ -17,7 +17,8 @@ package com.pekall.plist.su.settings.launcher;
 /**
  * XML configuration for launcher_config
  */
-public class LauncherClientConfig {
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
+class LauncherClientConfig {
 
     /**
      * 手机型号
@@ -52,9 +53,9 @@ public class LauncherClientConfig {
         this("", "", "", "", "", "", -1);
     }
 
-    public LauncherClientConfig(String phone_model, String register_bank,
-                                String phone_number, String register_date,
-                                String admin, String device_state, int is_registered) {
+    private LauncherClientConfig(String phone_model, String register_bank,
+                                 String phone_number, String register_date,
+                                 String admin, String device_state, int is_registered) {
         this.phone_model = phone_model;
         this.register_bank = register_bank;
         this.phone_number = phone_number;
@@ -90,9 +91,8 @@ public class LauncherClientConfig {
         if (!phone_model.equals(that.phone_model)) return false;
         if (!phone_number.equals(that.phone_number)) return false;
         if (!register_bank.equals(that.register_bank)) return false;
-        if (!register_date.equals(that.register_date)) return false;
+        return register_date.equals(that.register_date);
 
-        return true;
     }
 
     @Override

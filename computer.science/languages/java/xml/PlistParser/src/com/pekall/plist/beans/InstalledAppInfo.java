@@ -6,6 +6,7 @@ import java.util.List;
 /**
  * Entry of the InstalledApplicationList
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class InstalledAppInfo {
     /** The application's ID. */
     private String Identifier;
@@ -20,21 +21,21 @@ public class InstalledAppInfo {
     private String ShortVersion;
 
     /** The application's name. */
-    String Name;
+    private String Name;
 
     /** The app's static bundle size, in bytes. */
-    long BundleSize;
+    private long BundleSize;
 
     /**
      * The size of the app's document, library, and other folders, in bytes.
      * Availability: Available in iOS 5.0 and later.
      */
-    long DynamicSize;
+    private long DynamicSize;
 
    /**
      * Permissions requested, just for Android
      */
-    List<String> AppPermissions;
+   private List<String> AppPermissions;
 
     public InstalledAppInfo() {
     }
@@ -126,9 +127,8 @@ public class InstalledAppInfo {
         if (Identifier != null ? !Identifier.equals(info.Identifier) : info.Identifier != null) return false;
         if (Name != null ? !Name.equals(info.Name) : info.Name != null) return false;
         if (ShortVersion != null ? !ShortVersion.equals(info.ShortVersion) : info.ShortVersion != null) return false;
-        if (Version != null ? !Version.equals(info.Version) : info.Version != null) return false;
+        return !(Version != null ? !Version.equals(info.Version) : info.Version != null);
 
-        return true;
     }
 
     @Override

@@ -6,6 +6,7 @@ import java.util.Date;
 /**
  * Store information a history watch list
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class HistoryWatchItem extends UrlMatchRule {
 
     /** Visit count */
@@ -18,7 +19,7 @@ public class HistoryWatchItem extends UrlMatchRule {
      * Constructor
      *
      * @param url to watch
-     * @param type of the watch list, see {@link UrlMatchRule.MATCH_TYPE_CONTAIN, ...}
+     * @param type of the watch list
      */
     public HistoryWatchItem(String url, Integer type) {
         super(url, type);
@@ -50,7 +51,6 @@ public class HistoryWatchItem extends UrlMatchRule {
      * Set the visit count
      *
      * @param count of the item
-     * @hide for internal use
      */
     public void setCount(Integer count) {
         this.count = count;
@@ -69,7 +69,6 @@ public class HistoryWatchItem extends UrlMatchRule {
      * Set visit dates
      *
      * @param date of the watch list
-     * @hide for internal use
      */
     public void setDate(String date) {
         this.dates = date;
@@ -103,10 +102,9 @@ public class HistoryWatchItem extends UrlMatchRule {
 
         HistoryWatchItem item = (HistoryWatchItem) o;
 
-        if (count != item.count) return false;
-        if (!dates.equals(item.dates)) return false;
+        if (!count.equals(item.count)) return false;
+        return dates.equals(item.dates);
 
-        return true;
     }
 
     @Override

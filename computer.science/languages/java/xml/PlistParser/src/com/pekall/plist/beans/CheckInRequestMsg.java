@@ -5,6 +5,7 @@ import java.util.Arrays;
 /**
  * MDM checking request
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class CheckInRequestMsg extends BeanBase {
     /**
      * Type of the check-in request, see MessageType
@@ -113,9 +114,8 @@ public class CheckInRequestMsg extends BeanBase {
         if (!Arrays.equals(Token, msg.Token)) return false;
         if (Topic != null ? !Topic.equals(msg.Topic) : msg.Topic != null) return false;
         if (UDID != null ? !UDID.equals(msg.UDID) : msg.UDID != null) return false;
-        if (!Arrays.equals(UnlockToken, msg.UnlockToken)) return false;
+        return Arrays.equals(UnlockToken, msg.UnlockToken);
 
-        return true;
     }
 
     @Override

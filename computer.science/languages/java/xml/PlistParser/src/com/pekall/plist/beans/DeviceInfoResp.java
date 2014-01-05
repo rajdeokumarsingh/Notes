@@ -3,6 +3,7 @@ package com.pekall.plist.beans;
 /**
  * Dictionary QueryResponses for DeviceInformation command
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class DeviceInfoResp extends BeanBase{
     /** The unique device identifier (UDID) of the device. */
     private String UDID;
@@ -89,7 +90,7 @@ public class DeviceInfoResp extends BeanBase{
      */
     private Boolean CanDisableSystemFunction;
 
-    public DeviceInfoResp() {
+    protected DeviceInfoResp() {
     }
 
     public String getUDID() {
@@ -426,10 +427,8 @@ public class DeviceInfoResp extends BeanBase{
         if (VoiceRoamingEnabled != null ? !VoiceRoamingEnabled.equals(that.VoiceRoamingEnabled) : that.VoiceRoamingEnabled != null)
             return false;
         if (WiFiMAC != null ? !WiFiMAC.equals(that.WiFiMAC) : that.WiFiMAC != null) return false;
-        if (CanDisableSystemFunction != null ? !CanDisableSystemFunction.equals(that.CanDisableSystemFunction) : that.CanDisableSystemFunction != null)
-            return false;
+        return !(CanDisableSystemFunction != null ? !CanDisableSystemFunction.equals(that.CanDisableSystemFunction) : that.CanDisableSystemFunction != null);
 
-        return true;
     }
 
     @Override

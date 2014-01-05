@@ -3,6 +3,7 @@ package com.pekall.plist.su.settings.launcher;
 /**
  * Element for launcher_web_quick_launch.item
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class WebItem {
     /**
      * Quick launch title
@@ -102,9 +103,8 @@ public class WebItem {
         if (row != null ? !row.equals(webItem.row) : webItem.row != null) return false;
         if (screen != null ? !screen.equals(webItem.screen) : webItem.screen != null) return false;
         if (title != null ? !title.equals(webItem.title) : webItem.title != null) return false;
-        if (url != null ? !url.equals(webItem.url) : webItem.url != null) return false;
+        return !(url != null ? !url.equals(webItem.url) : webItem.url != null);
 
-        return true;
     }
 
     @Override

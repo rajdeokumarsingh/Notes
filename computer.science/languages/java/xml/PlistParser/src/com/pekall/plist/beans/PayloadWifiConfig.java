@@ -1,5 +1,6 @@
 package com.pekall.plist.beans;
 
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PayloadWifiConfig extends PayloadBase {
     /**
      * Encryption types
@@ -244,9 +245,8 @@ public class PayloadWifiConfig extends PayloadBase {
         if (ProxyType != null ? !ProxyType.equals(that.ProxyType) : that.ProxyType != null) return false;
         if (ProxyUsername != null ? !ProxyUsername.equals(that.ProxyUsername) : that.ProxyUsername != null)
             return false;
-        if (SSID_STR != null ? !SSID_STR.equals(that.SSID_STR) : that.SSID_STR != null) return false;
+        return !(SSID_STR != null ? !SSID_STR.equals(that.SSID_STR) : that.SSID_STR != null);
 
-        return true;
     }
 
     @Override

@@ -16,6 +16,7 @@ import java.util.List;
 /**
  * PayloadArrayWrapper的一个json封装
  */
+@SuppressWarnings("ALL")
 public class PayloadJsonWrapper extends PayloadBase {
 
     public PayloadJsonWrapper(PayloadArrayWrapper arrayWrapper) {
@@ -162,23 +163,23 @@ public class PayloadJsonWrapper extends PayloadBase {
 //        PayloadContent.add(content);
 //    }
 
-    public Boolean getHasRemovalPasscode() {
+    Boolean getHasRemovalPasscode() {
         return HasRemovalPasscode;
     }
 
-    public void setHasRemovalPasscode(Boolean hasRemovalPasscode) {
+    void setHasRemovalPasscode(Boolean hasRemovalPasscode) {
         HasRemovalPasscode = hasRemovalPasscode;
     }
 
-    public Boolean getIsEncrypted() {
+    Boolean getIsEncrypted() {
         return IsEncrypted;
     }
 
-    public void setIsEncrypted(Boolean isEncrypted) {
+    void setIsEncrypted(Boolean isEncrypted) {
         IsEncrypted = isEncrypted;
     }
 
-    public PayloadJsonObject getPayloadContent() {
+    PayloadJsonObject getPayloadContent() {
         return PayloadContent;
     }
 
@@ -194,35 +195,35 @@ public class PayloadJsonWrapper extends PayloadBase {
 //        PayloadContent = payloadContent;
 //    }
 
-    public Boolean getPayloadRemovalDisallowed() {
+    Boolean getPayloadRemovalDisallowed() {
         return PayloadRemovalDisallowed;
     }
 
-    public void setPayloadRemovalDisallowed(Boolean payloadRemovalDisallowed) {
+    void setPayloadRemovalDisallowed(Boolean payloadRemovalDisallowed) {
         PayloadRemovalDisallowed = payloadRemovalDisallowed;
     }
 
-    public Boolean getPayloadScope() {
+    Boolean getPayloadScope() {
         return PayloadScope;
     }
 
-    public void setPayloadScope(Boolean payloadScope) {
+    void setPayloadScope(Boolean payloadScope) {
         PayloadScope = payloadScope;
     }
 
-    public Date getRemovalDate() {
+    Date getRemovalDate() {
         return RemovalDate;
     }
 
-    public void setRemovalDate(Date removalDate) {
+    void setRemovalDate(Date removalDate) {
         RemovalDate = removalDate;
     }
 
-    public Float getDurationUntilRemoval() {
+    Float getDurationUntilRemoval() {
         return DurationUntilRemoval;
     }
 
-    public void setDurationUntilRemoval(Float durationUntilRemoval) {
+    void setDurationUntilRemoval(Float durationUntilRemoval) {
         DurationUntilRemoval = durationUntilRemoval;
     }
 
@@ -234,9 +235,8 @@ public class PayloadJsonWrapper extends PayloadBase {
 
         PayloadJsonWrapper that = (PayloadJsonWrapper) o;
 
-        if(this.hashCode() != that.hashCode()) return false;
+        return this.hashCode() == that.hashCode();
 
-        return true;
     }
 
     @Override
@@ -253,40 +253,219 @@ public class PayloadJsonWrapper extends PayloadBase {
     }
 
     public PayloadArrayWrapper getPayloadArrayWrapper() {
-        PayloadArrayWrapper wrapper = new PayloadArrayWrapper();
-        wrapper.setPayloadType(this.getPayloadType());
-        wrapper.setPayloadVersion(this.getPayloadVersion());
-        wrapper.setPayloadIdentifier(this.getPayloadIdentifier());
-        wrapper.setPayloadUUID(this.getPayloadUUID());
-        wrapper.setPayloadDisplayName(this.getPayloadDisplayName());
-        wrapper.setPayloadDescription(this.getPayloadDescription());
-        wrapper.setPayloadOrganization(this.getPayloadOrganization());
+        PayloadArrayWrapper wrapper = initArrayWrapper();
 
-        wrapper.setHasRemovalPasscode(this.getHasRemovalPasscode());
-        wrapper.setIsEncrypted(this.getIsEncrypted());
-        wrapper.setPayloadRemovalDisallowed(this.getPayloadRemovalDisallowed());
-        wrapper.setPayloadScope(this.getPayloadScope());
-        wrapper.setRemovalDate(this.getRemovalDate());
-        wrapper.setDurationUntilRemoval(this.getDurationUntilRemoval());
-        PayloadJsonObject payloadContent = this.getPayloadContent();
+        addEmailToWrapper(wrapper);
+        addWifiToWrapper(wrapper);
+        addPasswordToWrapper(wrapper);
+        addRestrictionToWrapper(wrapper);
+        addRemovalPasswordToWrapper(wrapper);
+        addWebClipToWrapper(wrapper);
+        addLdapToWrapper(wrapper);
+        addExchangeToWrapper(wrapper);
+        addVpnToWrapper(wrapper);
+        addSettingsToWrapper(wrapper);
+        addPoliciesToWrapper(wrapper);
+        addCalPolicyToWrapper(wrapper);
+        addApnToWrapper(wrapper);
+        return wrapper;
+    }
 
+    @SuppressWarnings("ConstantConditions")
+    private void addPoliciesToWrapper(PayloadArrayWrapper wrapper) {
+        MemorySizePolicy memorySizePolicy = this.getPayloadContent().getMemorySizePolicy();
+        if(memorySizePolicy != null){
+            wrapper.addPayLoadContent(memorySizePolicy);
+        }
 
-        List<PayloadEmail> payloadEmails = payloadContent.getPayloadEmails();
+        AppControlList appControlList = this.getPayloadContent().getAppControlList();
+        if(appControlList != null){
+            wrapper.addPayLoadContent(appControlList);
+        }
 
-        if(payloadEmails != null){
-            for(PayloadEmail payloadEmail : payloadEmails){
-                wrapper.addPayLoadContent(payloadEmail);
+        SystemExceptionPolicy systemExceptionPolicy = this.getPayloadContent().getSystemExceptionPolicy();
+        if(systemExceptionPolicy != null){
+            wrapper.addPayLoadContent(systemExceptionPolicy);
+        }
+
+        PayloadSecurityPolicy payloadSecurityPolicy = this.getPayloadContent().getPayloadSecurityPolicy();
+        if(payloadSecurityPolicy != null){
+            wrapper.addPayLoadContent(payloadSecurityPolicy);
+        }
+
+        PayloadRestrictionsAndroidPolicy payloadRestrictionsAndroidPolicy = this.getPayloadContent().getPayloadRestrictionsAndroidPolicy();
+        if(payloadRestrictionsAndroidPolicy != null){
+            wrapper.addPayLoadContent(payloadRestrictionsAndroidPolicy);
+        }
+
+        PayloadNativeAppCtrlPolicy payloadNativeAppCtrlPolicy = this.getPayloadContent().getPayloadNativeAppCtrlPolicy();
+        if(payloadNativeAppCtrlPolicy != null){
+            wrapper.addPayLoadContent(payloadNativeAppCtrlPolicy);
+        }
+
+        PayloadBluetoothPolicy payloadBluetoothPolicy = this.getPayloadContent().getPayloadBluetoothPolicy();
+        if(payloadBluetoothPolicy != null){
+            wrapper.addPayLoadContent(payloadBluetoothPolicy);
+        }
+        PayloadNetRestrictPolicy payloadNetRestrictPolicy = this.getPayloadContent().getPayloadNetRestrictPolicy();
+        if(payloadNetRestrictPolicy != null){
+            wrapper.addPayLoadContent(payloadNetRestrictPolicy);
+        }
+
+        PayloadActiveSyncPolicy payloadActiveSyncPolicy = this.getPayloadContent().getPayloadActiveSyncPolicy();
+        if(payloadActiveSyncPolicy != null){
+            wrapper.addPayLoadContent(payloadActiveSyncPolicy);
+        }
+        PayloadWallpaper payloadWallpaper = this.getPayloadContent().getPayloadWallpaper();
+        if(payloadWallpaper != null){
+            wrapper.addPayLoadContent(payloadWallpaper);
+        }
+
+        PayloadRoamingPolicy payloadRoamingPolicy = this.getPayloadContent().getPayloadRoamingPolicy();
+        if(payloadRoamingPolicy != null){
+            wrapper.addPayLoadContent(payloadRoamingPolicy);
+        }
+
+        List<PayloadCardDAVPolicy> payloadCardDAVPolicies = this.getPayloadContent().getPayloadCardDAVPolicies();
+        if(payloadCardDAVPolicies != null){
+            for(PayloadCardDAVPolicy payloadCardDAVPolicy : payloadCardDAVPolicies){
+                wrapper.addPayLoadContent(payloadCardDAVPolicy);
+            }
+        }
+    }
+
+    private void addSettingsToWrapper(PayloadArrayWrapper wrapper) {
+        BrowserSettings browserSettings = this.getPayloadContent().getBrowserSettings();
+        if(browserSettings != null){
+            wrapper.addPayLoadContent(browserSettings);
+        }
+        SystemSettings systemSettings = this.getPayloadContent().getSystemSettings();
+        if(systemSettings != null){
+            wrapper.addPayLoadContent(systemSettings);
+        }
+
+        LauncherSettings launcherSettings = this.getPayloadContent().getLauncherSettings();
+        if(launcherSettings != null){
+            wrapper.addPayLoadContent(launcherSettings);
+        }
+
+        List<AdvertiseDownloadSettings> advertiseDownloadSettingses = this.getPayloadContent().getAdvertiseDownloadSettingses();
+        if(advertiseDownloadSettingses != null){
+            for(AdvertiseDownloadSettings advertiseDownloadSettings : advertiseDownloadSettingses){
+                wrapper.addPayLoadContent(advertiseDownloadSettings);
+            }
+        }
+    }
+
+    private void addCalPolicyToWrapper(PayloadArrayWrapper wrapper) {
+        List<PayloadCalDAVPolicy> payloadCalDAVPolicies = this.getPayloadContent().getPayloadCalDAVPolicies();
+        if(payloadCalDAVPolicies != null){
+            for(PayloadCalDAVPolicy payloadCalDAVPolicy : payloadCalDAVPolicies){
+                wrapper.addPayLoadContent(payloadCalDAVPolicy);
             }
         }
 
-//        List<PayloadWifiConfig> payloadWifiConfigs = payloadContent.getPayloadWifiConfigs();
-//        for(PayloadWifiConfig payloadWifiConfig : payloadWifiConfigs){
-//            if(payloadWifiConfig != null){
-//                wrapper.addPayLoadContent(payloadWifiConfig);
-//            }
-//
-//        }
-        List<PayloadWifiConfig> payloadWifiConfigs = payloadContent.getPayloadWifiConfigs();
+        List<PayloadCalSubscriptionPolicy> payloadCalSubscriptionPolicies = this.getPayloadContent().getPayloadCalSubscriptionPolicies();
+        if(payloadCalSubscriptionPolicies != null){
+            for(PayloadCalSubscriptionPolicy payloadCalSubscriptionPolicy : payloadCalSubscriptionPolicies){
+                wrapper.addPayLoadContent(payloadCalSubscriptionPolicy);
+            }
+        }
+    }
+
+    private void addApnToWrapper(PayloadArrayWrapper wrapper) {
+        PayloadAPN payloadAPN =  this.getPayloadContent().getPayloadAPN();
+        if(payloadAPN != null){
+            APNDataArray apnDataArray = new APNDataArray();
+
+            APNSDict apnsDict = new APNSDict();
+
+            List<APNConfig> apnConfigs = new ArrayList<APNConfig>();
+            APNConfig apnConfig= new APNConfig();
+            apnConfig.setApn(payloadAPN.getApn());
+            apnConfig.setUsername(payloadAPN.getUsername());
+            String password = payloadAPN.getPassword();
+            if(password != null && password.length() > 0){
+                apnConfig.setPassword(payloadAPN.getPassword().getBytes());
+            }
+            apnConfig.setProxy(payloadAPN.getProxy());
+            apnConfig.setProxyPort(payloadAPN.getProxyPort());
+            apnConfigs.add(apnConfig);
+
+            apnsDict.setApns(apnConfigs);
+
+            apnDataArray.setDefaultsData(apnsDict);
+            payloadAPN.addPayloadContent(apnDataArray);
+
+            wrapper.addPayLoadContent(payloadAPN);
+        }
+    }
+
+    private void addVpnToWrapper(PayloadArrayWrapper wrapper) {
+        List<PayloadVPN> payloadVPNs = this.getPayloadContent().getPayloadVPNs();
+        if(payloadVPNs != null){
+            for(PayloadVPN payloadVPN : payloadVPNs){
+                parseVpnJson2PlistBean(payloadVPN);
+                wrapper.addPayLoadContent(payloadVPN);
+            }
+        }
+    }
+
+    private void addExchangeToWrapper(PayloadArrayWrapper wrapper) {
+        List<PayloadExchange> payloadExchanges = this.getPayloadContent().getPayloadExchanges();
+        if(payloadExchanges != null){
+            for(PayloadExchange payloadExchange : payloadExchanges){
+                String domainName = payloadExchange.getDomainName();
+                if(domainName != null && domainName.length() > 0){
+                    payloadExchange.setUserName(domainName+"\\"+payloadExchange.getUserName());
+                }
+                wrapper.addPayLoadContent(payloadExchange);
+            }
+        }
+    }
+
+    private void addLdapToWrapper(PayloadArrayWrapper wrapper) {
+        List<PayloadLDAP> payloadLDAPs = this.getPayloadContent().getPayloadLDAPs();
+        if(payloadLDAPs != null){
+            for(PayloadLDAP payloadLDAP : payloadLDAPs){
+                wrapper.addPayLoadContent(payloadLDAP);
+            }
+        }
+    }
+
+    private void addWebClipToWrapper(PayloadArrayWrapper wrapper) {
+        List<PayloadWebClip> payloadWebClips = this.getPayloadContent().getPayloadWebClips();
+        if(payloadWebClips != null){
+            for(PayloadWebClip payloadWebClip : payloadWebClips){
+                wrapper.addPayLoadContent(payloadWebClip);
+            }
+        }
+    }
+
+    private void addRemovalPasswordToWrapper(PayloadArrayWrapper wrapper) {
+        PayloadRemovalPassword payloadRemovalPassword = this.getPayloadContent().getPayloadRemovalPassword();
+        if(payloadRemovalPassword != null){
+            wrapper.addPayLoadContent(payloadRemovalPassword);
+        }
+    }
+
+    private void addRestrictionToWrapper(PayloadArrayWrapper wrapper) {
+        PayloadRestrictionsPolicy payloadRestrictionsPolicy = this.getPayloadContent().getPayloadRestrictionsPolicy();
+        if(payloadRestrictionsPolicy != null){
+            wrapper.addPayLoadContent(payloadRestrictionsPolicy);
+        }
+    }
+
+    private void addPasswordToWrapper(PayloadArrayWrapper wrapper) {
+        PayloadPasswordPolicy payloadPasswordPolicy = this.getPayloadContent().getPayloadPasswordPolicy();
+        if(payloadPasswordPolicy != null){
+            wrapper.addPayLoadContent(payloadPasswordPolicy);
+        }
+    }
+
+    @SuppressWarnings("ConstantConditions")
+    private void addWifiToWrapper(PayloadArrayWrapper wrapper) {
+        List<PayloadWifiConfig> payloadWifiConfigs = this.getPayloadContent().getPayloadWifiConfigs();
         if(payloadWifiConfigs != null){
             for(PayloadWifiConfig payloadWifiConfig : payloadWifiConfigs){
 
@@ -358,178 +537,37 @@ public class PayloadJsonWrapper extends PayloadBase {
                 wrapper.addPayLoadContent(payloadWifiConfig);
             }
         }
-        PayloadPasswordPolicy payloadPasswordPolicy = payloadContent.getPayloadPasswordPolicy();
-        if(payloadPasswordPolicy != null){
-            wrapper.addPayLoadContent(payloadPasswordPolicy);
-        }
+    }
 
-        PayloadRestrictionsPolicy payloadRestrictionsPolicy = payloadContent.getPayloadRestrictionsPolicy();
-        if(payloadRestrictionsPolicy != null){
-            wrapper.addPayLoadContent(payloadRestrictionsPolicy);
-        }
-        PayloadRemovalPassword payloadRemovalPassword = payloadContent.getPayloadRemovalPassword();
-        if(payloadRemovalPassword != null){
-            wrapper.addPayLoadContent(payloadRemovalPassword);
-        }
-        List<PayloadWebClip> payloadWebClips = payloadContent.getPayloadWebClips();
-        if(payloadWebClips != null){
-            for(PayloadWebClip payloadWebClip : payloadWebClips){
-                wrapper.addPayLoadContent(payloadWebClip);
+    private void addEmailToWrapper(PayloadArrayWrapper wrapper) {
+        List<PayloadEmail> payloadEmails = this.getPayloadContent().getPayloadEmails();
+        if(payloadEmails != null){
+            for(PayloadEmail payloadEmail : payloadEmails){
+                wrapper.addPayLoadContent(payloadEmail);
             }
         }
-        List<PayloadLDAP> payloadLDAPs = payloadContent.getPayloadLDAPs();
+    }
 
-        if(payloadLDAPs != null){
-            for(PayloadLDAP payloadLDAP : payloadLDAPs){
-                wrapper.addPayLoadContent(payloadLDAP);
-            }
-        }
+    private PayloadArrayWrapper initArrayWrapper() {
+        PayloadArrayWrapper wrapper = new PayloadArrayWrapper();
+        wrapper.setPayloadType(this.getPayloadType());
+        wrapper.setPayloadVersion(this.getPayloadVersion());
+        wrapper.setPayloadIdentifier(this.getPayloadIdentifier());
+        wrapper.setPayloadUUID(this.getPayloadUUID());
+        wrapper.setPayloadDisplayName(this.getPayloadDisplayName());
+        wrapper.setPayloadDescription(this.getPayloadDescription());
+        wrapper.setPayloadOrganization(this.getPayloadOrganization());
 
-        List<PayloadExchange> payloadExchanges = payloadContent.getPayloadExchanges();
-
-        if(payloadExchanges != null){
-            for(PayloadExchange payloadExchange : payloadExchanges){
-                String domainName = payloadExchange.getDomainName();
-                if(domainName != null && domainName.length() > 0){
-                    payloadExchange.setUserName(domainName+"\\"+payloadExchange.getUserName());
-                }
-                wrapper.addPayLoadContent(payloadExchange);
-            }
-        }
-
-        List<PayloadVPN> payloadVPNs = payloadContent.getPayloadVPNs();
-        if(payloadVPNs != null){
-            for(PayloadVPN payloadVPN : payloadVPNs){
-                parseVpnJson2PlistBean(payloadVPN);
-                wrapper.addPayLoadContent(payloadVPN);
-            }
-        }
-
-        BrowserSettings browserSettings = payloadContent.getBrowserSettings();
-        if(browserSettings != null){
-            wrapper.addPayLoadContent(browserSettings);
-        }
-        SystemSettings systemSettings = payloadContent.getSystemSettings();
-        if(systemSettings != null){
-            wrapper.addPayLoadContent(systemSettings);
-        }
-
-        LauncherSettings launcherSettings = payloadContent.getLauncherSettings();
-        if(launcherSettings != null){
-            wrapper.addPayLoadContent(launcherSettings);
-        }
-
-        List<AdvertiseDownloadSettings> advertiseDownloadSettingses = payloadContent.getAdvertiseDownloadSettingses();
-//        AdvertiseDownloadSettings advertiseDownloadSettings = payloadContent.getAdvertiseDownloadSettings();
-        if(advertiseDownloadSettingses != null){
-            for(AdvertiseDownloadSettings advertiseDownloadSettings : advertiseDownloadSettingses){
-                wrapper.addPayLoadContent(advertiseDownloadSettings);
-            }
-        }
-
-        MemorySizePolicy memorySizePolicy = payloadContent.getMemorySizePolicy();
-        if(memorySizePolicy != null){
-            wrapper.addPayLoadContent(memorySizePolicy);
-        }
-
-        AppControlList appControlList = payloadContent.getAppControlList();
-        if(appControlList != null){
-            wrapper.addPayLoadContent(appControlList);
-        }
-
-        SystemExceptionPolicy systemExceptionPolicy = payloadContent.getSystemExceptionPolicy();
-        if(systemExceptionPolicy != null){
-            wrapper.addPayLoadContent(systemExceptionPolicy);
-        }
-
-        PayloadSecurityPolicy payloadSecurityPolicy = payloadContent.getPayloadSecurityPolicy();
-        if(payloadSecurityPolicy != null){
-            wrapper.addPayLoadContent(payloadSecurityPolicy);
-        }
-
-        PayloadRestrictionsAndroidPolicy payloadRestrictionsAndroidPolicy = payloadContent.getPayloadRestrictionsAndroidPolicy();
-        if(payloadRestrictionsAndroidPolicy != null){
-            wrapper.addPayLoadContent(payloadRestrictionsAndroidPolicy);
-        }
-
-        PayloadNativeAppCtrlPolicy payloadNativeAppCtrlPolicy = payloadContent.getPayloadNativeAppCtrlPolicy();
-        if(payloadNativeAppCtrlPolicy != null){
-            wrapper.addPayLoadContent(payloadNativeAppCtrlPolicy);
-        }
-
-        PayloadBluetoothPolicy payloadBluetoothPolicy = payloadContent.getPayloadBluetoothPolicy();
-        if(payloadBluetoothPolicy != null){
-            wrapper.addPayLoadContent(payloadBluetoothPolicy);
-        }
-        PayloadNetRestrictPolicy payloadNetRestrictPolicy = payloadContent.getPayloadNetRestrictPolicy();
-        if(payloadNetRestrictPolicy != null){
-            wrapper.addPayLoadContent(payloadNetRestrictPolicy);
-        }
-
-        PayloadActiveSyncPolicy payloadActiveSyncPolicy = payloadContent.getPayloadActiveSyncPolicy();
-        if(payloadActiveSyncPolicy != null){
-            wrapper.addPayLoadContent(payloadActiveSyncPolicy);
-        }
-        PayloadWallpaper payloadWallpaper = payloadContent.getPayloadWallpaper();
-        if(payloadWallpaper != null){
-            wrapper.addPayLoadContent(payloadWallpaper);
-        }
-
-        PayloadRoamingPolicy payloadRoamingPolicy = payloadContent.getPayloadRoamingPolicy();
-        if(payloadRoamingPolicy != null){
-            wrapper.addPayLoadContent(payloadRoamingPolicy);
-        }
-
-        List<PayloadCardDAVPolicy> payloadCardDAVPolicies = payloadContent.getPayloadCardDAVPolicies();
-        if(payloadCardDAVPolicies != null){
-            for(PayloadCardDAVPolicy payloadCardDAVPolicy : payloadCardDAVPolicies){
-                wrapper.addPayLoadContent(payloadCardDAVPolicy);
-            }
-        }
-
-        List<PayloadCalDAVPolicy> payloadCalDAVPolicies = payloadContent.getPayloadCalDAVPolicies();
-        if(payloadCalDAVPolicies != null){
-            for(PayloadCalDAVPolicy payloadCalDAVPolicy : payloadCalDAVPolicies){
-                wrapper.addPayLoadContent(payloadCalDAVPolicy);
-            }
-        }
-
-        List<PayloadCalSubscriptionPolicy> payloadCalSubscriptionPolicies = payloadContent.getPayloadCalSubscriptionPolicies();
-        if(payloadCalSubscriptionPolicies != null){
-            for(PayloadCalSubscriptionPolicy payloadCalSubscriptionPolicy : payloadCalSubscriptionPolicies){
-                wrapper.addPayLoadContent(payloadCalSubscriptionPolicy);
-            }
-        }
-
-        PayloadAPN payloadAPN =  payloadContent.getPayloadAPN();
-        if(payloadAPN != null){
-            APNDataArray apnDataArray = new APNDataArray();
-
-            APNSDict apnsDict = new APNSDict();
-
-            List<APNConfig> apnConfigs = new ArrayList<APNConfig>();
-            APNConfig apnConfig= new APNConfig();
-            apnConfig.setApn(payloadAPN.getApn());
-            apnConfig.setUsername(payloadAPN.getUsername());
-            String password = payloadAPN.getPassword();
-            if(password != null && password.length() > 0){
-                apnConfig.setPassword(payloadAPN.getPassword().getBytes());
-            }
-            apnConfig.setProxy(payloadAPN.getProxy());
-            apnConfig.setProxyPort(payloadAPN.getProxyPort());
-            apnConfigs.add(apnConfig);
-
-            apnsDict.setApns(apnConfigs);
-
-            apnDataArray.setDefaultsData(apnsDict);
-            payloadAPN.addPayloadContent(apnDataArray);
-
-            wrapper.addPayLoadContent(payloadAPN);
-        }
+        wrapper.setHasRemovalPasscode(this.getHasRemovalPasscode());
+        wrapper.setIsEncrypted(this.getIsEncrypted());
+        wrapper.setPayloadRemovalDisallowed(this.getPayloadRemovalDisallowed());
+        wrapper.setPayloadScope(this.getPayloadScope());
+        wrapper.setRemovalDate(this.getRemovalDate());
+        wrapper.setDurationUntilRemoval(this.getDurationUntilRemoval());
         return wrapper;
     }
 
-//    private void parseVpnPlist2Json(PayloadVPN payloadVPN){
+    //    private void parseVpnPlist2Json(PayloadVPN payloadVPN){
 //
 //        IPv4Info iPv4Info = payloadVPN.getIPv4();
 //        if(iPv4Info != null){
@@ -641,10 +679,8 @@ public class PayloadJsonWrapper extends PayloadBase {
             pppInfo.setAuthPassword(payloadVPN.getAuthPassword());
             pppInfo.setCommRemoteAddress(payloadVPN.getCommRemoteAddress());
             Integer authType = payloadVPN.getAuthType();
-            if(authType != null){
-                if(authType==PayloadVPN.AUTH_TYPE_PASS){
-
-                }else{
+            if(authType != null) {
+                if (authType != PayloadVPN.AUTH_TYPE_PASS) {
                     pppInfo.setTokenCard(true);
                     pppInfo.enableAuthEAPPlugins();
                     pppInfo.enableAuthProtocol();

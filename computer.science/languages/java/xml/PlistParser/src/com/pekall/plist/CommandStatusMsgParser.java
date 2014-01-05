@@ -14,6 +14,7 @@ import java.util.List;
 /**
  * Parser for XML status messages, just a simple wrapper
  */
+@SuppressWarnings("UnusedDeclaration")
 public class CommandStatusMsgParser {
     private CommandStatusMsg mMessage;
 

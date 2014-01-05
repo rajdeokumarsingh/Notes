@@ -5,6 +5,7 @@ import java.util.Arrays;
 /**
  * Entry of the CertificateList array
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class CertificateItem {
     /** Common name of the certificate */
     private String CommonName;
@@ -57,9 +58,8 @@ public class CertificateItem {
 
         if (IsIdentity != item.IsIdentity) return false;
         if (CommonName != null ? !CommonName.equals(item.CommonName) : item.CommonName != null) return false;
-        if (!Arrays.equals(Data, item.Data)) return false;
+        return Arrays.equals(Data, item.Data);
 
-        return true;
     }
 
     @Override

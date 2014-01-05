@@ -22,6 +22,7 @@ import java.util.List;
 /**
  * XML configuration for "launcher_app_info"
  */
+@SuppressWarnings("UnusedDeclaration")
 public class LauncherSettings extends PayloadBase {
     /**
      * 手机型号
@@ -81,9 +82,8 @@ public class LauncherSettings extends PayloadBase {
 
         LauncherSettings that = (LauncherSettings) o;
 
-        if (this.hashCode() != that.hashCode()) return false;
+        return this.hashCode() == that.hashCode();
 
-        return true;
     }
 
     @Override

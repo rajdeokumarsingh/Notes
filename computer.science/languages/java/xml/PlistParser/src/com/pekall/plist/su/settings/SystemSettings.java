@@ -18,6 +18,7 @@ import com.pekall.plist.beans.PayloadBase;
 /**
  * XML configuration for "system_settings"
  */
+@SuppressWarnings("UnusedDeclaration")
 public class SystemSettings extends PayloadBase {
     /**
      * Whether wifi is on, 0 for off, 1 for on
@@ -103,29 +104,6 @@ public class SystemSettings extends PayloadBase {
                 ", systemUi=" + systemUi +
                 ", eraseDevice=" + eraseDevice +
                 '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof SystemSettings)) return false;
-
-        SystemSettings that = (SystemSettings) o;
-
-        if (airplane != that.airplane) return false;
-        if (bluetooth != that.bluetooth) return false;
-        if (camera != that.camera) return false;
-        if (dataRoaming != that.dataRoaming) return false;
-        if (microphone != that.microphone) return false;
-        if (mobileData != that.mobileData) return false;
-        if (nfc != that.nfc) return false;
-        if (sdcard != that.sdcard) return false;
-        if (usb != that.usb) return false;
-        if (wifi != that.wifi) return false;
-        if (systemUi != that.systemUi) return false;
-        if (eraseDevice != that.eraseDevice) return false;
-
-        return true;
     }
 
     public Integer getWifi() {
@@ -222,5 +200,48 @@ public class SystemSettings extends PayloadBase {
 
     public void setSystemUi(Integer systemUi) {
         this.systemUi = systemUi;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof SystemSettings)) return false;
+        if (!super.equals(o)) return false;
+
+        SystemSettings that = (SystemSettings) o;
+
+        if (airplane != null ? !airplane.equals(that.airplane) : that.airplane != null) return false;
+        if (bluetooth != null ? !bluetooth.equals(that.bluetooth) : that.bluetooth != null) return false;
+        if (camera != null ? !camera.equals(that.camera) : that.camera != null) return false;
+        if (dataRoaming != null ? !dataRoaming.equals(that.dataRoaming) : that.dataRoaming != null) return false;
+        if (eraseDevice != null ? !eraseDevice.equals(that.eraseDevice) : that.eraseDevice != null) return false;
+        if (microphone != null ? !microphone.equals(that.microphone) : that.microphone != null) return false;
+        if (mobileData != null ? !mobileData.equals(that.mobileData) : that.mobileData != null) return false;
+        if (nfc != null ? !nfc.equals(that.nfc) : that.nfc != null) return false;
+        if (sdcard != null ? !sdcard.equals(that.sdcard) : that.sdcard != null) return false;
+        if (systemUi != null ? !systemUi.equals(that.systemUi) : that.systemUi != null) return false;
+        if (usb != null ? !usb.equals(that.usb) : that.usb != null) return false;
+        //noinspection RedundantIfStatement
+        if (wifi != null ? !wifi.equals(that.wifi) : that.wifi != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + (wifi != null ? wifi.hashCode() : 0);
+        result = 31 * result + (bluetooth != null ? bluetooth.hashCode() : 0);
+        result = 31 * result + (camera != null ? camera.hashCode() : 0);
+        result = 31 * result + (microphone != null ? microphone.hashCode() : 0);
+        result = 31 * result + (nfc != null ? nfc.hashCode() : 0);
+        result = 31 * result + (dataRoaming != null ? dataRoaming.hashCode() : 0);
+        result = 31 * result + (sdcard != null ? sdcard.hashCode() : 0);
+        result = 31 * result + (usb != null ? usb.hashCode() : 0);
+        result = 31 * result + (airplane != null ? airplane.hashCode() : 0);
+        result = 31 * result + (mobileData != null ? mobileData.hashCode() : 0);
+        result = 31 * result + (systemUi != null ? systemUi.hashCode() : 0);
+        result = 31 * result + (eraseDevice != null ? eraseDevice.hashCode() : 0);
+        return result;
     }
 }

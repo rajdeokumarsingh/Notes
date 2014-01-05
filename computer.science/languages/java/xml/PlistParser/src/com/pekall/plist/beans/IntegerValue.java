@@ -3,7 +3,8 @@ package com.pekall.plist.beans;
 /**
  * Bean wrapping a integer
  */
-public class IntegerValue {
+@SuppressWarnings("UnusedDeclaration")
+class IntegerValue {
     private Integer value;
 
     public IntegerValue() {
@@ -28,9 +29,8 @@ public class IntegerValue {
 
         IntegerValue that = (IntegerValue) o;
 
-        if (value != null ? !value.equals(that.value) : that.value != null) return false;
+        return !(value != null ? !value.equals(that.value) : that.value != null);
 
-        return true;
     }
 
     @Override

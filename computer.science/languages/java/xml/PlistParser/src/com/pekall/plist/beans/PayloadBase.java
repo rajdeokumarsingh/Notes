@@ -1,15 +1,9 @@
 package com.pekall.plist.beans;
 
-import com.dd.plist.NSDictionary;
-import com.pekall.plist.Constants;
-import com.pekall.plist.PlistBeanConverter;
-import com.pekall.plist.PlistXmlParser;
-
-import java.io.IOException;
-
 /**
  * Base class for an ios payload, containing keys common to all payloads
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PayloadBase extends BeanBase {
 
     /**
@@ -95,9 +89,9 @@ public class PayloadBase extends BeanBase {
     public PayloadBase() {
     }
 
-    public PayloadBase(String payloadIdentifier, String payloadType, String payloadUUID,
-                       int payloadVersion, String payloadDescription, String payloadDisplayName,
-                       String payloadOrganization) {
+    PayloadBase(String payloadIdentifier, String payloadType, String payloadUUID,
+                int payloadVersion, String payloadDescription, String payloadDisplayName,
+                String payloadOrganization) {
         PayloadIdentifier = payloadIdentifier;
         PayloadType = payloadType;
         PayloadUUID = payloadUUID;
@@ -183,9 +177,8 @@ public class PayloadBase extends BeanBase {
         if (!PayloadIdentifier.equals(that.PayloadIdentifier)) return false;
         if (!PayloadOrganization.equals(that.PayloadOrganization)) return false;
         if (!PayloadType.equals(that.PayloadType)) return false;
-        if (!PayloadUUID.equals(that.PayloadUUID)) return false;
+        return PayloadUUID.equals(that.PayloadUUID);
 
-        return true;
     }
 
     @Override
@@ -206,9 +199,8 @@ public class PayloadBase extends BeanBase {
             return false;
         if (PayloadType != null ? !PayloadType.equals(base.PayloadType) : base.PayloadType != null) return false;
         if (PayloadUUID != null ? !PayloadUUID.equals(base.PayloadUUID) : base.PayloadUUID != null) return false;
-        if (PayloadStatus != null ? !PayloadStatus.equals(base.PayloadStatus) : base.PayloadStatus != null) return false;
+        return !(PayloadStatus != null ? !PayloadStatus.equals(base.PayloadStatus) : base.PayloadStatus != null);
 
-        return true;
     }
 
     @Override

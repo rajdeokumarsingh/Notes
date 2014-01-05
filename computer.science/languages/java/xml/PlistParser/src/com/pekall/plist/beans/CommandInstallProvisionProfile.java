@@ -1,12 +1,11 @@
 package com.pekall.plist.beans;
 
-import com.pekall.plist.Utils;
-
 import java.util.Arrays;
 
 /**
  * Command to install provisioning profiles
  */
+@SuppressWarnings("UnusedDeclaration")
 public class CommandInstallProvisionProfile extends CommandObject {
 
     public static final String KEY_PROVISIONING_PROFILE = "ProvisioningProfile";
@@ -40,9 +39,8 @@ public class CommandInstallProvisionProfile extends CommandObject {
 
         CommandInstallProvisionProfile that = (CommandInstallProvisionProfile) o;
 
-        if (!Arrays.equals(ProvisioningProfile, that.ProvisioningProfile)) return false;
+        return Arrays.equals(ProvisioningProfile, that.ProvisioningProfile);
 
-        return true;
     }
 
     @Override

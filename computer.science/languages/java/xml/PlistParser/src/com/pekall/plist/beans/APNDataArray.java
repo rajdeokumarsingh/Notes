@@ -1,5 +1,6 @@
 package com.pekall.plist.beans;
 
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class APNDataArray {
     /**
      * The only allowed value is com.apple.managedCarrier.
@@ -38,10 +39,8 @@ public class APNDataArray {
         APNDataArray that = (APNDataArray) o;
 
         if (DefaultsData != null ? !DefaultsData.equals(that.DefaultsData) : that.DefaultsData != null) return false;
-        if (DefaultsDomainName != null ? !DefaultsDomainName.equals(that.DefaultsDomainName) : that.DefaultsDomainName != null)
-            return false;
+        return !(DefaultsDomainName != null ? !DefaultsDomainName.equals(that.DefaultsDomainName) : that.DefaultsDomainName != null);
 
-        return true;
     }
 
     @Override

@@ -10,6 +10,7 @@ import java.io.IOException;
 /**
  * Base class for all beans
  */
+@SuppressWarnings("UnusedDeclaration")
 public abstract class BeanBase {
     /**
      * Convert bean to xml string
@@ -55,14 +56,14 @@ public abstract class BeanBase {
     /**
      * Create a bean from xml string.
      *
-     * @param xml
-     * @param clz
-     * @param <T>
-     * @return
+     * @param xml input xml string
+     * @param clz class of the bean
+     * @param <T> class type
+     * @return bean object
      */
+    @SuppressWarnings("unchecked")
     public static <T> T fromXmlT(String xml, Class<T> clz) {
         NSDictionary root;
-        BeanBase bean = null;
         Object object = null;
         try {
             root = (NSDictionary) PlistXmlParser.fromXml(xml);
@@ -70,6 +71,6 @@ public abstract class BeanBase {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return (T)object;
+        return (T) object;
     }
 }

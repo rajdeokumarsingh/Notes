@@ -22,6 +22,7 @@ import java.util.List;
 /**
  * Parsed data for XML configuration "device_info"
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class DeviceInfoRespSU extends DeviceInfoResp {
     /**
      * Device is not rooted and jailbreak
@@ -494,9 +495,8 @@ public class DeviceInfoRespSU extends DeviceInfoResp {
         if (usbDebugging != null ? !usbDebugging.equals(that.usbDebugging) : that.usbDebugging != null) return false;
         if (deviceSecurityStatus != null ? !deviceSecurityStatus.equals(that.deviceSecurityStatus) : that.deviceSecurityStatus != null) return false;
         if (clientVersion != null ? !clientVersion.equals(that.clientVersion) : that.clientVersion != null) return false;
-        if (trafficBytes != null ? !trafficBytes.equals(that.trafficBytes) : that.trafficBytes != null) return false;
+        return !(trafficBytes != null ? !trafficBytes.equals(that.trafficBytes) : that.trafficBytes != null);
 
-        return true;
     }
 
     @Override

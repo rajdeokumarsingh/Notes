@@ -3,6 +3,7 @@ package com.pekall.plist.beans;
 /**
  * Settings
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PhoneSetting {
 
     /**
@@ -58,9 +59,8 @@ public class PhoneSetting {
         PhoneSetting that = (PhoneSetting) o;
 
         if (Enabled != null ? !Enabled.equals(that.Enabled) : that.Enabled != null) return false;
-        if (Item != null ? !Item.equals(that.Item) : that.Item != null) return false;
+        return !(Item != null ? !Item.equals(that.Item) : that.Item != null);
 
-        return true;
     }
 
     @Override

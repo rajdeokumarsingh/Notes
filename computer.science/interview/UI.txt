@@ -1,0 +1,30 @@
+1、ListView的优化
+	主要涉及图片异步加载/缓存
+
+2、android中的动画有哪几类，它们的特点和区别是什么?
+　两种，一种是Tween动画、还有一种是Frame动画。Tween动画，这种实现方式可以使视图组件移动、放大、缩小以及产生透明度的变化;另一种Frame动画，传统的动画方法，通过顺序的播放排列好的图片来实现，类似电影。
+
+3、handler机制的原理
+andriod提供了 Handler 和Looper 来满足线程间的通信。Handler先进先出原则。Looper类用来管理特定线程内对象之间的消息交换(MessageExchange)。
+　　1)Looper: 一个线程可以产生一个Looper对象，由它来管理此线程里的MessageQueue(消息队列)。
+　　2)Handler: 你可以构造Handler对象来与Looper沟通，以便push新消息到Message Queue里;或者接收Looper从MessageQueue取出)所送来的消息。
+　　3) Message Queue(消息队列):用来存放线程放入的消息。
+　　4)线程：UI thread 通常就是mainthread，而Android启动程序时会替它建立一个MessageQueue。
+
+4、Activity的生命周期
+	onCreate onResume onPause onStop onDestory
+	分别展开说明
+
+5、dp,px,sp区别及使用场景
+	dp 用来标识控件大小 与屏幕物理尺寸无关 与像素密度有关 不同设备相同值的dp不同	
+	px 物理单位 不同设备相同值的px相同
+	sp 类似与dp 但用来标识字体大小	
+
+6、activity的启动模式有哪些？各有何特点?
+standard (默认)：每次都创建
+singleTop：如果在栈顶的话不重新创建实例，否则创建
+singleTask：如果之前存在则调用onNewIntent，不重新创建实例
+singleInstance：新建任务栈储存该activity
+
+7、列举一些常用的布局
+LinearLayout,RelativeLayout,AbsoluteLayout,TableLayout,FrameLayout,GridLayout

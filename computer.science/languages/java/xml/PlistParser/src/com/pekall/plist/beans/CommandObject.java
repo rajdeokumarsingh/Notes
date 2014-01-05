@@ -5,6 +5,7 @@ import com.pekall.plist.Utils;
 /**
  * Base class for server commands
  */
+@SuppressWarnings("UnusedDeclaration")
 public class CommandObject {
     /**  Empty message for ending a session */
     public static final String REQ_TYPE_EMPTY_MSG = "EmptyMessage";
@@ -162,10 +163,9 @@ public class CommandObject {
 
         CommandObject that = (CommandObject) o;
 
-        if (!Utils.safeString(RequestType)
-                .equals(Utils.safeString(that.RequestType))) return false;
+        return Utils.safeString(RequestType)
+                .equals(Utils.safeString(that.RequestType));
 
-        return true;
     }
 
     @Override

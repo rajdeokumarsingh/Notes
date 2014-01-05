@@ -6,6 +6,7 @@ import com.pekall.plist.beans.*;
 /**
  * Parser for XML command messages, just a simple wrapper
  */
+@SuppressWarnings("UnusedDeclaration")
 public class CommandMsgParser {
     private CommandMsg mMessage;
 

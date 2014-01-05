@@ -7,7 +7,8 @@ import java.util.List;
 /**
  * XML configuration for launcher_web_quick_launch
  */
-public class WebQuickLaunches {
+@SuppressWarnings("UnusedDeclaration")
+class WebQuickLaunches {
 
     private List<WebItem> items;
 
@@ -15,7 +16,7 @@ public class WebQuickLaunches {
         this(new ArrayList<WebItem>());
     }
 
-    public WebQuickLaunches(List<WebItem> items) {
+    private WebQuickLaunches(List<WebItem> items) {
         this.items = items;
     }
 
@@ -38,9 +39,8 @@ public class WebQuickLaunches {
 
         WebQuickLaunches that = (WebQuickLaunches) o;
 
-        if (this.hashCode() != that.hashCode()) return false;
+        return this.hashCode() == that.hashCode();
 
-        return true;
     }
 
     @Override

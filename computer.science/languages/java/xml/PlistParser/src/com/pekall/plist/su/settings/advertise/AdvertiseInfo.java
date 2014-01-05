@@ -22,12 +22,13 @@ import java.util.List;
 /**
  * XML configuration for "advertisement_statistic"
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class AdvertiseInfo extends CommandStatusMsg {
     /**
      * List contains advertisement information
      * Any element named item should go into this list
      */
-    List<AdvertiseStaInfo> advertiseStaInfos;
+    private List<AdvertiseStaInfo> advertiseStaInfos;
 
     public AdvertiseInfo() {
     }
@@ -57,11 +58,8 @@ public class AdvertiseInfo extends CommandStatusMsg {
         if (!(o instanceof AdvertiseInfo)) return false;
         if (!super.equals(o)) return false;
 
-        AdvertiseInfo that = (AdvertiseInfo) o;
+        return this.hashCode() == o.hashCode();
 
-        if (this.hashCode() != o.hashCode()) return false;
-
-        return true;
     }
 
     @Override

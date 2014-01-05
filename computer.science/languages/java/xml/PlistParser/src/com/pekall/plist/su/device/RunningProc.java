@@ -16,6 +16,7 @@ package com.pekall.plist.su.device;
 /**
  * XML configuration for device_info.running_proc
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class RunningProc {
     /**
      * 程序类型, application: 应用程序，service: 后台服务
@@ -82,9 +83,8 @@ public class RunningProc {
 
         if (!name.equals(that.name)) return false;
         if (!package_name.equals(that.package_name)) return false;
-        if (!type.equals(that.type)) return false;
+        return type.equals(that.type);
 
-        return true;
     }
 
     @Override

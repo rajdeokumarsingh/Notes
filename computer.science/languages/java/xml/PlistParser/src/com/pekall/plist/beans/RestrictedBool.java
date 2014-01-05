@@ -3,6 +3,7 @@ package com.pekall.plist.beans;
 /**
  * A dictionary of boolean restrictions.
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class RestrictedBool {
     /**
      * Following fields is in "Passcode Policy Payload",
@@ -399,10 +400,8 @@ public class RestrictedBool {
         if (forceITunesStorePasswordEntry != null ? !forceITunesStorePasswordEntry.equals(that.forceITunesStorePasswordEntry) : that.forceITunesStorePasswordEntry != null)
             return false;
         if (forcePIN != null ? !forcePIN.equals(that.forcePIN) : that.forcePIN != null) return false;
-        if (requireAlphanumeric != null ? !requireAlphanumeric.equals(that.requireAlphanumeric) : that.requireAlphanumeric != null)
-            return false;
+        return !(requireAlphanumeric != null ? !requireAlphanumeric.equals(that.requireAlphanumeric) : that.requireAlphanumeric != null);
 
-        return true;
     }
 
     @Override

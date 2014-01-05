@@ -10,6 +10,7 @@ import java.util.HashMap;
 /**
  * Status message for command ManagedApplicationList from client to server
  */
+@SuppressWarnings("UnusedDeclaration")
 public class CommandManageAppListStatus extends CommandStatusMsg {
     /**
      * A dictionary of managed apps.
@@ -23,7 +24,7 @@ public class CommandManageAppListStatus extends CommandStatusMsg {
         super(status, UDID, commandUUID);
     }
 
-    public ManagedAppList getManagedApplicationList() {
+    ManagedAppList getManagedApplicationList() {
         return ManagedApplicationList;
     }
 
@@ -41,7 +42,7 @@ public class CommandManageAppListStatus extends CommandStatusMsg {
             }
         }
 
-        String xml = "";
+        String xml;
         try {
             xml = PlistXmlParser.toXml(root);
         } catch (IOException e) {
@@ -70,10 +71,8 @@ public class CommandManageAppListStatus extends CommandStatusMsg {
 
         CommandManageAppListStatus that = (CommandManageAppListStatus) o;
 
-        if (ManagedApplicationList != null ? !ManagedApplicationList.equals(that.ManagedApplicationList) : that.ManagedApplicationList != null)
-            return false;
+        return !(ManagedApplicationList != null ? !ManagedApplicationList.equals(that.ManagedApplicationList) : that.ManagedApplicationList != null);
 
-        return true;
     }
 
     @Override

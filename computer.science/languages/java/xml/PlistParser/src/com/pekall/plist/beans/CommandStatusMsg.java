@@ -9,6 +9,7 @@ import java.util.List;
  * Status message from client to server to report client status
  * or last command result
  */
+@SuppressWarnings("UnusedDeclaration")
 public class CommandStatusMsg extends BeanBase {
 
     /**
@@ -115,9 +116,8 @@ public class CommandStatusMsg extends BeanBase {
         if (!(o instanceof CommandStatusMsg)) return false;
 
         CommandStatusMsg that = (CommandStatusMsg) o;
-        if (this.hashCode() != that.hashCode()) return false;
+        return this.hashCode() == that.hashCode();
 
-        return true;
     }
 
     @Override

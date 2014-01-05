@@ -3,6 +3,7 @@ package com.pekall.plist.beans;
 /**
  * An email payload creates an email account on the device.
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PayloadEmail extends PayloadBase {
     /**
      * Email types, see EmailAccountType
@@ -518,10 +519,8 @@ public class PayloadEmail extends PayloadBase {
         if (signature != null ? !signature.equals(email.signature) : email.signature != null) return false;
         if (vibrateOnNewEmail != null ? !vibrateOnNewEmail.equals(email.vibrateOnNewEmail) : email.vibrateOnNewEmail != null)
             return false;
-        if (vibrateOnNewEmailIfSilent != null ? !vibrateOnNewEmailIfSilent.equals(email.vibrateOnNewEmailIfSilent) : email.vibrateOnNewEmailIfSilent != null)
-            return false;
+        return !(vibrateOnNewEmailIfSilent != null ? !vibrateOnNewEmailIfSilent.equals(email.vibrateOnNewEmailIfSilent) : email.vibrateOnNewEmailIfSilent != null);
 
-        return true;
     }
 
     @Override

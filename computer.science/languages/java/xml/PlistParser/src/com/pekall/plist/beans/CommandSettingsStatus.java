@@ -6,6 +6,7 @@ import java.util.List;
 /**
  * Status message for command Settings
  */
+@SuppressWarnings("UnusedDeclaration")
 public class CommandSettingsStatus extends CommandStatusMsg {
     /**
      * Settings array contains a result dictionary that corresponds
@@ -44,9 +45,8 @@ public class CommandSettingsStatus extends CommandStatusMsg {
 
         CommandSettingsStatus that = (CommandSettingsStatus) o;
 
-        if (this.hashCode() != that.hashCode()) return false;
+        return this.hashCode() == that.hashCode();
 
-        return true;
     }
 
     @Override
@@ -66,7 +66,7 @@ public class CommandSettingsStatus extends CommandStatusMsg {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         for (SettingResult setting : Settings) {
-            sb.append(setting.toString() + ", ");
+            sb.append(setting.toString()).append(", ");
         }
         sb.append("}");
         return "CommandSettingsStatus{" +

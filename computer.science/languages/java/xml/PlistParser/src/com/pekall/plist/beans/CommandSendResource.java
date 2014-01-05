@@ -2,6 +2,7 @@ package com.pekall.plist.beans;
 
 import java.util.Arrays;
 
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class CommandSendResource extends CommandObject {
 
     public static final String RES_TYPE_ADVERTISE = "advertise";
@@ -52,9 +53,8 @@ public class CommandSendResource extends CommandObject {
         if (ResourceType != null ? !ResourceType.equals(that.ResourceType) : that.ResourceType != null)
             return false;
         if (!Arrays.equals(Data, that.Data)) return false;
-        if (Intent != null ? !Intent.equals(that.Intent) : that.Intent != null) return false;
+        return !(Intent != null ? !Intent.equals(that.Intent) : that.Intent != null);
 
-        return true;
     }
 
     @Override

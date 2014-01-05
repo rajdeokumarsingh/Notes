@@ -17,11 +17,12 @@ package com.pekall.plist.su.policy;
 /**
  * XML configuration for memory size policy
  */
+@SuppressWarnings("UnusedDeclaration")
 public class MemorySizePolicy extends Policy {
     /**
      * Detailed memory information
      */
-    Memory memory;
+    private Memory memory;
 
     public MemorySizePolicy() {
         this("", -1, "", new Memory());
@@ -50,9 +51,8 @@ public class MemorySizePolicy extends Policy {
 
         MemorySizePolicy that = (MemorySizePolicy) o;
 
-        if (memory != null ? !memory.equals(that.memory) : that.memory != null) return false;
+        return !(memory != null ? !memory.equals(that.memory) : that.memory != null);
 
-        return true;
     }
 
     @Override

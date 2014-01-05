@@ -15,12 +15,9 @@ package com.pekall.plist.su.policy;
 
 
 /**
- * Created with IntelliJ IDEA.
- * User: jiangrui
- * Date: 7/17/13
- * Time: 3:30 PM
- * To change this template use File | Settings | File Templates.
+ * Settings for android device
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class Devices {
     /**
      * Whether wifi is on, 0 for off, 1 for on
@@ -67,9 +64,9 @@ public class Devices {
         this(-1,-1,-1,-1,-1,-1,-1,-1,-1,-1);
     }
 
-    public Devices(int wifi, int bluetooth, int camera, int microphone,
-                          int nfc, int data_roaming, int sdcard, int usb,
-                          int airplane, int mobile_data) {
+    private Devices(int wifi, int bluetooth, int camera, int microphone,
+                    int nfc, int data_roaming, int sdcard, int usb,
+                    int airplane, int mobile_data) {
         this.wifi = wifi;
         this.bluetooth = bluetooth;
         this.camera = camera;
@@ -114,9 +111,8 @@ public class Devices {
         if (nfc != that.nfc) return false;
         if (sdcard != that.sdcard) return false;
         if (usb != that.usb) return false;
-        if (wifi != that.wifi) return false;
+        return wifi == that.wifi;
 
-        return true;
     }
 
     public int getWifi() {
