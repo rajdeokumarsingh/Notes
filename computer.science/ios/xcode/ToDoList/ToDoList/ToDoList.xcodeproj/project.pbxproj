@@ -19,6 +19,7 @@
 		892EC71618822E8B00A6D69B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 892EC6FE18822E8B00A6D69B /* UIKit.framework */; };
 		892EC71E18822E8B00A6D69B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 892EC71C18822E8B00A6D69B /* InfoPlist.strings */; };
 		892EC72018822E8B00A6D69B /* ToDoListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 892EC71F18822E8B00A6D69B /* ToDoListTests.m */; };
+		892EC72A188247F200A6D69B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 892EC729188247F200A6D69B /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		892EC71B18822E8B00A6D69B /* ToDoListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ToDoListTests-Info.plist"; sourceTree = "<group>"; };
 		892EC71D18822E8B00A6D69B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		892EC71F18822E8B00A6D69B /* ToDoListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoListTests.m; sourceTree = "<group>"; };
+		892EC729188247F200A6D69B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		892EC70018822E8B00A6D69B /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				892EC729188247F200A6D69B /* Main.storyboard */,
 				892EC70918822E8B00A6D69B /* AppDelegate.h */,
 				892EC70A18822E8B00A6D69B /* AppDelegate.m */,
 				892EC70C18822E8B00A6D69B /* Images.xcassets */,
@@ -219,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				892EC72A188247F200A6D69B /* Main.storyboard in Resources */,
 				892EC70518822E8B00A6D69B /* InfoPlist.strings in Resources */,
 				892EC70D18822E8B00A6D69B /* Images.xcassets in Resources */,
 			);
@@ -365,6 +369,7 @@
 				GCC_PREFIX_HEADER = "ToDoList/ToDoList-Prefix.pch";
 				INFOPLIST_FILE = "ToDoList/ToDoList-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -378,6 +383,7 @@
 				GCC_PREFIX_HEADER = "ToDoList/ToDoList-Prefix.pch";
 				INFOPLIST_FILE = "ToDoList/ToDoList-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
