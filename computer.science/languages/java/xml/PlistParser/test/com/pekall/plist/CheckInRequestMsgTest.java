@@ -10,12 +10,16 @@ public class CheckInRequestMsgTest extends TestCase {
             "<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n" +
             "<plist version=\"1.0\">\n" +
             "<dict>\n" +
+
             "\t<key>MessageType</key>\n" +
             "\t<string>Authenticate</string>\n" +
+
             "\t<key>Topic</key>\n" +
             "\t<string>test topic</string>\n" +
+
             "\t<key>UDID</key>\n" +
             "\t<string>xxxx-xxxx-xxxx-xxxx</string>\n" +
+
             "</dict>\n" +
             "</plist>";
 

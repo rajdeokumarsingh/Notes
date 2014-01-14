@@ -1,0 +1,88 @@
+公钥加密， 私钥解密
+公钥验证签名， 私钥签名
+
+Publick Key Infrastructure
+
+认证中心(CA)
+    发放数字证书
+        数字证书包括:
+            用户身份的部分信息
+            用户公钥
+
+    CA使用本身的私钥为数字证书签名
+
+核心技术基础:
+    加密
+    签名
+
+数字证书:
+    身份证
+    由权威机构发行
+    包括:
+        公开密钥
+        名称, 有效时间，发证机关名称，证书序列号
+        证书授权中心的签名
+
+数字认证原理
+    公钥：
+        加密，验证签名
+        一组用户知道
+
+    私钥：
+        解密，签名
+        仅本人知道
+
+    发送方使用接收方的公钥加密
+    接收方使用自己的私钥解密
+
+    通信双方在加密通信前需要给对方明文发送自己的证书（公钥，CA签名）
+        证书在这时被窃取了怎么办？
+        数字证书和私钥是一一对应的
+            如果数字证书（公钥）被窃取后，窃贼没有私钥, 不能够解密使用公钥加密的数据
+
+    常用RSA加密算法
+
+    CA
+        -CA.private.key
+        +CA.public.key
+
+    Object1
+        -Object1.private.key
+
+        +Object1.Certificate
+            Object1.public.key
+            Object1.info
+            Object1.ca.signature
+                (signed by -CA.private.key)
+
+        +CA.public.key
+                
+    Object2
+        -Object2.private.key
+
+        +Object2.Certificate
+            Object2.public.key
+            Object2.info
+            Object2.ca.signature
+                (signed by -CA.private.key)
+
+        +CA.public.key
+ 
+
+                Object1 ----------------------------------------------------> Object2
+                                    1. +Object1.Certificate
+                                                                    2. use +CA.public.key verify Object1.ca.signature
+
+                                                                    3. use Object1.public.key encrypt +Object2.Certificate
+                Object1 <---------------------------------------------------- Object2
+                                    4. encrypt +Object2.Certificate
+
+    5. user -Object1.private.key decripyt 
+        +Object2.Certificate
+
+    6. use +CA.public.key verify Object2.ca.signature
+
+    Until now Object1 and Object2 certificate both side and have public key of peer side
+
+
+

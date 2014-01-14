@@ -1,18 +1,56 @@
+目前关注问题： 
+    omx如何解码的 
+    如何配置解码器？
 
-OMXCodec
-OMXComponent
+# 显示所有omx解码器信息
+# stagefright -l
 
-mVideoSource
-    video decoder
+/system/lib/libstagefright.so
+/system/lib/libstagefright_amrnb_common.so
+/system/lib/libstagefright_avc_common.so
+/system/lib/libstagefright_chromium_http.so
+/system/lib/libstagefright_enc_common.so
+/system/lib/libstagefright_foundation.so
+/system/lib/libstagefright_mrvl_extractor.so
+/system/lib/libstagefright_omx.so
+/system/lib/libstagefright_soft_aacdec.so
+/system/lib/libstagefright_soft_aacenc.so
+/system/lib/libstagefright_soft_amrdec.so
+/system/lib/libstagefright_soft_amrnbenc.so
+/system/lib/libstagefright_soft_amrwbenc.so
+/system/lib/libstagefright_soft_flacenc.so
+/system/lib/libstagefright_soft_g711dec.so
+/system/lib/libstagefright_soft_gsmdec.so
+/system/lib/libstagefright_soft_h264dec.so
+/system/lib/libstagefright_soft_h264enc.so
+/system/lib/libstagefright_soft_mp3dec.so
+/system/lib/libstagefright_soft_mpeg4dec.so
+/system/lib/libstagefright_soft_mpeg4enc.so
+/system/lib/libstagefright_soft_mrvl_mpg123dec.so
+/system/lib/libstagefright_soft_rawdec.so
+/system/lib/libstagefright_soft_vorbisdec.so
+/system/lib/libstagefright_soft_vpxdec.so
+/system/lib/libstagefright_soft_vpxenc.so
+/system/lib/libstagefright_wfd.so
+/system/lib/libstagefright_yuv.so
+/system/lib/libstagefrighthw.so
 
-解码流程
-    1. OMXCodec使用OMX_EmptyThisBuffer传递未解码的buffer给component
-    2. component收到该命令后会读取input port buffer中的数据,将其组装成帧进行解码
-    3. 读取buffer中的数据完成后会调用EmptyBufferDone通知OMXCodec
+baidu:
+openmax, omx
 
-    4. OMXCodec使用OMX_FillThisBuffer传递空的bffer给component用于存储解码后的帧,
-    5. component收到该命令后将解码好的帧数据复制到该buffer上,
-    6. 然后调用FillBufferDone通知OMXCodec
+// todo:
+http://blog.csdn.net/vincent_blog/article/details/7578112
+OMX_Core.h
+OMX_Component.h
+
+
+
+OpenMAX Call Sequences
+http://www.360doc.com/content/10/1104/10/2642283_66481282.shtml
+
+http://www.360doc.com/userhome.aspx?userid=474846&cid=36
+http://www.360doc.com/content/11/1019/09/11192_157350357.shtml
+http://www.2cto.com/kf/201201/116143.html
 
 
 

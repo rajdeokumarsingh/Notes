@@ -56,8 +56,6 @@ http://192.168.10.210/mediawiki/index.php/MediaInfo
 
 
 
-
-
 编解码学习笔记（一）：基本概念
 http://blog.csdn.net/flowingflying/article/details/5713346
 
@@ -65,6 +63,19 @@ http://blog.csdn.net/flowingflying/article/details/5713346
 http://blog.csdn.net/flowingflying/article/details/5714003
 
 openmax
+http://www.khronos.org/openmax/
+
+
+http://blog.csdn.net/vincent_blog/article/details/7578112
+
+OpenMAX Call Sequences
+http://www.360doc.com/content/10/1104/10/2642283_66481282.shtml
+
 http://www.360doc.com/userhome.aspx?userid=474846&cid=36
+http://www.360doc.com/content/11/1019/09/11192_157350357.shtml
+
+http://www.2cto.com/kf/201201/116143.html
+
+
 
 

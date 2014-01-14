@@ -1,0 +1,109 @@
+file:///home/jiangrui/book/java/tutorial/security/sigcert/index.html
+
+Digital Signatures
+    The basic idea in the use of digital signatures is as follows.
+        1. You "sign" the document or code using one of your private keys, 
+            which you can generate by using keytool or security API methods. 
+            That is, you generate a digital signature for the document or code, 
+                using the jarsigner tool or Security API methods.
+
+        2. You send your signed document to your recipient.
+
+        3. You also supply your recipient with your public key. 
+            This public key corresponds to the private key you originally used to generate the signature.
+
+        4. Your recipient uses your public key to verify that your document 
+            came from you and was not modified before it reached him/her.
+
+Certificates
+    为公钥提供担保，有证书中心发布
+
+    A certificate contains:
+        1. A public key.
+
+        2. The "distinguished-name" information of the entity (person, company, or so on) whose certificate it is. 
+        This entity is referred to as the certificate subject, or owner. 
+        The distinguished-name information includes the following attributes (or a subset): 
+            the entity's name, organizational unit, organization, city or locality, state or province, and country code.
+
+        3. A digital signature. 
+            A certificate is signed by one entity, the issuer, to vouch for the fact 
+                that the enclosed public key is the actual public key of another entity, the owner.
+
+        4. The distinguished-name information for the signer (issuer).
+
+    certificate fingerprint(s) // 另外一种验证证书的方式
+        using the keytool -import or -printcert command
+        The recipient can then phone the certificate owner and 
+            compare the fingerprint values of the received certificate with the certificate that was sent.
+
+            If the fingerprints are the same, the certificates are the same.
+
+    self-signed certificate
+        signed using the private key corresponding to the public key in the certificate
+        可以使用自己的公钥来验证证书中的签名
+
+        It is reasonable to self-sign a certificate if the recipient already trusts the sender.
+
+
+    证书验证可通过：
+        1. the jarsigner tool (if the document/code and signature appear in a JAR file),
+        2. API methods
+        3. the runtime system, when a resource access is attempted and a policy file specifies 
+            that the resource access is allowed for the code attempting the access if its signature is authentic. 
+            The code's class file(s) and signature must be in a JAR file.
+
+        The keytool -export command or API methods can export your certificate from your keystore to a file
+
+Keystores
+    are password-protected databases 
+    stores 
+        1. Private keys 
+        2. their associated public key certificates 
+
+    can contain two types of entries:
+        1. the trusted certificate entries
+        2. key/certificate entries, each containing a private key and the corresponding public key certificate
+
+    Alias:
+        Each entry in a keystore is identified by an alias
+
+        A keystore owner can have multiple keys in the keystore, 
+            accessed via different aliases. 
+
+        可以通过alias的名称来指明key的用途, 如:
+            alias signPersonalEmail
+            alias signJarFiles
+
+    The keytool tool can be used to
+        1. Create private keys and their associated public key certificates
+        2. Issue certificate requests, which you send to the appropriate certification authority
+        3. Import certificate replies, obtained from the certification authority you contacted
+        4. Import public key certificates belonging to other parties as trusted certificates
+        5. Manage your keystore
+
+通信双方如何传递文件：
+sender:
+    Create a JAR file containing the document or class file, using the jar tool.
+    Generate keys (if they don't already exist), using the keytool -genkey command.
+
+    optional:
+        Use the keytool -certreq command; 
+        then send the resulting certificate signing request 
+            to a certification authority (CA) such as VeriSign.
+        Use the keytool -import command to import the CA's response.
+
+    Sign the JAR file, using the jarsigner tool and the private key generated earlier.
+    Export the public key certificate, using the keytool -export command. 
+    Then supply the signed JAR file and the certificate to the receiver.
+
+receiver:
+    验证证书
+        import the certificate as a trusted certificate, using the keytool -import command.
+        The keytool will attempt to construct a trust chain from the certificate 
+            to be imported to an already trusted certificate in the keystore
+
+        If that fails, the keytool will display the certificate fingerprint and prompt you to verify it.
+
+    验证签名
+        verify the authenticity of the JAR file signature, using the jarsigner tool.

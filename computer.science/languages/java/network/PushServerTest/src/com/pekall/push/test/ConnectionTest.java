@@ -63,17 +63,22 @@ public class ConnectionTest {
         }
 
         Debug.log("main thread continue ...");
-        Util.sleepSeconds(120);
+        // FIXME:
+        // Util.sleepSeconds(120);
+        Util.sleepSeconds(10);
 
-        while (true) {
+        // while (true) {
             Debug.log("begin ping ...");
             for (MdmPushClient mdmPushClient : mdmPushClients) {
                 if (mdmPushClient.isOpen()) {
                     mdmPushClient.ping("ping");
+                    // mdmPushClient.ping("");
                 }
             }
             Debug.log("end ping ...");
-            Util.sleepSeconds(60);
-        }
+            // Util.sleepSeconds(60);
+            // FIXME:
+            Util.sleepSeconds(10);
+        // }
     }
 }

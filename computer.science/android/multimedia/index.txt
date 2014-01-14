@@ -1,4 +1,3 @@
-
 100.working.notes
 
 ./010.theory/index.txt
