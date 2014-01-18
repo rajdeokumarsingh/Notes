@@ -10,7 +10,6 @@ OpenMax IL 主要内容如下所示:
         让两个组件直接连接的方式
 
 
-
 OMXMaster负责加载多个plugin
 
     在构造函数中默认添加了两个plugin:
@@ -22,16 +21,24 @@ OMXMaster负责加载多个plugin
             比如 /system/lib/libstagefrighthw.so, 是厂商提供的动态库
 
         每个plugin中会有多个component
-            通过调用 OMXPluginBase::makeComponentInstance 将一个component实例化
-
             OMX_COMPONENTTYPE 是component的接口
                 接口定义在:
                     OMX_Component.h OMX_Core.h
 
+            通过调用 OMXPluginBase::makeComponentInstance 将一个component实例化
+
+    OMXNodeInstance
+        中间层，封装一个OMX_COMPONENTTYPE接口（代码中的handler）
+        one node encapsulates a component
 
 
-OMXCodec
-OMXComponent
+
+OMXCodec OMXComponent
+
+
+
+
+
 
 mVideoSource
     video decoder
