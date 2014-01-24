@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>664F84C0-AF39-41D3-8A42-3EE8A0A24349</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Delegate</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C48A590F-B76A-4353-9471-2DC8AC75903B</key>
+		<string>https://github.com/jazzlly/Notes.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>computer.science/ios/xcode/ObjectiveC/Oc0008Delegate/Delegate/Delegate.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C48A590F-B76A-4353-9471-2DC8AC75903B</key>
+		<string>../../../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jazzlly/Notes.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C48A590F-B76A-4353-9471-2DC8AC75903B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C48A590F-B76A-4353-9471-2DC8AC75903B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>note</string>
+		</dict>
+	</array>
+</dict>
+</plist>
