@@ -45,5 +45,4 @@ stagefright的播放器类为AwesomePlayer, 几个主要的成员
     mVideoSource mAudioSource     // 音视频解码器, MediaSource, 为播放器提供数据
        ｜           |
     mVideoBuffer mAudioPlayer
-        ， 
 

@@ -14,4 +14,11 @@ MediaInfo
 MP4Parser
     mp4 文件格式分析http://code.google.com/p/mp4parser/
 
+Android 工具
+    # 显示所有omx解码器信息
+    # stagefright -l
+    # stagefright -h
+
+    # media -h
+
 

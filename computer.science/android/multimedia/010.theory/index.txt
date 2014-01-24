@@ -1,5 +1,7 @@
 000.basic.concept.txt
 
+000.basic.concept.color.txt
+
 001.video.play.theory.txt
 
 010.stagefright.basic.txt

@@ -1,0 +1,67 @@
+Color space
+    RGB color space
+
+    YUV
+        Y' stands for the luma component (the brightness) 
+            luminance is denoted by Y 
+                "luminance" meaning perceptual (color science) brightness
+
+            luma by Y' – the prime symbols (') denote gamma compression
+                gamma correction: the name of a nonlinear operation used to code and decode luminance
+                    simplest case:
+                               y
+                    Vout = A Vin
+                        A: constant, in common case A = 1
+
+                 "luma" is electronic (voltage of display) brightness.
+
+        U and V are the chrominance (color) components
+
+
+        why YUV
+            allowing reduced bandwidth for chrominance components
+
+            Y' is transmitted seperately with UV, which is used by black-and-white system
+
+        alias
+            Y'UV, YUV, YCbCr, YPbPr,
+
+            YCbCr
+            YPbPr
+                is a scaled version of YUV.  in analog component video
+                It is most commonly seen in its digital form, YCbCr, 
+                used widely in video and image compression schemes such as MPEG and JPEG.
+
+            YUV and Y'UV 
+                for specific analog encoding of color information in television systems
+
+        structure:
+            one luma (Y') and two chrominance (UV) components.
+
+        http://en.wikipedia.org/wiki/YUV
+
+    HSV color space
+        Hue, Saturation, (brightness)Value
+
+        HSV is a transformation of an RGB colorspace
+        often used by artists
+
+    Luma
+        luma represents the brightness in an image 
+        the "black-and-white" or achromatic portion of the image
+
+        Y for short
+
+    Chrominance(chroma)
+        represent the color information
+
+        as approximate representations of the relative amounts of blue and red in the color.
+        represented as two color-difference components: 
+            U = B′ − Y′ (blue − luma)
+            V = R′ − Y′ (red − luma)
+
+     It is similar to the YUV
+        except that the YIQ color space is rotated 33° with respect to the YUV color space and the color axes are swapped
+
+
+
