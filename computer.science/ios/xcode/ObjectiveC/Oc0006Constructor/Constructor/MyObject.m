@@ -15,6 +15,8 @@
         mName = @"Tomcat";
         mAge = [NSNumber numberWithInt:20];
     }
+    
+    NSLog(@"MyObject init: %@", self);
     return self;
 }
 
@@ -25,6 +27,10 @@
         mAge = number;
     }
     return self;
+}
+
+- (void) dealloc {
+    NSLog(@"dealocc");
 }
 
 - (NSString *) getName {

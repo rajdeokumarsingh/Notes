@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89CCC3B2188F691D002B6EE8 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CCC3B1188F691D002B6EE8 /* Car.m */; };
+		89CCC3B5188F6EBB002B6EE8 /* AllWeatherTire.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CCC3B4188F6EBB002B6EE8 /* AllWeatherTire.m */; };
 		89FBA9F51887EDCA00204A27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89FBA9F41887EDCA00204A27 /* Foundation.framework */; };
 		89FBA9F81887EDCA00204A27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FBA9F71887EDCA00204A27 /* main.m */; };
 		89FBA9FC1887EDCA00204A27 /* Constructor.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 89FBA9FB1887EDCA00204A27 /* Constructor.1 */; };
 		89FBAA041887EDFC00204A27 /* MyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FBAA031887EDFC00204A27 /* MyObject.m */; };
+		89FCAC74188F5AB60058F491 /* Tire.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FCAC73188F5AB60058F491 /* Tire.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +30,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		89CCC3B0188F691D002B6EE8 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		89CCC3B1188F691D002B6EE8 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		89CCC3B3188F6EBB002B6EE8 /* AllWeatherTire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllWeatherTire.h; sourceTree = "<group>"; };
+		89CCC3B4188F6EBB002B6EE8 /* AllWeatherTire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllWeatherTire.m; sourceTree = "<group>"; };
 		89FBA9F11887EDCA00204A27 /* Constructor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Constructor; sourceTree = BUILT_PRODUCTS_DIR; };
 		89FBA9F41887EDCA00204A27 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		89FBA9F71887EDCA00204A27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -34,6 +41,8 @@
 		89FBA9FB1887EDCA00204A27 /* Constructor.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Constructor.1; sourceTree = "<group>"; };
 		89FBAA021887EDFC00204A27 /* MyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyObject.h; sourceTree = "<group>"; };
 		89FBAA031887EDFC00204A27 /* MyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyObject.m; sourceTree = "<group>"; };
+		89FCAC72188F5AB60058F491 /* Tire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tire.h; sourceTree = "<group>"; };
+		89FCAC73188F5AB60058F491 /* Tire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tire.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +62,12 @@
 			children = (
 				89FBAA021887EDFC00204A27 /* MyObject.h */,
 				89FBAA031887EDFC00204A27 /* MyObject.m */,
+				89FCAC72188F5AB60058F491 /* Tire.h */,
+				89FCAC73188F5AB60058F491 /* Tire.m */,
+				89CCC3B3188F6EBB002B6EE8 /* AllWeatherTire.h */,
+				89CCC3B4188F6EBB002B6EE8 /* AllWeatherTire.m */,
+				89CCC3B0188F691D002B6EE8 /* Car.h */,
+				89CCC3B1188F691D002B6EE8 /* Car.m */,
 				89FBA9F61887EDCA00204A27 /* Constructor */,
 				89FBA9F31887EDCA00204A27 /* Frameworks */,
 				89FBA9F21887EDCA00204A27 /* Products */,
@@ -145,7 +160,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				89FBAA041887EDFC00204A27 /* MyObject.m in Sources */,
+				89FCAC74188F5AB60058F491 /* Tire.m in Sources */,
+				89CCC3B2188F691D002B6EE8 /* Car.m in Sources */,
 				89FBA9F81887EDCA00204A27 /* main.m in Sources */,
+				89CCC3B5188F6EBB002B6EE8 /* AllWeatherTire.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +275,7 @@
 				89FBAA011887EDCA00204A27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
