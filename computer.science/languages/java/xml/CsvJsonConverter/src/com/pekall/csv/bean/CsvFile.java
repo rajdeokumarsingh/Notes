@@ -32,7 +32,7 @@ public class CsvFile {
             sb.append("}");
         }
         return "CsvFile{" +
-                ", lines=" + sb.toString() +
+                "lines=" + sb.toString() +
                 '}';
     }
 

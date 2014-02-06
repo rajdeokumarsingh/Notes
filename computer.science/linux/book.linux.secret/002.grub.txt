@@ -1,3 +1,11 @@
 开机管理程序
+    加载和传输操作系统
+
+GRUB
+    GRand Unified Bootloader
 
 
+/boot/grub
+
+grub shell:
+    find /boot/grub+tab

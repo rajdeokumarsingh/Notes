@@ -69,6 +69,8 @@ flow index:
     声音音量如何管理
         400.code.reading/flow.volume.adjusting.cpp
             400.code.reading/volume.audio.service.java
+            400.code.reading/volume.audio.service.stream_status.java
+
                 400.code.reading/volume.ui.java
 
             400.code.reading/volume.audio.policy.manager.cpp

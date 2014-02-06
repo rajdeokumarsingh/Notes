@@ -1,4 +1,16 @@
+
+UEFI
+    Intel新一代的替代BIOS的booloader
+
+    https://wiki.archlinux.org/index.php/GPT
+        GUID Partition Table
+
+    https://wiki.archlinux.org/index.php/Boot_Loaders
+
 Concept
+    UEFI
+    GPT
+
     BIOS
         basic input output system
 
@@ -89,6 +101,9 @@ BIOS作用
             硬盘的第一扇区是的主引导扇区(Master Boot Record, MBR)
             开机管理程序安装在第一扇区， 负责引导操作系统。
 
+            # dump mbr
+            sudo dd=/dev/sda of=./mbr count=1
+
             MBR结构如下：
                 bootloader          [0, 445]
                     LILO, GRUB
@@ -154,6 +169,45 @@ BIOS作用
 	    linux一般都直接访问硬件
 }
 
+--------------------------------------------------------------------------------
+MBR disk
+Location in the HDD     Purpose of the Code
+First 440 bytes     MBR boot code that is launched by the BIOS.
+441-446 bytes       MBR disk signature.
+447-510 bytes       Actual partition table with info about primary and extended partitions. 
+                    (Note that logical partitions are not listed here)
+511-512 bytes       MBR boot signature 0xAA55. 
         
+--------------------------------------------------------------------------------
+GUID Partition Table
+Location in the HDD                                             Purpose
+First logical sector of the disk or First 512 bytes     Protective MBR - Same as a normal MBR but the 64-byte area contains 
+                                                        a single 0xEE type Primary partition entry defined over the entire size of the disk 
+                                                        or in case of >2 TiB, upto a partition size of 2 TiB.
+
+Second logical sector of the disk or Next 512 bytes     Primary GPT Header - Contains the Unique Disk GUID, Location of 
+                                                        the Primary Partition Table, Number of possible entries in partition table, 
+                                                        CRC32 checksums of itself and the Primary Partition Table, Location of 
+                                                        the Secondary (or Backup) GPT Header
+
+16 KiB (by default) following the second logical sector of the disk     
+                                                        Primary GPT Table - 128 Partition entries (by default, can be higher), 
+                                                        each with an entry of size 128 bytes (hence total of 16 KiB for 128 partition 
+                                                        entries). Sector numbers are stored as 64-bit LBA and each partition 
+                                                        has a Partition Type GUID and a Unique Partition GUID.
+
+16 KiB (by default) before the last logical sector of the disk  
+                                                        Secondary GPT table - It is byte-for-byte identical to the Primary table. 
+                                                        Used mainly for recovery in case the primary partition table is damaged.
+
+Last logical sector of the disk or Last 512 bytes       Secondary GPT Header - Contains the Unique Disk GUID, Location of 
+                                                        the Secondary Partition Table, Number of possible entries in the partition table,
+                                                        CRC32 checksums of itself and the Secondary Partition Table, Location of 
+                                                        the Primary GPT Header. This header can be used to recover GPT info 
+                                                        in case the primary header is corrupted. 
+
+
+--------------------------------------------------------------------------------
+
 
 
