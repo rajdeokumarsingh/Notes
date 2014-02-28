@@ -19,8 +19,8 @@ public class AutoTest {
         log("TEST push命令");
         String devUuidPrefix = "device_uuid_";
         while (true) {
-            // for (int id = 100000; id < 150000; id++) {
-            for (int id = 100000; id <= 100000; id++) {
+            for (int id = 100000; id < 150000; id++) {
+            // for (int id = 100000; id <= 100000; id++) {
                 System.out.println("send message: " + devUuidPrefix + id);
                 new TestPushServer(devUuidPrefix + id, "test push").test();
                 Util.sleepSeconds(3);

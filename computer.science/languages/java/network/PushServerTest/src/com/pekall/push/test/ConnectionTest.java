@@ -5,7 +5,7 @@ import java.net.URI;
 public class ConnectionTest {
 
     public static void main(String args[]) {
-        Debug.setVerboseDebugLog(true);
+        // Debug.setVerboseDebugLog(true);
 
         // begin monitor thread
         new Thread(new Runnable() {

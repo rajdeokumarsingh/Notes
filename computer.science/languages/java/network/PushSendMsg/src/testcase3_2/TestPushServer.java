@@ -31,7 +31,7 @@ public class TestPushServer {
 	}
 
 	public void test() {
-		String pushCmdUrl = "http://192.168.10.233:8080/PushServer/rest/push/sendMessage";
+		String pushCmdUrl = "http://192.168.8.79:8080/PushServer/rest/push/sendMessage";
 		String methodType = METHOD_TYPE_POST;
 		Map<String, String> headerMap = null;
 		String token = "YzAyMTBkYWNiNmE4ZDlhZjc5MjA3ZGY2MTMwY2EzNjA=";
