@@ -10,7 +10,7 @@ PC上连接实验
 
 WebSocket:
 http://wenku.baidu.com/link?url=3wSVPN2SY-i9O9CTZLSYftksoun-dlun8Oa9w7RpB3PfqpliGD4nCm8Wb0dfQw_E2u2-WZ06t3nWY_AE9nIZj6kA_oBLb--Dvhj6mUg9GJi
-http://baike.baidu.com/link?url=EF_AUiBI89KVmoRg_bH-_xHYZRCrjajia9BZSS9r-KKpXAG4wKAmRitszMJEKWCCzOt3K_lUETt9Vn2v7fAkUK
+http://baike.baidu.com/link?host=EF_AUiBI89KVmoRg_bH-_xHYZRCrjajia9BZSS9r-KKpXAG4wKAmRitszMJEKWCCzOt3K_lUETt9Vn2v7fAkUK
 
 
 极光推送技术原理：移动无线网络长连接

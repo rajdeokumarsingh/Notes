@@ -38,6 +38,8 @@ public class GeneralConverterTest extends TestCase {
         CsvBeanFactory factory = new CsvBeanFactory(fields, ContactsCompanyInfo.class);
         List<ContactsCompanyInfo> infos =
                 GeneralCsvConverter.csv2BeanList(new File(CSV_COMPANY_PATH), factory);
+
+
         assertEquals(infos.size(), 3);
         for (ContactsCompanyInfo info : infos) {
             assertNotNull(info);

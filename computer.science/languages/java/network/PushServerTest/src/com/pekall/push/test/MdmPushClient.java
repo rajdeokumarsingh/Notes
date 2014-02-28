@@ -9,11 +9,11 @@ import java.net.URI;
 
 public class MdmPushClient extends WebSocketClientTest {
 
-    public MdmPushClient(URI serverURI) {
+    public MdmPushClient(String serverURI) {
         super(serverURI, 1);
     }
 
-    public MdmPushClient(URI serverURI, int sockCnt) {
+    public MdmPushClient(String serverURI, int sockCnt) {
         super(serverURI, sockCnt);
         Debug.logVerbose("MdmPushClient, created");
     }
@@ -22,6 +22,7 @@ public class MdmPushClient extends WebSocketClientTest {
     public void onOpen(ServerHandshake handshake) {
         Debug.logVerbose("MdmPushClient, onOpen");
         Statistics.getInstance().success();
+
     }
 
     @Override

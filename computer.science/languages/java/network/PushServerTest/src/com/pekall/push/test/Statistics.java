@@ -11,6 +11,7 @@ public class Statistics {
     private long pongCnt = 0;
     private long errorCnt = 0;
     private long msgCnt = 0;
+    private MdmPushClient mMdmPushClient;
 
     private Statistics() {
     }
@@ -45,7 +46,9 @@ public class Statistics {
                 + ", ping: " + pingCnt + ", pong: " + pongCnt
                 + ", message: " + msgCnt
                 + " , connect fail : " + failCount
-                + ", network error: " + errorCnt;
+                + ", network error: " + errorCnt
+                + "\n"
+                + mMdmPushClient.getStatisticString();
     }
 
     public synchronized void ping() {
@@ -62,5 +65,9 @@ public class Statistics {
 
     public synchronized void message() {
         msgCnt++;
+    }
+
+    public void setClient(MdmPushClient mdmPushClient) {
+        mMdmPushClient = mdmPushClient;
     }
 }

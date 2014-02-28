@@ -20,11 +20,11 @@ import org.apache.http.params.HttpParams;
 import org.apache.http.util.EntityUtils;
 
 public class H02HttpsConnection {
-	public static void testHttpGet() throws IOException,
-			ClientProtocolException {
+	public static void testHttpGet() throws IOException {
 		
 		HttpClient httpclient = new DefaultHttpClient();
-		HttpGet httpGet = new HttpGet("https://www.alipay.com/");
+        HttpGet httpGet = new HttpGet(
+                "http://192.168.10.43:8080/PushServer/rest/push/assignServer?device_id=test0001");
 //		HttpGet httpGet = new HttpGet("https://mail.pekall.com/zimbra/");
 
 		HttpResponse response1 = httpclient.execute(httpGet);
