@@ -2,7 +2,7 @@ package com.pekall.mdm.util;
 
 public class Const {
 
-    public static final String AUTH_SVR_ADDR = "http://localhost:8080";
+    public static final String AUTH_SVR_ADDR = "http://192.168.8.150:8080";
     public static final String AUTH_LOGIN_PATH = "/rest/auth/login";
     public static final String AUTH_LOGOUT_PATH = "/rest/auth/logout";
 
