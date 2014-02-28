@@ -3,6 +3,7 @@ package com.pekall.plist.beans;
 /**
  * Security information in SecurityInfo status message
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class SecInfo {
 
     /**
@@ -79,9 +80,8 @@ public class SecInfo {
         if (HardwareEncryptionCaps != secInfo.HardwareEncryptionCaps) return false;
         if (PasscodeCompliant != secInfo.PasscodeCompliant) return false;
         if (PasscodeCompliantWithProfiles != secInfo.PasscodeCompliantWithProfiles) return false;
-        if (PasscodePresent != secInfo.PasscodePresent) return false;
+        return PasscodePresent == secInfo.PasscodePresent;
 
-        return true;
     }
 
     @Override

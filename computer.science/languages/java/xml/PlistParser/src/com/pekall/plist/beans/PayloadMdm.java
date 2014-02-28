@@ -1,5 +1,6 @@
 package com.pekall.plist.beans;
 
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PayloadMdm extends PayloadBase {
     private Integer AccessRights;
     private String CheckInURL;
@@ -93,9 +94,8 @@ public class PayloadMdm extends PayloadBase {
             return false;
         if (ServerURL != null ? !ServerURL.equals(that.ServerURL) : that.ServerURL != null) return false;
         if (SignMessage != null ? !SignMessage.equals(that.SignMessage) : that.SignMessage != null) return false;
-        if (Topic != null ? !Topic.equals(that.Topic) : that.Topic != null) return false;
+        return !(Topic != null ? !Topic.equals(that.Topic) : that.Topic != null);
 
-        return true;
     }
 
     @Override

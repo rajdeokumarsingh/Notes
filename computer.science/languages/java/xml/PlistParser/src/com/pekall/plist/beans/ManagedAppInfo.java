@@ -3,6 +3,7 @@ package com.pekall.plist.beans;
 /**
  * A dictionary contains a managed application's information
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class ManagedAppInfo {
     /**
      * The app is scheduled for installation, but needs a redemption code
@@ -103,10 +104,8 @@ public class ManagedAppInfo {
         if (ManagementFlags != null ? !ManagementFlags.equals(that.ManagementFlags) : that.ManagementFlags != null)
             return false;
         if (Status != null ? !Status.equals(that.Status) : that.Status != null) return false;
-        if (UnusedRedemptionCode != null ? !UnusedRedemptionCode.equals(that.UnusedRedemptionCode) : that.UnusedRedemptionCode != null)
-            return false;
+        return !(UnusedRedemptionCode != null ? !UnusedRedemptionCode.equals(that.UnusedRedemptionCode) : that.UnusedRedemptionCode != null);
 
-        return true;
     }
 
     @Override

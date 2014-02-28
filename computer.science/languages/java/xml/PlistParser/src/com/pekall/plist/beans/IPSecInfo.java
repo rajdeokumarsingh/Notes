@@ -2,6 +2,7 @@ package com.pekall.plist.beans;
 
 import java.util.Arrays;
 
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class IPSecInfo {
     /**
      * IP address or host name of the VPN server. Used for Cisco IPSec.
@@ -161,10 +162,8 @@ public class IPSecInfo {
         if (XAuthEnabled != null ? !XAuthEnabled.equals(ipSecInfo.XAuthEnabled) : ipSecInfo.XAuthEnabled != null)
             return false;
         if (XAuthName != null ? !XAuthName.equals(ipSecInfo.XAuthName) : ipSecInfo.XAuthName != null) return false;
-        if (XAuthPassword != null ? !XAuthPassword.equals(ipSecInfo.XAuthPassword) : ipSecInfo.XAuthPassword != null)
-            return false;
+        return !(XAuthPassword != null ? !XAuthPassword.equals(ipSecInfo.XAuthPassword) : ipSecInfo.XAuthPassword != null);
 
-        return true;
     }
 
     @Override

@@ -3,6 +3,7 @@ package com.pekall.plist.beans;
 /**
  * Just for android
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PayloadWallpaper extends PayloadBase {
     /**
      * Upload wallpaper images using the Manage Policy Files workflow and then select the required
@@ -98,10 +99,8 @@ public class PayloadWallpaper extends PayloadBase {
             return false;
         if (lowResolution != null ? !lowResolution.equals(that.lowResolution) : that.lowResolution != null)
             return false;
-        if (mediumResolution != null ? !mediumResolution.equals(that.mediumResolution) : that.mediumResolution != null)
-            return false;
+        return !(mediumResolution != null ? !mediumResolution.equals(that.mediumResolution) : that.mediumResolution != null);
 
-        return true;
     }
 
     @Override

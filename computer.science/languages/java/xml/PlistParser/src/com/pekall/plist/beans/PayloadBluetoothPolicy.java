@@ -1,5 +1,6 @@
 package com.pekall.plist.beans;
 
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PayloadBluetoothPolicy extends PayloadBase {
     /**
      * Allow Device discovery via Bluetooth
@@ -148,10 +149,8 @@ public class PayloadBluetoothPolicy extends PayloadBase {
         if (allowOutgoingCalls != null ? !allowOutgoingCalls.equals(that.allowOutgoingCalls) : that.allowOutgoingCalls != null)
             return false;
         if (allowPairing != null ? !allowPairing.equals(that.allowPairing) : that.allowPairing != null) return false;
-        if (allowTethering != null ? !allowTethering.equals(that.allowTethering) : that.allowTethering != null)
-            return false;
+        return !(allowTethering != null ? !allowTethering.equals(that.allowTethering) : that.allowTethering != null);
 
-        return true;
     }
 
     @Override

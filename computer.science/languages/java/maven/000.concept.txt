@@ -60,10 +60,104 @@ maven 坐标
     搜索顺序
         本地仓库， 远程仓库
 
+    仓库和依赖机制
+        1. 依赖的范围是system时，maven直接从本地文件系统解析构建
+        2. 尝试从本地仓库获取构件
+        3. 如果是发布版的构建，尝试从远程仓库获取构件
+        4. 如果是release或latest版本，将远程仓库中元数据和本地仓库元数据合并。计算出release或latest的真实值
+            maven-metadata-local.xml
+
+            <?xml version="1.0" encoding="UTF-8"?>
+            <metadata>
+                <groupId>com.juvenxu.mvnbook</groupId>
+                <artifactId>hello-world</artifactId>
+                <versioning>
+                    <versions>
+                        <version>1.0-SNAPSHOT</version>
+                    </versions>
+                    <lastUpdated>20131106053403</lastUpdated>
+                </versioning>
+            </metadata>
+
+        5. 如果是snapshot版本， 将远程仓库中元数据和本地仓库元数据合并。计算出snapshot的最新值。
+            如果本地仓库的值不是最新值，则需要从远程仓库下载
+        6. 如果是时间戳格式的快照，则将其拷贝成非时间戳格式，如SNAPSHOT
+
 版本
     snapshot版, 类似于debug版
     release版
 
+镜像
+    <mirrors>
+        <mirror>
+            <!--This sends everything else to /public -->
+            <id>nexus</id>
+
+            <mirrorOf>*</mirrorOf>           <-- 所以仓库的镜像 -->
+
+            <mirrorOf>central</mirrorOf>     <-- 中央仓库的镜像 -->
+            <url>http://192.168.10.224:8081/nexus/content/groups/public</url>
+        </mirror>
+    </mirrors>
+
+生命周期
+    初始化，
+    编译， 
+        maven-complier-plugin
+    测试，
+        maven-surefire-plugin
+    打包，
+    集成测试，
+    部署
+
+
+    三套生命周期
+        clean
+            清理项目
+                1. pre-clean
+                2. clean
+                               通过maven-clean-plugin:clean目标来完成
+                3. post-clean
+
+                $mvn clean
+
+        default
+
+            构建项目
+            ...
+            . compile          编译主代码
+                               通过maven-complier-plugin:compile目标来完成
+
+            . test             单元测试
+                               通过maven-surefire-plugin:test目标来完成
+
+            . package           打包，如jar
+                                通过maven-jar-plugin:jar目标来完成
+            . integration-test
+            . verify
+            . install           将包安装到本地仓库
+                                通过maven-install-plugin:install目标来完成
+            . deploy            将包部署到远程仓库
+
+            $mvn compile|test|package|install|deploy
+
+            参见<Maven实战> 7.2.3
+
+        site
+            建立项目站点
+
+            site 生成项目站点文档
+                               通过maven-site-plugin:site目标来完成
+            site-deploy
+                               通过maven-site-plugin:deploy目标来完成
+
+插件
+    maven-dependency-plugin
+        处理依赖关系
+
+        dependency:analyze
+        dependency:tree
+        dependency:list
 
 
 

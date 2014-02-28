@@ -45,5 +45,11 @@ public class Format {
 
         DateFormat df2 = new SimpleDateFormat("yyyy/mm/dd");
         System.out.println(df2.format(new Date()));
+
+        SimpleDateFormat df3 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.println(df3.format(new Date()));
+
+        System.out.println(Math.abs(1 - 2));
+
     }
 }

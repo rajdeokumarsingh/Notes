@@ -4,11 +4,12 @@ package com.pekall.plist.su.policy;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class AppInfoWrapper {
 
     private List<AppInfo> infos = new ArrayList<AppInfo>();
 
-    String eventId = "";
+    private String eventId = "";
 
     public AppInfoWrapper() {
     }
@@ -50,9 +51,8 @@ public class AppInfoWrapper {
         AppInfoWrapper that = (AppInfoWrapper) o;
 
         if (!eventId.equals(that.eventId)) return false;
-        if (!infos.equals(that.infos)) return false;
+        return infos.equals(that.infos);
 
-        return true;
     }
 
     @Override

@@ -3,6 +3,7 @@ package com.pekall.plist.beans;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("UnusedDeclaration")
 public class CommandDeviceInfo extends CommandObject {
     private List<String> Queries = new ArrayList<String>();
 
@@ -60,9 +61,8 @@ public class CommandDeviceInfo extends CommandObject {
 
         CommandDeviceInfo that = (CommandDeviceInfo) o;
 
-        if(this.hashCode() != that.hashCode()) return false;
+        return this.hashCode() == that.hashCode();
 
-        return true;
     }
 
     @Override

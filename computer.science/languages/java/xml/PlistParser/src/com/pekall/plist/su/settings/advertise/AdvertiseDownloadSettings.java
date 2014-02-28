@@ -18,6 +18,7 @@ import com.pekall.plist.beans.PayloadBase;
 /**
  * XML configuration for advertise download
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class AdvertiseDownloadSettings extends PayloadBase {
     /**
      * See playType
@@ -86,9 +87,8 @@ public class AdvertiseDownloadSettings extends PayloadBase {
 
         if (downloadUrl != null ? !downloadUrl.equals(that.downloadUrl) : that.downloadUrl != null) return false;
         if (playType != null ? !playType.equals(that.playType) : that.playType != null) return false;
-        if (version != null ? !version.equals(that.version) : that.version != null) return false;
+        return !(version != null ? !version.equals(that.version) : that.version != null);
 
-        return true;
     }
 
     @Override

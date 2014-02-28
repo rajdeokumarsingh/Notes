@@ -3,6 +3,7 @@ package com.pekall.plist.beans;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("UnusedDeclaration")
 public class APNSDict {
     /**
      * This array contains an arbitrary number of dictionaries,
@@ -35,9 +36,8 @@ public class APNSDict {
 
         APNSDict apnsDict = (APNSDict) o;
 
-        if (apns != null ? !apns.equals(apnsDict.apns) : apnsDict.apns != null) return false;
+        return !(apns != null ? !apns.equals(apnsDict.apns) : apnsDict.apns != null);
 
-        return true;
     }
 
     @Override

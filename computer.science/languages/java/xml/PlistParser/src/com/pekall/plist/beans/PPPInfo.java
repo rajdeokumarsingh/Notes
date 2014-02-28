@@ -3,16 +3,17 @@ package com.pekall.plist.beans;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PPPInfo {
     /**
      * See AuthEAPPlugins
      */
-    public static final String AUTH_PLUGIN_ENTRY = "EAP-RSA";
+    private static final String AUTH_PLUGIN_ENTRY = "EAP-RSA";
 
     /**
      * See AuthProtocol
      */
-    public static final String AUTH_PROT_ENTRY = "EAP";
+    private static final String AUTH_PROT_ENTRY = "EAP";
 
     /**
      * The VPN account user name. Used for L2TP and PPTP.
@@ -157,9 +158,7 @@ public class PPPInfo {
         // TODO:
         if (AuthEAPPlugins != null ? !AuthEAPPlugins.equals(pppInfo.AuthEAPPlugins) : pppInfo.AuthEAPPlugins != null)
             return false;
-        if (AuthProtocol != null ? !AuthProtocol.equals(pppInfo.AuthProtocol) : pppInfo.AuthProtocol != null)
-            return false;
-        return true;
+        return !(AuthProtocol != null ? !AuthProtocol.equals(pppInfo.AuthProtocol) : pppInfo.AuthProtocol != null);
     }
 
     @Override

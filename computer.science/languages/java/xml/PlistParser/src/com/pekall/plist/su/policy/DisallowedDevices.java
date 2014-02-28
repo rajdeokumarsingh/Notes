@@ -6,8 +6,9 @@ import java.util.List;
 /**
  * XML element for ios_control_policy.device_compromised
  */
+@SuppressWarnings("UnusedDeclaration")
 public class DisallowedDevices extends EventWrapper {
-    List<String> devices = new ArrayList<String>();
+    private List<String> devices = new ArrayList<String>();
 
     public DisallowedDevices() {
         super();
@@ -37,9 +38,8 @@ public class DisallowedDevices extends EventWrapper {
         if (!super.equals(o)) return false;
 
         DisallowedDevices that = (DisallowedDevices) o;
-        if(this.hashCode() != that.hashCode()) return false;
+        return this.hashCode() == that.hashCode();
 
-        return true;
     }
 
     @Override
@@ -53,10 +53,10 @@ public class DisallowedDevices extends EventWrapper {
 
     @Override
     public String toString() {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         sb.append("{");
         for(String s : devices) {
-            sb.append(s + ",");
+            sb.append(s).append(",");
         }
         sb.append("}");
         return "DisallowedDevices{" +

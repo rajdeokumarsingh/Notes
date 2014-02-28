@@ -16,6 +16,7 @@ package com.pekall.plist.su.device;
 /**
  * XML configuration for "device_info.install_info"
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class InstallInfo {
     /**
      * 类型, install: 安装信息，uninstall: 卸载信息
@@ -97,9 +98,8 @@ public class InstallInfo {
         if (date != that.date) return false;
         if (!name.equals(that.name)) return false;
         if (!package_name.equals(that.package_name)) return false;
-        if (!type.equals(that.type)) return false;
+        return type.equals(that.type);
 
-        return true;
     }
 
     @Override

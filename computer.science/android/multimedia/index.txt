@@ -1,4 +1,16 @@
-basic.concept.txt
+100.working.notes
+
+./010.theory/index.txt
+
+020.bin.shao.resource.txt
+
+800.tools
+
+900.todo
+
+code.reading/index.txt
+   practice:
+        dump a media file, tools
 
 opencore
     ./opencore/index.txt
@@ -10,4 +22,6 @@ opencore
 stagefright
     ./stagefright/stagefright.opencore.html
     ./stagefright/stagefright.txt
+
+
 

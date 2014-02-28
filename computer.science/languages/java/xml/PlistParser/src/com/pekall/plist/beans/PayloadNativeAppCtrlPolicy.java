@@ -1,5 +1,6 @@
 package com.pekall.plist.beans;
 
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PayloadNativeAppCtrlPolicy extends PayloadBase {
     private Boolean googlePlay;
     private Boolean youtube;
@@ -108,9 +109,8 @@ public class PayloadNativeAppCtrlPolicy extends PayloadBase {
         if (mail != null ? !mail.equals(that.mail) : that.mail != null) return false;
         if (settings != null ? !settings.equals(that.settings) : that.settings != null) return false;
         if (voiceDialer != null ? !voiceDialer.equals(that.voiceDialer) : that.voiceDialer != null) return false;
-        if (youtube != null ? !youtube.equals(that.youtube) : that.youtube != null) return false;
+        return !(youtube != null ? !youtube.equals(that.youtube) : that.youtube != null);
 
-        return true;
     }
 
     @Override

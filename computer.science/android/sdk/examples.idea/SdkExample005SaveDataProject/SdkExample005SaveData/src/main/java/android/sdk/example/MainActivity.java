@@ -40,8 +40,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
-                // TODO:
-                // intent.setClass(MainActivity.this, DbActivity.class);
+                intent.setClass(MainActivity.this, DbActivity.class);
                 startActivity(intent);
             }
         });
@@ -53,5 +52,10 @@ public class MainActivity extends Activity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }

@@ -5,6 +5,7 @@ import java.util.Arrays;
 /**
  * Configures an Exchange Active Sync account on the device.
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PayloadExchange extends PayloadBase {
 
     /**
@@ -268,10 +269,8 @@ public class PayloadExchange extends PayloadBase {
         if (UserName != null ? !UserName.equals(that.UserName) : that.UserName != null) return false;
         if (disableMailRecentsSyncing != null ? !disableMailRecentsSyncing.equals(that.disableMailRecentsSyncing) : that.disableMailRecentsSyncing != null)
             return false;
-        if (MailNumberOfPastDaysToSync != null ? !MailNumberOfPastDaysToSync.equals(that.MailNumberOfPastDaysToSync) : that.MailNumberOfPastDaysToSync != null)
-            return false;
+        return !(MailNumberOfPastDaysToSync != null ? !MailNumberOfPastDaysToSync.equals(that.MailNumberOfPastDaysToSync) : that.MailNumberOfPastDaysToSync != null);
 
-        return true;
     }
 
     @Override

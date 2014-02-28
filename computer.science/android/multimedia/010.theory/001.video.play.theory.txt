@@ -1,0 +1,61 @@
+视频播放的基本原理
+    播放一个视频分为4个步骤：
+
+    1. acess 访问，或者理解为接收、获取、得到
+    2. demux 解复用，就是把通常合在一起的音频和视频分离(还有可能的字幕)   
+    3. decode 解码，包括音频和视频的解码
+    4. output 输出，也分为音频和视频的输出（aout和vout）
+
+    例如 播放一个UDP组播的MPEG TS流
+
+        access部分负责从网络接收组播流，放到VLC的内存缓冲区中，
+            access模块关注IP协议，如是否IPv6、组播地址、组播协议、端口等信息；
+            如果检测出来是RTP协议，还要分析RTP头部信息。
+            参看VLC源码 /modules/access/udp.c 。
+            在同目录下还可以看到大量的access模块，如file、http、dvd、ftp、smb、tcp、dshow、mms、v4l…等等
+
+        demux部分首先要解析TS流的信息。
+            TS格式是MPEG2协议的一部分，
+            TS通常是固定188字节的一个packet，
+                一个TS流可以包含多个program（节目）
+                    一个program又可以包含多个视频、音频、和文字信息的ES流；
+                        每个ES流会有不同的PID标示。
+                        而又为了可以分析这些ES流 TS有一些固定的PID用来间隔发送program和es流信息的表格：PAT和PMT表
+
+        decode
+            VLC专门做了一个独立的库libdvbpsi来解析和编码TS流
+            VLC解码MPEG2使用了一个独立的库libmpeg2，
+            调用它的源文件是 /modules/codec/libmpeg2.c
+            VLC关于编解码的模块都放在/modules/codec目录下，其中包括著名的庞大的ffmpeg。
+
+
+    其他问题：
+        5. access来说，媒体的访问是分层的，
+            如RTSP就涉及到IPv4、TCP、UDP、RTCP、RTSP等多个层次的协议。
+
+            有些视频格式包括了传输、封装格式和编辑码格式
+                如MPEG系列，
+
+            有些封装格式是独立的容器，但是很多人会误解它是编解码格式，
+                如mkv、avi这些。
+
+        6. 音频和视频在demux之后就是独立的，但是需要有一套机制把它们同步起来。
+
+        7. 同时我们需要有一套机制来控制速度、暂停、停止、跳进，获取各种媒体信息
+
+        MPlayer的结构与此是类似的
+            stream目录对应的是access的功能
+            mpdemux对应的demux功能
+            libmpcodecs是解码器
+            libvo和libao2分别是视频和音频的输出
+
+        DirectShow也是类似
+            DirectShow里面的模块叫做“filter”，filter之间通过”pin”来连接。
+
+            access的模块对应于Source FIlter，这一类Filter只有输出pin没有输入pin。
+            demux模块对应于splitter filter，这种filter有一个输入pin，多个输出pin。
+            解码模块是一类transform filter，有一个输入pin、一个输出pin，
+                当然transform filter不一定是解码器，也可能是某种其他的处理。
+            输出模块对应于readering filter，有一个输入pin，没有输出pin。
+
+

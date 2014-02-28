@@ -3,6 +3,7 @@ package com.pekall.plist.beans;
 /**
  * A dictionary of numeric restrictions.
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class RestrictedValue {
     /**
      * Following fields is in "Passcode Policy Payload",
@@ -124,9 +125,8 @@ public class RestrictedValue {
         if (minComplexChars != null ? !minComplexChars.equals(value.minComplexChars) : value.minComplexChars != null)
             return false;
         if (minLength != null ? !minLength.equals(value.minLength) : value.minLength != null) return false;
-        if (pinHistory != null ? !pinHistory.equals(value.pinHistory) : value.pinHistory != null) return false;
+        return !(pinHistory != null ? !pinHistory.equals(value.pinHistory) : value.pinHistory != null);
 
-        return true;
     }
 
     @Override

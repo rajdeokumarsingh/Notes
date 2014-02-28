@@ -1,0 +1,53 @@
+
+12. check branch
+    git branch
+    git branch -v
+
+    git branch --merge
+        list merged branch
+
+    git branch --no-merge
+        list unmerge branch
+
+13. edit the file and commit it
+
+14. check out the branch RB_1.0
+    git checkout RB_1.0
+
+15. edit the file and commit it in the new branch RB_1.0
+
+16. add a tag for the branch RB_1.0
+    git tag 1.0 RB_1.0
+
+    git tag -a v1.4 -m 'my version 1.4'
+        # -m add more message
+    
+    git show v1.4
+
+    git push origin v1.4
+        # push tag to remote repo
+
+    git push origin --tags
+        # push all tags to remote repo
+
+
+17. check the tag
+    git tag
+
+18. check out the master branch
+    git checkout master
+
+19. merge the branch RB_1.0 to the master branch
+    git rebase RB_1.0               # now merge done!
+
+    # master rebase on RB_1.0
+
+20. delete the branch RB_1.0
+    git branch -d RB_1.0        # since the branch RB_1.0 was tagged,
+                                # only the branch name is deleted.
+
+21. create a branch from the tag 1.0
+    git branch RB_1.0.1 1.0
+    git checkout RB_1.0.1
+
+

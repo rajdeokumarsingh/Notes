@@ -1,0 +1,40 @@
+git gc
+    clean and optimize local repo disk space
+
+    --aggressive
+
+git archive
+    git archive --format=zip --prefix=mysite-release-1.0/ HEAD > mysite-release.zip
+    git archive --format=tar --prefix=mysite-release-1.0/ HEAD | gzip > mysite-release.tar.gz
+
+git reflog
+    see deleted/rebased commit 
+
+    find unbranch commit, then
+        git checkout -b this_commit
+
+    or 
+        git branch reflog-restore this_commit
+        git checkout reflog-restore
+
+binay search bug
+    git bisect
+        git bisect start
+
+        git bisect bad
+        git bisect good 1.0
+        # git go to middle point
+
+        # do test, failed, mark
+        git bad
+        ...
+
+        # bug found, go to HEAD
+
+    git bisect visualize
+    git bisect log
+        git bisect reset
+
+        
+
+

@@ -1,0 +1,34 @@
+
+
+WAV
+    微软公司开发的一种声音文件格式
+
+    符合RIFF(Resource Interchange File Format)文件规范
+
+    数据本身的格式为
+        1. PCM
+        2. 压缩型
+            支持MSADPCM，CCITT A LAW等多种压缩运算法
+            几乎所有支持ACM规范的编码都可以为WAV的音频流进行编码
+
+    标准格式化的WAV文件和CD格式一样，也是44.1K的取样频率，16位量化数字
+
+    取样频率一般有11025Hz(11kHz) ，22050Hz(22kHz)和44100Hz(44kHz) 三种
+
+
+WAV格式文件所占容量（KB) = （取样频率 X量化位数X 声道） X 时间 / 8 (字节= 8bit) 
+
+practice:
+    测试文件： android/frameworks/base/media/tests/contents/media_api/music/bzk_chic.wav
+    测试工具： 
+        1. mediainfo bzk_chic.wav
+        2. bless bzk_chic.wav
+
+        文件格式:
+            wav文件格式分析
+                http://www.cnblogs.com/tiandsp/archive/2012/10/17/2728585.html
+
+            wav文件格式分析(代码)
+                http://www.cnblogs.com/tiandsp/archive/2012/10/18/2730022.html
+
+            http://baike.baidu.com/link?url=5rAdYlst1nL8jVLP4ooVBpYRHnHAT6SnYGG7kdtXTAP9tAYY76YwpK5b7iJYd59Y

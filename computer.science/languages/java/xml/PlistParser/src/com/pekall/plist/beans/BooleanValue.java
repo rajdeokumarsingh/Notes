@@ -3,7 +3,8 @@ package com.pekall.plist.beans;
 /**
  * Bean wrapping a boolean
  */
-public class BooleanValue {
+@SuppressWarnings("UnusedDeclaration")
+class BooleanValue {
     private Boolean value;
 
     public BooleanValue() {
@@ -28,9 +29,8 @@ public class BooleanValue {
 
         BooleanValue that = (BooleanValue) o;
 
-        if (value != null ? !value.equals(that.value) : that.value != null) return false;
+        return !(value != null ? !value.equals(that.value) : that.value != null);
 
-        return true;
     }
 
     @Override

@@ -3,16 +3,17 @@ package com.pekall.plist.beans;
 /**
  * Containing restrictions.
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class Restrictions {
     /**
      * boolean restrictions
      */
-    RestrictedBool restrictedBool;
+    private RestrictedBool restrictedBool;
 
     /**
      * numeric restrictions
      */
-    RestrictedValue restrictedValue;
+    private RestrictedValue restrictedValue;
 
     public Restrictions() {
     }
@@ -47,10 +48,8 @@ public class Restrictions {
 
         if (restrictedBool != null ? !restrictedBool.equals(that.restrictedBool) : that.restrictedBool != null)
             return false;
-        if (restrictedValue != null ? !restrictedValue.equals(that.restrictedValue) : that.restrictedValue != null)
-            return false;
+        return !(restrictedValue != null ? !restrictedValue.equals(that.restrictedValue) : that.restrictedValue != null);
 
-        return true;
     }
 
     @Override

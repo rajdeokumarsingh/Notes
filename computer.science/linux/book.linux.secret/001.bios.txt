@@ -1,0 +1,213 @@
+
+UEFI
+    Intel新一代的替代BIOS的booloader
+
+    https://wiki.archlinux.org/index.php/GPT
+        GUID Partition Table
+
+    https://wiki.archlinux.org/index.php/Boot_Loaders
+
+Concept
+    UEFI
+    GPT
+
+    BIOS
+        basic input output system
+
+    北桥
+        控制CPU和内存
+
+    南桥
+        控制外设， PCI， PCI-E， USB， VGA
+
+        CMOS
+            位于南桥中
+            保存BIOS中用户设置的信息
+            主板上的纽扣电池就是为CMOS供电
+
+    SMBIOS
+        System Management BIOS
+        BIOS会将CMOS中资料和检测到的硬件信息，合成一张表格，写入到内存中。
+            也就是SMBIOS
+        
+        Linux中工具dmidecode用来查看SMBIOS。 （DMI: Desktop Management Interface）
+    
+    Flash Memory
+
+    硬盘结构
+        MBR (first sector of the disk)
+            bootloader
+            patition table
+            magic number
+
+        patition 1
+            boot sector (first sector of the patition)
+            data
+
+        patition 2
+            boot sector
+            data
+
+        patition 3
+        ...
+
+BIOS作用
+    开电源第一个运行的软件就是bios
+
+    1 检测主板上的芯片，并通知芯片初始化
+    2 记录用户设置的BIOS值
+    3 分配资源， 如中断号
+    4 加载操作系统
+        由bios转交给引导扇区，再由引导扇区转到各个分区激活相应的操作系统。
+
+开机过程 {
+    1 启动电源
+        Power On流程
+            cpu被激活去寻找bios
+            bios在flash memory中执行
+            bios加载cmos中的用户配直数据
+            bios将自己和cmos数据解压到内存中
+
+            bios主要工作｛ 
+                检查某些硬件的状态
+                    软盘驱动器，内存错误，硬盘错误，键盘错误，Flash错误
+                检查cmos数据
+            ｝
+
+    2 初始化北桥
+    3 将程序载入内存中
+    4 读取南桥的CMOS数据
+    5 POST (Power On Self Test)
+        开机第一个画面
+        检查cpu, 内存，显卡和相关外围控制器是否达到就绪状态
+            cpu基本信息，如速度，cache大小
+            内存大小，有无损坏
+            HDD， 按照排线顺序列出
+            cdrom
+        提供简单的内存测试
+
+        if 用户按del键, 选择进入bios
+            用户设置bios
+        else
+            加载操作系统
+
+
+    6 建立SMBIOS
+        POST完成后，会将检测到的硬件信息保存到内存的smbios中, 供操作系统来调用。
+            这部分信息是动态调整的，如USB
+
+    7 硬盘的主引导扇区 (MBR)
+        bios工作完毕后，将硬盘的第一扇区加载到内存执行
+            硬盘的第一扇区是的主引导扇区(Master Boot Record, MBR)
+            开机管理程序安装在第一扇区， 负责引导操作系统。
+
+            # dump mbr
+            sudo dd=/dev/sda of=./mbr count=1
+
+            MBR结构如下：
+                bootloader          [0, 445]
+                    LILO, GRUB
+                    同样可以放到每个分区的boot sector中
+                        每个硬盘分区的第一个扇区称为引导扇区 boot sector
+                    
+                    GRUB的配置却不在引导扇区
+
+                    安装linux的时候，可以指定grub安装到mbr或是分区的boot sector上
+                    如果要安装多个操作系统，就一定要把grub安装到MBR中
+                        这样用户才可以在grub中看到多系统的选项
+
+                    功能
+                    1 加载扇区 
+                    2 加载kernel
+                        1. 通过分区中的设置文件，显示grub画面
+                        2. 用户选择加载某个系统
+                        3. 根据grub配置， 加载kernel
+
+                partition table     [446, 509] 64 bytes
+                    partition 1:  16 bytes
+                        partition flag | start CHS | patition byte | end CHS | start LBA | size
+                    partition 2:
+                    partition 3:
+
+                    partition 4:
+                        由于分区表仅有64bytes, 所以划分硬盘时只能有4个主分区(primary partition)
+
+                        如果需要有5个以上的分区, 就需要将一个分区表项,通常是最后一个，改成扩展分区
+                            扩展分区和主分区没有实质区别
+
+                        partition 4称为扩展分区
+                            5～9 称为逻辑分区
+
+                    一般的硬盘分区方式:
+                        3个主分区， 1个扩展分区
+
+                    Linux一般都使用LVM划分分区：
+                        可随时增减硬盘和调整分区大小
+
+                    sudo fdisk -l /dev/sda
+                        查看硬盘分区表
+
+                        parted -h
+
+                magic number        [510, 511] 2 bytes
+                    0x55AA MBR的标志
+    8 加载操作系统
+        1. 加载kernel到内存
+        2. 加载initrd到内存
+            
+        操作系统起来后是用到的bios功能：
+            需要参考SMBIOS中的信息
+
+            ACPI (Advanced Configuration and Power Interface)
+                电源管理接口
+            内存分配
+
+            SpeedStep
+            PowerNow
+                降频省电功能
+	
+	    linux一般都直接访问硬件
+}
+
+--------------------------------------------------------------------------------
+MBR disk
+Location in the HDD     Purpose of the Code
+First 440 bytes     MBR boot code that is launched by the BIOS.
+441-446 bytes       MBR disk signature.
+447-510 bytes       Actual partition table with info about primary and extended partitions. 
+                    (Note that logical partitions are not listed here)
+511-512 bytes       MBR boot signature 0xAA55. 
+        
+--------------------------------------------------------------------------------
+GUID Partition Table
+Location in the HDD                                             Purpose
+First logical sector of the disk or First 512 bytes     Protective MBR - Same as a normal MBR but the 64-byte area contains 
+                                                        a single 0xEE type Primary partition entry defined over the entire size of the disk 
+                                                        or in case of >2 TiB, upto a partition size of 2 TiB.
+
+Second logical sector of the disk or Next 512 bytes     Primary GPT Header - Contains the Unique Disk GUID, Location of 
+                                                        the Primary Partition Table, Number of possible entries in partition table, 
+                                                        CRC32 checksums of itself and the Primary Partition Table, Location of 
+                                                        the Secondary (or Backup) GPT Header
+
+16 KiB (by default) following the second logical sector of the disk     
+                                                        Primary GPT Table - 128 Partition entries (by default, can be higher), 
+                                                        each with an entry of size 128 bytes (hence total of 16 KiB for 128 partition 
+                                                        entries). Sector numbers are stored as 64-bit LBA and each partition 
+                                                        has a Partition Type GUID and a Unique Partition GUID.
+
+16 KiB (by default) before the last logical sector of the disk  
+                                                        Secondary GPT table - It is byte-for-byte identical to the Primary table. 
+                                                        Used mainly for recovery in case the primary partition table is damaged.
+
+Last logical sector of the disk or Last 512 bytes       Secondary GPT Header - Contains the Unique Disk GUID, Location of 
+                                                        the Secondary Partition Table, Number of possible entries in the partition table,
+                                                        CRC32 checksums of itself and the Secondary Partition Table, Location of 
+                                                        the Primary GPT Header. This header can be used to recover GPT info 
+                                                        in case the primary header is corrupted. 
+
+
+--------------------------------------------------------------------------------
+
+
+

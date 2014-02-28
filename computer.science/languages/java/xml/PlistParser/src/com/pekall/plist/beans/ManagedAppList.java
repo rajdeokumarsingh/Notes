@@ -7,7 +7,7 @@ import java.util.HashMap;
  * The keys of the ManagedApplicationList dictionary are the
  * app identifiers for the managed apps.
  */
-public class ManagedAppList {
+class ManagedAppList {
     // TODO: define app id, should I add all application identifier in this class
     // private ManagedAppInfo appIdentifier1;
     // private ManagedAppInfo appIdentifier2;
@@ -34,19 +34,12 @@ public class ManagedAppList {
 
         ManagedAppList that = (ManagedAppList) o;
 
-        // if (managedApps != null ? !managedApps.equals(that.managedApps) : that.managedApps != null) return false;
-        if (this.managedApps == null && that.managedApps == null) return true;
-        if (this.managedApps == null || that.managedApps == null) return false;
-        if (this.hashCode() != that.hashCode()) return false;
+        return this.hashCode() == that.hashCode();
 
-        return true;
     }
 
     @Override
     public int hashCode() {
-        if (managedApps == null) {
-            return 0;
-        }
         int result = 0;
         for (String s : managedApps.keySet()) {
             if (s == null) continue;
@@ -61,11 +54,11 @@ public class ManagedAppList {
 
     @Override
     public String toString() {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         sb.append("{");
         for (String s : managedApps.keySet()) {
             if (s == null) continue;
-            sb.append("id: " + s + ", info: ");
+            sb.append("id: ").append(s).append(", info: ");
 
             if(managedApps.get(s) == null) continue;
             sb.append(managedApps.get(s).toString());

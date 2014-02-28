@@ -1,5 +1,6 @@
 package com.pekall.plist.beans;
 
+@SuppressWarnings("UnusedDeclaration")
 public class IPv4Info {
 
     /**
@@ -23,10 +24,8 @@ public class IPv4Info {
 
         IPv4Info iPv4Info = (IPv4Info) o;
 
-        if (OverridePrimary != null ? !OverridePrimary.equals(iPv4Info.OverridePrimary) : iPv4Info.OverridePrimary != null)
-            return false;
+        return !(OverridePrimary != null ? !OverridePrimary.equals(iPv4Info.OverridePrimary) : iPv4Info.OverridePrimary != null);
 
-        return true;
     }
 
     @Override

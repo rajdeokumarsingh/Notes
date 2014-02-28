@@ -16,16 +16,17 @@ package com.pekall.plist.su.policy;
 /**
  * XML element in memory_size_policy
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class Memory {
     /**
      * Detailed memory information, see {@link MemoryLimit}
      */
-    MemoryLimit memoryLimit;
+    private MemoryLimit memoryLimit;
 
     /**
      * Detailed disk information, see {@link DiskLimit}
      */
-    DiskLimit diskLimit;
+    private DiskLimit diskLimit;
 
     public Memory() {
         this(new MemoryLimit(), new DiskLimit());
@@ -60,10 +61,8 @@ public class Memory {
         Memory memory = (Memory) o;
 
         if (diskLimit != null ? !diskLimit.equals(memory.diskLimit) : memory.diskLimit != null) return false;
-        if (memoryLimit != null ? !memoryLimit.equals(memory.memoryLimit) : memory.memoryLimit != null)
-            return false;
+        return !(memoryLimit != null ? !memoryLimit.equals(memory.memoryLimit) : memory.memoryLimit != null);
 
-        return true;
     }
 
     @Override

@@ -1,0 +1,94 @@
+
+git branch -m master mymaster
+    rename master to mymaster
+
+    git branch -M master mymaster
+        force to override the new branch
+
+when to create a branch
+    1. experimental changes
+    2. add new feature
+    3. bug
+
+git branch new
+git checkout new
+
+
+git checkout -b alt master
+    create a new branch alt from master
+    checkout to it
+
+branch merge
+    1. directly merge
+        git checkout alternative
+        git add about.html
+        git commit -m "add about.html"
+
+        git checkout master
+        git merge alternative
+
+    2. squash merge
+        git merge --squash contacts
+            squash all commits in the branch to one commit 
+            then merge
+
+    3. cherry-pick
+        git checkout contacts
+        edit a file and commit it
+            git commit -m "add more more contacts"
+            [contacts 44f7c5c] add more more contacts
+            1 file changed, 1 insertion(+)
+
+        git checkout master
+        git cherry-pick 44ff7c5c
+
+        # pick several commit
+        git reset --hard HEAD^
+        git cherry-pick -n 44ff7c5c
+            merge to staging area, then
+
+            git cherry-pick -n xxxx
+            git cherry-pick -n xxxx...
+            git cherry-pick -n xxxx...
+
+            git commit ...
+
+    
+git mergetool
+
+git push origin my_branch
+    push a local branch to remote repo
+
+    # equals to
+    git push origin local_br_name:remote_br_name
+
+
+    # get remote branch
+    1. git fetch origin
+
+    2. git merge origin/my_branch
+        or 
+       git checkout -b local_my_branch origin/my_branch
+        or 
+       git checkout --track origin/my_branch
+
+
+   delete remote branch
+    # git push [远程名] [本地分支]:[远程分支] 
+    git push origin :remote_branch
+
+
+git rebase --onto master server client
+    1. 取出 client 分支，
+    2. 找出 client 分支和 server 分支的共同祖先之后的变化，
+    3. 然后把它们在master上重演一遍
+
+
+git rebase [master_branch] [feature_branch]
+    rebase feature_branch on master_branch
+        master_branch is base
+
+找到dev2在master分支上的commitID
+    git merge-base dev2 master
+    会显示dev2和master两个分支的共同的commitID
+

@@ -1,4 +1,8 @@
 
+TODO:
+    how to find help of maven
+        search: maven help
+
 mvn clean
     # 删除target目录。maven构建的文件(class, jar)都放在target目录
 
@@ -19,6 +23,7 @@ mvn deploy
 
 
 mvn help:system    # 输出所有java相关环境变量。
+mvn help:describe
 
 
 mvn clean [compile|test|package|install]
@@ -31,3 +36,5 @@ mvn archetype:generate
 mvn dependency:list
 mvn dependency:tree
 
+
+mvn install -Dmaven.test.skip=true

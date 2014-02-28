@@ -112,9 +112,12 @@ checking connectivity:
     egrep -i "IPACT=|pdpDroppe|CGACT:" radio.log
     grep 'pdp_network_drop\|UNSOL_DATA_CALL_LIST_CHANGED\|active=0\|tearDown=true' . -rns 
 
+
+multimedia:
+g/\<Vold\>\|\<dalvikvm\>\|\<ppd\>\|\<EventRelay\>/d
 onReceivedError
 
-    '\<load\( \)*[Uu]rl\( delay\)*\|shouldOverrideUrlLoading\|Controller.*\(onPause\|onResume\|onDestroy\)\|\(start\|stop\)UsingNetworkFeature\|onReceivedError\|updateStatus\|NetworkStateHandler.*NetworkInfo\|BindToDevice\|onPageStarted url\|onPageFinished url\|onLoadResource():\|FlushSocketPools\|updateStatus, setHttpProxy:\|JavaBridge.cpp\|WebUrlLoader\|chromium\|apn is\|[Uu]pdateProxy'
+    '\<load\( \)*[Uu]rl\( delay\)*\|shouldOverrideUrlLoading\|Controller.*\(onPause\|onResume\|onDestroy\)\|\(start\|stop\)UsingNetworkFeature\|onReceivedError\|updateStatus\|NetworkStateHandler.*NetworkInfo\|BindToDevice\|onPageStarted url\|onPageFinished url\|onLoadResource():\|FlushSocketPools\|updateStatus, setHttpProxy:\|JavaBridge.cpp\|WebUrlLoader\|chromium\|apn is\|[Uu]pdateProxy\|enter handleNetworkMessage'
 
 '\<Controller\|onReceivedError\|NetworkStateHandler.*NetworkInfo\|JavaBridge.cpp\|WebUrlLoader\|chromium\|apn is\|[Uu]pdateProxy\|找不到网页'
 

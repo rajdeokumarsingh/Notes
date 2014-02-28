@@ -1,0 +1,13 @@
+GET /websocket HTTP/1.1
+Connection: Upgrade
+Host: 192.168.8.149:9090
+Sec-WebSocket-Key: CrrPhHjBgfxSB3MGF9av7Q==
+Sec-WebSocket-Version: 13
+Upgrade: websocket
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: TkEEjXFKxhIcDZ5lXiI6txaB2XY=
+
+ÅÓÛ\8à~v\—f/—(fHñ~%ﬂ~|Wû1~Vó~%ﬂ~m]Ä)sL—f/—.zYÄ3q…l3É=mYû/=à~{]Ö5|]—f=\ñ*v[ñjMö8@	√l/√l=—(pSñ2=—m-«i)é!Å3{"id":0,"type":1,"command":0,"result":0,"reason":0}âÑ˘}VÛâ8îäping

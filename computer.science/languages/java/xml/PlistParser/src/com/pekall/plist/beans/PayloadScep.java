@@ -1,7 +1,6 @@
 package com.pekall.plist.beans;
 
-import java.util.Arrays;
-
+@SuppressWarnings("UnusedDeclaration")
 public class PayloadScep extends PayloadBase {
 
     private ScepContent PayloadContent;
@@ -34,10 +33,8 @@ public class PayloadScep extends PayloadBase {
 
         PayloadScep that = (PayloadScep) o;
 
-        if (PayloadContent != null ? !PayloadContent.equals(that.PayloadContent) : that.PayloadContent != null)
-            return false;
+        return !(PayloadContent != null ? !PayloadContent.equals(that.PayloadContent) : that.PayloadContent != null);
 
-        return true;
     }
 
     @Override

@@ -4,44 +4,45 @@ package com.pekall.plist.su.policy;
 /**
  * Policy for IOS devices
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class IosControlPolicy extends Policy {
 
     /**
      * Policy for different os version
      */
-    OsVersion os_version;
+    private OsVersion os_version;
 
     /**
      * Policy when data protection disabled
      */
-    EventWrapper data_protetion_disable;
+    private EventWrapper data_protetion_disable;
 
     /**
      * Policy when device is compromised
      */
-    EventWrapper device_compromised;
+    private EventWrapper device_compromised;
 
     /**
      * Policy when mdm is deactivated
      */
-    EventWrapper mdm_deactivated;
+    private EventWrapper mdm_deactivated;
 
     /**
      * Policy for disallowed devices
      */
-    DisallowedDevices disallowed_devices;
+    private DisallowedDevices disallowed_devices;
 
     public IosControlPolicy() {
         this("", -1, "", new OsVersion(), new EventWrapper(),
                 new EventWrapper(), new EventWrapper(), new DisallowedDevices());
     }
 
-    public IosControlPolicy(String name, int status, String description,
-                            OsVersion os_version,
-                            EventWrapper data_protetion_disable,
-                            EventWrapper device_compromised,
-                            EventWrapper mdm_deactivated,
-                            DisallowedDevices disallowed_devices) {
+    private IosControlPolicy(String name, int status, String description,
+                             OsVersion os_version,
+                             EventWrapper data_protetion_disable,
+                             EventWrapper device_compromised,
+                             EventWrapper mdm_deactivated,
+                             DisallowedDevices disallowed_devices) {
         super(name, status, description);
         this.os_version = os_version;
         this.data_protetion_disable = data_protetion_disable;
@@ -103,9 +104,8 @@ public class IosControlPolicy extends Policy {
         if (!device_compromised.equals(that.device_compromised)) return false;
         if (!disallowed_devices.equals(that.disallowed_devices)) return false;
         if (!mdm_deactivated.equals(that.mdm_deactivated)) return false;
-        if (!os_version.equals(that.os_version)) return false;
+        return os_version.equals(that.os_version);
 
-        return true;
     }
 
     @Override

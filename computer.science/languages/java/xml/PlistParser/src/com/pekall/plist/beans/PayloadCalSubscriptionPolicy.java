@@ -1,5 +1,6 @@
 package com.pekall.plist.beans;
 
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PayloadCalSubscriptionPolicy extends PayloadBase {
 
     /**
@@ -87,10 +88,8 @@ public class PayloadCalSubscriptionPolicy extends PayloadBase {
             return false;
         if (SubCalAccountUseSSL != null ? !SubCalAccountUseSSL.equals(that.SubCalAccountUseSSL) : that.SubCalAccountUseSSL != null)
             return false;
-        if (SubCalAccountUsername != null ? !SubCalAccountUsername.equals(that.SubCalAccountUsername) : that.SubCalAccountUsername != null)
-            return false;
+        return !(SubCalAccountUsername != null ? !SubCalAccountUsername.equals(that.SubCalAccountUsername) : that.SubCalAccountUsername != null);
 
-        return true;
     }
 
     @Override

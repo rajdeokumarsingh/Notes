@@ -16,6 +16,7 @@ package com.pekall.plist.su.policy;
 /**
  * XML element for system_exception_alert_policy.system_exception
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class SystemException {
     /**
      * 状态， 0:不生效, 1:生效
@@ -65,9 +66,8 @@ public class SystemException {
         if (status != that.status) return false;
         if (!description.equals(that.description)) return false;
         if (!eventId.equals(that.eventId)) return false;
-        if (!type.equals(that.type)) return false;
+        return type.equals(that.type);
 
-        return true;
     }
 
     @Override

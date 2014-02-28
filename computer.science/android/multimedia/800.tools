@@ -1,0 +1,24 @@
+
+bless
+    二进制文件分析工具
+
+MediaInfo
+
+    检测多媒体文件格式的程序 
+        http://mediainfo.sourceforge.net/zh-CN
+
+    sudo add-apt-repository ppa:shiki/mediainfo
+    sudo apt-get update
+    sudo apt-get install mediainfo
+
+MP4Parser
+    mp4 文件格式分析http://code.google.com/p/mp4parser/
+
+Android 工具
+    # 显示所有omx解码器信息
+    # stagefright -l
+    # stagefright -h
+
+    # media -h
+
+

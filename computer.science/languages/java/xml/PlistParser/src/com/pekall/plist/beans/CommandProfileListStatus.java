@@ -6,13 +6,14 @@ import java.util.List;
 /**
  * Status response for ProfileList command
  */
+@SuppressWarnings("UnusedDeclaration")
 public class CommandProfileListStatus extends CommandStatusMsg {
 
     /**
      * Array of dictionaries. Each entry describes an installed profile.
      * If the list is null, there are no profile installed.
      */
-    List<PayloadArrayWrapper> ProfileList;
+    private List<PayloadArrayWrapper> ProfileList;
 
     public CommandProfileListStatus() {
     }
@@ -50,9 +51,8 @@ public class CommandProfileListStatus extends CommandStatusMsg {
 
         CommandProfileListStatus that = (CommandProfileListStatus) o;
 
-        if(this.hashCode() != that.hashCode()) return false;
+        return this.hashCode() == that.hashCode();
 
-        return true;
     }
 
     @Override

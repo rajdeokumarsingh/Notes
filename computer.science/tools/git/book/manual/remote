@@ -1,0 +1,37 @@
+
+git remote
+
+    git remote -v # list address
+
+    git remote add origin git://git.hut.com/jr/home/abc.git
+    git remote rename origin jiangrui001
+    git remote rm jiangrui001
+    git remote show jiangrui001
+
+    EXAMPLES
+    * Add a new remote, fetch, and check out a branch from it
+        $ git remote
+        origin
+        $ git branch -r
+        origin/master
+        $ git remote add linux-nfs git://linux-nfs.org/pub/linux/nfs-2.6.git
+        $ git remote
+        linux-nfs
+        origin
+        $ git fetch
+        * refs/remotes/linux-nfs/master: storing branch 'master' ...
+        commit: bf81b46
+        $ git branch -r
+        origin/master
+        linux-nfs/master
+        $ git checkout -b nfs linux-nfs/master
+        ...
+
+    * Imitate git clone but track only selected branches
+        $ mkdir project.git
+        $ cd project.git
+        $ git init
+        $ git remote add -f -t master -m master origin git://example.com/git.git/
+        $ git merge origin
+
+

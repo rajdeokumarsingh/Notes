@@ -17,6 +17,7 @@ package com.pekall.plist.su.policy;
 /**
  * XML configuration for "app_control_list"
  */
+@SuppressWarnings("UnusedDeclaration")
 public class AppControlList extends Policy {
 
     private AppInfoWrapper mustInstall = new AppInfoWrapper();
@@ -53,22 +54,22 @@ public class AppControlList extends Policy {
         StringBuilder sb = new StringBuilder();
         sb.append("mustInstall{");
         for (AppInfo info : mustInstall.getInfos()) {
-            sb.append(info.toString() + ",");
+            sb.append(info.toString()).append(",");
         }
         sb.append("}");
         sb.append(",whiteList{");
         for (AppInfo info : whiteList.getInfos()) {
-            sb.append(info.toString() + ",");
+            sb.append(info.toString()).append(",");
         }
         sb.append("}");
         sb.append(",blackList{");
         for (AppInfo info : blackList.getInfos()) {
-            sb.append(info.toString() + ",");
+            sb.append(info.toString()).append(",");
         }
         sb.append("}");
         sb.append(",greyList{");
         for (AppInfo info : greyList.getInfos()) {
-            sb.append(info.toString() + ",");
+            sb.append(info.toString()).append(",");
         }
         sb.append("}");
         return "AppControlList{" +
@@ -85,9 +86,8 @@ public class AppControlList extends Policy {
 
         AppControlList that = (AppControlList) o;
 
-        if (this.hashCode() != that.hashCode()) return false;
+        return this.hashCode() == that.hashCode();
 
-        return true;
     }
 
     @Override

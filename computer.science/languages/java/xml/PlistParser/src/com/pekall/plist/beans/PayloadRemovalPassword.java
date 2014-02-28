@@ -6,6 +6,7 @@ package com.pekall.plist.beans;
  * and has a password value set, the device asks for the password when the user
  * taps a profile's Remove button. This payload is encrypted with the rest of the profile.
  */
+@SuppressWarnings("UnusedDeclaration")
 public class PayloadRemovalPassword extends PayloadBase {
 
     /**
@@ -33,10 +34,8 @@ public class PayloadRemovalPassword extends PayloadBase {
 
         PayloadRemovalPassword that = (PayloadRemovalPassword) o;
 
-        if (RemovalPassword != null ? !RemovalPassword.equals(that.RemovalPassword) : that.RemovalPassword != null)
-            return false;
+        return !(RemovalPassword != null ? !RemovalPassword.equals(that.RemovalPassword) : that.RemovalPassword != null);
 
-        return true;
     }
 
     @Override

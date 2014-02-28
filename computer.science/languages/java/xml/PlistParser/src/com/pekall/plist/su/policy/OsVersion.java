@@ -3,19 +3,20 @@ package com.pekall.plist.su.policy;
 /**
  * XML element for ios_control_policy.os_version
  */
+@SuppressWarnings("UnusedDeclaration")
 public class OsVersion extends EventWrapper {
 
     /**
      * If the os version is less than the value,
      * punishing event will be triggered
      */
-    double less_than;
+    private double less_than;
 
     public OsVersion() {
         this(0.0, "");
     }
 
-    public OsVersion(double less_than, String id) {
+    private OsVersion(double less_than, String id) {
         super(id);
         this.less_than = less_than;
     }
@@ -36,9 +37,8 @@ public class OsVersion extends EventWrapper {
 
         OsVersion osVersion = (OsVersion) o;
 
-        if (Double.compare(osVersion.less_than, less_than) != 0) return false;
+        return Double.compare(osVersion.less_than, less_than) == 0;
 
-        return true;
     }
 
     @Override

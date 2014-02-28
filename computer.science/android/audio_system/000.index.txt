@@ -1,0 +1,98 @@
+important logic concept:
+    ./010.important.concept.txt
+    ./100.basic.knowledge/pcm.format.txt
+
+    音频策略管理
+        stream_type，strategy, device三者之间的关系：
+        ./300.audio.policy/stream.strategy.device.txt
+
+
+Audio系统的进程和二进制文件组织
+    ./011.process.binary.layout
+
+flow index:
+    声音是如何播放出来的
+        音乐整个流程
+            
+            openOutput/closeOutput
+            系统启动时，会打开默认的audio output
+            蓝牙a2dp连接时，会打开a2dp audio output
+                400.code.reading/flow.open.output.cpp
+
+            播放声音之前, 会startOutput/stopOutput
+                主要是设置某个output的使用情况
+                400.code.reading/flow.start-stop.output.cpp
+
+            400.code.reading/flow.player.cpp
+                |
+                V
+            400.code.reading/flow.audiotrack.cpp
+                |
+                V
+            400.code.reading/flow.audioflinger.cpp
+
+            // TODO:
+            frameworks/av/media/libstagefright/AudioPlayer.cpp
+                How to user AudioTracker
+            frameworks/av/media/libmedia/AudioTrack.cpp
+            frameworks/base/core/jni/android_media_AudioTrack.cpp
+            frameworks/av/services/audioflinger/AudioFlinger.cpp
+
+        音乐播放
+
+        来电铃声播
+            vobios player
+
+        系统按键声音
+            soundpool
+
+        dtmf tone
+
+    声音是如何录制的
+        400.code.reading/flow.recorder.cpp
+        400.code.reading/flow.setAudioSource.cpp
+
+    声音通道如何管理
+        各种不同类型的声音从哪种设备中输出
+            audio.policy/stream.strategy.device.txt
+
+        声音通道的打开和关闭 
+            400.code.reading/flow.open.output.cpp
+
+        声音通道的切换
+            400.code.reading/flow.setParameters.cpp
+
+        声音冲突的解决
+            400.code.reading/flow.conflict.cpp
+            400.code.reading/AudioPolicyManagerBase.cpp
+
+    声音音量如何管理
+        400.code.reading/flow.volume.adjusting.cpp
+            400.code.reading/volume.audio.service.java
+            400.code.reading/volume.audio.service.stream_status.java
+
+                400.code.reading/volume.ui.java
+
+            400.code.reading/volume.audio.policy.manager.cpp
+            // todo: volume for stream
+
+    设备连接上的流程
+        耳机，蓝牙耳机连接/断开
+        400.code.reading/bt.cpp
+       
+    打电话播放铃音的流程        
+        400.code.reading/flow.incoming.call.cpp
+            
+audio framework相关知识学习
+    MediaPlayerService
+    AudioSink
+    stagefright
+        stagefright.txt
+
+code index:
+    ./001.index.code.framework.txt
+    ./002.index.code.HAL.txt
+
+how to:
+    ./700.tools/dump.pcm.txt
+

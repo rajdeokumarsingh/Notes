@@ -1,0 +1,72 @@
+三个基本层次
+    1. working tree
+
+    2. local repository
+        storage at local folder:    .git
+
+    3. remote repository
+        alias:              upstream repository 
+
+checkout
+    update the working tree, make it same with a specific version in the repository
+
+clone
+    1. create a copy of the repository   (copy the .git folder)
+    2. check out the master branch of the repository to the working tree
+                                         (copy content the branch to working tree)
+
+commit:
+    在 Git 中提交时，会保存一个提交（commit）对象
+    该对象包含
+        一个指向暂存内容快照的指针
+        本次提交的作者等相关附属信息
+        包含零个或多个指向该提交对象的父对象指针
+            首次提交是没有直接祖先的
+            普通提交有一个祖先
+            由两个或多个分支合并产生的提交则有多个祖先
+
+branch:
+    指向commit对象的可变的指针
+    缺省branch是master
+
+    当存在多个branch时，git如何知道工作在哪个branch上呢？
+        HEAD指针
+            指向当前工作的local branch
+                缺省指向master 
+
+            每次提交后，HEAD都随着分支移动
+
+            git checkout new_branch后
+                HEAD指向new_branch
+
+    fast forward
+        合并分支时，仅仅需要将分支右移动到另一个分支上
+
+    远程分支
+        本地对远程仓库中分支的索引
+        readonly
+
+        origin/contacts
+
+    跟踪远程分支
+        在该分支中push/pull直接会操作对应的远程分支
+        克隆时，默认会创建一个master分支跟踪origin/master
+        
+revision (版本)
+    record the content of a commit
+
+Log/Commit Message
+
+Tag (标签)
+    a alias for the internal revision number
+    tas is readonly
+
+Conflict
+    situation when git can not do merge automatically
+
+HEAD
+    represent the latest commit in the current branch
+
+
+rebase
+    不要在remote repo进行rebase

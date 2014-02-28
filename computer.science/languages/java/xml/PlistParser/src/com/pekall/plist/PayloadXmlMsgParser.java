@@ -19,8 +19,9 @@ import java.util.List;
 /**
  * XML parser for ios a whole payload message
  */
+@SuppressWarnings("UnusedDeclaration")
 public class PayloadXmlMsgParser {
-    private static HashMap<String, Class> payloadTypes = new HashMap<String, Class>();
+    private static final HashMap<String, Class> payloadTypes = new HashMap<String, Class>();
 
     static {
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_PASSWORD_POLICY, PayloadPasswordPolicy.class);
@@ -60,7 +61,7 @@ public class PayloadXmlMsgParser {
         payloadTypes.put(PayloadBase.PAYLOAD_TYPE_ACTIVE_SYNC_POLICY, PayloadActiveSyncPolicy.class);
     }
 
-    private HashMap<String, PayloadBase> payloads = new HashMap<String, PayloadBase>();
+    private final HashMap<String, PayloadBase> payloads = new HashMap<String, PayloadBase>();
 
     private PayloadArrayWrapper wrapper;
     /**

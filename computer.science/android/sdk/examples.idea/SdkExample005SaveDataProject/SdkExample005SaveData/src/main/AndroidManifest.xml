@@ -39,6 +39,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".PrefActivity"/>
+        <activity android:name=".DbActivity"/>
 
         <provider android:name=".provider.SdkExampleProvider"
                   android:authorities="android.sdk.example.provider"

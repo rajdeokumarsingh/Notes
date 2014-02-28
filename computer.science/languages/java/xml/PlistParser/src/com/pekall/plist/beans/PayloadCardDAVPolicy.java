@@ -1,5 +1,6 @@
 package com.pekall.plist.beans;
 
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PayloadCardDAVPolicy extends PayloadBase {
 
     /**
@@ -116,10 +117,8 @@ public class PayloadCardDAVPolicy extends PayloadBase {
         if (CardDAVPort != null ? !CardDAVPort.equals(that.CardDAVPort) : that.CardDAVPort != null) return false;
         if (CardDAVUseSSL != null ? !CardDAVUseSSL.equals(that.CardDAVUseSSL) : that.CardDAVUseSSL != null)
             return false;
-        if (CardDAVUsername != null ? !CardDAVUsername.equals(that.CardDAVUsername) : that.CardDAVUsername != null)
-            return false;
+        return !(CardDAVUsername != null ? !CardDAVUsername.equals(that.CardDAVUsername) : that.CardDAVUsername != null);
 
-        return true;
     }
 
     @Override

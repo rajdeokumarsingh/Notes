@@ -4,6 +4,7 @@ package com.pekall.plist.beans;
  * A Restrictions payload allows the administrator to restrict the user
  * from doing certain things with the device, such as using the camera.
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PayloadRestrictionsPolicy extends PayloadBase {
 
     /**
@@ -482,10 +483,8 @@ public class PayloadRestrictionsPolicy extends PayloadBase {
             return false;
         if (safariAllowPopups != null ? !safariAllowPopups.equals(that.safariAllowPopups) : that.safariAllowPopups != null)
             return false;
-        if (safariForceFraudWarning != null ? !safariForceFraudWarning.equals(that.safariForceFraudWarning) : that.safariForceFraudWarning != null)
-            return false;
+        return !(safariForceFraudWarning != null ? !safariForceFraudWarning.equals(that.safariForceFraudWarning) : that.safariForceFraudWarning != null);
 
-        return true;
     }
 
     @Override

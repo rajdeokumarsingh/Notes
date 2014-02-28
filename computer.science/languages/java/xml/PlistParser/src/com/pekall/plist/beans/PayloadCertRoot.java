@@ -2,6 +2,7 @@ package com.pekall.plist.beans;
 
 import java.util.Arrays;
 
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PayloadCertRoot extends PayloadBase {
     private String PayloadCertificateFileName;
     private byte[] PayloadContent;
@@ -41,9 +42,8 @@ public class PayloadCertRoot extends PayloadBase {
 
         if (PayloadCertificateFileName != null ? !PayloadCertificateFileName.equals(that.PayloadCertificateFileName) : that.PayloadCertificateFileName != null)
             return false;
-        if (!Arrays.equals(PayloadContent, that.PayloadContent)) return false;
+        return Arrays.equals(PayloadContent, that.PayloadContent);
 
-        return true;
     }
 
     @Override

@@ -13,12 +13,13 @@ import java.util.List;
 /**
  * Converter for PLIST objects and bean objects
  */
+@SuppressWarnings("UnusedDeclaration")
 public class PlistBeanConverter {
 
     /**
      * 通过传入的对象，直接转换为对应的plist，如果出入的对象为空，返回一个空的plist。
      * @param data 需要抓换的bean
-     * @return
+     * @return xml string from the bean object
      */
     public static String createPlistXmlFromBean(Object data){
         NSDictionary root = createNdictFromBean(data);
@@ -52,7 +53,7 @@ public class PlistBeanConverter {
      * @throws InvocationTargetException
      * @throws InstantiationException
      */
-    public static Object createBeanFromNdict(NSDictionary root, Class clz) throws
+    public static Object createBeanFromNdict(NSDictionary root, Class<?> clz) throws
             NoSuchMethodException, IllegalAccessException,
             InvocationTargetException, InstantiationException {
         // TODO: remove unused exception
@@ -72,15 +73,8 @@ public class PlistBeanConverter {
                 field.setAccessible(true);
 
                 // Convert two under lines in java field to space
-                String fieldName = field.getName();
-                if (fieldName.contains("__")) {
-                    fieldName = fieldName.replace("__", " ");
-                }
-                String keyName = KeyFieldTranslation.translateJavaField(fieldName);
-                if (keyName == null) {
-                    keyName = fieldName;
-                }
-                NSObject nsObject = root.objectForKey(keyName);
+                String fieldName = convertSpecialFieldName(field);
+                NSObject nsObject = root.objectForKey(tryTranslateFieldName(fieldName));
                 if (nsObject == null) continue;
 
                 PlistDebug.logVerbose("----------------------------------------");
@@ -125,7 +119,7 @@ public class PlistBeanConverter {
      * @param elementType element type of the list
      * @return the Java list
      */
-    public static List createListFromNSArray(NSArray array, Type elementType) {
+    private static List createListFromNSArray(NSArray array, Type elementType) {
         Class elementClass = null;
         if(elementType instanceof ParameterizedType) {
             // Nested List, like List<List<List<String>>>
@@ -135,10 +129,10 @@ public class PlistBeanConverter {
             elementClass = (Class) elementType;
         }
 
-        ArrayList list = new ArrayList();
+        ArrayList<Object> list = new ArrayList<Object>();
         for (NSObject nsObject : array.getArray()) {
             if(elementClass == null) {
-                if(elementType instanceof ParameterizedType) {
+                if(elementType != null) {
                     // Handle nested list
                     if (!NSArray.class.equals(nsObject.getClass())) {
                         PlistDebug.logError("Type error!");
@@ -192,13 +186,8 @@ public class PlistBeanConverter {
     }
 
     private static void appendData2Ndict(Object data, NSDictionary root) {
-        if(data == null){
-            return;
-        }
-        if (root == null) {
-            PlistDebug.logError("appendData2Ndict null argument," +
-                    " data: " + data + ", root: " + root);
-            return;
+        if (data == null || root == null) {
+            throw new IllegalStateException("param data or root is null!");
         }
 
         Class clz = data.getClass();
@@ -212,29 +201,14 @@ public class PlistBeanConverter {
             for (Field field : fields) {
                 field.setAccessible(true);
                 Class type = field.getType();
-
-                // Convert two under lines in java field to space
-                String fieldName = field.getName();
-                if (fieldName.contains("__")) {
-                    fieldName = fieldName.replace("__", " ");
-                }
+                String fieldName = convertSpecialFieldName(field);
 
                 PlistDebug.logVerbose("========================================");
                 PlistDebug.logVerbose(fieldName);
                 PlistDebug.logVerbose(type.getName());
 
-                // Ignore final fields
-                if ((field.getModifiers() & Modifier.FINAL) != 0) {
-                    PlistDebug.logVerbose("final field, continue!");
+                if (shouldIgnoreField(field)) {
                     continue;
-                }
-                // Ignore fields with special annotation
-                if(field.isAnnotationPresent(PlistControl.class)) {
-                    PlistControl annotation = field.getAnnotation(PlistControl.class);
-                    if (annotation != null && !annotation.toPlistXml()) {
-                        PlistDebug.logVerbose("ignore field for annotation!");
-                        continue;
-                    }
                 }
 
                 try {
@@ -252,50 +226,36 @@ public class PlistBeanConverter {
                         root.put(fieldName, field.getDouble(data));
                     } else if (Boolean.class.equals(type)) {
                         if (field.get(data) == null) continue;
-
                         root.put(fieldName, field.get(data));
                     } else if (Integer.class.equals(type)) {
                         if (field.get(data) == null) continue;
-
                         root.put(fieldName, field.get(data));
                     } else if (Long.class.equals(type)) {
                         if (field.get(data) == null) continue;
-
                         root.put(fieldName, field.get(data));
                     } else if (Float.class.equals(type)) {
                         if (field.get(data) == null) continue;
-
                         root.put(fieldName, field.get(data));
                     } else if (Double.class.equals(type)) {
                         if (field.get(data) == null) continue;
-
                         root.put(fieldName, field.get(data));
                     } else if (String.class.equals(type)) {
                         if (field.get(data) == null) continue;
-
                         root.put(fieldName, (String) field.get(data));
                     } else if (List.class.equals(type)) {
                         if (field.get(data) == null) continue;
-
                         root.put(fieldName, createNsArrayFromList((List) field.get(data)));
                     } else if (byte[].class.equals(type)) {
                         if (field.get(data) == null) continue;
-
                         root.put(fieldName, new NSData((byte[]) field.get(data)));
                     } else if (Date.class.equals(type)) {
                         if (field.get(data) == null) continue;
-
                         root.put(fieldName, new NSDate((Date) field.get(data)));
                     } else {
                         if (field.get(data) == null) continue;
-                        // Since some key names are illegal for a java field name,
-                        // we need to do a translation.
-                        String keyName = KeyFieldTranslation.translateJavaField(fieldName);
-                        if (keyName == null) {
-                            keyName = fieldName;
-                        }
+
                         NSDictionary dictionary = createNdictFromBean(field.get(data));
-                        root.put(keyName, dictionary);
+                        root.put(tryTranslateFieldName(fieldName), dictionary);
                     }
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
@@ -305,6 +265,44 @@ public class PlistBeanConverter {
             // Append fields of ancestors
             clz = clz.getSuperclass();
         }
+    }
+
+    /* Since some key names are illegal for a java field name,
+     * we need to do a translation.
+     */
+    private static String tryTranslateFieldName(String fieldName) {
+        String keyName = KeyFieldTranslation.translateJavaField(fieldName);
+        if (keyName == null) {
+            keyName = fieldName;
+        }
+        return keyName;
+    }
+
+    private static boolean shouldIgnoreField(Field field) {
+        // Ignore final fields
+        if ((field.getModifiers() & Modifier.FINAL) != 0) {
+            PlistDebug.logVerbose("final field, continue!");
+            return true;
+        }
+
+        // Ignore fields with special annotation
+        if(field.isAnnotationPresent(PlistControl.class)) {
+            PlistControl annotation = field.getAnnotation(PlistControl.class);
+            if (annotation != null && !annotation.toPlistXml()) {
+                PlistDebug.logVerbose("ignore field for annotation!");
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static String convertSpecialFieldName(Field field) {
+        // Convert two under lines in java field to space
+        String fieldName = field.getName();
+        if (fieldName.contains("__")) {
+            fieldName = fieldName.replace("__", " ");
+        }
+        return fieldName;
     }
 
     private static NSArray createNsArrayFromList(List list) {
@@ -363,9 +361,8 @@ public class PlistBeanConverter {
 
         ParameterizedType aType = (ParameterizedType) genericType;
         Type[] typeArguments = aType.getActualTypeArguments();
-        for (Type typeArgument : typeArguments) {
-            PlistDebug.logVerbose("typeArgument: " + typeArgument);
-            return typeArgument;
+        if (typeArguments != null) {
+            return typeArguments[0];
         }
         return null;
     }
@@ -401,7 +398,7 @@ public class PlistBeanConverter {
                 if (fieldClass.equals(boolean.class)) {
                     field.setBoolean(data, number.boolValue());
                 } else if (fieldClass.equals(Boolean.class)) {
-                    field.set(data, Boolean.valueOf(number.boolValue()));
+                    field.set(data, number.boolValue());
                 } else {
                     PlistDebug.logError("Convert type error!");
                 }
@@ -411,13 +408,13 @@ public class PlistBeanConverter {
                     field.setInt(data, number.intValue());
                     break;
                 } else if (fieldClass.equals(Integer.class)) {
-                    field.set(data, Integer.valueOf(number.intValue()));
+                    field.set(data, number.intValue());
                     break;
                 } else if (fieldClass.equals(long.class)) {
                     field.setLong(data, number.longValue());
                     break;
                 } else if (fieldClass.equals(Long.class)) {
-                    field.set(data, Long.valueOf(number.longValue()));
+                    field.set(data, number.longValue());
                     break;
                 }
                 /* else {
@@ -434,11 +431,11 @@ public class PlistBeanConverter {
                 if (fieldClass.equals(float.class)) {
                     field.setFloat(data, number.floatValue());
                 } else if (fieldClass.equals(Float.class)) {
-                    field.set(data, Float.valueOf(number.floatValue()));
+                    field.set(data, number.floatValue());
                 } else if (fieldClass.equals(double.class)) {
                     field.setDouble(data, number.doubleValue());
                 } else if (fieldClass.equals(Double.class)) {
-                    field.set(data, Double.valueOf(number.doubleValue()));
+                    field.set(data, number.doubleValue());
                 } else {
                     PlistDebug.logError("Convert type error!");
                 }

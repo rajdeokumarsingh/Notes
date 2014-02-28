@@ -1,6 +1,5 @@
 package org.java_websocket.client;
 
-import com.google.gson.Gson;
 import com.pekall.push.test.*;
 import org.java_websocket.WebSocket;
 import org.java_websocket.WebSocketAdapter;
@@ -47,10 +46,11 @@ public abstract class WebSocketClientTest
 
     private int sockCount = 1;
 
-    /**
-	 * The URI this channel is supposed to connect to.
-	 */
-	protected URI uri = null;
+
+	// The URI this channel is supposed to connect to.
+	private String queryServerAddr = null;
+
+    private URI pushServerUris[] = null;
 
 	private WebSocketImpl[] engines;
 	private Socket[] sockets;
@@ -75,7 +75,7 @@ public abstract class WebSocketClientTest
 	private int connectTimeout = 0;
 
 	/** This open a websocket connection as specified by rfc6455 */
-	public WebSocketClientTest(URI serverURI, int sockCount) {
+	public WebSocketClientTest(String serverURI, int sockCount) {
         this(serverURI, new Draft_17(), sockCount);
     }
 
@@ -84,18 +84,18 @@ public abstract class WebSocketClientTest
 	 * specified URI. The channel does not attampt to connect automatically. The connection
 	 * will be established once you call <var>connect</var>.
 	 */
-	public WebSocketClientTest(URI serverUri, Draft draft, int sockCount) {
-        this(serverUri, draft, null, 1000, sockCount);
+	public WebSocketClientTest(String serverUri, Draft draft, int sockCount) {
+        this(serverUri, draft, null, 5000, sockCount);
     }
 
-	public WebSocketClientTest(URI serverUri, Draft protocolDraft,
+	public WebSocketClientTest(String serverAddr, Draft protocolDraft,
                                Map<String, String> httpHeaders, int connectTimeout, int sockCount) {
-		if( serverUri == null ) {
+		if( serverAddr == null ) {
 			throw new IllegalArgumentException();
 		} else if( protocolDraft == null ) {
 			throw new IllegalArgumentException( "null as draft is permitted for `WebSocketServer` only!" );
 		}
-		this.uri = serverUri;
+		this.queryServerAddr = serverAddr;
 		this.draft = protocolDraft;
 		this.headers = httpHeaders;
 		this.connectTimeout = connectTimeout;
@@ -111,6 +111,45 @@ public abstract class WebSocketClientTest
 		return draft;
 	}
 
+    public String getStatisticString() {
+        int nullSock = 0;
+        int notOpen = 0;
+        int connecting = 0;
+        int open = 0;
+        int closing = 0;
+        int closed = 0;
+
+        for (int i = 0; i < sockCount; i++) {
+            if(engines[i] == null) {
+                nullSock++;
+                continue;
+            }
+
+            if (engines[i].getReadyState() == READYSTATE.NOT_YET_CONNECTED) {
+                notOpen++;
+            } else if (engines[i].getReadyState() == READYSTATE.CONNECTING) {
+                connecting++;
+            } else if (engines[i].getReadyState() == READYSTATE.OPEN) {
+                open++;
+            } else if (engines[i].getReadyState() == READYSTATE.CLOSING) {
+                closing++;
+            } else if (engines[i].getReadyState() == READYSTATE.CLOSED) {
+                closed++;
+            }
+        }
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("websocket state: [")
+                .append("null: ").append(nullSock)
+                .append(", not yet open: ").append(notOpen)
+                .append(", connecting: ").append(connecting)
+                .append(", open: ").append(open)
+                .append(", closing: ").append(closing)
+                .append(", closed: ").append(closed)
+                .append("]");
+        return sb.toString();
+    }
+
 	/**
 	 * Initiates the websocket connection. This method does not block.
 	 */
@@ -119,6 +158,7 @@ public abstract class WebSocketClientTest
         handshakeDone = false;
 
         recvThread = new Thread(this);
+        recvThread.setName("recv thread");
         recvThread.start();
 
         Debug.log("wait for handshake ...");
@@ -165,13 +205,14 @@ public abstract class WebSocketClientTest
 	}
 
     public void register(int id) {
+        Debug.log("register, id: " + PushConstant.DEVICE_ID_PREFIX +
+                PushConstant.DEVICE_BEGIN_ID + id);
         send(PushMessageManager.genShakeHandMessage(
                 PushConstant.DEVICE_BEGIN_ID + id).toJson(), id);
     }
 
     void send(String text, int id) throws NotYetConnectedException {
         if (engines[id] == null || !engines[id].isOpen()) return;
-        Debug.logVerbose("register msg, id: " + id + ", msg: " + text);
         engines[id].send(text);
     }
 
@@ -215,15 +256,21 @@ public abstract class WebSocketClientTest
         // assert ( sockets.isClosed() );
     }
 
+    private long mTotalReadCnt = 0;
+
     private void receiveThreadLoop() {
         byte[] rawBuffer = new byte[WebSocketImpl.RCVBUF];
         while (!isClosed()) {
             int readCnt = receiveParseData(rawBuffer);
+            mTotalReadCnt += readCnt;
 
             synchronized (initLock) {
-                if(readCnt > 0 && !handshakeDone) {
+                // We should resume main thread after about 95% handshake is done
+                if (!handshakeDone && mTotalReadCnt > sockCount * 0.99) {
                     handshakeDone = true;
                     initLock.notify();
+
+                    Debug.log("handshake total recv cnt: " + mTotalReadCnt);
                 }
             }
 
@@ -282,20 +329,41 @@ public abstract class WebSocketClientTest
     private void createSendThread() {
         Debug.log("create send thread");
         sendThread = new Thread(new WebsocketWriteThread());
+        sendThread.setName("send thread");
         sendThread.start();
     }
 
     private void initSockets() {
         Debug.log("init sockets begin");
+        pushServerUris = new URI[sockCount];
 
         for (int i = 0; i < sockCount; i++) {
             assert (engines[i] != null);
 
-            try {
-                Debug.log("init socket: " + i);
+            String queryUrl = queryServerAddr + PushConstant.PUSH_QUERY_PATH +
+                    PushConstant.PUSH_QUERY_PARAM + PushConstant.DEVICE_BEGIN_ID + i;
+            Debug.log("query push server addr:" + queryUrl);
 
+            ServerAddress serverAddress;
+            try {
+                serverAddress = ServerAddrQuery.query(queryUrl);
+                Debug.logVerbose("serverAddress: " + serverAddress.toString());
+                pushServerUris[i] = URI.create(PushConstant.WS_SCHEME + serverAddress.getIp()
+                        + ":" + serverAddress.getPort() + PushConstant.WS_PATH);
+                Debug.log("query push server uri:" + pushServerUris[i].toString());
+            } catch (IOException e) {
+                e.printStackTrace();
+                continue;
+            }
+
+            try {
+                Debug.log("init socket: " + i +
+                        ", host: " + pushServerUris[i].getHost() +
+                        ", port: " + pushServerUris[i].getPort());
                 sockets[i] = new Socket(proxy);
-                sockets[i].connect(new InetSocketAddress(uri.getHost(), getPort()), connectTimeout);
+
+                sockets[i].connect(new InetSocketAddress(pushServerUris[i].getHost(),
+                        pushServerUris[i].getPort()), connectTimeout);
                 sockInStreams[i] = sockets[i].getInputStream();
                 sockOutStreams[i] = sockets[i].getOutputStream();
             } catch (Exception e) {
@@ -307,6 +375,7 @@ public abstract class WebSocketClientTest
         Debug.log("init sockets done!");
     }
 
+    private int mTotalSendHandshake = 0;
     private void doHandshakes() {
         Debug.log("handshake begin");
         for (int i = 0; i < sockCount; i++) {
@@ -319,8 +388,9 @@ public abstract class WebSocketClientTest
                 onWebsocketError(engines[i], e);
                 engines[i].closeConnection(CloseFrame.NEVER_CONNECTED, e.getMessage());
             }
+            mTotalSendHandshake++;
         }
-        Debug.log("handshake in queue");
+        Debug.log("handshake in queue [" + mTotalSendHandshake + "]");
     }
 
     private void clearSockResource(int i) {
@@ -344,35 +414,19 @@ public abstract class WebSocketClientTest
         }
     }
 
-    private int getPort() {
-		int port = uri.getPort();
-		if( port == -1 ) {
-			String scheme = uri.getScheme();
-			if( scheme.equals( "wss" ) ) {
-				return WebSocket.DEFAULT_WSS_PORT;
-			} else if( scheme.equals( "ws" ) ) {
-				return WebSocket.DEFAULT_PORT;
-			} else {
-				throw new RuntimeException( "unkonow scheme" + scheme );
-			}
-		}
-		return port;
-	}
-
-	private void sendHandshake(int i) throws InvalidHandshakeException {
+    private void sendHandshake(int i) throws InvalidHandshakeException {
         assert (engines[i] != null);
 
         String path;
-        String part1 = uri.getPath();
-        String part2 = uri.getQuery();
+        String part1 = pushServerUris[i].getPath();
+        String part2 = pushServerUris[i].getQuery();
         if (part1 == null || part1.length() == 0)
             path = "/";
         else
             path = part1;
         if (part2 != null)
             path += "?" + part2;
-        int port = getPort();
-        String host = uri.getHost() + (port != WebSocket.DEFAULT_PORT ? ":" + port : "");
+        String host = pushServerUris[i].getHost() + ":" + pushServerUris[i].getPort();
 
         HandshakeImpl1Client handshake = new HandshakeImpl1Client();
         handshake.setResourceDescriptor(path);
@@ -451,6 +505,7 @@ public abstract class WebSocketClientTest
             Debug.logError("can not find socket");
             return;
         }
+
         register(i);
     }
 
@@ -543,7 +598,7 @@ public abstract class WebSocketClientTest
 		@Override
 		public void run() {
             Debug.log("send thread created");
-            Thread.currentThread().setName("WebsocketWriteThread");
+            // Thread.currentThread().setName("WebsocketWriteThread");
 
             while (!Thread.interrupted()) {
                 // accelerate sending speed
@@ -743,7 +798,8 @@ public abstract class WebSocketClientTest
 	
 	@Override
 	public String getResourceDescriptor() {
-		return uri.getPath();
+		// return queryServerAddr.getPath();
+        return PushConstant.WS_PATH;
 	}
 
     public void initSockContainer(int sockCount) {

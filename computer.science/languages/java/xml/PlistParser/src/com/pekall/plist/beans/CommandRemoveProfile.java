@@ -2,11 +2,10 @@ package com.pekall.plist.beans;
 
 import com.pekall.plist.Utils;
 
-import java.util.Arrays;
-
 /**
  * Command to remove configuration profiles
  */
+@SuppressWarnings("UnusedDeclaration")
 public class CommandRemoveProfile extends CommandObject {
 
     public static final String KEY_IDENTIFIER = "Identifier";
@@ -40,10 +39,9 @@ public class CommandRemoveProfile extends CommandObject {
 
         CommandRemoveProfile that = (CommandRemoveProfile) o;
 
-        if(!Utils.safeString(this.Identifier)
-                .equals(Utils.safeString(that.Identifier))) return false;
+        return Utils.safeString(this.Identifier)
+                .equals(Utils.safeString(that.Identifier));
 
-        return true;
     }
 
     @Override

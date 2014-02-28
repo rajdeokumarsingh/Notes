@@ -1,10 +1,9 @@
 package com.pekall.plist.beans;
 
-import com.pekall.plist.Utils;
-
 /**
  * Command to remove a provisioning profile
  */
+@SuppressWarnings("UnusedDeclaration")
 public class CommandRemoveProvisionProfile extends CommandObject {
 
     public static final String KEY_UUID = "UUID";
@@ -38,9 +37,8 @@ public class CommandRemoveProvisionProfile extends CommandObject {
 
         CommandRemoveProvisionProfile that = (CommandRemoveProvisionProfile) o;
 
-        if (UUID != null ? !UUID.equals(that.UUID) : that.UUID != null) return false;
+        return !(UUID != null ? !UUID.equals(that.UUID) : that.UUID != null);
 
-        return true;
     }
 
     @Override

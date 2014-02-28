@@ -8,11 +8,12 @@ import java.util.List;
 /**
  * XML configuration for sebrowser_history_watch
  */
+@SuppressWarnings("UnusedDeclaration")
 public class BrowserUploadData extends CommandStatusMsg {
     /**
      * List contains history watch historyWatchItems
      */
-    List<HistoryWatchItem> historyWatchItems;
+    private List<HistoryWatchItem> historyWatchItems;
 
     public BrowserUploadData() {
     }
@@ -43,9 +44,8 @@ public class BrowserUploadData extends CommandStatusMsg {
 
         BrowserUploadData that = (BrowserUploadData) o;
 
-        if(this.hashCode() != that.hashCode()) return false;
+        return this.hashCode() == that.hashCode();
 
-        return true;
     }
 
     @Override
@@ -65,12 +65,12 @@ public class BrowserUploadData extends CommandStatusMsg {
         sb.append("{");
         if(historyWatchItems != null) {
             for (HistoryWatchItem item : historyWatchItems) {
-                sb.append(item.toString() + ", ");
+                sb.append(item.toString()).append(", ");
             }
         }
         sb.append("}");
         return "BrowserUploadData{" +
-                "historyWatchItems=" + historyWatchItems +
+                "historyWatchItems=" + sb.toString() +
                 '}';
     }
 }

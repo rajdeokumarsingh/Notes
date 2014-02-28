@@ -2,6 +2,7 @@ package com.pekall.plist.beans;
 
 import java.util.Arrays;
 
+@SuppressWarnings("UnusedDeclaration")
 public class ClearPasscodeReq extends CommandObject {
     public static final String KEY_UNLOCKTOKEN = "UnlockToken";
     private byte[] UnlockToken;
@@ -22,9 +23,8 @@ public class ClearPasscodeReq extends CommandObject {
 
         ClearPasscodeReq that = (ClearPasscodeReq) o;
 
-        if (!Arrays.equals(UnlockToken, that.UnlockToken)) return false;
+        return Arrays.equals(UnlockToken, that.UnlockToken);
 
-        return true;
     }
 
     @Override

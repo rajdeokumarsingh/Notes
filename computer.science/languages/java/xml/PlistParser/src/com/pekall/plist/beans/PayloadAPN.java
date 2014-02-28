@@ -3,6 +3,7 @@ package com.pekall.plist.beans;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PayloadAPN extends PayloadBase {
 
     /**
@@ -121,9 +122,8 @@ public class PayloadAPN extends PayloadBase {
         if (password != null ? !password.equals(that.password) : that.password != null) return false;
         if (proxy != null ? !proxy.equals(that.proxy) : that.proxy != null) return false;
         if (proxyPort != null ? !proxyPort.equals(that.proxyPort) : that.proxyPort != null) return false;
-        if (username != null ? !username.equals(that.username) : that.username != null) return false;
+        return !(username != null ? !username.equals(that.username) : that.username != null);
 
-        return true;
     }
 
     @Override

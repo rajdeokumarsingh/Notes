@@ -1,5 +1,6 @@
 package com.pekall.plist.beans;
 
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PayloadRestrictionsAndroidPolicy extends PayloadBase {
 
     public static final String CTRL_ENABLED = "enabled";
@@ -218,10 +219,8 @@ public class PayloadRestrictionsAndroidPolicy extends PayloadBase {
             return false;
         if (useSensorAidingForLocation != null ? !useSensorAidingForLocation.equals(that.useSensorAidingForLocation) : that.useSensorAidingForLocation != null)
             return false;
-        if (useWirelessNetworkForLocation != null ? !useWirelessNetworkForLocation.equals(that.useWirelessNetworkForLocation) : that.useWirelessNetworkForLocation != null)
-            return false;
+        return !(useWirelessNetworkForLocation != null ? !useWirelessNetworkForLocation.equals(that.useWirelessNetworkForLocation) : that.useWirelessNetworkForLocation != null);
 
-        return true;
     }
 
     @Override

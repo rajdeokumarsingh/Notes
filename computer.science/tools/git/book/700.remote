@@ -1,0 +1,40 @@
+Three protocol
+    1. SSH
+    2. git
+    3. HTTP/HTTPS
+
+
+clone
+    git clone git://github.com/tswicegood/mysite-chp6.git
+
+check remote branch
+    $ git branch -r
+        origin/HEAD -> origin/master
+        origin/about
+        origin/alternate
+        origin/contacts
+        origin/master
+        origin/new
+
+git fetch
+
+git pull remote_repo_name remote_branch_name
+git push remote_repo_name remote_branch_name
+git push remote_repo_name local_branch_name:remote_branch_name
+
+
+create by init
+    git init
+    git remote add origin git://..../a.git
+    git pull origin master
+
+git remote
+    show remote repo name
+git remote -v
+    show detailed repo info
+
+git remote show origin
+
+git remote rename pb paul # change pb to paul
+
+git remote rm pb # remove remote repository

@@ -16,6 +16,7 @@ package com.pekall.plist.su.settings.launcher;
 /**
  * XML configuration for launcher_app_info.item
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class ApkItem {
     /**
      * Name of the application
@@ -130,9 +131,8 @@ public class ApkItem {
         if (name != null ? !name.equals(apkItem.name) : apkItem.name != null) return false;
         if (packageName != null ? !packageName.equals(apkItem.packageName) : apkItem.packageName != null) return false;
         if (row != null ? !row.equals(apkItem.row) : apkItem.row != null) return false;
-        if (screen != null ? !screen.equals(apkItem.screen) : apkItem.screen != null) return false;
+        return !(screen != null ? !screen.equals(apkItem.screen) : apkItem.screen != null);
 
-        return true;
     }
 
     @Override

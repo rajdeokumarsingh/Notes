@@ -6,6 +6,7 @@ import java.util.Arrays;
 /**
  * Store information of a quick launch item.
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class QuickLaunchItem {
     /** DB id */
     private String id;
@@ -39,7 +40,7 @@ public class QuickLaunchItem {
      * @param icon of the item
      * @param update whether the icon should be updated
      */
-    public QuickLaunchItem(String id, String title, String url, byte[] icon, int update) {
+    private QuickLaunchItem(String id, String title, String url, byte[] icon, int update) {
         this.id = id;
         this.title = title;
         this.url = url;
@@ -55,7 +56,7 @@ public class QuickLaunchItem {
      * @param url of the item
      * @param icon of the item
      */
-    public QuickLaunchItem(String id, String title, String url, byte[] icon) {
+    private QuickLaunchItem(String id, String title, String url, byte[] icon) {
         this(id, title, url, new byte[0], 1);
     }
 
@@ -83,7 +84,6 @@ public class QuickLaunchItem {
      * Set the id of the quick launch item
      *
      * @param id of the item
-     * @hide for internal use
      */
     public void setId(String id) {
         this.id = id;
@@ -137,7 +137,7 @@ public class QuickLaunchItem {
     /**
      * Set the icon of the quick launch item
      *
-     * @param icon
+     * @param icon icon of the quick launch
      */
     public void setIcon(byte[] icon) {
         this.blob = icon;
@@ -162,9 +162,8 @@ public class QuickLaunchItem {
 //        if (!Arrays.equals(blob, item.blob)) return false;
 //        if (!id.equals(item.id)) return false;
         if (!title.equals(item.title)) return false;
-        if (!url.equals(item.url)) return false;
+        return url.equals(item.url);
 
-        return true;
     }
 
     @Override

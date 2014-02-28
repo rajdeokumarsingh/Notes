@@ -3,6 +3,7 @@ package com.pekall.plist.beans;
 /**
  * Bean for payload type "com.apple.mobiledevice.passwordpolicy"
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PayloadPasswordPolicy extends PayloadBase {
     /**
      * See quality
@@ -202,10 +203,8 @@ public class PayloadPasswordPolicy extends PayloadBase {
         if (minLength != null ? !minLength.equals(policy.minLength) : policy.minLength != null) return false;
         if (pinHistory != null ? !pinHistory.equals(policy.pinHistory) : policy.pinHistory != null) return false;
         if (quality != null ? !quality.equals(policy.quality) : policy.quality != null) return false;
-        if (requireAlphanumeric != null ? !requireAlphanumeric.equals(policy.requireAlphanumeric) : policy.requireAlphanumeric != null)
-            return false;
+        return !(requireAlphanumeric != null ? !requireAlphanumeric.equals(policy.requireAlphanumeric) : policy.requireAlphanumeric != null);
 
-        return true;
     }
 
     @Override

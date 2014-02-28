@@ -4,14 +4,15 @@ package com.pekall.plist.su.policy;
 /**
  * Wrapper for class Event
  */
+@SuppressWarnings("UnusedDeclaration")
 public class EventWrapper {
 
-    String event_id = "";
+    private String event_id = "";
 
     public EventWrapper() {
     }
 
-    public EventWrapper(String id) {
+    EventWrapper(String id) {
         this.event_id = id;
     }
 
@@ -30,9 +31,8 @@ public class EventWrapper {
 
         EventWrapper that = (EventWrapper) o;
 
-        if (!event_id.equals(that.event_id)) return false;
+        return event_id.equals(that.event_id);
 
-        return true;
     }
 
     @Override

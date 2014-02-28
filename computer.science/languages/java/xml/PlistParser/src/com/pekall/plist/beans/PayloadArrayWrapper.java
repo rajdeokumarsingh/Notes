@@ -8,6 +8,7 @@ import java.util.List;
  * Representing an profile to install.
  * IOS payload in which "PayloadContent" contains an payload array.
  */
+@SuppressWarnings("UnusedDeclaration")
 public class PayloadArrayWrapper extends PayloadBase {
 
     /**
@@ -125,9 +126,8 @@ public class PayloadArrayWrapper extends PayloadBase {
 
         PayloadArrayWrapper that = (PayloadArrayWrapper) o;
 
-        if(this.hashCode() != that.hashCode()) return false;
+        return this.hashCode() == that.hashCode();
 
-        return true;
     }
 
     @Override
@@ -153,7 +153,7 @@ public class PayloadArrayWrapper extends PayloadBase {
         if (PayloadContent != null) {
             sb.append("{");
             for (PayloadBase payloadBase : PayloadContent) {
-                sb.append(payloadBase.toString() + "\n");
+                sb.append(payloadBase.toString()).append("\n");
             }
             sb.append("}");
         }

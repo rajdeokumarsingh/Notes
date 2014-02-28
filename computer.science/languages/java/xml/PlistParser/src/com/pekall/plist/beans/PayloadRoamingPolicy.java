@@ -3,6 +3,7 @@ package com.pekall.plist.beans;
 /**
  * Roaming setting
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PayloadRoamingPolicy extends PayloadBase {
     private boolean voiceRoaming;
     private boolean dataRoaming;
@@ -42,9 +43,8 @@ public class PayloadRoamingPolicy extends PayloadBase {
         PayloadRoamingPolicy that = (PayloadRoamingPolicy) o;
 
         if (dataRoaming != that.dataRoaming) return false;
-        if (voiceRoaming != that.voiceRoaming) return false;
+        return voiceRoaming == that.voiceRoaming;
 
-        return true;
     }
 
     @Override

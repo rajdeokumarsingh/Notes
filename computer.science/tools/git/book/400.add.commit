@@ -1,0 +1,33 @@
+git add -i
+    interactive
+
+git add -p
+    show the diff in the working space
+
+git commit -a
+    commit all changes in the working tree
+
+git commit -m "commit message"
+
+如果刚才提交时忘了暂存某些修改，可以先补上暂存操作，然后再运行 --amend 提交：
+    $ git commit -m 'initial commit'
+    $ git add forgotten_file
+    $ git commit --amend
+
+    上面的三条命令最终只是产生一个提交，第二个提交命令修正了第一个的提交内容。
+
+
+git diff
+    working tree  <----> staging area
+
+    --cached
+        staging area <---> local repository
+
+    HEAD
+        working tree  <----> local repository
+
+git mv index.html hello.html
+
+ignore file:
+    .gitignore          # for all users
+    .git/info/exclude   # only for current user

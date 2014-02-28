@@ -2,6 +2,7 @@ package com.pekall.plist.beans;
 
 import java.util.Arrays;
 
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class APNConfig {
     /**
      * This string specifies the Access Point Name.
@@ -85,9 +86,8 @@ public class APNConfig {
         if (!Arrays.equals(password, apnConfig.password)) return false;
         if (proxy != null ? !proxy.equals(apnConfig.proxy) : apnConfig.proxy != null) return false;
         if (proxyPort != null ? !proxyPort.equals(apnConfig.proxyPort) : apnConfig.proxyPort != null) return false;
-        if (username != null ? !username.equals(apnConfig.username) : apnConfig.username != null) return false;
+        return !(username != null ? !username.equals(apnConfig.username) : apnConfig.username != null);
 
-        return true;
     }
 
     @Override

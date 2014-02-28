@@ -6,6 +6,7 @@ import java.util.List;
 /**
  * A result for Settings command
  */
+@SuppressWarnings("UnusedDeclaration")
 public class SettingResult {
     /**
      * Status of the command.
@@ -58,9 +59,8 @@ public class SettingResult {
 
         if (Status != null ? !Status.equals(that.Status) : that.Status != null) return false;
         // if (ErrorChain != null ? !ErrorChain.equals(that.ErrorChain) : that.ErrorChain != null) return false;
-        if(this.hashCode() != that.hashCode()) return false;
+        return this.hashCode() == that.hashCode();
 
-        return true;
     }
 
     @Override
@@ -81,7 +81,7 @@ public class SettingResult {
         if (ErrorChain != null) {
             sb.append("{");
             for (CommandError error : ErrorChain) {
-                sb.append(error.toString() + ",");
+                sb.append(error.toString()).append(",");
             }
             sb.append("}");
         }

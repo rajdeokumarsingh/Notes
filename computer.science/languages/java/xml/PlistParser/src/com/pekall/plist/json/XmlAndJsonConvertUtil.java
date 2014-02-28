@@ -5,20 +5,16 @@ import com.pekall.plist.PayloadXmlMsgParser;
 import com.pekall.plist.beans.PayloadArrayWrapper;
 
 /**
- * Created with IntelliJ IDEA.
- * User: wjl
- * Date: 13-8-30
- * Time: 下午1:03
+ * Utility class for converting between xml and json
  */
-public class XmlAndJsonConvertUtil {
+@SuppressWarnings("UnusedDeclaration")
+class XmlAndJsonConvertUtil {
     public static String json2Xml(String json) {
         Gson gson = new Gson();
-        PayloadJsonWrapper wrapper = null;
+        PayloadJsonWrapper wrapper;
 
         String xml = null;
         try {
-
-
             wrapper = gson.fromJson(json, PayloadJsonWrapper.class);
             if (wrapper != null) {
                 xml = wrapper.getPayloadArrayWrapper().toXml();

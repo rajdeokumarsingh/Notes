@@ -4,35 +4,36 @@ package com.pekall.plist.su.policy;
 /**
  * Policy for Android devices
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class AndroidControlPolicy extends Policy {
     /**
      * Policy for different os version
      */
-    OsVersion os_version;
+    private OsVersion os_version;
 
     /**
      * Policy when device is compromised
      */
-    EventWrapper device_compromised;
+    private EventWrapper device_compromised;
 
     /**
      * Policy when data protection disabled
      */
-    EventWrapper data_encryption_disable;
+    private EventWrapper data_encryption_disable;
 
     /**
      * Policy when mdm is deactivated
      */
-    EventWrapper mdm_deactivated;
+    private EventWrapper mdm_deactivated;
 
     public AndroidControlPolicy() {
         this("", -1, "", new OsVersion(),
                 new EventWrapper(), new EventWrapper(), new EventWrapper());
     }
 
-    public AndroidControlPolicy(String name, int status, String description, OsVersion os_version,
-                                EventWrapper device_compromised, EventWrapper data_encryption_disable,
-                                EventWrapper mdm_deactivated) {
+    private AndroidControlPolicy(String name, int status, String description, OsVersion os_version,
+                                 EventWrapper device_compromised, EventWrapper data_encryption_disable,
+                                 EventWrapper mdm_deactivated) {
         super(name, status, description);
         this.os_version = os_version;
         this.device_compromised = device_compromised;
@@ -83,9 +84,8 @@ public class AndroidControlPolicy extends Policy {
         if (!data_encryption_disable.equals(that.data_encryption_disable)) return false;
         if (!device_compromised.equals(that.device_compromised)) return false;
         if (!mdm_deactivated.equals(that.mdm_deactivated)) return false;
-        if (!os_version.equals(that.os_version)) return false;
+        return os_version.equals(that.os_version);
 
-        return true;
     }
 
     @Override

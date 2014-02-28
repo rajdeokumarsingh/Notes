@@ -19,6 +19,7 @@ import com.pekall.plist.beans.PayloadBase;
 /**
  * Base class for policy XML configuration
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class Policy extends PayloadBase {
     /**
      * Policy name
@@ -33,18 +34,18 @@ public class Policy extends PayloadBase {
     /**
      * Whether is is a default policy
      */
-    boolean defaultPolicy = false;
+    private boolean defaultPolicy = false;
 
     /**
      * Policy description
      */
     String description;
 
-    public Policy() {
+    Policy() {
         this("", -1, "");
     }
 
-    public Policy(String name, int status, String description) {
+    Policy(String name, int status, String description) {
         this.name = name;
         this.status = status;
         this.description = description;
@@ -93,9 +94,8 @@ public class Policy extends PayloadBase {
         if (defaultPolicy != policy.defaultPolicy) return false;
         if (status != policy.status) return false;
         if (description != null ? !description.equals(policy.description) : policy.description != null) return false;
-        if (name != null ? !name.equals(policy.name) : policy.name != null) return false;
+        return !(name != null ? !name.equals(policy.name) : policy.name != null);
 
-        return true;
     }
 
     @Override

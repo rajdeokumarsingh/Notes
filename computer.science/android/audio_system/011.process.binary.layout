@@ -1,0 +1,161 @@
+Audio系统的service
+    AudioService.java
+        运行在system_server进程中
+
+    AudioFlinger.cpp
+    AudioPolicyService.cpp
+        运行在media_server进程中
+
+base/services/java/com/android/server/SystemServer.java
+    try {
+        Slog.i(TAG, "Audio Service");
+        ServiceManager.addService(Context.AUDIO_SERVICE, new AudioService(context));
+    } catch (Throwable e) {
+        Slog.e(TAG, "Failure starting Audio Service", e);
+    } 
+
+frameworks/av/media/mediaserver/main_mediaserver.cpp (4.2)
+base/media/mediaserver/main_mediaserver.cpp(2.3)
+int main(int argc, char** argv)
+    sp<ProcessState> proc(ProcessState::self());
+    sp<IServiceManager> sm = defaultServiceManager();
+    LOGI("ServiceManager: %p", sm.get());
+    AudioFlinger::instantiate();
+    MediaPlayerService::instantiate();
+    CameraService::instantiate();
+    AudioPolicyService::instantiate();
+    ...
+
+    ProcessState::self()->startThreadPool();
+    IPCThreadState::self()->joinThreadPool();
+
+base/cmds/system_server/library/system_init.cpp
+    // 在下面函数中启动native系统服务
+    extern "C" status_t system_init()
+    SurfaceFlinger::instantiate();
+    AudioFlinger::instantiate();
+    MediaPlayerService::instantiate();
+    CameraService::instantiate();
+    AudioPolicyService::instantiate();
+
+    // call to java layer to start java service
+    AndroidRuntime* runtime = AndroidRuntime::getRuntime();
+    runtime->callStatic("com/android/server/SystemServer", "init2");
+    
+
+相关进程
+# ps
+USER     PID   PPID  VSIZE  RSS     WCHAN    PC         NAME
+system    1691  1627  174640 35232 ffffffff afd0dd2c S system_server
+media     1635  1     42948  8564  ffffffff afd0dd2c S /system/bin/mediaserver
+app_20    1847  1627  112016 19556 ffffffff afd0ee58 S android.process.media
+
+================================================================================
+二进制文件结构
+package android.media in framework.jar // most in application processes
+    frameworks/base/media/java/android/media
+    {
+        AudioManager.java   -------------- Binder ----------------> { AudioService.java IAudioService.aidl }  
+                                                                       (in system server processes)
+        IAudioFocusDispatcher.aidl                                      Volume UI, volume/ringtone mode, ..., persist,
+
+        AudioService.java
+        AudioSystem.java
+
+        AudioRecord.java
+        AudioTrack.java
+
+        MediaPlayer.java
+        MediaRecorder.java
+
+        MediaScanner.java
+
+        ToneGenerator.java
+        ...
+    }       
+            | JNI from java to cpp
+            V
+frameworks/base/core/jni  // JNI cpp implementation
+               // most in application processes
+    LOCAL_MODULE:= libandroid_runtime {
+        android_media_AudioSystem.cpp
+        android_media_AudioRecord.cpp
+        android_media_AudioTrack.cpp
+        ...
+    }           
+                |
+                V
+frameworks/av/media/libmedia    // provide service interface for JNI cpp layer
+                        // most in application processes
+                        // implement binder(Bp/Bn) interface
+    LOCAL_MODULE:= libmedia {
+        AudioSystem.cpp 
+
+        IAudioPolicyService.cpp 
+
+        IAudioFlinger.cpp 
+        IAudioFlingerClient.cpp 
+
+        AudioTrack.cpp 
+        IAudioTrack.cpp 
+
+        IAudioRecord.cpp 
+        AudioRecord.cpp 
+
+        IMediaPlayer.cpp 
+        mediaplayer.cpp 
+        IMediaPlayerService.cpp 
+        IMediaPlayerClient.cpp 
+
+        IMediaRecorder.cpp 
+        mediarecorder.cpp 
+
+        Metadata.cpp 
+        IMediaMetadataRetriever.cpp 
+        mediametadataretriever.cpp 
+
+        ToneGenerator.cpp 
+
+        JetPlayer.cpp 
+        IOMX.cpp 
+        MediaScanner.cpp 
+        MediaScannerClient.cpp 
+        autodetect.cpp 
+        IMediaDeathNotifier.cpp 
+        MediaProfiles.cpp
+    }
+        |
+        | IPC to media_server process
+        V
+frameworks/av/services/audioflinger
+    LOCAL_MODULE:= libaudioflinger { // provide services
+                                   // in the media_server process
+        AudioFlinger.cpp
+        AudioPolicyService.cpp     
+    }
+
+    LOCAL_MODULE:= libaudiopolicybase {
+        AudioPolicyManagerBase.cpp # The base class of the HAL audio policy manager
+    }
+            |
+            V
+// The HAL interface
+libhardware_legacy/includehardware_legacy
+    AudioHardwareBase.h
+    AudioHardwareInterface.h
+    AudioPolicyInterface.h
+    AudioPolicyManagerBase.h
+    MediaPlayerHardwareInterface.h
+    MediaRecorderHardwareInterface.h
+        |
+        V
+// The HAL implementation
+hardware/alsa_sound
+    LOCAL_MODULE := libaudio {
+        AudioHardwareALSA.cpp
+        AudioPolicyManagerALSA.cpp
+        AudioStreamInALSA.cpp
+        AudioStreamOutALSA.cpp
+        ALSAStreamOps.cpp
+    }
+

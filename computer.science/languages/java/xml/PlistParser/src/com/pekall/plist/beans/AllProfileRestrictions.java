@@ -5,6 +5,7 @@ package com.pekall.plist.beans;
  * if ProfileRestrictions is set to true in the command.
  * The keys are the identifiers of the profiles.
  */
+@SuppressWarnings("UnusedDeclaration")
 public class AllProfileRestrictions {
     /**
      * Restrictions in the password profile. The key is the identifier of the profiles,
@@ -31,10 +32,8 @@ public class AllProfileRestrictions {
 
         AllProfileRestrictions that = (AllProfileRestrictions) o;
 
-        if (com_pekall_mdm_password_profile != null ? !com_pekall_mdm_password_profile.equals(that.com_pekall_mdm_password_profile) : that.com_pekall_mdm_password_profile != null)
-            return false;
+        return !(com_pekall_mdm_password_profile != null ? !com_pekall_mdm_password_profile.equals(that.com_pekall_mdm_password_profile) : that.com_pekall_mdm_password_profile != null);
 
-        return true;
     }
 
     @Override

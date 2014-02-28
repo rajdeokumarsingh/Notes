@@ -1,2 +1,21 @@
+tmp.note
 
+./todo
+
+./000.concept
+./100.install.conf
+./120.gui
+./200.first.project
+./300.branch
+./400.add.commit
+./500.branch
+./600.log
+./610.patch
+./700.remote
+./800.manage.local.repo
+./900.beyond.basic
+
+./1000.server
+
+./manual/index.txt
 

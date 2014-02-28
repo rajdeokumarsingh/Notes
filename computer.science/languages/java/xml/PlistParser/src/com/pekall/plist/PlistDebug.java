@@ -3,6 +3,7 @@ package com.pekall.plist;
 /**
  * Debug utility class
  */
+@SuppressWarnings("UnusedDeclaration")
 public class PlistDebug {
     private static boolean verboseDebugLog = false;
 

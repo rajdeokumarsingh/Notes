@@ -1,5 +1,6 @@
 package com.pekall.plist.beans;
 
+@SuppressWarnings("UnusedDeclaration")
 public class CommandRemoveDocument extends CommandObject {
     /**
      * UUID of the document
@@ -26,9 +27,8 @@ public class CommandRemoveDocument extends CommandObject {
 
         CommandRemoveDocument that = (CommandRemoveDocument) o;
 
-        if (DocumentUUID != null ? !DocumentUUID.equals(that.DocumentUUID) : that.DocumentUUID != null) return false;
+        return !(DocumentUUID != null ? !DocumentUUID.equals(that.DocumentUUID) : that.DocumentUUID != null);
 
-        return true;
     }
 
     @Override

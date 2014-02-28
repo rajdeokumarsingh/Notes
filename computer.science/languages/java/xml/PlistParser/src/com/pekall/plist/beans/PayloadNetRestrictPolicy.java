@@ -3,6 +3,7 @@ package com.pekall.plist.beans;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PayloadNetRestrictPolicy extends PayloadBase {
     /**
      * See minSecurityLevel
@@ -251,9 +252,8 @@ public class PayloadNetRestrictPolicy extends PayloadBase {
         if (minSecurityLevel != null ? !minSecurityLevel.equals(that.minSecurityLevel) : that.minSecurityLevel != null)
             return false;
         if (mobileAP != null ? !mobileAP.equals(that.mobileAP) : that.mobileAP != null) return false;
-        if (usbTethering != null ? !usbTethering.equals(that.usbTethering) : that.usbTethering != null) return false;
+        return !(usbTethering != null ? !usbTethering.equals(that.usbTethering) : that.usbTethering != null);
 
-        return true;
     }
 
     @Override

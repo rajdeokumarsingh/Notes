@@ -17,6 +17,7 @@ package com.pekall.plist.su.policy;
 /**
  * XML element for "app_control_list.app_info"
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class AppInfo {
     /**
      * Name of the application
@@ -85,9 +86,8 @@ public class AppInfo {
         if (!downloadUrl.equals(appInfo.downloadUrl)) return false;
         if (!packageName.equals(appInfo.packageName)) return false;
         if (!versionCode.equals(appInfo.versionCode)) return false;
-        if (matchRule != appInfo.matchRule) return false;
+        return matchRule == appInfo.matchRule;
 
-        return true;
     }
 
     @Override

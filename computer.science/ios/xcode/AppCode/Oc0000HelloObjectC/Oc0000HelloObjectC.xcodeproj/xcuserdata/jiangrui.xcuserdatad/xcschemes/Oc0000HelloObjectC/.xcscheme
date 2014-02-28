@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   version = "1.3">
+   <BuildAction>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForRunning = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "616F9180F2CB88B0E67288DB"
+               BuildableName = "Oc0000HelloObjectC/"
+               BlueprintName = "Oc0000HelloObjectC/"
+               ReferencedContainer = "container:Oc0000HelloObjectC.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <LaunchAction
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "616F9180F2CB88B0E67288DB"
+            BuildableName = "Oc0000HelloObjectC/"
+            BlueprintName = "Oc0000HelloObjectC/"
+            ReferencedContainer = "container:Oc0000HelloObjectC.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+</Scheme>

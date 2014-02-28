@@ -16,6 +16,7 @@ package com.pekall.plist.su.device;
 /**
  * XML element of "device_info.location"
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class Location {
 
     /**
@@ -64,9 +65,8 @@ public class Location {
         Location location = (Location) o;
 
         if (Double.compare(location.latitude, latitude) != 0) return false;
-        if (Double.compare(location.longitude, longitude) != 0) return false;
+        return Double.compare(location.longitude, longitude) == 0;
 
-        return true;
     }
 
     public double getLongitude() {

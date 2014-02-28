@@ -16,11 +16,12 @@ import java.util.List;
  * 6. Date type
  * 7. List type
  */
+@SuppressWarnings({"UnusedDeclaration", "BooleanMethodIsAlwaysInverted"})
 public class ObjectComparator {
     /**
      * Compare two object
-     * @param thiz
-     * @param that
+     * @param thiz object to compare
+     * @param that object to compare
      * @return true if two objects are equal, otherwise false
      */
     public static boolean equals(Object thiz, Object that) {
@@ -60,7 +61,6 @@ public class ObjectComparator {
                     if (isPrimitiveObject(fieldType) || String.class.equals(fieldType)) {
                         PlistDebug.logVerbose("compare primitive object type or string");
                         if (!thisObj.equals(thatObj)) return false;
-                        continue;
                     } else if (Date.class.isAssignableFrom(fieldType)) {
                         // FIXME: Hack for Date field, just compare its toString
                         if (!thisObj.toString().equals(thatObj.toString())) return false;
@@ -99,8 +99,8 @@ public class ObjectComparator {
 
     /**
      * Compare two list
-     * @param thisObj
-     * @param thatObj
+     * @param thisObj list to compare
+     * @param thatObj list to compare
      * @return true if all object in the list are equal, otherwise false
      */
     private static boolean compareListType(List thisObj, List thatObj) {
@@ -162,13 +162,10 @@ public class ObjectComparator {
     }
 
     private static boolean isPrimitiveArray(Class clz) {
-        if (boolean[].class.equals(clz) || byte[].class.equals(clz) ||
+        return boolean[].class.equals(clz) || byte[].class.equals(clz) ||
                 char[].class.equals(clz) || short[].class.equals(clz) ||
                 int[].class.equals(clz) || long[].class.equals(clz) ||
-                float[].class.equals(clz) || double[].class.equals(clz)) {
-            return true;
-        }
-        return false;
+                float[].class.equals(clz) || double[].class.equals(clz);
     }
 
     private static boolean comparePrimitiveArray(Object thisObj, Object thatObj, Field field) {

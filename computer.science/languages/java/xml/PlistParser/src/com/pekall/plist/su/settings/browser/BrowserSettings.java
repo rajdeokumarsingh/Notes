@@ -20,6 +20,7 @@ import java.util.List;
 /**
  * Store data parsed from XML configuration of the security browser
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class BrowserSettings extends PayloadBase {
     /**
      * 是否现实address bar, 0 表示不显示，1表示现实
@@ -107,10 +108,8 @@ public class BrowserSettings extends PayloadBase {
         if (!(o instanceof BrowserSettings)) return false;
         if (!super.equals(o)) return false;
 
-        BrowserSettings settings = (BrowserSettings) o;
-        if(this.hashCode() != o.hashCode()) return false;
+        return this.hashCode() == o.hashCode();
 
-        return true;
     }
 
     @Override

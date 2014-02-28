@@ -7,6 +7,7 @@ import java.util.List;
  * An LDAP payload provides information about an LDAP server to use, including account information
  * if required, and a set of LDAP search policies to use when querying that LDAP server.
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class PayloadLDAP extends PayloadBase {
 
     /**
@@ -120,10 +121,8 @@ public class PayloadLDAP extends PayloadBase {
             return false;
         if (LDAPAccountUserName != null ? !LDAPAccountUserName.equals(that.LDAPAccountUserName) : that.LDAPAccountUserName != null)
             return false;
-        if (LDAPSearchSettings != null ? !LDAPSearchSettings.equals(that.LDAPSearchSettings) : that.LDAPSearchSettings != null)
-            return false;
+        return !(LDAPSearchSettings != null ? !LDAPSearchSettings.equals(that.LDAPSearchSettings) : that.LDAPSearchSettings != null);
 
-        return true;
     }
 
     @Override

@@ -16,22 +16,23 @@ package com.pekall.plist.su.policy;
 /**
  * XML element for security_policy.password.failed_attempt
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class FailedAttempt {
     /**
      * Maximum retry number of password
      */
-    int max_retry_num;
+    private int max_retry_num;
 
     /**
      * Event name for punishment
      */
-    String event_id;
+    private String event_id;
 
     public FailedAttempt() {
         this(-1, "");
     }
 
-    public FailedAttempt(int max_retry_num, String event_id) {
+    private FailedAttempt(int max_retry_num, String event_id) {
         this.max_retry_num = max_retry_num;
         this.event_id = event_id;
     }
@@ -52,9 +53,8 @@ public class FailedAttempt {
         FailedAttempt that = (FailedAttempt) o;
 
         if (max_retry_num != that.max_retry_num) return false;
-        if (!event_id.equals(that.event_id)) return false;
+        return event_id.equals(that.event_id);
 
-        return true;
     }
 
     public int getMaxRetryNum() {

@@ -3,19 +3,20 @@ package com.pekall.plist.beans;
 /**
  * Status message for "Restrictions" command from client to server
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class CommandRestrictionsStatus extends CommandStatusMsg {
 
     /**
      * containing the global restrictions currently in effect.
      */
-    Restrictions GlobalRestrictions;
+    private Restrictions GlobalRestrictions;
 
     /**
      * containing the restrictions enforced by each profile. Only included
      * if ProfileRestrictions is set to true in the command.
      * The keys are the identifiers of the profiles.
      */
-    AllProfileRestrictions ProfileRestrictions;
+    private AllProfileRestrictions ProfileRestrictions;
 
     public CommandRestrictionsStatus() {
     }
@@ -50,10 +51,8 @@ public class CommandRestrictionsStatus extends CommandStatusMsg {
 
         if (GlobalRestrictions != null ? !GlobalRestrictions.equals(that.GlobalRestrictions) : that.GlobalRestrictions != null)
             return false;
-        if (ProfileRestrictions != null ? !ProfileRestrictions.equals(that.ProfileRestrictions) : that.ProfileRestrictions != null)
-            return false;
+        return !(ProfileRestrictions != null ? !ProfileRestrictions.equals(that.ProfileRestrictions) : that.ProfileRestrictions != null);
 
-        return true;
     }
 
     @Override

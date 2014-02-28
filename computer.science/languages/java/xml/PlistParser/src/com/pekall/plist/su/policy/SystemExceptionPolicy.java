@@ -20,9 +20,10 @@ import java.util.List;
 /**
  * XML configuration for system_exception_alert_policy
  */
+@SuppressWarnings("UnusedDeclaration")
 public class SystemExceptionPolicy extends Policy {
 
-    List<SystemException> exceptions;
+    private List<SystemException> exceptions;
 
     public SystemExceptionPolicy() {
         super();
@@ -60,9 +61,8 @@ public class SystemExceptionPolicy extends Policy {
         SystemExceptionPolicy that = (SystemExceptionPolicy) o;
 
         // if (!exceptions.equals(that.exceptions)) return false;
-        if(this.hashCode() != that.hashCode()) return false;
+        return this.hashCode() == that.hashCode();
 
-        return true;
     }
 
     @Override

@@ -16,6 +16,7 @@ package com.pekall.plist.su.settings.advertise;
 /**
  * XML element for "advertisement_statistic.item"
  */
+@SuppressWarnings({"UnusedDeclaration", "SimplifiableIfStatement"})
 public class AdvertiseStaInfo {
     /**
      * 广告id
@@ -72,10 +73,8 @@ public class AdvertiseStaInfo {
 
         if (count != null ? !count.equals(that.count) : that.count != null) return false;
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        if (totalDuration != null ? !totalDuration.equals(that.totalDuration) : that.totalDuration != null)
-            return false;
+        return !(totalDuration != null ? !totalDuration.equals(that.totalDuration) : that.totalDuration != null);
 
-        return true;
     }
 
     @Override

@@ -5,6 +5,7 @@ import com.pekall.plist.json.SkipFiled;
 /**
  * VPN profile
  */
+@SuppressWarnings("UnusedDeclaration")
 public class PayloadVPN extends PayloadBase {
 
     /**
