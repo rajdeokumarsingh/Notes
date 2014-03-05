@@ -40,7 +40,7 @@ public class Test03AccessApi extends TestCase {
 
     public void testAccessOkAfterLogin() throws Exception {
         HttpResponse response = HttpUtil.doLogin(Const.AUTH_LOGIN_URL,
-                Const.USERNAME_OK, Const.PASSWORD_OK);
+                Const.USERNAME_VALID, Const.PASSWORD_VALID);
 
         Debug.logVerbose(response.toString());
         assertEquals(response.getStatusLine().getStatusCode(), 200);
@@ -66,14 +66,14 @@ public class Test03AccessApi extends TestCase {
 
         // login 1
         HttpResponse response = HttpUtil.doLogin(Const.AUTH_LOGIN_URL,
-                Const.USERNAME_OK, Const.PASSWORD_OK);
+                Const.USERNAME_VALID, Const.PASSWORD_VALID);
         Debug.logVerbose(response.toString());
         String token1 = HttpUtil.getSingleHeader(response, Const.HTTP_HDR_SET_COOKIE);
         assertEquals(response.getStatusLine().getStatusCode(), 200);
         assertNotNull(token1);
 
         // login 2
-        response = HttpUtil.doLogin(Const.AUTH_LOGIN_URL, Const.USERNAME_OK, Const.PASSWORD_OK);
+        response = HttpUtil.doLogin(Const.AUTH_LOGIN_URL, Const.USERNAME_VALID, Const.PASSWORD_VALID);
         Debug.logVerbose(response.toString());
         String token2 = HttpUtil.getSingleHeader(response, Const.HTTP_HDR_SET_COOKIE);
         assertEquals(response.getStatusLine().getStatusCode(), 200);

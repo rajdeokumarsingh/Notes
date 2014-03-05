@@ -42,7 +42,7 @@ public class Test02Logout extends TestCase {
 
     public void testLogoutFail1() throws Exception {
         HttpResponse response = HttpUtil.doLogin(Const.AUTH_LOGIN_URL,
-                Const.USERNAME_OK, Const.PASSWORD_OK);
+                Const.USERNAME_VALID, Const.PASSWORD_VALID);
         Debug.logVerbose(response.toString());
 
         // first logout should be OK
@@ -60,7 +60,7 @@ public class Test02Logout extends TestCase {
 
     public void testLogoutOK() throws Exception {
         HttpResponse response = HttpUtil.doLogin(Const.AUTH_LOGIN_URL,
-                Const.USERNAME_OK, Const.PASSWORD_OK);
+                Const.USERNAME_VALID, Const.PASSWORD_VALID);
         Debug.logVerbose(response.toString());
 
         response = HttpUtil.doLogout(Const.AUTH_LOGOUT_URL,

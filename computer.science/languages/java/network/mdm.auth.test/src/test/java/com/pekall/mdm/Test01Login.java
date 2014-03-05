@@ -25,7 +25,25 @@ public class Test01Login extends TestCase {
     public void testLoginOK() throws Exception {
 
         HttpResponse response = HttpUtil.doLogin(Const.AUTH_LOGIN_URL,
-                Const.USERNAME_OK, Const.PASSWORD_OK);
+                Const.USERNAME_VALID, Const.PASSWORD_VALID);
+
+        Debug.logVerbose(response.toString());
+
+        assertEquals(response.getStatusLine().getStatusCode(), 200);
+
+        assertEquals(HttpUtil.getHeaderNumber(response, Const.HTTP_HDR_SET_COOKIE), 1);
+        assertTrue(HttpUtil.getSingleHeader(response, Const.HTTP_HDR_SET_COOKIE).startsWith("JSESSIONID="));
+
+        response = HttpUtil.doLogout(Const.AUTH_LOGOUT_URL,
+                HttpUtil.getSingleHeader(response, Const.HTTP_HDR_SET_COOKIE));
+        Debug.logVerbose(response.toString());
+        assertEquals(response.getStatusLine().getStatusCode(), 200);
+    }
+
+    public void testLoginOK2() throws Exception {
+
+        HttpResponse response = HttpUtil.doLogin(Const.AUTH_LOGIN_URL,
+                Const.USERNAME_NEW_ADDED, Const.PASSWORD_NEW_ADDED);
 
         Debug.logVerbose(response.toString());
 
@@ -43,20 +61,34 @@ public class Test01Login extends TestCase {
     public void testLoginFail() throws Exception {
         // error path
         HttpResponse response = HttpUtil.doLogin(Const.AUTH_LOGIN_URL + "/invalid",
-                Const.USERNAME_OK, Const.PASSWORD_OK);
+                Const.USERNAME_VALID, Const.PASSWORD_VALID);
         Debug.logVerbose(response.toString());
         assertEquals(response.getStatusLine().getStatusCode(), 401);
 
         // error username
         response = HttpUtil.doLogin(Const.AUTH_LOGIN_URL,
-                Const.USERNAME_OK + "xxx", Const.PASSWORD_OK);
+                Const.USERNAME_VALID + "xxx", Const.PASSWORD_VALID);
         Debug.logVerbose(response.toString());
         assertEquals(response.getStatusLine().getStatusCode(), 401);
 
         // error password
         response = HttpUtil.doLogin(Const.AUTH_LOGIN_URL,
-                Const.USERNAME_OK, Const.PASSWORD_OK + "xxx");
+                Const.USERNAME_VALID, Const.PASSWORD_VALID + "xxx");
         Debug.logVerbose(response.toString());
         assertEquals(response.getStatusLine().getStatusCode(), 401);
     }
+
+
+    public void testLoginFail2() throws Exception {
+
+        // fake mdm server will return 404 with error code to auth server
+        HttpResponse response = HttpUtil.doLogin(Const.AUTH_LOGIN_URL,
+                Const.USERNAME_NEW_ADDED + "1", Const.PASSWORD_NEW_ADDED + "1");
+
+        Debug.logVerbose(response.toString());
+        assertEquals(response.getStatusLine().getStatusCode(), 401);
+    }
+
+
 }
+

@@ -11,9 +11,6 @@ AbstractSecurityWebApplicationInitializer
         @Create
         DelegatingFilterProxy(filterName);
                  
-
-
-
 WebSecurityConfigurerAdapter.java
     // create the spring config like the spring-security.xml
 
