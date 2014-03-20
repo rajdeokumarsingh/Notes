@@ -1,4 +1,4 @@
-package com.pekall.mdm.util;
+package com.pekall.mdm.auth.testclient.util;
 
 /**
  * Debug utility class

@@ -1,0 +1,125 @@
+Filter基本概念
+
+    在servlet处理请求之前
+    servlet不会意识到filter的存在
+
+    filter在请求发送到servlet之前, 可以拦截处理请求
+    filter在响应发送到client之前, 可以拦截处理响应
+
+    容器根据DD中的声明来确定何时调用Filter
+        
+    分类：
+        1. 请求过滤器
+            完成安全检查
+            修改请求头部或者消息体
+            建立请求统计或者日志
+
+        2. 响应过滤器
+            压缩响应流
+            追加或者修改响应流
+            创建一个完全不同的响应
+
+
+Filter Chain
+    多个filter可以串联起来
+
+    在DD中可以指定每个filter对应的url
+    在DD中可以指定filter的顺序
+
+
+Filter和servlet的类似
+    Filter可以访问ServletContext,可以和其他Filter衔接
+
+    容器管理Filter的生命周期, Filter有如下方法：
+        init(FilterConfig filterConfig) 
+            一般会保存FilterConfig对象，以备以后过滤器使用
+            
+        destroy()
+            完成清理工作
+
+        doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+            完成真正的工作
+
+
+    Filter必须在DD中声明
+        过滤的url, 顺序
+        
+
+DD中Filter的声明
+    <filter>
+        <filter-name>beer request filter</filter-name>
+        <filter-class>com.springapp.filter.BeerRequestFilter</filter-class>
+        <init-param>            可选的，可有多个init-param
+            <param-name>LogFileName</param-name>
+            <param-value>UserLog.txt</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>beer request filter</filter-name>
+        <url-pattern>*.do</url-pattern>                 基于url的匹配
+        <!--<servlet-name>Ch2Servlet</servlet-name>-->  基于servlet的匹配
+                                                        // <url-pattern>和<servlet-name>必须有一个，而且只能有一个
+    </filter-mapping>
+
+Filter执行的顺序 (Filter Chain中的顺序)
+    1. 使用<url-pattern>规则的Filter放在最前面
+
+    2. 使用<servlet-name>规则的Filter放在<url-pattern>的后面
+
+    3. 同一种规则的Filter, 前后顺序和Filter在DD中声明的顺序一致
+
+Filter可以应用于请求分派器 (2.4版本)
+
+    <filter-mapping>
+        <filter-name>beer request filter</filter-name>
+        <url-pattern>*.do</url-pattern>
+
+                                            // 可以有0～4个<dispatcher>
+        <dispatcher>REQUEST</dispatcher>    // 表示对客户请求使用过滤器， 缺省就是REQUEST
+        <dispatcher>INCLUDE</dispatcher>    // 表示对一个include调用分派的请求启用过滤器
+        <dispatcher>FORWARD</dispatcher>    // 表示对一个forward调用分派的请求启用过滤器
+        <dispatcher>ERROR</dispatcher>      // 表示对错误处理器分派的请求启用过滤器
+    </filter-mapping>
+
+
+实现方法：
+    1. 请求过滤器
+        完成安全检查
+        修改请求头部或者消息体
+        建立请求统计或者日志
+
+        public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) {
+            // do something here
+
+            chain.doFilter(request,response);
+        }
+
+    2. 响应过滤器
+        压缩响应流
+        追加或者修改响应流
+        创建一个完全不同的响应
+
+        public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) {
+            // 在这里定制一个响应
+            chain.doFilter(request,response);
+            // do something here
+        }
+
+包装器
+    由于定制一个HttpServletResponse要实现非常多的类，非常罗嗦
+
+    装饰器/包装器模式
+        装饰器包装了原有对象，
+        装饰器能够提供原有对象的所有功能
+        并能够提供比原有对象更多的功能
+
+        将方法委托给被包装对象
+
+    ServletRequestWrapper
+    HttpServletRequestWrapper
+    ServletResponseWrapper
+    HttpServletResponseWrapper
+
+
+

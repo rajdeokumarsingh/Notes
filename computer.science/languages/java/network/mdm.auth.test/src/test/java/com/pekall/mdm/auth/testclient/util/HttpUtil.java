@@ -1,4 +1,4 @@
-package com.pekall.mdm.util;
+package com.pekall.mdm.auth.testclient.util;
 
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
@@ -15,7 +15,7 @@ import org.apache.http.protocol.HTTP;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -59,8 +59,8 @@ public class HttpUtil {
 
     public static HttpResponse doLogin(String url, String username, String password) throws IOException {
         List<NameValuePair> postParams = new ArrayList<NameValuePair>();
-        postParams.add(new BasicNameValuePair(Const.PARAM_USERNAME, username));
-        postParams.add(new BasicNameValuePair(Const.PARAM_PASSWORD, password));
+        postParams.add(new BasicNameValuePair(TestConfig.PARAM_USERNAME, username));
+        postParams.add(new BasicNameValuePair(TestConfig.PARAM_PASSWORD, password));
 
         return HttpUtil.doHttpPost(url, postParams);
     }
@@ -68,7 +68,7 @@ public class HttpUtil {
     public static HttpResponse doLogout(String url, String cookie) throws IOException {
         List<Header> headers = new ArrayList<Header>();
         if (cookie != null) {
-            headers.add(new BasicHeader(Const.HTTP_HDR_COOKIE, cookie));
+            headers.add(new BasicHeader(TestConfig.HTTP_HDR_COOKIE, cookie));
         }
         return doHttpPost(url, headers, null);
     }
@@ -77,10 +77,16 @@ public class HttpUtil {
         HttpResponse response;
         List<Header> headers = new ArrayList<Header>();
         if (cookie != null) {
-            headers.add(new BasicHeader(Const.HTTP_HDR_COOKIE, cookie));
+            headers.add(new BasicHeader(TestConfig.HTTP_HDR_COOKIE, cookie));
         }
         response = HttpUtil.doHttpGet(url, headers);
         return response;
+    }
+
+    public static HttpResponse renewUser(String id, String email, String password) throws IOException {
+        return HttpUtil.doAccessApi(TestConfig.AUTH_SVR_ADDR + TestConfig.AUTH_RENEW_USER_PATH
+                + "?email=" + email + "&id=" + id
+                + "&password=" + URLEncoder.encode(password, "utf-8"), null);
     }
 
     public static String getSingleHeader(HttpResponse response, String headerName) {
@@ -116,11 +122,8 @@ public class HttpUtil {
     }
 
     public static String dumpGetMethod(HttpGet get) {
-        StringBuilder sb = new StringBuilder();
-        sb.append("HTTP Get: ")
-                .append(get.getURI().toString()).append(", ")
-                .append("[header: ").append(get.getFirstHeader("Cookie")).append("], ");
 
-        return sb.toString();
+        return "HTTP Get: " + get.getURI().toString() + ", " + "[header: "
+                + get.getFirstHeader("Cookie") + "], ";
     }
 }

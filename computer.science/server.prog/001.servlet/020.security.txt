@@ -1,0 +1,12 @@
+
+三种坏蛋
+    Impersonator 假冒者
+    Upgrader     非法升级者
+    Eavesdropper 窃听者
+
+
+servlet安全要素
+    1. 认证
+    2. 授权
+    3. 机密性
+    4. 完整性

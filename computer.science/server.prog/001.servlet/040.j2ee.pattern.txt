@@ -1,0 +1,67 @@
+
+类型：
+    拦截过滤器 intercepting filter
+    MVC        model-view-controller
+    前端控制器 front controler
+    服务器定位器 service locator
+    业务委托     business delegate
+    传输对象     transfer object
+
+
+
+非功能性需求
+
+    性能
+    模快性
+    灵活性，可维护性，可扩展性
+
+
+原则
+    遵循接口编写代码
+    分离和内聚
+    松耦合
+    隐藏复杂性
+
+    远程代理
+
+    增强声明性控制
+        通过DD来（部署描述文件）配置应用
+
+
+MVC
+    MVC各个组建都运行在同一个JVM中
+
+远程调用
+    JNDI (Java name and directory interface)
+        将一些对象通过JNDI注册到网络上的位置中，其他应用就可拿到这些对象
+
+    RMI (Remove method invoking)
+
+        桩， 骨架， 业务对象
+
+        服务器端实现
+            1. 定义远程接口
+                桩，骨架，业务对象都要实现这个接口
+
+            2. 创建业务对象，向RMI/JNDI注册该远程对象
+
+            3. 生成桩，骨架
+
+            4. 启动，运行服务器
+
+服务器定位器 service locator
+    完成查找JNDI的所有逻辑
+    可以进行缓存
+
+
+
+MVC
+    控制器任务
+        1. 获取和处理请求参数
+            调用验证组件，验证错误也由他处理
+
+        2. 调用模型
+
+        3. 分派到视图
+
+    Structs框架

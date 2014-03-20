@@ -1,0 +1,29 @@
+sudo dpkg-reconfigure debconf
+
+see log:
+    cd /var/log; sudo tail -F daemon.log sulog user.log auth.log debug kern.log syslog dmesg messages kerberos/{krb5kdc,kadmin,krb5lib}.log
+
+1. add host name to:
+/etc/hosts
+    127.0.0.1 kerberos.pekall.com
+
+
+administrative server
+    admin.pekall.com
+
+
+# done!
+krb5_newrealm
+    set up a realm
+    /usr/share/doc/krb5-kdc/README.KDC
+
+
+/etc/krb5kdc
+    config of kdc
+
+
+master key password in
+    /etc/krb5kdc/stash
+
+
+/var/lib/krb5kdc/principal

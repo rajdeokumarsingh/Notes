@@ -1,0 +1,621 @@
+== Info: About to connect() to curl.haxx.se port 80 (#0)
+== Info:   Trying 80.67.6.50...
+== Info: Connected to curl.haxx.se (80.67.6.50) port 80 (#0)
+=> Send header, 99 bytes (0x63)
+0000: GET /docs/httpscripting.html HTTP/1.1
+0027: User-Agent: curl/7.29.0
+0040: Host: curl.haxx.se
+0054: Accept: */*
+0061: 
+<= Recv header, 17 bytes (0x11)
+0000: HTTP/1.1 200 OK
+<= Recv header, 37 bytes (0x25)
+0000: Date: Sun, 16 Mar 2014 07:48:15 GMT
+<= Recv header, 31 bytes (0x1f)
+0000: Server: Apache/2.4.6 (Debian)
+<= Recv header, 46 bytes (0x2e)
+0000: Last-Modified: Fri, 14 Mar 2014 23:25:04 GMT
+<= Recv header, 28 bytes (0x1c)
+0000: ETag: "8b82-4f499612d7474"
+<= Recv header, 22 bytes (0x16)
+0000: Accept-Ranges: bytes
+<= Recv header, 23 bytes (0x17)
+0000: Content-Length: 35714
+<= Recv header, 23 bytes (0x17)
+0000: Vary: Accept-Encoding
+<= Recv header, 25 bytes (0x19)
+0000: Content-Type: text/html
+<= Recv header, 2 bytes (0x2)
+0000: 
+<= Recv data, 2642 bytes (0xa52)
+0000: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "
+0040: http://www.w3.org/TR/html4/loose.dtd">.<HTML>.<HEAD> <TITLE>cURL
+0080:  - Tutorial</TITLE>.<meta content="text/html; charset=UTF-8" htt
+00c0: p-equiv="Content-Type">.<link rel="STYLESHEET" type="text/css" h
+0100: ref="http://curl.haxx.se/curl.css">.<link rel="shortcut icon" hr
+0140: ef="http://curl.haxx.se/favicon.ico">.</HEAD>.<BODY bgcolor="#ff
+0180: ffff" text="#000000" LINK="#0000ff" VLINK="#808080" ALINK="red">
+01c0: .<table cellspacing=0 cellpadding=5><tr><td valign=top align=lef
+0200: t>.<a href="/"><img border="0" src="http://curl.haxx.se/ds-curli
+0240: con.png" width="99" height="37" alt="cURL"></a>.<div class="main
+0280: menu">.<div><img border="0" src="/pix/left.png" alt="<"> <a href
+02c0: ="/" class="menuitem">Front Page</a></div>.<hr>.<div><a href="/d
+0300: ocs/" class="menuitem">Docs Index</a></div>.<div><a href="/docs/
+0340: bugs.html" class="menuitem">Bug Report</a></div>.<div><a href="/
+0380: docs/caextract.html" class="menuitem">CA Extract</a></div>.<div>
+03c0: <a href="/docs/companies.html" class="menuitem">Companies</a></d
+0400: iv>.<div><a href="/docs/comparison-table.html" class="menuitem">
+0440: Comparison</a></div>.<div><a href="/docs/copyright.html" class="
+0480: menuitem">Copyright</a></div>.<div><a href="/docs/manpage.html" 
+04c0: class="menuitem">curl Man Page</a></div>.<div><a href="/docs/lib
+0500: s.html" class="menuitem">Dependencies</a></div>.<div><a href="/d
+0540: onation.html" class="menuitem">Donate!</a></div>.<div><a href="/
+0580: docs/faq.html" class="menuitem">FAQ</a></div>.<div><a href="/doc
+05c0: s/features.html" class="menuitem">Features</a></div>.<div><a hre
+0600: f="/docs/history.html" class="menuitem">History</a></div>.<div><
+0640: a href="/docs/http-cookies.html" class="menuitem">HTTP Cookies</
+0680: a></div>.<div class="itemselect">HTTP Scripting</div>.<div><a hr
+06c0: ef="/docs/install.html" class="menuitem">Install</a></div>.<div>
+0700: <a href="/docs/knownbugs.html" class="menuitem">Known Bugs</a></
+0740: div>.<div><a href="/legal/" class="menuitem">Legal &raquo;</a></
+0780: div>.<div><a href="/docs/manual.html" class="menuitem">Manual</a
+07c0: ></div>.<div><a href="/docs/mk-ca-bundle.html" class="menuitem">
+0800: mk-ca-bundle</a></div>.<div><a href="/docs/programs.html" class=
+0840: "menuitem">Programs</a></div>.<div><a href="/docs/relatedtools.h
+0880: tml" class="menuitem">Related Tools</a></div>.<div><a href="/doc
+08c0: s/releases.html" class="menuitem">Release Table</a></div>.<div><
+0900: a href="/docs/security.html" class="menuitem">Security</a></div>
+0940: .<div><a href="/docs/sslcerts.html" class="menuitem">SSL Certs</
+0980: a></div>.<div><a href="/docs/thanks.html" class="menuitem">Thank
+09c0: s</a></div>.<div><a href="/docs/todo.html" class="menuitem">TODO
+0a00: </a></div>.<div><a href="/docs/versions.html" class="menuitem">V
+0a40: ersion Nums</a></d
+<= Recv data, 1448 bytes (0x5a8)
+0000: iv>.<div><a href="/docs/vulnerabilities.html" class="menuitem">V
+0040: ulnerabilities</a></div>.<div><a href="/search.html" class="menu
+0080: item">Search</a></div>.</div>.<p>.<p>.<a href="http://sourceforg
+00c0: e.net/projects/curl/"><img src="http://sourceforge.net/sflogo.ph
+0100: p?group_id=976&amp;type=8" width="80" height="15" border="0" alt
+0140: ="curl's project page on SourceForge.net"></a>.<p>. <a href="htt
+0180: p://curl.haxx.se/sponsors.html">Sponsors</a>:<br>.<a href="http:
+01c0: //www.haxx.se/">Haxx</a>.</td><td valign=top align=left>.<a href
+0200: ="/">cURL</a> <img alt=">" src="http://curl.haxx.se/arrow.png"> 
+0240: <a href="/docs/">Docs</a> <img alt=">" src="http://curl.haxx.se/
+0280: arrow.png"> <b>Tutorial</b>.<h1 class="pagetitle"> Using cURL to
+02c0:  automate HTTP jobs </h1>.<div class="relatedbox">.<b>Related:</
+0300: b>.<br><a href="manpage.html">curl man page</a>.<br><a href="man
+0340: ual.html">Manual</a>.<br><a href="faq.html">FAQ</a>.</div>.<h2>H
+0380: TTP Scripting</h2>.<p>.<a href="#Background">1.1</a> Background<
+03c0: br>.<a href="#The_HTTP_Protocol">1.2</a> The HTTP Protocol<br>.<
+0400: a href="#See_the_Protocol">1.3</a> See the Protocol<br>.<a href=
+0440: "#See_the_Timing">1.4</a> See the Timing<br>.<a href="#See_the_R
+0480: esponse">1.5</a> See the Response<br>.<h2>URL</h2>.<p>.<a href="
+04c0: #Spec">2.1</a> Spec<br>.<a href="#Host">2.2</a> Host<br>.<a href
+0500: ="#Port_number">2.3</a> Port number<br>.<a href="#User_name_and_
+0540: password">2.4</a> User name and password<br>.<a href="#Path_part
+0580: ">2.5</a> Path part<br>.<h2>Fetch a page
+<= Recv data, 1448 bytes (0x5a8)
+0000: </h2>.<p>.<a href="#GET">3.1</a> GET<br>.<a href="#HEAD">3.2</a>
+0040:  HEAD<br>.<h2>HTML forms</h2>.<p>.<a href="#Forms_explained">4.1
+0080: </a> Forms explained<br>.<a href="#GET">4.2</a> GET<br>.<a href=
+00c0: "#POST">4.3</a> POST<br>.<a href="#File_Upload_POST">4.4</a> Fil
+0100: e Upload POST<br>.<a href="#Hidden_Fields">4.5</a> Hidden Fields
+0140: <br>.<a href="#Figure_Out_What_A_POST_Looks_Lik">4.6</a> Figure 
+0180: Out What A POST Looks Like<br>.<h2>HTTP upload</h2>.<p>.<a href=
+01c0: "#PUT">5.1</a> PUT<br>.<h2>HTTP Authentication</h2>.<p>.<a href=
+0200: "#Basic_Authentication">6.1</a> Basic Authentication<br>.<a href
+0240: ="#Other_Authentication">6.2</a> Other Authentication<br>.<a hre
+0280: f="#Proxy_Authentication">6.3</a> Proxy Authentication<br>.<a hr
+02c0: ef="#Hiding_credentials">6.4</a> Hiding credentials<br>.<h2>More
+0300:  HTTP Headers</h2>.<p>.<a href="#Referer">7.1</a> Referer<br>.<a
+0340:  href="#User_Agent">7.2</a> User Agent<br>.<h2>Redirects</h2>.<p
+0380: >.<a href="#Location_header">8.1</a> Location header<br>.<a href
+03c0: ="#Other_redirects">8.2</a> Other redirects<br>.<h2>Cookies</h2>
+0400: .<p>.<a href="#Cookie_Basics">9.1</a> Cookie Basics<br>.<a href=
+0440: "#Cookie_options">9.2</a> Cookie options<br>.<h2>HTTPS</h2>.<p>.
+0480: <a href="#HTTPS_is_HTTP_secure">10.1</a> HTTPS is HTTP secure<br
+04c0: >.<a href="#Certificates">10.2</a> Certificates<br>.<h2>Custom R
+0500: equest Elements</h2>.<p>.<a href="#Modify_method_and_headers">11
+0540: .1</a> Modify method and headers<br>.<a href="#More_on_changed_m
+0580: ethods">11.2</a> More on changed methods
+<= Recv data, 1448 bytes (0x5a8)
+0000: <br>.<h2>Web Login</h2>.<p>.<a href="#Some_login_tricks">12.1</a
+0040: > Some login tricks<br>.<h2>Debug</h2>.<p>.<a href="#Some_debug_
+0080: tricks">13.1</a> Some debug tricks<br>.<h2>References</h2>.<p>.<
+00c0: a href="#Standards">14.1</a> Standards<br>.<a href="#Sites">14.2
+0100: </a> Sites<br>.<hr>. <h2>1. HTTP Scripting</h2><a name="Backgrou
+0140: nd"></a><h3>1.1 Background</h3>.<p> This document assumes that y
+0180: ou're familiar with HTML and general networking..<p> The increas
+01c0: ing amount of applications moving to the web has made "HTTP.  Sc
+0200: ripting" more frequently requested and wanted. To be able to aut
+0240: omatically.   extract information from the web, to fake users, t
+0280: o post or upload data to.   web servers are all important tasks 
+02c0: today.. <p> Curl is a command line tool for doing all sorts of U
+0300: RL manipulations and.  transfers, but this particular document w
+0340: ill focus on how to use it when.   doing HTTP requests for fun a
+0380: nd profit. I'll assume that you know how to.   invoke 'curl --he
+03c0: lp' or 'curl --manual' to get basic information about it.. <p> C
+0400: url is not written to do everything for you. It makes the reques
+0440: ts, it gets.  the data, it sends data and it retrieves the infor
+0480: mation. You probably need.   to glue everything together using s
+04c0: ome kind of script language or repeated.   manual invokes.. <a n
+0500: ame="The_HTTP_Protocol"></a><h3>1.2 The HTTP Protocol</h3>.<p> H
+0540: TTP is the protocol used to fetch data from web servers. It is a
+0580:  very simple.  protocol that is built up
+<= Recv data, 1448 bytes (0x5a8)
+0000: on TCP/IP. The protocol also allows information to.   get sent t
+0040: o the server from the client using a few different methods, as w
+0080: ill.   be shown here.. <p> HTTP is plain ASCII text lines being 
+00c0: sent by the client to a server to.  request a particular action,
+0100:  and then the server replies a few text lines.   before the actu
+0140: al requested content is sent to the client.. <p> The client, cur
+0180: l, sends a HTTP request. The request contains a method (like.  G
+01c0: ET, POST, HEAD etc), a number of request headers and sometimes a
+0200:  request.   body. The HTTP server responds with a status line (i
+0240: ndicating if things went.   well), response headers and most oft
+0280: en also a response body. The "body" part.   is the plain data yo
+02c0: u requested, like the actual HTML or the image etc.. <a name="Se
+0300: e_the_Protocol"></a><h3>1.3 See the Protocol</h3>.<p>  Using cur
+0340: l's option --verbose (-v as a short option) will display what ki
+0380: nd.   of commands curl sends to the server, as well as a few oth
+03c0: er informational.    texts.. <p>  --verbose is the single most u
+0400: seful option when it comes to debug or even.   understand the cu
+0440: rl&lt;-&gt;server interaction.. <p>  Sometimes even --verbose is
+0480:  not enough. Then --trace and --trace-ascii offer.   even more d
+04c0: etails as they show EVERYTHING curl sends and receives. Use it. 
+0500:    like this:. <pre>. curl --trace-ascii debugdump.txt <a href="
+0540: http://www.example.com/">http://www.example.com/</a>.</pre>.<a n
+0580: ame="See_the_Timing"></a><h3>1.4 See the
+<= Recv data, 1448 bytes (0x5a8)
+0000:  Timing</h3>.<p>  Many times you may wonder what exactly is taki
+0040: ng all the time, or you just.   want to know the amount of milli
+0080: seconds between two points in a.    transfer. For those, and oth
+00c0: er similar situations, the --trace-time option.    is what you n
+0100: eed. It'll prepend the time to each trace output line:. <pre>. c
+0140: url --trace-ascii d.txt --trace-time <a href="http://example.com
+0180: /">http://example.com/</a>.</pre>.<a name="See_the_Response"></a
+01c0: ><h3>1.5 See the Response</h3>.<p>  By default curl sends the re
+0200: sponse to stdout. You need to redirect it.   somewhere to avoid 
+0240: that, most often that is done with -o or -O.. <h2>2. URL</h2><a 
+0280: name="Spec"></a><h3>2.1 Spec</h3>.<p> The Uniform Resource Locat
+02c0: or format is how you specify the address of a.  particular resou
+0300: rce on the Internet. You know these, you've seen URLs like.   <a
+0340:  href="http://curl.haxx.se">http://curl.haxx.se</a> or <a href="
+0380: https://yourbank.com">https://yourbank.com</a> a million times. 
+03c0: RFC 3986 is the.   canonical spec.. <a name="Host"></a><h3>2.2 H
+0400: ost</h3>.<p> The host name is usually resolved using DNS or your
+0440:  /etc/hosts file to an IP.  address and that's what curl will co
+0480: mmunicate with. Alternatively you specify.   the IP address dire
+04c0: ctly in the URL instead of a name.. <p> For development and othe
+0500: r trying out situation, you can point out a different.  IP addre
+0540: ss for a host name than what would otherwise be used, by using c
+0580: url's.   --resolve option:. <pre>. curl 
+<= Recv data, 1448 bytes (0x5a8)
+0000: --resolve www.example.org:80:127.0.0.1 <a href="http://www.examp
+0040: le.org/">http://www.example.org/</a>.</pre>.<a name="Port_number
+0080: "></a><h3>2.3 Port number</h3>.<p> Each protocol curl supports o
+00c0: perate on a default port number, be it over TCP.  or in some cas
+0100: es UDP. Normally you don't have to take that into.   considerati
+0140: on, but at times you run test servers on other ports or.   simil
+0180: ar. Then you can specify the port number in the URL with a colon
+01c0:  and a.   number immediately following the host name. Like when 
+0200: doing HTTP to port.   1234:. <pre>. curl <a href="http://www.exa
+0240: mple.org:1234/">http://www.example.org:1234/</a>.</pre>.<p> The 
+0280: port number you specify in the URL is the number that the server
+02c0:  uses to.  offer its services. Sometimes you may use a local pro
+0300: xy, and then you may.   need to specify that proxy's port number
+0340:  separate on what curl needs to.   connect to locally. Like when
+0380:  using a HTTP proxy on port 4321:. <pre>. curl --proxy <a href="
+03c0: http://proxy.example.org:4321">http://proxy.example.org:4321</a>
+0400:  <a href="http://remote.example.org/">http://remote.example.org/
+0440: </a>.</pre>.<a name="User_name_and_password"></a><h3>2.4 User na
+0480: me and password</h3>.<p> Some services are setup to require HTTP
+04c0:  authentication and then you need to.  provide name and password
+0500:  which then is transferred to the remote site in.   various ways
+0540:  depending on the exact authentication protocol used.. <p> You c
+0580: an opt to either insert the user and pas
+<= Recv data, 1448 bytes (0x5a8)
+0000: sword in the URL or you can.  provide them separately:. <pre>. c
+0040: url <a href="http://user:password">http://user:password</a>@exam
+0080: ple.org/.</pre>.<p> or.<pre>. curl -u user:password <a href="htt
+00c0: p://example.org/">http://example.org/</a>.</pre>.<p> You need to
+0100:  pay attention that this kind of HTTP authentication is not what
+0140: .  is usually done and requested by user-oriented web sites thes
+0180: e days. They.   tend to use forms and cookies instead.. <a name=
+01c0: "Path_part"></a><h3>2.5 Path part</h3>.<p> The path part is just
+0200:  sent off to the server to request that it sends back.  the asso
+0240: ciated response. The path is what is to the right side of the sl
+0280: ash.   that follows the host name and possibly port number.. <h2
+02c0: >3. Fetch a page</h2><a name="GET"></a><h3>3.1 GET</h3>.<p> The 
+0300: simplest and most common request/operation made using HTTP is to
+0340:  get a.  URL. The URL could itself refer to a web page, an image
+0380:  or a file. The client.   issues a GET request to the server and
+03c0:  receives the document it asked for..   If you issue the command
+0400:  line. <pre>. curl <a href="http://curl.haxx.se">http://curl.hax
+0440: x.se</a>.</pre>.<p> you get a web page returned in your terminal
+0480:  window. The entire HTML document.  that that URL holds.. <p> Al
+04c0: l HTTP replies contain a set of response headers that are normal
+0500: ly hidden,.  use curl's --include (-i) option to display them as
+0540:  well as the rest of the.   document.. <a name="HEAD"></a><h3>3.
+0580: 2 HEAD</h3>.<p> You can ask the remote s
+<= Recv data, 1448 bytes (0x5a8)
+0000: erver for ONLY the headers by using the --head (-I).  option whi
+0040: ch will make curl issue a HEAD request. In some special cases.  
+0080:  servers deny the HEAD method while others still work, which is 
+00c0: a particular.   kind of annoyance.. <p> The HEAD method is defin
+0100: ed and made so that the server returns the headers.  exactly the
+0140:  way it would do for a GET, but without a body. It means that yo
+0180: u.   may see a Content-Length: in the response headers, but ther
+01c0: e must not be an.   actual body in the HEAD response.. <h2>4. HT
+0200: ML forms</h2><a name="Forms_explained"></a><h3>4.1 Forms explain
+0240: ed</h3>.<p> Forms are the general way a web site can present a H
+0280: TML page with fields for.  the user to enter data in, and then p
+02c0: ress some kind of 'OK' or 'submit'.   button to get that data se
+0300: nt to the server. The server then typically uses.   the posted d
+0340: ata to decide how to act. Like using the entered words to search
+0380: .   in a database, or to add the info in a bug track system, dis
+03c0: play the entered.   address on a map or using the info as a logi
+0400: n-prompt verifying that the user.   is allowed to see what it is
+0440:  about to see.. <p> Of course there has to be some kind of progr
+0480: am in the server end to receive.  the data you send. You cannot 
+04c0: just invent something out of the air.. <a name="GET"></a><h3>4.2
+0500:  GET</h3>.<p>  A GET-form uses the method GET, as specified in H
+0540: TML like:.<pre>. &lt;form method="GET" action="junk.cgi"&gt;. &l
+0580: t;input type=text name="birthyear"&gt;. 
+<= Recv data, 1448 bytes (0x5a8)
+0000: &lt;input type=submit name=press value="OK"&gt;. &lt;/form&gt;.<
+0040: /pre>.<p>  In your favorite browser, this form will appear with 
+0080: a text box to fill in.   and a press-button labeled "OK". If you
+00c0:  fill in '1905' and press the OK.    button, your browser will t
+0100: hen create a new URL to get for you. The URL will.    get "junk.
+0140: cgi?birthyear=1905&amp;press=OK" appended to the path part of th
+0180: e.    previous URL.. <p>  If the original form was seen on the p
+01c0: age "www.hotmail.com/when/birth.html",.   the second page you'll
+0200:  get will become.    "www.hotmail.com/when/junk.cgi?birthyear=19
+0240: 05&amp;press=OK".. <p>  Most search engines work this way..<p>  
+0280: To make curl do the GET form post for you, just enter the expect
+02c0: ed created.   URL:. <pre>. curl "<a href="http://www.hotmail.com
+0300: /when/junk.cgi?birthyear=1905&amp;press">http://www.hotmail.com/
+0340: when/junk.cgi?birthyear=1905&amp;press</a>=OK".</pre>.<a name="P
+0380: OST"></a><h3>4.3 POST</h3>.<p>  The GET method makes all input f
+03c0: ield names get displayed in the URL field of.   your browser. Th
+0400: at's generally a good thing when you want to be able to.    book
+0440: mark that page with your given data, but it is an obvious disadv
+0480: antage.    if you entered secret information in one of the field
+04c0: s or if there are a.    large amount of fields creating a very l
+0500: ong and unreadable URL.. <p>  The HTTP protocol then offers the 
+0540: POST method. This way the client sends the.   data separated fro
+0580: m the URL and thus you won't see any of 
+<= Recv data, 1448 bytes (0x5a8)
+0000: it in the URL.    address field.. <p>  The form would look very 
+0040: similar to the previous one:.<pre>. &lt;form method="POST" actio
+0080: n="junk.cgi"&gt;. &lt;input type=text name="birthyear"&gt;. &lt;
+00c0: input type=submit name=press value=" OK "&gt;. &lt;/form&gt;.</p
+0100: re>.<p>  And to use curl to post this form with the same data fi
+0140: lled in as before, we.   could do it like:. <pre>. curl --data "
+0180: birthyear=1905&amp;press=%20OK%20"  <a href="http://www.example.
+01c0: com/when.cgi">http://www.example.com/when.cgi</a>.</pre>.<p>  Th
+0200: is kind of POST will use the Content-Type.   application/x-www-f
+0240: orm-urlencoded and is the most widely used POST kind.. <p>  The 
+0280: data you send to the server MUST already be properly encoded, cu
+02c0: rl will.   not do that for you. For example, if you want the dat
+0300: a to contain a space,.    you need to replace that space with %2
+0340: 0 etc. Failing to comply with this.    will most likely cause yo
+0380: ur data to be received wrongly and messed up.. <p>  Recent curl 
+03c0: versions can in fact url-encode POST data for you, like this:.<p
+0400: re>. curl --data-urlencode "name=I am Daniel" <a href="http://ww
+0440: w.example.com">http://www.example.com</a>.</pre>.<a name="File_U
+0480: pload_POST"></a><h3>4.4 File Upload POST</h3>.<p>  Back in late 
+04c0: 1995 they defined an additional way to post data over HTTP. It. 
+0500:   is documented in the RFC 1867, why this method sometimes is re
+0540: ferred to as.    RFC1867-posting.. <p>  This method is mainly de
+0580: signed to better support file uploads. A
+<= Recv data, 1448 bytes (0x5a8)
+0000:  form that.   allows a user to upload a file could be written li
+0040: ke this in HTML:. <p>    &lt;form method="POST" enctype='multipa
+0080: rt/form-data' action="upload.cgi"&gt;.<pre>. &lt;input type=file
+00c0:  name=upload&gt;. &lt;input type=submit name=press value="OK"&gt
+0100: ;.</pre>.     &lt;/form&gt;. <p>  This clearly shows that the Co
+0140: ntent-Type about to be sent is.   multipart/form-data.. <p>  To 
+0180: post to a form like this with curl, you enter a command line lik
+01c0: e:.<pre>. curl --form upload=@localfilename --form press=OK [URL
+0200: ].</pre>.<a name="Hidden_Fields"></a><h3>4.5 Hidden Fields</h3>.
+0240: <p>  A very common way for HTML based application to pass state 
+0280: information.   between pages is to add hidden fields to the form
+02c0: s. Hidden fields are.    already filled in, they aren't displaye
+0300: d to the user and they get passed.    along just as all the othe
+0340: r fields.. <p>  A similar example form with one visible field, o
+0380: ne hidden field and one.   submit button could look like:. <p>  
+03c0:   &lt;form method="POST" action="foobar.cgi"&gt;.<pre>. &lt;inpu
+0400: t type=text name="birthyear"&gt;. &lt;input type=hidden name="pe
+0440: rson" value="daniel"&gt;. &lt;input type=submit name="press" val
+0480: ue="OK"&gt;.</pre>.     &lt;/form&gt;. <p>  To post this with cu
+04c0: rl, you won't have to think about if the fields are.   hidden or
+0500:  not. To curl they're all the same:. <pre>. curl --data "birthye
+0540: ar=1905&amp;press=OK&amp;person=daniel" [URL].</pre>.<a name="Fi
+0580: gure_Out_What_A_POST_Looks_Lik"></a><h3>
+<= Recv data, 1448 bytes (0x5a8)
+0000: 4.6 Figure Out What A POST Looks Like</h3>.<p>  When you're abou
+0040: t fill in a form and send to a server by using curl instead.   o
+0080: f a browser, you're of course very interested in sending a POST 
+00c0: exactly the.    way your browser does.. <p>  An easy way to get 
+0100: to see this, is to save the HTML page with the form on.   your l
+0140: ocal disk, modify the 'method' to a GET, and press the submit bu
+0180: tton.    (you could also change the action URL if you want to)..
+01c0:  <p>  You will then clearly see the data get appended to the URL
+0200: , separated with a.   '?'-letter as GET forms are supposed to.. 
+0240: <h2>5. HTTP upload</h2><a name="PUT"></a><h3>5.1 PUT</h3>.<p> Th
+0280: e perhaps best way to upload data to a HTTP server is to use PUT
+02c0: . Then.  again, this of course requires that someone put a progr
+0300: am or script on the.   server end that knows how to receive a HT
+0340: TP PUT stream.. <p> Put a file to a HTTP server with curl:.<pre>
+0380: . curl --upload-file uploadfile <a href="http://www.example.com/
+03c0: receive.cgi">http://www.example.com/receive.cgi</a>.</pre>.<h2>6
+0400: . HTTP Authentication</h2><a name="Basic_Authentication"></a><h3
+0440: >6.1 Basic Authentication</h3>.<p> HTTP Authentication is the ab
+0480: ility to tell the server your username and.  password so that it
+04c0:  can verify that you're allowed to do the request you're.   doin
+0500: g. The Basic authentication used in HTTP (which is the type curl
+0540:  uses by.   default) is *plain* *text* based, which means it sen
+0580: ds username and password.   only slightl
+<= Recv data, 1448 bytes (0x5a8)
+0000: y obfuscated, but still fully readable by anyone that sniffs on.
+0040:    the network between you and the remote server.. <p> To tell c
+0080: url to use a user and password for authentication:.<pre>. curl -
+00c0: -user name:password <a href="http://www.example.com">http://www.
+0100: example.com</a>.</pre>.<a name="Other_Authentication"></a><h3>6.
+0140: 2 Other Authentication</h3>.<p> The site might require a differe
+0180: nt authentication method (check the headers.  returned by the se
+01c0: rver), and then --ntlm, --digest, --negotiate or even.   --anyau
+0200: th might be options that suit you.. <a name="Proxy_Authenticatio
+0240: n"></a><h3>6.3 Proxy Authentication</h3>.<p> Sometimes your HTTP
+0280:  access is only available through the use of a HTTP.  proxy. Thi
+02c0: s seems to be especially common at various companies. A HTTP pro
+0300: xy.   may require its own user and password to allow the client 
+0340: to get through to.   the Internet. To specify those with curl, r
+0380: un something like:. <pre>. curl --proxy-user proxyuser:proxypass
+03c0: word curl.haxx.se.</pre>.<p> If your proxy requires the authenti
+0400: cation to be done using the NTLM method,.  use --proxy-ntlm, if 
+0440: it requires Digest use --proxy-digest.. <p> If you use any one t
+0480: hese user+password options but leave out the password.  part, cu
+04c0: rl will prompt for the password interactively.. <a name="Hiding_
+0500: credentials"></a><h3>6.4 Hiding credentials</h3>.<p> Do note tha
+0540: t when a program is run, its parameters might be possible to see
+0580: .  when listing the running processes of
+<= Recv data, 1448 bytes (0x5a8)
+0000:  the system. Thus, other users may be.   able to watch your pass
+0040: words if you pass them as plain command line.   options. There a
+0080: re ways to circumvent this.. <p> It is worth noting that while t
+00c0: his is how HTTP Authentication works, very.  many web sites will
+0100:  not use this concept when they provide logins etc. See.   the W
+0140: eb Login chapter further below for more details on that.. <h2>7.
+0180:  More HTTP Headers</h2><a name="Referer"></a><h3>7.1 Referer</h3
+01c0: >.<p> A HTTP request may include a 'referer' field (yes it is mi
+0200: sspelled), which.  can be used to tell from which URL the client
+0240:  got to this particular.   resource. Some programs/scripts check
+0280:  the referer field of requests to verify.   that this wasn't arr
+02c0: iving from an external site or an unknown page. While.   this is
+0300:  a stupid way to check something so easily forged, many scripts 
+0340: still.   do it. Using curl, you can put anything you want in the
+0380:  referer-field and.   thus more easily be able to fool the serve
+03c0: r into serving your request.. <p> Use curl to set the referer fi
+0400: eld with:.<pre>. curl --referer <a href="http://www.example.come
+0440: ">http://www.example.come</a> <a href="http://www.example.com">h
+0480: ttp://www.example.com</a>.</pre>.<a name="User_Agent"></a><h3>7.
+04c0: 2 User Agent</h3>.<p> Very similar to the referer field, all HTT
+0500: P requests may set the User-Agent.  field. It names what user ag
+0540: ent (client) that is being used. Many.   applications use this i
+0580: nformation to decide how to display page
+<= Recv data, 1448 bytes (0x5a8)
+0000: s. Silly web.   programmers try to make different pages for user
+0040: s of different browsers to.   make them look the best possible f
+0080: or their particular browsers. They usually.   also do different 
+00c0: kinds of javascript, vbscript etc.. <p> At times, you will see t
+0100: hat getting a page with curl will not return the same.  page tha
+0140: t you see when getting the page with your browser. Then you know
+0180:  it.   is time to set the User Agent field to fool the server in
+01c0: to thinking you're.   one of those browsers.. <p> To make curl l
+0200: ook like Internet Explorer 5 on a Windows 2000 box:.<p>  curl --
+0240: user-agent "Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)"
+0280:  [URL].<p> Or why not look like you're using Netscape 4.73 on an
+02c0:  old Linux box:.<p>  curl --user-agent "Mozilla/4.73 [en] (X11; 
+0300: U; Linux 2.2.15 i686)" [URL].<h2>8. Redirects</h2><a name="Locat
+0340: ion_header"></a><h3>8.1 Location header</h3>.<p> When a resource
+0380:  is requested from a server, the reply from the server may.  inc
+03c0: lude a hint about where the browser should go next to find this 
+0400: page, or a.   new page keeping newly generated output. The heade
+0440: r that tells the browser.   to redirect is Location:.. <p> Curl 
+0480: does not follow Location: headers by default, but will simply di
+04c0: splay.  such pages in the same manner it display all HTTP replie
+0500: s. It does however.   feature an option that will make it attemp
+0540: t to follow the Location: pointers.. <p> To tell curl to follow 
+0580: a Location:.<pre>. curl --location <a hr
+<= Recv data, 1448 bytes (0x5a8)
+0000: ef="http://www.example.com">http://www.example.com</a>.</pre>.<p
+0040: > If you use curl to POST to a site that immediately redirects y
+0080: ou to another.  page, you can safely use --location (-L) and --d
+00c0: ata/--form together. Curl will.   only use POST in the first req
+0100: uest, and then revert to GET in the following.   operations.. <a
+0140:  name="Other_redirects"></a><h3>8.2 Other redirects</h3>.<p> Bro
+0180: wser typically support at least two other ways of redirects that
+01c0:  curl.  doesn't: first the html may contain a meta refresh tag t
+0200: hat asks the browser.   to load a specific URL after a set numbe
+0240: r of seconds, or it may use.   javascript to do it.. <h2>9. Cook
+0280: ies</h2><a name="Cookie_Basics"></a><h3>9.1 Cookie Basics</h3>.<
+02c0: p> The way the web browsers do "client side state control" is by
+0300:  using.  cookies. Cookies are just names with associated content
+0340: s. The cookies are.   sent to the client by the server. The serv
+0380: er tells the client for what path.   and host name it wants the 
+03c0: cookie sent back, and it also sends an expiration.   date and a 
+0400: few more properties.. <p> When a client communicates with a serv
+0440: er with a name and path as previously.  specified in a received 
+0480: cookie, the client sends back the cookies and their.   contents 
+04c0: to the server, unless of course they are expired.. <p> Many appl
+0500: ications and servers use this method to connect a series of requ
+0540: ests.  into a single logical session. To be able to use curl in 
+0580: such occasions, we.   must be able to re
+<= Recv data, 1448 bytes (0x5a8)
+0000: cord and send back cookies the way the web application.   expect
+0040: s them. The same way browsers deal with them.. <a name="Cookie_o
+0080: ptions"></a><h3>9.2 Cookie options</h3>.<p> The simplest way to 
+00c0: send a few cookies to the server when getting a page with.  curl
+0100:  is to add them on the command line like:. <pre>. curl --cookie 
+0140: "name=Daniel" <a href="http://www.example.com">http://www.exampl
+0180: e.com</a>.</pre>.<p> Cookies are sent as common HTTP headers. Th
+01c0: is is practical as it allows curl.  to record cookies simply by 
+0200: recording headers. Record cookies with curl by.   using the --du
+0240: mp-header (-D) option like:. <pre>. curl --dump-header headers_a
+0280: nd_cookies <a href="http://www.example.com">http://www.example.c
+02c0: om</a>.</pre>.<p> (Take note that the --cookie-jar option descri
+0300: bed below is a better way to.  store cookies.). <p> Curl has a f
+0340: ull blown cookie parsing engine built-in that comes to use if yo
+0380: u.  want to reconnect to a server and use cookies that were stor
+03c0: ed from a.   previous connection (or hand-crafted manually to fo
+0400: ol the server into.   believing you had a previous connection). 
+0440: To use previously stored cookies,.   you run curl like:. <pre>. 
+0480: curl --cookie stored_cookies_in_file <a href="http://www.example
+04c0: .com">http://www.example.com</a>.</pre>.<p> Curl's "cookie engin
+0500: e" gets enabled when you use the --cookie option. If you.  only 
+0540: want curl to understand received cookies, use --cookie with a fi
+0580: le that.   doesn't exist. Example, if yo
+<= Recv data, 1448 bytes (0x5a8)
+0000: u want to let curl understand cookies from a.   page and follow 
+0040: a location (and thus possibly send back cookies it received),.  
+0080:  you can invoke it like:. <pre>. curl --cookie nada --location <
+00c0: a href="http://www.example.com">http://www.example.com</a>.</pre
+0100: >.<p> Curl has the ability to read and write cookie files that u
+0140: se the same file.  format that Netscape and Mozilla once used. I
+0180: t is a convenient way to share.   cookies between scripts or inv
+01c0: okes. The --cookie (-b) switch automatically.   detects if a giv
+0200: en file is such a cookie file and parses it, and by using the.  
+0240:  --cookie-jar (-c) option you'll make curl write a new cookie fi
+0280: le at the end.   of an operation:. <pre>. curl --cookie cookies.
+02c0: txt --cookie-jar newcookies.txt  <a href="http://www.example.com
+0300: ">http://www.example.com</a>.</pre>.<h2>10. HTTPS</h2><a name="H
+0340: TTPS_is_HTTP_secure"></a><h3>10.1 HTTPS is HTTP secure</h3>.<p> 
+0380: There are a few ways to do secure HTTP transfers. The by far mos
+03c0: t common.  protocol for doing this is what is generally known as
+0400:  HTTPS, HTTP over.   SSL. SSL encrypts all the data that is sent
+0440:  and received over the network and.   thus makes it harder for a
+0480: ttackers to spy on sensitive information.. <p> SSL (or TLS as th
+04c0: e latest version of the standard is called) offers a.  truckload
+0500:  of advanced features to allow all those encryptions and key.   
+0540: infrastructure mechanisms encrypted HTTP requires.. <p> Curl sup
+0580: ports encrypted fetches thanks to the fr
+<= Recv data, 1448 bytes (0x5a8)
+0000: eely available OpenSSL.  libraries. To get a page from a HTTPS s
+0040: erver, simply run curl like:. <pre>. curl <a href="https://secur
+0080: e.example.com">https://secure.example.com</a>.</pre>.<a name="Ce
+00c0: rtificates"></a><h3>10.2 Certificates</h3>.<p>  In the HTTPS wor
+0100: ld, you use certificates to validate that you are the one.   you
+0140:  claim to be, as an addition to normal passwords. Curl supports 
+0180: client-.    side certificates. All certificates are locked with 
+01c0: a pass phrase, which you.    need to enter before the certificat
+0200: e can be used by curl. The pass phrase.    can be specified on t
+0240: he command line or if not, entered interactively when.    curl q
+0280: ueries for it. Use a certificate with curl on a HTTPS server lik
+02c0: e:. <pre>. curl --cert mycert.pem <a href="https://secure.exampl
+0300: e.com">https://secure.example.com</a>.</pre>.<p>  curl also trie
+0340: s to verify that the server is who it claims to be, by.   verify
+0380: ing the server's certificate against a locally stored CA cert.  
+03c0:   bundle. Failing the verification will cause curl to deny the c
+0400: onnection. You.    must then use --insecure (-k) in case you wan
+0440: t to tell curl to ignore that.    the server can't be verified..
+0480:  <p>  More about server certificate verification and ca cert bun
+04c0: dles can be read.   in the SSLCERTS document, available online h
+0500: ere:. <pre>. <a href="http://curl.haxx.se/docs/sslcerts.html">ht
+0540: tp://curl.haxx.se/docs/sslcerts.html</a>.</pre>.<h2>11. Custom R
+0580: equest Elements</h2><a name="Modify_meth
+<= Recv data, 1448 bytes (0x5a8)
+0000: od_and_headers"></a><h3>11.1 Modify method and headers</h3>.<p> 
+0040: Doing fancy stuff, you may need to add or change elements of a s
+0080: ingle curl.  request.. <p> For example, you can change the POST 
+00c0: request to a PROPFIND and send the data.  as "Content-Type: text
+0100: /xml" (instead of the default Content-Type) like this:. <pre>. c
+0140: url --data "&lt;xml&gt;" --header "Content-Type: text/xml"  --re
+0180: quest PROPFIND url.com.</pre>.<p> You can delete a default heade
+01c0: r by providing one without content. Like you.  can ruin the requ
+0200: est by chopping off the Host: header:. <pre>. curl --header "Hos
+0240: t:" <a href="http://www.example.com">http://www.example.com</a>.
+0280: </pre>.<p> You can add headers the same way. Your server may wan
+02c0: t a "Destination:".  header, and you can add it:. <pre>. curl --
+0300: header "Destination: <a href="http://nowhere">http://nowhere</a>
+0340: " <a href="http://example.com">http://example.com</a>.</pre>.<a 
+0380: name="More_on_changed_methods"></a><h3>11.2 More on changed meth
+03c0: ods</h3>.<p> It should be noted that curl selects which methods 
+0400: to use on its own.  depending on what action to ask for. -d will
+0440:  do POST, -I will do HEAD and so.   on. If you use the --request
+0480:  / -X option you can change the method keyword.   curl selects, 
+04c0: but you will not modify curl's behavior. This means that if you.
+0500:    for example use -d "data" to do a POST, you can modify the me
+0540: thod to a.   PROPFIND with -X and curl will still think it sends
+0580:  a POST. You can change.   the normal GE
+<= Recv data, 1448 bytes (0x5a8)
+0000: T to a POST method by simply adding -X POST in a command line.  
+0040:  like:. <pre>. curl -X POST <a href="http://example.org/">http:/
+0080: /example.org/</a>.</pre>.<p> ... but curl will still think and a
+00c0: ct as if it sent a GET so it won't send any.  request body etc..
+0100:  <h2>12. Web Login</h2><a name="Some_login_tricks"></a><h3>12.1 
+0140: Some login tricks</h3>.<p> While not strictly just HTTP related,
+0180:  it still cause a lot of people problems.  so here's the executi
+01c0: ve run-down of how the vast majority of all login forms.   work 
+0200: and how to login to them using curl.. <p> It can also be noted t
+0240: hat to do this properly in an automated fashion, you.  will most
+0280:  certainly need to script things and do multiple curl invokes et
+02c0: c.. <p> First, servers mostly use cookies to track the logged-in
+0300:  status of the.  client, so you will need to capture the cookies
+0340:  you receive in the.   responses. Then, many sites also set a sp
+0380: ecial cookie on the login page (to.   make sure you got there th
+03c0: rough their login page) so you should make a habit.   of first g
+0400: etting the login-form page to capture the cookies set there.. <p
+0440: > Some web-based login systems features various amounts of javas
+0480: cript, and.  sometimes they use such code to set or modify cooki
+04c0: e contents. Possibly they.   do that to prevent programmed login
+0500: s, like this manual describes how to....   Anyway, if reading th
+0540: e code isn't enough to let you repeat the behavior.   manually, 
+0580: capturing the HTTP requests done by your
+<= Recv data, 1448 bytes (0x5a8)
+0000:  browsers and analyzing the.   sent cookies is usually a working
+0040:  method to work out how to shortcut the.   javascript need.. <p>
+0080:  In the actual &lt;form&gt; tag for the login, lots of sites fil
+00c0: l-in random/session.  or otherwise secretly generated hidden tag
+0100: s and you may need to first capture.   the HTML code for the log
+0140: in form and extract all the hidden fields to be able.   to do a 
+0180: proper login POST. Remember that the contents need to be URL enc
+01c0: oded.   when sent in a normal POST.. <h2>13. Debug</h2><a name="
+0200: Some_debug_tricks"></a><h3>13.1 Some debug tricks</h3>.<p> Many 
+0240: times when you run curl on a site, you'll notice that the site d
+0280: oesn't.  seem to respond the same way to your curl requests as i
+02c0: t does to your.   browser's.. <p> Then you need to start making 
+0300: your curl requests more similar to your.  browser's requests:. <
+0340: p> * Use the --trace-ascii option to store fully detailed logs o
+0380: f the requests.  for easier analyzing and better understanding. 
+03c0: <p> * Make sure you check for and use cookies when needed (both 
+0400: reading with.  --cookie and writing with --cookie-jar). <p> * Se
+0440: t user-agent to one like a recent popular browser does.<p> * Set
+0480:  referer like it is set by the browser.<p> * If you use POST, ma
+04c0: ke sure you send all the fields and in the same order as.  the b
+0500: rowser does it.. <p> A very good helper to make sure you do this
+0540:  right, is the LiveHTTPHeader tool.  that lets you view all head
+0580: ers you send and receive with Mozilla/Fi
+<= Recv data, 1216 bytes (0x4c0)
+0000: refox.   (even when using HTTPS). Chrome features similar functi
+0040: onality out of the box.   among the developer's tools.. <p> A mo
+0080: re raw approach is to capture the HTTP traffic on the network wi
+00c0: th tools.  such as ethereal or tcpdump and check what headers th
+0100: at were sent and.   received by the browser. (HTTPS makes this t
+0140: echnique inefficient.). <h2>14. References</h2><a name="Standard
+0180: s"></a><h3>14.1 Standards</h3>.<p> RFC 2616 is a must to read if
+01c0:  you want in-depth understanding of the HTTP.  protocol. <p> RFC
+0200:  3986 explains the URL syntax.<p> RFC 1867 defines the HTTP post
+0240:  upload format.<p> RFC 6525 defines how HTTP cookies work.<a nam
+0280: e="Sites"></a><h3>14.2 Sites</h3>.<p> <a href="http://curl.haxx.
+02c0: se">http://curl.haxx.se</a> is the home of the cURL project.</td
+0300: ></tr></table>.<p>.<a href="http://curl.haxx.se/donation.html"><
+0340: img border="0" src="http://curl.haxx.se/pix/donate.png" alt="don
+0380: ate!".width="88" height="31"></a>.<span class="aboutbox">.Page u
+03c0: pdated March 15, 2014.<br>.<a href="http://curl.haxx.se/about.ht
+0400: ml">web site info</a>.</span>.<center>.<a class="bottomad" href=
+0440: "http://www.easyalgo.com/eaupload.aspx".title="Asp.net upload co
+0480: mponent">File upload with ASP.NET</a>.</center>.</BODY>.</HTML>.
+== Info: Connection #0 to host curl.haxx.se left intact
