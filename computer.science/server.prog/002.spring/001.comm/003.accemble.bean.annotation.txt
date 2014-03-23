@@ -1,0 +1,326 @@
+
+自动装配
+
+    类型
+        1. byName
+            bean属性的名字和其他bean的名字相同
+
+            <bean id="kenny2"
+                class="com.springinaction.springidol.Instrumentalist" autowire="byName">
+                <property name="song" value="Jingle Bells" />
+                <!--<property name="instrument" ref="saxophone" />-->  // 自动装配到bean instrument上了
+            </bean>
+
+            <bean id="instrument"
+                class="com.springinaction.springidol.Saxophone" />
+
+
+        2. byType
+            装配和bean的属性具有相同类型成员
+            如果存在多个相同类型的成员，spring则会抛出exception
+
+            <bean id="kenny"
+                class="com.springinaction.springidol.Instrumentalist" autowire="byType">
+                <property name="song" value="Jingle Bells" />
+                <!--<property name="instrument" ref="saxophone" />-->  // 自动装配到bean saxophone上了
+            </bean>
+
+            <bean class="com.springinaction.springidol.Saxophone" />
+
+        3. constructor
+            和bean的构造器输入参数具有相同类型的其他bean自动装配到bean中
+
+        4. autodetect
+            首先进行constructor匹配，失败后则byType
+
+
+Java annotation config
+
+    <context:annotation-config/>
+        read configuration fron java annotation
+
+    @Autowired
+        1. autowire constructor
+            @Autowired
+            public Instrumentalist(Instrument instrument) {
+                this.instrument = instrument;
+            }
+
+        2. autowire propetry
+            @Autowired
+            private Instrument instrument;
+
+        3. autowire function
+            @Autowired
+            public void heresYourInstrument(Instrument instrument) {
+                this.instrument = instrument;
+            }
+
+        4. autowire setter
+            @Autowired
+            public void setInstrument(Instrument instrument) {
+                this.instrument = instrument;
+            }
+
+
+        allow null
+            @Autowired(required=false)
+
+    @Qualifier
+        @Autowired时指定bean的名字
+
+        @Autowired
+        @Qualifier("guitar")
+
+        直接使用@Qualifier
+            1. 指定qualifier
+                1.1 in xml:
+                    <bean class="com.springinaction.springidol.Guitar">
+                        <qualifier value="stringed" />
+                    </bean>
+                    or
+                1.2 in class declaration:
+                    @Qualifier("stringed")
+                    public class Guitar implements Instrument {
+
+            2. 使用Qualifier
+
+                @Qualifier("stringed")
+                private Instrument instrument;
+
+    @Value
+        @Value("test")
+        private String test;
+
+        @Value("#{systemProperties.myFavSong}")
+        private String song;
+
+
+    <context:component-scan base-package="com.springinaction.springidol">
+    </context:component-scan>
+        read configuration fron java annotation
+        not need to define even a bean!
+        用来替换annotation-config元素
+
+        会扫描base-package指定的package以及其子package
+
+        component-scan自动scan的bean
+            1. @Component, 通用注解，表示该类为spring组件
+
+                @Component                  // default bean id is ignorecased class name, "guitar"
+                public class Guitar implements Instrument
+                    扫描时，会自动件Guitar注册为bean, 
+
+                @Component("eddie")         // set bean id to "eddie" explicitly
+                public class Guitar implements Instrument
+ 
+
+                
+            2. @Controller, 标注类为spring mvc controller
+            3. @Repository, 标注类为数据仓库
+            4. @Service, 标注类为服务
+            5. 使用@Component标注的任意注解
+            6. @Configuration, java配置类
+
+
+            // 自动将Instrumentlist添加为@Component
+            <context:component-scan base-package="com.springinaction.springidol">
+                <context:include-filter type="assignable"
+                            expression="com.springinaction.springidol.Instrumentalist" />
+            </context:component-scan>
+
+                type
+                    1. annotation: 扫描expression指定的annotation
+                    2. assignable: 扫描expression指定的类
+                    3. aspectj:    扫描expression指定的aspectj表达式匹配的那些类
+                    4. custom:     使用自定义的TypeFilter实现类，该类由expression指定
+                    5. regex:      扫描名称和expression指定的正则表达式匹配的类
+
+                <context:exclude-filter/> 指定必须排除的类
+
+    java config
+        不使用xml进行配置
+        <context:component-scan 
+            base-package="com.springinaction.springidol">
+
+            会自动加载使用@Configuration标注的类
+
+        声明一个java configuration:        
+
+            @Configuration
+            public class SpringIdolConfig
+
+                can user just one @Configuration-annotated class, or many.
+                @Configuration can be considered the equivalent of XML's <beans/> element
+
+                @Configuration(defaultAutowire = Autowire.BY_TYPE, defaultLazy = Lazy.FALSE)
+                public class ApplicationConfig {
+                    // bean definitions follow
+                }
+                          
+
+
+            定义一个bean
+                @Bean
+                public Performer duke() {
+                    return new Juggler();
+                }
+
+                @Bean(name="tank")
+                public Performer perf() {
+                    return new Juggler();
+                }
+ 
+                // 等价于xml <bean id="duke" class="com.xxx.xxx.Juggler" />
+
+                @Bean
+                public Performer poeticDuke() {
+                    return new PoeticJuggler(sonnet29());
+                }
+                @Bean
+                private Poem sonnet29() {
+                    return new Sonnet29();
+                }
+
+                ////////////////////////////////////////////////////////////////////////////////
+                public class Foo {
+                    public void init() {
+                        // initialization logic
+                    }
+                }
+                public class Bar {
+                    public void cleanup() {
+                        // destruction logic
+                    }
+                }
+                @Configuration
+                    public class AppConfig {
+                        @Bean(initMethodName="init")
+                            public Foo foo() {
+                                return new Foo();
+                            }
+                        @Bean(destroyMethodName="cleanup")
+                            public Bar bar() {
+                                return new Bar();
+                            }
+                    }
+
+                ////////////////////////////////////////////////////////////////////////////////
+                // define scope, SINGLETON is the default
+                @Configuration
+                    public class MyConfiguration {
+                        @Bean(scope=DefaultScopes.PROTOTYPE)
+                            public Encryptor encryptor() {
+                                // ...
+                            }
+                    }
+
+                ////////////////////////////////////////////////////////////////////////////////
+        扫描configuration类：
+
+            ApplicationContext context =
+                 // 通过类名
+                new AnnotationConfigApplicationContext(SpringIdolConfig.class);
+                new AnnotationConfigApplicationContext(SpringIdolConfig.class, a.class, b.class);
+
+                // 通过包名
+                new AnnotationConfigApplicationContext("com.springinaction.springidol");
+                new AnnotationConfigApplicationContext("com.springinaction.springidol", "a.b.c");
+
+                // 通过通配符
+                new AnnotationConfigApplicationContext("**/configuration/**/*.class", "**/other/*Config.class");
+                Service service = context.getBean(Service.class);
+
+            considering what happens if two configuration classes define a bean with the same name. 
+                The last-specified class wins.
+
+        获取bean
+            ////////////////////////////////////////////////////////////////////////////////
+
+            JavaConfigApplicationContext context = new JavaConfigApplicationContext(...);
+            Service service = context.getBean(Service.class);
+            Service service = context.getBean(Service.class, "myService");
+             
+             // get all beans
+            Map matchingBeans = context.getBeansOfType(Service.class);
+            Service service = (Service) context.getBean("myService");
+
+            ////////////////////////////////////////////////////////////////////////////////
+
+            @Configuration
+                public class ConfigOne {
+                    @Bean
+                    public AccountRepository accountRepository() {
+                        // create and return an AccountRepository object
+                    }
+                }
+
+            @Configuration
+            @AnnotationDrivenConfig
+            public class ConfigTwo {
+                @Autowired 
+                AccountRepository accountRepository;
+
+                @Bean
+                public TransferService transferService() {
+                    return new TransferServiceImpl(accountRepository);
+                }
+            }
+            JavaConfigApplicationContext context =
+                new JavaConfigApplicationContext(ConfigOne.class, ConfigTwo.class);
+
+           //////////////////////////////////////////////////////////////////////////////// 
+           import other config
+
+               @Configuration
+               @Import({SpringIdolConfig.class})
+               public class DataSourceConfig {
+
+                   public static void main(String[] args) throws PerformanceException {
+                       ApplicationContext context = new AnnotationConfigApplicationContext(DataSourceConfig.class);
+                       Performer duke = (Performer) context.getBean("duke");
+                       duke.perform();
+                   }
+               }
+           
+           //////////////////////////////////////////////////////////////////////////////// 
+
+       @ComponentScan
+           equivalent for Spring XML's <context:component-scan/> 
+
+            package com.company.foo;
+            @Service
+            public class FooServiceImpl implements FooService {
+               private final FooRepository fooRepository;
+               @Autowired
+               public FooService(FooRepository fooRepository) {
+                   this.fooRepository = fooRepository;
+               }
+            }
+            @Repository
+            public class JdbcFooRepository implements FooRepository {
+               private final DataSource dataSource;
+               @Autowired
+               public FooRepository(DataSource dataSource) {
+                   this.dataSource = dataSource;
+               }
+            }
+
+            @Configuration
+            @ComponentScan("com.company") // search the com.company package for @Component, @Service, @Repository, ...
+            @Import("classpath:com/company/data-access-config.xml") // XML with DataSource bean
+            public class Config {
+            }
+
+            public class Main {
+                public static void main(String[] args) {
+                    JavaConfigApplicationContext ctx = new JavaConfigApplicationContext(Config.class);
+                    FooService fooService = ctx.getBean(FooService.class);
+                    fooService.doStuff();
+                    JdbcFooRepository fooRepo = ctx.getBean(JdbcFooRepository.class);
+                    fooRepo.doStuff();
+                }
+            }
+
+
+

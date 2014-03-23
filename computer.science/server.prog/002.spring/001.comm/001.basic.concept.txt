@@ -1,0 +1,50 @@
+
+Spring容器
+    容纳应用对象
+
+    容器创建对象，装配对象，管理对象， 销毁对象
+
+    Spring框架的核心
+
+    容器重要元素
+
+        1. Bean factory
+            最简单的容器
+            提供基本的依赖注入
+
+            org.springframework.beans.factory.BeanFactory
+
+    
+        2. AbstractApplicationContext
+            一般都使用AbstractApplicationContext
+
+                public abstract class AbstractApplicationContext extends DefaultResourceLoader
+                        implements ConfigurableApplicationContext, DisposableBean
+
+                ResourceLoader
+                     interface for loading resources (e.. class path or file system resources)
+
+            sub class
+                ClassPathXmlApplicationContext
+                FileSystemXmlApplicationContext
+
+
+            public interface ApplicationContext extends EnvironmentCapable, ListableBeanFactory, HierarchicalBeanFactory,
+                   MessageSource, ApplicationEventPublisher, ResourcePatternResolver {
+
+
+Life cycle of bean:
+    In you main(), create a ClassPathXmlApplicationContext("classpath: xxx.xml")
+        invoke getBean("beanName") from the ClassPathXmlApplicationContext
+
+    1. new a bean
+    2. inject bean fields
+    3. if implements BeanNameAware, Sping send bean name to bean
+    4. if implements ApplicationContextAware, Spring send ApplicationContext to bean
+    5. if implements InitializingBean(or init-method defined), afterPropertiesSet() will be called
+    6. if implements BeanPostProcessor, postProcessBeforeInitialization() and postProcessAfterInitialization() will be called
+    7. if implements DisposableBean(destroy-method defined), destroy() will be called
+
+
+
+

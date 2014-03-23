@@ -1,0 +1,84 @@
+
+XML名字空间
+    aop     声明切面
+    beans   装配bean
+    context     为配置应用上下文提供配置元素，包括自动检测，装配bean,注入非spring管理的对象
+    jee     java ee集成，jndi, ejb
+    jms     配置消息驱动的pojo
+    mvc     启用mvc
+
+Bean注入方式
+    1. 构造器注入
+    <bean id="poeticDuke"
+        class="com.springinaction.springidol.PoeticJuggler">
+        <constructor-arg value="15" />
+        <constructor-arg ref="sonnet29" />
+    </bean>
+
+    2. 工厂方法
+    <bean id="myStage" class="com.springinaction.springidol.Stage"
+        factory-method="getInstance"/>
+
+    3. 属性注入(调用setter方法)
+    <bean id="kenny2"
+        class="com.springinaction.springidol.Instrumentalist">
+            <property name="song" value="Jingle Bells" />
+            <property name="instrument" ref="saxophone" />
+    </bean>
+
+    <bean id="kenny3"
+        class="com.springinaction.springidol.Instrumentalist">
+            <property name="song" value="Jingle Bells" />
+            <property name="instrument">
+                <bean class="com.springinaction.springidol.Saxophone" />
+            </property>
+    </bean>
+
+    // injection list
+    <bean id="oneMan" class="com.springinaction.springidol2.OneManBand">
+        <property name="instruments">
+            <util:list>
+                <ref bean="saxophone"/>
+                <ref bean="guitar"/>
+            </util:list>
+        </property>
+    </bean>
+
+    // injection map
+    <bean id="oneMan" class="com.springinaction.springidol2.OneManBand">
+        <property name="instruments">
+            <util:map>
+                <entry key="SF" value-ref="saxophone"/>
+                <entry key="GT" value-ref="guitar"/>
+            </util:map>
+        </property>
+    </bean>
+
+    <bean id="oneMan" class="com.springinaction.springidol2.OneManBand">
+        <property name="instruments"><null/></property>
+    </bean>
+
+    表达式装配 SpEL
+
+
+Bean作用域
+    默认都是单例模式
+    总是返回同一个对象
+        每个上下文中有一个实例
+
+    通过scope控制创建对象的方式：
+
+        1. prototype 创建不同对象
+        <bean id="moreSonnet" 
+            class="com.springinaction.springidol.Sonnet29" scope="prototype"/> 
+
+        2. singleton 默认单例模式
+        3. request, 在一次http请求中，每个bean对应一个实例。mvc中生效
+        4. session, 在一次http session中， 每个bean对应一个实例。 mvc中生效
+        5. global-session, 在一个全局的http session中， 每个bean对应一个实例。 portlet中生效
+
+bean初始化和销毁
+    init-method
+    destroy-method
+
+
