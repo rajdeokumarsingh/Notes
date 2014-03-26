@@ -339,7 +339,7 @@ public abstract class WebSocketClientTest
 
         for (int i = 0; i < sockCount; i++) {
             assert (engines[i] != null);
-            /*
+
             String queryUrl = queryServerAddr + PushConstant.PUSH_QUERY_PATH +
                     PushConstant.PUSH_QUERY_PARAM + PushConstant.DEVICE_BEGIN_ID + i;
             Debug.log("query push server addr:" + queryUrl);
@@ -355,10 +355,6 @@ public abstract class WebSocketClientTest
                 e.printStackTrace();
                 continue;
             }
-            */
-
-            pushServerUris[i] = URI.create(queryServerAddr);
-            Debug.log("query push server uri:" + pushServerUris[i].toString());
 
             try {
                 Debug.log("init socket: " + i +

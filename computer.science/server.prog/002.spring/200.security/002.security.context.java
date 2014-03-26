@@ -1,3 +1,13 @@
+SecurityContextHolder-->SecurityContext-->Authentication--->{ principal, password, roles }
+UserDetailsService-->{UserDetails...}
+
+userDetailsService deriving:
+    userDetailsManager
+
+Authentication deriving:
+    AbstractAuthenticationToken
+    UsernamePasswordAuthenticationToken
+
 SecurityContextHolder
     SecurityContextHolderStrategy
         interface
@@ -61,3 +71,32 @@ UserDetailsService
     UserDetailsService, 
         to create a UserDetails when passed in a String-based username (or certificate ID or the like).
 
+Example:
+    // create user bu UserDetailsManager
+
+    @Repository
+    public class DefaultCalendarService implements CalendarService {
+        @Autowired
+        public DefaultCalendarService(EventDao eventDao, CalendarUserDao userDao, UserDetailsManager userDetailsManager) {
+            ...
+            this.eventDao = eventDao;
+            this.userDao = userDao;
+            this.userDetailsManager = userDetailsManager;
+        }
+
+        public int createUser(CalendarUser user) {
+            List<GrantedAuthority> authorities = AuthorityUtils.createAuthorityList("ROLE_USER");
+            UserDetails userDetails = new User(user.getEmail(), user.getPassword(), authorities);
+            userDetailsManager.createUser(userDetails);
+            return userDao.createUser(user);
+        }
+    }
+
+    // login current user
+    @Override
+    public void setCurrentUser(CalendarUser user) {
+        UserDetails userDetails = userDetailsService.loadUserByUsername(user.getEmail());
+        UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(userDetails,
+                user.getPassword(),userDetails.getAuthorities());
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+    }
