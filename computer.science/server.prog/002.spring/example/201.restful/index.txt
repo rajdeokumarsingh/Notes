@@ -1,0 +1,41 @@
+
+core (application's top-level packages):
+
+    domain: 
+        Components that cleanly capture the application's Core domain concepts. 
+        These classes are a manifestation of the ubiquitous language of the Core domain.
+
+
+        for example: 
+            Order, OrderStatus, Payment, PaymentDetails, PaymentStatus
+
+    event: 
+        Components that are the events that the domain can receive and process.
+
+        for example:
+            RequestAllOrdersEvent and AllOrdersEvent,
+            CreateOrderEvent and OrderCreatedEvent,
+            DeleteOrderEvent and OrderDeletedEvent,
+            RequestOrderDetailsEvent and OrderDetailsEvent,
+            RequestOrderStatusEvent and OrderStatusEvent,
+            SetOrderPaymentEvent,
+            OrderUpdatedEvent
+
+    service: 
+        Components that handle the actions that can be performed when an event is received.
+
+    repository: 
+        Components that store and retrieve the current state of the system's domain objects.
+    
+integration:
+    restful api
+        the core application structure should not influence the design of the API.
+
+    candidates for exposure to the outside world from the core domain:
+        Customer Order OrderStatus OrderStatusHistory Payment PaymentDetails PaymentStatus
+
+    Instead we can focus on exposing the following subset:
+        Order OrderStatus PaymentDetails PaymentStatus
+
+
+

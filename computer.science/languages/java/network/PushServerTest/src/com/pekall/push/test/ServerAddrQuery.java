@@ -19,6 +19,8 @@ public class ServerAddrQuery {
     }
 
     public static ServerAddress query(String url) throws IOException {
+        Debug.setVerboseDebugLog(true);
+
         Debug.logVerbose("query push server:" + url);
         ServerAddress serverAddress = null;
 
@@ -27,22 +29,22 @@ public class ServerAddrQuery {
 
         HttpResponse response1 = httpclient.execute(httpGet);
 
-        Debug.logVerbose("status line");
-        Debug.logVerbose(response1.getStatusLine().toString());
+        Debug.logVerbose("status line: " + response1.getStatusLine().toString());
 
         // Get the response
         BufferedReader rd = new BufferedReader(new InputStreamReader(
                 response1.getEntity().getContent()));
 
         String line = "";
-        Debug.logVerbose("entity:");
         while ((line = rd.readLine()) != null) {
-            Debug.logVerbose(line);
+            Debug.logVerbose("entity: " + line);
 
             Gson gson = new GsonBuilder().serializeNulls().create();
             serverAddress = gson.fromJson(line, ServerAddress.class);
             break;
         }
+
+        Debug.setVerboseDebugLog(false);
 
         return serverAddress;
     }

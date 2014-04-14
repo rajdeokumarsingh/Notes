@@ -1,0 +1,13 @@
+// gradle -q helloWorld
+
+task helloWorld << {
+    println 'hello, world'
+}
+
+task hello << {
+    print 'hello, '
+}
+
+task world(dependsOn: hello) << {
+    println 'world'
+}

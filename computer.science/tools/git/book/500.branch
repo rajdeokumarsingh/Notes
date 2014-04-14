@@ -13,7 +13,6 @@ when to create a branch
 git branch new
 git checkout new
 
-
 git checkout -b alt master
     create a new branch alt from master
     checkout to it

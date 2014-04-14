@@ -1,0 +1,189 @@
+gradle three phase
+    1. initialization
+        Gradle decides which projects are to participate in the build
+    2. configuration, DAG (for directed acyclic graph)
+        task objects are assembled into an internal object model
+        set up variables and data structures that will be needed by the task action
+    3. execution
+        build tasks are executed in the order required by their dependency relationships
+
+Tasks Are Objects
+    By default, each new task receives the type of DefaultTask
+
+    Methods of DefaultTask
+        dependsOn(task)
+
+            // Declare that world depends on hello
+            // Preserves any previously defined dependencies as well
+            task loadTestData {
+                dependsOn createSchema
+            }
+
+            // An alternate way to express the same dependency
+            task loadTestData {
+                dependsOn << createSchema
+            }
+
+            // Do the same using single quotes (which are usually optional)
+            task loadTestData {
+                dependsOn 'createSchema'
+            }
+
+            // Explicitly call the method on the task object
+            task loadTestData
+            loadTestData.dependsOn createSchema
+
+            // A shortcut for declaring dependencies
+            task loadTestData(dependsOn: createSchema)
+
+
+            // Declare dependencies one at a time
+            task loadTestData {
+                dependsOn << compileTestClasses
+                dependsOn << createSchema
+            }
+
+            // Pass dependencies as a variable-length list
+            task world {
+                dependsOn compileTestClasses, createSchema
+            }
+
+            // Explicitly call the method on the task object
+            task world
+            world.dependsOn compileTestClasses, createSchema
+
+            // A shortcut for dependencies only
+            // Note the Groovy list syntax
+            task world(dependsOn: [ compileTestClasses, createSchema ])
+
+
+        doFirst(closure)
+
+            task setupDatabaseTests << {
+                // This is the task's existing action
+                println 'load test data'
+            }
+
+            setupDatabaseTests.doFirst {
+                println 'create schema'
+            }
+
+            // Our changes to the task (in a place we can edit them)
+            setupDatabaseTests {
+                doFirst {
+                    println 'create database schema'
+                }
+                doFirst {
+                    println 'drop database schema'
+                }
+            }
+
+            $ gradle setupDatabaseTests
+            :setupDatabaseTests
+            drop database schema
+            create schema
+            load test data
+
+        doLast(closure)
+
+            setupDatabaseTests.doLast {
+                println 'load test data'
+            }
+            setupDatabaseTests.doLast {
+                println 'update version table'
+            }
+
+
+        onlyif(closure)
+
+            task createSchema << {
+                println 'create database schema'
+            }
+            task loadTestData(dependsOn: createSchema) << {
+                println 'load test data'
+            }
+            loadTestData.onlyIf {
+                System.properties['load.data'] == 'true'
+            }
+
+            gradle loadTestData -Dload.data=true
+
+
+    Properties of DefaultTask
+        didWork
+            A boolean property indicating whether the task completed successfully. 
+
+            apply plugin: 'java'
+            task emailMe(dependsOn: compileJava) << {
+                // if one (at least) java file was build, didWork is TRUE
+                if(tasks.compileJava.didWork) {
+                    println 'SEND EMAIL ANNOUNCING SUCCESS'
+                }
+            }
+
+        enabled
+            A boolean property indicating whether the task will execute.
+
+            task templates << {
+                println 'process email templates'
+            }
+            task sendEmails(dependsOn: templates) << {
+                println 'send emails'
+            }
+            sendEmails.enabled = false
+
+        path
+            A string property containing the fully qualified path of a task
+
+        description
+            task helloWorld(description: 'Says hello to the world') << {
+                println 'hello, world'
+            }
+
+            helloWorld {
+                description = 'Says hello to the world'
+            }
+
+            // Another way to do it
+            helloWorld.description = 'Says hello to the world'
+
+
+    Dynamic Properties (depreciated)
+        task copyFiles {
+            // Find files from wherever, copy them
+            // (then hardcode a list of files for illustration)
+            fileManifest = [ 'data.csv', 'config.json' ]
+        }
+        task createArtifact(dependsOn: copyFiles) << {
+            println "FILES IN MANIFEST: ${copyFiles.fileManifest}"
+        }
+
+        $ gradle -b dynamic.gradle createArtifact
+        FILES IN MANIFEST: [data.csv, config.json]
+
+
+    Task Types
+        Copy
+            copies files from one place into another 
+            task copyFiles(type: Copy) {
+                from 'resources'
+                into 'target'
+                include '**/*.xml', '**/*.txt', '**/*.properties'
+             }
+
+         Jar
+             apply plugin: 'java'
+             task customJar(type: Jar) {
+                 manifest {
+                 attributes firstKey: 'firstValue', secondKey: 'secondValue'
+                 }
+                 archiveName = 'hello.jar'
+                 destinationDir = file("${buildDir}/jars")
+                 from sourceSets.main.classes
+             }
+
+        JavaExec
+
+
+Where Do Tasks Come From?
+    come from plug-ins

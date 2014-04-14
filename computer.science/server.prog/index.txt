@@ -1,0 +1,9 @@
+
+
+"Criteria"
+    created by "Session"
+
+    include a group of "Criterion"
+        Restrictions.eq(), like, ... create a Criterion
+
+    Criteria.list() return queried vo
