@@ -1,0 +1,79 @@
+容器会自动将JSP转化为java代码，并最终转化为一个java servlet
+    实现接口HttpJspPage
+
+
+JSP java类型
+    scriptlet:  <% %>
+    指令：      <%@ %>
+    表达式：    <%= %> 
+
+
+    表达式：
+        <%= Counter.getCount() %>
+        不能有分号
+            容器会自动将表达式转化为：
+            out.println(Counter.getCount());
+
+
+        成员变量，函数
+        <%! int count = 1;%>
+        <%! int doubleCount() {
+            count *= 2;
+            return count;
+        }
+        %>
+
+隐式对象
+    out,request, response,session, application, config, exception, page
+    pageContext 封装了其他隐式对象
+
+初始化参数：
+    <servlet> 
+        <servlet-name>Hello Servlet</servlet-name>
+        <jsp-file>/TestInit.jsp</jsp-file>
+        <servlet-class>com.springapp.mvc.HelloServlet</servlet-class>
+    </servlet>
+
+Page Context
+    使用pageContext可以任意作用域的属性
+        page/application/servlet/session/request
+
+    pageContext.findAttribute()
+
+指令
+    page
+        <%@ page import=foo.* session="false" %>
+    
+    tablib
+        <%@ tablib tagdir="/WEB-INF/tags/cool" prefix="cool" %>
+
+    include
+        <%@ include file="a.html" %>
+
+Good Practice
+    尽量少在jsp中使用java代码
+
+    在web.xml中使用<scripting-invalid>来禁止jsp中的java
+
+Expression Language
+    EL
+    
+    下面两行是等价的：
+    <%= application.getAttribute("adminEmail")%>
+    ${applicationScope.adminEmail}
+
+    在web.xml中使用<el-ignore>来禁止jsp中的EL
+
+
+动作：
+    标准动作
+        <jsp:include page="a.jsp" />
+
+    其他动作
+        <c:set var="rate" value="32">
+
+
+
+
+
+

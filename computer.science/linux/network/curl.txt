@@ -1,0 +1,20 @@
+
+curl -i -X POST -d email=rui.jiang@pekall.com -d password=Qtm6kkPB -c cookies.txt http://192.168.10.32/auth/v1/login
+
+-v, --verbose
+
+-i, --include
+    include header in the output
+
+-X, --request
+    indicate the method POST, GET
+
+-d, --data
+    data in POST
+
+
+
+
+
+
+    

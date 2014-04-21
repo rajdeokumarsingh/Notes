@@ -1,0 +1,47 @@
+tasks
+    Emits a list of all tasks available in the current build file. Note that plug-ins may
+    introduce tasks of their own, so this list may be longer than the tasks you have
+    defined.
+
+--help or -h
+    Prints out the help messages describing all command-line options.
+
+-Dproperty=value
+    Defines a system property. This is a useful mechanism for passing parameters into
+    a build from the command line. Example: -Dcustom.config=my-config.properties.
+
+--info or -i
+    Sets the Gradle log level to INFO, which causes a few more informative messages
+    to be emitted over the default setting.
+
+--debug or -d
+    Turns out debug logging for the build, including stack traces. This generates a lot
+    of output, but can be quite useful for troubleshooting build problems.
+
+--dry-run or -m
+    Evaluates and runs the build file, but does not execute any task actions.
+
+--quiet or -q
+    Suppresses most output, showing error messages only.
+
+--gui
+    Launches the Gradle GUI.
+
+--stacktrace or -s
+    Emits an abbreviated stack trace when an exception is thrown by the build.
+    Normally, stack trace logging is suppressed, so this is a helpful switch when
+    debugging a broken build. The stack trace is abbreviated by removing frames
+    related to purely internal Groovy method calls.
+    10 | Chapter 1: Hello, Gradle!
+
+--full-stacktrace or -S
+    Emits a longer version of the --stacktrace output, including all internal Groovy
+    method calls. These are usually not of interest to the build developer.
+
+properties
+    Emits all the properties of the build’s Project object. The Project object is an object
+    representing the structure and state of the current build.
+
+
+
+

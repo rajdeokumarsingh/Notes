@@ -1,0 +1,10 @@
+
+@ContextConfiguration
+    * {@code @ContextConfiguration} defines class-level metadata that is
+    * used to determine how to load and configure an
+    * {@link org.springframework.context.ApplicationContext ApplicationContext}
+    * for integration tests.
+
+    exmaple:
+        @ContextConfiguration( { "classpath:com/springinaction/springidol/spring-idol.xml" })
+

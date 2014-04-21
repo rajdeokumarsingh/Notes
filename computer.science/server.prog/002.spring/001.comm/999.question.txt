@@ -1,0 +1,17 @@
+
+ClassPathXmlApplicationContext
+    file in the resouce folder will be zip to the root dir of jar
+    try unzip a .jar file:
+
+    resources
+        a.xml
+        classpath should be : "classpath: a.xml"
+
+    resources
+        com/pekall/mdm/a.xml
+        classpath should be : "classpath: com/pekall/mdm/a.xml"
+
+
+FileSystemXmlApplicationContext
+
+

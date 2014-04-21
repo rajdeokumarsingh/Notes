@@ -1,0 +1,77 @@
+
+<servlet-mapping>匹配类型
+
+    1. 完全匹配：
+        <url-pattern>/Beer/SelectBeer.do</url-pattern>
+                    必须以/开头
+                                    可以有扩展名字do, 不过不是必需的
+
+    2. 目录匹配：
+        <url-pattern>/Beer/*</url-pattern>
+                   可以是虚拟目录
+                   或者是实际目录
+
+    3. 扩展匹配：
+        <url-pattern>*.do</url-pattern>
+                1. 不能以斜线开头
+
+
+容器根据url选择servlet的规则：
+    1. 首先选择完全匹配
+    2. 然后进行目录匹配
+        如果一个url和多个目录匹配上了， 选择最长的匹配
+
+        如/foo/bar/myStuff.do和目录规则 /foo/bar/*, /foo/* 都能够匹配上
+            不过最后会映射到前者
+
+    3. 最后进行扩展名匹配
+
+<welcome-file-list>
+    指定默认的访问网页
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>     <!-- 容器会首先查找目录中是否有index.html -->
+        <welcome-file>default.jsp</welcome-file>    <!-- 容器会然后查找目录中是否有default.jsp -->
+                                                    <!-- 如果都没有，有的容器返回404, 有的容器返目录中所有文件的列表 -->
+    </welcome-file-list>
+
+<erro-page>
+    指定发生错误时候的页面
+
+    <erro-page>
+        <erro-type>java.lang.Throwable</erro-type>
+        <location>/errorPage.jsp</location>
+    </erro-page>
+
+    <erro-page>
+        <erro-code>404</erro-code>
+        <location>/errorPage.jsp</location>
+    </erro-page>
+
+servlet初始化
+    servlet默认会在第一个请求来的时候初始化
+
+    <load-on-startup>1<load-on-startup>
+        非0 表示在部署后或服务器启动后就初始化servlet
+
+    <servlet>
+        ...
+        <load-on-startup>1<load-on-startup>  第一个初始化
+        ...
+    </servlet>
+
+    <servlet>
+        <load-on-startup>2<load-on-startup> 第二个初始化
+    </servlet>
+
+    如果<load-on-startup>的数值相同，就按照web.xml中的前后顺序来初始化
+
+<mime-mapping>
+
+    <mime-mapping>
+        <extension>mpg</extension>          不要加点"."
+        <mime-type>video/mpeg</mime-type>
+    </mime-mapping>
+
+
+

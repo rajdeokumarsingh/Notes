@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+    <!--==========================================================================
+    加密用KEY 此处为随机值
+    ============================================================================-->
+    <util:properties id="securityKeys">
+        <prop key="remember-me">182301IEKO1L73C181891TLTKABCNKA1956A7G9UPQXN</prop>
+        <prop key="anonymous">BF93JFJ091N00Q7HF</prop>
+    </util:properties>
+
+    <!--==========================================================================
+    使用标注拦截业务层方法
+    ============================================================================-->
+    <security:global-method-security pre-post-annotations="enabled" />
+
+    <!--==========================================================================
+    SpringSecurity核心过滤器组
+    ============================================================================-->
+    <bean id="springSecurityFilterChain" class="org.springframework.security.web.FilterChainProxy">
+        <security:filter-chain-map request-matcher="ant" >
+            <security:filter-chain pattern="/**" filters="
+			   channelProcessingFilter,
+	           concurrencyFilter,
+	           securityContextPersistenceFilter,
+	           logoutFilter,
+	           usernamePasswordProcessingFilter,
+	           rememberMeProcessingFilter,
+	           anonymousProcessingFilter,
+	           exceptionTranslationFilter,
+	           filterSecurityInterceptor" />
+        </security:filter-chain-map>
+    </bean>
+
+    <!--==========================================================================
+    核心过滤器成员之一
+    常用来将某些HTTP协议的URL重定向到HTTPS协议
+    ============================================================================-->
+    <bean id="channelProcessingFilter" class="org.springframework.security.web.access.channel.ChannelProcessingFilter">
+        <property name="channelDecisionManager" ref="channelDecisionManager" />
+        <property name="securityMetadataSource">
+            <security:filter-security-metadata-source request-matcher="ant">
+                <!--
+                <security:intercept-url pattern="/just/test" access="REQUIRES_SECURE_CHANNEL" />
+                -->
+                <security:intercept-url pattern="/**" access="ANY_CHANNEL" />
+            </security:filter-security-metadata-source>
+        </property>
+    </bean>
+
+    <bean id="channelDecisionManager"
+          class="org.springframework.security.web.access.channel.ChannelDecisionManagerImpl">
+        <property name="channelProcessors">
+            <list>
+                <ref local="secureChannelProcessor" />
+                <ref local="insecureChannelProcessor" />
+            </list>
+        </property>
+    </bean>
+
+    <bean id="secureChannelProcessor" class="org.springframework.security.web.access.channel.SecureChannelProcessor" />
+    <bean id="insecureChannelProcessor" class="org.springframework.security.web.access.channel.InsecureChannelProcessor" />
+
+    <!--==========================================================================
+    核心过滤器成员之一
+    HttpSession并发过滤器
+    ============================================================================-->
+    <bean id="concurrencyFilter" class="org.springframework.security.web.session.ConcurrentSessionFilter">
+        <property name="sessionRegistry" ref="sessionRegistry" />
+        <property name="expiredUrl" value="/common/session-expired" />
+    </bean>
+
+    <bean id="sessionRegistry" class="org.springframework.security.core.session.SessionRegistryImpl" />
+
+    <bean id="sas" class="org.springframework.security.web.authentication.session.ConcurrentSessionControlStrategy">
+        <constructor-arg index="0" ref="sessionRegistry" />
+        <property name="maximumSessions" value="1" />
+    </bean>
+
+    <!--==========================================================================
+    核心过滤器成员之一
+    获取或存储一个SecurityContext
+    ============================================================================-->
+    <bean id="securityContextPersistenceFilter" class="org.springframework.security.web.context.SecurityContextPersistenceFilter" />
+
+    <!--==========================================================================
+    核心过滤器成员之一
+    监控一个实现退出功能的URL
+    ============================================================================-->
+    <bean id="logoutFilter" class="org.springframework.security.web.authentication.logout.LogoutFilter">
+        <constructor-arg index="0" value="/common/login" />
+        <constructor-arg index="1">
+            <array>
+                <ref local="logoutHandler" />
+                <ref local="rememberMeServices" />
+            </array>
+        </constructor-arg>
+        <property name="filterProcessesUrl" value="/common/logout"/>
+    </bean>
+
+    <!-- 这个Bean注入到logoutFilter中去，它实际负责最后的扫尾工作，如把HttpSession实例删除 -->
+    <bean id="logoutHandler" class="org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler">
+        <property name="invalidateHttpSession" value="true" />
+    </bean>
+
+    <!--==========================================================================
+    核心过滤器成员之一
+    监控一个URL，验证用户提交的用户名和密码
+    ============================================================================-->
+    <bean id="usernamePasswordProcessingFilter" class="org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter">
+        <property name="filterProcessesUrl" value="/common/login-process"/>
+        <property name="usernameParameter" value="username"/>
+        <property name="passwordParameter" value="password"/>
+        <property name="authenticationManager" ref="customAuthenticationManager"/>
+        <property name="rememberMeServices" ref="rememberMeServices"/>
+        <property name="authenticationFailureHandler" ref="authenticationFailureHandler"/>
+        <property name="sessionAuthenticationStrategy" ref="sas" />
+    </bean>
+
+    <!--
+        这个Bean注入到usernamePasswordProcessingFilter中去，他决定用户名和密码验证失败之后的动作
+        注意: 应设置行为为转发方式，否则保存在HttpServletRequest实例中的错误信息会因为重定向而丢失。
+     -->
+    <bean id="authenticationFailureHandler" class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
+        <property name="defaultFailureUrl" value="/common/login"/>
+        <property name="useForward" value="true" />
+    </bean>
+
+    <!--==========================================================================
+    核心过滤器成员之一
+    恢复被SpringSecurity框架打断的URL (如果用户可以重新被认证的话)
+    ============================================================================-->
+    <!-- 在SpringSecurity.3.1.0中这个过滤器的功能 已经移植到exceptionTranslationFilter 所以不再需要-->
+    <!--
+    <bean id="requestCacheAwareFilter" class="org.springframework.security.web.savedrequest.RequestCacheAwareFilter">
+        <constructor-arg index="0">
+            <bean class="org.springframework.security.web.savedrequest.HttpSessionRequestCache" />
+        </constructor-arg>
+    </bean>
+    -->
+
+    <!--==========================================================================
+    核心过滤器成员之一
+    通过分析浏览器传来的cookies查找用户名和密码用以决定是否可以登录
+    ============================================================================-->
+    <bean id="rememberMeProcessingFilter" class="org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter">
+        <property name="rememberMeServices" ref="rememberMeServices"/>
+        <property name="authenticationManager" ref="customAuthenticationManager" />
+    </bean>
+
+    <bean id="rememberMeServices" class="org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices">
+        <property name="key" value="#{securityKeys['remember-me']}" />
+        <property name="parameter" value="_remember_me" />
+        <property name="tokenValiditySeconds" value="7200" />
+        <property name="tokenRepository" ref="inMemoryTokenRepository" />
+        <property name="userDetailsService" ref="hibernateUserDetailsService" />
+    </bean>
+
+    <bean id="rememberMeAuthenticationProvider"
+          class="org.springframework.security.authentication.RememberMeAuthenticationProvider">
+        <property name="key" value="#{securityKeys['remember-me']}" />
+    </bean>
+
+    <bean id="inMemoryTokenRepository" class="org.springframework.security.web.authentication.rememberme.InMemoryTokenRepositoryImpl" />
+
+    <!--
+    <bean id="jdbcRememberMeTokenRepository"
+        class="org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    -->
+
+    <!--==========================================================================
+    核心过滤器成员之一
+    如果用户不能通过验证则给添加一个匿名用户的角色
+    ============================================================================-->
+    <bean id="anonymousProcessingFilter" class="org.springframework.security.web.authentication.AnonymousAuthenticationFilter">
+        <property name="userAttribute" value="anonymousUser,ROLE_ANONYMOUS"/>
+        <property name="key" value="#{securityKeys['anonymous']}"/>
+    </bean>
+
+    <!--==========================================================================
+    核心过滤器成员之一
+    解决因为权限和验证问题而引发的异常
+    ============================================================================-->
+    <bean id="exceptionTranslationFilter" class="org.springframework.security.web.access.ExceptionTranslationFilter">
+        <property name="authenticationEntryPoint" ref="authenticationEntryPoint" />
+        <property name="accessDeniedHandler" ref="accessDeniedHandler" />
+    </bean>
+
+    <bean id="authenticationEntryPoint" class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
+        <property name="useForward" value="false" />
+        <property name="loginFormUrl" value="/common/login" />
+    </bean>
+
+    <bean id="accessDeniedHandler" class="org.springframework.security.web.access.AccessDeniedHandlerImpl">
+        <property name="errorPage" value="/common/error"/>
+    </bean>
+
+    <!--==========================================================================
+    核心过滤器成员之一
+    完成最终的授权判断(委托给AccessDecisionManager接口)
+    ============================================================================-->
+    <bean id="filterSecurityInterceptor" class="org.springframework.security.web.access.intercept.FilterSecurityInterceptor">
+        <property name="authenticationManager" ref="customAuthenticationManager" />
+        <property name="accessDecisionManager" ref="affirmativeBased" />
+        <property name="securityMetadataSource">
+            <security:filter-security-metadata-source use-expressions="true">
+                <security:intercept-url pattern="/common/login" access="permitAll" />
+                <security:intercept-url pattern="/**" access="hasRole('ROLE_ADMIN')" />
+            </security:filter-security-metadata-source>
+        </property>
+    </bean>
+
+    <bean id="customAuthenticationManager" class="org.springframework.security.authentication.ProviderManager">
+        <property name="authenticationEventPublisher" ref="defaultAuthEventPublisher"/>
+        <property name="providers">
+            <list>
+                <ref local="daoAuthenticationProvider"/>
+                <ref local="anonymousAuthenticationProvider"/>
+                <ref local="rememberMeAuthenticationProvider"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="org.springframework.security.access.vote.AffirmativeBased" id="affirmativeBased">
+        <property name="decisionVoters">
+            <list>
+                <ref bean="roleVoter"/>
+                <ref bean="expressionVoter"/>
+                <ref bean="authenticatedVoter"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="org.springframework.security.access.vote.RoleVoter" id="roleVoter" />
+    <bean class="org.springframework.security.access.vote.AuthenticatedVoter" id="authenticatedVoter" />
+
+    <bean id="defaultAuthEventPublisher" class="org.springframework.security.authentication.DefaultAuthenticationEventPublisher"/>
+
+    <bean id="daoAuthenticationProvider" class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+        <property name="passwordEncoder" ref="md5PasswordEncoder"/>
+        <property name="userDetailsService" ref="hibernateUserDetailsService" />
+        <!--
+        <property name="saltSource" ref="saltSource"/>
+        -->
+    </bean>
+
+    <bean id="anonymousAuthenticationProvider" class="org.springframework.security.authentication.AnonymousAuthenticationProvider">
+        <property name="key" value="#{securityKeys['anonymous']}" />
+    </bean>
+
+    <bean class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler" id="expressionHandler"/>
+
+    <bean class="org.springframework.security.web.access.expression.WebExpressionVoter" id="expressionVoter">
+        <property name="expressionHandler" ref="expressionHandler"/>
+    </bean>
+
+    <!--
+        UserDetailsService自己提供了一个Hibernate实现
+        对应的 UserDetails实现为实体域的User对象
+    -->
+    <alias name="userDao" alias="hibernateUserDetailsService"/>
+
+    <bean class="org.springframework.security.authentication.encoding.Md5PasswordEncoder" id="md5PasswordEncoder" />
+
+    <!--
+    <bean class="org.springframework.security.authentication.dao.ReflectionSaltSource" id="saltSource">
+        <property name="userPropertyToUse" value="id"/>
+    </bean>
+    -->
+
+</beans>

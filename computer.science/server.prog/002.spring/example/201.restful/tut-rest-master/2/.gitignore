@@ -1,0 +1,14 @@
+build/
+.idea/
+.gradle/
+out/
+target/
+.iws
+.ipr
+.directory
+.settings
+.classpath
+.project
+
+
+/complete

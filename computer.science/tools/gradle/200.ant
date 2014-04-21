@@ -1,0 +1,14 @@
+
+def helloName = "Fird Birfle"
+int personAge = 43
+
+task hello << {
+    println "Hello ${helloName}. I believe you are ${personAge} years of age."
+}
+
+
+task hello << {
+    String greeting = "hello from Ant"
+    ant.echo(greeting)
+}
+

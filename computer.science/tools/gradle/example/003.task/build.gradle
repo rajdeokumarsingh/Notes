@@ -1,0 +1,108 @@
+// empty action
+task hello
+
+// one action
+task doSomething << {
+    println 'hello, task'
+}
+
+// more actions
+task doMore
+doMore << {
+    print 'do, '
+}
+doMore << {
+    println 'more!'
+}
+
+
+task initDb
+initDb << { println 'connect to database' }          // action block
+initDb << { println 'update database schema' }       // action block
+
+// configuration block, run in configuration phase, before execution phase
+initDb { println 'configuring database connection' } 
+initDb { println '...' } 
+
+
+// gradle three phase
+// 1. initialization
+    // Gradle decides which projects are to participate in the build
+// 2. configuration, DAG (for directed acyclic graph)
+    // task objects are assembled into an internal object model
+    // set up variables and data structures that will be needed by the task action
+// 3. execution
+    // build tasks are executed in the order required by their dependency relationships
+
+// Tasks Are Objects
+
+
+task setDb << {
+    // This is the task's existing action
+    println 'load test data'
+}
+
+// setDb.doFirst {
+//    println 'create schema'
+// }
+
+// Our changes to the task (in a place we can edit them)
+setDb {
+    doFirst {
+        println 'do first 1'
+    }
+    doFirst {
+        println 'do first 2'
+    }
+}
+
+setDb {
+    doLast {
+        println 'do last 1'
+    }
+    doLast {
+        println 'do last 2'
+    }
+
+}
+
+
+
+task createSchema << {
+    println 'create database schema'
+}
+task loadTestData(dependsOn: createSchema) << {
+    println 'load test data'
+}
+loadTestData.onlyIf {
+    System.properties['load.data'] == 'true'
+}
+
+apply plugin: 'java'
+task emailMe(dependsOn: compileJava) << {
+    if(tasks.compileJava.didWork) {
+        println 'have build java file'
+    } else {
+        println 'NOT build java file'
+    }
+}
+
+task echoMyPath << {
+    println "THIS TASK'S PATH IS ${path}"
+}
+
+task copyFiles1 {
+    // Find files from wherever, copy them
+    // (then hardcode a list of files for illustration)
+    fileManifest = [ 'data.csv', 'config.json' ]
+}
+task createArtifact(dependsOn: copyFiles1) << {
+    println "FILES IN MANIFEST: ${copyFiles1.fileManifest}"
+}
+
+
+task copyFiles(type: Copy) {
+    from 'resources'
+    into 'target'
+    include '**/*.xml', '**/*.txt', '**/*.properties'
+}

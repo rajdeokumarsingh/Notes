@@ -1,0 +1,75 @@
+HttpSession
+
+    HttpSession的三种死法
+        超时
+        被调用invalidate()
+        应用结束
+
+    超时设置：
+        全局超时
+        web.xml
+            <session-config>
+                <!-- minutes -->
+                <session-timeout>15</session-timeout>
+            </session-config>
+
+        session.setMaxInactiveInterval(20*60); // 20 minutes
+
+    生命周期
+        创建会话
+        撤销会话
+
+        HttpSessionListener
+            必须在web.xml中注册
+
+    属性
+        增加
+        删除
+        替换
+
+        HttpSessionBindingListener
+            一个属性对象的类可以implement这个接口
+
+            当该对象加入/退出某个session时， 这个对象会接到通知。
+
+        HttpSessionAttributeListener
+            必须在web.xml中注册
+
+    迁移
+        钝化
+            容器准备将session从一个容器移动到另外的容器中
+
+        激活
+            
+        HttpSessionEvent
+        HttpSessionActivationListener
+        
+        当发生应用迁移/拷贝的时候
+            vm中的ServletContext, ServletConfig都会复制一份
+                除了HttpSession, 所有其他对象都会拷贝一份到另一个vm中
+
+            但是vm中的HttpSession不会被复制， 只会从一个vm移动到另一个vm
+
+            在分布式环境中
+                一个servlet可以存在于多个vm中(服务器)
+                一个会话只会存在于一个vm中
+
+        
+        当负载均衡服务器将包含一个http session的请求序列从服务器A移动到服务器B时
+            HttpSession会（自动）在服务器A上钝化， 并在服务器B上激活
+
+        HttpSessionActivationListener
+            监听钝化/激活事件
+
+            如果session中的属性对象都是serializable的， 则该属性不需要该监听器
+            否则
+                让属性对象的类实现HttpSessionActivationListener
+                在其回调函数中解决这个问题
+
+                BTW, 实现了serializable的类实现了writeObject()和readObject()的方法
+
+
+
+
+
+

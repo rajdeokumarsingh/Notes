@@ -28,13 +28,14 @@ public class ServerAddrQuery {
 
         HttpResponse response = httpclient.execute(httpGet);
         Debug.logVerbose("status line:" + response.getStatusLine().toString());
+
         // Get the response
         BufferedReader rd = new BufferedReader(new InputStreamReader(
                 response.getEntity().getContent()));
 
         String line = "";
         while ((line = rd.readLine()) != null) {
-            Debug.logVerbose(line);
+            Debug.logVerbose("entity: " + line);
 
             Gson gson = new GsonBuilder().serializeNulls().create();
             serverAddress = gson.fromJson(line, ServerAddress.class);

@@ -1,0 +1,4 @@
+
+java -cp build/classes/main/ org.gradle.example.simple.HelloWorld
+    -cp classpath
+
