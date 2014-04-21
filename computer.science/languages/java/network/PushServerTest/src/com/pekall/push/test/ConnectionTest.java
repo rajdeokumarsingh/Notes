@@ -2,17 +2,12 @@ package com.pekall.push.test;
 
 public class ConnectionTest {
 
-<<<<<<< HEAD
-    public static void main(String args[]) {
-        // Debug.setVerboseDebugLog(true);
-=======
     private static final String USAGE =
             "java -jar PushServerTest.jar 50000 1000000 http://192.168.10.43:8080\n" +
             "        第一个参数： 连接数量\n" +
             "        第二个参数： 1000000 表示device id的开始范围。 建议测试组使用 1000,000开始的， 每台测试机器都不能够一样。\n" +
             "        比如一台使用1000000, 一台使用2000000, 一台使用3000000\n" +
             "        第三个参数： 查询服务器地址";
->>>>>>> d52295e16f9d15ba2363b0edc484657729e08558
 
     private static int SOCK_CNT = 0;
 
