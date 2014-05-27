@@ -20,20 +20,18 @@ public class ServerAddrQuery {
 
     public static ServerAddress query(String url) throws IOException {
         Debug.setVerboseDebugLog(true);
-
         Debug.logVerbose("query push server:" + url);
         ServerAddress serverAddress = null;
 
         HttpClient httpclient = new DefaultHttpClient();
         HttpGet httpGet = new HttpGet(url);
 
-        HttpResponse response1 = httpclient.execute(httpGet);
-
-        Debug.logVerbose("status line: " + response1.getStatusLine().toString());
+        HttpResponse response = httpclient.execute(httpGet);
+        Debug.logVerbose("status line:" + response.getStatusLine().toString());
 
         // Get the response
         BufferedReader rd = new BufferedReader(new InputStreamReader(
-                response1.getEntity().getContent()));
+                response.getEntity().getContent()));
 
         String line = "";
         while ((line = rd.readLine()) != null) {
