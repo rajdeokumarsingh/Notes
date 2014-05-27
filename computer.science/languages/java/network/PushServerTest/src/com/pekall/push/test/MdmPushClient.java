@@ -27,7 +27,8 @@ public class MdmPushClient extends WebSocketClientTest {
 
     @Override
     public void onMessage(String message) {
-        Debug.logVerbose("MdmPushClient, got message: " + message);
+        // Debug.logVerbose("MdmPushClient, got message: " + message);
+        Debug.log("MdmPushClient, got message: " + message);
         Statistics.getInstance().message();
     }
 

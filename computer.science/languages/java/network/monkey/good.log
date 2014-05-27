@@ -1,0 +1,58 @@
+browser : com.android.browser.BrowserActivity@41bae7f0 onStart, has state: false
+browser : ignore intents: false
+Controller: Controller()
+NetworkStateHandler: enter NetworkStateHandler()
+BrowserSettings: enter isWifiEnabled(): wifi enable: true, ScanResult: [SSID: cmcc-tttt, BSSID: e0:05:c5:cc:bb:40, capabilities: [WPA2-PSK-TKIP][ESS], level: -43, frequency: 2462, timestamp: 7835084792, SSID: WRHQ, BSSID: 54:e6:fc:68:b3:52, capabilities: [WPA-PSK-CCMP][WPA2-PSK-CCMP][WPS][ESS], level: -60, frequency: 2427, timestamp: 467442393373, SSID: wind, BSSID: 64:00:f1:13:4c:70, capabilities: [WPA2-EAP-CCMP][ESS], level: -68, frequency: 2462, timestamp: 800428125078, SSID: pekall_work, BSSID: 50:57:a8:66:e3:88, capabilities: [WPA2-PSK-CCMP][WPS][ESS], level: -69, frequency: 2412, timestamp: 0, SSID: AP-03-A, BSSID: 50:06:04:8d:76:82, capabilities: [WPA2-PSK-TKIP][ESS], level: -70, frequency: 2462, timestamp: 800558904928, SSID: AP-01, BSSID: 50:06:04:8d:76:80, capabilities: [WPA2-PSK-TKIP][ESS], level: -71, frequency: 2462, timestamp: 800558827087, SSID: AP-02, BSSID: 50:06:04:8d:76:81, capabilities: [WPA2-PSK-TKIP][ESS], level: -71, frequency: 2462, timestamp: 800558895966, SSID: HWT, BSSID: a8:15:4d:0c:44:1a, capabilities: [WPA2-PSK-CCMP+TKIP][ESS], level: -73, frequency: 2427, timestamp: 11202462679, SSID: WR-guest, BSSID: 64:00:f1:13:4c:71, capabilities: [ESS], level: -66, frequency: 2462, timestamp: 800428078537]
+BaseUi  : BaseUI, create mTitleBar!
+TitleBar: mFixedTitlebarContainer add titlebar
+BaseUi  : addFixedTitleBar
+Controller: start()
+Controller: onPreloginFinished
+Controller: openTabToHomePage2
+BaseUi  : SetSanyaHomepage, create mTitleBar old!
+TitleBar: mFixedTitlebarContainer add titlebar
+BaseUi  : addFixedTitleBar
+BaseUi  : SetSanyaHomepage mHomePageTitleBar has parent
+BaseUi  : SetSanyaHomepage, addView mTitleBar!
+WebSettingsClassic: got uaprofile: 
+WebCoreFrameBridge: CreateFrame, 1125
+WebCoreFrameBridge: WebFrame, 232
+WebCore::DocumentWriter: createDecoderIfNeeded()
+WebCore::DocumentWriter: write(): create decoder, mimetype: text/html
+WebCore::TextResourceDecoder: defaultEncoding, content-type: 1, default encoding: 
+WebCore::TextResourceDecoder: decode()
+WebCore::TextResourceDecoder: decode() css charset done!
+WebCore::TextResourceDecoder: checkForHeadCharset(), decode source: 0
+WebCore::TextResourceDecoder: checkForHeadCharset(), checkForMetaCharset
+WebCore::TextResourceDecoder: flush()
+WebViewCore: viewSizeChanged w=0; h=0; textwrapWidth=0; scale=1.6500001
+WebViewCore: skip viewSizeChanged as w is 0
+Controller: addTab
+Controller: setActiveTab
+Controller: attachSubWindow
+Controller: switchToTab
+dalvikvm: GC_CONCURRENT freed 433K, 14% free 4658K/5384K, paused 2ms+2ms, total 21ms
+browser : BrowserActivity.onResume: this=com.android.browser.BrowserActivity@41bae7f0
+Controller: onResume
+Controller: resumeWebViewTimers
+WebViewTimersControl: onBrowserActivityResume
+WebViewTimersControl: Resuming webview timers, view=com.android.browser.BrowserWebView{41bdb2d0 VFEDHVCL ......I. 0,0-0,0}
+Controller: attachSubWindow
+NetworkStateHandler: enter onResume()
+Controller: handleWifiStatusOnResume, wifi connected
+Controller: setUseWifi(): true
+Controller: setUserConfigWifi(): false
+NetworkStateHandler: enter onReceive()
+NetworkStateHandler: onReceive: NetworkInfo: type: WIFI[], state: CONNECTED/CONNECTED, reason: (unspecified), extra: "cmcc-tttt", roaming: false, failover: false, isAvailable: true
+NetworkStateHandler: enter sendNetworkType(): wifi, 
+NetworkStateHandler: enter onNetworkToggle(): true
+Controller: handleWifiMessage(): NetworkInfo: type: WIFI[], state: CONNECTED/CONNECTED, reason: (unspecified), extra: "cmcc-tttt", roaming: false, failover: false, isAvailable: true
+Controller: handleWifiMessage(): wifi connected
+Controller: setUseWifi(): true
+Controller: setUserConfigWifi(): false
+WebViewCore: viewSizeChanged w=291; h=437; textwrapWidth=291; scale=1.6500001
+WebViewCore_native: setSizeScreenWidthAndScale, 1141
+WebViewCore: viewSizeChanged
+dalvikvm: GC_FOR_ALLOC freed 291K, 13% free 4792K/5480K, paused 13ms, total 13ms
+WebViewCore: viewSizeChanged w=291; h=390; textwrapWidth=291; scale=1.6500001
+WebViewCore_native: setSizeScreenWidthAndScale, 1141

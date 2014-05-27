@@ -1,0 +1,726 @@
+--------- beginning of /dev/log/system
+05-05 18:17:59.996   534   564 D PowerManagerService: updateWakeLockSummaryLocked: mWakefulness=Awake, mWakeLockSummary=0x1
+05-05 18:17:59.996   534   564 D PowerManagerService: updateScreenStateLocked: mDisplayReady=true, newScreenState=2, mWakefulness=1, mWakeLockSummary=0x1, mUserActivitySummary=0x1, mBootCompleted=true
+05-05 18:17:59.996   534   564 D PowerManagerService: Acquiring suspend blocker "PowerManagerService.WakeLocks".
+05-05 18:17:59.996   534   563 D PowerManagerService: handleSandman: canDream=true, mWakefulness=Awake
+--------- beginning of /dev/log/main
+05-05 18:17:59.996   616   616 D Clock   : updateClock clockString: 下午6:18
+05-05 18:17:59.996   616   616 D Clock   : updateClock mFormat: h:mm aa
+05-05 18:17:59.996   616   616 D Clock   : updateClock time: 6:18; ampm: 下午
+05-05 18:17:59.996   534   548 V AlarmManager: Sync Push enabled with interval: 5
+05-05 18:18:00.035   616   616 D Clock   : updateClock clockString: 下午6:18
+05-05 18:18:00.035   616   616 D Clock   : updateClock mFormat: h:mm aa
+05-05 18:18:00.035   616   616 D Clock   : updateClock time: 6:18; ampm: 下午
+05-05 18:18:00.066   823   823 D DateTimeManager: TimeReceiver onReceive
+05-05 18:18:00.066   823   823 D DateTimeManager: handleMessage msg.what =1
+05-05 18:18:00.066   823   823 D DateTimeManager: getCurCityCalendar
+05-05 18:18:00.066   823   823 D DateTimeManager: 06 : 18 : 00
+05-05 18:18:00.066   823   823 D DateTimeManager: mDate =5 mMonth =4 mYear =114
+05-05 18:18:00.066   823   823 D DateTimeManager:  date =5  month =4  year =114
+05-05 18:18:00.066   823   823 D DateTimeManager: mMinute =17 mHour =18
+05-05 18:18:00.066   823   823 D DateTimeManager:  minute =18  hour =18
+05-05 18:18:00.074   534   548 D PowerManagerService: updateWakeLockSummaryLocked: mWakefulness=Awake, mWakeLockSummary=0x0
+05-05 18:18:00.074   534   548 D PowerManagerService: updateScreenStateLocked: mDisplayReady=true, newScreenState=2, mWakefulness=1, mWakeLockSummary=0x0, mUserActivitySummary=0x1, mBootCompleted=true
+05-05 18:18:00.074   534   548 D PowerManagerService: Releasing suspend blocker "PowerManagerService.WakeLocks".
+05-05 18:18:00.074   534   563 D PowerManagerService: handleSandman: canDream=true, mWakefulness=Awake
+05-05 18:18:00.191  1665  1675 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:00.191  1665  1675 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:00.191  1665  1675 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:00.191  1665  1675 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:00.191  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:00.191  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:00.191  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:00.191  1665  1675 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:00.191  1665  1675 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:00.191  1665  1675 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:00.191  1665  1675 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:00.191  1665  1675 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:00.441   932   932 I wpa_supplicant: Receive Command: SIGNAL_POLL
+05-05 18:18:00.613   932   932 I wpa_supplicant: wpa_supplicant_signal_poll buf=RSSI=-43
+05-05 18:18:00.613   932   932 I wpa_supplicant: LINKSPEED=24
+05-05 18:18:00.613   932   932 I wpa_supplicant: NOISE=9999
+05-05 18:18:00.613   932   932 I wpa_supplicant: FREQUENCY=0
+05-05 18:18:00.613   534   594 D WifiManager: calculateSignalLevel product=HUAWEI G521-L076 rssi=-43 numLevels=5
+05-05 18:18:00.613   534   594 D WifiStateMachine: fetchRssiAndLinkSpeedNative signalPoll=RSSI=-43
+05-05 18:18:00.613   534   594 D WifiStateMachine: LINKSPEED=24
+05-05 18:18:00.613   534   594 D WifiStateMachine: NOISE=9999
+05-05 18:18:00.613   534   594 D WifiStateMachine: FREQUENCY=0
+05-05 18:18:00.613   534   594 D WifiStateMachine: fetchRssiAndLinkSpeedNative newRssi=-43
+05-05 18:18:00.613   534   594 D WifiStateMachine: fetchRssiAndLinkSpeedNative newSignalLevel=4
+05-05 18:18:03.621   932   932 I wpa_supplicant: Receive Command: SIGNAL_POLL
+05-05 18:18:03.675   534   574 D PowerManagerService: userActivityNoUpdateLocked: eventTime=576217, event=0, flags=0x0, uid=1000
+05-05 18:18:03.675   534   574 D PowerManagerService: updateUserActivitySummaryLocked: mWakefulness=Awake, mUserActivitySummary=0x5, nextTimeout=584217 (in 7994 ms)
+05-05 18:18:03.675   534   574 D PowerManagerService: updateScreenStateLocked: mDisplayReady=true, newScreenState=2, mWakefulness=1, mWakeLockSummary=0x0, mUserActivitySummary=0x5, mBootCompleted=true
+05-05 18:18:03.675   534   574 D PowerManagerService: userActivityNoUpdateLocked: eventTime=576217, event=2, flags=0x0, uid=1000
+05-05 18:18:03.675   534   563 D PowerManagerService: handleSandman: canDream=true, mWakefulness=Awake
+05-05 18:18:03.683  1665  1674 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:03.683  1665  1674 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:03.683  1665  1674 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:03.683  1665  1674 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:03.683  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:03.683  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:03.683  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:03.683  1665  1674 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:03.683  1665  1674 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:03.683  1665  1674 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:03.683  1665  1674 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:03.683  1665  1674 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:03.683  1665  1675 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:03.683  1665  1675 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:03.683  1665  1675 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:03.683  1665  1675 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:03.683  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:03.683  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:03.683  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:03.683  1665  1675 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:03.683  1665  1675 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:03.683  1665  1675 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:03.683  1665  1675 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:03.683  1665  1675 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:03.714   616   616 D PowerUI : buckets   .....20 .. 15 .. 10
+05-05 18:18:03.714   616   616 D PowerUI : level          99 --> 99
+05-05 18:18:03.714   616   616 D PowerUI : status         2 --> 2
+05-05 18:18:03.714   616   616 D PowerUI : plugType       2 --> 2
+05-05 18:18:03.714   616   616 D PowerUI : invalidCharger 0 --> 0
+05-05 18:18:03.714   616   616 D PowerUI : bucket         1 --> 1
+05-05 18:18:03.714   616   616 D PowerUI : plugged        true --> true
+05-05 18:18:03.714   616   616 D PowerUI : temperature    340 --> 340
+05-05 18:18:03.738   534   563 D PowerManagerService: updateIsPoweredLocked: wasPowered=true, mIsPowered=true, oldPlugType=2, mPlugType=2, mBatteryLevel=99
+05-05 18:18:03.738   932   932 I wpa_supplicant: wpa_supplicant_signal_poll buf=RSSI=-45
+05-05 18:18:03.738   932   932 I wpa_supplicant: LINKSPEED=24
+05-05 18:18:03.738   932   932 I wpa_supplicant: NOISE=9999
+05-05 18:18:03.738   932   932 I wpa_supplicant: FREQUENCY=0
+05-05 18:18:03.738   534   594 D WifiManager: calculateSignalLevel product=HUAWEI G521-L076 rssi=-45 numLevels=5
+05-05 18:18:03.738   534   563 D PowerManagerService: handleSandman: canDream=true, mWakefulness=Awake
+05-05 18:18:03.738   534   594 D WifiStateMachine: fetchRssiAndLinkSpeedNative signalPoll=RSSI=-45
+05-05 18:18:03.738   534   594 D WifiStateMachine: LINKSPEED=24
+05-05 18:18:03.738   534   594 D WifiStateMachine: NOISE=9999
+05-05 18:18:03.738   534   594 D WifiStateMachine: FREQUENCY=0
+05-05 18:18:03.738   534   594 D WifiStateMachine: fetchRssiAndLinkSpeedNative newRssi=-45
+05-05 18:18:03.738   534   594 D WifiStateMachine: fetchRssiAndLinkSpeedNative newSignalLevel=4
+05-05 18:18:03.808  1665  1674 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:03.808  1665  1674 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:03.808  1665  1674 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:03.808  1665  1674 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:03.808  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:03.808  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:03.808  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:03.808  1665  1674 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:03.808  1665  1674 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:03.808  1665  1674 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:03.808  1665  1674 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:03.808  1665  1674 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:03.816  1665  1675 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:03.816  1665  1675 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:03.816  1665  1675 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:03.816  1665  1675 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:03.816  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:03.816  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:03.816  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:03.816  1665  1675 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:03.816  1665  1675 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:03.816  1665  1675 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:03.816  1665  1675 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:03.816  1665  1675 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:03.879  1665  1674 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:03.879  1665  1674 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:03.879  1665  1674 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:03.879  1665  1674 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:03.879  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:03.879  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:03.879  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:03.879  1665  1674 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:03.879  1665  1674 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:03.879  1665  1674 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:03.879  1665  1674 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:03.879  1665  1674 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:03.910  1665  1675 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:03.910  1665  1675 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:03.910  1665  1675 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:03.910  1665  1675 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:03.910  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:03.910  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:03.910  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:03.910  1665  1675 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:03.910  1665  1675 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:03.910  1665  1675 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:03.910  1665  1675 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:03.910  1665  1675 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:03.996  1665  1674 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:03.996  1665  1674 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:03.996  1665  1674 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:03.996  1665  1674 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:03.996  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:03.996  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:03.996  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:03.996  1665  1674 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:03.996  1665  1674 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:03.996  1665  1674 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:03.996  1665  1674 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:03.996  1665  1674 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:04.121  1665  1675 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:04.121  1665  1675 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:04.121  1665  1675 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:04.121  1665  1675 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:04.121  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:04.121  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:04.121  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:04.121  1665  1675 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:04.121  1665  1675 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:04.121  1665  1675 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:04.121  1665  1675 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:04.121  1665  1675 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:04.230  1665  1674 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:04.230  1665  1674 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:04.230  1665  1674 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:04.230  1665  1674 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:04.230  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:04.230  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:04.230  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:04.230  1665  1674 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:04.230  1665  1674 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:04.230  1665  1674 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:04.230  1665  1674 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:04.230  1665  1674 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:04.300  1665  1675 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:04.300  1665  1675 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:04.300  1665  1675 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:04.300  1665  1675 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:04.300  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:04.300  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:04.300  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:04.300  1665  1675 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:04.300  1665  1675 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:04.300  1665  1675 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:04.300  1665  1675 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:04.300  1665  1675 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:04.785   616   616 D StatusBar.NetworkController: updateTelephonySignalStrengthLte: !hasLTEService()
+05-05 18:18:04.785   616   616 D StatusBar.NetworkController: updateTelephonySignalStrengthLte: !hasLTEService()
+05-05 18:18:05.363   534   574 D PowerManagerService: userActivityNoUpdateLocked: eventTime=577912, event=0, flags=0x0, uid=1000
+05-05 18:18:05.363   534   574 D PowerManagerService: updateUserActivitySummaryLocked: mWakefulness=Awake, mUserActivitySummary=0x5, nextTimeout=585912 (in 7999 ms)
+05-05 18:18:05.363   534   574 D PowerManagerService: updateScreenStateLocked: mDisplayReady=true, newScreenState=2, mWakefulness=1, mWakeLockSummary=0x0, mUserActivitySummary=0x5, mBootCompleted=true
+05-05 18:18:05.363   534   574 D PowerManagerService: userActivityNoUpdateLocked: eventTime=577912, event=2, flags=0x0, uid=1000
+05-05 18:18:05.363   534   563 D PowerManagerService: handleSandman: canDream=true, mWakefulness=Awake
+05-05 18:18:05.371  1665  1674 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:05.371  1665  1674 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:05.371  1665  1674 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:05.371  1665  1674 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:05.371  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:05.371  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:05.371  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:05.371  1665  1674 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:05.371  1665  1674 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:05.371  1665  1674 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:05.371  1665  1674 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:05.371  1665  1674 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:05.379  1665  1675 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:05.379  1665  1675 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:05.379  1665  1675 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:05.379  1665  1675 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:05.379  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:05.379  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:05.379  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:05.379  1665  1675 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:05.379  1665  1675 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:05.379  1665  1675 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:05.379  1665  1675 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:05.379  1665  1675 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:05.480  1665  1674 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:05.480  1665  1674 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:05.480  1665  1674 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:05.480  1665  1674 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:05.480  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:05.480  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:05.480  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:05.480  1665  1674 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:05.480  1665  1674 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:05.480  1665  1674 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:05.480  1665  1674 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:05.480  1665  1674 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:05.488  1665  1675 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:05.488  1665  1675 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:05.488  1665  1675 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:05.488  1665  1675 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:05.488  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:05.488  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:05.488  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:05.488  1665  1675 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:05.488  1665  1675 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:05.488  1665  1675 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:05.488  1665  1675 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:05.488  1665  1675 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:05.496  1665  1674 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:05.496  1665  1674 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:05.496  1665  1674 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:05.496  1665  1674 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:05.496  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:05.496  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:05.496  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:05.496  1665  1674 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:05.496  1665  1674 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:05.496  1665  1674 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:05.496  1665  1674 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:05.496  1665  1674 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:05.582  1665  1675 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:05.582  1665  1675 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:05.582  1665  1675 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:05.582  1665  1675 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:05.582  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:05.582  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:05.582  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:05.582  1665  1675 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:05.582  1665  1675 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:05.582  1665  1675 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:05.582  1665  1675 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:05.582  1665  1675 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:05.613  1665  1674 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:05.613  1665  1674 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:05.613  1665  1674 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:05.613  1665  1674 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:05.613  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:05.613  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:05.613  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:05.613  1665  1674 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:05.613  1665  1674 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:05.613  1665  1674 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:05.613  1665  1674 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:05.613  1665  1674 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:05.738  1665  1675 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:05.738  1665  1675 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:05.738  1665  1675 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:05.738  1665  1675 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:05.738  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:05.738  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:05.738  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:05.738  1665  1675 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:05.738  1665  1675 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:05.738  1665  1675 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:05.738  1665  1675 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:05.738  1665  1675 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:05.855  1665  1674 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:05.855  1665  1674 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:05.855  1665  1674 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:05.855  1665  1674 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:05.855  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:05.855  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:05.855  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:05.855  1665  1674 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:05.855  1665  1674 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:05.855  1665  1674 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:05.855  1665  1674 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:05.855  1665  1674 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:05.902  1665  1675 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:05.902  1665  1675 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:05.902  1665  1675 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:05.902  1665  1675 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:05.902  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:05.902  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:05.902  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:05.902  1665  1675 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:05.902  1665  1675 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:05.902  1665  1675 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:05.902  1665  1675 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:05.902  1665  1675 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:05.957   534   574 D PowerManagerService: userActivityNoUpdateLocked: eventTime=578504, event=0, flags=0x0, uid=1000
+05-05 18:18:05.957   534   574 D PowerManagerService: updateUserActivitySummaryLocked: mWakefulness=Awake, mUserActivitySummary=0x5, nextTimeout=586504 (in 7998 ms)
+05-05 18:18:05.957   534   574 D PowerManagerService: updateScreenStateLocked: mDisplayReady=true, newScreenState=2, mWakefulness=1, mWakeLockSummary=0x0, mUserActivitySummary=0x5, mBootCompleted=true
+05-05 18:18:05.957   534   574 D PowerManagerService: userActivityNoUpdateLocked: eventTime=578504, event=2, flags=0x0, uid=1000
+05-05 18:18:05.964   534   563 D PowerManagerService: handleSandman: canDream=true, mWakefulness=Awake
+05-05 18:18:05.964  1665  1674 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:05.964  1665  1674 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:05.964  1665  1674 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:05.964  1665  1674 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:05.964  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:05.964  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:05.964  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:05.964  1665  1674 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:05.964  1665  1674 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:05.964  1665  1674 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:05.964  1665  1674 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:05.964  1665  1674 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:05.972  1665  1675 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:05.972  1665  1675 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:05.972  1665  1675 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:05.972  1665  1675 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:05.972  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:05.972  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:05.972  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:05.972  1665  1675 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:05.972  1665  1675 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:05.972  1665  1675 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:05.972  1665  1675 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:05.972  1665  1675 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:06.097  1665  1674 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:06.097  1665  1674 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:06.097  1665  1674 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:06.097  1665  1674 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:06.097  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:06.097  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:06.097  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:06.097  1665  1674 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:06.097  1665  1674 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:06.097  1665  1674 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:06.097  1665  1674 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:06.097  1665  1674 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:06.214  1665  1675 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:06.214  1665  1675 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:06.214  1665  1675 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:06.214  1665  1675 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:06.214  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:06.214  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:06.214  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:06.214  1665  1675 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:06.214  1665  1675 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:06.214  1665  1675 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:06.214  1665  1675 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:06.214  1665  1675 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:06.214  1665  1674 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:06.214  1665  1674 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:06.214  1665  1674 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:06.214  1665  1674 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:06.214  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:06.214  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:06.214  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:06.214  1665  1674 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:06.214  1665  1674 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:06.214  1665  1674 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:06.214  1665  1674 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:06.214  1665  1674 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:06.308  1665  1675 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:06.308  1665  1675 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:06.308  1665  1675 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:06.308  1665  1675 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:06.308  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:06.308  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:06.308  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:06.308  1665  1675 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:06.308  1665  1675 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:06.308  1665  1675 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:06.308  1665  1675 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:06.308  1665  1675 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:06.316  1665  1675 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:06.316  1665  1675 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:06.316  1665  1675 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:06.316  1665  1675 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:06.316  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:06.316  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:06.316  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:06.316  1665  1675 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:06.316  1665  1675 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:06.316  1665  1675 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:06.316  1665  1675 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:06.316  1665  1675 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:06.425  1665  1674 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:06.425  1665  1674 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:06.425  1665  1674 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:06.425  1665  1674 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:06.425  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:06.425  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:06.425  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:06.425  1665  1674 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:06.425  1665  1674 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:06.425  1665  1674 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:06.425  1665  1674 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:06.425  1665  1674 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:06.543  1665  1675 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:06.543  1665  1675 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:06.543  1665  1675 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:06.543  1665  1675 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:06.543  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:06.543  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:06.543  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:06.543  1665  1675 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:06.543  1665  1675 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:06.543  1665  1675 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:06.543  1665  1675 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:06.543  1665  1675 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:06.636  1665  1674 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:06.636  1665  1674 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:06.636  1665  1674 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:06.636  1665  1674 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:06.636  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:06.636  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:06.636  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:06.636  1665  1674 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:06.636  1665  1674 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:06.636  1665  1674 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:06.636  1665  1674 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:06.636  1665  1674 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:06.746   932   932 I wpa_supplicant: Receive Command: SIGNAL_POLL
+05-05 18:18:06.918   932   932 I wpa_supplicant: wpa_supplicant_signal_poll buf=RSSI=-41
+05-05 18:18:06.918   932   932 I wpa_supplicant: LINKSPEED=24
+05-05 18:18:06.918   932   932 I wpa_supplicant: NOISE=9999
+05-05 18:18:06.918   932   932 I wpa_supplicant: FREQUENCY=0
+05-05 18:18:06.918   534   594 D WifiManager: calculateSignalLevel product=HUAWEI G521-L076 rssi=-41 numLevels=5
+05-05 18:18:06.918   534   594 D WifiStateMachine: fetchRssiAndLinkSpeedNative signalPoll=RSSI=-41
+05-05 18:18:06.918   534   594 D WifiStateMachine: LINKSPEED=24
+05-05 18:18:06.918   534   594 D WifiStateMachine: NOISE=9999
+05-05 18:18:06.918   534   594 D WifiStateMachine: FREQUENCY=0
+05-05 18:18:06.918   534   594 D WifiStateMachine: fetchRssiAndLinkSpeedNative newRssi=-41
+05-05 18:18:06.918   534   594 D WifiStateMachine: fetchRssiAndLinkSpeedNative newSignalLevel=4
+05-05 18:18:07.316   534   574 D PowerManagerService: userActivityNoUpdateLocked: eventTime=579861, event=0, flags=0x0, uid=1000
+05-05 18:18:07.316   534   574 D PowerManagerService: updateUserActivitySummaryLocked: mWakefulness=Awake, mUserActivitySummary=0x5, nextTimeout=587861 (in 8000 ms)
+05-05 18:18:07.316   534   574 D PowerManagerService: updateScreenStateLocked: mDisplayReady=true, newScreenState=2, mWakefulness=1, mWakeLockSummary=0x0, mUserActivitySummary=0x5, mBootCompleted=true
+05-05 18:18:07.316   534   563 D PowerManagerService: handleSandman: canDream=true, mWakefulness=Awake
+05-05 18:18:07.316   534   574 D PowerManagerService: userActivityNoUpdateLocked: eventTime=579861, event=2, flags=0x0, uid=1000
+05-05 18:18:07.324  1665  1675 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:07.324  1665  1675 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:07.324  1665  1675 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:07.324  1665  1675 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:07.324  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:07.324  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:07.324  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:07.324  1665  1675 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:07.324  1665  1675 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:07.324  1665  1675 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:07.324  1665  1675 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:07.324  1665  1675 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:07.324  1665  1674 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:07.324  1665  1674 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:07.324  1665  1674 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:07.324  1665  1674 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:07.324  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:07.324  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:07.324  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:07.324  1665  1674 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:07.324  1665  1674 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:07.324  1665  1674 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:07.324  1665  1674 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:07.324  1665  1674 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:07.386   823   828 D dalvikvm: GC_CONCURRENT freed 2297K, 32% free 8917K/13096K, paused 3ms+2ms, total 19ms
+05-05 18:18:07.386   823   823 D dalvikvm: WAIT_FOR_CONCURRENT_GC blocked 12ms
+05-05 18:18:07.418  1665  1675 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:07.418  1665  1675 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:07.418  1665  1675 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:07.418  1665  1675 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:07.418  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:07.418  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:07.418  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:07.418  1665  1675 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:07.418  1665  1675 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:07.418  1665  1675 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:07.418  1665  1675 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:07.418  1665  1675 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:07.418  1665  1674 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:07.418  1665  1674 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:07.418  1665  1674 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:07.418  1665  1674 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:07.418  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:07.418  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:07.418  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:07.418  1665  1674 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:07.418  1665  1674 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:07.418  1665  1674 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:07.418  1665  1674 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:07.418  1665  1674 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:07.433  1665  1675 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:07.433  1665  1675 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:07.433  1665  1675 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:07.433  1665  1675 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:07.433  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:07.433  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:07.433  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:07.433  1665  1675 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:07.433  1665  1675 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:07.433  1665  1675 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:07.433  1665  1675 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:07.433  1665  1675 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:07.433   534   545 D ActivityManager: startActivityMayWait() getCtaCheck: true
+05-05 18:18:07.433   534   545 V ActivityManager: send smart intent for new activity com.android.browser where 1
+05-05 18:18:07.433   534   545 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1042 com.android.server.am.ActivityStack.startActivityMayWait:3233 com.android.server.am.ActivityManagerService.startActivityAsUser:2561 com.android.server.am.ActivityManagerService.startActivity:2549 android.app.ActivityManagerNative.onTransact:131 
+05-05 18:18:07.433   534   545 V ActivityManager: startActivityLocked ### send app launch event intent.
+05-05 18:18:07.433   534   545 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.android.browser/.BrowserActivity bnds=[240,65][360,215]} from pid 823
+05-05 18:18:07.480   534   545 D dalvikvm: GC_FOR_ALLOC freed 387K, 22% free 7351K/9388K, paused 32ms, total 32ms
+05-05 18:18:07.480   534   545 I dalvikvm-heap: Grow heap (frag case) to 7.535MB for 214528-byte allocation
+05-05 18:18:07.511   534   550 D dalvikvm: GC_FOR_ALLOC freed 3K, 22% free 7557K/9600K, paused 31ms, total 31ms
+05-05 18:18:07.543   534   545 D dalvikvm: GC_FOR_ALLOC freed 422K, 26% free 7137K/9600K, paused 32ms, total 32ms
+05-05 18:18:07.550   534   550 E WindowManager: hasWallpaperLayer true
+05-05 18:18:07.550   534   545 D PowerManagerService: updateWakeLockSummaryLocked: mWakefulness=Awake, mWakeLockSummary=0x1
+05-05 18:18:07.550   534   545 D PowerManagerService: updateScreenStateLocked: mDisplayReady=true, newScreenState=2, mWakefulness=1, mWakeLockSummary=0x1, mUserActivitySummary=0x5, mBootCompleted=true
+05-05 18:18:07.550   534   545 D PowerManagerService: Acquiring suspend blocker "PowerManagerService.WakeLocks".
+05-05 18:18:07.550   534   563 D PowerManagerService: handleSandman: canDream=true, mWakefulness=Awake
+05-05 18:18:07.558   534   550 E WindowManager: hasWallpaperLayer true
+05-05 18:18:07.558   772  1126 D EventRelay: Got DVFS_BOOSTER: reason APP_LAUNCH:4 duration: 2000
+05-05 18:18:07.558   772  1126 D EventRelay: queue new cancel msg for: 4 at 582108
+05-05 18:18:07.558   772   772 I EventRelay: sendStateCmdToSocketSrv--reason: 4 status: 10000
+05-05 18:18:07.558   158   158 I ppd     : ppd_loop                 : Hit Rule <BootComplete> ==> Constraint <Default>
+05-05 18:18:07.558   158   158 I ppd     : ppd_loop                 : Hit Rule <CallIdle> ==> Constraint <RadioIdle>
+05-05 18:18:07.558   158   158 I ppd     : ppd_loop                 : Hit Rule <AppLaunch> ==> Constraint <PerformanceHigh>
+05-05 18:18:07.566   158   158 I ppd     : set_cpu_hotplug_lock     : Constraint set for CPU lock(1)
+05-05 18:18:07.566   158   158 I ppd     : set_cpu_online           : Constraint set for CPU0 online(1)
+05-05 18:18:07.566   158   158 E ppd     : sysfs_write_attribute    : writing's messed up: Invalid argument
+05-05 18:18:07.566   158   158 W ppd     : set_cpu_frequency        : Couldn't set constraint for cpu0 (1200000-1200000-ondemand)
+05-05 18:18:07.566   158   158 I ppd     : set_cpu_online           : Constraint set for CPU1 online(1)
+05-05 18:18:07.566   158   158 W ppd     : set_cpu_frequency        : NULL cpu frequency parameters
+05-05 18:18:07.566   158   158 I ppd     : set_cpu_online           : Constraint set for CPU2 online(1)
+05-05 18:18:07.566   158   158 W ppd     : set_cpu_frequency        : NULL cpu frequency parameters
+05-05 18:18:07.566   158   158 I ppd     : set_cpu_online           : Constraint set for CPU3 online(1)
+05-05 18:18:07.566   158   158 W ppd     : set_cpu_frequency        : NULL cpu frequency parameters
+05-05 18:18:07.566   158   158 I ppd     : set_ddr_frequency        : Constraint set for DDR (400000-400000-50-throughput)
+05-05 18:18:07.566   158   158 I ppd     : set_gpu_frequency        : Constraint set for GPU0 (624000-624000-ondemand)
+05-05 18:18:07.566   158   158 I ppd     : set_gpu_frequency        : Constraint set for GPU1 (624000-624000-ondemand)
+05-05 18:18:07.566  1689  1689 V browser : com.android.browser.BrowserActivity@41bae7f0 onStart, has state: false
+05-05 18:18:07.566  1689  1689 V browser : ignore intents: false
+05-05 18:18:07.566  1689  1689 V Controller: Controller()
+05-05 18:18:07.566   772  1126 I EventRelay: Send intent to cmd socket: Intent { act=com.marvell.cpugadget.TASK_MONITOR flg=0x8000010 (has extras) }
+05-05 18:18:07.566  1689  1689 V NetworkStateHandler: enter NetworkStateHandler()
+05-05 18:18:07.566   534   730 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1042 com.android.server.am.ActivityStack.resumeTopActivityLocked:1687 com.android.server.am.ActivityStack.resumeTopActivityLocked:1447 com.android.server.am.ActivityStack.completePauseLocked:1192 com.android.server.am.ActivityStack.activityPaused:1089 
+05-05 18:18:07.574  1689  1689 V BrowserSettings: enter isWifiEnabled(): wifi enable: true, ScanResult: [SSID: cmcc-tttt, BSSID: e0:05:c5:cc:bb:40, capabilities: [WPA2-PSK-TKIP][ESS], level: -43, frequency: 2462, timestamp: 7835084792, SSID: WRHQ, BSSID: 54:e6:fc:68:b3:52, capabilities: [WPA-PSK-CCMP][WPA2-PSK-CCMP][WPS][ESS], level: -60, frequency: 2427, timestamp: 467442393373, SSID: wind, BSSID: 64:00:f1:13:4c:70, capabilities: [WPA2-EAP-CCMP][ESS], level: -68, frequency: 2462, timestamp: 800428125078, SSID: pekall_work, BSSID: 50:57:a8:66:e3:88, capabilities: [WPA2-PSK-CCMP][WPS][ESS], level: -69, frequency: 2412, timestamp: 0, SSID: AP-03-A, BSSID: 50:06:04:8d:76:82, capabilities: [WPA2-PSK-TKIP][ESS], level: -70, frequency: 2462, timestamp: 800558904928, SSID: AP-01, BSSID: 50:06:04:8d:76:80, capabilities: [WPA2-PSK-TKIP][ESS], level: -71, frequency: 2462, timestamp: 800558827087, SSID: AP-02, BSSID: 50:06:04:8d:76:81, capabilities: [WPA2-PSK-TKIP][ESS], level: -71, frequency: 2462, timestamp: 800558895966, SSID: HWT, BSSID: a8:15:4d:0c:44:1a, capabilities: [WPA2-PSK-CCMP+TKIP][ESS], level: -73, frequency: 2427, timestamp: 11202462679, SSID: WR-guest, BSSID: 64:00:f1:13:4c:71, capabilities: [ESS], level: -66, frequency: 2462, timestamp: 800428078537]
+05-05 18:18:07.582   534   550 E WindowManager: hasWallpaperLayer true
+05-05 18:18:07.589   534   550 E WindowManager: hasWallpaperLayer false
+05-05 18:18:07.589   823   823 E DynamicIcon: onWindowVisibilityChanged 8 - com.android.calendar
+05-05 18:18:07.597  1689  1689 V BaseUi  : BaseUI, create mTitleBar!
+05-05 18:18:07.597   534   550 E WindowManager: hasWallpaperLayer false
+05-05 18:18:07.605   534   785 E WindowManager: hasWallpaperLayer false
+05-05 18:18:07.629  1689  1693 D dalvikvm: GC_CONCURRENT freed 750K, 17% free 4487K/5384K, paused 2ms+4ms, total 21ms
+05-05 18:18:07.629  1689  1689 V TitleBar: mFixedTitlebarContainer add titlebar
+05-05 18:18:07.629  1689  1689 V BaseUi  : addFixedTitleBar
+05-05 18:18:07.660  1689  1689 V Controller: start()
+05-05 18:18:07.675  1689  1689 V Controller: onPreloginFinished
+05-05 18:18:07.675  1689  1689 V Controller: openTabToHomePage2
+05-05 18:18:07.675  1689  1689 V BaseUi  : SetSanyaHomepage, create mTitleBar old!
+05-05 18:18:07.699  1689  1689 V TitleBar: mFixedTitlebarContainer add titlebar
+05-05 18:18:07.699  1689  1689 V BaseUi  : addFixedTitleBar
+05-05 18:18:07.699  1689  1689 V BaseUi  : SetSanyaHomepage mHomePageTitleBar has parent
+05-05 18:18:07.699  1689  1689 V BaseUi  : SetSanyaHomepage, addView mTitleBar!
+05-05 18:18:07.707  1689  1689 I WebSettingsClassic: got uaprofile: 
+05-05 18:18:07.714  1689  1714 E WebCoreFrameBridge: CreateFrame, 1125
+05-05 18:18:07.722  1689  1714 E WebCoreFrameBridge: WebFrame, 232
+05-05 18:18:07.722  1689  1714 E WebCore::DocumentWriter: createDecoderIfNeeded()
+05-05 18:18:07.722  1689  1714 E WebCore::DocumentWriter: write(): create decoder, mimetype: text/html
+05-05 18:18:07.722  1689  1714 E WebCore::TextResourceDecoder: defaultEncoding, content-type: 1, default encoding: 
+05-05 18:18:07.722  1689  1714 E WebCore::TextResourceDecoder: decode()
+05-05 18:18:07.722  1689  1714 E WebCore::TextResourceDecoder: decode() css charset done!
+05-05 18:18:07.722  1689  1714 E WebCore::TextResourceDecoder: checkForHeadCharset(), decode source: 0
+05-05 18:18:07.722  1689  1714 E WebCore::TextResourceDecoder: checkForHeadCharset(), checkForMetaCharset
+05-05 18:18:07.722  1689  1714 E WebCore::TextResourceDecoder: flush()
+05-05 18:18:07.738  1689  1714 V WebViewCore: viewSizeChanged w=0; h=0; textwrapWidth=0; scale=1.6500001
+05-05 18:18:07.738  1689  1714 W WebViewCore: skip viewSizeChanged as w is 0
+05-05 18:18:07.746  1689  1689 V Controller: addTab
+05-05 18:18:07.746  1689  1689 V Controller: setActiveTab
+05-05 18:18:07.746  1689  1689 V Controller: attachSubWindow
+05-05 18:18:07.754  1689  1689 V Controller: switchToTab
+05-05 18:18:07.754  1689  1693 D dalvikvm: GC_CONCURRENT freed 433K, 14% free 4658K/5384K, paused 2ms+2ms, total 21ms
+05-05 18:18:07.761  1689  1689 V browser : BrowserActivity.onResume: this=com.android.browser.BrowserActivity@41bae7f0
+05-05 18:18:07.761  1689  1689 V Controller: onResume
+05-05 18:18:07.761  1689  1689 V Controller: resumeWebViewTimers
+05-05 18:18:07.761  1689  1689 D WebViewTimersControl: onBrowserActivityResume
+05-05 18:18:07.761  1689  1689 D WebViewTimersControl: Resuming webview timers, view=com.android.browser.BrowserWebView{41bdb2d0 VFEDHVCL ......I. 0,0-0,0}
+05-05 18:18:07.761  1689  1689 V Controller: attachSubWindow
+05-05 18:18:07.761   534   550 E WindowManager: hasWallpaperLayer false
+05-05 18:18:07.769  1689  1689 V NetworkStateHandler: enter onResume()
+05-05 18:18:07.769  1689  1689 V Controller: handleWifiStatusOnResume, wifi connected
+05-05 18:18:07.777  1689  1689 V Controller: setUseWifi(): true
+05-05 18:18:07.777  1689  1689 V Controller: setUserConfigWifi(): false
+05-05 18:18:07.785  1689  1689 V NetworkStateHandler: enter onReceive()
+05-05 18:18:07.785  1689  1689 V NetworkStateHandler: onReceive: NetworkInfo: type: WIFI[], state: CONNECTED/CONNECTED, reason: (unspecified), extra: "cmcc-tttt", roaming: false, failover: false, isAvailable: true
+05-05 18:18:07.785  1689  1689 V NetworkStateHandler: enter sendNetworkType(): wifi, 
+05-05 18:18:07.793  1689  1689 V NetworkStateHandler: enter onNetworkToggle(): true
+05-05 18:18:07.793  1689  1689 V Controller: handleWifiMessage(): NetworkInfo: type: WIFI[], state: CONNECTED/CONNECTED, reason: (unspecified), extra: "cmcc-tttt", roaming: false, failover: false, isAvailable: true
+05-05 18:18:07.793  1689  1689 V Controller: handleWifiMessage(): wifi connected
+05-05 18:18:07.793  1689  1689 V Controller: setUseWifi(): true
+05-05 18:18:07.793  1689  1689 V Controller: setUserConfigWifi(): false
+05-05 18:18:07.793  1665  1675 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:07.793  1665  1675 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:07.793  1665  1675 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:07.793  1665  1675 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:07.793  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:07.793  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:07.793  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:07.793  1665  1675 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:07.793  1665  1675 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:07.793  1665  1675 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:07.793  1665  1675 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:07.793  1665  1675 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:07.879   534   730 E WindowManager: hasWallpaperLayer false
+05-05 18:18:07.894   534   730 E WindowManager: hasWallpaperLayer false
+05-05 18:18:07.918   534   779 E WindowManager: hasWallpaperLayer false
+05-05 18:18:07.925   534   779 D PowerManagerService: updateWakeLockSummaryLocked: mWakefulness=Awake, mWakeLockSummary=0x23
+05-05 18:18:07.925   534   779 D PowerManagerService: updateScreenStateLocked: mDisplayReady=true, newScreenState=2, mWakefulness=1, mWakeLockSummary=0x23, mUserActivitySummary=0x5, mBootCompleted=true
+05-05 18:18:07.925   534   779 E WindowManager: hasWallpaperLayer false
+05-05 18:18:07.925   534   563 D PowerManagerService: handleSandman: canDream=true, mWakefulness=Awake
+05-05 18:18:07.957   534   550 E WindowManager: hasWallpaperLayer false
+05-05 18:18:07.964   534   550 I ActivityManager: Displayed com.android.browser/.BrowserActivity: +397ms
+05-05 18:18:07.964   534   550 E WindowManager: hasWallpaperLayer false
+05-05 18:18:07.964   534   550 E WindowManager: hasWallpaperLayer false
+05-05 18:18:07.972  1665  1674 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:07.972  1665  1674 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:07.972  1665  1674 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:07.972  1665  1674 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:07.972  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:07.972  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:07.972  1665  1674 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:07.972  1665  1674 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:07.972  1665  1674 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:07.972  1665  1674 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:07.972  1665  1674 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:07.972  1665  1674 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:07.972  1689  1714 V WebViewCore: viewSizeChanged w=291; h=437; textwrapWidth=291; scale=1.6500001
+05-05 18:18:07.972  1689  1714 E WebViewCore_native: setSizeScreenWidthAndScale, 1141
+05-05 18:18:07.972  1689  1714 V WebViewCore: viewSizeChanged
+05-05 18:18:07.988   616   616 D StatusBar.NetworkController: updateTelephonySignalStrengthLte: !hasLTEService()
+05-05 18:18:07.988   616   616 D StatusBar.NetworkController: updateTelephonySignalStrengthLte: !hasLTEService()
+05-05 18:18:08.027  1689  1689 D dalvikvm: GC_FOR_ALLOC freed 291K, 13% free 4792K/5480K, paused 13ms, total 13ms
+05-05 18:18:08.082   534   550 E WindowManager: hasWallpaperLayer false
+05-05 18:18:08.089  1689  1714 V WebViewCore: viewSizeChanged w=291; h=390; textwrapWidth=291; scale=1.6500001
+05-05 18:18:08.089  1689  1714 E WebViewCore_native: setSizeScreenWidthAndScale, 1141
+05-05 18:18:08.089   823   823 E DynamicUpdater : unregisterReceiver
+05-05 18:18:08.089   823   823 E DynamicIcon: onPause  isvisible = true   mAttachedToWindow:true    mWindowVisible:falsecom.android.calendar
+05-05 18:18:08.089   823   823 E DynamicUpdater : unregisterReceiver
+05-05 18:18:08.089   534   771 D PowerManagerService: updateWakeLockSummaryLocked: mWakefulness=Awake, mWakeLockSummary=0x23
+05-05 18:18:08.089   534   771 D PowerManagerService: updateScreenStateLocked: mDisplayReady=true, newScreenState=2, mWakefulness=1, mWakeLockSummary=0x23, mUserActivitySummary=0x5, mBootCompleted=true
+05-05 18:18:08.089   534   563 D PowerManagerService: handleSandman: canDream=true, mWakefulness=Awake
+05-05 18:18:08.097   823   823 E DynamicIcon: onPause  isvisible = true   mAttachedToWindow:false    mWindowVisible:falsecom.huawei.android.totemweather
+05-05 18:18:08.097   823   823 E DynamicIcon: onVisibilityChanged 4 - com.android.calendar
+05-05 18:18:08.175  1665  1675 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:08.175  1665  1675 W MessageQueue: java.lang.RuntimeException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {4196fc08} sending message to a Handler on a dead thread
+05-05 18:18:08.175  1665  1675 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:309)
+05-05 18:18:08.175  1665  1675 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:623)
+05-05 18:18:08.175  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:592)
+05-05 18:18:08.175  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:563)
+05-05 18:18:08.175  1665  1675 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:500)
+05-05 18:18:08.175  1665  1675 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:82)
+05-05 18:18:08.175  1665  1675 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.onAccessibilityEvent(AccessibilityService.java:619)
+05-05 18:18:08.175  1665  1675 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:70)
+05-05 18:18:08.175  1665  1675 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:388)
+05-05 18:18:08.175  1665  1675 W MessageQueue: 	at dalvik.system.NativeStart.run(Native Method)
+05-05 18:18:09.566   772   772 I EventRelay: sendStateCmdToSocketSrv--reason: 4 status: 0
+05-05 18:18:09.566   158   158 I ppd     : ppd_loop                 : Hit Rule <BootComplete> ==> Constraint <Default>
+05-05 18:18:09.566   158   158 I ppd     : ppd_loop                 : Hit Rule <CallIdle> ==> Constraint <RadioIdle>
+05-05 18:18:09.566   158   158 I ppd     : set_cpu_hotplug_lock     : Constraint set for CPU lock(1)
+05-05 18:18:09.566   158   158 I ppd     : set_cpu_online           : Constraint set for CPU0 online(1)
+05-05 18:18:09.566   158   158 I ppd     : set_cpu_frequency        : Constraint set for CPU0 (312000-1200000-ondemand)
+05-05 18:18:09.566   158   158 I ppd     : set_cpu_frequency        : Constraint set for CPU0 governor threshold(0-0)
+05-05 18:18:09.566   158   158 I ppd     : set_cpu_frequency        : Constraint set for CPU0 governor sampling_rate(10000)
+05-05 18:18:09.566   158   158 I ppd     : set_cpu_online           : Constraint set for CPU1 online(1)
+05-05 18:18:09.566   158   158 W ppd     : set_cpu_frequency        : NULL cpu frequency parameters
+05-05 18:18:09.566   158   158 I ppd     : set_cpu_online           : Constraint set for CPU2 online(1)
+05-05 18:18:09.566   158   158 W ppd     : set_cpu_frequency        : NULL cpu frequency parameters
+05-05 18:18:09.566   158   158 I ppd     : set_cpu_online           : Constraint set for CPU3 online(1)
+05-05 18:18:09.566   158   158 W ppd     : set_cpu_frequency        : NULL cpu frequency parameters
+05-05 18:18:09.566   158   158 I ppd     : set_ddr_frequency        : Constraint set for DDR (156000-400000-50-throughput)
+05-05 18:18:09.566   158   158 I ppd     : set_gpu_frequency        : Constraint set for GPU0 (156000-624000-ondemand)
+05-05 18:18:09.574   158   158 I ppd     : set_gpu_frequency        : Constraint set for GPU1 (156000-624000-ondemand)
+05-05 18:18:09.785   534   794 E WindowManager: hasWallpaperLayer false
+05-05 18:18:09.925   932   932 I wpa_supplicant: Receive Command: SIGNAL_POLL
+05-05 18:18:09.996   932   932 I wpa_supplicant: wpa_supplicant_signal_poll buf=RSSI=-44
+05-05 18:18:09.996   932   932 I wpa_supplicant: LINKSPEED=24
+05-05 18:18:09.996   932   932 I wpa_supplicant: NOISE=9999
+05-05 18:18:09.996   932   932 I wpa_supplicant: FREQUENCY=0
+05-05 18:18:09.996   534   594 D WifiManager: calculateSignalLevel product=HUAWEI G521-L076 rssi=-44 numLevels=5
+05-05 18:18:09.996   534   594 D WifiStateMachine: fetchRssiAndLinkSpeedNative signalPoll=RSSI=-44
+05-05 18:18:09.996   534   594 D WifiStateMachine: LINKSPEED=24
+05-05 18:18:09.996   534   594 D WifiStateMachine: NOISE=9999
+05-05 18:18:09.996   534   594 D WifiStateMachine: FREQUENCY=0
+05-05 18:18:09.996   534   594 D WifiStateMachine: fetchRssiAndLinkSpeedNative newRssi=-44
+05-05 18:18:09.996   534   594 D WifiStateMachine: fetchRssiAndLinkSpeedNative newSignalLevel=4
+05-05 18:18:10.066   534   550 E WindowManager: hasWallpaperLayer false
+05-05 18:18:10.066   534   550 D PowerManagerService: userActivityNoUpdateLocked: eventTime=582614, event=0, flags=0x0, uid=1000
+05-05 18:18:10.066   534   550 D PowerManagerService: updateUserActivitySummaryLocked: mWakefulness=Awake, mUserActivitySummary=0x5, nextTimeout=590614 (in 8000 ms)
+05-05 18:18:10.066   534   550 D PowerManagerService: updateScreenStateLocked: mDisplayReady=true, newScreenState=2, mWakefulness=1, mWakeLockSummary=0x23, mUserActivitySummary=0x5, mBootCompleted=true
+05-05 18:18:10.066   534   563 D PowerManagerService: handleSandman: canDream=true, mWakefulness=Awake
+05-05 18:18:10.066   534   550 D PowerManagerService: userActivityNoUpdateLocked: eventTime=582614, event=0, flags=0x1, uid=1000
+05-05 18:18:10.066   534   550 D PowerManagerService: updateWakeLockSummaryLocked: mWakefulness=Awake, mWakeLockSummary=0x0
+05-05 18:18:10.066   534   550 D PowerManagerService: updateScreenStateLocked: mDisplayReady=true, newScreenState=2, mWakefulness=1, mWakeLockSummary=0x0, mUserActivitySummary=0x5, mBootCompleted=true
+05-05 18:18:10.066   534   550 D PowerManagerService: Releasing suspend blocker "PowerManagerService.WakeLocks".
+05-05 18:18:10.066   534   563 D PowerManagerService: handleSandman: canDream=true, mWakefulness=Awake

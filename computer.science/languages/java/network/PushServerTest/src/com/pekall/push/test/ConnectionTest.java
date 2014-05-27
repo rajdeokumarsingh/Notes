@@ -22,7 +22,7 @@ public class ConnectionTest {
     */
     public static void main(String args[]) {
         // Uncomment following line for very verbose log
-        // Debug.setVerboseDebugLog(true);
+        Debug.setVerboseDebugLog(true);
 
         processArgs(args);
 
@@ -34,7 +34,7 @@ public class ConnectionTest {
         Debug.log("main thread continue ...");
         startMonitor(mdmPushClient);
 
-        Util.sleepSeconds(60);
+        Util.sleepSeconds(120);
 
         while (true) {
             Debug.log("begin ping ...");
@@ -42,7 +42,7 @@ public class ConnectionTest {
                 mdmPushClient.ping("ping");
             }
             Debug.log("end ping ...");
-            Util.sleepSeconds(60);
+            Util.sleepSeconds(120);
         }
     }
 

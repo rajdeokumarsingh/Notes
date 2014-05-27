@@ -5,3 +5,5 @@
 ./calc.time.txt
 
 ./strace.txt
+
+checkinstall

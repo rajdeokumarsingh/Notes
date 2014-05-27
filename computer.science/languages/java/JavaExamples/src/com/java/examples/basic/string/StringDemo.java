@@ -6,6 +6,8 @@ public class StringDemo {
 //        palinrome();
 //        convertValue("10.23", "20.38");
         toStringDemo();
+
+        System.out.println("t".substring(0, "t".length()-1));
     }
 
     private static void toStringDemo() {

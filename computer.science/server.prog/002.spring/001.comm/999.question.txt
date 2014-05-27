@@ -11,6 +11,9 @@ ClassPathXmlApplicationContext
         com/pekall/mdm/a.xml
         classpath should be : "classpath: com/pekall/mdm/a.xml"
 
+    /resources
+        is default in classpath
+        
 
 FileSystemXmlApplicationContext
 

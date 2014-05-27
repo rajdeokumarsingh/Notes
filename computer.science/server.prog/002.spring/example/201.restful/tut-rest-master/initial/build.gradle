@@ -11,7 +11,6 @@ apply plugin: 'propdeps-eclipse'
 buildscript {
   repositories {
     mavenCentral()
-    // maven { url 'http://192.168.10.224:8081/nexus/content/groups/public' }
     maven {
       url "http://download.java.net/maven/2"
     }
@@ -46,8 +45,10 @@ dependencies {
     testCompile 'org.springframework:spring-test:3.2.3.RELEASE'
     testCompile 'junit:junit:4.+'
     testCompile "org.mockito:mockito-all:1.9.5"
+
+    testCompile 'javax.servlet:servlet-api:3.0.1'
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '1.9'
+    gradleVersion = '1.6'
 }

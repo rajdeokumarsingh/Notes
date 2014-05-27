@@ -11,9 +11,6 @@ apply plugin: 'idea'
 buildscript {
   repositories {
     mavenCentral()
-    maven { 
-        url 'http://192.168.10.224:8081/nexus/content/groups/public' 
-    }
     maven {
       url "http://download.java.net/maven/2"
     }

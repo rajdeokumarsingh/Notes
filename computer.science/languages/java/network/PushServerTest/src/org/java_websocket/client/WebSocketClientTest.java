@@ -206,7 +206,7 @@ public abstract class WebSocketClientTest
 
     public void register(int id) {
         Debug.log("register, id: " + PushConstant.DEVICE_ID_PREFIX +
-                PushConstant.DEVICE_BEGIN_ID + id);
+                (PushConstant.DEVICE_BEGIN_ID + id));
         send(PushMessageManager.genShakeHandMessage(
                 PushConstant.DEVICE_BEGIN_ID + id).toJson(), id);
     }
@@ -340,8 +340,9 @@ public abstract class WebSocketClientTest
         for (int i = 0; i < sockCount; i++) {
             assert (engines[i] != null);
 
-            String queryUrl = queryServerAddr + PushConstant.PUSH_QUERY_PATH +
-                    PushConstant.PUSH_QUERY_PARAM + PushConstant.DEVICE_BEGIN_ID + i;
+            String queryUrl = queryServerAddr +
+                    PushConstant.PUSH_QUERY_PATH + PushConstant.PUSH_QUERY_PARAM +
+                    PushConstant.DEVICE_ID_PREFIX + (PushConstant.DEVICE_BEGIN_ID + i);
             Debug.log("query push server addr:" + queryUrl);
 
             ServerAddress serverAddress;

@@ -1,0 +1,13602 @@
+cscope 15 $HOME/git/note/computer.science/server.prog/002.spring/example/201.restful/tut-rest-master/3 -q 0000000417 0000071873
+	@complete/src/main/java/com/yummynoodlebar/config/CoreConfig.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÚfig
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gdomaš
+.
+	gOrd”
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	g»pos™Üy
+.
+	gOrd”sMemÜyR•os™Üy
+;
+
+5 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	g»pos™Üy
+.
+	gOrd”sR•os™Üy
+;
+
+6 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	g£rviûs
+.
+	gOrd”Ev’tHªdËr
+;
+
+7 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	g£rviûs
+.
+	gOrd”S”viû
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gcÚ‹xt
+.
+	gªnÙ©iÚ
+.
+	gB—n
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gcÚ‹xt
+.
+	gªnÙ©iÚ
+.
+	gCÚfigu¿tiÚ
+;
+
+11 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gHashM­
+;
+
+12 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+14 @
+CÚfigu¿tiÚ
+
+
+15 
+public
+ cÏs 
+	cCÜeCÚfig
+ {
+
+17 @
+B—n
+
+
+18 
+public
+ 
+Ord”S”viû
+ 
+	$ü—‹S”viû
+(
+Ord”sR•os™Üy
+ 
+»po
+) {
+
+19  
+Ãw
+ 
+	`Ord”Ev’tHªdËr
+(
+»po
+);
+
+22 @
+B—n
+
+
+23 
+public
+ 
+Ord”sR•os™Üy
+ 
+	$ü—‹R•o
+() {
+
+24  
+Ãw
+ 
+	`Ord”sMemÜyR•os™Üy
+Òew 
+HashM­
+<
+UUID
+, 
+Ord”
+>());
+
+25 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/config/MVCConfig.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÚfig
+;
+
+3 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gcÚ‹xt
+.
+	gªnÙ©iÚ
+.
+	gCompÚ’tSÿn
+;
+
+4 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gcÚ‹xt
+.
+	gªnÙ©iÚ
+.
+	gCÚfigu¿tiÚ
+;
+
+5 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	g£rvËt
+.
+	gcÚfig
+.
+	gªnÙ©iÚ
+.
+	gEÇbËWebMvc
+;
+
+7 @
+	gCÚfigu¿tiÚ
+
+
+8 @
+	gEÇbËWebMvc
+
+
+9 @
+CompÚ’tSÿn
+(
+ba£Packages
+ = {"com.yummynoodlebar.rest.controller"})
+
+10 
+public
+ cÏs 
+	cMVCCÚfig
+ {}
+
+	@complete/src/main/java/com/yummynoodlebar/config/WebAppInitializer.java
+
+2 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÚfig
+;
+
+4 
+impÜt
+ 
+	gÜg
+.
+	g¦f4j
+.
+	gLogg”
+;
+
+5 
+impÜt
+ 
+	gÜg
+.
+	g¦f4j
+.
+	gLogg”FaùÜy
+;
+
+6 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gWebAµliÿtiÚIn™Ÿliz”
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gcÚ‹xt
+.
+	gCÚ‹xtLßd”Li¡’”
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gcÚ‹xt
+.
+	gWebAµliÿtiÚCÚ‹xt
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gcÚ‹xt
+.
+	gsuµÜt
+.
+	gAÂÙ©iÚCÚfigWebAµliÿtiÚCÚ‹xt
+;
+
+10 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gf‹r
+.
+	gD–eg©šgF‹rProxy
+;
+
+11 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	g£rvËt
+.
+	gDi¥©ch”S”vËt
+;
+
+13 
+impÜt
+ 
+	gjavax
+.
+	g£rvËt
+.
+	gF‹rRegi¡¿tiÚ
+;
+
+14 
+impÜt
+ 
+	gjavax
+.
+	g£rvËt
+.
+	gS”vËtCÚ‹xt
+;
+
+15 
+impÜt
+ 
+	gjavax
+.
+	g£rvËt
+.
+	gS”vËtRegi¡¿tiÚ
+;
+
+16 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gS‘
+;
+
+18 
+public
+ cÏs 
+	cWebAµIn™Ÿliz”
+ 
+im¶em’ts
+ 
+	mWebAµliÿtiÚIn™Ÿliz”
+ {
+
+20 
+´iv©e
+ 
+Logg”
+ 
+	mLOG
+ = 
+Logg”FaùÜy
+.
+g‘Logg”
+(
+WebAµIn™Ÿliz”
+.
+şass
+);
+
+24 @
+Ov”ride
+
+
+25 
+public
+ 
+	$ÚS¹up
+(
+S”vËtCÚ‹xt
+ 
+£rvËtCÚ‹xt
+) {
+
+26 
+WebAµliÿtiÚCÚ‹xt
+ 
+roÙCÚ‹xt
+ = 
+	`ü—‹RoÙCÚ‹xt
+(
+£rvËtCÚ‹xt
+);
+
+28 
+	`cÚfigu»S´šgMvc
+(
+£rvËtCÚ‹xt
+, 
+roÙCÚ‹xt
+);
+
+33 
+´iv©e
+ 
+WebAµliÿtiÚCÚ‹xt
+ 
+	$ü—‹RoÙCÚ‹xt
+(
+S”vËtCÚ‹xt
+ 
+£rvËtCÚ‹xt
+) {
+
+34 
+AÂÙ©iÚCÚfigWebAµliÿtiÚCÚ‹xt
+ 
+roÙCÚ‹xt
+ = 
+Ãw
+ 
+	`AÂÙ©iÚCÚfigWebAµliÿtiÚCÚ‹xt
+();
+
+35 
+roÙCÚ‹xt
+.(
+CÜeCÚfig
+.
+şass
+);
+
+36 
+roÙCÚ‹xt
+.
+	`»äesh
+();
+
+38 
+£rvËtCÚ‹xt
+.
+	`addLi¡’”
+(
+Ãw
+ 
+	`CÚ‹xtLßd”Li¡’”
+(
+roÙCÚ‹xt
+));
+
+39 
+£rvËtCÚ‹xt
+.
+	`£tIn™P¬am‘”
+("defaultHtmlEscape", "true");
+
+41  
+roÙCÚ‹xt
+;
+
+42 
+	}
+}
+
+46 
+´iv©e
+ 
+	$cÚfigu»S´šgMvc
+(
+S”vËtCÚ‹xt
+ 
+£rvËtCÚ‹xt
+, 
+WebAµliÿtiÚCÚ‹xt
+ 
+roÙCÚ‹xt
+) {
+
+47 
+AÂÙ©iÚCÚfigWebAµliÿtiÚCÚ‹xt
+ 
+mvcCÚ‹xt
+ = 
+Ãw
+ 
+	`AÂÙ©iÚCÚfigWebAµliÿtiÚCÚ‹xt
+();
+
+48 
+mvcCÚ‹xt
+.(
+MVCCÚfig
+.
+şass
+);
+
+50 
+mvcCÚ‹xt
+.
+	`£tP¬’t
+(
+roÙCÚ‹xt
+);
+
+54 
+S”vËtRegi¡¿tiÚ
+.
+DyÇmic
+ 
+­pS”vËt
+ = 
+£rvËtCÚ‹xt
+.
+	`addS”vËt
+(
+
+55 "web£rviû", 
+Ãw
+ 
+	`Di¥©ch”S”vËt
+(
+mvcCÚ‹xt
+));
+
+56 
+­pS”vËt
+.
+	`£tLßdOnS¹up
+(1);
+
+57 
+S‘
+<
+SŒšg
+> 
+m­pšgCÚæiùs
+ = 
+­pS”vËt
+.
+	`addM­pšg
+("/");
+
+59 ià(!
+m­pšgCÚæiùs
+.
+	`isEm±y
+()) {
+
+60 
+SŒšg
+ 
+s
+ : 
+m­pšgCÚæiùs
+) {
+
+61 
+LOG
+.
+	`”rÜ
+("M­pšg cÚæiù: " + 
+s
+);
+
+63 
+throw
+ 
+Ãw
+ 
+	`IÎeg®S‹Exû±iÚ
+(
+
+67 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/domain/Customer.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gdomaš
+;
+
+3 
+public
+ cÏs 
+	cCu¡om”
+ {
+
+4 
+´iv©e
+ 
+SŒšg
+ 
+	mÇme
+;
+
+6 
+´iv©e
+ 
+SŒšg
+ 
+	m¡»‘Ad»ss
+;
+
+7 
+´iv©e
+ 
+SŒšg
+ 
+	mc™y
+;
+
+8 
+´iv©e
+ 
+SŒšg
+ 
+	mpo¡®Code
+;
+
+10 
+public
+ 
+SŒšg
+ 
+	$g‘Po¡®Code
+() {
+
+11  
+po¡®Code
+;
+
+14 
+public
+ 
+	$£tPo¡®Code
+(
+SŒšg
+ 
+po¡®Code
+) {
+
+15 
+this
+.
+po¡®Code
+ =…ostalCode;
+
+16 
+	}
+}
+
+18 
+public
+ 
+SŒšg
+ 
+	$g‘C™y
+() {
+
+19  
+c™y
+;
+
+20 
+	}
+}
+
+22 
+public
+ 
+	$£tC™y
+(
+SŒšg
+ 
+c™y
+) {
+
+23 
+this
+.
+c™y
+ = city;
+
+24 
+	}
+}
+
+26 
+public
+ 
+SŒšg
+ 
+	$g‘SŒ“tAd»ss
+() {
+
+27  
+¡»‘Ad»ss
+;
+
+28 
+	}
+}
+
+30 
+public
+ 
+	$£tSŒ“tAd»ss
+(
+SŒšg
+ 
+¡»‘Ad»ss
+) {
+
+31 
+this
+.
+¡»‘Ad»ss
+ = streetAdress;
+
+32 
+	}
+}
+
+34 
+public
+ 
+SŒšg
+ 
+	$g‘Name
+() {
+
+35  
+Çme
+;
+
+36 
+	}
+}
+
+38 
+public
+ 
+	$£tName
+(
+SŒšg
+ 
+Çme
+) {
+
+39 
+this
+.
+Çme
+ =‚ame;
+
+40 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/domain/Order.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gdomaš
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.
+	gOrd”D‘as
+;
+
+4 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gb—ns
+.
+	gB—nUts
+;
+
+6 
+impÜt
+ 
+	gjava
+.
+	gut
+.*;
+
+8 
+public
+ cÏs 
+	cOrd”
+ {
+
+10 
+´iv©e
+ 
+fš®
+ 
+D©e
+ 
+	md©eTimeOfSubmissiÚ
+;
+
+11 
+´iv©e
+ 
+	mM­
+<
+	mSŒšg
+, 
+	mIÁeg”
+> 
+	mÜd”I‹ms
+;
+
+12 
+´iv©e
+ 
+fš®
+ 
+UUID
+ 
+	mkey
+;
+
+13 
+´iv©e
+ 
+Cu¡om”
+ 
+	mcu¡om”
+;
+
+15 
+´iv©e
+ 
+Ord”Stus
+ 
+	m¡©us
+;
+
+16 
+´iv©e
+ 
+	mLi¡
+<
+	mOrd”Stus
+> 
+	m¡©usHi¡Üy
+;
+
+18 
+public
+ 
+	$Ord”
+(
+fš®
+ 
+D©e
+ 
+d©eTimeOfSubmissiÚ
+) {
+
+19 
+this
+.
+key
+ = 
+UUID
+.
+	`¿ndomUUID
+();
+
+20 
+this
+.
+d©eTimeOfSubmissiÚ
+ = dateTimeOfSubmission;
+
+21 
+¡©usHi¡Üy
+ = 
+Ãw
+ 
+A¼ayLi¡
+<
+Ord”Stus
+>();
+
+24 
+public
+ 
+	$addStus
+(
+Ord”Stus
+ 
+ÃwStus
+) {
+
+25 
+¡©usHi¡Üy
+.
+	`add
+(
+ÃwStus
+);
+
+26 
+¡©us
+ = 
+ÃwStus
+;
+
+27 
+	}
+}
+
+29 
+public
+ 
+Ord”Stus
+ 
+	$g‘Stus
+() {
+
+30  
+¡©us
+;
+
+31 
+	}
+}
+
+33 
+public
+ 
+D©e
+ 
+	$g‘D©eTimeOfSubmissiÚ
+() {
+
+34  
+d©eTimeOfSubmissiÚ
+;
+
+35 
+	}
+}
+
+37 
+public
+ 
+UUID
+ 
+	$g‘Key
+() {
+
+38  
+key
+;
+
+39 
+	}
+}
+
+41 
+public
+ 
+£tOrd”I‹ms
+(
+M­
+<
+SŒšg
+, 
+IÁeg”
+> 
+Üd”I‹ms
+) {
+
+42 ià(
+	gÜd”I‹ms
+ =ğ
+nuÎ
+) {
+
+43 
+this
+.
+Üd”I‹ms
+ = 
+CŞËùiÚs
+.
+em±yM­
+();
+
+45 
+	gthis
+.
+	gÜd”I‹ms
+ = 
+CŞËùiÚs
+.
+unmodifŸbËM­
+(
+Üd”I‹ms
+);
+
+49 
+public
+ 
+	gM­
+<
+	gSŒšg
+, 
+	gIÁeg”
+> 
+	$g‘Ord”I‹ms
+() {
+
+50  
+Üd”I‹ms
+;
+
+51 
+	}
+}
+
+53 
+public
+ 
+boŞ—n
+ 
+	$ÿnBeD–‘ed
+() {
+
+54  
+Œue
+;
+
+55 
+	}
+}
+
+57 
+public
+ 
+Ord”D‘as
+ 
+	$toOrd”D‘as
+() {
+
+58 
+Ord”D‘as
+ 
+d‘as
+ = 
+Ãw
+ 
+	`Ord”D‘as
+();
+
+60 
+B—nUts
+.
+	`cİyPrİ”t›s
+(
+this
+, 
+d‘as
+);
+
+62  
+d‘as
+;
+
+63 
+	}
+}
+
+65 
+public
+ 
+Ord”
+ 
+	$äomOrd”D‘as
+(
+Ord”D‘as
+ 
+Üd”D‘as
+) {
+
+66 
+Ord”
+ 
+Üd”
+ = 
+Ãw
+ 
+	`Ord”
+(
+Üd”D‘as
+.
+	`g‘D©eTimeOfSubmissiÚ
+());
+
+68 
+B—nUts
+.
+	`cİyPrİ”t›s
+(
+Üd”D‘as
+, 
+Üd”
+);
+
+70  
+Üd”
+;
+
+71 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/domain/OrderStatus.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gdomaš
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.
+	gOrd”StusD‘as
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gD©e
+;
+
+6 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+8 
+public
+ cÏs 
+	cOrd”Stus
+ {
+
+10 
+´iv©e
+ 
+D©e
+ 
+	m¡©usD©e
+;
+
+11 
+´iv©e
+ 
+SŒšg
+ 
+	m¡©us
+;
+
+13 
+public
+ 
+	$Ord”Stus
+(
+fš®
+ 
+D©e
+ 
+d©e
+, fš® 
+SŒšg
+ 
+¡©us
+) {
+
+14 
+this
+.
+¡©us
+ = status;
+
+15 
+this
+.
+¡©usD©e
+ = 
+d©e
+;
+
+18 
+public
+ 
+D©e
+ 
+	$g‘StusD©e
+() {
+
+19  
+¡©usD©e
+;
+
+20 
+	}
+}
+
+22 
+public
+ 
+SŒšg
+ 
+	$g‘Stus
+() {
+
+23  
+¡©us
+;
+
+24 
+	}
+}
+
+26 
+public
+ 
+Ord”StusD‘as
+ 
+	$toStusD‘as
+() {
+
+27  
+Ãw
+ 
+	`Ord”StusD‘as
+(
+¡©usD©e
+, 
+¡©us
+);
+
+28 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/domain/OrderStatusHistory.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gdomaš
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gS‘
+;
+
+5 
+public
+ cÏs 
+	cOrd”StusHi¡Üy
+ {
+
+7 
+´iv©e
+ 
+fš®
+ 
+	mS‘
+<
+	mOrd”Stus
+> 
+	mÜd”Stu£s
+;
+
+9 
+public
+ 
+Ord”StusHi¡Üy
+(
+fš®
+ 
+S‘
+<
+Ord”Stus
+> 
+Üd”Stu£s
+) {
+
+10 
+	mthis
+.
+	mÜd”Stu£s
+ = 
+Üd”Stu£s
+;
+
+13 
+public
+ 
+	$addStus
+(
+fš®
+ 
+Ord”Stus
+ 
+Üd”Stus
+) {
+
+14 
+this
+.
+Üd”Stu£s
+.
+	`add
+(
+Üd”Stus
+);
+
+15 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/domain/Payment.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gdomaš
+;
+
+3 
+public
+ cÏs 
+	cPaym’t
+ {
+
+	@complete/src/main/java/com/yummynoodlebar/core/domain/PaymentDetails.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gdomaš
+;
+
+3 
+public
+ cÏs 
+	cPaym’tD‘as
+ {
+
+	@complete/src/main/java/com/yummynoodlebar/core/domain/PaymentStatus.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gdomaš
+;
+
+3 
+public
+ cÏs 
+	cPaym’tStus
+ {
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/CreateEvent.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+;
+
+3 
+public
+ cÏs 
+	cC»©eEv’t
+ {
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/CreatedEvent.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+;
+
+3 
+public
+ cÏs 
+	cC»©edEv’t
+ {
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/DeleteEvent.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+;
+
+3 
+public
+ cÏs 
+	cD–‘eEv’t
+ {
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/DeletedEvent.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+;
+
+3 
+public
+ cÏs 
+	cD–‘edEv’t
+ {
+
+4 
+´Ùeùed
+ 
+boŞ—n
+ 
+	m’t™yFound
+ = 
+Œue
+;
+
+6 
+public
+ 
+boŞ—n
+ 
+	$isEÁ™yFound
+() {
+
+7  
+’t™yFound
+;
+
+9 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/ReadEvent.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+;
+
+3 
+public
+ cÏs 
+	cR—dEv’t
+ {
+
+4 
+´Ùeùed
+ 
+boŞ—n
+ 
+	m’t™yFound
+ = 
+Œue
+;
+
+6 
+public
+ 
+boŞ—n
+ 
+	$isEÁ™yFound
+() {
+
+7  
+’t™yFound
+;
+
+9 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/RequestReadEvent.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+;
+
+3 
+public
+ cÏs 
+	cReque¡R—dEv’t
+ {
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/UpdateEvent.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+;
+
+3 
+public
+ 
+ab¡¿ù
+ cÏs 
+	cUpd©eEv’t
+ {
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/UpdatedEvent.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+;
+
+3 
+public
+ cÏs 
+	cUpd©edEv’t
+ {
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/orders/AllOrdersEvent.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gR—dEv’t
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gCŞËùiÚ
+;
+
+6 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gCŞËùiÚs
+;
+
+7 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+9 
+public
+ cÏs 
+	cAÎOrd”sEv’t
+ 
+ex‹nds
+ 
+	mR—dEv’t
+ {
+
+11 
+´iv©e
+ 
+fš®
+ 
+	mLi¡
+<
+	mOrd”D‘as
+> 
+	mÜd”sD‘as
+;
+
+13 
+public
+ 
+AÎOrd”sEv’t
+(
+Li¡
+<
+Ord”D‘as
+> 
+Üd”s
+) {
+
+14 
+	mthis
+.
+	mÜd”sD‘as
+ = 
+CŞËùiÚs
+.
+unmodifŸbËLi¡
+(
+Üd”s
+);
+
+17 
+public
+ 
+	gCŞËùiÚ
+<
+	gOrd”D‘as
+> 
+	$g‘Ord”sD‘as
+() {
+
+18  
+this
+.
+Üd”sD‘as
+;
+
+19 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/orders/CreateOrderEvent.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gC»©eEv’t
+;
+
+5 
+public
+ cÏs 
+	cC»©eOrd”Ev’t
+ 
+ex‹nds
+ 
+	mC»©eEv’t
+ {
+
+6 
+´iv©e
+ 
+Ord”D‘as
+ 
+	md‘as
+;
+
+8 
+public
+ 
+	$C»©eOrd”Ev’t
+(
+Ord”D‘as
+ 
+d‘as
+) {
+
+9 
+this
+.
+d‘as
+ = details;
+
+12 
+public
+ 
+Ord”D‘as
+ 
+	$g‘D‘as
+() {
+
+13  
+d‘as
+;
+
+14 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/orders/DeleteOrderEvent.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gD–‘eEv’t
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+7 
+public
+ cÏs 
+	cD–‘eOrd”Ev’t
+ 
+ex‹nds
+ 
+	mD–‘eEv’t
+ {
+
+9 
+´iv©e
+ 
+fš®
+ 
+UUID
+ 
+	mkey
+;
+
+11 
+public
+ 
+	$D–‘eOrd”Ev’t
+(
+fš®
+ 
+UUID
+ 
+key
+) {
+
+12 
+this
+.
+key
+ = key;
+
+15 
+public
+ 
+UUID
+ 
+	$g‘Key
+() {
+
+16  
+key
+;
+
+17 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/orders/OrderCreatedEvent.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gC»©edEv’t
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+7 
+public
+ cÏs 
+	cOrd”C»©edEv’t
+ 
+ex‹nds
+ 
+	mC»©edEv’t
+ {
+
+9 
+´iv©e
+ 
+fš®
+ 
+UUID
+ 
+	mÃwOrd”Key
+;
+
+10 
+´iv©e
+ 
+fš®
+ 
+Ord”D‘as
+ 
+	md‘as
+;
+
+12 
+public
+ 
+	$Ord”C»©edEv’t
+(
+fš®
+ 
+UUID
+ 
+ÃwOrd”Key
+, fš® 
+Ord”D‘as
+ 
+d‘as
+) {
+
+13 
+this
+.
+ÃwOrd”Key
+ =‚ewOrderKey;
+
+14 
+this
+.
+d‘as
+ = details;
+
+17 
+public
+ 
+Ord”D‘as
+ 
+	$g‘D‘as
+() {
+
+18  
+d‘as
+;
+
+19 
+	}
+}
+
+21 
+public
+ 
+UUID
+ 
+	$g‘NewOrd”Key
+() {
+
+22  
+ÃwOrd”Key
+;
+
+23 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/orders/OrderDeletedEvent.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gD–‘edEv’t
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+7 
+public
+ cÏs 
+	cOrd”D–‘edEv’t
+ 
+ex‹nds
+ 
+	mD–‘edEv’t
+ {
+
+9 
+´iv©e
+ 
+UUID
+ 
+	mkey
+;
+
+10 
+´iv©e
+ 
+Ord”D‘as
+ 
+	md‘as
+;
+
+11 
+´iv©e
+ 
+boŞ—n
+ 
+	md–‘iÚCom¶‘ed
+;
+
+13 
+´iv©e
+ 
+	$Ord”D–‘edEv’t
+(
+UUID
+ 
+key
+) {
+
+14 
+this
+.
+key
+ = key;
+
+17 
+public
+ 
+	$Ord”D–‘edEv’t
+(
+UUID
+ 
+key
+, 
+Ord”D‘as
+ 
+d‘as
+) {
+
+18 
+this
+.
+key
+ = key;
+
+19 
+this
+.
+d‘as
+ = details;
+
+20 
+this
+.
+d–‘iÚCom¶‘ed
+ = 
+Œue
+;
+
+21 
+	}
+}
+
+23 
+public
+ 
+UUID
+ 
+	$g‘Key
+() {
+
+24  
+key
+;
+
+25 
+	}
+}
+
+27 
+public
+ 
+Ord”D‘as
+ 
+	$g‘D‘as
+() {
+
+28  
+d‘as
+;
+
+29 
+	}
+}
+
+31 
+public
+ 
+boŞ—n
+ 
+	$isD–‘iÚCom¶‘ed
+() {
+
+32  
+d–‘iÚCom¶‘ed
+;
+
+33 
+	}
+}
+
+35 
+public
+ 
+Ord”D–‘edEv’t
+ 
+	$d–‘iÚFÜbidd’
+(
+UUID
+ 
+key
+, 
+Ord”D‘as
+ 
+d‘as
+) {
+
+36 
+Ord”D–‘edEv’t
+ 
+ev
+ = 
+Ãw
+ 
+	`Ord”D–‘edEv’t
+(
+key
+, 
+d‘as
+);
+
+37 
+ev
+.
+’t™yFound
+=
+Œue
+;
+
+38 
+ev
+.
+d–‘iÚCom¶‘ed
+=
+çl£
+;
+
+39  
+ev
+;
+
+40 
+	}
+}
+
+42 
+public
+ 
+Ord”D–‘edEv’t
+ 
+	$nÙFound
+(
+UUID
+ 
+key
+) {
+
+43 
+Ord”D–‘edEv’t
+ 
+ev
+ = 
+Ãw
+ 
+	`Ord”D–‘edEv’t
+(
+key
+);
+
+44 
+ev
+.
+’t™yFound
+=
+çl£
+;
+
+45  
+ev
+;
+
+46 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/orders/OrderDetails.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gCŞËùiÚs
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gD©e
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gM­
+;
+
+6 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+8 
+public
+ cÏs 
+	cOrd”D‘as
+ {
+
+10 
+´iv©e
+ 
+UUID
+ 
+	mkey
+;
+
+11 
+´iv©e
+ 
+D©e
+ 
+	md©eTimeOfSubmissiÚ
+;
+
+12 
+´iv©e
+ 
+	mM­
+<
+	mSŒšg
+, 
+	mIÁeg”
+> 
+	mÜd”I‹ms
+;
+
+14 
+public
+ 
+	$Ord”D‘as
+() {
+
+15 
+key
+ = 
+nuÎ
+;
+
+18 
+public
+ 
+	$Ord”D‘as
+(
+UUID
+ 
+key
+) {
+
+19 
+this
+.
+key
+ = key;
+
+20 
+	}
+}
+
+22 
+public
+ 
+D©e
+ 
+	$g‘D©eTimeOfSubmissiÚ
+() {
+
+23  
+this
+.
+d©eTimeOfSubmissiÚ
+;
+
+24 
+	}
+}
+
+26 
+public
+ 
+	$£tD©eTimeOfSubmissiÚ
+(
+D©e
+ 
+d©eTimeOfSubmissiÚ
+) {
+
+27 
+this
+.
+d©eTimeOfSubmissiÚ
+ = dateTimeOfSubmission;
+
+28 
+	}
+}
+
+30 
+public
+ 
+	gM­
+<
+	gSŒšg
+, 
+	gIÁeg”
+> 
+	$g‘Ord”I‹ms
+() {
+
+31  
+Üd”I‹ms
+;
+
+32 
+	}
+}
+
+34 
+public
+ 
+£tOrd”I‹ms
+(
+M­
+<
+SŒšg
+, 
+IÁeg”
+> 
+Üd”I‹ms
+) {
+
+35 ià(
+	gÜd”I‹ms
+ =ğ
+nuÎ
+) {
+
+36 
+this
+.
+Üd”I‹ms
+ = 
+CŞËùiÚs
+.
+em±yM­
+();
+
+38 
+	gthis
+.
+	gÜd”I‹ms
+ = 
+CŞËùiÚs
+.
+unmodifŸbËM­
+(
+Üd”I‹ms
+);
+
+42 
+public
+ 
+UUID
+ 
+	$g‘Key
+() {
+
+43  
+key
+;
+
+44 
+	}
+}
+
+46 
+public
+ 
+	$£tKey
+(
+UUID
+ 
+key
+) {
+
+47 
+this
+.
+key
+ = key;
+
+48 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/orders/OrderDetailsEvent.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gR—dEv’t
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+7 
+public
+ cÏs 
+	cOrd”D‘asEv’t
+ 
+ex‹nds
+ 
+	mR—dEv’t
+ {
+
+8 
+´iv©e
+ 
+UUID
+ 
+	mkey
+;
+
+9 
+´iv©e
+ 
+Ord”D‘as
+ 
+	mÜd”D‘as
+;
+
+11 
+´iv©e
+ 
+	$Ord”D‘asEv’t
+(
+UUID
+ 
+key
+) {
+
+12 
+this
+.
+key
+ = key;
+
+15 
+public
+ 
+	$Ord”D‘asEv’t
+(
+UUID
+ 
+key
+, 
+Ord”D‘as
+ 
+Üd”D‘as
+) {
+
+16 
+this
+.
+key
+ = key;
+
+17 
+this
+.
+Üd”D‘as
+ = orderDetails;
+
+18 
+	}
+}
+
+20 
+public
+ 
+UUID
+ 
+	$g‘Key
+() {
+
+21  
+key
+;
+
+22 
+	}
+}
+
+24 
+public
+ 
+Ord”D‘as
+ 
+	$g‘Ord”D‘as
+() {
+
+25  
+Üd”D‘as
+;
+
+26 
+	}
+}
+
+28 
+public
+ 
+Ord”D‘asEv’t
+ 
+	$nÙFound
+(
+UUID
+ 
+key
+) {
+
+29 
+Ord”D‘asEv’t
+ 
+ev
+ = 
+Ãw
+ 
+	`Ord”D‘asEv’t
+(
+key
+);
+
+30 
+ev
+.
+’t™yFound
+=
+çl£
+;
+
+31  
+ev
+;
+
+32 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/orders/OrderStatus.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+5 
+public
+ cÏs 
+	cOrd”Stus
+ {
+
+7 
+´iv©e
+ 
+UUID
+ 
+	mkey
+;
+
+9 
+public
+ 
+	$Ord”Stus
+() {
+
+10 
+key
+ = 
+nuÎ
+;
+
+13 
+public
+ 
+	$Ord”Stus
+(
+UUID
+ 
+key
+) {
+
+14 
+this
+.
+key
+ = key;
+
+15 
+	}
+}
+
+17 
+public
+ 
+UUID
+ 
+	$g‘Key
+() {
+
+18  
+key
+;
+
+19 
+	}
+}
+
+21 
+public
+ 
+	$£tKey
+(
+UUID
+ 
+key
+) {
+
+22 
+this
+.
+key
+ = key;
+
+23 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/orders/OrderStatusDetails.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gD©e
+;
+
+5 
+public
+ cÏs 
+	cOrd”StusD‘as
+ {
+
+7 
+´iv©e
+ 
+D©e
+ 
+	m¡©usD©e
+;
+
+8 
+´iv©e
+ 
+SŒšg
+ 
+	m¡©us
+;
+
+10 
+public
+ 
+	$Ord”StusD‘as
+(
+D©e
+ 
+¡©usD©e
+, 
+SŒšg
+ 
+¡©us
+) {
+
+11 
+this
+.
+¡©us
+ = status;
+
+12 
+this
+.
+¡©usD©e
+ = statusDate;
+
+15 
+public
+ 
+D©e
+ 
+	$g‘StusD©e
+() {
+
+16  
+¡©usD©e
+;
+
+17 
+	}
+}
+
+19 
+public
+ 
+SŒšg
+ 
+	$g‘Stus
+() {
+
+20  
+¡©us
+;
+
+21 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/orders/OrderStatusEvent.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gR—dEv’t
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+7 
+public
+ cÏs 
+	cOrd”StusEv’t
+ 
+ex‹nds
+ 
+	mR—dEv’t
+ {
+
+8 
+´iv©e
+ 
+UUID
+ 
+	mkey
+;
+
+9 
+´iv©e
+ 
+Ord”StusD‘as
+ 
+	mÜd”Stus
+;
+
+11 
+´iv©e
+ 
+	$Ord”StusEv’t
+(
+UUID
+ 
+key
+) {
+
+12 
+this
+.
+key
+ = key;
+
+15 
+public
+ 
+	$Ord”StusEv’t
+(
+UUID
+ 
+key
+, 
+Ord”StusD‘as
+ 
+Üd”Stus
+) {
+
+16 
+this
+.
+key
+ = key;
+
+17 
+this
+.
+Üd”Stus
+ = orderStatus;
+
+18 
+	}
+}
+
+20 
+public
+ 
+UUID
+ 
+	$g‘Key
+() {
+
+21  
+key
+;
+
+22 
+	}
+}
+
+24 
+public
+ 
+Ord”StusD‘as
+ 
+	$g‘Ord”Stus
+() {
+
+25  
+Üd”Stus
+;
+
+26 
+	}
+}
+
+28 
+public
+ 
+Ord”StusEv’t
+ 
+	$nÙFound
+(
+UUID
+ 
+key
+) {
+
+29 
+Ord”StusEv’t
+ 
+ev
+ = 
+Ãw
+ 
+	`Ord”StusEv’t
+(
+key
+);
+
+30 
+ev
+.
+’t™yFound
+=
+çl£
+;
+
+31  
+ev
+;
+
+32 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/orders/OrderUpdatedEvent.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gUpd©edEv’t
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+7 
+public
+ cÏs 
+	cOrd”Upd©edEv’t
+ 
+ex‹nds
+ 
+	mUpd©edEv’t
+ {
+
+9 
+´iv©e
+ 
+UUID
+ 
+	mkey
+;
+
+10 
+´iv©e
+ 
+Ord”D‘as
+ 
+	mÜd”D‘as
+;
+
+12 
+public
+ 
+	$Ord”Upd©edEv’t
+(
+UUID
+ 
+key
+, 
+Ord”D‘as
+ 
+Üd”D‘as
+) {
+
+13 
+this
+.
+key
+ = key;
+
+14 
+this
+.
+Üd”D‘as
+ = orderDetails;
+
+17 
+public
+ 
+UUID
+ 
+	$g‘Key
+() {
+
+18  
+key
+;
+
+19 
+	}
+}
+
+21 
+public
+ 
+Ord”D‘as
+ 
+	$g‘Ord”D‘as
+() {
+
+22  
+Üd”D‘as
+;
+
+23 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/orders/PaymentDetails.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gCŞËùiÚs
+;
+
+4 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gD©e
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gM­
+;
+
+6 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+8 
+public
+ cÏs 
+	cPaym’tD‘as
+ {
+
+10 
+´iv©e
+ 
+UUID
+ 
+	mkey
+;
+
+11 
+´iv©e
+ 
+D©e
+ 
+	md©eTimeOfSubmissiÚ
+;
+
+15 
+public
+ 
+	$Paym’tD‘as
+() {
+
+16 
+key
+ = 
+nuÎ
+;
+
+19 
+public
+ 
+	$Paym’tD‘as
+(
+UUID
+ 
+key
+) {
+
+20 
+this
+.
+key
+ = key;
+
+21 
+	}
+}
+
+23 
+public
+ 
+D©e
+ 
+	$g‘D©eTimeOfSubmissiÚ
+() {
+
+24  
+this
+.
+d©eTimeOfSubmissiÚ
+;
+
+25 
+	}
+}
+
+27 
+public
+ 
+	$£tD©eTimeOfSubmissiÚ
+(
+D©e
+ 
+d©eTimeOfSubmissiÚ
+) {
+
+28 
+this
+.
+d©eTimeOfSubmissiÚ
+ = dateTimeOfSubmission;
+
+29 
+	}
+}
+
+31 
+public
+ 
+UUID
+ 
+	$g‘Key
+() {
+
+32  
+key
+;
+
+33 
+	}
+}
+
+35 
+public
+ 
+	$£tKey
+(
+UUID
+ 
+key
+) {
+
+36 
+this
+.
+key
+ = key;
+
+37 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/orders/RequestAllOrdersEvent.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gReque¡R—dEv’t
+;
+
+5 
+public
+ cÏs 
+	cReque¡AÎOrd”sEv’t
+ 
+ex‹nds
+ 
+	mReque¡R—dEv’t
+ {
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/orders/RequestOrderDetailsEvent.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gReque¡R—dEv’t
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+7 
+public
+ cÏs 
+	cReque¡Ord”D‘asEv’t
+ 
+ex‹nds
+ 
+	mReque¡R—dEv’t
+ {
+
+8 
+´iv©e
+ 
+UUID
+ 
+	mkey
+;
+
+10 
+public
+ 
+	$Reque¡Ord”D‘asEv’t
+(
+UUID
+ 
+key
+) {
+
+11 
+this
+.
+key
+ = key;
+
+14 
+public
+ 
+UUID
+ 
+	$g‘Key
+() {
+
+15  
+key
+;
+
+16 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/orders/RequestOrderStatusEvent.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gReque¡R—dEv’t
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+7 
+public
+ cÏs 
+	cReque¡Ord”StusEv’t
+ 
+ex‹nds
+ 
+	mReque¡R—dEv’t
+ {
+
+8 
+´iv©e
+ 
+UUID
+ 
+	mkey
+;
+
+10 
+public
+ 
+	$Reque¡Ord”StusEv’t
+(
+UUID
+ 
+key
+) {
+
+11 
+this
+.
+key
+ = key;
+
+14 
+public
+ 
+UUID
+ 
+	$g‘Key
+() {
+
+15  
+key
+;
+
+16 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/orders/SetOrderPaymentEvent.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gUpd©eEv’t
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+7 
+public
+ cÏs 
+	cS‘Ord”Paym’tEv’t
+ 
+ex‹nds
+ 
+	mUpd©eEv’t
+ {
+
+9 
+´iv©e
+ 
+UUID
+ 
+	mkey
+;
+
+10 
+´iv©e
+ 
+Paym’tD‘as
+ 
+	m·ym’tD‘as
+;
+
+12 
+public
+ 
+	$S‘Ord”Paym’tEv’t
+(
+UUID
+ 
+key
+, 
+Paym’tD‘as
+ 
+·ym’tD‘as
+) {
+
+13 
+this
+.
+key
+ = key;
+
+14 
+this
+.
+·ym’tD‘as
+ =…aymentDetails;
+
+17 
+public
+ 
+UUID
+ 
+	$g‘Key
+() {
+
+18  
+key
+;
+
+19 
+	}
+}
+
+21 
+public
+ 
+Paym’tD‘as
+ 
+	$g‘Paym’tD‘as
+() {
+
+22  
+·ym’tD‘as
+;
+
+23 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/orders/SetPaymentEvent.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gUpd©eEv’t
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+7 
+public
+ cÏs 
+	cS‘Paym’tEv’t
+ 
+ex‹nds
+ 
+	mUpd©eEv’t
+ {
+
+9 
+´iv©e
+ 
+UUID
+ 
+	mkey
+;
+
+10 
+´iv©e
+ 
+Ord”D‘as
+ 
+	mÜd”D‘as
+;
+
+12 
+public
+ 
+	$S‘Paym’tEv’t
+(
+UUID
+ 
+key
+, 
+Ord”D‘as
+ 
+Üd”D‘as
+) {
+
+13 
+this
+.
+key
+ = key;
+
+14 
+this
+.
+Üd”D‘as
+ = orderDetails;
+
+17 
+public
+ 
+UUID
+ 
+	$g‘Key
+() {
+
+18  
+key
+;
+
+19 
+	}
+}
+
+21 
+public
+ 
+Ord”D‘as
+ 
+	$g‘Ord”D‘as
+() {
+
+22  
+Üd”D‘as
+;
+
+23 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/events/orders/UpdateOrderEvent.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gUpd©eEv’t
+;
+
+5 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+7 
+public
+ cÏs 
+	cUpd©eOrd”Ev’t
+ 
+ex‹nds
+ 
+	mUpd©eEv’t
+ {
+
+9 
+´iv©e
+ 
+UUID
+ 
+	mkey
+;
+
+10 
+´iv©e
+ 
+Ord”D‘as
+ 
+	mÜd”D‘as
+;
+
+12 
+public
+ 
+	$Upd©eOrd”Ev’t
+(
+UUID
+ 
+key
+, 
+Ord”D‘as
+ 
+Üd”D‘as
+) {
+
+13 
+this
+.
+key
+ = key;
+
+14 
+this
+.
+Üd”D‘as
+ = orderDetails;
+
+17 
+public
+ 
+UUID
+ 
+	$g‘Key
+() {
+
+18  
+key
+;
+
+19 
+	}
+}
+
+21 
+public
+ 
+Ord”D‘as
+ 
+	$g‘Ord”D‘as
+() {
+
+22  
+Üd”D‘as
+;
+
+23 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/repository/OrdersMemoryRepository.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	g»pos™Üy
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gdomaš
+.
+	gOrd”
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gC»©eEv’t
+;
+
+5 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gD–‘eEv’t
+;
+
+6 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gReque¡R—dEv’t
+;
+
+7 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gUpd©edEv’t
+;
+
+8 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.*;
+
+10 
+impÜt
+ 
+	gjava
+.
+	gut
+.*;
+
+12 
+public
+ cÏs 
+	cOrd”sMemÜyR•os™Üy
+ 
+im¶em’ts
+ 
+	mOrd”sR•os™Üy
+ {
+
+14 
+´iv©e
+ 
+	mM­
+<
+	mUUID
+, 
+	mOrd”
+> 
+	mÜd”s
+;
+
+16 
+public
+ 
+Ord”sMemÜyR•os™Üy
+(
+fš®
+ 
+M­
+<
+UUID
+, 
+Ord”
+> 
+Üd”s
+) {
+
+17 
+	mthis
+.
+	mÜd”s
+ = 
+CŞËùiÚs
+.
+unmodifŸbËM­
+(
+Üd”s
+);
+
+20 @
+Ov”ride
+
+
+21 
+public
+ 
+synchrÚized
+ 
+Ord”
+ 
+	$§ve
+(
+Ord”
+ 
+Üd”
+) {
+
+23 
+M­
+<
+UUID
+, 
+Ord”
+> 
+modifŸbËOrd”s
+ = 
+Ãw
+ 
+HashM­
+<UUID, Ord”>(
+Üd”s
+);
+
+24 
+modifŸbËOrd”s
+.
+	`put
+(
+Üd”
+.
+	`g‘Key
+(), order);
+
+25 
+this
+.
+Üd”s
+ = 
+CŞËùiÚs
+.
+	`unmodifŸbËM­
+(
+modifŸbËOrd”s
+);
+
+27  
+Üd”
+;
+
+28 
+	}
+}
+
+30 @
+Ov”ride
+
+
+31 
+public
+ 
+synchrÚized
+ 
+	$d–‘e
+(
+UUID
+ 
+key
+) {
+
+32 ià(
+Üd”s
+.
+	`cÚšsKey
+(
+key
+)) {
+
+33 
+M­
+<
+UUID
+, 
+Ord”
+> 
+modifŸbËOrd”s
+ = 
+Ãw
+ 
+HashM­
+<UUID, Ord”>(
+Üd”s
+);
+
+34 
+modifŸbËOrd”s
+.
+	`»move
+(
+key
+);
+
+35 
+this
+.
+Üd”s
+ = 
+CŞËùiÚs
+.
+	`unmodifŸbËM­
+(
+modifŸbËOrd”s
+);
+
+37 
+	}
+}
+
+39 @
+Ov”ride
+
+
+40 
+public
+ 
+Ord”
+ 
+	$fšdById
+(
+UUID
+ 
+key
+) {
+
+41  
+Üd”s
+.
+	`g‘
+(
+key
+);
+
+42 
+	}
+}
+
+44 @
+Ov”ride
+
+
+45 
+public
+ 
+	gLi¡
+<
+	gOrd”
+> 
+	$fšdAÎ
+() {
+
+46  
+CŞËùiÚs
+.
+	`unmodifŸbËLi¡
+(
+Ãw
+ 
+A¼ayLi¡
+<
+Ord”
+>(
+Üd”s
+.
+	`v®ues
+()));
+
+47 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/repository/OrdersRepository.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	g»pos™Üy
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gdomaš
+.
+	gOrd”
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gC»©eEv’t
+;
+
+5 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gD–‘eEv’t
+;
+
+6 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gReque¡R—dEv’t
+;
+
+7 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gUpd©edEv’t
+;
+
+8 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.*;
+
+10 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+11 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+14 
+public
+ 
+š‹rçû
+ 
+	gOrd”sR•os™Üy
+ {
+
+16 
+Ord”
+ 
+§ve
+(Ord” 
+Üd”
+);
+
+18 
+d–‘e
+(
+UUID
+ 
+key
+);
+
+20 
+Ord”
+ 
+fšdById
+(
+UUID
+ 
+key
+);
+
+22 
+	gLi¡
+<
+	gOrd”
+> 
+fšdAÎ
+();
+
+	@complete/src/main/java/com/yummynoodlebar/core/services/OrderEventHandler.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	g£rviûs
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gdomaš
+.
+	gOrd”
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gdomaš
+.
+	gOrd”Stus
+;
+
+5 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	g»pos™Üy
+.
+	gOrd”sMemÜyR•os™Üy
+;
+
+6 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.*;
+
+7 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	g»pos™Üy
+.
+	gOrd”sR•os™Üy
+;
+
+9 
+impÜt
+ 
+	gjava
+.
+	gut
+.*;
+
+11 
+public
+ cÏs 
+	cOrd”Ev’tHªdËr
+ 
+im¶em’ts
+ 
+	mOrd”S”viû
+ {
+
+13 
+´iv©e
+ 
+fš®
+ 
+Ord”sR•os™Üy
+ 
+	mÜd”sR•os™Üy
+;
+
+15 
+public
+ 
+	$Ord”Ev’tHªdËr
+(
+fš®
+ 
+Ord”sR•os™Üy
+ 
+Üd”sR•os™Üy
+) {
+
+16 
+this
+.
+Üd”sR•os™Üy
+ = ordersRepository;
+
+19 @
+Ov”ride
+
+
+20 
+public
+ 
+Ord”C»©edEv’t
+ 
+	$ü—‹Ord”
+(
+C»©eOrd”Ev’t
+ 
+ü—‹Ord”Ev’t
+) {
+
+21 
+Ord”
+ 
+Üd”
+ = Ord”.
+	`äomOrd”D‘as
+(
+ü—‹Ord”Ev’t
+.
+	`g‘D‘as
+());
+
+23 
+Üd”
+.
+	`addStus
+(
+Ãw
+ 
+	`Ord”Stus
+Òew 
+	`D©e
+(), "Order Created"));
+
+25 
+Üd”
+ = 
+Üd”sR•os™Üy
+.
+	`§ve
+(order);
+
+27  
+Ãw
+ 
+	`Ord”C»©edEv’t
+(
+Üd”
+.
+	`g‘Key
+(), ord”.
+	`toOrd”D‘as
+());
+
+28 
+	}
+}
+
+30 @
+Ov”ride
+
+
+31 
+public
+ 
+AÎOrd”sEv’t
+ 
+	$»que¡AÎOrd”s
+(
+Reque¡AÎOrd”sEv’t
+ 
+»que¡AÎCu¼’tOrd”sEv’t
+) {
+
+32 
+Li¡
+<
+Ord”D‘as
+> 
+g’”©edD‘as
+ = 
+Ãw
+ 
+A¼ayLi¡
+<OrderDetails>();
+
+33 
+Ord”
+ 
+Üd”
+ : 
+Üd”sR•os™Üy
+.
+	`fšdAÎ
+()) {
+
+34 
+g’”©edD‘as
+.
+	`add
+(
+Üd”
+.
+	`toOrd”D‘as
+());
+
+36  
+Ãw
+ 
+	`AÎOrd”sEv’t
+(
+g’”©edD‘as
+);
+
+37 
+	}
+}
+
+39 @
+Ov”ride
+
+
+40 
+public
+ 
+Ord”D‘asEv’t
+ 
+	$»que¡Ord”D‘as
+(
+Reque¡Ord”D‘asEv’t
+ 
+»que¡Ord”D‘asEv’t
+) {
+
+42 
+Ord”
+ 
+Üd”
+ = 
+Üd”sR•os™Üy
+.
+	`fšdById
+(
+»que¡Ord”D‘asEv’t
+.
+	`g‘Key
+());
+
+44 ià(
+Üd”
+ =ğ
+nuÎ
+) {
+
+45  
+Ord”D‘asEv’t
+.
+	`nÙFound
+(
+»que¡Ord”D‘asEv’t
+.
+	`g‘Key
+());
+
+48  
+Ãw
+ 
+	`Ord”D‘asEv’t
+(
+
+49 
+»que¡Ord”D‘asEv’t
+.
+	`g‘Key
+(),
+
+50 
+Üd”
+.
+	`toOrd”D‘as
+());
+
+51 
+	}
+}
+
+53 @
+Ov”ride
+
+
+54 
+public
+ 
+Ord”Upd©edEv’t
+ 
+	$£tOrd”Paym’t
+(
+S‘Ord”Paym’tEv’t
+ 
+£tOrd”Paym’tEv’t
+) {
+
+55  
+nuÎ
+;
+
+56 
+	}
+}
+
+58 @
+Ov”ride
+
+
+59 
+public
+ 
+Ord”D–‘edEv’t
+ 
+	$d–‘eOrd”
+(
+D–‘eOrd”Ev’t
+ 
+d–‘eOrd”Ev’t
+) {
+
+61 
+Ord”
+ 
+Üd”
+ = 
+Üd”sR•os™Üy
+.
+	`fšdById
+(
+d–‘eOrd”Ev’t
+.
+	`g‘Key
+());
+
+63 ià(
+Üd”
+ =ğ
+nuÎ
+) {
+
+64  
+Ord”D–‘edEv’t
+.
+	`nÙFound
+(
+d–‘eOrd”Ev’t
+.
+	`g‘Key
+());
+
+67 
+Ord”D‘as
+ 
+d‘as
+ = 
+Üd”
+.
+	`toOrd”D‘as
+();
+
+72 ià(!
+Üd”
+.
+	`ÿnBeD–‘ed
+()) {
+
+73  
+Ord”D–‘edEv’t
+.
+	`d–‘iÚFÜbidd’
+(
+d–‘eOrd”Ev’t
+.
+	`g‘Key
+(), 
+d‘as
+);
+
+76 
+Üd”sR•os™Üy
+.
+	`d–‘e
+(
+d–‘eOrd”Ev’t
+.
+	`g‘Key
+());
+
+77  
+Ãw
+ 
+	`Ord”D–‘edEv’t
+(
+d–‘eOrd”Ev’t
+.
+	`g‘Key
+(), 
+d‘as
+);
+
+78 
+	}
+}
+
+80 @
+Ov”ride
+
+
+81 
+public
+ 
+Ord”StusEv’t
+ 
+	$»que¡Ord”Stus
+(
+Reque¡Ord”StusEv’t
+ 
+»que¡Ord”D‘asEv’t
+) {
+
+82 
+Ord”
+ 
+Üd”
+ = 
+Üd”sR•os™Üy
+.
+	`fšdById
+(
+»que¡Ord”D‘asEv’t
+.
+	`g‘Key
+());
+
+84 ià(
+Üd”
+ =ğ
+nuÎ
+) {
+
+85  
+Ord”StusEv’t
+.
+	`nÙFound
+(
+»que¡Ord”D‘asEv’t
+.
+	`g‘Key
+());
+
+88  
+Ãw
+ 
+	`Ord”StusEv’t
+(
+»que¡Ord”D‘asEv’t
+.
+	`g‘Key
+(), 
+Üd”
+.
+	`g‘Stus
+().
+	`toStusD‘as
+());
+
+89 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/core/services/OrderService.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	g£rviûs
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.*;
+
+8 
+public
+ 
+š‹rçû
+ 
+	gOrd”S”viû
+ {
+
+10 
+public
+ 
+AÎOrd”sEv’t
+ 
+»que¡AÎOrd”s
+(
+Reque¡AÎOrd”sEv’t
+ 
+»que¡AÎCu¼’tOrd”sEv’t
+);
+
+12 
+public
+ 
+Ord”D‘asEv’t
+ 
+»que¡Ord”D‘as
+(
+Reque¡Ord”D‘asEv’t
+ 
+»que¡Ord”D‘asEv’t
+);
+
+14 
+public
+ 
+Ord”StusEv’t
+ 
+»que¡Ord”Stus
+(
+Reque¡Ord”StusEv’t
+ 
+»que¡Ord”StusEv’t
+);
+
+16 
+public
+ 
+Ord”C»©edEv’t
+ 
+ü—‹Ord”
+(
+C»©eOrd”Ev’t
+ 
+ev’t
+);
+
+18 
+public
+ 
+Ord”Upd©edEv’t
+ 
+£tOrd”Paym’t
+(
+S‘Ord”Paym’tEv’t
+ 
+£tOrd”Paym’tEv’t
+);
+
+20 
+public
+ 
+Ord”D–‘edEv’t
+ 
+d–‘eOrd”
+(
+D–‘eOrd”Ev’t
+ 
+d–‘eOrd”Ev’t
+);
+
+	@complete/src/main/java/com/yummynoodlebar/rest/controller/OrderCommandsController.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.
+	gC»©eOrd”Ev’t
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.
+	gD–‘eOrd”Ev’t
+;
+
+5 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.
+	gOrd”C»©edEv’t
+;
+
+6 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.
+	gOrd”D–‘edEv’t
+;
+
+7 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	g£rviûs
+.
+	gOrd”S”viû
+;
+
+8 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gdomaš
+.
+	gOrd”
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	g¦f4j
+.
+	gLogg”
+;
+
+10 
+impÜt
+ 
+	gÜg
+.
+	g¦f4j
+.
+	gLogg”FaùÜy
+;
+
+11 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gb—ns
+.
+	gçùÜy
+.
+	gªnÙ©iÚ
+.
+	gAutowœed
+;
+
+12 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gH‰pH—d”s
+;
+
+13 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gH‰pStus
+;
+
+14 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gRe¥Ú£EÁ™y
+;
+
+15 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g¡”eÙy³
+.
+	gCÚŒŞËr
+;
+
+16 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gbšd
+.
+	gªnÙ©iÚ
+.
+	gP©hV¬ŸbË
+;
+
+17 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gbšd
+.
+	gªnÙ©iÚ
+.
+	gReque¡Body
+;
+
+18 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gbšd
+.
+	gªnÙ©iÚ
+.
+	gReque¡M­pšg
+;
+
+19 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gbšd
+.
+	gªnÙ©iÚ
+.
+	gReque¡M‘hod
+;
+
+20 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gut
+.
+	gUriCompÚ’tsBud”
+;
+
+22 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+24 @
+	gCÚŒŞËr
+
+
+25 @
+Reque¡M­pšg
+("/aggregators/orders")
+
+26 
+public
+ cÏs 
+	cOrd”CommªdsCÚŒŞËr
+ {
+
+28 
+´iv©e
+ 
+Logg”
+ 
+	mLOG
+ = 
+Logg”FaùÜy
+.
+g‘Logg”
+(
+Ord”CommªdsCÚŒŞËr
+.
+şass
+);
+
+30 @
+Autowœed
+
+
+31 
+´iv©e
+ 
+Ord”S”viû
+ 
+	mÜd”S”viû
+;
+
+33 @
+	$Reque¡M­pšg
+(
+m‘hod
+ = 
+Reque¡M‘hod
+.
+POST
+)
+
+34 
+public
+ 
+Re¥Ú£EÁ™y
+<
+Ord”
+> 
+	`ü—‹Ord”
+(@
+Reque¡Body
+ Ord” 
+Üd”
+, 
+UriCompÚ’tsBud”
+ 
+bud”
+) {
+
+36 
+Ord”C»©edEv’t
+ 
+Üd”C»©ed
+ = 
+Üd”S”viû
+.
+	`ü—‹Ord”
+(
+Ãw
+ 
+	`C»©eOrd”Ev’t
+(
+Üd”
+.
+	`toOrd”D‘as
+()));
+
+38 
+Ord”
+ 
+ÃwOrd”
+ = Ord”.
+	`äomOrd”D‘as
+(
+Üd”C»©ed
+.
+	`g‘D‘as
+());
+
+40 
+H‰pH—d”s
+ 
+h—d”s
+ = 
+Ãw
+ 
+	`H‰pH—d”s
+();
+
+41 
+h—d”s
+.
+	`£tLoÿtiÚ
+(
+
+42 
+bud”
+.
+	`·th
+("/aggregators/orders/{id}")
+
+43 .
+	`budAndEx·nd
+(
+Üd”C»©ed
+.
+	`g‘NewOrd”Key
+().
+	`toSŒšg
+()).
+	`toUri
+());
+
+45  
+Ãw
+ 
+Re¥Ú£EÁ™y
+<
+Ord”
+>(
+ÃwOrd”
+, 
+h—d”s
+, 
+H‰pStus
+.
+CREATED
+);
+
+48 @
+	`Reque¡M­pšg
+(
+m‘hod
+ = 
+Reque¡M‘hod
+.
+DELETE
+, 
+v®ue
+ = "/{id}")
+
+49 
+public
+ 
+Re¥Ú£EÁ™y
+<
+Ord”
+> 
+	`ÿnûlOrd”
+(@
+P©hV¬ŸbË
+ 
+SŒšg
+ 
+id
+) {
+
+51 
+Ord”D–‘edEv’t
+ 
+Üd”D–‘ed
+ = 
+Üd”S”viû
+.
+	`d–‘eOrd”
+(
+Ãw
+ 
+	`D–‘eOrd”Ev’t
+(
+UUID
+.
+	`äomSŒšg
+(
+id
+)));
+
+53 ià(!
+Üd”D–‘ed
+.
+	`isEÁ™yFound
+()) {
+
+54  
+Ãw
+ 
+Re¥Ú£EÁ™y
+<
+Ord”
+>(
+H‰pStus
+.
+NOT_FOUND
+);
+
+57 
+Ord”
+ 
+Üd”
+ = Ord”.
+	`äomOrd”D‘as
+(
+Üd”D–‘ed
+.
+	`g‘D‘as
+());
+
+59 ià(
+Üd”D–‘ed
+.
+	`isD–‘iÚCom¶‘ed
+()) {
+
+60  
+Ãw
+ 
+Re¥Ú£EÁ™y
+<
+Ord”
+>(
+Üd”
+, 
+H‰pStus
+.
+OK
+);
+
+63  
+Ãw
+ 
+Re¥Ú£EÁ™y
+<
+Ord”
+>(
+Üd”
+, 
+H‰pStus
+.
+FORBIDDEN
+);
+
+64 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/rest/controller/OrderPaymentDetailsController.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	g£rviûs
+.
+	gOrd”S”viû
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gdomaš
+.
+	gPaym’tD‘as
+;
+
+5 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g¡”eÙy³
+.
+	gCÚŒŞËr
+;
+
+6 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gbšd
+.
+	gªnÙ©iÚ
+.
+	gP©hV¬ŸbË
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gbšd
+.
+	gªnÙ©iÚ
+.
+	gReque¡M­pšg
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gbšd
+.
+	gªnÙ©iÚ
+.
+	gReque¡M‘hod
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gbšd
+.
+	gªnÙ©iÚ
+.
+	gRe¥Ú£Body
+;
+
+11 @
+	gCÚŒŞËr
+
+
+12 @
+Reque¡M­pšg
+("/aggregators/orders/{id}/paymentdetails")
+
+13 
+public
+ cÏs 
+	cOrd”Paym’tD‘asCÚŒŞËr
+ {
+
+15 
+´iv©e
+ 
+Ord”S”viû
+ 
+	mÜd”S”viû
+;
+
+17 
+public
+ 
+	$£tOrd”S”viû
+(
+Ord”S”viû
+ 
+Üd”S”viû
+) {
+
+18 
+this
+.
+Üd”S”viû
+ = orderService;
+
+21 @
+	$Reque¡M­pšg
+(
+m‘hod
+ = 
+Reque¡M‘hod
+.
+GET
+)
+
+22 
+public
+
+
+23 @
+Re¥Ú£Body
+
+
+24 
+Paym’tD‘as
+ 
+	`g‘Paym’tD‘as
+(@
+P©hV¬ŸbË
+ 
+SŒšg
+ 
+id
+) {
+
+28  
+nuÎ
+;
+
+29 
+	}
+}
+
+31 @
+	$Reque¡M­pšg
+(
+m‘hod
+ = 
+Reque¡M‘hod
+.
+PUT
+)
+
+32 
+public
+
+
+33 @
+Re¥Ú£Body
+
+
+34 
+Paym’tD‘as
+ 
+	`upd©ePaym’tD‘as
+(@
+P©hV¬ŸbË
+ 
+SŒšg
+ 
+id
+) {
+
+40  
+nuÎ
+;
+
+41 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/rest/controller/OrderQueriesController.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.*;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	g£rviûs
+.
+	gOrd”S”viû
+;
+
+5 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gdomaš
+.
+	gOrd”
+;
+
+6 
+impÜt
+ 
+	gÜg
+.
+	g¦f4j
+.
+	gLogg”
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	g¦f4j
+.
+	gLogg”FaùÜy
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gb—ns
+.
+	gçùÜy
+.
+	gªnÙ©iÚ
+.
+	gAutowœed
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gH‰pStus
+;
+
+10 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gRe¥Ú£EÁ™y
+;
+
+11 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g¡”eÙy³
+.
+	gCÚŒŞËr
+;
+
+12 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gbšd
+.
+	gªnÙ©iÚ
+.*;
+
+14 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gA¼ayLi¡
+;
+
+15 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+16 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+18 @
+	gCÚŒŞËr
+
+
+19 @
+Reque¡M­pšg
+("/aggregators/orders")
+
+20 
+public
+ cÏs 
+	cOrd”Qu”›sCÚŒŞËr
+ {
+
+22 
+´iv©e
+ 
+Logg”
+ 
+	mLOG
+ = 
+Logg”FaùÜy
+.
+g‘Logg”
+(
+Ord”Qu”›sCÚŒŞËr
+.
+şass
+);
+
+24 @
+Autowœed
+
+
+25 
+´iv©e
+ 
+Ord”S”viû
+ 
+	mÜd”S”viû
+;
+
+27 @
+Reque¡M­pšg
+(
+m‘hod
+ = 
+Reque¡M‘hod
+.
+GET
+)
+
+28 @
+Re¥Ú£Stus
+(
+H‰pStus
+.
+OK
+)
+
+29 @
+Re¥Ú£Body
+
+
+30 
+public
+ 
+Li¡
+<
+Ord”
+> 
+	$g‘AÎOrd”s
+() {
+
+31 
+Li¡
+<
+Ord”
+> 
+Üd”s
+ = 
+Ãw
+ 
+A¼ayLi¡
+<Order>();
+
+32 
+Ord”D‘as
+ 
+d‘a
+ : 
+Üd”S”viû
+.
+	`»que¡AÎOrd”s
+(
+Ãw
+ 
+	`Reque¡AÎOrd”sEv’t
+()).
+	`g‘Ord”sD‘as
+()) {
+
+33 
+Üd”s
+.
+	`add
+(
+Ord”
+.
+	`äomOrd”D‘as
+(
+d‘a
+));
+
+35  
+Üd”s
+;
+
+38 @
+	`Reque¡M­pšg
+(
+m‘hod
+ = 
+Reque¡M‘hod
+.
+GET
+, 
+v®ue
+ = "/{id}")
+
+39 
+public
+ 
+Re¥Ú£EÁ™y
+<
+Ord”
+> 
+	`v›wOrd”
+(@
+P©hV¬ŸbË
+ 
+SŒšg
+ 
+id
+) {
+
+41 
+Ord”D‘asEv’t
+ 
+d‘as
+ = 
+Üd”S”viû
+.
+	`»que¡Ord”D‘as
+(
+Ãw
+ 
+	`Reque¡Ord”D‘asEv’t
+(
+UUID
+.
+	`äomSŒšg
+(
+id
+)));
+
+43 ià(!
+d‘as
+.
+	`isEÁ™yFound
+()) {
+
+44  
+Ãw
+ 
+Re¥Ú£EÁ™y
+<
+Ord”
+>(
+H‰pStus
+.
+NOT_FOUND
+);
+
+47 
+Ord”
+ 
+Üd”
+ = Ord”.
+	`äomOrd”D‘as
+(
+d‘as
+.
+	`g‘Ord”D‘as
+());
+
+49  
+Ãw
+ 
+Re¥Ú£EÁ™y
+<
+Ord”
+>(
+Üd”
+, 
+H‰pStus
+.
+OK
+);
+
+50 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/rest/controller/OrderStatusController.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.
+	gOrd”StusEv’t
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.
+	gReque¡Ord”StusEv’t
+;
+
+5 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	g£rviûs
+.
+	gOrd”S”viû
+;
+
+6 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gdomaš
+.
+	gOrd”Stus
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gb—ns
+.
+	gçùÜy
+.
+	gªnÙ©iÚ
+.
+	gAutowœed
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gH‰pStus
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gRe¥Ú£EÁ™y
+;
+
+10 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g¡”eÙy³
+.
+	gCÚŒŞËr
+;
+
+11 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gbšd
+.
+	gªnÙ©iÚ
+.
+	gP©hV¬ŸbË
+;
+
+12 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gbšd
+.
+	gªnÙ©iÚ
+.
+	gReque¡M­pšg
+;
+
+13 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gbšd
+.
+	gªnÙ©iÚ
+.
+	gReque¡M‘hod
+;
+
+15 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+17 @
+	gCÚŒŞËr
+
+
+18 @
+Reque¡M­pšg
+("/aggregators/orders/{id}/status")
+
+19 
+public
+ cÏs 
+	cOrd”StusCÚŒŞËr
+ {
+
+21 @
+Autowœed
+
+
+22 
+´iv©e
+ 
+Ord”S”viû
+ 
+	mÜd”S”viû
+;
+
+24 @
+	$Reque¡M­pšg
+(
+m‘hod
+ = 
+Reque¡M‘hod
+.
+GET
+)
+
+25 
+public
+ 
+Re¥Ú£EÁ™y
+<
+Ord”Stus
+> 
+	`g‘Ord”Stus
+(@
+P©hV¬ŸbË
+ 
+SŒšg
+ 
+id
+) {
+
+27 
+Ord”StusEv’t
+ 
+Üd”StusEv’t
+ = 
+Üd”S”viû
+.
+	`»que¡Ord”Stus
+(
+Ãw
+ 
+	`Reque¡Ord”StusEv’t
+(
+UUID
+.
+	`äomSŒšg
+(
+id
+)));
+
+29 ià(!
+Üd”StusEv’t
+.
+	`isEÁ™yFound
+()) {
+
+30  
+Ãw
+ 
+Re¥Ú£EÁ™y
+<
+Ord”Stus
+>(
+H‰pStus
+.
+NOT_FOUND
+);
+
+33  
+Ãw
+ 
+Re¥Ú£EÁ™y
+<
+Ord”Stus
+>(
+
+34 
+Ord”Stus
+.
+	`äomOrd”StusD‘as
+(
+
+35 
+Üd”StusEv’t
+.
+	`g‘Key
+(),
+
+36 
+Üd”StusEv’t
+.
+	`g‘Ord”Stus
+()),
+
+37 
+H‰pStus
+.
+OK
+);
+
+39 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/rest/domain/Order.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gdomaš
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.
+	gOrd”D‘as
+;
+
+5 
+impÜt
+ 
+	gjavax
+.
+	gxml
+.
+	gbšd
+.
+	gªnÙ©iÚ
+.
+	gXmlEËm’t
+;
+
+6 
+impÜt
+ 
+	gjavax
+.
+	gxml
+.
+	gbšd
+.
+	gªnÙ©iÚ
+.
+	gXmlRoÙEËm’t
+;
+
+7 
+impÜt
+ 
+	gjava
+.
+	gio
+.
+	gS”ŸlizabË
+;
+
+8 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gCŞËùiÚs
+;
+
+9 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gD©e
+;
+
+10 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gM­
+;
+
+11 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+17 @
+XmlRoÙEËm’t
+
+
+18 
+public
+ cÏs 
+	cOrd”
+ 
+im¶em’ts
+ 
+	mS”ŸlizabË
+ {
+
+20 
+´iv©e
+ 
+D©e
+ 
+	md©eTimeOfSubmissiÚ
+;
+
+22 
+´iv©e
+ 
+	mM­
+<
+	mSŒšg
+, 
+	mIÁeg”
+> 
+	m™ems
+;
+
+24 
+´iv©e
+ 
+UUID
+ 
+	mkey
+;
+
+26 
+public
+ 
+D©e
+ 
+	$g‘D©eTimeOfSubmissiÚ
+() {
+
+27  
+d©eTimeOfSubmissiÚ
+;
+
+30 
+public
+ 
+UUID
+ 
+	$g‘Key
+() {
+
+31  
+key
+;
+
+32 
+	}
+}
+
+34 
+public
+ 
+	gM­
+<
+	gSŒšg
+, 
+	gIÁeg”
+> 
+	$g‘I‹ms
+() {
+
+35  
+™ems
+;
+
+36 
+	}
+}
+
+38 
+public
+ 
+£tI‹ms
+(
+M­
+<
+SŒšg
+, 
+IÁeg”
+> 
+™ems
+) {
+
+39 ià(
+	g™ems
+ =ğ
+nuÎ
+) {
+
+40 
+this
+.
+™ems
+ = 
+CŞËùiÚs
+.
+em±yM­
+();
+
+42 
+	gthis
+.
+	g™ems
+ = 
+CŞËùiÚs
+.
+unmodifŸbËM­
+(
+™ems
+);
+
+46 
+public
+ 
+	$£tD©eTimeOfSubmissiÚ
+(
+D©e
+ 
+d©eTimeOfSubmissiÚ
+) {
+
+47 
+this
+.
+d©eTimeOfSubmissiÚ
+ = dateTimeOfSubmission;
+
+48 
+	}
+}
+
+50 
+public
+ 
+	$£tKey
+(
+UUID
+ 
+key
+) {
+
+51 
+this
+.
+key
+ = key;
+
+52 
+	}
+}
+
+54 
+public
+ 
+Ord”D‘as
+ 
+	$toOrd”D‘as
+() {
+
+55 
+Ord”D‘as
+ 
+d‘as
+ = 
+Ãw
+ 
+	`Ord”D‘as
+();
+
+57 
+d‘as
+.
+	`£tOrd”I‹ms
+(
+™ems
+);
+
+58 
+d‘as
+.
+	`£tKey
+(
+key
+);
+
+59 
+d‘as
+.
+	`£tD©eTimeOfSubmissiÚ
+(
+d©eTimeOfSubmissiÚ
+);
+
+61  
+d‘as
+;
+
+62 
+	}
+}
+
+64 
+public
+ 
+Ord”
+ 
+	$äomOrd”D‘as
+(
+Ord”D‘as
+ 
+Üd”D‘as
+) {
+
+65 
+Ord”
+ 
+Üd”
+ = 
+Ãw
+ 
+	`Ord”
+();
+
+67 
+Üd”
+.
+d©eTimeOfSubmissiÚ
+ = 
+Üd”D‘as
+.
+	`g‘D©eTimeOfSubmissiÚ
+();
+
+68 
+Üd”
+.
+key
+ = 
+Üd”D‘as
+.
+	`g‘Key
+();
+
+69 
+Üd”
+.
+	`£tI‹ms
+(
+Üd”D‘as
+.
+	`g‘Ord”I‹ms
+());
+
+71  
+Üd”
+;
+
+72 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/rest/domain/OrderStatus.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gdomaš
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.
+	gOrd”StusD‘as
+;
+
+5 
+impÜt
+ 
+	gjavax
+.
+	gxml
+.
+	gbšd
+.
+	gªnÙ©iÚ
+.
+	gXmlEËm’t
+;
+
+6 
+impÜt
+ 
+	gjavax
+.
+	gxml
+.
+	gbšd
+.
+	gªnÙ©iÚ
+.
+	gXmlRoÙEËm’t
+;
+
+7 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gD©e
+;
+
+8 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+10 @
+XmlRoÙEËm’t
+
+
+11 
+public
+ cÏs 
+	cOrd”Stus
+ {
+
+13 @
+XmlEËm’t
+
+
+14 
+´iv©e
+ 
+UUID
+ 
+	mÜd”Id
+;
+
+16 @
+XmlEËm’t
+
+
+17 
+´iv©e
+ 
+D©e
+ 
+	m¡©usD©e
+;
+
+19 @
+XmlEËm’t
+
+
+20 
+´iv©e
+ 
+SŒšg
+ 
+	m¡©us
+;
+
+22 
+public
+ 
+Ord”Stus
+ 
+	$äomOrd”StusD‘as
+(
+UUID
+ 
+key
+, 
+Ord”StusD‘as
+ 
+Üd”D‘as
+) {
+
+23 
+Ord”Stus
+ 
+¡©us
+ = 
+Ãw
+ 
+	`Ord”Stus
+();
+
+25 
+¡©us
+.
+Üd”Id
+ = 
+key
+;
+
+26 
+¡©us
+.¡©u ğ
+Üd”D‘as
+.
+	`g‘Stus
+();
+
+27 
+¡©us
+.
+¡©usD©e
+ = 
+Üd”D‘as
+.
+	`g‘StusD©e
+();
+
+29  
+¡©us
+;
+
+32 
+public
+ 
+UUID
+ 
+	$g‘Ord”Id
+() {
+
+33  
+Üd”Id
+;
+
+34 
+	}
+}
+
+36 
+public
+ 
+D©e
+ 
+	$g‘StusD©e
+() {
+
+37  
+¡©usD©e
+;
+
+38 
+	}
+}
+
+40 
+public
+ 
+SŒšg
+ 
+	$g‘Stus
+() {
+
+41  
+¡©us
+;
+
+42 
+	}
+}
+
+	@complete/src/main/java/com/yummynoodlebar/rest/domain/PaymentDetails.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gdomaš
+;
+
+3 
+public
+ cÏs 
+	cPaym’tD‘as
+ {
+
+	@complete/src/main/java/com/yummynoodlebar/rest/domain/PaymentStatus.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gdomaš
+;
+
+3 
+public
+ cÏs 
+	cPaym’tStus
+ {
+
+	@complete/src/test/java/com/yummynoodlebar/config/CoreDomainIntegrationTest.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÚfig
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.
+	gAÎOrd”sEv’t
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.
+	gC»©eOrd”Ev’t
+;
+
+5 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.
+	gOrd”D‘as
+;
+
+6 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.
+	gReque¡AÎOrd”sEv’t
+;
+
+7 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	g£rviûs
+.
+	gOrd”S”viû
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gTe¡
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gruÂ”
+.
+	gRunW™h
+;
+
+10 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gb—ns
+.
+	gçùÜy
+.
+	gªnÙ©iÚ
+.
+	gAutowœed
+;
+
+11 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gcÚ‹xt
+.
+	gCÚ‹xtCÚfigu¿tiÚ
+;
+
+12 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gcÚ‹xt
+.
+	gjun™4
+.
+	gS´šgJUn™4CÏssRuÂ”
+;
+
+14 
+impÜt
+ 
+	gjun™
+.
+	gäamewÜk
+.
+	gTe¡Ca£
+.*;
+
+16 @
+RunW™h
+(
+S´šgJUn™4CÏssRuÂ”
+.
+şass
+)
+
+17 @
+CÚ‹xtCÚfigu¿tiÚ
+(
+şas£s
+ = {
+CÜeCÚfig
+.
+şass
+})
+
+18 
+public
+ cÏs 
+	cCÜeDomašIÁeg¿tiÚTe¡
+ {
+
+20 @
+Autowœed
+
+
+21 
+Ord”S”viû
+ 
+Üd”S”viû
+;
+
+23 @
+Te¡
+
+
+24 
+public
+ 
+	$addANewOrd”ToTheSy¡em
+() {
+
+26 
+C»©eOrd”Ev’t
+ 
+ev
+ = 
+Ãw
+ 
+	`C»©eOrd”Ev’t
+Òew 
+	`Ord”D‘as
+());
+
+28 
+Üd”S”viû
+.
+	`ü—‹Ord”
+(
+ev
+);
+
+30 
+AÎOrd”sEv’t
+ 
+®lOrd”s
+ = 
+Üd”S”viû
+.
+	`»que¡AÎOrd”s
+(
+Ãw
+ 
+	`Reque¡AÎOrd”sEv’t
+());
+
+32 
+	`as£¹Equ®s
+(1, 
+®lOrd”s
+.
+	`g‘Ord”sD‘as
+().
+	`size
+());
+
+34 
+	}
+}
+
+	@complete/src/test/java/com/yummynoodlebar/config/RestDomainIntegrationTest.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÚfig
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+.
+	gfixtu»
+.
+	gRe¡D©aFixtu»
+;
+
+4 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gBefÜe
+;
+
+5 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gTe¡
+;
+
+6 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gruÂ”
+.
+	gRunW™h
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gb—ns
+.
+	gçùÜy
+.
+	gªnÙ©iÚ
+.
+	gAutowœed
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gMedŸTy³
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gcÚ‹xt
+.
+	gCÚ‹xtCÚfigu¿tiÚ
+;
+
+10 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gcÚ‹xt
+.
+	gjun™4
+.
+	gS´šgJUn™4CÏssRuÂ”
+;
+
+11 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gcÚ‹xt
+.
+	gweb
+.
+	gWebAµCÚfigu¿tiÚ
+;
+
+12 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	gMockMvc
+;
+
+13 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g£tup
+.
+	gMockMvcBud”s
+;
+
+14 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gcÚ‹xt
+.
+	gWebAµliÿtiÚCÚ‹xt
+;
+
+16 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+.
+	gfixtu»
+.
+	gRe¡D©aFixtu»
+.
+	g¡ªd¬dOrd”JSON
+;
+
+17 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»que¡
+.
+	gMockMvcReque¡Bud”s
+.
+	gg‘
+;
+
+18 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»que¡
+.
+	gMockMvcReque¡Bud”s
+.
+	gpo¡
+;
+
+19 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»suÉ
+.
+	gMockMvcResuÉHªdËrs
+.
+	g´št
+;
+
+20 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»suÉ
+.
+	gMockMvcResuÉM©ch”s
+.
+	gjsÚP©h
+;
+
+21 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»suÉ
+.
+	gMockMvcResuÉM©ch”s
+.
+	g¡©us
+;
+
+23 @
+RunW™h
+(
+S´šgJUn™4CÏssRuÂ”
+.
+şass
+)
+
+24 @
+	gWebAµCÚfigu¿tiÚ
+
+
+25 @
+CÚ‹xtCÚfigu¿tiÚ
+(
+şas£s
+ = {
+CÜeCÚfig
+.
+şass
+, 
+MVCCÚfig
+.class})
+
+26 
+public
+ cÏs 
+	cRe¡DomašIÁeg¿tiÚTe¡
+ {
+
+28 @
+Autowœed
+
+
+29 
+WebAµliÿtiÚCÚ‹xt
+ 
+webAµliÿtiÚCÚ‹xt
+;
+
+31 
+´iv©e
+ 
+MockMvc
+ 
+	mmockMvc
+;
+
+33 @
+BefÜe
+
+
+34 
+public
+ 
+	$£tup
+() {
+
+35 
+this
+.
+mockMvc
+ = 
+MockMvcBud”s
+.
+	`webAµCÚ‹xtS‘up
+Ñhis.
+webAµliÿtiÚCÚ‹xt
+).
+	`bud
+();
+
+38 @
+Te¡
+
+
+39 
+public
+ 
+	$addANewOrd”ToTheSy¡em
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+40 
+this
+.
+mockMvc
+.
+	`³rfÜm
+(
+
+41 
+	`po¡
+("/aggregators/orders")
+
+42 .
+	`cÚ‹Á
+(
+	`¡ªd¬dOrd”JSON
+())
+
+43 .
+	`cÚ‹ÁTy³
+(
+MedŸTy³
+.
+APPLICATION_JSON
+)
+
+44 .
+	`acû±
+(
+MedŸTy³
+.
+APPLICATION_JSON
+))
+
+45 .
+	`ªdDo
+(
+	`´št
+())
+
+46 .
+	`ªdEx³ù
+(
+	`¡©us
+().
+	`isC»©ed
+());
+
+48 
+this
+.
+mockMvc
+.
+	`³rfÜm
+(
+
+49 
+	`g‘
+("/aggregators/orders")
+
+50 .
+	`acû±
+(
+MedŸTy³
+.
+APPLICATION_JSON
+))
+
+51 .
+	`ªdDo
+(
+	`´št
+())
+
+52 .
+	`ªdEx³ù
+(
+	`¡©us
+().
+	`isOk
+())
+
+53 .
+	`ªdEx³ù
+(
+	`jsÚP©h
+("$[0].™ems['" + 
+Re¡D©aFixtu»
+.
+YUMMY_ITEM
+ + "']").
+	`v®ue
+(12));
+
+55 
+	}
+}
+
+	@complete/src/test/java/com/yummynoodlebar/core/domain/OrdersUnitTest.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gdomaš
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gdomaš
+.
+	gfixtu»s
+.
+	gOrd”sFixtu»s
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.*;
+
+5 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	g»pos™Üy
+.
+	gOrd”sMemÜyR•os™Üy
+;
+
+6 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gBefÜe
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gTe¡
+;
+
+9 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gCŞËùiÚs
+;
+
+10 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gHashM­
+;
+
+11 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gM­
+;
+
+12 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+14 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gAs£¹
+.
+	gas£¹Equ®s
+;
+
+16 
+public
+ cÏs 
+	cOrd”sUn™Te¡
+ {
+
+18 
+Ord”sMemÜyR•os™Üy
+ 
+	muut
+;
+
+20 @
+BefÜe
+
+
+21 
+public
+ 
+	$£tupUn™Und”Te¡
+() {
+
+22 
+M­
+<
+UUID
+, 
+Ord”
+> 
+em±yOrd”Li¡
+ = 
+Ãw
+ 
+HashM­
+<UUID, Order>();
+
+23 
+uut
+ = 
+Ãw
+ 
+	`Ord”sMemÜyR•os™Üy
+(
+em±yOrd”Li¡
+);
+
+26 @
+Te¡
+
+
+27 
+public
+ 
+	$addASšgËOrd”ToTheOrd”s
+() {
+
+29 
+	`as£¹Equ®s
+(0, 
+uut
+.
+	`fšdAÎ
+().
+	`size
+());
+
+31 
+uut
+.
+	`§ve
+(
+Ord”sFixtu»s
+.
+	`¡ªd¬dOrd”
+());
+
+33 
+	`as£¹Equ®s
+(1, 
+uut
+.
+	`fšdAÎ
+().
+	`size
+());
+
+34 
+	}
+}
+
+36 @
+Te¡
+
+
+37 
+public
+ 
+	$»moveASšgËOrd”
+() {
+
+39 
+UUID
+ 
+key
+ = UUID.
+	`¿ndomUUID
+();
+
+41 
+uut
+ = 
+Ãw
+ 
+	`Ord”sMemÜyR•os™Üy
+(
+CŞËùiÚs
+.
+	`sšgËtÚM­
+(
+key
+, 
+Ord”sFixtu»s
+.
+	`¡ªd¬dOrd”
+()));
+
+43 
+	`as£¹Equ®s
+(1, 
+uut
+.
+	`fšdAÎ
+().
+	`size
+());
+
+45 
+uut
+.
+	`d–‘e
+(
+key
+);
+
+47 
+	`as£¹Equ®s
+(0, 
+uut
+.
+	`fšdAÎ
+().
+	`size
+());
+
+48 
+	}
+}
+
+	@complete/src/test/java/com/yummynoodlebar/core/domain/fixtures/OrdersFixtures.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gdomaš
+.
+	gfixtu»s
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gdomaš
+.
+	gOrd”
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.
+	gOrd”D‘as
+;
+
+6 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gCŞËùiÚs
+;
+
+7 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gD©e
+;
+
+9 
+public
+ cÏs 
+	cOrd”sFixtu»s
+ {
+
+11 
+public
+ 
+fš®
+ 
+SŒšg
+ 
+	mYUMMY_ITEM
+ = "yummy_core";
+
+13 
+public
+ 
+Ord”
+ 
+	$¡ªd¬dOrd”
+() {
+
+14 
+Ord”
+ 
+Üd”
+ = 
+Ãw
+ 
+	`Ord”
+Òew 
+	`D©e
+());
+
+16 
+Üd”
+.
+	`£tOrd”I‹ms
+(
+CŞËùiÚs
+.
+	`sšgËtÚM­
+(
+YUMMY_ITEM
+, 12));
+
+18  
+Üd”
+;
+
+24 
+public
+ 
+Ord”D‘as
+ 
+	$¡ªd¬dOrd”D‘as
+() {
+
+25  
+	`¡ªd¬dOrd”
+().
+	`toOrd”D‘as
+();
+
+26 
+	}
+}
+
+	@complete/src/test/java/com/yummynoodlebar/core/services/OrderEventHandlerUnitTest.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	g£rviûs
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gdomaš
+.
+	gOrd”
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	g»pos™Üy
+.
+	gOrd”sMemÜyR•os™Üy
+;
+
+5 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.*;
+
+6 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gBefÜe
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gTe¡
+;
+
+9 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gD©e
+;
+
+10 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+11 
+impÜt
+ 
+	gjun™
+.
+	gäamewÜk
+.
+	gTe¡Ca£
+.*;
+
+13 
+impÜt
+ 
+	gjun™
+.
+	gäamewÜk
+.
+	gTe¡Ca£
+.
+	gas£¹Equ®s
+;
+
+14 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock™o
+.*;
+
+16 
+public
+ cÏs 
+	cOrd”Ev’tHªdËrUn™Te¡
+ {
+
+18 
+Ord”Ev’tHªdËr
+ 
+	muut
+;
+
+19 
+Ord”sMemÜyR•os™Üy
+ 
+	mmockOrd”sMemÜyR•os™Üy
+;
+
+21 @
+BefÜe
+
+
+22 
+public
+ 
+	$£tupUn™Und”Te¡
+() {
+
+23 
+mockOrd”sMemÜyR•os™Üy
+ = 
+	`mock
+(
+Ord”sMemÜyR•os™Üy
+.
+şass
+);
+
+24 
+uut
+ = 
+Ãw
+ 
+	`Ord”Ev’tHªdËr
+(
+mockOrd”sMemÜyR•os™Üy
+);
+
+27 @
+Te¡
+
+
+28 
+public
+ 
+	$addANewOrd”ToTheSy¡em
+() {
+
+30 
+	`wh’
+(
+mockOrd”sMemÜyR•os™Üy
+.
+	`§ve
+(
+	`ªy
+(
+Ord”
+.
+şass
+))).
+	`th’R‘uº
+(
+Ãw
+ 
+	`Ord”
+Òew 
+	`D©e
+()));
+
+32 
+C»©eOrd”Ev’t
+ 
+ev
+ = 
+Ãw
+ 
+	`C»©eOrd”Ev’t
+Òew 
+	`Ord”D‘as
+());
+
+34 
+uut
+.
+	`ü—‹Ord”
+(
+ev
+);
+
+36 
+	`v”ify
+(
+mockOrd”sMemÜyR•os™Üy
+).
+	`§ve
+(
+	`ªy
+(
+Ord”
+.
+şass
+));
+
+37 
+	`v”ifyNoMÜeIÁ”aùiÚs
+(
+mockOrd”sMemÜyR•os™Üy
+);
+
+38 
+	}
+}
+
+40 @
+Te¡
+
+
+41 
+public
+ 
+	$addTwoNewOrd”sToTheSy¡em
+() {
+
+43 
+	`wh’
+(
+mockOrd”sMemÜyR•os™Üy
+.
+	`§ve
+(
+	`ªy
+(
+Ord”
+.
+şass
+))).
+	`th’R‘uº
+(
+Ãw
+ 
+	`Ord”
+Òew 
+	`D©e
+()));
+
+45 
+C»©eOrd”Ev’t
+ 
+ev
+ = 
+Ãw
+ 
+	`C»©eOrd”Ev’t
+Òew 
+	`Ord”D‘as
+());
+
+47 
+uut
+.
+	`ü—‹Ord”
+(
+ev
+);
+
+48 
+uut
+.
+	`ü—‹Ord”
+(
+ev
+);
+
+50 
+	`v”ify
+(
+mockOrd”sMemÜyR•os™Üy
+, 
+	`times
+(2)).
+	`§ve
+(
+	`ªy
+(
+Ord”
+.
+şass
+));
+
+51 
+	`v”ifyNoMÜeIÁ”aùiÚs
+(
+mockOrd”sMemÜyR•os™Üy
+);
+
+52 
+	}
+}
+
+54 @
+Te¡
+
+
+55 
+public
+ 
+	$»moveAnOrd”FromTheSy¡emFasIfNÙP»£Á
+() {
+
+56 
+UUID
+ 
+key
+ = UUID.
+	`¿ndomUUID
+();
+
+58 
+	`wh’
+(
+mockOrd”sMemÜyR•os™Üy
+.
+	`fšdById
+(
+key
+)).
+	`th’R‘uº
+(
+nuÎ
+);
+
+61 
+	}
+}
+
+63 @
+Te¡
+
+
+64 
+public
+ 
+	$»moveAnOrd”FromTheSy¡emFasIfNÙP”m™‹d
+() {
+
+65 
+UUID
+ 
+key
+ = UUID.
+	`¿ndomUUID
+();
+
+67 
+Ord”
+ 
+Üd”
+ = 
+Ãw
+ 
+	`Ord”
+Òew 
+	`D©e
+()) {
+
+68 @
+Ov”ride
+
+
+69 
+public
+ 
+boŞ—n
+ 
+	`ÿnBeD–‘ed
+() {
+
+70  
+çl£
+;
+
+74 
+	`wh’
+(
+mockOrd”sMemÜyR•os™Üy
+.
+	`fšdById
+(
+key
+)).
+	`th’R‘uº
+(
+Üd”
+);
+
+76 
+D–‘eOrd”Ev’t
+ 
+ev
+ = 
+Ãw
+ 
+	`D–‘eOrd”Ev’t
+(
+key
+);
+
+78 
+Ord”D–‘edEv’t
+ 
+Üd”D–‘edEv’t
+ = 
+uut
+.
+	`d–‘eOrd”
+(
+ev
+);
+
+80 
+	`v”ify
+(
+mockOrd”sMemÜyR•os™Üy
+, 
+	`Ãv”
+()).
+	`d–‘e
+(
+ev
+.
+	`g‘Key
+());
+
+82 
+	`as£¹True
+(
+Üd”D–‘edEv’t
+.
+	`isEÁ™yFound
+());
+
+83 
+	`as£¹F®£
+(
+Üd”D–‘edEv’t
+.
+	`isD–‘iÚCom¶‘ed
+());
+
+84 
+	`as£¹Equ®s
+(
+Üd”
+.
+	`g‘D©eTimeOfSubmissiÚ
+(), 
+Üd”D–‘edEv’t
+.
+	`g‘D‘as
+().getDateTimeOfSubmission());
+
+85 
+	}
+}
+
+87 @
+Te¡
+
+
+88 
+public
+ 
+	$»moveAnOrd”FromTheSy¡emWÜksIfExi¡s
+() {
+
+90 
+UUID
+ 
+key
+ = UUID.
+	`¿ndomUUID
+();
+
+91 
+Ord”
+ 
+Üd”
+ = 
+Ãw
+ 
+	`Ord”
+Òew 
+	`D©e
+());
+
+93 
+	`wh’
+(
+mockOrd”sMemÜyR•os™Üy
+.
+	`fšdById
+(
+key
+)).
+	`th’R‘uº
+(
+Üd”
+);
+
+95 
+D–‘eOrd”Ev’t
+ 
+ev
+ = 
+Ãw
+ 
+	`D–‘eOrd”Ev’t
+(
+key
+);
+
+97 
+Ord”D–‘edEv’t
+ 
+Üd”D–‘edEv’t
+ = 
+uut
+.
+	`d–‘eOrd”
+(
+ev
+);
+
+99 
+	`v”ify
+(
+mockOrd”sMemÜyR•os™Üy
+).
+	`d–‘e
+(
+ev
+.
+	`g‘Key
+());
+
+101 
+	`as£¹True
+(
+Üd”D–‘edEv’t
+.
+	`isEÁ™yFound
+());
+
+102 
+	`as£¹True
+(
+Üd”D–‘edEv’t
+.
+	`isD–‘iÚCom¶‘ed
+());
+
+103 
+	`as£¹Equ®s
+(
+Üd”
+.
+	`g‘D©eTimeOfSubmissiÚ
+(), 
+Üd”D–‘edEv’t
+.
+	`g‘D‘as
+().getDateTimeOfSubmission());
+
+104 
+	}
+}
+
+	@complete/src/test/java/com/yummynoodlebar/rest/controller/CancelOrderIntegrationTest.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.
+	gD–‘eOrd”Ev’t
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	g£rviûs
+.
+	gOrd”S”viû
+;
+
+5 
+impÜt
+ 
+	gÜg
+.
+	ghamüe¡
+.
+	gM©ch”s
+;
+
+6 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gBefÜe
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gTe¡
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gInjeùMocks
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock
+;
+
+10 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock™oAÂÙ©iÚs
+;
+
+11 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gMedŸTy³
+;
+
+12 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gcÚv”‹r
+.
+	gjsÚ
+.
+	gM­pšgJacksÚ2H‰pMes§geCÚv”‹r
+;
+
+13 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	gMockMvc
+;
+
+15 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+17 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+.
+	gfixtu»
+.
+	gRe¡Ev’tFixtu»s
+.*;
+
+18 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock™o
+.*;
+
+19 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock™o
+.
+	gwh’
+;
+
+20 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»que¡
+.
+	gMockMvcReque¡Bud”s
+.
+	gd–‘e
+;
+
+21 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»suÉ
+.
+	gMockMvcResuÉHªdËrs
+.
+	g´št
+;
+
+22 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»suÉ
+.
+	gMockMvcResuÉM©ch”s
+.*;
+
+23 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g£tup
+.
+	gMockMvcBud”s
+.
+	g¡ªd®ÚeS‘up
+;
+
+25 
+public
+ cÏs 
+	cCªûlOrd”IÁeg¿tiÚTe¡
+ {
+
+27 
+MockMvc
+ 
+	mmockMvc
+;
+
+29 @
+InjeùMocks
+
+
+30 
+Ord”CommªdsCÚŒŞËr
+ 
+	mcÚŒŞËr
+;
+
+32 @
+Mock
+
+
+33 
+Ord”S”viû
+ 
+	mÜd”S”viû
+;
+
+35 
+UUID
+ 
+	mkey
+ = UUID.
+äomSŒšg
+("f3512d26-72f6-4290-9265-63ad69eccc13");
+
+37 @
+BefÜe
+
+
+38 
+public
+ 
+	$£tup
+() {
+
+39 
+Mock™oAÂÙ©iÚs
+.
+	`š™Mocks
+(
+this
+);
+
+41 
+this
+.
+mockMvc
+ = 
+	`¡ªd®ÚeS‘up
+(
+cÚŒŞËr
+)
+
+42 .
+	`£tMes§geCÚv”‹rs
+(
+Ãw
+ 
+	`M­pšgJacksÚ2H‰pMes§geCÚv”‹r
+()).
+	`bud
+();
+
+46 @
+Te¡
+
+
+47 
+public
+ 
+	$th©D–‘eOrd”U£sH‰pOkOnSucûss
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+49 
+	`wh’
+(
+Üd”S”viû
+.
+	`d–‘eOrd”
+(
+	`ªy
+(
+D–‘eOrd”Ev’t
+.
+şass
+)))
+
+50 .
+	`th’R‘uº
+(
+
+51 
+	`Üd”D–‘ed
+(
+key
+));
+
+53 
+this
+.
+mockMvc
+.
+	`³rfÜm
+(
+
+54 
+	`d–‘e
+("/agg»g©Üs/Üd”s/{id}", 
+key
+.
+	`toSŒšg
+())
+
+55 .
+	`acû±
+(
+MedŸTy³
+.
+APPLICATION_JSON
+))
+
+56 .
+	`ªdDo
+(
+	`´št
+())
+
+57 .
+	`ªdEx³ù
+(
+	`¡©us
+().
+	`isOk
+());
+
+59 
+	`v”ify
+(
+Üd”S”viû
+).
+	`d–‘eOrd”
+(
+	`¬gTh©
+(
+
+60 
+M©ch”s
+.<
+D–‘eOrd”Ev’t
+>
+	`hasPrİ”ty
+("key",
+
+61 
+M©ch”s
+.
+	`equ®To
+(
+key
+))));
+
+62 
+	}
+}
+
+64 @
+Te¡
+
+
+65 
+public
+ 
+	$th©D–‘eOrd”U£sH‰pNÙFoundOnEÁ™yLookupFau»
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+67 
+	`wh’
+(
+Üd”S”viû
+.
+	`d–‘eOrd”
+(
+	`ªy
+(
+D–‘eOrd”Ev’t
+.
+şass
+)))
+
+68 .
+	`th’R‘uº
+(
+
+69 
+	`Üd”D–‘edNÙFound
+(
+key
+));
+
+71 
+this
+.
+mockMvc
+.
+	`³rfÜm
+(
+
+72 
+	`d–‘e
+("/agg»g©Üs/Üd”s/{id}", 
+key
+.
+	`toSŒšg
+())
+
+73 .
+	`acû±
+(
+MedŸTy³
+.
+APPLICATION_JSON
+))
+
+74 .
+	`ªdDo
+(
+	`´št
+())
+
+75 .
+	`ªdEx³ù
+(
+	`¡©us
+().
+	`isNÙFound
+());
+
+77 
+	}
+}
+
+79 @
+Te¡
+
+
+80 
+public
+ 
+	$th©D–‘eOrd”U£sH‰pFÜbidd’OnEÁ™yD–‘iÚFau»
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+82 
+	`wh’
+(
+Üd”S”viû
+.
+	`d–‘eOrd”
+(
+	`ªy
+(
+D–‘eOrd”Ev’t
+.
+şass
+)))
+
+83 .
+	`th’R‘uº
+(
+
+84 
+	`Üd”D–‘edFaed
+(
+key
+));
+
+86 
+this
+.
+mockMvc
+.
+	`³rfÜm
+(
+
+87 
+	`d–‘e
+("/agg»g©Üs/Üd”s/{id}", 
+key
+.
+	`toSŒšg
+())
+
+88 .
+	`acû±
+(
+MedŸTy³
+.
+APPLICATION_JSON
+))
+
+89 .
+	`ªdDo
+(
+	`´št
+())
+
+90 .
+	`ªdEx³ù
+(
+	`¡©us
+().
+	`isFÜbidd’
+());
+
+91 
+	}
+}
+
+	@complete/src/test/java/com/yummynoodlebar/rest/controller/CreateNewOrderIntegrationTest.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.
+	gC»©eOrd”Ev’t
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	g£rviûs
+.
+	gOrd”S”viû
+;
+
+5 
+impÜt
+ 
+	gÜg
+.
+	ghamüe¡
+.
+	gM©ch”s
+;
+
+6 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gBefÜe
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gTe¡
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gInjeùMocks
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock
+;
+
+10 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock™oAÂÙ©iÚs
+;
+
+11 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gMedŸTy³
+;
+
+12 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gcÚv”‹r
+.
+	gjsÚ
+.
+	gM­pšgJacksÚ2H‰pMes§geCÚv”‹r
+;
+
+13 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	gMockMvc
+;
+
+15 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+17 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»que¡
+.
+	gMockMvcReque¡Bud”s
+.*;
+
+18 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»suÉ
+.
+	gMockMvcResuÉM©ch”s
+.*;
+
+19 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g£tup
+.
+	gMockMvcBud”s
+.*;
+
+20 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»suÉ
+.
+	gMockMvcResuÉHªdËrs
+.*;
+
+21 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock™o
+.*;
+
+22 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+.
+	gfixtu»
+.
+	gRe¡D©aFixtu»
+.*;
+
+23 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+.
+	gfixtu»
+.
+	gRe¡Ev’tFixtu»s
+.*;
+
+26 
+public
+ cÏs 
+	cC»©eNewOrd”IÁeg¿tiÚTe¡
+ {
+
+28 
+MockMvc
+ 
+	mmockMvc
+;
+
+30 @
+InjeùMocks
+
+
+31 
+Ord”CommªdsCÚŒŞËr
+ 
+	mcÚŒŞËr
+;
+
+33 @
+Mock
+
+
+34 
+Ord”S”viû
+ 
+	mÜd”S”viû
+;
+
+36 @
+BefÜe
+
+
+37 
+public
+ 
+	$£tup
+() {
+
+38 
+Mock™oAÂÙ©iÚs
+.
+	`š™Mocks
+(
+this
+);
+
+40 
+this
+.
+mockMvc
+ = 
+	`¡ªd®ÚeS‘up
+(
+cÚŒŞËr
+)
+
+41 .
+	`£tMes§geCÚv”‹rs
+(
+Ãw
+ 
+	`M­pšgJacksÚ2H‰pMes§geCÚv”‹r
+()).
+	`bud
+();
+
+43 
+	`wh’
+(
+Üd”S”viû
+.
+	`ü—‹Ord”
+(
+	`ªy
+(
+C»©eOrd”Ev’t
+.
+şass
+))).
+	`th’R‘uº
+(
+
+44 
+	`Üd”C»©ed
+(
+UUID
+.
+	`äomSŒšg
+("f3512d26-72f6-4290-9265-63ad69eccc13")));
+
+49 @
+Te¡
+
+
+50 
+public
+ 
+	$th©C»©eOrd”U£sH‰pC»©ed
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+52 
+this
+.
+mockMvc
+.
+	`³rfÜm
+(
+
+53 
+	`po¡
+("/aggregators/orders")
+
+54 .
+	`cÚ‹Á
+(
+	`¡ªd¬dOrd”JSON
+())
+
+55 .
+	`cÚ‹ÁTy³
+(
+MedŸTy³
+.
+APPLICATION_JSON
+)
+
+56 .
+	`acû±
+(
+MedŸTy³
+.
+APPLICATION_JSON
+))
+
+57 .
+	`ªdDo
+(
+	`´št
+())
+
+58 .
+	`ªdEx³ù
+(
+	`¡©us
+().
+	`isC»©ed
+());
+
+59 
+	}
+}
+
+61 @
+Te¡
+
+
+62 
+public
+ 
+	$th©C»©eOrd”R’d”sAsJsÚ
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+64 
+this
+.
+mockMvc
+.
+	`³rfÜm
+(
+
+65 
+	`po¡
+("/aggregators/orders")
+
+66 .
+	`cÚ‹Á
+(
+	`¡ªd¬dOrd”JSON
+())
+
+67 .
+	`cÚ‹ÁTy³
+(
+MedŸTy³
+.
+APPLICATION_JSON
+)
+
+68 .
+	`acû±
+(
+MedŸTy³
+.
+APPLICATION_JSON
+))
+
+69 .
+	`ªdEx³ù
+(
+	`jsÚP©h
+("$.™ems['" + 
+YUMMY_ITEM
+ + "']").
+	`v®ue
+(12))
+
+70 .
+	`ªdEx³ù
+(
+	`jsÚP©h
+("$.key").
+	`v®ue
+("f3512d26-72f6-4290-9265-63ad69eccc13"));
+
+71 
+	}
+}
+
+73 @
+Te¡
+
+
+74 
+public
+ 
+	$th©C»©eOrd”Pas£sLoÿtiÚH—d”
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+76 
+this
+.
+mockMvc
+.
+	`³rfÜm
+(
+
+77 
+	`po¡
+("/aggregators/orders")
+
+78 .
+	`cÚ‹Á
+(
+	`¡ªd¬dOrd”JSON
+())
+
+79 .
+	`cÚ‹ÁTy³
+(
+MedŸTy³
+.
+APPLICATION_JSON
+)
+
+80 .
+	`acû±
+(
+MedŸTy³
+.
+APPLICATION_JSON
+))
+
+81 .
+	`ªdEx³ù
+(
+	`h—d”
+().
+	`¡ršg
+("LoÿtiÚ", 
+M©ch”s
+.
+	`’dsW™h
+("/aggregators/orders/f3512d26-72f6-4290-9265-63ad69eccc13")));
+
+82 
+	}
+}
+
+	@complete/src/test/java/com/yummynoodlebar/rest/controller/GetAllOrdersIntegrationTest.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.
+	gReque¡AÎOrd”sEv’t
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	g£rviûs
+.
+	gOrd”S”viû
+;
+
+5 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+.
+	gfixtu»
+.
+	gRe¡D©aFixtu»
+;
+
+6 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gBefÜe
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gTe¡
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gInjeùMocks
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock
+;
+
+10 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock™oAÂÙ©iÚs
+;
+
+11 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gMedŸTy³
+;
+
+12 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	gMockMvc
+;
+
+14 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+.
+	gfixtu»
+.
+	gRe¡D©aFixtu»
+.
+	g®lOrd”s
+;
+
+15 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock™o
+.
+	gªy
+;
+
+16 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock™o
+.
+	gwh’
+;
+
+17 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»que¡
+.
+	gMockMvcReque¡Bud”s
+.
+	gg‘
+;
+
+18 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»suÉ
+.
+	gMockMvcResuÉM©ch”s
+.
+	gjsÚP©h
+;
+
+19 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»suÉ
+.
+	gMockMvcResuÉM©ch”s
+.
+	g¡©us
+;
+
+20 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g£tup
+.
+	gMockMvcBud”s
+.
+	g¡ªd®ÚeS‘up
+;
+
+21 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»suÉ
+.
+	gMockMvcResuÉHªdËrs
+.*;
+
+24 
+public
+ cÏs 
+	cG‘AÎOrd”sIÁeg¿tiÚTe¡
+ {
+
+26 
+MockMvc
+ 
+	mmockMvc
+;
+
+28 @
+InjeùMocks
+
+
+29 
+Ord”Qu”›sCÚŒŞËr
+ 
+	mcÚŒŞËr
+;
+
+31 @
+Mock
+
+
+32 
+Ord”S”viû
+ 
+	mÜd”S”viû
+;
+
+34 @
+BefÜe
+
+
+35 
+public
+ 
+	$£tup
+() {
+
+36 
+Mock™oAÂÙ©iÚs
+.
+	`š™Mocks
+(
+this
+);
+
+38 
+this
+.
+mockMvc
+ = 
+	`¡ªd®ÚeS‘up
+(
+cÚŒŞËr
+).
+	`bud
+();
+
+40 
+	`wh’
+(
+Üd”S”viû
+.
+	`»que¡AÎOrd”s
+(
+	`ªy
+(
+Reque¡AÎOrd”sEv’t
+.
+şass
+))).
+	`th’R‘uº
+(
+	`®lOrd”s
+());
+
+43 @
+Te¡
+
+
+44 
+public
+ 
+	$th©G‘Ord”sR’d”sAsJsÚ
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+46 
+this
+.
+mockMvc
+.
+	`³rfÜm
+(
+
+47 
+	`g‘
+("/aggregators/orders")
+
+48 .
+	`acû±
+(
+MedŸTy³
+.
+APPLICATION_JSON
+))
+
+49 .
+	`ªdDo
+(
+	`´št
+())
+
+50 .
+	`ªdEx³ù
+(
+	`¡©us
+().
+	`isOk
+())
+
+51 .
+	`ªdEx³ù
+(
+	`jsÚP©h
+("$[0].™ems['" + 
+Re¡D©aFixtu»
+.
+YUMMY_ITEM
+ + "']").
+	`v®ue
+(12));
+
+52 
+	}
+}
+
+	@complete/src/test/java/com/yummynoodlebar/rest/controller/OrderStatusIntegrationTest.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.
+	gReque¡Ord”StusEv’t
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	g£rviûs
+.
+	gOrd”S”viû
+;
+
+5 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gBefÜe
+;
+
+6 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gTe¡
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gInjeùMocks
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock™oAÂÙ©iÚs
+;
+
+10 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gMedŸTy³
+;
+
+11 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gcÚv”‹r
+.
+	gjsÚ
+.
+	gM­pšgJacksÚ2H‰pMes§geCÚv”‹r
+;
+
+12 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gcÚv”‹r
+.
+	gxml
+.
+	gJaxb2RoÙEËm’tH‰pMes§geCÚv”‹r
+;
+
+13 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	gMockMvc
+;
+
+15 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+17 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+.
+	gfixtu»
+.
+	gRe¡Ev’tFixtu»s
+.*;
+
+18 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock™o
+.
+	gªy
+;
+
+19 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock™o
+.
+	gwh’
+;
+
+20 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»que¡
+.
+	gMockMvcReque¡Bud”s
+.
+	gg‘
+;
+
+21 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»suÉ
+.
+	gMockMvcResuÉHªdËrs
+.
+	g´št
+;
+
+22 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»suÉ
+.
+	gMockMvcResuÉM©ch”s
+.*;
+
+23 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g£tup
+.
+	gMockMvcBud”s
+.
+	g¡ªd®ÚeS‘up
+;
+
+25 
+public
+ cÏs 
+	cOrd”StusIÁeg¿tiÚTe¡
+ {
+
+27 
+MockMvc
+ 
+	mmockMvc
+;
+
+29 @
+InjeùMocks
+
+
+30 
+Ord”StusCÚŒŞËr
+ 
+	mcÚŒŞËr
+;
+
+32 @
+Mock
+
+
+33 
+Ord”S”viû
+ 
+	mÜd”S”viû
+;
+
+35 
+UUID
+ 
+	mkey
+ = UUID.
+äomSŒšg
+("f3512d26-72f6-4290-9265-63ad69eccc13");
+
+37 @
+BefÜe
+
+
+38 
+public
+ 
+	$£tup
+() {
+
+39 
+Mock™oAÂÙ©iÚs
+.
+	`š™Mocks
+(
+this
+);
+
+41 
+this
+.
+mockMvc
+ = 
+	`¡ªd®ÚeS‘up
+(
+cÚŒŞËr
+)
+
+42 .
+	`£tMes§geCÚv”‹rs
+(
+
+43 
+Ãw
+ 
+	`M­pšgJacksÚ2H‰pMes§geCÚv”‹r
+(),
+
+44 
+Ãw
+ 
+	`Jaxb2RoÙEËm’tH‰pMes§geCÚv”‹r
+()).
+	`bud
+();
+
+47 @
+Te¡
+
+
+48 
+public
+ 
+	$th©V›wOrd”StusU£sH‰pNÙFound
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+50 
+	`wh’
+(
+Üd”S”viû
+.
+	`»que¡Ord”Stus
+(
+	`ªy
+(
+Reque¡Ord”StusEv’t
+.
+şass
+))).
+	`th’R‘uº
+(
+
+51 
+	`Üd”StusNÙFound
+(
+key
+));
+
+53 
+this
+.
+mockMvc
+.
+	`³rfÜm
+(
+
+54 
+	`g‘
+("/agg»g©Üs/Üd”s/{id}/¡©us", 
+key
+.
+	`toSŒšg
+())
+
+55 .
+	`acû±
+(
+MedŸTy³
+.
+APPLICATION_JSON
+))
+
+56 .
+	`ªdEx³ù
+(
+	`¡©us
+().
+	`isNÙFound
+());
+
+57 
+	}
+}
+
+59 @
+Te¡
+
+
+60 
+public
+ 
+	$th©V›wOrd”U£sH‰pOK
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+62 
+	`wh’
+(
+Üd”S”viû
+.
+	`»que¡Ord”Stus
+(
+	`ªy
+(
+Reque¡Ord”StusEv’t
+.
+şass
+))).
+	`th’R‘uº
+(
+
+63 
+	`Üd”Stus
+(
+key
+, "Cooking"));
+
+65 
+this
+.
+mockMvc
+.
+	`³rfÜm
+(
+
+66 
+	`g‘
+("/agg»g©Üs/Üd”s/{id}/¡©us", 
+key
+.
+	`toSŒšg
+())
+
+67 .
+	`acû±
+(
+MedŸTy³
+.
+APPLICATION_JSON
+))
+
+68 .
+	`ªdDo
+(
+	`´št
+())
+
+69 .
+	`ªdEx³ù
+(
+	`¡©us
+().
+	`isOk
+());
+
+70 
+	}
+}
+
+72 @
+Te¡
+
+
+73 
+public
+ 
+	$th©V›wOrd”R’d”sJSONCÜ»ùly
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+75 
+	`wh’
+(
+Üd”S”viû
+.
+	`»que¡Ord”Stus
+(
+	`ªy
+(
+Reque¡Ord”StusEv’t
+.
+şass
+))).
+	`th’R‘uº
+(
+
+76 
+	`Üd”Stus
+(
+key
+, "Cooking"));
+
+78 
+this
+.
+mockMvc
+.
+	`³rfÜm
+(
+
+79 
+	`g‘
+("/agg»g©Üs/Üd”s/{id}/¡©us", 
+key
+.
+	`toSŒšg
+())
+
+80 .
+	`acû±
+(
+MedŸTy³
+.
+APPLICATION_JSON
+))
+
+81 .
+	`ªdEx³ù
+(
+	`cÚ‹Á
+().
+	`cÚ‹ÁTy³Com·tibËW™h
+(
+MedŸTy³
+.
+APPLICATION_JSON
+))
+
+82 .
+	`ªdEx³ù
+(
+	`jsÚP©h
+("$.Üd”Id").
+	`v®ue
+(
+key
+.
+	`toSŒšg
+()))
+
+83 .
+	`ªdEx³ù
+(
+	`jsÚP©h
+("$.¡©us").
+	`v®ue
+("Cooking"));
+
+84 
+	}
+}
+
+86 @
+Te¡
+
+
+87 
+public
+ 
+	$th©V›wOrd”R’d”sXMLCÜ»ùly
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+89 
+	`wh’
+(
+Üd”S”viû
+.
+	`»que¡Ord”Stus
+(
+	`ªy
+(
+Reque¡Ord”StusEv’t
+.
+şass
+))).
+	`th’R‘uº
+(
+
+90 
+	`Üd”Stus
+(
+key
+, "Cooking"));
+
+92 
+this
+.
+mockMvc
+.
+	`³rfÜm
+(
+
+93 
+	`g‘
+("/agg»g©Üs/Üd”s/{id}/¡©us", 
+key
+.
+	`toSŒšg
+())
+
+94 .
+	`acû±
+(
+MedŸTy³
+.
+TEXT_XML
+))
+
+95 .
+	`ªdDo
+(
+	`´št
+())
+
+96 .
+	`ªdEx³ù
+(
+	`cÚ‹Á
+().
+	`cÚ‹ÁTy³
+(
+MedŸTy³
+.
+TEXT_XML
+))
+
+97 .
+	`ªdEx³ù
+(
+	`x·th
+("/Üd”Stus/Üd”Id").
+	`¡ršg
+(
+key
+.
+	`toSŒšg
+()))
+
+98 .
+	`ªdEx³ù
+(
+	`x·th
+("/Üd”Stus/¡©us").
+	`¡ršg
+("Cooking"));
+
+99 
+	}
+}
+
+	@complete/src/test/java/com/yummynoodlebar/rest/controller/ViewOrderIntegrationTest.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.
+	gReque¡Ord”D‘asEv’t
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	g£rviûs
+.
+	gOrd”S”viû
+;
+
+5 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gBefÜe
+;
+
+6 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gTe¡
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gInjeùMocks
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock™oAÂÙ©iÚs
+;
+
+10 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gMedŸTy³
+;
+
+11 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gcÚv”‹r
+.
+	gjsÚ
+.
+	gM­pšgJacksÚ2H‰pMes§geCÚv”‹r
+;
+
+12 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	gMockMvc
+;
+
+14 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+16 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock™o
+.
+	gªy
+;
+
+17 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock™o
+.
+	gwh’
+;
+
+18 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»que¡
+.
+	gMockMvcReque¡Bud”s
+.
+	gg‘
+;
+
+19 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»suÉ
+.
+	gMockMvcResuÉHªdËrs
+.
+	g´št
+;
+
+20 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»suÉ
+.
+	gMockMvcResuÉM©ch”s
+.*;
+
+21 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g£tup
+.
+	gMockMvcBud”s
+.
+	g¡ªd®ÚeS‘up
+;
+
+22 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+.
+	gfixtu»
+.
+	gRe¡D©aFixtu»
+.*;
+
+23 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+.
+	gfixtu»
+.
+	gRe¡Ev’tFixtu»s
+.*;
+
+25 
+public
+ cÏs 
+	cV›wOrd”IÁeg¿tiÚTe¡
+ {
+
+27 
+MockMvc
+ 
+	mmockMvc
+;
+
+29 @
+InjeùMocks
+
+
+30 
+Ord”Qu”›sCÚŒŞËr
+ 
+	mcÚŒŞËr
+;
+
+32 @
+Mock
+
+
+33 
+Ord”S”viû
+ 
+	mÜd”S”viû
+;
+
+35 
+UUID
+ 
+	mkey
+ = UUID.
+äomSŒšg
+("f3512d26-72f6-4290-9265-63ad69eccc13");
+
+37 @
+BefÜe
+
+
+38 
+public
+ 
+	$£tup
+() {
+
+39 
+Mock™oAÂÙ©iÚs
+.
+	`š™Mocks
+(
+this
+);
+
+41 
+this
+.
+mockMvc
+ = 
+	`¡ªd®ÚeS‘up
+(
+cÚŒŞËr
+)
+
+42 .
+	`£tMes§geCÚv”‹rs
+(
+Ãw
+ 
+	`M­pšgJacksÚ2H‰pMes§geCÚv”‹r
+()).
+	`bud
+();
+
+45 @
+Te¡
+
+
+46 
+public
+ 
+	$th©V›wOrd”U£sH‰pNÙFound
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+48 
+	`wh’
+(
+Üd”S”viû
+.
+	`»que¡Ord”D‘as
+(
+	`ªy
+(
+Reque¡Ord”D‘asEv’t
+.
+şass
+))).
+	`th’R‘uº
+(
+
+49 
+	`Üd”D‘asNÙFound
+(
+key
+));
+
+51 
+this
+.
+mockMvc
+.
+	`³rfÜm
+(
+
+52 
+	`g‘
+("/agg»g©Üs/Üd”s/{id}", 
+key
+.
+	`toSŒšg
+())
+
+53 .
+	`acû±
+(
+MedŸTy³
+.
+APPLICATION_JSON
+))
+
+54 .
+	`ªdDo
+(
+	`´št
+())
+
+55 .
+	`ªdEx³ù
+(
+	`¡©us
+().
+	`isNÙFound
+());
+
+56 
+	}
+}
+
+58 @
+Te¡
+
+
+59 
+public
+ 
+	$th©V›wOrd”U£sH‰pOK
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+61 
+	`wh’
+(
+Üd”S”viû
+.
+	`»que¡Ord”D‘as
+(
+	`ªy
+(
+Reque¡Ord”D‘asEv’t
+.
+şass
+))).
+	`th’R‘uº
+(
+
+62 
+	`Üd”D‘asEv’t
+(
+key
+));
+
+64 
+this
+.
+mockMvc
+.
+	`³rfÜm
+(
+
+65 
+	`g‘
+("/agg»g©Üs/Üd”s/{id}", 
+key
+.
+	`toSŒšg
+())
+
+66 .
+	`acû±
+(
+MedŸTy³
+.
+APPLICATION_JSON
+))
+
+67 .
+	`ªdEx³ù
+(
+	`¡©us
+().
+	`isOk
+());
+
+68 
+	}
+}
+
+70 @
+Te¡
+
+
+71 
+public
+ 
+	$th©V›wOrd”R’d”sCÜ»ùly
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+73 
+	`wh’
+(
+Üd”S”viû
+.
+	`»que¡Ord”D‘as
+(
+	`ªy
+(
+Reque¡Ord”D‘asEv’t
+.
+şass
+))).
+	`th’R‘uº
+(
+
+74 
+	`Üd”D‘asEv’t
+(
+key
+));
+
+76 
+this
+.
+mockMvc
+.
+	`³rfÜm
+(
+
+77 
+	`g‘
+("/agg»g©Üs/Üd”s/{id}", 
+key
+.
+	`toSŒšg
+())
+
+78 .
+	`acû±
+(
+MedŸTy³
+.
+APPLICATION_JSON
+))
+
+79 .
+	`ªdEx³ù
+(
+	`jsÚP©h
+("$.™ems['" + 
+YUMMY_ITEM
+ + "']").
+	`v®ue
+(12))
+
+80 .
+	`ªdEx³ù
+(
+	`jsÚP©h
+("$.key").
+	`v®ue
+(
+key
+.
+	`toSŒšg
+()));
+
+81 
+	}
+}
+
+	@complete/src/test/java/com/yummynoodlebar/rest/controller/ViewOrderXmlIntegrationTest.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.
+	gReque¡Ord”D‘asEv’t
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	g£rviûs
+.
+	gOrd”S”viû
+;
+
+5 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gBefÜe
+;
+
+6 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gTe¡
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gInjeùMocks
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock™oAÂÙ©iÚs
+;
+
+10 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gMedŸTy³
+;
+
+11 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gcÚv”‹r
+.
+	gjsÚ
+.
+	gM­pšgJacksÚ2H‰pMes§geCÚv”‹r
+;
+
+12 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gcÚv”‹r
+.
+	gxml
+.
+	gJaxb2RoÙEËm’tH‰pMes§geCÚv”‹r
+;
+
+13 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	gMockMvc
+;
+
+15 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+17 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+.
+	gfixtu»
+.
+	gRe¡Ev’tFixtu»s
+.
+	gÜd”D‘asEv’t
+;
+
+18 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock™o
+.
+	gªy
+;
+
+19 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock™o
+.
+	gwh’
+;
+
+20 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»que¡
+.
+	gMockMvcReque¡Bud”s
+.
+	gg‘
+;
+
+21 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»suÉ
+.
+	gMockMvcResuÉHªdËrs
+.
+	g´št
+;
+
+22 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»suÉ
+.
+	gMockMvcResuÉM©ch”s
+.*;
+
+23 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g£tup
+.
+	gMockMvcBud”s
+.
+	g¡ªd®ÚeS‘up
+;
+
+26 
+public
+ cÏs 
+	cV›wOrd”XmlIÁeg¿tiÚTe¡
+ {
+
+28 
+MockMvc
+ 
+	mmockMvc
+;
+
+30 @
+InjeùMocks
+
+
+31 
+Ord”Qu”›sCÚŒŞËr
+ 
+	mcÚŒŞËr
+;
+
+33 @
+Mock
+
+
+34 
+Ord”S”viû
+ 
+	mÜd”S”viû
+;
+
+36 
+UUID
+ 
+	mkey
+ = UUID.
+äomSŒšg
+("f3512d26-72f6-4290-9265-63ad69eccc13");
+
+38 @
+BefÜe
+
+
+39 
+public
+ 
+	$£tup
+() {
+
+40 
+Mock™oAÂÙ©iÚs
+.
+	`š™Mocks
+(
+this
+);
+
+42 
+this
+.
+mockMvc
+ = 
+	`¡ªd®ÚeS‘up
+(
+cÚŒŞËr
+)
+
+43 .
+	`£tMes§geCÚv”‹rs
+(
+Ãw
+ 
+	`M­pšgJacksÚ2H‰pMes§geCÚv”‹r
+(),
+
+44 
+Ãw
+ 
+	`Jaxb2RoÙEËm’tH‰pMes§geCÚv”‹r
+()).
+	`bud
+();
+
+47 @
+Te¡
+
+
+48 
+public
+ 
+	$th©V›wOrd”R’d”sXMLCÜ»ùly
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+50 
+	`wh’
+(
+Üd”S”viû
+.
+	`»que¡Ord”D‘as
+(
+	`ªy
+(
+Reque¡Ord”D‘asEv’t
+.
+şass
+))).
+	`th’R‘uº
+(
+
+51 
+	`Üd”D‘asEv’t
+(
+key
+));
+
+53 
+this
+.
+mockMvc
+.
+	`³rfÜm
+(
+
+54 
+	`g‘
+("/agg»g©Üs/Üd”s/{id}", 
+key
+.
+	`toSŒšg
+())
+
+55 .
+	`acû±
+(
+MedŸTy³
+.
+TEXT_XML
+))
+
+56 .
+	`ªdDo
+(
+	`´št
+())
+
+57 .
+	`ªdEx³ù
+(
+	`cÚ‹Á
+().
+	`cÚ‹ÁTy³
+(
+MedŸTy³
+.
+TEXT_XML
+))
+
+58 .
+	`ªdEx³ù
+(
+	`x·th
+("/Üd”/key").
+	`¡ršg
+(
+key
+.
+	`toSŒšg
+()));
+
+59 
+	}
+}
+
+61 @
+Te¡
+
+
+62 
+public
+ 
+	$th©V›wOrd”R’d”sJsÚCÜ»ùly
+(è
+throws
+ 
+Exû±iÚ
+ {
+
+64 
+	`wh’
+(
+Üd”S”viû
+.
+	`»que¡Ord”D‘as
+(
+	`ªy
+(
+Reque¡Ord”D‘asEv’t
+.
+şass
+))).
+	`th’R‘uº
+(
+
+65 
+	`Üd”D‘asEv’t
+(
+key
+));
+
+69 
+this
+.
+mockMvc
+.
+	`³rfÜm
+(
+
+70 
+	`g‘
+("/agg»g©Üs/Üd”s/{id}", 
+key
+.
+	`toSŒšg
+())
+
+71 .
+	`acû±
+(
+MedŸTy³
+.
+APPLICATION_JSON
+))
+
+72 .
+	`ªdDo
+(
+	`´št
+())
+
+73 .
+	`ªdEx³ù
+(
+	`cÚ‹Á
+().
+	`cÚ‹ÁTy³Com·tibËW™h
+(
+MedŸTy³
+.
+APPLICATION_JSON
+))
+
+74 .
+	`ªdEx³ù
+(
+	`jsÚP©h
+("$.key").
+	`v®ue
+(
+key
+.
+	`toSŒšg
+()));
+
+75 
+	}
+}
+
+	@complete/src/test/java/com/yummynoodlebar/rest/controller/fixture/RestDataFixture.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+.
+	gfixtu»
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.*;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gdomaš
+.
+	gOrd”
+;
+
+6 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gA¼ayLi¡
+;
+
+7 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gCŞËùiÚs
+;
+
+8 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+9 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+18 
+public
+ cÏs 
+	cRe¡D©aFixtu»
+ {
+
+19 
+public
+ 
+fš®
+ 
+SŒšg
+ 
+	mYUMMY_ITEM
+ = "yummy1";
+
+21 
+public
+ 
+AÎOrd”sEv’t
+ 
+	$®lOrd”s
+() {
+
+22 
+Li¡
+<
+Ord”D‘as
+> 
+Üd”s
+ = 
+Ãw
+ 
+A¼ayLi¡
+<OrderDetails>();
+
+24 
+Üd”s
+.
+	`add
+(
+	`¡ªd¬dOrd”D‘as
+());
+
+25 
+Üd”s
+.
+	`add
+(
+	`¡ªd¬dOrd”D‘as
+());
+
+26 
+Üd”s
+.
+	`add
+(
+	`¡ªd¬dOrd”D‘as
+());
+
+28  
+Ãw
+ 
+	`AÎOrd”sEv’t
+(
+Üd”s
+);
+
+31 
+public
+ 
+Ord”
+ 
+	$¡ªd¬dOrd”
+() {
+
+32 
+Ord”
+ 
+Üd”
+ = 
+Ãw
+ 
+	`Ord”
+();
+
+34 
+Üd”
+.
+	`£tI‹ms
+(
+CŞËùiÚs
+.
+	`sšgËtÚM­
+(
+YUMMY_ITEM
+, 12));
+
+36  
+Üd”
+;
+
+37 
+	}
+}
+
+39 
+public
+ 
+Ord”D‘as
+ 
+	$cu¡omKeyOrd”D‘as
+(
+UUID
+ 
+key
+) {
+
+40 
+Ord”D‘as
+ 
+Üd”d‘as
+ = 
+Ãw
+ 
+	`Ord”D‘as
+(
+key
+);
+
+42 
+Üd”d‘as
+.
+	`£tOrd”I‹ms
+(
+CŞËùiÚs
+.
+	`sšgËtÚM­
+(
+YUMMY_ITEM
+, 12));
+
+44  
+Üd”d‘as
+;
+
+45 
+	}
+}
+
+46 
+public
+ 
+Ord”D‘as
+ 
+	$¡ªd¬dOrd”D‘as
+() {
+
+47  
+	`cu¡omKeyOrd”D‘as
+(
+UUID
+.
+	`¿ndomUUID
+());
+
+48 
+	}
+}
+
+50 
+public
+ 
+SŒšg
+ 
+	$¡ªd¬dOrd”JSON
+() {
+
+52 
+	}
+}
+
+	@complete/src/test/java/com/yummynoodlebar/rest/controller/fixture/RestEventFixtures.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+.
+	gfixtu»
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.*;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+.
+	gfixtu»
+.
+	gRe¡D©aFixtu»
+.*;
+
+6 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gD©e
+;
+
+7 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gUUID
+;
+
+9 
+public
+ cÏs 
+	cRe¡Ev’tFixtu»s
+ {
+
+10 
+public
+ 
+Ord”StusEv’t
+ 
+	$Üd”StusNÙFound
+(
+UUID
+ 
+key
+) {
+
+11  
+Ord”StusEv’t
+.
+	`nÙFound
+(
+key
+);
+
+13 
+public
+ 
+Ord”StusEv’t
+ 
+	$Üd”Stus
+(
+UUID
+ 
+key
+, 
+SŒšg
+ 
+¡©us
+) {
+
+14  
+Ãw
+ 
+	`Ord”StusEv’t
+(
+key
+,‚ew 
+	`Ord”StusD‘as
+Òew 
+	`D©e
+(), 
+¡©us
+));
+
+15 
+	}
+}
+
+16 
+public
+ 
+Ord”D‘asEv’t
+ 
+	$Üd”D‘asNÙFound
+(
+UUID
+ 
+key
+) {
+
+17  
+Ord”D‘asEv’t
+.
+	`nÙFound
+(
+key
+);
+
+18 
+	}
+}
+
+19 
+public
+ 
+Ord”D‘asEv’t
+ 
+	$Üd”D‘asEv’t
+(
+UUID
+ 
+key
+) {
+
+20  
+Ãw
+ 
+	`Ord”D‘asEv’t
+(
+key
+, 
+	`cu¡omKeyOrd”D‘as
+(key));
+
+21 
+	}
+}
+
+22 
+public
+ 
+Ord”C»©edEv’t
+ 
+	$Üd”C»©ed
+(
+UUID
+ 
+key
+) {
+
+23  
+Ãw
+ 
+	`Ord”C»©edEv’t
+(
+key
+, 
+	`cu¡omKeyOrd”D‘as
+(key));
+
+24 
+	}
+}
+
+25 
+public
+ 
+Ord”D–‘edEv’t
+ 
+	$Üd”D–‘ed
+(
+UUID
+ 
+key
+) {
+
+26  
+Ãw
+ 
+	`Ord”D–‘edEv’t
+(
+key
+, 
+	`¡ªd¬dOrd”D‘as
+());
+
+27 
+	}
+}
+
+28 
+public
+ 
+Ord”D–‘edEv’t
+ 
+	$Üd”D–‘edFaed
+(
+UUID
+ 
+key
+) {
+
+29  
+Ord”D–‘edEv’t
+.
+	`d–‘iÚFÜbidd’
+(
+key
+, 
+	`¡ªd¬dOrd”D‘as
+());
+
+30 
+	}
+}
+
+31 
+public
+ 
+Ord”D–‘edEv’t
+ 
+	$Üd”D–‘edNÙFound
+(
+UUID
+ 
+key
+) {
+
+32  
+Ord”D–‘edEv’t
+.
+	`nÙFound
+(
+key
+);
+
+33 
+	}
+}
+
+	@complete/src/test/java/com/yummynoodlebar/rest/domain/OrderTests.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gdomaš
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	gcÜe
+.
+	gev’ts
+.
+	gÜd”s
+.
+	gOrd”D‘as
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gyummynoodËb¬
+.
+	g»¡
+.
+	gcÚŒŞËr
+.
+	gfixtu»
+.
+	gRe¡D©aFixtu»
+;
+
+5 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gTe¡
+;
+
+7 
+impÜt
+ 
+	gjun™
+.
+	gäamewÜk
+.
+	gAs£¹
+.
+	gas£¹Equ®s
+;
+
+8 
+impÜt
+ 
+	gjun™
+.
+	gäamewÜk
+.
+	gTe¡Ca£
+.
+	gas£¹True
+;
+
+10 
+public
+ cÏs 
+	cOrd”Te¡s
+ {
+
+12 @
+Te¡
+
+
+13 
+public
+ 
+	$th©Ord”CªCÚv”tToOrd”D‘as
+() {
+
+14 
+Ord”
+ 
+Üd”
+ = 
+Re¡D©aFixtu»
+.
+	`¡ªd¬dOrd”
+();
+
+16 
+Ord”D‘as
+ 
+d‘as
+ = 
+Üd”
+.
+	`toOrd”D‘as
+();
+
+18 
+	`as£¹Equ®s
+(
+Üd”
+.
+	`g‘Key
+(), 
+d‘as
+.getKey());
+
+19 
+	`as£¹Equ®s
+(
+Üd”
+.
+	`g‘D©eTimeOfSubmissiÚ
+(), 
+d‘as
+.getDateTimeOfSubmission());
+
+20 
+	`as£¹Equ®s
+(
+d‘as
+.
+	`g‘Ord”I‹ms
+().
+	`size
+(), details.getOrderItems().size());
+
+21 
+	`as£¹True
+(
+d‘as
+.
+	`g‘Ord”I‹ms
+().
+	`cÚšsKey
+(
+Re¡D©aFixtu»
+.
+YUMMY_ITEM
+));
+
+22 
+	`as£¹Equ®s
+(
+d‘as
+.
+	`g‘Ord”I‹ms
+().
+	`g‘
+(
+Re¡D©aFixtu»
+.
+YUMMY_ITEM
+), 
+Üd”
+.
+	`g‘I‹ms
+().get(RestDataFixture.YUMMY_ITEM));
+
+25 @
+Te¡
+
+
+26 
+public
+ 
+	$th©Ord”CªCÚv”tFromOrd”D‘as
+() {
+
+27 
+Ord”D‘as
+ 
+d‘as
+ = 
+Re¡D©aFixtu»
+.
+	`¡ªd¬dOrd”D‘as
+();
+
+29 
+Ord”
+ 
+Üd”
+ = Ord”.
+	`äomOrd”D‘as
+(
+d‘as
+);
+
+31 
+	`as£¹Equ®s
+(
+Üd”
+.
+	`g‘Key
+(), 
+d‘as
+.getKey());
+
+32 
+	`as£¹Equ®s
+(
+Üd”
+.
+	`g‘D©eTimeOfSubmissiÚ
+(), 
+d‘as
+.getDateTimeOfSubmission());
+
+33 
+	`as£¹Equ®s
+(
+Üd”
+.
+	`g‘I‹ms
+().
+	`size
+(), 
+d‘as
+.
+	`g‘Ord”I‹ms
+().size());
+
+34 
+	`as£¹True
+(
+Üd”
+.
+	`g‘I‹ms
+().
+	`cÚšsKey
+(
+Re¡D©aFixtu»
+.
+YUMMY_ITEM
+));
+
+35 
+	`as£¹Equ®s
+(
+d‘as
+.
+	`g‘Ord”I‹ms
+().
+	`g‘
+(
+Re¡D©aFixtu»
+.
+YUMMY_ITEM
+), 
+Üd”
+.
+	`g‘I‹ms
+().get(RestDataFixture.YUMMY_ITEM));
+
+36 
+	}
+}
+
+	@
+1
+.
+1
+/usr/include
+62
+4927
+complete/src/main/java/com/yummynoodlebar/config/CoreConfig.java
+complete/src/main/java/com/yummynoodlebar/config/MVCConfig.java
+complete/src/main/java/com/yummynoodlebar/config/WebAppInitializer.java
+complete/src/main/java/com/yummynoodlebar/core/domain/Customer.java
+complete/src/main/java/com/yummynoodlebar/core/domain/Order.java
+complete/src/main/java/com/yummynoodlebar/core/domain/OrderStatus.java
+complete/src/main/java/com/yummynoodlebar/core/domain/OrderStatusHistory.java
+complete/src/main/java/com/yummynoodlebar/core/domain/Payment.java
+complete/src/main/java/com/yummynoodlebar/core/domain/PaymentDetails.java
+complete/src/main/java/com/yummynoodlebar/core/domain/PaymentStatus.java
+complete/src/main/java/com/yummynoodlebar/core/events/CreateEvent.java
+complete/src/main/java/com/yummynoodlebar/core/events/CreatedEvent.java
+complete/src/main/java/com/yummynoodlebar/core/events/DeleteEvent.java
+complete/src/main/java/com/yummynoodlebar/core/events/DeletedEvent.java
+complete/src/main/java/com/yummynoodlebar/core/events/ReadEvent.java
+complete/src/main/java/com/yummynoodlebar/core/events/RequestReadEvent.java
+complete/src/main/java/com/yummynoodlebar/core/events/UpdateEvent.java
+complete/src/main/java/com/yummynoodlebar/core/events/UpdatedEvent.java
+complete/src/main/java/com/yummynoodlebar/core/events/orders/AllOrdersEvent.java
+complete/src/main/java/com/yummynoodlebar/core/events/orders/CreateOrderEvent.java
+complete/src/main/java/com/yummynoodlebar/core/events/orders/DeleteOrderEvent.java
+complete/src/main/java/com/yummynoodlebar/core/events/orders/OrderCreatedEvent.java
+complete/src/main/java/com/yummynoodlebar/core/events/orders/OrderDeletedEvent.java
+complete/src/main/java/com/yummynoodlebar/core/events/orders/OrderDetails.java
+complete/src/main/java/com/yummynoodlebar/core/events/orders/OrderDetailsEvent.java
+complete/src/main/java/com/yummynoodlebar/core/events/orders/OrderStatus.java
+complete/src/main/java/com/yummynoodlebar/core/events/orders/OrderStatusDetails.java
+complete/src/main/java/com/yummynoodlebar/core/events/orders/OrderStatusEvent.java
+complete/src/main/java/com/yummynoodlebar/core/events/orders/OrderUpdatedEvent.java
+complete/src/main/java/com/yummynoodlebar/core/events/orders/PaymentDetails.java
+complete/src/main/java/com/yummynoodlebar/core/events/orders/RequestAllOrdersEvent.java
+complete/src/main/java/com/yummynoodlebar/core/events/orders/RequestOrderDetailsEvent.java
+complete/src/main/java/com/yummynoodlebar/core/events/orders/RequestOrderStatusEvent.java
+complete/src/main/java/com/yummynoodlebar/core/events/orders/SetOrderPaymentEvent.java
+complete/src/main/java/com/yummynoodlebar/core/events/orders/SetPaymentEvent.java
+complete/src/main/java/com/yummynoodlebar/core/events/orders/UpdateOrderEvent.java
+complete/src/main/java/com/yummynoodlebar/core/repository/OrdersMemoryRepository.java
+complete/src/main/java/com/yummynoodlebar/core/repository/OrdersRepository.java
+complete/src/main/java/com/yummynoodlebar/core/services/OrderEventHandler.java
+complete/src/main/java/com/yummynoodlebar/core/services/OrderService.java
+complete/src/main/java/com/yummynoodlebar/rest/controller/OrderCommandsController.java
+complete/src/main/java/com/yummynoodlebar/rest/controller/OrderPaymentDetailsController.java
+complete/src/main/java/com/yummynoodlebar/rest/controller/OrderQueriesController.java
+complete/src/main/java/com/yummynoodlebar/rest/controller/OrderStatusController.java
+complete/src/main/java/com/yummynoodlebar/rest/domain/Order.java
+complete/src/main/java/com/yummynoodlebar/rest/domain/OrderStatus.java
+complete/src/main/java/com/yummynoodlebar/rest/domain/PaymentDetails.java
+complete/src/main/java/com/yummynoodlebar/rest/domain/PaymentStatus.java
+complete/src/test/java/com/yummynoodlebar/config/CoreDomainIntegrationTest.java
+complete/src/test/java/com/yummynoodlebar/config/RestDomainIntegrationTest.java
+complete/src/test/java/com/yummynoodlebar/core/domain/OrdersUnitTest.java
+complete/src/test/java/com/yummynoodlebar/core/domain/fixtures/OrdersFixtures.java
+complete/src/test/java/com/yummynoodlebar/core/services/OrderEventHandlerUnitTest.java
+complete/src/test/java/com/yummynoodlebar/rest/controller/CancelOrderIntegrationTest.java
+complete/src/test/java/com/yummynoodlebar/rest/controller/CreateNewOrderIntegrationTest.java
+complete/src/test/java/com/yummynoodlebar/rest/controller/GetAllOrdersIntegrationTest.java
+complete/src/test/java/com/yummynoodlebar/rest/controller/OrderStatusIntegrationTest.java
+complete/src/test/java/com/yummynoodlebar/rest/controller/ViewOrderIntegrationTest.java
+complete/src/test/java/com/yummynoodlebar/rest/controller/ViewOrderXmlIntegrationTest.java
+complete/src/test/java/com/yummynoodlebar/rest/controller/fixture/RestDataFixture.java
+complete/src/test/java/com/yummynoodlebar/rest/controller/fixture/RestEventFixtures.java
+complete/src/test/java/com/yummynoodlebar/rest/domain/OrderTests.java

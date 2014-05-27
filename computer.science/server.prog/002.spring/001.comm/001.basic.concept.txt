@@ -1,5 +1,60 @@
 
+核心组件
+
+    Core container
+        core and beans
+            provide the fundamental parts of the framework
+            including the IoC and Dependency Injection features
+
+            core class:
+                BeanFactory
+
+        context
+             build on Core and Beans
+
+             support
+                internationalization (using, for example, resource bundles), 
+                event­propagation, 
+                resource­loading, 
+                and the transparent creation of contexts by, for example, a servlet container. 
+
+                Java EE features such as EJB, JMX ,and basic remoting. 
+
+            core interface:
+                ApplicationContext
+
+         Expression Language 
+            querying and manipulating an object graph at runtime
+
+
+    Data Access/Integration
+        components:
+            JDBC 
+            ORM 
+                provides integration layers : 
+                JPA, JDO, and Hibernate
+            OXM 
+            JMS
+            Transaction modules
+
+    Web
+        components:
+             Web
+
+             Web­Servlet
+                Spring’s model­view­controller (MVC) implementation
+
+             WebSocket 
+
+             Web­Portle
+
+    AOP and Instrumentation
+
+    Test
+        support JUnit or TestNG
+
 Spring容器
+
     容纳应用对象
 
     容器创建对象，装配对象，管理对象， 销毁对象
@@ -44,6 +99,7 @@ Life cycle of bean:
     5. if implements InitializingBean(or init-method defined), afterPropertiesSet() will be called
     6. if implements BeanPostProcessor, postProcessBeforeInitialization() and postProcessAfterInitialization() will be called
     7. if implements DisposableBean(destroy-method defined), destroy() will be called
+
 
 
 
