@@ -2,6 +2,7 @@ package com.baobaotao.ioc;
 
 import java.sql.Array;
 
+// metaphor of bean
 public class MoAttack implements ActorArrangable {
 	private GeLi geli;
 

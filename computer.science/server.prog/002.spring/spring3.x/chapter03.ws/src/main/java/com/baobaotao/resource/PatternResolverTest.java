@@ -9,7 +9,7 @@ public class PatternResolverTest {
 	public static void main(String[] args) throws Throwable{
 		
 		ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-		Resource resources[] =resolver.getResources("classpath*:com/baobaotao/**/*.xml");
+		Resource resources[] =resolver.getResources("classpath*:/**/*");
 		for(Resource resource:resources){
 			System.out.println(resource.getDescription());
 		}

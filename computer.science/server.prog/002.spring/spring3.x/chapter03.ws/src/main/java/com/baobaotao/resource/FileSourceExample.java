@@ -12,7 +12,8 @@ public class FileSourceExample {
 	
 	public static void main(String[] args) {
 		try {
-			String filePath = "D:/masterSpring/chapter3/WebRoot/WEB-INF/classes/conf/file1.txt";
+//			String filePath = "D:/masterSpring/chapter3/WebRoot/WEB-INF/classes/conf/file1.txt";
+			String filePath = "src/main/resources/conf/file1.txt";
 			Resource res1 = new FileSystemResource(filePath);
             Resource res2 = new ClassPathResource("conf/file1.txt");
             
