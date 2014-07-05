@@ -2,6 +2,11 @@
 [root@mdm3 ~]# ps aux|grep redi
 root     21281  0.0  0.0 103244   860 pts/1    S+   08:22   0:00 grep redi
 redis    27587  0.0  0.3  54080  7024 ?        Ssl  Mar26   1:21 /usr/sbin/redis-server 0.0.0.0:6379                                                      
+redis-cli
+# help
+# help <tab>
+# help @<tab>
+
 [root@mdm3 ~]# redis-cli 
     127.0.0.1:6379> help
     redis-cli 2.8.7

@@ -1,0 +1,7 @@
+
+Storyboard note:
+1. 在项目的主设置界面， 要在development info中选择自己的storyboard为Main Interface
+2. 将AppDelegate.m中didFinishLaunchingWithOptions中自动生成的代码模板去掉，直接返回YES
+
+
+

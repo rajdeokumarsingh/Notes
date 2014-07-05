@@ -1,0 +1,27 @@
+maven打包编译时后台一直输出警告信息:
+[WARNING] Some problems were encountered while building the effective model for com.juvenxu.mvnbook:hello-world:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 21, column 14
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+在compile plugin中添加version
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <configuration>
+        <source>1.5</source>
+        <target>1.5</target>
+    </configuration>
+    <version>2.5.1</version>
+</plugin>
+
+maven打包编译时后台一直输出警告信息:
+[WARNING] File encoding has not been set, using platform encoding GBK, i.e. build is platform dependent!
+    在pom.xml文件中增加一个配置项即可
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+
