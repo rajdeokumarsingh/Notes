@@ -1,0 +1,56 @@
+
+仓库布局
+    目录结构：
+    /groupId/artifactId/version/artifactId-version[-classifier].packaging
+
+仓库分类
+    本地仓库
+
+    远程仓库
+        中央仓库
+        <repositories>  
+            <repository>  
+                <id>central</id>  
+                <name>Maven Repository Switchboard</name>  
+                <layout>default</layout>  
+                <url>http://repo1.maven.org/maven2</url>  
+                <snapshots>  
+                    <enabled>false</enabled>  
+                </snapshots>  
+            </repository>  
+        </repositories>  
+
+
+        私服
+            定义在项目的pom.xml中
+        <project>  
+            ...   
+            <repositories>  
+                <repository>  
+                    <id>maven-net-cn</id>  
+                    <name>Maven China Mirror</name>  
+                    <url>http://maven.net.cn/content/groups/public/</url>  
+                    <releases>  
+                        <enabled>true</enabled>  
+                    </releases>  
+                    <snapshots>  
+                    <enabled>false</enabled>  
+                    </snapshots>  
+                </repository>  
+            </repositories>  
+            <pluginRepositories>  
+                <pluginRepository>  
+                <id>maven-net-cn</id>  
+                <name>Maven China Mirror</name>  
+                <url>http://maven.net.cn/content/groups/public/</url>  
+                <releases>  
+                    <enabled>true</enabled>  
+                </releases>  
+                <snapshots>  
+                    <enabled>false</enabled>  
+                </snapshots>       
+                </pluginRepository>  
+            </pluginRepositories>  
+            ...   
+        </project>  
+

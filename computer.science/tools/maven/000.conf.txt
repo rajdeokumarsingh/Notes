@@ -26,4 +26,5 @@ M2_HOME     # maven 安装目录
                 └── juvenxu     
 
 settings.xml
-    <mirror>设置特定的仓库
+    <mirror>            # 设置特定的远程仓库
+    <localRepository>   # 设置特定的本地仓库

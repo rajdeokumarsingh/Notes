@@ -1,0 +1,7 @@
+
+official site:
+    http://maven.apache.org/index.html
+
+search repo:
+    http://www.mvnrepository.com/
+

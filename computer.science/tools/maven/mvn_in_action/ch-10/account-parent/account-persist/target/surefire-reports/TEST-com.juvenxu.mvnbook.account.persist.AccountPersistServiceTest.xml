@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.006" errors="0" skipped="0" tests="1" name="com.juvenxu.mvnbook.helloworld.HelloWorldTest">
+<testsuite failures="0" time="0.931" errors="0" skipped="0" tests="4" name="com.juvenxu.mvnbook.account.persist.AccountPersistServiceTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/jiangrui/git/note/computer.science/tools/maven/mvn_in_action/ch-03/hello-world"/>
+    <property name="user.dir" value="/Users/jiangrui/git/note/computer.science/tools/maven/mvn_in_action/ch-10/account-parent/account-persist"/>
     <property name="java.runtime.version" value="1.6.0_65-b14-462-11M4609"/>
     <property name="java.awt.graphicsenv" value="apple.awt.CGraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed"/>
@@ -46,7 +46,7 @@
     <property name="java.vm.specification.version" value="1.0"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher package"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
     <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
     <property name="user.language" value="zh"/>
     <property name="awt.toolkit" value="apple.awt.CToolkit"/>
@@ -65,5 +65,8 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0.006" classname="com.juvenxu.mvnbook.helloworld.HelloWorldTest" name="testSayHello"/>
+  <testcase time="0.607" classname="com.juvenxu.mvnbook.account.persist.AccountPersistServiceTest" name="testReadAccount"/>
+  <testcase time="0.122" classname="com.juvenxu.mvnbook.account.persist.AccountPersistServiceTest" name="testDeleteAccount"/>
+  <testcase time="0.143" classname="com.juvenxu.mvnbook.account.persist.AccountPersistServiceTest" name="testCreateAccount"/>
+  <testcase time="0.059" classname="com.juvenxu.mvnbook.account.persist.AccountPersistServiceTest" name="testUpdateAccount"/>
 </testsuite>

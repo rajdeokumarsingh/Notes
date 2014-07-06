@@ -1,0 +1,90 @@
+
+
+插件目标
+    mvn dependency:list
+    mvn dependency:tree
+    mvn dependency:analyze
+
+插件目标和生命周期绑定
+    内置绑定
+        clean
+            pre-clean 
+            clean               # bind maven-clean-plugin:clean
+            post-clean
+
+        site 
+            pre-site
+            site                # maven-site-plugin:site
+            post-site
+            site-deploy         # maven-site-plugin:deploy
+
+        default
+            validate
+            initialize
+
+            generate-sources
+            process-sources     # maven-resources-plugin:resources
+                                # 对src/main/resources中内容进行变量替换, 复制输出到classpath中
+                                
+
+            generate-resources
+            process-resources
+            compile             # maven-compiler-plugin:compile
+                                # 编译src/main/java中文件，输出到classpath中
+            process-classes
+
+            generate-test-sources
+            process-test-sources        # maven-resources-plugin:testResources
+            generate-test-resources
+            process-test-resources
+            test-compile                # maven-compiler-plugin:testCompile
+            process-test-classes
+            test                        # maven-surefile-plugin:test
+
+            package                     # maven-jar-plugin:jar
+            pre-integration-test
+            integration-test
+            post-integration-test
+            verify
+            install                     # maven-install-plugin:install
+            deploy                      # maven-deploy-plugin:deploy
+
+    其他生命周期没有默认绑定。如果没有显式写出，就没有绑定
+
+    自定义绑定
+        不同的插件目标绑定到同一生命周期阶段时，插件目标的声明顺序决定了他的执行顺序
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+            <version>2.2.1</version>
+            <executions>
+                <execution>
+                    <id>attach-sources</id>
+                    <phase>verify</phase>
+                    <goals>
+                        <goal>jar-no-fork</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>attach-test-sources</id>
+                    <phase>verify</phase>
+                    <goals>
+                        <goal>test-jar-no-fork</goal>
+                    </goals>
+                    </execution>
+            </executions>
+        </plugin>
+
+插件命令行参数：
+
+    maven-surefile-plugin:
+        mvn install -Dmaven.test.skip=true # 忽略测试
+
+目标前缀
+    mvn [goals] [phases]
+
+    mvn install     # install 是一个life cycle的phase
+    mvn help:system     # help是一个插件goals的缩写 goal prefix, 
+                        # 等于 mvn maven-help-plugin:system
+   

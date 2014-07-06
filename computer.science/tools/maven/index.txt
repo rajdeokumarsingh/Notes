@@ -1,10 +1,20 @@
 ./000.conf.txt
+
 ./100.concept.txt
 
 ./200.pom.xml.txt
 ./205.pom.dependency.txt
 
+./300.repo.txt      # todo:
+
+./400.life.cycle.txt
+./405.plugin.txt
+
 ./800.command.txt
+
 ./900.problems.txt
 
+./z00.reference.txt
 
+# super pom
+./pom-4.0.0.xml
