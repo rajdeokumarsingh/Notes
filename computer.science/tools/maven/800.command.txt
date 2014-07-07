@@ -1,0 +1,16 @@
+mvn help:system         # 查看系统java属性，环境变量
+mvn help:active-profiles [-Dproperty]   # 查看激活的profile
+
+mvn help:describe
+    # see errors
+
+
+mvn archetype:generate      #生成maven源代码目录的结构
+
+mvn dependency:list
+mvn dependency:tree
+mvn dependency:analyze
+
+mvn site        # 创建站点
+
+mvn install -Dmaven.test.skip=true # 忽略测试

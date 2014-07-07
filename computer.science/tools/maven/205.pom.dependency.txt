@@ -1,0 +1,79 @@
+maven 中央仓库
+http://repo1.maven.org/maven2
+
+
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-core</artifactId>
+    <version>2.5.6</version>
+
+    <scope></scope>
+        编译时需要一套classpath
+            1. compile
+                默认的范围，编译，测试，运行是都会用到, spring-core
+            2. test
+                编译，运行时无法引用到该依赖, junit
+            3. runtime
+                测试，运行时有效。jdbc驱动
+            4. provided
+                编译，测试时有效。servlet-api
+                
+    <optional>true/false</optional>                   
+        可选依赖
+        最好不要使用可选依赖
+
+    <exclusions>
+        <exclusion>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+        </exclusion>
+    </exclusions>
+        在依赖传递中排除某个依赖，同时在另外的地方显示指明依赖
+</dependency>
+
+依赖传递性
+
+    行代表A->B的依赖范围， 列代表B->C的依赖范围
+    值代表A->C的依赖范围
+                compile     test    provided    runtime
+    compile     compile     --      --          runtime
+    test        test        --      --          test
+    provided    provided    --      provided    provided
+    runtime     runtime     --      --          runtime
+
+依赖调解
+    1. 依赖路径短者优先
+        A -> B -> Z (2.0)
+        A -> X -> Y -> Z (1.0)
+
+        优先选择A -> Z (2.0)
+
+    2. 依赖路径长度一样时，选择声明在前面的依赖
+        A -> B -> Z (2.0)
+        A -> C -> Z (1.0)
+
+        优先选择A -> Z (2.0)
+
+可选依赖
+    不会被传递
+    最好不要使用可选依赖
+        
+版本归类
+
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-beans</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    ...
+
+    <properties>
+        <spring.version>2.5.6</spring.version>
+    </properties>
+
+

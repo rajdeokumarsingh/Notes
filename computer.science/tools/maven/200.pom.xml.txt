@@ -1,0 +1,26 @@
+pom.xml
+    groupId     #项目名称, etc, com.pekall.mdm
+    artifactId  #模块名称，对应一个jar, war
+
+    name    # 用于阅读的名称， 非必须 
+
+
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>2.5.6</version>
+
+        <scope></scope>
+            编译时需要一套classpath
+                1. compile
+                    默认的范围，编译，测试，运行是都会用到, spring-core
+                2. test
+                    编译，运行时无法引用到该依赖, junit
+                3. runtime
+                    测试，运行时有效。jdbc驱动
+                4. provided
+                    编译，测试时有效。servlet-api
+                    
+    </dependency>
+
+

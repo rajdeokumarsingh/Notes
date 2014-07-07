@@ -1,0 +1,20 @@
+软件的坐标
+    <groupId>junit</groupId>
+                    <groupId>spring-core</groupId>
+                    <groupId>spring-context</groupId>
+                    : 必选
+
+    <artifactId>junit</artifactId>
+                    : 必选
+
+    <version>3.8.1</version>
+                    : 必选
+
+    <packaging> : 打包方式, jar, war。 默认是jar
+
+    <classifier> : 定义附属构件，如java-doc, sources等等
+                    不能直接定义附属构件，附属构件通过plugin生成
+
+
+        
+

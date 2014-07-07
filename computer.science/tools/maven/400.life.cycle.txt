@@ -1,0 +1,51 @@
+
+maven life cycle
+    initialize
+    compile         # maven-compile-plugin
+    test            # maven-surefire-plugin
+    package
+    integrationTest
+    deploy
+
+三套生命周期
+    clean       # 清理项目
+    default     # 构建项目
+    site        # 建立项目站点
+
+    每个项目周期包括一些阶段(phase)
+
+        clean
+            pre-clean, clean, post-clean
+
+        default
+            validate
+            initialize
+
+            generate-sources
+            process-sources     # 对src/main/resources中内容进行变量替换, 复制输出到classpath中
+            generate-resources
+            process-resources
+            compile             # 编译src/main/java中文件，输出到classpath中
+            process-classes
+
+            generate-test-sources
+            process-test-sources
+            generate-test-resources
+            process-test-resources
+            test-compile
+            process-test-classes
+            test
+
+            prepare-package
+            pre-integration-test
+            integration-test
+            post-integration-test
+            verify
+            install
+            deploy
+
+        site        # 建立项目站点
+            pre-site, site, post-site, site-deploy
+
+
+
