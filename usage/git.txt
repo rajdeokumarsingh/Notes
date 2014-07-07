@@ -1,3 +1,13 @@
+git branch # check local branch
+git branch -r # check remote branch
+
+git checkout -b mdm3.0
+git checkout -b mdm3.0 origin/mdm3.0
+
+git branch -d mdm3.0
+
+git checkout -b mdm3.0 origin/mdm3.1
+
 ================================================================================
 How to install Git on Ubuntu Lucid (10.04)
 

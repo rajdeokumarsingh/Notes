@@ -7,3 +7,5 @@
 ./strace.txt
 
 checkinstall
+
+./dig.txt

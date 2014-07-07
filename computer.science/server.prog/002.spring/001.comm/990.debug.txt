@@ -1,0 +1,7 @@
+
+// debug classpath:
+ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+Resource resources[] =resolver.getResources("classpath*:/**/applicationContext.xml");
+for(Resource resource:resources){
+    System.out.println(resource.getDescription());
+}

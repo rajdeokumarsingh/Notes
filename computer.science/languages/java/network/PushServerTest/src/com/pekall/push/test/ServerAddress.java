@@ -7,6 +7,8 @@ public class ServerAddress {
     String ip = "";
     int port = -1;
 
+    String path = "";
+
     private String query = "";
 
     ServerAddress() {
@@ -40,11 +42,20 @@ public class ServerAddress {
         return query;
     }
 
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public String getWsPath() {
+        return path;
+    }
+
     @Override
     public String toString() {
         return "ServerAddress{" +
                 "ip='" + ip + '\'' +
                 ", port=" + port +
+                ", path='" + path + '\'' +
                 ", query='" + query + '\'' +
                 '}';
     }

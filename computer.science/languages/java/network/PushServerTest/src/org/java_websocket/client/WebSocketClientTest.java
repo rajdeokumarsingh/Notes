@@ -1,6 +1,7 @@
 package org.java_websocket.client;
 
 import com.pekall.push.test.*;
+import com.pekall.push.test.Debug;
 import org.java_websocket.WebSocket;
 import org.java_websocket.WebSocketAdapter;
 import org.java_websocket.WebSocketImpl;
@@ -13,6 +14,7 @@ import org.java_websocket.framing.Framedata.Opcode;
 import org.java_websocket.handshake.HandshakeImpl1Client;
 import org.java_websocket.handshake.Handshakedata;
 import org.java_websocket.handshake.ServerHandshake;
+import sun.security.ssl.*;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -213,6 +215,8 @@ public abstract class WebSocketClientTest
 
     void send(String text, int id) throws NotYetConnectedException {
         if (engines[id] == null || !engines[id].isOpen()) return;
+
+        Debug.log("send msg: " + text);
         engines[id].send(text);
     }
 
@@ -349,8 +353,13 @@ public abstract class WebSocketClientTest
             try {
                 serverAddress = ServerAddrQuery.query(queryUrl);
                 Debug.logVerbose("serverAddress: " + serverAddress.toString());
+                if (true) { // old push server
                 pushServerUris[i] = URI.create(PushConstant.WS_SCHEME + serverAddress.getIp()
                         + ":" + serverAddress.getPort() + PushConstant.WS_PATH);
+                } else { // new push server
+                    pushServerUris[i] = URI.create(serverAddress.getWsPath());;
+                }
+
                 Debug.log("query push server uri:" + pushServerUris[i].toString());
             } catch (IOException e) {
                 e.printStackTrace();

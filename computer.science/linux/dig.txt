@@ -1,0 +1,6 @@
+http://www.cyberciti.biz/faq/linux-unix-dig-command-examples-usage-syntax/
+
+Linux and Unix dig Command Examples
+
+List of DNS record types
+

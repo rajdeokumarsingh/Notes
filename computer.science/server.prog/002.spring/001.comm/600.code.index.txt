@@ -1,0 +1,65 @@
+
+core interfaces:
+    BeanFactory
+    ApplicationContext
+
+        AbstractApplicationContext implement ApplicationContext
+            关键流程：
+                refresh() :
+                    read config.xml
+                    create beans according to config.xml
+                    invoke bean post processors
+
+core members:
+
+    material:
+        Resource, BeanDefinition, PropertyEditor
+
+    operator:
+        ResourceLoader, BeanDefinitionReader, BeanFactoryPostProcessor
+            InstantiationStrategy, BeanWrapper
+
+BeanDefinition
+    ->AbstractBeanDefinition
+        -> RootBeanDefinition   // map normal <bean>
+        -> ChildBeanDefinition  // map child bean, like <bean ... parent="xxx"/>
+
+    BeanDefinitionReader
+        parse config.xml to generate BeanDefinition
+        The BeanDefinition may be not completed
+            outside properties are generated
+
+            Spring use BeanFactoryPostProcess to convert properties to real value
+
+    BeanDefinitionRegistry
+        all BeanDefinition will be registered to BeanDefinitionRegistry
+
+BeanDefinition ---> Real Bean Object
+
+    InstantiationStrategy
+        create a real bean object according to a BeanDefinition
+
+        ->SimpleInstantiationStrategy   // create bean with constructor
+
+            ->CglibSubclassingInstantiationStratery
+
+        !!! will NOT set properties of beans
+
+            |
+            V
+    BeanWrapper
+        set properties of beans
+
+        PropertyEditor
+            convert string value of a property to a JavaBean property
+            determinate type of a property, from a string to its real value
+
+        
+        JavaBean -------------------- BeanInfo
+
+                               getPropertyDescriptors() : PropertyDescriptor[]
+            property1                 PropertyDescriptor wrap a PropertyEditor for property1
+            property2                 PropertyDescriptor wrap a PropertyEditor for property2
+
+
+

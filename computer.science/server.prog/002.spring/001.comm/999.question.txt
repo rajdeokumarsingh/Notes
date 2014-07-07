@@ -18,3 +18,5 @@ ClassPathXmlApplicationContext
 FileSystemXmlApplicationContext
 
 
+can not import properties in xml
+    need to add <PropertyPlaceholderConfigurer>

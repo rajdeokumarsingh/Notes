@@ -124,6 +124,8 @@ onReceivedError
 
     'startUsingNetworkFeature\|loadUrl delay\|NetworkStateHandler: onReceive: NetworkInfo: type:'
 
+    'died\|\<anr\|system.err\|\<debug\>'
+
     'load\( \)*[Uu]rl\( delay\)*\|shouldOverrideUrlLoading\|onPageStarted url\|onPageFinished url\|onProgressChanged'
     'load\( \)*[Uu]rl\( delay\)*\|shouldOverrideUrlLoading\|onPageStarted url\|onPageFinished url'
     'load\( \)*[Uu]rl\( delay\)*\|shouldOverrideUrlLoading'
