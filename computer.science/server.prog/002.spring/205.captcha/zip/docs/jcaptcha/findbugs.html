@@ -1,0 +1,870 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>JCaptcha - FindBugs Bug Detector Report</title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+    </style>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+                                                    
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+                                                        
+<script type="text/javascript">var pageTracker = _gat._getTracker("UA-3856069-2");
+        pageTracker._initData();
+        pageTracker._trackPageview();</script>
+                    </head>
+  <body class="composite">
+    <div id="banner">
+                  <a href=".." id="bannerLeft">
+    
+                                            <img src="images/jcaptcha-logo.jpg" alt="" />
+    
+            </a>
+                    <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+            
+  
+    
+            <div class="xleft">
+        Last Published: 03 Feb 2009
+                  &nbsp;| Version: 1.0
+                      </div>
+            <div class="xright">            <a href="http://www.octo.com" class="externalLink">OCTO Technology</a>
+            
+  
+
+  
+    
+            
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="leftColumn">
+      <div id="navcolumn">
+           
+  
+
+  
+    
+            
+  
+    
+                   <h5>Overview</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="index.html">Introduction</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://sourceforge.net/project/showfiles.php?group_id=97877" class="externalLink">Download</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://forge.octo.com/jcaptcha/confluence" class="externalLink">Wiki Documentation</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://forge.octo.com/jcaptcha/jira" class="externalLink">Issue tracker</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://sourceforge.net/projects/jcaptcha" class="externalLink">Sourceforge site</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://fisheye3.cenqua.com/browse/jcaptcha" class="externalLink">Browse source</a>
+          </li>
+              
+    <li class="none">
+                    <a href="mail-lists.html">Mailing lists</a>
+          </li>
+              
+    <li class="none">
+                    <a href="team-list.html">Project Team</a>
+          </li>
+              
+    <li class="none">
+                    <a href="thanks.html">Thanks</a>
+          </li>
+          </ul>
+              <h5>Parent Project</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="../index.html">JCaptcha Home</a>
+          </li>
+          </ul>
+              <h5>Project Documentation</h5>
+            <ul>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+                    <a href="project-info.html">Project Information</a>
+                </li>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+            
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+              
+            <li class="expanded">
+                    <a href="project-reports.html">Project Reports</a>
+                  <ul>
+                  
+    <li class="none">
+                    <a href="checkstyle.html">Checkstyle</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="clover/index.html">Clover</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="cpd.html">CPD Report</a>
+          </li>
+                  
+    <li class="none">
+              <strong>FindBugs Report</strong>
+        </li>
+                  
+    <li class="none">
+                    <a href="apidocs/index.html">JavaDocs</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="surefire-report.html">Maven Surefire Report</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="pmd.html">PMD Report</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="jxr.html">Source Xref</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="taglist.html">Tag List</a>
+          </li>
+              </ul>
+        </li>
+          </ul>
+                                           <a href="http://maven.apache.org/" title="Built by Maven" class="poweredBy">
+            <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
+          </a>
+                       
+  
+
+  
+    
+            
+  
+    
+        </div>
+    </div>
+    <div id="bodyColumn">
+      <div id="contentBox">
+        <div class="section"><h2>FindBugs Bug Detector Report</h2>
+<p>The following document contains the results of <a href="http://findbugs.sourceforge.net" class="externalLink">FindBugs Report</a>
+</p>
+<p>FindBugs Version is <i>1.2.1</i>
+</p>
+<p>Threshold is <i>Low</i>
+</p>
+<p>Effort is <i>Default</i>
+</p>
+</div>
+<div class="section"><h2>Summary</h2>
+<table class="bodyTable"><tr class="a"><th>Classes</th>
+<th>Bugs</th>
+<th>Errors</th>
+<th>Missing Classes</th>
+</tr>
+<tr class="b"><td>390</td>
+<td>43</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</table>
+</div>
+<div class="section"><h2>Files</h2>
+<table class="bodyTable"><tr class="a"><th>Class</th>
+<th>Bugs</th>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.component.image.color.RandomListColorGenerator">com.octo.captcha.component.image.color.RandomListColorGenerator</a>
+</td>
+<td>1</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.component.image.deformation.ImageDeformationByFilters">com.octo.captcha.component.image.deformation.ImageDeformationByFilters</a>
+</td>
+<td>1</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.component.image.fontgenerator.RandomFontGenerator">com.octo.captcha.component.image.fontgenerator.RandomFontGenerator</a>
+</td>
+<td>4</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.component.image.textpaster.ChangeableAttributedString">com.octo.captcha.component.image.textpaster.ChangeableAttributedString</a>
+</td>
+<td>5</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.component.image.textpaster.DecoratedRandomTextPaster">com.octo.captcha.component.image.textpaster.DecoratedRandomTextPaster</a>
+</td>
+<td>2</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.component.image.textpaster.RandomTextPaster">com.octo.captcha.component.image.textpaster.RandomTextPaster</a>
+</td>
+<td>1</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.component.image.utils.ToolkitFactory">com.octo.captcha.component.image.utils.ToolkitFactory</a>
+</td>
+<td>1</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.component.image.wordtoimage.DeformedComposedWordToImage">com.octo.captcha.component.image.wordtoimage.DeformedComposedWordToImage</a>
+</td>
+<td>3</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.component.image.wordtoimage.FilteredComposedWordToImage">com.octo.captcha.component.image.wordtoimage.FilteredComposedWordToImage</a>
+</td>
+<td>3</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.engine.GenericCaptchaEngine">com.octo.captcha.engine.GenericCaptchaEngine</a>
+</td>
+<td>3</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.engine.image.utils.ImageCaptchaToJPEG">com.octo.captcha.engine.image.utils.ImageCaptchaToJPEG</a>
+</td>
+<td>2</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.engine.image.utils.ImageToFile">com.octo.captcha.engine.image.utils.ImageToFile</a>
+</td>
+<td>1</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.engine.sound.utils.SoundToFile">com.octo.captcha.engine.sound.utils.SoundToFile</a>
+</td>
+<td>1</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.image.fisheye.FishEye">com.octo.captcha.image.fisheye.FishEye</a>
+</td>
+<td>1</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.image.gimpy.Gimpy">com.octo.captcha.image.gimpy.Gimpy</a>
+</td>
+<td>2</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.module.config.CaptchaModuleConfig">com.octo.captcha.module.config.CaptchaModuleConfig</a>
+</td>
+<td>1</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.module.taglib.MessageTag">com.octo.captcha.module.taglib.MessageTag</a>
+</td>
+<td>1</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.module.taglib.QuestionTag">com.octo.captcha.module.taglib.QuestionTag</a>
+</td>
+<td>1</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.service.AbstractManageableCaptchaService">com.octo.captcha.service.AbstractManageableCaptchaService</a>
+</td>
+<td>3</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.service.captchastore.CaptchaAndLocale">com.octo.captcha.service.captchastore.CaptchaAndLocale</a>
+</td>
+<td>1</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.service.image.DefaultManageableImageCaptchaService">com.octo.captcha.service.image.DefaultManageableImageCaptchaService</a>
+</td>
+<td>1</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.sound.gimpy.GimpySound">com.octo.captcha.sound.gimpy.GimpySound</a>
+</td>
+<td>1</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.sound.speller.SpellerSound">com.octo.captcha.sound.speller.SpellerSound</a>
+</td>
+<td>1</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.sound.spellfind.SpellFindCaptcha">com.octo.captcha.sound.spellfind.SpellFindCaptcha</a>
+</td>
+<td>1</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.text.math.MathCaptcha">com.octo.captcha.text.math.MathCaptcha</a>
+</td>
+<td>1</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.component.image.color.RandomListColorGenerator"></a>
+<div class="section"><h3>com.octo.captcha.component.image.color.RandomListColorGenerator</h3>
+<table class="bodyTable"><tr class="a"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td>com.octo.captcha.component.image.color.RandomListColorGenerator.RandomListColorGenerator(Color[]) may expose internal representation by storing an externally mutable object into RandomListColorGenerator.colorsList</td>
+<td>MALICIOUS_CODE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#EI_EXPOSE_REP2" class="externalLink">EI_EXPOSE_REP2</a>
+</td>
+<td>51</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.component.image.deformation.ImageDeformationByFilters"></a>
+<div class="section"><h3>com.octo.captcha.component.image.deformation.ImageDeformationByFilters</h3>
+<table class="bodyTable"><tr class="a"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td>com.octo.captcha.component.image.deformation.ImageDeformationByFilters.ImageDeformationByFilters(ImageFilter[]) may expose internal representation by storing an externally mutable object into ImageDeformationByFilters.filters</td>
+<td>MALICIOUS_CODE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#EI_EXPOSE_REP2" class="externalLink">EI_EXPOSE_REP2</a>
+</td>
+<td>36</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.component.image.fontgenerator.RandomFontGenerator"></a>
+<div class="section"><h3>com.octo.captcha.component.image.fontgenerator.RandomFontGenerator</h3>
+<table class="bodyTable"><tr class="a"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td>com.octo.captcha.component.image.fontgenerator.RandomFontGenerator.getBadFontNamePrefixes() may expose internal representation by returning RandomFontGenerator.badFontNamePrefixes</td>
+<td>MALICIOUS_CODE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#EI_EXPOSE_REP" class="externalLink">EI_EXPOSE_REP</a>
+</td>
+<td>235</td>
+</tr>
+<tr class="a"><td>com.octo.captcha.component.image.fontgenerator.RandomFontGenerator.RandomFontGenerator(Integer, Integer, String[]) may expose internal representation by storing an externally mutable object into RandomFontGenerator.badFontNamePrefixes</td>
+<td>MALICIOUS_CODE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#EI_EXPOSE_REP2" class="externalLink">EI_EXPOSE_REP2</a>
+</td>
+<td>74</td>
+</tr>
+<tr class="b"><td>com.octo.captcha.component.image.fontgenerator.RandomFontGenerator.setBadFontNamePrefixes(String[]) may expose internal representation by storing an externally mutable object into RandomFontGenerator.badFontNamePrefixes</td>
+<td>MALICIOUS_CODE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#EI_EXPOSE_REP2" class="externalLink">EI_EXPOSE_REP2</a>
+</td>
+<td>242</td>
+</tr>
+<tr class="a"><td>com.octo.captcha.component.image.fontgenerator.RandomFontGenerator.defaultBadFontNamePrefixes should be both final and package protected</td>
+<td>MALICIOUS_CODE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#MS_FINAL_PKGPROTECT" class="externalLink">MS_FINAL_PKGPROTECT</a>
+</td>
+<td>42</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.component.image.textpaster.ChangeableAttributedString"></a>
+<div class="section"><h3>com.octo.captcha.component.image.textpaster.ChangeableAttributedString</h3>
+<table class="bodyTable"><tr class="b"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="a"><td>Dead store to arbitraryHorizontalPadding in com.octo.captcha.component.image.textpaster.ChangeableAttributedString.moveToRandomSpot(BufferedImage, Point2D)</td>
+<td>STYLE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#DLS_DEAD_LOCAL_STORE" class="externalLink">DLS_DEAD_LOCAL_STORE</a>
+</td>
+<td>134</td>
+</tr>
+<tr class="b"><td>Dead store to arbitraryVerticalPadding in com.octo.captcha.component.image.textpaster.ChangeableAttributedString.moveToRandomSpot(BufferedImage, Point2D)</td>
+<td>STYLE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#DLS_DEAD_LOCAL_STORE" class="externalLink">DLS_DEAD_LOCAL_STORE</a>
+</td>
+<td>135</td>
+</tr>
+<tr class="a"><td>Dead store to RS in com.octo.captcha.component.image.textpaster.ChangeableAttributedString.toString()</td>
+<td>STYLE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#DLS_DEAD_LOCAL_STORE" class="externalLink">DLS_DEAD_LOCAL_STORE</a>
+</td>
+<td>312</td>
+</tr>
+<tr class="b"><td>Primitive boxed just to call toString in com.octo.captcha.component.image.textpaster.ChangeableAttributedString.ChangeableAttributedString(Graphics2D, AttributedString, int)</td>
+<td>PERFORMANCE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#DM_BOXED_PRIMITIVE_TOSTRING" class="externalLink">DM_BOXED_PRIMITIVE_TOSTRING</a>
+</td>
+<td>83</td>
+</tr>
+<tr class="a"><td>int division result cast to double or float in com.octo.captcha.component.image.textpaster.ChangeableAttributedString.moveToRandomSpot(BufferedImage, Point2D)</td>
+<td>STYLE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#ICAST_IDIV_CAST_TO_DOUBLE" class="externalLink">ICAST_IDIV_CAST_TO_DOUBLE</a>
+</td>
+<td>158</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.component.image.textpaster.DecoratedRandomTextPaster"></a>
+<div class="section"><h3>com.octo.captcha.component.image.textpaster.DecoratedRandomTextPaster</h3>
+<table class="bodyTable"><tr class="b"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="a"><td>com.octo.captcha.component.image.textpaster.DecoratedRandomTextPaster.DecoratedRandomTextPaster(Integer, Integer, ColorGenerator, Boolean, TextDecorator[]) may expose internal representation by storing an externally mutable object into DecoratedRandomTextPaster.decorators</td>
+<td>MALICIOUS_CODE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#EI_EXPOSE_REP2" class="externalLink">EI_EXPOSE_REP2</a>
+</td>
+<td>50</td>
+</tr>
+<tr class="b"><td>com.octo.captcha.component.image.textpaster.DecoratedRandomTextPaster.DecoratedRandomTextPaster(Integer, Integer, ColorGenerator, TextDecorator[]) may expose internal representation by storing an externally mutable object into DecoratedRandomTextPaster.decorators</td>
+<td>MALICIOUS_CODE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#EI_EXPOSE_REP2" class="externalLink">EI_EXPOSE_REP2</a>
+</td>
+<td>37</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.component.image.textpaster.RandomTextPaster"></a>
+<div class="section"><h3>com.octo.captcha.component.image.textpaster.RandomTextPaster</h3>
+<table class="bodyTable"><tr class="a"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td>com.octo.captcha.component.image.textpaster.RandomTextPaster.RandomTextPaster(Integer, Integer, Color[]) may expose internal representation by storing an externally mutable object into RandomTextPaster.textColors</td>
+<td>MALICIOUS_CODE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#EI_EXPOSE_REP2" class="externalLink">EI_EXPOSE_REP2</a>
+</td>
+<td>37</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.component.image.utils.ToolkitFactory"></a>
+<div class="section"><h3>com.octo.captcha.component.image.utils.ToolkitFactory</h3>
+<table class="bodyTable"><tr class="a"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td>com.octo.captcha.component.image.utils.ToolkitFactory.TOOLKIT_IMPL isn't final but should be</td>
+<td>MALICIOUS_CODE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#MS_SHOULD_BE_FINAL" class="externalLink">MS_SHOULD_BE_FINAL</a>
+</td>
+<td>30</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.component.image.wordtoimage.DeformedComposedWordToImage"></a>
+<div class="section"><h3>com.octo.captcha.component.image.wordtoimage.DeformedComposedWordToImage</h3>
+<table class="bodyTable"><tr class="a"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td>com.octo.captcha.component.image.wordtoimage.DeformedComposedWordToImage.DeformedComposedWordToImage(FontGenerator, BackgroundGenerator, TextPaster, ImageDeformation[], ImageDeformation[], ImageDeformation[]) may expose internal representation by storing an externally mutable object into DeformedComposedWordToImage.backgroundDeformation</td>
+<td>MALICIOUS_CODE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#EI_EXPOSE_REP2" class="externalLink">EI_EXPOSE_REP2</a>
+</td>
+<td>77</td>
+</tr>
+<tr class="a"><td>com.octo.captcha.component.image.wordtoimage.DeformedComposedWordToImage.DeformedComposedWordToImage(FontGenerator, BackgroundGenerator, TextPaster, ImageDeformation[], ImageDeformation[], ImageDeformation[]) may expose internal representation by storing an externally mutable object into DeformedComposedWordToImage.finalDeformation</td>
+<td>MALICIOUS_CODE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#EI_EXPOSE_REP2" class="externalLink">EI_EXPOSE_REP2</a>
+</td>
+<td>79</td>
+</tr>
+<tr class="b"><td>com.octo.captcha.component.image.wordtoimage.DeformedComposedWordToImage.DeformedComposedWordToImage(FontGenerator, BackgroundGenerator, TextPaster, ImageDeformation[], ImageDeformation[], ImageDeformation[]) may expose internal representation by storing an externally mutable object into DeformedComposedWordToImage.textDeformation</td>
+<td>MALICIOUS_CODE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#EI_EXPOSE_REP2" class="externalLink">EI_EXPOSE_REP2</a>
+</td>
+<td>78</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.component.image.wordtoimage.FilteredComposedWordToImage"></a>
+<div class="section"><h3>com.octo.captcha.component.image.wordtoimage.FilteredComposedWordToImage</h3>
+<table class="bodyTable"><tr class="a"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td>com.octo.captcha.component.image.wordtoimage.FilteredComposedWordToImage.FilteredComposedWordToImage(FontGenerator, BackgroundGenerator, TextPaster, ImageFilter[], ImageFilter[], ImageFilter[]) may expose internal representation by storing an externally mutable object into FilteredComposedWordToImage.backgroundFilters</td>
+<td>MALICIOUS_CODE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#EI_EXPOSE_REP2" class="externalLink">EI_EXPOSE_REP2</a>
+</td>
+<td>57</td>
+</tr>
+<tr class="a"><td>com.octo.captcha.component.image.wordtoimage.FilteredComposedWordToImage.FilteredComposedWordToImage(FontGenerator, BackgroundGenerator, TextPaster, ImageFilter[], ImageFilter[], ImageFilter[]) may expose internal representation by storing an externally mutable object into FilteredComposedWordToImage.finalFilters</td>
+<td>MALICIOUS_CODE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#EI_EXPOSE_REP2" class="externalLink">EI_EXPOSE_REP2</a>
+</td>
+<td>59</td>
+</tr>
+<tr class="b"><td>com.octo.captcha.component.image.wordtoimage.FilteredComposedWordToImage.FilteredComposedWordToImage(FontGenerator, BackgroundGenerator, TextPaster, ImageFilter[], ImageFilter[], ImageFilter[]) may expose internal representation by storing an externally mutable object into FilteredComposedWordToImage.textFilters</td>
+<td>MALICIOUS_CODE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#EI_EXPOSE_REP2" class="externalLink">EI_EXPOSE_REP2</a>
+</td>
+<td>58</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.engine.GenericCaptchaEngine"></a>
+<div class="section"><h3>com.octo.captcha.engine.GenericCaptchaEngine</h3>
+<table class="bodyTable"><tr class="a"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td>com.octo.captcha.engine.GenericCaptchaEngine.getFactories() may expose internal representation by returning GenericCaptchaEngine.factories</td>
+<td>MALICIOUS_CODE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#EI_EXPOSE_REP" class="externalLink">EI_EXPOSE_REP</a>
+</td>
+<td>54</td>
+</tr>
+<tr class="a"><td>com.octo.captcha.engine.GenericCaptchaEngine.GenericCaptchaEngine(CaptchaFactory[]) may expose internal representation by storing an externally mutable object into GenericCaptchaEngine.factories</td>
+<td>MALICIOUS_CODE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#EI_EXPOSE_REP2" class="externalLink">EI_EXPOSE_REP2</a>
+</td>
+<td>45</td>
+</tr>
+<tr class="b"><td>com.octo.captcha.engine.GenericCaptchaEngine.setFactories(CaptchaFactory[]) may expose internal representation by storing an externally mutable object into GenericCaptchaEngine.factories</td>
+<td>MALICIOUS_CODE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#EI_EXPOSE_REP2" class="externalLink">EI_EXPOSE_REP2</a>
+</td>
+<td>61</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.engine.image.utils.ImageCaptchaToJPEG"></a>
+<div class="section"><h3>com.octo.captcha.engine.image.utils.ImageCaptchaToJPEG</h3>
+<table class="bodyTable"><tr class="a"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td>Exception is caught when Exception is not thrown in com.octo.captcha.engine.image.utils.ImageCaptchaToJPEG.main(String[])</td>
+<td>STYLE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#REC_CATCH_EXCEPTION" class="externalLink">REC_CATCH_EXCEPTION</a>
+</td>
+<td>93</td>
+</tr>
+<tr class="a"><td>Exception is caught when Exception is not thrown in com.octo.captcha.engine.image.utils.ImageCaptchaToJPEG.main(String[])</td>
+<td>STYLE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#REC_CATCH_EXCEPTION" class="externalLink">REC_CATCH_EXCEPTION</a>
+</td>
+<td>87</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.engine.image.utils.ImageToFile"></a>
+<div class="section"><h3>com.octo.captcha.engine.image.utils.ImageToFile</h3>
+<table class="bodyTable"><tr class="b"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="a"><td>com.octo.captcha.engine.image.utils.ImageToFile.serialize(BufferedImage, File) ignores return value of java.io.File.createNewFile()</td>
+<td>CORRECTNESS</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#RV_RETURN_VALUE_IGNORED" class="externalLink">RV_RETURN_VALUE_IGNORED</a>
+</td>
+<td>44</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.engine.sound.utils.SoundToFile"></a>
+<div class="section"><h3>com.octo.captcha.engine.sound.utils.SoundToFile</h3>
+<table class="bodyTable"><tr class="b"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="a"><td>com.octo.captcha.engine.sound.utils.SoundToFile.serialize(AudioInputStream, File) ignores return value of java.io.File.createNewFile()</td>
+<td>CORRECTNESS</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#RV_RETURN_VALUE_IGNORED" class="externalLink">RV_RETURN_VALUE_IGNORED</a>
+</td>
+<td>41</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.image.fisheye.FishEye"></a>
+<div class="section"><h3>com.octo.captcha.image.fisheye.FishEye</h3>
+<table class="bodyTable"><tr class="b"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="a"><td>com.octo.captcha.image.fisheye.FishEye is Serializable; consider declaring a serialVersionUID</td>
+<td>BAD_PRACTICE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#SE_NO_SERIALVERSIONID" class="externalLink">SE_NO_SERIALVERSIONID</a>
+</td>
+<td>38-89</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.image.gimpy.Gimpy"></a>
+<div class="section"><h3>com.octo.captcha.image.gimpy.Gimpy</h3>
+<table class="bodyTable"><tr class="b"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="a"><td>Class com.octo.captcha.image.gimpy.Gimpy implements same interface as superclass</td>
+<td>STYLE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#RI_REDUNDANT_INTERFACES" class="externalLink">RI_REDUNDANT_INTERFACES</a>
+</td>
+<td>27-48</td>
+</tr>
+<tr class="b"><td>com.octo.captcha.image.gimpy.Gimpy is Serializable; consider declaring a serialVersionUID</td>
+<td>BAD_PRACTICE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#SE_NO_SERIALVERSIONID" class="externalLink">SE_NO_SERIALVERSIONID</a>
+</td>
+<td>27-48</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.module.config.CaptchaModuleConfig"></a>
+<div class="section"><h3>com.octo.captcha.module.config.CaptchaModuleConfig</h3>
+<table class="bodyTable"><tr class="a"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td>Redundant nullcheck of ?, which is known to be non-null in com.octo.captcha.module.config.CaptchaModuleConfig.validate()</td>
+<td>STYLE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" class="externalLink">RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE</a>
+</td>
+<td>184</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.module.taglib.MessageTag"></a>
+<div class="section"><h3>com.octo.captcha.module.taglib.MessageTag</h3>
+<table class="bodyTable"><tr class="a"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td>Class com.octo.captcha.module.taglib.MessageTag implements same interface as superclass</td>
+<td>STYLE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#RI_REDUNDANT_INTERFACES" class="externalLink">RI_REDUNDANT_INTERFACES</a>
+</td>
+<td>20-41</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.module.taglib.QuestionTag"></a>
+<div class="section"><h3>com.octo.captcha.module.taglib.QuestionTag</h3>
+<table class="bodyTable"><tr class="a"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td>Class com.octo.captcha.module.taglib.QuestionTag implements same interface as superclass</td>
+<td>STYLE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#RI_REDUNDANT_INTERFACES" class="externalLink">RI_REDUNDANT_INTERFACES</a>
+</td>
+<td>17-28</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.service.AbstractManageableCaptchaService"></a>
+<div class="section"><h3>com.octo.captcha.service.AbstractManageableCaptchaService</h3>
+<table class="bodyTable"><tr class="a"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td>Result of integer multiplication cast to long in com.octo.captcha.service.AbstractManageableCaptchaService.garbageCollectCaptchaStore(Iterator)</td>
+<td>STYLE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#ICAST_INTEGER_MULTIPLY_CAST_TO_LONG" class="externalLink">ICAST_INTEGER_MULTIPLY_CAST_TO_LONG</a>
+</td>
+<td>248</td>
+</tr>
+<tr class="a"><td>Result of integer multiplication cast to long in com.octo.captcha.service.AbstractManageableCaptchaService.getGarbageCollectableCaptchaIds(long)</td>
+<td>STYLE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#ICAST_INTEGER_MULTIPLY_CAST_TO_LONG" class="externalLink">ICAST_INTEGER_MULTIPLY_CAST_TO_LONG</a>
+</td>
+<td>289</td>
+</tr>
+<tr class="b"><td>Class com.octo.captcha.service.AbstractManageableCaptchaService implements same interface as superclass</td>
+<td>STYLE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#RI_REDUNDANT_INTERFACES" class="externalLink">RI_REDUNDANT_INTERFACES</a>
+</td>
+<td>33-376</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.service.captchastore.CaptchaAndLocale"></a>
+<div class="section"><h3>com.octo.captcha.service.captchastore.CaptchaAndLocale</h3>
+<table class="bodyTable"><tr class="a"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td>com.octo.captcha.service.captchastore.CaptchaAndLocale is Serializable; consider declaring a serialVersionUID</td>
+<td>BAD_PRACTICE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#SE_NO_SERIALVERSIONID" class="externalLink">SE_NO_SERIALVERSIONID</a>
+</td>
+<td>24-47</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.service.image.DefaultManageableImageCaptchaService"></a>
+<div class="section"><h3>com.octo.captcha.service.image.DefaultManageableImageCaptchaService</h3>
+<table class="bodyTable"><tr class="a"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td>Class com.octo.captcha.service.image.DefaultManageableImageCaptchaService implements same interface as superclass</td>
+<td>STYLE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#RI_REDUNDANT_INTERFACES" class="externalLink">RI_REDUNDANT_INTERFACES</a>
+</td>
+<td>32-55</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.sound.gimpy.GimpySound"></a>
+<div class="section"><h3>com.octo.captcha.sound.gimpy.GimpySound</h3>
+<table class="bodyTable"><tr class="a"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td>com.octo.captcha.sound.gimpy.GimpySound is Serializable; consider declaring a serialVersionUID</td>
+<td>BAD_PRACTICE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#SE_NO_SERIALVERSIONID" class="externalLink">SE_NO_SERIALVERSIONID</a>
+</td>
+<td>26-39</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.sound.speller.SpellerSound"></a>
+<div class="section"><h3>com.octo.captcha.sound.speller.SpellerSound</h3>
+<table class="bodyTable"><tr class="a"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td>com.octo.captcha.sound.speller.SpellerSound is Serializable; consider declaring a serialVersionUID</td>
+<td>BAD_PRACTICE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#SE_NO_SERIALVERSIONID" class="externalLink">SE_NO_SERIALVERSIONID</a>
+</td>
+<td>25-38</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.sound.spellfind.SpellFindCaptcha"></a>
+<div class="section"><h3>com.octo.captcha.sound.spellfind.SpellFindCaptcha</h3>
+<table class="bodyTable"><tr class="a"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td>com.octo.captcha.sound.spellfind.SpellFindCaptcha is Serializable; consider declaring a serialVersionUID</td>
+<td>BAD_PRACTICE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#SE_NO_SERIALVERSIONID" class="externalLink">SE_NO_SERIALVERSIONID</a>
+</td>
+<td>25-38</td>
+</tr>
+</table>
+</div>
+<a name="com.octo.captcha.text.math.MathCaptcha"></a>
+<div class="section"><h3>com.octo.captcha.text.math.MathCaptcha</h3>
+<table class="bodyTable"><tr class="a"><th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td>com.octo.captcha.text.math.MathCaptcha is Serializable; consider declaring a serialVersionUID</td>
+<td>BAD_PRACTICE</td>
+<td><a href="http://findbugs.sourceforge.net/bugDescriptions.html#SE_NO_SERIALVERSIONID" class="externalLink">SE_NO_SERIALVERSIONID</a>
+</td>
+<td>22-43</td>
+</tr>
+</table>
+</div>
+
+      </div>
+    </div>
+    <div class="clear">
+      <hr/>
+    </div>
+    <div id="footer">
+      <div class="xright">&#169;  
+          2003-2009
+    
+          JCaptcha corp.
+          
+  
+
+  
+    
+            
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>

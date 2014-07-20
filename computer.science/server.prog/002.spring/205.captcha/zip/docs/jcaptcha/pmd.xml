@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.2.2" timestamp="2009-02-03T22:51:50.125">
+<file name="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\fontgenerator\RandomFontGenerator.java">
+<violation beginline="185" endline="189" begincolumn="25" endcolumn="25" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="com.octo.captcha.component.image.fontgenerator" class="RandomFontGenerator" method="checkFontNamePrefix" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="3">
+These nested if statements could be combined
+</violation>
+</file>
+</pmd>

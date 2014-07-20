@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+<duplication lines="37" tokens="128">
+<file line="358" path="E:\dev\projects\jcaptcha\extension-buffered-engine\src\main\java\com\octo\captcha\engine\bufferedengine\buffer\DatabaseCaptchaBuffer.java"/>
+<file line="408" path="E:\dev\projects\jcaptcha\extension-buffered-engine\src\main\java\com\octo\captcha\engine\bufferedengine\buffer\DatabaseCaptchaBuffer.java"/>
+<codefragment>
+<![CDATA[
+            ps.setString(1, locale.toString());
+            rs = ps.executeQuery();
+            if (rs.next()) {
+                size = rs.getInt(1);
+            }
+            rs.close();
+            con.commit();
+        } catch (SQLException e) {
+            log.error(DB_ERROR, e);
+            if (rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException ex) {
+                }
+            }
+        } finally {
+            if (ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                }
+            }
+            if (con != null) {
+                try {
+                    con.close();
+                } catch (SQLException e) {
+                }
+            }
+        }
+
+        return size;
+    }
+
+    /**
+     * Release all the ressources and close the buffer.
+     */
+    public void dispose() {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="28" tokens="101">
+<file line="361" path="E:\dev\projects\jcaptcha\extension-buffered-engine\src\main\java\com\octo\captcha\engine\bufferedengine\buffer\DatabaseCaptchaBuffer.java"/>
+<file line="501" path="E:\dev\projects\jcaptcha\extension-buffered-engine\src\main\java\com\octo\captcha\engine\bufferedengine\buffer\DatabaseCaptchaBuffer.java"/>
+<codefragment>
+<![CDATA[
+                set.add(rs.getString(1));
+            }
+            rs.close();
+            con.commit();
+        } catch (SQLException e) {
+            log.error(DB_ERROR, e);
+            if (rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException ex) {
+                }
+            }
+        } finally {
+            if (ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                }
+            }
+            if (con != null) {
+                try {
+                    con.close();
+                } catch (SQLException e) {
+                }
+            }
+        }
+
+        return set;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="25" tokens="95">
+<file line="363" path="E:\dev\projects\jcaptcha\extension-buffered-engine\src\main\java\com\octo\captcha\engine\bufferedengine\buffer\DatabaseCaptchaBuffer.java"/>
+<file line="458" path="E:\dev\projects\jcaptcha\extension-buffered-engine\src\main\java\com\octo\captcha\engine\bufferedengine\buffer\DatabaseCaptchaBuffer.java"/>
+<codefragment>
+<![CDATA[
+            ps.execute();
+            con.commit();
+
+        } catch (SQLException e) {
+            log.error(DB_ERROR, e);
+            if (rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException ex) {
+                }
+            }
+        } finally {
+            if (ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                }
+            }
+            if (con != null) {
+                try {
+                    con.close();
+                } catch (SQLException e) {
+                }
+            }
+        }
+]]>
+</codefragment>
+</duplication>
+<duplication lines="25" tokens="90">
+<file line="201" path="E:\dev\projects\jcaptcha\extension-buffered-engine\src\main\java\com\octo\captcha\engine\bufferedengine\buffer\DatabaseCaptchaBuffer.java"/>
+<file line="364" path="E:\dev\projects\jcaptcha\extension-buffered-engine\src\main\java\com\octo\captcha\engine\bufferedengine\buffer\DatabaseCaptchaBuffer.java"/>
+<codefragment>
+<![CDATA[
+            con.commit();
+        } catch (SQLException e) {
+            log.error(DB_ERROR, e);
+            if (rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException ex) {
+                }
+            }
+        } finally {
+            if (ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                }
+            }
+            if (con != null) {
+                try {
+                    con.close();
+                } catch (SQLException e) {
+                }
+            }
+        }
+
+        return size;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="14" tokens="60">
+<file line="32" path="E:\dev\projects\jcaptcha\extension-buffered-engine\src\test\java\com\octo\captcha\engine\bufferedengine\QuartzBufferedEngineContainerTest.java"/>
+<file line="54" path="E:\dev\projects\jcaptcha\extension-buffered-engine\src\test\java\com\octo\captcha\engine\bufferedengine\QuartzBufferedEngineContainerTest.java"/>
+<codefragment>
+<![CDATA[
+        Resource ressource = new ClassPathResource("testNoBufferedCaptchaQuartzBufferedEngine.xml");
+        ConfigurableBeanFactory bf = new XmlBeanFactory(ressource);
+        BufferedEngineContainer container = (BufferedEngineContainer) bf.getBean("container");
+        Object scheduler = bf.getBean("quartz");
+        Thread.sleep(10000);
+        for (int i = 0; i < 100; i++) {
+            assertNotNull(container.getNextCaptcha());
+        }
+    }
+
+    /**
+     * @see com.octo.captcha.engine.bufferedengine.BufferedEngineContainerTestAbstract#getEngine()
+     */
+    public BufferedEngineContainer getEngine() {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="5" tokens="56">
+<file line="68" path="E:\dev\projects\jcaptcha\extension-buffered-engine\src\test\java\com\octo\captcha\engine\bufferedengine\MockedBufferedEngineContainerTest.java"/>
+<file line="73" path="E:\dev\projects\jcaptcha\extension-buffered-engine\src\test\java\com\octo\captcha\engine\bufferedengine\MockedBufferedEngineContainerTest.java"/>
+<codefragment>
+<![CDATA[
+        assertEquals("volatil buffer should be updated", maxVolatil, engine.getVolatileBuffer().size());
+        engine.swapCaptchasFromPersistentToVolatileMemory();
+        assertEquals("volatil buffer should be filled", maxVolatil, engine.getVolatileBuffer().size());
+        assertEquals("pers buffer should be updated", feed - 2 * swap - 2, engine.getPersistentBuffer().size());
+        engine.feedPersistentBuffer();
+]]>
+</codefragment>
+</duplication>
+<duplication lines="5" tokens="53">
+<file line="55" path="E:\dev\projects\jcaptcha\extension-buffered-engine\src\test\java\com\octo\captcha\engine\bufferedengine\ContainerConfigurationTest.java"/>
+<file line="66" path="E:\dev\projects\jcaptcha\extension-buffered-engine\src\test\java\com\octo\captcha\engine\bufferedengine\ContainerConfigurationTest.java"/>
+<codefragment>
+<![CDATA[
+    public void testServeOnlyConfiguredLocales() {
+        HashMap localRatio2 = new HashMap(3);
+        localRatio2.put(Locale.GERMAN, new Double(0.1));
+        localRatio2.put(Locale.CHINA, new Double(0.8));
+        localRatio2.put(Locale.ITALY, new Double(0.1));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="15" tokens="51">
+<file line="209" path="E:\dev\projects\jcaptcha\extension-buffered-engine\src\main\java\com\octo\captcha\engine\bufferedengine\buffer\DatabaseCaptchaBuffer.java"/>
+<file line="67" path="E:\dev\projects\jcaptcha\extension-buffered-engine\src\test\java\com\octo\captcha\engine\bufferedengine\buffer\DatabaseCaptchaBufferTest.java"/>
+<codefragment>
+<![CDATA[
+            }
+        } finally {
+            if (ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                }
+            }
+            if (con != null) {
+                try {
+                    con.close();
+                } catch (SQLException e) {
+                }
+            }
+        }
+]]>
+</codefragment>
+</duplication>
+<duplication lines="8" tokens="50">
+<file line="128" path="E:\dev\projects\jcaptcha\extension-buffered-engine\src\test\java\com\octo\captcha\engine\bufferedengine\buffer\CaptchaBufferTestAbstract.java"/>
+<file line="156" path="E:\dev\projects\jcaptcha\extension-buffered-engine\src\test\java\com\octo\captcha\engine\bufferedengine\buffer\CaptchaBufferTestAbstract.java"/>
+<codefragment>
+<![CDATA[
+    public void testPutAllCaptchaCollectionLocale() {
+        buffer = getBuffer();
+        ArrayList listToStore = new ArrayList(SIZE);
+
+        for (int i = 0; i < SIZE; ++i) {
+            listToStore.add(engine.getNextCaptcha());
+        }
+        buffer.putAllCaptcha(listToStore, Locale.GERMAN);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="14" tokens="50">
+<file line="211" path="E:\dev\projects\jcaptcha\extension-buffered-engine\src\main\java\com\octo\captcha\engine\bufferedengine\buffer\DatabaseCaptchaBuffer.java"/>
+<file line="326" path="E:\dev\projects\jcaptcha\extension-buffered-engine\src\main\java\com\octo\captcha\engine\bufferedengine\buffer\DatabaseCaptchaBuffer.java"/>
+<codefragment>
+<![CDATA[
+            } finally {
+                if (ps != null) {
+                    try {
+                        ps.close();
+                    } catch (SQLException e) {
+                    }
+                }
+                if (con != null) {
+                    try {
+                        con.close();
+                    } catch (SQLException e) {
+                    }
+                }
+            }
+]]>
+</codefragment>
+</duplication>
+</pmd-cpd>

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><title>JCaptchaImageController xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../../../../../../../../apidocs/com/octo/captcha/module/acegi/JCaptchaImageController.html">View Javadoc</a></div><pre>
+
+<a name="1" href="#1">1</a>   <em class="comment">/*</em>
+<a name="2" href="#2">2</a>   <em class="comment"> * JCaptcha, the open source java framework for captcha definition and integration</em>
+<a name="3" href="#3">3</a>   <em class="comment"> * Copyright (c)  2007 jcaptcha.net. All Rights Reserved.</em>
+<a name="4" href="#4">4</a>   <em class="comment"> * See the LICENSE.txt file distributed with this package.</em>
+<a name="5" href="#5">5</a>   <em class="comment"> */</em>
+<a name="6" href="#6">6</a>   
+<a name="7" href="#7">7</a>   <strong>package</strong> com.octo.captcha.module.acegi;
+<a name="8" href="#8">8</a>   
+<a name="9" href="#9">9</a>   <strong>import</strong> com.octo.captcha.service.image.ImageCaptchaService;
+<a name="10" href="#10">10</a>  <strong>import</strong> com.sun.image.codec.jpeg.JPEGCodec;
+<a name="11" href="#11">11</a>  <strong>import</strong> com.sun.image.codec.jpeg.JPEGImageEncoder;
+<a name="12" href="#12">12</a>  <strong>import</strong> org.springframework.beans.factory.InitializingBean;
+<a name="13" href="#13">13</a>  <strong>import</strong> org.springframework.web.servlet.ModelAndView;
+<a name="14" href="#14">14</a>  <strong>import</strong> org.springframework.web.servlet.mvc.Controller;
+<a name="15" href="#15">15</a>  
+<a name="16" href="#16">16</a>  <strong>import</strong> javax.servlet.ServletOutputStream;
+<a name="17" href="#17">17</a>  <strong>import</strong> javax.servlet.http.HttpServletRequest;
+<a name="18" href="#18">18</a>  <strong>import</strong> javax.servlet.http.HttpServletResponse;
+<a name="19" href="#19">19</a>  <strong>import</strong> java.awt.image.BufferedImage;
+<a name="20" href="#20">20</a>  <strong>import</strong> java.io.ByteArrayOutputStream;
+<a name="21" href="#21">21</a>  
+<a name="22" href="#22">22</a>  <em>/**<em>*</em></em>
+<a name="23" href="#23">23</a>  <em> * &lt;p>&lt;ul>&lt;li>&lt;/li>&lt;/ul>&lt;/p></em>
+<a name="24" href="#24">24</a>  <em> *</em>
+<a name="25" href="#25">25</a>  <em> * @author &lt;a href="<a href="mailto:marc.antoine.garrigue@gmail.com" target="alexandria_uri">mailto:marc.antoine.garrigue@gmail.com</a>">Marc-Antoine Garrigue&lt;/a></em>
+<a name="26" href="#26">26</a>  <em> * @version $Id: JCaptchaImageController.java 466 2007-12-27 09:38:03Z antoineveret $</em>
+<a name="27" href="#27">27</a>  <em> */</em>
+<a name="28" href="#28">28</a>  <strong>public</strong> <strong>class</strong> <a href="../../../../../com/octo/captcha/module/acegi/JCaptchaImageController.html">JCaptchaImageController</a> implements Controller, InitializingBean {
+<a name="29" href="#29">29</a>      <strong>private</strong> ImageCaptchaService imageCaptchaService;
+<a name="30" href="#30">30</a>  
+<a name="31" href="#31">31</a>      <strong>public</strong> ImageCaptchaService getImageCaptchaService() {
+<a name="32" href="#32">32</a>          <strong>return</strong> imageCaptchaService;
+<a name="33" href="#33">33</a>      }
+<a name="34" href="#34">34</a>  
+<a name="35" href="#35">35</a>      <strong>public</strong> <strong>void</strong> setImageCaptchaService(ImageCaptchaService imageCaptchaService) {
+<a name="36" href="#36">36</a>          <strong>this</strong>.imageCaptchaService = imageCaptchaService;
+<a name="37" href="#37">37</a>      }
+<a name="38" href="#38">38</a>  
+<a name="39" href="#39">39</a>      <strong>public</strong> <strong>void</strong> afterPropertiesSet() throws Exception {
+<a name="40" href="#40">40</a>  
+<a name="41" href="#41">41</a>          <strong>if</strong> (imageCaptchaService == <strong>null</strong>) {
+<a name="42" href="#42">42</a>              <strong>throw</strong> <strong>new</strong> RuntimeException(<span class="string">"Required imageCaptchaService not set"</span>);
+<a name="43" href="#43">43</a>          }
+<a name="44" href="#44">44</a>      }
+<a name="45" href="#45">45</a>  
+<a name="46" href="#46">46</a>      <strong>public</strong> ModelAndView handleRequest(HttpServletRequest httpServletRequest, HttpServletResponse response) throws Exception {
+<a name="47" href="#47">47</a>          byte[] captchaChallengeAsJpeg = <strong>null</strong>;
+<a name="48" href="#48">48</a>  
+<a name="49" href="#49">49</a>          ByteArrayOutputStream jpegOutputStream = <strong>new</strong> ByteArrayOutputStream();
+<a name="50" href="#50">50</a>  
+<a name="51" href="#51">51</a>          <em class="comment">//get the session id that will identify the generated captcha.</em>
+<a name="52" href="#52">52</a>          <em class="comment">//the same id must be used to validate the response, the session id is a good candidate!</em>
+<a name="53" href="#53">53</a>          String captchaId = httpServletRequest.getSession().getId();
+<a name="54" href="#54">54</a>  
+<a name="55" href="#55">55</a>          BufferedImage challenge =
+<a name="56" href="#56">56</a>                  imageCaptchaService.getImageChallengeForID(captchaId, httpServletRequest.getLocale());
+<a name="57" href="#57">57</a>  
+<a name="58" href="#58">58</a>          JPEGImageEncoder jpegEncoder =
+<a name="59" href="#59">59</a>                  JPEGCodec.createJPEGEncoder(jpegOutputStream);
+<a name="60" href="#60">60</a>          jpegEncoder.encode(challenge);
+<a name="61" href="#61">61</a>  
+<a name="62" href="#62">62</a>          captchaChallengeAsJpeg = jpegOutputStream.toByteArray();
+<a name="63" href="#63">63</a>  
+<a name="64" href="#64">64</a>          <em class="comment">// configure cache  directives</em>
+<a name="65" href="#65">65</a>          response.setHeader(<span class="string">"Cache-Control"</span>, <span class="string">"no-store"</span>);
+<a name="66" href="#66">66</a>          response.setHeader(<span class="string">"Pragma"</span>, <span class="string">"no-cache"</span>);
+<a name="67" href="#67">67</a>          response.setDateHeader(<span class="string">"Expires"</span>, 0);
+<a name="68" href="#68">68</a>          <em class="comment">//flush content in the response</em>
+<a name="69" href="#69">69</a>          response.setContentType(<span class="string">"image/jpeg"</span>);
+<a name="70" href="#70">70</a>          ServletOutputStream responseOutputStream =
+<a name="71" href="#71">71</a>                  response.getOutputStream();
+<a name="72" href="#72">72</a>          responseOutputStream.write(captchaChallengeAsJpeg);
+<a name="73" href="#73">73</a>          responseOutputStream.flush();
+<a name="74" href="#74">74</a>          responseOutputStream.close();
+<a name="75" href="#75">75</a>          <strong>return</strong> <strong>null</strong>;
+<a name="76" href="#76">76</a>      }
+<a name="77" href="#77">77</a>  
+<a name="78" href="#78">78</a>  
+<a name="79" href="#79">79</a>  }
+</pre>
+<hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
+</html>
+

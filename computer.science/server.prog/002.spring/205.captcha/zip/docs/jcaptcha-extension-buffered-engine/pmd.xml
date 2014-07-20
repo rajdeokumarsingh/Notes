@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.2.2" timestamp="2009-02-03T23:06:22.046">
+<file name="E:\dev\projects\jcaptcha\extension-buffered-engine\src\main\java\com\octo\captcha\engine\bufferedengine\QuartzBufferedEngineContainer.java">
+<violation beginline="39" endline="39" begincolumn="30" endcolumn="32" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.octo.captcha.engine.bufferedengine" class="QuartzBufferedEngineContainer" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'log'.
+</violation>
+</file>
+<file name="E:\dev\projects\jcaptcha\extension-buffered-engine\src\main\java\com\octo\captcha\engine\bufferedengine\buffer\DatabaseCaptchaBuffer.java">
+<violation beginline="149" endline="149" begincolumn="13" endcolumn="13" rule="EmptyStatementNotInLoop" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine.buffer" class="DatabaseCaptchaBuffer" method="removeCaptcha" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyStatementNotInLoop" priority="3">
+An empty statement (semicolon) not part of a loop
+</violation>
+<violation beginline="207" endline="208" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine.buffer" class="DatabaseCaptchaBuffer" method="removeCaptcha" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="217" endline="218" begincolumn="17" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine.buffer" class="DatabaseCaptchaBuffer" method="removeCaptcha" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="224" endline="225" begincolumn="17" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine.buffer" class="DatabaseCaptchaBuffer" method="removeCaptcha" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="330" endline="331" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine.buffer" class="DatabaseCaptchaBuffer" method="putAllCaptcha" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="336" endline="337" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine.buffer" class="DatabaseCaptchaBuffer" method="putAllCaptcha" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="370" endline="371" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine.buffer" class="DatabaseCaptchaBuffer" method="size" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="377" endline="378" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine.buffer" class="DatabaseCaptchaBuffer" method="size" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="383" endline="384" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine.buffer" class="DatabaseCaptchaBuffer" method="size" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="420" endline="421" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine.buffer" class="DatabaseCaptchaBuffer" method="size" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="427" endline="428" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine.buffer" class="DatabaseCaptchaBuffer" method="size" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="433" endline="434" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine.buffer" class="DatabaseCaptchaBuffer" method="size" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="466" endline="467" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine.buffer" class="DatabaseCaptchaBuffer" method="clear" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="473" endline="474" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine.buffer" class="DatabaseCaptchaBuffer" method="clear" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="479" endline="480" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine.buffer" class="DatabaseCaptchaBuffer" method="clear" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="510" endline="511" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine.buffer" class="DatabaseCaptchaBuffer" method="getLocales" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="517" endline="518" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine.buffer" class="DatabaseCaptchaBuffer" method="getLocales" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="523" endline="524" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine.buffer" class="DatabaseCaptchaBuffer" method="getLocales" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+</file>
+<file name="E:\dev\projects\jcaptcha\extension-buffered-engine\src\test\java\com\octo\captcha\engine\bufferedengine\ContainerConfigurationTest.java">
+<violation beginline="75" endline="77" begincolumn="11" endcolumn="9" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine" class="ContainerConfigurationTest" method="testServeOnlyConfiguredLocales" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="83" endline="85" begincolumn="11" endcolumn="9" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine" class="ContainerConfigurationTest" method="testServeOnlyConfiguredLocales" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="94" endline="96" begincolumn="11" endcolumn="9" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine" class="ContainerConfigurationTest" method="testServeOnlyConfiguredLocales" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+</file>
+<file name="E:\dev\projects\jcaptcha\extension-buffered-engine\src\test\java\com\octo\captcha\engine\bufferedengine\QuartzBufferedEngineContainerTest.java">
+<violation beginline="25" endline="25" begincolumn="30" endcolumn="32" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.octo.captcha.engine.bufferedengine" class="QuartzBufferedEngineContainerTest" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'log'.
+</violation>
+<violation beginline="35" endline="35" begincolumn="16" endcolumn="24" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="com.octo.captcha.engine.bufferedengine" class="QuartzBufferedEngineContainerTest" method="testBasic" variable="scheduler" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'scheduler'.
+</violation>
+<violation beginline="45" endline="45" begincolumn="33" endcolumn="41" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="com.octo.captcha.engine.bufferedengine" class="QuartzBufferedEngineContainerTest" method="testMockFillingDisk" variable="container" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'container'.
+</violation>
+<violation beginline="46" endline="46" begincolumn="16" endcolumn="24" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="com.octo.captcha.engine.bufferedengine" class="QuartzBufferedEngineContainerTest" method="testMockFillingDisk" variable="scheduler" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'scheduler'.
+</violation>
+<violation beginline="57" endline="57" begincolumn="16" endcolumn="24" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="com.octo.captcha.engine.bufferedengine" class="QuartzBufferedEngineContainerTest" method="testNoBufferdedCaptcha" variable="scheduler" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'scheduler'.
+</violation>
+<violation beginline="71" endline="71" begincolumn="16" endcolumn="24" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="com.octo.captcha.engine.bufferedengine" class="QuartzBufferedEngineContainerTest" method="getEngine" variable="scheduler" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'scheduler'.
+</violation>
+</file>
+<file name="E:\dev\projects\jcaptcha\extension-buffered-engine\src\test\java\com\octo\captcha\engine\bufferedengine\buffer\CaptchaBufferTestAbstract.java">
+<violation beginline="50" endline="52" begincolumn="15" endcolumn="5" rule="UselessOverridingMethod" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine.buffer" class="CaptchaBufferTestAbstract" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#UselessOverridingMethod" priority="3">
+Overriding method merely calls super
+</violation>
+</file>
+<file name="E:\dev\projects\jcaptcha\extension-buffered-engine\src\test\java\com\octo\captcha\engine\bufferedengine\buffer\DatabaseCaptchaBufferTest.java">
+<violation beginline="52" endline="53" begincolumn="15" endcolumn="13" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine.buffer" class="DatabaseCaptchaBufferTest" method="getBuffer" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="64" endline="65" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine.buffer" class="DatabaseCaptchaBufferTest" method="getBuffer" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="72" endline="73" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine.buffer" class="DatabaseCaptchaBufferTest" method="getBuffer" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="78" endline="79" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine.buffer" class="DatabaseCaptchaBufferTest" method="getBuffer" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+</file>
+<file name="E:\dev\projects\jcaptcha\extension-buffered-engine\src\test\java\com\octo\captcha\engine\bufferedengine\buffer\MemoryCaptchaBufferTest.java">
+<violation beginline="33" endline="34" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.bufferedengine.buffer" class="MemoryCaptchaBufferTest" method="testRemoveEmptyBuffer" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+</file>
+<file name="E:\dev\projects\jcaptcha\extension-buffered-engine\src\test\java\com\octo\captcha\engine\bufferedengine\manager\QuartzBufferedEngineManagerTest.java">
+<violation beginline="35" endline="35" begincolumn="30" endcolumn="32" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.octo.captcha.engine.bufferedengine.manager" class="QuartzBufferedEngineManagerTest" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'log'.
+</violation>
+</file>
+</pmd>

@@ -1,0 +1,1311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+<duplication lines="56" tokens="443">
+<file line="44" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\FilteredGimpyEngine.java"/>
+<file line="41" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\FilteredListGimpyEngine.java"/>
+<codefragment>
+<![CDATA[
+    protected void buildInitialFactories() {
+
+        //      build filters
+        com.jhlabs.image.EmbossFilter emboss = new com.jhlabs.image.EmbossFilter();
+        com.jhlabs.image.SphereFilter sphere = new com.jhlabs.image.SphereFilter();
+        com.jhlabs.image.RippleFilter rippleBack = new com.jhlabs.image.RippleFilter();
+        com.jhlabs.image.RippleFilter ripple = new com.jhlabs.image.RippleFilter();
+        com.jhlabs.image.TwirlFilter twirl = new com.jhlabs.image.TwirlFilter();
+        com.jhlabs.image.WaterFilter water = new com.jhlabs.image.WaterFilter();
+        com.jhlabs.image.WeaveFilter weaves = new com.jhlabs.image.WeaveFilter();
+        com.jhlabs.image.CrystalizeFilter crystal = new com.jhlabs.image.CrystalizeFilter();
+
+        emboss.setBumpHeight(2.0f);
+
+        ripple.setWaveType(com.jhlabs.image.RippleFilter.NOISE);
+        ripple.setXAmplitude(10);
+        ripple.setYAmplitude(3);
+        ripple.setXWavelength(20);
+        ripple.setYWavelength(10);
+        ripple.setEdgeAction(com.jhlabs.image.TransformFilter.CLAMP);
+
+        rippleBack.setWaveType(com.jhlabs.image.RippleFilter.NOISE);
+        rippleBack.setXAmplitude(5);
+        rippleBack.setYAmplitude(5);
+        rippleBack.setXWavelength(10);
+        rippleBack.setYWavelength(10);
+        rippleBack.setEdgeAction(com.jhlabs.image.TransformFilter.CLAMP);
+
+        water.setAmplitude(5);
+        water.setAntialias(true);
+        water.setWavelength(10);
+
+        twirl.setAngle(3 / 360);
+
+        sphere.setRefractionIndex(1);
+
+        weaves.setUseImageColors(true);
+
+        crystal.setScale(0.5f);
+        crystal.setGridType(com.jhlabs.image.CrystalizeFilter.RANDOM);
+        crystal.setFadeEdges(false);
+        crystal.setEdgeThickness(0.2f);
+        crystal.setRandomness(0.1f);
+
+        TextPaster paster =
+                new RandomTextPaster(new Integer(8), new Integer(10),
+                        Color.gray);
+        BackgroundGenerator back =
+                new FunkyBackgroundGenerator(new Integer(200),
+                        new Integer(100));
+        FontGenerator font =
+                new RandomFontGenerator(new Integer(25), new Integer(35));
+        com.octo.captcha.component.word.wordgenerator.WordGenerator words =
+                new com.octo.captcha.component.word.wordgenerator.DictionaryWordGenerator(
+                        new com.octo.captcha.component.word.FileDictionary(
+                                "toddlist"));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="26" tokens="254">
+<file line="143" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\textpaster\LineRandomTextPaster.java"/>
+<file line="84" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\textpaster\textdecorator\LineTextDecorator.java"/>
+<codefragment>
+<![CDATA[
+            Rectangle2D bounds = newAttrString.getBounds(j).getFrame();
+            for (int i = 0; i < numberOfLinesPerGlyph.intValue(); i++) {
+                // double circleSize = circleMaxSize * (1 + myRandom.nextDouble()) / 2;
+                double circlex = bounds.getMinX() + bounds.getWidth() * 0.7 * myRandom.nextDouble();
+                double circley = bounds.getMinY() - bounds.getHeight() * 0.5
+                        * myRandom.nextDouble();
+                //width
+                double width = 5 + myRandom.nextInt(25);
+                //length
+                double length = 5 + myRandom.nextInt(25);
+                //get an angle between 0 and PI
+                double angle = Math.PI * myRandom.nextDouble();
+                //rotation and translation where the character is
+                AffineTransform transformation = new AffineTransform(Math.cos(angle), -Math
+                        .sin(angle), Math.sin(angle), Math.cos(angle), circlex, circley);
+
+                QuadCurve2D q = new QuadCurve2D.Double();
+                // start poitn , control point, finhsi point
+                q.setCurve(0, 0, (length / 2.0) + 15.0 * myRandom.nextDouble()
+                        * (myRandom.nextBoolean() ? -1 : 1), (width / 2.0) + 15.0
+                        * myRandom.nextDouble() * (myRandom.nextBoolean() ? -1 : 1), length, width);
+                g2.setStroke(new BasicStroke(2 + myRandom.nextInt(4)));
+                g2.draw(transformation.createTransformedShape(q));
+            }
+        }
+        g2.setComposite(oldComp);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="36" tokens="234">
+<file line="98" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\FilteredGimpyEngine.java"/>
+<file line="99" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\FilteredListGimpyEngine.java"/>
+<codefragment>
+<![CDATA[
+        com.octo.captcha.image.ImageCaptchaFactory[] factories = new com.octo.captcha.image.ImageCaptchaFactory[3];
+        com.octo.captcha.component.image.wordtoimage.WordToImage word2image =
+                new com.octo.captcha.component.image.wordtoimage.FilteredComposedWordToImage(
+                        font,
+                        back,
+                        paster,
+                        new ImageFilter[]{water},
+                        new ImageFilter[]{emboss},
+                        new ImageFilter[]{ripple});
+        factories[0] =
+                new com.octo.captcha.image.gimpy.GimpyFactory(words,
+                        word2image);
+        //select filters for 2
+        word2image =
+                new com.octo.captcha.component.image.wordtoimage.FilteredComposedWordToImage(
+                        font,
+                        back,
+                        paster,
+                        new ImageFilter[]{rippleBack},
+                        new ImageFilter[]{crystal},
+                        new ImageFilter[]{ripple});
+        factories[1] =
+                new com.octo.captcha.image.gimpy.GimpyFactory(words,
+                        word2image);
+        //select filters for 3
+        word2image =
+                new com.octo.captcha.component.image.wordtoimage.FilteredComposedWordToImage(
+                        font,
+                        back,
+                        paster,
+                        new ImageFilter[]{rippleBack},
+                        new ImageFilter[]{},
+                        new ImageFilter[]{weaves});
+        factories[2] =
+                new com.octo.captcha.image.gimpy.GimpyFactory(words,
+                        word2image);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="18" tokens="195">
+<file line="39" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\FilteredBaffleListGimpyEngine.java"/>
+<file line="39" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\FilteredListGimpyEngine.java"/>
+<codefragment>
+<![CDATA[
+        extends com.octo.captcha.engine.image.ListImageCaptchaEngine {
+
+    protected void buildInitialFactories() {
+
+        //      build filters
+        com.jhlabs.image.EmbossFilter emboss = new com.jhlabs.image.EmbossFilter();
+        com.jhlabs.image.SphereFilter sphere = new com.jhlabs.image.SphereFilter();
+        com.jhlabs.image.RippleFilter rippleBack = new com.jhlabs.image.RippleFilter();
+        com.jhlabs.image.RippleFilter ripple = new com.jhlabs.image.RippleFilter();
+        com.jhlabs.image.TwirlFilter twirl = new com.jhlabs.image.TwirlFilter();
+        com.jhlabs.image.WaterFilter water = new com.jhlabs.image.WaterFilter();
+        com.jhlabs.image.WeaveFilter weaves = new com.jhlabs.image.WeaveFilter();
+        com.jhlabs.image.CrystalizeFilter crystal = new com.jhlabs.image.CrystalizeFilter();
+
+        emboss.setBumpHeight(2.0f);
+
+        ripple.setWaveType(com.jhlabs.image.RippleFilter.NOISE);
+        ripple.setXAmplitude(10);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="27" tokens="192">
+<file line="47" path="E:\dev\projects\jcaptcha\jcaptcha\src\test\java\com\octo\captcha\component\image\wordtoimage\DeformedComposedWordToImageTest.java"/>
+<file line="45" path="E:\dev\projects\jcaptcha\jcaptcha\src\test\java\com\octo\captcha\component\image\wordtoimage\FilteredComposedWordToImageTest.java"/>
+<codefragment>
+<![CDATA[
+    private Integer minAcceptedWordLength = new Integer(1);
+    private Integer maxAcceptedWordLength = new Integer(10);
+    private Integer imageHeight = new Integer(100);
+    private Integer imageWidth = new Integer(100);
+    private Integer minFontSize = new Integer(10);
+    private Integer maxFontSize = new Integer(10);
+
+    public void setUp() {
+
+        BackgroundGenerator background = new GradientBackgroundGenerator(this.imageHeight, this.imageWidth, Color.black, Color.white);
+        FontGenerator fontGenerator = new RandomFontGenerator(this.minFontSize, this.maxFontSize);
+        TextPaster textPaster = new SimpleTextPaster(this.minAcceptedWordLength, this.maxAcceptedWordLength, Color.blue);
+
+        ImageFilter backFilter = new ReplicateScaleFilter(background.getImageWidth(),
+                background.getImageHeight());
+
+        ImageFilter textFilter = new ReplicateScaleFilter(background.getImageWidth(),
+                background.getImageHeight());
+
+        ImageFilter finalFilter = new ReplicateScaleFilter(background.getImageWidth(),
+                background.getImageHeight());
+
+        ImageFilter[] backFilters = {backFilter};
+
+        ImageFilter[] textFilters = {textFilter};
+
+        ImageFilter[] finalFilters = {finalFilter};
+]]>
+</codefragment>
+</duplication>
+<duplication lines="31" tokens="181">
+<file line="59" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\DeformedBaffleListGimpyEngine.java"/>
+<file line="53" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\FilteredBaffleListGimpyEngine.java"/>
+<codefragment>
+<![CDATA[
+        emboss.setBumpHeight(2.0f);
+
+        ripple.setWaveType(com.jhlabs.image.RippleFilter.NOISE);
+        ripple.setXAmplitude(3);
+        ripple.setYAmplitude(3);
+        ripple.setXWavelength(20);
+        ripple.setYWavelength(10);
+        ripple.setEdgeAction(com.jhlabs.image.TransformFilter.CLAMP);
+
+        rippleBack.setWaveType(com.jhlabs.image.RippleFilter.NOISE);
+        rippleBack.setXAmplitude(5);
+        rippleBack.setYAmplitude(5);
+        rippleBack.setXWavelength(10);
+        rippleBack.setYWavelength(10);
+        rippleBack.setEdgeAction(com.jhlabs.image.TransformFilter.CLAMP);
+
+        water.setAmplitude(1);
+        water.setAntialias(true);
+        water.setWavelength(20);
+
+        twirl.setAngle(3 / 360);
+
+        sphere.setRefractionIndex(1);
+
+        weaves.setUseImageColors(true);
+
+        crystal.setScale(0.5f);
+        crystal.setGridType(com.jhlabs.image.CrystalizeFilter.RANDOM);
+        crystal.setFadeEdges(false);
+        crystal.setEdgeThickness(0.2f);
+        crystal.setRandomness(0.1f);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="15" tokens="177">
+<file line="41" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\FilteredBaffleListGimpyEngine.java"/>
+<file line="44" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\FilteredGimpyEngine.java"/>
+<codefragment>
+<![CDATA[
+    static {
+        //build filters
+        com.jhlabs.image.EmbossFilter emboss = new com.jhlabs.image.EmbossFilter();
+        com.jhlabs.image.SphereFilter sphere = new com.jhlabs.image.SphereFilter();
+        com.jhlabs.image.RippleFilter rippleBack = new com.jhlabs.image.RippleFilter();
+        com.jhlabs.image.RippleFilter ripple = new com.jhlabs.image.RippleFilter();
+        com.jhlabs.image.TwirlFilter twirl = new com.jhlabs.image.TwirlFilter();
+        com.jhlabs.image.WaterFilter water = new com.jhlabs.image.WaterFilter();
+        com.jhlabs.image.WeaveFilter weaves = new com.jhlabs.image.WeaveFilter();
+        com.jhlabs.image.CrystalizeFilter crystal = new com.jhlabs.image.CrystalizeFilter();
+
+        emboss.setBumpHeight(2.0f);
+
+        ripple.setWaveType(com.jhlabs.image.RippleFilter.NOISE);
+        ripple.setXAmplitude(10);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="160">
+<file line="46" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\DeformedBaffleListGimpyEngine.java"/>
+<file line="39" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\FilteredBaffleListGimpyEngine.java"/>
+<codefragment>
+<![CDATA[
+        extends com.octo.captcha.engine.image.ListImageCaptchaEngine {
+
+    protected void buildInitialFactories() {
+
+        //build filters
+        com.jhlabs.image.EmbossFilter emboss = new com.jhlabs.image.EmbossFilter();
+        com.jhlabs.image.SphereFilter sphere = new com.jhlabs.image.SphereFilter();
+        com.jhlabs.image.RippleFilter rippleBack = new com.jhlabs.image.RippleFilter();
+        com.jhlabs.image.RippleFilter ripple = new com.jhlabs.image.RippleFilter();
+        com.jhlabs.image.TwirlFilter twirl = new com.jhlabs.image.TwirlFilter();
+        com.jhlabs.image.WaterFilter water = new com.jhlabs.image.WaterFilter();
+        com.jhlabs.image.WeaveFilter weaves = new com.jhlabs.image.WeaveFilter();
+        com.jhlabs.image.CrystalizeFilter crystal = new com.jhlabs.image.CrystalizeFilter();
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="153">
+<file line="48" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\DeformedBaffleListGimpyEngine.java"/>
+<file line="44" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\FilteredGimpyEngine.java"/>
+<codefragment>
+<![CDATA[
+    static {
+        //build filters
+        com.jhlabs.image.EmbossFilter emboss = new com.jhlabs.image.EmbossFilter();
+        com.jhlabs.image.SphereFilter sphere = new com.jhlabs.image.SphereFilter();
+        com.jhlabs.image.RippleFilter rippleBack = new com.jhlabs.image.RippleFilter();
+        com.jhlabs.image.RippleFilter ripple = new com.jhlabs.image.RippleFilter();
+        com.jhlabs.image.TwirlFilter twirl = new com.jhlabs.image.TwirlFilter();
+        com.jhlabs.image.WaterFilter water = new com.jhlabs.image.WaterFilter();
+        com.jhlabs.image.WeaveFilter weaves = new com.jhlabs.image.WeaveFilter();
+        com.jhlabs.image.CrystalizeFilter crystal = new com.jhlabs.image.CrystalizeFilter();
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="129">
+<file line="155" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\textpaster\BaffleRandomTextPaster.java"/>
+<file line="98" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\textpaster\textdecorator\BaffleTextDecorator.java"/>
+<codefragment>
+<![CDATA[
+            Rectangle2D bounds = newAttrString.getBounds(j).getFrame();
+            double circleMaxSize = (double) bounds.getWidth() / 2;
+            for (int i = 0; i < numberOfHolesPerGlyph.intValue(); i++) {
+                double circleSize = circleMaxSize * (1 + myRandom.nextDouble()) / 2;
+                double circlex = bounds.getMinX() + bounds.getWidth() * circleXRatio
+                        * myRandom.nextDouble();
+                double circley = bounds.getMinY() - bounds.getHeight() * circleYRatio
+                        * myRandom.nextDouble();
+                Ellipse2D circle = new Ellipse2D.Double(circlex, circley, circleSize, circleSize);
+                g2.fill(circle);
+            }
+        }
+        g2.setColor(oldColor);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="26" tokens="120">
+<file line="26" path="E:\dev\projects\jcaptcha\jcaptcha\src\test\java\com\octo\captcha\sound\speller\SpellerSoundFactoryTest.java"/>
+<file line="28" path="E:\dev\projects\jcaptcha\jcaptcha\src\test\java\com\octo\captcha\sound\spellfind\SpellFindCaptchaFactoryTest.java"/>
+<codefragment>
+<![CDATA[
+public class SpellFindCaptchaFactoryTest extends TestCase {
+
+    public void testSpellerSoundFactory() throws Exception {
+        try {
+            new SpellerSoundFactory(null, null, null);
+            fail("Test is not implemented");
+        } catch (CaptchaException e) {
+            assertNotNull(e.getMessage());
+        }
+        try {
+            new SpellerSoundFactory(new RandomWordGenerator("a"), null, null);
+            fail("Test is not implemented");
+        } catch (CaptchaException e) {
+            assertNotNull(e.getMessage());
+        }
+
+        try {
+            new SpellerSoundFactory(null, new WordToSoundMock(), null);
+            fail("Test is not implemented");
+        } catch (CaptchaException e) {
+            assertNotNull(e.getMessage());
+        }
+    }
+
+
+    public void testGetSoundCaptcha() throws Exception {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="37" tokens="117">
+<file line="115" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\textpaster\BaffleRandomTextPaster.java"/>
+<file line="52" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\textpaster\DecoratedRandomTextPaster.java"/>
+<codefragment>
+<![CDATA[
+    }
+
+    /**
+     * Pastes the attributed string on the backround image and return the final image. Implementation must take into
+     * account the fact that the text must be readable by human and non by programs
+     *
+     * @return the final image
+     *
+     * @throws com.octo.captcha.CaptchaException
+     *          if any exception accurs during paste routine.
+     */
+    public BufferedImage pasteText(BufferedImage background, AttributedString attributedWord)
+            throws CaptchaException {
+        BufferedImage out = copyBackground(background);
+        Graphics2D g2 = pasteBackgroundAndSetTextColor(out, background);
+        g2.setRenderingHint(RenderingHints.KEY_FRACTIONALMETRICS,
+                RenderingHints.VALUE_FRACTIONALMETRICS_ON);
+        g2.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
+        g2.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING,
+                RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
+        // this attribute doesn't do anything in JDK 1.4, but maybe it will in JDK 1.5
+        // attributedString.addAttribute(TextAttribute.WIDTH, TextAttribute.WIDTH_EXTENDED);
+
+        // convert string into a series of glyphs we can work with
+        ChangeableAttributedString newAttrString = new ChangeableAttributedString(g2,
+                attributedWord, kerning);
+
+        // space out the glyphs with a little kerning
+        newAttrString.useMinimumSpacing(kerning);
+        // shift string to a random spot in the output imge
+        newAttrString.moveToRandomSpot(background);
+        // now draw each glyph at the appropriate spot on th eimage.
+        if (isManageColorPerGlyph()) {
+            newAttrString.drawString(g2, getColorGenerator());
+        } else {
+            newAttrString.drawString(g2);
+        }
+]]>
+</codefragment>
+</duplication>
+<duplication lines="23" tokens="112">
+<file line="27" path="E:\dev\projects\jcaptcha\jcaptcha\src\test\java\com\octo\captcha\sound\speller\SoundSpellerFactoryTest.java"/>
+<file line="26" path="E:\dev\projects\jcaptcha\jcaptcha\src\test\java\com\octo\captcha\sound\speller\SpellerSoundFactoryTest.java"/>
+<codefragment>
+<![CDATA[
+public class SpellerSoundFactoryTest extends TestCase {
+
+      public void testSpellerSoundFactory() throws Exception {
+          try {
+              new SpellerSoundFactory(null, null, null);
+              fail("Test is not implemented");
+          } catch (CaptchaException e) {
+              assertNotNull(e.getMessage());
+          }
+          try {
+              new SpellerSoundFactory(new RandomWordGenerator("a"), null, null);
+              fail("Test is not implemented");
+          } catch (CaptchaException e) {
+              assertNotNull(e.getMessage());
+          }
+
+          try {
+              new SpellerSoundFactory(null, new WordToSoundMock(), null);
+              fail("Test is not implemented");
+          } catch (CaptchaException e) {
+              assertNotNull(e.getMessage());
+          }
+      }
+]]>
+</codefragment>
+</duplication>
+<duplication lines="33" tokens="98">
+<file line="114" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\textpaster\BaffleRandomTextPaster.java"/>
+<file line="103" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\textpaster\LineRandomTextPaster.java"/>
+<codefragment>
+<![CDATA[
+                : colorGenerator;
+    }
+
+    /**
+     * Pastes the attributed string on the backround image and return the final image. Implementation must take into
+     * account the fact that the text must be readable by human and non by programs
+     *
+     * @return the final image
+     *
+     * @throws CaptchaException if any exception accurs during paste routine.
+     */
+    public BufferedImage pasteText(BufferedImage background, AttributedString attributedWord)
+            throws CaptchaException {
+        BufferedImage out = copyBackground(background);
+        Graphics2D g2 = pasteBackgroundAndSetTextColor(out, background);
+        g2.setRenderingHint(RenderingHints.KEY_FRACTIONALMETRICS,
+                RenderingHints.VALUE_FRACTIONALMETRICS_ON);
+        g2.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
+        g2.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING,
+                RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
+        // this attribute doesn't do anything in JDK 1.4, but maybe it will in JDK 1.5
+        // attributedString.addAttribute(TextAttribute.WIDTH, TextAttribute.WIDTH_EXTENDED);
+
+        // convert string into a series of glyphs we can work with
+        ChangeableAttributedString newAttrString = new ChangeableAttributedString(g2,
+                attributedWord, kerning);
+
+        // space out the glyphs with a little kerning
+        newAttrString.useMinimumSpacing(kerning);
+        // shift string to a random spot in the output imge
+        newAttrString.moveToRandomSpot(background);
+        // now draw each glyph at the appropriate spot on th eimage.
+        if (isManageColorPerGlyph())
+]]>
+</codefragment>
+</duplication>
+<duplication lines="32" tokens="96">
+<file line="52" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\textpaster\DecoratedRandomTextPaster.java"/>
+<file line="104" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\textpaster\LineRandomTextPaster.java"/>
+<codefragment>
+<![CDATA[
+    }
+
+    /**
+     * Pastes the attributed string on the backround image and return the final image. Implementation must take into
+     * account the fact that the text must be readable by human and non by programs
+     *
+     * @return the final image
+     *
+     * @throws CaptchaException if any exception accurs during paste routine.
+     */
+    public BufferedImage pasteText(BufferedImage background, AttributedString attributedWord)
+            throws CaptchaException {
+        BufferedImage out = copyBackground(background);
+        Graphics2D g2 = pasteBackgroundAndSetTextColor(out, background);
+        g2.setRenderingHint(RenderingHints.KEY_FRACTIONALMETRICS,
+                RenderingHints.VALUE_FRACTIONALMETRICS_ON);
+        g2.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
+        g2.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING,
+                RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
+        // this attribute doesn't do anything in JDK 1.4, but maybe it will in JDK 1.5
+        // attributedString.addAttribute(TextAttribute.WIDTH, TextAttribute.WIDTH_EXTENDED);
+
+        // convert string into a series of glyphs we can work with
+        ChangeableAttributedString newAttrString = new ChangeableAttributedString(g2,
+                attributedWord, kerning);
+
+        // space out the glyphs with a little kerning
+        newAttrString.useMinimumSpacing(kerning);
+        // shift string to a random spot in the output imge
+        newAttrString.moveToRandomSpot(background);
+        // now draw each glyph at the appropriate spot on th eimage.
+        if (isManageColorPerGlyph())
+]]>
+</codefragment>
+</duplication>
+<duplication lines="9" tokens="94">
+<file line="38" path="E:\dev\projects\jcaptcha\jcaptcha\src\test\java\com\octo\captcha\component\image\color\RandomRangeColorGeneratorTest.java"/>
+<file line="56" path="E:\dev\projects\jcaptcha\jcaptcha\src\test\java\com\octo\captcha\component\image\color\RandomRangeColorGeneratorTest.java"/>
+<codefragment>
+<![CDATA[
+        colorGenerator = new RandomRangeColorGenerator(redRange, greenRange, blueRange);
+
+        // due to the random factor, test is repeated several times
+        for (int i = 0; i < 100; i++) {
+            Color color = colorGenerator.getNextColor();
+
+            assertTrue(color.getRed() >= redRange[0] && color.getRed() <= redRange[1]);
+            assertTrue(color.getGreen() >= greenRange[0] && color.getGreen() <= greenRange[1]);
+            assertTrue(color.getBlue() >= blueRange[0] && color.getBlue() <= blueRange[1]);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="18" tokens="93">
+<file line="85" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\sound\gimpy\GimpySoundFactory.java"/>
+<file line="94" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\sound\speller\SpellerSoundFactory.java"/>
+<codefragment>
+<![CDATA[
+        SoundCaptcha soundCaptcha = new SpellerSound(getQuestion(locale), sound, word);
+        return soundCaptcha;
+    }
+
+    protected String getQuestion(Locale locale) {
+        return CaptchaQuestionHelper.getQuestion(locale, BUNDLE_QUESTION_KEY);
+    }
+
+    protected Integer getRandomLength() {
+        Integer wordLength;
+        int range = getWordToSound().getMaxAcceptedWordLength()
+                - getWordToSound().getMinAcceptedWordLength();
+        int randomRange = range != 0 ? myRandom.nextInt(range + 1) : 0;
+        wordLength = new Integer(randomRange + getWordToSound().getMinAcceptedWordLength());
+        return wordLength;
+    }
+
+}
+]]>
+</codefragment>
+</duplication>
+<duplication lines="25" tokens="93">
+<file line="80" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\wordtoimage\DeformedComposedWordToImage.java"/>
+<file line="60" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\wordtoimage\FilteredComposedWordToImage.java"/>
+<codefragment>
+<![CDATA[
+    }
+
+    /**
+     * Creates an image of the provided String This method is a skeleton for creation algorithm. it proceeds as folows :
+     * <ul> <li>Checks the word length</li> <li>Creates an java.text.AttributedString from the word</li> <li>Create an
+     * image for the background using the abstact method getBackround</li> <li>Apply background filters</li> <li>Apply
+     * font to the AttributedString using the abstract method getFont</li> <li>Create a transparent backround </li>
+     * <li>Put the text on the transparent backround using the abstact method pasteText</li> <li>Apply the text filters
+     * </li> <li>Paste the transparent image using an alpha composite</li> <li>Apply the final filters </li> <li>Return
+     * the newly created image</li> </ul>
+     *
+     * @return an image representation of the word
+     *
+     * @throws CaptchaException if word is invalid or if image generation fails.
+     */
+    public BufferedImage getImage(String word) throws CaptchaException {
+        BufferedImage background = getBackround();
+        AttributedString aword = getAttributedString(word, checkWordLength(word));
+        //copy background
+        BufferedImage out = new BufferedImage(background.getWidth(), background.getHeight(),
+                background.getType());
+        Graphics2D g2 = (Graphics2D) out.getGraphics();
+        //paste background
+        g2.drawImage(background, 0, 0, out.getWidth(), out.getHeight(), null);
+        g2.dispose();
+]]>
+</codefragment>
+</duplication>
+<duplication lines="23" tokens="90">
+<file line="65" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\module\web\image\ImageToJpegHelper.java"/>
+<file line="55" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\module\web\sound\SoundToWavHelper.java"/>
+<codefragment>
+<![CDATA[
+            AudioSystem.write(stream, AudioFileFormat.Type.WAVE, wavOutputStream);
+            //AudioSystem.(pAudioInputStream, AudioFileFormat.Type.WAVE, pFile);
+
+        }
+        catch (IllegalArgumentException e) {
+            //    log a security warning and return a 404...
+            if (log != null && log.isWarnEnabled()) {
+                log.warn("There was a try from " + theRequest.getRemoteAddr()
+                        + " to render an captcha with invalid ID :'" + id + "' or with a too long one");
+                theResponse.sendError(HttpServletResponse.SC_NOT_FOUND);
+                return;
+            }
+        }
+        catch (CaptchaServiceException e) {
+            // log and return a 404 instead of an image...
+            if (log != null && log.isWarnEnabled()) {
+                log.warn(
+
+                        "Error trying to generate a captcha and " + "render its challenge as JPEG", e);
+            }
+            theResponse.sendError(HttpServletResponse.SC_NOT_FOUND);
+            return;
+        }
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="90">
+<file line="108" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\DeformedBaffleListGimpyEngine.java"/>
+<file line="86" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\FilteredBaffleListGimpyEngine.java"/>
+<codefragment>
+<![CDATA[
+        com.octo.captcha.component.word.wordgenerator.WordGenerator words = new com.octo.captcha.component.word.wordgenerator.DictionaryWordGenerator(
+                new com.octo.captcha.component.word.FileDictionary(
+                        "toddlist"));
+        //wordtoimage components
+        TextPaster paster = new BaffleRandomTextPaster(new Integer(6), new Integer(
+                8), Color.black, new Integer(3),
+                Color.white);
+        BackgroundGenerator back = new UniColorBackgroundGenerator(
+                new Integer(200), new Integer(100), Color.white);
+        //BackgroundGenerator back = new FunkyBackgroundGenerator(new Integer(200), new Integer(100));
+        FontGenerator font = new TwistedAndShearedRandomFontGenerator(
+                new Integer(30), new Integer(40));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="19" tokens="89">
+<file line="24" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\sound\gimpy\GimpySound.java"/>
+<file line="23" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\sound\speller\SpellerSound.java"/>
+<file line="23" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\sound\spellfind\SpellFindCaptcha.java"/>
+<codefragment>
+<![CDATA[
+      public SpellFindCaptcha(String thequestion,
+                          AudioInputStream thechallenge, String theresponse) {
+          super(thequestion, thechallenge);
+          this.response = theresponse;
+      }
+
+      public Boolean validateResponse(Object theresponse) {
+          if ((theresponse != null) && (theresponse instanceof String)) {
+              return this.validateResponse((String) theresponse);
+          } else {
+              return Boolean.FALSE;
+          }
+      }
+
+      public Boolean validateResponse(String theresponse) {
+          return Boolean.valueOf(this.response.equalsIgnoreCase(theresponse));
+      }
+
+}
+]]>
+</codefragment>
+</duplication>
+<duplication lines="14" tokens="89">
+<file line="64" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\DeformedBaffleListGimpyEngine.java"/>
+<file line="58" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\FilteredGimpyEngine.java"/>
+<codefragment>
+<![CDATA[
+        ripple.setXAmplitude(10);
+        ripple.setYAmplitude(3);
+        ripple.setXWavelength(20);
+        ripple.setYWavelength(10);
+        ripple.setEdgeAction(com.jhlabs.image.TransformFilter.CLAMP);
+
+        rippleBack.setWaveType(com.jhlabs.image.RippleFilter.NOISE);
+        rippleBack.setXAmplitude(5);
+        rippleBack.setYAmplitude(5);
+        rippleBack.setXWavelength(10);
+        rippleBack.setYWavelength(10);
+        rippleBack.setEdgeAction(com.jhlabs.image.TransformFilter.CLAMP);
+
+        water.setAmplitude(5);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="85">
+<file line="84" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\textpaster\textdecorator\BaffleTextDecorator.java"/>
+<file line="74" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\textpaster\textdecorator\LineTextDecorator.java"/>
+<codefragment>
+<![CDATA[
+        this(numberOfLinesPerGlyph, linesColorGenerator);
+        this.alphaCompositeType = alphaCompositeType != null ? alphaCompositeType.intValue() : this.alphaCompositeType;
+    }
+
+    public void decorateAttributedString(Graphics2D g2, AttributedString attributedWord, ChangeableAttributedString newAttrString) {
+        Color oldColor = g2.getColor();
+        Composite oldComp = g2.getComposite();
+        g2.setComposite(AlphaComposite.getInstance(alphaCompositeType));
+        for (int j = 0; j < attributedWord.getIterator().getEndIndex(); j++) {
+            g2.setColor(linesColorGenerator.getNextColor());
+]]>
+</codefragment>
+</duplication>
+<duplication lines="35" tokens="84">
+<file line="85" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\sound\gimpy\GimpySoundFactory.java"/>
+<file line="115" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\sound\spellfind\SpellFindCaptchaFactory.java"/>
+<codefragment>
+<![CDATA[
+        SoundCaptcha soundCaptcha = new SpellerSound(getQuestion(locale), sound, response.toString());
+        return soundCaptcha;
+    }
+
+    protected String getQuestion(Locale locale) {
+        return CaptchaQuestionHelper.getQuestion(locale, BUNDLE_QUESTION_KEY);
+    }
+
+
+    protected Integer getRandomLength() {
+        /*Integer wordLength;
+        int range = maxWords-minWords;
+        int randomRange = range != 0 ? myRandom.nextInt(range + 1) : 0;
+        return randomRange + minWords;*/
+        Integer wordLength;
+        int range = getWordToSound().getMaxAcceptedWordLength()
+                - getWordToSound().getMinAcceptedWordLength();
+        int randomRange = range != 0 ? myRandom.nextInt(range + 1) : 0;
+        wordLength = new Integer(randomRange + getWordToSound().getMinAcceptedWordLength());
+        return wordLength;
+    }
+
+    /*
+
+private class WordAndPosition{
+public WordAndPosition(String word, int position) {
+    this.word = word;
+    this.position = position;
+}
+
+String word;
+int position;
+}
+    */
+}
+]]>
+</codefragment>
+</duplication>
+<duplication lines="14" tokens="78">
+<file line="254" path="E:\dev\projects\jcaptcha\jcaptcha\src\test\java\com\octo\captcha\service\RunableAbstractManageableCaptchaServiceTest.java"/>
+<file line="288" path="E:\dev\projects\jcaptcha\jcaptcha\src\test\java\com\octo\captcha\service\RunableAbstractManageableCaptchaServiceTest.java"/>
+<codefragment>
+<![CDATA[
+                    getMService().getNumberOfCorrectResponses());
+        }
+
+        for (int i = 0; i < CAPTCHA_STORE_LOAD_BEFORE_GARBAGE_COLLECTION; i++) {
+            String id = String.valueOf(i);
+            service.generateAndStoreCaptcha(Locale.getDefault(), id);
+            try {
+                service.validateResponseForID("unknown", "false");
+                fail("should have thrown an exception");
+            } catch (CaptchaServiceException e) {
+            	assertNotNull(e.getMessage());
+            }
+            assertEquals("should not have been incremented", CAPTCHA_STORE_LOAD_BEFORE_GARBAGE_COLLECTION,
+                    getMService().getNumberOfCorrectResponses());
+]]>
+</codefragment>
+</duplication>
+<duplication lines="7" tokens="77">
+<file line="73" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\service\image\AbstractManageableImageCaptchaService.java"/>
+<file line="149" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\service\multitype\GenericManageableCaptchaService.java"/>
+<codefragment>
+<![CDATA[
+        if (ImageCaptcha.class.isAssignableFrom(captchaClass)) {
+            BufferedImage challenge = (BufferedImage) captcha.getChallenge();
+            BufferedImage clone = new BufferedImage(challenge.getWidth(), challenge.getHeight(), challenge.getType());
+            clone.getGraphics().drawImage(challenge, 0, 0, clone.getWidth(), clone.getHeight(), null);
+            clone.getGraphics().dispose();
+            return clone;
+        } else if (SoundCaptcha.class.isAssignableFrom(captchaClass)) {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="25" tokens="77">
+<file line="26" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\image\gimpy\Gimpy.java"/>
+<file line="21" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\text\math\MathCaptcha.java"/>
+<codefragment>
+<![CDATA[
+    MathCaptcha(String question, String challenge, String response) {
+        super(question, challenge);
+        this.response = response;
+    }
+
+    /**
+     * Validation routine from the CAPTCHA interface. this methods verify if the response is not null and a String and
+     * then compares the given response to the internal string.
+     *
+     * @return true if the given response equals the internal response, false otherwise.
+     */
+    public final Boolean validateResponse(final Object response) {
+        return (null != response && response instanceof String)
+                ? validateResponse((String) response) : Boolean.FALSE;
+    }
+
+    /**
+     * Very simple validation routine that compares the given response to the internal string.
+     *
+     * @return true if the given response equals the internal response, false otherwise.
+     */
+    private final Boolean validateResponse(final String response) {
+        return Boolean.valueOf(response.equals(this.response));
+    }
+}
+]]>
+</codefragment>
+</duplication>
+<duplication lines="19" tokens="76">
+<file line="85" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\ImageCaptchaEngine.java"/>
+<file line="63" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\sound\SoundCaptchaEngine.java"/>
+<codefragment>
+<![CDATA[
+        return getNextSoundCaptcha(locale);
+    }
+
+    /**
+     * @return captcha factories used by this engine
+     */
+    public CaptchaFactory[] getFactories() {
+        return (CaptchaFactory[]) this.factories.toArray(new CaptchaFactory[factories.size()]);
+    }
+
+    /**
+     * @param factories new captcha factories for this engine
+     */
+    public void setFactories(CaptchaFactory[] factories) throws CaptchaEngineException {
+        checkNotNullOrEmpty(factories);
+        ArrayList tempFactories = new ArrayList();
+
+        for (int i = 0; i < factories.length; i++) {
+            if (!SoundCaptchaFactory.class.isAssignableFrom(factories[i].getClass())) {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="18" tokens="76">
+<file line="125" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\textpaster\BaffleRandomTextPaster.java"/>
+<file line="68" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\textpaster\DoubleRandomTextPaster.java"/>
+<codefragment>
+<![CDATA[
+                                   final AttributedString attributedWord) throws CaptchaException {
+        BufferedImage out = copyBackground(background);
+        Graphics2D g2 = pasteBackgroundAndSetTextColor(out, background);
+
+        g2.setRenderingHint(RenderingHints.KEY_FRACTIONALMETRICS,
+                RenderingHints.VALUE_FRACTIONALMETRICS_ON);
+        g2.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
+        g2.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING,
+                RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
+        // this attribute doesn't do anything in JDK 1.4, but maybe it will in JDK 1.5
+        // attributedString.addAttribute(TextAttribute.WIDTH, TextAttribute.WIDTH_EXTENDED);
+
+        // convert string into a series of glyphs we can work with
+        ChangeableAttributedString newAttrString = new ChangeableAttributedString(g2,
+                attributedWord, kerning);
+
+        // space out the glyphs with a little kerning
+        newAttrString.useMinimumSpacing(kerning);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="35" tokens="73">
+<file line="27" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\service\image\AbstractManageableImageCaptchaService.java"/>
+<file line="48" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\service\multitype\GenericManageableCaptchaService.java"/>
+<codefragment>
+<![CDATA[
+    										CaptchaEngine captchaEngine,
+								            int minGuarantedStorageDelayInSeconds,
+								            int maxCaptchaStoreSize,
+								            int captchaStoreLoadBeforeGarbageCollection) {
+    	super(captchaStore, captchaEngine, minGuarantedStorageDelayInSeconds,
+    			maxCaptchaStoreSize, captchaStoreLoadBeforeGarbageCollection);
+    }
+    
+    /**
+     * Method to retrive the image challenge corresponding to the given ticket.
+     *
+     * @param ID the ticket
+     *
+     * @return the challenge
+     *
+     * @throws com.octo.captcha.service.CaptchaServiceException
+     *          if the ticket is invalid
+     */
+    public BufferedImage getImageChallengeForID(String ID) throws CaptchaServiceException {
+        return (BufferedImage) this.getChallengeForID(ID);
+    }
+
+    /**
+     * Method to retrive the image challenge corresponding to the given ticket.
+     *
+     * @param ID the ticket
+     *
+     * @return the challenge
+     *
+     * @throws com.octo.captcha.service.CaptchaServiceException
+     *          if the ticket is invalid
+     */
+    public BufferedImage getImageChallengeForID(String ID, Locale locale) throws CaptchaServiceException {
+        return (BufferedImage) this.getChallengeForID(ID, locale);
+    }
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="70">
+<file line="57" path="E:\dev\projects\jcaptcha\jcaptcha\src\test\java\com\octo\captcha\component\image\textpaster\DoubleTextPasterTest.java"/>
+<file line="56" path="E:\dev\projects\jcaptcha\jcaptcha\src\test\java\com\octo\captcha\component\image\textpaster\SimpleTextPasterTest.java"/>
+<codefragment>
+<![CDATA[
+            test = this.simpleTextPaster.pasteText(testBufferedImage, testAttributedString);
+        } catch (CaptchaException e) {
+            assertNotNull(e);
+        }
+        assertNotNull(test);
+        assertEquals(testBufferedImage.getHeight(), test.getHeight());
+        assertEquals(testBufferedImage.getWidth(), test.getWidth());
+    }
+
+    public void testGetMaxAcceptedWordLenght() {
+        assertEquals(this.maxAcceptedWordLength.intValue(),
+                this.simpleTextPaster.getMaxAcceptedWordLenght());
+]]>
+</codefragment>
+</duplication>
+<duplication lines="9" tokens="68">
+<file line="108" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\FilteredBaffleListGimpyEngine.java"/>
+<file line="116" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\FilteredBaffleListGimpyEngine.java"/>
+<codefragment>
+<![CDATA[
+                        new ImageFilter[]{crystal}, new ImageFilter[]{ripple});
+        this.addFactory(
+                new com.octo.captcha.image.gimpy.GimpyFactory(words,
+                        word2image));
+        //select filters for 3
+        word2image =
+                new com.octo.captcha.component.image.wordtoimage.FilteredComposedWordToImage(
+                        font, back, paster, new ImageFilter[]{rippleBack},
+                        new ImageFilter[]{}, new ImageFilter[]{weaves});
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="66">
+<file line="69" path="E:\dev\projects\jcaptcha\jcaptcha\src\test\java\com\octo\captcha\component\image\color\RandomRangeColorGeneratorTest.java"/>
+<file line="82" path="E:\dev\projects\jcaptcha\jcaptcha\src\test\java\com\octo\captcha\component\image\color\RandomRangeColorGeneratorTest.java"/>
+<codefragment>
+<![CDATA[
+        int[] redRange = new int[]{-12, 42};
+        int[] greenRange = new int[]{57, 62};
+        int[] blueRange = new int[]{10, 12};
+
+        try {
+            colorGenerator = new RandomRangeColorGenerator(redRange, greenRange, blueRange);
+            fail();
+        } catch (CaptchaException e) {
+        	assertNotNull(e.getMessage());
+        }
+    }
+
+    public void testClosedRange() {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="61">
+<file line="47" path="E:\dev\projects\jcaptcha\jcaptcha\src\test\java\com\octo\captcha\component\word\wordgenerator\DictionaryWordGeneratorTest.java"/>
+<file line="64" path="E:\dev\projects\jcaptcha\jcaptcha\src\test\java\com\octo\captcha\component\word\wordgenerator\DictionaryWordGeneratorTest.java"/>
+<codefragment>
+<![CDATA[
+            String test = this.dictionaryWordGenerator.getWord(length, Locale.US);
+            assertNotNull(test);
+            assertTrue(test.length() > 0);
+            assertEquals(length.intValue(), test.length());
+        }
+        try {
+            this.dictionaryWordGenerator.getWord(UNKNOWN_LENGTH);
+            fail("Should throw a CaptchaException");
+        } catch (CaptchaException e) {
+            assertNotNull(e.getMessage());
+        }
+    }
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="61">
+<file line="126" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\textpaster\BaffleRandomTextPaster.java"/>
+<file line="64" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\textpaster\RandomTextPaster.java"/>
+<codefragment>
+<![CDATA[
+                                   final AttributedString attributedString) {
+        BufferedImage out = copyBackground(background);
+        Graphics2D g2 = pasteBackgroundAndSetTextColor(out, background);
+        g2.setRenderingHint(RenderingHints.KEY_FRACTIONALMETRICS,
+                RenderingHints.VALUE_FRACTIONALMETRICS_ON);
+        g2.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
+        g2.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING,
+                RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
+        // this doesn't do anything in JDK 1.4, but maybe it will in JDK 1.5
+        // attributedString.addAttribute(TextAttribute.WIDTH, TextAttribute.WIDTH_EXTENDED);
+
+        // convert string into a series of glyphs we can work with
+        ChangeableAttributedString newAttrString = new ChangeableAttributedString(g2,
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="59">
+<file line="79" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\DeformedBaffleListGimpyEngine.java"/>
+<file line="73" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\FilteredGimpyEngine.java"/>
+<codefragment>
+<![CDATA[
+        water.setWavelength(10);
+
+        twirl.setAngle(3 / 360);
+
+        sphere.setRefractionIndex(1);
+
+        weaves.setUseImageColors(true);
+
+        crystal.setScale(0.5f);
+        crystal.setGridType(com.jhlabs.image.CrystalizeFilter.RANDOM);
+        crystal.setFadeEdges(false);
+        crystal.setEdgeThickness(0.2f);
+        crystal.setRandomness(0.1f);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="4" tokens="59">
+<file line="44" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\fisheye\SimpleFishEyeEngine.java"/>
+<file line="53" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\DeformedBaffleListGimpyEngine.java"/>
+<codefragment>
+<![CDATA[
+        com.jhlabs.image.RippleFilter rippleBack = new com.jhlabs.image.RippleFilter();
+        com.jhlabs.image.RippleFilter ripple = new com.jhlabs.image.RippleFilter();
+        com.jhlabs.image.TwirlFilter twirl = new com.jhlabs.image.TwirlFilter();
+        com.jhlabs.image.WaterFilter water = new com.jhlabs.image.WaterFilter();
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="58">
+<file line="105" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\ImageCaptchaEngine.java"/>
+<file line="82" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\sound\SoundCaptchaEngine.java"/>
+<codefragment>
+<![CDATA[
+                throw new CaptchaEngineException("This factory is not an sound captcha factory " + factories[i].getClass());
+            }
+            tempFactories.add(factories[i]);
+        }
+
+        this.factories = tempFactories;
+    }
+
+  protected void checkNotNullOrEmpty(CaptchaFactory[] factories) {
+        if (factories == null || factories.length == 0) {
+            throw new CaptchaEngineException("impossible to set null or empty factories");
+        }
+    }
+]]>
+</codefragment>
+</duplication>
+<duplication lines="16" tokens="57">
+<file line="57" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\sound\gimpy\GimpySoundFactory.java"/>
+<file line="67" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\sound\speller\SpellerSoundFactory.java"/>
+<codefragment>
+<![CDATA[
+    }
+
+    public WordToSound getWordToSound() {
+        return this.word2Sound;
+    }
+
+    public WordGenerator getWordGenerator() {
+        return this.wordGenerator;
+    }
+
+    /**
+     * @return a Sound Captcha
+     */
+    public SoundCaptcha getSoundCaptcha() {
+        String word = this.wordGenerator.getWord(getRandomLength(), Locale.getDefault());
+        AudioInputStream sound = this.word2Sound.getSound(wordDecorator.decorateWord(word));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="19" tokens="56">
+<file line="52" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\textpaster\DoubleRandomTextPaster.java"/>
+<file line="40" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\textpaster\NonLinearTextPaster.java"/>
+<codefragment>
+<![CDATA[
+    public NonLinearTextPaster(Integer minAcceptedWordLength, Integer maxAcceptedWordLength,
+                            ColorGenerator colorGenerator, Boolean manageColorPerGlyph) {
+        super(minAcceptedWordLength, maxAcceptedWordLength, colorGenerator, manageColorPerGlyph);
+    }
+
+    /**
+     * Pastes the attributed string on the backround image and return the final image. Implementation must take into
+     * account the fact that the text must be readable by human and non by programs.
+     *
+     * @return the final image
+     *
+     * @throws com.octo.captcha.CaptchaException
+     *          if any exception accurs during paste routine.
+     */
+    public BufferedImage pasteText(final BufferedImage background,
+                                   final AttributedString attributedWord) throws CaptchaException {
+
+        BufferedImage out = copyBackground(background);
+        Graphics2D g2 = pasteBackgroundAndSetTextColor(out, background);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="8" tokens="55">
+<file line="102" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\FilteredGimpyEngine.java"/>
+<file line="110" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\FilteredGimpyEngine.java"/>
+<codefragment>
+<![CDATA[
+        factories[1] =
+                new com.octo.captcha.image.gimpy.GimpyFactory(words,
+                        word2image);
+        //select filters for 3
+        word2image =
+                new com.octo.captcha.component.image.wordtoimage.FilteredComposedWordToImage(
+                        font, back, paster, new ImageFilter[]{rippleBack},
+                        new ImageFilter[]{}, new ImageFilter[]{weaves});
+]]>
+</codefragment>
+</duplication>
+<duplication lines="8" tokens="54">
+<file line="59" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\FilteredDoubleRandomListGimpyEngine.java"/>
+<file line="92" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\FilteredListGimpyEngine.java"/>
+<codefragment>
+<![CDATA[
+                new RandomFontGenerator(new Integer(25), new Integer(35));
+        com.octo.captcha.component.word.wordgenerator.WordGenerator words =
+                new com.octo.captcha.component.word.wordgenerator.DictionaryWordGenerator(
+                        new com.octo.captcha.component.word.FileDictionary(
+                                "toddlist"));
+
+        //build factories
+        com.octo.captcha.image.ImageCaptchaFactory[] factories = new com.octo.captcha.image.ImageCaptchaFactory[3];
+]]>
+</codefragment>
+</duplication>
+<duplication lines="8" tokens="53">
+<file line="68" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\DeformedBaffleListGimpyEngine.java"/>
+<file line="43" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\FilteredDoubleRandomListGimpyEngine.java"/>
+<codefragment>
+<![CDATA[
+        com.jhlabs.image.RippleFilter rippleBack = new com.jhlabs.image.RippleFilter();
+
+        rippleBack.setWaveType(com.jhlabs.image.RippleFilter.NOISE);
+        rippleBack.setXAmplitude(5);
+        rippleBack.setYAmplitude(5);
+        rippleBack.setXWavelength(10);
+        rippleBack.setYWavelength(10);
+        rippleBack.setEdgeAction(com.jhlabs.image.TransformFilter.CLAMP);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="6" tokens="52">
+<file line="43" path="E:\dev\projects\jcaptcha\jcaptcha\src\test\java\com\octo\captcha\component\image\wordtoimage\ComposedWordToImageTest.java"/>
+<file line="47" path="E:\dev\projects\jcaptcha\jcaptcha\src\test\java\com\octo\captcha\component\image\wordtoimage\DeformedComposedWordToImageTest.java"/>
+<codefragment>
+<![CDATA[
+    private Integer minAcceptedWordLength = new Integer(1);
+    private Integer maxAcceptedWordLength = new Integer(10);
+    private Integer imageHeight = new Integer(100);
+    private Integer imageWidth = new Integer(100);
+    private Integer minFontSize = new Integer(10);
+    private Integer maxFontSize = new Integer(10);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="9" tokens="52">
+<file line="48" path="E:\dev\projects\jcaptcha\jcaptcha\src\test\java\com\octo\captcha\component\image\textpaster\DoubleTextPasterTest.java"/>
+<file line="48" path="E:\dev\projects\jcaptcha\jcaptcha\src\test\java\com\octo\captcha\component\image\textpaster\SimpleTextPasterTest.java"/>
+<codefragment>
+<![CDATA[
+        this.simpleTextPaster = new SimpleTextPaster(this.minAcceptedWordLength, this.maxAcceptedWordLength, Color.blue);
+    }
+
+    public void testPasteText() {
+        BufferedImage testBufferedImage = new BufferedImage(100, 50, BufferedImage.TYPE_INT_RGB);
+        AttributedString testAttributedString = new AttributedString("test");
+        BufferedImage test = null;
+        try {
+            test = this.simpleTextPaster.pasteText(testBufferedImage, testAttributedString);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="17" tokens="52">
+<file line="74" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\textpaster\BaffleRandomTextPaster.java"/>
+<file line="92" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\textpaster\BaffleRandomTextPaster.java"/>
+<codefragment>
+<![CDATA[
+        super(minAcceptedWordLength, maxAcceptedWordLength, colorGenerator, manageColorPerGlyph);
+        this.numberOfHolesPerGlyph = numberOfHolesPerGlyph != null ? numberOfHolesPerGlyph
+                : this.numberOfHolesPerGlyph;
+        this.holesColorGenerator = new SingleColorGenerator(holesColor != null ? holesColor
+                : colorGenerator.getNextColor());
+    }
+
+    /**
+     * @param minAcceptedWordLength Max length of a word
+     * @param maxAcceptedWordLength Min length of a word
+     * @param colorGenerator        Color generatior for the text
+     * @param manageColorPerGlyph   Boolean to set if each glyph can have a new color from the color generator
+     * @param numberOfHolesPerGlyph Number of holes around the glyph
+     * @param holesColorGenerator   The color genator for the glyphs (one color for all glyph)
+     */
+    public BaffleRandomTextPaster(Integer minAcceptedWordLength, Integer maxAcceptedWordLength,
+                                  ColorGenerator colorGenerator, Boolean manageColorPerGlyph, Integer numberOfHolesPerGlyph,
+]]>
+</codefragment>
+</duplication>
+<duplication lines="8" tokens="51">
+<file line="71" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\service\AbstractCaptchaService.java"/>
+<file line="106" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\service\AbstractCaptchaService.java"/>
+<codefragment>
+<![CDATA[
+        if (!this.store.hasCaptcha(ID)) {
+            //if not generate it
+            captcha = generateAndStoreCaptcha(locale, ID);
+        } else {
+            captcha = this.store.getCaptcha(ID);
+            if (captcha == null) {
+                captcha = generateAndStoreCaptcha(locale, ID);
+            }else if (locale != null) {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="8" tokens="51">
+<file line="100" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\FilteredBaffleListGimpyEngine.java"/>
+<file line="108" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\FilteredBaffleListGimpyEngine.java"/>
+<codefragment>
+<![CDATA[
+                        new ImageFilter[]{emboss}, new ImageFilter[]{ripple});
+        this.addFactory(
+                new com.octo.captcha.image.gimpy.GimpyFactory(words,
+                        word2image));
+        //select filters for 2
+        word2image =
+                new com.octo.captcha.component.image.wordtoimage.FilteredComposedWordToImage(
+                        font, back, paster, new ImageFilter[]{rippleBack},
+]]>
+</codefragment>
+</duplication>
+<duplication lines="8" tokens="51">
+<file line="39" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\BasicListGimpyEngine.java"/>
+<file line="45" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\MultipleGimpyEngine.java"/>
+<codefragment>
+<![CDATA[
+    static {
+        //word generator
+        com.octo.captcha.component.word.wordgenerator.WordGenerator dictionnaryWords = new com.octo.captcha.component.word.wordgenerator.DictionaryWordGenerator(
+                new com.octo.captcha.component.word.FileDictionary(
+                        "toddlist"));
+
+        //wordtoimage components
+        TextPaster randomPaster = new RandomTextPaster(new Integer(6),
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="51">
+<file line="63" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\textpaster\DoubleTextPaster.java"/>
+<file line="51" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\component\image\textpaster\SimpleTextPaster.java"/>
+<codefragment>
+<![CDATA[
+                                   final AttributedString attributedWord) throws CaptchaException {
+        int x = (background.getWidth()) / 20;
+        int y = (background.getHeight()) / 2;
+        BufferedImage out = copyBackground(background);
+        Graphics2D g2 = pasteBackgroundAndSetTextColor(out, background);
+        //pie.drawString(attributedWord.getIterator(), x, y);
+        //pie.dispose();
+
+        // convert string into a series of glyphs we can work with
+        ChangeableAttributedString newAttrString = new ChangeableAttributedString(g2,
+                attributedWord, 2);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="5" tokens="50">
+<file line="41" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\BaffleListGimpyEngine.java"/>
+<file line="73" path="E:\dev\projects\jcaptcha\jcaptcha\src\main\java\com\octo\captcha\engine\image\gimpy\DefaultGimpyEngine.java"/>
+<codefragment>
+<![CDATA[
+        com.octo.captcha.component.word.wordgenerator.WordGenerator dictionnaryWords = new com.octo.captcha.component.word.wordgenerator.ComposeDictionaryWordGenerator(
+                new com.octo.captcha.component.word.FileDictionary(
+                        "toddlist"));
+        //wordtoimage components
+        TextPaster randomPaster = new DecoratedRandomTextPaster(new Integer(6), new Integer(
+]]>
+</codefragment>
+</duplication>
+</pmd-cpd>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.2.2" timestamp="2009-02-03T22:57:48.734">
+<file name="E:\dev\projects\jcaptcha\extension-jbosscache-store\src\test\java\com\octo\captcha\service\captchastore\JBossCacheCaptchaStoreTest.java">
+<violation beginline="28" endline="30" begincolumn="12" endcolumn="5" rule="UselessOverridingMethod" ruleset="Basic Rules" package="com.octo.captcha.service.captchastore" class="JBossCacheCaptchaStoreTest" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#UselessOverridingMethod" priority="3">
+Overriding method merely calls super
+</violation>
+</file>
+</pmd>

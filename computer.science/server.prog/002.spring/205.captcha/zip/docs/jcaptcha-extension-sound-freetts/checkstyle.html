@@ -1,0 +1,2655 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>JCaptcha - Checkstyle Results</title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+    </style>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+                                                    
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+                                                        
+<script type="text/javascript">var pageTracker = _gat._getTracker("UA-3856069-2");
+        pageTracker._initData();
+        pageTracker._trackPageview();</script>
+                    </head>
+  <body class="composite">
+    <div id="banner">
+                  <a href=".." id="bannerLeft">
+    
+                                            <img src="images/jcaptcha-logo.jpg" alt="" />
+    
+            </a>
+                    <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+            
+  
+    
+            <div class="xleft">
+        Last Published: 03 Feb 2009
+                  &nbsp;| Version: 1.0
+                      </div>
+            <div class="xright">            <a href="http://www.octo.com" class="externalLink">OCTO Technology</a>
+            
+  
+
+  
+    
+            
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="leftColumn">
+      <div id="navcolumn">
+           
+  
+
+  
+    
+            
+  
+    
+                   <h5>Overview</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="index.html">Introduction</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://sourceforge.net/project/showfiles.php?group_id=97877" class="externalLink">Download</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://forge.octo.com/jcaptcha/confluence" class="externalLink">Wiki Documentation</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://forge.octo.com/jcaptcha/jira" class="externalLink">Issue tracker</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://sourceforge.net/projects/jcaptcha" class="externalLink">Sourceforge site</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://fisheye3.cenqua.com/browse/jcaptcha" class="externalLink">Browse source</a>
+          </li>
+              
+    <li class="none">
+                    <a href="mail-lists.html">Mailing lists</a>
+          </li>
+              
+    <li class="none">
+                    <a href="team-list.html">Project Team</a>
+          </li>
+              
+    <li class="none">
+                    <a href="thanks.html">Thanks</a>
+          </li>
+          </ul>
+              <h5>Parent Project</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="../index.html">JCaptcha Home</a>
+          </li>
+          </ul>
+              <h5>Project Documentation</h5>
+            <ul>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+                    <a href="project-info.html">Project Information</a>
+                </li>
+              
+                
+              
+            
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+              
+            <li class="expanded">
+                    <a href="project-reports.html">Project Reports</a>
+                  <ul>
+                  
+    <li class="none">
+              <strong>Checkstyle</strong>
+        </li>
+                  
+    <li class="none">
+                    <a href="clover/index.html">Clover</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="cpd.html">CPD Report</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="findbugs.html">FindBugs Report</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="apidocs/index.html">JavaDocs</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="surefire-report.html">Maven Surefire Report</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="pmd.html">PMD Report</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="jxr.html">Source Xref</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="taglist.html">Tag List</a>
+          </li>
+              </ul>
+        </li>
+          </ul>
+                                           <a href="http://maven.apache.org/" title="Built by Maven" class="poweredBy">
+            <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
+          </a>
+                       
+  
+
+  
+    
+            
+  
+    
+        </div>
+    </div>
+    <div id="bodyColumn">
+      <div id="contentBox">
+        <div class="section"><h2>Checkstyle Results</h2>
+<p>The following document contains the results of <a href="http://checkstyle.sourceforge.net/" class="externalLink">Checkstyle</a>
+.&#160;<a href="#checkstyle.rss"><img alt="rss feed" src="images/rss.png" /></a>
+</p>
+</div>
+<div class="section"><h2>Summary</h2>
+<table class="bodyTable"><tr class="a"><th>Files</th>
+<th>Infos&#160;<img alt="Infos" src="images/icon_info_sml.gif" /></th>
+<th>Warnings&#160;<img alt="Warnings" src="images/icon_warning_sml.gif" /></th>
+<th>Errors&#160;<img alt="Errors" src="images/icon_error_sml.gif" /></th>
+</tr>
+<tr class="b"><td>14</td>
+<td>0</td>
+<td>0</td>
+<td>387</td>
+</tr>
+</table>
+</div>
+<div class="section"><h2>Files</h2>
+<table class="bodyTable"><tr class="a"><th>Files</th>
+<th>I&#160;<img alt="Infos" src="images/icon_info_sml.gif" /></th>
+<th>W&#160;<img alt="Warnings" src="images/icon_warning_sml.gif" /></th>
+<th>E&#160;<img alt="Errors" src="images/icon_error_sml.gif" /></th>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.component.sound.soundconfigurator.FreeTTSSoundConfigurator.java">com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.java</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>43</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.component.sound.soundconfigurator.package.html">com/octo/captcha/component/sound/soundconfigurator/package.html</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.component.sound.wordtosound.AbstractFreeTTSWordToSound.java">com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.java</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>122</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.component.sound.wordtosound.CleanFreeTTSWordToSound.java">com/octo/captcha/component/sound/wordtosound/CleanFreeTTSWordToSound.java</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>16</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.component.sound.wordtosound.FreeTTSWordToSound.java">com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.java</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>102</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.component.sound.wordtosound.package.html">com/octo/captcha/component/sound/wordtosound/package.html</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.engine.sound.gimpy.SimpleListSoundCaptchaEngine.java">com/octo/captcha/engine/sound/gimpy/SimpleListSoundCaptchaEngine.java</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>14</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.engine.sound.speller.SpellerSoundCaptchaEngine.java">com/octo/captcha/engine/sound/speller/SpellerSoundCaptchaEngine.java</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>16</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.engine.sound.utils.SoundCaptchaToWAV.java">com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.java</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>40</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.engine.sound.utils.package.html">com/octo/captcha/engine/sound/utils/package.html</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.service.sound.DefaultManageableSoundCaptchaService.java">com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.java</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>30</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.service.sound.package.html">com/octo/captcha/service/sound/package.html</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</table>
+</div>
+<div class="section"><h2>Rules</h2>
+<table class="bodyTable"><tr class="b"><th>Rules</th>
+<th>Violations</th>
+<th>Severity</th>
+</tr>
+<tr class="a"><td>PackageHtml</td>
+<td>4</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>NewlineAtEndOfFile</td>
+<td>3</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>Translation</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>JavadocMethod</td>
+<td>46</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>JavadocType</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>JavadocVariable</td>
+<td>34</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>JavadocStyle</td>
+<td>46</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>ConstantName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>LocalFinalVariableName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>LocalVariableName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>MemberName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>MethodName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>PackageName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>ParameterName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>StaticVariableName</td>
+<td>2</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>TypeName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>AvoidStarImport</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>IllegalImport</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>RedundantImport</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>UnusedImports</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>FileLength</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>LineLength</td>
+<td>117</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>MethodLength</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>ParameterNumber</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>EmptyForIteratorPad</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>MethodParamPad</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>NoWhitespaceAfter</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>NoWhitespaceBefore</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>OperatorWrap</td>
+<td>5</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>ParenPad</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>TypecastParenPad</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>TabCharacter</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>WhitespaceAfter</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>WhitespaceAround</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>ModifierOrder</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>RedundantModifier</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>AvoidNestedBlocks</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>EmptyBlock</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>LeftCurly</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>NeedBraces</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>RightCurly</td>
+<td>4</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>AvoidInlineConditionals</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>DoubleCheckedLocking</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>EmptyStatement</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>EqualsHashCode</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>HiddenField</td>
+<td>11</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>IllegalInstantiation</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>InnerAssignment</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>MagicNumber</td>
+<td>20</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>MissingSwitchDefault</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>RedundantThrows</td>
+<td>6</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>SimplifyBooleanExpression</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>SimplifyBooleanReturn</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>DesignForExtension</td>
+<td>19</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>FinalClass</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>HideUtilityClassConstructor</td>
+<td>1</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>InterfaceIsType</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>VisibilityModifier</td>
+<td>9</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>ArrayTypeStyle</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>FinalParameters</td>
+<td>56</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>GenericIllegalRegexp<ul><li><b>message</b>
+: <tt>&quot;Line has trailing spaces.&quot;</tt>
+</li>
+<li><b>format</b>
+: <tt>&quot;\s+$&quot;</tt>
+</li>
+</ul>
+</td>
+<td>4</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>TodoComment</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>UpperEll</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+</table>
+</div>
+<div class="section"><h2>Details</h2>
+<div class="section"><h3><a name="com.octo.captcha.component.sound.soundconfigurator.FreeTTSSoundConfigurator.java"></a>
+com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.java</h3>
+<table class="bodyTable"><tr class="b"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>File does not end with a newline.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#0">0</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#2">2</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#11">11</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#18">18</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Variable 'name' must be private and have accessor methods.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#18">18</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#20">20</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Variable 'location' must be private and have accessor methods.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#20">20</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#22">22</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Variable 'volume' must be private and have accessor methods.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#22">22</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#24">24</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Variable 'pitch' must be private and have accessor methods.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#24">24</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#26">26</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Variable 'rate' must be private and have accessor methods.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#26">26</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#28">28</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#37">37</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter name should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#37">37</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'name' hides a field.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#37">37</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter location should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#37">37</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'location' hides a field.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#37">37</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter volume should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#37">37</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'volume' hides a field.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#37">37</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter pitch should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#37">37</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'pitch' hides a field.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#37">37</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter rate should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#38">38</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'rate' hides a field.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#38">38</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'250' is a magic number.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#49">49</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'50' is a magic number.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#49">49</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'1000' is a magic number.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#55">55</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#64">64</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected an @return tag.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#66">66</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getVolume' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#66">66</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#71">71</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected an @return tag.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#73">73</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getPitch' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#73">73</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#78">78</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected an @return tag.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#80">80</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getName' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#80">80</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#85">85</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected an @return tag.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#87">87</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getRate' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#87">87</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#92">92</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected an @return tag.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#94">94</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getLocation' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/FreeTTSSoundConfigurator.html#94">94</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="com.octo.captcha.component.sound.soundconfigurator.package.html"></a>
+com/octo/captcha/component/sound/soundconfigurator/package.html</h3>
+<table class="bodyTable"><tr class="b"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing package documentation file.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/soundconfigurator/package.html#0">0</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="com.octo.captcha.component.sound.wordtosound.AbstractFreeTTSWordToSound.java"></a>
+com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.java</h3>
+<table class="bodyTable"><tr class="b"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#2">2</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#10">10</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#27">27</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#33">33</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Variable 'defaultVoiceName' must be private and have accessor methods.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#33">33</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#35">35</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#35">35</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Variable 'defaultVoicePackage' must be private and have accessor methods.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#35">35</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#37">37</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Name 'FREETTS_PROPERTIES_KEY' must match pattern '^[a-z][a-zA-Z0-9]*$'.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#37">37</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#39">39</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#41">41</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#43">43</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#45">45</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#47">47</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#52">52</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#54">54</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#56">56</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#58">58</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#64">64</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'100' is a magic number.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#65">65</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'100' is a magic number.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#65">65</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'4' is a magic number.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#67">67</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'6' is a magic number.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#68">68</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#73">73</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#80">80</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter configurator should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#80">80</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'configurator' hides a field.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#80">80</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter minAcceptedWordLength should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#80">80</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'minAcceptedWordLength' hides a field.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#80">80</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter maxAcceptedWordLength should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#81">81</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'maxAcceptedWordLength' hides a field.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#81">81</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#89">89</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected an @return tag.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#91">91</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getSound' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#91">91</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter word should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#91">91</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'word'.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#91">91</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @throws tag for 'CaptchaException'.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#91">91</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Redundant throws: 'CaptchaException' is unchecked exception.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#91">91</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected an @return tag.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#100">100</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#100">100</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getSound' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#100">100</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter word should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#100">100</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'word'.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#100">100</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter locale should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#100">100</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'locale' hides a field.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#100">100</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'locale'.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#100">100</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @throws tag for 'CaptchaException'.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#100">100</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Redundant throws: 'CaptchaException' is unchecked exception.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#100">100</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#121">121</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getMaxAcceptedWordLength' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#128">128</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#128">128</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getMinAcceptedWordLength' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#132">132</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#132">132</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getMaxAcceptedWordLenght' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#140">140</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getMinAcceptedWordLenght' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#148">148</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#152">152</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#154">154</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#159">159</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#166">166</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#177">177</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter soundPackage should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#179">179</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'soundPackage'.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#179">179</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#191">191</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter voice should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#194">194</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'voice' hides a field.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#194">194</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'voice'.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#194">194</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#201">201</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#209">209</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#211">211</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'stringToSound' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#211">211</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter sentence should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#211">211</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Redundant throws: 'CaptchaException' is unchecked exception.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#211">211</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#212">212</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#226">226</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#227">227</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#230">230</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#232">232</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#234">234</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#236">236</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#238">238</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#240">240</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#242">242</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#244">244</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#249">249</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#253">253</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#258">258</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Unused @throws tag for 'UnsupportedOperationException'.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#258">258</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter format should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#260">260</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#264">264</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#273">273</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#279">279</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#285">285</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#292">292</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#298">298</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#304">304</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#316">316</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#317">317</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#318">318</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter volume should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#338">338</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#342">342</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter size should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#347">347</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#353">353</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#355">355</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#363">363</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#366">366</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#372">372</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#381">381</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#387">387</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#392">392</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter audioData should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#395">395</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#399">399</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#406">406</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter bytes should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#409">409</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter offset should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#409">409</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter size should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#409">409</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#416">416</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#419">419</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#425">425</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#434">434</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter msg should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#439">439</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/AbstractFreeTTSWordToSound.html#445">445</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="com.octo.captcha.component.sound.wordtosound.CleanFreeTTSWordToSound.java"></a>
+com/octo/captcha/component/sound/wordtosound/CleanFreeTTSWordToSound.java</h3>
+<table class="bodyTable"><tr class="a"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>File does not end with a newline.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/CleanFreeTTSWordToSound.html#0">0</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/CleanFreeTTSWordToSound.html#2">2</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/CleanFreeTTSWordToSound.html#20">20</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/CleanFreeTTSWordToSound.html#25">25</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/CleanFreeTTSWordToSound.html#27">27</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter configurator should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/CleanFreeTTSWordToSound.html#27">27</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'configurator'.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/CleanFreeTTSWordToSound.html#27">27</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter minAcceptedWordLength should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/CleanFreeTTSWordToSound.html#27">27</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'minAcceptedWordLength'.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/CleanFreeTTSWordToSound.html#27">27</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter maxAcceptedWordLength should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/CleanFreeTTSWordToSound.html#28">28</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'maxAcceptedWordLength'.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/CleanFreeTTSWordToSound.html#28">28</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/CleanFreeTTSWordToSound.html#33">33</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected an @return tag.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/CleanFreeTTSWordToSound.html#35">35</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'addEffects' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/CleanFreeTTSWordToSound.html#35">35</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter sound should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/CleanFreeTTSWordToSound.html#35">35</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'sound'.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/CleanFreeTTSWordToSound.html#35">35</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="com.octo.captcha.component.sound.wordtosound.FreeTTSWordToSound.java"></a>
+com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.java</h3>
+<table class="bodyTable"><tr class="b"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#2">2</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#27">27</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#32">32</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#33">33</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Variable 'defaultVoiceName' must be private and have accessor methods.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#33">33</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#35">35</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#35">35</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Variable 'defaultVoicePackage' must be private and have accessor methods.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#35">35</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#40">40</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#42">42</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#47">47</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#51">51</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#57">57</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter configurator should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#57">57</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'configurator'.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#57">57</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter minAcceptedWordLength should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#57">57</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter maxAcceptedWordLength should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#58">58</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#60">60</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#69">69</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#76">76</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected an @return tag.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#78">78</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getSound' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#78">78</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter word should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#78">78</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'word'.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#78">78</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @throws tag for 'CaptchaException'.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#78">78</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Redundant throws: 'CaptchaException' is unchecked exception.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#78">78</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line has trailing spaces.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#80">80</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line has trailing spaces.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#81">81</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected an @return tag.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#88">88</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#88">88</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getSound' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#88">88</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter word should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#88">88</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'word'.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#88">88</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter locale should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#88">88</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'locale'.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#88">88</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @throws tag for 'CaptchaException'.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#88">88</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Redundant throws: 'CaptchaException' is unchecked exception.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#88">88</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#118">118</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#126">126</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected an @return tag.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#128">128</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'addEffects' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#128">128</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter sound should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#128">128</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'sound'.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#128">128</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#134">134</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter voice should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#137">137</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'voice' hides a field.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#137">137</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'voice'.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#137">137</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#144">144</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#152">152</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#154">154</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'stringToSound' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#154">154</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter sentence should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#154">154</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Redundant throws: 'CaptchaException' is unchecked exception.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#154">154</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#155">155</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line has trailing spaces.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#163">163</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line has trailing spaces.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#168">168</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#174">174</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#175">175</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#178">178</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#180">180</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#182">182</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#184">184</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#186">186</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#188">188</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#190">190</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#192">192</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#197">197</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#201">201</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#206">206</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Unused @throws tag for 'UnsupportedOperationException'.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#206">206</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter format should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#208">208</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#212">212</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#221">221</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#227">227</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#233">233</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#240">240</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#246">246</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#252">252</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#264">264</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#265">265</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#266">266</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter volume should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#286">286</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#290">290</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter size should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#295">295</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#301">301</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#303">303</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#311">311</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#314">314</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#320">320</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#329">329</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#335">335</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#340">340</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter audioData should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#343">343</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#347">347</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#354">354</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter bytes should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#357">357</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter offset should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#357">357</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter size should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#357">357</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#363">363</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#372">372</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter msg should be final.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#377">377</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/FreeTTSWordToSound.html#383">383</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="com.octo.captcha.component.sound.wordtosound.package.html"></a>
+com/octo/captcha/component/sound/wordtosound/package.html</h3>
+<table class="bodyTable"><tr class="a"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing package documentation file.</td>
+<td><a href="./xref/com/octo/captcha/component/sound/wordtosound/package.html#0">0</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="com.octo.captcha.engine.sound.gimpy.SimpleListSoundCaptchaEngine.java"></a>
+com/octo/captcha/engine/sound/gimpy/SimpleListSoundCaptchaEngine.java</h3>
+<table class="bodyTable"><tr class="a"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/gimpy/SimpleListSoundCaptchaEngine.html#2">2</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/gimpy/SimpleListSoundCaptchaEngine.html#8">8</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/gimpy/SimpleListSoundCaptchaEngine.html#14">14</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/gimpy/SimpleListSoundCaptchaEngine.html#22">22</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/gimpy/SimpleListSoundCaptchaEngine.html#29">29</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'buildInitialFactories' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/gimpy/SimpleListSoundCaptchaEngine.html#38">38</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/gimpy/SimpleListSoundCaptchaEngine.html#38">38</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/gimpy/SimpleListSoundCaptchaEngine.html#39">39</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/gimpy/SimpleListSoundCaptchaEngine.html#43">43</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'100' is a magic number.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/gimpy/SimpleListSoundCaptchaEngine.html#43">43</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'70' is a magic number.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/gimpy/SimpleListSoundCaptchaEngine.html#43">43</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/gimpy/SimpleListSoundCaptchaEngine.html#44">44</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'4' is a magic number.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/gimpy/SimpleListSoundCaptchaEngine.html#44">44</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'10' is a magic number.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/gimpy/SimpleListSoundCaptchaEngine.html#44">44</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="com.octo.captcha.engine.sound.speller.SpellerSoundCaptchaEngine.java"></a>
+com/octo/captcha/engine/sound/speller/SpellerSoundCaptchaEngine.java</h3>
+<table class="bodyTable"><tr class="b"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>File does not end with a newline.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/speller/SpellerSoundCaptchaEngine.html#0">0</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/speller/SpellerSoundCaptchaEngine.html#2">2</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/speller/SpellerSoundCaptchaEngine.html#8">8</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/speller/SpellerSoundCaptchaEngine.html#14">14</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/speller/SpellerSoundCaptchaEngine.html#20">20</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/speller/SpellerSoundCaptchaEngine.html#29">29</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Extra HTML tag found: &lt;/p&gt;</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/speller/SpellerSoundCaptchaEngine.html#29">29</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/speller/SpellerSoundCaptchaEngine.html#37">37</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'buildInitialFactories' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/speller/SpellerSoundCaptchaEngine.html#39">39</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/speller/SpellerSoundCaptchaEngine.html#42">42</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/speller/SpellerSoundCaptchaEngine.html#45">45</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'100' is a magic number.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/speller/SpellerSoundCaptchaEngine.html#45">45</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'110' is a magic number.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/speller/SpellerSoundCaptchaEngine.html#45">45</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/speller/SpellerSoundCaptchaEngine.html#46">46</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'4' is a magic number.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/speller/SpellerSoundCaptchaEngine.html#46">46</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'10' is a magic number.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/speller/SpellerSoundCaptchaEngine.html#46">46</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="com.octo.captcha.engine.sound.utils.SoundCaptchaToWAV.java"></a>
+com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.java</h3>
+<table class="bodyTable"><tr class="a"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#2">2</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#8">8</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#14">14</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#29">29</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Utility classes should not have a public or default constructor.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#36">36</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#38">38</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Name 'SHOULD_DELETE_OLD_WAVS_FIRST' must match pattern '^[a-z][a-zA-Z0-9]*$'.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#38">38</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#40">40</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter args should be final.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#40">40</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#43">43</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'+' should be on a new line.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#53">53</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'+' should be on a new line.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#54">54</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'+' should be on a new line.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#55">55</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#69">69</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#71">71</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'}' should be on the same line.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#72">72</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#74">74</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#80">80</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'}' should be on the same line.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#81">81</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#83">83</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#86">86</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'}' should be on the same line.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#87">87</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#89">89</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#100">100</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter outputDir should be final.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#100">100</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#108">108</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#119">119</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#119">119</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter iterations should be final.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#119">119</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter captchaEngine should be final.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#119">119</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter outputDir should be final.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#119">119</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#122">122</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#135">135</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'100' is a magic number.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#139">139</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'99' is a magic number.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#139">139</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'}' should be on the same line.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#143">143</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'+' should be on a new line.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#151">151</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#152">152</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'+' should be on a new line.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#152">152</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/SoundCaptchaToWAV.html#153">153</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="com.octo.captcha.engine.sound.utils.package.html"></a>
+com/octo/captcha/engine/sound/utils/package.html</h3>
+<table class="bodyTable"><tr class="b"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing package documentation file.</td>
+<td><a href="./xref/com/octo/captcha/engine/sound/utils/package.html#0">0</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="com.octo.captcha.service.sound.DefaultManageableSoundCaptchaService.java"></a>
+com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.java</h3>
+<table class="bodyTable"><tr class="b"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#2">2</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#14">14</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#15">15</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#16">16</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#19">19</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#20">20</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#22">22</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#24">24</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#25">25</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#33">33</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter minGuarantedStorageDelayInSeconds should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#33">33</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'minGuarantedStorageDelayInSeconds'.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#33">33</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter maxCaptchaStoreSize should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#33">33</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'maxCaptchaStoreSize'.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#33">33</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter captchaStoreLoadBeforeGarbageCollection should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#33">33</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'captchaStoreLoadBeforeGarbageCollection'.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#33">33</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#34">34</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#38">38</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#39">39</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'180' is a magic number.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#45">45</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'100000' is a magic number.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#45">45</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'75000' is a magic number.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#45">45</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#49">49</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#49">49</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter captchaStore should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#49">49</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter captchaEngine should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#49">49</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter minGuarantedStorageDelayInSeconds should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#49">49</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter maxCaptchaStoreSize should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#49">49</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter captchaStoreLoadBeforeGarbageCollection should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#49">49</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/DefaultManageableSoundCaptchaService.html#50">50</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="com.octo.captcha.service.sound.package.html"></a>
+com/octo/captcha/service/sound/package.html</h3>
+<table class="bodyTable"><tr class="a"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing package documentation file.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/package.html#0">0</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+      </div>
+    </div>
+    <div class="clear">
+      <hr/>
+    </div>
+    <div id="footer">
+      <div class="xright">&#169;  
+          2003-2009
+    
+          JCaptcha corp.
+          
+  
+
+  
+    
+            
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>

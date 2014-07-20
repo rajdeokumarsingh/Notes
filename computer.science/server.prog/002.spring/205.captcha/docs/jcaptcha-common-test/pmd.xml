@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.2.2" timestamp="2009-02-03T22:49:33.421">
+<file name="E:\dev\projects\jcaptcha\common-test\src\main\java\com\octo\captcha\MockCaptcha.java">
+<violation beginline="61" endline="61" begincolumn="16" endcolumn="47" rule="BooleanInstantiation" ruleset="Basic Rules" package="com.octo.captcha" class="MockCaptcha" method="validateResponse" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#BooleanInstantiation" priority="2">
+Avoid instantiating Boolean objects; reference Boolean.TRUE or Boolean.FALSE or call Boolean.valueOf() instead.
+</violation>
+<violation beginline="81" endline="81" begincolumn="16" endcolumn="40" rule="BooleanInstantiation" ruleset="Basic Rules" package="com.octo.captcha" class="MockCaptcha" method="hasGetChalengeBeenCalled" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#BooleanInstantiation" priority="2">
+Avoid instantiating Boolean objects; reference Boolean.TRUE or Boolean.FALSE or call Boolean.valueOf() instead.
+</violation>
+</file>
+<file name="E:\dev\projects\jcaptcha\common-test\src\main\java\com\octo\captcha\engine\MockCaptchaEngine.java">
+<violation beginline="12" endline="12" begincolumn="1" endcolumn="54" rule="ImportFromSamePackage" ruleset="Import Statement Rules" package="com.octo.captcha.engine" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#ImportFromSamePackage" priority="3">
+No need to import a type that lives in the same package
+</violation>
+</file>
+</pmd>

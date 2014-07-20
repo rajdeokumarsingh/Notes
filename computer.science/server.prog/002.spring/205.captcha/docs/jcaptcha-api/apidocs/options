@@ -1,0 +1,29 @@
+-classpath
+'E:/dev/projects/jcaptcha/api/target/classes'
+-doclet
+'gr.spinellis.umlgraph.doclet.UmlGraphDoc'
+-docletpath
+'E:/dev/apps/maven/maven2-repo/gr/spinellis/UmlGraph/4.6/UmlGraph-4.6.jar'
+-encoding
+'Cp1252'
+-protected
+-sourcepath
+'E:/dev/projects/jcaptcha/api/src/main/java'
+-inferrel -inferdep -quiet -hide java.* -collpackages java.util.* -qualify
+                            -postfixpackage -nodefontsize 9
+                            -nodefontpackagesize 7 -views
+-author
+-bottom
+'Copyright &#169; 2003-2009 <a href="http://www.jcaptcha.net/">JCaptcha corp.</a>. All Rights Reserved.'
+-charset
+'UTF-8'
+-d
+'E:/dev/projects/jcaptcha/api/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'API 1.0 API'
+-use
+-version
+-windowtitle
+'API 1.0 API'

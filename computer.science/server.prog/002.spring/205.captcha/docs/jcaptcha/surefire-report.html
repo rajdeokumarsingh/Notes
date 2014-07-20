@@ -1,0 +1,1849 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>JCaptcha - </title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+    </style>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+                                                    
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+                                                        
+<script type="text/javascript">var pageTracker = _gat._getTracker("UA-3856069-2");
+        pageTracker._initData();
+        pageTracker._trackPageview();</script>
+                    </head>
+  <body class="composite">
+    <div id="banner">
+                  <a href=".." id="bannerLeft">
+    
+                                            <img src="images/jcaptcha-logo.jpg" alt="" />
+    
+            </a>
+                    <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+            
+  
+    
+            <div class="xleft">
+        Last Published: 03 Feb 2009
+                  &nbsp;| Version: 1.0
+                      </div>
+            <div class="xright">            <a href="http://www.octo.com" class="externalLink">OCTO Technology</a>
+            
+  
+
+  
+    
+            
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="leftColumn">
+      <div id="navcolumn">
+           
+  
+
+  
+    
+            
+  
+    
+                   <h5>Overview</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="index.html">Introduction</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://sourceforge.net/project/showfiles.php?group_id=97877" class="externalLink">Download</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://forge.octo.com/jcaptcha/confluence" class="externalLink">Wiki Documentation</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://forge.octo.com/jcaptcha/jira" class="externalLink">Issue tracker</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://sourceforge.net/projects/jcaptcha" class="externalLink">Sourceforge site</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://fisheye3.cenqua.com/browse/jcaptcha" class="externalLink">Browse source</a>
+          </li>
+              
+    <li class="none">
+                    <a href="mail-lists.html">Mailing lists</a>
+          </li>
+              
+    <li class="none">
+                    <a href="team-list.html">Project Team</a>
+          </li>
+              
+    <li class="none">
+                    <a href="thanks.html">Thanks</a>
+          </li>
+          </ul>
+              <h5>Parent Project</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="../index.html">JCaptcha Home</a>
+          </li>
+          </ul>
+              <h5>Project Documentation</h5>
+            <ul>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+                    <a href="project-info.html">Project Information</a>
+                </li>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+            
+            
+      
+            
+      
+            
+      
+              
+            <li class="expanded">
+                    <a href="project-reports.html">Project Reports</a>
+                  <ul>
+                  
+    <li class="none">
+                    <a href="checkstyle.html">Checkstyle</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="clover/index.html">Clover</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="cpd.html">CPD Report</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="findbugs.html">FindBugs Report</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="apidocs/index.html">JavaDocs</a>
+          </li>
+                  
+    <li class="none">
+              <strong>Maven Surefire Report</strong>
+        </li>
+                  
+    <li class="none">
+                    <a href="pmd.html">PMD Report</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="jxr.html">Source Xref</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="taglist.html">Tag List</a>
+          </li>
+              </ul>
+        </li>
+          </ul>
+                                           <a href="http://maven.apache.org/" title="Built by Maven" class="poweredBy">
+            <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
+          </a>
+                       
+  
+
+  
+    
+            
+  
+    
+        </div>
+    </div>
+    <div id="bodyColumn">
+      <div id="contentBox">
+        <h2><a name="Summary"></a>
+Summary</h2>
+<div class="section">[<a href="#Summary">Summary</a>
+][<a href="#Package_List">Package List</a>
+][<a href="#Test_Cases">Test Cases</a>
+]</div>
+<table class="bodyTable"><tr class="a"></tr>
+<tr class="b"></tr>
+</table>
+<table class="bodyTable"><tr class="a"><th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="b"><td>166</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>37.70</td>
+</tr>
+</table>
+<br />
+Note: failures are anticipated and checked for with assertions while errors are unanticipated.<table class="bodyTable"><tr class="a"></tr>
+<tr class="b"></tr>
+</table>
+<h2><a name="Package_List"></a>
+Package List</h2>
+<div class="section">[<a href="#Summary">Summary</a>
+][<a href="#Package_List">Package List</a>
+][<a href="#Test_Cases">Test Cases</a>
+]</div>
+<table class="bodyTable"><tr class="a"></tr>
+<tr class="b"></tr>
+</table>
+<table class="bodyTable"><tr class="a"><th>Package</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.sound.speller">com.octo.captcha.sound.speller</a>
+</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.03</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.image.gimpy">com.octo.captcha.image.gimpy</a>
+</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.02</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.component.image.color">com.octo.captcha.component.image.color</a>
+</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.09</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.component.image.textpaster">com.octo.captcha.component.image.textpaster</a>
+</td>
+<td>14</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.08</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.component.image.fontgenerator">com.octo.captcha.component.image.fontgenerator</a>
+</td>
+<td>12</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.30</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.service.captchastore">com.octo.captcha.service.captchastore</a>
+</td>
+<td>16</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.17</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.component.image.backgroundgenerator">com.octo.captcha.component.image.backgroundgenerator</a>
+</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.03</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.engine.sound">com.octo.captcha.engine.sound</a>
+</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.09</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.component.word">com.octo.captcha.component.word</a>
+</td>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.16</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.sound.spellfind">com.octo.captcha.sound.spellfind</a>
+</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.14</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.image">com.octo.captcha.image</a>
+</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.22</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.sound">com.octo.captcha.sound</a>
+</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.02</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.service">com.octo.captcha.service</a>
+</td>
+<td>34</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>35.73</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.component.image.utils">com.octo.captcha.component.image.utils</a>
+</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.01</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.component.word.wordgenerator">com.octo.captcha.component.word.wordgenerator</a>
+</td>
+<td>9</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.06</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.image.fisheye">com.octo.captcha.image.fisheye</a>
+</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.08</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.engine.image">com.octo.captcha.engine.image</a>
+</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.12</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.component.image.wordtoimage">com.octo.captcha.component.image.wordtoimage</a>
+</td>
+<td>20</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.34</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.sound.gimpy">com.octo.captcha.sound.gimpy</a>
+</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.00</td>
+</tr>
+</table>
+<br />
+Note: package statistics are not computed recursively, they only sum up all of its testsuites numbers.<h3><a name="com.octo.captcha.sound.speller"></a>
+com.octo.captcha.sound.speller</h3>
+<table class="bodyTable"><tr class="a"><th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.sound.spellerSoundSpellerFactoryTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.sound.spellerSoundSpellerFactoryTest">SoundSpellerFactoryTest</a>
+</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.03</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.sound.spellerSpellerSoundFactoryTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.sound.spellerSpellerSoundFactoryTest">SpellerSoundFactoryTest</a>
+</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.image.gimpy"></a>
+com.octo.captcha.image.gimpy</h3>
+<table class="bodyTable"><tr class="b"><th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.image.gimpyGimpyFactoryTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.image.gimpyGimpyFactoryTest">GimpyFactoryTest</a>
+</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.02</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.image.color"></a>
+com.octo.captcha.component.image.color</h3>
+<table class="bodyTable"><tr class="b"><th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.component.image.colorRandomListColorGeneratorTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.component.image.colorRandomListColorGeneratorTest">RandomListColorGeneratorTest</a>
+</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.05</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.component.image.colorRandomRangeColorGeneratorTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.component.image.colorRandomRangeColorGeneratorTest">RandomRangeColorGeneratorTest</a>
+</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.05</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.image.textpaster"></a>
+com.octo.captcha.component.image.textpaster</h3>
+<table class="bodyTable"><tr class="a"><th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.component.image.textpasterBaffleRandomTextPasterTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.component.image.textpasterBaffleRandomTextPasterTest">BaffleRandomTextPasterTest</a>
+</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.01</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.component.image.textpasterDoubleRandomTextPasterTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.component.image.textpasterDoubleRandomTextPasterTest">DoubleRandomTextPasterTest</a>
+</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.02</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.component.image.textpasterDoubleTextPasterTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.component.image.textpasterDoubleTextPasterTest">DoubleTextPasterTest</a>
+</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.05</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.component.image.textpasterSimpleTextPasterTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.component.image.textpasterSimpleTextPasterTest">SimpleTextPasterTest</a>
+</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.image.fontgenerator"></a>
+com.octo.captcha.component.image.fontgenerator</h3>
+<table class="bodyTable"><tr class="b"><th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.component.image.fontgeneratorDeformedRandomFontGeneratorTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.component.image.fontgeneratorDeformedRandomFontGeneratorTest">DeformedRandomFontGeneratorTest</a>
+</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.06</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.component.image.fontgeneratorRandomFontGeneratorTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.component.image.fontgeneratorRandomFontGeneratorTest">RandomFontGeneratorTest</a>
+</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.12</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.component.image.fontgeneratorTwistedAndShearedRandomFontGeneratorTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.component.image.fontgeneratorTwistedAndShearedRandomFontGeneratorTest">TwistedAndShearedRandomFontGeneratorTest</a>
+</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.08</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.component.image.fontgeneratorTwistedRandomFontGeneratorTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.component.image.fontgeneratorTwistedRandomFontGeneratorTest">TwistedRandomFontGeneratorTest</a>
+</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.03</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.service.captchastore"></a>
+com.octo.captcha.service.captchastore</h3>
+<table class="bodyTable"><tr class="a"><th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.service.captchastoreFastHashMapCaptchaStoreTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.service.captchastoreFastHashMapCaptchaStoreTest">FastHashMapCaptchaStoreTest</a>
+</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.11</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.service.captchastoreMapCaptchaStoreTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.service.captchastoreMapCaptchaStoreTest">MapCaptchaStoreTest</a>
+</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.06</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.image.backgroundgenerator"></a>
+com.octo.captcha.component.image.backgroundgenerator</h3>
+<table class="bodyTable"><tr class="b"><th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.component.image.backgroundgeneratorFileReaderRandomBackgroundGeneratorTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.component.image.backgroundgeneratorFileReaderRandomBackgroundGeneratorTest">FileReaderRandomBackgroundGeneratorTest</a>
+</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.03</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.engine.sound"></a>
+com.octo.captcha.engine.sound</h3>
+<table class="bodyTable"><tr class="b"><th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.engine.soundDefaultSoundCaptchaEngineTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.engine.soundDefaultSoundCaptchaEngineTest">DefaultSoundCaptchaEngineTest</a>
+</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.06</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.engine.soundListSoundCaptchaEngineTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.engine.soundListSoundCaptchaEngineTest">ListSoundCaptchaEngineTest</a>
+</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.03</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.word"></a>
+com.octo.captcha.component.word</h3>
+<table class="bodyTable"><tr class="a"><th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.component.wordDefaultSizeSortedWordListTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.component.wordDefaultSizeSortedWordListTest">DefaultSizeSortedWordListTest</a>
+</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.01</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.component.wordFileDictionaryTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.component.wordFileDictionaryTest">FileDictionaryTest</a>
+</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.14</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.sound.spellfind"></a>
+com.octo.captcha.sound.spellfind</h3>
+<table class="bodyTable"><tr class="b"><th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.sound.spellfindSpellFindCaptchaFactoryTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.sound.spellfindSpellFindCaptchaFactoryTest">SpellFindCaptchaFactoryTest</a>
+</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.14</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.image"></a>
+com.octo.captcha.image</h3>
+<table class="bodyTable"><tr class="b"><th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.imageImageCaptchaTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.imageImageCaptchaTest">ImageCaptchaTest</a>
+</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.22</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.sound"></a>
+com.octo.captcha.sound</h3>
+<table class="bodyTable"><tr class="b"><th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.soundSoundCaptchaTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.soundSoundCaptchaTest">SoundCaptchaTest</a>
+</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.02</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.service"></a>
+com.octo.captcha.service</h3>
+<table class="bodyTable"><tr class="b"><th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.serviceRunableAbstractCaptchaServiceTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.serviceRunableAbstractCaptchaServiceTest">RunableAbstractCaptchaServiceTest</a>
+</td>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.16</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.serviceRunableAbstractManageableCaptchaServiceTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.serviceRunableAbstractManageableCaptchaServiceTest">RunableAbstractManageableCaptchaServiceTest</a>
+</td>
+<td>27</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>35.58</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.image.utils"></a>
+com.octo.captcha.component.image.utils</h3>
+<table class="bodyTable"><tr class="a"><th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.component.image.utilsToolkitFactoryTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.component.image.utilsToolkitFactoryTest">ToolkitFactoryTest</a>
+</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.01</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.word.wordgenerator"></a>
+com.octo.captcha.component.word.wordgenerator</h3>
+<table class="bodyTable"><tr class="a"><th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.component.word.wordgeneratorComposeDictionaryWordGeneratorTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.component.word.wordgeneratorComposeDictionaryWordGeneratorTest">ComposeDictionaryWordGeneratorTest</a>
+</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.05</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.component.word.wordgeneratorDictionaryWordGeneratorTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.component.word.wordgeneratorDictionaryWordGeneratorTest">DictionaryWordGeneratorTest</a>
+</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.component.word.wordgeneratorDummyWordGeneratorTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.component.word.wordgeneratorDummyWordGeneratorTest">DummyWordGeneratorTest</a>
+</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.component.word.wordgeneratorRandomWordGeneratorTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.component.word.wordgeneratorRandomWordGeneratorTest">RandomWordGeneratorTest</a>
+</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.02</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.image.fisheye"></a>
+com.octo.captcha.image.fisheye</h3>
+<table class="bodyTable"><tr class="b"><th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.image.fisheyeFishEyeFactoryTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.image.fisheyeFishEyeFactoryTest">FishEyeFactoryTest</a>
+</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.08</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.image.fisheyeFishEyeTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.image.fisheyeFishEyeTest">FishEyeTest</a>
+</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.engine.image"></a>
+com.octo.captcha.engine.image</h3>
+<table class="bodyTable"><tr class="a"><th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.engine.imageDefaultImageCaptchaEngineTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.engine.imageDefaultImageCaptchaEngineTest">DefaultImageCaptchaEngineTest</a>
+</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.09</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.engine.imageListImageCaptchaEngineTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.engine.imageListImageCaptchaEngineTest">ListImageCaptchaEngineTest</a>
+</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.03</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.image.wordtoimage"></a>
+com.octo.captcha.component.image.wordtoimage</h3>
+<table class="bodyTable"><tr class="b"><th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.component.image.wordtoimageComposedWordToImageTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.component.image.wordtoimageComposedWordToImageTest">ComposedWordToImageTest</a>
+</td>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.03</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.component.image.wordtoimageDeformedComposedWordToImageTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.component.image.wordtoimageDeformedComposedWordToImageTest">DeformedComposedWordToImageTest</a>
+</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.23</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.component.image.wordtoimageFilteredComposedWordToImageTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.component.image.wordtoimageFilteredComposedWordToImageTest">FilteredComposedWordToImageTest</a>
+</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.08</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.component.image.wordtoimageSimpleWordToImageTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.component.image.wordtoimageSimpleWordToImageTest">SimpleWordToImageTest</a>
+</td>
+<td>9</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.sound.gimpy"></a>
+com.octo.captcha.sound.gimpy</h3>
+<table class="bodyTable"><tr class="a"><th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.sound.gimpySoundGimpyFactoryTest"><img src="images/icon_success_sml.gif" /></a>
+</td>
+<td><a href="#com.octo.captcha.sound.gimpySoundGimpyFactoryTest">SoundGimpyFactoryTest</a>
+</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>100.00%</td>
+<td>0.00</td>
+</tr>
+</table>
+<table class="bodyTable"><tr class="a"></tr>
+<tr class="b"></tr>
+</table>
+<h2><a name="Test_Cases"></a>
+Test Cases</h2>
+<div class="section">[<a href="#Summary">Summary</a>
+][<a href="#Package_List">Package List</a>
+][<a href="#Test_Cases">Test Cases</a>
+]</div>
+<h3><a name="com.octo.captcha.component.image.backgroundgeneratorFileReaderRandomBackgroundGeneratorTest"></a>
+FileReaderRandomBackgroundGeneratorTest</h3>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testFindDirectoryNotExisting</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testFindDirectoryClasspathDir</td>
+<td>0.02</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testFindDirectoryClasspathEmptyDir</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testCtorEmptyImageDir</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetBackground</td>
+<td>0.01</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.image.colorRandomListColorGeneratorTest"></a>
+RandomListColorGeneratorTest</h3>
+<table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testNominalCase</td>
+<td>0.03</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testNullColor</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testSingleColor</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.image.colorRandomRangeColorGeneratorTest"></a>
+RandomRangeColorGeneratorTest</h3>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testNominalCase</td>
+<td>0.05</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testNominalCaseWithoutAlpha</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testRangeError</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testRangeValueError</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testClosedRange</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.image.fontgeneratorDeformedRandomFontGeneratorTest"></a>
+DeformedRandomFontGeneratorTest</h3>
+<table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetFont</td>
+<td>0.05</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.image.fontgeneratorRandomFontGeneratorTest"></a>
+RandomFontGeneratorTest</h3>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetFont</td>
+<td>0.02</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetFontWithList</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetFontWithEmptyList</td>
+<td>0.02</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetFontWithBadFontList</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetFontWithBadFontPrefix</td>
+<td>0.01</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetFontWithEmptyBadFontPrefix</td>
+<td>0.06</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testMinFontSize</td>
+<td>0.01</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testMaxFontSize</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.image.fontgeneratorTwistedAndShearedRandomFontGeneratorTest"></a>
+TwistedAndShearedRandomFontGeneratorTest</h3>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetFont</td>
+<td>0.02</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGet10000Font</td>
+<td>0.05</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.image.fontgeneratorTwistedRandomFontGeneratorTest"></a>
+TwistedRandomFontGeneratorTest</h3>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetFont</td>
+<td>0.03</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.image.textpasterBaffleRandomTextPasterTest"></a>
+BaffleRandomTextPasterTest</h3>
+<table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testPasteText</td>
+<td>0.01</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetMaxAcceptedWordLenght</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetMinAcceptedWordLenght</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.image.textpasterDoubleRandomTextPasterTest"></a>
+DoubleRandomTextPasterTest</h3>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testPasteText</td>
+<td>0.02</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.image.textpasterDoubleTextPasterTest"></a>
+DoubleTextPasterTest</h3>
+<table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testPasteText</td>
+<td>0.05</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetMaxAcceptedWordLenght</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetMinAcceptedWordLenght</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetMaxAcceptedWordLength</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetMinAcceptedWordLength</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.image.textpasterSimpleTextPasterTest"></a>
+SimpleTextPasterTest</h3>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testPasteText</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetMaxAcceptedWordLenght</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetMinAcceptedWordLenght</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetMaxAcceptedWordLength</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetMinAcceptedWordLength</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.image.utilsToolkitFactoryTest"></a>
+ToolkitFactoryTest</h3>
+<table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetaDefaultToolkit</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetCustomToolkit</td>
+<td>0.01</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetBadClassToolkit</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.image.wordtoimageComposedWordToImageTest"></a>
+ComposedWordToImageTest</h3>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetFont</td>
+<td>0.02</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetMaxAcceptedWordLength</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetMinAcceptedWordLength</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetBackround</td>
+<td>0.01</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetImageHeight</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetImageWidth</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetMinFontSize</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.image.wordtoimageDeformedComposedWordToImageTest"></a>
+DeformedComposedWordToImageTest</h3>
+<table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetImage</td>
+<td>0.22</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetImageNull</td>
+<td>0.01</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.image.wordtoimageFilteredComposedWordToImageTest"></a>
+FilteredComposedWordToImageTest</h3>
+<table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetImage</td>
+<td>0.08</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetImageNull</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.image.wordtoimageSimpleWordToImageTest"></a>
+SimpleWordToImageTest</h3>
+<table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetFont</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetMaxAcceptedWordLenght</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetMinAcceptedWordLenght</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetMaxAcceptedWordLength</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetMinAcceptedWordLength</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetBackround</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetImageHeight</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetImageWidth</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetMinFontSize</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.wordDefaultSizeSortedWordListTest"></a>
+DefaultSizeSortedWordListTest</h3>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetLocale</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testAddWord</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetNextWord</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetMinWord</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetMaxWord</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.wordFileDictionaryTest"></a>
+FileDictionaryTest</h3>
+<table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetWordList</td>
+<td>0.05</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetWordListLocale</td>
+<td>0.08</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.word.wordgeneratorComposeDictionaryWordGeneratorTest"></a>
+ComposeDictionaryWordGeneratorTest</h3>
+<table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetWordIntegerLocale</td>
+<td>0.05</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testSmallWordWithOneLetter</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testEmptyDictionnary</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.word.wordgeneratorDictionaryWordGeneratorTest"></a>
+DictionaryWordGeneratorTest</h3>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetWordIntegerLocale</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetWordInteger</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.word.wordgeneratorDummyWordGeneratorTest"></a>
+DummyWordGeneratorTest</h3>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetWordIntegerLocale</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetWordInteger</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetDefaultWord</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.component.word.wordgeneratorRandomWordGeneratorTest"></a>
+RandomWordGeneratorTest</h3>
+<table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetWord</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.engine.imageDefaultImageCaptchaEngineTest"></a>
+DefaultImageCaptchaEngineTest</h3>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testNullOrEmptyFactoryImageCaptchaEngineConstructor</td>
+<td>0.02</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testNullOrEmptySetFactories</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testWrongTypeSetFactories</td>
+<td>0.03</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testSetFactories</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.engine.imageListImageCaptchaEngineTest"></a>
+ListImageCaptchaEngineTest</h3>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testNullOrEmptyFactoryImageCaptchaEngineConstructor</td>
+<td>0.03</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testNullOrEmptySetFactories</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testWrongTypeSetFactories</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testSetFactories</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.engine.soundDefaultSoundCaptchaEngineTest"></a>
+DefaultSoundCaptchaEngineTest</h3>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testNullOrEmptySetFactories</td>
+<td>0.05</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testWrongTypeSetFactories</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testSetFactories</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testNullOrEmptyFactorySoundCaptchaEngineConstructor</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.engine.soundListSoundCaptchaEngineTest"></a>
+ListSoundCaptchaEngineTest</h3>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testNullOrEmptySetFactories</td>
+<td>0.03</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testWrongTypeSetFactories</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testSetFactories</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testNullOrEmptyFactorySoundCaptchaEngineConstructor</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.image.fisheyeFishEyeFactoryTest"></a>
+FishEyeFactoryTest</h3>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetImageCaptcha</td>
+<td>0.08</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.image.fisheyeFishEyeTest"></a>
+FishEyeTest</h3>
+<table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testValidateResponse</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testValidateResponseTolerance</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.image.gimpyGimpyFactoryTest"></a>
+GimpyFactoryTest</h3>
+<table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetRandomLength</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGimpyFactory</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.imageImageCaptchaTest"></a>
+ImageCaptchaTest</h3>
+<table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testValidateResponse</td>
+<td>0.19</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetQuestion</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetChallenge</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testDisposeChallenge</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetImageChallenge</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testUnMarshalling</td>
+<td>0.02</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testUnMarshallingWithGetChallenge</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testUnMarshallingWithDisposedChallenge</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.service.captchastoreFastHashMapCaptchaStoreTest"></a>
+FastHashMapCaptchaStoreTest</h3>
+<table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testHasCaptcha</td>
+<td>0.02</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testStoreCaptcha</td>
+<td>0.01</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testStoreCaptchaAndLocale</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testRemoveCaptcha</td>
+<td>0.02</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetSize</td>
+<td>0.02</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetKeys</td>
+<td>0.01</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetCaptcha</td>
+<td>0.02</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testEmpty</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.service.captchastoreMapCaptchaStoreTest"></a>
+MapCaptchaStoreTest</h3>
+<table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testHasCaptcha</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testStoreCaptcha</td>
+<td>0.02</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testStoreCaptchaAndLocale</td>
+<td>0.02</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testRemoveCaptcha</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetSize</td>
+<td>0.01</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetKeys</td>
+<td>0.02</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetCaptcha</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testEmpty</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.serviceRunableAbstractCaptchaServiceTest"></a>
+RunableAbstractCaptchaServiceTest</h3>
+<table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testAbstractCaptchaService</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetChallengeForID</td>
+<td>0.09</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetQuestionForID</td>
+<td>0.02</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testValidateResponseForID</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGenerateAndStoreCaptcha</td>
+<td>0.01</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testCaptchaRegenerationWhenNewLocaleIsAsked</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testInitStore</td>
+<td>0.02</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.serviceRunableAbstractManageableCaptchaServiceTest"></a>
+RunableAbstractManageableCaptchaServiceTest</h3>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testIsCaptchaStoreFull</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testAbstractManageableCaptchaService</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetCaptchaEngineClass</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testSetCaptchaEngineClass</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testEmptyCaptchaStore</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGarbageCollectCaptchaStore</td>
+<td>3.11</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetCaptchaStoreMaxSize</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testSetCaptchaStoreMaxSize</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testSetCaptchaStoreSizeBeforeGarbageCollection</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetCaptchaStoreSizeBeforeGarbageCollection</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetNumberOfGarbageCollectedCaptcha</td>
+<td>9.31</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetNumberOfGarbageCollectableCaptchas</td>
+<td>12.41</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetCaptchaStoreSize</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetNumberOfUncorrectResponses</td>
+<td>0.02</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetNumberOfCorrectResponses</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetNumberOfGeneratedCaptchas</td>
+<td>0.03</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testSetMinGuarantedStorageDelayInSeconds</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetMinGuarantedStorageDelayInSeconds</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testAutomaticGarbaging</td>
+<td>8.20</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testMaxStoreSizeConstraint</td>
+<td>2.47</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testAbstractCaptchaService</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetChallengeForID</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetQuestionForID</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testValidateResponseForID</td>
+<td>0.01</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGenerateAndStoreCaptcha</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testCaptchaRegenerationWhenNewLocaleIsAsked</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testInitStore</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.sound.gimpySoundGimpyFactoryTest"></a>
+SoundGimpyFactoryTest</h3>
+<table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGimpyFactory</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.soundSoundCaptchaTest"></a>
+SoundCaptchaTest</h3>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetQuestion</td>
+<td>0.02</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetChallenge</td>
+<td>0.00</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetAudioChallenge</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.sound.spellerSoundSpellerFactoryTest"></a>
+SoundSpellerFactoryTest</h3>
+<table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testSpellerSoundFactory</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.sound.spellerSpellerSoundFactoryTest"></a>
+SpellerSoundFactoryTest</h3>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testSpellerSoundFactory</td>
+<td>0.00</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetSoundCaptcha</td>
+<td>0.00</td>
+</tr>
+</table>
+<h3><a name="com.octo.captcha.sound.spellfindSpellFindCaptchaFactoryTest"></a>
+SpellFindCaptchaFactoryTest</h3>
+<table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testSpellerSoundFactory</td>
+<td>0.05</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testGetSoundCaptcha</td>
+<td>0.08</td>
+</tr>
+</table>
+<table class="bodyTable"><tr class="a"></tr>
+<tr class="b"></tr>
+</table>
+<table class="bodyTable"><tr class="a"></tr>
+<tr class="b"></tr>
+</table>
+
+      </div>
+    </div>
+    <div class="clear">
+      <hr/>
+    </div>
+    <div id="footer">
+      <div class="xright">&#169;  
+          2003-2009
+    
+          JCaptcha corp.
+          
+  
+
+  
+    
+            
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>

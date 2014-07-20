@@ -1,0 +1,1353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>JCaptcha - Checkstyle Results</title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+    </style>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+                                                    
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+                                                        
+<script type="text/javascript">var pageTracker = _gat._getTracker("UA-3856069-2");
+        pageTracker._initData();
+        pageTracker._trackPageview();</script>
+                    </head>
+  <body class="composite">
+    <div id="banner">
+                  <a href=".." id="bannerLeft">
+    
+                                            <img src="images/jcaptcha-logo.jpg" alt="" />
+    
+            </a>
+                    <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+            
+  
+    
+            <div class="xleft">
+        Last Published: 03 Feb 2009
+                  &nbsp;| Version: 1.0
+                      </div>
+            <div class="xright">            <a href="http://www.octo.com" class="externalLink">OCTO Technology</a>
+            
+  
+
+  
+    
+            
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="leftColumn">
+      <div id="navcolumn">
+           
+  
+
+  
+    
+            
+  
+    
+                   <h5>Overview</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="index.html">Introduction</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://sourceforge.net/project/showfiles.php?group_id=97877" class="externalLink">Download</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://forge.octo.com/jcaptcha/confluence" class="externalLink">Wiki Documentation</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://forge.octo.com/jcaptcha/jira" class="externalLink">Issue tracker</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://sourceforge.net/projects/jcaptcha" class="externalLink">Sourceforge site</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://fisheye3.cenqua.com/browse/jcaptcha" class="externalLink">Browse source</a>
+          </li>
+              
+    <li class="none">
+                    <a href="mail-lists.html">Mailing lists</a>
+          </li>
+              
+    <li class="none">
+                    <a href="team-list.html">Project Team</a>
+          </li>
+              
+    <li class="none">
+                    <a href="thanks.html">Thanks</a>
+          </li>
+          </ul>
+              <h5>Parent Project</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="../index.html">JCaptcha Home</a>
+          </li>
+          </ul>
+              <h5>Project Documentation</h5>
+            <ul>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+                    <a href="project-info.html">Project Information</a>
+                </li>
+              
+                
+              
+            
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+              
+            <li class="expanded">
+                    <a href="project-reports.html">Project Reports</a>
+                  <ul>
+                  
+    <li class="none">
+              <strong>Checkstyle</strong>
+        </li>
+                  
+    <li class="none">
+                    <a href="clover/index.html">Clover</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="cpd.html">CPD Report</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="findbugs.html">FindBugs Report</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="apidocs/index.html">JavaDocs</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="surefire-report.html">Maven Surefire Report</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="pmd.html">PMD Report</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="jxr.html">Source Xref</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="taglist.html">Tag List</a>
+          </li>
+              </ul>
+        </li>
+          </ul>
+                                           <a href="http://maven.apache.org/" title="Built by Maven" class="poweredBy">
+            <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
+          </a>
+                       
+  
+
+  
+    
+            
+  
+    
+        </div>
+    </div>
+    <div id="bodyColumn">
+      <div id="contentBox">
+        <div class="section"><h2>Checkstyle Results</h2>
+<p>The following document contains the results of <a href="http://checkstyle.sourceforge.net/" class="externalLink">Checkstyle</a>
+.&#160;<a href="#checkstyle.rss"><img alt="rss feed" src="images/rss.png" /></a>
+</p>
+</div>
+<div class="section"><h2>Summary</h2>
+<table class="bodyTable"><tr class="a"><th>Files</th>
+<th>Infos&#160;<img alt="Infos" src="images/icon_info_sml.gif" /></th>
+<th>Warnings&#160;<img alt="Warnings" src="images/icon_warning_sml.gif" /></th>
+<th>Errors&#160;<img alt="Errors" src="images/icon_error_sml.gif" /></th>
+</tr>
+<tr class="b"><td>4</td>
+<td>0</td>
+<td>0</td>
+<td>149</td>
+</tr>
+</table>
+</div>
+<div class="section"><h2>Files</h2>
+<table class="bodyTable"><tr class="a"><th>Files</th>
+<th>I&#160;<img alt="Infos" src="images/icon_info_sml.gif" /></th>
+<th>W&#160;<img alt="Warnings" src="images/icon_warning_sml.gif" /></th>
+<th>E&#160;<img alt="Errors" src="images/icon_error_sml.gif" /></th>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.module.filter.FilterConfigUtils.java">com/octo/captcha/module/filter/FilterConfigUtils.java</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>32</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.module.filter.image.ImageCaptchaFilter.java">com/octo/captcha/module/filter/image/ImageCaptchaFilter.java</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>115</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.module.filter.image.package.html">com/octo/captcha/module/filter/image/package.html</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.module.filter.package.html">com/octo/captcha/module/filter/package.html</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</table>
+</div>
+<div class="section"><h2>Rules</h2>
+<table class="bodyTable"><tr class="b"><th>Rules</th>
+<th>Violations</th>
+<th>Severity</th>
+</tr>
+<tr class="a"><td>PackageHtml</td>
+<td>2</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>NewlineAtEndOfFile</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>Translation</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>JavadocMethod</td>
+<td>15</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>JavadocType</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>JavadocVariable</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>JavadocStyle</td>
+<td>24</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>ConstantName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>LocalFinalVariableName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>LocalVariableName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>MemberName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>MethodName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>PackageName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>ParameterName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>StaticVariableName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>TypeName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>AvoidStarImport</td>
+<td>1</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>IllegalImport</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>RedundantImport</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>UnusedImports</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>FileLength</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>LineLength</td>
+<td>70</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>MethodLength</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>ParameterNumber</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>EmptyForIteratorPad</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>MethodParamPad</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>NoWhitespaceAfter</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>NoWhitespaceBefore</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>OperatorWrap</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>ParenPad</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>TypecastParenPad</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>TabCharacter</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>WhitespaceAfter</td>
+<td>3</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>WhitespaceAround</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>ModifierOrder</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>RedundantModifier</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>AvoidNestedBlocks</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>EmptyBlock</td>
+<td>1</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>LeftCurly</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>NeedBraces</td>
+<td>1</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>RightCurly</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>AvoidInlineConditionals</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>DoubleCheckedLocking</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>EmptyStatement</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>EqualsHashCode</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>HiddenField</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>IllegalInstantiation</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>InnerAssignment</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>MagicNumber</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>MissingSwitchDefault</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>RedundantThrows</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>SimplifyBooleanExpression</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>SimplifyBooleanReturn</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>DesignForExtension</td>
+<td>3</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>FinalClass</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>HideUtilityClassConstructor</td>
+<td>1</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>InterfaceIsType</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>VisibilityModifier</td>
+<td>2</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>ArrayTypeStyle</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>FinalParameters</td>
+<td>26</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>GenericIllegalRegexp<ul><li><b>message</b>
+: <tt>&quot;Line has trailing spaces.&quot;</tt>
+</li>
+<li><b>format</b>
+: <tt>&quot;\s+$&quot;</tt>
+</li>
+</ul>
+</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>TodoComment</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>UpperEll</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+</table>
+</div>
+<div class="section"><h2>Details</h2>
+<div class="section"><h3><a name="com.octo.captcha.module.filter.FilterConfigUtils.java"></a>
+com/octo/captcha/module/filter/FilterConfigUtils.java</h3>
+<table class="bodyTable"><tr class="b"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#2">2</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#12">12</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Utility classes should not have a public or default constructor.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#18">18</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#19">19</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#22">22</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#24">24</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#26">26</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#28">28</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theFilterConfig should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#31">31</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theInitParameterName should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#32">32</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter isMandatory should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#33">33</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#46">46</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#49">49</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#51">51</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#55">55</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#58">58</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#59">59</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#60">60</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#61">61</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theFilterConfig should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#63">63</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theInitParameterName should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#64">64</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter isMandatory should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#65">65</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theMinValue should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#66">66</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theMaxValue should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#67">67</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#99">99</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#102">102</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#104">104</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#106">106</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#108">108</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theFilterConfig should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#111">111</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theInitParameterName should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#112">112</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter isMandatory should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/FilterConfigUtils.html#113">113</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="com.octo.captcha.module.filter.image.ImageCaptchaFilter.java"></a>
+com/octo/captcha/module/filter/image/ImageCaptchaFilter.java</h3>
+<table class="bodyTable"><tr class="a"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#2">2</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Using the '.*' form of import should be avoided - javax.servlet.*.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#17">17</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#27">27</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#28">28</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#29">29</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#30">30</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#31">31</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#32">32</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#33">33</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#34">34</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#35">35</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#36">36</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#49">49</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#55">55</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#56">56</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#70">70</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#76">76</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#82">82</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#83">83</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#88">88</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#89">89</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#90">90</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#101">101</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#108">108</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#109">109</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#115">115</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#116">116</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#122">122</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#123">123</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#134">134</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#135">135</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#141">141</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#142">142</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#146">146</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#151">151</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#152">152</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#157">157</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#158">158</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#164">164</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#165">165</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#171">171</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#175">175</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#183">183</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#188">188</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#189">189</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Variable 'verificationForwards' must be private and have accessor methods.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#192">192</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#194">194</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Variable 'captchaServiceClassName' must be private and have accessor methods.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#197">197</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'init' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#206">206</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'theFilterConfig'.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#206">206</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @throws tag for 'ServletException'.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#207">207</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#235">235</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#237">237</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#285">285</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#299">299</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#300">300</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#301">301</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#308">308</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'doFilter' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#311">311</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'theRequest'.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#311">311</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'theResponse'.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#312">312</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'theFilterChain'.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#313">313</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @throws tag for 'IOException'.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#314">314</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @throws tag for 'ServletException'.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#314">314</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'if' construct must use '{}'s.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#321">321</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#321">321</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#347">347</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'destroy' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#350">350</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#351">351</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#352">352</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#353">353</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#363">363</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#365">365</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theRequest should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#365">365</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'theRequest'.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#365">365</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theResponse should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#365">365</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'theResponse'.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#365">365</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#366">366</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>';' is not followed by whitespace.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#366">366</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#367">367</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#372">372</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#373">373</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#379">379</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theRequest should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#381">381</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theResponse should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#382">382</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#386">386</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>';' is not followed by whitespace.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#386">386</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#393">393</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#437">437</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#438">438</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theRequest should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#447">447</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#448">448</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theResponse should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#448">448</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theVerificationURL should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#449">449</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theFilterChain should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#450">450</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'theFilterChain'.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#450">450</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#453">453</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>';' is not followed by whitespace.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#453">453</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Must have at least one statement.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#470">470</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#486">486</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#489">489</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#493">493</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theVerificationURL should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#495">495</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theRequest should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#496">496</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theResponse should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#497">497</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @throws tag for 'ServletException'.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#498">498</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#504">504</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#511">511</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#518">518</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theFilterChain should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#520">520</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theRequest should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#521">521</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theResponse should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#522">522</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @throws tag for 'ServletException'.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#523">523</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#532">532</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theRequest should be final.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html#537">537</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="com.octo.captcha.module.filter.image.package.html"></a>
+com/octo/captcha/module/filter/image/package.html</h3>
+<table class="bodyTable"><tr class="a"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing package documentation file.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/image/package.html#0">0</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="com.octo.captcha.module.filter.package.html"></a>
+com/octo/captcha/module/filter/package.html</h3>
+<table class="bodyTable"><tr class="a"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing package documentation file.</td>
+<td><a href="./xref/com/octo/captcha/module/filter/package.html#0">0</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+      </div>
+    </div>
+    <div class="clear">
+      <hr/>
+    </div>
+    <div id="footer">
+      <div class="xright">&#169;  
+          2003-2009
+    
+          JCaptcha corp.
+          
+  
+
+  
+    
+            
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>

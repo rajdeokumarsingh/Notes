@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.2.2" timestamp="2009-02-03T23:08:10.000">
+<file name="E:\dev\projects\jcaptcha\integration-filter\src\main\java\com\octo\captcha\module\filter\FilterConfigUtils.java">
+<violation beginline="125" endline="125" begincolumn="29" endcolumn="62" rule="BooleanInstantiation" ruleset="Basic Rules" package="com.octo.captcha.module.filter" class="FilterConfigUtils" method="getBooleanInitParameter" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#BooleanInstantiation" priority="2">
+Avoid instantiating Boolean objects; reference Boolean.TRUE or Boolean.FALSE or call Boolean.valueOf() instead.
+</violation>
+</file>
+<file name="E:\dev\projects\jcaptcha\integration-filter\src\main\java\com\octo\captcha\module\filter\image\ImageCaptchaFilter.java">
+<violation beginline="352" endline="352" begincolumn="38" endcolumn="47" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="com.octo.captcha.module.filter.image" class="ImageCaptchaFilter" method="destroy" variable="manageable" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'manageable'.
+</violation>
+<violation beginline="365" endline="369" begincolumn="13" endcolumn="5" rule="UnusedFormalParameter" ruleset="Unused Code Rules" package="com.octo.captcha.module.filter.image" class="ImageCaptchaFilter" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedFormalParameter" priority="3">
+Avoid unused method parameters such as 'theResponse'.
+</violation>
+<violation beginline="470" endline="473" begincolumn="11" endcolumn="9" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.module.filter.image" class="ImageCaptchaFilter" method="verifyAnswerToACaptchaChallenge" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+</file>
+</pmd>

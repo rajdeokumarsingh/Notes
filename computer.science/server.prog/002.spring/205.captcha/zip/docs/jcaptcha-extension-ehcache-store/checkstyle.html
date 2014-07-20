@@ -1,0 +1,2038 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>JCaptcha - Checkstyle Results</title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+    </style>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+                                                    
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+                                                        
+<script type="text/javascript">var pageTracker = _gat._getTracker("UA-3856069-2");
+        pageTracker._initData();
+        pageTracker._trackPageview();</script>
+                    </head>
+  <body class="composite">
+    <div id="banner">
+                  <a href=".." id="bannerLeft">
+    
+                                            <img src="images/jcaptcha-logo.jpg" alt="" />
+    
+            </a>
+                    <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+            
+  
+    
+            <div class="xleft">
+        Last Published: 03 Feb 2009
+                  &nbsp;| Version: 1.0
+                      </div>
+            <div class="xright">            <a href="http://www.octo.com" class="externalLink">OCTO Technology</a>
+            
+  
+
+  
+    
+            
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="leftColumn">
+      <div id="navcolumn">
+           
+  
+
+  
+    
+            
+  
+    
+                   <h5>Overview</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="index.html">Introduction</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://sourceforge.net/project/showfiles.php?group_id=97877" class="externalLink">Download</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://forge.octo.com/jcaptcha/confluence" class="externalLink">Wiki Documentation</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://forge.octo.com/jcaptcha/jira" class="externalLink">Issue tracker</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://sourceforge.net/projects/jcaptcha" class="externalLink">Sourceforge site</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://fisheye3.cenqua.com/browse/jcaptcha" class="externalLink">Browse source</a>
+          </li>
+              
+    <li class="none">
+                    <a href="mail-lists.html">Mailing lists</a>
+          </li>
+              
+    <li class="none">
+                    <a href="team-list.html">Project Team</a>
+          </li>
+              
+    <li class="none">
+                    <a href="thanks.html">Thanks</a>
+          </li>
+          </ul>
+              <h5>Parent Project</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="../index.html">JCaptcha Home</a>
+          </li>
+          </ul>
+              <h5>Project Documentation</h5>
+            <ul>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+                    <a href="project-info.html">Project Information</a>
+                </li>
+              
+                
+              
+            
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+              
+            <li class="expanded">
+                    <a href="project-reports.html">Project Reports</a>
+                  <ul>
+                  
+    <li class="none">
+              <strong>Checkstyle</strong>
+        </li>
+                  
+    <li class="none">
+                    <a href="clover/index.html">Clover</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="cpd.html">CPD Report</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="findbugs.html">FindBugs Report</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="apidocs/index.html">JavaDocs</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="surefire-report.html">Maven Surefire Report</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="pmd.html">PMD Report</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="jxr.html">Source Xref</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="taglist.html">Tag List</a>
+          </li>
+              </ul>
+        </li>
+          </ul>
+                                           <a href="http://maven.apache.org/" title="Built by Maven" class="poweredBy">
+            <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
+          </a>
+                       
+  
+
+  
+    
+            
+  
+    
+        </div>
+    </div>
+    <div id="bodyColumn">
+      <div id="contentBox">
+        <div class="section"><h2>Checkstyle Results</h2>
+<p>The following document contains the results of <a href="http://checkstyle.sourceforge.net/" class="externalLink">Checkstyle</a>
+.&#160;<a href="#checkstyle.rss"><img alt="rss feed" src="images/rss.png" /></a>
+</p>
+</div>
+<div class="section"><h2>Summary</h2>
+<table class="bodyTable"><tr class="a"><th>Files</th>
+<th>Infos&#160;<img alt="Infos" src="images/icon_info_sml.gif" /></th>
+<th>Warnings&#160;<img alt="Warnings" src="images/icon_warning_sml.gif" /></th>
+<th>Errors&#160;<img alt="Errors" src="images/icon_error_sml.gif" /></th>
+</tr>
+<tr class="b"><td>9</td>
+<td>0</td>
+<td>0</td>
+<td>272</td>
+</tr>
+</table>
+</div>
+<div class="section"><h2>Files</h2>
+<table class="bodyTable"><tr class="a"><th>Files</th>
+<th>I&#160;<img alt="Infos" src="images/icon_info_sml.gif" /></th>
+<th>W&#160;<img alt="Warnings" src="images/icon_warning_sml.gif" /></th>
+<th>E&#160;<img alt="Errors" src="images/icon_error_sml.gif" /></th>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.service.EhcacheManageableCaptchaService.java">com/octo/captcha/service/EhcacheManageableCaptchaService.java</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>109</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.service.EhcacheManageableCaptchaServiceMBean.java">com/octo/captcha/service/EhcacheManageableCaptchaServiceMBean.java</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.service.captchastore.EhcacheCaptchaStore.java">com/octo/captcha/service/captchastore/EhcacheCaptchaStore.java</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>86</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.service.captchastore.package.html">com/octo/captcha/service/captchastore/package.html</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.service.image.EhcacheManageableImageCaptchaService.java">com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.java</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>35</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.service.image.package.html">com/octo/captcha/service/image/package.html</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.service.package.html">com/octo/captcha/service/package.html</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="a"><td><a href="#com.octo.captcha.service.sound.EhcacheManageableSoundCaptchaService.java">com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.java</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>34</td>
+</tr>
+<tr class="b"><td><a href="#com.octo.captcha.service.sound.package.html">com/octo/captcha/service/sound/package.html</a>
+</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</table>
+</div>
+<div class="section"><h2>Rules</h2>
+<table class="bodyTable"><tr class="a"><th>Rules</th>
+<th>Violations</th>
+<th>Severity</th>
+</tr>
+<tr class="b"><td>PackageHtml</td>
+<td>4</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>NewlineAtEndOfFile</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>Translation</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>JavadocMethod</td>
+<td>26</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>JavadocType</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>JavadocVariable</td>
+<td>13</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>JavadocStyle</td>
+<td>15</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>ConstantName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>LocalFinalVariableName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>LocalVariableName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>MemberName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>MethodName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>PackageName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>ParameterName</td>
+<td>6</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>StaticVariableName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>TypeName</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>AvoidStarImport</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>IllegalImport</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>RedundantImport</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>UnusedImports</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>FileLength</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>LineLength</td>
+<td>80</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>MethodLength</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>ParameterNumber</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>EmptyForIteratorPad</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>MethodParamPad</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>NoWhitespaceAfter</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>NoWhitespaceBefore</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>OperatorWrap</td>
+<td>2</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>ParenPad</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>TypecastParenPad</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>TabCharacter</td>
+<td>21</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>WhitespaceAfter</td>
+<td>1</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>WhitespaceAround</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>ModifierOrder</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>RedundantModifier</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>AvoidNestedBlocks</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>EmptyBlock</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>LeftCurly</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>NeedBraces</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>RightCurly</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>AvoidInlineConditionals</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>DoubleCheckedLocking</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>EmptyStatement</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>EqualsHashCode</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>HiddenField</td>
+<td>4</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>IllegalInstantiation</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>InnerAssignment</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>MagicNumber</td>
+<td>1</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>MissingSwitchDefault</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>RedundantThrows</td>
+<td>11</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>SimplifyBooleanExpression</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>SimplifyBooleanReturn</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>DesignForExtension</td>
+<td>35</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>FinalClass</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>HideUtilityClassConstructor</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>InterfaceIsType</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>VisibilityModifier</td>
+<td>1</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>ArrayTypeStyle</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>FinalParameters</td>
+<td>48</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>GenericIllegalRegexp<ul><li><b>message</b>
+: <tt>&quot;Line has trailing spaces.&quot;</tt>
+</li>
+<li><b>format</b>
+: <tt>&quot;\s+$&quot;</tt>
+</li>
+</ul>
+</td>
+<td>4</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="a"><td>TodoComment</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+<tr class="b"><td>UpperEll</td>
+<td>0</td>
+<td><img alt="Errors" src="images/icon_error_sml.gif" />&#160;Error</td>
+</tr>
+</table>
+</div>
+<div class="section"><h2>Details</h2>
+<div class="section"><h3><a name="com.octo.captcha.service.EhcacheManageableCaptchaService.java"></a>
+com/octo/captcha/service/EhcacheManageableCaptchaService.java</h3>
+<table class="bodyTable"><tr class="a"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#2">2</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#25">25</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#36">36</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#36">36</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#37">37</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#38">38</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#40">40</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#43">43</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#44">44</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#45">45</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#46">46</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#47">47</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#49">49</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Variable 'captchaStoreCacheName' must be private and have accessor methods.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#49">49</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#52">52</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#52">52</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter captchaEngine should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#52">52</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#53">53</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter minGuarantedStorageDelayInSeconds should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#53">53</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'minGuarantedStorageDelayInSeconds' hides a field.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#53">53</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter maxCaptchaStoreSize should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#53">53</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#54">54</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#58">58</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#58">58</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter captchaEngine should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#58">58</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#59">59</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter minGuarantedStorageDelayInSeconds should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#59">59</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'minGuarantedStorageDelayInSeconds' hides a field.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#59">59</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter maxCaptchaStoreSize should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#59">59</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter cacheName should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#60">60</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#78">78</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#94">94</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#100">100</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#102">102</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getCaptchaEngineClass' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#104">104</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#108">108</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#109">109</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#111">111</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#113">113</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#114">114</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'setCaptchaEngineClass' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#117">117</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theClassName should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#117">117</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Redundant throws: 'IllegalArgumentException' is unchecked exception.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#118">118</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#124">124</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#138">138</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#139">139</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getMinGuarantedStorageDelayInSeconds' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#144">144</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#148">148</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#149">149</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#155">155</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'setMinGuarantedStorageDelayInSeconds' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#155">155</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter theMinGuarantedStorageDelayInSeconds should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#155">155</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#156">156</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#162">162</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#163">163</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getNumberOfGeneratedCaptchas' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#168">168</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#173">173</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getNumberOfCorrectResponses' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#178">178</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#183">183</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getNumberOfUncorrectResponses' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#188">188</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#192">192</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getCaptchaStoreSize' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#197">197</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#201">201</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#202">202</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#204">204</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getNumberOfGarbageCollectableCaptchas' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#206">206</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#211">211</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#212">212</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getNumberOfGarbageCollectedCaptcha' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#217">217</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getCaptchaStoreSizeBeforeGarbageCollection' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#224">224</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#228">228</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#231">231</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'setCaptchaStoreSizeBeforeGarbageCollection' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#231">231</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter captchaStoreSizeBeforeGarbageCollection should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#231">231</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'captchaStoreSizeBeforeGarbageCollection'.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#231">231</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#233">233</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#239">239</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'setCaptchaStoreMaxSize' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#242">242</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter size should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#242">242</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'size'.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#242">242</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getCaptchaStoreMaxSize' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#253">253</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#258">258</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#259">259</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'garbageCollectCaptchaStore' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#262">262</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#266">266</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#272">272</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#280">280</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'emptyCaptchaStore' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#283">283</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#289">289</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#291">291</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#308">308</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'1000' is a magic number.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#308">308</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#319">319</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Redundant throws: 'CacheException' is unchecked exception.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#319">319</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'generateAndStoreCaptcha' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#338">338</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#338">338</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter locale should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#338">338</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter ID should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#338">338</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Name 'ID' must match pattern '^[a-z][a-zA-Z0-9]*$'.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#338">338</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'+' should be on a new line.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#341">341</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'+' should be on a new line.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#342">342</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#357">357</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#366">366</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'validateResponseForID' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#366">366</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter ID should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#366">366</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Name 'ID' must match pattern '^[a-z][a-zA-Z0-9]*$'.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#366">366</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter response should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#366">366</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'response'.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#366">366</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Redundant throws: 'CaptchaServiceException' is unchecked exception.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaService.html#366">366</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="com.octo.captcha.service.EhcacheManageableCaptchaServiceMBean.java"></a>
+com/octo/captcha/service/EhcacheManageableCaptchaServiceMBean.java</h3>
+<table class="bodyTable"><tr class="a"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaServiceMBean.html#2">2</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaServiceMBean.html#10">10</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaServiceMBean.html#11">11</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/EhcacheManageableCaptchaServiceMBean.html#17">17</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="com.octo.captcha.service.captchastore.EhcacheCaptchaStore.java"></a>
+com/octo/captcha/service/captchastore/EhcacheCaptchaStore.java</h3>
+<table class="bodyTable"><tr class="b"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#2">2</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#23">23</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#26">26</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#32">32</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#32">32</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#33">33</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#33">33</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#34">34</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#36">36</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#37">37</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line has trailing spaces.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#39">39</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#40">40</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter cacheName should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#40">40</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'cacheName' hides a field.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#40">40</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#41">41</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line has trailing spaces.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#43">43</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line has trailing spaces.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#45">45</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#45">45</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#46">46</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter cache should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#48">48</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>'cache' hides a field.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#48">48</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#49">49</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line has trailing spaces.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#51">51</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#52">52</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'hasCaptcha' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#57">57</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter id should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#57">57</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'id'.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#57">57</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#68">68</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#75">75</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#77">77</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'storeCaptcha' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#77">77</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter id should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#77">77</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter captcha should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#77">77</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Redundant throws: 'CaptchaServiceException' is unchecked exception.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#77">77</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#82">82</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#89">89</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#91">91</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'storeCaptcha' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#91">91</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter id should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#91">91</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter captcha should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#91">91</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter locale should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#91">91</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Redundant throws: 'CaptchaServiceException' is unchecked exception.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#91">91</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>',' is not followed by whitespace.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#92">92</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#100">100</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getCaptcha' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#102">102</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter id should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#102">102</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'id'.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#102">102</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Redundant throws: 'CaptchaServiceException' is unchecked exception.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#102">102</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getLocale' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#125">125</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter id should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#125">125</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'id'.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#125">125</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Redundant throws: 'CaptchaServiceException' is unchecked exception.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#125">125</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Unused @throws tag for 'CaptchaServiceException'.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#147">147</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'removeCaptcha' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#149">149</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter id should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#149">149</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#153">153</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected an @return tag.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#156">156</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getSize' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#156">156</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#161">161</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected an @return tag.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#164">164</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getKeys' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#164">164</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>First sentence should end with a period.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#173">173</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'empty' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#176">176</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#185">185</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#185">185</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#186">186</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#187">187</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'initAndStart' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#187">187</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#187">187</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#188">188</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#189">189</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#190">190</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#190">190</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#191">191</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#192">192</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#194">194</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#195">195</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#195">195</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#196">196</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#197">197</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'cleanAndShutdown' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#197">197</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#197">197</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#198">198</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#199">199</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#200">200</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line contains a tab character.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/EhcacheCaptchaStore.html#201">201</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="com.octo.captcha.service.captchastore.package.html"></a>
+com/octo/captcha/service/captchastore/package.html</h3>
+<table class="bodyTable"><tr class="a"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing package documentation file.</td>
+<td><a href="./xref/com/octo/captcha/service/captchastore/package.html#0">0</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="com.octo.captcha.service.image.EhcacheManageableImageCaptchaService.java"></a>
+com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.java</h3>
+<table class="bodyTable"><tr class="a"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#2">2</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#21">21</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#23">23</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#23">23</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter captchaEngine should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#23">23</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter minGuarantedStorageDelayInSeconds should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#23">23</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter maxCaptchaStoreSize should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#23">23</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#24">24</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#27">27</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#27">27</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter captchaEngine should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#27">27</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter minGuarantedStorageDelayInSeconds should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#27">27</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter maxCaptchaStoreSize should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#27">27</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter cacheName should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#27">27</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#28">28</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#41">41</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getImageChallengeForID' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#41">41</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter ID should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#41">41</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Name 'ID' must match pattern '^[a-z][a-zA-Z0-9]*$'.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#41">41</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Redundant throws: 'CaptchaServiceException' is unchecked exception.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#41">41</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#56">56</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getImageChallengeForID' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#56">56</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter ID should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#56">56</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Name 'ID' must match pattern '^[a-z][a-zA-Z0-9]*$'.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#56">56</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter locale should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#56">56</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'locale'.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#56">56</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Redundant throws: 'CaptchaServiceException' is unchecked exception.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#56">56</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#61">61</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#62">62</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#63">63</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getChallengeClone' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#68">68</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter captcha should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#68">68</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'captcha'.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#68">68</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#70">70</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/image/EhcacheManageableImageCaptchaService.html#72">72</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="com.octo.captcha.service.image.package.html"></a>
+com/octo/captcha/service/image/package.html</h3>
+<table class="bodyTable"><tr class="a"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing package documentation file.</td>
+<td><a href="./xref/com/octo/captcha/service/image/package.html#0">0</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="com.octo.captcha.service.package.html"></a>
+com/octo/captcha/service/package.html</h3>
+<table class="bodyTable"><tr class="a"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing package documentation file.</td>
+<td><a href="./xref/com/octo/captcha/service/package.html#0">0</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="com.octo.captcha.service.sound.EhcacheManageableSoundCaptchaService.java"></a>
+com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.java</h3>
+<table class="bodyTable"><tr class="a"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#2">2</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#22">22</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#24">24</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#24">24</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter captchaEngine should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#24">24</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter minGuarantedStorageDelayInSeconds should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#24">24</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter maxCaptchaStoreSize should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#24">24</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#25">25</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#28">28</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing a Javadoc comment.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#28">28</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter captchaEngine should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#28">28</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter minGuarantedStorageDelayInSeconds should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#28">28</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter maxCaptchaStoreSize should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#28">28</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter cacheName should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#28">28</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#29">29</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#42">42</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getSoundChallengeForID' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#42">42</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter ID should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#42">42</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Name 'ID' must match pattern '^[a-z][a-zA-Z0-9]*$'.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#42">42</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Redundant throws: 'CaptchaServiceException' is unchecked exception.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#42">42</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#57">57</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getSoundChallengeForID' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#57">57</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter ID should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#57">57</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Name 'ID' must match pattern '^[a-z][a-zA-Z0-9]*$'.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#57">57</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter locale should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#57">57</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'locale'.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#57">57</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Redundant throws: 'CaptchaServiceException' is unchecked exception.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#57">57</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#62">62</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#63">63</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#64">64</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Method 'getChallengeClone' is not designed for extension - needs to be abstract, final or empty.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#69">69</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Parameter captcha should be final.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#69">69</a>
+</td>
+</tr>
+<tr class="b"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Expected @param tag for 'captcha'.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#69">69</a>
+</td>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Line is longer than 80 characters.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/EhcacheManageableSoundCaptchaService.html#71">71</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="com.octo.captcha.service.sound.package.html"></a>
+com/octo/captcha/service/sound/package.html</h3>
+<table class="bodyTable"><tr class="b"><th>Violation</th>
+<th>Message</th>
+<th>Line</th>
+</tr>
+<tr class="a"><td><img alt="Errors" src="images/icon_error_sml.gif" /></td>
+<td>Missing package documentation file.</td>
+<td><a href="./xref/com/octo/captcha/service/sound/package.html#0">0</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+      </div>
+    </div>
+    <div class="clear">
+      <hr/>
+    </div>
+    <div id="footer">
+      <div class="xright">&#169;  
+          2003-2009
+    
+          JCaptcha corp.
+          
+  
+
+  
+    
+            
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+<duplication lines="195" tokens="346">
+<file line="219" path="E:\dev\projects\jcaptcha\extension-sound-freetts\src\main\java\com\octo\captcha\component\sound\wordtosound\AbstractFreeTTSWordToSound.java"/>
+<file line="167" path="E:\dev\projects\jcaptcha\extension-sound-freetts\src\main\java\com\octo\captcha\component\sound\wordtosound\FreeTTSWordToSound.java"/>
+<codefragment>
+<![CDATA[
+        this.voice.deallocate();
+        
+        AudioInputStream ais = audioPlayer.getAudioInputStream();
+        return ais;
+    }
+
+    /**
+     * Implementation of freeTTS AudioPlayer interface, to produce an audioInputStream, this is not a very clean way
+     * since it doesn't really play. But it is the only way to get a stream easily
+     */
+    private class InputStreamAudioPlayer implements AudioPlayer {
+        private boolean debug = false;
+
+        private AudioFormat currentFormat = null;
+
+        private byte[] outputData;
+
+        private int curIndex = 0;
+
+        private int totBytes = 0;
+
+        private Vector outputList;
+
+        private AudioInputStream audioInputStream;
+
+        /**
+         * Constructs a InputStreamAudioPlayer
+         *
+         */
+        public InputStreamAudioPlayer() {
+            debug = Utilities.getBoolean("com.sun.speech.freetts.audio.AudioPlayer.debug");
+            outputList = new Vector();
+        }
+
+        /**
+         * Sets the audio format for this player
+         *
+         * @param format the audio format
+         *
+         * @throws UnsupportedOperationException if the line cannot be opened with the given format
+         */
+        public synchronized void setAudioFormat(AudioFormat format) {
+            currentFormat = format;
+        }
+
+        /**
+         * Gets the audio format for this player
+         *
+         * @return format the audio format
+         */
+        public AudioFormat getAudioFormat() {
+            return currentFormat;
+        }
+
+        /**
+         * Pauses audio output
+         */
+        public void pause() {
+        }
+
+        /**
+         * Resumes audio output
+         */
+        public synchronized void resume() {
+        }
+
+        /**
+         * Cancels currently playing audio
+         */
+        public synchronized void cancel() {
+        }
+
+        /**
+         * Prepares for another batch of output. Larger groups of output (such as all output associated with a single
+         * FreeTTSSpeakable) should be grouped between a reset/drain pair.
+         */
+        public synchronized void reset() {
+        }
+
+        /**
+         * Starts the first sample timer
+         */
+        public void startFirstSampleTimer() {
+        }
+
+        /**
+         * Closes this audio player
+         */
+        public synchronized void close() {
+            try {
+                audioInputStream.close();
+            } catch (IOException ioe) {
+                System.err.println("Problem while closing the audioInputSteam");
+            }
+
+        }
+
+        public AudioInputStream getAudioInputStream() {
+            InputStream tInputStream = new SequenceInputStream(outputList.elements());
+            AudioInputStream tAudioInputStream = new AudioInputStream(tInputStream, currentFormat,
+                    totBytes / currentFormat.getFrameSize());
+
+            return tAudioInputStream;
+        }
+
+        /**
+         * Returns the current volume.
+         *
+         * @return the current volume (between 0 and 1)
+         */
+        public float getVolume() {
+            return 1.0f;
+        }
+
+        /**
+         * Sets the current volume.
+         *
+         * @param volume the current volume (between 0 and 1)
+         */
+        public void setVolume(float volume) {
+        }
+
+        /**
+         * Starts the output of a set of data. Audio data for a single utterance should be grouped between begin/end
+         * pairs.
+         *
+         * @param size the size of data between now and the end
+         */
+        public void begin(int size) {
+            outputData = new byte[size];
+            curIndex = 0;
+        }
+
+        /**
+         * Marks the end of a set of data. Audio data for a single utterance should be groupd between begin/end pairs.
+         *
+         * @return true if the audio was output properly, false if the output was cancelled or interrupted.
+         */
+        public boolean end() {
+            outputList.add(new ByteArrayInputStream(outputData));
+            totBytes += outputData.length;
+            return true;
+        }
+
+        /**
+         * Waits for all queued audio to be played
+         *
+         * @return true if the audio played to completion, false if the audio was stopped
+         */
+        public boolean drain() {
+            return true;
+        }
+
+        /**
+         * Gets the amount of played since the last mark
+         *
+         * @return the amount of audio in milliseconds
+         */
+        public synchronized long getTime() {
+            return -1L;
+        }
+
+        /**
+         * Resets the audio clock
+         */
+        public synchronized void resetTime() {
+        }
+
+        /**
+         * Writes the given bytes to the audio stream
+         *
+         * @param audioData audio data to write to the device
+         *
+         * @return <code>true</code> of the write completed successfully, <code> false </code> if the write was
+         *         cancelled.
+         */
+        public boolean write(byte[] audioData) {
+            return write(audioData, 0, audioData.length);
+        }
+
+        /**
+         * Writes the given bytes to the audio stream
+         *
+         * @param bytes  audio data to write to the device
+         * @param offset the offset into the buffer
+         * @param size   the size into the buffer
+         *
+         * @return <code>true</code> of the write completed successfully, <code> false </code> if the write was
+         *         cancelled.
+         */
+        public boolean write(byte[] bytes, int offset, int size) {
+            System.arraycopy(bytes, offset, outputData, curIndex, size);
+            curIndex += size;
+            return true;
+        }
+]]>
+</codefragment>
+</duplication>
+<duplication lines="22" tokens="96">
+<file line="41" path="E:\dev\projects\jcaptcha\extension-sound-freetts\src\test\java\com\octo\captcha\component\sound\wordtosound\FreeTTSWordToSoundTest.java"/>
+<file line="42" path="E:\dev\projects\jcaptcha\extension-sound-freetts\src\test\java\com\octo\captcha\component\sound\wordtosound\SpellingFreeTTSWordToSoundTest.java"/>
+<codefragment>
+<![CDATA[
+    public SpellingFreeTTSWordToSoundTest(String name) {
+        super(name);
+    }
+
+    public void setUp() {
+        this.cleanFreeTTSwordToSound = new FreeTTSWordToSound(new FreeTTSSoundConfigurator(voiceName, voicePackage, 1.0f, 100, 100), 3, 6);
+
+    }
+
+    public void testConfiguration() {
+        this.cleanFreeTTSwordToSound.getSound("test");
+    }
+
+
+    public void testGetMaxAcceptedWordLength() {
+        assertEquals(this.cleanFreeTTSwordToSound.getMaxAcceptedWordLength(), 6);
+    }
+
+    public void testGetMinAcceptedWordLength() {
+        assertEquals(this.cleanFreeTTSwordToSound.getMinAcceptedWordLength(), 3);
+    }
+}
+]]>
+</codefragment>
+</duplication>
+<duplication lines="17" tokens="74">
+<file line="46" path="E:\dev\projects\jcaptcha\extension-sound-freetts\src\test\java\com\octo\captcha\component\sound\wordtosound\CleanFreeTTSWordToSoundTest.java"/>
+<file line="46" path="E:\dev\projects\jcaptcha\extension-sound-freetts\src\test\java\com\octo\captcha\component\sound\wordtosound\FreeTTSWordToSoundTest.java"/>
+<codefragment>
+<![CDATA[
+        this.cleanFreeTTSwordToSound = new FreeTTSWordToSound(new FreeTTSSoundConfigurator(voiceName, voicePackage, 1.0f, 100, 100), 3, 6);
+
+    }
+
+    public void testConfiguration() {
+        this.cleanFreeTTSwordToSound.getSound("test");
+    }
+
+
+    public void testGetMaxAcceptedWordLength() {
+        assertEquals(this.cleanFreeTTSwordToSound.getMaxAcceptedWordLength(), 6);
+    }
+
+    public void testGetMinAcceptedWordLength() {
+        assertEquals(this.cleanFreeTTSwordToSound.getMinAcceptedWordLength(), 3);
+    }
+}
+]]>
+</codefragment>
+</duplication>
+<duplication lines="33" tokens="70">
+<file line="189" path="E:\dev\projects\jcaptcha\extension-sound-freetts\src\main\java\com\octo\captcha\component\sound\wordtosound\AbstractFreeTTSWordToSound.java"/>
+<file line="130" path="E:\dev\projects\jcaptcha\extension-sound-freetts\src\main\java\com\octo\captcha\component\sound\wordtosound\FreeTTSWordToSound.java"/>
+<codefragment>
+<![CDATA[
+    }
+
+
+
+    /**
+     * Configue the voice with the SoundConfigurator
+     */
+    private void configureVoice(Voice voice) {
+        voice.setPitch(configurator.getPitch());
+        voice.setVolume(configurator.getVolume());
+        voice.setRate(configurator.getRate());
+    }
+
+    /**
+     * Main method for this service Return an image with the specified. Synchronisation is very important, for multi
+     * threading execution
+     *
+     * @param sentence Written sentece to transform into speech
+     *
+     * @return the generated sound
+     *
+     * @throws com.octo.captcha.CaptchaException
+     *          if word is invalid or an exception occurs during the sound generation
+     */
+    public synchronized AudioInputStream stringToSound(String sentence) throws CaptchaException {
+        //use the custom (see inner class) InputStreamAudioPlayer, which provide interface to
+        // Audio Stream
+        InputStreamAudioPlayer audioPlayer = new InputStreamAudioPlayer();
+
+        this.voice.setAudioPlayer(audioPlayer);
+
+        // Allocates the resources for the voice.
+        this.voice.allocate();
+]]>
+</codefragment>
+</duplication>
+<duplication lines="31" tokens="50">
+<file line="422" path="E:\dev\projects\jcaptcha\extension-sound-freetts\src\main\java\com\octo\captcha\component\sound\wordtosound\AbstractFreeTTSWordToSound.java"/>
+<file line="360" path="E:\dev\projects\jcaptcha\extension-sound-freetts\src\main\java\com\octo\captcha\component\sound\wordtosound\FreeTTSWordToSound.java"/>
+<codefragment>
+<![CDATA[
+            return true;
+        }
+
+        /**
+         * Returns the name of this audioplayer
+         *
+         * @return the name of the audio player
+         */
+        public String toString() {
+            return "AudioInputStreamAudioPlayer";
+        }
+
+        /**
+         * Outputs a debug message if debugging is turned on
+         *
+         * @param msg the message to output
+         */
+        private void debugPrint(String msg) {
+            if (debug) {
+                System.out.println(toString() + ": " + msg);
+            }
+        }
+
+        /**
+         * Shows metrics for this audio player
+         */
+        public void showMetrics() {
+        }
+    }
+
+}
+]]>
+</codefragment>
+</duplication>
+</pmd-cpd>

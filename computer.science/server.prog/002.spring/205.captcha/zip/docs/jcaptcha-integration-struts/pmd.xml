@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.2.2" timestamp="2009-02-03T23:08:30.359">
+<file name="E:\dev\projects\jcaptcha\integration-struts\src\main\java\com\octo\captcha\module\struts\CaptchaServicePlugin.java">
+<violation beginline="39" endline="39" begincolumn="27" endcolumn="33" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.octo.captcha.module.struts" class="CaptchaServicePlugin" variable="servlet" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'servlet'.
+</violation>
+</file>
+</pmd>

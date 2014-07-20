@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.2.2" timestamp="2009-02-03T22:52:45.078">
+<file name="E:\dev\projects\jcaptcha\testing\compatibility-1.0-JDK3\src\test\java\com\octo\captcha\CompatibilityJDK3Test.java">
+<violation beginline="22" endline="24" begincolumn="9" endcolumn="9" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha" class="CompatibilityJDK3Test" method="testThrowException" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+</file>
+</pmd>

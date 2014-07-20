@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.2.2" timestamp="2009-02-03T23:07:12.046">
+<file name="E:\dev\projects\jcaptcha\extension-sound-freetts\src\main\java\com\octo\captcha\component\sound\wordtosound\AbstractFreeTTSWordToSound.java">
+<violation beginline="52" endline="52" begincolumn="20" endcolumn="25" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.octo.captcha.component.sound.wordtosound" class="AbstractFreeTTSWordToSound" variable="locale" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'locale'.
+</violation>
+</file>
+<file name="E:\dev\projects\jcaptcha\extension-sound-freetts\src\test\java\com\octo\captcha\engine\sound\DefaultSoundCaptchaEngineTest.java">
+<violation beginline="31" endline="33" begincolumn="11" endcolumn="9" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.sound" class="DefaultSoundCaptchaEngineTest" method="testNullOrEmptyFactorySoundCaptchaEngineConstructor" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="38" endline="40" begincolumn="11" endcolumn="9" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.sound" class="DefaultSoundCaptchaEngineTest" method="testNullOrEmptyFactorySoundCaptchaEngineConstructor" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="51" endline="53" begincolumn="11" endcolumn="9" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.sound" class="DefaultSoundCaptchaEngineTest" method="testNullOrEmptySetFactories" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="58" endline="60" begincolumn="11" endcolumn="9" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.sound" class="DefaultSoundCaptchaEngineTest" method="testNullOrEmptySetFactories" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="71" endline="73" begincolumn="11" endcolumn="9" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.octo.captcha.engine.sound" class="DefaultSoundCaptchaEngineTest" method="testWrongTypeSetFactories" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+</file>
+<file name="E:\dev\projects\jcaptcha\extension-sound-freetts\src\test\java\com\octo\captcha\engine\sound\SoundEngineSample.java">
+<violation beginline="61" endline="61" begincolumn="27" endcolumn="38" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="com.octo.captcha.engine.sound" class="SoundEngineSample" method="main" variable="configurator" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'configurator'.
+</violation>
+</file>
+</pmd>

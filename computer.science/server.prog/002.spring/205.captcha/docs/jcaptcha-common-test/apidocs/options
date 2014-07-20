@@ -1,0 +1,31 @@
+-classpath
+'E:/dev/projects/jcaptcha/common-test/target/classes;E:/dev/apps/maven/maven2-repo/com/octo/captcha/jcaptcha-api/1.0/jcaptcha-api-1.0.jar;E:/dev/apps/maven/maven2-repo/junit/junit/3.8.1/junit-3.8.1.jar'
+-doclet
+'gr.spinellis.umlgraph.doclet.UmlGraphDoc'
+-docletpath
+'E:/dev/apps/maven/maven2-repo/gr/spinellis/UmlGraph/4.6/UmlGraph-4.6.jar'
+-encoding
+'Cp1252'
+-protected
+-sourcepath
+'E:/dev/projects/jcaptcha/common-test/src/main/java'
+-inferrel -inferdep -quiet -hide java.* -collpackages java.util.* -qualify
+                            -postfixpackage -nodefontsize 9
+                            -nodefontpackagesize 7 -views
+-author
+-bottom
+'Copyright &#169; 2003-2009 <a href="http://www.jcaptcha.net/">JCaptcha corp.</a>. All Rights Reserved.'
+-charset
+'UTF-8'
+-d
+'E:/dev/projects/jcaptcha/common-test/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Common test 1.0 API'
+-linkoffline
+'http://www.jcaptcha.net/jcaptcha-api/apidocs' 'E:/dev/projects/jcaptcha/api/target/site/apidocs'
+-use
+-version
+-windowtitle
+'Common test 1.0 API'

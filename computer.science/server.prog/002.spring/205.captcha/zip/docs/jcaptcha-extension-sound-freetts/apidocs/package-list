@@ -1,0 +1,6 @@
+com.octo.captcha.component.sound.soundconfigurator
+com.octo.captcha.component.sound.wordtosound
+com.octo.captcha.engine.sound.gimpy
+com.octo.captcha.engine.sound.speller
+com.octo.captcha.engine.sound.utils
+com.octo.captcha.service.sound
