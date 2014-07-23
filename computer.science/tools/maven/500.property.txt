@@ -1,0 +1,62 @@
+
+定义属性:
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <copyright.year>2014</copyright.year>
+        ...
+    </properties>
+
+使用属性:
+    <configuration>
+        <driver>${jdbc.driverClassName}</driver>
+        <url>jdbc:mysql://${master.host}:3306/${db.name}</url>
+        <username>${jdbc.master.username}</username>
+        <password>${jdbc.master.password}</password>
+    </configuration>
+
+属性分类
+
+    内置属性: 
+        ${basedir} 项目根目录, 包括pom.xml的目录
+        ${version} 项目版本
+
+     POM属性：
+        ${project.build.sourceDirectory}: 源代码目录 default: /src/main/java
+
+        ${project.build.testSourceDirectory}: default: /src/test/java
+        ${project.build.directory}:             /target
+        ${project.build.outputDirectory}:       /target/classes
+        ${project.build.testOutputDirectory}:       /target/test-classes
+
+        ${project.artifactId}: 对应<project> <artifactId>
+        ${project.groupId}: 对应<project> <groupId>
+        ${project.version}: 对应<project> <version>
+        ${project.build.finalName} : ${project.artifactId}-${project.version}
+
+    自定义属性:
+
+        <properties>
+            <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+            <copyright.year>2014</copyright.year>
+            ...
+        </properties>
+
+    Settings属性
+        系统全局和用户settings.xml中的xml元素的值
+
+        ${settings.localRepository}     # 用户本地仓库的地址
+
+    Java属性
+        ${user.home}    # 用户目录
+
+    环境变量属性
+        ${env.JAVA_HOME}
+
+        mvn help:system
+
+
+
+
+
+
+

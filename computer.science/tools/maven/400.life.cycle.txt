@@ -1,8 +1,8 @@
 
 maven life cycle
     initialize
-    compile         # maven-compile-plugin
-    test            # maven-surefire-plugin
+    compile
+    test
     package
     integrationTest
     deploy
@@ -22,9 +22,9 @@ maven life cycle
             initialize
 
             generate-sources
-            process-sources     # 对src/main/resources中内容进行变量替换, 复制输出到classpath中
+            process-sources     
             generate-resources
-            process-resources
+            process-resources   # 对src/main/resources中内容进行变量替换, 复制输出到classpath中
             compile             # 编译src/main/java中文件，输出到classpath中
             process-classes
 
@@ -48,4 +48,5 @@ maven life cycle
             pre-site, site, post-site, site-deploy
 
 
+生命周期和插件目标绑定
 

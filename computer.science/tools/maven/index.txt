@@ -10,6 +10,9 @@
 ./400.life.cycle.txt
 ./405.plugin.txt
 
+./500.property.txt
+./510.profile.txt
+
 ./800.command.txt
 
 ./900.problems.txt

@@ -1,5 +1,3 @@
-
-
 插件目标
     mvn dependency:list
     mvn dependency:tree
@@ -23,20 +21,20 @@
             initialize
 
             generate-sources
-            process-sources     # maven-resources-plugin:resources
-                                # 对src/main/resources中内容进行变量替换, 复制输出到classpath中
+            process-sources     
                                 
-
             generate-resources
-            process-resources
+            process-resources   # maven-resources-plugin:resources 
+                                # 对src/main/resources中内容进行变量替换, 复制输出到classpath中
+
             compile             # maven-compiler-plugin:compile
                                 # 编译src/main/java中文件，输出到classpath中
             process-classes
 
             generate-test-sources
-            process-test-sources        # maven-resources-plugin:testResources
+            process-test-sources        
             generate-test-resources
-            process-test-resources
+            process-test-resources      # maven-resources-plugin:testResources
             test-compile                # maven-compiler-plugin:testCompile
             process-test-classes
             test                        # maven-surefile-plugin:test
@@ -87,4 +85,20 @@
     mvn install     # install 是一个life cycle的phase
     mvn help:system     # help是一个插件goals的缩写 goal prefix, 
                         # 等于 mvn maven-help-plugin:system
-   
+
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>2.10</version>
+    <configuration>
+        <skipTests>true</skipTests>
+        <parallel>methods</parallel>
+        <threadCount>10</threadCount>
+    </configuration>
+</plugin>
+
+maven-resources-plugin
+    处理一般资源文件, 会包括在classpath中
+
+maven-war-plugin
+    处理一般web文件, 不会包括在classpath中

@@ -2,6 +2,14 @@
 official site:
     http://maven.apache.org/index.html
 
+    POM Reference
+        http://maven.apache.org/pom.html
+
+
 search repo:
     http://www.mvnrepository.com/
 
+http://books.sonatype.com/mvnref-book/reference/resource-filtering-sect-properties.html
+
+
+    

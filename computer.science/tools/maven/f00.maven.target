@@ -1,0 +1,91 @@
+/targe
+
+├── classes
+│   ├── ApplicationResources_en_US.properties   # 翻译文件
+│   ├── ApplicationResources.properties
+│   ├── ApplicationResources_zh_CN.properties
+
+│   ├── c3p0.properties                 # properties
+│   ├── mail.properties
+│   ├── dbcp.properties
+│   ├── policyTemplate.properties
+│   ├── applicationMarket.properties
+
+│   ├── hibernate.cfg.xml               # xml resources
+│   ├── log4j.xml
+
+│   ├── com                             #  class file
+│   │   └── pekall
+│   │       └── mdm
+│   │           └── restfulapi
+│   │               ├── controller
+│   │               │   ├── ActionHistoryController.class
+                    ....
+
+│   ├── activeMail.vm                   # 邮件模板
+│   ├── adminActiveMail.vm
+│   ├── deviceRegisterSuccess.vm
+│   ├── forgetPasswordMail.vm
+│   ├── inviteAndroidIOSDeviceRegister.vm
+│   ├── inviteDeviceRegister.vm
+│   ├── policyViolationMail.vm
+│   ├── registerMail.vm
+│   └── resetPassword.vm
+
+├── generated-sources
+│   └── annotations
+├── maven-archiver
+│   └── pom.properties          # maven 坐标
+├── maven-status
+│   └── maven-compiler-plugin
+│       └── compile
+│           └── default-compile
+│               ├── createdFiles.lst
+│               └── inputFiles.lst
+
+
+├── mdm-restful-api-3.0-SNAPSHOT
+│   ├── META-INF
+│   └── WEB-INF
+│       ├── classes
+│       │   ├── activeMail.vm
+│       │   ├── c3p0.properties
+                ......
+│       │   ├── com
+│       │   │   └── pekall
+│       │   │       └── mdm
+│       │   │           └── restfulapi
+│       │   │               ├── controller
+│       │   │               │   ├── ActionHistoryController.class
+│       │   │               │   ├── AdminController.class
+                            ...
+│       │   ├── log4j.xml
+│       │   └── resetPassword.vm
+│       ├── lib
+│       │   ├── activation-1.1.jar
+                ...
+│       │   └── xmlbeans-2.3.0.jar
+│       ├── dispatcher-servlet.xml      # 注意 dispatcher-servlet.xml和web.xml不在classpath中
+│       └── web.xml
+
+├── mdm-restful-api-3.0-SNAPSHOT.war
+
+├── surefire
+└── test-classes
+    ├── init-procedure
+    │   ├── create_contact_relation.sql
+    │   ├── doc_app_query.sql
+    │   ├── procedure.sh
+    │   ├── remove_application_relation.sql
+    │   ├── remove_contact_relation.sql
+    │   └── remove_document_relation.sql
+    ├── init-sql
+    │   ├── mdm3.0-advance_search.sql
+    │   ├── mdm3.0-role.sql
+    │   └── mdm3.0-tenant.sql
+    ├── testContext.xml
+    └── WEB-INF
+        ├── dispatcher-servlet.xml
+        └── web.xml
+
+54 directories, 414 files

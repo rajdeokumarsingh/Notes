@@ -1,12 +1,14 @@
 mvn help:system         # 查看系统java属性，环境变量
 mvn help:active-profiles [-Dproperty]   # 查看激活的profile
 
-mvn help:describe
+mvn help:describe       # check plugin information
     # see errors
-
 
 mvn archetype:generate      #生成maven源代码目录的结构
 
+################################################################################
+# dependency
+################################################################################
 mvn dependency:list
 mvn dependency:tree
 mvn dependency:analyze
@@ -14,3 +16,18 @@ mvn dependency:analyze
 mvn site        # 创建站点
 
 mvn install -Dmaven.test.skip=true # 忽略测试
+
+mvn install -P profile
+
+################################################################################
+# test
+################################################################################
+mvn package -DskipTests             # skip running test
+mvn package -Dmaven.test.skip=true  # skip compiling and running test
+
+mvn test -Dtest=DemoTest           # run tests in class DemoTest
+mvn test -Dtest=Random*Test        # using regular expression for test class name
+mvn test -Dtest=Random*Test,DemoTest    # running multiple tests
+
+
+

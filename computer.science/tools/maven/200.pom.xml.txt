@@ -1,6 +1,7 @@
 pom.xml
-    groupId     #项目名称, etc, com.pekall.mdm
-    artifactId  #模块名称，对应一个jar, war
+    groupId     # 项目名称, etc, com.pekall.mdm
+    artifactId  # 一个构件的名称, war, jar
+                # 构件命名一般为 ${artifactId}-${version}.${package}
 
     name    # 用于阅读的名称， 非必须 
 
@@ -20,7 +21,8 @@ pom.xml
                     测试，运行时有效。jdbc驱动
                 4. provided
                     编译，测试时有效。servlet-api
-                    
+                5. import
+                  dependencyManagement时使用
     </dependency>
 
 

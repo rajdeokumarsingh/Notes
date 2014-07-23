@@ -30,7 +30,6 @@
     git push origin --tags
         # push all tags to remote repo
 
-
 17. check the tag
     git tag
 

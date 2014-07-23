@@ -5,7 +5,6 @@ M2_HOME     # maven 安装目录
     /conf
         settings.xml    # 全局设置
 
-
     export M2_HOME=/Users/jiangrui/bin/apache-maven-3.2.1
     export MAVEN_OPTS='-Xms128m -Xmx512m'
 
@@ -13,13 +12,25 @@ M2_HOME     # maven 安装目录
     用户目录，保存特定用户的settings.xml和repository
     一般修改这里的settings.xml
 
+    一个具体仓库的目录结构:
+        ~/.m2/repository/com/pekall/mdm/auth/mdm-auth
+            ├── 1.0-SNAPSHOT
+            │   ├── maven-metadata-local.xml        # 项目的坐标, groupId, artifactId, versioning
+            │   ├── _maven.repositories
+            │   ├── mdm-auth-1.0-SNAPSHOT.pom       # 项目的pom.xml
+            │   └── mdm-auth-1.0-SNAPSHOT.war       
+            └── maven-metadata-local.xml            # 项目的坐标, groupId, artifactId, versioning
+
 目录结构
 ├── pom.xml
 └── src
     ├── main            # 打包到构件中，jar, war
-    │   └── java
-    │       └── com             # 和pom.xml中groupId对应,com.pekall.mdm
-    │           └── juvenxu
+    │   ├── java                  # 打包后位于classpath中
+    │   │     └── com             # 和pom.xml中groupId对应,com.pekall.mdm
+    │   │          └── juvenxu
+    │   ├── resources           # 打包后位于classpath中
+    │   └── webapp              # 打包后不在classpath中
+    │   
     └── test
         └── java        # 不会打包到构件中
             └── com
@@ -28,3 +39,4 @@ M2_HOME     # maven 安装目录
 settings.xml
     <mirror>            # 设置特定的远程仓库
     <localRepository>   # 设置特定的本地仓库
+

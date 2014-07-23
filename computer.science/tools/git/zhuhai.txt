@@ -1,33 +1,7 @@
 
 gitk filename
     check the version tree
-===============================================================================
-How to install Git on Ubuntu Lucid (10.04)
-
-May 13, 2010 by kibyegon
-
-I’m sure there are tons of blogs out there on the same subject. This is just like a reference for me and others out there who might stumble upon this post. Note that what I have documented here is what worked for me. At the time of writing the latest GIT version was 1.7.1
-
-First we install the dependent packages, thus you wont have to install the packages yourself.
-$ sudo aptitude build-dep git-core
-
-Download latest stable GIT release from here
-$ wget http://kernel.org/pub/software/scm/git/git-1.7.1.tar.gz
-
-Extract the archive and change to the extracted directory
-# tar xvzf git-1.7.1.tar.gz
-# cd git-1.7.1/
-
-Run the following
-$ ./configure
-$ make
-$ sudo make install
-
-Check installation and clean up
-$ git --version
-$ cd ../;rm -r git-1.7.1 git-1.7.1.tar.gz
 ================================================================================
-
 参考：
 http://gitref.org/
 http://www.kernel.org/pub/software/scm/git/docs/user-manual.html
@@ -38,7 +12,6 @@ http://www.kernel.org/pub/software/scm/git/docs/everyday.html
 发送时间: Thursday, September 08, 2011 10:11 AM
 收件人: Chen Jinxiang; 'zhidong.hou'; Wang liang
 主题: Git 服务器一些简单操作
-
 
 Hi,all，
 关于dsds git服务器，建议将master分支做为开发的 主干，每个人使用它作为base，创建调试branch， 在调试完成已经阶段后，将正式代码提

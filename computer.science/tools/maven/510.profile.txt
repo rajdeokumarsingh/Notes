@@ -1,0 +1,113 @@
+
+定义profile
+
+    <profiles>
+        <profile>
+            <id>localhost</id>
+            <properties>
+                <master.host>localhost</master.host>
+                <slave.host>localhost</slave.host>
+
+                <jdbc.master.username>root</jdbc.master.username>
+                <jdbc.master.password>newpwd</jdbc.master.password>
+
+                <phase>process-test-resources</phase>
+
+            </properties>
+        </profile>
+
+        <profile>
+            <id>dev</id>
+            <properties>
+                <master.host>192.168.10.32</master.host>
+                <slave.host>192.168.10.33</slave.host>
+
+                <jdbc.master.username>root</jdbc.master.username>
+                <jdbc.master.password>pekall1234</jdbc.master.password>
+            </properties>
+        </profile>
+    </profiles>
+
+激活profile
+    1. 命令行激活
+        mvn clean install -Plocalhost
+        mvn clean install -Pdev1,dev2       # 同时激活两个profile
+
+    2. settings.xml中激活
+
+        <activeProfiles>
+            <activeProfile>dev-x</activeProfile>
+        </activeProfiles>
+
+    3. 系统属性激活
+    <profiles>
+        <profile>
+            <activation>
+                <property>
+                    <name>dev</name>
+                    <!-- <value>x</value> -->
+                </property>
+            </activation>
+            <properties>
+                <master.host>192.168.10.32</master.host>
+                <slave.host>192.168.10.33</slave.host>
+
+                <jdbc.master.username>root</jdbc.master.username>
+                <jdbc.master.password>pekall1234</jdbc.master.password>
+            </properties>
+        </profile>
+    </profiles>
+
+    # mvn clean instal -Ddev
+    # mvn clean instal -Ddev=x
+
+    4. 操作系统环境激活
+            <activation>
+                <os>
+                    <name>Windows XP</name>
+                    <family>Windows</family>
+                    <arch>x86</arch>
+                </os>
+            </activation>
+ 
+    5. 文件存在与否激活
+    <profiles>
+        <profile>
+            <activation>
+                <file>
+                    <missing>x.properties</missing>
+                    <exists>y.properties</exists>
+                </file>
+            </activation>
+            <properties>
+                <master.host>192.168.10.32</master.host>
+                <slave.host>192.168.10.33</slave.host>
+
+                <jdbc.master.username>root</jdbc.master.username>
+                <jdbc.master.password>pekall1234</jdbc.master.password>
+            </properties>
+        </profile>
+    </profiles>
+
+    6. 默认激活
+    <profile>
+        <id>dev</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <properties>
+            ...
+        </properties>
+    </profile>
+
+    注意，如果pom中的任何一个profile被上述任何一种方式激活，所有的默认profile就会失效。
+
+maven help:active-profiles      # 列举出项目中激活的profile
+maven help:all-profiles         # 列举出当前项目中所有的profile
+
+Profile放置的位置
+    pom.xml                 # profile能够和pom.xml一起提交到代码仓库，安装到本地仓库，部署到远程仓库
+    用户settings.xml
+    全局settings.xml    # 不推荐
+        
+

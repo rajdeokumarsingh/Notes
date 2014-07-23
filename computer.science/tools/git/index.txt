@@ -191,4 +191,3 @@ Next Steps
         cache of the state of a directory tree, used to create commits, check out working directories, 
         and hold the various trees involved in a merge
 
-

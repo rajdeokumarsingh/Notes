@@ -1,7 +1,7 @@
 软件的坐标
     <groupId>junit</groupId>
-                    <groupId>spring-core</groupId>
-                    <groupId>spring-context</groupId>
+    <groupId>spring-core</groupId>
+    <groupId>spring-context</groupId>
                     : 必选
 
     <artifactId>junit</artifactId>
