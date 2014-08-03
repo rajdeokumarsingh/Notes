@@ -13,3 +13,8 @@ Android:
 ../android/android.sdk/get.app.sign.txt
     如何在apk中检查自己的签名
 
+http://www.fwolf.com/blog/post/407
+生成用于web服务器的openssl证书
+    如果发送错误：
+    wrong number of fields on line 1 (looking for field 6, got 1, '' left)
+    清空index.txt文件

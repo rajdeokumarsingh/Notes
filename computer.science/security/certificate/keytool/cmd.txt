@@ -1,0 +1,8 @@
+# generate keypair
+keytool -genkeypair -keyalg RSA -keysize 2048 -sigalg SHA1withRSA  -validity 36000 -alias www.pekall.com -keystore pekall.keystore
+
+# export certificate
+keytool -exportcert -alias www.pekall.com -keystore pekall.keystore -file pekall.cert -rfc
+
+# generate CA request
+keytool -certreq -alias www.pekall.com -keystore pekall.keystore -file pekall.csr -v
