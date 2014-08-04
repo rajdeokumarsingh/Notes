@@ -1,8 +1,12 @@
+   
+# Generate a Java keystore and key pair
+keytool -genkey -alias pekall.com -keyalg RSA -keystore pekall.jks -keypass pekall1234
+
 # generate keypair
-keytool -genkeypair -keyalg RSA -keysize 2048 -sigalg SHA1withRSA  -validity 36000 -alias www.pekall.com -keystore pekall.keystore
+# keytool -genkeypair -keyalg RSA -keysize 2048 -sigalg SHA1withRSA  -validity 36000 -alias www.pekall.com -keystore pekall.keystore
 
 # export certificate
-keytool -exportcert -alias www.pekall.com -keystore pekall.keystore -file pekall.cert -rfc
+# keytool -exportcert -alias www.pekall.com -keystore pekall.keystore -file pekall.cert -rfc
 
 # generate CA request
-keytool -certreq -alias www.pekall.com -keystore pekall.keystore -file pekall.csr -v
+# keytool -certreq -alias www.pekall.com -keystore pekall.keystore -file pekall.csr -v
