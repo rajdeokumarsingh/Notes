@@ -1,12 +1,15 @@
-   
 # Generate a Java keystore and key pair
-keytool -genkey -alias pekall.com -keyalg RSA -keystore pekall.jks -keypass pekall1234
+keytool -genkey -alias mydomain.com -keyalg RSA -keystore mydomain.jks -keysize 2048 \
+-dname "cn=Mark Jones, ou=Java, o=Sun, c=US"
 
-# generate keypair
-# keytool -genkeypair -keyalg RSA -keysize 2048 -sigalg SHA1withRSA  -validity 36000 -alias www.pekall.com -keystore pekall.keystore
+# Generate a certificate signing request (CSR) for an existing Java keystore
+keytool -certreq -alias mydomain.com -keystore mydomain.jks -file mydomain.csr
 
-# export certificate
-# keytool -exportcert -alias www.pekall.com -keystore pekall.keystore -file pekall.cert -rfc
+# Import a root or intermediate CA certificate to an existing Java keystore
+keytool -import -trustcacerts -alias root -file Thawte.crt -keystore mydomain.jks
 
-# generate CA request
-# keytool -certreq -alias www.pekall.com -keystore pekall.keystore -file pekall.csr -v
+# Import a signed primary certificate to an existing Java keystore
+keytool -import -trustcacerts -alias mydomain -file mydomain.crt -keystore mydomain.jks
+
+# Generate a keystore and self-signed certificate (see How to Create a Self Signed Certificate using Java Keytool for more info)
+keytool -genkey -keyalg RSA -alias selfsigned -keystore mydomain.jks -storepass password -validity 360 -keysize 2048
