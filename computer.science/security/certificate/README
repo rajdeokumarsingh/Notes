@@ -24,6 +24,7 @@ openssl/
 2. 配置服务器。
 将服务端证书/keystore和ca证书/keystore导入到服务器中，目前使用tomcat。ca用于认证客户端。
 tomcat修改参见文件tomcat.conf
+请注意，启动tomcat时一定要使用sudo，不然无法绑定443端口
 
 配置本地DNS设置，在/etc/hosts中添加
 127.0.0.1   www.zlex.org
