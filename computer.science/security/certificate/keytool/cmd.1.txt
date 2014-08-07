@@ -1,0 +1,47 @@
+
+keytool -genkey -alias duke -keystore duke.jks \
+       -dname "cn=Mark Jones, ou=Java, o=Sun, c=US"
+
+# pkcs12 type
+#keytool -genkey -alias duke -keystore duke.jks -storetype pkcs12 \
+#            -dname "cn=Mark Jones, ou=Java, o=Sun, c=US"
+
+
+# csr
+keytool -certreq -alias duke -keystore duke.jks -file duke.csr
+
+# CA work with root
+openssl x509 -req -days 3650 -sha1 -extensions v3_req -CA ../../openssl/certs/ca.cer \
+    -CAkey ../../openssl/private/ca.key.pem -CAserial ../../openssl/ca.srl -CAcreateserial \
+    -in duke.csr -out duke.cer
+
+# CA work with root signed certificate
+openssl x509 -req -days 3650 -sha1 -extensions v3_req -CA ../../openssl/certs/server.cer \
+    -CAkey ../../openssl/private/server.key.pem -CAserial ../../openssl/ca.srl -CAcreateserial \
+    -in duke.csr -out duke.cer
+
+
+# import new cer signed by CA
+keytool -import -alias server -file ../../openssl/certs/server.cer -keystore duke.jks
+keytool -import -alias caRoot -file ../../openssl/certs/ca.cer -keystore duke.jks
+keytool -import -alias duke -file duke.cer -keystore duke.jks
+
+
+# export certificate from a keystore
+keytool -keystore duke.jks -export -alias duke -file duke.export.cer
+keytool -keystore duke.jks -export -alias server -file server.export.cer
+
+# display certificate in a keystore
+keytool -keystore duke.jks -list -v -alias duke
+
+# display certificate in a file
+keytool -printcert -file certfile.cer
+
+
+# generate self-signed certificate
+keytool -selfcert -alias duke -keystore duke.bk.jks \
+       -dname "cn=Mark Jones, ou=Java, o=Sun, c=US"
+
+// todo what is security provider
+-provider provider_class_name
+

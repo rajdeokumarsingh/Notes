@@ -1,0 +1,46 @@
+
+1. 生成证书链，命令参见openssl.cmd。生成的目录见openssl。
+"ca"是PEKALL自签名的根证书。这个根证书可以以后需要第三方权威机构或格尔来签发。目前做实验自签名就够了。
+"ca"签发一个服务器证书"server"和一个客户端"client"证书。
+以后可通过这两个证书进行双向认证。
+
+tree openssl/
+openssl/
+├── certs           # 证书
+│   ├── ca.cer
+│   ├── ca.p12
+│   ├── client.cer
+│   ├── client.p12
+│   ├── server.cer
+│   └── server.p12
+├── private         # keystore
+│   ├── ca.csr
+│   ├── ca.key.pem
+│   ├── client.csr
+│   ├── client.key.pem
+│   ├── server.csr
+│   └── server.key.pem
+
+2. 配置服务器。
+将服务端证书/keystore和ca证书/keystore导入到服务器中，目前使用tomcat。ca用于认证客户端。
+tomcat修改参见文件tomcat.conf
+请注意，启动tomcat时一定要使用sudo，不然无法绑定443端口
+
+配置本地DNS设置，在/etc/hosts中添加
+127.0.0.1   www.zlex.org
+
+3. 配置浏览器
+将客户端证书/keystore导入到Firefox中: 首选项->高级->证书->查看证书->您的证书->导入->选择client.p12
+将ca证书导入到Firefox中: 首选项->高级->证书->查看证书->证书机构->导入->选择ca.cer
+
+可通过浏览器访问https://www.zlex.org
+
+4. 在java程序中获取证书信息
+程序目录openssl.java.web
+编译打包成一个hello.war包，拷贝到tomcat/webapps目录。
+
+通过浏览器访问：
+https://www.zlex.org/test/hello
+在浏览器中可以看到客户端证书的信息。
+
+
