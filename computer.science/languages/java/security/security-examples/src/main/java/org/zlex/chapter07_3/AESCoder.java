@@ -113,7 +113,7 @@ public abstract class AESCoder {
 		/*
 		 * AES 要求密钥长度为 128位、192位或 256位
 		 */
-		kg.init(256);
+		kg.init(128);
 
 		// 生成秘密密钥
 		SecretKey secretKey = kg.generateKey();

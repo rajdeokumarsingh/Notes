@@ -1,0 +1,1 @@
+keytool -importkeystore -destkeystore zjipst.client.jks -deststoretype kjs -srckeystore zjipst.client.pfx -srcstoretype pkcs12 -alias test.pekall.com

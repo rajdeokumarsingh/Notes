@@ -82,7 +82,7 @@ public abstract class CertificateCoder {
 	 * @return Certificate 证书
 	 * @throws Exception
 	 */
-	private static X509Certificate getCertificate(String certificatePath)
+	public static X509Certificate getCertificate(String certificatePath)
 			throws Exception {
 
 		// 实例化证书工厂

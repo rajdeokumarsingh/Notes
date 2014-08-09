@@ -23,8 +23,13 @@ public class AESCoderTest {
 	 */
 	@Test
 	public final void test() throws Exception {
-		String inputStr = "AES";
-		byte[] inputData = inputStr.getBytes();
+		String inputStr = "{\"expireTime\":1411950600000,\"quota\":123,\"publicKey\":\"MIGfMA0GCSq" +
+                "GSIb3DQEBAQUAA4GNADCBiQKBgQCX85ci3V3pHl5XNAT4QcEST2zzaRhPsg7vsO9OzKT/BR73y2RTHcQA5i" +
+                "FqL2SH+r2WTrrYNnqClz5uuE4Fnr20KWgMrs4ud/InR0R3ES4NWj6seYqh883i7BzjAHcRRkDgQBtxpUCrZx" +
+                "ilY5BQBtaKeblwE9HlkVBgGibWiIwpsQIDAQAB\"}" +"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCX85c" +
+                "i3V3pHl5XNAT4QcEST2zzaRhPsg7vsO9OzKT";
+
+        byte[] inputData = inputStr.getBytes();
 		System.err.println("原文:\t" + inputStr);
 
 		// 初始化密钥
