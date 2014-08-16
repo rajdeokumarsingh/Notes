@@ -1,5 +1,7 @@
 package com.ray.demo.ssl;
 
+import com.pekall.mdm.common.util.PoliceOfficerInfo;
+import com.pekall.mdm.common.util.X509CertParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -24,12 +26,25 @@ public class HelloController {
         return "hello";
     }
 
+    @RequestMapping(value = "/zjipst_cert" ,method = RequestMethod.GET)
+    public String getZjipstCert(ModelMap model, HttpServletRequest request) {
+        logger.info("get cert: " + request.getHeader(X509CertParser.X_CERT_HEADER));
+
+        PoliceOfficerInfo policeOfficerInfo = X509CertParser.getOfficerInfo(request);
+
+        logger.info("get policeOffice`rInfo: " + policeOfficerInfo.toString());
+
+        model.addAttribute("message", policeOfficerInfo.toString());
+
+        return "hello";
+    }
+
     @RequestMapping(value = "/get_cert" ,method = RequestMethod.GET)
     public String getCertificate(ModelMap model, HttpServletRequest request) {
-        logger.info("get cert: " + request.getHeader("X-cert"));
+        logger.info("get cert: " + request.getHeader(X509CertParser.X_CERT_HEADER));
 
         StringBuilder sb = new StringBuilder("-----BEGIN CERTIFICATE-----\n");
-        sb.append(request.getHeader("X-cert"));
+        sb.append(request.getHeader(X509CertParser.X_CERT_HEADER));
         sb.append("\n-----END CERTIFICATE-----");
 
         try {
@@ -42,7 +57,6 @@ public class HelloController {
 
             // 关闭证书文件流
             inputStream.close();
-
 
             System.out.println("certificate: " + certificate.toString());
             model.addAttribute("message", certificate.toString());

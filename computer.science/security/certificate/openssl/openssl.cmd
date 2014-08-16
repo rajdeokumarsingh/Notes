@@ -57,6 +57,19 @@ openssl ca -in private/client.csr -days 3650 -out certs/client.cer -cert certs/c
 echo 客户证书转换 client.p12
 openssl pkcs12 -export -inkey private/client.key.pem -in certs/client.cer -out certs/client.p12
 
+echo 产生客户私钥
+openssl genrsa -des3 -out private/gclient.key.pem 2048
+
+echo 生成客户证书请求 gclient.csr
+openssl req -new -key private/gclient.key.pem -out private/gclient.csr -subj "/C=CN/ST=BJ/L=BJ/O=zlex/OU=zlex/CN=gclient.zlex.org"
+
+echo 签发客户证书 gclient.cer
+openssl ca -in private/gclient.csr -days 3650 -out certs/gclient.cer -cert certs/client.cer -keyfile private/client.key.pem -notext
+
+echo 客户证书转换 gclient.p12
+openssl pkcs12 -export -inkey private/gclient.key.pem -in certs/gclient.cer -out certs/gclient.p12
+
+
 echo 将ca.cer和server.cer导入到信任库
 553  keytool -import -trustcacerts -alias 1 -file certs/server.cer -keystore ca.trust.jks
 554  keytool -import -trustcacerts -alias 2 -file certs/server.cer -keystore ca.trust.jks
