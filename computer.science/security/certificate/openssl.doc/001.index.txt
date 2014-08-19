@@ -1,0 +1,65 @@
+http://wiki.openssl.org/index.php/Main_Page
+
+Command Line:
+    1.  http://wiki.openssl.org/index.php/Command_Line_Utilities
+
+    openssl command [ command_opts ] [ command_args ] 
+
+    openssl->help
+           ->version
+           ->engine
+           ->speed
+
+
+    $ openssl list-standard-commands
+    $ openssl list-cipher-commands
+    $ openssl list-message-digest-commands
+
+    openssl ciphers
+    openssl list-cipher-algorithms
+    openssl list-public-key-algorithms
+    
+    Encryption operations
+        openssl enc
+            OpenSSL> enc --help
+
+            4  openssl base64 -in 001.index.txt -out 001.b64
+            6  openssl base64 -d -in 001.b64 -out 001.b64.dec
+            9  openssl des3 -in 001.index.txt -out 001.des3
+            11  openssl des3 -d -in 001.des3 -out 001.des3.dec
+            26  openssl des3 -salt -in 001.index.txt -out 001.des3
+            30  openssl des3 -d -in 001.des3 -out 001.des3.dec
+
+    Create / Handle Public Key Certificates
+
+        generate rsa key
+            35  openssl genrsa -out rsa.pem -aes256 # encrypt the private key with aes256
+            38  openssl genrsa -out rsa.pem -des3   # encrypt the private key with des3
+            40  openssl genrsa -out rsa.pem         # no encryption for the private key
+
+
+        handle rsa key
+
+            # convert between .pem and .der format
+            54  openssl rsa -inform PEM -outform DER -in rsa.pem -out rsa.der       
+            58  openssl rsa -inform der -outform pem -in rsa.der -out rsa.pem.back
+
+            # To convert a private key from PEM to DER format:
+            openssl rsa -in key.pem -outform DER -out keyout.der
+
+            # remove password in rsa.pem
+            openssl rsa -in rsa.pem -out rsa.nopwd.pem
+
+            # To encrypt a private key using triple DES:
+            openssl rsa -in key.pem -des3 -out keyout.pem
+
+            # To print out the components of a private key to standard output:
+            openssl rsa -in key.pem -text
+            openssl rsa -in key.pem -text -noout
+
+        handle dsa / gendsa keys
+
+    Certificate Request / pkcs10 / req
+        req - PKCS#10 certificate request and certificate generating utility.
+
+    2. Testing of SSL/TLS protocols (openssl s_server, openssl s_client).

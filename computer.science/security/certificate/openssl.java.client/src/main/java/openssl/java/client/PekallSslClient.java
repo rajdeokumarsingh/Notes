@@ -37,13 +37,14 @@ public class PekallSslClient {
 
     private static void ignoreServerCert() throws KeyManagementException, NoSuchAlgorithmException,
             KeyStoreException, IOException, CertificateException, UnrecoverableKeyException {
-        String keystorePassword = "123456";
+        String keystorePassword = "pekallsu";
 
         final HttpParams httpParams = new BasicHttpParams();
 
         // load the keystore containing the client certificate - keystore type is probably jks or pkcs12
         final KeyStore keystore = KeyStore.getInstance("pkcs12");
-        FileInputStream keystoreInput = new FileInputStream(new File("/home/jiangrui/certificate/client/zwm2.p12"));
+//        FileInputStream keystoreInput = new FileInputStream(new File("/home/jiangrui/certificate/client/zwm2.p12"));
+        FileInputStream keystoreInput = new FileInputStream(new File("/home/jiangrui/certificate/pekall.ca/client.p12"));
         keystore.load(keystoreInput, keystorePassword.toCharArray());
 
         KeyManagerFactory keyManagerFactory = KeyManagerFactory.getInstance("SunX509");
