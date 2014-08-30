@@ -1,9 +1,9 @@
 package com.ray.demo.ssl;
 
-import com.pekall.mdm.common.util.PoliceOfficerInfo;
-import com.pekall.mdm.common.util.X509CertParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.ByteArrayInputStream;
-import java.security.cert.Certificate;
 import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
 
@@ -26,17 +25,18 @@ public class HelloController {
         return "hello";
     }
 
-    @RequestMapping(value = "/zjipst_cert" ,method = RequestMethod.GET)
-    public String getZjipstCert(ModelMap model, HttpServletRequest request) {
+    @RequestMapping(value = "/zjipst_cert" ,method = RequestMethod.GET,  produces = {"application/json"})
+    public ResponseEntity<Object> getZjipstCert(ModelMap model, HttpServletRequest request) {
         logger.info("get cert: " + request.getHeader(X509CertParser.X_CERT_HEADER));
 
         PoliceOfficerInfo policeOfficerInfo = X509CertParser.getOfficerInfo(request);
 
-        logger.info("get policeOffice`rInfo: " + policeOfficerInfo.toString());
+        logger.info("get policeOfficerInfo: " + policeOfficerInfo.toString());
 
         model.addAttribute("message", policeOfficerInfo.toString());
 
-        return "hello";
+        return new ResponseEntity<Object>(policeOfficerInfo, HttpStatus.OK);
+        // return "hello";
     }
 
     @RequestMapping(value = "/get_cert" ,method = RequestMethod.GET)
