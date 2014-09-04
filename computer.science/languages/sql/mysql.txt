@@ -1,0 +1,13 @@
+# mysql -uroot -ppekall1234 -h 192.168.10.32
+> help
+
+> show databases;
+> use mdm_reactor;
+
+> show tables;
+> show columns from mdm_auth_user;  // == describe mdm_auth_user;
+
+> show errors;
+> help show
+> show status;
+> show grants;

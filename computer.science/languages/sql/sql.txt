@@ -30,22 +30,44 @@ SQL语句后最好加上分号
 SELECT:
     SELECT prod_name FROM Products;
     SELECT prod_id, prod_desc FROM Products;
-    SELECT * FROM Products;
+    SELECT * FROM Products;             -- 检索不需要的列会降低应用程序的性能
+
+DISTINCT:
+    SELECT DISTINCT vendor_id from products; -- 去掉重复的值
+    SELECT DISTINCT vendor_id, prod_price from products; -- DISTINCT同时作用于vendor_id和prod_price
+
+LIMIT:
+    SELECT vendor_id from products LIMIT 5;
+    SELECT vendor_id from products LIMIT 0,5; -- 从第0行开始，总共5个数据
+
+    limit应该放在where, order by之后
 
 ORDER BY:    
     SELECT prod_id, prod_desc FROM Products ORDER BY prod_desc;
 
     DESC
+        默认顺序(ASC)是A-Z, DESC是Z-A
+
         SELECT prod_id, prod_desc FROM Products ORDER BY prod_desc DESC; 反序
         SELECT prod_id, prod_desc FROM Products ORDER BY prod_desc DESC, prod_id; 反序
 
     SELECT prod_id, prod_desc FROM Products ORDER BY 1; 按照第一列排序
     SELECT prod_id, prod_desc FROM Products ORDER BY 1, 2; 先按照第一列，然后第二列排序
 
-如果不指明ORDER BY, 输出的顺序是数据添加时间的先后顺序.
-ORDER BY应该是SELECT语句中的最后一个clause
+    如果不指明ORDER BY, 输出的顺序是数据添加时间的先后顺序.
+    ORDER BY应该是SELECT语句中的最后一个clause
+
+    combo技能:
+       -- 找出最贵的商品
+       select prod_price from product order by prod_price desc limit 1;
+
+       -- 找出最贵的所有商品
+       select prod_id, prod_price from product where prod_price in 
+            (select prod_price from product order by prod_price desc limit 1);
 
 WHERE:
+    过滤数据应该在sql中，而不是在应用中过滤
+
     select * from Products where prod_price=3.49;
     比较符号，所有的c语言比较
         BETWEEN
@@ -62,11 +84,19 @@ WHERE:
             select * from Products where (vend_id='BRS01' or vend_id='DLL01') and prod_price > 4;
         in
             select * from Products where vend_id IN ('BRS01','DLL01');
+            IN的速度较快
+            not in/between/exists
         not
-            select * from Products where not vend_id in ('BRS01','DLL01');
+            select * from Products where vend_id NOT IN ('BRS01','DLL01');
+
+    注意：字符串需要使用单引号括起，数值不用。
 
 Wildchar
     % 正则表达式 ".*"
+        可以匹配0个字符
+        可以匹配数值类型的字段(test in mysql)
+        '%',可以匹配几乎任何东西，包括空串。不过不可以匹配NULL
+
         select * from Products where vend_id like '%Ng%'; sqlite3大小写不敏感
 
     _ 正则表达式"."
@@ -78,41 +108,100 @@ Wildchar
         不要过分使用通配符。如果其他操作能供完成相同功能，则避免使用通配符
         不要将它们放在搜索的最开始的地方
 
+MySQL正则表达式
+    select * from Products where vend_id regexp '100'; # grep 100 
+
+    like和regexp的区别
+        like当整列数据完全匹配
+
+    select * from Products where vend_id regexp 'ignorecase';        # 默认不区分大消息
+    select * from Products where vend_id regexp binary 'noignorecase'; # 通过binary来标明区分大小写
+
+    select * from Products where vend_id regexp 'foo|bar'; # or
+    select * from Products where vend_id regexp '[abc]bar';
+    select * from Products where vend_id regexp '[^abc]bar';
+    select * from Products where vend_id regexp '[0-9]bar';
+    select * from Products where vend_id regexp '\\.bar';  # escaping
+
+    测试正则表达式
+    select 'hello' regexp 'hel'
+    
 计算字段：
     数据转换，计算，格式化
 
     拼接字段: concatenate. 可以是使用'+'或'||'
         将两列拼接起来
-            select vend_name || '(' || vend_country || ')' from Vendors; (sqlite)
+            SELECT vend_name || '(' || vend_country || ')' FROM Vendors; (sqlite)
+            SELECT CONCAT(vend_name, '(', vend_country, ')') FROM vendors;
+            SELECT CONCAT(TRIM(vend_name), '(', LTRIM(vend_country), ')') FROM vendors;
+                TRIM, LTRIM, RTRIM用于删除空格
 
-    别名： alias, 给新创建的
-    select vend_name || '{' || vend_country || '}' as nc from Vendors order by vend_country;
+    别名: alias, 给新创建的
+        select vend_name || '{' || vend_country || '}' as nc from Vendors order by vend_country;
+        SELECT CONCAT(vend_name, '(', vend_country, ')') as title FROM vendors;
 
     计算： 支持 +, -, *, /
-    select order_num, quantity, item_price, item_price*item_price as total 
-        from OrderItems 
-        where order_num=20008;
+        select order_num, quantity, item_price, item_price*item_price as total 
+            from OrderItems 
+            where order_num=20008;
+
+        测试计算：
+            select 3*2;
+            select now();
+
+    注意：在sql中使用计算比应用程序中的性能要高
 
 函数：
     字符串处理:
         select prod_name, upper(prod_name) from Products;
-        lower
+        upper, lower
+        left, right
+        ltrim, rtrim
+        soundex
+        substring
         length
 
         (not in sqlite) left soundex
 
+        函数的移植性不是很好
+
+时间日期：
+    select prod_name from products where order_date = '2014-09-01'; # error
+
+    login_time的类型是datetime
+
+    # 使用date函数提取日期
+    select login_time from mdm_auth_login_log where date(login_time) = '2014-08-27';
+
+    # 使用time函数提取时间
+    select login_time from mdm_auth_login_log where time(login_time) = '13:34:08';
+
+    select login_time from mdm_auth_login_log where date(login_time) between '2005-09-01' and '2005-09-30';
+    select login_time from mdm_auth_login_log where year(login_time)='2005' and month(login_time)='9';
+
+    函数
+        date, time, year, month, day, dayofweek, hour, minute, second,
+
+        adddate, addtime, 
+        curdate, curtime, now
+        datediff
+        date_and
+        date_format
+数值计算：
+    sin, cos, tan,
+    abs, mod, exp, sqrt
+    pi,
+    rand
 
 汇总数据:
-    avg()
     count() 
         count(*)
             包括所有行
         count(column_name)
             不统计该列null值
         distinct (key word), 统计行的个数，但是所有相同的行记为一行
-    max()
-    min()
-    sum()
+
+    avg() max() min() sum()
 
     select min(quantity) as min, max(quantity) as max, avg(quantity) as avg from OrderItems;
     select count(distinct prod_price) from Products; 
@@ -122,9 +211,12 @@ Wildchar
 
     select vend_id, count(*) as num_prods from Products group by vend_id;
 
+    # 查看每个企业有多少管理员
+    select domain, count(*) from mdm_auth_user group by domain;
+
     group by的基本逻辑是
-        sort_table_by_group();
-        for(line=first_line;line<=last_line;line++)
+        1. sort_table_by_group();
+        2. for(line=first_line;line<=last_line;line++)
             if(where(line)) 
                 // if(just_col) print(line)
                 if(count())
@@ -132,7 +224,8 @@ Wildchar
                 if(sum())
                     sum+=val(line);
                 ...
-            if(end_of_group(line))
+
+            if(having(group) && end_of_group(line))
                 print(line) | print(sum()) | print(count)
                 clear sum, clear count
 
@@ -154,7 +247,7 @@ Wildchar
 
             select school_name, grade_name, class_name, count(*) as cnt
                 from stud_table 
-                group by school_name, grade_name, class name
+                group by school_name, grade_name, class_name
                 having cnt>60
 
         group by中每个列都必须是检索列或有效表达式，不能使聚集函数。
@@ -171,7 +264,17 @@ Wildchar
 
         where在数据分组之前进行过滤
             where排除的行不在分组中
+
+            // 找出提供了三件价格大于10的商品的供货商
+            select vend_id, count(*) as cnt 
+                from Products 
+                where prod_price >= 10
+                group by vend_id 
+                having count(*) >= 3; 
+
         having在数据分组之后进行过滤
+
+        having支持所有的where操作符
 
     select句子顺序：
         select 
@@ -180,8 +283,13 @@ Wildchar
         group by
         having
         order by
+        limit
     
 子查询：    
+    select * from mdm_auth_role as r where r.id in   
+        (select role_id from mdm_auth_role_perm as rp 
+            where rp.perm_id='perm_id_aaaaaaaaaaaaaaaaaaaaaa33');
+
     0.select的基本逻辑是
         for(line=first_line;line<=last_line;line++)
             if(where(line)) 
@@ -204,7 +312,8 @@ Wildchar
                 if(sum())
                     sum+=val(line);
                 ...
-            if(end_of_group(line))
+
+            if(end_of_group(line) && having(group))
                 print(line) | print(sum()) | print(count)
                 clear sum, clear count
 
@@ -234,6 +343,9 @@ Wildchar
                 where orders.cust_id=orders.cust_id) --这句话的语法没问题，但是语意含糊
                 as orders
         from orders
+
+    思路：先确定出几张表，写出最内层的查询，然后扩展到外层。
+            一开始可以使用hardcode的数据，然后将hardcode数据替换成sql句子
 
     练习：
         1.统计每个客户所有订单应付的价格
@@ -306,6 +418,7 @@ Wildchar
             on customers.cust_id=orders.cust_id;
 
     联结的表越多，性能越低
+
     练习：
         查询订购了RGAN01的客户列表
 
@@ -326,10 +439,10 @@ Wildchar
     缩短sql语句
 
         select cust_name, toi.prod_id, toi.order_num
-        from customers as tc, orders as ot, orderitems as toi
-        where tc.cust_id=ot.cust_id 
-            and ot.order_num=toi.order_num 
-            and toi.prod_id='RGAN01'
+            from customers as tc, orders as ot, orderitems as toi
+            where tc.cust_id=ot.cust_id 
+                and ot.order_num=toi.order_num 
+                and toi.prod_id='RGAN01'
 
         select tc.*, toi.prod_id, toi.order_num
         from customers as tc, orders as ot, orderitems as toi
@@ -447,7 +560,7 @@ select思路：
                 if(sum())
                     sum+=val(line);
                 ...
-            if(end_of_group(line))
+            if(end_of_group(line) && having(group))
                 print(line) | print(sum()) | print(count)
                 clear sum, clear count
 
