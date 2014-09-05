@@ -580,7 +580,61 @@ select句子顺序：
     group by
     having
     order by
- 
+--------------------------------------------------------------------------------
+不同类型的联结
+    内部联结（等值联结，equijion）
+        inner join
+
+    自联结
+        应用范围：同一张表中
+        应用场景：知道一个字段A的查询值, 需要查一个字段B
+        
+        -- 查找邮件为‘daiwz@zjipst.com’的用户所在企业的所有用户
+
+        使用子查询
+        select * from mdm_auth_user where domain in 
+            (select domain from mdm_auth_user where username regexp 'daiwz@zjipst.com')
+
+        使用自联结
+        select * from mdm_auth_user u1, mdm_auth_user u2
+            where u1.username regexp 'daiwz@zjipst.com' 
+            and u1.domain= u2.domain;
+
+        自联结的性能有时候比子查询好
+
+    外部联结
+        包括没有关联的行
+
+        left/right outer join
+            left 指定包括左边表的所有行
+            right 指定包括右边表的所有行
+
+        // 查看所有用户的所有设备
+        select u.account, d.device_name from mdm_user u, mdm_device_info d             
+            where u.account = d.account order by u.account;
+
+        // 查看所有用户的所有设备, 包括没有设备的用户
+        select u.account, d.device_name from mdm_user u left outer join mdm_device_info d 
+            on u.account = d.account  order by u.account;
+
+
+        // 查看所有用户的设备数量
+        select u.account, count(d.device_name) from mdm_user u, mdm_device_info d             
+            where u.account = d.account group by u.account order by u.account;
+
+        // 查看所有用户的设备数量, 包括没有设备的用户
+        select u.account, count(d.device_name) from mdm_user u left outer join mdm_device_info d 
+            on u.account = d.account  group by u.account order by u.account;
+
+        select u.account from mdm_user u 
+            where u.account not in (select d.account from mdm_device_info d);
+
+    使用聚集函数
+        // 查看所有用户的设备数量
+        select u.account, count(d.device_name) from mdm_user u inner join mdm_device_info d             
+            on u.account = d.account group by u.account order by u.account;
+
+todo:
 --------------------------------------------------------------------------------
 解决问题的工具：
     子查询
