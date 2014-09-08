@@ -637,6 +637,8 @@ select句子顺序：
 todo:
 --------------------------------------------------------------------------------
 解决问题的工具：
+    一张表或多张表
+
     子查询
         在where句子中 
         在column中，一般使用聚集函数
@@ -655,11 +657,34 @@ todo:
         对于统计数目的问题可简化为两个子问题
             1.将需要统计的数据都列举出来
             2.进行分组
-    union
-    view
 
     考虑空的情况
 --------------------------------------------------------------------------------
+组合查询
+
+    union
+        类似OR
+        union all: 包括重复的行
+
+        简化复杂的where句子
+
+    view
+
+全文搜索：
+
+    CREATE TABLE productnotes
+    (
+     note_id    int           NOT NULL AUTO_INCREMENT,
+     prod_id    char(10)      NOT NULL,
+     note_date datetime       NOT NULL,
+     note_text  text          NULL ,
+     PRIMARY KEY(note_id),
+     FULLTEXT(note_text)        # 索引单个列
+    ) ENGINE=MyISAM;            # 必须使用MyISAM引擎
+
+    不要再导入表的时候启用FULLTEXT。导入数据后，在alter表
+
+    SELECT note_text FROM productnotes WHERE MATCH(note_text) AGAINST('rabbit');
 
 插入数据
     插入完整的行
@@ -700,6 +725,12 @@ todo:
     values('1000000007',
             'Toy Land')
 
+    插入多行
+    insert into customers(cust_id,
+            cust_name)
+    values('1000000007', 'Toy Land'),
+          ('1000000008', 'Ray Jiang')
+
     省略列
         该列定义允许为NULL
         表的定义中给出了默认值
@@ -728,14 +759,18 @@ todo:
         where ...
         group by ...
 
+    
+    INSERT LOW_PRIORITY INTO
+        降低insert的优先级, 提高性能
+
 更新行
     update table 
     set col=value [,col=value]
-    where ...
+    where ...                   # 如果没有where, 则更新所有行
 
     update customers
     set cust_contact='Jiang Rui',
-        cust_email='jiangrui-tr2008@hotmail.com'
+    cust_email='jiangrui-tr2008@hotmail.com'
     where cust_id='1000000007'
 
     删除某一项
@@ -745,7 +780,7 @@ todo:
 
 删除行
     delete from table
-    where ...
+    where ...           # 如果没有where, 将删除表中所有记录
 
     delete from customers
     where cust_id='1000000007'
@@ -756,8 +791,25 @@ todo:
     同样功能，更高效率
     truncate table
 
+    注意使用delete和update之前使用select测试一下where
+
 创建表
     [not] null default
+
+    CREATE TABLE customers IF NOT EXISTS
+    (
+         cust_id      int       NOT NULL AUTO_INCREMENT,
+         cust_name    char(50)  NOT NULL ,
+         cust_address char(50)  NULL ,
+         cust_city    char(50)  NULL ,
+         cust_state   char(5)   NULL ,
+         cust_zip     char(10)  NULL ,
+         cust_country char(50)  NOT NULL DEFAULT 'CN',
+         cust_contact char(50)  ,           # 默认就是null
+         cust_email   char(255) ,           # 默认就是null
+         PRIMARY KEY (cust_id)
+    ) ENGINE=InnoDB;
+
 
     CREATE TABLE test 
     (
@@ -767,17 +819,32 @@ todo:
          test_desc  text NULL
     );
 
-更新表
-    alert table vendors 
-    add vend_phone char(20)
+    CREATE TABLE IF NOT EXISTS customers (id int NOT NULL);
 
-    alert table vendors 
-    drop column vend_phone 
+更新表
+    ALERT TABLE vendors 
+    ADD vend_phone CHAR(20)
+
+    ALERT TABLE vendors 
+    DROP COLUMN vend_phone 
+
+    ALTER TABLE orderitems 
+    ADD CONSTRAINT fk_orderitems_orders 
+    FOREIGN KEY (order_num) 
+    REFERENCES orders (order_num);
 
 删除表
-    drop table vendors
+    DROP TABLE vendors;
+
+重命名表
+    RENAME TABLE a_table TO a_new_table;
+
+    RENAME TABLE a_table TO a_new_table
+                 a_table_2 to a_new_table_2;
 
 视图
+    语法上等于一个select句子
+
     虚拟的表，包括动态的查询结果
     重用SQL句子
     格式化输出数据
@@ -812,6 +879,8 @@ todo:
     where tc.cust_id=ot.cust_id 
         and ot.order_num=toi.order_num 
 
+    视图对性能影响较大
+
 存储过程：
     skip
     批处理过程
@@ -822,8 +891,25 @@ todo:
     执行存储过程
         execute addNewProduct('name', 'prod');
 
-管理事务
-    skip
+
+    定义存储过程
+    delimiter ;;
+    CREATE PROCEDURE prod_price (
+            out price_min int,
+            out price_max int,
+            out price_avg int
+            )
+    BEGIN
+    select min(prod_price) into price_min from products;
+    select max(prod_price) into price_max from products;
+    select avg(prod_price) into price_avg from products;
+    END
+    ;;
+    delimiter ;
+
+    调用存储过程
+    call prod_price(@pmin, @pmax, @pavg);
+    select @pmin, @pmax, @pavg;
 
 使用游标 cursor
     结果集 result set
@@ -835,6 +921,9 @@ todo:
     declare c cursor for select * from customers;
     open cursor c;
     
+管理事务
+    skip
+
 Done!
 review
 
