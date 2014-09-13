@@ -912,6 +912,7 @@ todo:
     select @pmin, @pmax, @pavg;
 
 使用游标 cursor
+    
     结果集 result set
         sql查询得到的结果
 
@@ -920,9 +921,79 @@ todo:
 
     declare c cursor for select * from customers;
     open cursor c;
+
+    MySql中游标只能用于存储过程和函数
     
+        delimiter ;;
+        CREATE PROCEDURE dec_cursor ()
+        BEGIN
+            DECLARE ordernumbers CURSOR FOR
+            SELECT order_num FROM orders;
+
+            -- declare local variable
+            DECLARE o INT;
+
+            -- open cursor
+            OPEN ordernumbers;
+
+            -- get order number
+            FETCH ordernumber INTO o;
+
+            -- close cursor
+            CLOSE ordernumber;
+        END
+
+        ;;
+        delimiter ;
+
+触发器
+    todo:
+    执行一个sql语句时，触发另外一些sql自动执行
+
+    支持触发器的MySql语句
+        delete, insert, update
+
 管理事务
-    skip
+    InnoDB支持事务
+    事物保证多个sql句子执行的原子性，要么完整执行，要么不执行
+
+    terminology
+        transaction: 指一组sql语句
+        rollback: 撤销指定sql语句的过程
+        commit: 将未存储的sql语句结果写入数据库表
+        savepoint: 事务中临时设置的占位符(placeholder), 可以对它进行rollback
+
+    开始事务
+        START TRANSACTION
+
+    提交事务
+        START TRANSACTION
+        delete from orderitems where order_number = 21000;
+
+        # 如果这一条sql语句执行失败，前面所有sql自动rollback
+        delete from oders where order_number = 21000;   
+        COMMIT
+
+    ROLLBACK
+
+        start TRANSACTION
+        delete from table1;
+        ROLLBACK
+
+        insert, update, delete语句可以rollback
+
+    save point
+        用于部分提交和撤销
+
+        SAVEPOINT delete1;
+        ...
+        ROLLBACK TO delete1;
+
+        保留点越多越好
+
+        执行一条rollback或commit后，save point自动释放
+        RELEASE SAVEPOINT
+
 
 Done!
 review
