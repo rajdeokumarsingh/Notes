@@ -1,0 +1,23 @@
+http://wiki.openssl.org/index.php/Main_Page
+
+Command Line:
+    1.  http://wiki.openssl.org/index.php/Command_Line_Utilities
+        openssl command [ command_opts ] [ command_args ] 
+
+    $ openssl list-standard-commands
+    $ openssl list-cipher-commands
+    $ openssl list-message-digest-commands
+
+    OpenSSL> ciphers
+    openssl list-cipher-algorithms
+    openssl list-public-key-algorithms
+
+    OpenSSL> speed # performance
+
+    openssl enc
+        The command for encryption operations
+        OpenSSL> enc --help
+
+
+
+    2. Testing of SSL/TLS protocols (openssl s_server, openssl s_client).

@@ -1,0 +1,14 @@
+Change log for MySQL, Fourth Edition sampdb distribution
+
+   This file lists changes to the sampdb distribution that accompanies
+   MySQL, Fourth Edition. Changes are listed in reverse chronological
+   order.
+
+   Downloads are available at: [1]http://www.kitebird.com/mysql-book/.
+
+   Version 1.00 (2008-08-23)
+     * Initial release.
+
+References
+
+   1. http://www.kitebird.com/mysql-book/

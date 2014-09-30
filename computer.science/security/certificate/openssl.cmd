@@ -74,3 +74,7 @@ echo 客户密钥库转换 client.keystore
 keytool -importkeystore -v -srckeystore certs/client.p12 -srcstorepass 123456 -destkeystore certs/client.keystore -srcstoretype pkcs12 -deststorepass 123456
 keytool -list -keystore certs/client.keystore -v -storepass 123456
 
+
+# export cert from p12
+
+openssl pkcs12 -in zwm1.p12 -clcerts -nokeys

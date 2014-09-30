@@ -1,0 +1,74 @@
+# mysql -uroot -ppekall1234 -h 192.168.10.32 mdm_reactor
+# 
+> help
+
+# 修改当前用户的密码
+> set password = password('pekall1234');
+
+> show databases;
+> use mdm_reactor;
+
+> show tables;
+> show columns from mdm_auth_user;  
+> describe mdm_auth_user;
+
+> show errors;
+> help show
+> show status;
+> show grants;
+
+> set autocommit 0 --取消自动提交
+
+> show character set;
+> show collation;   # 排序方法
+
+# 查看默认字符集
+> show variables like 'character%';
+> show variables like 'collation%';
+
+# 字符集范围: 服务器/数据库/表/列 级别
+
+CREATE TABLE mytable (
+    col1 INT,
+    col2 VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_general_ci
+) DEFAULT CHARACTER SET hebrew
+COLLATE hebrew_general_ci;
+
+# 安全管理
+use mysql;
+show tables;
+
+create user ben identified by 'p@$$word';
+rename user ben to tom;
+drop user tom;
+
+set password for ben = password('newpwd');
+
+# 查看ben的权限
+show grants for ben;
+
+# 授予权限
+grant select on mdm_reactor.* to ben;
+grant select, insert on mdm_reactor.* to ben;
+grant all on mdm_reactor.* to ben;
+# 撤销权限
+revoke select on mdm_reactor.* to ben;
+
+# 权限层次，服务器/数据库/表/列/存储过程
+grant all to ben;
+grant on database.* to ben;
+
+
+# 备份数据库
+mysqldump -uroot -ppekall1234 mdm_reactor;
+
+# 将所有数据刷新到磁盘
+flush tables;
+
+# 检查表键是否正确
+analyze table user;
+
+# 进行多方面检查
+check table user;
+
+select now(), user(), version(), database()
