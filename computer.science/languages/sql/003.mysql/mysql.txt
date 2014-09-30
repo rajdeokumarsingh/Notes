@@ -1,11 +1,16 @@
-# mysql -uroot -ppekall1234 -h 192.168.10.32
+# mysql -uroot -ppekall1234 -h 192.168.10.32 mdm_reactor
+# 
 > help
+
+# 修改当前用户的密码
+> set password = password('pekall1234');
 
 > show databases;
 > use mdm_reactor;
 
 > show tables;
-> show columns from mdm_auth_user;  // == describe mdm_auth_user;
+> show columns from mdm_auth_user;  
+> describe mdm_auth_user;
 
 > show errors;
 > help show
@@ -65,3 +70,5 @@ analyze table user;
 
 # 进行多方面检查
 check table user;
+
+select now(), user(), version(), database()

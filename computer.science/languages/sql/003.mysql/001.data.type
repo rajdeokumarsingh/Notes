@@ -1,0 +1,76 @@
+
+M整数的位数，D是小数位数
+
+tinyint ([M])    8位 M带符号数，默认为4 （符号算一位), 无符号数为3
+smallint    16位  M 5
+mediumint   24位  M 9
+int         32位  M 11
+bigint      64位  M 20
+
+修饰符serial
+    bigint unsigned not null auto_increment unique的缩写
+
+decimal ([M, D])
+    同义词numeric, dec, fixed
+
+float (p)
+
+double (M, D)
+bit (M)  M [1, 64]
+
+字符串类型
+    二进制类型
+        binary, varbinary, blob 
+        字符序列
+
+        binary [M] , M [0, 255], default 1
+            固定长度的二进制串
+            
+        varbinary [M] , M [0, 65535], default 1
+            可变长度的二进制串
+
+        tinyblob
+        mediumblob
+        blob
+        longblob
+            存储空间：实际需要的字节数和字符长度的信息组成的前缀(1-4字节)
+
+    字符类型
+        char, varchar, text
+        字符序列
+        有字符集和排序方式的概念
+            CHARACTER SET latin1/utf8
+            CHARSET latin1/utf8
+            COLLATE collation
+
+        char_length计算字符长度
+        length计算字节长度
+
+        char 固定长度字符串 [0-255, default 1]
+            存储空间： M*最宽字符字节
+                如utf8每个字符需要1到3个字节
+                则char(m) 需要3*m字节
+
+        varchar 可变长度字符串 [0-65535]
+            存储空间：实际需要的字节数和字符长度的信息组成的前缀(1-2字节)
+
+        tinytext [0-255]
+            存储空间：实际需要的字节数和字符长度的信息组成的前缀(1字节)
+
+        text [0~2^16-1]
+            存储空间：实际需要的字节数和字符长度的信息组成的前缀(2字节)
+        mediumtext [0- 2^24-1] 
+        longtext [0 ~ 2^32-1]
+
+    ENUM和SET
+    日期类型
+        DATE
+           yyyy-mm-dd 3bytes 
+        DATETIME
+            yyyy-mm-dd hh:mm:ss 8 bytes
+        TIME
+            hh:mm:ss 3 bytes
+        TIMESTAMP
+            yyyy-mm-dd hh:mm:ss 8 bytes
+            创建一行数据时，会自动添加值 DEFAULT CURRENT_TIMESTAMP
+            更新一行数据时，会自动更新值 ON UPDATE CURRENT_TIMESTAMP
