@@ -1,0 +1,26 @@
+索引类型
+    唯一索引：被索引的列不允许重复
+    普通索引：允许索引值重复
+    FULLTEXT：全文索引。仅仅适用于MyISAM
+    SPATIAL: 
+    HASH：Memory数据表的默认索引类型
+
+创建索引：
+1. ALTER TABLE tb_name ADD INDEX/UNIQUE/FULLTEXT/SPATIAL 
+    [index_name] (column1[, column2...]);
+
+ALTER TABLE tb_name ADD PRIMARY KEY (column1[, column2...]);
+
+2. CREATE INDEX/UNIQUE/FULLTEXT/SPATIAL index_name ON tb_name 
+    (column1[, column2...]);
+
+3. CREATE TABLE tb_name (
+    ...
+    INDEX/UNIQUE/FULLTEXT/SPATIAL index_name (column1[, column2...]);
+    primary key (column1[, column2...]);
+)
+
+4. create table tb_name (
+    i INT NOT NULL PRIMARY KEY;
+    j INT NOT NULL UNIQUE;
+}

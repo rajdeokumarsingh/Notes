@@ -1,16 +1,26 @@
+# mysql url
+mysql://username[:password]@hostname[:port]/db_name/tb_name
+
 # mysql -uroot -ppekall1234 -h 192.168.10.32 mdm_reactor
 # 
 > help
 
+终端命令结束符
+    ; 
+    \G  将一行数据分成多列显示，可读性好
+
 # 修改当前用户的密码
-> set password = password('pekall1234');
+> SET PASSWORD = PASSWORD('pekall1234');
 
-> show databases;
-> use mdm_reactor;
+> SHOW DATABASES;
+> CREATE DATABASE [IF NOT EXISTS] db_name
+    [CHARSET cs_name] [COLLATE collation];
 
-> show tables;
-> show columns from mdm_auth_user;  
-> describe mdm_auth_user;
+> USE mdm_reactor;
+> DROP DATABASE db_name;
+> ALTER DATABASE db_name [CHARSET cs_name] [COLLATE collation];
+    一个数据库对应一个目录
+    /usr/local/mysql/data/mdm_reactor
 
 > show errors;
 > help show
@@ -28,11 +38,30 @@
 
 # 字符集范围: 服务器/数据库/表/列 级别
 
-CREATE TABLE mytable (
+CREATE TABLE [IF NOT EXIST ]mytable (
     col1 INT,
     col2 VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_general_ci
-) DEFAULT CHARACTER SET hebrew
+) ENGINE=InnoDB DEFAULT CHARACTER SET hebrew
 COLLATE hebrew_general_ci;
+
+# clone a table (only structure, not data)
+CREATE TABLE mytable1 LIKE mytable;
+INSERT INTO mytable1 SELECT * FROM mytable;
+
+# clone a table and copy data. But not clone index, foreign key ...
+create table mytable1 select * from mytable;
+
+> show tables;
+> show tables\G
+> show columns from mdm_auth_user;  
+> describe mdm_auth_user;
+    一个表对应几个文件
+        mdm_auth_user.frm 数据表的定义
+        mdm_auth_user.ibd InnoDB的数据和索引
+> show create table mdm_auth_user;
+
+DROP TABLE [IF EXIST] tb_name[,table2...];
+
 
 # 安全管理
 use mysql;
@@ -72,3 +101,14 @@ analyze table user;
 check table user;
 
 select now(), user(), version(), database()
+
+# 对齐输出
+mysql -t sampledb < test.sql
+
+# 保存结果
+mysql -t sampledb < test.sql > rest.txt
+
+# 在mysql中执行sql
+mysql> source test.sql
+
+
