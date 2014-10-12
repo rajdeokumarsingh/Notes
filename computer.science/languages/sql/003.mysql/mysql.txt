@@ -4,6 +4,14 @@ mysql://username[:password]@hostname[:port]/db_name/tb_name
 # mysql -uroot -ppekall1234 -h 192.168.10.32 mdm_reactor
 # 
 > help
+> help show
+
+> show errors;
+> show status;
+> show grants;
+
+mysqlshow
+mysqldump
 
 终端命令结束符
     ; 
@@ -21,11 +29,6 @@ mysql://username[:password]@hostname[:port]/db_name/tb_name
 > ALTER DATABASE db_name [CHARSET cs_name] [COLLATE collation];
     一个数据库对应一个目录
     /usr/local/mysql/data/mdm_reactor
-
-> show errors;
-> help show
-> show status;
-> show grants;
 
 > set autocommit 0 --取消自动提交
 

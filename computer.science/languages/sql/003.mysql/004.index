@@ -1,3 +1,4 @@
+show index;
 索引类型
     唯一索引：被索引的列不允许重复
     普通索引：允许索引值重复
@@ -16,11 +17,26 @@ ALTER TABLE tb_name ADD PRIMARY KEY (column1[, column2...]);
 
 3. CREATE TABLE tb_name (
     ...
-    INDEX/UNIQUE/FULLTEXT/SPATIAL index_name (column1[, column2...]);
-    primary key (column1[, column2...]);
+    INDEX/UNIQUE/FULLTEXT/SPATIAL index_name (column1[, column2...]),
+    PRIMARY KEY (column1[, column2...])
 )
 
 4. create table tb_name (
-    i INT NOT NULL PRIMARY KEY;
-    j INT NOT NULL UNIQUE;
+    i INT NOT NULL PRIMARY KEY,
+    j INT NOT NULL UNIQUE
 }
+
+# 前缀索引
+5. create table tb_name (
+    i CHAR(30) NOT NULL,
+    j BINARY(200) NOT NULL,
+    index (i(10)),
+    index (binary(20))
+}
+
+删除索引
+DROP INDEX index_name ON tb_name;
+DROP INDEX `PRIMARY` ON tb_name;
+
+ALTER TABLE tb_name DROP INDEX index_name;
+ALTER TABLE tb_name DROP INDEX `PRIMARY`;
