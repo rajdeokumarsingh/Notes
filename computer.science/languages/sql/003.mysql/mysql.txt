@@ -10,6 +10,12 @@ mysql://username[:password]@hostname[:port]/db_name/tb_name
 > show status;
 > show grants;
 
+show variables like '%query_cache%';
+show status like 'Qcache%';
+show engine innodb status\g;
+
+show status like 'com_sel%';
+
 mysqlshow
 mysqldump
 

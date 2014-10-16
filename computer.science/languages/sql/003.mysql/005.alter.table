@@ -1,0 +1,24 @@
+
+ALTER TABLE tb_name action [, action...]
+
+# 修改数据类型
+ALTER TABLE tb_name MODIFY i MEDIUMINT UNSIGNED;
+ALTER TABLE tb_name MODIFY name CHAR(32);
+ALTER TABLE tb_name MODIFY name CHAR(32) CHARSET UCS2;
+
+ALTER TABLE tb_name CHANGE i i MEDIUMINT UNSIGNED;
+
+# 修改数据类型以及列名称
+ALTER TABLE tb_name CHANGE i k MEDIUMINT UNSIGNED;
+
+# 修改数据引擎
+ALTER TABLE tb_name ENGINE = InnoDB;
+
+# 修改表名
+ALTER TABLE tb_name RENAME TO new_tb_name;
+RENAME TABLE tb_name TO new_tb_name;
+
+ALTER TABLE db1.tb_name RENAME TO db2.tb_name;
+
+# add column
+ALTER TABLE tb_name add col_name CHAR(32);
