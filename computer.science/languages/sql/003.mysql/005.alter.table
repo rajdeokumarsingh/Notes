@@ -1,12 +1,9 @@
-
 ALTER TABLE tb_name action [, action...]
 
 # 修改数据类型
 ALTER TABLE tb_name MODIFY i MEDIUMINT UNSIGNED;
 ALTER TABLE tb_name MODIFY name CHAR(32);
 ALTER TABLE tb_name MODIFY name CHAR(32) CHARSET UCS2;
-
-ALTER TABLE tb_name CHANGE i i MEDIUMINT UNSIGNED;
 
 # 修改数据类型以及列名称
 ALTER TABLE tb_name CHANGE i k MEDIUMINT UNSIGNED;

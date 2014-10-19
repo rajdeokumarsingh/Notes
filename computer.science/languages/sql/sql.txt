@@ -290,6 +290,74 @@ MySQL正则表达式
         (select role_id from mdm_auth_role_perm as rp 
             where rp.perm_id='perm_id_aaaaaaaaaaaaaaaaaaaaaa33');
 
+    标量子查询 = 
+        select * from mdm_auth_role as r where r.id =
+            (select role_id from mdm_auth_role_perm as rp 
+                where rp.perm_id='perm_id_aaaaaaaaaaaaaaaaaaaaaa33');
+            如果子查询返回多个值，则语句失败
+
+        # 选择出注册时间最早的设备
+        select * from mdm_device_info device
+            where device.create_time = (select min(create_time) from mdm_device_info);
+
+        # 选择考试成绩高于平均分数的同学
+        select tb_student.* tb_score.score from tb_studuent inner join tb_score
+            on tb_studuent.id = tb_score.student_id 
+            and tb_score.score > (select avg(score) from tb_score)
+
+        # 选择和adams来自于同一个城市和州的总统
+        select * from president
+            where (city, state) = 
+            # where row(city, state) = 语法等价
+            (select city, state from president 
+                where name = 'adams');
+
+    IN, NOT IN
+        子查询返回多行
+
+        # 查找有缺勤记录的学生
+        SELECT * FROM student
+            WHERE student.id IN (SELECT DISTINCT id from absent);
+
+        SELECT * FROM student
+        WHERE EXISTS (SELECT * from absent where absent.student_id = student.id);
+
+
+        # 查找没有缺勤记录的学生
+        SELECT * FROM student
+            WHERE student.id NOT IN (SELECT DISTINCT id from absent);
+
+        SELECT * FROM student
+        WHERE NOT EXISTS (SELECT * from absent where absent.student_id = student.id);
+
+
+        # 选择和名字中包括了adams的来自于同一个城市和州的总统
+        select * from president
+            where (city, state) in 
+            (select city, state from president 
+                where name like '%adams%');
+
+    ALL, ANY, SOME
+
+        # 选择出注册时间最早的设备
+        SELECT * FROM mdm_device_info device
+            WHERE device.create_time <= ALL(SELECT create_time FROM mdm_device_info);
+
+        # 选择出注册时间最晚的设备
+        SELECT * FROM mdm_device_info device
+            WHERE device.create_time >= ANY(SELECT create_time FROM mdm_device_info);
+
+        ANY等价于SOME
+        IN 等价于 = ANY
+        NOT IN 等价于 <> ALL
+        
+    EXIST, NOT EXIST
+        # 测试某个子查询是否返回了任何数据
+        select exist (select * from student);
+
+    from中的子查询
+        select * from (select id, name from student) as test;
+
     0.select的基本逻辑是
         for(line=first_line;line<=last_line;line++)
             if(where(line)) 
@@ -584,6 +652,12 @@ select句子顺序：
 不同类型的联结
     内部联结（等值联结，equijion）
         inner join
+        select cust_name,cust_state,order_num from customers inner join orders 
+            on customers.cust_id=orders.cust_id;
+
+        cross join, join 等价于inner join
+        逗号操作符 (等价于innter join) : 尽量避免
+            select t1.*, t2.* from t1, t2 where t1.i1 = t2.i2;
 
     自联结
         应用范围：同一张表中
@@ -596,7 +670,7 @@ select句子顺序：
             (select domain from mdm_auth_user where username regexp 'daiwz@zjipst.com')
 
         使用自联结
-        select * from mdm_auth_user u1, mdm_auth_user u2
+        select u1.*, u2.* from mdm_auth_user u1, mdm_auth_user u2
             where u1.username regexp 'daiwz@zjipst.com' 
             and u1.domain= u2.domain;
 
@@ -605,9 +679,10 @@ select句子顺序：
     外部联结
         包括没有关联的行
 
-        left/right outer join
+        left/right [outer] join
             left 指定包括左边表的所有行
             right 指定包括右边表的所有行
+            同义词：
 
         // 查看所有用户的所有设备
         select u.account, d.device_name from mdm_user u, mdm_device_info d             
@@ -616,7 +691,6 @@ select句子顺序：
         // 查看所有用户的所有设备, 包括没有设备的用户
         select u.account, d.device_name from mdm_user u left outer join mdm_device_info d 
             on u.account = d.account  order by u.account;
-
 
         // 查看所有用户的设备数量
         select u.account, count(d.device_name) from mdm_user u, mdm_device_info d             
@@ -793,6 +867,13 @@ todo:
 
     注意使用delete和update之前使用select测试一下where
 
+    删除多个表中的数据
+    delete tb1 from tb1 inner join tb2 where tb1.id = tb2.id;
+    delete tb1, tb2 from tb1 inner join tb2 where tb1.id = tb2.id;
+
+    技巧：
+    将一个select 句子中最开始的select改写成delete
+
 创建表
     [not] null default
 
@@ -954,8 +1035,55 @@ todo:
         delete, insert, update
 
 管理事务
-    InnoDB支持事务
-    事物保证多个sql句子执行的原子性，要么完整执行，要么不执行
+    InnoDB/Falcon支持事务
+    
+    ACID
+        Atomic
+            事物保证多个sql句子执行的原子性，要么完整执行，要么不执行
+        Consistent
+            稳定性, 不会破坏数据库中的数据的一致性
+        Isolate
+            隔离性，事务之间互补影响
+            锁定级别
+                表级别
+                    MyISAM使用表级别锁定, 不同客户端不能同时修改同一个表
+                行级别
+                    InnoDB
+            InnoDB
+                事务隔离级别
+
+                1. 脏读(dirty read): 
+                    事务A做出的修改在提交前可以被其他事务看到
+                    但是事务A可能还会回滚, 这将导致应用程序的逻辑混乱
+
+                2. 不可重复读取(nonrepeatable read):
+                    事务A执行了两次select语句。在这两个select句子中间，事务B对相关数据做了修改
+                    导致事务A两次select的数据不一致
+                3. 幻影数据行(phantom raw):
+                    事务A执行了两次select语句。在这两个select句子中间，事务B添加了相关数据
+                    导致事务A第二次select的数据增加了
+ 
+                InnoDB提供的事务隔离级别
+                read uncommitted: 允许某个事务A看到其他事务没有提交的数据改动
+                read committed: 只允许某个事务A看到其他事务已经提交的改动
+                repeatable read: 某个事务A两次select的结果一定是一致的。
+                                即使有其他事务提交数据，对事务A都没有影响
+                                innodb默认值
+                serializable: 类似repeatable read，但是事务隔离更彻底。
+                                某个事务A正在读取某些数据行，在它完成之前，
+                                其他事务无法修改那些数据行。
+
+                # 服务器级别
+                SET GLOBAL TRANSACTION ISOLATION LEVEL level
+
+                # session 级别, 客户端和服务器的本次会话
+                SET SESSION TRANSACTION ISOLATION LEVEL level
+
+                # 作用于下一次事务
+                SET TRANSACTION ISOLATION LEVEL level
+                    
+        Durable
+            可靠性。事务成功后，数据更定会保存到数据库中
 
     terminology
         transaction: 指一组sql语句
@@ -966,14 +1094,34 @@ todo:
     开始事务
         START TRANSACTION
 
+        start transaction之后，会自动提交当前事务
+            并开始一个新的事务
+
     提交事务
-        START TRANSACTION
+        START TRANSACTION;
         delete from orderitems where order_number = 21000;
 
         # 如果这一条sql语句执行失败，前面所有sql自动rollback
         delete from oders where order_number = 21000;   
+        COMMIT;
+
+        START TRANSACTION;
+        insert into tb1 name = 'test';
+        insert into tb1 name = 'test2'; # 这时在其他表中select是看不到test和test2的
         COMMIT
 
+    禁止sql语句自动提交
+        set autocommit = 0;
+        然后执行的语句不会自动提交
+        会进入当前事务
+        直到执行commit或rollback语句
+
+
+        set autocommit = 0; // begin transaction
+        insert ...
+        insert ...
+        commit
+        set autocommit = 1;
     ROLLBACK
 
         start TRANSACTION
@@ -993,6 +1141,21 @@ todo:
 
         执行一条rollback或commit后，save point自动释放
         RELEASE SAVEPOINT
+
+    导致事务提交的场景
+        在执行下面句子之前，数据库会提交当前事务
+            set autocommit, start transaction, begin, commit, rollback
+            用于创建，改变或删除数据库或表的DLL语句 (data definition language)
+                drop database
+                alert/drop/trancate/rename table
+                create/drop index
+                set autocommit = 1 (if it is 0)
+            锁定有关的语句
+                lock tables
+                unlock tables (if table locked)
+
+    导致事务结束的场景
+        事务提交前，客户端和服务器之间连接断掉。服务器自动回滚
 
 
 Done!

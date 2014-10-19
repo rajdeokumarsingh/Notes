@@ -1,0 +1,128 @@
+管理事务
+
+InnoDB/Falcon支持事务
+
+ACID
+    Atomic
+        事物保证多个sql句子执行的原子性，要么完整执行，要么不执行
+    Consistent
+        稳定性, 不会破坏数据库中的数据的一致性
+    Isolate
+        隔离性，事务之间互补影响
+        锁定级别
+            表级别
+                MyISAM使用表级别锁定, 不同客户端不能同时修改同一个表
+            行级别
+                InnoDB
+        InnoDB
+            事务隔离级别
+
+            1. 脏读(dirty read): 
+                事务A做出的修改在提交前可以被其他事务看到
+                但是事务A可能还会回滚, 这将导致应用程序的逻辑混乱
+
+            2. 不可重复读取(nonrepeatable read):
+                事务A执行了两次select语句。在这两个select句子中间，事务B对相关数据做了修改
+                导致事务A两次select的数据不一致
+            3. 幻影数据行(phantom raw):
+                事务A执行了两次select语句。在这两个select句子中间，事务B添加了相关数据
+                导致事务A第二次select的数据增加了
+
+            InnoDB提供的事务隔离级别
+            read uncommitted: 允许某个事务A看到其他事务没有提交的数据改动
+            read committed: 只允许某个事务A看到其他事务已经提交的改动
+            repeatable read: 某个事务A两次select的结果一定是一致的。
+                            即使有其他事务提交数据，对事务A都没有影响
+                            innodb默认值
+            serializable: 类似repeatable read，但是事务隔离更彻底。
+                            某个事务A正在读取某些数据行，在它完成之前，
+                            其他事务无法修改那些数据行。
+
+            # 服务器级别
+            SET GLOBAL TRANSACTION ISOLATION LEVEL level
+
+            # session 级别, 客户端和服务器的本次会话
+            SET SESSION TRANSACTION ISOLATION LEVEL level
+
+            # 作用于下一次事务
+            SET TRANSACTION ISOLATION LEVEL level
+                
+    Durable
+        可靠性。事务成功后，数据更定会保存到数据库中
+
+terminology
+    transaction: 指一组sql语句
+    rollback: 撤销指定sql语句的过程
+    commit: 将未存储的sql语句结果写入数据库表
+    savepoint: 事务中临时设置的占位符(placeholder), 可以对它进行rollback
+
+开始事务
+    START TRANSACTION
+
+    start transaction之后，会自动提交当前事务
+        并开始一个新的事务
+
+提交事务
+    START TRANSACTION;
+    delete from orderitems where order_number = 21000;
+
+    # 如果这一条sql语句执行失败，前面所有sql自动rollback
+    delete from oders where order_number = 21000;   
+    COMMIT;
+
+    START TRANSACTION;
+    insert into tb1 name = 'test';
+    insert into tb1 name = 'test2'; # 这时在其他表中select是看不到test和test2的
+    COMMIT
+
+禁止sql语句自动提交
+    set autocommit = 0;
+    然后执行的语句不会自动提交
+    会进入当前事务
+    直到执行commit或rollback语句
+
+
+    set autocommit = 0; // begin transaction
+    insert ...
+    insert ...
+    commit
+    set autocommit = 1;
+ROLLBACK
+
+    start TRANSACTION
+    delete from table1;
+    ROLLBACK
+
+    insert, update, delete语句可以rollback
+
+save point
+    用于部分提交和撤销
+
+    SAVEPOINT delete1;
+    ...
+    ROLLBACK TO delete1;
+
+    保留点越多越好
+
+    执行一条rollback或commit后，save point自动释放
+    RELEASE SAVEPOINT
+
+导致事务提交的场景
+    在执行下面句子之前，数据库会提交当前事务
+        set autocommit, start transaction, begin, commit, rollback
+        用于创建，改变或删除数据库或表的DLL语句 (data definition language)
+            drop database
+            alert/drop/trancate/rename table
+            create/drop index
+            set autocommit = 1 (if it is 0)
+        锁定有关的语句
+            lock tables
+            unlock tables (if table locked)
+
+导致事务结束的场景
+    事务提交前，客户端和服务器之间连接断掉。服务器自动回滚
+
+事务问题的非事务解决方案
+    锁定数据表
+    LOCK TABLES tb1 WRITE, tb2 READ
+    UNLOCK TABLES

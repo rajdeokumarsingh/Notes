@@ -3,4 +3,4 @@ storage engine
     MyISAM 默认处理引擎
     NDB    MySQL Cluster专用引擎
 
-    show engines;
+show engines;
