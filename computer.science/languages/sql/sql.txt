@@ -838,7 +838,7 @@ todo:
         降低insert的优先级, 提高性能
 
 更新行
-    update table 
+    UPDATE tb_name 
     set col=value [,col=value]
     where ...                   # 如果没有where, 则更新所有行
 
