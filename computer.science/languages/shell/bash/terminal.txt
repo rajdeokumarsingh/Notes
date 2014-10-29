@@ -1,0 +1,15 @@
+ctrl-b/f: move backward/forward
+ctrl-p/n: move previous/next
+esc b/f:  move backward/forward a word
+ctrl-a/e: move to line head/tail
+
+esc d/backspace: delete word
+ctrl-d: remove current char
+ctrl-u/k: remove whole line
+
+ctrl--: undo
+
+
+# mysql -uroot -ppekall1234
+##next time
+# !my

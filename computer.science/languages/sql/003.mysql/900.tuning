@@ -1,98 +1,76 @@
------Original Message-----
-From: rui.jiang@pekall.com [mailto:rui.jiang@pekall.com]
-Sent: Monday, October 13, 2014 1:58 PM
-To: yimeng duan
-Cc: 武耀晖; Hou Zhidong
-Subject: MySql缓存配置，监控
+使用索引
+    如何挑选索引
+        为用于搜索，分类或分组的数据列编制索引, (where, join on, order by, group by后的列)
+        不用为用于显示的列编制索引
 
+        考虑数据列的维度(cardinality)
+            列中非重复的的数值个数
+            维度越高，索引效果越好
 
-配置在my.cnf中:
+        对短小的值进行索引
+        为字符串编制前缀索引
+        复合索引, 充分利用最左边的前缀
 
-# Remove leading # and set to the amount of RAM for the most important data # cache in MySQL. Start at 70% of total RAM for dedicated server, else 10%.
-innodb_buffer_pool_size = 800M # All in one服务器可配置成物理内存的10%
+        不要建立过多的索引
 
-# 查询缓存不宜配置过大，可通过检查命中率来调整
-query_cache_limit = 52M
-query_cache_size = 52M
-query_cache_type = ON
+        索引的类型和对他进行的操作保持一致
+            散列索引：= <>的效率非常高 
+                      查找一个范围的比较操作不佳
+                        id < 30
+                        weight BETWEEN 100 AND 200
+            B Tree索引： < > = between效率都比较高
 
-可通过命令行查看缓存状态:
-show engine innodb status\g;          # 查询innodb缓存状态
-show variables like '%query_cache%';  # 查询query缓存配置
-show status like 'Qcache%';           # 查询query 缓存命中率，状态等
+慢查询文件
+    todo:
+    show variables like 'slow_query%';
+    mysqldumpslow
 
-BR,
-Jiang Rui
+查询优化
+    对数据表进行分析
+        analyze table mdm_org;
+        show index from mdm_org\G
 
------ 转发的邮件 -----
-发件人: "Hou Zhidong" <zhidong.hou@pekall.com>
-收件人: "Hou Zhidong" <zhidong.hou@pekall.com>, "rui jiang" <rui.jiang@pekall.com>, "yimeng duan" <yimeng.duan@pekall.com>
-抄送: "武耀晖" <yaohui.wu@pekall.com>
-发送时间: 星期一, 2014年 10 月 13日 下午 8:31:55
-主题: RE: MySql缓存配置，监控
+    EXPLAN
+        修改sql后，然后通过explain来查看
+        explan会检查查询是否使用了索引
+        思路：关联查询过程中应该将限制性最强的列放在最前面
+        改变where and中的顺序
 
-Not sure whether it helps.
+    STRAGHT_JOIN
 
-http://dba.stackexchange.com/questions/77905/mysql-high-cpu-usage
+    尽量使用数据类型相同的列进行比较
+        对于带有索引的数据列，数据类型相同的比较效率会更高
 
------Original Message-----
-From: Hou Zhidong [mailto:zhidong.hou@pekall.com] 
-Sent: Monday, October 13, 2014 8:09 PM
-To: 'rui.jiang@pekall.com'; 'yimeng duan'
-Cc: '武耀晖'
-Subject: RE: MySql缓存配置，监控
+    使带索引的数据列在表达式中单独出现
+        where col * 2 < 4; -- bad!
+        where col < 4 /2;  -- good!
 
+    不要在like表达式的最开始使用通配符
+        where col like '%string%' -- bad!
 
-http://forums.cpanel.net/f402/mysql-high-cpu-usage-374152.html
+    优化器对联结优化比子查询好
 
-http://www.webhostrepo.com/blog/How-to-Troubleshoot-mysql-database-server-high-cpu-usage-slowness/
+    实验各种查询的变种，多次运行它们
 
+    避免多次使用mysql的自动转换功能
 
-How to troubleshoot mysql database server high cpu usage/slowness 
+    数据类型选择
+        尽量使用数值操作，少用字符串操作
+        尽量使用小的类型
 
+        varchar类型
+            定期使用optimize table优化
 
-Steps:
+        尽量将数据列定义成default null
 
-1. Firstly find out what's causing server CPU high usage Normally, we firstly will notice that server cpu load is high, run 'top' to confirm which process is contributing the cpu high usage, it's mysql or other process. Also, run uptime, vmstat 2 and iostat -x to find out if there's any abnormal situation.
+        使用enum
 
-Here, we need some baseline to compare with, before the problem happens and server is running fine, we should have recorded some baseline information first such as the output of:
+        使用procedure analyse()函数
+            select * from mdm_org procedure analyse()\G
+            select * from mdm_org procedure analyse(16, 256)\G
 
-vmstat 2 20
-top -b -n 5
-iostat -x 5 | grep sdb
+5.4 有效加载数据
+    
 
-2. check mysql error log , slow query log etc from /etc/my.cnf
-
-log_error                = /srv/mysql/log/error.log
-log_slow_queries        = /srv/mysql/log/mysql-slow.log
-innodb_buffer_pool_size=20000M
-
-
-3. mysql> show engine innodb status\G
-
-
-look at the end of the output as follows:
-----------------------
-BUFFER POOL AND MEMORY
-----------------------
-Total memory allocated 22981924466; in additional pool allocated 1048576 Dictionary memory allocated 2323288
-Buffer pool size   1280000
-Free buffers       0
-Database pages     1115883
-Modified db pages  12101
-Pending reads 0
-Pending writes: LRU 0, flush list 32, single page 0 Pages read 2075693, created 11255097, written 1339038405
-0.00 reads/s, 2.98 creates/s, 427.44 writes/s Buffer pool hit rate 1000 / 1000
-----------------
-
-The bufer pool hit rate shoule be nearly 1000/1000. page write/s is 427.44 for this case.
-
-The innodb_buffer_pool_size system variable specifies the size of the buffer pool. If your buffer pool is small and you have sufficient memory, making the pool larger can improve performance by reducing the amount of disk I/O needed as queries access InnoDB tables.
-
-
-4. show processlist; then 'kill query [number]' to kill process.
-
-
-# mysql -uroot -ppassword -e "show processlist" | grep client1_hostname | awk '{print "kill query "$1";"}' | mysql -uroot -ppassword
 
 
