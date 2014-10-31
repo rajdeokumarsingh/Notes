@@ -1,0 +1,6 @@
+storage engine
+    InnoDB 具有外键支持功能的事务处理引擎
+    MyISAM 默认处理引擎
+    NDB    MySQL Cluster专用引擎
+
+show engines;

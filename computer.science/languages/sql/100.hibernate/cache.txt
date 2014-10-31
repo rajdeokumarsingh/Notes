@@ -1,0 +1,78 @@
+查询缓存适用于只读或更新频率非常低的数据,如组织机构, 权限数据等等。
+
+配置Maven pom.xml, 添加ehcache依赖:
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-ehcache</artifactId>
+        <version>${hibernate.version}</version>
+        <!--<hibernate.version>4.2.7.Final</hibernate.version>-->
+    </dependency>
+
+添加ehcache.xml到resources目录
+
+    // todo: investigate cache time
+    <?xml version="1.0" encoding="UTF-8"?>
+    <ehcache>
+        <diskStore path="/tmp"/>
+        <defaultCache
+            maxElementsInMemory="1000000"
+            eternal="false"
+            timeToIdleSeconds="1200"
+            timeToLiveSeconds="1200"
+            overflowToDisk="true"
+            diskPersistent="false"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LRU"/>
+    </ehcache>
+
+配置Hibernate SessionFactory:
+
+    <!-- Hibernate SessionFactory -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean" destroy-method="destroy">
+        ...
+        <property name="hibernateProperties">
+            <props>
+                ...
+                <prop key="hibernate.cache.use_second_level_cache">true</prop>
+                <prop key="hibernate.cache.use_query_cache">true</prop>
+                <prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</prop>
+                <prop key="hibernate.cache.provider_configuration_file_resource_path">classpath:ehcache.xml</prop>
+            </props>
+        </property>
+    </bean>
+
+
+Java代码修改:
+    为实体类添加注解:
+        import org.hibernate.annotations.Cache;
+        import org.hibernate.annotations.CacheConcurrencyStrategy;
+
+        ...
+        @Cache(usage=CacheConcurrencyStrategy.READ_WRITE)
+        public class MdmOrg extends BaseObject {
+
+    查询时设置cacheable为true:
+        Criteria criteria = getSession().createCriteria(persistentClass);
+        criteria.add(Restrictions.eq(column, value));
+        criteria.setMaxResults(1);
+        criteria.setCacheable(true);
+        List<T> items = criteria.list();
+
+测试方法:
+    开启mysql查询日志， 在/etc/mysql/my.cnf中添加：
+        general_log_file        = /var/log/mysql/mysql.log
+        general_log             = 1
+    重启mysql
+
+    测试代码:
+        @Test
+        public void testHQueryCache() throws Exception {
+
+            // Run this case and check mysql query log. There should be only one sql query according to the log.
+            for (int i = 0; i < 10; i++) {
+                assertNotNull(mdmOrgManager.getOrg("330000000000"));
+            }
+        }
+
+        开启缓存后，多次查询在mysql的查询日志中仅仅只有一条日志
+

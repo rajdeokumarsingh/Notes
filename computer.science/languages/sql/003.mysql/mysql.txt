@@ -1,38 +1,97 @@
+# mysql url
+mysql://username[:password]@hostname[:port]/db_name/tb_name
+
 # mysql -uroot -ppekall1234 -h 192.168.10.32 mdm_reactor
 # 
 > help
-
-# 修改当前用户的密码
-> set password = password('pekall1234');
-
-> show databases;
-> use mdm_reactor;
-
-> show tables;
-> show columns from mdm_auth_user;  
-> describe mdm_auth_user;
-
-> show errors;
 > help show
+
+> show something [like clause] [where clause]
+> show errors;
 > show status;
 > show grants;
 
+# meta information
+show tables from information_schema;
+    schemata # tables information
+
+# performance tuning
+show variables like '%query_cache%';
+show status like 'Qcache%';
+show engine innodb status\g;
+
+show status like 'com_sel%';
+table performance_schema;
+
+select * from information_schema.processlist;
+
+
+mysqlshow
+mysqldump
+
+终端命令结束符
+    ; 
+    \G  将一行数据分成多列显示，可读性好
+
+# 修改当前用户的密码
+> SET PASSWORD = PASSWORD('pekall1234');
+
+# database operation
+    > SHOW DATABASES;
+    > SHOW CREATE DATABASE db_name;
+    > CREATE DATABASE [IF NOT EXISTS] db_name
+        [CHARSET cs_name] [COLLATE collation];
+
+    > USE mdm_reactor;
+    > DROP DATABASE db_name;
+    > ALTER DATABASE db_name [CHARSET cs_name] [COLLATE collation];
+        一个数据库对应一个目录
+        /usr/local/mysql/data/mdm_reactor
+
+    > SHOW TABLE STAUTS [FROM db_name]\G
+
 > set autocommit 0 --取消自动提交
 
-> show character set;
-> show collation;   # 排序方法
+# charset
+    > show character set;
+    > show charset;
+    > show collation;   # 排序方法
 
-# 查看默认字符集
-> show variables like 'character%';
-> show variables like 'collation%';
+    # 查看默认字符集
+    > show variables like 'character%';
+    > show variables like 'collation%';
 
-# 字符集范围: 服务器/数据库/表/列 级别
+    # 字符集范围: 服务器/数据库/表/列 级别
 
-CREATE TABLE mytable (
-    col1 INT,
-    col2 VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_general_ci
-) DEFAULT CHARACTER SET hebrew
-COLLATE hebrew_general_ci;
+# table operation
+    CREATE TABLE [IF NOT EXIST ]mytable (
+        col1 INT,
+        col2 VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_general_ci
+    ) ENGINE=InnoDB DEFAULT CHARACTER SET hebrew
+    COLLATE hebrew_general_ci;
+
+    # clone a table (only structure, not data)
+    CREATE TABLE mytable1 LIKE mytable;
+    INSERT INTO mytable1 SELECT * FROM mytable;
+
+    # clone a table and copy data. But not clone index, foreign key ...
+    create table mytable1 select * from mytable;
+
+    > show tables [FROM db_name];
+    > show tables\G
+    > SHOW CREATE TABLE tb_name;
+    > SHOW COLUMNS FROM tb_name;  
+    > describe tb_name;
+        一个表对应几个文件
+            mdm_auth_user.frm 数据表的定义
+            mdm_auth_user.ibd InnoDB的数据和索引
+    > SHOW INDEX FROM tb_name; 
+
+    DROP TABLE [IF EXIST] tb_name[,table2...];
+
+# explan, desc
+explan {a sql}
+desc {a sql}
 
 # 安全管理
 use mysql;
@@ -72,3 +131,14 @@ analyze table user;
 check table user;
 
 select now(), user(), version(), database()
+
+# 对齐输出
+mysql -t sampledb < test.sql
+
+# 保存结果
+mysql -t sampledb < test.sql > rest.txt
+
+# 在mysql中执行sql
+mysql> source test.sql
+
+

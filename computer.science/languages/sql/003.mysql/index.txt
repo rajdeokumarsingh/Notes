@@ -1,0 +1,6 @@
+mysql.txt
+001.data.type
+002.charset
+003.engine
+004.index
+005.alter.table

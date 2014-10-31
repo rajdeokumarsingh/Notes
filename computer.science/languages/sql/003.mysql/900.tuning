@@ -1,0 +1,76 @@
+使用索引
+    如何挑选索引
+        为用于搜索，分类或分组的数据列编制索引, (where, join on, order by, group by后的列)
+        不用为用于显示的列编制索引
+
+        考虑数据列的维度(cardinality)
+            列中非重复的的数值个数
+            维度越高，索引效果越好
+
+        对短小的值进行索引
+        为字符串编制前缀索引
+        复合索引, 充分利用最左边的前缀
+
+        不要建立过多的索引
+
+        索引的类型和对他进行的操作保持一致
+            散列索引：= <>的效率非常高 
+                      查找一个范围的比较操作不佳
+                        id < 30
+                        weight BETWEEN 100 AND 200
+            B Tree索引： < > = between效率都比较高
+
+慢查询文件
+    todo:
+    show variables like 'slow_query%';
+    mysqldumpslow
+
+查询优化
+    对数据表进行分析
+        analyze table mdm_org;
+        show index from mdm_org\G
+
+    EXPLAN
+        修改sql后，然后通过explain来查看
+        explan会检查查询是否使用了索引
+        思路：关联查询过程中应该将限制性最强的列放在最前面
+        改变where and中的顺序
+
+    STRAGHT_JOIN
+
+    尽量使用数据类型相同的列进行比较
+        对于带有索引的数据列，数据类型相同的比较效率会更高
+
+    使带索引的数据列在表达式中单独出现
+        where col * 2 < 4; -- bad!
+        where col < 4 /2;  -- good!
+
+    不要在like表达式的最开始使用通配符
+        where col like '%string%' -- bad!
+
+    优化器对联结优化比子查询好
+
+    实验各种查询的变种，多次运行它们
+
+    避免多次使用mysql的自动转换功能
+
+    数据类型选择
+        尽量使用数值操作，少用字符串操作
+        尽量使用小的类型
+
+        varchar类型
+            定期使用optimize table优化
+
+        尽量将数据列定义成default null
+
+        使用enum
+
+        使用procedure analyse()函数
+            select * from mdm_org procedure analyse()\G
+            select * from mdm_org procedure analyse(16, 256)\G
+
+5.4 有效加载数据
+    
+
+
+
