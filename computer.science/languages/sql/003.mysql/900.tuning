@@ -1,3 +1,16 @@
+build benchmark
+    SysBench
+connection pool
+query cache
+sql
+explan
+
+transaction log can improve transaction performance
+高可用MySQL:构建健壮的数据中心
+
+crash test
+
+
 使用索引
     如何挑选索引
         为用于搜索，分类或分组的数据列编制索引, (where, join on, order by, group by后的列)

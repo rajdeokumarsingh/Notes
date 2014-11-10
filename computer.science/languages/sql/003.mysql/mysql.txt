@@ -1,4 +1,4 @@
-# mysql url
+# MYSQL URL
 mysql://username[:password]@hostname[:port]/db_name/tb_name
 
 # mysql -uroot -ppekall1234 -h 192.168.10.32 mdm_reactor
@@ -14,6 +14,8 @@ mysql://username[:password]@hostname[:port]/db_name/tb_name
 # meta information
 show tables from information_schema;
     schemata # tables information
+
+SHOW TABLE STATUS LIKE 'user';
 
 # performance tuning
 show variables like '%query_cache%';

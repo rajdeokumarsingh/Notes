@@ -8,10 +8,12 @@ Subject: MySql缓存配置，监控
 
 配置在my.cnf中:
 
+
 # Remove leading # and set to the amount of RAM for the most important data # cache in MySQL. Start at 70% of total RAM for dedicated server, else 10%.
 innodb_buffer_pool_size = 800M # All in one服务器可配置成物理内存的10%
 
 # 查询缓存不宜配置过大，可通过检查命中率来调整
+# 查询缓存和mysql的连接有关系，每个连接都有单独的查询缓存?
 query_cache_limit = 52M
 query_cache_size = 52M
 query_cache_type = ON
