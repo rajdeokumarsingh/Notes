@@ -3,7 +3,7 @@ package com.pekall.push.test;
 public class ConnectionTest {
 
     private static final String USAGE =
-            "java -jar PushServerTest.jar 50000 1000000 http://192.168.10.43:8080\n" +
+            "java -jar PushServerTest.jar 50000 1000000 http://192.168.10.43:8080 [ws://192.168.10.55:9040/websocket]\n" +
             "        第一个参数： 连接数量\n" +
             "        第二个参数： 1000000 表示device id的开始范围。 建议测试组使用 1000,000开始的， 每台测试机器都不能够一样。\n" +
             "        比如一台使用1000000, 一台使用2000000, 一台使用3000000\n" +
@@ -47,7 +47,7 @@ public class ConnectionTest {
     }
 
     private static void processArgs(String[] args) {
-        if (args.length != 3) {
+        if (args.length < 3) {
             Debug.log("Usage:");
             Debug.log(USAGE);
             System.exit(-1);
@@ -60,6 +60,10 @@ public class ConnectionTest {
 
         PushConstant.PUSH_QUERY_ADDR = args[2];
         Debug.log("query url: " + PushConstant.PUSH_QUERY_ADDR);
+
+        if (args.length > 3) {
+            PushConstant.PUSH_WS_ADDR = args[3];
+        }
     }
 
     private static void startMonitor(final MdmPushClient mdmPushClient) {

@@ -14,7 +14,9 @@ public class PushConstant {
 
     // default path
     public static String PUSH_QUERY_ADDR = "http://192.168.10.43:8080";
-//    public final static String PUSH_QUERY_PATH = "/PushServer/rest/push/assignServer";
+    public static String PUSH_WS_ADDR = null;
+
+    //    public final static String PUSH_QUERY_PATH = "/PushServer/rest/push/assignServer";
     public final static String PUSH_QUERY_PATH = "/assignServer";
     public final static String PUSH_QUERY_PARAM = "?device_id=";
 }

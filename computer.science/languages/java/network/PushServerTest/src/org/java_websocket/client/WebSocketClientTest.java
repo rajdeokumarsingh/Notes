@@ -351,13 +351,13 @@ public abstract class WebSocketClientTest
 
             ServerAddress serverAddress;
             try {
-                serverAddress = ServerAddrQuery.query(queryUrl);
-                Debug.logVerbose("serverAddress: " + serverAddress.toString());
-                if (true) { // old push server
-                pushServerUris[i] = URI.create(PushConstant.WS_SCHEME + serverAddress.getIp()
-                        + ":" + serverAddress.getPort() + PushConstant.WS_PATH);
-                } else { // new push server
-                    pushServerUris[i] = URI.create(serverAddress.getWsPath());;
+                if (PushConstant.PUSH_WS_ADDR != null) {
+                    pushServerUris[i] = URI.create(PushConstant.PUSH_WS_ADDR);;
+                } else {
+                    serverAddress = ServerAddrQuery.query(queryUrl);
+                    Debug.logVerbose("serverAddress: " + serverAddress.toString());
+                    pushServerUris[i] = URI.create(PushConstant.WS_SCHEME + serverAddress.getIp()
+                            + ":" + serverAddress.getPort() + PushConstant.WS_PATH);
                 }
 
                 Debug.log("query push server uri:" + pushServerUris[i].toString());
