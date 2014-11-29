@@ -1,0 +1,66 @@
+用户变量
+    形式为@var_name
+        由当前字符集的文字数字字符、‘.’、‘_’和‘$’组成
+
+    SET @var_name = expr [, @var_name = expr] ...
+        SET @t1=0, @t2=0, @t3=0;
+
+    可以先在用户变量中保存值然后在以后引用它；这样可以将值从一个语句传递到另一个语句。
+    用户变量与连接有关。也就是说，一个客户端定义的变量不能被其它客户端看到或使用。
+
+    当客户端退出时，该客户端连接的所有变量将自动释放。
+
+    未定义的用户变量初始化为空
+
+    1."=",如 set @a =3,@a:=5
+    2.":="。select常常这样使用
+        使用select 和set设置变量的区别，set可以使用以上两种形式设置变量。
+        而select只能使用":="的形式设置变量
+
+    滥用用户变量会导致程序难以理解及管理
+
+系统变量
+    SET GLOBAL var_name
+    SET SESSION var_name
+
+
+    要想设置一个GLOBAL变量的值，使用下面的语法：
+        mysql> SET GLOBAL sort_buffer_size=value;
+        mysql> SET @@global.sort_buffer_size=value;
+
+    要想设置一个SESSION变量的值，使用下面的语法：
+        mysql> SET SESSION sort_buffer_size=value;
+        mysql> SET @@session.sort_buffer_size=value;
+        mysql> SET sort_buffer_size=value;
+
+        LOCAL是SESSION的同义词。
+
+    要想检索一个GLOBAL变量的值，使用下面的语法：
+        mysql> SELECT @@global.sort_buffer_size;
+        mysql> SHOW GLOBAL VARIABLES like 'sort_buffer_size';
+
+    要想检索一个SESSION变量的值，使用下面的语法：
+        mysql> SELECT @@sort_buffer_size;
+        mysql> SELECT @@session.sort_buffer_size;
+        mysql> SHOW SESSION VARIABLES like 'sort_buffer_size';
+
+        这里，LOCAL也是SESSION的同义词。
+
+    当你用SELECT @@var_name搜索一个变量时(也就是说，不指定global.、session.或者local.)，
+        MySQL返回SESSION值（如果存在），否则返回GLOBAL值。
+
+    对于SHOW VARIABLES，如果不指定GLOBAL、SESSION或者LOCAL，
+        MySQL返回SESSION值。
+
+局部变量
+
+    作用范围在begin到end语句块之间。在该语句块里设置的变量
+    declare语句专门用于定义局部变量。
+
+    set语句是设置不同类型的变量，包括会话变量和全局变量
+
+    局部变量与用户变量的区分在于两点
+        1.用户变量是以"@"开头的。局部变量没有这个符号
+        2.定义变量不同。用户变量使用set语句，局部变量使用declare语句定义
+        3.作用范围。局部变量只在begin-end语句块之间有效。在begin-end语句块运行完之后，局部变量就消失了。
+            

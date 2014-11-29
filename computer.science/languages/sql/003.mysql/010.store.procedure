@@ -1,0 +1,137 @@
+DROP PROCEDURE IF EXISTS `migrate_user`;
+
+DELIMITER $$
+DELIMITER ;
+
+CREATE PROCEDURE([[IN |OUT |INOUT ] 参数名 数据类形...])
+
+example:
+    DELIMITER //  
+    CREATE PROCEDURE demo_in_parameter(IN p_in int)  
+    BEGIN   
+    SELECT p_in;   
+    SET p_in=2;   
+    SELECT p_in;   
+    END;   
+    //  
+    DELIMITER ; 
+
+mysql > SET @p_in=1;  
+mysql > CALL demo_in_parameter(@p_in);  
+
+(4). 变量
+Ⅰ. 变量定义
+DECLARE variable_name [,variable_name...] datatype [DEFAULT value];
+其中，datatype为MySQL的数据类型，如:int, float, date, varchar(length)
+例如:
+DECLARE l_int int unsigned default 4000000;  
+DECLARE l_numeric number(8,2) DEFAULT 9.95;  
+DECLARE l_date date DEFAULT '1999-12-31';  
+DECLARE l_datetime datetime DEFAULT '1999-12-31 23:59:59';  
+DECLARE l_varchar varchar(255) DEFAULT 'This will not be padded';   
+
+(5). 注释
+MySQL存储过程可使用两种风格的注释
+双模杠：--
+    该风格一般用于单行注释
+c风格： 一般用于多行注释
+
+MySQL存储过程的调用
+用call和你过程名以及一个括号，括号里面根据需要，加入参数，参数包括输入参数、输出参数、输入输出参数。
+
+查看存储过程
+    select name from mysql.proc where db=’数据库名’;
+    select routine_name from information_schema.routines where routine_schema='数据库名';
+    show procedure status where db='数据库名';
+    show procedure status\G
+
+
+MySQL存储过程的修改
+    ALTER PROCEDURE
+    更改用CREATE PROCEDURE 建立的预先指定的存储过程，其不会影响相关存储过程或存储功能。
+ 
+MySQL存储过程的删除
+    删除一个存储过程比较简单，和删除表一样：
+    DROP PROCEDURE
+    从MySQL的表格中删除一个或多个存储过程。
+
+
+(1). 变量作用域
+    内部的变量在其作用域范围内享有更高的优先权，当执行到end。变量时，内部变量消失，
+    此时已经在其作用域外，变量不再可见了，应为在存储过程外再也不能找到这个申明的变量，
+    但是你可以通过out参数或者将其值指派给会话变量来保存其值。
+
+ (2). 条件语句
+ Ⅰ. if-then -else语句
+DELIMITER //  
+CREATE PROCEDURE proc2(IN parameter int)  
+    begin 
+        declare var int;  
+        set var=parameter+1;  
+        if var=0 then 
+            insert into t values(17);  
+        end if;  
+        if parameter=0 then 
+            update t set s1=s1+1;  
+        else 
+            update t set s1=s1+2;  
+        end if;  
+    end;  
+//  
+DELIMITER ;  
+
+Ⅱ. case语句： 
+DELIMITER //  
+CREATE PROCEDURE proc3 (in parameter int)  
+begin 
+    declare var int;  
+    set var=parameter+1;  
+    case var  
+        when 0 then   
+            insert into t values(17);  
+        when 1 then   
+            insert into t values(18);  
+        else   
+            insert into t values(19);  
+    end case;  
+end;  
+//  
+mysql > DELIMITER ; 
+
+(3). 循环语句
+Ⅰ. while ···· end while：
+DELIMITER //  
+CREATE PROCEDURE proc4()  
+    begin 
+        declare var int;  
+        set var=0;  
+        while var<6 do  
+            insert into t values(var);  
+            set var=var+1;  
+        end while;  
+    end;  
+//  
+mysql > DELIMITER ; 
+
+
+Ⅱ. repeat···· end repeat：
+它在执行操作后检查结果，而while则是执行前进行检查。
+DELIMITER //  
+CREATE PROCEDURE proc5 ()  
+    begin   
+        declare v int;  
+        set v=0;  
+        repeat  
+            insert into t values(v);  
+            set v=v+1;  
+        until v>=5 
+        end repeat;  
+    end;  
+//  
+mysql > DELIMITER ;  
+
+
+参考文献：
+MySQL存储过程详解
+http://blog.sina.com.cn/s/blog_52d20fbf0100ofd5.html
+
